@@ -1,0 +1,13 @@
+.local/
+.venv/
+venv/
+test-runs/
+dist/
+build/
+*.egg-info/
+__pycache__/
+*.py[cod]
+node_modules/
+.env
+.env.*
+!.env.example

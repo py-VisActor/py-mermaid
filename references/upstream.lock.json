@@ -1,0 +1,37 @@
+{
+  "schema": "py-mermaid-upstream-lock/v1",
+  "repository": "https://github.com/mermaid-js/mermaid.git",
+  "version": "12.2.0",
+  "tag": "mermaid@12.2.0",
+  "commit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "recordedDate": "2026-11-02",
+  "nodeEngine": ">=22.12.0",
+  "sha256": {
+    "LICENSE": "ec9fb67dcb25eccc416ed56e1aab819222c805a2a4bfe4cb19e7556bf2ffde80",
+    "pnpm-lock.yaml": "d75b263b5a0ace23797e375423a7d24e6e208c440c7eb75d4cc4a422de5973ca",
+    "packages/mermaid/package.json": "7ce10161c490d592e517805e75976782a55b74a2ab59c16cec7d69895542f1d8",
+    "packages/parser/package.json": "f13b4b88cca5687260f8cc764f1ba1c17a1d5b54d4399ad200ae7a1aa6ee5ea5",
+    "packages/mermaid-zenuml/package.json": "4042edb0a463645abc6689efa035f4bc75ecb229ab2c20f8f876354fed2078d7",
+    "packages/mermaid-layout-elk/package.json": "d68826ff075e38e74cbe24e5facc14ceb46ac703d442487ae30626da31f89400",
+    "packages/mermaid-layout-tidy-tree/package.json": "db0aead74284aaa7dfd83507cfcf14ba3c15a8c36221c1314e9998d0596e840d",
+    "packages/mermaid/src/diagram-api/diagram-orchestration.ts": "8cf1d4425574bb5d1096e31659d6e334e5dad2695c0b16ba01ddc7801da18a8f",
+    "packages/mermaid/src/schemas/config.schema.yaml": "855e6fbb5d278f190f15a7660b44dca6a4699ca8077ab8b35579a4e8a64be019",
+    "packages/mermaid/src/defaultConfig.ts": "f5bb393e7f39ca7ab9bb152be3002ff802487d77db33721ad11c7d03709dc782"
+  },
+  "packages": {
+    "packages/mermaid/package.json": "12.2.0",
+    "packages/parser/package.json": "2.0.1",
+    "packages/mermaid-zenuml/package.json": "1.0.1",
+    "packages/mermaid-layout-elk/package.json": "1.0.1",
+    "packages/mermaid-layout-tidy-tree/package.json": "1.0.1"
+  },
+  "canvas": {
+    "distribution": "py-skia-canvas",
+    "version": "0.1.0a18",
+    "requiresPython": ">=3.13,<3.14",
+    "validatedTargets": [
+      "Windows AMD64",
+      "Linux glibc 2.28+ x86_64"
+    ]
+  }
+}

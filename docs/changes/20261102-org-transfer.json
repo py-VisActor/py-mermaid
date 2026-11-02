@@ -1,0 +1,365 @@
+{
+  "schema": "py-mermaid-change/v1",
+  "taskId": "20261102-org-transfer",
+  "kind": "repository-transfer-followup-metadata-documentation",
+  "baseCommit": "7f2961ccb808d9152e16a5eee428a09eddacd81d",
+  "startingStatus": " M README.md\n?? .gitattributes\n?? .github/\n?? .gitignore\n?? AGENTS.md\n?? README.en.md\n?? THIRD_PARTY_NOTICES.md\n?? docs/\n?? examples/\n?? pyproject.toml\n?? references/\n?? scripts/\n?? src/\n?? tests/\n?? tools/\n",
+  "objective": "Verify the user-completed GitHub organization transfer and synchronize the local origin, project URLs and bilingual development entry points.",
+  "baseline": {
+    "mermaid": "12.2.0",
+    "commit": "1fb7869866dd619168d840291c9c54b4f129758b",
+    "canvas": "0.1.0a18"
+  },
+  "authorization": "Original request authorized moving py-mermaid to py-visactor. User subsequently completed the remote transfer. This task verifies it and updates local configuration/links while preserving all pending work; no commit/push/release.",
+  "repository": {
+    "id": 1442682877,
+    "previous": "xuanhun/py-mermaid",
+    "current": "py-VisActor/py-mermaid",
+    "defaultBranch": "main",
+    "remoteTransferPerformedBy": "user"
+  },
+  "acceptanceCriteria": [
+    "Remote repository retains ID 1442682877 and main HEAD, belongs to py-VisActor organization, and authenticated user retains admin permission",
+    "Local origin fetch/push resolve to the canonical organization URL and local refs/HEAD are unchanged",
+    "Project metadata URLs, bilingual README and next-session entry agree with the new repository",
+    "Existing dirty working files are backed up; only the intended five existing files and origin URL change",
+    "Final bootstrap, existing 12 negative-control tests, upstream integrity and focused metadata/preservation checks pass"
+  ],
+  "changedPaths": [
+    "README.en.md",
+    "README.md",
+    "docs/NEW_SESSION.md",
+    "docs/RELEASE_STATUS.md",
+    "pyproject.toml"
+  ],
+  "sourceSha256": {
+    ".gitattributes": "12947ab11783de1318a3aa111c1fc7efd4a7992096f665186e266f19e44d9560",
+    ".github/workflows/validate.yml": "67512a6d2ef3f7d2edd8150c55cfb079223fa03c0a4bf896ca10532a9c6daa73",
+    ".gitignore": "d91599ae38f089faee96df60c294ee6a07d53ea8cd90341e48651dc999865c6f",
+    "AGENTS.md": "f6bda37343625db6fe859d09aeeb59c06d1e3836f6fa7e623bde19d599157762",
+    "LICENSE": "d925ca50a75467a0a8d28c4f7236922346b52c782cd80840d0aec258eaf4f870",
+    "README.en.md": "7089cf40724f3193b9385a0f5cdf66981230b8c1b625c77d18c6df638c69432a",
+    "README.md": "6ecb9912baf5b1e30808c6af51ababdaa4282c28510a6f9781778f55958752d8",
+    "THIRD_PARTY_NOTICES.md": "cb00e13fceade19cf9a84c527b6c7badcd195829b7fe96e189613f1ccbbf1fd8",
+    "docs/API_COMPATIBILITY.md": "2303c4abebb6541751eb39758e0981bbd7b49472a16b9835e0879c895c24a87f",
+    "docs/IMPLEMENTATION_PLAN.md": "8f00293eb65a26fd17f856edebdb4c2b667fa3ea74e79c56a1aee07630b0946d",
+    "docs/NEW_SESSION.md": "cfe236aafae7f5aad0b483c485e9c97b59fefd1ed2f1a55f2c2a5710b4859583",
+    "docs/RELEASE_STATUS.md": "68ab8ccce066f43b377f01442b8c4ac3a9195ab320b3def5703ad91909ce74e7",
+    "docs/TASKS.md": "ab47c316379fcbdbedc15aa9493b3c9cb4c483d7cd2f34c138de81362a9fe6e6",
+    "docs/TEST_AND_RELEASE.md": "7afa30c79f8335052c0d736c0b31eabf98a51f49d4f80d3da7c054f5d6476bb7",
+    "docs/assets/canvas-smoke.png": "228637b81706b7ec37dafcc1ea1718bc26e35c47d8cc33a2e74b107f413d2647",
+    "docs/assets/manifest.json": "7830469bea43cfc0fc7f87089595e76434490e007c6e86c512a50a69b8485251",
+    "docs/changes/20261102-bootstrap.json": "9cad845d4153b3b24938c62e4470baee7337754d919f25e043c69277c1df724a",
+    "docs/changes/20261102-migration-plan.json": "8cd9447cb3590a29531bef2b226fdd7a20d60dc4f6ded61d183653fe853bd5f9",
+    "docs/compatibility.json": "98a5dbe15d403b74b943982a549b8964200ceb5da853dc334dbf7287d8e51eb0",
+    "examples/README.md": "58474392d2cbb08c393b581abcd9b71518612e43c39fd90167e2012a9da26d85",
+    "examples/canvas_smoke.py": "b894f858e83d0e7e1d2123df713aea024f48db8da7d20b9f622f09ed7c2575a6",
+    "pyproject.toml": "a3643e79a10e483f74ad8f599b455466c6adef184ed0c1489692560e57b93bc5",
+    "references/README.md": "f0e1de2d48811e968266a5ac42780f888a6f445eacdf57ee7353fb340bbf15bf",
+    "references/licenses/mermaid-LICENSE": "ec9fb67dcb25eccc416ed56e1aab819222c805a2a4bfe4cb19e7556bf2ffde80",
+    "references/spec-inventory.json": "ee27c957a6cd7b0457dd3f60713f930a319368769585009119adf3e0ae83073f",
+    "references/upstream.lock.json": "1c7fae733904788d26816f4157443883c8a24afbba69b256311b011aaa8fb2bf",
+    "scripts/upstream.py": "5aeac1fd00a3dab6050dd0d01790432835beab8b36a5c086b1e10f8e93dfe9eb",
+    "scripts/validate_bootstrap.py": "a068260e7fa91a53e35761ee4fc9ca789f5f9f9f023dc072392d61ae75742a45",
+    "src/py_mermaid/__init__.py": "1d77306db799e436aa2998781c571be6691ed28cb6238397affc19d9722e8db2",
+    "src/py_mermaid/config/__init__.py": "30d048d1a0f476166358c50aaebdd04035bfdcb57308050199bfcfb23ad648a4",
+    "src/py_mermaid/diagrams/__init__.py": "9154145bccf3c978abe2ae3b6934ba969a756e9a6e77bdf2dbf3dbfd373cb619",
+    "src/py_mermaid/layout/__init__.py": "6d1ecc869efa4cd9a7edd97fbd986cb719aa5509366da8775096b1fbd3074add",
+    "src/py_mermaid/model/__init__.py": "dc03b5bae51198aa7a4252ce4f65fb4717b4d1c241f1fed23dd0506f00743b3c",
+    "src/py_mermaid/parsing/__init__.py": "b65850e74fbc18c01bb8a8be0cc07c2b645a18c9e5a0796827f51a038c2ccd76",
+    "src/py_mermaid/py.typed": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/py_mermaid/rendering/__init__.py": "ed89819539fa2b113c92aa2530d8598d7a1ba665a8127ab2c1641e6445415573",
+    "src/py_mermaid/rendering/skia/__init__.py": "5ae5baff33905f6d19a3fe393d0cc071ab9d4072fd838ee931d074d552b969bf",
+    "tests/README.md": "563fd8df4cd6243c66346ba47b9d254b21552ab5c1effffb07c2f871dcf3a00c",
+    "tests/bootstrap/test_bootstrap.py": "997ec02823705b67a7a7d8cb37a6fccafccf0e97f699d669d51c9c877b003660",
+    "tests/fixtures/README.md": "1e939759d909a441055faf260f5c41c1335fa8f249d704ff8711a797dce92ee9",
+    "tests/fixtures/cases.json": "c4ef0e112388885a45bf7f2d19b130eac49d6427043500bcb40295a2704de66f",
+    "tests/fixtures/flowchart-minimal.mmd": "9ddf4d8df3da5cd67d76d49a806719ee82b32a4a1081e1e6e14a5f176015e74b",
+    "tools/oracle/README.md": "0b5653686ef7031d09a6c4dca577e0295cc45edc7c0f5a27487dc6548b1e05ca"
+  },
+  "commands": [
+    {
+      "id": "bootstrap-before",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "scripts/validate_bootstrap.py",
+        "--out",
+        "C:\\code\\py-mermaid\\test-runs\\20261102-org-transfer-followup-01\\bootstrap-before.json"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261102-org-transfer-followup-01/bootstrap-before.log",
+      "logSha256": "7744417c4b9d619e021b52e37ae1a1dc53d5c32e4769e16e15f30f3b8c8fac11"
+    },
+    {
+      "id": "unit-before",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests/bootstrap",
+        "-v"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261102-org-transfer-followup-01/unit-before.log",
+      "logSha256": "85b8bb1e998b07d2b83d050b859df5f4fab5c4bf7e9620cce5807693ca7e9705"
+    },
+    {
+      "id": "upstream-fetch",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "scripts/upstream.py",
+        "fetch"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261102-org-transfer-followup-01/upstream-fetch.log",
+      "logSha256": "bbf4fdaaffb239104b5b73011299564327ef34a0f316464112d5d902be5421c2"
+    },
+    {
+      "id": "upstream-check-before",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "scripts/upstream.py",
+        "check"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261102-org-transfer-followup-01/upstream-check-before.log",
+      "logSha256": "e177513c6db5afbcc9524be08795930fb8d5edc0c47ba46d8051ee7859418089"
+    },
+    {
+      "id": "set-origin",
+      "command": [
+        "git",
+        "remote",
+        "set-url",
+        "origin",
+        "https://github.com/py-VisActor/py-mermaid.git"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261102-org-transfer-followup-01/set-origin.log",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "bootstrap-after",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "scripts/validate_bootstrap.py",
+        "--out",
+        "C:\\code\\py-mermaid\\test-runs\\20261102-org-transfer-followup-01\\bootstrap-after.json"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261102-org-transfer-followup-01/bootstrap-after.log",
+      "logSha256": "7744417c4b9d619e021b52e37ae1a1dc53d5c32e4769e16e15f30f3b8c8fac11"
+    },
+    {
+      "id": "unit-after",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests/bootstrap",
+        "-v"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261102-org-transfer-followup-01/unit-after.log",
+      "logSha256": "53c47c55544ed6c824d9ae99e81005ec0a2cef34adf014e845577dcbfa8d2037"
+    },
+    {
+      "id": "upstream-check-after",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "scripts/upstream.py",
+        "check"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261102-org-transfer-followup-01/upstream-check-after.log",
+      "logSha256": "e177513c6db5afbcc9524be08795930fb8d5edc0c47ba46d8051ee7859418089"
+    },
+    {
+      "id": "scope-review",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "C:\\code\\py-mermaid\\test-runs\\20261102-org-transfer-followup-01\\verify_transfer.py"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261102-org-transfer-followup-01/scope-review.log",
+      "logSha256": "cb38413df46c72fb2b14e2e554f423286576b57d6526e1c593918958d66bc804"
+    },
+    {
+      "id": "remote-head-after",
+      "command": [
+        "git",
+        "ls-remote",
+        "--symref",
+        "origin",
+        "HEAD",
+        "refs/heads/main"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261102-org-transfer-followup-01/remote-head-after.log",
+      "logSha256": "ecbfaf3f91aee7e7f2ab9376bd93c56f0a9ddb813c4772f8ffc8ac9fbe3e9863"
+    },
+    {
+      "id": "diff-check",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261102-org-transfer-followup-01/diff-check.log",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "test-runs/20261102-org-transfer-followup-01/starting-snapshot.json",
+      "sha256": "9b4408342695cade887d2ead709ba74e791f33a42eb9041c18b8bc094abcb26e"
+    },
+    {
+      "path": "test-runs/20261102-org-transfer-followup-01/starting-status.txt",
+      "sha256": "1cc7014e05231492563610a2d513faef3e939c488725c32d6fbadf8ccc40ec83"
+    },
+    {
+      "path": "test-runs/20261102-org-transfer-followup-01/starting-diff.patch",
+      "sha256": "18736815cdb2dc69320b28d2bedb86b5efc0e484d3862530d57035d903297aff"
+    },
+    {
+      "path": "test-runs/20261102-org-transfer-followup-01/git-config.before",
+      "sha256": "d1d30cbad56c5f1a8923edcf8300398c05f02af4a2dfc59bc66e54d81e44dfc2"
+    },
+    {
+      "path": "test-runs/20261102-org-transfer-followup-01/refs-before.txt",
+      "sha256": "7fbc788e30d527f2d33e703d813a474cf4bbd65feda8cd1a2abc7ea436d8b7a6"
+    },
+    {
+      "path": "test-runs/20261102-org-transfer-followup-01/remotes-before.txt",
+      "sha256": "8b2479d1cdf5d7654b75c8c928c32ad19199d53d049584d3b322d500128484cb"
+    },
+    {
+      "path": "test-runs/20261102-org-transfer-followup-01/commands-before.json",
+      "sha256": "a5e38888dbca1b22c2c0684479efef63dbb91abf496102863da6d903950e9b20"
+    },
+    {
+      "path": "test-runs/20261102-org-transfer-followup-01/commands-mutation.json",
+      "sha256": "96a90df146df6618fc8f32d1292316aa1df70f72c2ddde40f823f05e4fea37cb"
+    },
+    {
+      "path": "test-runs/20261102-org-transfer-followup-01/commands-after.json",
+      "sha256": "9b8f82548541583b9a931afbebf74cb4330bc7088defd679243f33d8a1680093"
+    },
+    {
+      "path": "test-runs/20261102-org-transfer-followup-01/bootstrap-before.json",
+      "sha256": "7744417c4b9d619e021b52e37ae1a1dc53d5c32e4769e16e15f30f3b8c8fac11"
+    },
+    {
+      "path": "test-runs/20261102-org-transfer-followup-01/bootstrap-after.json",
+      "sha256": "7744417c4b9d619e021b52e37ae1a1dc53d5c32e4769e16e15f30f3b8c8fac11"
+    },
+    {
+      "path": "test-runs/20261102-org-transfer-followup-01/remote-repository.json",
+      "sha256": "278da123e90e99e2ecae815a0f6208c18328297c18c9b3f1ac380607128d34a2"
+    },
+    {
+      "path": "test-runs/20261102-org-transfer-followup-01/verify_transfer.py",
+      "sha256": "e92e761f721552578115a301486f331a768fde4bd7f0c9b276493084c10db52c"
+    },
+    {
+      "path": "test-runs/20261102-org-transfer-followup-01/scope-review.json",
+      "sha256": "cb38413df46c72fb2b14e2e554f423286576b57d6526e1c593918958d66bc804"
+    }
+  ],
+  "documentationReview": [
+    {
+      "topic": "entry-and-current-state",
+      "status": "updated",
+      "paths": [
+        "README.md",
+        "README.en.md",
+        "docs/NEW_SESSION.md",
+        "docs/RELEASE_STATUS.md"
+      ],
+      "reason": "Use canonical organization repository links, update the copyable future task, and distinguish user-performed transfer from local follow-up."
+    },
+    {
+      "topic": "package-metadata",
+      "status": "updated",
+      "paths": [
+        "pyproject.toml"
+      ],
+      "reason": "Update Repository, Documentation and Issues URLs only; keep version, dependencies, ABI, classifiers and build configuration unchanged."
+    },
+    {
+      "topic": "implementation-and-api",
+      "status": "reviewed-no-change",
+      "paths": [
+        "docs/IMPLEMENTATION_PLAN.md",
+        "docs/TASKS.md",
+        "docs/API_COMPATIBILITY.md",
+        "docs/compatibility.json"
+      ],
+      "reason": "Repository ownership changes no migration milestone, product API, default behavior, denominator or verified stage."
+    },
+    {
+      "topic": "source-and-tests",
+      "status": "reviewed-no-change",
+      "paths": [
+        "AGENTS.md",
+        "references/upstream.lock.json",
+        "references/spec-inventory.json",
+        "references/README.md",
+        "docs/TEST_AND_RELEASE.md",
+        "tests",
+        "tools/oracle"
+      ],
+      "reason": "Mermaid/Canvas sources, hashes, test fixtures, oracle protocol and release gates are unrelated to the project-hosting URL and remain byte-identical."
+    },
+    {
+      "topic": "examples-and-images",
+      "status": "reviewed-no-change",
+      "paths": [
+        "examples",
+        "docs/assets"
+      ],
+      "reason": "No rendering, resources, example code or existing image provenance changed; no new Canvas smoke or Mermaid images are needed for URL-only metadata changes."
+    },
+    {
+      "topic": "licenses",
+      "status": "reviewed-no-change",
+      "paths": [
+        "LICENSE",
+        "THIRD_PARTY_NOTICES.md",
+        "references/licenses/mermaid-LICENSE"
+      ],
+      "reason": "An organization transfer does not change existing copyright, license terms or third-party code inclusion; no new distribution built."
+    }
+  ],
+  "limitations": [
+    "No new Mermaid implementation/spec/rendering/platform acceptance",
+    "Current local scaffold, planning work and URL edits remain uncommitted and unpushed; remote main remains the original skeleton commit",
+    "No new wheel built and no previous wheel report is reused for the modified metadata",
+    "No organization permissions, members, billing, repository visibility or security settings modified",
+    "Browser connectivity was not used or repaired by this follow-up"
+  ],
+  "nextStep": "Continue M1/M2 migration work using py-VisActor/py-mermaid; commit/push the prepared local project only under applicable user authorization.",
+  "status": "repository_transfer_followup_scoped_verified",
+  "externalChecks": [
+    {
+      "tool": "GitHub connector get_repo",
+      "selector": "py-VisActor/py-mermaid",
+      "result": "Stable repository ID 1442682877, Organization owner py-VisActor, main default branch, admin permission retained",
+      "evidence": "test-runs/20261102-org-transfer-followup-01/remote-repository.json"
+    }
+  ],
+  "acceptanceResults": [
+    "User-completed remote transfer confirmed with the stable repository ID and retained admin permission",
+    "Origin fetch and push URLs now use https://github.com/py-VisActor/py-mermaid.git; local refs and HEAD remain unchanged",
+    "Remote main HEAD verified unchanged at 7f2961ccb808d9152e16a5eee428a09eddacd81d",
+    "Exactly five existing files updated for metadata/documentation; other 38 existing nonignored files remain byte-identical",
+    "Bootstrap, 12 existing negative-control tests, upstream provenance and focused scope/metadata/preservation checks passed",
+    "All existing dirty files backed up before edits; no commit, push, publication or organization permission change performed"
+  ]
+}

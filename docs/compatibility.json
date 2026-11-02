@@ -1,0 +1,463 @@
+{
+  "schema": "py-mermaid-compatibility/v1",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "status": "bootstrap",
+  "stages": [
+    "planned",
+    "inventoried",
+    "parser_verified",
+    "layout_verified",
+    "canvas_verified",
+    "release_accepted"
+  ],
+  "diagrams": [
+    {
+      "id": "c4",
+      "source": "packages/mermaid/src/diagrams/c4/c4Detector.ts",
+      "scope": "core",
+      "status": "inventoried",
+      "parser": "planned",
+      "layout": "planned",
+      "canvas": "planned",
+      "evidence": []
+    },
+    {
+      "id": "flowchart-v2",
+      "source": "packages/mermaid/src/diagrams/flowchart/flowDetector-v2.ts",
+      "scope": "core",
+      "status": "inventoried",
+      "parser": "planned",
+      "layout": "planned",
+      "canvas": "planned",
+      "evidence": []
+    },
+    {
+      "id": "agentflow",
+      "source": "packages/mermaid/src/diagrams/agentflow/afDetector.ts",
+      "scope": "core",
+      "status": "inventoried",
+      "parser": "planned",
+      "layout": "planned",
+      "canvas": "planned",
+      "evidence": []
+    },
+    {
+      "id": "swimlane",
+      "source": "packages/mermaid/src/diagrams/swimlanes/detector.ts",
+      "scope": "core",
+      "status": "inventoried",
+      "parser": "planned",
+      "layout": "planned",
+      "canvas": "planned",
+      "evidence": []
+    },
+    {
+      "id": "er",
+      "source": "packages/mermaid/src/diagrams/er/erDetector.ts",
+      "scope": "core",
+      "status": "inventoried",
+      "parser": "planned",
+      "layout": "planned",
+      "canvas": "planned",
+      "evidence": []
+    },
+    {
+      "id": "gitGraph",
+      "source": "packages/mermaid/src/diagrams/git/gitGraphDetector.ts",
+      "scope": "core",
+      "status": "inventoried",
+      "parser": "planned",
+      "layout": "planned",
+      "canvas": "planned",
+      "evidence": []
+    },
+    {
+      "id": "gantt",
+      "source": "packages/mermaid/src/diagrams/gantt/ganttDetector.ts",
+      "scope": "core",
+      "status": "inventoried",
+      "parser": "planned",
+      "layout": "planned",
+      "canvas": "planned",
+      "evidence": []
+    },
+    {
+      "id": "info",
+      "source": "packages/mermaid/src/diagrams/info/infoDetector.ts",
+      "scope": "core",
+      "status": "inventoried",
+      "parser": "planned",
+      "layout": "planned",
+      "canvas": "planned",
+      "evidence": []
+    },
+    {
+      "id": "pie",
+      "source": "packages/mermaid/src/diagrams/pie/pieDetector.ts",
+      "scope": "core",
+      "status": "inventoried",
+      "parser": "planned",
+      "layout": "planned",
+      "canvas": "planned",
+      "evidence": []
+    },
+    {
+      "id": "quadrantChart",
+      "source": "packages/mermaid/src/diagrams/quadrant-chart/quadrantDetector.ts",
+      "scope": "core",
+      "status": "inventoried",
+      "parser": "planned",
+      "layout": "planned",
+      "canvas": "planned",
+      "evidence": []
+    },
+    {
+      "id": "xychart",
+      "source": "packages/mermaid/src/diagrams/xychart/xychartDetector.ts",
+      "scope": "core",
+      "status": "inventoried",
+      "parser": "planned",
+      "layout": "planned",
+      "canvas": "planned",
+      "evidence": []
+    },
+    {
+      "id": "requirement",
+      "source": "packages/mermaid/src/diagrams/requirement/requirementDetector.ts",
+      "scope": "core",
+      "status": "inventoried",
+      "parser": "planned",
+      "layout": "planned",
+      "canvas": "planned",
+      "evidence": []
+    },
+    {
+      "id": "sequence",
+      "source": "packages/mermaid/src/diagrams/sequence/sequenceDetector.ts",
+      "scope": "core",
+      "status": "inventoried",
+      "parser": "planned",
+      "layout": "planned",
+      "canvas": "planned",
+      "evidence": []
+    },
+    {
+      "id": "classDiagram",
+      "source": "packages/mermaid/src/diagrams/class/classDetector-V2.ts",
+      "scope": "core",
+      "status": "inventoried",
+      "parser": "planned",
+      "layout": "planned",
+      "canvas": "planned",
+      "evidence": []
+    },
+    {
+      "id": "stateDiagram",
+      "source": "packages/mermaid/src/diagrams/state/stateDetector-V2.ts",
+      "scope": "core",
+      "status": "inventoried",
+      "parser": "planned",
+      "layout": "planned",
+      "canvas": "planned",
+      "evidence": []
+    },
+    {
+      "id": "journey",
+      "source": "packages/mermaid/src/diagrams/user-journey/journeyDetector.ts",
+      "scope": "core",
+      "status": "inventoried",
+      "parser": "planned",
+      "layout": "planned",
+      "canvas": "planned",
+      "evidence": []
+    },
+    {
+      "id": "flowchart-elk",
+      "source": "packages/mermaid/src/diagrams/flowchart/elk/detector.ts",
+      "scope": "core",
+      "status": "inventoried",
+      "parser": "planned",
+      "layout": "planned",
+      "canvas": "planned",
+      "evidence": []
+    },
+    {
+      "id": "timeline",
+      "source": "packages/mermaid/src/diagrams/timeline/detector.ts",
+      "scope": "core",
+      "status": "inventoried",
+      "parser": "planned",
+      "layout": "planned",
+      "canvas": "planned",
+      "evidence": []
+    },
+    {
+      "id": "mindmap",
+      "source": "packages/mermaid/src/diagrams/mindmap/detector.ts",
+      "scope": "core",
+      "status": "inventoried",
+      "parser": "planned",
+      "layout": "planned",
+      "canvas": "planned",
+      "evidence": []
+    },
+    {
+      "id": "kanban",
+      "source": "packages/mermaid/src/diagrams/kanban/detector.ts",
+      "scope": "core",
+      "status": "inventoried",
+      "parser": "planned",
+      "layout": "planned",
+      "canvas": "planned",
+      "evidence": []
+    },
+    {
+      "id": "sankey",
+      "source": "packages/mermaid/src/diagrams/sankey/sankeyDetector.ts",
+      "scope": "core",
+      "status": "inventoried",
+      "parser": "planned",
+      "layout": "planned",
+      "canvas": "planned",
+      "evidence": []
+    },
+    {
+      "id": "packet",
+      "source": "packages/mermaid/src/diagrams/packet/detector.ts",
+      "scope": "core",
+      "status": "inventoried",
+      "parser": "planned",
+      "layout": "planned",
+      "canvas": "planned",
+      "evidence": []
+    },
+    {
+      "id": "radar",
+      "source": "packages/mermaid/src/diagrams/radar/detector.ts",
+      "scope": "core",
+      "status": "inventoried",
+      "parser": "planned",
+      "layout": "planned",
+      "canvas": "planned",
+      "evidence": []
+    },
+    {
+      "id": "block",
+      "source": "packages/mermaid/src/diagrams/block/blockDetector.ts",
+      "scope": "core",
+      "status": "inventoried",
+      "parser": "planned",
+      "layout": "planned",
+      "canvas": "planned",
+      "evidence": []
+    },
+    {
+      "id": "treeView",
+      "source": "packages/mermaid/src/diagrams/treeView/detector.ts",
+      "scope": "core",
+      "status": "inventoried",
+      "parser": "planned",
+      "layout": "planned",
+      "canvas": "planned",
+      "evidence": []
+    },
+    {
+      "id": "architecture",
+      "source": "packages/mermaid/src/diagrams/architecture/architectureDetector.ts",
+      "scope": "core",
+      "status": "inventoried",
+      "parser": "planned",
+      "layout": "planned",
+      "canvas": "planned",
+      "evidence": []
+    },
+    {
+      "id": "eventmodeling",
+      "source": "packages/mermaid/src/diagrams/eventmodeling/detector.ts",
+      "scope": "core",
+      "status": "inventoried",
+      "parser": "planned",
+      "layout": "planned",
+      "canvas": "planned",
+      "evidence": []
+    },
+    {
+      "id": "ishikawa",
+      "source": "packages/mermaid/src/diagrams/ishikawa/ishikawaDetector.ts",
+      "scope": "core",
+      "status": "inventoried",
+      "parser": "planned",
+      "layout": "planned",
+      "canvas": "planned",
+      "evidence": []
+    },
+    {
+      "id": "venn",
+      "source": "packages/mermaid/src/diagrams/venn/vennDetector.ts",
+      "scope": "core",
+      "status": "inventoried",
+      "parser": "planned",
+      "layout": "planned",
+      "canvas": "planned",
+      "evidence": []
+    },
+    {
+      "id": "treemap",
+      "source": "packages/mermaid/src/diagrams/treemap/detector.ts",
+      "scope": "core",
+      "status": "inventoried",
+      "parser": "planned",
+      "layout": "planned",
+      "canvas": "planned",
+      "evidence": []
+    },
+    {
+      "id": "usecase",
+      "source": "packages/mermaid/src/diagrams/usecase/usecaseDetector.ts",
+      "scope": "core",
+      "status": "inventoried",
+      "parser": "planned",
+      "layout": "planned",
+      "canvas": "planned",
+      "evidence": []
+    },
+    {
+      "id": "wardley",
+      "source": "packages/mermaid/src/diagrams/wardley/wardleyDetector.ts",
+      "scope": "core",
+      "status": "inventoried",
+      "parser": "planned",
+      "layout": "planned",
+      "canvas": "planned",
+      "evidence": []
+    },
+    {
+      "id": "cynefin",
+      "source": "packages/mermaid/src/diagrams/cynefin/cynefinDetector.ts",
+      "scope": "core",
+      "status": "inventoried",
+      "parser": "planned",
+      "layout": "planned",
+      "canvas": "planned",
+      "evidence": []
+    },
+    {
+      "id": "railroad",
+      "source": "packages/mermaid/src/diagrams/railroad/railroadDetector.ts",
+      "scope": "core",
+      "status": "inventoried",
+      "parser": "planned",
+      "layout": "planned",
+      "canvas": "planned",
+      "evidence": []
+    },
+    {
+      "id": "railroadEbnf",
+      "source": "packages/mermaid/src/diagrams/railroad/ebnfDetector.ts",
+      "scope": "core",
+      "status": "inventoried",
+      "parser": "planned",
+      "layout": "planned",
+      "canvas": "planned",
+      "evidence": []
+    },
+    {
+      "id": "railroadAbnf",
+      "source": "packages/mermaid/src/diagrams/railroad/abnfDetector.ts",
+      "scope": "core",
+      "status": "inventoried",
+      "parser": "planned",
+      "layout": "planned",
+      "canvas": "planned",
+      "evidence": []
+    },
+    {
+      "id": "railroadPeg",
+      "source": "packages/mermaid/src/diagrams/railroad/pegDetector.ts",
+      "scope": "core",
+      "status": "inventoried",
+      "parser": "planned",
+      "layout": "planned",
+      "canvas": "planned",
+      "evidence": []
+    },
+    {
+      "id": "zenuml",
+      "scope": "external_plugin",
+      "source": "packages/mermaid-zenuml/src/detector.ts",
+      "status": "inventoried",
+      "parser": "planned",
+      "layout": "planned",
+      "canvas": "planned",
+      "evidence": []
+    }
+  ],
+  "crossCutting": [
+    {
+      "id": "preprocessing-frontmatter-directives",
+      "status": "planned",
+      "evidence": []
+    },
+    {
+      "id": "configuration-schema-defaults",
+      "status": "planned",
+      "evidence": []
+    },
+    {
+      "id": "themes-css-cascade",
+      "status": "planned",
+      "evidence": []
+    },
+    {
+      "id": "text-html-markdown-math",
+      "status": "planned",
+      "evidence": []
+    },
+    {
+      "id": "accessibility-metadata",
+      "status": "planned",
+      "evidence": []
+    },
+    {
+      "id": "links-interaction-security",
+      "status": "planned",
+      "evidence": []
+    },
+    {
+      "id": "icons-images-resource-policy",
+      "status": "planned",
+      "evidence": []
+    },
+    {
+      "id": "layout-engines-dagre-elk-tidy",
+      "status": "planned",
+      "evidence": []
+    },
+    {
+      "id": "handdrawn-random-seed",
+      "status": "planned",
+      "evidence": []
+    },
+    {
+      "id": "exports-scale-background",
+      "status": "planned",
+      "evidence": []
+    },
+    {
+      "id": "diagnostics-errors-utf16",
+      "status": "planned",
+      "evidence": []
+    },
+    {
+      "id": "threading-lifecycle",
+      "status": "planned",
+      "evidence": []
+    },
+    {
+      "id": "offline-deployment",
+      "status": "planned",
+      "evidence": []
+    }
+  ],
+  "limitation": "A source-file inventory is not a case/assertion ledger. All Mermaid Python parsing, layout and rendering remain planned."
+}

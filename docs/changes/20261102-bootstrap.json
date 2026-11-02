@@ -1,0 +1,304 @@
+{
+  "schema": "py-mermaid-change/v1",
+  "taskId": "20261102-bootstrap",
+  "baseCommit": "7f2961ccb808d9152e16a5eee428a09eddacd81d",
+  "startingStatus": "Clean clone: LICENSE and title-only README.md",
+  "objective": "Prepare complete Mermaid-to-Python port structure and startup documents using py-skia-canvas; add Canvas README ecosystem entry",
+  "kind": "bootstrap-tooling-documentation",
+  "acceptanceCriteria": [
+    "Pinned upstream source and complete detector/file inventory are independently reproducible",
+    "Startup, plan, API/spec compatibility, task and test/release documents are linked",
+    "Bootstrap checks detect denominator/version/hash/fixture/document corruption",
+    "Scaffold wheel builds and imports outside repository without Node; no rendering claim",
+    "Actual Canvas dependency sample executes with fresh GPU and CPU outputs",
+    "Canvas README ecosystem entry is bilingual; existing modifications preserved"
+  ],
+  "authorization": "Download, local scaffold/docs/tooling/example work and Canvas README edits. No commit/push/release requested.",
+  "sourceSha256": {
+    ".gitattributes": "12947ab11783de1318a3aa111c1fc7efd4a7992096f665186e266f19e44d9560",
+    ".github/workflows/validate.yml": "67512a6d2ef3f7d2edd8150c55cfb079223fa03c0a4bf896ca10532a9c6daa73",
+    ".gitignore": "d91599ae38f089faee96df60c294ee6a07d53ea8cd90341e48651dc999865c6f",
+    "AGENTS.md": "f6bda37343625db6fe859d09aeeb59c06d1e3836f6fa7e623bde19d599157762",
+    "LICENSE": "d925ca50a75467a0a8d28c4f7236922346b52c782cd80840d0aec258eaf4f870",
+    "README.en.md": "b52c064eb978594e52076f325507b9357e956ad9949be0ef3ede8a748fcddf6b",
+    "README.md": "2576854ab1d7781e498e9333a74736707c66b2eab82ef2beca1e66ec0a0819b6",
+    "THIRD_PARTY_NOTICES.md": "cb00e13fceade19cf9a84c527b6c7badcd195829b7fe96e189613f1ccbbf1fd8",
+    "docs/API_COMPATIBILITY.md": "04f8c17dc2524332d28b30c0b189a3d1c78b43715a8821e5e645ab12b8a999a5",
+    "docs/IMPLEMENTATION_PLAN.md": "a4a30e5e1139f39db790335d19423d2e529cc552fc470a6a296a44ee6c8b17d6",
+    "docs/NEW_SESSION.md": "416bd9f83eeba391175a6327d58517776151e953d91672cfc5b4dfe32d90540b",
+    "docs/RELEASE_STATUS.md": "ebadc83d75a6f514077ec04c90302763a9429538737447c81c3ae0f689dd9436",
+    "docs/TASKS.md": "c18930d7474c28c9bdfffff4dee45ebfea5140206f89861a3f41cfab7ddf12a7",
+    "docs/TEST_AND_RELEASE.md": "7afa30c79f8335052c0d736c0b31eabf98a51f49d4f80d3da7c054f5d6476bb7",
+    "docs/assets/canvas-smoke.png": "228637b81706b7ec37dafcc1ea1718bc26e35c47d8cc33a2e74b107f413d2647",
+    "docs/assets/manifest.json": "7830469bea43cfc0fc7f87089595e76434490e007c6e86c512a50a69b8485251",
+    "docs/compatibility.json": "98a5dbe15d403b74b943982a549b8964200ceb5da853dc334dbf7287d8e51eb0",
+    "examples/README.md": "58474392d2cbb08c393b581abcd9b71518612e43c39fd90167e2012a9da26d85",
+    "examples/canvas_smoke.py": "b894f858e83d0e7e1d2123df713aea024f48db8da7d20b9f622f09ed7c2575a6",
+    "pyproject.toml": "ca7306c6de629ed91fd59e9ce8071aff2571157a765f3ea7a783018050a904e6",
+    "references/README.md": "17ccc4d154709485bb74113ec095ef1a4a288d69c1b451420d144c2554194281",
+    "references/licenses/mermaid-LICENSE": "ec9fb67dcb25eccc416ed56e1aab819222c805a2a4bfe4cb19e7556bf2ffde80",
+    "references/spec-inventory.json": "ee27c957a6cd7b0457dd3f60713f930a319368769585009119adf3e0ae83073f",
+    "references/upstream.lock.json": "1c7fae733904788d26816f4157443883c8a24afbba69b256311b011aaa8fb2bf",
+    "scripts/upstream.py": "5aeac1fd00a3dab6050dd0d01790432835beab8b36a5c086b1e10f8e93dfe9eb",
+    "scripts/validate_bootstrap.py": "a068260e7fa91a53e35761ee4fc9ca789f5f9f9f023dc072392d61ae75742a45",
+    "src/py_mermaid/__init__.py": "1d77306db799e436aa2998781c571be6691ed28cb6238397affc19d9722e8db2",
+    "src/py_mermaid/config/__init__.py": "30d048d1a0f476166358c50aaebdd04035bfdcb57308050199bfcfb23ad648a4",
+    "src/py_mermaid/diagrams/__init__.py": "9154145bccf3c978abe2ae3b6934ba969a756e9a6e77bdf2dbf3dbfd373cb619",
+    "src/py_mermaid/layout/__init__.py": "6d1ecc869efa4cd9a7edd97fbd986cb719aa5509366da8775096b1fbd3074add",
+    "src/py_mermaid/model/__init__.py": "dc03b5bae51198aa7a4252ce4f65fb4717b4d1c241f1fed23dd0506f00743b3c",
+    "src/py_mermaid/parsing/__init__.py": "b65850e74fbc18c01bb8a8be0cc07c2b645a18c9e5a0796827f51a038c2ccd76",
+    "src/py_mermaid/py.typed": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/py_mermaid/rendering/__init__.py": "ed89819539fa2b113c92aa2530d8598d7a1ba665a8127ab2c1641e6445415573",
+    "src/py_mermaid/rendering/skia/__init__.py": "5ae5baff33905f6d19a3fe393d0cc071ab9d4072fd838ee931d074d552b969bf",
+    "tests/README.md": "563fd8df4cd6243c66346ba47b9d254b21552ab5c1effffb07c2f871dcf3a00c",
+    "tests/bootstrap/test_bootstrap.py": "997ec02823705b67a7a7d8cb37a6fccafccf0e97f699d669d51c9c877b003660",
+    "tests/fixtures/README.md": "1e939759d909a441055faf260f5c41c1335fa8f249d704ff8711a797dce92ee9",
+    "tests/fixtures/cases.json": "c4ef0e112388885a45bf7f2d19b130eac49d6427043500bcb40295a2704de66f",
+    "tests/fixtures/flowchart-minimal.mmd": "9ddf4d8df3da5cd67d76d49a806719ee82b32a4a1081e1e6e14a5f176015e74b",
+    "tools/oracle/README.md": "e1b7a2d2c48b58264e7e10a919680b6748938e4f47db7ea5f6f6847a241947eb"
+  },
+  "commands": [
+    {
+      "id": "bootstrap",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "scripts/validate_bootstrap.py",
+        "--out",
+        "C:\\code\\py-mermaid\\test-runs\\20261102-bootstrap-final-01\\docs.json"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261102-bootstrap-final-01/bootstrap.log",
+      "logSha256": "7744417c4b9d619e021b52e37ae1a1dc53d5c32e4769e16e15f30f3b8c8fac11"
+    },
+    {
+      "id": "unit",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests/bootstrap",
+        "-v"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261102-bootstrap-final-01/unit.log",
+      "logSha256": "4fc73154a429aa67dc12e756f33de46147e4cc3db68d48dd222e091be2dfbf49"
+    },
+    {
+      "id": "upstream",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "scripts/upstream.py",
+        "check"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261102-bootstrap-final-01/upstream.log",
+      "logSha256": "e177513c6db5afbcc9524be08795930fb8d5edc0c47ba46d8051ee7859418089"
+    },
+    {
+      "id": "diff",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261102-bootstrap-final-01/diff.log",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "C:/venvs/pymmd-20261102/Scripts/python.exe",
+        "examples/canvas_smoke.py",
+        "--backend",
+        "gpu",
+        "--out",
+        "test-runs/20261102-canvas-gpu-01"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "C:/venvs/pymmd-20261102/Scripts/python.exe",
+        "examples/canvas_smoke.py",
+        "--backend",
+        "cpu",
+        "--out",
+        "test-runs/20261102-canvas-cpu-01"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "C:/venvs/pymmd-20261102/Scripts/python.exe",
+        "-m",
+        "build",
+        "--wheel",
+        "--no-isolation",
+        "--outdir",
+        "dist/bootstrap-01"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "C:/venvs/pymmd-install-20261102/Scripts/python.exe",
+        "-m",
+        "pip",
+        "install",
+        "--index-url",
+        "https://pypi.org/simple/",
+        "--only-binary=:all:",
+        "C:\\code\\py-mermaid\\dist\\bootstrap-01\\py_mermaid-0.0.1a0-py3-none-any.whl"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": "python -I test-runs/20261102-isolated-package-01/probe.py (absolute paths, external cwd, PATH unset)",
+      "exitCode": 1,
+      "reason": "Probe incorrectly assumed PATH key exists; original failure retained"
+    },
+    {
+      "command": [
+        "C:/venvs/pymmd-install-20261102/Scripts/python.exe",
+        "-I",
+        "C:\\code\\py-mermaid\\test-runs\\20261102-isolated-package-02\\probe.py",
+        "C:\\code\\py-mermaid",
+        "C:\\code\\py-mermaid\\test-runs\\20261102-isolated-package-02\\report.json",
+        "C:\\code\\py-mermaid\\dist\\bootstrap-01\\py_mermaid-0.0.1a0-py3-none-any.whl"
+      ],
+      "exitCode": 0,
+      "cwd": "C:/Users/Admin/AppData/Local/Temp",
+      "environment": {
+        "PATH": "unset"
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "path": "test-runs/20261102-bootstrap-final-01/run.json",
+      "sha256": "6dda6d9b42a03f35340b1009c1f61391fbecda2b500b3a35fda0bc978f147ba1"
+    },
+    {
+      "path": "test-runs/20261102-bootstrap-final-01/docs.json",
+      "sha256": "7744417c4b9d619e021b52e37ae1a1dc53d5c32e4769e16e15f30f3b8c8fac11"
+    },
+    {
+      "path": "test-runs/20261102-canvas-gpu-01/result.json",
+      "sha256": "56a22fe068273f5abf78c6986b344c94c8c9285f7f46d1806cf5b353e8a5a615"
+    },
+    {
+      "path": "test-runs/20261102-canvas-cpu-01/result.json",
+      "sha256": "b909d3704529e96d06a4c7968fbe6205d902463c50a9e5e2abde7ad02da2e6c9"
+    },
+    {
+      "path": "test-runs/20261102-isolated-package-01/failure.json",
+      "sha256": "82900355fd05318bb6f8e9627a5068184b48b9e3fb523be6ca10d9e5f1a81a04"
+    },
+    {
+      "path": "test-runs/20261102-isolated-package-02/report.json",
+      "sha256": "b9b1d654fe2f955e070bf6d05aea1c84da139cb0a6898fb9af896d972b822b7b"
+    },
+    {
+      "path": "dist/bootstrap-01/py_mermaid-0.0.1a0-py3-none-any.whl",
+      "sha256": "8b48962da2adbf709715157bf288cbae7a38b07bd2e2d27c341b9678049cb507"
+    }
+  ],
+  "documentationReview": [
+    {
+      "topic": "entry",
+      "status": "updated",
+      "paths": [
+        "README.md",
+        "README.en.md",
+        "AGENTS.md",
+        "docs/NEW_SESSION.md"
+      ],
+      "reason": "Explicit bootstrap state, full migration target, dependency/installation and next-session instructions"
+    },
+    {
+      "topic": "api-usage-development",
+      "status": "updated",
+      "paths": [
+        "docs/IMPLEMENTATION_PLAN.md",
+        "docs/API_COMPATIBILITY.md",
+        "docs/TASKS.md",
+        "docs/TEST_AND_RELEASE.md",
+        "tools/oracle/README.md"
+      ],
+      "reason": "Define parser/layout/Canvas boundaries, full source denominator and future host/oracle/acceptance work; APIs remain design only"
+    },
+    {
+      "topic": "demos-images",
+      "status": "updated",
+      "paths": [
+        "examples/canvas_smoke.py",
+        "examples/README.md",
+        "docs/assets/manifest.json",
+        "docs/assets/canvas-smoke.png"
+      ],
+      "reason": "Run actual Windows GPU and CPU dependency examples and inspect unedited originals; embedded GPU image has source and output hashes"
+    },
+    {
+      "topic": "release",
+      "status": "updated",
+      "paths": [
+        "docs/RELEASE_STATUS.md",
+        "pyproject.toml",
+        "THIRD_PARTY_NOTICES.md"
+      ],
+      "reason": "Local scaffold packaging only, pin supported dependency scope, retain upstream licensing and list unverified rendering/platform/release work"
+    }
+  ],
+  "limitations": [
+    "No Mermaid parse/layout/render implementation",
+    "No individual-spec assertion ledger or official JS oracle yet",
+    "No Mermaid platform/render/release acceptance",
+    "Linux and no-loader not executed in this task",
+    "Canvas engine state and smoke sample are not native GPU trace or full API acceptance",
+    "Remote CI and publication not executed",
+    "Isolated-import probe first failed on unset PATH; corrected in a new run, original retained",
+    "Canvas whole-tree git diff --check reports existing CRLF whitespace in four user-modified docs; README-only diff check passes, other pre-task dirty diff bytes verified unchanged."
+  ],
+  "nextStep": "M1 spec and host audit, M2 official JS oracle, M3 flowchart vertical slice",
+  "environment": {
+    "python": "CPython 3.13.15",
+    "platform": "Windows 11 AMD64",
+    "canvas": "0.1.0a18",
+    "upstream": "12.2.0 / 1fb7869866dd619168d840291c9c54b4f129758b",
+    "gpu": "NVIDIA RTX 5080 / Vulkan / NvidiaProprietary 595.95",
+    "nativeSha256": "0bf11b1ce9026553ef7a65c1cc1806e56eb641c33eca30051c85f9e81ac2b9fc"
+  },
+  "acceptanceResults": [
+    "Full startup and source boundaries prepared",
+    "12 bootstrap and negative-control tests passed",
+    "Real source inventory reconstructed and verified",
+    "Scaffold wheel built and checked in fresh isolated environment",
+    "GPU and explicit CPU Canvas dependency samples passed and visually inspected",
+    "Bilingual Canvas ecosystem entry added; non-README dirty diff verified unchanged"
+  ],
+  "status": "bootstrap_scoped_verified",
+  "relatedWorkspace": {
+    "root": "C:/code/py-skia-canvas",
+    "changedByTask": [
+      "README.md",
+      "README.en.md"
+    ],
+    "evidence": [
+      {
+        "path": "C:/code/py-skia-canvas/test-runs/20261102-mermaid-ecosystem-final-01/docs.json",
+        "sha256": "bd9726e0fa1382d7b87ad1c7ea629680209a40d59f8ec804d4ef4a5064c9215d"
+      },
+      {
+        "path": "C:/code/py-skia-canvas/test-runs/20261102-mermaid-ecosystem-review-01/review.json",
+        "sha256": "7508276be6fa6030b0fb6370e4c5b992f5a7a31b083fee9f93d1bb354c7d134a"
+      },
+      {
+        "path": "C:\\code\\py-skia-canvas\\test-runs\\20261102-mermaid-ecosystem-final-02\\scope-review.json",
+        "sha256": "e0c69f2b9302b3b614d12eccceca8cec7cd84290165a2353abd1d2d4bbcb7584"
+      }
+    ]
+  },
+  "previousEvidenceCheck": "test-runs/20261102-bootstrap-final-01/evidence-check.json (superseded only by related-workspace whitespace review metadata)"
+}

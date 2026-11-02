@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools==84.2.1", "wheel==0.48.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "py-mermaid"
+version = "0.0.1a0"
+description = "Python port of Mermaid syntax and rendering, built on py-skia-canvas (bootstrap stage)"
+readme = "README.md"
+requires-python = ">=3.13,<3.14"
+license = "MIT"
+license-files = ["LICENSE"]
+dependencies = ["py-skia-canvas==0.1.0a18"]
+classifiers = [
+  "Development Status :: 1 - Planning",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Multimedia :: Graphics",
+]
+
+[project.optional-dependencies]
+dev = ["build==1.6.1", "setuptools==84.2.1", "wheel==0.48.0"]
+
+[project.urls]
+Repository = "https://github.com/py-VisActor/py-mermaid"
+Documentation = "https://github.com/py-VisActor/py-mermaid/blob/main/docs/NEW_SESSION.md"
+Issues = "https://github.com/py-VisActor/py-mermaid/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+py_mermaid = ["py.typed"]

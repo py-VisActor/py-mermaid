@@ -1,0 +1,25 @@
+{
+  "schema": "py-mermaid-example-assets/v1",
+  "scope": "Canvas dependency only; no Mermaid rendering",
+  "sourceRun": "test-runs/20261102-canvas-gpu-01",
+  "sourceReportSha256": "56a22fe068273f5abf78c6986b344c94c8c9285f7f46d1806cf5b353e8a5a615",
+  "canvasVersion": "0.1.0a18",
+  "script": "examples/canvas_smoke.py",
+  "scriptSha256": "b894f858e83d0e7e1d2123df713aea024f48db8da7d20b9f622f09ed7c2575a6",
+  "image": "canvas-smoke.png",
+  "sha256": "228637b81706b7ec37dafcc1ea1718bc26e35c47d8cc33a2e74b107f413d2647",
+  "pixels": [
+    360,
+    140
+  ],
+  "engine": {
+    "renderer": "GPU",
+    "api": "Vulkan",
+    "device": "Discrete GPU (NVIDIA GeForce RTX 5080)",
+    "driver": "NvidiaProprietary (595.95)",
+    "threads": 20,
+    "textContrast": 0.0,
+    "textGamma": 1.4
+  },
+  "visualReview": "Blue rectangle and complete readable label within 360x140, white background; inspected without image editing."
+}

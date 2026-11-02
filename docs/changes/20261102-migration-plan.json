@@ -1,0 +1,405 @@
+{
+  "schema": "py-mermaid-change/v1",
+  "taskId": "20261102-migration-plan",
+  "kind": "planning-documentation",
+  "baseCommit": "7f2961ccb808d9152e16a5eee428a09eddacd81d",
+  "startingStatus": " M README.md\n?? .gitattributes\n?? .github/\n?? .gitignore\n?? AGENTS.md\n?? README.en.md\n?? THIRD_PARTY_NOTICES.md\n?? docs/\n?? examples/\n?? pyproject.toml\n?? references/\n?? scripts/\n?? src/\n?? tests/\n?? tools/\n",
+  "objective": "Read the project documentation and produce a complete source-grounded Mermaid-to-Python migration plan, task dependencies and acceptance gates.",
+  "baseline": {
+    "mermaid": "12.2.0",
+    "commit": "1fb7869866dd619168d840291c9c54b4f129758b",
+    "canvas": "0.1.0a18"
+  },
+  "authorization": "Local documentation review and migration planning. No product implementation, commit, push or publication requested.",
+  "acceptanceCriteria": [
+    "All required project documents and source lock reviewed; existing dirty files preserved before edits",
+    "Plan covers all 37 core detectors plus ZenUML, diagnostics and all 13 cross-cutting areas",
+    "M0-M8 tasks have dependencies, concrete deliverables and acceptance gates",
+    "Pinned-source default ELK, runtime detector order, inline-test gaps and additional layout/theme dependencies are reflected",
+    "Bilingual entry points and relevant Chinese contracts/source/oracle documentation agree; no implementation or compatibility status inflation",
+    "Bootstrap, existing negative controls, upstream provenance and documentation consistency checks pass against final files"
+  ],
+  "status": "planning_documentation_scoped_verified",
+  "changedPaths": [
+    "README.en.md",
+    "README.md",
+    "docs/API_COMPATIBILITY.md",
+    "docs/IMPLEMENTATION_PLAN.md",
+    "docs/NEW_SESSION.md",
+    "docs/RELEASE_STATUS.md",
+    "docs/TASKS.md",
+    "references/README.md",
+    "tools/oracle/README.md"
+  ],
+  "sourceSha256": {
+    ".gitattributes": "12947ab11783de1318a3aa111c1fc7efd4a7992096f665186e266f19e44d9560",
+    ".github/workflows/validate.yml": "67512a6d2ef3f7d2edd8150c55cfb079223fa03c0a4bf896ca10532a9c6daa73",
+    ".gitignore": "d91599ae38f089faee96df60c294ee6a07d53ea8cd90341e48651dc999865c6f",
+    "AGENTS.md": "f6bda37343625db6fe859d09aeeb59c06d1e3836f6fa7e623bde19d599157762",
+    "LICENSE": "d925ca50a75467a0a8d28c4f7236922346b52c782cd80840d0aec258eaf4f870",
+    "README.en.md": "0a96492241558e62a171e0141073be865d185a5889bbfc893667a652fc603165",
+    "README.md": "d950d5fb206ff9c38e0a4cd20385451c652bf214473aa058c97040c9ed1c688f",
+    "THIRD_PARTY_NOTICES.md": "cb00e13fceade19cf9a84c527b6c7badcd195829b7fe96e189613f1ccbbf1fd8",
+    "docs/API_COMPATIBILITY.md": "2303c4abebb6541751eb39758e0981bbd7b49472a16b9835e0879c895c24a87f",
+    "docs/IMPLEMENTATION_PLAN.md": "8f00293eb65a26fd17f856edebdb4c2b667fa3ea74e79c56a1aee07630b0946d",
+    "docs/NEW_SESSION.md": "99a1e03624d9f881185200ec0afe5119f23bc8514091064bb3841c1f8ca2048d",
+    "docs/RELEASE_STATUS.md": "6ed234fd53258c0b5da8c92fe2e9f091cc59805129b735041281094dbb62dcec",
+    "docs/TASKS.md": "ab47c316379fcbdbedc15aa9493b3c9cb4c483d7cd2f34c138de81362a9fe6e6",
+    "docs/TEST_AND_RELEASE.md": "7afa30c79f8335052c0d736c0b31eabf98a51f49d4f80d3da7c054f5d6476bb7",
+    "docs/assets/canvas-smoke.png": "228637b81706b7ec37dafcc1ea1718bc26e35c47d8cc33a2e74b107f413d2647",
+    "docs/assets/manifest.json": "7830469bea43cfc0fc7f87089595e76434490e007c6e86c512a50a69b8485251",
+    "docs/changes/20261102-bootstrap.json": "9cad845d4153b3b24938c62e4470baee7337754d919f25e043c69277c1df724a",
+    "docs/compatibility.json": "98a5dbe15d403b74b943982a549b8964200ceb5da853dc334dbf7287d8e51eb0",
+    "examples/README.md": "58474392d2cbb08c393b581abcd9b71518612e43c39fd90167e2012a9da26d85",
+    "examples/canvas_smoke.py": "b894f858e83d0e7e1d2123df713aea024f48db8da7d20b9f622f09ed7c2575a6",
+    "pyproject.toml": "ca7306c6de629ed91fd59e9ce8071aff2571157a765f3ea7a783018050a904e6",
+    "references/README.md": "f0e1de2d48811e968266a5ac42780f888a6f445eacdf57ee7353fb340bbf15bf",
+    "references/licenses/mermaid-LICENSE": "ec9fb67dcb25eccc416ed56e1aab819222c805a2a4bfe4cb19e7556bf2ffde80",
+    "references/spec-inventory.json": "ee27c957a6cd7b0457dd3f60713f930a319368769585009119adf3e0ae83073f",
+    "references/upstream.lock.json": "1c7fae733904788d26816f4157443883c8a24afbba69b256311b011aaa8fb2bf",
+    "scripts/upstream.py": "5aeac1fd00a3dab6050dd0d01790432835beab8b36a5c086b1e10f8e93dfe9eb",
+    "scripts/validate_bootstrap.py": "a068260e7fa91a53e35761ee4fc9ca789f5f9f9f023dc072392d61ae75742a45",
+    "src/py_mermaid/__init__.py": "1d77306db799e436aa2998781c571be6691ed28cb6238397affc19d9722e8db2",
+    "src/py_mermaid/config/__init__.py": "30d048d1a0f476166358c50aaebdd04035bfdcb57308050199bfcfb23ad648a4",
+    "src/py_mermaid/diagrams/__init__.py": "9154145bccf3c978abe2ae3b6934ba969a756e9a6e77bdf2dbf3dbfd373cb619",
+    "src/py_mermaid/layout/__init__.py": "6d1ecc869efa4cd9a7edd97fbd986cb719aa5509366da8775096b1fbd3074add",
+    "src/py_mermaid/model/__init__.py": "dc03b5bae51198aa7a4252ce4f65fb4717b4d1c241f1fed23dd0506f00743b3c",
+    "src/py_mermaid/parsing/__init__.py": "b65850e74fbc18c01bb8a8be0cc07c2b645a18c9e5a0796827f51a038c2ccd76",
+    "src/py_mermaid/py.typed": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/py_mermaid/rendering/__init__.py": "ed89819539fa2b113c92aa2530d8598d7a1ba665a8127ab2c1641e6445415573",
+    "src/py_mermaid/rendering/skia/__init__.py": "5ae5baff33905f6d19a3fe393d0cc071ab9d4072fd838ee931d074d552b969bf",
+    "tests/README.md": "563fd8df4cd6243c66346ba47b9d254b21552ab5c1effffb07c2f871dcf3a00c",
+    "tests/bootstrap/test_bootstrap.py": "997ec02823705b67a7a7d8cb37a6fccafccf0e97f699d669d51c9c877b003660",
+    "tests/fixtures/README.md": "1e939759d909a441055faf260f5c41c1335fa8f249d704ff8711a797dce92ee9",
+    "tests/fixtures/cases.json": "c4ef0e112388885a45bf7f2d19b130eac49d6427043500bcb40295a2704de66f",
+    "tests/fixtures/flowchart-minimal.mmd": "9ddf4d8df3da5cd67d76d49a806719ee82b32a4a1081e1e6e14a5f176015e74b",
+    "tools/oracle/README.md": "0b5653686ef7031d09a6c4dca577e0295cc45edc7c0f5a27487dc6548b1e05ca"
+  },
+  "commands": [
+    {
+      "id": "bootstrap-before",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "scripts/validate_bootstrap.py",
+        "--out",
+        "C:\\code\\py-mermaid\\test-runs\\20261102-migration-plan-review-01\\bootstrap-before.json"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261102-migration-plan-review-01/bootstrap-before.log",
+      "logSha256": "7744417c4b9d619e021b52e37ae1a1dc53d5c32e4769e16e15f30f3b8c8fac11"
+    },
+    {
+      "id": "bootstrap-tests-before",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests/bootstrap",
+        "-v"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261102-migration-plan-review-01/bootstrap-tests-before.log",
+      "logSha256": "68766d3c3c1316e97df6f2b234134c5f9d25d47d47a3421cd97ec5bbf6387250"
+    },
+    {
+      "id": "upstream-fetch",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "scripts/upstream.py",
+        "fetch"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261102-migration-plan-review-01/upstream-fetch.log",
+      "logSha256": "bbf4fdaaffb239104b5b73011299564327ef34a0f316464112d5d902be5421c2"
+    },
+    {
+      "id": "upstream-check",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "scripts/upstream.py",
+        "check"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261102-migration-plan-review-01/upstream-check.log",
+      "logSha256": "e177513c6db5afbcc9524be08795930fb8d5edc0c47ba46d8051ee7859418089"
+    },
+    {
+      "id": "canvas-auto",
+      "command": [
+        "C:/venvs/pymmd-20261102/Scripts/python.exe",
+        "examples/canvas_smoke.py",
+        "--backend",
+        "auto",
+        "--out",
+        "C:\\code\\py-mermaid\\test-runs\\20261102-migration-plan-review-01\\canvas-auto"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261102-migration-plan-review-01/canvas-auto.log",
+      "logSha256": "a4532592121ec1ca2a85dc8e47ea09564c6618ee29e1bb015ae054e59f29aae0"
+    },
+    {
+      "id": "canvas-cpu",
+      "command": [
+        "C:/venvs/pymmd-20261102/Scripts/python.exe",
+        "examples/canvas_smoke.py",
+        "--backend",
+        "cpu",
+        "--out",
+        "C:\\code\\py-mermaid\\test-runs\\20261102-migration-plan-review-01\\canvas-cpu"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261102-migration-plan-review-01/canvas-cpu.log",
+      "logSha256": "b909d3704529e96d06a4c7968fbe6205d902463c50a9e5e2abde7ad02da2e6c9"
+    },
+    {
+      "id": "canvas-gpu",
+      "command": [
+        "C:/venvs/pymmd-20261102/Scripts/python.exe",
+        "examples/canvas_smoke.py",
+        "--backend",
+        "gpu",
+        "--out",
+        "C:\\code\\py-mermaid\\test-runs\\20261102-migration-plan-review-01\\canvas-gpu"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261102-migration-plan-review-01/canvas-gpu.log",
+      "logSha256": "56a22fe068273f5abf78c6986b344c94c8c9285f7f46d1806cf5b353e8a5a615"
+    },
+    {
+      "id": "bootstrap-after",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "scripts/validate_bootstrap.py",
+        "--out",
+        "C:\\code\\py-mermaid\\test-runs\\20261102-migration-plan-review-01\\bootstrap-after.json"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261102-migration-plan-review-01/bootstrap-after.log",
+      "logSha256": "7744417c4b9d619e021b52e37ae1a1dc53d5c32e4769e16e15f30f3b8c8fac11"
+    },
+    {
+      "id": "bootstrap-tests-after",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests/bootstrap",
+        "-v"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261102-migration-plan-review-01/bootstrap-tests-after.log",
+      "logSha256": "68766d3c3c1316e97df6f2b234134c5f9d25d47d47a3421cd97ec5bbf6387250"
+    },
+    {
+      "id": "plan-review",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "C:\\code\\py-mermaid\\test-runs\\20261102-migration-plan-review-01\\verify_plan.py"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261102-migration-plan-review-01/plan-review.log",
+      "logSha256": "025fa7fc76690c1194bf3c626cd515d8d316c9682de42e9b237457dfb83a309a"
+    },
+    {
+      "id": "upstream-check-after",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "scripts/upstream.py",
+        "check"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261102-migration-plan-review-01/upstream-check-after.log",
+      "logSha256": "e177513c6db5afbcc9524be08795930fb8d5edc0c47ba46d8051ee7859418089"
+    },
+    {
+      "id": "diff-check",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261102-migration-plan-review-01/diff-check.log",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "test-runs/20261102-migration-plan-review-01/starting-snapshot.json",
+      "sha256": "464682a3375152fa0f2f2a519c6a657938cd8c6eab66effaf08280c2967b37f1"
+    },
+    {
+      "path": "test-runs/20261102-migration-plan-review-01/starting-status.txt",
+      "sha256": "1cc7014e05231492563610a2d513faef3e939c488725c32d6fbadf8ccc40ec83"
+    },
+    {
+      "path": "test-runs/20261102-migration-plan-review-01/starting-diff.patch",
+      "sha256": "c842d446e358bd36d929467f025b6b70cfd1956f42c9af6713d2c755dea049b3"
+    },
+    {
+      "path": "test-runs/20261102-migration-plan-review-01/source-audit.json",
+      "sha256": "37e1479a4c18061b98e11280d0a2a6f069e268b3dfe69676d7848353fe49ec3b"
+    },
+    {
+      "path": "test-runs/20261102-migration-plan-review-01/commands-before.json",
+      "sha256": "45c2cf13577ba971ddad57c0d5b1b36266733dc2a2224ee127fa8a28171c351b"
+    },
+    {
+      "path": "test-runs/20261102-migration-plan-review-01/commands-canvas.json",
+      "sha256": "04f0adf6701a49b9a6399ad7d8a70883e8eded6db8506438ea80b0abcc2b9315"
+    },
+    {
+      "path": "test-runs/20261102-migration-plan-review-01/commands-after.json",
+      "sha256": "62e008933088cd57a9fb6e9e4669084af2e0bcf0b542f40242faad8e0f391b03"
+    },
+    {
+      "path": "test-runs/20261102-migration-plan-review-01/bootstrap-before.json",
+      "sha256": "7744417c4b9d619e021b52e37ae1a1dc53d5c32e4769e16e15f30f3b8c8fac11"
+    },
+    {
+      "path": "test-runs/20261102-migration-plan-review-01/bootstrap-after.json",
+      "sha256": "7744417c4b9d619e021b52e37ae1a1dc53d5c32e4769e16e15f30f3b8c8fac11"
+    },
+    {
+      "path": "test-runs/20261102-migration-plan-review-01/verify_plan.py",
+      "sha256": "9afd388edfcb1c55cc632bb0075aa40fcb29502f3b62366b195dad7699ab0944"
+    },
+    {
+      "path": "test-runs/20261102-migration-plan-review-01/plan-review.json",
+      "sha256": "025fa7fc76690c1194bf3c626cd515d8d316c9682de42e9b237457dfb83a309a"
+    },
+    {
+      "path": "test-runs/20261102-migration-plan-review-01/canvas-auto/result.json",
+      "sha256": "a4532592121ec1ca2a85dc8e47ea09564c6618ee29e1bb015ae054e59f29aae0"
+    },
+    {
+      "path": "test-runs/20261102-migration-plan-review-01/canvas-auto/canvas.png",
+      "sha256": "228637b81706b7ec37dafcc1ea1718bc26e35c47d8cc33a2e74b107f413d2647"
+    },
+    {
+      "path": "test-runs/20261102-migration-plan-review-01/canvas-cpu/result.json",
+      "sha256": "b909d3704529e96d06a4c7968fbe6205d902463c50a9e5e2abde7ad02da2e6c9"
+    },
+    {
+      "path": "test-runs/20261102-migration-plan-review-01/canvas-cpu/canvas.png",
+      "sha256": "e38b1f822bea14fcca13582a6335705bb6e63fa2d03601a29b329302de8218d0"
+    },
+    {
+      "path": "test-runs/20261102-migration-plan-review-01/canvas-gpu/result.json",
+      "sha256": "56a22fe068273f5abf78c6986b344c94c8c9285f7f46d1806cf5b353e8a5a615"
+    },
+    {
+      "path": "test-runs/20261102-migration-plan-review-01/canvas-gpu/canvas.png",
+      "sha256": "228637b81706b7ec37dafcc1ea1718bc26e35c47d8cc33a2e74b107f413d2647"
+    }
+  ],
+  "documentationReview": [
+    {
+      "topic": "entry",
+      "status": "updated",
+      "paths": [
+        "README.md",
+        "README.en.md",
+        "docs/NEW_SESSION.md"
+      ],
+      "reason": "Link the complete migration roadmap and clarify default ELK and current unimplemented scope."
+    },
+    {
+      "topic": "implementation-and-tasks",
+      "status": "updated",
+      "paths": [
+        "docs/IMPLEMENTATION_PLAN.md",
+        "docs/TASKS.md"
+      ],
+      "reason": "Expand M0-M8 into full scope, source-derived risks, architecture, work packages, dependencies, deliverables, gates, decision points and next-batch acceptance."
+    },
+    {
+      "topic": "api-and-host",
+      "status": "updated",
+      "paths": [
+        "docs/API_COMPATIBILITY.md"
+      ],
+      "reason": "Record the pinned default ELK and actual detector-order contract and inline-test denominator gap; no public API implementation or finalized signature added."
+    },
+    {
+      "topic": "source-and-oracle",
+      "status": "updated",
+      "paths": [
+        "references/README.md",
+        "tools/oracle/README.md"
+      ],
+      "reason": "Separate inventory import order from runtime registration and add inline-test discovery, artifact identity, full/tiny, seed and test-only geometry constraints."
+    },
+    {
+      "topic": "test-and-release-contract",
+      "status": "reviewed-no-change",
+      "paths": [
+        "docs/TEST_AND_RELEASE.md",
+        "tests/README.md",
+        "tests/fixtures/README.md"
+      ],
+      "reason": "Existing layered difference reporting, raw artifacts, negative controls, fresh candidate, owner/backend/font/deployment and release gates remain valid; task ordering is expanded in TASKS without changing acceptance thresholds."
+    },
+    {
+      "topic": "demos-and-images",
+      "status": "reviewed-no-change",
+      "paths": [
+        "examples/canvas_smoke.py",
+        "examples/README.md",
+        "docs/assets/manifest.json",
+        "docs/assets/canvas-smoke.png"
+      ],
+      "reason": "No rendering behavior or Mermaid API added. Existing dependency sample and its image source remain accurate; fresh auto/CPU/GPU outputs were executed and viewed, not presented as Mermaid images."
+    },
+    {
+      "topic": "capability-and-packaging",
+      "status": "reviewed-no-change",
+      "paths": [
+        "docs/compatibility.json",
+        "pyproject.toml",
+        "src/py_mermaid",
+        "THIRD_PARTY_NOTICES.md"
+      ],
+      "reason": "No code, dependencies, package bytes, license inclusion or verified Mermaid assertions changed. Keep all parser/layout/canvas stages planned and do not build or publish a new placeholder package."
+    },
+    {
+      "topic": "current-state",
+      "status": "updated",
+      "paths": [
+        "docs/RELEASE_STATUS.md"
+      ],
+      "reason": "Separate the planning update and new dependency/source checks from earlier bootstrap history and unimplemented product behavior."
+    }
+  ],
+  "limitations": [
+    "Planning only; no Mermaid parser, layout, rendering, assertion-ledger extraction or JS oracle implemented",
+    "No Mermaid spec passed; file counts are not assertion coverage",
+    "Cross-host visual equivalence, HTML/math/interaction mappings and full dependency/license closure require later evidence and necessary decisions",
+    "Fresh Canvas smoke is Windows-only and does not prove native GPU trace, all API coverage, Linux or no-loader deployment",
+    "No release acceptance, remote CI, commit, push or publication performed",
+    "No calendar estimate until M1 assertion sizing and M2/M3 measured work establish a defensible basis"
+  ],
+  "nextStep": "M1-01 through M1-06 and M2-01 through M2-04 for the six flowchart input groups; then compare/negative controls and the real default-ELK M3 slice. Complete global M1/M2 before claiming full phases.",
+  "acceptanceResults": [
+    "Complete plan documented and split into 48 uniquely numbered work packages across M0-M8",
+    "All 38 diagram entries assigned exactly once: 37 core plus ZenUML; diagnostics and 13 cross-cutting areas remain included",
+    "Pinned default ELK, runtime registration order, embedded-test gap and additional layout/theme dependencies recorded with 20 canonical source hashes",
+    "All 42 original nonignored project files backed up; 9 intended Markdown files edited and 33 other files remain byte-identical",
+    "Final bootstrap and all 12 existing negative-control tests passed; upstream check and documentation/source-preservation review passed",
+    "Fresh Windows auto/CPU/GPU dependency smoke outputs passed and all three original images visually inspected; no Mermaid spec claim",
+    "No runtime code, compatibility state, dependency, example source or image provenance changed"
+  ],
+  "visualReview": {
+    "scope": "Canvas dependency samples only",
+    "paths": [
+      "test-runs/20261102-migration-plan-review-01/canvas-auto/canvas.png",
+      "test-runs/20261102-migration-plan-review-01/canvas-cpu/canvas.png",
+      "test-runs/20261102-migration-plan-review-01/canvas-gpu/canvas.png"
+    ],
+    "result": "All three original 360x140 images viewed: expected blue rectangle and visible measured text; no Mermaid output or native GPU trace claim."
+  }
+}
