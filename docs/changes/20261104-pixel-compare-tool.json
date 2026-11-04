@@ -1,0 +1,289 @@
+{
+  "schema": "py-mermaid-change/v1",
+  "taskId": "20261104-pixel-compare-tool",
+  "kind": "standalone-png-pixel-diagnostics-and-test-plan",
+  "status": "standalone-pixel-tool-and-test-plan-scoped-verified",
+  "objective": "Provide a concrete reusable PNG pixel comparison utility and document how it supplies L4 diagnostics without imposing cross-renderer pixel equality.",
+  "authorization": "User asked to improve the test plan and include an image pixel comparison tool. This standalone test utility is prepared now; Mermaid source/test phase order remains unchanged.",
+  "acceptanceCriteria": [
+    "Compute all-channel raw RGBA, transparent/composited, size/coverage and tile-localized differences without hiding source content",
+    "Generate preserved input copies, heatmaps/masks, JSON SHA report and offline HTML overlay",
+    "Separate default diagnostic completion from optional exact pixel-regression results and tool errors",
+    "Prove known numeric/alpha/dimension/mode cases, failure receipts and non-overwrite behavior with focused utility controls",
+    "Document actual commands/development-only dependencies/limits and keep formal Mermaid P2/P3 work and compatibility status unchanged"
+  ],
+  "baseCommit": "b1e4c10adc2c3ca8b77b86febcd306512116408c",
+  "startingState": {
+    "evidence": "test-runs/20261104-pixel-compare-tool-01/starting.json",
+    "sha256": "acb8b0ef991d119503567994f5269e3c6194f910ea38342a4a3a28bafe40b015",
+    "preexistingChangesPreserved": true
+  },
+  "changedPaths": [
+    "README.en.md",
+    "README.md",
+    "docs/EXECUTION_HANDOFF.md",
+    "docs/FULL_MIGRATION_PLAN.md",
+    "docs/NEW_SESSION.md",
+    "docs/RELEASE_STATUS.md",
+    "docs/RENDER_CONSISTENCY.md",
+    "docs/SOURCE_BASED_VERIFICATION.md",
+    "docs/TEST_AND_RELEASE.md",
+    "references/migration-execution.json",
+    "references/render-validation-policy.json",
+    "scripts/validate_migration_plan.py",
+    "tests/README.md",
+    "tests/pixel_compare/test_pixel_compare.py",
+    "tools/PIXEL_COMPARE.md",
+    "tools/oracle/README.md",
+    "tools/pixel_compare.py",
+    "tools/pixel_compare_requirements.txt"
+  ],
+  "sourceSha256": {
+    "README.en.md": "a69110e544df6dc968e1df8da6e0426b308035d7a252178cbef3c806db75f72e",
+    "README.md": "385a352924341be7edeefe8cff2e6e23f1d24069eb184ae067d9969604cf8539",
+    "docs/EXECUTION_HANDOFF.md": "3f82df2dbbecbcc8555eca572ee3650ec0c8051d7eeed793653efe8ddaba7072",
+    "docs/FULL_MIGRATION_PLAN.md": "088b3dbcc506959e69bf0a087cf26e5f384bf5d4af6cb3f77c02dc106f1ca229",
+    "docs/NEW_SESSION.md": "51ab26a043350ae5810146313bf65f17c7ea05e8586751afef1ed58acb79c408",
+    "docs/RELEASE_STATUS.md": "9ae330ce5c91bca0283fc9af3e15ce7b15585e3a65745f71eb3a72be34fe004a",
+    "docs/RENDER_CONSISTENCY.md": "83a0429775c11fbb484e892ca19feaeaefc0b9fd9c7717a026e58db8acc4c0a6",
+    "docs/SOURCE_BASED_VERIFICATION.md": "f9c5286a9a1828552c815b488bd6e6cdd010fcb3ab981de1c6ce040102d01958",
+    "docs/TEST_AND_RELEASE.md": "cf4eb8df5c666db10cdf4b0ac050c8997a958a803153a18d4bab739971a7f68c",
+    "references/migration-execution.json": "8abfaff3856979cf35a3b7df52ca0d13ab650ff6d39a8c4b4e3da418606c1c63",
+    "references/render-validation-policy.json": "e6682204f71f149667175ad43ee8267fd360835ca7ed9b562199206f3dc34b34",
+    "scripts/validate_migration_plan.py": "61318b5815ec1dcc6996f133f45388993e68b3506945a4733be96d40abd00c2c",
+    "tests/README.md": "61dbeebbe86c4f263fc759d8079f8f28fa53b5bb525ae9e9d224506975f4884a",
+    "tests/pixel_compare/test_pixel_compare.py": "7b9541a49a670840ccc4dad00e9a4047c7514d127f7971138795232c814bb0e8",
+    "tools/PIXEL_COMPARE.md": "4117ae784e2d561f57fe71da1c3da6498bbe935044038639a23644b759f86ffa",
+    "tools/oracle/README.md": "1b50898316183bb7c170621d41c062bc9fb8572d1b7c5f997eaa48d3e5572c9b",
+    "tools/pixel_compare.py": "dc230b56ffce47a5ff3c0ba496387274566a799ad124d56a32c9d9857d5b1d45",
+    "tools/pixel_compare_requirements.txt": "41b54a6fb2918667ca47a61d73b522629d84490f3d78f0f20b21135faba10d35"
+  },
+  "commands": [
+    {
+      "id": "pixel-utility-tests",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests/pixel_compare",
+        "-v"
+      ],
+      "exitCode": 0,
+      "expectedExitCode": 0,
+      "log": "test-runs/20261104-pixel-compare-tool-01/pixel-utility-tests.log",
+      "logSha256": "57e29a08a500581417b609af0969ef4516ad1a41716ac4b8a3da7f2004254cde",
+      "output": "test_16_bit_precision_loss_is_rejected (test_pixel_compare.PixelCLITests.test_16_bit_precision_loss_is_rejected) ... ok\r\ntest_animated_png_rejected (test_pixel_compare.PixelCLITests.test_animated_png_rejected) ... ok\r\ntest_diagnostic_reports_difference_but_no_functional_pass (test_pixel_compare.PixelCLITests.test_diagnostic_reports_difference_but_no_functional_pass) ... ok\r\ntest_different_color_metadata_prevents_false_exact_match (test_pixel_compare.PixelCLITests.test_different_color_metadata_prevents_false_exact_match) ... ok\r\ntest_exact_mismatch_returns_one_and_match_returns_zero (test_pixel_compare.PixelCLITests.test_exact_mismatch_returns_one_and_match_returns_zero) ... ok\r\ntest_exact_rejects_tolerance (test_pixel_compare.PixelCLITests.test_exact_rejects_tolerance) ... ok\r\ntest_existing_output_is_never_overwritten (test_pixel_compare.PixelCLITests.test_existing_output_is_never_overwritten) ... ok\r\ntest_jpeg_rejected_with_error_receipt (test_pixel_compare.PixelCLITests.test_jpeg_rejected_with_error_receipt) ... ok\r\ntest_missing_pillow_is_tool_error_not_pixel_mismatch (test_pixel_compare.PixelCLITests.test_missing_pillow_is_tool_error_not_pixel_mismatch) ... ok\r\ntest_palette_png_decodes_without_false_difference (test_pixel_compare.PixelCLITests.test_palette_png_decodes_without_false_difference) ... ok\r\ntest_alpha_only_change_visible_on_white (test_pixel_compare.PixelMetricsTests.test_alpha_only_change_visible_on_white) ... ok\r\ntest_crossed_dimensions_do_not_count_neither_frame_corner (test_pixel_compare.PixelMetricsTests.test_crossed_dimensions_do_not_count_neither_frame_corner) ... ok\r\ntest_display_threshold_never_changes_raw_metrics (test_pixel_compare.PixelMetricsTests.test_display_threshold_never_changes_raw_metrics) ... ok\r\ntest_hidden_transparent_rgb_is_reported_separately (test_pixel_compare.PixelMetricsTests.test_hidden_transparent_rgb_is_reported_separately) ... ok\r\ntest_rgb_change_with_unchanged_alpha_has_correct_bbox_and_metrics (test_pixel_compare.PixelMetricsTests.test_rgb_change_with_unchanged_alpha_has_correct_bbox_and_metrics) ... ok\r\ntest_tile_report_localizes_small_change_despite_large_background (test_pixel_compare.PixelMetricsTests.test_tile_report_localizes_small_change_despite_large_background) ... ok\r\ntest_union_budget_is_enforced (test_pixel_compare.PixelMetricsTests.test_union_budget_is_enforced) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 17 tests in 1.226s\r\n\r\nOK\r\n"
+    },
+    {
+      "id": "plan-check",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "scripts/validate_migration_plan.py",
+        "--check",
+        "--out",
+        "C:\\code\\py-visactor\\py-mermaid\\test-runs\\20261104-pixel-compare-tool-01\\plan-report.json"
+      ],
+      "exitCode": 0,
+      "expectedExitCode": 0,
+      "log": "test-runs/20261104-pixel-compare-tool-01/plan-check.log",
+      "logSha256": "d0c99cb132af65b0817e232dd6bf0b49b008bf28d6652712beb6b09be13eb423",
+      "output": "{\r\n  \"status\": \"MIGRATION_PLAN_VALIDATED\",\r\n  \"errors\": [],\r\n  \"tasks\": 61,\r\n  \"phaseCounts\": {\r\n    \"P0\": 4,\r\n    \"P1\": 32,\r\n    \"P2\": 12,\r\n    \"P3\": 6,\r\n    \"P4\": 5,\r\n    \"P5\": 2\r\n  },\r\n  \"featureFamilies\": 12,\r\n  \"detectors\": 38,\r\n  \"crossCutting\": 13,\r\n  \"initialReadyTasks\": [\r\n    \"P0-01\"\r\n  ],\r\n  \"productExecutions\": 0,\r\n  \"limitation\": \"Scope, task references and phase barriers only; no product implementation or functional acceptance.\"\r\n}\r\n"
+    },
+    {
+      "id": "bootstrap-after",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "scripts/validate_bootstrap.py",
+        "--out",
+        "C:\\code\\py-visactor\\py-mermaid\\test-runs\\20261104-pixel-compare-tool-01\\bootstrap-report.json"
+      ],
+      "exitCode": 0,
+      "expectedExitCode": 0,
+      "log": "test-runs/20261104-pixel-compare-tool-01/bootstrap-after.log",
+      "logSha256": "f39881c9e182998232f6c2a738ffbcf26ee48a6e98c0ecf5e6cf5f6cd87ce638",
+      "output": "{\r\n  \"status\": \"BOOTSTRAP_VALIDATED\",\r\n  \"errors\": [],\r\n  \"detectors\": 38,\r\n  \"inventoryFiles\": 2806,\r\n  \"markdownFiles\": 27,\r\n  \"mermaidSpecsPassed\": 0,\r\n  \"limitation\": \"Metadata/source consistency only; no Mermaid parsing, layout, rendering or release acceptance.\"\r\n}\r\n"
+    },
+    {
+      "id": "diff-check",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exitCode": 0,
+      "expectedExitCode": 0,
+      "log": "test-runs/20261104-pixel-compare-tool-01/diff-check.log",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output": ""
+    },
+    {
+      "id": "final-demo-diagnostic",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "tools/pixel_compare.py",
+        "--reference",
+        "C:\\code\\py-visactor\\py-mermaid\\docs\\assets\\canvas-smoke.png",
+        "--candidate",
+        "C:\\code\\py-visactor\\py-mermaid\\test-runs\\20261104-pixel-compare-tool-01\\synthetic-pixel-change.png",
+        "--out",
+        "C:\\code\\py-visactor\\py-mermaid\\test-runs\\20261104-pixel-compare-tool-01\\final-diagnostic"
+      ],
+      "exitCode": 0,
+      "expectedExitCode": 0,
+      "log": "test-runs/20261104-pixel-compare-tool-01/final-demo-diagnostic.log",
+      "logSha256": "34e84cd21c0e20c2ed673d730a9f5a47a540dff7c398a552254a6f8321c5b1db",
+      "output": "{\"result\": \"DIAGNOSTIC_ONLY\", \"functionalStatus\": \"NOT_EVALUATED\", \"report\": \"C:\\\\code\\\\py-visactor\\\\py-mermaid\\\\test-runs\\\\20261104-pixel-compare-tool-01\\\\final-diagnostic\\\\report.json\", \"html\": \"C:\\\\code\\\\py-visactor\\\\py-mermaid\\\\test-runs\\\\20261104-pixel-compare-tool-01\\\\final-diagnostic\\\\report.html\", \"unionDifferentPixels\": 240}\r\n"
+    },
+    {
+      "id": "final-demo-exact-difference",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "tools/pixel_compare.py",
+        "--reference",
+        "C:\\code\\py-visactor\\py-mermaid\\docs\\assets\\canvas-smoke.png",
+        "--candidate",
+        "C:\\code\\py-visactor\\py-mermaid\\test-runs\\20261104-pixel-compare-tool-01\\synthetic-pixel-change.png",
+        "--out",
+        "C:\\code\\py-visactor\\py-mermaid\\test-runs\\20261104-pixel-compare-tool-01\\final-exact-difference",
+        "--mode",
+        "exact"
+      ],
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "log": "test-runs/20261104-pixel-compare-tool-01/final-demo-exact-difference.log",
+      "logSha256": "af1925e8848571f48766336cc93486ecb3654a36962bb1426c6dba55e392766b",
+      "output": "{\"result\": \"PIXEL_MISMATCH_OR_COLOR_METADATA_DIFFERENCE\", \"functionalStatus\": \"NOT_EVALUATED\", \"report\": \"C:\\\\code\\\\py-visactor\\\\py-mermaid\\\\test-runs\\\\20261104-pixel-compare-tool-01\\\\final-exact-difference\\\\report.json\", \"html\": \"C:\\\\code\\\\py-visactor\\\\py-mermaid\\\\test-runs\\\\20261104-pixel-compare-tool-01\\\\final-exact-difference\\\\report.html\", \"unionDifferentPixels\": 240}\r\n"
+    },
+    {
+      "id": "final-demo-exact-same",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "tools/pixel_compare.py",
+        "--reference",
+        "C:\\code\\py-visactor\\py-mermaid\\docs\\assets\\canvas-smoke.png",
+        "--candidate",
+        "C:\\code\\py-visactor\\py-mermaid\\docs\\assets\\canvas-smoke.png",
+        "--out",
+        "C:\\code\\py-visactor\\py-mermaid\\test-runs\\20261104-pixel-compare-tool-01\\final-exact-same",
+        "--mode",
+        "exact"
+      ],
+      "exitCode": 0,
+      "expectedExitCode": 0,
+      "log": "test-runs/20261104-pixel-compare-tool-01/final-demo-exact-same.log",
+      "logSha256": "ea78a66eea6191178b1a9712996ca1236f6b62179fb093c02db89ca8724fdd63",
+      "output": "{\"result\": \"PIXEL_MATCH\", \"functionalStatus\": \"NOT_EVALUATED\", \"report\": \"C:\\\\code\\\\py-visactor\\\\py-mermaid\\\\test-runs\\\\20261104-pixel-compare-tool-01\\\\final-exact-same\\\\report.json\", \"html\": \"C:\\\\code\\\\py-visactor\\\\py-mermaid\\\\test-runs\\\\20261104-pixel-compare-tool-01\\\\final-exact-same\\\\report.html\", \"unionDifferentPixels\": 0}\r\n"
+    }
+  ],
+  "evidence": {
+    "test-runs/20261104-pixel-compare-tool-01/bootstrap-after.log": "f39881c9e182998232f6c2a738ffbcf26ee48a6e98c0ecf5e6cf5f6cd87ce638",
+    "test-runs/20261104-pixel-compare-tool-01/bootstrap-before.log": "55a21f1192c8ee9c14685da920ba071bdfdfb3cc7cb2068b0b7604a839aeaeaa",
+    "test-runs/20261104-pixel-compare-tool-01/bootstrap-report.json": "f39881c9e182998232f6c2a738ffbcf26ee48a6e98c0ecf5e6cf5f6cd87ce638",
+    "test-runs/20261104-pixel-compare-tool-01/commands-final.json": "56022e40b004a8649b321b788a9ffebd34c3235e75a65f3550ae7146f46eb517",
+    "test-runs/20261104-pixel-compare-tool-01/demo-commands.json": "e72dbe5d77c7839d7717138dde1ae1d2efcdf30152aaf5177cd32a2ef7e2451d",
+    "test-runs/20261104-pixel-compare-tool-01/demo-diagnostic.log": "d8657ffbaa98483c755094759f60fff71bccba33700da2df2fd6b62ec43506ac",
+    "test-runs/20261104-pixel-compare-tool-01/demo-exact-difference.log": "5b04684d16ed797a3e340ce9f63229b02bd1fe837159a9b24cf070c12a22ba8b",
+    "test-runs/20261104-pixel-compare-tool-01/demo-exact-same.log": "680b5e100bb0a4dafb86034719fb85e83efbfb9da4be4d9477255ad10b5f917b",
+    "test-runs/20261104-pixel-compare-tool-01/diagnostic/candidate.png": "f3add44cb99b26d5ba49e2d9c5ec74dbf30b82771ef48ea127ea6daa11bb8836",
+    "test-runs/20261104-pixel-compare-tool-01/diagnostic/diff-black.png": "5b0e50a0ff065f1d651f95412e211d59c64235a5321a129fac186efc28137b04",
+    "test-runs/20261104-pixel-compare-tool-01/diagnostic/diff-raw.png": "5b0e50a0ff065f1d651f95412e211d59c64235a5321a129fac186efc28137b04",
+    "test-runs/20261104-pixel-compare-tool-01/diagnostic/diff-white.png": "5b0e50a0ff065f1d651f95412e211d59c64235a5321a129fac186efc28137b04",
+    "test-runs/20261104-pixel-compare-tool-01/diagnostic/mask-raw.png": "15a4e235a23b8b948fe3fb7191d68cc28c1bb952ab20d456708ab486f179fe3e",
+    "test-runs/20261104-pixel-compare-tool-01/diagnostic/mask-threshold.png": "15a4e235a23b8b948fe3fb7191d68cc28c1bb952ab20d456708ab486f179fe3e",
+    "test-runs/20261104-pixel-compare-tool-01/diagnostic/reference.png": "228637b81706b7ec37dafcc1ea1718bc26e35c47d8cc33a2e74b107f413d2647",
+    "test-runs/20261104-pixel-compare-tool-01/diagnostic/report.html": "0f94a3f0db4bbb018dff0f24336a96a95fb83a6cf3437f055ba83efa08a5ca8f",
+    "test-runs/20261104-pixel-compare-tool-01/diagnostic/report.json": "4b5fc048e6a91ac21c3ffd83d49aefb6ca1ad15fbdd583ee74134038fe541e4c",
+    "test-runs/20261104-pixel-compare-tool-01/diff-check.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "test-runs/20261104-pixel-compare-tool-01/exact-difference/candidate.png": "f3add44cb99b26d5ba49e2d9c5ec74dbf30b82771ef48ea127ea6daa11bb8836",
+    "test-runs/20261104-pixel-compare-tool-01/exact-difference/diff-black.png": "5b0e50a0ff065f1d651f95412e211d59c64235a5321a129fac186efc28137b04",
+    "test-runs/20261104-pixel-compare-tool-01/exact-difference/diff-raw.png": "5b0e50a0ff065f1d651f95412e211d59c64235a5321a129fac186efc28137b04",
+    "test-runs/20261104-pixel-compare-tool-01/exact-difference/diff-white.png": "5b0e50a0ff065f1d651f95412e211d59c64235a5321a129fac186efc28137b04",
+    "test-runs/20261104-pixel-compare-tool-01/exact-difference/mask-raw.png": "15a4e235a23b8b948fe3fb7191d68cc28c1bb952ab20d456708ab486f179fe3e",
+    "test-runs/20261104-pixel-compare-tool-01/exact-difference/mask-threshold.png": "15a4e235a23b8b948fe3fb7191d68cc28c1bb952ab20d456708ab486f179fe3e",
+    "test-runs/20261104-pixel-compare-tool-01/exact-difference/reference.png": "228637b81706b7ec37dafcc1ea1718bc26e35c47d8cc33a2e74b107f413d2647",
+    "test-runs/20261104-pixel-compare-tool-01/exact-difference/report.html": "d57747dd93d54ae40a26b389e769273aaedd83b0ec4bbe49c5f4433f931c6ab4",
+    "test-runs/20261104-pixel-compare-tool-01/exact-difference/report.json": "516fc3b68818807601fb1322ca32c1f5e3c43b952b8891941f9994db22e1cf8f",
+    "test-runs/20261104-pixel-compare-tool-01/exact-same/candidate.png": "228637b81706b7ec37dafcc1ea1718bc26e35c47d8cc33a2e74b107f413d2647",
+    "test-runs/20261104-pixel-compare-tool-01/exact-same/diff-black.png": "baaae60bb6888579883711ce6b4f6933604543f118e4787b03251a936b7b728a",
+    "test-runs/20261104-pixel-compare-tool-01/exact-same/diff-raw.png": "baaae60bb6888579883711ce6b4f6933604543f118e4787b03251a936b7b728a",
+    "test-runs/20261104-pixel-compare-tool-01/exact-same/diff-white.png": "baaae60bb6888579883711ce6b4f6933604543f118e4787b03251a936b7b728a",
+    "test-runs/20261104-pixel-compare-tool-01/exact-same/mask-raw.png": "7312321023c6be324aecff3172a3ed46fe1a1087fa3d47acf71d623cc46c4c51",
+    "test-runs/20261104-pixel-compare-tool-01/exact-same/mask-threshold.png": "7312321023c6be324aecff3172a3ed46fe1a1087fa3d47acf71d623cc46c4c51",
+    "test-runs/20261104-pixel-compare-tool-01/exact-same/reference.png": "228637b81706b7ec37dafcc1ea1718bc26e35c47d8cc33a2e74b107f413d2647",
+    "test-runs/20261104-pixel-compare-tool-01/exact-same/report.html": "e329bb21a67630560d0b358c6dd641cbbb3c8369afa52bb5dabdd060ce3b6cd6",
+    "test-runs/20261104-pixel-compare-tool-01/exact-same/report.json": "f3c1e1577ee9b7841e462a4298c66659aac921bcab363fd45184c80b0bd489ad",
+    "test-runs/20261104-pixel-compare-tool-01/final-demo-diagnostic.log": "34e84cd21c0e20c2ed673d730a9f5a47a540dff7c398a552254a6f8321c5b1db",
+    "test-runs/20261104-pixel-compare-tool-01/final-demo-exact-difference.log": "af1925e8848571f48766336cc93486ecb3654a36962bb1426c6dba55e392766b",
+    "test-runs/20261104-pixel-compare-tool-01/final-demo-exact-same.log": "ea78a66eea6191178b1a9712996ca1236f6b62179fb093c02db89ca8724fdd63",
+    "test-runs/20261104-pixel-compare-tool-01/final-diagnostic/candidate.png": "f3add44cb99b26d5ba49e2d9c5ec74dbf30b82771ef48ea127ea6daa11bb8836",
+    "test-runs/20261104-pixel-compare-tool-01/final-diagnostic/diff-black.png": "5b0e50a0ff065f1d651f95412e211d59c64235a5321a129fac186efc28137b04",
+    "test-runs/20261104-pixel-compare-tool-01/final-diagnostic/diff-raw.png": "5b0e50a0ff065f1d651f95412e211d59c64235a5321a129fac186efc28137b04",
+    "test-runs/20261104-pixel-compare-tool-01/final-diagnostic/diff-white.png": "5b0e50a0ff065f1d651f95412e211d59c64235a5321a129fac186efc28137b04",
+    "test-runs/20261104-pixel-compare-tool-01/final-diagnostic/mask-raw.png": "15a4e235a23b8b948fe3fb7191d68cc28c1bb952ab20d456708ab486f179fe3e",
+    "test-runs/20261104-pixel-compare-tool-01/final-diagnostic/mask-threshold.png": "15a4e235a23b8b948fe3fb7191d68cc28c1bb952ab20d456708ab486f179fe3e",
+    "test-runs/20261104-pixel-compare-tool-01/final-diagnostic/reference.png": "228637b81706b7ec37dafcc1ea1718bc26e35c47d8cc33a2e74b107f413d2647",
+    "test-runs/20261104-pixel-compare-tool-01/final-diagnostic/report.html": "0f94a3f0db4bbb018dff0f24336a96a95fb83a6cf3437f055ba83efa08a5ca8f",
+    "test-runs/20261104-pixel-compare-tool-01/final-diagnostic/report.json": "49f6de38ceb1173648c0697b41c7f6f846af7f8070f2909e5873a9d20570c3b1",
+    "test-runs/20261104-pixel-compare-tool-01/final-exact-difference/candidate.png": "f3add44cb99b26d5ba49e2d9c5ec74dbf30b82771ef48ea127ea6daa11bb8836",
+    "test-runs/20261104-pixel-compare-tool-01/final-exact-difference/diff-black.png": "5b0e50a0ff065f1d651f95412e211d59c64235a5321a129fac186efc28137b04",
+    "test-runs/20261104-pixel-compare-tool-01/final-exact-difference/diff-raw.png": "5b0e50a0ff065f1d651f95412e211d59c64235a5321a129fac186efc28137b04",
+    "test-runs/20261104-pixel-compare-tool-01/final-exact-difference/diff-white.png": "5b0e50a0ff065f1d651f95412e211d59c64235a5321a129fac186efc28137b04",
+    "test-runs/20261104-pixel-compare-tool-01/final-exact-difference/mask-raw.png": "15a4e235a23b8b948fe3fb7191d68cc28c1bb952ab20d456708ab486f179fe3e",
+    "test-runs/20261104-pixel-compare-tool-01/final-exact-difference/mask-threshold.png": "15a4e235a23b8b948fe3fb7191d68cc28c1bb952ab20d456708ab486f179fe3e",
+    "test-runs/20261104-pixel-compare-tool-01/final-exact-difference/reference.png": "228637b81706b7ec37dafcc1ea1718bc26e35c47d8cc33a2e74b107f413d2647",
+    "test-runs/20261104-pixel-compare-tool-01/final-exact-difference/report.html": "d57747dd93d54ae40a26b389e769273aaedd83b0ec4bbe49c5f4433f931c6ab4",
+    "test-runs/20261104-pixel-compare-tool-01/final-exact-difference/report.json": "8f2dafd7195a2486e3efac29a4fc8c1c8a4c7017465a67ad6f5497d731fc5adf",
+    "test-runs/20261104-pixel-compare-tool-01/final-exact-same/candidate.png": "228637b81706b7ec37dafcc1ea1718bc26e35c47d8cc33a2e74b107f413d2647",
+    "test-runs/20261104-pixel-compare-tool-01/final-exact-same/diff-black.png": "baaae60bb6888579883711ce6b4f6933604543f118e4787b03251a936b7b728a",
+    "test-runs/20261104-pixel-compare-tool-01/final-exact-same/diff-raw.png": "baaae60bb6888579883711ce6b4f6933604543f118e4787b03251a936b7b728a",
+    "test-runs/20261104-pixel-compare-tool-01/final-exact-same/diff-white.png": "baaae60bb6888579883711ce6b4f6933604543f118e4787b03251a936b7b728a",
+    "test-runs/20261104-pixel-compare-tool-01/final-exact-same/mask-raw.png": "7312321023c6be324aecff3172a3ed46fe1a1087fa3d47acf71d623cc46c4c51",
+    "test-runs/20261104-pixel-compare-tool-01/final-exact-same/mask-threshold.png": "7312321023c6be324aecff3172a3ed46fe1a1087fa3d47acf71d623cc46c4c51",
+    "test-runs/20261104-pixel-compare-tool-01/final-exact-same/reference.png": "228637b81706b7ec37dafcc1ea1718bc26e35c47d8cc33a2e74b107f413d2647",
+    "test-runs/20261104-pixel-compare-tool-01/final-exact-same/report.html": "e329bb21a67630560d0b358c6dd641cbbb3c8369afa52bb5dabdd060ce3b6cd6",
+    "test-runs/20261104-pixel-compare-tool-01/final-exact-same/report.json": "382820801d7ff596ef8ad2b0fdb459455f974de517f540e6167285f044ae4251",
+    "test-runs/20261104-pixel-compare-tool-01/pixel-utility-tests.log": "57e29a08a500581417b609af0969ef4516ad1a41716ac4b8a3da7f2004254cde",
+    "test-runs/20261104-pixel-compare-tool-01/plan-check.log": "d0c99cb132af65b0817e232dd6bf0b49b008bf28d6652712beb6b09be13eb423",
+    "test-runs/20261104-pixel-compare-tool-01/plan-report.json": "d0c99cb132af65b0817e232dd6bf0b49b008bf28d6652712beb6b09be13eb423",
+    "test-runs/20261104-pixel-compare-tool-01/starting.json": "acb8b0ef991d119503567994f5269e3c6194f910ea38342a4a3a28bafe40b015",
+    "test-runs/20261104-pixel-compare-tool-01/synthetic-pixel-change.png": "f3add44cb99b26d5ba49e2d9c5ec74dbf30b82771ef48ea127ea6daa11bb8836",
+    "test-runs/20261104-pixel-compare-tool-01/upstream-before.log": "e177513c6db5afbcc9524be08795930fb8d5edc0c47ba46d8051ee7859418089"
+  },
+  "acceptanceResults": [
+    {
+      "criterion": 1,
+      "result": "passed",
+      "evidence": "17 focused utility tests cover independent numeric expectations, transparency, dimensions, localized tiles, thresholds and input limits."
+    },
+    {
+      "criterion": 2,
+      "result": "passed",
+      "evidence": "Final demo contains unchanged input byte copies, raw/white/black heatmaps, masks, JSON SHA record and offline HTML."
+    },
+    {
+      "criterion": 3,
+      "result": "passed",
+      "evidence": "Diagnostic difference exit 0; exact difference exit 1; exact same exit 0; tool failures exit 2 in unit controls."
+    },
+    {
+      "criterion": 4,
+      "result": "passed",
+      "evidence": "Injected 20x12 pixel patch detected as 240 pixels, bbox [24,28,44,40]. Candidate and heatmap visually reviewed; final images equal reviewed images."
+    },
+    {
+      "criterion": 5,
+      "result": "passed",
+      "evidence": "Usage, limitations and diagnostic/nonfunctional boundary documented; migration plan and bootstrap checks passed."
+    }
+  ],
+  "limitations": [
+    "Standalone PNG utility only; no actual Mermaid A/B rendering or semantic acceptance performed.",
+    "Static <=8-bit PNG only; no ICC/gamma conversion or SSIM.",
+    "Exact mode does not verify frozen environment identity.",
+    "Pillow is a development utility dependency only; production dependencies unchanged.",
+    "P2-V05/V06 remain planned; no task completion or functional compatibility inferred."
+  ],
+  "nextStep": "Reuse this standalone utility in P2-V05 after the P1 source phase; implement business oracle/semantic/geometry assertions in the planned P2 tasks."
+}

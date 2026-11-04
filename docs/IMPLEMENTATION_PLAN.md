@@ -1,5 +1,9 @@
 # 完整迁移实施方案
 
+> **执行顺序已由用户更新：先完成全部功能源码，再设计测试/单元测试、统一排查修复，最后全量。当前执行权威为 [FULL_MIGRATION_PLAN](FULL_MIGRATION_PLAN.md)、[任务图](../references/migration-execution.json)和 [接管指令](EXECUTION_HANDOFF.md)。下文保留历史 M0…M8 的范围与来源发现，不能按其中旧的“先完成每图测试再推进”时序执行。**
+
+> **渲染标准同样已更新：[功能一致，不要求跨 DOM/Canvas 完全像素一致](RENDER_CONSISTENCY.md)。下文旧的像素/坐标比较表述仅作历史参考；正常引擎差异可通过，功能/内容/关系/可读性错误仍失败。**
+
 2026-11-02 梳理。本文是实施计划，不是实现或验收报告。任务编号与门禁见 [TASKS](TASKS.md)，实际能力只以 [RELEASE_STATUS](RELEASE_STATUS.md) 和 [compatibility.json](compatibility.json) 为准。
 
 ## 1. 目标、基线与当前起点
@@ -36,7 +40,15 @@
 
 当前索引不改写、不冒充新增覆盖；审计发现的其他来源采用补充清单追踪。M1 仍需核对 config schema/defaultConfig、全部渲染 helper、构建逻辑、资源、snapshot 和传递依赖。
 
+2026-11-04 补充：[第三方依赖盘点](THIRD_PARTY_DEPENDENCIES.md)和 [dependencies.json](../references/dependencies.json)已建立五个产品包的静态声明/版本/传递图/import/补丁清单；实际 bundle 与第三方许可证、资源审计继续保留 open。ELK 按用户决定使用独立 py-elk（分发名 `py-visactor-elk`）；本项目接入尚未实施，后续 M3/M4 验证适配的模型、选项、标签和路由，不要求 py-elk 回退 Mermaid 的旧 elkjs 版本。
+
 ## 3. 目标架构和运行契约
+
+执行用户确认的 [Canvas 原生架构](CANVAS_NATIVE_ARCHITECTURE.md)：直接采用 Python 语义模型/样式/文本 box/布局几何/绘制指令，测量、绘制与编码统一交给 py-skia-canvas。淘汰 DOM/虚拟 DOM、D3 selection、fastdom、React 浏览器渲染和 HTML 截图；不为这些机制寻找 Python 兼容库。上游图语言、所用数值/布局算法、图形表达、配置与安全功能仍需保留并验证，生产不读取浏览器测量结果。
+
+功能拆分与首个交付已具体化为 [F01.1 基础流程图](FEATURE_MIGRATION.md)：从 Mermaid 大功能选流程图，再选择矩形/有向边/TD-LR 所需的共享子集，实现文本到默认 ELK/PNG。机器功能表包含全部 38 个 detector 和 13 项跨图能力的归属；它只确定实施范围，不表示迁移已完成。
+
+依赖实施补充见 [完整树与自底向上方案](DEPENDENCY_MIGRATION.md)：D00…D10 按值/几何/资源/图结构/解析/标签/数值/布局/宿主/组装/ZenUML 分解，逐项映射回本计划 M1/M3/M4/M5/M6。完整锁和额外源码链均已生成，不等于 bundle/许可证或候选等价已验证；不改变产品接口和兼容门禁。
 
 ```text
 text + immutable configuration + explicit resource policy

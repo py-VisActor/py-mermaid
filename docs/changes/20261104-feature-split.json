@@ -1,0 +1,215 @@
+{
+  "schema": "py-mermaid-change/v1",
+  "taskId": "20261104-feature-split",
+  "kind": "functional-decomposition-and-first-slice-selection",
+  "status": "feature-scope-selected-and-planning-consistency-verified",
+  "objective": "Split Mermaid by user-visible feature families and shared modules, map them to the dependency tree, and select the first implementation slice.",
+  "acceptanceCriteria": [
+    "All 38 detector entries assigned exactly once and all 13 cross-cutting capabilities assigned to shared owners",
+    "First feature selected explicitly with dependency subset, planned inputs, task sequence and acceptance boundaries",
+    "Default ELK and actual Canvas output remain mandatory; all remaining feature scope retained",
+    "Planning does not raise compatibility status or add unverified runtime dependencies",
+    "Existing dependency policy title encoding repaired with graph structure unchanged; affected generated views reproduce"
+  ],
+  "baseCommit": "b1e4c10adc2c3ca8b77b86febcd306512116408c",
+  "startingStatus": " M README.en.md\n M README.md\n M docs/IMPLEMENTATION_PLAN.md\n M docs/NEW_SESSION.md\n M docs/RELEASE_STATUS.md\n M docs/TASKS.md\n M references/README.md\n M tests/README.md\n?? docs/DEPENDENCY_MIGRATION.md\n?? docs/THIRD_PARTY_DEPENDENCIES.md\n?? docs/changes/20261104-dependency-audit.json\n?? docs/changes/20261104-dependency-tree.json\n?? references/dependencies.json\n?? references/dependency-bottom-up.md\n?? references/dependency-porting-policy.json\n?? references/dependency-toolchain-tree.txt\n?? references/dependency-tree.json\n?? references/dependency-tree.txt\n?? references/python-candidates.json\n?? scripts/audit_dependencies.py\n?? scripts/build_dependency_tree.py\n?? tests/dependencies/\n",
+  "authorization": "Local functional decomposition and first-feature selection. Product implementation is not started in this task.",
+  "changedPaths": [
+    "README.en.md",
+    "README.md",
+    "docs/DEPENDENCY_MIGRATION.md",
+    "docs/FEATURE_MIGRATION.md",
+    "docs/IMPLEMENTATION_PLAN.md",
+    "docs/NEW_SESSION.md",
+    "docs/RELEASE_STATUS.md",
+    "docs/TASKS.md",
+    "docs/changes/20261104-feature-split.json",
+    "references/dependency-porting-policy.json",
+    "references/dependency-tree.json",
+    "references/feature-modules.json"
+  ],
+  "preservedStartingFiles": [
+    "docs/THIRD_PARTY_DEPENDENCIES.md",
+    "docs/changes/20261104-dependency-audit.json",
+    "docs/changes/20261104-dependency-tree.json",
+    "references/README.md",
+    "references/dependencies.json",
+    "references/dependency-bottom-up.md",
+    "references/dependency-toolchain-tree.txt",
+    "references/dependency-tree.txt",
+    "references/python-candidates.json",
+    "scripts/audit_dependencies.py",
+    "scripts/build_dependency_tree.py",
+    "tests/README.md",
+    "tests/dependencies/test_dependency_audit.py",
+    "tests/dependencies/test_dependency_tree.py"
+  ],
+  "sourceSha256": {
+    "README.en.md": "62e644aaa1c89b691690eb534eba7e81cc8693f08ed8ac2c1022a01e0378007f",
+    "README.md": "535fe1d04d650c44f1dea736b3e0faafe65deebca123c2e03b8e5650c5f20a1c",
+    "docs/DEPENDENCY_MIGRATION.md": "bca50028eb1be844fc35322a3d6ee4cf46999abbc657e5be5de8bd89eb89f8d7",
+    "docs/FEATURE_MIGRATION.md": "7b1979e598107c961af784d867405e6ee67a1e3f6707fa8f3276286d6db7a603",
+    "docs/IMPLEMENTATION_PLAN.md": "101b3e50279e09fbc331351b3efe688e450f28f11e409d69638002fe991171ff",
+    "docs/NEW_SESSION.md": "482403fe0e444db832cef75c5aebaa18816a03400a0c0fdd04ebbbe830d79872",
+    "docs/RELEASE_STATUS.md": "6ab82bd05bd0ed45e4eef2e3c179e106dd60cc9e80449c9ebcf01f31c40486a5",
+    "docs/TASKS.md": "d2232ef2283c953799667a12f6f43136488315862f805d593ee8c46a83e87df8",
+    "references/dependency-porting-policy.json": "92aba35d3d7860a3fe237cba8a101089f3af3e2613edd80b44c7ac5da666b6ac",
+    "references/dependency-tree.json": "6a3e20c6e610c4f2ef0957779e0cf819e0c9ee3b60b12ed6d7d84d9bcf4a05a6",
+    "references/feature-modules.json": "6231f7c0069d4b011319e12b8618d477497a0e34b1be2e1e428be26671a6c354"
+  },
+  "commands": [
+    {
+      "id": "bootstrap-before",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "scripts/validate_bootstrap.py"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261104-feature-split-01/bootstrap-before.log",
+      "logSha256": "5b03e814aba83dde478dbbbb5b30c60776a3778eec85a0d15e0ec30cb03879a5"
+    },
+    {
+      "id": "upstream-before",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "scripts/upstream.py",
+        "check"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261104-feature-split-01/upstream-before.log",
+      "logSha256": "e177513c6db5afbcc9524be08795930fb8d5edc0c47ba46d8051ee7859418089"
+    },
+    {
+      "id": "feature-review",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "C:\\code\\py-visactor\\py-mermaid\\test-runs\\20261104-feature-split-01\\review_feature_plan.py"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261104-feature-split-01/feature-review.log",
+      "logSha256": "f4486e2aecbf24e666f658a5d9505c54f52a52690c9c9519a3ba62c8bb5e083a"
+    },
+    {
+      "id": "tree-check",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "scripts/build_dependency_tree.py",
+        "--check"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261104-feature-split-01/tree-check.log",
+      "logSha256": "f278bdf2fd292bfc3d017d9df9bbf5b01039a73a53d454221605e3fc1ae89021"
+    },
+    {
+      "id": "bootstrap-after",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "scripts/validate_bootstrap.py"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261104-feature-split-01/bootstrap-after.log",
+      "logSha256": "10549475367968e3d7628ae6d4812a52fcba6e77a6bad290953b273362a29542"
+    },
+    {
+      "id": "diff-check",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261104-feature-split-01/diff-check.log",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "test-runs/20261104-feature-split-01/bootstrap-after.log",
+      "sha256": "10549475367968e3d7628ae6d4812a52fcba6e77a6bad290953b273362a29542"
+    },
+    {
+      "path": "test-runs/20261104-feature-split-01/bootstrap-before.log",
+      "sha256": "5b03e814aba83dde478dbbbb5b30c60776a3778eec85a0d15e0ec30cb03879a5"
+    },
+    {
+      "path": "test-runs/20261104-feature-split-01/commands.json",
+      "sha256": "2d4d12f1d3f052096d7bb4d407b28aee4b5c8086eb86d2b0461c720ed9939d34"
+    },
+    {
+      "path": "test-runs/20261104-feature-split-01/diff-check.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "test-runs/20261104-feature-split-01/feature-review.log",
+      "sha256": "f4486e2aecbf24e666f658a5d9505c54f52a52690c9c9519a3ba62c8bb5e083a"
+    },
+    {
+      "path": "test-runs/20261104-feature-split-01/review_feature_plan.py",
+      "sha256": "2cc0b42f33b5320110e5dea6743a0a26c9bc2b63ba971a0f6f3efcea804576e8"
+    },
+    {
+      "path": "test-runs/20261104-feature-split-01/starting.json",
+      "sha256": "de978abb1e617a3768c8bb5a3d59bc653d971f5149bdea29cc02f7e87de1302b"
+    },
+    {
+      "path": "test-runs/20261104-feature-split-01/tree-check.log",
+      "sha256": "f278bdf2fd292bfc3d017d9df9bbf5b01039a73a53d454221605e3fc1ae89021"
+    },
+    {
+      "path": "test-runs/20261104-feature-split-01/upstream-before.log",
+      "sha256": "e177513c6db5afbcc9524be08795930fb8d5edc0c47ba46d8051ee7859418089"
+    }
+  ],
+  "acceptanceResults": [
+    "12 feature families cover each of 38 detectors exactly once; 8 shared modules cover each of 13 cross-cutting capabilities exactly once.",
+    "All shared-module/work-package/family references resolve and shared-module prerequisites are acyclic.",
+    "F01.1 basic flowchart selected: plain rectangular nodes/directed edges, TD/LR, single/chain/branch-merge inputs, default real py-elk layout and actual Canvas PNG. Five planned inputs are not represented as passed tests.",
+    "First coding task and six slice tasks documented; F01.2-F01.4 preserve remaining flowchart scope and original M3 gates.",
+    "Repaired terminal-encoding damage in work-package Chinese titles; graph nodes, edges, scopes, SCCs and per-node plans identical to previous snapshot; only policy fingerprint changed in generated graph.",
+    "Feature-plan review, tree comparison, bootstrap/doc links and whitespace checks passed. No Mermaid product or candidate-library execution."
+  ],
+  "documentationReview": [
+    {
+      "paths": [
+        "docs/FEATURE_MIGRATION.md",
+        "references/feature-modules.json"
+      ],
+      "status": "created",
+      "reason": "User-visible feature/module/dependency decomposition, concrete first slice, target inputs, execution sequence and acceptance boundaries."
+    },
+    {
+      "paths": [
+        "README.md",
+        "README.en.md",
+        "docs/NEW_SESSION.md",
+        "docs/TASKS.md",
+        "docs/IMPLEMENTATION_PLAN.md",
+        "docs/DEPENDENCY_MIGRATION.md",
+        "docs/RELEASE_STATUS.md"
+      ],
+      "status": "updated",
+      "reason": "Prioritize first functional slice and clarify that bottom-up dependency work serves the selected feature rather than entire-library completion."
+    },
+    {
+      "paths": [
+        "docs/API_COMPATIBILITY.md",
+        "docs/TEST_AND_RELEASE.md",
+        "docs/compatibility.json",
+        "pyproject.toml",
+        "src",
+        "examples",
+        "docs/assets"
+      ],
+      "status": "reviewed-no-change",
+      "reason": "No runtime API, implementation, dependency, baseline, compatibility gate, rendering example or image changed; no new image validation is required for a scope-selection task."
+    }
+  ],
+  "limitations": [
+    "Functional and dependency mapping remains planned and requires per-symbol source/fixture contracts before implementation.",
+    "No parser, layout adapter, renderer, official oracle or Mermaid assertion was implemented or run.",
+    "Full M1/M2/M3 and complete flowchart scope remain open; F01.1 is a first internal batch.",
+    "Only affected planning/metadata consistency checked; no full spec, rendering or release verification.",
+    "No commit, push or publication."
+  ],
+  "nextStep": "Implement F01.1-T1 planned flowchart contracts and minimal lexer/parser/model, adding only needed foundational semantics; then measure labels, adapt real py-elk and render through Canvas. Use changed-surface checks and final unified full validation after functionality migration."
+}

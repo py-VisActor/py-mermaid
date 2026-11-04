@@ -5,14 +5,14 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "py-mermaid"
 version = "0.0.1a0"
-description = "Python port of Mermaid syntax and rendering, built on py-skia-canvas (bootstrap stage)"
+description = "Basic Mermaid flowcharts in Python, built on py-skia-canvas and pyelk"
 readme = "README.md"
 requires-python = ">=3.13,<3.14"
 license = "MIT"
-license-files = ["LICENSE"]
-dependencies = ["py-skia-canvas==0.1.0a18"]
+license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md", "references/licenses/mermaid-LICENSE"]
+dependencies = ["py-skia-canvas==0.1.0a18", "py-visactor-elk==0.1.0"]
 classifiers = [
-  "Development Status :: 1 - Planning",
+  "Development Status :: 3 - Alpha",
   "Programming Language :: Python :: 3.13",
   "Topic :: Multimedia :: Graphics",
 ]

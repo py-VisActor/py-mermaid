@@ -1,6 +1,10 @@
 # 测试与发布方案
 
+最新执行时序见 [FULL_MIGRATION_PLAN](FULL_MIGRATION_PLAN.md)和 [SOURCE_BASED_VERIFICATION](SOURCE_BASED_VERIFICATION.md)：**全部功能源码 P1 写完后，P2 才正式设计用例/单测/oracle，P3 分组首次运行、统一排查修复，P4 最终全量。** P1 仅运行编译/import/引用/签名/注册等机械检查，不以逐图单测或图片通过作为继续写码前置。下列现有资料检查不属于 Mermaid 功能验收。
+
 ## 目前能运行的检查
+
+独立 PNG 像素对比工具也已可运行，开发依赖/命令/报告解释见 [PIXEL_COMPARE](../tools/PIXEL_COMPARE.md)。它不调用产品渲染器，默认仅诊断；不能将工具返回 0 当成 Mermaid 功能通过。
 
 以下是源码/资料与依赖检查，均不证明 Mermaid 渲染通过：
 
@@ -19,13 +23,17 @@ python -m build --wheel
 
 ## 待实现的差分体系
 
+按照用户确定的 [Canvas 原生架构](CANVAS_NATIVE_ARCHITECTURE.md)，DOM tree、React component tree、选择器调用或浏览器调度顺序只可作为上游诊断信息，不要求 Python 复制。Python 比较对象为语义、解析后样式、文字/节点 box、路由与绘制输出；富文本/配置含义与安全功能仍要验证，视觉差异完整报告。该变化不允许生产使用浏览器测量或 oracle 坐标。
+
+用户已确定渲染**功能一致即可，不要求 DOM/Canvas 完全像素一致**。以 [分层判定规则](RENDER_CONSISTENCY.md)为准：语义、实际内容、几何关系/可读性和安全/导出是门禁；像素差/SSIM 仅诊断。合理字体度量、抗锯齿、自然尺寸与满足约束的坐标/路由变化可通过。
+
 官方 JS oracle 尚未实现，入口要求见 [tools/oracle](../tools/oracle/README.md)。不提供虚构的 capture/compare 命令。M2 实现后再补可执行步骤和锁文件。
 
 - 一份共享输入：文本、config/theme、seed、资源/字体、layout、尺寸/density/backend 与预期错误。
 - A 记录：实际 Mermaid/npm integrity、源码 SHA、Node/browser/dependencies、字体 SHA、解析模型、标准化配置、SVG、DOM 测量/布局、PNG/RGBA。
 - Python 记录：候选包/native SHA、相同输入与字体、model/layout/display primitives、Canvas engine、PNG/RGBA、SVG/PDF 及异常。
-- 比较分层：模型/错误、几何/样式、原始 RGBA 与差异图、导出结构/同一栅格器输出。报告所有差异，遵守 [API_COMPATIBILITY](API_COMPATIBILITY.md) 的标准。
-- 必须有负控制：破坏节点 ID/属性、label box、路由端点、一个像素、一个错误类型或字体来源，检查器均应拒绝。
+- 比较分层：模型/错误、语义绘制场景、几何关系/可读性、导出/安全，另保存原始 RGBA/差异图作诊断。自然坐标/尺寸不设跨引擎相等门槛，显式尺寸约束仍检查。
+- 必须有正/负控制：漏节点/标签、错箭头、错连接、裁切或 no-op 绘制等必须失败；仅正常抗锯齿/合法度量和位置变化不能误判失败。单像素破坏只在明确指定的确定性自身回归 profile 要求拒绝。
 
 ## 测试分组
 

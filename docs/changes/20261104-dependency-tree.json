@@ -1,0 +1,342 @@
+{
+  "schema": "py-mermaid-change/v1",
+  "taskId": "20261104-dependency-tree",
+  "kind": "dependency-tree-and-python-migration-planning",
+  "status": "complete-pinned-lock-graph-and-porting-plan-targeted-verified",
+  "objective": "Produce a complete pinned dependency graph and readable trees, supplement actual source imports, research Python candidates and define bottom-up migration work packages.",
+  "authorization": "Local audit, candidate research and implementation planning; no product implementation, dependency installation, commit, push or publication.",
+  "acceptanceCriteria": [
+    "Preserve all pinned snapshots, importer links, optional and peer contexts with no unresolved edge",
+    "Provide readable product and full toolchain trees without truncating shared/cyclic dependencies",
+    "Include dev-field source value imports while keeping types/tests explicit",
+    "Compute SCC-aware bottom-up order and map every product node to a proposed Python handling strategy",
+    "Research official Python candidate documentation and metadata without claiming equivalence",
+    "Preserve starting work, runtime dependencies, upstream baseline and compatibility state; validate only affected audit/tools/docs"
+  ],
+  "baseCommit": "b1e4c10adc2c3ca8b77b86febcd306512116408c",
+  "startingStatus": " M README.en.md\n M README.md\n M docs/IMPLEMENTATION_PLAN.md\n M docs/NEW_SESSION.md\n M docs/RELEASE_STATUS.md\n M docs/TASKS.md\n M references/README.md\n M tests/README.md\n?? docs/THIRD_PARTY_DEPENDENCIES.md\n?? docs/changes/20261104-dependency-audit.json\n?? references/dependencies.json\n?? scripts/audit_dependencies.py\n?? tests/dependencies/\n",
+  "baseline": {
+    "mermaid": "12.2.0",
+    "commit": "1fb7869866dd619168d840291c9c54b4f129758b",
+    "canvas": "0.1.0a18"
+  },
+  "changedPaths": [
+    "README.en.md",
+    "README.md",
+    "docs/DEPENDENCY_MIGRATION.md",
+    "docs/IMPLEMENTATION_PLAN.md",
+    "docs/NEW_SESSION.md",
+    "docs/RELEASE_STATUS.md",
+    "docs/TASKS.md",
+    "docs/THIRD_PARTY_DEPENDENCIES.md",
+    "docs/changes/20261104-dependency-tree.json",
+    "references/README.md",
+    "references/dependency-bottom-up.md",
+    "references/dependency-porting-policy.json",
+    "references/dependency-toolchain-tree.txt",
+    "references/dependency-tree.json",
+    "references/dependency-tree.txt",
+    "references/python-candidates.json",
+    "scripts/build_dependency_tree.py",
+    "tests/README.md",
+    "tests/dependencies/test_dependency_tree.py"
+  ],
+  "preservedStartingFiles": [
+    "docs/changes/20261104-dependency-audit.json",
+    "references/dependencies.json",
+    "scripts/audit_dependencies.py",
+    "tests/dependencies/test_dependency_audit.py"
+  ],
+  "sourceSha256": {
+    "README.en.md": "7392cc36cd72f26f9e5f543f25196ee944130d23d7031b5ac5667d8a659b09c1",
+    "README.md": "de897f72505fc94fe8a0758fe4badf8004b94698e38ac94b85f54d01a4aa0ca3",
+    "docs/DEPENDENCY_MIGRATION.md": "295ef97802e795c6a3c87134c1beb28a73229726d882768bc05b4757e16737f0",
+    "docs/IMPLEMENTATION_PLAN.md": "878966094085107082460222e382d0742a79422729173550235580b5dac73a20",
+    "docs/NEW_SESSION.md": "87beec9508ef03b1b13bbe20e596ee0aed911d6191de7e18ae0bed83cae25c02",
+    "docs/RELEASE_STATUS.md": "13de8062b5ec5a3cfb2f3872680966b452e85dc912760f45ed0073b121079c04",
+    "docs/TASKS.md": "28caa74b14b90a5c40e79d651235cc73a7f0049acdfb911e050b24ce4c21d628",
+    "docs/THIRD_PARTY_DEPENDENCIES.md": "6f0bac55dfa4bfcf67dcc0a7766f074afe456f81867d31d822150c7ca7d4ca88",
+    "references/README.md": "431369c670d16ce1ff82ff51ad7d0c5b773105e326a99246ffd6ae4cccd13c7b",
+    "references/dependency-bottom-up.md": "b99d4d4fee3484b6224d070b4bd8708187dcb4a92b3a7b23e728cc0121e21393",
+    "references/dependency-porting-policy.json": "4b5c4c1a7722e15c316ef75ea3f7a4a5495667cee7890249b36bed2d12fde121",
+    "references/dependency-toolchain-tree.txt": "f12b51ab945f381cf6ce3ccfdba140018c4599f9346db5bddaaf5c851b7ba6a7",
+    "references/dependency-tree.json": "0f4a40e4236f684c510ae50247d1c74a384173d55cd6879559f4be863d314f65",
+    "references/dependency-tree.txt": "2f34d858a613ddb630f9829b2936ad0d2ea11a01cc8062bd4644476b672929d3",
+    "references/python-candidates.json": "e27ca2f9a86298d56c6d33f1ad0c7683e6849c5d35d3ca9c0cf8d99f3ee7cc8a",
+    "scripts/build_dependency_tree.py": "88bd344ac686252d39e7d0e5234dc65397720dac0049c9ec2c2c0c6435828d57",
+    "tests/README.md": "5ca7d585f00a323a4dbb1b76b87d39b85bc79ba2a4982c92704b2563dc64af5f",
+    "tests/dependencies/test_dependency_tree.py": "59071d32df0909e9ee086946899106af6c710170442a0072e5519e1f074fa92a"
+  },
+  "commands": [
+    {
+      "id": "bootstrap-before",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "scripts/validate_bootstrap.py"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261104-dependency-tree-01/bootstrap-before.log",
+      "logSha256": "eecd66b3fe2d591e16cfc303c0d0f6b889e8037237bfed0a4c86f3480f9e2df0"
+    },
+    {
+      "id": "upstream-before",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "scripts/upstream.py",
+        "check"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261104-dependency-tree-01/upstream-before.log",
+      "logSha256": "e177513c6db5afbcc9524be08795930fb8d5edc0c47ba46d8051ee7859418089"
+    },
+    {
+      "id": "audit-before",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "scripts/audit_dependencies.py",
+        "--check"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261104-dependency-tree-01/audit-before.log",
+      "logSha256": "2165819dda6f57499fc23cd713756559e8070584b5c09440a9b3939c65a15798"
+    },
+    {
+      "id": "tree-check",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "scripts/build_dependency_tree.py",
+        "--check"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261104-dependency-tree-01/tree-check.log",
+      "logSha256": "f278bdf2fd292bfc3d017d9df9bbf5b01039a73a53d454221605e3fc1ae89021"
+    },
+    {
+      "id": "audit-check",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "scripts/audit_dependencies.py",
+        "--check"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261104-dependency-tree-01/audit-check.log",
+      "logSha256": "2165819dda6f57499fc23cd713756559e8070584b5c09440a9b3939c65a15798"
+    },
+    {
+      "id": "dependency-controls",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests/dependencies",
+        "-v"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261104-dependency-tree-01/dependency-controls.log",
+      "logSha256": "e4fb1330d7202d489194611e298600620891539c5a69f80f33a7aef0fda8a59c"
+    },
+    {
+      "id": "bootstrap-after",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "scripts/validate_bootstrap.py"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261104-dependency-tree-01/bootstrap-after.log",
+      "logSha256": "5b03e814aba83dde478dbbbb5b30c60776a3778eec85a0d15e0ec30cb03879a5"
+    },
+    {
+      "id": "diff-check",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261104-dependency-tree-01/diff-check.log",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "test-runs/20261104-dependency-tree-01/audit-before.log",
+      "sha256": "2165819dda6f57499fc23cd713756559e8070584b5c09440a9b3939c65a15798"
+    },
+    {
+      "path": "test-runs/20261104-dependency-tree-01/audit-check.log",
+      "sha256": "2165819dda6f57499fc23cd713756559e8070584b5c09440a9b3939c65a15798"
+    },
+    {
+      "path": "test-runs/20261104-dependency-tree-01/bootstrap-after.log",
+      "sha256": "5b03e814aba83dde478dbbbb5b30c60776a3778eec85a0d15e0ec30cb03879a5"
+    },
+    {
+      "path": "test-runs/20261104-dependency-tree-01/bootstrap-before.log",
+      "sha256": "eecd66b3fe2d591e16cfc303c0d0f6b889e8037237bfed0a4c86f3480f9e2df0"
+    },
+    {
+      "path": "test-runs/20261104-dependency-tree-01/commands-after.json",
+      "sha256": "d1548f12ac6fe329e9fa91c852eb269d1669d48acc65291c55fa4d640a224ffc"
+    },
+    {
+      "path": "test-runs/20261104-dependency-tree-01/dependency-controls.log",
+      "sha256": "e4fb1330d7202d489194611e298600620891539c5a69f80f33a7aef0fda8a59c"
+    },
+    {
+      "path": "test-runs/20261104-dependency-tree-01/diff-check.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "test-runs/20261104-dependency-tree-01/python-candidate-metadata/antlr4-python3-runtime.json",
+      "sha256": "f3f53611a3b5160738057d4b46b7a9d3a89c8655d16365a18257af6115668f15"
+    },
+    {
+      "path": "test-runs/20261104-dependency-tree-01/python-candidate-metadata/coloraide.json",
+      "sha256": "8a9afd36161b68b5c9b4c4508e9b2ce9cddc9ce550af57932e2f23f7465b2b0d"
+    },
+    {
+      "path": "test-runs/20261104-dependency-tree-01/python-candidate-metadata/cssselect2.json",
+      "sha256": "134361f6a1951fd0d5dd9ed4cc5c2e44384ed66d460e4e9d8df9bd6244bbafcf"
+    },
+    {
+      "path": "test-runs/20261104-dependency-tree-01/python-candidate-metadata/grandalf.json",
+      "sha256": "26ec7c14e58170cc5fe101cdf23d21e399746f94004ba75f088681bb6d6076c9"
+    },
+    {
+      "path": "test-runs/20261104-dependency-tree-01/python-candidate-metadata/html5lib.json",
+      "sha256": "1e44b17181b3a4538838d4d6b6d31f122910f8ea883cd26505469d403ca5c37b"
+    },
+    {
+      "path": "test-runs/20261104-dependency-tree-01/python-candidate-metadata/lark.json",
+      "sha256": "c988b34c6890c5a6b2f3ae6913cc12422d16ef0c9c34122c8d9e260a2678c9ca"
+    },
+    {
+      "path": "test-runs/20261104-dependency-tree-01/python-candidate-metadata/latex2mathml.json",
+      "sha256": "5ec27f932ff03690b55ee8019d4b08485b768443d202baab46ee97ab8743e3d4"
+    },
+    {
+      "path": "test-runs/20261104-dependency-tree-01/python-candidate-metadata/markdown-it-py.json",
+      "sha256": "093d54bb83e6c89afa23d4a62bc054a390b94888729f1589c0c0d2e1950db1b8"
+    },
+    {
+      "path": "test-runs/20261104-dependency-tree-01/python-candidate-metadata/mdit-py-plugins.json",
+      "sha256": "d0e103f20eda2f976fed5361c7815d5f78abe3628502d14627ad2746ef193cd8"
+    },
+    {
+      "path": "test-runs/20261104-dependency-tree-01/python-candidate-metadata/networkx.json",
+      "sha256": "b6eb07ed01755ff0d3a3f983a9fef01bfb7a137bc78d1d4f65aa4ab9111aeb9c"
+    },
+    {
+      "path": "test-runs/20261104-dependency-tree-01/python-candidate-metadata/PyYAML.json",
+      "sha256": "d0c463a86ed24144dd112fd1fe43b7c208e52c7d3903c2f51c84acfb5b10c749"
+    },
+    {
+      "path": "test-runs/20261104-dependency-tree-01/python-candidate-metadata/rough.json",
+      "sha256": "600748433e649adee037686d3d27bd8df9d3e5f5837be79464a2ef520bfc1ae1"
+    },
+    {
+      "path": "test-runs/20261104-dependency-tree-01/python-candidate-metadata/svg.path.json",
+      "sha256": "c83baddc48de0b49e7ad11b1129d52ed90b6581ff07baa48fa383e8d1ea7ffb5"
+    },
+    {
+      "path": "test-runs/20261104-dependency-tree-01/python-candidate-metadata/tinycss2.json",
+      "sha256": "e0640b996a20229a100ae161ecd86d20cd07a10823218112f05feb005272b7dd"
+    },
+    {
+      "path": "test-runs/20261104-dependency-tree-01/starting-diff.patch",
+      "sha256": "f3c24c94c08aa70247a0a1aa48e165ef120c16b1272948349fc0c429b069b018"
+    },
+    {
+      "path": "test-runs/20261104-dependency-tree-01/starting-snapshot.json",
+      "sha256": "ed571250b975f13dec8e88d039f2b7700b4d4e0ebbebdf0ce38f0899b56d460e"
+    },
+    {
+      "path": "test-runs/20261104-dependency-tree-01/starting-status.txt",
+      "sha256": "64a8fcb14f63b550c494c3df18012a311c78e9bf11e5e8be7638238b94ff4104"
+    },
+    {
+      "path": "test-runs/20261104-dependency-tree-01/tree-check.log",
+      "sha256": "f278bdf2fd292bfc3d017d9df9bbf5b01039a73a53d454221605e3fc1ae89021"
+    },
+    {
+      "path": "test-runs/20261104-dependency-tree-01/upstream-before.log",
+      "sha256": "e177513c6db5afbcc9524be08795930fb8d5edc0c47ba46d8051ee7859418089"
+    }
+  ],
+  "research": {
+    "method": "Read official documentation with web tools and retrieve 14 official PyPI JSON metadata responses through urllib GET requests; no installation or candidate execution.",
+    "metadata": "references/python-candidates.json",
+    "rawResponseDirectory": "test-runs/20261104-dependency-tree-01/python-candidate-metadata",
+    "candidateCount": 14,
+    "adoptedNewRuntimeDependencies": 0
+  },
+  "acceptanceResults": [
+    "All 2419 raw lock snapshot keys independently matched against graph; 13 workspace nodes and 5118 edges retained with no unresolved target.",
+    "Source-inclusive product graph has 360 registry contexts, 335 registry package names, 5 workspace nodes, 362 SCCs and 3 cyclic components.",
+    "Complete product and full-toolchain text views preserve all edges via expansion/reference links; generated JSON and bottom-up index reproduce exactly.",
+    "All product nodes have a proposed strategy/work-package assignment; strategies that require source reachability remain explicitly unverified.",
+    "Four source value roots included; type/test additions classified explicitly without deleting them from the raw full lock graph.",
+    "14 official Python candidate metadata records captured with observed versions, Requires-Dist and response fingerprints; no equivalence claim.",
+    "14 targeted dependency controls, both generated inventory comparisons, bootstrap/doc links and whitespace check passed.",
+    "Original inventory/audit tool and starting change record preserved; runtime metadata, source lock, compatibility state and src unchanged."
+  ],
+  "documentationReview": [
+    {
+      "paths": [
+        "README.md",
+        "README.en.md",
+        "docs/NEW_SESSION.md",
+        "references/README.md",
+        "tests/README.md"
+      ],
+      "status": "updated",
+      "reason": "Expose complete trees, reproducible verification, scoped tests and candidate status to new sessions."
+    },
+    {
+      "paths": [
+        "docs/DEPENDENCY_MIGRATION.md",
+        "docs/THIRD_PARTY_DEPENDENCIES.md",
+        "docs/IMPLEMENTATION_PLAN.md",
+        "docs/TASKS.md",
+        "docs/RELEASE_STATUS.md"
+      ],
+      "status": "updated",
+      "reason": "Define lock completeness, source supplements, internal algorithm boundary, candidate evidence, D00-D10 dependencies and change-only validation before final full validation."
+    },
+    {
+      "paths": [
+        "docs/API_COMPATIBILITY.md",
+        "docs/TEST_AND_RELEASE.md",
+        "docs/compatibility.json",
+        "pyproject.toml",
+        "THIRD_PARTY_NOTICES.md"
+      ],
+      "status": "reviewed-no-change",
+      "reason": "No finalized public API, runtime dependency, compatibility acceptance, shipped third-party code or license conclusion changed."
+    },
+    {
+      "paths": [
+        "examples/canvas_smoke.py",
+        "examples/README.md",
+        "docs/assets/manifest.json",
+        "docs/assets/canvas-smoke.png"
+      ],
+      "status": "reviewed-no-change",
+      "reason": "No rendering behavior changed; this audit/planning task produces no new Mermaid output and does not require fresh Canvas/GPU visual verification."
+    }
+  ],
+  "limitations": [
+    "Complete for pinned pnpm mapping edges, not every bundled internal algorithm or resource.",
+    "Peer ranges are metadata; resolved snapshot edges/context keys are retained without inventing missing peer providers.",
+    "Source additions are static import candidates with explicit type/test exclusions, not proven bundle execution.",
+    "Porting decisions are proposals; Python candidate metadata is not an accepted runtime lock or equivalence proof.",
+    "Platform-optional packages remain visible; no third-party tarball license or native dependency closure claim.",
+    "Package-internal algorithm surfaces, actual bundle reachability, third-party tarball/license/resources and a resolved Python candidate install lock remain follow-up work.",
+    "Lark, YAML, Markdown, CSS/HTML, Rough and math candidates were researched, not equivalence-tested or installed.",
+    "Only affected audit/graph/docs validation executed; no Mermaid product, JS oracle, full spec, rendering, device/platform or release validation claimed.",
+    "No commit, push or publication performed."
+  ],
+  "nextStep": "Start D00/D01/D02 primitives and candidate surface evaluations, D03 ordered graph/compound graph and D04 parser proofs as their real prerequisites permit; reuse existing py-elk and Canvas for a separately scoped Mermaid adapter. Validate changed surfaces during migration and run unified full checks after all functionality is migrated."
+}

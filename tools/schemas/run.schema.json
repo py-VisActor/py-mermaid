@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "py-mermaid-run/v1",
+  "type": "object",
+  "required": ["schema", "runId", "scope", "kind", "status", "startedAtUtc", "finishedAtUtc", "environment", "source", "commands", "artifacts", "functionalStatus"],
+  "properties": {
+    "schema": {"const": "py-mermaid-run/v1"},
+    "runId": {"type": "string"},
+    "scope": {"type": "string"},
+    "kind": {"type": "string"},
+    "status": {"enum": ["RUNNING", "SUCCESS", "FAILED", "ERROR", "INTERRUPTED"]},
+    "startedAtUtc": {"type": "string", "format": "date-time"},
+    "finishedAtUtc": {"type": ["string", "null"]},
+    "durationSeconds": {"type": "number", "minimum": 0},
+    "environment": {"type": "object"},
+    "source": {"type": "object", "required": ["sourceTreeSha256", "files"]},
+    "functionalStatus": {"enum": ["NOT_EVALUATED", "PASS", "FAIL", "UNVERIFIED"]},
+    "commands": {"type": "array", "items": {"type": "object", "required": ["name", "argv", "cwd", "status", "exitCode", "stdout", "stderr"], "properties": {
+      "argv": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+      "exitCode": {"type": ["integer", "null"]},
+      "status": {"enum": ["RUNNING", "SUCCESS", "FAILED", "TIMEOUT", "ERROR", "INTERRUPTED"]}
+    }}},
+    "artifacts": {"type": "object", "additionalProperties": {"type": "object", "required": ["sha256", "bytes"], "properties": {
+      "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}, "bytes": {"type": "integer", "minimum": 0}
+    }}}
+  }
+}

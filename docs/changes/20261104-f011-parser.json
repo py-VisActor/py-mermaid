@@ -1,0 +1,103 @@
+{
+  "schema": "py-mermaid-change/v1",
+  "taskId": "20261104-f011-parser",
+  "phase": "F01.1-S2",
+  "ownerAgent": "/root/parser_config",
+  "baseline": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "startingEvidence": "test-runs/execution-start-20261104T132038Z/",
+  "status": "code_complete_unverified",
+  "changedFiles": [
+    {
+      "path": "src/py_mermaid/config/__init__.py",
+      "sha256": "0a1a35bc6930e3ec4b021e68d66da16df4f0a576472bc4ec2410598579e6ab4f"
+    },
+    {
+      "path": "src/py_mermaid/config/flowchart.py",
+      "sha256": "e9cb70b46444188498f96c804e79961551b45986187d6fa73c99ab6aeda6904d"
+    },
+    {
+      "path": "src/py_mermaid/parsing/__init__.py",
+      "sha256": "23cde8ba2b1e5aefd57036a5233180f8b6fe63c5c5a3be1166c3f58de843fb0d"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/flowchart/__init__.py",
+      "sha256": "648b1a3ca353ad86c12facbcb0d900aa2595a274b64b0d2c2a931c131c3c8a96"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/flowchart/parser.py",
+      "sha256": "c7790bb09f46b1ccc47ac18283651eb24a0a91467ea86ecfc0843b734ff16efa"
+    }
+  ],
+  "sourceMap": "references/f011-parser-sources.json",
+  "acceptance": [
+    "Configured F01.1 subset has actual parser/config code",
+    "compile/import/signatures only; behavior and source-based tests deferred to S3/S4"
+  ],
+  "mechanicalChecks": [
+    {
+      "command": "C:/venvs/pymmd-20261102/Scripts/python.exe -m compileall -q src/py_mermaid/config src/py_mermaid/parsing src/py_mermaid/diagrams/flowchart",
+      "exitCode": 0,
+      "stdout": ""
+    },
+    {
+      "command": "PYTHONPATH=src C:/venvs/pymmd-20261102/Scripts/python.exe -c <import config/parsing/diagram parser and inspect signatures>",
+      "exitCode": 0,
+      "stdout": "(config: 'Mapping | None' = None) -> 'FlowConfig'\n(text: 'str', *, config: 'Mapping | None' = None) -> 'Flowchart'\nTrue\n"
+    }
+  ],
+  "limitations": [
+    "No behavior run, functional pass or compatibility claim in S2",
+    "Full Mermaid parser/config intentionally outside current scope",
+    "Configuration errors lack source spans because config is external Mapping"
+  ],
+  "nextAction": "S3 independent source-based parser/config tests; S4 first actual behavior run",
+  "preservedExistingWork": true,
+  "commitPushPublish": false,
+  "fixes": [
+    {
+      "issueId": "F011-INLINE-COMMENT",
+      "phase": "F01.1-S4",
+      "rootCause": "Python reused broad detection-style inline comment semantics in the grammar scanner, although pinned cleanupComments only removes whole-line comments.",
+      "before": "test-runs/f011-s4-language-fix-20261104T133941Z/before.json",
+      "firstOfficialFailure": "test-runs/f011-s4-official-001/manifest.json",
+      "fix": "Reject %% when nonwhitespace precedes the marker on its raw line. Preserve indented whole-line and EOF comments.",
+      "regression": "Language only: 34 test methods passed, exit 0.",
+      "evidence": "test-runs/f011-s4-language-fix-20261104T133941Z/manifest.json",
+      "parserSha256": "d583589eee23eb5c92b6d351d2dd7adfaa4d0cdde6129b6dd4d5b6c72d2efee8",
+      "limitations": "Full final candidate revalidation belongs to coordinator; this is targeted language evidence."
+    },
+    {
+      "issueId": "F011-DIAGRAM-APPEARANCE",
+      "phase": "F01.1-S4",
+      "rootCause": "Global default/classic configuration and font16 were mistaken for resolved per-diagram redux-color/neo and theme font14. Initial tests repeated this source-reading error.",
+      "before": "test-runs/f011-s4-language-theme-fix-20261104T134306Z/before.json",
+      "fix": "Resolve effective flowchart theme/look/font/color; retain original site font and legacy padding; expose minNodeWidth/wrappingWidth and neo geometry via v1.1 contract.",
+      "sourceMap": "references/f011-parser-sources.json",
+      "regression": "Language only 36/36 tests passed, exit0; no full candidate claim.",
+      "evidence": "test-runs/f011-s4-language-theme-fix-20261104T134306Z/manifest.json",
+      "configSha256": "df26dc64292448cb76871bebd2c5bce9610c993354af0a7641aa4735dc6a6489"
+    }
+  ],
+  "currentFiles": [
+    {
+      "path": "src/py_mermaid/config/flowchart.py",
+      "sha256": "df26dc64292448cb76871bebd2c5bce9610c993354af0a7641aa4735dc6a6489"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/flowchart/parser.py",
+      "sha256": "d583589eee23eb5c92b6d351d2dd7adfaa4d0cdde6129b6dd4d5b6c72d2efee8"
+    },
+    {
+      "path": "tests/f011/test_language.py",
+      "sha256": "6ffdf035d5438aa2782cf74cd6cb0e48d63841b435ce1fd51b47e318dceda3dd"
+    },
+    {
+      "path": "references/f011-parser-sources.json",
+      "sha256": "8b363955818fa5130b5afbacf0bb2d3de11bef9784b92f1ac186acc55d12415c"
+    },
+    {
+      "path": "references/f011-language-assertions.json",
+      "sha256": "1f2ea2cf92d8db5287c48594a4092a0d7582e31d558565fdba0b19d7a8b26cf5"
+    }
+  ]
+}

@@ -2,8 +2,9 @@
 
 本项目沿用根 [MIT LICENSE](LICENSE)。
 
-- Mermaid：固定 12.2.0 / `1fb7869866dd619168d840291c9c54b4f129758b`，MIT；版权原文保留于 [references/licenses/mermaid-LICENSE](references/licenses/mermaid-LICENSE)。当前只提交来源元数据与索引，完整参考 checkout 不进入发行包。
+- Mermaid：固定 12.2.0 / `1fb7869866dd619168d840291c9c54b4f129758b`，MIT；版权原文保留于 [references/licenses/mermaid-LICENSE](references/licenses/mermaid-LICENSE)，随本包分发。F01.1 基础流程图语法、配置、样式和几何职责的来源映射位于 `references/f011-*-sources.json`；完整参考 checkout 不进入发行包。
 - py-skia-canvas：依赖 0.1.0a18，使用其公开 Python API。其 wheel 内含自身及 Rust/Skia 等第三方许可；本项目不复制其核心或原生库。
+- py-visactor-elk：依赖 0.1.0，使用公开 `pyelk.ELK` 接口，不复制其算法源码。该独立分发包自行携带 `MIT AND (EPL-2.0 OR GPL-3.0-or-later) AND Apache-2.0` 许可及来源通知。
 - Mermaid 的 Dagre/ELK/D3/RoughJS/KaTeX/Iconify/ZenUML 等依赖：锁定源码中的包/lock 只提供来源起点，实际移植/打包前逐项审计版本、传递依赖和许可。不能从 Mermaid 主仓库 MIT 推断所有依赖或资源均为 MIT。
 - 系统/用户字体、图标及图片：不随本骨架复制，后续共享 fixture 资源须附独立许可、来源与 SHA。
 

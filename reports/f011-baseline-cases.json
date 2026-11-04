@@ -1,0 +1,299 @@
+{
+  "schema": "py-mermaid-f011-cases/v1",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "origin": "Independently authored from flow.jison graphConfig/vertex/linkStatement and flowDb.addVertex/addLink; exact source hashes in references/f011-parser-sources.json",
+  "cases": [
+    {
+      "id": "single",
+      "text": "flowchart TD\nA[Hello]",
+      "nodes": [
+        [
+          "A",
+          "Hello"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD"
+    },
+    {
+      "id": "td-chain",
+      "text": "flowchart TD\nA[Start] --> B[End]",
+      "nodes": [
+        [
+          "A",
+          "Start"
+        ],
+        [
+          "B",
+          "End"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD"
+    },
+    {
+      "id": "lr-chain",
+      "text": "flowchart LR\nA[Start] --> B[Middle] --> C[End]",
+      "nodes": [
+        [
+          "A",
+          "Start"
+        ],
+        [
+          "B",
+          "Middle"
+        ],
+        [
+          "C",
+          "End"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "B",
+          "C"
+        ]
+      ],
+      "direction": "LR"
+    },
+    {
+      "id": "branch-merge",
+      "text": "flowchart TD\nA[Start] --> B[Left]\nA --> C[Right]\nB --> D[End]\nC --> D",
+      "nodes": [
+        [
+          "A",
+          "Start"
+        ],
+        [
+          "B",
+          "Left"
+        ],
+        [
+          "C",
+          "Right"
+        ],
+        [
+          "D",
+          "End"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "A",
+          "C"
+        ],
+        [
+          "B",
+          "D"
+        ],
+        [
+          "C",
+          "D"
+        ]
+      ],
+      "direction": "TD"
+    },
+    {
+      "id": "graph-alias",
+      "text": "graph LR; A[First] --> B[Last];",
+      "nodes": [
+        [
+          "A",
+          "First"
+        ],
+        [
+          "B",
+          "Last"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "LR"
+    },
+    {
+      "id": "whole-line-comments",
+      "text": "%% heading\nflowchart TD\n%% before nodes\nA[One] --> B[Two]\n%% after edge",
+      "nodes": [
+        [
+          "A",
+          "One"
+        ],
+        [
+          "B",
+          "Two"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD"
+    },
+    {
+      "id": "quoted-unicode",
+      "text": "flowchart TD\nA[\"开始 😀\"] --> B[\"完成\"]",
+      "nodes": [
+        [
+          "A",
+          "开始 😀"
+        ],
+        [
+          "B",
+          "完成"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD"
+    },
+    {
+      "id": "redeclare",
+      "text": "flowchart TD\nA[Old] --> B\nA[New]\nA --> B",
+      "nodes": [
+        [
+          "A",
+          "New"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD"
+    },
+    {
+      "id": "multiline",
+      "text": "flowchart LR\nA[\"First\nsecond\"] --> B[Done]",
+      "nodes": [
+        [
+          "A",
+          "First\nsecond"
+        ],
+        [
+          "B",
+          "Done"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "LR"
+    },
+    {
+      "id": "disconnected",
+      "text": "flowchart TD\nA[Alpha]\nB[Beta]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD"
+    },
+    {
+      "id": "root-id",
+      "text": "graph TD\nroot[Root] --> e0[End]",
+      "nodes": [
+        [
+          "root",
+          "Root"
+        ],
+        [
+          "e0",
+          "End"
+        ]
+      ],
+      "edges": [
+        [
+          "root",
+          "e0"
+        ]
+      ],
+      "direction": "TD"
+    },
+    {
+      "id": "long-label",
+      "text": "flowchart LR\nA[Long ordinary text for measured sizing] --> B[End]",
+      "nodes": [
+        [
+          "A",
+          "Long ordinary text for measured sizing"
+        ],
+        [
+          "B",
+          "End"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "LR"
+    }
+  ],
+  "negativeCases": [
+    {
+      "id": "inline-comment",
+      "text": "%% heading\nflowchart TD\n%% before nodes\nA[One] --> B[Two] %% after edge",
+      "origin": "S4 official source disagreement preserved; cleanupComments only removes whole lines"
+    },
+    {
+      "id": "incomplete-edge",
+      "text": "flowchart TD\nA-->"
+    },
+    {
+      "id": "unclosed-label",
+      "text": "flowchart TD\nA[Missing"
+    }
+  ],
+  "probeCorrections": [
+    {
+      "source": "packages/mermaid/src/diagram-api/comments.ts:cleanupComments / flow-comments.spec.js",
+      "reason": "Initial comments positive used unsupported inline %% syntax; retain as negative and add correct whole-line positive",
+      "evidence": "test-runs/f011-s4-official-002/comments.error.json"
+    }
+  ]
+}

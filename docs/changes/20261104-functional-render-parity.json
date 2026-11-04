@@ -1,0 +1,275 @@
+{
+  "schema": "py-mermaid-change/v1",
+  "taskId": "20261104-functional-render-parity",
+  "kind": "user-authorized-functional-rendering-parity-policy",
+  "status": "functional-render-parity-policy-scoped-verified",
+  "objective": "Define DOM-versus-Canvas rendering acceptance as functional/scene/geometry-quality parity with permitted renderer variation, not pixel equality, and synchronize execution handoff.",
+  "authorization": "User explicitly requires functionality to match and rendering not to be completely pixel-identical across DOM and Canvas.",
+  "acceptanceCriteria": [
+    "Exact functional requirements distinguished from permissible engine/font/geometry presentation variation",
+    "Reference and candidate semantic scenes, actual drawing evidence and quality checks defined",
+    "Image similarity is diagnostic rather than a substitute gate; same-renderer optional exact regression isolated",
+    "Positive and negative controls include both harmless renderer variation and real content/connection/clipping faults",
+    "Handoff/contracts/machine policy agree without changing all-source-before-tests phase order"
+  ],
+  "baseCommit": "b1e4c10adc2c3ca8b77b86febcd306512116408c",
+  "startingStatus": " M AGENTS.md\n M README.en.md\n M README.md\n M docs/API_COMPATIBILITY.md\n M docs/IMPLEMENTATION_PLAN.md\n M docs/NEW_SESSION.md\n M docs/RELEASE_STATUS.md\n M docs/TASKS.md\n M docs/TEST_AND_RELEASE.md\n M references/README.md\n M tests/README.md\n M tools/oracle/README.md\n?? docs/CANVAS_NATIVE_ARCHITECTURE.md\n?? docs/DEPENDENCY_MIGRATION.md\n?? docs/EXECUTION_HANDOFF.md\n?? docs/FEATURE_MIGRATION.md\n?? docs/FULL_MIGRATION_PLAN.md\n?? docs/MODULE_BOUNDARIES.md\n?? docs/PARALLEL_EXECUTION.md\n?? docs/SOURCE_BASED_VERIFICATION.md\n?? docs/THIRD_PARTY_DEPENDENCIES.md\n?? docs/changes/20261104-canvas-native.json\n?? docs/changes/20261104-dependency-audit.json\n?? docs/changes/20261104-dependency-tree.json\n?? docs/changes/20261104-feature-split.json\n?? docs/changes/20261104-full-migration-handoff.json\n?? references/dependencies.json\n?? references/dependency-bottom-up.md\n?? references/dependency-porting-policy.json\n?? references/dependency-toolchain-tree.txt\n?? references/dependency-tree.json\n?? references/dependency-tree.txt\n?? references/execution-state.template.json\n?? references/feature-modules.json\n?? references/migration-execution.json\n?? references/python-candidates.json\n?? scripts/audit_dependencies.py\n?? scripts/build_dependency_tree.py\n?? scripts/validate_migration_plan.py\n?? tests/dependencies/\n",
+  "changedPaths": [
+    "AGENTS.md",
+    "README.en.md",
+    "README.md",
+    "docs/API_COMPATIBILITY.md",
+    "docs/CANVAS_NATIVE_ARCHITECTURE.md",
+    "docs/EXECUTION_HANDOFF.md",
+    "docs/FEATURE_MIGRATION.md",
+    "docs/FULL_MIGRATION_PLAN.md",
+    "docs/IMPLEMENTATION_PLAN.md",
+    "docs/NEW_SESSION.md",
+    "docs/PARALLEL_EXECUTION.md",
+    "docs/RELEASE_STATUS.md",
+    "docs/RENDER_CONSISTENCY.md",
+    "docs/SOURCE_BASED_VERIFICATION.md",
+    "docs/TEST_AND_RELEASE.md",
+    "docs/changes/20261104-functional-render-parity.json",
+    "references/execution-state.template.json",
+    "references/feature-modules.json",
+    "references/migration-execution.json",
+    "references/render-validation-policy.json",
+    "scripts/validate_migration_plan.py",
+    "tools/oracle/README.md"
+  ],
+  "preservedStartingFiles": [
+    "docs/DEPENDENCY_MIGRATION.md",
+    "docs/MODULE_BOUNDARIES.md",
+    "docs/TASKS.md",
+    "docs/THIRD_PARTY_DEPENDENCIES.md",
+    "docs/changes/20261104-canvas-native.json",
+    "docs/changes/20261104-dependency-audit.json",
+    "docs/changes/20261104-dependency-tree.json",
+    "docs/changes/20261104-feature-split.json",
+    "docs/changes/20261104-full-migration-handoff.json",
+    "references/README.md",
+    "references/dependencies.json",
+    "references/dependency-bottom-up.md",
+    "references/dependency-porting-policy.json",
+    "references/dependency-toolchain-tree.txt",
+    "references/dependency-tree.json",
+    "references/dependency-tree.txt",
+    "references/python-candidates.json",
+    "scripts/audit_dependencies.py",
+    "scripts/build_dependency_tree.py",
+    "tests/README.md",
+    "tests/dependencies/test_dependency_audit.py",
+    "tests/dependencies/test_dependency_tree.py"
+  ],
+  "sourceSha256": {
+    "AGENTS.md": "0c1408449fa152aa7a55ca341b8df94c12110419d4ecd75b9cfe7f308132227f",
+    "README.en.md": "e83d0164dbe77da698249a847f9d9332562c6fbc131ee7e072b7065952c7158a",
+    "README.md": "4b36a876b89d7e0a558f79230429f0b715e1b318a41f95a62ff98e57cfddf164",
+    "docs/API_COMPATIBILITY.md": "c6f3006bbf0182caeddc306e590c42a9c5b1545aaff3decd7ab12c24587237bd",
+    "docs/CANVAS_NATIVE_ARCHITECTURE.md": "7b2fc2430f8e455e5eb8125c3591deea5fbf59fc5752d8b0a7948db0ef7c940d",
+    "docs/EXECUTION_HANDOFF.md": "3ce600b712b7df985fbbb92b0b84a42e81e402914f4f737e98fce13b2948edf4",
+    "docs/FEATURE_MIGRATION.md": "97a8b77f789c5c95638893407ffb1cc36d91c06355281d8283ce517e77dd0561",
+    "docs/FULL_MIGRATION_PLAN.md": "7956bbd5473111de7cd9d7cdc37ec79c1f80bf8e78bcb2da16ef0a583efe2b55",
+    "docs/IMPLEMENTATION_PLAN.md": "3f8d5d56c0cf60d9e668d61ef800863750563bb4d467b0a2ba8126b77c653eee",
+    "docs/NEW_SESSION.md": "01a5c6938a249bcd122e7b223e592535e5cac96ee91f5394983e4008c5eb4fd5",
+    "docs/PARALLEL_EXECUTION.md": "4845eaf7edd3c52c0cc1ea3b776f5e151ed062a3ec946725c381d35d18b3af29",
+    "docs/RELEASE_STATUS.md": "8e7624b86d162f22d1fcad76a52b08ccaada352cfdcfb04ac359c5753f6af0ea",
+    "docs/RENDER_CONSISTENCY.md": "ae23d60bacc2bff399fb437d362328b45a69b40c2dab8feea3a8096d556b812a",
+    "docs/SOURCE_BASED_VERIFICATION.md": "0fe07b44644001bea6f0274b0fa4757b4e03921a8faa789aa6ca1f9778fdbf00",
+    "docs/TEST_AND_RELEASE.md": "2ba7c84bd5e8fbcf00be3256ea57151e77cdddf0e8ee09c0e3cfd361163ccbd7",
+    "references/execution-state.template.json": "0b28e064241f5e7bcd22ba64c555d2a7e7769c8c4187778e6604a03409e6be23",
+    "references/feature-modules.json": "8858d905ea101fb0b13ef864e9257c74ad08a242a56448abae27b064894989c2",
+    "references/migration-execution.json": "4dee086ee2e1798a77bba4c2d4c393c074c3362d2b7c157382c2848f68f13c0c",
+    "references/render-validation-policy.json": "7eb75fb9745e60e47059deba3f8490ccc8285a57748a8c2767053b9ef7a5c523",
+    "scripts/validate_migration_plan.py": "967d9d7fc32521408d227c51ca6edc9264504827f985f1a21e40e66021a90768",
+    "tools/oracle/README.md": "47761257833d0ac548f1316043219b32f71bd8fe49737deff9ec9b05eef84d21"
+  },
+  "commands": [
+    {
+      "id": "bootstrap-before",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "scripts/validate_bootstrap.py"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261104-functional-render-parity-01/bootstrap-before.log",
+      "logSha256": "b7d34bac2621a02fde774854f39712f458e9b1ed0af0d748f561427cc2bb8a91"
+    },
+    {
+      "id": "upstream-before",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "scripts/upstream.py",
+        "check"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261104-functional-render-parity-01/upstream-before.log",
+      "logSha256": "e177513c6db5afbcc9524be08795930fb8d5edc0c47ba46d8051ee7859418089"
+    },
+    {
+      "id": "plan-check",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "scripts/validate_migration_plan.py",
+        "--check",
+        "--out",
+        "C:\\code\\py-visactor\\py-mermaid\\test-runs\\20261104-functional-render-parity-01\\plan-report.json"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261104-functional-render-parity-01/plan-check.log",
+      "logSha256": "d0c99cb132af65b0817e232dd6bf0b49b008bf28d6652712beb6b09be13eb423"
+    },
+    {
+      "id": "render-policy-controls",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "C:\\code\\py-visactor\\py-mermaid\\test-runs\\20261104-functional-render-parity-01\\review_render_policy.py"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261104-functional-render-parity-01/render-policy-controls.log",
+      "logSha256": "3c00c6134de868fcd186f855af509f350f7e85dc6437f422926dfd1c4e269255"
+    },
+    {
+      "id": "bootstrap-after",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "scripts/validate_bootstrap.py",
+        "--out",
+        "C:\\code\\py-visactor\\py-mermaid\\test-runs\\20261104-functional-render-parity-01\\bootstrap-report.json"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261104-functional-render-parity-01/bootstrap-after.log",
+      "logSha256": "55a21f1192c8ee9c14685da920ba071bdfdfb3cc7cb2068b0b7604a839aeaeaa"
+    },
+    {
+      "id": "diff-check",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261104-functional-render-parity-01/diff-check.log",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "test-runs/20261104-functional-render-parity-01/bootstrap-after.log",
+      "sha256": "55a21f1192c8ee9c14685da920ba071bdfdfb3cc7cb2068b0b7604a839aeaeaa"
+    },
+    {
+      "path": "test-runs/20261104-functional-render-parity-01/bootstrap-before.log",
+      "sha256": "b7d34bac2621a02fde774854f39712f458e9b1ed0af0d748f561427cc2bb8a91"
+    },
+    {
+      "path": "test-runs/20261104-functional-render-parity-01/bootstrap-report.json",
+      "sha256": "55a21f1192c8ee9c14685da920ba071bdfdfb3cc7cb2068b0b7604a839aeaeaa"
+    },
+    {
+      "path": "test-runs/20261104-functional-render-parity-01/commands.json",
+      "sha256": "d4934ba977c9d07c5595d0c9c3bacf940cfe2166d2ca44158bd0ec0117e7af09"
+    },
+    {
+      "path": "test-runs/20261104-functional-render-parity-01/diff-check.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "test-runs/20261104-functional-render-parity-01/plan-check.log",
+      "sha256": "d0c99cb132af65b0817e232dd6bf0b49b008bf28d6652712beb6b09be13eb423"
+    },
+    {
+      "path": "test-runs/20261104-functional-render-parity-01/plan-report.json",
+      "sha256": "d0c99cb132af65b0817e232dd6bf0b49b008bf28d6652712beb6b09be13eb423"
+    },
+    {
+      "path": "test-runs/20261104-functional-render-parity-01/render-policy-controls.log",
+      "sha256": "3c00c6134de868fcd186f855af509f350f7e85dc6437f422926dfd1c4e269255"
+    },
+    {
+      "path": "test-runs/20261104-functional-render-parity-01/review_render_policy.py",
+      "sha256": "e1752a9c1a1813ad2255e49ff7bcc88c8e8544e9a68d5672bd75aba936bec65a"
+    },
+    {
+      "path": "test-runs/20261104-functional-render-parity-01/starting.json",
+      "sha256": "2e6cf4f3945a01483e906da27a2ba1b1a83b533dce5ba73a2f27a2bf08759d4d"
+    },
+    {
+      "path": "test-runs/20261104-functional-render-parity-01/upstream-before.log",
+      "sha256": "e177513c6db5afbcc9524be08795930fb8d5edc0c47ba46d8051ee7859418089"
+    }
+  ],
+  "acceptanceResults": [
+    "User-authorized acceptance explicitly requires functional/rendered-content/geometry-quality parity without cross-DOM/Canvas pixel, absolute-coordinate or natural-size equality.",
+    "L1 semantic, L2 actual render scene and L3 geometry/readability gates separated from L4 diagnostic image metrics; explicit output-size contracts remain required.",
+    "SemanticScene normalization, actual Canvas output evidence, clipping/connection/content checks, expected renderer variation and PASS/FAIL/REVIEW/UNVERIFIED rules documented.",
+    "Normal raster/font-metric/constraint-preserving layout variation permitted; missing labels/elements, wrong arrows/content/styles/security, clipping and no-op drawing remain failures.",
+    "Optional exact Python self-regression limited to demonstrated deterministic frozen profiles; single-pixel cross-engine changes not automatic failures.",
+    "All execution/handoff/API/testing documents and machine links updated, preserving 61 tasks, all feature ownership and all-source-before-test-design barriers.",
+    "Six metadata-policy negative controls, plan validation, bootstrap/doc links and whitespace checks passed; no product/image/comparator execution claimed.",
+    "Raw dependency/source graph, runtime metadata and compatibility status preserved."
+  ],
+  "documentationReview": [
+    {
+      "paths": [
+        "docs/RENDER_CONSISTENCY.md",
+        "references/render-validation-policy.json"
+      ],
+      "status": "created",
+      "reason": "Concrete reference/candidate scene capture, layered detection, allowed variations, genuine render faults, controlled diagnostics and final acceptance."
+    },
+    {
+      "paths": [
+        "AGENTS.md",
+        "README.md",
+        "README.en.md",
+        "docs/API_COMPATIBILITY.md",
+        "docs/SOURCE_BASED_VERIFICATION.md",
+        "docs/TEST_AND_RELEASE.md",
+        "docs/CANVAS_NATIVE_ARCHITECTURE.md",
+        "docs/FULL_MIGRATION_PLAN.md",
+        "docs/EXECUTION_HANDOFF.md",
+        "docs/NEW_SESSION.md",
+        "docs/PARALLEL_EXECUTION.md",
+        "docs/FEATURE_MIGRATION.md",
+        "docs/IMPLEMENTATION_PLAN.md",
+        "tools/oracle/README.md",
+        "docs/RELEASE_STATUS.md"
+      ],
+      "status": "updated",
+      "reason": "Remove ambiguous pixel/coordinate equality gates and make functional parity with permissible engine variation authoritative for new sessions."
+    },
+    {
+      "paths": [
+        "references/migration-execution.json",
+        "references/feature-modules.json",
+        "references/execution-state.template.json",
+        "scripts/validate_migration_plan.py"
+      ],
+      "status": "updated",
+      "reason": "Link policy and guard functional/quality requirements plus diagnostic-only image comparison without changing task dependencies or execution stages."
+    },
+    {
+      "paths": [
+        "src",
+        "pyproject.toml",
+        "docs/compatibility.json",
+        "references/upstream.lock.json",
+        "examples",
+        "docs/assets",
+        "references/dependency-tree.json",
+        "references/dependencies.json"
+      ],
+      "status": "reviewed-no-change",
+      "reason": "Policy clarification only; no product code, actual tests/comparator, runtime dependency, source baseline, compatibility claim or image changed."
+    }
+  ],
+  "limitations": [
+    "A/B capture, scene comparators and render-quality checks are planned P2 work, not implemented by this policy update.",
+    "Metadata controls verify acceptance configuration only; no image similarity, actual visual fault injection or Mermaid rendering performed.",
+    "Case-specific algorithm numeric precision and visual warning calibration remain P2 design; global SSIM/pixel equality is not a cross-engine acceptance gate.",
+    "No commit, push, remote synchronization or publication."
+  ],
+  "nextStep": "Execute the unchanged all-source P1 phase; in P2 implement SemanticScene capture, L1-L3 gates, actual Canvas-output evidence, positive/negative controls and diagnostic-only image reporting under the new policy."
+}

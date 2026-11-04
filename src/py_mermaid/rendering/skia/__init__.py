@@ -1,1 +1,4 @@
-"""Reserved for the sole production backend, using public py-skia-canvas APIs."""
+"""Sole production backend; native imports occur when a session is created."""
+from .session import CanvasSession
+
+__all__ = ["CanvasSession"]

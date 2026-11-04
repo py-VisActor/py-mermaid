@@ -1,0 +1,1181 @@
+{
+  "schema": "py-mermaid-execution-state/v1",
+  "template": false,
+  "plan": "references/migration-execution.json",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "phase": "F01.1-local-delivery",
+  "startedAtUtc": "20261104T132038Z",
+  "currentSourceIdentity": {
+    "treeSha256": "916d506280bdeb7e1444b44d0ecad0ee5085c93a9dec7db90c9cd5483f8902b1",
+    "evidence": "test-runs/f011-s5-final-001/source-candidate.json",
+    "wheelSha256": "b5fee226f8eba18b659bcdf38c978320b494a8ed4f8652475a4167433d7a25e4"
+  },
+  "interfaceVersion": "f011-v1.1",
+  "activeLeases": [],
+  "commonRequests": [],
+  "blockers": [],
+  "nextTaskIds": [],
+  "tasks": {
+    "P0-01": {
+      "status": "in_progress",
+      "ownerAgent": "/root",
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [
+        "test-runs/execution-start-20261104T132038Z/manifest.json"
+      ],
+      "remainingWork": [
+        "Run fixed-source/bootstrap/dependency/plan mechanical checks"
+      ]
+    },
+    "P0-02": {
+      "status": "in_progress",
+      "ownerAgent": "/root",
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P0-03": {
+      "status": "in_progress",
+      "ownerAgent": "/root",
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": [
+        "Receive layout/Canvas public API source audits; record dependency environment"
+      ]
+    },
+    "P0-GATE": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P1-01": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P1-02": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P1-03": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P1-04": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P1-05": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P1-06": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P1-07": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P1-08": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P1-09": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P1-10": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P1-11": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P1-12": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P1-13": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P1-14": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P1-15": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P1-16": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P1-17": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P1-F01-SEED": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P1-F01": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P1-F02": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P1-F03": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P1-F04": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P1-F05": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P1-F06": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P1-F07": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P1-F08": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P1-F09": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P1-F10": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P1-F11": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P1-F12": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P1-INTEGRATE": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P1-GATE": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P2-V01": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P2-V02": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P2-V03": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P2-V04": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P2-V05": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P2-V06": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P2-U01": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P2-U02": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P2-U03": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P2-U04": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P2-V07": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P2-GATE": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P3-01": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P3-02": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P3-03": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P3-04": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P3-05": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P3-GATE": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P4-01": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P4-02": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P4-03": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P4-04": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P4-GATE": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P5-01": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    },
+    "P5-02": {
+      "status": "planned",
+      "ownerAgent": null,
+      "leasedWritePaths": [],
+      "sourceIdentity": null,
+      "evidence": [],
+      "remainingWork": []
+    }
+  },
+  "detectors": {
+    "c4": {
+      "featureId": "F02",
+      "sourceTask": "P1-F02",
+      "sourceStatus": "planned",
+      "sourceMap": [],
+      "integrationStatus": "not-started",
+      "verificationStatus": "not-started"
+    },
+    "flowchart-v2": {
+      "featureId": "F01",
+      "sourceTask": "P1-F01",
+      "sourceStatus": "planned",
+      "sourceMap": [],
+      "integrationStatus": "not-started",
+      "verificationStatus": "not-started"
+    },
+    "agentflow": {
+      "featureId": "F09",
+      "sourceTask": "P1-F09",
+      "sourceStatus": "planned",
+      "sourceMap": [],
+      "integrationStatus": "not-started",
+      "verificationStatus": "not-started"
+    },
+    "swimlane": {
+      "featureId": "F09",
+      "sourceTask": "P1-F09",
+      "sourceStatus": "planned",
+      "sourceMap": [],
+      "integrationStatus": "not-started",
+      "verificationStatus": "not-started"
+    },
+    "er": {
+      "featureId": "F02",
+      "sourceTask": "P1-F02",
+      "sourceStatus": "planned",
+      "sourceMap": [],
+      "integrationStatus": "not-started",
+      "verificationStatus": "not-started"
+    },
+    "gitGraph": {
+      "featureId": "F04",
+      "sourceTask": "P1-F04",
+      "sourceStatus": "planned",
+      "sourceMap": [],
+      "integrationStatus": "not-started",
+      "verificationStatus": "not-started"
+    },
+    "gantt": {
+      "featureId": "F04",
+      "sourceTask": "P1-F04",
+      "sourceStatus": "planned",
+      "sourceMap": [],
+      "integrationStatus": "not-started",
+      "verificationStatus": "not-started"
+    },
+    "info": {
+      "featureId": "F12",
+      "sourceTask": "P1-F12",
+      "sourceStatus": "planned",
+      "sourceMap": [],
+      "integrationStatus": "not-started",
+      "verificationStatus": "not-started"
+    },
+    "pie": {
+      "featureId": "F05",
+      "sourceTask": "P1-F05",
+      "sourceStatus": "planned",
+      "sourceMap": [],
+      "integrationStatus": "not-started",
+      "verificationStatus": "not-started"
+    },
+    "quadrantChart": {
+      "featureId": "F05",
+      "sourceTask": "P1-F05",
+      "sourceStatus": "planned",
+      "sourceMap": [],
+      "integrationStatus": "not-started",
+      "verificationStatus": "not-started"
+    },
+    "xychart": {
+      "featureId": "F05",
+      "sourceTask": "P1-F05",
+      "sourceStatus": "planned",
+      "sourceMap": [],
+      "integrationStatus": "not-started",
+      "verificationStatus": "not-started"
+    },
+    "requirement": {
+      "featureId": "F02",
+      "sourceTask": "P1-F02",
+      "sourceStatus": "planned",
+      "sourceMap": [],
+      "integrationStatus": "not-started",
+      "verificationStatus": "not-started"
+    },
+    "sequence": {
+      "featureId": "F03",
+      "sourceTask": "P1-F03",
+      "sourceStatus": "planned",
+      "sourceMap": [],
+      "integrationStatus": "not-started",
+      "verificationStatus": "not-started"
+    },
+    "classDiagram": {
+      "featureId": "F02",
+      "sourceTask": "P1-F02",
+      "sourceStatus": "planned",
+      "sourceMap": [],
+      "integrationStatus": "not-started",
+      "verificationStatus": "not-started"
+    },
+    "stateDiagram": {
+      "featureId": "F02",
+      "sourceTask": "P1-F02",
+      "sourceStatus": "planned",
+      "sourceMap": [],
+      "integrationStatus": "not-started",
+      "verificationStatus": "not-started"
+    },
+    "journey": {
+      "featureId": "F04",
+      "sourceTask": "P1-F04",
+      "sourceStatus": "planned",
+      "sourceMap": [],
+      "integrationStatus": "not-started",
+      "verificationStatus": "not-started"
+    },
+    "flowchart-elk": {
+      "featureId": "F01",
+      "sourceTask": "P1-F01",
+      "sourceStatus": "planned",
+      "sourceMap": [],
+      "integrationStatus": "not-started",
+      "verificationStatus": "not-started"
+    },
+    "timeline": {
+      "featureId": "F04",
+      "sourceTask": "P1-F04",
+      "sourceStatus": "planned",
+      "sourceMap": [],
+      "integrationStatus": "not-started",
+      "verificationStatus": "not-started"
+    },
+    "mindmap": {
+      "featureId": "F06",
+      "sourceTask": "P1-F06",
+      "sourceStatus": "planned",
+      "sourceMap": [],
+      "integrationStatus": "not-started",
+      "verificationStatus": "not-started"
+    },
+    "kanban": {
+      "featureId": "F08",
+      "sourceTask": "P1-F08",
+      "sourceStatus": "planned",
+      "sourceMap": [],
+      "integrationStatus": "not-started",
+      "verificationStatus": "not-started"
+    },
+    "sankey": {
+      "featureId": "F07",
+      "sourceTask": "P1-F07",
+      "sourceStatus": "planned",
+      "sourceMap": [],
+      "integrationStatus": "not-started",
+      "verificationStatus": "not-started"
+    },
+    "packet": {
+      "featureId": "F08",
+      "sourceTask": "P1-F08",
+      "sourceStatus": "planned",
+      "sourceMap": [],
+      "integrationStatus": "not-started",
+      "verificationStatus": "not-started"
+    },
+    "radar": {
+      "featureId": "F05",
+      "sourceTask": "P1-F05",
+      "sourceStatus": "planned",
+      "sourceMap": [],
+      "integrationStatus": "not-started",
+      "verificationStatus": "not-started"
+    },
+    "block": {
+      "featureId": "F08",
+      "sourceTask": "P1-F08",
+      "sourceStatus": "planned",
+      "sourceMap": [],
+      "integrationStatus": "not-started",
+      "verificationStatus": "not-started"
+    },
+    "treeView": {
+      "featureId": "F06",
+      "sourceTask": "P1-F06",
+      "sourceStatus": "planned",
+      "sourceMap": [],
+      "integrationStatus": "not-started",
+      "verificationStatus": "not-started"
+    },
+    "architecture": {
+      "featureId": "F08",
+      "sourceTask": "P1-F08",
+      "sourceStatus": "planned",
+      "sourceMap": [],
+      "integrationStatus": "not-started",
+      "verificationStatus": "not-started"
+    },
+    "eventmodeling": {
+      "featureId": "F09",
+      "sourceTask": "P1-F09",
+      "sourceStatus": "planned",
+      "sourceMap": [],
+      "integrationStatus": "not-started",
+      "verificationStatus": "not-started"
+    },
+    "ishikawa": {
+      "featureId": "F09",
+      "sourceTask": "P1-F09",
+      "sourceStatus": "planned",
+      "sourceMap": [],
+      "integrationStatus": "not-started",
+      "verificationStatus": "not-started"
+    },
+    "venn": {
+      "featureId": "F07",
+      "sourceTask": "P1-F07",
+      "sourceStatus": "planned",
+      "sourceMap": [],
+      "integrationStatus": "not-started",
+      "verificationStatus": "not-started"
+    },
+    "treemap": {
+      "featureId": "F06",
+      "sourceTask": "P1-F06",
+      "sourceStatus": "planned",
+      "sourceMap": [],
+      "integrationStatus": "not-started",
+      "verificationStatus": "not-started"
+    },
+    "usecase": {
+      "featureId": "F02",
+      "sourceTask": "P1-F02",
+      "sourceStatus": "planned",
+      "sourceMap": [],
+      "integrationStatus": "not-started",
+      "verificationStatus": "not-started"
+    },
+    "wardley": {
+      "featureId": "F09",
+      "sourceTask": "P1-F09",
+      "sourceStatus": "planned",
+      "sourceMap": [],
+      "integrationStatus": "not-started",
+      "verificationStatus": "not-started"
+    },
+    "cynefin": {
+      "featureId": "F09",
+      "sourceTask": "P1-F09",
+      "sourceStatus": "planned",
+      "sourceMap": [],
+      "integrationStatus": "not-started",
+      "verificationStatus": "not-started"
+    },
+    "railroad": {
+      "featureId": "F10",
+      "sourceTask": "P1-F10",
+      "sourceStatus": "planned",
+      "sourceMap": [],
+      "integrationStatus": "not-started",
+      "verificationStatus": "not-started"
+    },
+    "railroadEbnf": {
+      "featureId": "F10",
+      "sourceTask": "P1-F10",
+      "sourceStatus": "planned",
+      "sourceMap": [],
+      "integrationStatus": "not-started",
+      "verificationStatus": "not-started"
+    },
+    "railroadAbnf": {
+      "featureId": "F10",
+      "sourceTask": "P1-F10",
+      "sourceStatus": "planned",
+      "sourceMap": [],
+      "integrationStatus": "not-started",
+      "verificationStatus": "not-started"
+    },
+    "railroadPeg": {
+      "featureId": "F10",
+      "sourceTask": "P1-F10",
+      "sourceStatus": "planned",
+      "sourceMap": [],
+      "integrationStatus": "not-started",
+      "verificationStatus": "not-started"
+    },
+    "zenuml": {
+      "featureId": "F11",
+      "sourceTask": "P1-F11",
+      "sourceStatus": "planned",
+      "sourceMap": [],
+      "integrationStatus": "not-started",
+      "verificationStatus": "not-started"
+    }
+  },
+  "crossCutting": {
+    "preprocessing-frontmatter-directives": {
+      "moduleOwner": "C01",
+      "sourceStatus": "planned",
+      "sourceMap": [],
+      "verificationStatus": "not-started"
+    },
+    "configuration-schema-defaults": {
+      "moduleOwner": "C01",
+      "sourceStatus": "planned",
+      "sourceMap": [],
+      "verificationStatus": "not-started"
+    },
+    "themes-css-cascade": {
+      "moduleOwner": "C04",
+      "sourceStatus": "planned",
+      "sourceMap": [],
+      "verificationStatus": "not-started"
+    },
+    "text-html-markdown-math": {
+      "moduleOwner": "C04",
+      "sourceStatus": "planned",
+      "sourceMap": [],
+      "verificationStatus": "not-started"
+    },
+    "accessibility-metadata": {
+      "moduleOwner": "C08",
+      "sourceStatus": "planned",
+      "sourceMap": [],
+      "verificationStatus": "not-started"
+    },
+    "links-interaction-security": {
+      "moduleOwner": "C08",
+      "sourceStatus": "planned",
+      "sourceMap": [],
+      "verificationStatus": "not-started"
+    },
+    "icons-images-resource-policy": {
+      "moduleOwner": "C08",
+      "sourceStatus": "planned",
+      "sourceMap": [],
+      "verificationStatus": "not-started"
+    },
+    "layout-engines-dagre-elk-tidy": {
+      "moduleOwner": "C05",
+      "sourceStatus": "planned",
+      "sourceMap": [],
+      "verificationStatus": "not-started"
+    },
+    "handdrawn-random-seed": {
+      "moduleOwner": "C06",
+      "sourceStatus": "planned",
+      "sourceMap": [],
+      "verificationStatus": "not-started"
+    },
+    "exports-scale-background": {
+      "moduleOwner": "C07",
+      "sourceStatus": "planned",
+      "sourceMap": [],
+      "verificationStatus": "not-started"
+    },
+    "diagnostics-errors-utf16": {
+      "moduleOwner": "C01",
+      "sourceStatus": "planned",
+      "sourceMap": [],
+      "verificationStatus": "not-started"
+    },
+    "threading-lifecycle": {
+      "moduleOwner": "C07",
+      "sourceStatus": "planned",
+      "sourceMap": [],
+      "verificationStatus": "not-started"
+    },
+    "offline-deployment": {
+      "moduleOwner": "C07",
+      "sourceStatus": "planned",
+      "sourceMap": [],
+      "verificationStatus": "not-started"
+    }
+  },
+  "sharedModules": {
+    "C01": {
+      "sourceStatus": "planned",
+      "interfaceVersion": null,
+      "sourceTasks": [
+        "P1-02",
+        "P1-03",
+        "P1-17",
+        "P1-F01",
+        "P1-F02",
+        "P1-F03",
+        "P1-F04",
+        "P1-F05",
+        "P1-F06",
+        "P1-F07",
+        "P1-F08",
+        "P1-F09",
+        "P1-F10",
+        "P1-F11",
+        "P1-F12"
+      ]
+    },
+    "C02": {
+      "sourceStatus": "planned",
+      "interfaceVersion": null,
+      "sourceTasks": [
+        "P1-03",
+        "P1-F01",
+        "P1-F02",
+        "P1-F03",
+        "P1-F04",
+        "P1-F05",
+        "P1-F06",
+        "P1-F07",
+        "P1-F08",
+        "P1-F09",
+        "P1-F10",
+        "P1-F11"
+      ]
+    },
+    "C03": {
+      "sourceStatus": "planned",
+      "interfaceVersion": null,
+      "sourceTasks": [
+        "P1-01",
+        "P1-04",
+        "P1-F01",
+        "P1-F02",
+        "P1-F03",
+        "P1-F04",
+        "P1-F05",
+        "P1-F06",
+        "P1-F07",
+        "P1-F08",
+        "P1-F09",
+        "P1-F10",
+        "P1-F11"
+      ]
+    },
+    "C04": {
+      "sourceStatus": "planned",
+      "interfaceVersion": null,
+      "sourceTasks": [
+        "P1-06",
+        "P1-07",
+        "P1-11",
+        "P1-14",
+        "P1-15",
+        "P1-F01",
+        "P1-F02",
+        "P1-F03",
+        "P1-F04",
+        "P1-F05",
+        "P1-F06",
+        "P1-F07",
+        "P1-F08",
+        "P1-F09",
+        "P1-F10",
+        "P1-F11",
+        "P1-F12"
+      ]
+    },
+    "C05": {
+      "sourceStatus": "planned",
+      "interfaceVersion": null,
+      "sourceTasks": [
+        "P1-09",
+        "P1-10",
+        "P1-11",
+        "P1-12",
+        "P1-13",
+        "P1-F01",
+        "P1-F02",
+        "P1-F04",
+        "P1-F05",
+        "P1-F06",
+        "P1-F07",
+        "P1-F08",
+        "P1-F09",
+        "P1-F10",
+        "P1-F11"
+      ]
+    },
+    "C06": {
+      "sourceStatus": "planned",
+      "interfaceVersion": null,
+      "sourceTasks": [
+        "P1-04",
+        "P1-08",
+        "P1-11",
+        "P1-16",
+        "P1-F01",
+        "P1-F02",
+        "P1-F03",
+        "P1-F04",
+        "P1-F05",
+        "P1-F06",
+        "P1-F07",
+        "P1-F08",
+        "P1-F09",
+        "P1-F10",
+        "P1-F11",
+        "P1-F12"
+      ]
+    },
+    "C07": {
+      "sourceStatus": "planned",
+      "interfaceVersion": null,
+      "sourceTasks": [
+        "P1-08",
+        "P1-17",
+        "P1-F01",
+        "P1-F02",
+        "P1-F03",
+        "P1-F04",
+        "P1-F05",
+        "P1-F06",
+        "P1-F07",
+        "P1-F08",
+        "P1-F09",
+        "P1-F10",
+        "P1-F11",
+        "P1-F12"
+      ]
+    },
+    "C08": {
+      "sourceStatus": "planned",
+      "interfaceVersion": null,
+      "sourceTasks": [
+        "P1-05",
+        "P1-17",
+        "P1-F01",
+        "P1-F02",
+        "P1-F03",
+        "P1-F04",
+        "P1-F05",
+        "P1-F06",
+        "P1-F07",
+        "P1-F08",
+        "P1-F09",
+        "P1-F10",
+        "P1-F11"
+      ]
+    }
+  },
+  "retrospectives": [],
+  "renderValidationPolicy": "references/render-validation-policy.json",
+  "workers": {
+    "parser_config": {
+      "status": "idle_completed_f011",
+      "activeWritePaths": []
+    },
+    "geometry_elk": {
+      "status": "idle_completed_f011",
+      "activeWritePaths": []
+    },
+    "canvas_labels": {
+      "status": "idle_completed_f011",
+      "activeWritePaths": []
+    }
+  },
+  "activePlan": "docs/F01_1_EXECUTION_PLAN.md",
+  "activeScope": "F01.1",
+  "scopeOverride": {
+    "date": "2026-11-04",
+    "authorization": "用户明确只完成基础流程图，并要求落文档、创建目标、按计划执行",
+    "supersedesFullMigrationScheduling": true,
+    "deferred": "F01.2…F01.4/F02…F12以及完整跨图扩全，不属于本轮验收"
+  },
+  "sliceTasks": {
+    "F01.1-S0": {
+      "status": "complete",
+      "ownerAgent": "/root",
+      "remainingWork": [],
+      "evidence": [
+        "test-runs/execution-start-20261104T132038Z/manifest.json",
+        "test-runs/execution-start-20261104T132038Z/checks.json"
+      ]
+    },
+    "F01.1-S1": {
+      "status": "complete",
+      "ownerAgent": "/root",
+      "remainingWork": [],
+      "evidence": [
+        "docs/F01_1_INTERFACES.md",
+        "src/py_mermaid/model/flowchart.py"
+      ]
+    },
+    "F01.1-S2": {
+      "status": "code_complete_unverified",
+      "ownerAgent": "/root",
+      "remainingWork": [],
+      "evidence": [
+        "test-runs/f011-s2-source-20261104T133352Z/manifest.json"
+      ]
+    },
+    "F01.1-S3": {
+      "status": "test_design_complete",
+      "ownerAgent": "/root",
+      "remainingWork": [],
+      "evidence": [
+        "test-runs/f011-s3-design-001/manifest.json"
+      ]
+    },
+    "F01.1-S4": {
+      "status": "targeted_verified",
+      "ownerAgent": "/root",
+      "remainingWork": [],
+      "evidence": [
+        "test-runs/f011-s4-language-fix-20261104T133941Z/manifest.json",
+        "test-runs/f011-s4-language-theme-fix-20261104T134306Z/manifest.json",
+        "test-runs/f011-s4-canvas-defaults-001/manifest.json",
+        "test-runs/f011-s4-compare-cpu-001/report.json"
+      ]
+    },
+    "F01.1-S5": {
+      "status": "complete_local_delivery",
+      "ownerAgent": "/root",
+      "remainingWork": [],
+      "evidence": [
+        "test-runs/f011-s5-final-001/summary.json",
+        "docs/F01_1_ACCEPTANCE.md"
+      ]
+    }
+  },
+  "installationValidation": {
+    "currentInstruction": "deferred_by_user_do_not_continue_or_rerun",
+    "historicalRecord": "An isolated install/check completed before the latest user instruction; retained without further work",
+    "evidence": "test-runs/f011-s5-final-001/package-audit.json"
+  },
+  "currentScopeStatus": "complete_local_delivery_install_validation_deferred",
+  "remainingEnvironmentItems": [
+    "Linux not verified",
+    "no-loader not verified",
+    "System fallback fonts not bundled",
+    "F01.2+ and all other diagram families deferred",
+    "No commit/push/publish"
+  ],
+  "visualReport": {
+    "path": "reports/f011-render-comparison.html",
+    "manifest": "reports/f011-render-comparison.manifest.json",
+    "sha256": "17183c7173f90af7630c67ada7a98a2a9dc867751cb007e4422c00c7078676cb",
+    "qa": "test-runs/f011-html-report-qa-002/report.json",
+    "usesExistingEvidence": true,
+    "productRerun": false,
+    "installationVerification": false
+  },
+  "tooling": {
+    "status": "standardized_v1",
+    "entry": "tools/workflow.py",
+    "documentation": "tools/RUNS_AND_REPORTS.md",
+    "reportSpec": "tools/report_specs/f011-baseline.json",
+    "latestReport": "reports/F01.1-report-20261104T142137Z-f5ec6727/index.html",
+    "latestReportRun": "test-runs/F01.1-report-20261104T142137Z-f5ec6727/run.json",
+    "latestRenderRun": "test-runs/F01.1-render-20261104T141622Z-f2bb78ca/run.json",
+    "tests": "test-runs/tooling-record-20261104T142105Z-5c081a64/run.json",
+    "testMethodsPassed": 16,
+    "reportServerUrl": "http://127.0.0.1:8765/F01.1-report-20261104T142137Z-f5ec6727/index.html",
+    "originalServerUrl": "http://127.0.0.1:8765/f011-render-comparison.html",
+    "installationValidation": "deferred; not executed"
+  }
+}

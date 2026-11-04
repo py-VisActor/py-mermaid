@@ -1,0 +1,215 @@
+{
+  "schema": "py-mermaid-change/v1",
+  "taskId": "20261104-f011-execution",
+  "status": "complete_local_delivery",
+  "objective": "Complete F01.1 basic flowchart only, per current explicit user scope",
+  "baseCommit": "b1e4c10adc2c3ca8b77b86febcd306512116408c",
+  "startingEvidence": [
+    "test-runs/execution-start-20261104T132038Z/manifest.json",
+    "test-runs/f011-start-20261104T133000Z"
+  ],
+  "plan": "docs/F01_1_EXECUTION_PLAN.md",
+  "interface": "docs/F01_1_INTERFACES.md",
+  "acceptanceCriteria": [
+    "All supported F01.1 syntax, layout, content, PNG and error requirements verified",
+    "True pyelk and Canvas, no Node/browser/JS in production",
+    "Source-derived tests after slice source completion",
+    "Same candidate final local verification and installable package"
+  ],
+  "sourceStatus": "code_complete",
+  "functionalStatus": "f011_local_verified",
+  "externalActions": {
+    "commit": false,
+    "push": false,
+    "publish": false
+  },
+  "summary": {
+    "scope": "F01.1",
+    "status": "complete_local_delivery",
+    "sourceTreeSha256": "916d506280bdeb7e1444b44d0ecad0ee5085c93a9dec7db90c9cd5483f8902b1",
+    "wheelSha256": "b5fee226f8eba18b659bcdf38c978320b494a8ed4f8652475a4167433d7a25e4",
+    "wheel": "dist/f011-20261104/py_mermaid-0.0.1a0-py3-none-any.whl",
+    "tests": {
+      "language": 36,
+      "layout": 21,
+      "canvas": 23,
+      "api": 5,
+      "total": 85,
+      "passed": 85
+    },
+    "profiles": {
+      "cpu": {
+        "positiveCases": 12,
+        "negativeCases": 3,
+        "evidence": "test-runs/f011-s5-final-001/compare-cpu/report.json"
+      },
+      "auto": {
+        "positiveCases": 12,
+        "negativeCases": 3,
+        "evidence": "test-runs/f011-s5-final-001/compare-auto/report.json"
+      },
+      "gpu": {
+        "positiveCases": 12,
+        "negativeCases": 3,
+        "evidence": "test-runs/f011-s5-final-001/compare-gpu/report.json"
+      }
+    },
+    "metadataNegativeControlsPassed": 12,
+    "installationValidation": {
+      "currentInstruction": "deferred_by_user_do_not_continue_or_rerun",
+      "historicalRecord": "An isolated install/check completed before the latest user instruction; retained without further work",
+      "evidence": "test-runs/f011-s5-final-001/package-audit.json"
+    },
+    "limitations": [
+      "Linux not verified",
+      "no-loader not verified",
+      "System fallback fonts not bundled",
+      "F01.2+ and all other diagram families deferred",
+      "No commit/push/publish"
+    ],
+    "productCandidateUnchanged": true
+  },
+  "sourceIdentity": "test-runs/f011-s5-final-001/source-candidate.json",
+  "evidenceIndex": "test-runs/f011-s5-final-001/summary.json",
+  "sourceSha256": {
+    "README.en.md": "754b87fcf5f4714112a57bcf0ceac8409cb2eb16f0e13d58162e16a6bf5b91f6",
+    "README.md": "5a086e569e7808474b6f07f1abd285b91e56fbd4a08779e6759f3eb70b7ce2e6",
+    "THIRD_PARTY_NOTICES.md": "b7961f2fb396a53491b5d840649c696ff97daf0b8607ede40b91a3ecef07281f",
+    "docs/F01_1_ACCEPTANCE.md": "dde0d644634a3bef240962f15baab0d1258e754b97088f9079d3a1404dd5aba1",
+    "docs/F01_1_EXECUTION_PLAN.md": "8d7487b93f86b03375d6db4d5128d440abde1edc4daf6b067c0d10c91e8fdabe",
+    "docs/F01_1_INTERFACES.md": "502730d0f9750a8e07d740c4863dc62e0c6d0493776302ad6af1390c74946cdb",
+    "docs/F01_1_USAGE.md": "55a40c1a372f54e1fa3801f692693224c380d0f5488783f947d1d32a2903467e",
+    "examples/basic_flowchart.py": "1ca48112545b0c9f75e3892ac3097cf240c5f8a8d2181331dff90bb38a618b3b",
+    "pyproject.toml": "dc0548ca0adc4d6decb5eca8eb0ccabe706d664bead639c8fd562736f696059f",
+    "scripts/validate_bootstrap.py": "1c97fe5293217dab8e435719a77dad2cbda6568c68301f0d17784b9757f4adec",
+    "src/py_mermaid/__init__.py": "57ce35c88f465bcd79b24a21f3226a4a66a1bbe3e00fe770cfa02e4ca1a36de6",
+    "src/py_mermaid/api.py": "7a0e287e69dd6e3731065ead01358acd815f7d91cfee41491071e4e1d16b9b50",
+    "src/py_mermaid/config/__init__.py": "0a1a35bc6930e3ec4b021e68d66da16df4f0a576472bc4ec2410598579e6ab4f",
+    "src/py_mermaid/config/flowchart.py": "df26dc64292448cb76871bebd2c5bce9610c993354af0a7641aa4735dc6a6489",
+    "src/py_mermaid/diagrams/__init__.py": "9154145bccf3c978abe2ae3b6934ba969a756e9a6e77bdf2dbf3dbfd373cb619",
+    "src/py_mermaid/diagrams/flowchart/__init__.py": "648b1a3ca353ad86c12facbcb0d900aa2595a274b64b0d2c2a931c131c3c8a96",
+    "src/py_mermaid/diagrams/flowchart/parser.py": "d583589eee23eb5c92b6d351d2dd7adfaa4d0cdde6129b6dd4d5b6c72d2efee8",
+    "src/py_mermaid/geometry/__init__.py": "0ca8cdbb89dcf0d094482cc55108fe682db492c7d56bb41197bde74f103b230b",
+    "src/py_mermaid/geometry/flowchart.py": "89961446f5e4cd602d0d9060f7c6c90abb99f43806912633aed635f9517af558",
+    "src/py_mermaid/layout/__init__.py": "6d1ecc869efa4cd9a7edd97fbd986cb719aa5509366da8775096b1fbd3074add",
+    "src/py_mermaid/layout/elk/__init__.py": "9baa94a4f1ce971d55a2f5008bd33c126764842ed68909c731f88d822c28498b",
+    "src/py_mermaid/layout/elk/flowchart.py": "45f00869480651b770f887c2192e1d79e61b092760be142102e94299b0584842",
+    "src/py_mermaid/model/__init__.py": "dc03b5bae51198aa7a4252ce4f65fb4717b4d1c241f1fed23dd0506f00743b3c",
+    "src/py_mermaid/model/flowchart.py": "b5fbb48ae42e3c9e7967f28a4b0eaddd76f344c40370e7e12061505b01c39288",
+    "src/py_mermaid/parsing/__init__.py": "23cde8ba2b1e5aefd57036a5233180f8b6fe63c5c5a3be1166c3f58de843fb0d",
+    "src/py_mermaid/rendering/__init__.py": "ed89819539fa2b113c92aa2530d8598d7a1ba665a8127ab2c1641e6445415573",
+    "src/py_mermaid/rendering/labels/__init__.py": "3f13a05a862ff631ed2ee3775646e6040cb0881b19c6550092638b438f424848",
+    "src/py_mermaid/rendering/labels/plain.py": "e49b02ac031cad45062dfecd2074609cdbea104748d3188341b649884b9a9f79",
+    "src/py_mermaid/rendering/skia/__init__.py": "60776be795ea6008f72da9be2517dd538cfb7f61f937930944bfa915c706df7a",
+    "src/py_mermaid/rendering/skia/session.py": "52115145f4d06a5ae3ff06e5895626b258c9f3be05ddd537d861c52c3c51d5bf",
+    "tools/f011_validate.py": "792beae69b824fb283caaa4c063636dadc758a94f656c24af784001498991564",
+    "tools/oracle/f011_capture.cjs": "e377fe359b93128b4eed5a4e92bd15a514e09c060b94a1a773a1330dc9a861c9"
+  },
+  "commands": [
+    {
+      "scope": "all_f011_tests_installed_wheel",
+      "command": [
+        "C:\\venvs\\pymmd-f011-final-20261104\\Scripts\\python.exe",
+        "-I",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "C:\\code\\py-visactor\\py-mermaid\\tests\\f011",
+        "-v"
+      ],
+      "exitCode": 0
+    },
+    {
+      "scope": "installed_wheel_official_compare_cpu",
+      "command": [
+        "C:\\venvs\\pymmd-f011-final-20261104\\Scripts\\python.exe",
+        "-I",
+        "C:\\code\\py-visactor\\py-mermaid\\tools\\f011_validate.py",
+        "--oracle",
+        "C:\\code\\py-visactor\\py-mermaid\\test-runs\\f011-s5-official-001",
+        "--out",
+        "C:\\code\\py-visactor\\py-mermaid\\test-runs\\f011-s5-final-001\\compare-cpu",
+        "--backend",
+        "cpu"
+      ],
+      "exitCode": 0
+    },
+    {
+      "scope": "installed_wheel_official_compare_auto",
+      "command": [
+        "C:\\venvs\\pymmd-f011-final-20261104\\Scripts\\python.exe",
+        "-I",
+        "C:\\code\\py-visactor\\py-mermaid\\tools\\f011_validate.py",
+        "--oracle",
+        "C:\\code\\py-visactor\\py-mermaid\\test-runs\\f011-s5-official-001",
+        "--out",
+        "C:\\code\\py-visactor\\py-mermaid\\test-runs\\f011-s5-final-001\\compare-auto",
+        "--backend",
+        "auto"
+      ],
+      "exitCode": 0
+    },
+    {
+      "scope": "installed_wheel_official_compare_gpu",
+      "command": [
+        "C:\\venvs\\pymmd-f011-final-20261104\\Scripts\\python.exe",
+        "-I",
+        "C:\\code\\py-visactor\\py-mermaid\\tools\\f011_validate.py",
+        "--oracle",
+        "C:\\code\\py-visactor\\py-mermaid\\test-runs\\f011-s5-official-001",
+        "--out",
+        "C:\\code\\py-visactor\\py-mermaid\\test-runs\\f011-s5-final-001\\compare-gpu",
+        "--backend",
+        "gpu"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "bootstrap",
+      "command": [
+        "C:\\venvs\\pymmd-20261102\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests/bootstrap",
+        "-v"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "metadata",
+      "command": [
+        "C:\\venvs\\pymmd-20261102\\Scripts\\python.exe",
+        "scripts/validate_bootstrap.py"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "upstream",
+      "command": [
+        "C:\\venvs\\pymmd-20261102\\Scripts\\python.exe",
+        "scripts/upstream.py",
+        "check"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "migration-plan",
+      "command": [
+        "C:\\venvs\\pymmd-20261102\\Scripts\\python.exe",
+        "scripts/validate_migration_plan.py",
+        "--check"
+      ],
+      "exitCode": 0
+    }
+  ],
+  "limitations": [
+    "Linux not verified",
+    "no-loader not verified",
+    "System fallback fonts not bundled",
+    "F01.2+ and all other diagram families deferred",
+    "No commit/push/publish"
+  ]
+}

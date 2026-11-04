@@ -1,0 +1,529 @@
+{
+  "schema": "py-mermaid-feature-module-plan/v1",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "status": "planned-not-implemented",
+  "selectionRule": "Choose a user-visible feature first, then migrate only its required dependency surfaces bottom-up. Preserve all other scope.",
+  "features": [
+    {
+      "id": "F01",
+      "name": "流程图",
+      "detectors": [
+        "flowchart-v2",
+        "flowchart-elk"
+      ],
+      "dependencyFamilies": [
+        "elkjs",
+        "dagre-d3-es",
+        "d3"
+      ],
+      "sharedModules": [
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C05",
+        "C06",
+        "C07",
+        "C08"
+      ],
+      "priority": "first",
+      "firstSlice": "F01.1"
+    },
+    {
+      "id": "F02",
+      "name": "关系与建模图",
+      "detectors": [
+        "classDiagram",
+        "stateDiagram",
+        "er",
+        "requirement",
+        "usecase",
+        "c4"
+      ],
+      "dependencyFamilies": [
+        "dagre-d3-es",
+        "elkjs",
+        "d3"
+      ],
+      "sharedModules": [
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C05",
+        "C06",
+        "C07",
+        "C08"
+      ],
+      "priority": "after-first-flowchart"
+    },
+    {
+      "id": "F03",
+      "name": "时序图",
+      "detectors": [
+        "sequence"
+      ],
+      "dependencyFamilies": [
+        "d3"
+      ],
+      "sharedModules": [
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C06",
+        "C07",
+        "C08"
+      ],
+      "priority": "after-first-flowchart"
+    },
+    {
+      "id": "F04",
+      "name": "时间与过程图",
+      "detectors": [
+        "gantt",
+        "journey",
+        "timeline",
+        "gitGraph"
+      ],
+      "dependencyFamilies": [
+        "dayjs",
+        "d3"
+      ],
+      "sharedModules": [
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C05",
+        "C06",
+        "C07",
+        "C08"
+      ],
+      "priority": "later"
+    },
+    {
+      "id": "F05",
+      "name": "数值图表",
+      "detectors": [
+        "pie",
+        "quadrantChart",
+        "xychart",
+        "radar"
+      ],
+      "dependencyFamilies": [
+        "d3"
+      ],
+      "sharedModules": [
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C05",
+        "C06",
+        "C07",
+        "C08"
+      ],
+      "priority": "later"
+    },
+    {
+      "id": "F06",
+      "name": "树与层次图",
+      "detectors": [
+        "mindmap",
+        "treeView",
+        "treemap"
+      ],
+      "dependencyFamilies": [
+        "d3",
+        "cytoscape-cose-bilkent",
+        "non-layered-tidy-tree-layout"
+      ],
+      "sharedModules": [
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C05",
+        "C06",
+        "C07",
+        "C08"
+      ],
+      "priority": "later"
+    },
+    {
+      "id": "F07",
+      "name": "流量与集合图",
+      "detectors": [
+        "sankey",
+        "venn"
+      ],
+      "dependencyFamilies": [
+        "d3-sankey",
+        "@upsetjs/venn.js",
+        "d3"
+      ],
+      "sharedModules": [
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C05",
+        "C06",
+        "C07",
+        "C08"
+      ],
+      "priority": "later"
+    },
+    {
+      "id": "F08",
+      "name": "结构与架构图",
+      "detectors": [
+        "block",
+        "packet",
+        "kanban",
+        "architecture"
+      ],
+      "dependencyFamilies": [
+        "cytoscape",
+        "cytoscape-fcose",
+        "d3"
+      ],
+      "sharedModules": [
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C05",
+        "C06",
+        "C07",
+        "C08"
+      ],
+      "priority": "later"
+    },
+    {
+      "id": "F09",
+      "name": "专用业务图",
+      "detectors": [
+        "swimlane",
+        "agentflow",
+        "eventmodeling",
+        "ishikawa",
+        "wardley",
+        "cynefin"
+      ],
+      "dependencyFamilies": [
+        "d3",
+        "roughjs",
+        "elkjs"
+      ],
+      "sharedModules": [
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C05",
+        "C06",
+        "C07",
+        "C08"
+      ],
+      "priority": "later"
+    },
+    {
+      "id": "F10",
+      "name": "语法轨道图",
+      "detectors": [
+        "railroad",
+        "railroadEbnf",
+        "railroadAbnf",
+        "railroadPeg"
+      ],
+      "dependencyFamilies": [
+        "d3"
+      ],
+      "sharedModules": [
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C05",
+        "C06",
+        "C07",
+        "C08"
+      ],
+      "priority": "later"
+    },
+    {
+      "id": "F11",
+      "name": "ZenUML 插件",
+      "detectors": [
+        "zenuml"
+      ],
+      "dependencyFamilies": [
+        "@zenuml/core",
+        "antlr4"
+      ],
+      "sharedModules": [
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C05",
+        "C06",
+        "C07",
+        "C08"
+      ],
+      "priority": "separate-high-risk-track"
+    },
+    {
+      "id": "F12",
+      "name": "信息与诊断输出",
+      "detectors": [
+        "info"
+      ],
+      "dependencyFamilies": [],
+      "sharedModules": [
+        "C01",
+        "C04",
+        "C06",
+        "C07"
+      ],
+      "priority": "later"
+    }
+  ],
+  "sharedModules": [
+    {
+      "id": "C01",
+      "name": "预处理、配置与诊断",
+      "workPackages": [
+        "D00",
+        "D02"
+      ],
+      "crossCutting": [
+        "preprocessing-frontmatter-directives",
+        "configuration-schema-defaults",
+        "diagnostics-errors-utf16"
+      ],
+      "dependsOn": []
+    },
+    {
+      "id": "C02",
+      "name": "图种检测与语法解析",
+      "workPackages": [
+        "D04"
+      ],
+      "crossCutting": [],
+      "dependsOn": [
+        "C01"
+      ]
+    },
+    {
+      "id": "C03",
+      "name": "语义模型与有序图结构",
+      "workPackages": [
+        "D00",
+        "D03"
+      ],
+      "crossCutting": [],
+      "dependsOn": []
+    },
+    {
+      "id": "C04",
+      "name": "标签测量、排版与主题样式",
+      "workPackages": [
+        "D01",
+        "D02",
+        "D05",
+        "D08"
+      ],
+      "crossCutting": [
+        "themes-css-cascade",
+        "text-html-markdown-math"
+      ],
+      "dependsOn": [
+        "C01",
+        "C08"
+      ]
+    },
+    {
+      "id": "C05",
+      "name": "布局与路由适配",
+      "workPackages": [
+        "D03",
+        "D06",
+        "D07"
+      ],
+      "crossCutting": [
+        "layout-engines-dagre-elk-tidy"
+      ],
+      "dependsOn": [
+        "C03",
+        "C04"
+      ]
+    },
+    {
+      "id": "C06",
+      "name": "形状、路径、箭头和手绘几何",
+      "workPackages": [
+        "D01",
+        "D06"
+      ],
+      "crossCutting": [
+        "handdrawn-random-seed"
+      ],
+      "dependsOn": []
+    },
+    {
+      "id": "C07",
+      "name": "Canvas 绘制、导出和运行所有权",
+      "workPackages": [
+        "D08",
+        "D09"
+      ],
+      "crossCutting": [
+        "exports-scale-background",
+        "threading-lifecycle",
+        "offline-deployment"
+      ],
+      "dependsOn": [
+        "C06"
+      ]
+    },
+    {
+      "id": "C08",
+      "name": "资源、安全与交互元数据",
+      "workPackages": [
+        "D02",
+        "D05",
+        "D08"
+      ],
+      "crossCutting": [
+        "accessibility-metadata",
+        "links-interaction-security",
+        "icons-images-resource-policy"
+      ],
+      "dependsOn": [
+        "C01"
+      ]
+    }
+  ],
+  "firstSlice": {
+    "id": "F01.1",
+    "feature": "F01",
+    "name": "基础流程图文本到默认 ELK 布局再到 PNG",
+    "state": "selected-planned-not-implemented",
+    "scope": [
+      "flowchart / graph 检测别名",
+      "TD / LR 方向",
+      "矩形节点及普通文字标签",
+      "单节点、链式与分支合流有向边",
+      "默认 classic/default 相关样式",
+      "真实 py-elk 布局",
+      "真实 Canvas 测量及 PNG bytes",
+      "非法语法及未支持功能的明确诊断"
+    ],
+    "layout": "default-elk-via-py-visactor-elk",
+    "rendering": "public-py-skia-canvas-api",
+    "defaultLabelPolicy": "Keep source configuration defaults as semantic options. Convert ordinary labels to Python text runs/boxes and measure with Canvas; no default DOM route, virtual DOM, or htmlLabels=false workaround.",
+    "firstCodingTask": "P1-01/P1-03 then P1-F01-SEED: implement source contracts, parser/model and first pipeline; continue all feature source before P2 formal tests.",
+    "cases": [
+      {
+        "id": "F01.1-single",
+        "input": "flowchart TD\n  A[Start]\n",
+        "expected": "single rectangle with measured label"
+      },
+      {
+        "id": "F01.1-chain-td",
+        "input": "flowchart TD\n  A[Start] --> B[Done]\n",
+        "expected": "two nodes, directed edge, top-to-bottom layout"
+      },
+      {
+        "id": "F01.1-chain-lr",
+        "input": "flowchart LR\n  A[Start] --> B[Done]\n",
+        "expected": "two nodes, directed edge, left-to-right layout"
+      },
+      {
+        "id": "F01.1-branch-merge",
+        "input": "flowchart TD\n  A[Start] --> B[Left]\n  A --> C[Right]\n  B --> D[End]\n  C --> D\n",
+        "expected": "four unique nodes and four edges; stable insertion order; real layout"
+      },
+      {
+        "id": "F01.1-invalid",
+        "input": "flowchart TD\n  A -->\n",
+        "expected": "Syntax failure/source location according to pinned grammar; formal source-derived assertions designed in P2 after all feature source."
+      }
+    ],
+    "followUpSlices": [
+      {
+        "id": "F01.2",
+        "scope": "边标签、更多节点形状、子图与跨组连线"
+      },
+      {
+        "id": "F01.3",
+        "scope": "frontmatter/directive/theme、HTML/Markdown 标签分支及首批六组 M3 契约闭环"
+      },
+      {
+        "id": "F01.4",
+        "scope": "全部 flowchart 语法、显式 Dagre、其他 ELK 算法与选项、资源/交互、手绘和其他导出逐步扩全"
+      }
+    ],
+    "verification": "P1 writes all feature source with mechanical checks only; P2 designs source-derived tests; P3 first grouped product runs and unified fixes; P4 final full validation.",
+    "caseStatus": "Existing planning examples, not P1 test gates. Formal source-derived case/assertion design starts in P2."
+  },
+  "diagnosticEntries": [
+    "error",
+    "---"
+  ],
+  "limitations": [
+    "Dependency families are a planning-level mapping, not proven symbol reachability for every detector.",
+    "Shared module interfaces and public API remain design proposals until corresponding source contracts are extracted.",
+    "All Mermaid parser/layout/render capabilities remain unimplemented; this file selects scope only."
+  ],
+  "architecture": {
+    "id": "canvas-native-no-dom",
+    "decision": "user-authorized",
+    "renderer": "py-skia-canvas-public-api-only",
+    "layoutReuse": "py-visactor-elk",
+    "pipeline": [
+      "semantic-model",
+      "resolved-styles-and-text-runs",
+      "canvas-text-measurement",
+      "layout-and-routing",
+      "typed-draw-commands",
+      "canvas-draw-and-encode"
+    ],
+    "discardMechanisms": [
+      "DOM",
+      "virtual-DOM",
+      "D3-selection",
+      "browser-layout",
+      "browser-render-scheduling",
+      "HTML-to-image"
+    ],
+    "preserve": [
+      "Mermaid syntax/model/config meaning",
+      "required numeric/layout/geometry algorithms",
+      "label/style/resource/security semantics",
+      "applicable metadata"
+    ],
+    "sourceTreePurpose": "Immutable upstream provenance, not a Python runtime dependency list.",
+    "functionalExclusion": "Removing host mechanisms is authorized; required feature loss is not inferred from that removal."
+  },
+  "executionStrategy": {
+    "authoritativePlan": "docs/FULL_MIGRATION_PLAN.md",
+    "taskGraph": "references/migration-execution.json",
+    "phaseOrder": [
+      "P0",
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5"
+    ],
+    "allFeatureSourcePhase": "P1",
+    "formalTestDesignPhase": "P2",
+    "firstProductTestExecutionPhase": "P3",
+    "finalFullValidationPhase": "P4"
+  },
+  "renderValidationPolicy": "references/render-validation-policy.json"
+}

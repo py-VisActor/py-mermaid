@@ -1,0 +1,166 @@
+{
+  "schema": "py-mermaid-change/v1",
+  "taskId": "20261104-dependency-audit",
+  "kind": "dependency-audit-tool-and-documentation",
+  "baseCommit": "b1e4c10adc2c3ca8b77b86febcd306512116408c",
+  "startingStatus": "",
+  "objective": "Inventory the pinned Mermaid third-party dependencies, exact lock versions, source roles and Python migration boundaries.",
+  "status": "static-inventory-and-targeted-validation-passed",
+  "authorization": "Local py-mermaid dependency audit; no product implementation, commit, push or publication.",
+  "acceptanceCriteria": [
+    "Read pinned manifests and lock without installing or executing JS",
+    "Separate core declarations, first-party plugins, source imports and transitive snapshot contexts",
+    "Document exact versions, dev-field value imports, patches and remaining license/bundle audit gaps",
+    "Provide deterministic inventory comparison and focused negative controls",
+    "Keep Mermaid compatibility and Python production dependencies unchanged"
+  ],
+  "baseline": {
+    "mermaid": "12.2.0",
+    "commit": "1fb7869866dd619168d840291c9c54b4f129758b",
+    "canvas": "0.1.0a18"
+  },
+  "changedPaths": [
+    "README.en.md",
+    "README.md",
+    "docs/IMPLEMENTATION_PLAN.md",
+    "docs/NEW_SESSION.md",
+    "docs/RELEASE_STATUS.md",
+    "docs/TASKS.md",
+    "docs/THIRD_PARTY_DEPENDENCIES.md",
+    "docs/changes/20261104-dependency-audit.json",
+    "references/README.md",
+    "references/dependencies.json",
+    "scripts/audit_dependencies.py",
+    "tests/README.md",
+    "tests/dependencies/test_dependency_audit.py"
+  ],
+  "sourceSha256": {
+    "README.en.md": "8dc6be87f0da07684610c042ca138d41cbca772bb23df858823554104a21d74c",
+    "README.md": "c325912f84db7ebe229d8128ed90b0041e5b7cb54a77ffe3e9dd42c0ae61d74c",
+    "docs/IMPLEMENTATION_PLAN.md": "e2944cd644bb01197e1655a520dce5012f6deea193dbfbebedb89333cb88c1cf",
+    "docs/NEW_SESSION.md": "b63b53dce9ceaf54651cc9fdffe7cf542baf9e87bb816fe432b825178bd7b0eb",
+    "docs/RELEASE_STATUS.md": "a3e667dfe7df05efa49c437fb0e9a4758220ca250826e7d5e60fa29b9a2805f2",
+    "docs/TASKS.md": "3c04a82bd270641b91a28af5f274f55e2abe0313b475a1df510a0113b287903c",
+    "docs/THIRD_PARTY_DEPENDENCIES.md": "277f0164c839440ce118ea2ae203ba1a9d88ac632245443cf332c30fab2a2ea3",
+    "references/README.md": "1dbcbf21a67fe3af27eddde542c9bf2ee469c7c1a95ab599cd02e3c75aec5d71",
+    "references/dependencies.json": "90f61bec3dbd3e3cfe7246e77b230ce7eef3433c34089ade0c4c1a269199ba31",
+    "scripts/audit_dependencies.py": "26bb2c606063622697c15ce778d8d2d576735fa9266ade133901e638e08e2636",
+    "tests/README.md": "63270d03deb6406b2a540e064813a6edf93301f90d42b3db12d61d564bf8d580",
+    "tests/dependencies/test_dependency_audit.py": "c267c1995cb6da72eaa6c31798c36f36ba71d6200e613ceea7fcd1ceaee36d58"
+  },
+  "commands": [
+    {
+      "id": "inventory-check",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "scripts/audit_dependencies.py",
+        "--check"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261104-dependency-audit-01/inventory-check.log",
+      "logSha256": "2165819dda6f57499fc23cd713756559e8070584b5c09440a9b3939c65a15798"
+    },
+    {
+      "id": "dependency-controls",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests/dependencies",
+        "-v"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261104-dependency-audit-01/dependency-controls.log",
+      "logSha256": "3bad0e64847be9eb81fca55ce49b73e5203467bece6efb99e52e1d7907815a1a"
+    },
+    {
+      "id": "bootstrap-after",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "scripts/validate_bootstrap.py"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261104-dependency-audit-01/bootstrap-after.log",
+      "logSha256": "eecd66b3fe2d591e16cfc303c0d0f6b889e8037237bfed0a4c86f3480f9e2df0"
+    },
+    {
+      "id": "diff-check",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261104-dependency-audit-01/diff-check.log",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "test-runs/20261104-dependency-audit-01/commands.json",
+      "sha256": "adc7250c2ba284bc8cd744ed90013d1cbbdd0fe8050f0c1faf776e99e37ca11b"
+    }
+  ],
+  "acceptanceResults": [
+    "Pinned core 23 dependency declarations and five first-party package manifests recorded; 84 total declarations across dependency groups",
+    "344 declared production snapshot contexts resolved without missing edges; registry integrity metadata associated, not downloaded tarball verification",
+    "32 literal source package candidates recorded with canonical source hashes and type/value candidate flags",
+    "Extra dev-field value imports and nonstandard test import distinguished in documentation",
+    "Inventory comparison, six focused controls, bootstrap including documentation links, and tracked diff whitespace check passed",
+    "No Python runtime dependency, Mermaid compatibility, source lock, upstream checkout or rendering example changed"
+  ],
+  "documentationReview": [
+    {
+      "paths": [
+        "README.md",
+        "README.en.md",
+        "docs/NEW_SESSION.md",
+        "references/README.md"
+      ],
+      "status": "updated",
+      "reason": "Expose pinned dependency audit, machine inventory and verification commands."
+    },
+    {
+      "paths": [
+        "docs/THIRD_PARTY_DEPENDENCIES.md",
+        "docs/IMPLEMENTATION_PLAN.md",
+        "docs/TASKS.md",
+        "docs/RELEASE_STATUS.md",
+        "tests/README.md"
+      ],
+      "status": "updated",
+      "reason": "Document source-based classification, scoped validation and open bundle/license/host tasks; keep M1-06 incomplete and py-elk integration separate."
+    },
+    {
+      "paths": [
+        "docs/API_COMPATIBILITY.md",
+        "docs/TEST_AND_RELEASE.md",
+        "docs/compatibility.json",
+        "pyproject.toml",
+        "THIRD_PARTY_NOTICES.md"
+      ],
+      "status": "reviewed-no-change",
+      "reason": "Static source inventory adds no runtime behavior, shipped third-party bytes, finalized public API, license conclusion or Mermaid assertion result."
+    },
+    {
+      "paths": [
+        "examples/canvas_smoke.py",
+        "examples/README.md",
+        "docs/assets/manifest.json",
+        "docs/assets/canvas-smoke.png"
+      ],
+      "status": "reviewed-no-change",
+      "reason": "Audit adds no rendering capability or changed sample/image; no fresh GPU/CPU or visual output claimed."
+    }
+  ],
+  "limitations": [
+    "Static declared dependency closure includes types, optional and peer contexts; not a minimal bundle runtime SBOM or unique package-name count.",
+    "pnpm parser is scoped to the pinned v9 mapping/scalar structures; literal imports are not a full TypeScript AST or reachability proof.",
+    "Third-party tarballs, transitive license texts, fonts/icons/math assets and generated/bundled runtime semantics remain unaudited.",
+    "No Mermaid parser/layout/render, py-elk adapter, oracle, visual verification or release acceptance implemented.",
+    "No Node/npm install, JS execution, network access for the new audit, commit, push or publication."
+  ],
+  "nextStep": "Use the dependency map for M1-06 bundle/host/resource/license follow-up and a separate py-elk Mermaid adapter task, while preserving all remaining migration scope."
+}

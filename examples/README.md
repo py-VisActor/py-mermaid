@@ -17,3 +17,15 @@ python examples/canvas_smoke.py --backend gpu --out test-runs/new-example-gpu
 以下是本例在 Windows / Canvas 0.1.0a18 / NVIDIA Vulkan GPU 的原始输出，未经后处理；[manifest](../docs/assets/manifest.json)记录脚本、输出 SHA 与来源 run。这是依赖示例图，不是 Mermaid 图。
 
 ![Canvas 依赖检查：白底蓝矩形和 py-mermaid Canvas backend 文字](../docs/assets/canvas-smoke.png)
+# F01.1 基础流程图示例
+
+[basic_flowchart.py](basic_flowchart.py) 输入真实Mermaid分支/合流文本，经Python解析、Canvas测量、真实ELK布局和Canvas输出PNG。安装本地包后运行：
+
+```shell
+python examples/basic_flowchart.py --out test-runs/new-flowchart.png
+python examples/basic_flowchart.py --backend cpu --out test-runs/new-flowchart-cpu.png
+```
+
+已有输出文件拒绝覆盖。脚本使用受保护main入口；生产不使用Node/browser/JS。支持边界见 [使用说明](../docs/F01_1_USAGE.md)。真实本地样例与来源指纹见 [样例清单](../docs/assets/f011-manifest.json)。
+
+![基础流程图分支与合流](../docs/assets/f011-branch-merge.png)

@@ -1,0 +1,18 @@
+{
+  "schema": "py-mermaid-render-report-spec/v1",
+  "scope": "F01.1",
+  "title": "基础流程图 · 渲染效果对比",
+  "final": "test-runs/f011-s5-final-001",
+  "oracle": "test-runs/f011-s5-official-001",
+  "fixtures": "reports/f011-baseline-cases.json",
+  "template": "tools/templates/f011_comparison.html",
+  "profiles": ["cpu", "auto", "gpu"],
+  "defaultCase": "branch-merge",
+  "caseTitles": {
+    "single": "单节点", "td-chain": "纵向链 · TD", "lr-chain": "横向链 · LR",
+    "branch-merge": "分支与合流", "graph-alias": "graph 别名", "whole-line-comments": "整行注释",
+    "quoted-unicode": "中文与 Emoji", "redeclare": "节点重声明与重复边", "multiline": "多行标签",
+    "disconnected": "独立节点", "root-id": "特殊命名 ID", "long-label": "长标签与自动换行",
+    "inline-comment": "非法行尾注释", "incomplete-edge": "不完整连线", "unclosed-label": "未闭合标签"
+  }
+}

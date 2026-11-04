@@ -1,0 +1,83 @@
+{
+  "schema": "py-mermaid-f011-source-map/v1",
+  "taskId": "F01.1-S2/elk",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "status": "code_complete_unverified",
+  "interfaceVersion": "F01.1-v1",
+  "sourceFiles": [
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/layout-algorithms/elk/render.ts",
+      "symbols": [
+        "buildElkGraphFromLayoutData",
+        "createRootElkGraph",
+        "resolveElkPreset",
+        "applyElkEdgeLayout",
+        "createEdgePointsFromSection"
+      ],
+      "sha256": "6258890b3f311e86e4cd4dc99d480f704fde7473e150dc62b88838c5015c5011"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/defaultConfig.ts",
+      "symbols": [
+        "config.elk"
+      ],
+      "sha256": "6f2ec3c231ee970fb0368d158975090d488c93c9801a618b06cb18d58488b068"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/layout-algorithms/elk/geometry.ts",
+      "symbols": [
+        "outlineAttachPoint",
+        "computeNodeIntersection"
+      ],
+      "sha256": "80264414c9e8526d7a2561cfbaa5475d6ba90ed45b2bca8b590a665fb88c938a"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/markers.js",
+      "symbols": [
+        "point"
+      ],
+      "sha256": "10af49778781a739f213b2f7f4387df2c70597c00bee23d92f705c4a41909ddc"
+    }
+  ],
+  "pythonPaths": [
+    "src/py_mermaid/layout/elk/flowchart.py",
+    "src/py_mermaid/geometry/flowchart.py"
+  ],
+  "dependency": {
+    "distribution": "py-visactor-elk",
+    "version": "0.1.0",
+    "import": "pyelk",
+    "publicSymbols": [
+      "ELK",
+      "ELK.layout",
+      "ELK.__enter__",
+      "ELK.__exit__",
+      "__version__"
+    ],
+    "apiSourceSha256": "1023d31ee30a9b6284b705b45af9ec7159741c602b731c73f74abcfdd1cb59ab"
+  },
+  "contract": {
+    "coordinates": "logical px; top-left node boxes; flat graph sections in graph coordinates",
+    "direction": {
+      "TD": "DOWN",
+      "LR": "RIGHT"
+    },
+    "ids": "private ordered engine nN/eN ids mapped back losslessly; root user id cannot collide",
+    "dimensions": "fixed measured width/height; nonfinite, nonpositive, missing, duplicate or changed ids/dimensions rejected",
+    "errors": "MermaidError ELK_UNAVAILABLE/ELK_VERSION_MISMATCH/ELK_LAYOUT_FAILED/INVALID_ELK_RESULT; engine exception retained as cause",
+    "ownership": "per-call context-managed ELK worker; no Canvas/native drawing object; cancellation exits context; no internal asyncio.run"
+  },
+  "behaviorNotes": [
+    "Root options follow fixed createRootElkGraph and actual defaultConfig.elk plus default preset, not schema prose.",
+    "flowchart nodeSpacing/rankSpacing remain in config but fixed Mermaid ELK adapter does not consume them. Native adapter likewise does not map them; root spacing.baseValue remains 40.",
+    "Only flat measured rectangles, ordinary directed edges, TD/LR are in current scope. No hierarchy, terminal labels, other shapes or algorithms are claimed.",
+    "All returned edge sections and bend points are preserved. No fixed coordinates, fallback layout or source-coordinate compensation.",
+    "Native arrow triangle helper expresses the ordinary point marker on the final nonzero segment, tip at route endpoint; no browser marker DOM is retained.",
+    "Official comparison, real pyelk behavior and rendered output verification are deferred until S3/S4."
+  ],
+  "remainingVerification": [
+    "Source-derived unit cases in S3",
+    "Actual pyelk execution for single node, TD/LR chain, branch/merge and self-loop in S4",
+    "Real Canvas routes/arrows/bounds visual verification and isolated installation in S5"
+  ]
+}

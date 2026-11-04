@@ -1,0 +1,85 @@
+{
+  "schema": "py-mermaid-change/v1",
+  "taskId": "20261104-standardize-logging-reports",
+  "status": "complete_local_tooling",
+  "objective": "标准化执行日志、报告配置/生成及本地查看入口，后续直接复用",
+  "authorization": "用户要求日志/报告脚本标准化，并明确要求启动本地Web服务提供报告URL；安装验证保持暂缓",
+  "baseCommit": "b1e4c10adc2c3ca8b77b86febcd306512116408c",
+  "startingState": {
+    "dirtyTreePreserved": true,
+    "priorTaskRecord": "docs/changes/20261104-f011-html-report.json",
+    "originalReportSha256": "17183c7173f90af7630c67ada7a98a2a9dc867751cb007e4422c00c7078676cb"
+  },
+  "acceptanceCriteria": [
+    "新run独立且旧历史不覆盖",
+    "argv/cwd/退出码/原始stdout与stderr/时间/环境/工具与输入产物SHA可追溯",
+    "失败/超时/完整性与功能状态分离",
+    "报告scope/title/fixture/profile/路径由配置控制",
+    "已有结果报告和明确重渲染两类入口分开",
+    "HTTP本地报告URL可访问并提供标准服务日志实现",
+    "无安装验证或发布动作"
+  ],
+  "sourceSha256": {
+    "AGENTS.md": "e60aae2769c8ccfde4b97cf473f41a1a661e2d264172e08adde716b48d942be4",
+    "reports/README.md": "8a3a52f797e933787010e1a72b1512c274a5cee308bccedb8b5e32e229522586",
+    "reports/f011-baseline-cases.json": "38a92d8babe38a188c2171e1ccfe6736939957c080464c09ab21cb91648ec1df",
+    "tests/README.md": "8a030ce10eaa2ff69f4f3c9bfbdae0435ff1edd18f4233c9ff5a50dcedab1505",
+    "tests/tooling/test_workflow.py": "56add151c506538fc1f56d3dc7d54cd56ea255c43f46b1239bc78a808cb815ad",
+    "tools/RUNS_AND_REPORTS.md": "0f7a6e1d081637a56d2d8b009741061ff76c073dce56f998792126934f244ef7",
+    "tools/build_f011_html_report.py": "1ca207d899cfd3d826eb70e1737e7a5d4e7450bb604bb714c147790cb849a2e2",
+    "tools/f011_validate.py": "999c2501102927f0d2067889b4491b2babe2fec46871940c44c3840e7637f40f",
+    "tools/oracle/README.md": "8924afc7d0b0b7cfc24c30f094c599e029ddeebf383bd7d7881189a0d4b7140b",
+    "tools/oracle/f011_capture.cjs": "ab3bb0188a0fe79f90a932c6a88da1556c9b0b13971dae2d65a3ea80a9151516",
+    "tools/plans/f011-tests.json": "b551eb11aa92031bcdd491ad518c2f08c38f844d2e1a22e1dfe41e6ad506a1e7",
+    "tools/report_specs/f011-baseline.json": "cf82c7393cb3415a57485c2c753f8e8c3d253eaa3ba264ba54fd627026a9ab97",
+    "tools/run_support.py": "b5a9c4bc1699c1aeb00974e7a744465465967db159dc81a9ddde755f1f364d4d",
+    "tools/schemas/command-plan.schema.json": "0d2d6d1682dbe463d36f2cce348c3daf5f9d0b71f06161c3ef5bd3c1ae1cb667",
+    "tools/schemas/event.schema.json": "86c0211f174d12e225b70e9385d509f2c9c0a75b307e55d8da476aa765a06e1d",
+    "tools/schemas/report-manifest.schema.json": "1dcd6a1218e22e263823f89f32d9a39a4a6f6498ee2b9752007c4f3ac5aa734e",
+    "tools/schemas/report-spec.schema.json": "0b0566df0bc5287c16c041077c80369fc4578d6b914faf7ea7d5e910e0b1425f",
+    "tools/schemas/run.schema.json": "88d68c364fea7f96df192ce020a233139c292e7363ac004c57b167ad319cd8e7",
+    "tools/serve_reports.py": "e9b925d18caf1dfbfce28ba23719e74e6bde08f979c53f0fe81bacdce2f58697",
+    "tools/templates/f011_comparison.html": "77894cbd71f65aede1cefc7ab37011b8d6cc40b7def9a1cc94b5b00855e8caaf",
+    "tools/workflow.py": "1c502d1a104d16600d2fe7a483b465d4981ef6d86e84dadb902dabfab84e391d"
+  },
+  "evidence": [
+    "test-runs/tooling-record-20261104T142105Z-5c081a64/run.json",
+    "test-runs/F01.1-report-20261104T142137Z-f5ec6727/run.json",
+    "test-runs/F01.1-render-20261104T141622Z-f2bb78ca/run.json",
+    "test-runs/tooling-record-20261104T142108Z-f2b15a3f/run.json",
+    "test-runs/standard-report-browser-20261104-001/result.json",
+    "test-runs/tooling-standardization-close-20261104/checks.json"
+  ],
+  "checks": {
+    "toolingTests": {
+      "passed": 16,
+      "total": 16
+    },
+    "renderPipeline": {
+      "profile": "cpu",
+      "positive": 12,
+      "negative": 3,
+      "status": "PASS"
+    },
+    "htmlUI": {
+      "threeProfileHistoricalReport": "PASS",
+      "oneProfileSourceReport": "PASS",
+      "originalUrlPreserved": true,
+      "pageErrors": 0
+    },
+    "productSourceUnchanged": true,
+    "installationValidation": "NOT_EXECUTED"
+  },
+  "limitations": [
+    "场景/比较协议目前基于F01.1；后续图种需提供同协议或新增适配",
+    "超时只保证终止直接子进程，子进程树由具体工具负责",
+    "已运行8765旧服务早于标准日志模块，保持URL不中断；下次启动新服务使用标准serve run",
+    "历史日志不补写成新验证；纯报告执行不宣称重测功能"
+  ],
+  "corrections": [
+    "首次logger验证发现event名称与命令name字段冲突，已修复并保留失败run/error.txt"
+  ],
+  "commit": false,
+  "push": false,
+  "publish": false
+}

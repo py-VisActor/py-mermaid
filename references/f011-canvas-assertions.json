@@ -1,0 +1,693 @@
+{
+  "schema": "py-mermaid-f011-assertions/v1",
+  "taskId": "F01.1-S3/canvas",
+  "candidateSha256": null,
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "testPath": "tests/f011/test_canvas.py",
+  "testSha256": "09ab6969088cde6ec18c94f5f681638338d384f02e17948d48796566281d2394",
+  "count": 23,
+  "sources": [
+    {
+      "repository": "mermaid",
+      "commit": "1fb7869866dd619168d840291c9c54b4f129758b",
+      "path": "packages/mermaid/src/rendering-util/createText.ts",
+      "symbols": [
+        "createText",
+        "createFormattedText",
+        "addHtmlSpan"
+      ],
+      "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+      "contract": "plain line interpretation and source line-height distinction"
+    },
+    {
+      "repository": "mermaid",
+      "commit": "1fb7869866dd619168d840291c9c54b4f129758b",
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/squareRect.ts",
+      "symbols": [
+        "squareRect"
+      ],
+      "sha256": "2456ebbc205f1c73fcaf34e63d055a18b17ae71fbce2b1f4ff08e910d8cc2dfd",
+      "contract": "classic horizontal padding = 2*node.padding and vertical = node.padding"
+    },
+    {
+      "repository": "mermaid",
+      "commit": "1fb7869866dd619168d840291c9c54b4f129758b",
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/drawRect.ts",
+      "symbols": [
+        "drawRect"
+      ],
+      "sha256": "1d03397624d31f5a244f32260fd8d109dd41751f1970858feb453f09a95d849e",
+      "contract": "measured label plus padding determines rectangle dimensions"
+    },
+    {
+      "repository": "mermaid",
+      "commit": "1fb7869866dd619168d840291c9c54b4f129758b",
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/markers.js",
+      "symbols": [
+        "point"
+      ],
+      "sha256": "10af49778781a739f213b2f7f4387df2c70597c00bee23d92f705c4a41909ddc",
+      "contract": "oriented filled point arrow; Python geometry adapted to actual route terminal"
+    },
+    {
+      "repository": "mermaid",
+      "commit": "1fb7869866dd619168d840291c9c54b4f129758b",
+      "path": "packages/mermaid/src/rendering-util/setupViewPortForSVG.ts",
+      "symbols": [
+        "setupViewPortForSVG"
+      ],
+      "sha256": "8242d3e2112f371b8551c2aeb09680cdc608b8452c6eb82cbd5a2e6d3f465fd4",
+      "contract": "content bounds and diagram padding at output boundary"
+    },
+    {
+      "repository": "py-skia-canvas",
+      "commit": "8b5611dc7911d9ebc470c949a396807515690aac",
+      "tag": "v0.1.0a18",
+      "path": "python/py_skia_canvas/__init__.py",
+      "symbols": [
+        "Canvas",
+        "CanvasRenderingContext2D.measureText",
+        "Canvas.toBufferSync"
+      ],
+      "sha256": "c110f8dc2ab2ef8c532f05191a4dd6b43d6139c8fbafea1273dd2f33a307da52",
+      "contract": "public owner-thread measurement/drawing/PNG encoding, no private API calls"
+    },
+    {
+      "repository": "py-skia-canvas",
+      "commit": "8b5611dc7911d9ebc470c949a396807515690aac",
+      "tag": "v0.1.0a18",
+      "path": "python/py_skia_canvas/_exports.py",
+      "symbols": [
+        "options",
+        "export"
+      ],
+      "sha256": "26f4ab49f822541f5274cba6b8f743e3fe486eb598623f06dac9a0402530c966",
+      "contract": "public owner-thread measurement/drawing/PNG encoding, no private API calls"
+    },
+    {
+      "repository": "py-skia-canvas",
+      "commit": "8b5611dc7911d9ebc470c949a396807515690aac",
+      "tag": "v0.1.0a18",
+      "path": "python/py_skia_canvas/_metrics.py",
+      "symbols": [
+        "TextMetrics"
+      ],
+      "sha256": "602b29736b42bea604b03d90cafb42116ad9eb57f3b3e0730d1d084324f4400e",
+      "contract": "public owner-thread measurement/drawing/PNG encoding, no private API calls"
+    },
+    {
+      "repository": "mermaid",
+      "commit": "1fb7869866dd619168d840291c9c54b4f129758b",
+      "path": "packages/mermaid/src/config.ts",
+      "symbols": [
+        "resolveAppearance",
+        "setDiagramConfigScope",
+        "updateCurrentConfig"
+      ],
+      "sha256": "91dd68a9e7d57c4635a04fab0ccd78ec230b4417a02f4f4b3cd9a6bb445f09ef",
+      "contract": "effective appearance cascade, source default presentation and preserved label wrapping"
+    },
+    {
+      "repository": "mermaid",
+      "commit": "1fb7869866dd619168d840291c9c54b4f129758b",
+      "path": "packages/mermaid/src/themes/theme-redux-color.js",
+      "symbols": [
+        "Theme.constructor",
+        "Theme.updateColors"
+      ],
+      "sha256": "5e4278fb33825a501ffae1c6ac13a869763c4e611de9ad6077b58513e4e1b6d0",
+      "contract": "effective appearance cascade, source default presentation and preserved label wrapping"
+    },
+    {
+      "repository": "mermaid",
+      "commit": "1fb7869866dd619168d840291c9c54b4f129758b",
+      "path": "packages/mermaid/src/styles.ts",
+      "symbols": [
+        "getStyles"
+      ],
+      "sha256": "dd53a582b0c2411e16beeb37f51664968f278b08b97f63fc8808cbc8381f73fb",
+      "contract": "effective appearance cascade, source default presentation and preserved label wrapping"
+    },
+    {
+      "repository": "mermaid",
+      "commit": "1fb7869866dd619168d840291c9c54b4f129758b",
+      "path": "packages/mermaid/src/rendering-util/insertLookDefs.ts",
+      "symbols": [
+        "insertLookDefs"
+      ],
+      "sha256": "9810059f11462129a1518d3b1fa3950e9e16a959dbe92abc732aa5e714a2eb13",
+      "contract": "effective appearance cascade, source default presentation and preserved label wrapping"
+    },
+    {
+      "repository": "mermaid",
+      "commit": "1fb7869866dd619168d840291c9c54b4f129758b",
+      "path": "packages/mermaid/src/schemas/config.schema.yaml",
+      "symbols": [
+        "FlowchartDiagramConfig"
+      ],
+      "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+      "contract": "effective appearance cascade, source default presentation and preserved label wrapping"
+    },
+    {
+      "repository": "mermaid",
+      "commit": "1fb7869866dd619168d840291c9c54b4f129758b",
+      "path": "packages/mermaid/src/mermaidAPI.ts",
+      "symbols": [
+        "initialize",
+        "createUserStyles"
+      ],
+      "sha256": "c38ef136d815a638993d271f253d2ca825046fb97292d30a7a4de8ea57fc0318",
+      "contract": "effective appearance cascade, source default presentation and preserved label wrapping"
+    },
+    {
+      "repository": "mermaid",
+      "commit": "1fb7869866dd619168d840291c9c54b4f129758b",
+      "path": "packages/mermaid/src/rendering-util/handle-markdown-text.ts",
+      "symbols": [
+        "nonMarkdownToHTML"
+      ],
+      "sha256": "6f99a7b3f5b11f87f5509a370663f14650f8f8c3cbb9a34ea496a1aa183cd0ca",
+      "contract": "effective appearance cascade, source default presentation and preserved label wrapping"
+    },
+    {
+      "repository": "mermaid",
+      "commit": "1fb7869866dd619168d840291c9c54b4f129758b",
+      "path": "packages/mermaid/src/rendering-util/splitText.ts",
+      "symbols": [
+        "splitWordToFitWidth",
+        "splitLineToFitWidth"
+      ],
+      "sha256": "3dab45fa82a11d7410a306819c7a01c0dc25aab5810cba0127d0adf00547f40e",
+      "contract": "effective appearance cascade, source default presentation and preserved label wrapping"
+    }
+  ],
+  "assertions": [
+    {
+      "id": "F011-CANVAS-SOURCE-PADDING-AND-PUBLIC-TEXT-METRICS",
+      "test": "CanvasMeasurementTests.test_source_padding_and_public_text_metrics",
+      "status": "targeted_verified",
+      "evidence": "test-runs/f011-s4-canvas-defaults-001/manifest.json",
+      "expectedSourceSymbols": [
+        "config.resolveAppearance",
+        "FlowchartDiagramConfig",
+        "theme-redux-color.Theme",
+        "squareRect",
+        "drawRect",
+        "labelHelper",
+        "addHtmlSpan",
+        "insertLookDefs",
+        "CanvasRenderingContext2D.measureText",
+        "Canvas.toBufferSync"
+      ],
+      "independence": "Expected effective defaults derived from fixed sources and officialA; direct public a18 metrics independently check adapter; synthetic placements/effective font injection are test-only inputs, not Python saved outputs",
+      "scope": "Windows calling-thread Canvas/default appearance regression; final frozen-candidate validation remains separate"
+    },
+    {
+      "id": "F011-CANVAS-FONT-SIZE-CHANGES-REAL-METRICS",
+      "test": "CanvasMeasurementTests.test_font_size_changes_real_metrics",
+      "status": "targeted_verified",
+      "evidence": "test-runs/f011-s4-canvas-defaults-001/manifest.json",
+      "expectedSourceSymbols": [
+        "config.resolveAppearance",
+        "FlowchartDiagramConfig",
+        "theme-redux-color.Theme",
+        "squareRect",
+        "drawRect",
+        "labelHelper",
+        "addHtmlSpan",
+        "insertLookDefs",
+        "CanvasRenderingContext2D.measureText",
+        "Canvas.toBufferSync"
+      ],
+      "independence": "Expected effective defaults derived from fixed sources and officialA; direct public a18 metrics independently check adapter; synthetic placements/effective font injection are test-only inputs, not Python saved outputs",
+      "scope": "Windows calling-thread Canvas/default appearance regression; final frozen-candidate validation remains separate"
+    },
+    {
+      "id": "F011-CANVAS-MULTILINE-PLAIN-TEXT-AND-LINEHEIGHT",
+      "test": "CanvasMeasurementTests.test_multiline_plain_text_and_lineheight",
+      "status": "targeted_verified",
+      "evidence": "test-runs/f011-s4-canvas-defaults-001/manifest.json",
+      "expectedSourceSymbols": [
+        "config.resolveAppearance",
+        "FlowchartDiagramConfig",
+        "theme-redux-color.Theme",
+        "squareRect",
+        "drawRect",
+        "labelHelper",
+        "addHtmlSpan",
+        "insertLookDefs",
+        "CanvasRenderingContext2D.measureText",
+        "Canvas.toBufferSync"
+      ],
+      "independence": "Expected effective defaults derived from fixed sources and officialA; direct public a18 metrics independently check adapter; synthetic placements/effective font injection are test-only inputs, not Python saved outputs",
+      "scope": "Windows calling-thread Canvas/default appearance regression; final frozen-candidate validation remains separate"
+    },
+    {
+      "id": "F011-CANVAS-LONG-LABEL-PRESERVED-WITHOUT-TRUNCATION",
+      "test": "CanvasMeasurementTests.test_long_label_preserved_without_truncation",
+      "status": "targeted_verified",
+      "evidence": "test-runs/f011-s4-canvas-defaults-001/manifest.json",
+      "expectedSourceSymbols": [
+        "config.resolveAppearance",
+        "FlowchartDiagramConfig",
+        "theme-redux-color.Theme",
+        "squareRect",
+        "drawRect",
+        "labelHelper",
+        "addHtmlSpan",
+        "insertLookDefs",
+        "CanvasRenderingContext2D.measureText",
+        "Canvas.toBufferSync"
+      ],
+      "independence": "Expected effective defaults derived from fixed sources and officialA; direct public a18 metrics independently check adapter; synthetic placements/effective font injection are test-only inputs, not Python saved outputs",
+      "scope": "Windows calling-thread Canvas/default appearance regression; final frozen-candidate validation remains separate"
+    },
+    {
+      "id": "F011-CANVAS-FALLBACK-FONT-DECLARATION-SEPARATOR",
+      "test": "CanvasMeasurementTests.test_fallback_font_declaration_separator",
+      "status": "targeted_verified",
+      "evidence": "test-runs/f011-s4-canvas-defaults-001/manifest.json",
+      "expectedSourceSymbols": [
+        "config.resolveAppearance",
+        "FlowchartDiagramConfig",
+        "theme-redux-color.Theme",
+        "squareRect",
+        "drawRect",
+        "labelHelper",
+        "addHtmlSpan",
+        "insertLookDefs",
+        "CanvasRenderingContext2D.measureText",
+        "Canvas.toBufferSync"
+      ],
+      "independence": "Expected effective defaults derived from fixed sources and officialA; direct public a18 metrics independently check adapter; synthetic placements/effective font injection are test-only inputs, not Python saved outputs",
+      "scope": "Windows calling-thread Canvas/default appearance regression; final frozen-candidate validation remains separate"
+    },
+    {
+      "id": "F011-CANVAS-SOURCE-EFFECTIVE-MINIMUM-AND-EMPTY-LABEL-EXCEPTION",
+      "test": "CanvasMeasurementTests.test_source_effective_minimum_and_empty_label_exception",
+      "status": "targeted_verified",
+      "evidence": "test-runs/f011-s4-canvas-defaults-001/manifest.json",
+      "expectedSourceSymbols": [
+        "config.resolveAppearance",
+        "FlowchartDiagramConfig",
+        "theme-redux-color.Theme",
+        "squareRect",
+        "drawRect",
+        "labelHelper",
+        "addHtmlSpan",
+        "insertLookDefs",
+        "CanvasRenderingContext2D.measureText",
+        "Canvas.toBufferSync"
+      ],
+      "independence": "Expected effective defaults derived from fixed sources and officialA; direct public a18 metrics independently check adapter; synthetic placements/effective font injection are test-only inputs, not Python saved outputs",
+      "scope": "Windows calling-thread Canvas/default appearance regression; final frozen-candidate validation remains separate"
+    },
+    {
+      "id": "F011-CANVAS-LONG-UNBREAKABLE-WORD-PRESERVED-AND-CONTAINED",
+      "test": "CanvasMeasurementTests.test_long_unbreakable_word_preserved_and_contained",
+      "status": "targeted_verified",
+      "evidence": "test-runs/f011-s4-canvas-defaults-001/manifest.json",
+      "expectedSourceSymbols": [
+        "config.resolveAppearance",
+        "FlowchartDiagramConfig",
+        "theme-redux-color.Theme",
+        "squareRect",
+        "drawRect",
+        "labelHelper",
+        "addHtmlSpan",
+        "insertLookDefs",
+        "CanvasRenderingContext2D.measureText",
+        "Canvas.toBufferSync"
+      ],
+      "independence": "Expected effective defaults derived from fixed sources and officialA; direct public a18 metrics independently check adapter; synthetic placements/effective font injection are test-only inputs, not Python saved outputs",
+      "scope": "Windows calling-thread Canvas/default appearance regression; final frozen-candidate validation remains separate"
+    },
+    {
+      "id": "F011-CANVAS-SITE-ROOT-FONTSIZE-DOES-NOT-CHANGE-EFFECTIVE-THEME-FONT",
+      "test": "CanvasMeasurementTests.test_site_root_fontsize_does_not_change_effective_theme_font",
+      "status": "targeted_verified",
+      "evidence": "test-runs/f011-s4-canvas-defaults-001/manifest.json",
+      "expectedSourceSymbols": [
+        "config.resolveAppearance",
+        "FlowchartDiagramConfig",
+        "theme-redux-color.Theme",
+        "squareRect",
+        "drawRect",
+        "labelHelper",
+        "addHtmlSpan",
+        "insertLookDefs",
+        "CanvasRenderingContext2D.measureText",
+        "Canvas.toBufferSync"
+      ],
+      "independence": "Expected effective defaults derived from fixed sources and officialA; direct public a18 metrics independently check adapter; synthetic placements/effective font injection are test-only inputs, not Python saved outputs",
+      "scope": "Windows calling-thread Canvas/default appearance regression; final frozen-candidate validation remains separate"
+    },
+    {
+      "id": "F011-CANVAS-RICH-CONTENT-REJECTED-INSTEAD-OF-STRIPPED",
+      "test": "CanvasMeasurementTests.test_rich_content_rejected_instead_of_stripped",
+      "status": "targeted_verified",
+      "evidence": "test-runs/f011-s4-canvas-defaults-001/manifest.json",
+      "expectedSourceSymbols": [
+        "config.resolveAppearance",
+        "FlowchartDiagramConfig",
+        "theme-redux-color.Theme",
+        "squareRect",
+        "drawRect",
+        "labelHelper",
+        "addHtmlSpan",
+        "insertLookDefs",
+        "CanvasRenderingContext2D.measureText",
+        "Canvas.toBufferSync"
+      ],
+      "independence": "Expected effective defaults derived from fixed sources and officialA; direct public a18 metrics independently check adapter; synthetic placements/effective font injection are test-only inputs, not Python saved outputs",
+      "scope": "Windows calling-thread Canvas/default appearance regression; final frozen-candidate validation remains separate"
+    },
+    {
+      "id": "F011-CANVAS-PNG-DIMENSIONS-BACKGROUND-AND-VISIBLE-CONTENT",
+      "test": "CanvasContentTests.test_png_dimensions_background_and_visible_content",
+      "status": "targeted_verified",
+      "evidence": "test-runs/f011-s4-canvas-defaults-001/manifest.json",
+      "expectedSourceSymbols": [
+        "config.resolveAppearance",
+        "FlowchartDiagramConfig",
+        "theme-redux-color.Theme",
+        "squareRect",
+        "drawRect",
+        "labelHelper",
+        "addHtmlSpan",
+        "insertLookDefs",
+        "CanvasRenderingContext2D.measureText",
+        "Canvas.toBufferSync"
+      ],
+      "independence": "Expected effective defaults derived from fixed sources and officialA; direct public a18 metrics independently check adapter; synthetic placements/effective font injection are test-only inputs, not Python saved outputs",
+      "scope": "Windows calling-thread Canvas/default appearance regression; final frozen-candidate validation remains separate"
+    },
+    {
+      "id": "F011-CANVAS-EVERY-LABEL-HAS-PIXELS-INSIDE-ITS-NODE",
+      "test": "CanvasContentTests.test_every_label_has_pixels_inside_its_node",
+      "status": "targeted_verified",
+      "evidence": "test-runs/f011-s4-canvas-defaults-001/manifest.json",
+      "expectedSourceSymbols": [
+        "config.resolveAppearance",
+        "FlowchartDiagramConfig",
+        "theme-redux-color.Theme",
+        "squareRect",
+        "drawRect",
+        "labelHelper",
+        "addHtmlSpan",
+        "insertLookDefs",
+        "CanvasRenderingContext2D.measureText",
+        "Canvas.toBufferSync"
+      ],
+      "independence": "Expected effective defaults derived from fixed sources and officialA; direct public a18 metrics independently check adapter; synthetic placements/effective font injection are test-only inputs, not Python saved outputs",
+      "scope": "Windows calling-thread Canvas/default appearance regression; final frozen-candidate validation remains separate"
+    },
+    {
+      "id": "F011-CANVAS-PLAIN-RECT-FILL-AND-STROKE-ARE-PRESENT",
+      "test": "CanvasContentTests.test_plain_rect_fill_and_stroke_are_present",
+      "status": "targeted_verified",
+      "evidence": "test-runs/f011-s4-canvas-defaults-001/manifest.json",
+      "expectedSourceSymbols": [
+        "config.resolveAppearance",
+        "FlowchartDiagramConfig",
+        "theme-redux-color.Theme",
+        "squareRect",
+        "drawRect",
+        "labelHelper",
+        "addHtmlSpan",
+        "insertLookDefs",
+        "CanvasRenderingContext2D.measureText",
+        "Canvas.toBufferSync"
+      ],
+      "independence": "Expected effective defaults derived from fixed sources and officialA; direct public a18 metrics independently check adapter; synthetic placements/effective font injection are test-only inputs, not Python saved outputs",
+      "scope": "Windows calling-thread Canvas/default appearance regression; final frozen-candidate validation remains separate"
+    },
+    {
+      "id": "F011-CANVAS-NEO-SHADOW-IS-VISIBLE-AND-INCLUDED-IN-BOUNDS",
+      "test": "CanvasContentTests.test_neo_shadow_is_visible_and_included_in_bounds",
+      "status": "targeted_verified",
+      "evidence": "test-runs/f011-s4-canvas-defaults-001/manifest.json",
+      "expectedSourceSymbols": [
+        "config.resolveAppearance",
+        "FlowchartDiagramConfig",
+        "theme-redux-color.Theme",
+        "squareRect",
+        "drawRect",
+        "labelHelper",
+        "addHtmlSpan",
+        "insertLookDefs",
+        "CanvasRenderingContext2D.measureText",
+        "Canvas.toBufferSync"
+      ],
+      "independence": "Expected effective defaults derived from fixed sources and officialA; direct public a18 metrics independently check adapter; synthetic placements/effective font injection are test-only inputs, not Python saved outputs",
+      "scope": "Windows calling-thread Canvas/default appearance regression; final frozen-candidate validation remains separate"
+    },
+    {
+      "id": "F011-CANVAS-MULTIPLE-SECTIONS-AND-ARROW-HAVE-REAL-PIXELS",
+      "test": "CanvasContentTests.test_multiple_sections_and_arrow_have_real_pixels",
+      "status": "targeted_verified",
+      "evidence": "test-runs/f011-s4-canvas-defaults-001/manifest.json",
+      "expectedSourceSymbols": [
+        "config.resolveAppearance",
+        "FlowchartDiagramConfig",
+        "theme-redux-color.Theme",
+        "squareRect",
+        "drawRect",
+        "labelHelper",
+        "addHtmlSpan",
+        "insertLookDefs",
+        "CanvasRenderingContext2D.measureText",
+        "Canvas.toBufferSync"
+      ],
+      "independence": "Expected effective defaults derived from fixed sources and officialA; direct public a18 metrics independently check adapter; synthetic placements/effective font injection are test-only inputs, not Python saved outputs",
+      "scope": "Windows calling-thread Canvas/default appearance regression; final frozen-candidate validation remains separate"
+    },
+    {
+      "id": "F011-CANVAS-PADDING-CONTAINS-ALL-DRAWN-GEOMETRY",
+      "test": "CanvasContentTests.test_padding_contains_all_drawn_geometry",
+      "status": "targeted_verified",
+      "evidence": "test-runs/f011-s4-canvas-defaults-001/manifest.json",
+      "expectedSourceSymbols": [
+        "config.resolveAppearance",
+        "FlowchartDiagramConfig",
+        "theme-redux-color.Theme",
+        "squareRect",
+        "drawRect",
+        "labelHelper",
+        "addHtmlSpan",
+        "insertLookDefs",
+        "CanvasRenderingContext2D.measureText",
+        "Canvas.toBufferSync"
+      ],
+      "independence": "Expected effective defaults derived from fixed sources and officialA; direct public a18 metrics independently check adapter; synthetic placements/effective font injection are test-only inputs, not Python saved outputs",
+      "scope": "Windows calling-thread Canvas/default appearance regression; final frozen-candidate validation remains separate"
+    },
+    {
+      "id": "F011-CANVAS-REAL-ELK-BRANCH-SEMANTIC-CONNECTIONS-AND-CONTENT",
+      "test": "CanvasContentTests.test_real_elk_branch_semantic_connections_and_content",
+      "status": "targeted_verified",
+      "evidence": "test-runs/f011-s4-canvas-defaults-001/manifest.json",
+      "expectedSourceSymbols": [
+        "config.resolveAppearance",
+        "FlowchartDiagramConfig",
+        "theme-redux-color.Theme",
+        "squareRect",
+        "drawRect",
+        "labelHelper",
+        "addHtmlSpan",
+        "insertLookDefs",
+        "CanvasRenderingContext2D.measureText",
+        "Canvas.toBufferSync"
+      ],
+      "independence": "Expected effective defaults derived from fixed sources and officialA; direct public a18 metrics independently check adapter; synthetic placements/effective font injection are test-only inputs, not Python saved outputs",
+      "scope": "Windows calling-thread Canvas/default appearance regression; final frozen-candidate validation remains separate"
+    },
+    {
+      "id": "F011-CANVAS-OWNER-THREAD-REJECTS-MEASURE-AND-RENDER",
+      "test": "CanvasLifecycleTests.test_owner_thread_rejects_measure_and_render",
+      "status": "targeted_verified",
+      "evidence": "test-runs/f011-s4-canvas-defaults-001/manifest.json",
+      "expectedSourceSymbols": [
+        "config.resolveAppearance",
+        "FlowchartDiagramConfig",
+        "theme-redux-color.Theme",
+        "squareRect",
+        "drawRect",
+        "labelHelper",
+        "addHtmlSpan",
+        "insertLookDefs",
+        "CanvasRenderingContext2D.measureText",
+        "Canvas.toBufferSync"
+      ],
+      "independence": "Expected effective defaults derived from fixed sources and officialA; direct public a18 metrics independently check adapter; synthetic placements/effective font injection are test-only inputs, not Python saved outputs",
+      "scope": "Windows calling-thread Canvas/default appearance regression; final frozen-candidate validation remains separate"
+    },
+    {
+      "id": "F011-CANVAS-REPEATED-SESSION-HAS-NO-OLD-TRACE-OR-STYLE",
+      "test": "CanvasLifecycleTests.test_repeated_session_has_no_old_trace_or_style",
+      "status": "targeted_verified",
+      "evidence": "test-runs/f011-s4-canvas-defaults-001/manifest.json",
+      "expectedSourceSymbols": [
+        "config.resolveAppearance",
+        "FlowchartDiagramConfig",
+        "theme-redux-color.Theme",
+        "squareRect",
+        "drawRect",
+        "labelHelper",
+        "addHtmlSpan",
+        "insertLookDefs",
+        "CanvasRenderingContext2D.measureText",
+        "Canvas.toBufferSync"
+      ],
+      "independence": "Expected effective defaults derived from fixed sources and officialA; direct public a18 metrics independently check adapter; synthetic placements/effective font injection are test-only inputs, not Python saved outputs",
+      "scope": "Windows calling-thread Canvas/default appearance regression; final frozen-candidate validation remains separate"
+    },
+    {
+      "id": "F011-CANVAS-WORKER-CAN-CREATE-OWN-SESSION",
+      "test": "CanvasLifecycleTests.test_worker_can_create_own_session",
+      "status": "targeted_verified",
+      "evidence": "test-runs/f011-s4-canvas-defaults-001/manifest.json",
+      "expectedSourceSymbols": [
+        "config.resolveAppearance",
+        "FlowchartDiagramConfig",
+        "theme-redux-color.Theme",
+        "squareRect",
+        "drawRect",
+        "labelHelper",
+        "addHtmlSpan",
+        "insertLookDefs",
+        "CanvasRenderingContext2D.measureText",
+        "Canvas.toBufferSync"
+      ],
+      "independence": "Expected effective defaults derived from fixed sources and officialA; direct public a18 metrics independently check adapter; synthetic placements/effective font injection are test-only inputs, not Python saved outputs",
+      "scope": "Windows calling-thread Canvas/default appearance regression; final frozen-candidate validation remains separate"
+    },
+    {
+      "id": "F011-CANVAS-AUTO-PRESERVES-ACTUAL-CANVAS-DEFAULT",
+      "test": "CanvasLifecycleTests.test_auto_preserves_actual_canvas_default",
+      "status": "targeted_verified",
+      "evidence": "test-runs/f011-s4-canvas-defaults-001/manifest.json",
+      "expectedSourceSymbols": [
+        "config.resolveAppearance",
+        "FlowchartDiagramConfig",
+        "theme-redux-color.Theme",
+        "squareRect",
+        "drawRect",
+        "labelHelper",
+        "addHtmlSpan",
+        "insertLookDefs",
+        "CanvasRenderingContext2D.measureText",
+        "Canvas.toBufferSync"
+      ],
+      "independence": "Expected effective defaults derived from fixed sources and officialA; direct public a18 metrics independently check adapter; synthetic placements/effective font injection are test-only inputs, not Python saved outputs",
+      "scope": "Windows calling-thread Canvas/default appearance regression; final frozen-candidate validation remains separate"
+    },
+    {
+      "id": "F011-CANVAS-GPU-REQUIRED-RETURNS-GPU",
+      "test": "CanvasLifecycleTests.test_gpu_required_returns_gpu",
+      "status": "targeted_verified",
+      "evidence": "test-runs/f011-s4-canvas-defaults-001/manifest.json",
+      "expectedSourceSymbols": [
+        "config.resolveAppearance",
+        "FlowchartDiagramConfig",
+        "theme-redux-color.Theme",
+        "squareRect",
+        "drawRect",
+        "labelHelper",
+        "addHtmlSpan",
+        "insertLookDefs",
+        "CanvasRenderingContext2D.measureText",
+        "Canvas.toBufferSync"
+      ],
+      "independence": "Expected effective defaults derived from fixed sources and officialA; direct public a18 metrics independently check adapter; synthetic placements/effective font injection are test-only inputs, not Python saved outputs",
+      "scope": "Windows calling-thread Canvas/default appearance regression; final frozen-candidate validation remains separate"
+    },
+    {
+      "id": "F011-CANVAS-UNKNOWN-BACKEND-REJECTED",
+      "test": "CanvasLifecycleTests.test_unknown_backend_rejected",
+      "status": "targeted_verified",
+      "evidence": "test-runs/f011-s4-canvas-defaults-001/manifest.json",
+      "expectedSourceSymbols": [
+        "config.resolveAppearance",
+        "FlowchartDiagramConfig",
+        "theme-redux-color.Theme",
+        "squareRect",
+        "drawRect",
+        "labelHelper",
+        "addHtmlSpan",
+        "insertLookDefs",
+        "CanvasRenderingContext2D.measureText",
+        "Canvas.toBufferSync"
+      ],
+      "independence": "Expected effective defaults derived from fixed sources and officialA; direct public a18 metrics independently check adapter; synthetic placements/effective font injection are test-only inputs, not Python saved outputs",
+      "scope": "Windows calling-thread Canvas/default appearance regression; final frozen-candidate validation remains separate"
+    },
+    {
+      "id": "F011-CANVAS-EXPLICIT-MISSING-ROUTE-REJECTED",
+      "test": "CanvasLifecycleTests.test_explicit_missing_route_rejected",
+      "status": "targeted_verified",
+      "evidence": "test-runs/f011-s4-canvas-defaults-001/manifest.json",
+      "expectedSourceSymbols": [
+        "config.resolveAppearance",
+        "FlowchartDiagramConfig",
+        "theme-redux-color.Theme",
+        "squareRect",
+        "drawRect",
+        "labelHelper",
+        "addHtmlSpan",
+        "insertLookDefs",
+        "CanvasRenderingContext2D.measureText",
+        "Canvas.toBufferSync"
+      ],
+      "independence": "Expected effective defaults derived from fixed sources and officialA; direct public a18 metrics independently check adapter; synthetic placements/effective font injection are test-only inputs, not Python saved outputs",
+      "scope": "Windows calling-thread Canvas/default appearance regression; final frozen-candidate validation remains separate"
+    }
+  ],
+  "limits": [
+    "CJK pixel presence does not alone prove correct font glyph coverage; final visual/font review remains required",
+    "Canvas.engine records backend status, not native per-call trace; real PNG decoding/foreground checks verify drawing occurred",
+    "No browser pixel equality threshold",
+    "Unavailable GPU is reported as failure/unverified environment, never skipped or CPU fallback counted as GPU"
+  ],
+  "mechanicalChecks": [
+    {
+      "command": [
+        "C:\\venvs\\pymmd-20261102\\Scripts\\python.exe",
+        "-m",
+        "compileall",
+        "-q",
+        "src/py_mermaid/rendering/skia",
+        "src/py_mermaid/rendering/labels",
+        "tests/f011/test_canvas.py"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\venvs\\pymmd-20261102\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests/f011",
+        "-p",
+        "test_canvas.py",
+        "-v"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "test_every_label_has_pixels_inside_its_node (test_canvas.CanvasContentTests.test_every_label_has_pixels_inside_its_node) ... C:\\code\\py-visactor\\py-mermaid\\tests\\f011\\test_canvas.py:59: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.\n  return sum(max(pixel) < 130 for pixel in image.crop((left, top, right, bottom)).getdata())\nok\ntest_multiple_sections_and_arrow_have_real_pixels (test_canvas.CanvasContentTests.test_multiple_sections_and_arrow_have_real_pixels) ... ok\ntest_neo_shadow_is_visible_and_included_in_bounds (test_canvas.CanvasContentTests.test_neo_shadow_is_visible_and_included_in_bounds) ... ok\ntest_padding_contains_all_drawn_geometry (test_canvas.CanvasContentTests.test_padding_contains_all_drawn_geometry) ... ok\ntest_plain_rect_fill_and_stroke_are_present (test_canvas.CanvasContentTests.test_plain_rect_fill_and_stroke_are_present) ... ok\ntest_png_dimensions_background_and_visible_content (test_canvas.CanvasContentTests.test_png_dimensions_background_and_visible_content) ... C:\\code\\py-visactor\\py-mermaid\\tests\\f011\\test_canvas.py:162: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.\n  self.assertGreater(len(set(image.getdata())), 8, \"a background-only/no-op image is invalid\")\nok\ntest_real_elk_branch_semantic_connections_and_content (test_canvas.CanvasContentTests.test_real_elk_branch_semantic_connections_and_content) ... ok\ntest_auto_preserves_actual_canvas_default (test_canvas.CanvasLifecycleTests.test_auto_preserves_actual_canvas_default) ... ok\ntest_explicit_missing_route_rejected (test_canvas.CanvasLifecycleTests.test_explicit_missing_route_rejected) ... ok\ntest_gpu_required_returns_gpu (test_canvas.CanvasLifecycleTests.test_gpu_required_returns_gpu) ... ok\ntest_owner_thread_rejects_measure_and_render (test_canvas.CanvasLifecycleTests.test_owner_thread_rejects_measure_and_render) ... ok\ntest_repeated_session_has_no_old_trace_or_style (test_canvas.CanvasLifecycleTests.test_repeated_session_has_no_old_trace_or_style) ... ok\ntest_unknown_backend_rejected (test_canvas.CanvasLifecycleTests.test_unknown_backend_rejected) ... ok\ntest_worker_can_create_own_session (test_canvas.CanvasLifecycleTests.test_worker_can_create_own_session) ... ok\ntest_fallback_font_declaration_separator (test_canvas.CanvasMeasurementTests.test_fallback_font_declaration_separator) ... ok\ntest_font_size_changes_real_metrics (test_canvas.CanvasMeasurementTests.test_font_size_changes_real_metrics) ... ok\ntest_long_label_preserved_without_truncation (test_canvas.CanvasMeasurementTests.test_long_label_preserved_without_truncation) ... ok\ntest_long_unbreakable_word_preserved_and_contained (test_canvas.CanvasMeasurementTests.test_long_unbreakable_word_preserved_and_contained) ... ok\ntest_multiline_plain_text_and_lineheight (test_canvas.CanvasMeasurementTests.test_multiline_plain_text_and_lineheight) ... ok\ntest_rich_content_rejected_instead_of_stripped (test_canvas.CanvasMeasurementTests.test_rich_content_rejected_instead_of_stripped) ... ok\ntest_site_root_fontsize_does_not_change_effective_theme_font (test_canvas.CanvasMeasurementTests.test_site_root_fontsize_does_not_change_effective_theme_font) ... ok\ntest_source_effective_minimum_and_empty_label_exception (test_canvas.CanvasMeasurementTests.test_source_effective_minimum_and_empty_label_exception) ... ok\ntest_source_padding_and_public_text_metrics (test_canvas.CanvasMeasurementTests.test_source_padding_and_public_text_metrics)\nDefault neo: max(label,120)+32 horizontally and row-height+24. ... ok\n\n----------------------------------------------------------------------\nRan 23 tests in 0.464s\n\nOK\n"
+    }
+  ],
+  "history": [
+    {
+      "candidateSha256": "349136b5247435693b4b94b2627477d0ba6842b7147feea0496c077d5d6776ef",
+      "testSha256": "8e7c2c6b22b0a96d5da20cd6bc14878d45a91797962bd39854f4a41d2dfa2d51",
+      "count": 19,
+      "status": "original19 source-designed cases; superseded effective appearance assumptions fixed after official run"
+    }
+  ],
+  "candidateIdentity": "Changed v1.1 source hashes bound in targeted run; final candidate must be frozen by coordinator"
+}

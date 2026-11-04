@@ -1,0 +1,429 @@
+{
+  "schema": "py-mermaid-python-candidate-research/v1",
+  "purpose": "Candidate metadata only; not accepted dependencies or a Python runtime lock. Equivalence and pure-Python execution paths require focused verification.",
+  "candidates": {
+    "lark": {
+      "metadataUrl": "https://pypi.org/pypi/lark/json",
+      "metadataSha256": "c988b34c6890c5a6b2f3ae6913cc12422d16ef0c9c34122c8d9e260a2678c9ca",
+      "observedAtUtc": "2026-11-04T11:07:32.246265+00:00",
+      "version": "1.3.1",
+      "requiresPython": ">=3.8",
+      "requiresDist": [
+        "regex; extra == \"regex\"",
+        "js2py; extra == \"nearley\"",
+        "atomicwrites; extra == \"atomic-cache\"",
+        "interegular<0.4.0,>=0.3.1; extra == \"interegular\""
+      ],
+      "licenseExpression": null,
+      "licenseField": "MIT",
+      "projectUrls": {
+        "Download": "https://github.com/lark-parser/lark/tarball/master",
+        "Homepage": "https://github.com/lark-parser/lark"
+      },
+      "universalWheelFiles": [
+        {
+          "filename": "lark-1.3.1-py3-none-any.whl",
+          "sha256": "c629b661023a014c37da873b4ff58a817398d12635d3bbb2c5a03be7fe5d1e12"
+        }
+      ],
+      "status": "metadata-researched-not-equivalence-tested"
+    },
+    "PyYAML": {
+      "metadataUrl": "https://pypi.org/pypi/PyYAML/json",
+      "metadataSha256": "d0c463a86ed24144dd112fd1fe43b7c208e52c7d3903c2f51c84acfb5b10c749",
+      "observedAtUtc": "2026-11-04T11:07:32.816291+00:00",
+      "version": "6.0.3",
+      "requiresPython": ">=3.8",
+      "requiresDist": [],
+      "licenseExpression": null,
+      "licenseField": "MIT",
+      "projectUrls": {
+        "Bug Tracker": "https://github.com/yaml/pyyaml/issues",
+        "CI": "https://github.com/yaml/pyyaml/actions",
+        "Documentation": "https://pyyaml.org/wiki/PyYAMLDocumentation",
+        "Download": "https://pypi.org/project/PyYAML/",
+        "Homepage": "https://pyyaml.org/",
+        "Mailing lists": "http://lists.sourceforge.net/lists/listinfo/yaml-core",
+        "Source Code": "https://github.com/yaml/pyyaml"
+      },
+      "universalWheelFiles": [],
+      "status": "metadata-researched-not-equivalence-tested"
+    },
+    "markdown-it-py": {
+      "metadataUrl": "https://pypi.org/pypi/markdown-it-py/json",
+      "metadataSha256": "093d54bb83e6c89afa23d4a62bc054a390b94888729f1589c0c0d2e1950db1b8",
+      "observedAtUtc": "2026-11-04T11:07:32.311538+00:00",
+      "version": "4.2.0",
+      "requiresPython": ">=3.10",
+      "requiresDist": [
+        "mdurl~=0.1",
+        "psutil; extra == \"benchmarking\"",
+        "pytest; extra == \"benchmarking\"",
+        "pytest-benchmark; extra == \"benchmarking\"",
+        "commonmark~=0.9; extra == \"compare\"",
+        "markdown~=3.4; extra == \"compare\"",
+        "mistletoe~=1.0; extra == \"compare\"",
+        "mistune~=3.0; extra == \"compare\"",
+        "panflute~=2.3; extra == \"compare\"",
+        "markdown-it-pyrs; extra == \"compare\"",
+        "linkify-it-py<3,>=1; extra == \"linkify\"",
+        "mdit-py-plugins>=0.5.0; extra == \"plugins\"",
+        "gprof2dot; extra == \"profiling\"",
+        "mdit-py-plugins>=0.5.0; extra == \"rtd\"",
+        "myst-parser; extra == \"rtd\"",
+        "pyyaml; extra == \"rtd\"",
+        "sphinx; extra == \"rtd\"",
+        "sphinx-copybutton; extra == \"rtd\"",
+        "sphinx-design; extra == \"rtd\"",
+        "sphinx-book-theme~=1.0; extra == \"rtd\"",
+        "jupyter_sphinx; extra == \"rtd\"",
+        "ipykernel; extra == \"rtd\"",
+        "coverage; extra == \"testing\"",
+        "pytest; extra == \"testing\"",
+        "pytest-cov; extra == \"testing\"",
+        "pytest-regressions; extra == \"testing\"",
+        "pytest-timeout; extra == \"testing\"",
+        "requests; extra == \"testing\""
+      ],
+      "licenseExpression": null,
+      "licenseField": null,
+      "projectUrls": {
+        "Documentation": "https://markdown-it-py.readthedocs.io",
+        "Homepage": "https://github.com/executablebooks/markdown-it-py"
+      },
+      "universalWheelFiles": [
+        {
+          "filename": "markdown_it_py-4.2.0-py3-none-any.whl",
+          "sha256": "9f7ebbcd14fe59494226453aed97c1070d83f8d24b6fc3a3bcf9a38092641c4a"
+        }
+      ],
+      "status": "metadata-researched-not-equivalence-tested"
+    },
+    "mdit-py-plugins": {
+      "metadataUrl": "https://pypi.org/pypi/mdit-py-plugins/json",
+      "metadataSha256": "d0e103f20eda2f976fed5361c7815d5f78abe3628502d14627ad2746ef193cd8",
+      "observedAtUtc": "2026-11-04T11:07:32.359066+00:00",
+      "version": "0.6.1",
+      "requiresPython": ">=3.10",
+      "requiresDist": [
+        "markdown-it-py<5.0.0,>=2.0.0",
+        "pre-commit; extra == \"code-style\"",
+        "myst-parser; extra == \"rtd\"",
+        "sphinx-book-theme; extra == \"rtd\"",
+        "coverage; extra == \"testing\"",
+        "pytest; extra == \"testing\"",
+        "pytest-cov; extra == \"testing\"",
+        "pytest-regressions; extra == \"testing\"",
+        "pytest-timeout; extra == \"testing\""
+      ],
+      "licenseExpression": null,
+      "licenseField": null,
+      "projectUrls": {
+        "Documentation": "https://mdit-py-plugins.readthedocs.io",
+        "Homepage": "https://github.com/executablebooks/mdit-py-plugins"
+      },
+      "universalWheelFiles": [
+        {
+          "filename": "mdit_py_plugins-0.6.1-py3-none-any.whl",
+          "sha256": "214c82fb2ac524472ab6a5bcab1de80f73b50443e187f401bfd77efbc7c6481d"
+        }
+      ],
+      "status": "metadata-researched-not-equivalence-tested"
+    },
+    "tinycss2": {
+      "metadataUrl": "https://pypi.org/pypi/tinycss2/json",
+      "metadataSha256": "e0640b996a20229a100ae161ecd86d20cd07a10823218112f05feb005272b7dd",
+      "observedAtUtc": "2026-11-04T11:07:32.140231+00:00",
+      "version": "1.5.1",
+      "requiresPython": ">=3.10",
+      "requiresDist": [
+        "webencodings>=0.4",
+        "sphinx; extra == \"doc\"",
+        "furo; extra == \"doc\"",
+        "pytest; extra == \"test\"",
+        "ruff; extra == \"test\""
+      ],
+      "licenseExpression": null,
+      "licenseField": null,
+      "projectUrls": {
+        "Changelog": "https://github.com/Kozea/tinycss2/releases",
+        "Code": "https://github.com/Kozea/tinycss2/",
+        "Documentation": "https://doc.courtbouillon.org/tinycss2/",
+        "Donation": "https://opencollective.com/courtbouillon",
+        "Homepage": "https://www.courtbouillon.org/tinycss2",
+        "Issues": "https://github.com/Kozea/tinycss2/issues"
+      },
+      "universalWheelFiles": [
+        {
+          "filename": "tinycss2-1.5.1-py3-none-any.whl",
+          "sha256": "3415ba0f5839c062696996998176c4a3751d18b7edaaeeb658c9ce21ec150661"
+        }
+      ],
+      "status": "metadata-researched-not-equivalence-tested"
+    },
+    "cssselect2": {
+      "metadataUrl": "https://pypi.org/pypi/cssselect2/json",
+      "metadataSha256": "134361f6a1951fd0d5dd9ed4cc5c2e44384ed66d460e4e9d8df9bd6244bbafcf",
+      "observedAtUtc": "2026-11-04T11:07:32.132616+00:00",
+      "version": "0.10.1",
+      "requiresPython": ">=3.10",
+      "requiresDist": [
+        "tinycss2",
+        "webencodings",
+        "sphinx; extra == \"doc\"",
+        "furo; extra == \"doc\"",
+        "pytest; extra == \"test\"",
+        "ruff; extra == \"test\""
+      ],
+      "licenseExpression": null,
+      "licenseField": null,
+      "projectUrls": {
+        "Changelog": "https://github.com/Kozea/cssselect2/releases",
+        "Code": "https://github.com/Kozea/cssselect2/",
+        "Documentation": "https://doc.courtbouillon.org/cssselect2/",
+        "Donation": "https://opencollective.com/courtbouillon",
+        "Homepage": "https://doc.courtbouillon.org/cssselect2/",
+        "Issues": "https://github.com/Kozea/cssselect2/issues"
+      },
+      "universalWheelFiles": [
+        {
+          "filename": "cssselect2-0.10.1-py3-none-any.whl",
+          "sha256": "25cc4494d55985d6a6da359be48da6ce98c28dcbafa2314c383ace3fc32ec868"
+        }
+      ],
+      "status": "metadata-researched-not-equivalence-tested"
+    },
+    "html5lib": {
+      "metadataUrl": "https://pypi.org/pypi/html5lib/json",
+      "metadataSha256": "1e44b17181b3a4538838d4d6b6d31f122910f8ea883cd26505469d403ca5c37b",
+      "observedAtUtc": "2026-11-04T11:07:32.880724+00:00",
+      "version": "1.1",
+      "requiresPython": ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*",
+      "requiresDist": [
+        "six (>=1.9)",
+        "webencodings",
+        "genshi ; extra == 'all'",
+        "chardet (>=2.2) ; extra == 'all'",
+        "lxml ; (platform_python_implementation == 'CPython') and extra == 'all'",
+        "chardet (>=2.2) ; extra == 'chardet'",
+        "genshi ; extra == 'genshi'",
+        "lxml ; (platform_python_implementation == 'CPython') and extra == 'lxml'"
+      ],
+      "licenseExpression": null,
+      "licenseField": "MIT License",
+      "projectUrls": {
+        "Homepage": "https://github.com/html5lib/html5lib-python"
+      },
+      "universalWheelFiles": [
+        {
+          "filename": "html5lib-1.1-py2.py3-none-any.whl",
+          "sha256": "0d78f8fde1c230e99fe37986a60526d7049ed4bf8a9fadbad5f00e22e58e041d"
+        }
+      ],
+      "status": "metadata-researched-not-equivalence-tested"
+    },
+    "coloraide": {
+      "metadataUrl": "https://pypi.org/pypi/coloraide/json",
+      "metadataSha256": "8a9afd36161b68b5c9b4c4508e9b2ce9cddc9ce550af57932e2f23f7465b2b0d",
+      "observedAtUtc": "2026-11-04T11:07:33.155465+00:00",
+      "version": "8.14",
+      "requiresPython": ">=3.10",
+      "requiresDist": [
+        "typing-extensions; python_version < \"3.11\""
+      ],
+      "licenseExpression": "MIT",
+      "licenseField": null,
+      "projectUrls": {
+        "Homepage": "https://github.com/facelessuser/coloraide"
+      },
+      "universalWheelFiles": [
+        {
+          "filename": "coloraide-8.14-py3-none-any.whl",
+          "sha256": "d8ff41fa0d91ff0e8b84fd707cb4aeb7dcf1b21006422479309c0101139f5c11"
+        }
+      ],
+      "status": "metadata-researched-not-equivalence-tested"
+    },
+    "latex2mathml": {
+      "metadataUrl": "https://pypi.org/pypi/latex2mathml/json",
+      "metadataSha256": "5ec27f932ff03690b55ee8019d4b08485b768443d202baab46ee97ab8743e3d4",
+      "observedAtUtc": "2026-11-04T11:07:33.447323+00:00",
+      "version": "3.81.1",
+      "requiresPython": ">=3.10",
+      "requiresDist": [],
+      "licenseExpression": null,
+      "licenseField": "MIT",
+      "projectUrls": {
+        "Donate": "https://www.buymeacoffee.com/roniemartinez",
+        "repository": "https://github.com/roniemartinez/latex2mathml"
+      },
+      "universalWheelFiles": [
+        {
+          "filename": "latex2mathml-3.81.1-py3-none-any.whl",
+          "sha256": "c337668441b71c819b6733905a8058ba9a9d767bae11a0c5fdacb3aff31361bd"
+        }
+      ],
+      "status": "metadata-researched-not-equivalence-tested"
+    },
+    "networkx": {
+      "metadataUrl": "https://pypi.org/pypi/networkx/json",
+      "metadataSha256": "b6eb07ed01755ff0d3a3f983a9fef01bfb7a137bc78d1d4f65aa4ab9111aeb9c",
+      "observedAtUtc": "2026-11-04T11:07:33.323095+00:00",
+      "version": "3.7",
+      "requiresPython": "!=3.14.1,>=3.12",
+      "requiresDist": [
+        "asv>=0.6.5; extra == \"benchmarking\"",
+        "py-rattler<0.22,>=0.21; extra == \"benchmarking\"",
+        "virtualenv; extra == \"benchmarking\"",
+        "numpy>=2.2; extra == \"default\"",
+        "scipy>=1.15; extra == \"default\"",
+        "matplotlib>=3.10; extra == \"default\"",
+        "pandas>=2.3; extra == \"default\"",
+        "pre-commit>=4.1; extra == \"developer\"",
+        "mypy>=1.15; extra == \"developer\"",
+        "sphinx>=8.0; extra == \"doc\"",
+        "pydata-sphinx-theme>=0.16; extra == \"doc\"",
+        "sphinx-gallery>=0.18; extra == \"doc\"",
+        "numpydoc>=1.8.0; extra == \"doc\"",
+        "pillow>=10; extra == \"doc\"",
+        "texext>=0.6.7; extra == \"doc\"",
+        "myst-nb>=1.1; extra == \"doc\"",
+        "intersphinx-registry; extra == \"doc\"",
+        "osmnx>=2.0.0; extra == \"example\"",
+        "momepy>=0.7.2; extra == \"example\"",
+        "contextily>=1.6; extra == \"example\"",
+        "seaborn>=0.13; extra == \"example\"",
+        "cairocffi>=1.7; extra == \"example\"",
+        "igraph>=0.11; extra == \"example\"",
+        "scikit-learn>=1.6; extra == \"example\"",
+        "iplotx>=0.9.0; extra == \"example\"",
+        "hiveplotlib>=0.28; extra == \"example\"",
+        "lxml>=4.6; extra == \"extra\"",
+        "pygraphviz>=2.0; extra == \"extra\"",
+        "pydot>=3.0.1; extra == \"extra\"",
+        "sympy>=1.10; extra == \"extra\"",
+        "build>=0.10; extra == \"release\"",
+        "twine>=4.0; extra == \"release\"",
+        "wheel>=0.40; extra == \"release\"",
+        "changelist==0.5; extra == \"release\"",
+        "pytest>=7.2; extra == \"test\"",
+        "pytest-cov>=4.0; extra == \"test\"",
+        "pytest-xdist>=3.0; extra == \"test\"",
+        "pytest-mpl; extra == \"test-extras\"",
+        "pytest-randomly; extra == \"test-extras\""
+      ],
+      "licenseExpression": "BSD-3-Clause",
+      "licenseField": null,
+      "projectUrls": {
+        "Bug Tracker": "https://github.com/networkx/networkx/issues",
+        "Documentation": "https://networkx.org/documentation/stable/",
+        "Homepage": "https://networkx.org/",
+        "Source Code": "https://github.com/networkx/networkx"
+      },
+      "universalWheelFiles": [
+        {
+          "filename": "networkx-3.7-py3-none-any.whl",
+          "sha256": "e3fd2c13a7814cee3746340d8d7f8598a67f16a58bf47fb7f8793fab6efca1b0"
+        }
+      ],
+      "status": "metadata-researched-not-equivalence-tested"
+    },
+    "rough": {
+      "metadataUrl": "https://pypi.org/pypi/rough/json",
+      "metadataSha256": "600748433e649adee037686d3d27bd8df9d3e5f5837be79464a2ef520bfc1ae1",
+      "observedAtUtc": "2026-11-04T11:07:32.969579+00:00",
+      "version": "1.6",
+      "requiresPython": ">=3.10",
+      "requiresDist": [],
+      "licenseExpression": null,
+      "licenseField": "MIT",
+      "projectUrls": {
+        "Homepage": "https://github.com/cktlco/rough-py",
+        "Repository": "https://github.com/cktlco/rough-py"
+      },
+      "universalWheelFiles": [
+        {
+          "filename": "rough-1.6-py3-none-any.whl",
+          "sha256": "fe23e614d177e62ede853ec60994ed38af558c4b8a90ff8b07cd44709dffb82c"
+        }
+      ],
+      "status": "metadata-researched-not-equivalence-tested"
+    },
+    "grandalf": {
+      "metadataUrl": "https://pypi.org/pypi/grandalf/json",
+      "metadataSha256": "26ec7c14e58170cc5fe101cdf23d21e399746f94004ba75f088681bb6d6076c9",
+      "observedAtUtc": "2026-11-04T11:07:33.421262+00:00",
+      "version": "0.8",
+      "requiresPython": "",
+      "requiresDist": [
+        "pyparsing",
+        "numpy ; extra == 'full'",
+        "ply ; extra == 'full'"
+      ],
+      "licenseExpression": null,
+      "licenseField": "GPLv2 | EPLv1",
+      "projectUrls": {
+        "Homepage": "https://github.com/bdcht/grandalf"
+      },
+      "universalWheelFiles": [
+        {
+          "filename": "grandalf-0.8-py3-none-any.whl",
+          "sha256": "793ca254442f4a79252ea9ff1ab998e852c1e071b863593e5383afee906b4185"
+        }
+      ],
+      "status": "metadata-researched-not-equivalence-tested"
+    },
+    "svg.path": {
+      "metadataUrl": "https://pypi.org/pypi/svg.path/json",
+      "metadataSha256": "c83baddc48de0b49e7ad11b1129d52ed90b6581ff07baa48fa383e8d1ea7ffb5",
+      "observedAtUtc": "2026-11-04T11:07:33.657291+00:00",
+      "version": "7.1",
+      "requiresPython": ">=3.8",
+      "requiresDist": [
+        "pytest; extra == \"test\"",
+        "pytest-cov; extra == \"test\"",
+        "Pillow; extra == \"test\"",
+        "black; extra == \"test\"",
+        "flake8; extra == \"test\"",
+        "pyroma; extra == \"test\"",
+        "check-manifest; extra == \"test\"",
+        "mypy; extra == \"test\"",
+        "zest.releaser[recommended]; extra == \"test\""
+      ],
+      "licenseExpression": null,
+      "licenseField": "MIT",
+      "projectUrls": {
+        "Homepage": "https://github.com/regebro/svg.path"
+      },
+      "universalWheelFiles": [
+        {
+          "filename": "svg_path-7.1-py2.py3-none-any.whl",
+          "sha256": "2c4afb1457da48ff3b3ef802aacf50fd0f23f99e82b77c6f60abc0f1ddb9c312"
+        }
+      ],
+      "status": "metadata-researched-not-equivalence-tested"
+    },
+    "antlr4-python3-runtime": {
+      "metadataUrl": "https://pypi.org/pypi/antlr4-python3-runtime/json",
+      "metadataSha256": "f3f53611a3b5160738057d4b46b7a9d3a89c8655d16365a18257af6115668f15",
+      "observedAtUtc": "2026-11-04T11:07:33.597231+00:00",
+      "version": "4.13.2",
+      "requiresPython": null,
+      "requiresDist": [
+        "typing; python_version < \"3.5\""
+      ],
+      "licenseExpression": null,
+      "licenseField": "BSD",
+      "projectUrls": {
+        "Homepage": "http://www.antlr.org"
+      },
+      "universalWheelFiles": [
+        {
+          "filename": "antlr4_python3_runtime-4.13.2-py3-none-any.whl",
+          "sha256": "fe3835eb8d33daece0e799090eda89719dbccee7aa39ef94eed3818cafa5a7e8"
+        }
+      ],
+      "status": "metadata-researched-not-equivalence-tested"
+    }
+  }
+}

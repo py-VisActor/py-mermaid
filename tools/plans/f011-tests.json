@@ -1,0 +1,12 @@
+{
+  "schema": "py-mermaid-command-plan/v1",
+  "scope": "F01.1",
+  "description": "Explicit functional test run; uses the selected Python and existing dependencies, never installs",
+  "inputs": ["{repo}/references/f011-language-assertions.json", "{repo}/references/f011-layout-assertions.json", "{repo}/references/f011-canvas-assertions.json"],
+  "steps": [
+    {"name": "language", "argv": ["{python}", "-m", "unittest", "discover", "-s", "{repo}/tests/f011", "-p", "test_language.py", "-v"], "env": {"PYTHONPATH": "{repo}/src"}},
+    {"name": "layout", "argv": ["{python}", "-m", "unittest", "discover", "-s", "{repo}/tests/f011", "-p", "test_layout.py", "-v"], "env": {"PYTHONPATH": "{repo}/src"}},
+    {"name": "canvas", "argv": ["{python}", "-m", "unittest", "discover", "-s", "{repo}/tests/f011", "-p", "test_canvas.py", "-v"], "env": {"PYTHONPATH": "{repo}/src"}},
+    {"name": "api", "argv": ["{python}", "-m", "unittest", "discover", "-s", "{repo}/tests/f011", "-p", "test_api.py", "-v"], "env": {"PYTHONPATH": "{repo}/src"}}
+  ]
+}

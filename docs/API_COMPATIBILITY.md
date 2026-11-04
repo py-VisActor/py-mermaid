@@ -1,4 +1,8 @@
+> 2026-11-04 当前执行范围仅F01.1基础流程图，已实现接口见 [使用说明](F01_1_USAGE.md)，本地结果见 [验收记录](F01_1_ACCEPTANCE.md)。安装验证按用户最新要求暂缓，后续不继续或复跑。下方完整迁移范围和旧时序仅作后续规划/历史来源，当前以 [F01.1计划](F01_1_EXECUTION_PLAN.md) 为准。
+
 # API 与 spec 兼容规则
+
+本文定义最终应保持的行为，不规定测试必须先于源码。执行顺序采用用户最新 [完整方案](FULL_MIGRATION_PLAN.md)：P1 先全部功能源码，P2 来源测试/单测，P3 排查修复，P4 最终全量；旧 M1/M2 编号仅作历史范围追踪。
 
 ## spec 的含义
 
@@ -22,14 +26,16 @@
 
 ## 浏览器宿主对应：必须逐项解决
 
+用户已确认 [Canvas 原生架构](CANVAS_NATIVE_ARCHITECTURE.md)：DOM/虚拟 DOM、D3 selection、浏览器布局与渲染调度等实现机制被替换，Python 不模拟这些 API。以下对应保留的是 Mermaid 的语义、图形表达和配置含义，不要求重现 DOM 树、操作次数或组件生命周期。具体功能缺口与视觉差异仍需记录和验证。
+
 | 上游行为 | Python 移植要求 | 当前状态 |
 | --- | --- | --- |
 | SVG shapes/path/marker/clip/style | 直接产生 Canvas primitives；保留几何、锚点、层叠与 viewport | planned |
 | SVG text 与 getBBox/getComputedTextLength | 同一声明字体，记录浏览器与 Canvas 测量/fallback 差异，逐断言核对 | planned |
-| HTML foreignObject、Markdown、CSS | 盘点标签/换行/继承/box model，建立受控 Python 排版，不默默剥成纯文本 | open mapping |
+| HTML foreignObject、Markdown、CSS | 将所需标签/换行/样式含义解析为 Python text runs/boxes 并用 Canvas 绘制；不建立 foreignObject、DOM 或通用浏览器 CSS 排版器，不默默丢失内容 | open functional mapping |
 | KaTeX/math、图标/iconify、外部图像 | 固定依赖/许可和资源输入，定义离线表达或显式不支持，不能丢失内容 | open mapping |
 | click/link、DOM callbacks、bindFunctions | 静态输出携带链接/交互元数据，明确 Python 接口与不可等价项 | open mapping |
-| securityLevel、sanitizer、URL policy | 拒绝脚本执行，建立输入/资源策略和恶意输入断言 | planned |
+| securityLevel、sanitizer、URL policy | Python 标签/链接/资源策略与恶意输入断言；不复刻 DOMPurify 的 DOM 操作机制 | planned |
 | accTitle/accDescr、SVG metadata | 语义模型保留；按导出格式登记元数据，不伪称 PNG 有 DOM accessibility tree | planned |
 | handdrawn/rough 随机性、布局插件 | 保留 seed/算法/选项及依赖来源，未实现模式明确失败 | planned |
 
@@ -39,12 +45,14 @@
 
 ## 分层验收
 
-1. **语法/配置/语义**：规范化 AST/model、节点边/属性/默认值、错误与 source span；字段和数字按明确单位精确检查，不遗漏未知字段。
-2. **布局/绘图语义**：节点/组边界、路由控制点、label box、marker 端点、层叠与 style；相同输入/字体/选项比对，禁止样例坐标补偿。
-3. **渲染输出**：官方 browser PNG 与 Python Canvas 分别记录原始 RGBA、尺寸、字体/driver、差异图和数量。文本/抗锯齿链不同，不能预先保证天然逐像素相同；报告完整差异，不擅自设容差或把近似称完全兼容。
-4. **稳定与导出**：同后端 Python 确定性回归要求精确像素；PDF/SVG 同一指定栅格器另验，字体/文本/页/viewport/metadata 结构独立检查。GPU/CPU 分组，不以不同 backend 图片互为零差异 oracle。
+用户已确定**功能一致，跨 DOM/Canvas 渲染不用完全像素一致**，具体判定以 [RENDER_CONSISTENCY](RENDER_CONSISTENCY.md)及其机器策略为准：
 
-验收 profile 和未等价标准在 M1/M2 固定。全量完成要求全部断言有终态证据、跨图能力有契约、图像已审阅且无被隐藏的差异；不能只用 SSIM 或人眼判断覆盖完整 spec。
+1. **功能/语义**：规范化 AST/model/config，核对节点边/分组、标签/公式内容、方向/约束、默认值、错误、安全和适用元数据。所保留功能必须一致，不以图片相似度替代。
+2. **绘制结构**：将 A/B 映射为语义场景，核对实际绘制的元素、标签、箭头、资源和解析后样式；B 的 DisplayList 还要有真实 Canvas 输出证据，不只检查模型存在。
+3. **几何关系/可读性**：核对端口/端点连接、图种方向/排序、分组包含、内容容纳/无意裁切、遮挡和显式尺寸约束。绝对坐标、节点自然尺寸、合理换行及路由可因引擎和字体度量不同而变化；纯算法单测仍按自己的数值契约验证。
+4. **图像诊断/自身回归**：保存原始 A/B 图及诊断指标，跨引擎不要求像素零差或固定 SSIM。只有冻结环境且证明确定性的指定 Python 自回归用例可选择精确像素；不同 GPU/CPU/driver 不互为零差异基准。
+
+P2 将规则和允许差异类别版本化，P3/P4 按功能与质量门禁判定。正常引擎差异记 `expected_renderer_variation`，可以通过；功能错误必须失败，无法解释的采集/视觉异常先复核或标未验。全量完成不要求所有像素差消失，仍要求全部必要功能/质量断言有终态证据，不隐藏失败或篡改原始图。
 
 ## Canvas 边界
 

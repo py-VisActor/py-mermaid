@@ -1,0 +1,51 @@
+{
+  "schema": "py-mermaid-change/v1",
+  "taskId": "20261104-f011-elk",
+  "status": "code_complete_unverified",
+  "phase": "F01.1-S2",
+  "baseCommit": "b1e4c10adc2c3ca8b77b86febcd306512116408c",
+  "startingState": {
+    "evidence": "test-runs/execution-start-20261104T132038Z/",
+    "preexistingChangesPreserved": true
+  },
+  "acceptanceCriteria": [
+    "Real async pyelk.ELK invocation with deterministic lifecycle; no runtime fallback",
+    "Flat ordered rectangle/node id and dimension validation; TD/LR direction and fixed upstream root defaults",
+    "Preserve complete edge sections and finite graph geometry",
+    "Pure geometry helpers usable without Canvas or pyelk import"
+  ],
+  "changedPaths": [
+    "src/py_mermaid/geometry/__init__.py",
+    "src/py_mermaid/geometry/flowchart.py",
+    "src/py_mermaid/layout/elk/__init__.py",
+    "src/py_mermaid/layout/elk/flowchart.py",
+    "references/f011-elk-sources.json"
+  ],
+  "sourceSha256": {
+    "src/py_mermaid/geometry/__init__.py": "0ca8cdbb89dcf0d094482cc55108fe682db492c7d56bb41197bde74f103b230b",
+    "src/py_mermaid/geometry/flowchart.py": "89961446f5e4cd602d0d9060f7c6c90abb99f43806912633aed635f9517af558",
+    "src/py_mermaid/layout/elk/__init__.py": "9baa94a4f1ce971d55a2f5008bd33c126764842ed68909c731f88d822c28498b",
+    "src/py_mermaid/layout/elk/flowchart.py": "45f00869480651b770f887c2192e1d79e61b092760be142102e94299b0584842",
+    "references/f011-elk-sources.json": "f34134674af638c0a7a37b498cb3057391c5483077b81ce718a41402f8c0ee3e"
+  },
+  "commands": [
+    {
+      "command": "C:/venvs/pymmd-20261102/Scripts/python.exe -m compileall -q src/py_mermaid/geometry src/py_mermaid/layout/elk",
+      "exitCode": 0,
+      "scope": "mechanical compilation only"
+    },
+    {
+      "command": "PYTHONPATH=src C:/venvs/pymmd-20261102/Scripts/python.exe -c <import layout_flowchart and geometry exports; inspect.signature/is coroutine>",
+      "exitCode": 0,
+      "stdout": "(diagram: 'Flowchart', measured: 'tuple[MeasuredNode, ...]') -> 'FlowLayout'\nTrue\ngeometry imports OK\n",
+      "scope": "mechanical imports/signature only; no layout invocation"
+    }
+  ],
+  "limitations": [
+    "Source-derived unit cases in S3",
+    "Actual pyelk execution for single node, TD/LR chain, branch/merge and self-loop in S4",
+    "Real Canvas routes/arrows/bounds visual verification and isolated installation in S5"
+  ],
+  "nextAction": "Coordinator integrates API and real Canvas; S3 creates independent source-derived tests before S4 behavior execution",
+  "commitPushPublish": false
+}

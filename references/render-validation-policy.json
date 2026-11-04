@@ -1,0 +1,133 @@
+{
+  "schema": "py-mermaid-render-validation-policy/v1",
+  "version": 1,
+  "decision": "user-authorized-functional-parity-not-pixel-parity",
+  "scope": "Planned P2-P4 verification; no renderer/comparator implementation or product acceptance is claimed.",
+  "phaseOrder": [
+    "P0",
+    "P1",
+    "P2",
+    "P3",
+    "P4",
+    "P5"
+  ],
+  "crossEngine": {
+    "profile": "dom-vs-canvas-functional",
+    "functionalParityRequired": true,
+    "renderedContentAndRelationshipsRequired": true,
+    "geometryQualityRequired": true,
+    "pixelEqualityRequired": false,
+    "absoluteCoordinateEqualityRequired": false,
+    "naturalDimensionEqualityRequired": false,
+    "explicitDimensionContractRequired": true,
+    "imageMetricsRole": "diagnostic-and-review-routing-only",
+    "singlePixelDifferenceOutcome": "diagnostic-not-automatic-failure"
+  },
+  "layers": [
+    {
+      "id": "L1",
+      "name": "functional-semantics",
+      "gate": true,
+      "checks": [
+        "nodes-edges-groups-content",
+        "relationships-direction-constraints",
+        "configuration-meaning",
+        "errors-security-metadata"
+      ]
+    },
+    {
+      "id": "L2",
+      "name": "semantic-render-scene",
+      "gate": true,
+      "checks": [
+        "element-role-and-owner-mapping",
+        "rendered-label-marker-resource-content",
+        "resolved-style-meaning",
+        "actual-canvas-execution-and-output"
+      ]
+    },
+    {
+      "id": "L3",
+      "name": "geometry-and-readability",
+      "gate": true,
+      "checks": [
+        "diagram-specific-order-direction",
+        "group-containment-and-port-attachment",
+        "no-unintended-content-loss-clipping-or-occlusion",
+        "viewport-and-explicit-dimensions"
+      ]
+    },
+    {
+      "id": "L4",
+      "name": "visual-diagnostics",
+      "gate": false,
+      "checks": [
+        "raw-images-and-diff-artifacts",
+        "similarity-and-local-anomaly-signals",
+        "unexplained-anomaly-review"
+      ]
+    }
+  ],
+  "permittedVariations": [
+    "antialiasing-hinting-subpixel-rounding",
+    "font-metric-driven-node-size-and-natural-viewport",
+    "constraint-preserving-position-and-routing",
+    "content-preserving-readable-line-wrap"
+  ],
+  "neverExcusedBySimilarity": [
+    "missing-or-extra-elements",
+    "wrong-text-or-math-content",
+    "wrong-edge-or-marker-direction",
+    "wrong-group-or-resource",
+    "clipped-or-unreadable-required-content",
+    "wrong-config-style-meaning",
+    "explicit-size-contract-violation",
+    "unsafe-resource-or-url-behavior",
+    "unexecuted-canvas-draw-commands"
+  ],
+  "profiles": {
+    "algorithm-unit": {
+      "independentExpectationRequired": true,
+      "numericPrecision": "Per algorithm/version/units, fixed before runs; no arbitrary global tolerance."
+    },
+    "canvas-self-regression": {
+      "pixelExactOptional": true,
+      "requires": [
+        "frozen-fonts-resources-seed-size",
+        "same-backend-driver-environment",
+        "demonstrated-determinism"
+      ],
+      "crossBackendPixelEqualityRequired": false
+    }
+  },
+  "outcomes": [
+    "PASS",
+    "FAIL",
+    "REVIEW",
+    "UNVERIFIED"
+  ],
+  "expectedVariationClassification": "expected_renderer_variation",
+  "finalAcceptance": "All required functional/render-structure/geometry-quality/export-security gates pass; review items resolved; pixel difference may remain.",
+  "comparatorsToBuildIn": "P2",
+  "firstGroupedProductRunsIn": "P3",
+  "finalFullMatrixIn": "P4",
+  "pixelTool": {
+    "path": "tools/pixel_compare.py",
+    "documentation": "tools/PIXEL_COMPARE.md",
+    "requirements": "tools/pixel_compare_requirements.txt",
+    "status": "standalone-utility-available",
+    "defaultMode": "diagnostic",
+    "functionalStatus": "NOT_EVALUATED",
+    "modes": [
+      "diagnostic",
+      "exact"
+    ],
+    "exitCodes": {
+      "diagnostic-completed": 0,
+      "exact-match": 0,
+      "exact-mismatch": 1,
+      "tool-error": 2
+    },
+    "semanticComparatorImplemented": false
+  }
+}

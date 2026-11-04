@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "py-mermaid-command-plan/v1",
+  "type": "object",
+  "required": ["schema", "steps"],
+  "properties": {
+    "schema": {"const": "py-mermaid-command-plan/v1"},
+    "scope": {"type": "string"},
+    "inputs": {"type": "array", "items": {"type": "string"}},
+    "steps": {"type": "array", "minItems": 1, "items": {
+      "type": "object", "required": ["name", "argv"],
+      "properties": {
+        "name": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$"},
+        "argv": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+        "cwd": {"type": "string"},
+        "env": {"type": "object", "additionalProperties": {"type": "string"}},
+        "timeoutSeconds": {"type": "number", "exclusiveMinimum": 0}
+      }
+    }}
+  }
+}

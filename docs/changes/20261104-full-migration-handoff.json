@@ -1,0 +1,390 @@
+{
+  "schema": "py-mermaid-change/v1",
+  "taskId": "20261104-full-migration-handoff",
+  "kind": "complete-source-first-parallel-execution-handoff",
+  "status": "complete-local-handoff-plan-scoped-verified",
+  "objective": "Prepare a complete handoff-ready migration plan with extensible common modules, maximum safe parallelism, all feature source before source-derived test design, unified diagnosis/fixes and final full validation.",
+  "authorization": "User explicitly requested complete planning and parallel decomposition for a later execution session; current turn does not implement the product or publish.",
+  "acceptanceCriteria": [
+    "All 38 detector and 13 cross-cutting owners covered by source tasks",
+    "All source tasks precede formal test design and all phase barriers are machine-checkable",
+    "Shared interfaces, owners, extension requests and 4-slot scheduling are concrete",
+    "Source-based test design, initial grouped runs, common-root fixes and final candidate matrix are fully specified",
+    "Copyable handoff states current facts, exact startup, first dispatch, durable task state and resumption",
+    "Old document timing conflicts are explicitly superseded without reducing compatibility scope"
+  ],
+  "baseCommit": "b1e4c10adc2c3ca8b77b86febcd306512116408c",
+  "startingStatus": " M AGENTS.md\n M README.en.md\n M README.md\n M docs/API_COMPATIBILITY.md\n M docs/IMPLEMENTATION_PLAN.md\n M docs/NEW_SESSION.md\n M docs/RELEASE_STATUS.md\n M docs/TASKS.md\n M docs/TEST_AND_RELEASE.md\n M references/README.md\n M tests/README.md\n?? docs/CANVAS_NATIVE_ARCHITECTURE.md\n?? docs/DEPENDENCY_MIGRATION.md\n?? docs/FEATURE_MIGRATION.md\n?? docs/THIRD_PARTY_DEPENDENCIES.md\n?? docs/changes/20261104-canvas-native.json\n?? docs/changes/20261104-dependency-audit.json\n?? docs/changes/20261104-dependency-tree.json\n?? docs/changes/20261104-feature-split.json\n?? references/dependencies.json\n?? references/dependency-bottom-up.md\n?? references/dependency-porting-policy.json\n?? references/dependency-toolchain-tree.txt\n?? references/dependency-tree.json\n?? references/dependency-tree.txt\n?? references/feature-modules.json\n?? references/python-candidates.json\n?? scripts/audit_dependencies.py\n?? scripts/build_dependency_tree.py\n?? tests/dependencies/\n",
+  "changedPaths": [
+    "AGENTS.md",
+    "README.en.md",
+    "README.md",
+    "docs/API_COMPATIBILITY.md",
+    "docs/CANVAS_NATIVE_ARCHITECTURE.md",
+    "docs/DEPENDENCY_MIGRATION.md",
+    "docs/EXECUTION_HANDOFF.md",
+    "docs/FEATURE_MIGRATION.md",
+    "docs/FULL_MIGRATION_PLAN.md",
+    "docs/IMPLEMENTATION_PLAN.md",
+    "docs/MODULE_BOUNDARIES.md",
+    "docs/NEW_SESSION.md",
+    "docs/PARALLEL_EXECUTION.md",
+    "docs/RELEASE_STATUS.md",
+    "docs/SOURCE_BASED_VERIFICATION.md",
+    "docs/TASKS.md",
+    "docs/TEST_AND_RELEASE.md",
+    "docs/changes/20261104-full-migration-handoff.json",
+    "references/README.md",
+    "references/execution-state.template.json",
+    "references/feature-modules.json",
+    "references/migration-execution.json",
+    "scripts/validate_migration_plan.py",
+    "tests/README.md",
+    "tools/oracle/README.md"
+  ],
+  "preservedStartingFiles": [
+    "docs/THIRD_PARTY_DEPENDENCIES.md",
+    "docs/changes/20261104-canvas-native.json",
+    "docs/changes/20261104-dependency-audit.json",
+    "docs/changes/20261104-dependency-tree.json",
+    "docs/changes/20261104-feature-split.json",
+    "references/dependencies.json",
+    "references/dependency-bottom-up.md",
+    "references/dependency-porting-policy.json",
+    "references/dependency-toolchain-tree.txt",
+    "references/dependency-tree.json",
+    "references/dependency-tree.txt",
+    "references/python-candidates.json",
+    "scripts/audit_dependencies.py",
+    "scripts/build_dependency_tree.py",
+    "tests/dependencies/test_dependency_audit.py",
+    "tests/dependencies/test_dependency_tree.py"
+  ],
+  "sourceSha256": {
+    "AGENTS.md": "e9fcaacdce94791709d44733f377f2fb3763b5e84dd041f3b7fbe53bedd17e32",
+    "README.en.md": "89c81edb2740a7acbc8826481b98bf2426128f175f7c5b53f3bf639c0d0c8d9f",
+    "README.md": "f52744713dabac7a9a1291d350434be43ad2a2055cc5d7cde6a65a04fa3b5ce2",
+    "docs/API_COMPATIBILITY.md": "bcb9edb8595be690cbae8f5a876c7d5695f3dff79b779d7caee6f2283f4b19b3",
+    "docs/CANVAS_NATIVE_ARCHITECTURE.md": "8d27df3b00740dad7fc694722ad5ac261a21b9ff2e487d260068f5881cd7c5a6",
+    "docs/DEPENDENCY_MIGRATION.md": "7a51235f6fc70370c269b7b9376946e5a0ae6c8de5af2de164edfa88be8d7469",
+    "docs/EXECUTION_HANDOFF.md": "0a5d84c7c001d645f55ba8f34361e2e1d18a3822d0be75f017497cfe23f6625d",
+    "docs/FEATURE_MIGRATION.md": "e397ab388afdeeaaf87aafef0be6b047483b86c6e726ca188f6fac7a1faea892",
+    "docs/FULL_MIGRATION_PLAN.md": "fe77b23d290e5035a288ea8c581b8410f47cc24626b923488064810d76ab052c",
+    "docs/IMPLEMENTATION_PLAN.md": "a287eaeb160715e3fc0da85ca081bbde74f1cf7162410c2c408a4e8c53ab7a97",
+    "docs/MODULE_BOUNDARIES.md": "9f551ef34b2a957d996d718a1d3a60aaea3bfc573421d4474d90603ee2620400",
+    "docs/NEW_SESSION.md": "c9fabe286b6f7fe45c43f92d829e7091c8bb01ba97b95de6cd415305ddbb075d",
+    "docs/PARALLEL_EXECUTION.md": "b78ee1b1ed9dc47d781f2353b4ca34423fd16441e77d1e0214725059960de2f9",
+    "docs/RELEASE_STATUS.md": "e2b8a83eb05e1f970e487233adb25912761fd0ea3c0539db46df678f7c3b816d",
+    "docs/SOURCE_BASED_VERIFICATION.md": "1348de7809c3c4ce688d50b730e0104f0660e453f49f1ce5718aab97e8665cda",
+    "docs/TASKS.md": "3572d061c0eb9c09d3aa084ee97adeb1182c5c8e05691533f1680185873f536b",
+    "docs/TEST_AND_RELEASE.md": "cc468c01eedc6dd9862331637bb0e53d0cb9f83a16bd0891c037891753b067e1",
+    "references/README.md": "8879ae4d06c4bb0a8f1e4561f397f30e3748a86d31c253f994c11a6ecf11daa8",
+    "references/execution-state.template.json": "f0bc3872b460de1a5239e2d802e92924391f5fdcb4d787ab248a5649ed26e063",
+    "references/feature-modules.json": "ce5f7532d63f6debf578bb98fd600e5cf18bffb8eaa40f4c3ab70cca7c6e4d56",
+    "references/migration-execution.json": "3ffa4da28bdb0f0a653a7272585e3d9b58f3476496144172f3845bb74962b40d",
+    "scripts/validate_migration_plan.py": "7965925078b354fe3eddbd3a6867852492e0307baeff1be5d1a5824d9657c2c8",
+    "tests/README.md": "19b18463d659c2e166f1a2d47f599b5bba091705fa2aa2db8c9be8fe008068fa",
+    "tools/oracle/README.md": "5be7ba25df45e6304b2b8a9ae61ed3320cc0421b1f9b593ad2411a9ca48f0599"
+  },
+  "commands": [
+    {
+      "id": "bootstrap-before",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "scripts/validate_bootstrap.py"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261104-full-migration-handoff-01/bootstrap-before.log",
+      "logSha256": "e70b70bfba3bd505268b39047c0b71be4f2b5d4abf92e4df81315bb5889127cf"
+    },
+    {
+      "id": "upstream-before",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "scripts/upstream.py",
+        "check"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261104-full-migration-handoff-01/upstream-before.log",
+      "logSha256": "e177513c6db5afbcc9524be08795930fb8d5edc0c47ba46d8051ee7859418089"
+    },
+    {
+      "id": "plan-check",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "scripts/validate_migration_plan.py",
+        "--check",
+        "--out",
+        "C:\\code\\py-visactor\\py-mermaid\\test-runs\\20261104-full-migration-handoff-01\\plan-report.json"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261104-full-migration-handoff-01/plan-check.log",
+      "logSha256": "d0c99cb132af65b0817e232dd6bf0b49b008bf28d6652712beb6b09be13eb423"
+    },
+    {
+      "id": "handoff-controls",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "C:\\code\\py-visactor\\py-mermaid\\test-runs\\20261104-full-migration-handoff-01\\review_handoff.py"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261104-full-migration-handoff-01/handoff-controls.log",
+      "logSha256": "8e40a8d662119f863c6ce6105457d347e41f05d7fa2ebb79131d7831931373dc"
+    },
+    {
+      "id": "bootstrap-after",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "scripts/validate_bootstrap.py",
+        "--out",
+        "C:\\code\\py-visactor\\py-mermaid\\test-runs\\20261104-full-migration-handoff-01\\bootstrap-report.json"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261104-full-migration-handoff-01/bootstrap-after.log",
+      "logSha256": "b7d34bac2621a02fde774854f39712f458e9b1ed0af0d748f561427cc2bb8a91"
+    },
+    {
+      "id": "diff-check",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261104-full-migration-handoff-01/diff-check.log",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "plan-check-final",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "scripts/validate_migration_plan.py",
+        "--check",
+        "--out",
+        "C:\\code\\py-visactor\\py-mermaid\\test-runs\\20261104-full-migration-handoff-01\\plan-report-final.json"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261104-full-migration-handoff-01/plan-check-final.log",
+      "logSha256": "d0c99cb132af65b0817e232dd6bf0b49b008bf28d6652712beb6b09be13eb423"
+    },
+    {
+      "id": "handoff-controls-final",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "C:\\code\\py-visactor\\py-mermaid\\test-runs\\20261104-full-migration-handoff-01\\review_handoff.py"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261104-full-migration-handoff-01/handoff-controls-final.log",
+      "logSha256": "8e40a8d662119f863c6ce6105457d347e41f05d7fa2ebb79131d7831931373dc"
+    },
+    {
+      "id": "bootstrap-final",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "scripts/validate_bootstrap.py",
+        "--out",
+        "C:\\code\\py-visactor\\py-mermaid\\test-runs\\20261104-full-migration-handoff-01\\bootstrap-report-final.json"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261104-full-migration-handoff-01/bootstrap-final.log",
+      "logSha256": "b7d34bac2621a02fde774854f39712f458e9b1ed0af0d748f561427cc2bb8a91"
+    },
+    {
+      "id": "diff-check-final",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261104-full-migration-handoff-01/diff-check-final.log",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "test-runs/20261104-full-migration-handoff-01/agent-reviews.json",
+      "sha256": "cf68da4a291edd1d3f71f431fd826660b8d0c64a97b94e15c69a4118d3c6f836"
+    },
+    {
+      "path": "test-runs/20261104-full-migration-handoff-01/bootstrap-after.log",
+      "sha256": "b7d34bac2621a02fde774854f39712f458e9b1ed0af0d748f561427cc2bb8a91"
+    },
+    {
+      "path": "test-runs/20261104-full-migration-handoff-01/bootstrap-before.log",
+      "sha256": "e70b70bfba3bd505268b39047c0b71be4f2b5d4abf92e4df81315bb5889127cf"
+    },
+    {
+      "path": "test-runs/20261104-full-migration-handoff-01/bootstrap-final.log",
+      "sha256": "b7d34bac2621a02fde774854f39712f458e9b1ed0af0d748f561427cc2bb8a91"
+    },
+    {
+      "path": "test-runs/20261104-full-migration-handoff-01/bootstrap-report-final.json",
+      "sha256": "b7d34bac2621a02fde774854f39712f458e9b1ed0af0d748f561427cc2bb8a91"
+    },
+    {
+      "path": "test-runs/20261104-full-migration-handoff-01/bootstrap-report.json",
+      "sha256": "b7d34bac2621a02fde774854f39712f458e9b1ed0af0d748f561427cc2bb8a91"
+    },
+    {
+      "path": "test-runs/20261104-full-migration-handoff-01/build_execution_plan.py",
+      "sha256": "0af2b44f513419fc7eaa4df86abd01a3a3db37d3a2488b2f442ad7e1316ba1db"
+    },
+    {
+      "path": "test-runs/20261104-full-migration-handoff-01/commands-after.json",
+      "sha256": "1f840502336ac0b0b3009dfd0cb2516a61c9e5f9252af2c8b5cb3c3367fdcea3"
+    },
+    {
+      "path": "test-runs/20261104-full-migration-handoff-01/commands-final.json",
+      "sha256": "f4a4457cadf40f46d47215cf68b293ee34784a3ec7305974aab3f37aa9cdd128"
+    },
+    {
+      "path": "test-runs/20261104-full-migration-handoff-01/diff-check-final.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "test-runs/20261104-full-migration-handoff-01/diff-check.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "test-runs/20261104-full-migration-handoff-01/handoff-controls-final.log",
+      "sha256": "8e40a8d662119f863c6ce6105457d347e41f05d7fa2ebb79131d7831931373dc"
+    },
+    {
+      "path": "test-runs/20261104-full-migration-handoff-01/handoff-controls.log",
+      "sha256": "8e40a8d662119f863c6ce6105457d347e41f05d7fa2ebb79131d7831931373dc"
+    },
+    {
+      "path": "test-runs/20261104-full-migration-handoff-01/plan-check-final.log",
+      "sha256": "d0c99cb132af65b0817e232dd6bf0b49b008bf28d6652712beb6b09be13eb423"
+    },
+    {
+      "path": "test-runs/20261104-full-migration-handoff-01/plan-check.log",
+      "sha256": "d0c99cb132af65b0817e232dd6bf0b49b008bf28d6652712beb6b09be13eb423"
+    },
+    {
+      "path": "test-runs/20261104-full-migration-handoff-01/plan-report-final.json",
+      "sha256": "d0c99cb132af65b0817e232dd6bf0b49b008bf28d6652712beb6b09be13eb423"
+    },
+    {
+      "path": "test-runs/20261104-full-migration-handoff-01/plan-report.json",
+      "sha256": "d0c99cb132af65b0817e232dd6bf0b49b008bf28d6652712beb6b09be13eb423"
+    },
+    {
+      "path": "test-runs/20261104-full-migration-handoff-01/review_handoff.py",
+      "sha256": "a126168453925b0ca63e4b734defa646a07ccee651a02766df5cc4abdf31896e"
+    },
+    {
+      "path": "test-runs/20261104-full-migration-handoff-01/starting.json",
+      "sha256": "e4ae454734410b87588f68573690f195a47f81a2419aeb8e210351f9639e2d90"
+    },
+    {
+      "path": "test-runs/20261104-full-migration-handoff-01/sync_execution_order.py",
+      "sha256": "c814806cf0c94063de01090448b4c529f6fe46a0ae35469ce3dd939f0fd5a35d"
+    },
+    {
+      "path": "test-runs/20261104-full-migration-handoff-01/upstream-before.log",
+      "sha256": "e177513c6db5afbcc9524be08795930fb8d5edc0c47ba46d8051ee7859418089"
+    }
+  ],
+  "parallelExecution": {
+    "contributors": [
+      {
+        "agent": "module_plan",
+        "artifact": "docs/MODULE_BOUNDARIES.md",
+        "scope": "Module boundaries, typed contracts, feature/common extension and ownership."
+      },
+      {
+        "agent": "parallel_plan",
+        "artifact": "docs/PARALLEL_EXECUTION.md",
+        "scope": "Four-slot scheduling, ready queues, source/integration dependencies, leases and role prompts."
+      },
+      {
+        "agent": "verification_plan",
+        "artifact": "docs/SOURCE_BASED_VERIFICATION.md",
+        "scope": "Source-derived P2 design, P3 grouped diagnosis/common fixes and P4 full candidate matrix."
+      }
+    ],
+    "readOnlyReviews": [
+      {
+        "agent": "verification_plan",
+        "result": "Passed: no premature P1 tests or P2/P3 barrier conflict; candidate-content changes require final revalidation."
+      },
+      {
+        "agent": "module_plan",
+        "result": "Task/graph/scope checks passed; found missing C01 provider P1-03. Corrected sharedModules, state-template providers and master-plan responsibility text; final validator checks this ownership."
+      }
+    ]
+  },
+  "acceptanceResults": [
+    "Complete P0-P5 execution package created with 61 task/gate nodes; 32 nodes belong to the all-source P1 phase.",
+    "All 12 feature families/38 detectors and all 13 cross-cutting owners covered; task DAG and combined start/integration DAG acyclic; all P2 tasks require P1 source gate transitively.",
+    "Extensible module/interface/ownership specification, main-plus-three-worker schedule, first dispatch, requests, receipts, resumption and retrospective rules provided.",
+    "Source-derived testing starts P2, first grouped product runs P3, common-root unified repairs and impacted rechecks P3, final full candidate matrix P4.",
+    "Copyable handoff and durable execution-state template include all tasks, 38 detector states, 13 cross-cutting states and 8 shared responsibilities without falsely marking progress.",
+    "Old M0-M8 timing explicitly superseded in entry points; all final feature/safety/resource/platform/export/ownership acceptance scope preserved.",
+    "Plan validation, eight invalid-plan negative controls, documentation/bootstrap consistency and whitespace checks passed against final artifacts.",
+    "Raw dependency inventory/graph, feature membership/shared ownership, upstream lock/runtime dependencies/compatibility state and src unchanged. No Mermaid product execution."
+  ],
+  "documentationReview": [
+    {
+      "paths": [
+        "docs/FULL_MIGRATION_PLAN.md",
+        "docs/EXECUTION_HANDOFF.md",
+        "docs/MODULE_BOUNDARIES.md",
+        "docs/PARALLEL_EXECUTION.md",
+        "docs/SOURCE_BASED_VERIFICATION.md",
+        "references/migration-execution.json",
+        "references/execution-state.template.json",
+        "scripts/validate_migration_plan.py"
+      ],
+      "status": "created",
+      "reason": "Complete portable execution package, phase-barrier task graph, module/parallel/test protocols, state template and mechanical validator."
+    },
+    {
+      "paths": [
+        "AGENTS.md",
+        "README.md",
+        "README.en.md",
+        "docs/NEW_SESSION.md",
+        "docs/TASKS.md",
+        "docs/IMPLEMENTATION_PLAN.md",
+        "docs/FEATURE_MIGRATION.md",
+        "references/feature-modules.json",
+        "docs/DEPENDENCY_MIGRATION.md",
+        "docs/CANVAS_NATIVE_ARCHITECTURE.md",
+        "docs/API_COMPATIBILITY.md",
+        "docs/TEST_AND_RELEASE.md",
+        "docs/RELEASE_STATUS.md",
+        "references/README.md",
+        "tests/README.md",
+        "tools/oracle/README.md"
+      ],
+      "status": "updated",
+      "reason": "Make latest all-source-first order authoritative; remove premature per-diagram test gates while retaining original behavior, scope and evidence requirements."
+    },
+    {
+      "paths": [
+        "src",
+        "pyproject.toml",
+        "references/upstream.lock.json",
+        "docs/compatibility.json",
+        "examples",
+        "docs/assets",
+        "references/dependency-tree.json",
+        "references/dependencies.json",
+        "references/python-candidates.json"
+      ],
+      "status": "reviewed-no-change",
+      "reason": "Planning/tool validation only. No product API/runtime/package/resource/renderer/compatibility implementation or image changed; no fresh rendering or GPU/CPU check required."
+    }
+  ],
+  "limitations": [
+    "This turn creates a complete execution plan, not the planned product implementation. All task and template progress remains planned.",
+    "Only audit/plan/doc consistency checks and invalid-plan controls executed; no Mermaid source migration, functional/unit/visual/full-spec or release acceptance performed.",
+    "Source-first coding cannot guarantee behavior until independent P2-P4 work; known unknowns and real API/resource gaps must be recorded without stubs or silent scope reduction.",
+    "Existing documents remain local/uncommitted; no remote synchronization, commit, push or publication performed.",
+    "Final Python dependency pins, resources/licenses and complete source-derived case/assertion totals are execution-stage outputs, not invented by this plan."
+  ],
+  "nextStep": "Give docs/EXECUTION_HANDOFF.md to the new workspace-authorized session; begin P0-01, establish execution state and owners, then keep workers on all P1 source tasks until complete before entering P2."
+}

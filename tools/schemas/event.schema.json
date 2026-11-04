@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "py-mermaid-event/v1",
+  "type": "object",
+  "required": ["schema", "runId", "atUtc", "event"],
+  "properties": {
+    "schema": {"const": "py-mermaid-event/v1"},
+    "runId": {"type": "string"},
+    "atUtc": {"type": "string", "format": "date-time"},
+    "event": {"type": "string", "minLength": 1}
+  }
+}

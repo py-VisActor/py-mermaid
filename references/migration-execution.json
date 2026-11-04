@@ -1,0 +1,2112 @@
+{
+  "schema": "py-mermaid-migration-execution/v1",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "status": "handoff-ready-not-executed",
+  "phaseOrder": [
+    "P0",
+    "P1",
+    "P2",
+    "P3",
+    "P4",
+    "P5"
+  ],
+  "strategy": {
+    "sourceFirstAllFeatures": true,
+    "formalTestDesignPhase": "P2",
+    "firstProductTestExecutionPhase": "P3",
+    "finalFullValidationPhase": "P4",
+    "p1AllowedChecks": [
+      "syntax",
+      "compile",
+      "side-effect-free-import",
+      "symbols-signatures-registry",
+      "dependency-and-package-wiring"
+    ],
+    "p1Forbidden": [
+      "new-functional-test-design",
+      "per-diagram-product-tests",
+      "browser-oracle-capture",
+      "visual-acceptance",
+      "full-matrix-reruns"
+    ]
+  },
+  "architecture": "canvas-native-no-dom",
+  "baseline": {
+    "mermaid": "12.2.0",
+    "canvas": "0.1.0a18",
+    "python": ">=3.13,<3.14",
+    "elkDistribution": "py-visactor-elk"
+  },
+  "sourceDenominators": {
+    "coreDetectors": 37,
+    "pluginDetectors": 1,
+    "crossCutting": 13,
+    "testSourceFiles": 368,
+    "renderFixtures": 2366,
+    "grammars": 38,
+    "syntaxDocs": 34
+  },
+  "parallelism": {
+    "defaultSlots": 4,
+    "coordinators": 1,
+    "workers": 3,
+    "rule": "Ready queue, one active writer per file, exclusive interface owner; roles are reused, not simultaneous required agents."
+  },
+  "stateVocabulary": [
+    "planned",
+    "ready",
+    "claimed",
+    "in_progress",
+    "awaiting_provider",
+    "source_written",
+    "code_complete_unverified",
+    "test_design_complete",
+    "failure_recorded",
+    "fix_in_progress",
+    "targeted_verified",
+    "full_verified",
+    "blocked_environment",
+    "code_incomplete"
+  ],
+  "executionStatePath": "docs/execution-state.json",
+  "tasks": [
+    {
+      "id": "P0-01",
+      "phase": "P0",
+      "title": "接管脏树、来源身份与恢复点",
+      "ownerRole": "COORD",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "docs/execution-state.json",
+        "docs/execution-log/**"
+      ],
+      "dependsOn": [],
+      "integrationNeeds": [],
+      "outputs": [
+        "起点快照、源 SHA、阶段和现有实现事实"
+      ],
+      "featureIds": [],
+      "sharedModules": [],
+      "recommendedWave": "W0",
+      "sourceMapFragment": null,
+      "exitRule": "见阶段门禁与对应专项文档，结果绑定实际状态和证据"
+    },
+    {
+      "id": "P0-02",
+      "phase": "P0",
+      "title": "功能/模块/路径和最小接口边界",
+      "ownerRole": "COORD",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "docs/execution-state.json"
+      ],
+      "dependsOn": [
+        "P0-01"
+      ],
+      "integrationNeeds": [],
+      "outputs": [
+        "全部 F/C 归属、接口 v1、写入租约与 ready 队列"
+      ],
+      "featureIds": [],
+      "sharedModules": [],
+      "recommendedWave": "W0",
+      "sourceMapFragment": null,
+      "exitRule": "见阶段门禁与对应专项文档，结果绑定实际状态和证据"
+    },
+    {
+      "id": "P0-03",
+      "phase": "P0",
+      "title": "目标依赖、Canvas/py-elk 接口与资源约束",
+      "ownerRole": "DEPENDENCIES",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "docs/execution-log/dependency-research/**"
+      ],
+      "dependsOn": [
+        "P0-01"
+      ],
+      "integrationNeeds": [],
+      "outputs": [
+        "版本/许可/资源/API 缺口记录，保留生产去 DOM 边界"
+      ],
+      "featureIds": [],
+      "sharedModules": [],
+      "recommendedWave": "W0",
+      "sourceMapFragment": null,
+      "exitRule": "见阶段门禁与对应专项文档，结果绑定实际状态和证据"
+    },
+    {
+      "id": "P0-GATE",
+      "phase": "P0",
+      "title": "接管与边界门禁",
+      "ownerRole": "COORD",
+      "status": "planned",
+      "kind": "gate",
+      "writePaths": [],
+      "dependsOn": [
+        "P0-02",
+        "P0-03"
+      ],
+      "integrationNeeds": [],
+      "outputs": [],
+      "featureIds": [],
+      "sharedModules": [],
+      "recommendedWave": "W0",
+      "sourceMapFragment": null,
+      "exitRule": "见阶段门禁与对应专项文档，结果绑定实际状态和证据"
+    },
+    {
+      "id": "P1-01",
+      "phase": "P1",
+      "title": "核心纯数据、单位、错误和协议",
+      "ownerRole": "CORE",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "src/py_mermaid/model/**",
+        "references/port-map/P1-01.json"
+      ],
+      "dependsOn": [
+        "P0-GATE"
+      ],
+      "integrationNeeds": [],
+      "outputs": [
+        "SourceSpan/Config/Model/Measure/Layout/Display/Result 协议"
+      ],
+      "featureIds": [],
+      "sharedModules": [
+        "C03"
+      ],
+      "recommendedWave": "W1",
+      "sourceMapFragment": "references/port-map/P1-01.json",
+      "exitRule": "全部真实实现和源码接线，机械检查有实录；仅标 code_complete_unverified"
+    },
+    {
+      "id": "P1-02",
+      "phase": "P1",
+      "title": "完整配置/defaults/merge 与 JS 值适配",
+      "ownerRole": "CONFIG",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "src/py_mermaid/config/**",
+        "references/port-map/P1-02.json"
+      ],
+      "dependsOn": [
+        "P1-01"
+      ],
+      "integrationNeeds": [],
+      "outputs": [
+        "固定 schema/default/主题配置入口、值/错误语义"
+      ],
+      "featureIds": [],
+      "sharedModules": [
+        "C01"
+      ],
+      "recommendedWave": "W1",
+      "sourceMapFragment": "references/port-map/P1-02.json",
+      "exitRule": "全部真实实现和源码接线，机械检查有实录；仅标 code_complete_unverified"
+    },
+    {
+      "id": "P1-03",
+      "phase": "P1",
+      "title": "预处理/位置映射/检测与 parser 基础",
+      "ownerRole": "PARSER",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "src/py_mermaid/parsing/**",
+        "references/port-map/P1-03.json"
+      ],
+      "dependsOn": [
+        "P1-01"
+      ],
+      "integrationNeeds": [
+        "P1-02",
+        "P1-05"
+      ],
+      "outputs": [
+        "grammar 共用工具、前处理/注册协议；无 Canvas"
+      ],
+      "featureIds": [],
+      "sharedModules": [
+        "C01",
+        "C02"
+      ],
+      "recommendedWave": "W1",
+      "sourceMapFragment": "references/port-map/P1-03.json",
+      "exitRule": "全部真实实现和源码接线，机械检查有实录；仅标 code_complete_unverified"
+    },
+    {
+      "id": "P1-04",
+      "phase": "P1",
+      "title": "完整纯几何、路径、相交、marker 和图基础",
+      "ownerRole": "GEOMETRY",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "src/py_mermaid/geometry/**",
+        "references/port-map/P1-04.json"
+      ],
+      "dependsOn": [
+        "P1-01"
+      ],
+      "integrationNeeds": [],
+      "outputs": [
+        "几何计算、曲线、采样/谓词、节点边界和变换"
+      ],
+      "featureIds": [],
+      "sharedModules": [
+        "C03",
+        "C06"
+      ],
+      "recommendedWave": "W1",
+      "sourceMapFragment": "references/port-map/P1-04.json",
+      "exitRule": "全部真实实现和源码接线，机械检查有实录；仅标 code_complete_unverified"
+    },
+    {
+      "id": "P1-05",
+      "phase": "P1",
+      "title": "离线资源、安全、链接与 a11y 元数据",
+      "ownerRole": "RESOURCES",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "src/py_mermaid/resources/**",
+        "src/py_mermaid/security/**",
+        "references/port-map/P1-05.json"
+      ],
+      "dependsOn": [
+        "P1-01"
+      ],
+      "integrationNeeds": [
+        "P1-02",
+        "P1-04"
+      ],
+      "outputs": [
+        "字体/图标/图片描述、策略/限制、元数据转换"
+      ],
+      "featureIds": [],
+      "sharedModules": [
+        "C08"
+      ],
+      "recommendedWave": "W1/W4",
+      "sourceMapFragment": "references/port-map/P1-05.json",
+      "exitRule": "全部真实实现和源码接线，机械检查有实录；仅标 code_complete_unverified"
+    },
+    {
+      "id": "P1-06",
+      "phase": "P1",
+      "title": "全部主题/look 和解析后样式",
+      "ownerRole": "STYLES",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "src/py_mermaid/rendering/styles/**",
+        "references/port-map/P1-06.json"
+      ],
+      "dependsOn": [
+        "P1-01"
+      ],
+      "integrationNeeds": [
+        "P1-02",
+        "P1-11"
+      ],
+      "outputs": [
+        "11 主题、级联/颜色/字体/线型，去 CSS 浏览器机制"
+      ],
+      "featureIds": [],
+      "sharedModules": [
+        "C04"
+      ],
+      "recommendedWave": "W2/W4",
+      "sourceMapFragment": "references/port-map/P1-06.json",
+      "exitRule": "全部真实实现和源码接线，机械检查有实录；仅标 code_complete_unverified"
+    },
+    {
+      "id": "P1-07",
+      "phase": "P1",
+      "title": "普通/多行标签与测量协议编排",
+      "ownerRole": "LABELS",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "src/py_mermaid/rendering/labels/core/**",
+        "src/py_mermaid/rendering/labels/__init__.py",
+        "references/port-map/P1-07.json"
+      ],
+      "dependsOn": [
+        "P1-01"
+      ],
+      "integrationNeeds": [
+        "P1-05",
+        "P1-06",
+        "P1-08"
+      ],
+      "outputs": [
+        "文本 run/box、换行/基线、注入 Canvas 测量"
+      ],
+      "featureIds": [],
+      "sharedModules": [
+        "C04"
+      ],
+      "recommendedWave": "W2",
+      "sourceMapFragment": "references/port-map/P1-07.json",
+      "exitRule": "全部真实实现和源码接线，机械检查有实录；仅标 code_complete_unverified"
+    },
+    {
+      "id": "P1-08",
+      "phase": "P1",
+      "title": "唯一 Canvas 后端/测量/所有导出/owner",
+      "ownerRole": "CANVAS",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "src/py_mermaid/rendering/skia/**",
+        "src/py_mermaid/rendering/display/**",
+        "references/port-map/P1-08.json"
+      ],
+      "dependsOn": [
+        "P1-01"
+      ],
+      "integrationNeeds": [
+        "P1-04",
+        "P1-05"
+      ],
+      "outputs": [
+        "DisplayList 编译/执行、PNG/JPEG/WebP/SVG/PDF 适用 API、设备和所有权"
+      ],
+      "featureIds": [],
+      "sharedModules": [
+        "C06",
+        "C07"
+      ],
+      "recommendedWave": "W1/W2/W8",
+      "sourceMapFragment": "references/port-map/P1-08.json",
+      "exitRule": "全部真实实现和源码接线，机械检查有实录；仅标 code_complete_unverified"
+    },
+    {
+      "id": "P1-09",
+      "phase": "P1",
+      "title": "完整 py-elk 适配、选项/端口/层级/路由",
+      "ownerRole": "ELK",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "src/py_mermaid/layout/elk/**",
+        "references/port-map/P1-09.json"
+      ],
+      "dependsOn": [
+        "P1-01"
+      ],
+      "integrationNeeds": [
+        "P1-04",
+        "P1-07"
+      ],
+      "outputs": [
+        "真实 py-elk 入口，全部适用算法/preset/选项对应"
+      ],
+      "featureIds": [],
+      "sharedModules": [
+        "C05"
+      ],
+      "recommendedWave": "W2/W8",
+      "sourceMapFragment": "references/port-map/P1-09.json",
+      "exitRule": "全部真实实现和源码接线，机械检查有实录；仅标 code_complete_unverified"
+    },
+    {
+      "id": "P1-10",
+      "phase": "P1",
+      "title": "Dagre 计算和复合图/路由",
+      "ownerRole": "DAGRE",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "src/py_mermaid/layout/dagre/**",
+        "references/port-map/P1-10.json"
+      ],
+      "dependsOn": [
+        "P1-01"
+      ],
+      "integrationNeeds": [
+        "P1-04",
+        "P1-11"
+      ],
+      "outputs": [
+        "rank/order/position/route；不复刻 D3 DOM 或 graphlib API"
+      ],
+      "featureIds": [],
+      "sharedModules": [
+        "C05"
+      ],
+      "recommendedWave": "W3",
+      "sourceMapFragment": "references/port-map/P1-10.json",
+      "exitRule": "全部真实实现和源码接线，机械检查有实录；仅标 code_complete_unverified"
+    },
+    {
+      "id": "P1-11",
+      "phase": "P1",
+      "title": "D3 所用数值/日期/颜色/尺度/树/空间算法",
+      "ownerRole": "NUMERICS",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "src/py_mermaid/numerics/**",
+        "references/port-map/P1-11.json"
+      ],
+      "dependsOn": [
+        "P1-01"
+      ],
+      "integrationNeeds": [
+        "P1-04"
+      ],
+      "outputs": [
+        "数值/尺度/ticks/format/层级/force/quadtree 与随机语义"
+      ],
+      "featureIds": [],
+      "sharedModules": [
+        "C04",
+        "C05",
+        "C06"
+      ],
+      "recommendedWave": "W1/W4",
+      "sourceMapFragment": "references/port-map/P1-11.json",
+      "exitRule": "全部真实实现和源码接线，机械检查有实录；仅标 code_complete_unverified"
+    },
+    {
+      "id": "P1-12",
+      "phase": "P1",
+      "title": "两套 COSE、fCoSE、tidy 算法",
+      "ownerRole": "TREE-FORCE",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "src/py_mermaid/layout/cose/**",
+        "src/py_mermaid/layout/tidy/**",
+        "references/port-map/P1-12.json"
+      ],
+      "dependsOn": [
+        "P1-01"
+      ],
+      "integrationNeeds": [
+        "P1-04",
+        "P1-11"
+      ],
+      "outputs": [
+        "约束、seed、停止条件、各版本行为边界"
+      ],
+      "featureIds": [],
+      "sharedModules": [
+        "C05"
+      ],
+      "recommendedWave": "W5",
+      "sourceMapFragment": "references/port-map/P1-12.json",
+      "exitRule": "全部真实实现和源码接线，机械检查有实录；仅标 code_complete_unverified"
+    },
+    {
+      "id": "P1-13",
+      "phase": "P1",
+      "title": "Sankey/Venn/swimlane 与专用布局",
+      "ownerRole": "SPECIAL-LAYOUT",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "src/py_mermaid/layout/sankey/**",
+        "src/py_mermaid/layout/venn/**",
+        "src/py_mermaid/layout/swimlane/**",
+        "references/port-map/P1-13.json"
+      ],
+      "dependsOn": [
+        "P1-01"
+      ],
+      "integrationNeeds": [
+        "P1-04",
+        "P1-11"
+      ],
+      "outputs": [
+        "流量/集合/泳道算法、路由与后处理"
+      ],
+      "featureIds": [],
+      "sharedModules": [
+        "C05"
+      ],
+      "recommendedWave": "W6",
+      "sourceMapFragment": "references/port-map/P1-13.json",
+      "exitRule": "全部真实实现和源码接线，机械检查有实录；仅标 code_complete_unverified"
+    },
+    {
+      "id": "P1-14",
+      "phase": "P1",
+      "title": "Markdown/富文本/HTML 含义的 Python 标签",
+      "ownerRole": "RICH-LABELS",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "src/py_mermaid/rendering/labels/rich/**",
+        "src/py_mermaid/rendering/labels/markdown/**",
+        "references/port-map/P1-14.json"
+      ],
+      "dependsOn": [
+        "P1-01"
+      ],
+      "integrationNeeds": [
+        "P1-05",
+        "P1-06",
+        "P1-07",
+        "P1-08"
+      ],
+      "outputs": [
+        "内容/样式 run 与 box，无 DOM/浏览器排版"
+      ],
+      "featureIds": [],
+      "sharedModules": [
+        "C04"
+      ],
+      "recommendedWave": "W4",
+      "sourceMapFragment": "references/port-map/P1-14.json",
+      "exitRule": "全部真实实现和源码接线，机械检查有实录；仅标 code_complete_unverified"
+    },
+    {
+      "id": "P1-15",
+      "phase": "P1",
+      "title": "数学语法/宏与数学 box 排版",
+      "ownerRole": "MATH",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "src/py_mermaid/rendering/labels/math/**",
+        "references/port-map/P1-15.json"
+      ],
+      "dependsOn": [
+        "P1-01"
+      ],
+      "integrationNeeds": [
+        "P1-04",
+        "P1-05",
+        "P1-07",
+        "P1-08"
+      ],
+      "outputs": [
+        "公式结构、字体/度量、伸缩符与 Canvas 指令数据"
+      ],
+      "featureIds": [],
+      "sharedModules": [
+        "C04"
+      ],
+      "recommendedWave": "W4",
+      "sourceMapFragment": "references/port-map/P1-15.json",
+      "exitRule": "全部真实实现和源码接线，机械检查有实录；仅标 code_complete_unverified"
+    },
+    {
+      "id": "P1-16",
+      "phase": "P1",
+      "title": "Rough/手绘填充和随机流",
+      "ownerRole": "ROUGH",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "src/py_mermaid/geometry/rough/**",
+        "references/port-map/P1-16.json"
+      ],
+      "dependsOn": [
+        "P1-04"
+      ],
+      "integrationNeeds": [
+        "P1-06",
+        "P1-11"
+      ],
+      "outputs": [
+        "手绘/填充/seed 的纯几何；写入租约在 P1-04 释放后分配"
+      ],
+      "featureIds": [],
+      "sharedModules": [
+        "C06"
+      ],
+      "recommendedWave": "W4/W8",
+      "sourceMapFragment": "references/port-map/P1-16.json",
+      "exitRule": "全部真实实现和源码接线，机械检查有实录；仅标 code_complete_unverified"
+    },
+    {
+      "id": "P1-17",
+      "phase": "P1",
+      "title": "runtime、API/CLI、注册/包和例子源码",
+      "ownerRole": "COORD",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "src/py_mermaid/runtime/**",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/cli.py",
+        "src/py_mermaid/__main__.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/diagrams/__init__.py",
+        "src/py_mermaid/layout/__init__.py",
+        "pyproject.toml",
+        "examples/**",
+        "references/port-map/P1-17.json"
+      ],
+      "dependsOn": [
+        "P1-01"
+      ],
+      "integrationNeeds": [
+        "P1-02",
+        "P1-03",
+        "P1-05",
+        "P1-08"
+      ],
+      "outputs": [
+        "请求隔离/取消/预算、真实 API/CLI、扩展注册、打包接线与示例源文件"
+      ],
+      "featureIds": [],
+      "sharedModules": [
+        "C01",
+        "C07",
+        "C08"
+      ],
+      "recommendedWave": "W2/W8",
+      "sourceMapFragment": "references/port-map/P1-17.json",
+      "exitRule": "全部真实实现和源码接线，机械检查有实录；仅标 code_complete_unverified"
+    },
+    {
+      "id": "P1-F01-SEED",
+      "phase": "P1",
+      "title": "首写基础流程图源码接线",
+      "ownerRole": "FEATURE-F01",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "src/py_mermaid/diagrams/flowchart/**",
+        "references/port-map/P1-F01-SEED.json"
+      ],
+      "dependsOn": [
+        "P1-01",
+        "P1-03"
+      ],
+      "integrationNeeds": [
+        "P1-02",
+        "P1-04",
+        "P1-06",
+        "P1-07",
+        "P1-08",
+        "P1-09"
+      ],
+      "outputs": [
+        "F01.1 parser/model/布局/绘制源码骨架，继续扩全，不做先测门禁"
+      ],
+      "featureIds": [
+        "F01"
+      ],
+      "sharedModules": [],
+      "recommendedWave": "W2",
+      "sourceMapFragment": "references/port-map/P1-F01-SEED.json",
+      "exitRule": "全部真实实现和源码接线，机械检查有实录；仅标 code_complete_unverified"
+    },
+    {
+      "id": "P1-F01",
+      "phase": "P1",
+      "title": "流程图全部专用源码",
+      "ownerRole": "FEATURE-F01",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "src/py_mermaid/diagrams/flowchart/**",
+        "references/port-map/P1-F01.json"
+      ],
+      "dependsOn": [
+        "P1-01",
+        "P1-03",
+        "P1-F01-SEED"
+      ],
+      "integrationNeeds": [
+        "P1-02",
+        "P1-05",
+        "P1-06",
+        "P1-07",
+        "P1-08",
+        "P1-09",
+        "P1-10",
+        "P1-14",
+        "P1-15",
+        "P1-16",
+        "P1-17"
+      ],
+      "outputs": [
+        "完整 grammar/模型/合法非法分支/专用排布/配置/样式/资源/元数据和导出接线"
+      ],
+      "featureIds": [
+        "F01"
+      ],
+      "sharedModules": [
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C05",
+        "C06",
+        "C07",
+        "C08"
+      ],
+      "recommendedWave": "W2/W8",
+      "sourceMapFragment": "references/port-map/P1-F01.json",
+      "exitRule": "全部真实实现和源码接线，机械检查有实录；仅标 code_complete_unverified"
+    },
+    {
+      "id": "P1-F02",
+      "phase": "P1",
+      "title": "关系与建模图全部专用源码",
+      "ownerRole": "FEATURE-F02",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "src/py_mermaid/diagrams/class_diagram/**",
+        "src/py_mermaid/diagrams/state_diagram/**",
+        "src/py_mermaid/diagrams/er/**",
+        "src/py_mermaid/diagrams/requirement/**",
+        "src/py_mermaid/diagrams/usecase/**",
+        "src/py_mermaid/diagrams/c4/**",
+        "references/port-map/P1-F02.json"
+      ],
+      "dependsOn": [
+        "P1-01",
+        "P1-03"
+      ],
+      "integrationNeeds": [
+        "P1-02",
+        "P1-05",
+        "P1-06",
+        "P1-07",
+        "P1-08",
+        "P1-09",
+        "P1-10",
+        "P1-14",
+        "P1-15",
+        "P1-17"
+      ],
+      "outputs": [
+        "完整 grammar/模型/合法非法分支/专用排布/配置/样式/资源/元数据和导出接线"
+      ],
+      "featureIds": [
+        "F02"
+      ],
+      "sharedModules": [
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C05",
+        "C06",
+        "C07",
+        "C08"
+      ],
+      "recommendedWave": "W3",
+      "sourceMapFragment": "references/port-map/P1-F02.json",
+      "exitRule": "全部真实实现和源码接线，机械检查有实录；仅标 code_complete_unverified"
+    },
+    {
+      "id": "P1-F03",
+      "phase": "P1",
+      "title": "时序图全部专用源码",
+      "ownerRole": "FEATURE-F03",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "src/py_mermaid/diagrams/sequence/**",
+        "references/port-map/P1-F03.json"
+      ],
+      "dependsOn": [
+        "P1-01",
+        "P1-03"
+      ],
+      "integrationNeeds": [
+        "P1-02",
+        "P1-05",
+        "P1-06",
+        "P1-07",
+        "P1-08",
+        "P1-14",
+        "P1-15",
+        "P1-17"
+      ],
+      "outputs": [
+        "完整 grammar/模型/合法非法分支/专用排布/配置/样式/资源/元数据和导出接线"
+      ],
+      "featureIds": [
+        "F03"
+      ],
+      "sharedModules": [
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C06",
+        "C07",
+        "C08"
+      ],
+      "recommendedWave": "W3",
+      "sourceMapFragment": "references/port-map/P1-F03.json",
+      "exitRule": "全部真实实现和源码接线，机械检查有实录；仅标 code_complete_unverified"
+    },
+    {
+      "id": "P1-F04",
+      "phase": "P1",
+      "title": "时间与过程图全部专用源码",
+      "ownerRole": "FEATURE-F04",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "src/py_mermaid/diagrams/gantt/**",
+        "src/py_mermaid/diagrams/journey/**",
+        "src/py_mermaid/diagrams/timeline/**",
+        "src/py_mermaid/diagrams/git_graph/**",
+        "references/port-map/P1-F04.json"
+      ],
+      "dependsOn": [
+        "P1-01",
+        "P1-03"
+      ],
+      "integrationNeeds": [
+        "P1-02",
+        "P1-05",
+        "P1-06",
+        "P1-07",
+        "P1-08",
+        "P1-11",
+        "P1-14",
+        "P1-15",
+        "P1-17"
+      ],
+      "outputs": [
+        "完整 grammar/模型/合法非法分支/专用排布/配置/样式/资源/元数据和导出接线"
+      ],
+      "featureIds": [
+        "F04"
+      ],
+      "sharedModules": [
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C05",
+        "C06",
+        "C07",
+        "C08"
+      ],
+      "recommendedWave": "W4",
+      "sourceMapFragment": "references/port-map/P1-F04.json",
+      "exitRule": "全部真实实现和源码接线，机械检查有实录；仅标 code_complete_unverified"
+    },
+    {
+      "id": "P1-F05",
+      "phase": "P1",
+      "title": "数值图表全部专用源码",
+      "ownerRole": "FEATURE-F05",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "src/py_mermaid/diagrams/pie/**",
+        "src/py_mermaid/diagrams/quadrant/**",
+        "src/py_mermaid/diagrams/xychart/**",
+        "src/py_mermaid/diagrams/radar/**",
+        "references/port-map/P1-F05.json"
+      ],
+      "dependsOn": [
+        "P1-01",
+        "P1-03"
+      ],
+      "integrationNeeds": [
+        "P1-02",
+        "P1-05",
+        "P1-06",
+        "P1-07",
+        "P1-08",
+        "P1-11",
+        "P1-14",
+        "P1-15",
+        "P1-17"
+      ],
+      "outputs": [
+        "完整 grammar/模型/合法非法分支/专用排布/配置/样式/资源/元数据和导出接线"
+      ],
+      "featureIds": [
+        "F05"
+      ],
+      "sharedModules": [
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C05",
+        "C06",
+        "C07",
+        "C08"
+      ],
+      "recommendedWave": "W4",
+      "sourceMapFragment": "references/port-map/P1-F05.json",
+      "exitRule": "全部真实实现和源码接线，机械检查有实录；仅标 code_complete_unverified"
+    },
+    {
+      "id": "P1-F06",
+      "phase": "P1",
+      "title": "树与层次图全部专用源码",
+      "ownerRole": "FEATURE-F06",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "src/py_mermaid/diagrams/mindmap/**",
+        "src/py_mermaid/diagrams/tree_view/**",
+        "src/py_mermaid/diagrams/treemap/**",
+        "references/port-map/P1-F06.json"
+      ],
+      "dependsOn": [
+        "P1-01",
+        "P1-03"
+      ],
+      "integrationNeeds": [
+        "P1-02",
+        "P1-05",
+        "P1-06",
+        "P1-07",
+        "P1-08",
+        "P1-11",
+        "P1-12",
+        "P1-14",
+        "P1-15",
+        "P1-17"
+      ],
+      "outputs": [
+        "完整 grammar/模型/合法非法分支/专用排布/配置/样式/资源/元数据和导出接线"
+      ],
+      "featureIds": [
+        "F06"
+      ],
+      "sharedModules": [
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C05",
+        "C06",
+        "C07",
+        "C08"
+      ],
+      "recommendedWave": "W5",
+      "sourceMapFragment": "references/port-map/P1-F06.json",
+      "exitRule": "全部真实实现和源码接线，机械检查有实录；仅标 code_complete_unverified"
+    },
+    {
+      "id": "P1-F07",
+      "phase": "P1",
+      "title": "流量与集合图全部专用源码",
+      "ownerRole": "FEATURE-F07",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "src/py_mermaid/diagrams/sankey/**",
+        "src/py_mermaid/diagrams/venn/**",
+        "references/port-map/P1-F07.json"
+      ],
+      "dependsOn": [
+        "P1-01",
+        "P1-03"
+      ],
+      "integrationNeeds": [
+        "P1-02",
+        "P1-05",
+        "P1-06",
+        "P1-07",
+        "P1-08",
+        "P1-13",
+        "P1-14",
+        "P1-15",
+        "P1-17"
+      ],
+      "outputs": [
+        "完整 grammar/模型/合法非法分支/专用排布/配置/样式/资源/元数据和导出接线"
+      ],
+      "featureIds": [
+        "F07"
+      ],
+      "sharedModules": [
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C05",
+        "C06",
+        "C07",
+        "C08"
+      ],
+      "recommendedWave": "W6",
+      "sourceMapFragment": "references/port-map/P1-F07.json",
+      "exitRule": "全部真实实现和源码接线，机械检查有实录；仅标 code_complete_unverified"
+    },
+    {
+      "id": "P1-F08",
+      "phase": "P1",
+      "title": "结构与架构图全部专用源码",
+      "ownerRole": "FEATURE-F08",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "src/py_mermaid/diagrams/block/**",
+        "src/py_mermaid/diagrams/packet/**",
+        "src/py_mermaid/diagrams/kanban/**",
+        "src/py_mermaid/diagrams/architecture/**",
+        "references/port-map/P1-F08.json"
+      ],
+      "dependsOn": [
+        "P1-01",
+        "P1-03"
+      ],
+      "integrationNeeds": [
+        "P1-02",
+        "P1-05",
+        "P1-06",
+        "P1-07",
+        "P1-08",
+        "P1-12",
+        "P1-14",
+        "P1-15",
+        "P1-17"
+      ],
+      "outputs": [
+        "完整 grammar/模型/合法非法分支/专用排布/配置/样式/资源/元数据和导出接线"
+      ],
+      "featureIds": [
+        "F08"
+      ],
+      "sharedModules": [
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C05",
+        "C06",
+        "C07",
+        "C08"
+      ],
+      "recommendedWave": "W5",
+      "sourceMapFragment": "references/port-map/P1-F08.json",
+      "exitRule": "全部真实实现和源码接线，机械检查有实录；仅标 code_complete_unverified"
+    },
+    {
+      "id": "P1-F09",
+      "phase": "P1",
+      "title": "专用业务图全部专用源码",
+      "ownerRole": "FEATURE-F09",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "src/py_mermaid/diagrams/swimlane/**",
+        "src/py_mermaid/diagrams/agentflow/**",
+        "src/py_mermaid/diagrams/eventmodeling/**",
+        "src/py_mermaid/diagrams/ishikawa/**",
+        "src/py_mermaid/diagrams/wardley/**",
+        "src/py_mermaid/diagrams/cynefin/**",
+        "references/port-map/P1-F09.json"
+      ],
+      "dependsOn": [
+        "P1-01",
+        "P1-03"
+      ],
+      "integrationNeeds": [
+        "P1-02",
+        "P1-05",
+        "P1-06",
+        "P1-07",
+        "P1-08",
+        "P1-09",
+        "P1-13",
+        "P1-14",
+        "P1-15",
+        "P1-16",
+        "P1-17"
+      ],
+      "outputs": [
+        "完整 grammar/模型/合法非法分支/专用排布/配置/样式/资源/元数据和导出接线"
+      ],
+      "featureIds": [
+        "F09"
+      ],
+      "sharedModules": [
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C05",
+        "C06",
+        "C07",
+        "C08"
+      ],
+      "recommendedWave": "W6",
+      "sourceMapFragment": "references/port-map/P1-F09.json",
+      "exitRule": "全部真实实现和源码接线，机械检查有实录；仅标 code_complete_unverified"
+    },
+    {
+      "id": "P1-F10",
+      "phase": "P1",
+      "title": "语法轨道图全部专用源码",
+      "ownerRole": "FEATURE-F10",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "src/py_mermaid/diagrams/railroad/**",
+        "references/port-map/P1-F10.json"
+      ],
+      "dependsOn": [
+        "P1-01",
+        "P1-03"
+      ],
+      "integrationNeeds": [
+        "P1-02",
+        "P1-04",
+        "P1-05",
+        "P1-06",
+        "P1-07",
+        "P1-08",
+        "P1-14",
+        "P1-15",
+        "P1-17"
+      ],
+      "outputs": [
+        "完整 grammar/模型/合法非法分支/专用排布/配置/样式/资源/元数据和导出接线"
+      ],
+      "featureIds": [
+        "F10"
+      ],
+      "sharedModules": [
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C05",
+        "C06",
+        "C07",
+        "C08"
+      ],
+      "recommendedWave": "W7",
+      "sourceMapFragment": "references/port-map/P1-F10.json",
+      "exitRule": "全部真实实现和源码接线，机械检查有实录；仅标 code_complete_unverified"
+    },
+    {
+      "id": "P1-F11",
+      "phase": "P1",
+      "title": "ZenUML 插件全部专用源码",
+      "ownerRole": "FEATURE-F11",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "src/py_mermaid/diagrams/zenuml/**",
+        "references/port-map/P1-F11.json"
+      ],
+      "dependsOn": [
+        "P1-01",
+        "P1-03"
+      ],
+      "integrationNeeds": [
+        "P1-02",
+        "P1-05",
+        "P1-06",
+        "P1-07",
+        "P1-08",
+        "P1-14",
+        "P1-15",
+        "P1-17"
+      ],
+      "outputs": [
+        "完整 grammar/模型/合法非法分支/专用排布/配置/样式/资源/元数据和导出接线"
+      ],
+      "featureIds": [
+        "F11"
+      ],
+      "sharedModules": [
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C05",
+        "C06",
+        "C07",
+        "C08"
+      ],
+      "recommendedWave": "W2-early/W7",
+      "sourceMapFragment": "references/port-map/P1-F11.json",
+      "exitRule": "全部真实实现和源码接线，机械检查有实录；仅标 code_complete_unverified"
+    },
+    {
+      "id": "P1-F12",
+      "phase": "P1",
+      "title": "信息与诊断输出全部专用源码",
+      "ownerRole": "FEATURE-F12",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "src/py_mermaid/diagrams/info/**",
+        "references/port-map/P1-F12.json"
+      ],
+      "dependsOn": [
+        "P1-01",
+        "P1-03"
+      ],
+      "integrationNeeds": [
+        "P1-02",
+        "P1-05",
+        "P1-06",
+        "P1-07",
+        "P1-08",
+        "P1-14",
+        "P1-15",
+        "P1-17"
+      ],
+      "outputs": [
+        "完整 grammar/模型/合法非法分支/专用排布/配置/样式/资源/元数据和导出接线"
+      ],
+      "featureIds": [
+        "F12"
+      ],
+      "sharedModules": [
+        "C01",
+        "C04",
+        "C06",
+        "C07"
+      ],
+      "recommendedWave": "W3",
+      "sourceMapFragment": "references/port-map/P1-F12.json",
+      "exitRule": "全部真实实现和源码接线，机械检查有实录；仅标 code_complete_unverified"
+    },
+    {
+      "id": "P1-INTEGRATE",
+      "phase": "P1",
+      "title": "全部公共能力与 38 入口源码收口",
+      "ownerRole": "COORD",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "src/py_mermaid/**",
+        "references/port-map.json",
+        "docs/execution-state.json",
+        "references/port-map/P1-INTEGRATE.json"
+      ],
+      "dependsOn": [
+        "P1-01",
+        "P1-02",
+        "P1-03",
+        "P1-04",
+        "P1-05",
+        "P1-06",
+        "P1-07",
+        "P1-08",
+        "P1-09",
+        "P1-10",
+        "P1-11",
+        "P1-12",
+        "P1-13",
+        "P1-14",
+        "P1-15",
+        "P1-16",
+        "P1-17",
+        "P1-F01-SEED",
+        "P1-F01",
+        "P1-F02",
+        "P1-F03",
+        "P1-F04",
+        "P1-F05",
+        "P1-F06",
+        "P1-F07",
+        "P1-F08",
+        "P1-F09",
+        "P1-F10",
+        "P1-F11",
+        "P1-F12"
+      ],
+      "integrationNeeds": [],
+      "outputs": [
+        "源码完整性/引用/签名/注册/包接线报告、无 stub 审查、全源码快照"
+      ],
+      "featureIds": [],
+      "sharedModules": [],
+      "recommendedWave": "W8",
+      "sourceMapFragment": "references/port-map/P1-INTEGRATE.json",
+      "exitRule": "全部真实实现和源码接线，机械检查有实录；仅标 code_complete_unverified"
+    },
+    {
+      "id": "P1-GATE",
+      "phase": "P1",
+      "title": "全部源码齐备且未验证门禁",
+      "ownerRole": "COORD",
+      "status": "planned",
+      "kind": "gate",
+      "writePaths": [],
+      "dependsOn": [
+        "P1-INTEGRATE"
+      ],
+      "integrationNeeds": [],
+      "outputs": [],
+      "featureIds": [],
+      "sharedModules": [],
+      "recommendedWave": "W8",
+      "sourceMapFragment": null,
+      "exitRule": "全部真实实现和源码接线，机械检查有实录；仅标 code_complete_unverified"
+    },
+    {
+      "id": "P2-V01",
+      "phase": "P2",
+      "title": "全部来源与断言清单",
+      "ownerRole": "QA-SOURCE",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "references/spec-cases/**",
+        "references/spec-assertions/**"
+      ],
+      "dependsOn": [
+        "P1-GATE"
+      ],
+      "integrationNeeds": [],
+      "outputs": [
+        "基于原实现的测试/工具源码与期望来源；产品首次分组运行留 P3"
+      ],
+      "featureIds": [],
+      "sharedModules": [],
+      "recommendedWave": "",
+      "sourceMapFragment": null,
+      "exitRule": "见阶段门禁与对应专项文档，结果绑定实际状态和证据"
+    },
+    {
+      "id": "P2-V02",
+      "phase": "P2",
+      "title": "官方/候选环境和共享输入协议",
+      "ownerRole": "QA-ENV",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "tools/oracle/environment/**",
+        "tests/fixtures/**"
+      ],
+      "dependsOn": [
+        "P1-GATE"
+      ],
+      "integrationNeeds": [],
+      "outputs": [
+        "基于原实现的测试/工具源码与期望来源；产品首次分组运行留 P3"
+      ],
+      "featureIds": [],
+      "sharedModules": [],
+      "recommendedWave": "",
+      "sourceMapFragment": null,
+      "exitRule": "见阶段门禁与对应专项文档，结果绑定实际状态和证据"
+    },
+    {
+      "id": "P2-V03",
+      "phase": "P2",
+      "title": "官方 A 采集工具",
+      "ownerRole": "QA-ORACLE",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "tools/oracle/capture/**"
+      ],
+      "dependsOn": [
+        "P1-GATE",
+        "P2-V02"
+      ],
+      "integrationNeeds": [],
+      "outputs": [
+        "基于原实现的测试/工具源码与期望来源；产品首次分组运行留 P3"
+      ],
+      "featureIds": [],
+      "sharedModules": [],
+      "recommendedWave": "",
+      "sourceMapFragment": null,
+      "exitRule": "见阶段门禁与对应专项文档，结果绑定实际状态和证据"
+    },
+    {
+      "id": "P2-V04",
+      "phase": "P2",
+      "title": "隔离 Python B runner",
+      "ownerRole": "QA-RUNNER",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "tools/oracle/python_runner/**"
+      ],
+      "dependsOn": [
+        "P1-GATE",
+        "P2-V02"
+      ],
+      "integrationNeeds": [],
+      "outputs": [
+        "基于原实现的测试/工具源码与期望来源；产品首次分组运行留 P3"
+      ],
+      "featureIds": [],
+      "sharedModules": [],
+      "recommendedWave": "",
+      "sourceMapFragment": null,
+      "exitRule": "见阶段门禁与对应专项文档，结果绑定实际状态和证据"
+    },
+    {
+      "id": "P2-V05",
+      "phase": "P2",
+      "title": "分层比较器和原始差异报告",
+      "ownerRole": "QA-COMPARE",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "tools/oracle/compare/**"
+      ],
+      "dependsOn": [
+        "P1-GATE",
+        "P2-V02"
+      ],
+      "integrationNeeds": [],
+      "outputs": [
+        "基于原实现的测试/工具源码与期望来源；产品首次分组运行留 P3",
+        "L1/L2/L3 functional and rendered-content/geometry-quality gates; cross-engine pixel metrics diagnostic only."
+      ],
+      "featureIds": [],
+      "sharedModules": [],
+      "recommendedWave": "",
+      "sourceMapFragment": null,
+      "exitRule": "见阶段门禁与对应专项文档，结果绑定实际状态和证据",
+      "availableComponents": [
+        "tools/pixel_compare.py"
+      ]
+    },
+    {
+      "id": "P2-V06",
+      "phase": "P2",
+      "title": "比较器/清单负控制",
+      "ownerRole": "QA-CONTROL",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "tests/oracle_controls/**"
+      ],
+      "dependsOn": [
+        "P1-GATE",
+        "P2-V01",
+        "P2-V05"
+      ],
+      "integrationNeeds": [],
+      "outputs": [
+        "基于原实现的测试/工具源码与期望来源；产品首次分组运行留 P3",
+        "Positive controls permit normal renderer variation; negative controls reject missing content/wrong links/clipping/no-op drawing."
+      ],
+      "featureIds": [],
+      "sharedModules": [],
+      "recommendedWave": "",
+      "sourceMapFragment": null,
+      "exitRule": "见阶段门禁与对应专项文档，结果绑定实际状态和证据"
+    },
+    {
+      "id": "P2-U01",
+      "phase": "P2",
+      "title": "配置/语法/模型/全部图种单元用例",
+      "ownerRole": "QA-LANGUAGE",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "tests/unit/core/**",
+        "tests/unit/config/**",
+        "tests/unit/parsing/**",
+        "tests/unit/model/**"
+      ],
+      "dependsOn": [
+        "P1-GATE",
+        "P2-V01"
+      ],
+      "integrationNeeds": [],
+      "outputs": [
+        "基于原实现的测试/工具源码与期望来源；产品首次分组运行留 P3"
+      ],
+      "featureIds": [],
+      "sharedModules": [],
+      "recommendedWave": "",
+      "sourceMapFragment": null,
+      "exitRule": "见阶段门禁与对应专项文档，结果绑定实际状态和证据"
+    },
+    {
+      "id": "P2-U02",
+      "phase": "P2",
+      "title": "数值/几何/布局单元用例",
+      "ownerRole": "QA-ALGORITHMS",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "tests/unit/geometry/**",
+        "tests/unit/algorithms/**",
+        "tests/unit/layout/**"
+      ],
+      "dependsOn": [
+        "P1-GATE",
+        "P2-V01"
+      ],
+      "integrationNeeds": [],
+      "outputs": [
+        "基于原实现的测试/工具源码与期望来源；产品首次分组运行留 P3"
+      ],
+      "featureIds": [],
+      "sharedModules": [],
+      "recommendedWave": "",
+      "sourceMapFragment": null,
+      "exitRule": "见阶段门禁与对应专项文档，结果绑定实际状态和证据"
+    },
+    {
+      "id": "P2-U03",
+      "phase": "P2",
+      "title": "标签/样式/资源/安全单元用例",
+      "ownerRole": "QA-PRESENTATION",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "tests/unit/labels/**",
+        "tests/unit/styles/**",
+        "tests/unit/resources/**",
+        "tests/unit/security/**"
+      ],
+      "dependsOn": [
+        "P1-GATE",
+        "P2-V01"
+      ],
+      "integrationNeeds": [],
+      "outputs": [
+        "基于原实现的测试/工具源码与期望来源；产品首次分组运行留 P3"
+      ],
+      "featureIds": [],
+      "sharedModules": [],
+      "recommendedWave": "",
+      "sourceMapFragment": null,
+      "exitRule": "见阶段门禁与对应专项文档，结果绑定实际状态和证据"
+    },
+    {
+      "id": "P2-U04",
+      "phase": "P2",
+      "title": "绘制/图种组合/导出/生命周期/部署用例",
+      "ownerRole": "QA-RUNTIME",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "tests/unit/rendering/**",
+        "tests/integration/**",
+        "tests/lifecycle/**",
+        "tests/deployment/**",
+        "tests/exports/**"
+      ],
+      "dependsOn": [
+        "P1-GATE",
+        "P2-V01",
+        "P2-V02"
+      ],
+      "integrationNeeds": [],
+      "outputs": [
+        "基于原实现的测试/工具源码与期望来源；产品首次分组运行留 P3"
+      ],
+      "featureIds": [],
+      "sharedModules": [],
+      "recommendedWave": "",
+      "sourceMapFragment": null,
+      "exitRule": "见阶段门禁与对应专项文档，结果绑定实际状态和证据"
+    },
+    {
+      "id": "P2-V07",
+      "phase": "P2",
+      "title": "分组/影响集运行器与完整测试归属收口",
+      "ownerRole": "COORD",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "tools/oracle/run_groups.py",
+        "tools/oracle/README.md",
+        "tests/README.md"
+      ],
+      "dependsOn": [
+        "P2-V01",
+        "P2-V02",
+        "P2-V03",
+        "P2-V04",
+        "P2-V05",
+        "P2-V06",
+        "P2-U01",
+        "P2-U02",
+        "P2-U03",
+        "P2-U04"
+      ],
+      "integrationNeeds": [],
+      "outputs": [
+        "真实运行入口/说明、case 来源完整性与测试收集报告"
+      ],
+      "featureIds": [],
+      "sharedModules": [],
+      "recommendedWave": "",
+      "sourceMapFragment": null,
+      "exitRule": "见阶段门禁与对应专项文档，结果绑定实际状态和证据"
+    },
+    {
+      "id": "P2-GATE",
+      "phase": "P2",
+      "title": "测试设计/单测/工具齐备门禁",
+      "ownerRole": "COORD",
+      "status": "planned",
+      "kind": "gate",
+      "writePaths": [],
+      "dependsOn": [
+        "P2-V07"
+      ],
+      "integrationNeeds": [],
+      "outputs": [],
+      "featureIds": [],
+      "sharedModules": [],
+      "recommendedWave": "",
+      "sourceMapFragment": null,
+      "exitRule": "见阶段门禁与对应专项文档，结果绑定实际状态和证据"
+    },
+    {
+      "id": "P3-01",
+      "phase": "P3",
+      "title": "模块/图种分组首轮运行并冻结失败",
+      "ownerRole": "QA-GROUPS",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "test-runs/<new-run>/**"
+      ],
+      "dependsOn": [
+        "P2-GATE"
+      ],
+      "integrationNeeds": [],
+      "outputs": [
+        "每组原始结果、失败/未验、候选和环境指纹"
+      ],
+      "featureIds": [],
+      "sharedModules": [],
+      "recommendedWave": "",
+      "sourceMapFragment": null,
+      "exitRule": "见阶段门禁与对应专项文档，结果绑定实际状态和证据"
+    },
+    {
+      "id": "P3-02",
+      "phase": "P3",
+      "title": "统一根因归类和修复优先级",
+      "ownerRole": "COORD",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "docs/issues/**"
+      ],
+      "dependsOn": [
+        "P3-01"
+      ],
+      "integrationNeeds": [],
+      "outputs": [
+        "公共根因簇、影响面、owner 和修复分片"
+      ],
+      "featureIds": [],
+      "sharedModules": [],
+      "recommendedWave": "",
+      "sourceMapFragment": null,
+      "exitRule": "见阶段门禁与对应专项文档，结果绑定实际状态和证据"
+    },
+    {
+      "id": "P3-03",
+      "phase": "P3",
+      "title": "公共根因批修与相关复测",
+      "ownerRole": "SHARED-OWNERS",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "src/py_mermaid/<leased-shared-paths>/**"
+      ],
+      "dependsOn": [
+        "P3-02"
+      ],
+      "integrationNeeds": [],
+      "outputs": [
+        "共享原因修复、直接和上层受影响回归"
+      ],
+      "featureIds": [],
+      "sharedModules": [],
+      "recommendedWave": "",
+      "sourceMapFragment": null,
+      "exitRule": "见阶段门禁与对应专项文档，结果绑定实际状态和证据"
+    },
+    {
+      "id": "P3-04",
+      "phase": "P3",
+      "title": "图种/资源/平台原因批修",
+      "ownerRole": "FEATURE-OWNERS",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "src/py_mermaid/diagrams/<leased-family>/**"
+      ],
+      "dependsOn": [
+        "P3-02"
+      ],
+      "integrationNeeds": [
+        "P3-03"
+      ],
+      "outputs": [
+        "各独立根因补丁与相关测试结果"
+      ],
+      "featureIds": [],
+      "sharedModules": [],
+      "recommendedWave": "",
+      "sourceMapFragment": null,
+      "exitRule": "见阶段门禁与对应专项文档，结果绑定实际状态和证据"
+    },
+    {
+      "id": "P3-05",
+      "phase": "P3",
+      "title": "整合修复、准备候选和相关回归收口",
+      "ownerRole": "COORD",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "docs/**",
+        "examples/**",
+        "pyproject.toml",
+        "test-runs/<new-run>/**"
+      ],
+      "dependsOn": [
+        "P3-03",
+        "P3-04"
+      ],
+      "integrationNeeds": [],
+      "outputs": [
+        "最终候选前的包/README/许可/资源/示例准备及相关回归报告"
+      ],
+      "featureIds": [],
+      "sharedModules": [],
+      "recommendedWave": "",
+      "sourceMapFragment": null,
+      "exitRule": "见阶段门禁与对应专项文档，结果绑定实际状态和证据"
+    },
+    {
+      "id": "P3-GATE",
+      "phase": "P3",
+      "title": "功能排查修复闭环门禁",
+      "ownerRole": "COORD",
+      "status": "planned",
+      "kind": "gate",
+      "writePaths": [],
+      "dependsOn": [
+        "P3-05"
+      ],
+      "integrationNeeds": [],
+      "outputs": [],
+      "featureIds": [],
+      "sharedModules": [],
+      "recommendedWave": "",
+      "sourceMapFragment": null,
+      "exitRule": "见阶段门禁与对应专项文档，结果绑定实际状态和证据"
+    },
+    {
+      "id": "P4-01",
+      "phase": "P4",
+      "title": "冻结最终源码/依赖/资源和同一 wheel",
+      "ownerRole": "COORD",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "test-runs/<final-run>/**"
+      ],
+      "dependsOn": [
+        "P3-GATE"
+      ],
+      "integrationNeeds": [],
+      "outputs": [
+        "候选/资源/环境实际 hash、完整适用矩阵"
+      ],
+      "featureIds": [],
+      "sharedModules": [],
+      "recommendedWave": "",
+      "sourceMapFragment": null,
+      "exitRule": "见阶段门禁与对应专项文档，结果绑定实际状态和证据"
+    },
+    {
+      "id": "P4-02",
+      "phase": "P4",
+      "title": "全断言/配置/算法完整矩阵",
+      "ownerRole": "QA-FULL-LOGIC",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "test-runs/<final-run>/logic/**"
+      ],
+      "dependsOn": [
+        "P4-01"
+      ],
+      "integrationNeeds": [],
+      "outputs": [
+        "全部用例/来源终态与原始结果"
+      ],
+      "featureIds": [],
+      "sharedModules": [],
+      "recommendedWave": "",
+      "sourceMapFragment": null,
+      "exitRule": "见阶段门禁与对应专项文档，结果绑定实际状态和证据"
+    },
+    {
+      "id": "P4-03",
+      "phase": "P4",
+      "title": "视觉/字体/设备/格式完整矩阵",
+      "ownerRole": "QA-FULL-VISUAL",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "test-runs/<final-run>/visual/**"
+      ],
+      "dependsOn": [
+        "P4-01"
+      ],
+      "integrationNeeds": [],
+      "outputs": [
+        "原始像素/差异、字体、CPU/GPU、所有适用格式",
+        "Functional/render-quality acceptance with explained engine variations; no cross-DOM/Canvas pixel-equality gate."
+      ],
+      "featureIds": [],
+      "sharedModules": [],
+      "recommendedWave": "",
+      "sourceMapFragment": null,
+      "exitRule": "见阶段门禁与对应专项文档，结果绑定实际状态和证据"
+    },
+    {
+      "id": "P4-04",
+      "phase": "P4",
+      "title": "双平台/部署/安全/生命周期完整矩阵",
+      "ownerRole": "QA-FULL-DEPLOY",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "test-runs/<final-run>/deployment/**"
+      ],
+      "dependsOn": [
+        "P4-01"
+      ],
+      "integrationNeeds": [],
+      "outputs": [
+        "Windows/Linux、隔离/离线/no-loader、owner 和包内容/许可证据"
+      ],
+      "featureIds": [],
+      "sharedModules": [],
+      "recommendedWave": "",
+      "sourceMapFragment": null,
+      "exitRule": "见阶段门禁与对应专项文档，结果绑定实际状态和证据"
+    },
+    {
+      "id": "P4-GATE",
+      "phase": "P4",
+      "title": "同候选最终全量门禁",
+      "ownerRole": "COORD",
+      "status": "planned",
+      "kind": "gate",
+      "writePaths": [],
+      "dependsOn": [
+        "P4-02",
+        "P4-03",
+        "P4-04"
+      ],
+      "integrationNeeds": [],
+      "outputs": [],
+      "featureIds": [],
+      "sharedModules": [],
+      "recommendedWave": "",
+      "sourceMapFragment": null,
+      "exitRule": "见阶段门禁与对应专项文档，结果绑定实际状态和证据"
+    },
+    {
+      "id": "P5-01",
+      "phase": "P5",
+      "title": "核对交接文档/真实例子/候选发行条件",
+      "ownerRole": "COORD",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "docs/delivery/**"
+      ],
+      "dependsOn": [
+        "P4-GATE"
+      ],
+      "integrationNeeds": [],
+      "outputs": [
+        "交付清单、已知差异与候选一致性；不改已验证候选字节"
+      ],
+      "featureIds": [],
+      "sharedModules": [],
+      "recommendedWave": "",
+      "sourceMapFragment": null,
+      "exitRule": "见阶段门禁与对应专项文档，结果绑定实际状态和证据"
+    },
+    {
+      "id": "P5-02",
+      "phase": "P5",
+      "title": "按实际授权 commit/push/CI/发布/回读",
+      "ownerRole": "COORD",
+      "status": "planned",
+      "kind": "work",
+      "writePaths": [
+        "docs/delivery/**"
+      ],
+      "dependsOn": [
+        "P5-01"
+      ],
+      "integrationNeeds": [],
+      "outputs": [
+        "各外部动作实录、实际下载 SHA；无授权则记录待发行，不伪称发布"
+      ],
+      "featureIds": [],
+      "sharedModules": [],
+      "recommendedWave": "",
+      "sourceMapFragment": null,
+      "exitRule": "见阶段门禁与对应专项文档，结果绑定实际状态和证据",
+      "requiresExplicitAuthorization": true
+    }
+  ],
+  "featureTaskCoverage": {
+    "F01": {
+      "detectors": [
+        "flowchart-v2",
+        "flowchart-elk"
+      ],
+      "sourceTask": "P1-F01"
+    },
+    "F02": {
+      "detectors": [
+        "classDiagram",
+        "stateDiagram",
+        "er",
+        "requirement",
+        "usecase",
+        "c4"
+      ],
+      "sourceTask": "P1-F02"
+    },
+    "F03": {
+      "detectors": [
+        "sequence"
+      ],
+      "sourceTask": "P1-F03"
+    },
+    "F04": {
+      "detectors": [
+        "gantt",
+        "journey",
+        "timeline",
+        "gitGraph"
+      ],
+      "sourceTask": "P1-F04"
+    },
+    "F05": {
+      "detectors": [
+        "pie",
+        "quadrantChart",
+        "xychart",
+        "radar"
+      ],
+      "sourceTask": "P1-F05"
+    },
+    "F06": {
+      "detectors": [
+        "mindmap",
+        "treeView",
+        "treemap"
+      ],
+      "sourceTask": "P1-F06"
+    },
+    "F07": {
+      "detectors": [
+        "sankey",
+        "venn"
+      ],
+      "sourceTask": "P1-F07"
+    },
+    "F08": {
+      "detectors": [
+        "block",
+        "packet",
+        "kanban",
+        "architecture"
+      ],
+      "sourceTask": "P1-F08"
+    },
+    "F09": {
+      "detectors": [
+        "swimlane",
+        "agentflow",
+        "eventmodeling",
+        "ishikawa",
+        "wardley",
+        "cynefin"
+      ],
+      "sourceTask": "P1-F09"
+    },
+    "F10": {
+      "detectors": [
+        "railroad",
+        "railroadEbnf",
+        "railroadAbnf",
+        "railroadPeg"
+      ],
+      "sourceTask": "P1-F10"
+    },
+    "F11": {
+      "detectors": [
+        "zenuml"
+      ],
+      "sourceTask": "P1-F11"
+    },
+    "F12": {
+      "detectors": [
+        "info"
+      ],
+      "sourceTask": "P1-F12"
+    }
+  },
+  "crossCuttingOwners": {
+    "preprocessing-frontmatter-directives": "C01",
+    "configuration-schema-defaults": "C01",
+    "diagnostics-errors-utf16": "C01",
+    "themes-css-cascade": "C04",
+    "text-html-markdown-math": "C04",
+    "layout-engines-dagre-elk-tidy": "C05",
+    "handdrawn-random-seed": "C06",
+    "exports-scale-background": "C07",
+    "threading-lifecycle": "C07",
+    "offline-deployment": "C07",
+    "accessibility-metadata": "C08",
+    "links-interaction-security": "C08",
+    "icons-images-resource-policy": "C08"
+  },
+  "rules": [
+    "All source tasks complete and integrated before P1-GATE; formal test work cannot start before that gate.",
+    "dependsOn controls start; integrationNeeds controls final integration, not premature functional tests.",
+    "Execution-state tasks use immutable plan IDs and bind actual owner/paths/status/evidence; plan itself is not an execution report.",
+    "P1-INTEGRATE leases shared files only after workers release them; never concurrent broad src ownership.",
+    "P4 failure preserves run, returns to affected P3 fixes, then validates a new full candidate; no cross-candidate report splicing.",
+    "P5 candidate-affecting edits require returning to P4. Publishing requires actual session authorization."
+  ],
+  "documents": [
+    "docs/FULL_MIGRATION_PLAN.md",
+    "docs/EXECUTION_HANDOFF.md",
+    "docs/MODULE_BOUNDARIES.md",
+    "docs/PARALLEL_EXECUTION.md",
+    "docs/SOURCE_BASED_VERIFICATION.md",
+    "docs/RENDER_CONSISTENCY.md"
+  ],
+  "renderValidationPolicy": "references/render-validation-policy.json",
+  "preparedTools": [
+    {
+      "id": "pixel-compare",
+      "path": "tools/pixel_compare.py",
+      "status": "standalone-utility-available",
+      "doesNotCompleteTasks": [
+        "P2-V05",
+        "P2-V06"
+      ],
+      "mermaidFunctionalValidation": false
+    }
+  ]
+}

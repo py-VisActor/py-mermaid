@@ -1,6 +1,14 @@
 # 上游资料与 spec 索引
 
+当前执行按 [完整主方案](../docs/FULL_MIGRATION_PLAN.md)与 [机器任务图](migration-execution.json)进行。P0/P1 读取来源以编写全部功能源码；正式逐 case/assertion 拆解与单测/oracle 后置 P2，排查批修 P3、最终全量 P4。本文旧 M1/M2 名称只表示来源工作范围。
+
 固定官方 [Mermaid 12.2.0 源码](https://github.com/mermaid-js/mermaid/tree/1fb7869866dd619168d840291c9c54b4f129758b)，详细版本和关键 canonical Git blob 的 SHA256 见 [upstream.lock.json](upstream.lock.json)。[spec-inventory.json](spec-inventory.json)记录每个源文件的路径、Git blob ID 与类别；checkout 位于被忽略的 `.local/upstream-mermaid`。
+
+[dependencies.json](dependencies.json)补充五个产品包的声明、锁定版本、传递 snapshot 图、registry integrity、源码 import 和补丁指纹。运行 `python scripts/audit_dependencies.py --check` 复核；说明及限制见 [第三方依赖盘点](../docs/THIRD_PARTY_DEPENDENCIES.md)。这是静态依赖盘点，不是 bundle 可达性或传递许可证审计结论。
+
+完整视图见 [产品树](dependency-tree.txt)、[全工具链树](dependency-toolchain-tree.txt)、[完整机器图](dependency-tree.json)和 [底层工作索引](dependency-bottom-up.md)，统一由 `python scripts/build_dependency_tree.py --check` 核对。处理规则来自 [策略文件](dependency-porting-policy.json)，候选研究见 [python-candidates.json](python-candidates.json)，方案与范围见 [依赖迁移](../docs/DEPENDENCY_MIGRATION.md)。候选元数据中的版本不自动成为产品 pin。
+
+[Canvas 原生架构](../docs/CANVAS_NATIVE_ARCHITECTURE.md)明确淘汰目标产品中的 DOM/浏览器实现层。原始来源节点/边保留，`plan` 描述功能保留、计算迁移与宿主淘汰；不能把完整 npm 来源树当成目标 Python 依赖列表。
 
 ```shell
 python scripts/upstream.py fetch

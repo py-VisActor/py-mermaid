@@ -1,0 +1,706 @@
+{
+  "schema": "py-mermaid-f011-language-assertions/v1",
+  "phase": "F01.1-S3",
+  "status": "targeted_verified",
+  "candidateSha256": "349136b5247435693b4b94b2627477d0ba6842b7147feea0496c077d5d6776ef",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "sources": [
+    {
+      "id": "SRC01",
+      "path": "packages/mermaid/src/diagrams/flowchart/parser/flow.jison",
+      "symbols": [
+        "graphConfig",
+        "FirstStmtSeparator",
+        "vertexStatement",
+        "vertex",
+        "idString",
+        "linkStatement"
+      ],
+      "sha256": "9597faffe2a133b104c6dd4f38a162f6980bff4e0a841a83ff94af3900ea7ba8"
+    },
+    {
+      "id": "SRC02",
+      "path": "packages/mermaid/src/diagrams/flowchart/flowDb.ts",
+      "symbols": [
+        "addVertex",
+        "addSingleLink",
+        "addLink",
+        "clear"
+      ],
+      "sha256": "33577b9ade8c65be6049c3093089dbf81abf44214f49c2b2ea46434183889288"
+    },
+    {
+      "id": "SRC03",
+      "path": "packages/mermaid/src/diagrams/flowchart/parser/flow-vertice-chaining.spec.js",
+      "symbols": [
+        "should handle chaining of vertices"
+      ],
+      "sha256": "70b2eda87930b2bc2558425a721b74261176305d8b6db9e0cf1c3ad79cc0b698"
+    },
+    {
+      "id": "SRC04",
+      "path": "packages/mermaid/src/diagrams/flowchart/parser/flow-singlenode.spec.js",
+      "symbols": [
+        "should handle a single node",
+        "should handle a single square node"
+      ],
+      "sha256": "04bd8c3cb02cbb3f5afdd9ccb1c97de0667226e7b344fc95762c225725bfb595"
+    },
+    {
+      "id": "SRC05",
+      "path": "packages/mermaid/src/diagrams/flowchart/parser/flow-comments.spec.js",
+      "symbols": [
+        "should handle comments",
+        "should handle comments at the start",
+        "should handle comments at the end no trailing newline"
+      ],
+      "sha256": "27b3dad4ff89e422463e230efc458558c1a7168e86375d0b62ce8ca36f0e8172"
+    },
+    {
+      "id": "SRC06",
+      "path": "packages/mermaid/src/diagrams/flowchart/parser/flow-text.spec.js",
+      "symbols": [
+        "should handle quoted text in vertices",
+        "should throw error for strings and text at the same time"
+      ],
+      "sha256": "2d65566bc468a06cdeb3d53093a2f7a46694edc8209116f0073481059dd3f1e3"
+    },
+    {
+      "id": "SRC07",
+      "path": "packages/mermaid/src/diagram-api/comments.ts",
+      "symbols": [
+        "cleanupComments"
+      ],
+      "sha256": "aa637df212ecc22cbcb12387af31a4d0f8c266ece03cc6134d46dd9427acd120"
+    },
+    {
+      "id": "SRC08",
+      "path": "packages/mermaid/src/preprocess.ts",
+      "symbols": [
+        "cleanupText"
+      ],
+      "sha256": "db337ae9cc0f7ff189cc50d06d6fb28452dfbc37294f56a966dc3f48b2a628e0"
+    },
+    {
+      "id": "SRC09",
+      "path": "packages/mermaid/src/schemas/config.schema.yaml",
+      "symbols": [
+        "fontFamily",
+        "fontSize",
+        "maxTextSize",
+        "maxEdges",
+        "FlowchartDiagramConfig"
+      ],
+      "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8"
+    },
+    {
+      "id": "SRC10",
+      "path": "packages/mermaid/src/config.ts",
+      "symbols": [
+        "getEffectiveHtmlLabels"
+      ],
+      "sha256": "91dd68a9e7d57c4635a04fab0ccd78ec230b4417a02f4f4b3cd9a6bb445f09ef"
+    },
+    {
+      "id": "SRC11",
+      "path": "packages/mermaid/src/config.spec.ts",
+      "symbols": [
+        "getEffectiveHtmlLabels tests",
+        "should set site config and config properly"
+      ],
+      "sha256": "b5a26f828d9c914cf80de5a361eada4e63b0389e76b731c98404c01fc76f6047"
+    },
+    {
+      "id": "SRC12",
+      "path": "packages/mermaid/src/themes/theme-default.js",
+      "symbols": [
+        "Theme.constructor",
+        "Theme.updateColors"
+      ],
+      "sha256": "c7676f84269d433c83f089bd978439a0d5e783ba48f1dfd87a294efb674e3b66"
+    },
+    {
+      "id": "SRC13",
+      "path": "packages/mermaid/src/rendering-util/createText.ts",
+      "symbols": [
+        "addHtmlSpan",
+        "createFormattedText"
+      ],
+      "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865"
+    },
+    {
+      "id": "SRC14",
+      "path": "packages/mermaid/src/rendering-util/handle-markdown-text.ts",
+      "symbols": [
+        "nonMarkdownToHTML",
+        "nonMarkdownToLines"
+      ],
+      "sha256": "6f99a7b3f5b11f87f5509a370663f14650f8f8c3cbb9a34ea496a1aa183cd0ca"
+    },
+    {
+      "id": "CONTRACT",
+      "path": "docs/F01_1_INTERFACES.md",
+      "sha256": "502730d0f9750a8e07d740c4863dc62e0c6d0493776302ad6af1390c74946cdb"
+    },
+    {
+      "id": "SCOPE",
+      "path": "docs/F01_1_EXECUTION_PLAN.md",
+      "sha256": "ce2f31e69e384f4c918c21d886ad7a3948091b941c9157631c939f0897c72cf5"
+    },
+    {
+      "id": "SRC15",
+      "path": "packages/mermaid/src/themes/theme-redux-color.js",
+      "symbols": [
+        "Theme.constructor",
+        "Theme.updateColors"
+      ],
+      "sha256": "5e4278fb33825a501ffae1c6ac13a869763c4e611de9ad6077b58513e4e1b6d0"
+    },
+    {
+      "id": "SRC16",
+      "path": "packages/mermaid/src/mermaidAPI.ts",
+      "symbols": [
+        "initialize",
+        "createUserStyles"
+      ],
+      "sha256": "c38ef136d815a638993d271f253d2ca825046fb97292d30a7a4de8ea57fc0318"
+    },
+    {
+      "id": "SRC17",
+      "path": "packages/mermaid/src/styles.ts",
+      "symbols": [
+        "getStyles"
+      ],
+      "sha256": "dd53a582b0c2411e16beeb37f51664968f278b08b97f63fc8808cbc8381f73fb"
+    },
+    {
+      "id": "SRC18",
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/squareRect.ts",
+      "symbols": [
+        "squareRect"
+      ],
+      "sha256": "2456ebbc205f1c73fcaf34e63d055a18b17ae71fbce2b1f4ff08e910d8cc2dfd"
+    },
+    {
+      "id": "SRC19",
+      "path": "packages/mermaid/src/rendering-util/insertLookDefs.ts",
+      "symbols": [
+        "insertLookDefs",
+        "dropShadow"
+      ],
+      "sha256": "9810059f11462129a1518d3b1fa3950e9e16a959dbe92abc732aa5e714a2eb13"
+    }
+  ],
+  "assertions": [
+    {
+      "id": "F011-LANG-001",
+      "entry": "test_language.LanguageTests.test_header_keywords_and_directions",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC03",
+        "SRC04",
+        "SRC06"
+      ],
+      "basis": "Pinned grammar productions and FlowDB insertion/text update semantics, with fixed hand-authored graphs."
+    },
+    {
+      "id": "F011-LANG-002",
+      "entry": "test_language.LanguageTests.test_single_bare_node",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC03",
+        "SRC04",
+        "SRC06"
+      ],
+      "basis": "Pinned grammar productions and FlowDB insertion/text update semantics, with fixed hand-authored graphs."
+    },
+    {
+      "id": "F011-LANG-003",
+      "entry": "test_language.LanguageTests.test_single_rectangle",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC03",
+        "SRC04",
+        "SRC06"
+      ],
+      "basis": "Pinned grammar productions and FlowDB insertion/text update semantics, with fixed hand-authored graphs."
+    },
+    {
+      "id": "F011-LANG-004",
+      "entry": "test_language.LanguageTests.test_chain",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC03",
+        "SRC04",
+        "SRC06"
+      ],
+      "basis": "Pinned grammar productions and FlowDB insertion/text update semantics, with fixed hand-authored graphs."
+    },
+    {
+      "id": "F011-LANG-005",
+      "entry": "test_language.LanguageTests.test_branch_and_merge",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC03",
+        "SRC04",
+        "SRC06"
+      ],
+      "basis": "Pinned grammar productions and FlowDB insertion/text update semantics, with fixed hand-authored graphs."
+    },
+    {
+      "id": "F011-LANG-006",
+      "entry": "test_language.LanguageTests.test_disconnected_nodes_keep_insertion_order",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC03",
+        "SRC04",
+        "SRC06"
+      ],
+      "basis": "Pinned grammar productions and FlowDB insertion/text update semantics, with fixed hand-authored graphs."
+    },
+    {
+      "id": "F011-LANG-007",
+      "entry": "test_language.LanguageTests.test_bare_reference_preserves_label",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC03",
+        "SRC04",
+        "SRC06"
+      ],
+      "basis": "Pinned grammar productions and FlowDB insertion/text update semantics, with fixed hand-authored graphs."
+    },
+    {
+      "id": "F011-LANG-008",
+      "entry": "test_language.LanguageTests.test_last_explicit_label_wins_without_reordering",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC03",
+        "SRC04",
+        "SRC06"
+      ],
+      "basis": "Pinned grammar productions and FlowDB insertion/text update semantics, with fixed hand-authored graphs."
+    },
+    {
+      "id": "F011-LANG-009",
+      "entry": "test_language.LanguageTests.test_duplicate_edges_retained",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC03",
+        "SRC04",
+        "SRC06"
+      ],
+      "basis": "Pinned grammar productions and FlowDB insertion/text update semantics, with fixed hand-authored graphs."
+    },
+    {
+      "id": "F011-LANG-010",
+      "entry": "test_language.LanguageTests.test_self_loop_retained",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC03",
+        "SRC04",
+        "SRC06"
+      ],
+      "basis": "Pinned grammar productions and FlowDB insertion/text update semantics, with fixed hand-authored graphs."
+    },
+    {
+      "id": "F011-LANG-011",
+      "entry": "test_language.LanguageTests.test_comments_at_beginning_middle_and_eof",
+      "sources": [
+        "SRC01",
+        "SRC05",
+        "SRC07"
+      ],
+      "basis": "Upstream comment preprocessing examples and grammar separators."
+    },
+    {
+      "id": "F011-LANG-012",
+      "entry": "test_language.LanguageTests.test_semicolons_and_horizontal_spaces",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC03",
+        "SRC04",
+        "SRC06"
+      ],
+      "basis": "Pinned grammar productions and FlowDB insertion/text update semantics, with fixed hand-authored graphs."
+    },
+    {
+      "id": "F011-LANG-013",
+      "entry": "test_language.LanguageTests.test_quoted_punctuation",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC03",
+        "SRC04",
+        "SRC06"
+      ],
+      "basis": "Pinned grammar productions and FlowDB insertion/text update semantics, with fixed hand-authored graphs."
+    },
+    {
+      "id": "F011-LANG-014",
+      "entry": "test_language.LanguageTests.test_plain_hash_is_not_an_entity",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC03",
+        "SRC04",
+        "SRC06"
+      ],
+      "basis": "Pinned grammar productions and FlowDB insertion/text update semantics, with fixed hand-authored graphs."
+    },
+    {
+      "id": "F011-LANG-015",
+      "entry": "test_language.LanguageTests.test_literal_and_actual_line_breaks",
+      "sources": [
+        "SRC06",
+        "SRC13",
+        "SRC14"
+      ],
+      "basis": "Ordinary text rendering transformations and line-break semantics, independent of candidate string processing."
+    },
+    {
+      "id": "F011-LANG-016",
+      "entry": "test_language.LanguageTests.test_plain_whitespace_rendering_semantics",
+      "sources": [
+        "SRC06",
+        "SRC13",
+        "SRC14"
+      ],
+      "basis": "Ordinary text rendering transformations and line-break semantics, independent of candidate string processing."
+    },
+    {
+      "id": "F011-LANG-017",
+      "entry": "test_language.LanguageTests.test_unicode_and_crlf_source_positions",
+      "sources": [
+        "SRC01",
+        "SRC08",
+        "SRC09",
+        "CONTRACT"
+      ],
+      "basis": "Raw source positions and UTF-16 arithmetic from internal contract; limits from source schema, explicit reject policy from scope."
+    },
+    {
+      "id": "F011-LANG-018",
+      "entry": "test_language.LanguageTests.test_incomplete_source_reports_raw_eof_position",
+      "sources": [
+        "SRC01",
+        "SRC08",
+        "SRC09",
+        "CONTRACT"
+      ],
+      "basis": "Raw source positions and UTF-16 arithmetic from internal contract; limits from source schema, explicit reject policy from scope."
+    },
+    {
+      "id": "F011-LANG-019",
+      "entry": "test_language.LanguageTests.test_invalid_sources_explicitly_fail_with_location",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC06",
+        "SCOPE",
+        "CONTRACT"
+      ],
+      "basis": "Pinned legal/illegal grammar plus explicit F01.1 reject/immutability/request-isolation contract; no claim upstream rejects all scope exclusions."
+    },
+    {
+      "id": "F011-LANG-020",
+      "entry": "test_language.LanguageTests.test_valid_mermaid_outside_slice_rejected",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC06",
+        "SCOPE",
+        "CONTRACT"
+      ],
+      "basis": "Pinned legal/illegal grammar plus explicit F01.1 reject/immutability/request-isolation contract; no claim upstream rejects all scope exclusions."
+    },
+    {
+      "id": "F011-LANG-021",
+      "entry": "test_language.LanguageTests.test_text_budget_counts_utf16_and_does_not_truncate",
+      "sources": [
+        "SRC01",
+        "SRC08",
+        "SRC09",
+        "CONTRACT"
+      ],
+      "basis": "Raw source positions and UTF-16 arithmetic from internal contract; limits from source schema, explicit reject policy from scope."
+    },
+    {
+      "id": "F011-LANG-022",
+      "entry": "test_language.LanguageTests.test_edge_budget_boundary",
+      "sources": [
+        "SRC01",
+        "SRC08",
+        "SRC09",
+        "CONTRACT"
+      ],
+      "basis": "Raw source positions and UTF-16 arithmetic from internal contract; limits from source schema, explicit reject policy from scope."
+    },
+    {
+      "id": "F011-LANG-023",
+      "entry": "test_language.LanguageTests.test_invalid_input_type",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC06",
+        "SCOPE",
+        "CONTRACT"
+      ],
+      "basis": "Pinned legal/illegal grammar plus explicit F01.1 reject/immutability/request-isolation contract; no claim upstream rejects all scope exclusions."
+    },
+    {
+      "id": "F011-LANG-024",
+      "entry": "test_language.LanguageTests.test_request_isolation_after_success_and_failure",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC06",
+        "SCOPE",
+        "CONTRACT"
+      ],
+      "basis": "Pinned legal/illegal grammar plus explicit F01.1 reject/immutability/request-isolation contract; no claim upstream rejects all scope exclusions."
+    },
+    {
+      "id": "F011-LANG-025",
+      "entry": "test_language.LanguageTests.test_model_is_immutable",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC06",
+        "SCOPE",
+        "CONTRACT"
+      ],
+      "basis": "Pinned legal/illegal grammar plus explicit F01.1 reject/immutability/request-isolation contract; no claim upstream rejects all scope exclusions."
+    },
+    {
+      "id": "F011-LANG-026",
+      "entry": "test_language.ConfigurationTests.test_source_defaults",
+      "sources": [
+        "SRC09",
+        "SRC10",
+        "SRC11",
+        "SRC13",
+        "SCOPE",
+        "SRC15",
+        "SRC16",
+        "SRC17",
+        "SRC18",
+        "SRC19"
+      ],
+      "basis": "Diagram-scoped FlowchartDiagramConfig appearance, config.ts resolveAppearance/updateCurrentConfig and mermaidAPI initialize fontFamily-only bridge, redux-color effective theme variables, neo geometry and scoped input contract. Corrected initial global-schema-only expectation; original S4 logs retained."
+    },
+    {
+      "id": "F011-LANG-027",
+      "entry": "test_language.ConfigurationTests.test_supported_overrides_and_input_unchanged",
+      "sources": [
+        "SRC09",
+        "SRC10",
+        "SRC11",
+        "SRC13",
+        "SCOPE",
+        "SRC15",
+        "SRC16",
+        "SRC17",
+        "SRC18",
+        "SRC19"
+      ],
+      "basis": "Diagram-scoped FlowchartDiagramConfig appearance, config.ts resolveAppearance/updateCurrentConfig and mermaidAPI initialize fontFamily-only bridge, redux-color effective theme variables, neo geometry and scoped input contract. Corrected initial global-schema-only expectation; original S4 logs retained."
+    },
+    {
+      "id": "F011-LANG-028",
+      "entry": "test_language.ConfigurationTests.test_html_labels_precedence_and_nullish_fallback",
+      "sources": [
+        "SRC09",
+        "SRC10",
+        "SRC11",
+        "SRC13",
+        "SCOPE",
+        "SRC15",
+        "SRC16",
+        "SRC17",
+        "SRC18",
+        "SRC19"
+      ],
+      "basis": "Diagram-scoped FlowchartDiagramConfig appearance, config.ts resolveAppearance/updateCurrentConfig and mermaidAPI initialize fontFamily-only bridge, redux-color effective theme variables, neo geometry and scoped input contract. Corrected initial global-schema-only expectation; original S4 logs retained."
+    },
+    {
+      "id": "F011-LANG-029",
+      "entry": "test_language.ConfigurationTests.test_unknown_and_unsupported_options_rejected",
+      "sources": [
+        "SRC09",
+        "SRC10",
+        "SRC11",
+        "SRC13",
+        "SCOPE",
+        "SRC15",
+        "SRC16",
+        "SRC17",
+        "SRC18",
+        "SRC19"
+      ],
+      "basis": "Diagram-scoped FlowchartDiagramConfig appearance, config.ts resolveAppearance/updateCurrentConfig and mermaidAPI initialize fontFamily-only bridge, redux-color effective theme variables, neo geometry and scoped input contract. Corrected initial global-schema-only expectation; original S4 logs retained."
+    },
+    {
+      "id": "F011-LANG-030",
+      "entry": "test_language.ConfigurationTests.test_invalid_numeric_values_rejected",
+      "sources": [
+        "SRC09",
+        "SRC10",
+        "SRC11",
+        "SRC13",
+        "SCOPE",
+        "SRC15",
+        "SRC16",
+        "SRC17",
+        "SRC18",
+        "SRC19"
+      ],
+      "basis": "Diagram-scoped FlowchartDiagramConfig appearance, config.ts resolveAppearance/updateCurrentConfig and mermaidAPI initialize fontFamily-only bridge, redux-color effective theme variables, neo geometry and scoped input contract. Corrected initial global-schema-only expectation; original S4 logs retained."
+    },
+    {
+      "id": "F011-LANG-031",
+      "entry": "test_language.ConfigurationTests.test_zero_spacing_and_padding_allowed",
+      "sources": [
+        "SRC09",
+        "SRC10",
+        "SRC11",
+        "SRC13",
+        "SCOPE",
+        "SRC15",
+        "SRC16",
+        "SRC17",
+        "SRC18",
+        "SRC19"
+      ],
+      "basis": "Diagram-scoped FlowchartDiagramConfig appearance, config.ts resolveAppearance/updateCurrentConfig and mermaidAPI initialize fontFamily-only bridge, redux-color effective theme variables, neo geometry and scoped input contract. Corrected initial global-schema-only expectation; original S4 logs retained."
+    },
+    {
+      "id": "F011-LANG-032",
+      "entry": "test_language.ConfigurationTests.test_wrong_configuration_shapes_rejected",
+      "sources": [
+        "SRC09",
+        "SRC10",
+        "SRC11",
+        "SRC13",
+        "SCOPE",
+        "SRC15",
+        "SRC16",
+        "SRC17",
+        "SRC18",
+        "SRC19"
+      ],
+      "basis": "Diagram-scoped FlowchartDiagramConfig appearance, config.ts resolveAppearance/updateCurrentConfig and mermaidAPI initialize fontFamily-only bridge, redux-color effective theme variables, neo geometry and scoped input contract. Corrected initial global-schema-only expectation; original S4 logs retained."
+    },
+    {
+      "id": "F011-LANG-033",
+      "entry": "test_language.LanguageTests.test_inline_comments_are_not_grammar_whitespace",
+      "sources": [
+        "SRC01",
+        "SRC05",
+        "SRC07",
+        "SRC08"
+      ],
+      "basis": "Locked cleanupComments is line-anchored; flow.jison has no inline %% token. Official getDiagramFromText failed on the original inline-edge positive probe; now retained as negative source evidence."
+    },
+    {
+      "id": "F011-LANG-034",
+      "entry": "test_language.LanguageTests.test_indented_whole_line_comments_with_crlf_and_no_final_newline",
+      "sources": [
+        "SRC01",
+        "SRC05",
+        "SRC07",
+        "SRC08"
+      ],
+      "basis": "Upstream whole-line comment specs cover indentation and final EOF without newline; raw positions/CRLF normalize through the public parser contract."
+    },
+    {
+      "id": "F011-LANG-035",
+      "entry": "test_language.ConfigurationTests.test_diagram_appearance_and_site_font_are_distinct",
+      "sources": [
+        "SRC09",
+        "SRC10",
+        "CONTRACT",
+        "SRC15",
+        "SRC16",
+        "SRC17",
+        "SRC18",
+        "SRC19"
+      ],
+      "basis": "Independent locked per-diagram schema and scoped theme reconstruction; explicit site fontFamily bridge and absent rootfontSize bridge; squareRect neo ignores legacy padding."
+    },
+    {
+      "id": "F011-LANG-036",
+      "entry": "test_language.ConfigurationTests.test_minimum_label_width_and_wrapping_configuration",
+      "sources": [
+        "SRC09",
+        "SRC10",
+        "CONTRACT",
+        "SRC15",
+        "SRC16",
+        "SRC17",
+        "SRC18",
+        "SRC19"
+      ],
+      "basis": "Independent locked per-diagram schema and scoped theme reconstruction; explicit site fontFamily bridge and absent rootfontSize bridge; squareRect neo ignores legacy padding."
+    }
+  ],
+  "testMethodCount": 36,
+  "subtests": "Parameterized values declared in source; count above is unittest methods, not parameterized executions or upstream coverage.",
+  "entry": "python -m unittest discover -s tests/f011 -p test_language.py -v",
+  "independence": "Expected semantic graphs, defaults and invalid inputs are handwritten from locked grammar/spec/config and current scoped contract. No candidate outputs were executed or serialized to produce expectations.",
+  "mechanicalChecks": [
+    {
+      "command": "python -m compileall -q tests/f011/test_language.py",
+      "exitCode": 0
+    },
+    {
+      "command": "PYTHONPATH=src python -c <unittest discovery only, suite.countTestCases()>",
+      "expectedMethodCount": 32,
+      "execution": "collection only; no test body run"
+    }
+  ],
+  "boundaries": [
+    "Tests cover only F01.1 contract, not full flow.jison or config schema.",
+    "Mermaid-valid excluded features must fail in this package; rejection asserts the slice scope, not upstream invalidity.",
+    "Raw span contract is Python-facing; upstream legacy flowchart does not promise equivalent positions.",
+    "Default htmlLabels preserves true and ordinary text rendering meaning; rich inputs are explicit exclusions.",
+    "No behavior execution in S3; all cases await S4."
+  ],
+  "staticQuestions": [
+    "Current scanner accepts CR-only source position conventions through its own raw map; dedicated CRLF and astral Unicode checks assert external arithmetic, pending first run.",
+    "Configuration options nodeSpacing/rankSpacing do not imply the pinned ELK adapter consumes them. Separate layout tests should enforce the locked adapter option contract."
+  ],
+  "testFile": {
+    "path": "tests/f011/test_language.py",
+    "sha256": "6ffdf035d5438aa2782cf74cd6cb0e48d63841b435ce1fd51b47e318dceda3dd"
+  },
+  "targetedFix": {
+    "originalCandidateSha256": "349136b5247435693b4b94b2627477d0ba6842b7147feea0496c077d5d6776ef",
+    "parserSha256": "d583589eee23eb5c92b6d351d2dd7adfaa4d0cdde6129b6dd4d5b6c72d2efee8",
+    "firstOfficialFailure": "test-runs/f011-s4-official-001/manifest.json",
+    "verification": "test-runs/f011-s4-language-fix-20261104T133941Z/manifest.json",
+    "methodsPassed": 34,
+    "fullCandidateVerification": false
+  },
+  "appearanceCorrection": {
+    "evidence": "test-runs/f011-s4-language-theme-fix-20261104T134306Z/manifest.json",
+    "priorEvidence": [
+      "test-runs/f011-s4-groups-001/",
+      "test-runs/f011-s4-official-003/manifest.json"
+    ],
+    "methodsPassed": 36,
+    "configSha256": "df26dc64292448cb76871bebd2c5bce9610c993354af0a7641aa4735dc6a6489",
+    "reason": "Initial default assertions omitted diagram-scoped theme resolution. Expectations corrected from locked source and official output, not from candidate output.",
+    "fullCandidateVerification": false
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "schema": "py-mermaid-f011-assets/v1",
+  "sourceRun": "test-runs/f011-s4-compare-cpu-001",
+  "sourceTreeSha256": "0b0b85e7f09a7ed163ee4f9293516ba314827ba7b8367d6b8fe2b02ed221f90d",
+  "sourceFiles": {
+    "src/py_mermaid/__init__.py": "57ce35c88f465bcd79b24a21f3226a4a66a1bbe3e00fe770cfa02e4ca1a36de6",
+    "src/py_mermaid/api.py": "7a0e287e69dd6e3731065ead01358acd815f7d91cfee41491071e4e1d16b9b50",
+    "src/py_mermaid/config/__init__.py": "0a1a35bc6930e3ec4b021e68d66da16df4f0a576472bc4ec2410598579e6ab4f",
+    "src/py_mermaid/config/flowchart.py": "df26dc64292448cb76871bebd2c5bce9610c993354af0a7641aa4735dc6a6489",
+    "src/py_mermaid/diagrams/__init__.py": "9154145bccf3c978abe2ae3b6934ba969a756e9a6e77bdf2dbf3dbfd373cb619",
+    "src/py_mermaid/diagrams/flowchart/__init__.py": "648b1a3ca353ad86c12facbcb0d900aa2595a274b64b0d2c2a931c131c3c8a96",
+    "src/py_mermaid/diagrams/flowchart/parser.py": "d583589eee23eb5c92b6d351d2dd7adfaa4d0cdde6129b6dd4d5b6c72d2efee8",
+    "src/py_mermaid/geometry/__init__.py": "0ca8cdbb89dcf0d094482cc55108fe682db492c7d56bb41197bde74f103b230b",
+    "src/py_mermaid/geometry/flowchart.py": "89961446f5e4cd602d0d9060f7c6c90abb99f43806912633aed635f9517af558",
+    "src/py_mermaid/layout/__init__.py": "6d1ecc869efa4cd9a7edd97fbd986cb719aa5509366da8775096b1fbd3074add",
+    "src/py_mermaid/layout/elk/__init__.py": "9baa94a4f1ce971d55a2f5008bd33c126764842ed68909c731f88d822c28498b",
+    "src/py_mermaid/layout/elk/flowchart.py": "45f00869480651b770f887c2192e1d79e61b092760be142102e94299b0584842",
+    "src/py_mermaid/model/__init__.py": "dc03b5bae51198aa7a4252ce4f65fb4717b4d1c241f1fed23dd0506f00743b3c",
+    "src/py_mermaid/model/flowchart.py": "b5fbb48ae42e3c9e7967f28a4b0eaddd76f344c40370e7e12061505b01c39288",
+    "src/py_mermaid/parsing/__init__.py": "23cde8ba2b1e5aefd57036a5233180f8b6fe63c5c5a3be1166c3f58de843fb0d",
+    "src/py_mermaid/rendering/__init__.py": "ed89819539fa2b113c92aa2530d8598d7a1ba665a8127ab2c1641e6445415573",
+    "src/py_mermaid/rendering/labels/__init__.py": "3f13a05a862ff631ed2ee3775646e6040cb0881b19c6550092638b438f424848",
+    "src/py_mermaid/rendering/labels/plain.py": "e49b02ac031cad45062dfecd2074609cdbea104748d3188341b649884b9a9f79",
+    "src/py_mermaid/rendering/skia/__init__.py": "60776be795ea6008f72da9be2517dd538cfb7f61f937930944bfa915c706df7a",
+    "src/py_mermaid/rendering/skia/session.py": "52115145f4d06a5ae3ff06e5895626b258c9f3be05ddd537d861c52c3c51d5bf"
+  },
+  "reportSha256": "09249d5a7921673678d291728d17c205df78ee3d4d2efd4fe4e09cb212a203cf",
+  "images": [
+    {
+      "id": "single",
+      "image": "f011-single.png",
+      "source": "test-runs/f011-s4-compare-cpu-001/single.png",
+      "sha256": "7966af57067ab3ca617b5bfb00fffed8a6494cb2aed81e21769892d00cfbd33d",
+      "pixels": [
+        176,
+        69
+      ]
+    },
+    {
+      "id": "td-chain",
+      "image": "f011-td-chain.png",
+      "source": "test-runs/f011-s4-compare-cpu-001/td-chain.png",
+      "sha256": "42c005765dbf9b4fbd69a0cd0106bd8d6a1af217acea6e691ca4b45aed5c3a02",
+      "pixels": [
+        176,
+        154
+      ]
+    },
+    {
+      "id": "lr-chain",
+      "image": "f011-lr-chain.png",
+      "source": "test-runs/f011-s4-compare-cpu-001/lr-chain.png",
+      "sha256": "d0bb088db33b4300d540b74920cc6d5718ddd0273ae8cd355b6c2fd01419b6de",
+      "pixels": [
+        560,
+        69
+      ]
+    },
+    {
+      "id": "branch-merge",
+      "image": "f011-branch-merge.png",
+      "source": "test-runs/f011-s4-compare-cpu-001/branch-merge.png",
+      "sha256": "410030b5e1896d3531ae7bdae49c3188e48e3532028e2a2693c7009429f7d56d",
+      "pixels": [
+        368,
+        239
+      ]
+    },
+    {
+      "id": "quoted-unicode",
+      "image": "f011-quoted-unicode.png",
+      "source": "test-runs/f011-s4-compare-cpu-001/quoted-unicode.png",
+      "sha256": "148493aeb8672119e11ac6ca22000b54156918f305722466e75cc646f4dcda74",
+      "pixels": [
+        176,
+        154
+      ]
+    },
+    {
+      "id": "long-label",
+      "image": "f011-long-label.png",
+      "source": "test-runs/f011-s4-compare-cpu-001/long-label.png",
+      "sha256": "6c62b900cb99c4a17c4e48691a6c73c4350caf175fafe8849df7240e507155c4",
+      "pixels": [
+        368,
+        111
+      ]
+    }
+  ],
+  "visualReview": "Branch/merge, Unicode/emoji and long-label images inspected directly; nodes/text/arrows complete, no cropping; original bytes copied without image processing",
+  "backend": "CPU",
+  "fonts": "System fallback; no bundled font resources"
+}

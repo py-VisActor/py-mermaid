@@ -1,0 +1,214 @@
+{
+  "schema": "py-mermaid-f011-assertions/v1",
+  "taskId": "F01.1-S3/layout",
+  "candidateSourceIdentity": "349136b5247435693b4b94b2627477d0ba6842b7147feea0496c077d5d6776ef",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "sources": [
+    {
+      "responsibility": "Mermaid root defaults and sections",
+      "upstreamPath": "packages/mermaid/src/rendering-util/layout-algorithms/elk/render.ts",
+      "sha256": "6258890b3f311e86e4cd4dc99d480f704fde7473e150dc62b88838c5015c5011"
+    },
+    {
+      "responsibility": "Actual runtime default ELK config",
+      "upstreamPath": "packages/mermaid/src/defaultConfig.ts",
+      "sha256": "6f2ec3c231ee970fb0368d158975090d488c93c9801a618b06cb18d58488b068"
+    },
+    {
+      "responsibility": "Rectangle onBorder predicate",
+      "upstreamPath": "packages/mermaid/src/rendering-util/layout-algorithms/elk/geometry.ts",
+      "sha256": "80264414c9e8526d7a2561cfbaa5475d6ba90ed45b2bca8b590a665fb88c938a"
+    },
+    {
+      "responsibility": "Ordinary point marker",
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/markers.js",
+      "sha256": "10af49778781a739f213b2f7f4387df2c70597c00bee23d92f705c4a41909ddc"
+    }
+  ],
+  "independentContract": "../py-elk/API_COMPATIBILITY.md; ../py-elk/docs/E08_API_LIFECYCLE.md; py-visactor-elk==0.1.0 public layout interface",
+  "testFile": "tests/f011/test_layout.py",
+  "testFileSha256": "a20d7c15fc2ec77efae4e60dff42cce747522363acf84491292aae47d77c12fa",
+  "execution": "python -m unittest discover -s tests/f011 -p test_layout.py -v",
+  "status": "authored_not_run",
+  "assertions": [
+    {
+      "id": "F011-G01",
+      "test": "GeometryTests.test_g01_section_order_and_bends_are_lossless",
+      "group": "geometry",
+      "status": "authored_not_run",
+      "expectationOrigin": "Independent analytic geometry"
+    },
+    {
+      "id": "F011-G02",
+      "test": "GeometryTests.test_g02_arrow_tip_base_width_and_orientation",
+      "group": "geometry",
+      "status": "authored_not_run",
+      "expectationOrigin": "Independent analytic geometry"
+    },
+    {
+      "id": "F011-G03",
+      "test": "GeometryTests.test_g03_arrow_rejects_degenerate_paths_and_sizes",
+      "group": "geometry",
+      "status": "authored_not_run",
+      "expectationOrigin": "Independent analytic geometry"
+    },
+    {
+      "id": "F011-G04",
+      "test": "GeometryTests.test_g04_bounds_include_route_nodes_graph_and_margin",
+      "group": "geometry",
+      "status": "authored_not_run",
+      "expectationOrigin": "Independent analytic geometry"
+    },
+    {
+      "id": "F011-L01",
+      "test": "RealElkTests.test_l01_real_single_node",
+      "group": "real-engine",
+      "status": "authored_not_run",
+      "expectationOrigin": "Relational geometry and endpoint/dimension integrity from fixed Mermaid ELK adapter plus pyelk async/JSON contract"
+    },
+    {
+      "id": "F011-L02",
+      "test": "RealElkTests.test_l02_real_td_chain",
+      "group": "real-engine",
+      "status": "authored_not_run",
+      "expectationOrigin": "Relational geometry and endpoint/dimension integrity from fixed Mermaid ELK adapter plus pyelk async/JSON contract"
+    },
+    {
+      "id": "F011-L03",
+      "test": "RealElkTests.test_l03_real_lr_chain",
+      "group": "real-engine",
+      "status": "authored_not_run",
+      "expectationOrigin": "Relational geometry and endpoint/dimension integrity from fixed Mermaid ELK adapter plus pyelk async/JSON contract"
+    },
+    {
+      "id": "F011-L04",
+      "test": "RealElkTests.test_l04_real_td_branch_merge",
+      "group": "real-engine",
+      "status": "authored_not_run",
+      "expectationOrigin": "Relational geometry and endpoint/dimension integrity from fixed Mermaid ELK adapter plus pyelk async/JSON contract"
+    },
+    {
+      "id": "F011-L05",
+      "test": "RealElkTests.test_l05_real_lr_branch_merge",
+      "group": "real-engine",
+      "status": "authored_not_run",
+      "expectationOrigin": "Relational geometry and endpoint/dimension integrity from fixed Mermaid ELK adapter plus pyelk async/JSON contract"
+    },
+    {
+      "id": "F011-L06",
+      "test": "RealElkTests.test_l06_real_multiedge_preserves_both_routes",
+      "group": "real-engine",
+      "status": "authored_not_run",
+      "expectationOrigin": "Relational geometry and endpoint/dimension integrity from fixed Mermaid ELK adapter plus pyelk async/JSON contract"
+    },
+    {
+      "id": "F011-L07",
+      "test": "RealElkTests.test_l07_real_self_loop",
+      "group": "real-engine",
+      "status": "authored_not_run",
+      "expectationOrigin": "Relational geometry and endpoint/dimension integrity from fixed Mermaid ELK adapter plus pyelk async/JSON contract"
+    },
+    {
+      "id": "F011-L08",
+      "test": "RealElkTests.test_l08_reserved_looking_user_ids_and_independent_calls",
+      "group": "real-engine",
+      "status": "authored_not_run",
+      "expectationOrigin": "Relational geometry and endpoint/dimension integrity from fixed Mermaid ELK adapter plus pyelk async/JSON contract"
+    },
+    {
+      "id": "F011-L09",
+      "test": "RealElkTests.test_l09_measured_dimensions_and_input_immutability",
+      "group": "real-engine",
+      "status": "authored_not_run",
+      "expectationOrigin": "Relational geometry and endpoint/dimension integrity from fixed Mermaid ELK adapter plus pyelk async/JSON contract"
+    },
+    {
+      "id": "F011-C01",
+      "test": "AdapterControlTests.test_c01_source_root_defaults_direction_and_ignored_spacing",
+      "group": "engine-boundary-controls",
+      "status": "authored_not_run",
+      "expectationOrigin": "Independent source root defaults or explicit corrupt-engine/lifecycle negative controls"
+    },
+    {
+      "id": "F011-C02",
+      "test": "AdapterControlTests.test_c02_input_faults_fail_before_engine_creation",
+      "group": "engine-boundary-controls",
+      "status": "authored_not_run",
+      "expectationOrigin": "Independent source root defaults or explicit corrupt-engine/lifecycle negative controls"
+    },
+    {
+      "id": "F011-C03",
+      "test": "AdapterControlTests.test_c03_wrong_direction_or_engine_is_explicit",
+      "group": "engine-boundary-controls",
+      "status": "authored_not_run",
+      "expectationOrigin": "Independent source root defaults or explicit corrupt-engine/lifecycle negative controls"
+    },
+    {
+      "id": "F011-C04",
+      "test": "AdapterControlTests.test_c04_corrupt_output_is_rejected_and_worker_closed",
+      "group": "engine-boundary-controls",
+      "status": "authored_not_run",
+      "expectationOrigin": "Independent source root defaults or explicit corrupt-engine/lifecycle negative controls"
+    },
+    {
+      "id": "F011-C05",
+      "test": "AdapterControlTests.test_c05_multiple_sections_and_bends_are_not_dropped",
+      "group": "engine-boundary-controls",
+      "status": "authored_not_run",
+      "expectationOrigin": "Independent source root defaults or explicit corrupt-engine/lifecycle negative controls"
+    },
+    {
+      "id": "F011-C06",
+      "test": "AdapterControlTests.test_c06_engine_failure_retains_cause_and_closes",
+      "group": "engine-boundary-controls",
+      "status": "authored_not_run",
+      "expectationOrigin": "Independent source root defaults or explicit corrupt-engine/lifecycle negative controls"
+    },
+    {
+      "id": "F011-C07",
+      "test": "AdapterControlTests.test_c07_cancellation_propagates_and_closes",
+      "group": "engine-boundary-controls",
+      "status": "authored_not_run",
+      "expectationOrigin": "Independent source root defaults or explicit corrupt-engine/lifecycle negative controls"
+    },
+    {
+      "id": "F011-C08",
+      "test": "AdapterControlTests.test_c08_wrong_engine_version_is_rejected_before_layout",
+      "group": "engine-boundary-controls",
+      "status": "authored_not_run",
+      "expectationOrigin": "Independent source root defaults or explicit corrupt-engine/lifecycle negative controls"
+    }
+  ],
+  "sharedRealEngineAssertions": [
+    "All semantic node and edge ids in declaration order; no dropped or extra elements",
+    "Exact measured fixed node dimensions; positive finite graph bounds",
+    "All node boxes and all route points inside returned graph; pairwise node boxes do not overlap",
+    "Start/end route points on corresponding rectangular node border within 1e-5 logical px",
+    "Every route has positive length; each segment orthogonal within 1e-5 logical px",
+    "Forward acyclic nodes ordered TD or LR without coordinate goldens",
+    "Actual engine name and version identify pyelk 0.1.0"
+  ],
+  "testOnlyFixtures": "80x40 rectangles isolate layout from font measurement; mocked result coordinates are synthetic corrupt-engine controls, never production layout data or goldens",
+  "notClaimed": [
+    "Exact cross-engine coordinates or pixel equivalence",
+    "Full Mermaid grammar, subgraphs or nonrectangular shapes",
+    "Actual layout behavior pass before S4",
+    "Native Canvas output, covered by separate integration/visual group"
+  ],
+  "sourceQuestions": [
+    "Multiedge distinct-route assertion derives mergeEdges=false; if real provider violates it record as source/adapter discrepancy before deciding fix.",
+    "Real self-loop boundary, no-clipping and orthogonality assertions exercise genuine pyelk sections without a fallback."
+  ],
+  "mechanicalChecks": [
+    {
+      "command": "C:/venvs/pymmd-20261102/Scripts/python.exe -m compileall -q tests/f011/test_layout.py",
+      "exitCode": 0
+    },
+    {
+      "command": "PYTHONPATH=src C:/venvs/pymmd-20261102/Scripts/python.exe -c <unittest.TestLoader discover test_layout.py; countTestCases only>",
+      "exitCode": 0,
+      "stdout": "Collected test methods: 21",
+      "behaviorExecuted": false
+    }
+  ]
+}

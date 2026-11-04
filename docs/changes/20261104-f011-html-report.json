@@ -1,0 +1,66 @@
+{
+  "schema": "py-mermaid-change/v1",
+  "taskId": "20261104-f011-html-report",
+  "status": "complete_local_report",
+  "objective": "将已有F01.1官方/Python渲染与诊断结果生成可离线查看的单文件HTML对比报告",
+  "scope": "Report-only; no product source edits, renders, installs or test-suite reruns",
+  "baseCommit": "b1e4c10adc2c3ca8b77b86febcd306512116408c",
+  "acceptanceCriteria": [
+    "12正例和3非法输入以及CPU/Auto/GPU均可查看",
+    "原始PNG按既有SHA核对并内嵌",
+    "并排/叠加/热图/掩码、缩放、导航/搜索/下载可用",
+    "功能状态与图像诊断状态分离",
+    "离线页面无外部网络请求、无页面异常",
+    "安装验证保持暂缓"
+  ],
+  "sourceSha256": {
+    "tools/build_f011_html_report.py": "f1cbf94f057ecdc8be681a85c7b6c7b0a2f690b217ff8498d4a217bd9bbaf3b8",
+    "tools/templates/f011_comparison.html": "d7e47b866ba58b653e55b88afb6802401ae971f0981ec5db86c4df17b6a6b3d4",
+    "reports/f011-render-comparison.html": "17183c7173f90af7630c67ada7a98a2a9dc867751cb007e4422c00c7078676cb",
+    "reports/f011-render-comparison.manifest.json": "697d312ca2bb7a5cccd0c49126663c5b058d825a0a412b132625a3aaf6d5d6fa",
+    "reports/README.md": "e05f97064fc9cbbbb99e42a8b139ec95d06ddc2f08af7f42d38d4c832db05c55",
+    "docs/F01_1_ACCEPTANCE.md": "33a19a440339715030707ef6b8b45abcf83f997ec7a49bf475adbf3a911a2319",
+    "tools/oracle/README.md": "7b9435783d1e371450c8ab4ac21f7440f9ecf21d74dc1a45fbbe28ff1b5cdf29"
+  },
+  "evidence": [
+    "reports/f011-render-comparison.manifest.json",
+    "test-runs/f011-html-report-qa-001/report.json",
+    "test-runs/f011-html-report-qa-002/report.json"
+  ],
+  "checks": {
+    "initialUI": {
+      "passed": 47,
+      "total": 48,
+      "unresolved": 0,
+      "note": "中文搜索探针因shell输出编码错误，使用Unicode转义更正后通过；旧失败保留，HTML搜索实现未改"
+    },
+    "finalAffectedUI": {
+      "passed": 7,
+      "total": 7,
+      "pageErrors": 0,
+      "remoteRequests": 0
+    },
+    "docsCommand": [
+      "C:/venvs/pymmd-20261102/Scripts/python.exe",
+      "scripts/validate_bootstrap.py"
+    ],
+    "docsExitCode": 0
+  },
+  "corrections": [
+    {
+      "stage": "generator",
+      "issue": "Windows venv无tzdata导致ZoneInfo初始化失败",
+      "resolution": "用标准库固定UTC+08:00表示当前上海时区，无安装新依赖，初次失败未产生报告"
+    },
+    {
+      "stage": "layout",
+      "issue": "移动端总览表列过窄",
+      "resolution": "最小表宽配合局部横向滚动，不造成页面溢出；初始HTML和manifest保存在qa-001"
+    }
+  ],
+  "functionalResults": "Quoted from existing frozen-candidate evidence, not re-evaluated by HTML generation",
+  "installationValidation": "deferred; none executed this turn",
+  "commit": false,
+  "push": false,
+  "publish": false
+}

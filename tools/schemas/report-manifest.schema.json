@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "py-mermaid-render-report/v1",
+  "type": "object",
+  "required": ["schema", "generatedAt", "report", "sha256", "scope", "positiveCases", "negativeCases", "profiles", "inputs", "renderedDuringGeneration", "installationVerificationDuringGeneration"],
+  "properties": {
+    "schema": {"const": "py-mermaid-render-report/v1"},
+    "generatedAt": {"type": "string", "format": "date-time"},
+    "report": {"type": "string"},
+    "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "scope": {"type": "string"},
+    "profiles": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+    "positiveCases": {"type": "integer", "minimum": 1},
+    "negativeCases": {"type": "integer", "minimum": 0},
+    "inputs": {"type": "object"},
+    "renderedDuringGeneration": {"const": false},
+    "installationVerificationDuringGeneration": {"const": false}
+  }
+}

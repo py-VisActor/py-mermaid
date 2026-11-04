@@ -81,8 +81,11 @@ def check(root: Path = ROOT) -> dict:
                 errors.append(f"Invalid evidence file: {item['id']}")
             elif hashlib.sha256((root / evidence['path']).read_bytes()).hexdigest() != evidence.get("sha256"):
                 errors.append(f"Evidence hash differs: {item['id']}")
-    if project["dependencies"] != [f"py-skia-canvas=={lock['canvas']['version']}"]:
+    expected_dependencies = [f"py-skia-canvas=={lock['canvas']['version']}", "py-visactor-elk==0.1.0"]
+    if expected_dependencies[0] not in project["dependencies"]:
         errors.append("Canvas dependency differs from lock")
+    elif project["dependencies"] != expected_dependencies:
+        errors.append("Runtime dependencies differ from pinned Canvas/ELK requirements")
     if project["requires-python"] != lock["canvas"]["requiresPython"]:
         errors.append("Python support differs from locked Canvas ABI scope")
     tree = ast.parse((root / "src/py_mermaid/__init__.py").read_text(encoding="utf-8"))

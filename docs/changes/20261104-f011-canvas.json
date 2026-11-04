@@ -1,0 +1,133 @@
+{
+  "schema": "py-mermaid-change/v1",
+  "taskId": "20261104-f011-canvas",
+  "executionTask": "F01.1-S4/default-appearance-canvas",
+  "status": "targeted_verified",
+  "objective": "F01.1 plain label measurement and owner-thread real Canvas PNG drawing",
+  "baseCommit": "b1e4c10adc2c3ca8b77b86febcd306512116408c",
+  "startingState": {
+    "evidence": "test-runs/execution-start-20261104T132038Z/",
+    "preexistingChangesPreserved": true
+  },
+  "changedPaths": [
+    "src/py_mermaid/rendering/skia/__init__.py",
+    "src/py_mermaid/rendering/skia/session.py",
+    "src/py_mermaid/rendering/labels/__init__.py",
+    "src/py_mermaid/rendering/labels/plain.py",
+    "references/f011-canvas-sources.json",
+    "tests/f011/test_canvas.py",
+    "references/f011-canvas-assertions.json"
+  ],
+  "sourceSha256": {
+    "src/py_mermaid/rendering/skia/__init__.py": "60776be795ea6008f72da9be2517dd538cfb7f61f937930944bfa915c706df7a",
+    "src/py_mermaid/rendering/skia/session.py": "52115145f4d06a5ae3ff06e5895626b258c9f3be05ddd537d861c52c3c51d5bf",
+    "src/py_mermaid/rendering/labels/__init__.py": "3f13a05a862ff631ed2ee3775646e6040cb0881b19c6550092638b438f424848",
+    "src/py_mermaid/rendering/labels/plain.py": "e49b02ac031cad45062dfecd2074609cdbea104748d3188341b649884b9a9f79",
+    "references/f011-canvas-sources.json": "2655cf13ee8eaf29f3f2375399675182ec0ba53ed1399a0fc44d9f06d0d6a400",
+    "tests/f011/test_canvas.py": "09ab6969088cde6ec18c94f5f681638338d384f02e17948d48796566281d2394",
+    "references/f011-canvas-assertions.json": "2ba265c1ef1ee9481d9735623a68e45b7a52f43d1ddcb859776277ca7715b2a8"
+  },
+  "commands": [
+    {
+      "command": [
+        "C:\\venvs\\pymmd-20261102\\Scripts\\python.exe",
+        "-m",
+        "compileall",
+        "-q",
+        "src/py_mermaid/rendering/skia",
+        "src/py_mermaid/rendering/labels",
+        "tests/f011/test_canvas.py"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\venvs\\pymmd-20261102\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests/f011",
+        "-p",
+        "test_canvas.py",
+        "-v"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "test_every_label_has_pixels_inside_its_node (test_canvas.CanvasContentTests.test_every_label_has_pixels_inside_its_node) ... C:\\code\\py-visactor\\py-mermaid\\tests\\f011\\test_canvas.py:59: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.\n  return sum(max(pixel) < 130 for pixel in image.crop((left, top, right, bottom)).getdata())\nok\ntest_multiple_sections_and_arrow_have_real_pixels (test_canvas.CanvasContentTests.test_multiple_sections_and_arrow_have_real_pixels) ... ok\ntest_neo_shadow_is_visible_and_included_in_bounds (test_canvas.CanvasContentTests.test_neo_shadow_is_visible_and_included_in_bounds) ... ok\ntest_padding_contains_all_drawn_geometry (test_canvas.CanvasContentTests.test_padding_contains_all_drawn_geometry) ... ok\ntest_plain_rect_fill_and_stroke_are_present (test_canvas.CanvasContentTests.test_plain_rect_fill_and_stroke_are_present) ... ok\ntest_png_dimensions_background_and_visible_content (test_canvas.CanvasContentTests.test_png_dimensions_background_and_visible_content) ... C:\\code\\py-visactor\\py-mermaid\\tests\\f011\\test_canvas.py:162: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.\n  self.assertGreater(len(set(image.getdata())), 8, \"a background-only/no-op image is invalid\")\nok\ntest_real_elk_branch_semantic_connections_and_content (test_canvas.CanvasContentTests.test_real_elk_branch_semantic_connections_and_content) ... ok\ntest_auto_preserves_actual_canvas_default (test_canvas.CanvasLifecycleTests.test_auto_preserves_actual_canvas_default) ... ok\ntest_explicit_missing_route_rejected (test_canvas.CanvasLifecycleTests.test_explicit_missing_route_rejected) ... ok\ntest_gpu_required_returns_gpu (test_canvas.CanvasLifecycleTests.test_gpu_required_returns_gpu) ... ok\ntest_owner_thread_rejects_measure_and_render (test_canvas.CanvasLifecycleTests.test_owner_thread_rejects_measure_and_render) ... ok\ntest_repeated_session_has_no_old_trace_or_style (test_canvas.CanvasLifecycleTests.test_repeated_session_has_no_old_trace_or_style) ... ok\ntest_unknown_backend_rejected (test_canvas.CanvasLifecycleTests.test_unknown_backend_rejected) ... ok\ntest_worker_can_create_own_session (test_canvas.CanvasLifecycleTests.test_worker_can_create_own_session) ... ok\ntest_fallback_font_declaration_separator (test_canvas.CanvasMeasurementTests.test_fallback_font_declaration_separator) ... ok\ntest_font_size_changes_real_metrics (test_canvas.CanvasMeasurementTests.test_font_size_changes_real_metrics) ... ok\ntest_long_label_preserved_without_truncation (test_canvas.CanvasMeasurementTests.test_long_label_preserved_without_truncation) ... ok\ntest_long_unbreakable_word_preserved_and_contained (test_canvas.CanvasMeasurementTests.test_long_unbreakable_word_preserved_and_contained) ... ok\ntest_multiline_plain_text_and_lineheight (test_canvas.CanvasMeasurementTests.test_multiline_plain_text_and_lineheight) ... ok\ntest_rich_content_rejected_instead_of_stripped (test_canvas.CanvasMeasurementTests.test_rich_content_rejected_instead_of_stripped) ... ok\ntest_site_root_fontsize_does_not_change_effective_theme_font (test_canvas.CanvasMeasurementTests.test_site_root_fontsize_does_not_change_effective_theme_font) ... ok\ntest_source_effective_minimum_and_empty_label_exception (test_canvas.CanvasMeasurementTests.test_source_effective_minimum_and_empty_label_exception) ... ok\ntest_source_padding_and_public_text_metrics (test_canvas.CanvasMeasurementTests.test_source_padding_and_public_text_metrics)\nDefault neo: max(label,120)+32 horizontally and row-height+24. ... ok\n\n----------------------------------------------------------------------\nRan 23 tests in 0.464s\n\nOK\n"
+    }
+  ],
+  "implementation": [
+    "lazy native import; session owner checks; auto default, CPU setter, GPU requirement",
+    "public measureText used for every line; source-derived squareRect padding",
+    "all route sections, filled terminal arrows, rectangles and plain text drawn using public Context API",
+    "content+stroke+arrow bounds and padding determine canvas dimensions",
+    "real PNG bytes with actual backend identity and immutable value draw trace",
+    "Canvas font value removes the source CSS default trailing declaration semicolon; parser supplies normalized plain newlines",
+    "Reject installed Canvas version drift before creating a Canvas object",
+    "Consume geometry.arrow_polygon provider for route-end arrow construction"
+  ],
+  "limitations": [
+    "23 targeted Windows cases passed; final frozen candidate validation and real image review remain coordinator responsibilities",
+    "CJK pixels alone do not prove correct glyph/font coverage",
+    "Only supported plain F01.1 labels, rectangular default appearance, arrows and PNG",
+    "PNG surface budget64M pixels/max dimension32768"
+  ],
+  "nextAction": "Coordinator integrates provider fixes, freezes updated candidate, compares official content/styles and runs S5 slice matrix",
+  "history": [
+    {
+      "status": "code_complete_unverified",
+      "sourceSha256": {
+        "src/py_mermaid/rendering/skia/__init__.py": "60776be795ea6008f72da9be2517dd538cfb7f61f937930944bfa915c706df7a",
+        "src/py_mermaid/rendering/skia/session.py": "6ee4fb596333f9feeeaa8380aaaa2bf738d30c9e7efe3cbf5692f7015cc4c5db",
+        "src/py_mermaid/rendering/labels/__init__.py": "3f13a05a862ff631ed2ee3775646e6040cb0881b19c6550092638b438f424848",
+        "src/py_mermaid/rendering/labels/plain.py": "863be0a74b4d8b838eb6513f3fa51ed97301c86991a817d9a46c3700b90f9aae",
+        "references/f011-canvas-sources.json": "ee725bcb55e711ecc9973d7e01a1d1419ccd1b701f39d504e6a5aa2d207f9075"
+      },
+      "commands": [
+        {
+          "command": [
+            "C:\\venvs\\pymmd-20261102\\Scripts\\python.exe",
+            "-m",
+            "compileall",
+            "-q",
+            "src/py_mermaid/rendering/skia",
+            "src/py_mermaid/rendering/labels"
+          ],
+          "exitCode": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "command": [
+            "C:\\venvs\\pymmd-20261102\\Scripts\\python.exe",
+            "-c",
+            "import sys, inspect; sys.path.insert(0,'src'); from py_mermaid.rendering.skia import CanvasSession; from py_mermaid.rendering.labels import measure_node; print(inspect.signature(CanvasSession)); print(inspect.signature(CanvasSession.measure)); print(inspect.signature(CanvasSession.render)); print('mechanical imports only; no Canvas object created')"
+          ],
+          "exitCode": 0,
+          "stdout": "(backend: 'str' = 'auto')\n(self, diagram: 'Flowchart') -> 'tuple[MeasuredNode, ...]'\n(self, diagram: 'Flowchart', measured: 'tuple[MeasuredNode, ...]', layout: 'FlowLayout') -> 'RenderResult'\nmechanical imports only; no Canvas object created\n",
+          "stderr": ""
+        }
+      ]
+    }
+  ],
+  "interfaceVersion": "F01.1-v1.1",
+  "correction": {
+    "rootCause": "Earlier source audit stopped at global theme-default/classic rather than resolving diagram defaults redux-color/neo",
+    "officialFailureEvidence": "test-runs/f011-s4-official-002/single.svg",
+    "changedBehavior": [
+      "Source effective fonts, node fill/border/text and edge colors are now supplied by config provider",
+      "Neo padding/minimum label width and wrapping geometry",
+      "Single no-blur translated shadow silhouette including stroke and output bounds",
+      "Source-based expectations updated rather than accepting incorrect appearance as antialiasing variation"
+    ]
+  },
+  "evidence": [
+    {
+      "path": "test-runs\\f011-s4-canvas-defaults-001\\manifest.json",
+      "sha256": "2258b4119265279ad1ae90b1cdd9030b2b63dc57afe0b0f1e6f91843773e9f6e"
+    }
+  ]
+}

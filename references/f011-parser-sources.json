@@ -1,0 +1,237 @@
+{
+  "schema": "py-mermaid-f011-parser-sources/v1",
+  "taskId": "F01.1-S2/parser-config",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "sources": [
+    {
+      "path": "packages/mermaid/src/diagrams/flowchart/parser/flow.jison",
+      "sha256": "9597faffe2a133b104c6dd4f38a162f6980bff4e0a841a83ff94af3900ea7ba8",
+      "symbols": [
+        "graphConfig",
+        "FirstStmtSeparator",
+        "vertexStatement",
+        "vertex",
+        "node",
+        "linkStatement"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/flowchart/flowDb.ts",
+      "sha256": "33577b9ade8c65be6049c3093089dbf81abf44214f49c2b2ea46434183889288",
+      "symbols": [
+        "addVertex",
+        "addSingleLink",
+        "addLink"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/flowchart/flowDetector-v2.ts",
+      "sha256": "e261b51e381767b67e969ace3e638b32b8d1d8398403b70c054d0c2116fbc49f",
+      "symbols": [
+        "detector"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/schemas/config.schema.yaml",
+      "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+      "symbols": [
+        "fontFamily",
+        "fontSize",
+        "maxTextSize",
+        "maxEdges",
+        "$defs.FlowchartDiagramConfig"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/config.ts",
+      "sha256": "91dd68a9e7d57c4635a04fab0ccd78ec230b4417a02f4f4b3cd9a6bb445f09ef",
+      "symbols": [
+        "getEffectiveHtmlLabels"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/defaultConfig.ts",
+      "sha256": "6f2ec3c231ee970fb0368d158975090d488c93c9801a618b06cb18d58488b068",
+      "symbols": [
+        "config"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/themes/theme-default.js",
+      "sha256": "c7676f84269d433c83f089bd978439a0d5e783ba48f1dfd87a294efb674e3b66",
+      "symbols": [
+        "Theme.constructor",
+        "Theme.updateColors"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/createText.ts",
+      "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+      "symbols": [
+        "addHtmlSpan",
+        "createFormattedText"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/handle-markdown-text.ts",
+      "sha256": "6f99a7b3f5b11f87f5509a370663f14650f8f8c3cbb9a34ea496a1aa183cd0ca",
+      "symbols": [
+        "nonMarkdownToHTML",
+        "nonMarkdownToLines"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/diagram-api/comments.ts",
+      "symbols": [
+        "cleanupComments"
+      ],
+      "sha256": "aa637df212ecc22cbcb12387af31a4d0f8c266ece03cc6134d46dd9427acd120"
+    },
+    {
+      "path": "packages/mermaid/src/themes/theme-redux-color.js",
+      "symbols": [
+        "Theme.constructor",
+        "Theme.updateColors"
+      ],
+      "sha256": "5e4278fb33825a501ffae1c6ac13a869763c4e611de9ad6077b58513e4e1b6d0"
+    },
+    {
+      "path": "packages/mermaid/src/mermaidAPI.ts",
+      "symbols": [
+        "initialize",
+        "createUserStyles"
+      ],
+      "sha256": "c38ef136d815a638993d271f253d2ca825046fb97292d30a7a4de8ea57fc0318"
+    },
+    {
+      "path": "packages/mermaid/src/styles.ts",
+      "symbols": [
+        "getStyles"
+      ],
+      "sha256": "dd53a582b0c2411e16beeb37f51664968f278b08b97f63fc8808cbc8381f73fb"
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/squareRect.ts",
+      "symbols": [
+        "squareRect"
+      ],
+      "sha256": "2456ebbc205f1c73fcaf34e63d055a18b17ae71fbce2b1f4ff08e910d8cc2dfd"
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/insertLookDefs.ts",
+      "symbols": [
+        "insertLookDefs",
+        "dropShadow"
+      ],
+      "sha256": "9810059f11462129a1518d3b1fa3950e9e16a959dbe92abc732aa5e714a2eb13"
+    }
+  ],
+  "targets": [
+    {
+      "path": "src/py_mermaid/config/__init__.py",
+      "sha256": "0a1a35bc6930e3ec4b021e68d66da16df4f0a576472bc4ec2410598579e6ab4f"
+    },
+    {
+      "path": "src/py_mermaid/config/flowchart.py",
+      "sha256": "df26dc64292448cb76871bebd2c5bce9610c993354af0a7641aa4735dc6a6489"
+    },
+    {
+      "path": "src/py_mermaid/parsing/__init__.py",
+      "sha256": "23cde8ba2b1e5aefd57036a5233180f8b6fe63c5c5a3be1166c3f58de843fb0d"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/flowchart/__init__.py",
+      "sha256": "648b1a3ca353ad86c12facbcb0d900aa2595a274b64b0d2c2a931c131c3c8a96"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/flowchart/parser.py",
+      "sha256": "d583589eee23eb5c92b6d351d2dd7adfaa4d0cdde6129b6dd4d5b6c72d2efee8"
+    }
+  ],
+  "defaults": {
+    "fontFamily": "\"Recursive Variable\", arial, sans-serif",
+    "fontSize": 14,
+    "flowchart.padding": 15,
+    "flowchart.diagramPadding": 8,
+    "flowchart.nodeSpacing": 50,
+    "flowchart.rankSpacing": 50,
+    "htmlLabelsEffective": true,
+    "maxTextSize": 50000,
+    "maxEdges": 500,
+    "theme": "redux-color",
+    "look": "neo",
+    "layout": "elk",
+    "fill": "#ffffff",
+    "stroke": "#28253D",
+    "textColor": "#28253D",
+    "edgeColor": "#000000",
+    "background": "#ffffff",
+    "lineHeightHtml": 1.5,
+    "lineHeightSvg": 1.1,
+    "siteFontFamily": "\"trebuchet ms\", verdana, arial, sans-serif;",
+    "siteFontSize": 16,
+    "paddingX": 16,
+    "paddingY": 12,
+    "minNodeWidth": 120,
+    "wrappingWidth": 120,
+    "nodeStrokeWidth": 2,
+    "edgeStrokeWidth": 2,
+    "shadowOffsetX": 4,
+    "shadowOffsetY": 4,
+    "shadowOpacity": 0.06
+  },
+  "semanticNotes": [
+    "Ordinary text under default htmlLabels maps to Python measured lines; default remains true.",
+    "Explicit rectangle labels replace prior label; bare references retain it; insertion order remains stable.",
+    "Source positions retain raw Python indices and UTF-16 offsets/columns, line 1-based, span half-open.",
+    "Literal backslash+n and actual line breaks produce multiline ordinary labels; per-line horizontal whitespace collapses.",
+    "No global parser/DB/config state; each call owns new dictionaries and frozen outputs.",
+    "nodeSpacing/rankSpacing are retained config values; pinned Mermaid ELK adapter does not consume them. No invented ELK mapping.",
+    "Syntactically valid features outside this bounded language explicitly fail, rather than pretending complete flow.jison coverage.",
+    "Only whole-line %% comments are parser whitespace, including EOF without trailing newline. Inline %% after header/node/edge/separator is invalid; detectType stripAnyComments is not parser semantics.",
+    "S4 correction: FlowchartDiagramConfig redux-color/neo defaults win over global default/classic via config.ts resolveAppearance/setDiagramConfigScope. updateCurrentConfig rebuilds themeVariables from original initialize options.",
+    "mermaidAPI.initialize bridges explicit fontFamily into themeVariables.fontFamily; no bridge exists for fontSize. Effective theme font is 14px, while site root fontSize defaults to 16 and is retained separately.",
+    "squareRect look neo uses fixed horizontal/vertical padding 16/12. Legacy flowchart.padding default15 remains recorded but does not change neo rectangle padding.",
+    "minNodeWidth and wrappingWidth default120 are explicit supported flowchart parameters; empty-label minimum-width exception is implemented at the Canvas measurement boundary.",
+    "Prior global default/classic appearance and its passing local test expectations were incorrect source interpretation. Original S4 evidence is retained, not relabeled as equivalent."
+  ],
+  "outOfScope": [
+    "other directions including TB alias",
+    "empty diagram",
+    "frontmatter/directives",
+    "subgraphs",
+    "other shapes",
+    "edge labels",
+    "node groups via ampersand",
+    "HTML/Markdown/math/entities/icons",
+    "style/class/click/a11y statements",
+    "alternate themes/look/layout",
+    "themeVariables",
+    "unsupported configuration keys"
+  ],
+  "threadOwnership": "Pure immutable Python data only; no native objects allocated.",
+  "status": "code_complete_unverified",
+  "targetedFixEvidence": "test-runs/f011-s4-language-theme-fix-20261104T134306Z/manifest.json",
+  "historicalDefaultsBeforeS4DiagramScopeFix": {
+    "fontFamily": "\"trebuchet ms\", verdana, arial, sans-serif;",
+    "fontSize": 16,
+    "flowchart.padding": 15,
+    "flowchart.diagramPadding": 8,
+    "flowchart.nodeSpacing": 50,
+    "flowchart.rankSpacing": 50,
+    "htmlLabelsEffective": true,
+    "maxTextSize": 50000,
+    "maxEdges": 500,
+    "theme": "default",
+    "look": "classic",
+    "layout": "elk",
+    "fill": "#ECECFF",
+    "stroke": "#9370DB",
+    "textColor": "#333",
+    "edgeColor": "#333333",
+    "background": "white",
+    "lineHeightHtml": 1.5,
+    "lineHeightSvg": 1.1
+  },
+  "interfaceVersion": "F01.1-v1.1"
+}

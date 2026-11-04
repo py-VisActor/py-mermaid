@@ -1,0 +1,2363 @@
+{
+  "schema": "py-mermaid-dependency-porting-policy/v1",
+  "state": "proposal-not-implemented",
+  "constraints": [
+    "Production uses Python implementations; no JS/Node/browser subprocess or interpreter.",
+    "Existing py-skia-canvas native rendering is retained through public APIs; no new native renderer introduced.",
+    "Equivalent means source-observable behavior verified by changed-surface differential checks; no inferred parity from package names.",
+    "Trace retained semantic and algorithm surfaces to Python responsibilities. Discard DOM/browser mechanisms under user authorization and document how required features are reimplemented; functional exclusions still require evidence.",
+    "Do not emulate DOM/virtual DOM, CSS browser layout, D3 selection or browser render scheduling in Python."
+  ],
+  "workPackages": {
+    "D00": {
+      "title": "Python 值/数值/顺序/UTF-16/随机/通用工具",
+      "dependsOn": [],
+      "state": "planned"
+    },
+    "D01": {
+      "title": "点/矩形/路径/曲线/采样/精确谓词与填充",
+      "dependsOn": [
+        "D00"
+      ],
+      "state": "planned"
+    },
+    "D02": {
+      "title": "日期/颜色/YAML/离线资源基础适配",
+      "dependsOn": [
+        "D00"
+      ],
+      "state": "planned"
+    },
+    "D03": {
+      "title": "有序图/复合图/遍历/堆/四叉树基础",
+      "dependsOn": [
+        "D00",
+        "D01"
+      ],
+      "state": "planned"
+    },
+    "D04": {
+      "title": "lexer/grammar/AST/错误与 parser 服务",
+      "dependsOn": [
+        "D00",
+        "D02"
+      ],
+      "state": "planned"
+    },
+    "D05": {
+      "title": "HTML/Markdown/CSS/安全策略/数学语法",
+      "dependsOn": [
+        "D00",
+        "D01",
+        "D02"
+      ],
+      "state": "planned"
+    },
+    "D06": {
+      "title": "D3 数值/比例尺/形状/专用几何",
+      "dependsOn": [
+        "D01",
+        "D02",
+        "D03"
+      ],
+      "state": "planned"
+    },
+    "D07": {
+      "title": "Dagre/COSE/fCoSE/tidy/Sankey/Venn/ELK 适配",
+      "dependsOn": [
+        "D01",
+        "D03",
+        "D06"
+      ],
+      "state": "planned"
+    },
+    "D08": {
+      "title": "标签/box model/数学排版/图标/Canvas primitives",
+      "dependsOn": [
+        "D01",
+        "D02",
+        "D05",
+        "D06"
+      ],
+      "state": "planned"
+    },
+    "D09": {
+      "title": "Mermaid 各图种组装/注册/配置/导出",
+      "dependsOn": [
+        "D04",
+        "D07",
+        "D08"
+      ],
+      "state": "planned"
+    },
+    "D10": {
+      "title": "ZenUML 语法/模型/布局/宿主和额外运行链拆解",
+      "dependsOn": [
+        "D04",
+        "D05",
+        "D07",
+        "D08"
+      ],
+      "state": "planned"
+    },
+    "DEV": {
+      "title": "仅研发工具：生成器/构建/测试/文档，不作为产品运行链",
+      "dependsOn": [],
+      "state": "planned"
+    },
+    "TYPES": {
+      "title": "类型映射为 Python 契约；不直接引入运行库",
+      "dependsOn": [],
+      "state": "planned"
+    },
+    "TRACE": {
+      "title": "未细查的传递调用面：按 featureOwners 定位后重写或证明不可达",
+      "dependsOn": [],
+      "state": "needs-source-reachability-review"
+    }
+  },
+  "sourceImports": {
+    "js-yaml": {
+      "disposition": "include-value-root",
+      "reason": "Has value imports in pinned product source despite dev-field placement; include its full declared closure."
+    },
+    "langium": {
+      "disposition": "include-value-root",
+      "reason": "Has value imports in pinned product source despite dev-field placement; include its full declared closure."
+    },
+    "non-layered-tidy-tree-layout": {
+      "disposition": "include-value-root",
+      "reason": "Has value imports in pinned product source despite dev-field placement; include its full declared closure."
+    },
+    "fastdom": {
+      "disposition": "include-value-root",
+      "reason": "Has value imports in pinned product source despite dev-field placement; include its full declared closure."
+    },
+    "@iconify/types": {
+      "disposition": "type-only-extra",
+      "reason": "Additional source references are type-only; runtime declaration closure, if any, remains independently retained."
+    },
+    "d3-selection": {
+      "disposition": "type-only-extra",
+      "reason": "Additional source references are type-only; runtime declaration closure, if any, remains independently retained."
+    },
+    "type-fest": {
+      "disposition": "type-only-extra",
+      "reason": "Additional source references are type-only; runtime declaration closure, if any, remains independently retained."
+    },
+    "vitest": {
+      "disposition": "test-only-extra",
+      "reason": "Only candidate is nonstandard baselineDdltSpec.ts test file; all development edges remain in full toolchain graph."
+    }
+  },
+  "exact": {
+    "elkjs": {
+      "action": "reuse-existing-python",
+      "workPackage": "D07",
+      "candidates": [
+        "py-visactor-elk"
+      ],
+      "reason": "Use the separate py-elk project; Mermaid adapter, option/model/route parity pending. Do not downgrade its baseline."
+    },
+    "mermaid": {
+      "action": "assemble-python",
+      "workPackage": "D09",
+      "candidates": [],
+      "reason": "First-party entry/plugin contract assembled above migrated components; not an external library substitution."
+    },
+    "@mermaid-js/layout-elk": {
+      "action": "assemble-python",
+      "workPackage": "D09",
+      "candidates": [],
+      "reason": "First-party entry/plugin contract assembled above migrated components; not an external library substitution."
+    },
+    "@mermaid-js/layout-tidy-tree": {
+      "action": "assemble-python",
+      "workPackage": "D09",
+      "candidates": [],
+      "reason": "First-party entry/plugin contract assembled above migrated components; not an external library substitution."
+    },
+    "@mermaid-js/parser": {
+      "action": "candidate-or-rewrite",
+      "workPackage": "D04",
+      "candidates": [
+        "lark"
+      ],
+      "reason": "Lark is a parser toolkit candidate, not a compatible Langium/Chevrotain API. Rewrite grammar/actions/services and source spans."
+    },
+    "chevrotain": {
+      "action": "candidate-or-rewrite",
+      "workPackage": "D04",
+      "candidates": [
+        "lark"
+      ],
+      "reason": "Lark is a parser toolkit candidate, not a compatible Langium/Chevrotain API. Rewrite grammar/actions/services and source spans."
+    },
+    "langium": {
+      "action": "candidate-or-rewrite",
+      "workPackage": "D04",
+      "candidates": [
+        "lark"
+      ],
+      "reason": "Lark is a parser toolkit candidate, not a compatible Langium/Chevrotain API. Rewrite grammar/actions/services and source spans."
+    },
+    "chevrotain-allstar": {
+      "action": "candidate-or-rewrite",
+      "workPackage": "D04",
+      "candidates": [
+        "lark"
+      ],
+      "reason": "Lark is a parser toolkit candidate, not a compatible Langium/Chevrotain API. Rewrite grammar/actions/services and source spans."
+    },
+    "antlr4": {
+      "action": "candidate-or-rewrite",
+      "workPackage": "D10",
+      "candidates": [
+        "antlr4-python3-runtime",
+        "lark"
+      ],
+      "reason": "ZenUML locks JS runtime 4.11.0. Python target requires matching generator/runtime and original grammar/actions; latest metadata is not a selected version."
+    },
+    "dagre-d3-es": {
+      "action": "retain-layout-and-graph-meaning-only",
+      "workPackage": "D07",
+      "candidates": [],
+      "reason": "Discard D3/SVG renderer and API-shaped graphlib plumbing. Use the minimal ordered/compound graph model needed by features; port actual Dagre ranking/order/position/routing only for Dagre functionality.",
+      "runtimeDisposition": "python-layout-and-model"
+    },
+    "layout-base": {
+      "action": "rewrite-used-surface",
+      "workPackage": "D07",
+      "candidates": [],
+      "reason": "Rewrite original algorithm/constraints, iterations, seeds, termination and tie-breaks; preserve all simultaneously locked versions."
+    },
+    "cose-base": {
+      "action": "rewrite-used-surface",
+      "workPackage": "D07",
+      "candidates": [],
+      "reason": "Rewrite original algorithm/constraints, iterations, seeds, termination and tie-breaks; preserve all simultaneously locked versions."
+    },
+    "cytoscape": {
+      "action": "retain-graph-and-layout-computation",
+      "workPackage": "D07",
+      "candidates": [],
+      "reason": "Retain required graph/constraint/layout computation. Discard browser canvas/SVG rendering, DOM events and UI bindings; final drawing uses py-skia-canvas.",
+      "runtimeDisposition": "python-layout-and-model"
+    },
+    "cytoscape-cose-bilkent": {
+      "action": "rewrite-used-surface",
+      "workPackage": "D07",
+      "candidates": [],
+      "reason": "Rewrite original algorithm/constraints, iterations, seeds, termination and tie-breaks; preserve all simultaneously locked versions."
+    },
+    "cytoscape-fcose": {
+      "action": "rewrite-used-surface",
+      "workPackage": "D07",
+      "candidates": [],
+      "reason": "Rewrite original algorithm/constraints, iterations, seeds, termination and tie-breaks; preserve all simultaneously locked versions."
+    },
+    "non-layered-tidy-tree-layout": {
+      "action": "rewrite-used-surface",
+      "workPackage": "D07",
+      "candidates": [],
+      "reason": "Rewrite original algorithm/constraints, iterations, seeds, termination and tie-breaks; preserve all simultaneously locked versions."
+    },
+    "d3-sankey": {
+      "action": "rewrite-used-surface",
+      "workPackage": "D07",
+      "candidates": [],
+      "reason": "Rewrite original algorithm/constraints, iterations, seeds, termination and tie-breaks; preserve all simultaneously locked versions."
+    },
+    "@upsetjs/venn.js": {
+      "action": "rewrite-used-surface",
+      "workPackage": "D07",
+      "candidates": [],
+      "reason": "Rewrite original algorithm/constraints, iterations, seeds, termination and tie-breaks; preserve all simultaneously locked versions."
+    },
+    "roughjs": {
+      "action": "candidate-or-rewrite",
+      "workPackage": "D01",
+      "candidates": [
+        "rough",
+        "svg.path"
+      ],
+      "reason": "Evaluate pure-Python path/fill implementations against locked RoughJS seed stream, ops, curves and clipping; adapt generated geometry to Canvas."
+    },
+    "hachure-fill": {
+      "action": "candidate-or-rewrite",
+      "workPackage": "D01",
+      "candidates": [
+        "rough",
+        "svg.path"
+      ],
+      "reason": "Evaluate pure-Python path/fill implementations against locked RoughJS seed stream, ops, curves and clipping; adapt generated geometry to Canvas."
+    },
+    "points-on-curve": {
+      "action": "candidate-or-rewrite",
+      "workPackage": "D01",
+      "candidates": [
+        "rough",
+        "svg.path"
+      ],
+      "reason": "Evaluate pure-Python path/fill implementations against locked RoughJS seed stream, ops, curves and clipping; adapt generated geometry to Canvas."
+    },
+    "points-on-path": {
+      "action": "candidate-or-rewrite",
+      "workPackage": "D01",
+      "candidates": [
+        "rough",
+        "svg.path"
+      ],
+      "reason": "Evaluate pure-Python path/fill implementations against locked RoughJS seed stream, ops, curves and clipping; adapt generated geometry to Canvas."
+    },
+    "path-data-parser": {
+      "action": "candidate-or-rewrite",
+      "workPackage": "D01",
+      "candidates": [
+        "rough",
+        "svg.path"
+      ],
+      "reason": "Evaluate pure-Python path/fill implementations against locked RoughJS seed stream, ops, curves and clipping; adapt generated geometry to Canvas."
+    },
+    "delaunator": {
+      "action": "rewrite-used-surface",
+      "workPackage": "D01",
+      "candidates": [],
+      "reason": "Pure-Python triangulation/orientation predicates and degeneracy/tie-break contracts; no assumed NumPy/SciPy dependency."
+    },
+    "robust-predicates": {
+      "action": "rewrite-used-surface",
+      "workPackage": "D01",
+      "candidates": [],
+      "reason": "Pure-Python triangulation/orientation predicates and degeneracy/tie-break contracts; no assumed NumPy/SciPy dependency."
+    },
+    "internmap": {
+      "action": "rewrite-used-surface",
+      "workPackage": "D00",
+      "candidates": [],
+      "reason": "Preserve JS value/key interning and insertion order rather than assuming Python dict equality is identical."
+    },
+    "marked": {
+      "action": "candidate-with-adapter",
+      "workPackage": "D05",
+      "candidates": [
+        "markdown-it-py",
+        "mdit-py-plugins"
+      ],
+      "reason": "Token parsing candidate; Marked dialect/options/HTML/escaping require adapter and differential tests."
+    },
+    "js-yaml": {
+      "action": "candidate-with-adapter",
+      "workPackage": "D02",
+      "candidates": [
+        "PyYAML (pure Python Loader)"
+      ],
+      "reason": "Explicit JS JSON_SCHEMA resolver/tag/merge/numeric/error mapping; safe_load alone is not parity."
+    },
+    "yaml": {
+      "action": "candidate-with-adapter",
+      "workPackage": "D02",
+      "candidates": [
+        "PyYAML (pure Python Loader)"
+      ],
+      "reason": "Explicit JS JSON_SCHEMA resolver/tag/merge/numeric/error mapping; safe_load alone is not parity."
+    },
+    "khroma": {
+      "action": "candidate-with-adapter",
+      "workPackage": "D02",
+      "candidates": [
+        "coloraide",
+        "stdlib colorsys"
+      ],
+      "reason": "Validate parse/rounding/clamp/alpha/contrast and serialization; do not replace theme color formulas blindly."
+    },
+    "color-convert": {
+      "action": "candidate-with-adapter",
+      "workPackage": "D02",
+      "candidates": [
+        "coloraide",
+        "stdlib colorsys"
+      ],
+      "reason": "Validate parse/rounding/clamp/alpha/contrast and serialization; do not replace theme color formulas blindly."
+    },
+    "color-name": {
+      "action": "candidate-with-adapter",
+      "workPackage": "D02",
+      "candidates": [
+        "coloraide",
+        "stdlib colorsys"
+      ],
+      "reason": "Validate parse/rounding/clamp/alpha/contrast and serialization; do not replace theme color formulas blindly."
+    },
+    "color-string": {
+      "action": "candidate-with-adapter",
+      "workPackage": "D02",
+      "candidates": [
+        "coloraide",
+        "stdlib colorsys"
+      ],
+      "reason": "Validate parse/rounding/clamp/alpha/contrast and serialization; do not replace theme color formulas blindly."
+    },
+    "dayjs": {
+      "action": "stdlib-with-adapter",
+      "workPackage": "D02",
+      "candidates": [
+        "datetime",
+        "zoneinfo",
+        "calendar"
+      ],
+      "reason": "JS date formats, local/UTC/DST, invalid dates, week/calendar tick rules require adapter. Windows IANA data availability must be explicit."
+    },
+    "d3-time": {
+      "action": "stdlib-with-adapter",
+      "workPackage": "D02",
+      "candidates": [
+        "datetime",
+        "zoneinfo",
+        "calendar"
+      ],
+      "reason": "JS date formats, local/UTC/DST, invalid dates, week/calendar tick rules require adapter. Windows IANA data availability must be explicit."
+    },
+    "d3-time-format": {
+      "action": "stdlib-with-adapter",
+      "workPackage": "D02",
+      "candidates": [
+        "datetime",
+        "zoneinfo",
+        "calendar"
+      ],
+      "reason": "JS date formats, local/UTC/DST, invalid dates, week/calendar tick rules require adapter. Windows IANA data availability must be explicit."
+    },
+    "stylis": {
+      "action": "replace-style-meaning-not-browser-css",
+      "workPackage": "D05",
+      "candidates": [],
+      "reason": "Resolve Mermaid theme/config/user-style meaning into typed style values. No CSS injection, browser prefixing or full browser cascade/layout clone. Optional tokenizer only if retained style input needs it.",
+      "runtimeDisposition": "python-style-model"
+    },
+    "postcss": {
+      "action": "replace-style-meaning-not-browser-css",
+      "workPackage": "D05",
+      "candidates": [],
+      "reason": "Discard JS CSS build/injection/browser compatibility plumbing. Resolve retained theme/user-style values into Python style data; optional token parsing is selected by feature, not copied from the npm graph.",
+      "runtimeDisposition": "python-style-model"
+    },
+    "postcss-import": {
+      "action": "replace-style-meaning-not-browser-css",
+      "workPackage": "D05",
+      "candidates": [],
+      "reason": "Discard JS CSS build/injection/browser compatibility plumbing. Resolve retained theme/user-style values into Python style data; optional token parsing is selected by feature, not copied from the npm graph.",
+      "runtimeDisposition": "python-style-model"
+    },
+    "postcss-js": {
+      "action": "replace-style-meaning-not-browser-css",
+      "workPackage": "D05",
+      "candidates": [],
+      "reason": "Discard JS CSS build/injection/browser compatibility plumbing. Resolve retained theme/user-style values into Python style data; optional token parsing is selected by feature, not copied from the npm graph.",
+      "runtimeDisposition": "python-style-model"
+    },
+    "postcss-load-config": {
+      "action": "replace-style-meaning-not-browser-css",
+      "workPackage": "D05",
+      "candidates": [],
+      "reason": "Discard JS CSS build/injection/browser compatibility plumbing. Resolve retained theme/user-style values into Python style data; optional token parsing is selected by feature, not copied from the npm graph.",
+      "runtimeDisposition": "python-style-model"
+    },
+    "postcss-nested": {
+      "action": "replace-style-meaning-not-browser-css",
+      "workPackage": "D05",
+      "candidates": [],
+      "reason": "Discard JS CSS build/injection/browser compatibility plumbing. Resolve retained theme/user-style values into Python style data; optional token parsing is selected by feature, not copied from the npm graph.",
+      "runtimeDisposition": "python-style-model"
+    },
+    "postcss-selector-parser": {
+      "action": "replace-style-meaning-not-browser-css",
+      "workPackage": "D05",
+      "candidates": [],
+      "reason": "Discard JS CSS build/injection/browser compatibility plumbing. Resolve retained theme/user-style values into Python style data; optional token parsing is selected by feature, not copied from the npm graph.",
+      "runtimeDisposition": "python-style-model"
+    },
+    "postcss-value-parser": {
+      "action": "replace-style-meaning-not-browser-css",
+      "workPackage": "D05",
+      "candidates": [],
+      "reason": "Discard JS CSS build/injection/browser compatibility plumbing. Resolve retained theme/user-style values into Python style data; optional token parsing is selected by feature, not copied from the npm graph.",
+      "runtimeDisposition": "python-style-model"
+    },
+    "cssesc": {
+      "action": "replace-style-meaning-not-browser-css",
+      "workPackage": "D05",
+      "candidates": [],
+      "reason": "Discard JS CSS build/injection/browser compatibility plumbing. Resolve retained theme/user-style values into Python style data; optional token parsing is selected by feature, not copied from the npm graph.",
+      "runtimeDisposition": "python-style-model"
+    },
+    "dompurify": {
+      "action": "replace-security-behavior-not-dom",
+      "workPackage": "D05",
+      "candidates": [
+        "html",
+        "urllib.parse"
+      ],
+      "reason": "Do not clone DOMPurify traversal or introduce a DOM solely for sanitization. Implement safe label parsing, resource and URL policy against the typed Python model; complex HTML parser optional by feature.",
+      "runtimeDisposition": "python-feature-policy-rewrite"
+    },
+    "@braintree/sanitize-url": {
+      "action": "retain-url-policy-adapter",
+      "workPackage": "D05",
+      "candidates": [
+        "urllib.parse"
+      ],
+      "reason": "Retain required URL normalization and rejection behavior independent of DOM; use Python parsing plus explicit policy and negative cases.",
+      "runtimeDisposition": "python-feature-policy-rewrite"
+    },
+    "katex": {
+      "action": "candidate-and-layout-rewrite",
+      "workPackage": "D08",
+      "candidates": [
+        "latex2mathml"
+      ],
+      "reason": "Candidate covers math syntax conversion only; implement math box metrics, macros, fonts, operators and layout. No JS engine/TeX subprocess."
+    },
+    "@iconify/utils": {
+      "action": "retain-offline-icon-data-and-geometry",
+      "workPackage": "D08",
+      "candidates": [
+        "xml.etree.ElementTree",
+        "svg.path"
+      ],
+      "reason": "Read offline icon data/SVG paths and transforms into Python geometry. No SVG DOM, icon-component runtime, implicit JS package installation or browser renderer.",
+      "runtimeDisposition": "python-resource-and-geometry"
+    },
+    "fastdom": {
+      "action": "discard-browser-layer",
+      "workPackage": "D08",
+      "candidates": [],
+      "reason": "Discard DOM measure/mutate queues. Explicit Canvas measurement, layout and drawing phases preserve data dependencies and owner-thread rules.",
+      "runtimeDisposition": "not-a-python-runtime-library"
+    },
+    "@zenuml/core": {
+      "action": "rewrite-semantic-layout-canvas-pipeline",
+      "workPackage": "D10",
+      "candidates": [
+        "antlr4-python3-runtime"
+      ],
+      "reason": "Use source renderToSvg as a reference entry for syntax/model/layout/style semantics. The Python renderer is a Canvas draw-command pipeline; React/DOM/native alternate backends are not ported.",
+      "runtimeDisposition": "python-feature-pipeline"
+    },
+    "@mermaid-js/mermaid-zenuml": {
+      "action": "rewrite-semantic-layout-canvas-pipeline",
+      "workPackage": "D10",
+      "candidates": [
+        "antlr4-python3-runtime"
+      ],
+      "reason": "Use source renderToSvg as a reference entry for syntax/model/layout/style semantics. The Python renderer is a Canvas draw-command pipeline; React/DOM/native alternate backends are not ported.",
+      "runtimeDisposition": "python-feature-pipeline"
+    },
+    "react": {
+      "action": "discard-browser-layer",
+      "workPackage": "D10",
+      "candidates": [],
+      "reason": "Discard React/DOM rendering, UI scheduling and DOM screenshot layers. Reimplement diagram-visible model, style, geometry and applicable metadata through Canvas.",
+      "runtimeDisposition": "not-a-python-runtime-library"
+    },
+    "react-dom": {
+      "action": "discard-browser-layer",
+      "workPackage": "D10",
+      "candidates": [],
+      "reason": "Discard React/DOM rendering, UI scheduling and DOM screenshot layers. Reimplement diagram-visible model, style, geometry and applicable metadata through Canvas.",
+      "runtimeDisposition": "not-a-python-runtime-library"
+    },
+    "scheduler": {
+      "action": "discard-browser-layer",
+      "workPackage": "D10",
+      "candidates": [],
+      "reason": "Discard React/DOM rendering, UI scheduling and DOM screenshot layers. Reimplement diagram-visible model, style, geometry and applicable metadata through Canvas.",
+      "runtimeDisposition": "not-a-python-runtime-library"
+    },
+    "jotai": {
+      "action": "replace-ui-state-with-python-data",
+      "workPackage": "D10",
+      "candidates": [],
+      "reason": "Do not clone React state/component utilities. Required render state and resolved class/style meaning belong in immutable Python model/style data.",
+      "runtimeDisposition": "python-model-and-style"
+    },
+    "immer": {
+      "action": "replace-ui-state-with-python-data",
+      "workPackage": "D10",
+      "candidates": [],
+      "reason": "Do not clone React state/component utilities. Required render state and resolved class/style meaning belong in immutable Python model/style data.",
+      "runtimeDisposition": "python-model-and-style"
+    },
+    "use-sync-external-store": {
+      "action": "replace-ui-state-with-python-data",
+      "workPackage": "D10",
+      "candidates": [],
+      "reason": "Do not clone React state/component utilities. Required render state and resolved class/style meaning belong in immutable Python model/style data.",
+      "runtimeDisposition": "python-model-and-style"
+    },
+    "html-to-image": {
+      "action": "discard-browser-layer",
+      "workPackage": "D10",
+      "candidates": [],
+      "reason": "Discard React/DOM rendering, UI scheduling and DOM screenshot layers. Reimplement diagram-visible model, style, geometry and applicable metadata through Canvas.",
+      "runtimeDisposition": "not-a-python-runtime-library"
+    },
+    "uuid": {
+      "action": "stdlib-with-adapter",
+      "workPackage": "D00",
+      "candidates": [
+        "uuid"
+      ],
+      "reason": "Pinned source imports v4 in mindmapDb.ts and v5 in erRenderer.js. Evaluate uuid.uuid4/uuid.uuid5 against namespace/encoding/output; do not require unavailable UUID v7 for this surface."
+    },
+    "es-toolkit": {
+      "action": "stdlib-with-adapter",
+      "workPackage": "D00",
+      "candidates": [
+        "collections",
+        "copy",
+        "textwrap"
+      ],
+      "reason": "Implement used JS value/default/merge/order/dedent surfaces; standard-library functions need behavior adapters."
+    },
+    "lodash": {
+      "action": "stdlib-with-adapter",
+      "workPackage": "D00",
+      "candidates": [
+        "collections",
+        "copy",
+        "textwrap"
+      ],
+      "reason": "Implement used JS value/default/merge/order/dedent surfaces; standard-library functions need behavior adapters."
+    },
+    "lodash-es": {
+      "action": "stdlib-with-adapter",
+      "workPackage": "D00",
+      "candidates": [
+        "collections",
+        "copy",
+        "textwrap"
+      ],
+      "reason": "Implement used JS value/default/merge/order/dedent surfaces; standard-library functions need behavior adapters."
+    },
+    "ts-dedent": {
+      "action": "stdlib-with-adapter",
+      "workPackage": "D00",
+      "candidates": [
+        "collections",
+        "copy",
+        "textwrap"
+      ],
+      "reason": "Implement used JS value/default/merge/order/dedent surfaces; standard-library functions need behavior adapters."
+    },
+    "debug": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "logging",
+        "io"
+      ],
+      "reason": "Preserve observable diagnostics; Node transport/thread internals only excluded after tracing relevant entry."
+    },
+    "pino": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "logging",
+        "io"
+      ],
+      "reason": "Preserve observable diagnostics; Node transport/thread internals only excluded after tracing relevant entry."
+    },
+    "pino-abstract-transport": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "logging",
+        "io"
+      ],
+      "reason": "Preserve observable diagnostics; Node transport/thread internals only excluded after tracing relevant entry."
+    },
+    "pino-std-serializers": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "logging",
+        "io"
+      ],
+      "reason": "Preserve observable diagnostics; Node transport/thread internals only excluded after tracing relevant entry."
+    },
+    "sonic-boom": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "logging",
+        "io"
+      ],
+      "reason": "Preserve observable diagnostics; Node transport/thread internals only excluded after tracing relevant entry."
+    },
+    "thread-stream": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "logging",
+        "io"
+      ],
+      "reason": "Preserve observable diagnostics; Node transport/thread internals only excluded after tracing relevant entry."
+    },
+    "jison": {
+      "action": "replace-development-generator",
+      "workPackage": "DEV",
+      "candidates": [
+        "lark (offline generation)",
+        "Python grammar/table tooling"
+      ],
+      "reason": "Generation-only tools; generated grammar behavior is migrated in D04, not discarded with the JS toolchain."
+    },
+    "langium-cli": {
+      "action": "replace-development-generator",
+      "workPackage": "DEV",
+      "candidates": [
+        "lark (offline generation)",
+        "Python grammar/table tooling"
+      ],
+      "reason": "Generation-only tools; generated grammar behavior is migrated in D04, not discarded with the JS toolchain."
+    },
+    "buffer": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "bytes",
+        "base64",
+        "struct",
+        "zlib",
+        "asyncio"
+      ],
+      "reason": "Translate used data/event/cancellation behavior; check byte order, UTF encodings and exceptions."
+    },
+    "safe-buffer": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "bytes",
+        "base64",
+        "struct",
+        "zlib",
+        "asyncio"
+      ],
+      "reason": "Translate used data/event/cancellation behavior; check byte order, UTF encodings and exceptions."
+    },
+    "safer-buffer": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "bytes",
+        "base64",
+        "struct",
+        "zlib",
+        "asyncio"
+      ],
+      "reason": "Translate used data/event/cancellation behavior; check byte order, UTF encodings and exceptions."
+    },
+    "base64-js": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "bytes",
+        "base64",
+        "struct",
+        "zlib",
+        "asyncio"
+      ],
+      "reason": "Translate used data/event/cancellation behavior; check byte order, UTF encodings and exceptions."
+    },
+    "ieee754": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "bytes",
+        "base64",
+        "struct",
+        "zlib",
+        "asyncio"
+      ],
+      "reason": "Translate used data/event/cancellation behavior; check byte order, UTF encodings and exceptions."
+    },
+    "pako": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "bytes",
+        "base64",
+        "struct",
+        "zlib",
+        "asyncio"
+      ],
+      "reason": "Translate used data/event/cancellation behavior; check byte order, UTF encodings and exceptions."
+    },
+    "events": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "bytes",
+        "base64",
+        "struct",
+        "zlib",
+        "asyncio"
+      ],
+      "reason": "Translate used data/event/cancellation behavior; check byte order, UTF encodings and exceptions."
+    },
+    "abort-controller": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "bytes",
+        "base64",
+        "struct",
+        "zlib",
+        "asyncio"
+      ],
+      "reason": "Translate used data/event/cancellation behavior; check byte order, UTF encodings and exceptions."
+    },
+    "event-target-shim": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "bytes",
+        "base64",
+        "struct",
+        "zlib",
+        "asyncio"
+      ],
+      "reason": "Translate used data/event/cancellation behavior; check byte order, UTF encodings and exceptions."
+    },
+    "tslib": {
+      "action": "rewrite-used-surface",
+      "workPackage": "D00",
+      "candidates": [],
+      "reason": "Translate compiled helper semantics in relevant source surfaces; no TypeScript execution in product."
+    },
+    "@swc/helpers": {
+      "action": "rewrite-used-surface",
+      "workPackage": "D00",
+      "candidates": [],
+      "reason": "Translate compiled helper semantics in relevant source surfaces; no TypeScript execution in product."
+    },
+    "@chevrotain/types": {
+      "action": "type-contract",
+      "workPackage": "TYPES",
+      "candidates": [],
+      "reason": "Type-only package contract; no direct Python runtime dependency."
+    },
+    "@iconify/types": {
+      "action": "type-contract",
+      "workPackage": "TYPES",
+      "candidates": [],
+      "reason": "Type-only package contract; no direct Python runtime dependency."
+    },
+    "type-fest": {
+      "action": "type-contract",
+      "workPackage": "TYPES",
+      "candidates": [],
+      "reason": "Type-only package contract; no direct Python runtime dependency."
+    },
+    "csstype": {
+      "action": "type-contract",
+      "workPackage": "TYPES",
+      "candidates": [],
+      "reason": "Type-only package contract; no direct Python runtime dependency."
+    },
+    "d3": {
+      "action": "split-computation-from-discarded-dom",
+      "workPackage": "D06",
+      "candidates": [],
+      "reason": "Retain used numeric/layout/curve algorithms; discard selection/DOM/transition/browser-host layer. Generate typed draw commands for py-skia-canvas.",
+      "runtimeDisposition": "split-retained-computation-and-discarded-host"
+    },
+    "argparse": {
+      "action": "trace-cli-then-adapt",
+      "workPackage": "D00",
+      "candidates": [
+        "argparse"
+      ],
+      "reason": "CLI declaration may be unused in a browser bundle; prove entry reachability. Required argument parsing/error behavior uses a Python adapter, not a JS CLI."
+    },
+    "commander": {
+      "action": "trace-cli-then-adapt",
+      "workPackage": "D00",
+      "candidates": [
+        "argparse"
+      ],
+      "reason": "CLI declaration may be unused in a browser bundle; prove entry reachability. Required argument parsing/error behavior uses a Python adapter, not a JS CLI."
+    },
+    "@isaacs/cliui": {
+      "action": "trace-cli-then-adapt",
+      "workPackage": "D00",
+      "candidates": [
+        "argparse"
+      ],
+      "reason": "CLI declaration may be unused in a browser bundle; prove entry reachability. Required argument parsing/error behavior uses a Python adapter, not a JS CLI."
+    },
+    "@pkgjs/parseargs": {
+      "action": "trace-cli-then-adapt",
+      "workPackage": "D00",
+      "candidates": [
+        "argparse"
+      ],
+      "reason": "CLI declaration may be unused in a browser bundle; prove entry reachability. Required argument parsing/error behavior uses a Python adapter, not a JS CLI."
+    },
+    "arg": {
+      "action": "trace-cli-then-adapt",
+      "workPackage": "D00",
+      "candidates": [
+        "argparse"
+      ],
+      "reason": "CLI declaration may be unused in a browser bundle; prove entry reachability. Required argument parsing/error behavior uses a Python adapter, not a JS CLI."
+    },
+    "jackspeak": {
+      "action": "trace-cli-then-adapt",
+      "workPackage": "D00",
+      "candidates": [
+        "argparse"
+      ],
+      "reason": "CLI declaration may be unused in a browser bundle; prove entry reachability. Required argument parsing/error behavior uses a Python adapter, not a JS CLI."
+    },
+    "@antfu/install-pkg": {
+      "action": "trace-icon-resource-then-rewrite",
+      "workPackage": "D08",
+      "candidates": [
+        "importlib.resources",
+        "pathlib",
+        "json"
+      ],
+      "reason": "Iconify import/package helper chain: trace actual browser entry; required offline assets/metadata are served by Python. Never invoke JS installers or execute icon-pack code."
+    },
+    "package-manager-detector": {
+      "action": "trace-icon-resource-then-rewrite",
+      "workPackage": "D08",
+      "candidates": [
+        "importlib.resources",
+        "pathlib",
+        "json"
+      ],
+      "reason": "Iconify import/package helper chain: trace actual browser entry; required offline assets/metadata are served by Python. Never invoke JS installers or execute icon-pack code."
+    },
+    "tinyexec": {
+      "action": "trace-icon-resource-then-rewrite",
+      "workPackage": "D08",
+      "candidates": [
+        "importlib.resources",
+        "pathlib",
+        "json"
+      ],
+      "reason": "Iconify import/package helper chain: trace actual browser entry; required offline assets/metadata are served by Python. Never invoke JS installers or execute icon-pack code."
+    },
+    "@antfu/utils": {
+      "action": "trace-icon-resource-then-rewrite",
+      "workPackage": "D08",
+      "candidates": [
+        "importlib.resources",
+        "pathlib",
+        "json"
+      ],
+      "reason": "Iconify import/package helper chain: trace actual browser entry; required offline assets/metadata are served by Python. Never invoke JS installers or execute icon-pack code."
+    },
+    "globals": {
+      "action": "trace-icon-resource-then-rewrite",
+      "workPackage": "D08",
+      "candidates": [
+        "importlib.resources",
+        "pathlib",
+        "json"
+      ],
+      "reason": "Iconify import/package helper chain: trace actual browser entry; required offline assets/metadata are served by Python. Never invoke JS installers or execute icon-pack code."
+    },
+    "kolorist": {
+      "action": "trace-icon-resource-then-rewrite",
+      "workPackage": "D08",
+      "candidates": [
+        "importlib.resources",
+        "pathlib",
+        "json"
+      ],
+      "reason": "Iconify import/package helper chain: trace actual browser entry; required offline assets/metadata are served by Python. Never invoke JS installers or execute icon-pack code."
+    },
+    "local-pkg": {
+      "action": "trace-icon-resource-then-rewrite",
+      "workPackage": "D08",
+      "candidates": [
+        "importlib.resources",
+        "pathlib",
+        "json"
+      ],
+      "reason": "Iconify import/package helper chain: trace actual browser entry; required offline assets/metadata are served by Python. Never invoke JS installers or execute icon-pack code."
+    },
+    "mlly": {
+      "action": "trace-icon-resource-then-rewrite",
+      "workPackage": "D08",
+      "candidates": [
+        "importlib.resources",
+        "pathlib",
+        "json"
+      ],
+      "reason": "Iconify import/package helper chain: trace actual browser entry; required offline assets/metadata are served by Python. Never invoke JS installers or execute icon-pack code."
+    },
+    "pkg-types": {
+      "action": "trace-icon-resource-then-rewrite",
+      "workPackage": "D08",
+      "candidates": [
+        "importlib.resources",
+        "pathlib",
+        "json"
+      ],
+      "reason": "Iconify import/package helper chain: trace actual browser entry; required offline assets/metadata are served by Python. Never invoke JS installers or execute icon-pack code."
+    },
+    "confbox": {
+      "action": "trace-icon-resource-then-rewrite",
+      "workPackage": "D08",
+      "candidates": [
+        "importlib.resources",
+        "pathlib",
+        "json"
+      ],
+      "reason": "Iconify import/package helper chain: trace actual browser entry; required offline assets/metadata are served by Python. Never invoke JS installers or execute icon-pack code."
+    },
+    "exsolve": {
+      "action": "trace-icon-resource-then-rewrite",
+      "workPackage": "D08",
+      "candidates": [
+        "importlib.resources",
+        "pathlib",
+        "json"
+      ],
+      "reason": "Iconify import/package helper chain: trace actual browser entry; required offline assets/metadata are served by Python. Never invoke JS installers or execute icon-pack code."
+    },
+    "quansync": {
+      "action": "trace-icon-resource-then-rewrite",
+      "workPackage": "D08",
+      "candidates": [
+        "importlib.resources",
+        "pathlib",
+        "json"
+      ],
+      "reason": "Iconify import/package helper chain: trace actual browser entry; required offline assets/metadata are served by Python. Never invoke JS installers or execute icon-pack code."
+    },
+    "ufo": {
+      "action": "trace-icon-resource-then-rewrite",
+      "workPackage": "D08",
+      "candidates": [
+        "importlib.resources",
+        "pathlib",
+        "json"
+      ],
+      "reason": "Iconify import/package helper chain: trace actual browser entry; required offline assets/metadata are served by Python. Never invoke JS installers or execute icon-pack code."
+    },
+    "acorn": {
+      "action": "trace-icon-resource-then-rewrite",
+      "workPackage": "D08",
+      "candidates": [
+        "importlib.resources",
+        "pathlib",
+        "json"
+      ],
+      "reason": "Iconify import/package helper chain: trace actual browser entry; required offline assets/metadata are served by Python. Never invoke JS installers or execute icon-pack code."
+    },
+    "vscode-jsonrpc": {
+      "action": "trace-parser-services-then-rewrite",
+      "workPackage": "D04",
+      "candidates": [],
+      "reason": "Langium declared service closure. Retain parsing/locations/diagnostics used by Mermaid; editor/LSP-only paths may be excluded only with generated-parser reachability evidence."
+    },
+    "vscode-languageserver": {
+      "action": "trace-parser-services-then-rewrite",
+      "workPackage": "D04",
+      "candidates": [],
+      "reason": "Langium declared service closure. Retain parsing/locations/diagnostics used by Mermaid; editor/LSP-only paths may be excluded only with generated-parser reachability evidence."
+    },
+    "vscode-languageserver-protocol": {
+      "action": "trace-parser-services-then-rewrite",
+      "workPackage": "D04",
+      "candidates": [],
+      "reason": "Langium declared service closure. Retain parsing/locations/diagnostics used by Mermaid; editor/LSP-only paths may be excluded only with generated-parser reachability evidence."
+    },
+    "vscode-languageserver-textdocument": {
+      "action": "trace-parser-services-then-rewrite",
+      "workPackage": "D04",
+      "candidates": [],
+      "reason": "Langium declared service closure. Retain parsing/locations/diagnostics used by Mermaid; editor/LSP-only paths may be excluded only with generated-parser reachability evidence."
+    },
+    "vscode-languageserver-types": {
+      "action": "trace-parser-services-then-rewrite",
+      "workPackage": "D04",
+      "candidates": [],
+      "reason": "Langium declared service closure. Retain parsing/locations/diagnostics used by Mermaid; editor/LSP-only paths may be excluded only with generated-parser reachability evidence."
+    },
+    "vscode-uri": {
+      "action": "trace-parser-services-then-rewrite",
+      "workPackage": "D04",
+      "candidates": [],
+      "reason": "Langium declared service closure. Retain parsing/locations/diagnostics used by Mermaid; editor/LSP-only paths may be excluded only with generated-parser reachability evidence."
+    },
+    "strictdom": {
+      "action": "discard-browser-layer",
+      "workPackage": "D08",
+      "candidates": [],
+      "reason": "Discard DOM measure/mutate queues. Explicit Canvas measurement, layout and drawing phases preserve data dependencies and owner-thread rules.",
+      "runtimeDisposition": "not-a-python-runtime-library"
+    },
+    "@alloc/quick-lru": {
+      "action": "stdlib-with-adapter",
+      "workPackage": "D00",
+      "candidates": [
+        "collections.OrderedDict",
+        "functools"
+      ],
+      "reason": "Match cache eviction, mutation and observable iteration semantics; generic cache classes are not an automatic byte-for-byte replacement."
+    },
+    "lru-cache": {
+      "action": "stdlib-with-adapter",
+      "workPackage": "D00",
+      "candidates": [
+        "collections.OrderedDict",
+        "functools"
+      ],
+      "reason": "Match cache eviction, mutation and observable iteration semantics; generic cache classes are not an automatic byte-for-byte replacement."
+    },
+    "yallist": {
+      "action": "stdlib-with-adapter",
+      "workPackage": "D00",
+      "candidates": [
+        "collections.OrderedDict",
+        "functools"
+      ],
+      "reason": "Match cache eviction, mutation and observable iteration semantics; generic cache classes are not an automatic byte-for-byte replacement."
+    },
+    "ansi-regex": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "re",
+        "unicodedata"
+      ],
+      "reason": "Terminal/log formatting path must be traced separately from diagram text measurement; port used escaping/Unicode rules, Canvas owns actual glyph metrics."
+    },
+    "ansi-styles": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "re",
+        "unicodedata"
+      ],
+      "reason": "Terminal/log formatting path must be traced separately from diagram text measurement; port used escaping/Unicode rules, Canvas owns actual glyph metrics."
+    },
+    "strip-ansi": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "re",
+        "unicodedata"
+      ],
+      "reason": "Terminal/log formatting path must be traced separately from diagram text measurement; port used escaping/Unicode rules, Canvas owns actual glyph metrics."
+    },
+    "wrap-ansi": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "re",
+        "unicodedata"
+      ],
+      "reason": "Terminal/log formatting path must be traced separately from diagram text measurement; port used escaping/Unicode rules, Canvas owns actual glyph metrics."
+    },
+    "string-width": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "re",
+        "unicodedata"
+      ],
+      "reason": "Terminal/log formatting path must be traced separately from diagram text measurement; port used escaping/Unicode rules, Canvas owns actual glyph metrics."
+    },
+    "eastasianwidth": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "re",
+        "unicodedata"
+      ],
+      "reason": "Terminal/log formatting path must be traced separately from diagram text measurement; port used escaping/Unicode rules, Canvas owns actual glyph metrics."
+    },
+    "emoji-regex": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "re",
+        "unicodedata"
+      ],
+      "reason": "Terminal/log formatting path must be traced separately from diagram text measurement; port used escaping/Unicode rules, Canvas owns actual glyph metrics."
+    },
+    "is-fullwidth-code-point": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "re",
+        "unicodedata"
+      ],
+      "reason": "Terminal/log formatting path must be traced separately from diagram text measurement; port used escaping/Unicode rules, Canvas owns actual glyph metrics."
+    },
+    "picocolors": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "re",
+        "unicodedata"
+      ],
+      "reason": "Terminal/log formatting path must be traced separately from diagram text measurement; port used escaping/Unicode rules, Canvas owns actual glyph metrics."
+    },
+    "@nodelib/fs.scandir": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D02",
+      "candidates": [
+        "pathlib",
+        "glob",
+        "os",
+        "io"
+      ],
+      "reason": "File/watch/resource declarations are retained including platform optional nodes; trace browser entry before excluding. Product resource access stays explicit and offline."
+    },
+    "@nodelib/fs.stat": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D02",
+      "candidates": [
+        "pathlib",
+        "glob",
+        "os",
+        "io"
+      ],
+      "reason": "File/watch/resource declarations are retained including platform optional nodes; trace browser entry before excluding. Product resource access stays explicit and offline."
+    },
+    "@nodelib/fs.walk": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D02",
+      "candidates": [
+        "pathlib",
+        "glob",
+        "os",
+        "io"
+      ],
+      "reason": "File/watch/resource declarations are retained including platform optional nodes; trace browser entry before excluding. Product resource access stays explicit and offline."
+    },
+    "chokidar": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D02",
+      "candidates": [
+        "pathlib",
+        "glob",
+        "os",
+        "io"
+      ],
+      "reason": "File/watch/resource declarations are retained including platform optional nodes; trace browser entry before excluding. Product resource access stays explicit and offline."
+    },
+    "fast-glob": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D02",
+      "candidates": [
+        "pathlib",
+        "glob",
+        "os",
+        "io"
+      ],
+      "reason": "File/watch/resource declarations are retained including platform optional nodes; trace browser entry before excluding. Product resource access stays explicit and offline."
+    },
+    "glob": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D02",
+      "candidates": [
+        "pathlib",
+        "glob",
+        "os",
+        "io"
+      ],
+      "reason": "File/watch/resource declarations are retained including platform optional nodes; trace browser entry before excluding. Product resource access stays explicit and offline."
+    },
+    "glob-parent": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D02",
+      "candidates": [
+        "pathlib",
+        "glob",
+        "os",
+        "io"
+      ],
+      "reason": "File/watch/resource declarations are retained including platform optional nodes; trace browser entry before excluding. Product resource access stays explicit and offline."
+    },
+    "path-key": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D02",
+      "candidates": [
+        "pathlib",
+        "glob",
+        "os",
+        "io"
+      ],
+      "reason": "File/watch/resource declarations are retained including platform optional nodes; trace browser entry before excluding. Product resource access stays explicit and offline."
+    },
+    "path-parse": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D02",
+      "candidates": [
+        "pathlib",
+        "glob",
+        "os",
+        "io"
+      ],
+      "reason": "File/watch/resource declarations are retained including platform optional nodes; trace browser entry before excluding. Product resource access stays explicit and offline."
+    },
+    "path-scurry": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D02",
+      "candidates": [
+        "pathlib",
+        "glob",
+        "os",
+        "io"
+      ],
+      "reason": "File/watch/resource declarations are retained including platform optional nodes; trace browser entry before excluding. Product resource access stays explicit and offline."
+    },
+    "normalize-path": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D02",
+      "candidates": [
+        "pathlib",
+        "glob",
+        "os",
+        "io"
+      ],
+      "reason": "File/watch/resource declarations are retained including platform optional nodes; trace browser entry before excluding. Product resource access stays explicit and offline."
+    },
+    "readdirp": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D02",
+      "candidates": [
+        "pathlib",
+        "glob",
+        "os",
+        "io"
+      ],
+      "reason": "File/watch/resource declarations are retained including platform optional nodes; trace browser entry before excluding. Product resource access stays explicit and offline."
+    },
+    "rw": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D02",
+      "candidates": [
+        "pathlib",
+        "glob",
+        "os",
+        "io"
+      ],
+      "reason": "File/watch/resource declarations are retained including platform optional nodes; trace browser entry before excluding. Product resource access stays explicit and offline."
+    },
+    "fsevents": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D02",
+      "candidates": [
+        "pathlib",
+        "glob",
+        "os",
+        "io"
+      ],
+      "reason": "File/watch/resource declarations are retained including platform optional nodes; trace browser entry before excluding. Product resource access stays explicit and offline."
+    },
+    "is-binary-path": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D02",
+      "candidates": [
+        "pathlib",
+        "glob",
+        "os",
+        "io"
+      ],
+      "reason": "File/watch/resource declarations are retained including platform optional nodes; trace browser entry before excluding. Product resource access stays explicit and offline."
+    },
+    "binary-extensions": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D02",
+      "candidates": [
+        "pathlib",
+        "glob",
+        "os",
+        "io"
+      ],
+      "reason": "File/watch/resource declarations are retained including platform optional nodes; trace browser entry before excluding. Product resource access stays explicit and offline."
+    },
+    "iconv-lite": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "codecs"
+      ],
+      "reason": "Retain encodings, replacement/error and partial-buffer behavior if reachable; Python codec defaults are not asserted equivalent."
+    },
+    "string_decoder": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "codecs"
+      ],
+      "reason": "Retain encodings, replacement/error and partial-buffer behavior if reachable; Python codec defaults are not asserted equivalent."
+    },
+    "cross-spawn": {
+      "action": "trace-platform-then-rewrite",
+      "workPackage": "D00",
+      "candidates": [
+        "sys",
+        "os",
+        "asyncio"
+      ],
+      "reason": "Node process/CLI plumbing may be non-browser code; prove entry reachability. Do not introduce Node, JS interpreters or opaque subprocess fallback."
+    },
+    "foreground-child": {
+      "action": "trace-platform-then-rewrite",
+      "workPackage": "D00",
+      "candidates": [
+        "sys",
+        "os",
+        "asyncio"
+      ],
+      "reason": "Node process/CLI plumbing may be non-browser code; prove entry reachability. Do not introduce Node, JS interpreters or opaque subprocess fallback."
+    },
+    "isexe": {
+      "action": "trace-platform-then-rewrite",
+      "workPackage": "D00",
+      "candidates": [
+        "sys",
+        "os",
+        "asyncio"
+      ],
+      "reason": "Node process/CLI plumbing may be non-browser code; prove entry reachability. Do not introduce Node, JS interpreters or opaque subprocess fallback."
+    },
+    "which": {
+      "action": "trace-platform-then-rewrite",
+      "workPackage": "D00",
+      "candidates": [
+        "sys",
+        "os",
+        "asyncio"
+      ],
+      "reason": "Node process/CLI plumbing may be non-browser code; prove entry reachability. Do not introduce Node, JS interpreters or opaque subprocess fallback."
+    },
+    "shebang-command": {
+      "action": "trace-platform-then-rewrite",
+      "workPackage": "D00",
+      "candidates": [
+        "sys",
+        "os",
+        "asyncio"
+      ],
+      "reason": "Node process/CLI plumbing may be non-browser code; prove entry reachability. Do not introduce Node, JS interpreters or opaque subprocess fallback."
+    },
+    "shebang-regex": {
+      "action": "trace-platform-then-rewrite",
+      "workPackage": "D00",
+      "candidates": [
+        "sys",
+        "os",
+        "asyncio"
+      ],
+      "reason": "Node process/CLI plumbing may be non-browser code; prove entry reachability. Do not introduce Node, JS interpreters or opaque subprocess fallback."
+    },
+    "signal-exit": {
+      "action": "trace-platform-then-rewrite",
+      "workPackage": "D00",
+      "candidates": [
+        "sys",
+        "os",
+        "asyncio"
+      ],
+      "reason": "Node process/CLI plumbing may be non-browser code; prove entry reachability. Do not introduce Node, JS interpreters or opaque subprocess fallback."
+    },
+    "on-exit-leak-free": {
+      "action": "trace-platform-then-rewrite",
+      "workPackage": "D00",
+      "candidates": [
+        "sys",
+        "os",
+        "asyncio"
+      ],
+      "reason": "Node process/CLI plumbing may be non-browser code; prove entry reachability. Do not introduce Node, JS interpreters or opaque subprocess fallback."
+    },
+    "process": {
+      "action": "trace-platform-then-rewrite",
+      "workPackage": "D00",
+      "candidates": [
+        "sys",
+        "os",
+        "asyncio"
+      ],
+      "reason": "Node process/CLI plumbing may be non-browser code; prove entry reachability. Do not introduce Node, JS interpreters or opaque subprocess fallback."
+    },
+    "process-warning": {
+      "action": "trace-platform-then-rewrite",
+      "workPackage": "D00",
+      "candidates": [
+        "sys",
+        "os",
+        "asyncio"
+      ],
+      "reason": "Node process/CLI plumbing may be non-browser code; prove entry reachability. Do not introduce Node, JS interpreters or opaque subprocess fallback."
+    },
+    "atomic-sleep": {
+      "action": "trace-platform-then-rewrite",
+      "workPackage": "D00",
+      "candidates": [
+        "sys",
+        "os",
+        "asyncio"
+      ],
+      "reason": "Node process/CLI plumbing may be non-browser code; prove entry reachability. Do not introduce Node, JS interpreters or opaque subprocess fallback."
+    },
+    "fast-redact": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "logging",
+        "json",
+        "io",
+        "asyncio"
+      ],
+      "reason": "Rewrite required logging/redaction, ordering, scheduling and stream/error contracts; preserve JS behavior at migrated boundaries."
+    },
+    "safe-stable-stringify": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "logging",
+        "json",
+        "io",
+        "asyncio"
+      ],
+      "reason": "Rewrite required logging/redaction, ordering, scheduling and stream/error contracts; preserve JS behavior at migrated boundaries."
+    },
+    "quick-format-unescaped": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "logging",
+        "json",
+        "io",
+        "asyncio"
+      ],
+      "reason": "Rewrite required logging/redaction, ordering, scheduling and stream/error contracts; preserve JS behavior at migrated boundaries."
+    },
+    "split2": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "logging",
+        "json",
+        "io",
+        "asyncio"
+      ],
+      "reason": "Rewrite required logging/redaction, ordering, scheduling and stream/error contracts; preserve JS behavior at migrated boundaries."
+    },
+    "ms": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "logging",
+        "json",
+        "io",
+        "asyncio"
+      ],
+      "reason": "Rewrite required logging/redaction, ordering, scheduling and stream/error contracts; preserve JS behavior at migrated boundaries."
+    },
+    "any-promise": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "logging",
+        "json",
+        "io",
+        "asyncio"
+      ],
+      "reason": "Rewrite required logging/redaction, ordering, scheduling and stream/error contracts; preserve JS behavior at migrated boundaries."
+    },
+    "thenify": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "logging",
+        "json",
+        "io",
+        "asyncio"
+      ],
+      "reason": "Rewrite required logging/redaction, ordering, scheduling and stream/error contracts; preserve JS behavior at migrated boundaries."
+    },
+    "thenify-all": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "logging",
+        "json",
+        "io",
+        "asyncio"
+      ],
+      "reason": "Rewrite required logging/redaction, ordering, scheduling and stream/error contracts; preserve JS behavior at migrated boundaries."
+    },
+    "pify": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "logging",
+        "json",
+        "io",
+        "asyncio"
+      ],
+      "reason": "Rewrite required logging/redaction, ordering, scheduling and stream/error contracts; preserve JS behavior at migrated boundaries."
+    },
+    "mz": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "logging",
+        "json",
+        "io",
+        "asyncio"
+      ],
+      "reason": "Rewrite required logging/redaction, ordering, scheduling and stream/error contracts; preserve JS behavior at migrated boundaries."
+    },
+    "queue-microtask": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "logging",
+        "json",
+        "io",
+        "asyncio"
+      ],
+      "reason": "Rewrite required logging/redaction, ordering, scheduling and stream/error contracts; preserve JS behavior at migrated boundaries."
+    },
+    "run-parallel": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "logging",
+        "json",
+        "io",
+        "asyncio"
+      ],
+      "reason": "Rewrite required logging/redaction, ordering, scheduling and stream/error contracts; preserve JS behavior at migrated boundaries."
+    },
+    "reusify": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "logging",
+        "json",
+        "io",
+        "asyncio"
+      ],
+      "reason": "Rewrite required logging/redaction, ordering, scheduling and stream/error contracts; preserve JS behavior at migrated boundaries."
+    },
+    "fastq": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "logging",
+        "json",
+        "io",
+        "asyncio"
+      ],
+      "reason": "Rewrite required logging/redaction, ordering, scheduling and stream/error contracts; preserve JS behavior at migrated boundaries."
+    },
+    "merge2": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "logging",
+        "json",
+        "io",
+        "asyncio"
+      ],
+      "reason": "Rewrite required logging/redaction, ordering, scheduling and stream/error contracts; preserve JS behavior at migrated boundaries."
+    },
+    "minipass": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "logging",
+        "json",
+        "io",
+        "asyncio"
+      ],
+      "reason": "Rewrite required logging/redaction, ordering, scheduling and stream/error contracts; preserve JS behavior at migrated boundaries."
+    },
+    "readable-stream": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "logging",
+        "json",
+        "io",
+        "asyncio"
+      ],
+      "reason": "Rewrite required logging/redaction, ordering, scheduling and stream/error contracts; preserve JS behavior at migrated boundaries."
+    },
+    "util-deprecate": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "logging",
+        "json",
+        "io",
+        "asyncio"
+      ],
+      "reason": "Rewrite required logging/redaction, ordering, scheduling and stream/error contracts; preserve JS behavior at migrated boundaries."
+    },
+    "class-variance-authority": {
+      "action": "replace-ui-state-with-python-data",
+      "workPackage": "D10",
+      "candidates": [],
+      "reason": "Do not clone React state/component utilities. Required render state and resolved class/style meaning belong in immutable Python model/style data.",
+      "runtimeDisposition": "python-model-and-style"
+    },
+    "clsx": {
+      "action": "replace-ui-state-with-python-data",
+      "workPackage": "D10",
+      "candidates": [],
+      "reason": "Do not clone React state/component utilities. Required render state and resolved class/style meaning belong in immutable Python model/style data.",
+      "runtimeDisposition": "python-model-and-style"
+    },
+    "tabbable": {
+      "action": "discard-browser-layer",
+      "workPackage": "D10",
+      "candidates": [],
+      "reason": "Discard React/DOM rendering, UI scheduling and DOM screenshot layers. Reimplement diagram-visible model, style, geometry and applicable metadata through Canvas.",
+      "runtimeDisposition": "not-a-python-runtime-library"
+    },
+    "camelcase-css": {
+      "action": "host-rewrite-and-trace",
+      "workPackage": "D10",
+      "candidates": [],
+      "reason": "Trace ZenUML diagram entry and retain actual class/style/focus/interaction metadata. Editor-only assumptions require proof."
+    },
+    "object-assign": {
+      "action": "rewrite-used-surface",
+      "workPackage": "D00",
+      "candidates": [
+        "collections",
+        "json",
+        "hashlib",
+        "re"
+      ],
+      "reason": "Translate relevant value/key/hash/string/token behavior; JSON5/JS tokens require explicit grammar logic, not Python eval or blind json.loads."
+    },
+    "object-hash": {
+      "action": "rewrite-used-surface",
+      "workPackage": "D00",
+      "candidates": [
+        "collections",
+        "json",
+        "hashlib",
+        "re"
+      ],
+      "reason": "Translate relevant value/key/hash/string/token behavior; JSON5/JS tokens require explicit grammar logic, not Python eval or blind json.loads."
+    },
+    "hasown": {
+      "action": "rewrite-used-surface",
+      "workPackage": "D00",
+      "candidates": [
+        "collections",
+        "json",
+        "hashlib",
+        "re"
+      ],
+      "reason": "Translate relevant value/key/hash/string/token behavior; JSON5/JS tokens require explicit grammar logic, not Python eval or blind json.loads."
+    },
+    "function-bind": {
+      "action": "rewrite-used-surface",
+      "workPackage": "D00",
+      "candidates": [
+        "collections",
+        "json",
+        "hashlib",
+        "re"
+      ],
+      "reason": "Translate relevant value/key/hash/string/token behavior; JSON5/JS tokens require explicit grammar logic, not Python eval or blind json.loads."
+    },
+    "es-errors": {
+      "action": "rewrite-used-surface",
+      "workPackage": "D00",
+      "candidates": [
+        "collections",
+        "json",
+        "hashlib",
+        "re"
+      ],
+      "reason": "Translate relevant value/key/hash/string/token behavior; JSON5/JS tokens require explicit grammar logic, not Python eval or blind json.loads."
+    },
+    "dlv": {
+      "action": "rewrite-used-surface",
+      "workPackage": "D00",
+      "candidates": [
+        "collections",
+        "json",
+        "hashlib",
+        "re"
+      ],
+      "reason": "Translate relevant value/key/hash/string/token behavior; JSON5/JS tokens require explicit grammar logic, not Python eval or blind json.loads."
+    },
+    "didyoumean": {
+      "action": "rewrite-used-surface",
+      "workPackage": "D00",
+      "candidates": [
+        "collections",
+        "json",
+        "hashlib",
+        "re"
+      ],
+      "reason": "Translate relevant value/key/hash/string/token behavior; JSON5/JS tokens require explicit grammar logic, not Python eval or blind json.loads."
+    },
+    "is-number": {
+      "action": "rewrite-used-surface",
+      "workPackage": "D00",
+      "candidates": [
+        "collections",
+        "json",
+        "hashlib",
+        "re"
+      ],
+      "reason": "Translate relevant value/key/hash/string/token behavior; JSON5/JS tokens require explicit grammar logic, not Python eval or blind json.loads."
+    },
+    "json5": {
+      "action": "rewrite-used-surface",
+      "workPackage": "D00",
+      "candidates": [
+        "collections",
+        "json",
+        "hashlib",
+        "re"
+      ],
+      "reason": "Translate relevant value/key/hash/string/token behavior; JSON5/JS tokens require explicit grammar logic, not Python eval or blind json.loads."
+    },
+    "jsesc": {
+      "action": "rewrite-used-surface",
+      "workPackage": "D00",
+      "candidates": [
+        "collections",
+        "json",
+        "hashlib",
+        "re"
+      ],
+      "reason": "Translate relevant value/key/hash/string/token behavior; JSON5/JS tokens require explicit grammar logic, not Python eval or blind json.loads."
+    },
+    "js-tokens": {
+      "action": "rewrite-used-surface",
+      "workPackage": "D00",
+      "candidates": [
+        "collections",
+        "json",
+        "hashlib",
+        "re"
+      ],
+      "reason": "Translate relevant value/key/hash/string/token behavior; JSON5/JS tokens require explicit grammar logic, not Python eval or blind json.loads."
+    },
+    "anymatch": {
+      "action": "rewrite-used-surface-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "re",
+        "fnmatch"
+      ],
+      "reason": "Trace pattern/module/version helpers; implement used grammar and matching/ordering behavior, standard fnmatch is only a primitive."
+    },
+    "balanced-match": {
+      "action": "rewrite-used-surface-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "re",
+        "fnmatch"
+      ],
+      "reason": "Trace pattern/module/version helpers; implement used grammar and matching/ordering behavior, standard fnmatch is only a primitive."
+    },
+    "brace-expansion": {
+      "action": "rewrite-used-surface-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "re",
+        "fnmatch"
+      ],
+      "reason": "Trace pattern/module/version helpers; implement used grammar and matching/ordering behavior, standard fnmatch is only a primitive."
+    },
+    "braces": {
+      "action": "rewrite-used-surface-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "re",
+        "fnmatch"
+      ],
+      "reason": "Trace pattern/module/version helpers; implement used grammar and matching/ordering behavior, standard fnmatch is only a primitive."
+    },
+    "fill-range": {
+      "action": "rewrite-used-surface-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "re",
+        "fnmatch"
+      ],
+      "reason": "Trace pattern/module/version helpers; implement used grammar and matching/ordering behavior, standard fnmatch is only a primitive."
+    },
+    "is-core-module": {
+      "action": "rewrite-used-surface-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "re",
+        "fnmatch"
+      ],
+      "reason": "Trace pattern/module/version helpers; implement used grammar and matching/ordering behavior, standard fnmatch is only a primitive."
+    },
+    "is-extglob": {
+      "action": "rewrite-used-surface-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "re",
+        "fnmatch"
+      ],
+      "reason": "Trace pattern/module/version helpers; implement used grammar and matching/ordering behavior, standard fnmatch is only a primitive."
+    },
+    "is-glob": {
+      "action": "rewrite-used-surface-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "re",
+        "fnmatch"
+      ],
+      "reason": "Trace pattern/module/version helpers; implement used grammar and matching/ordering behavior, standard fnmatch is only a primitive."
+    },
+    "micromatch": {
+      "action": "rewrite-used-surface-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "re",
+        "fnmatch"
+      ],
+      "reason": "Trace pattern/module/version helpers; implement used grammar and matching/ordering behavior, standard fnmatch is only a primitive."
+    },
+    "minimatch": {
+      "action": "rewrite-used-surface-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "re",
+        "fnmatch"
+      ],
+      "reason": "Trace pattern/module/version helpers; implement used grammar and matching/ordering behavior, standard fnmatch is only a primitive."
+    },
+    "picomatch": {
+      "action": "rewrite-used-surface-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "re",
+        "fnmatch"
+      ],
+      "reason": "Trace pattern/module/version helpers; implement used grammar and matching/ordering behavior, standard fnmatch is only a primitive."
+    },
+    "to-regex-range": {
+      "action": "rewrite-used-surface-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "re",
+        "fnmatch"
+      ],
+      "reason": "Trace pattern/module/version helpers; implement used grammar and matching/ordering behavior, standard fnmatch is only a primitive."
+    },
+    "semver": {
+      "action": "rewrite-used-surface-and-trace",
+      "workPackage": "D00",
+      "candidates": [
+        "re",
+        "fnmatch"
+      ],
+      "reason": "Trace pattern/module/version helpers; implement used grammar and matching/ordering behavior, standard fnmatch is only a primitive."
+    },
+    "baseline-browser-mapping": {
+      "action": "trace-style-targets-then-rewrite",
+      "workPackage": "D05",
+      "candidates": [],
+      "reason": "Browser target/prefix data may influence generated styles; pin required derived constants offline or rewrite used transforms. Do not port automatic update scripts."
+    },
+    "browserslist": {
+      "action": "trace-style-targets-then-rewrite",
+      "workPackage": "D05",
+      "candidates": [],
+      "reason": "Browser target/prefix data may influence generated styles; pin required derived constants offline or rewrite used transforms. Do not port automatic update scripts."
+    },
+    "caniuse-lite": {
+      "action": "trace-style-targets-then-rewrite",
+      "workPackage": "D05",
+      "candidates": [],
+      "reason": "Browser target/prefix data may influence generated styles; pin required derived constants offline or rewrite used transforms. Do not port automatic update scripts."
+    },
+    "electron-to-chromium": {
+      "action": "trace-style-targets-then-rewrite",
+      "workPackage": "D05",
+      "candidates": [],
+      "reason": "Browser target/prefix data may influence generated styles; pin required derived constants offline or rewrite used transforms. Do not port automatic update scripts."
+    },
+    "node-releases": {
+      "action": "trace-style-targets-then-rewrite",
+      "workPackage": "D05",
+      "candidates": [],
+      "reason": "Browser target/prefix data may influence generated styles; pin required derived constants offline or rewrite used transforms. Do not port automatic update scripts."
+    },
+    "update-browserslist-db": {
+      "action": "trace-style-targets-then-rewrite",
+      "workPackage": "D05",
+      "candidates": [],
+      "reason": "Browser target/prefix data may influence generated styles; pin required derived constants offline or rewrite used transforms. Do not port automatic update scripts."
+    },
+    "convert-source-map": {
+      "action": "trace-compiler-config-then-rewrite",
+      "workPackage": "D10",
+      "candidates": [
+        "importlib.resources",
+        "json"
+      ],
+      "reason": "Transitive ZenUML compiler/config/source mapping plumbing; inspect renderToSvg use and reproduce DSL-visible transforms/errors. No runtime JS/TS loader."
+    },
+    "source-map-js": {
+      "action": "trace-compiler-config-then-rewrite",
+      "workPackage": "D10",
+      "candidates": [
+        "importlib.resources",
+        "json"
+      ],
+      "reason": "Transitive ZenUML compiler/config/source mapping plumbing; inspect renderToSvg use and reproduce DSL-visible transforms/errors. No runtime JS/TS loader."
+    },
+    "lines-and-columns": {
+      "action": "trace-compiler-config-then-rewrite",
+      "workPackage": "D10",
+      "candidates": [
+        "importlib.resources",
+        "json"
+      ],
+      "reason": "Transitive ZenUML compiler/config/source mapping plumbing; inspect renderToSvg use and reproduce DSL-visible transforms/errors. No runtime JS/TS loader."
+    },
+    "gensync": {
+      "action": "trace-compiler-config-then-rewrite",
+      "workPackage": "D10",
+      "candidates": [
+        "importlib.resources",
+        "json"
+      ],
+      "reason": "Transitive ZenUML compiler/config/source mapping plumbing; inspect renderToSvg use and reproduce DSL-visible transforms/errors. No runtime JS/TS loader."
+    },
+    "pirates": {
+      "action": "trace-compiler-config-then-rewrite",
+      "workPackage": "D10",
+      "candidates": [
+        "importlib.resources",
+        "json"
+      ],
+      "reason": "Transitive ZenUML compiler/config/source mapping plumbing; inspect renderToSvg use and reproduce DSL-visible transforms/errors. No runtime JS/TS loader."
+    },
+    "real-require": {
+      "action": "trace-compiler-config-then-rewrite",
+      "workPackage": "D10",
+      "candidates": [
+        "importlib.resources",
+        "json"
+      ],
+      "reason": "Transitive ZenUML compiler/config/source mapping plumbing; inspect renderToSvg use and reproduce DSL-visible transforms/errors. No runtime JS/TS loader."
+    },
+    "resolve": {
+      "action": "trace-compiler-config-then-rewrite",
+      "workPackage": "D10",
+      "candidates": [
+        "importlib.resources",
+        "json"
+      ],
+      "reason": "Transitive ZenUML compiler/config/source mapping plumbing; inspect renderToSvg use and reproduce DSL-visible transforms/errors. No runtime JS/TS loader."
+    },
+    "supports-preserve-symlinks-flag": {
+      "action": "trace-compiler-config-then-rewrite",
+      "workPackage": "D10",
+      "candidates": [
+        "importlib.resources",
+        "json"
+      ],
+      "reason": "Transitive ZenUML compiler/config/source mapping plumbing; inspect renderToSvg use and reproduce DSL-visible transforms/errors. No runtime JS/TS loader."
+    },
+    "jiti": {
+      "action": "trace-compiler-config-then-rewrite",
+      "workPackage": "D10",
+      "candidates": [
+        "importlib.resources",
+        "json"
+      ],
+      "reason": "Transitive ZenUML compiler/config/source mapping plumbing; inspect renderToSvg use and reproduce DSL-visible transforms/errors. No runtime JS/TS loader."
+    },
+    "sucrase": {
+      "action": "trace-compiler-config-then-rewrite",
+      "workPackage": "D10",
+      "candidates": [
+        "importlib.resources",
+        "json"
+      ],
+      "reason": "Transitive ZenUML compiler/config/source mapping plumbing; inspect renderToSvg use and reproduce DSL-visible transforms/errors. No runtime JS/TS loader."
+    },
+    "ts-interface-checker": {
+      "action": "trace-compiler-config-then-rewrite",
+      "workPackage": "D10",
+      "candidates": [
+        "importlib.resources",
+        "json"
+      ],
+      "reason": "Transitive ZenUML compiler/config/source mapping plumbing; inspect renderToSvg use and reproduce DSL-visible transforms/errors. No runtime JS/TS loader."
+    },
+    "lilconfig": {
+      "action": "trace-compiler-config-then-rewrite",
+      "workPackage": "D10",
+      "candidates": [
+        "importlib.resources",
+        "json"
+      ],
+      "reason": "Transitive ZenUML compiler/config/source mapping plumbing; inspect renderToSvg use and reproduce DSL-visible transforms/errors. No runtime JS/TS loader."
+    },
+    "read-cache": {
+      "action": "trace-compiler-config-then-rewrite",
+      "workPackage": "D10",
+      "candidates": [
+        "importlib.resources",
+        "json"
+      ],
+      "reason": "Transitive ZenUML compiler/config/source mapping plumbing; inspect renderToSvg use and reproduce DSL-visible transforms/errors. No runtime JS/TS loader."
+    },
+    "package-json-from-dist": {
+      "action": "trace-compiler-config-then-rewrite",
+      "workPackage": "D10",
+      "candidates": [
+        "importlib.resources",
+        "json"
+      ],
+      "reason": "Transitive ZenUML compiler/config/source mapping plumbing; inspect renderToSvg use and reproduce DSL-visible transforms/errors. No runtime JS/TS loader."
+    },
+    "escalade": {
+      "action": "trace-compiler-config-then-rewrite",
+      "workPackage": "D10",
+      "candidates": [
+        "importlib.resources",
+        "json"
+      ],
+      "reason": "Transitive ZenUML compiler/config/source mapping plumbing; inspect renderToSvg use and reproduce DSL-visible transforms/errors. No runtime JS/TS loader."
+    },
+    "nanoid": {
+      "action": "stdlib-with-adapter",
+      "workPackage": "D00",
+      "candidates": [
+        "secrets"
+      ],
+      "reason": "Preserve alphabet, ID shape and observable randomness; no assertion of seed equivalence."
+    },
+    "pathe": {
+      "action": "stdlib-with-adapter-and-trace",
+      "workPackage": "D02",
+      "candidates": [
+        "posixpath",
+        "pathlib"
+      ],
+      "reason": "Iconify resource/module path helper; preserve POSIX normalization/URL boundaries and platform rules, not ambient filesystem lookup."
+    },
+    "highlight.js": {
+      "action": "rewrite-used-surface-and-trace",
+      "workPackage": "D10",
+      "candidates": [],
+      "reason": "Trace ZenUML code/highlight surface and reproduce required token/style model in Python; do not assume highlight.js is unused or introduce JS execution."
+    },
+    "d3-selection": {
+      "action": "discard-browser-layer",
+      "workPackage": "D08",
+      "candidates": [],
+      "reason": "User-authorized Canvas architecture discards DOM selections, mutations, animation and browser controls. Represent required geometry/style/interaction intent as typed Python data, not a D3 API clone.",
+      "runtimeDisposition": "not-a-python-runtime-library"
+    },
+    "d3-transition": {
+      "action": "discard-browser-layer",
+      "workPackage": "D08",
+      "candidates": [],
+      "reason": "User-authorized Canvas architecture discards DOM selections, mutations, animation and browser controls. Represent required geometry/style/interaction intent as typed Python data, not a D3 API clone.",
+      "runtimeDisposition": "not-a-python-runtime-library"
+    },
+    "d3-brush": {
+      "action": "discard-browser-layer",
+      "workPackage": "D08",
+      "candidates": [],
+      "reason": "User-authorized Canvas architecture discards DOM selections, mutations, animation and browser controls. Represent required geometry/style/interaction intent as typed Python data, not a D3 API clone.",
+      "runtimeDisposition": "not-a-python-runtime-library"
+    },
+    "d3-drag": {
+      "action": "discard-browser-layer",
+      "workPackage": "D08",
+      "candidates": [],
+      "reason": "User-authorized Canvas architecture discards DOM selections, mutations, animation and browser controls. Represent required geometry/style/interaction intent as typed Python data, not a D3 API clone.",
+      "runtimeDisposition": "not-a-python-runtime-library"
+    },
+    "d3-zoom": {
+      "action": "discard-browser-layer",
+      "workPackage": "D08",
+      "candidates": [],
+      "reason": "User-authorized Canvas architecture discards DOM selections, mutations, animation and browser controls. Represent required geometry/style/interaction intent as typed Python data, not a D3 API clone.",
+      "runtimeDisposition": "not-a-python-runtime-library"
+    },
+    "d3-axis": {
+      "action": "rewrite-axis-geometry",
+      "workPackage": "D06",
+      "candidates": [],
+      "reason": "Compute ticks, labels and axis geometry from scales; draw via Canvas. No D3 selection or SVG axis element implementation.",
+      "runtimeDisposition": "python-computation-and-draw-data"
+    },
+    "d3-timer": {
+      "action": "replace-host-control-if-needed",
+      "workPackage": "D00",
+      "candidates": [],
+      "reason": "Retain required iteration/callback semantics with explicit Python control flow; no browser animation timer or D3 event framework clone.",
+      "runtimeDisposition": "python-control-flow"
+    },
+    "d3-dispatch": {
+      "action": "replace-host-control-if-needed",
+      "workPackage": "D00",
+      "candidates": [],
+      "reason": "Retain required iteration/callback semantics with explicit Python control flow; no browser animation timer or D3 event framework clone.",
+      "runtimeDisposition": "python-control-flow"
+    }
+  },
+  "prefixes": [
+    {
+      "prefix": "@types/",
+      "action": "type-contract",
+      "workPackage": "TYPES",
+      "candidates": [],
+      "reason": "Type declarations become Python contracts; they remain visible in the raw tree."
+    },
+    {
+      "prefix": "@napi-rs/canvas",
+      "action": "discard-alternate-renderer",
+      "workPackage": "D08",
+      "candidates": [
+        "py-skia-canvas"
+      ],
+      "reason": "All required drawing/measurement/encoding uses the already selected py-skia-canvas public API. Keep upstream native/platform nodes for provenance only.",
+      "runtimeDisposition": "replaced-by-existing-canvas"
+    },
+    {
+      "prefix": "@chevrotain/",
+      "action": "candidate-or-rewrite",
+      "workPackage": "D04",
+      "candidates": [
+        "lark"
+      ],
+      "reason": "Parser internal AST/regex/lexer behavior migrated by grammar work; not a drop-in Python API."
+    },
+    {
+      "prefix": "d3-",
+      "action": "retain-used-computation-only",
+      "workPackage": "D06",
+      "candidates": [],
+      "reason": "Retain used numeric/geometry/layout behavior. Exact browser-host rules override this prefix; never clone D3 DOM APIs.",
+      "runtimeDisposition": "python-computation-review"
+    },
+    {
+      "prefix": "@babel/",
+      "action": "trace-then-rewrite-surface",
+      "workPackage": "D10",
+      "candidates": [],
+      "reason": "Declared through ZenUML. Trace DSL AST/source mapping/transformation use; map required behavior to Python without JS execution."
+    },
+    {
+      "prefix": "@jridgewell/",
+      "action": "trace-then-rewrite-surface",
+      "workPackage": "D10",
+      "candidates": [],
+      "reason": "Declared through ZenUML. Trace DSL AST/source mapping/transformation use; map required behavior to Python without JS execution."
+    },
+    {
+      "prefix": "@floating-ui/",
+      "action": "discard-browser-layer",
+      "workPackage": "D10",
+      "candidates": [],
+      "reason": "Discard browser/React UI infrastructure under user-authorized Canvas architecture. Preserve required diagram data/style/geometry through new Python responsibilities.",
+      "runtimeDisposition": "not-a-python-runtime-library"
+    },
+    {
+      "prefix": "@headlessui/",
+      "action": "discard-browser-layer",
+      "workPackage": "D10",
+      "candidates": [],
+      "reason": "Discard browser/React UI infrastructure under user-authorized Canvas architecture. Preserve required diagram data/style/geometry through new Python responsibilities.",
+      "runtimeDisposition": "not-a-python-runtime-library"
+    },
+    {
+      "prefix": "@react-",
+      "action": "discard-browser-layer",
+      "workPackage": "D10",
+      "candidates": [],
+      "reason": "Discard browser/React UI infrastructure under user-authorized Canvas architecture. Preserve required diagram data/style/geometry through new Python responsibilities.",
+      "runtimeDisposition": "not-a-python-runtime-library"
+    },
+    {
+      "prefix": "@tanstack/",
+      "action": "discard-browser-layer",
+      "workPackage": "D10",
+      "candidates": [],
+      "reason": "Discard browser/React UI infrastructure under user-authorized Canvas architecture. Preserve required diagram data/style/geometry through new Python responsibilities.",
+      "runtimeDisposition": "not-a-python-runtime-library"
+    },
+    {
+      "prefix": "tailwind",
+      "action": "replace-style-meaning-not-browser-css",
+      "workPackage": "D05",
+      "candidates": [],
+      "reason": "Resolve required theme/class-derived style values into Python styles; do not port browser UI CSS build/runtime infrastructure.",
+      "runtimeDisposition": "python-style-model"
+    }
+  ],
+  "productFallback": {
+    "action": "trace-then-rewrite-surface",
+    "workPackage": "TRACE",
+    "candidates": [],
+    "reason": "Trace retained feature semantics by featureOwners. DOM/browser layers are replaced by typed styles/geometry and Canvas under user authorization; unreviewed computational surfaces still require source evidence before exclusion."
+  },
+  "toolingFallback": {
+    "action": "replace-development-tool",
+    "workPackage": "DEV",
+    "candidates": [],
+    "reason": "Outside source-inclusive product closure. Retain full build/test/docs graph; replace needed development workflow, not introduce it into Python product."
+  },
+  "architecture": {
+    "id": "canvas-native-no-dom",
+    "decision": "user-authorized",
+    "renderer": "py-skia-canvas-public-api-only",
+    "layoutReuse": "py-visactor-elk",
+    "pipeline": [
+      "semantic-model",
+      "resolved-styles-and-text-runs",
+      "canvas-text-measurement",
+      "layout-and-routing",
+      "typed-draw-commands",
+      "canvas-draw-and-encode"
+    ],
+    "discardMechanisms": [
+      "DOM",
+      "virtual-DOM",
+      "D3-selection",
+      "browser-layout",
+      "browser-render-scheduling",
+      "HTML-to-image"
+    ],
+    "preserve": [
+      "Mermaid syntax/model/config meaning",
+      "required numeric/layout/geometry algorithms",
+      "label/style/resource/security semantics",
+      "applicable metadata"
+    ],
+    "sourceTreePurpose": "Immutable upstream provenance, not a Python runtime dependency list.",
+    "functionalExclusion": "Removing host mechanisms is authorized; required feature loss is not inferred from that removal."
+  }
+}

@@ -1,0 +1,267 @@
+{
+  "schema": "py-mermaid-change/v1",
+  "taskId": "20261104-canvas-native",
+  "kind": "user-authorized-canvas-native-architecture",
+  "status": "canvas-native-architecture-and-policy-scoped-verified",
+  "objective": "Discard DOM/browser implementation mechanisms and dependencies from the Python architecture, retaining Mermaid features through typed semantic/style/layout/draw data and py-skia-canvas.",
+  "authorization": "User explicitly requires all drawing through py-skia-canvas and discarding DOM-based implementation approaches and dependencies as far as possible.",
+  "acceptanceCriteria": [
+    "Canvas-only pipeline and mechanism-vs-feature boundaries documented without requiring renewed approval",
+    "Browser-host dependency plans explicitly discarded; required computation/style/security functionality preserved",
+    "Raw upstream graph nodes/edges/scopes and Mermaid feature denominators preserved",
+    "F01.1 label plan uses Python text data and Canvas measurements, not a DOM compatibility path",
+    "Relevant contracts, new-session instructions and generated views agree; no product capability inflated"
+  ],
+  "baseCommit": "b1e4c10adc2c3ca8b77b86febcd306512116408c",
+  "startingStatus": " M README.en.md\n M README.md\n M docs/IMPLEMENTATION_PLAN.md\n M docs/NEW_SESSION.md\n M docs/RELEASE_STATUS.md\n M docs/TASKS.md\n M references/README.md\n M tests/README.md\n?? docs/DEPENDENCY_MIGRATION.md\n?? docs/FEATURE_MIGRATION.md\n?? docs/THIRD_PARTY_DEPENDENCIES.md\n?? docs/changes/20261104-dependency-audit.json\n?? docs/changes/20261104-dependency-tree.json\n?? docs/changes/20261104-feature-split.json\n?? references/dependencies.json\n?? references/dependency-bottom-up.md\n?? references/dependency-porting-policy.json\n?? references/dependency-toolchain-tree.txt\n?? references/dependency-tree.json\n?? references/dependency-tree.txt\n?? references/feature-modules.json\n?? references/python-candidates.json\n?? scripts/audit_dependencies.py\n?? scripts/build_dependency_tree.py\n?? tests/dependencies/\n",
+  "changedPaths": [
+    "AGENTS.md",
+    "README.en.md",
+    "README.md",
+    "docs/API_COMPATIBILITY.md",
+    "docs/CANVAS_NATIVE_ARCHITECTURE.md",
+    "docs/DEPENDENCY_MIGRATION.md",
+    "docs/FEATURE_MIGRATION.md",
+    "docs/IMPLEMENTATION_PLAN.md",
+    "docs/NEW_SESSION.md",
+    "docs/RELEASE_STATUS.md",
+    "docs/TASKS.md",
+    "docs/TEST_AND_RELEASE.md",
+    "docs/THIRD_PARTY_DEPENDENCIES.md",
+    "docs/changes/20261104-canvas-native.json",
+    "references/README.md",
+    "references/dependency-bottom-up.md",
+    "references/dependency-porting-policy.json",
+    "references/dependency-tree.json",
+    "references/feature-modules.json",
+    "scripts/build_dependency_tree.py"
+  ],
+  "preservedStartingFiles": [
+    "docs/changes/20261104-dependency-audit.json",
+    "docs/changes/20261104-dependency-tree.json",
+    "docs/changes/20261104-feature-split.json",
+    "references/dependencies.json",
+    "references/dependency-toolchain-tree.txt",
+    "references/dependency-tree.txt",
+    "references/python-candidates.json",
+    "scripts/audit_dependencies.py",
+    "tests/README.md",
+    "tests/dependencies/test_dependency_audit.py",
+    "tests/dependencies/test_dependency_tree.py"
+  ],
+  "sourceSha256": {
+    "AGENTS.md": "4cebbf961a1c0403d8ed5b8d1513b4d71446ebe3bc13ef2ec0fff09603d47232",
+    "README.en.md": "633c7b2aabede7b49632a1095157fe5bed5f846903fe5e33d9e13093379f0a6c",
+    "README.md": "4003d9dd8251eaea3652083e709d37a07a20e0f675d673472e666307ce625078",
+    "docs/API_COMPATIBILITY.md": "0e7f3bdc719707dcb05be3284e359d8c71678b6d793cc832d6577a35b52097b2",
+    "docs/CANVAS_NATIVE_ARCHITECTURE.md": "f706290861fd6189ae0e3fe42009df9a1c20d5b9d181e337344387af0a47126b",
+    "docs/DEPENDENCY_MIGRATION.md": "78acee02609da88fdf387576b8d30aa89f9f50b096f97f08c509abc9956448ba",
+    "docs/FEATURE_MIGRATION.md": "b290fd11f23e50f7b6e5679d33b5f630eaa294cf07b25cf022566b275d2fc557",
+    "docs/IMPLEMENTATION_PLAN.md": "5df3054d90d320d78de64025adfd945df55aa3eef02a0cf15d47428e3e51aef8",
+    "docs/NEW_SESSION.md": "d62a5695ca0ba04939790fb9539b76685732dcc8e93b833ddedc0aa56a4ada46",
+    "docs/RELEASE_STATUS.md": "4e2694fd79fc99e9dd20a29a7b1d2b5fcd4d2b069d1212239ba635071b571874",
+    "docs/TASKS.md": "ffe7ad20fcaf808fda048b162963536e471025da24a5aab56af3bac65b2f194e",
+    "docs/TEST_AND_RELEASE.md": "f13a17188ce5c5a01d5882e80d76eac6bcb7fe3d660d17935d8ccccec1aafbeb",
+    "docs/THIRD_PARTY_DEPENDENCIES.md": "3b95d12fd3aedf17de41c3b9beb1be7c8bf0002bc40e2e9b9b56451a5e9641a1",
+    "references/README.md": "0d96a81c4d9af2689b9e9d4cc644c52fb3ed0bf93455ba47e06f7fd46b334b1f",
+    "references/dependency-bottom-up.md": "d49da72a88b94098e9317e685271ff46a7319b13b735a877b1a5311f6f5b575f",
+    "references/dependency-porting-policy.json": "545b9df5e92e728622af17f743da5ad6a7bbd04f535f632e02ab9d8a74f8944f",
+    "references/dependency-tree.json": "5afd1cbd933f74b7eb4c199934a3e07b08ef0e36649ef23085e421d9a28bce3d",
+    "references/feature-modules.json": "6e186334dc75279e67d3f23599f25cd71a562d6f38f8a9dfdffba89eea986cc9",
+    "scripts/build_dependency_tree.py": "77fffd42759d2da62d95749b3f993268d39cd12c21c210c443008c8a317f5cd6"
+  },
+  "commands": [
+    {
+      "id": "bootstrap-before",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "scripts/validate_bootstrap.py"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261104-canvas-native-01/bootstrap-before.log",
+      "logSha256": "10549475367968e3d7628ae6d4812a52fcba6e77a6bad290953b273362a29542"
+    },
+    {
+      "id": "upstream-before",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "scripts/upstream.py",
+        "check"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261104-canvas-native-01/upstream-before.log",
+      "logSha256": "e177513c6db5afbcc9524be08795930fb8d5edc0c47ba46d8051ee7859418089"
+    },
+    {
+      "id": "architecture-review",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "C:\\code\\py-visactor\\py-mermaid\\test-runs\\20261104-canvas-native-01\\review_architecture.py"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261104-canvas-native-01/architecture-review.log",
+      "logSha256": "98ef6d2e735ad8a6f077feacbc7c3a9e01d910b2245fa75c63eac2769c22ad0e"
+    },
+    {
+      "id": "tree-check",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "scripts/build_dependency_tree.py",
+        "--check"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261104-canvas-native-01/tree-check.log",
+      "logSha256": "f278bdf2fd292bfc3d017d9df9bbf5b01039a73a53d454221605e3fc1ae89021"
+    },
+    {
+      "id": "dependency-controls",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests/dependencies",
+        "-v"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261104-canvas-native-01/dependency-controls.log",
+      "logSha256": "e4fb1330d7202d489194611e298600620891539c5a69f80f33a7aef0fda8a59c"
+    },
+    {
+      "id": "bootstrap-after",
+      "command": [
+        "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\python.exe",
+        "scripts/validate_bootstrap.py"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261104-canvas-native-01/bootstrap-after.log",
+      "logSha256": "e70b70bfba3bd505268b39047c0b71be4f2b5d4abf92e4df81315bb5889127cf"
+    },
+    {
+      "id": "diff-check",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exitCode": 0,
+      "log": "test-runs/20261104-canvas-native-01/diff-check.log",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "test-runs/20261104-canvas-native-01/architecture-review.log",
+      "sha256": "98ef6d2e735ad8a6f077feacbc7c3a9e01d910b2245fa75c63eac2769c22ad0e"
+    },
+    {
+      "path": "test-runs/20261104-canvas-native-01/bootstrap-after.log",
+      "sha256": "e70b70bfba3bd505268b39047c0b71be4f2b5d4abf92e4df81315bb5889127cf"
+    },
+    {
+      "path": "test-runs/20261104-canvas-native-01/bootstrap-before.log",
+      "sha256": "10549475367968e3d7628ae6d4812a52fcba6e77a6bad290953b273362a29542"
+    },
+    {
+      "path": "test-runs/20261104-canvas-native-01/commands.json",
+      "sha256": "b2828f1af898c71f9871106219b8d62264a5d7c4fec4c23d89e01373a4c7bda1"
+    },
+    {
+      "path": "test-runs/20261104-canvas-native-01/dependency-controls.log",
+      "sha256": "e4fb1330d7202d489194611e298600620891539c5a69f80f33a7aef0fda8a59c"
+    },
+    {
+      "path": "test-runs/20261104-canvas-native-01/diff-check.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "test-runs/20261104-canvas-native-01/review_architecture.py",
+      "sha256": "2a7fea9778dcd163b9f3838a69db01a8cc7ab456ab124baca694c3deaa9f425b"
+    },
+    {
+      "path": "test-runs/20261104-canvas-native-01/starting.json",
+      "sha256": "9acd0989374fcc77519dee45da7b2035d40c68da87648e8c9de8190563e712c4"
+    },
+    {
+      "path": "test-runs/20261104-canvas-native-01/tree-check.log",
+      "sha256": "f278bdf2fd292bfc3d017d9df9bbf5b01039a73a53d454221605e3fc1ae89021"
+    },
+    {
+      "path": "test-runs/20261104-canvas-native-01/update_policy.py",
+      "sha256": "5c50957990f29c9572db0096fe9d54e175da78f446a9f7efccd3d75c8419d550"
+    },
+    {
+      "path": "test-runs/20261104-canvas-native-01/upstream-before.log",
+      "sha256": "e177513c6db5afbcc9524be08795930fb8d5edc0c47ba46d8051ee7859418089"
+    }
+  ],
+  "acceptanceResults": [
+    "User-authorized Canvas-native pipeline added to architecture/compatibility/functional/dependency plans and machine policy.",
+    "D3 DOM/control layers, fastdom/strictdom, React/DOM scheduling, HTML-to-image and alternate native renderer plans explicitly discarded; styles, security, diagram data and numerical/layout algorithms retain Python responsibilities.",
+    "F01.1 uses Python text runs and boxes plus Canvas measurement; it no longer requires a default DOM emulation route.",
+    "All 2432 upstream nodes, 5118 dependency edges, scopes, integrity and SCC layers unchanged; all feature families/shared owners and planned cases preserved.",
+    "Raw inventory, both full source text trees and Python candidate research remain byte-identical; target plans/index and architecture metadata regenerated.",
+    "Architecture policy review, generated-view comparison, 14 targeted dependency controls, bootstrap/documentation structure and whitespace checks passed.",
+    "Runtime dependencies, upstream lock, compatibility state and src remain unchanged; no rendering execution or Mermaid spec claim."
+  ],
+  "documentationReview": [
+    {
+      "paths": [
+        "AGENTS.md",
+        "docs/CANVAS_NATIVE_ARCHITECTURE.md",
+        "docs/API_COMPATIBILITY.md",
+        "docs/FEATURE_MIGRATION.md",
+        "docs/IMPLEMENTATION_PLAN.md",
+        "docs/DEPENDENCY_MIGRATION.md",
+        "docs/TASKS.md",
+        "docs/TEST_AND_RELEASE.md"
+      ],
+      "status": "updated",
+      "reason": "Record user-authorized replacement of DOM mechanisms by Python semantic/style/geometry/draw data; preserve feature/security/algorithm and visual reporting requirements."
+    },
+    {
+      "paths": [
+        "README.md",
+        "README.en.md",
+        "docs/NEW_SESSION.md",
+        "docs/RELEASE_STATUS.md",
+        "docs/THIRD_PARTY_DEPENDENCIES.md",
+        "references/README.md"
+      ],
+      "status": "updated",
+      "reason": "Expose authoritative architecture and distinguish upstream dependency provenance from target Python runtime selection."
+    },
+    {
+      "paths": [
+        "references/dependency-porting-policy.json",
+        "references/feature-modules.json",
+        "scripts/build_dependency_tree.py",
+        "references/dependency-tree.json",
+        "references/dependency-bottom-up.md"
+      ],
+      "status": "updated",
+      "reason": "Mark discarded browser implementation layers explicitly and publish the Canvas-native target pipeline while retaining all raw source identities and edges."
+    },
+    {
+      "paths": [
+        "pyproject.toml",
+        "docs/compatibility.json",
+        "src",
+        "examples",
+        "docs/assets",
+        "tools/oracle/README.md"
+      ],
+      "status": "reviewed-no-change",
+      "reason": "No product renderer or dependency introduced; existing Canvas sample remains accurate. Upstream DOM measurements remain valid development-only oracle diagnostics, not production dependencies."
+    }
+  ],
+  "limitations": [
+    "Architecture and policy only: Python Mermaid parser/layout adapter/renderer still unimplemented.",
+    "No candidate package equivalence, actual image output, GPU/CPU or full-spec verification performed.",
+    "Rich text/style/math/resource mappings and functional/visual differences require implementation and changed-surface evidence.",
+    "Discarding host implementation mechanisms is user-authorized; it does not authorize silent omission of diagram semantics, content, security or numerical algorithms.",
+    "No commit, push or publication."
+  ],
+  "nextStep": "Implement F01.1-T1 semantic parsing/model contracts under the Canvas-native pipeline, then explicit styles/text measurement, real py-elk layout and direct Canvas draw commands; no DOM/virtual-DOM or browser compatibility layer."
+}
