@@ -1,0 +1,93 @@
+{
+  "schema": "py-mermaid-source-receipt/v1",
+  "owner": "C",
+  "task": "BULK-swimlane-routing",
+  "status": "code_complete_unverified",
+  "sourceVersion": "mermaid@12.2.0",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "sourceMap": "references/bulk-C-swimlane-routing.json",
+  "ownedSourceSha256": "85f1d91d4a67bb33cc838af39777349b3dae5c8e3f501fab6010566dae735854",
+  "ownedFiles": [
+    {
+      "path": "src/py_mermaid/diagrams/business/_swimlane_routing/__init__.py",
+      "sha256": "a0872233b4fb985c7e9ef3c8214e51869c4cd88d425f532aeab6a99cc6c15c6a",
+      "bytes": 2869
+    },
+    {
+      "path": "src/py_mermaid/diagrams/business/_swimlane_routing/detours.py",
+      "sha256": "1286cd2e791ff5589b6eb7cf8e1d0c8ec1dc7db830708e205ecd60be09439695",
+      "bytes": 3618
+    },
+    {
+      "path": "src/py_mermaid/diagrams/business/_swimlane_routing/direction.py",
+      "sha256": "704f61e6334035affd24f4e22f40ce4328e9bc2c22733f9ad927110d68c32c35",
+      "bytes": 4574
+    },
+    {
+      "path": "src/py_mermaid/diagrams/business/_swimlane_routing/endpoint_clip.py",
+      "sha256": "c78c8106840b04d7fb3110d19b50a96c1a75d4b5745eca26bdf1882e0f91234d",
+      "bytes": 6561
+    },
+    {
+      "path": "src/py_mermaid/diagrams/business/_swimlane_routing/geometry.py",
+      "sha256": "ff80abe76b4381d44a866948f499814d694f4a727530052521517e118f475503",
+      "bytes": 10057
+    },
+    {
+      "path": "src/py_mermaid/diagrams/business/_swimlane_routing/label_anchoring.py",
+      "sha256": "6d9d968a3252723d0bf8a2c7d03b7fc19175af86201d552b85acb81cb2361d08",
+      "bytes": 5721
+    },
+    {
+      "path": "src/py_mermaid/diagrams/business/_swimlane_routing/materialized.py",
+      "sha256": "621023f77414e94acbe69ee048466959fd3d5397e68c7aedc3bf6c40a188aaa3",
+      "bytes": 33609
+    },
+    {
+      "path": "src/py_mermaid/diagrams/business/_swimlane_routing/router.py",
+      "sha256": "64caadc01cba284bda4168296d9ff8316bdc671a7b075d1c2c7b03be9e214a24",
+      "bytes": 30252
+    },
+    {
+      "path": "src/py_mermaid/diagrams/business/_swimlane_routing/shared_tracks.py",
+      "sha256": "abe833d3ddfb48dcc6bedde8c96c51c5910bae754774a1a7cbbd3f8364bc8c56",
+      "bytes": 6092
+    },
+    {
+      "path": "src/py_mermaid/diagrams/business/_swimlane_routing/terminal_routes.py",
+      "sha256": "de48c8b38fc0b8faf3f853df4be47698ffc208f7463501efe221978ccea0f7d1",
+      "bytes": 4699
+    },
+    {
+      "path": "src/py_mermaid/diagrams/business/_swimlane_routing/validation.py",
+      "sha256": "e3fd59df65ea474eb4e812382510fc23b4cf6f13a9f284ded5a7d7337f15af4e",
+      "bytes": 2086
+    }
+  ],
+  "mechanicalRuns": [
+    "BULK-record-20261106T033829Z-89b5f64e",
+    "BULK-record-20261106T033838Z-0b497e6d"
+  ],
+  "mechanicalResult": "compile/import/signature only",
+  "functionalStatus": "NOT_EVALUATED",
+  "behaviorExecuted": false,
+  "nativeAllocated": false,
+  "testsDesigned": false,
+  "publicInterface": "route_and_postprocess(layout:dict,direction:str)->None",
+  "integration": {
+    "input": "B prepare/default lane/label nodes/Sugiyama TB centers",
+    "output": "in-place final oriented node/label centers, title rectangles, routes; layout-only edges removed",
+    "renderer": "source rect duplicate handoff retained; B owns later shape intersection from edges.js"
+  },
+  "knownUnverified": [
+    "No routing/native/oracle/visual behavior has been run in P1.",
+    "P2 must independently verify source route choice, bounds, labels and all four direction branches; compilation is not functional evidence."
+  ],
+  "intentionalAdaptations": [
+    "TypeScript interfaces erased to local mutable Python dicts; original opaque keys preserved.",
+    "JS Map/object identity comparisons use Python is or numeric identity indices; stable source iteration order preserved.",
+    "JS Number.toFixed geometric cache keys use binary-value decimal rounding rather than Python ties-to-even formatting.",
+    "Source validation warnings use Python logging and do not mutate routes or reject an otherwise returned layout.",
+    "Existing source exhausted-A* anchor fallback is retained before the complete source postprocessing/validation; no new generic fallback is introduced."
+  ]
+}

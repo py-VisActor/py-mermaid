@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "scope": "BULK_STATIC_31_ENTRIES",
+  "owner": "B",
+  "phase": "P2",
+  "status": "designed_not_executed",
+  "frozenProductSHA256": "97b353ebf7e176a750a736a714c85638e0a497b722e451dc77570579a2d36cbb",
+  "upstream": {"version": "12.2.0", "commit": "1fb7869866dd619168d840291c9c54b4f129758b", "root": ".local/upstream-mermaid"},
+  "lease": ["tests/bulk/b/**", "tests/bulk/cases-B.json", "references/bulk-B-assertions.json", "docs/changes/bulk-B-P2.json"],
+  "detectors": ["gantt", "journey", "timeline", "gitGraph", "swimlane", "agentflow", "eventmodeling", "ishikawa", "wardley", "cynefin"],
+  "deferredNotCounted": ["pie", "quadrantChart", "xychart", "radar", "treemap", "sankey", "venn"],
+  "designCounts": {
+    "unittestMethods": 139,
+    "asyncMethods": 27,
+    "fixtures": 110,
+    "renderFixtures": 97,
+    "syntaxErrorFixtures": 10,
+    "rendererErrorFixtures": 3,
+    "fixedSourceFilesInventoried": 245,
+    "sourceLiteralItTestDescribeTitlesInventoried": 837,
+    "sourceParameterTableLocationsInventoried": 19,
+    "inventoryCountsAreNotCoveragePercentages": true
+  },
+  "fixturesByKind": {"gantt":22,"journey":4,"timeline":17,"gitGraph":22,"swimlane":13,"agentflow":13,"eventmodeling":7,"ishikawa":3,"wardley":5,"cynefin":4},
+  "coverage": {
+    "temporal": ["task IDs and source raw labels/tags/sections/directives", "sorted actor union and unclamped finite journey scores", "timeline whitespace-sensitive event grammar/continuations/LR/TD", "Git branch/head/merge/cherry-pick/type/tag semantics and meaningful exact error controls"],
+    "calendar": ["leap dates/month-year clamping/fractional day-week rounding", "after latest/until earliest/inclusive dates/excludes/includes/manual end", "calendar-day vs elapsed-hour DST spring/fall", "year zero/negative/10000 Gregorian arithmetic and fallback limits", "timestamp X/x start/end source asymmetry", "cyclic dependencies/missing previous/zero-duration warning"],
+    "business": ["AgentFlow seven kinds/shape aliases/removed shape table/global and nested flows/connectors/opaque metadata/source diagnostics", "all eight upstream AgentFlow conformance fixtures copied verbatim with original hashes", "EventModeling aliases/data formats/type reference table/reset/multiple sources/notes/GWT/source-unconsumed metadata", "Ishikawa relative indentation/deep cause nesting/82-degree leaf geometry", "Wardley fractional-percent projection/pipelines/strategies/inertia/trends/annotations/links/coordinate errors", "Cynefin five domains/transition EOL/repeated blocks/selfloop warning/overflow/seeded and host seed geometry"],
+    "swimlane": ["five directions", "nested/topmost lane ownership", "source DFS backedge reversal and ID retention", "proper graph intermediate dummy ranks", "cross-lane edge-label target ownership and dimensions", "synthetic default lane/idempotence", "fixed title band constraints and real LR rotation pivot", "real dedicated layout full IDs/labels/cycle/non-overlap/containment", "public provider immutable group_data including synthetic group", "AgentFlow explicit real ELK vs built-in Swimlane bridge"],
+    "styles": ["11 Timeline and Git theme branches", "source brightness 120%", "source CSS versus user important override", "handDrawn retained families", "generic scene paint bounds versus viewport", "real measured label boxes and visible content"]
+  },
+  "independence": {"candidateExecutedToDeriveExpected": false,"coordinateGoldenFromCandidate": false,"privateLayoutHelperUsedToComputeExpected": false,"expectationBasis":"fixed grammar/DB/spec/renderer/styles and literal numerical relationships","publicPathBoundsUse":"decode actual recorded path geometry only, never generate expected layout"},
+  "mechanicalRuns": [
+    {"run":"test-runs/BULK-record-20261106T042406Z-8a607be3","status":"SUCCESS","exitCode":0,"purpose":"stdlib-only fixture and source assertion inventory generation"},
+    {"run":"test-runs/BULK-record-20261106T042408Z-ddea3cbc","status":"SUCCESS","exitCode":0,"purpose":"compile/import/discovery and JSON/origin-hash checks only; collected 139 methods; no runner"}
+  ],
+  "preservedEarlierP2Runs": ["test-runs/BULK-record-20261106T042038Z-1264bc2c","test-runs/BULK-record-20261106T042248Z-b912faaa","test-runs/BULK-record-20261106T042255Z-1146f9be"],
+  "hashes": {
+    "tests/bulk/b/__init__.py":"babba001bd6ca7dd5a24dbd036c341fa1052edb75c4e2c1af23617c326aa2aba",
+    "tests/bulk/b/fixture_design.py":"87f6fc904ca3afd116251f32ada5f686f8e91050ecd32779a4eddbc743ca93da",
+    "tests/bulk/b/mechanical.py":"a9170de4e8d20b81c608ddb75a457937e7e86c35e00a7ff95b48e92330abf19f",
+    "tests/bulk/b/support.py":"c76bd03f62d89a3b313ac766606795503d72338afc504aa20db3c55cb251e061",
+    "tests/bulk/b/test_branch_tables.py":"972ecb7a9fc744d2f1b342e871b374e7b3471b8561c40feab76c699cca8c11d2",
+    "tests/bulk/b/test_business_semantics.py":"124a08449c5c19f375919fcd62da9cb6844439181f757ab359e00b92bb2e6569",
+    "tests/bulk/b/test_geometry.py":"b64b5aa0b1b2dffdcc3671413dd18a360864eb3ab5456063a0eb09763a2931ab",
+    "tests/bulk/b/test_source_algorithms.py":"d38f6bc995da18deb4deea8b2e275956ee50945f65b6c970b480f3b658a7db06",
+    "tests/bulk/b/test_temporal_semantics.py":"fab9459b08af848d8e0da47dbc3f0e4856d20e87862b41911fddf6355d32edda",
+    "tests/bulk/cases-B.json":"b4e6669a8cdc64edb382e65f921deaf6f0925059ae1ac6c6357f915c0a33c12c",
+    "references/bulk-B-assertions.json":"32687dcc999ce5b278d7c7bac195f3245b4617705dab8401c83d90894476193d"
+  },
+  "P3Commands": [
+    "C:/venvs/pymmd-20261102/Scripts/python.exe tools/workflow.py record --scope BULK --name B-P3-first-unit --input references/bulk-B-assertions.json -- C:/venvs/pymmd-20261102/Scripts/python.exe -m unittest discover -s tests/bulk/b -t tests/bulk -p test_*.py -v"
+  ],
+  "notExecuted": ["product parse/build/layout/render", "formal unit tests", "native Canvas", "official oracle", "image comparison"],
+  "limitationsAndPending": [
+    "P2 collection success is not product behavior PASS; all 139 methods and 110 fixtures await P3.",
+    "DST uses an isolated host-conversion seam and existing IANA New_York data. Missing host tzdata produces an explicit skip; no installation or fabricated timezone coverage.",
+    "The 837 literal source titles include describe blocks and 19 parameter table locations, not 837 claimed migrated test cases. The actual encoded assertion index is the 139-method list.",
+    "C separately owns complete private Swimlane routing phase assertions; B does not duplicate or edit its files.",
+    "Source EventModeling namespace lookup defect and unconsumed note/GWT/entity/title paints remain versioned source behavior.",
+    "Cynefin source seed=0 host render(id) uses explicit native renderId, stable kind when absent; this is a recorded host adaptation.",
+    "AgentFlow collapsed source genuine selfloops, unknown-shape diagnostics, Swimlane nested frames and all directions remain P3 risk checks; frozen src unchanged.",
+    "First complete grouped P3 run must finish before any product or expectation repair; preserve all first-run evidence."
+  ],
+  "next":"Stop writing. Root freezes P2 inputs and executes grouped first P3 runs."
+}

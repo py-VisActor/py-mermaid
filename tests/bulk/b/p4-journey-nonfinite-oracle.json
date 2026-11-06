@@ -1,0 +1,5 @@
+{
+  "schema":"py-mermaid-command-plan/v1","scope":"BULK",
+  "inputs":["{repo}/tests/bulk/b/journey-nonfinite-probe.json"],
+  "steps":[{"name":"Journey-source-nonfinite-face-attributes","argv":["node","{repo}/tools/oracle/bulk_capture.cjs","--fixtures","{repo}/tests/bulk/b/journey-nonfinite-probe.json","--out","{run}/artifacts/oracle"],"timeout":180}]
+}

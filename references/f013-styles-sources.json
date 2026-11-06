@@ -1,0 +1,98 @@
+{
+  "schema": "py-mermaid-source-map/v1",
+  "taskId": "F01.3-S2/styles",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "pythonPaths": [
+    "src/py_mermaid/rendering/styles/flowchart.py",
+    "src/py_mermaid/rendering/styles/__init__.py"
+  ],
+  "sources": [
+    {
+      "upstreamPath": "packages/mermaid/src/styles.ts",
+      "symbols": [
+        "getStyles"
+      ],
+      "canonicalSha256": "2c6b17f84b2e0a88ebfd9591cb3df7dcb32d7d05561bdceabcd40f8888f327c1"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/diagrams/flowchart/styles.ts",
+      "symbols": [
+        "getStyles",
+        "genColor"
+      ],
+      "canonicalSha256": "f0e82b3ad7267d58c37da1d4da44b05f63036f922e7a715f64965749ddd35ad5"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/diagrams/common/colorThemeGate.ts",
+      "symbols": [
+        "isColorTheme",
+        "paletteSlotCount"
+      ],
+      "canonicalSha256": "01d2f95921caf0b8cd76427092789323c3dbaec7f2fb56fa20ca1bbc13bfd5e3"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/createText.ts",
+      "symbols": [
+        "createText",
+        "addHtmlSpan"
+      ],
+      "canonicalSha256": "711f26bbda94ae9b8020e5aa59e8b41692c8ae569de6fe080000dac4719f5536"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/handle-markdown-text.ts",
+      "symbols": [
+        "markdownToHTML",
+        "markdownToLines"
+      ],
+      "canonicalSha256": "6d8fc409c5401de7aa1f7c8ca2e2f1384af8d9f96690102cfe88646ee7971b28"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/utils.ts",
+      "symbols": [
+        "insertTitle"
+      ],
+      "canonicalSha256": "4880a24ada719172bc45652cefa9a2defd6e8aaeba9ebbd7862108dd930baca9"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/insertLookDefs.ts",
+      "symbols": [
+        "insertLookDefs"
+      ],
+      "canonicalSha256": "55bb1d46c232a7f2935d34976a6c1e6cfa7b874b7ae0ba4ac601761cfc660569"
+    }
+  ],
+  "responsibility": "Native semantic paint/font intent and CSS declaration/cascade for applicable static flowchart targets; no DOM, browser or interactive CSS runtime; source-gated categorical group palettes, native horizontal gradient strokes and native source shadows including dark-theme tint, offsets/blur/colors",
+  "defaults": "Resolved style comes from effective FlowConfig and theme variables; group palettes only when config exposes source-gated palette; title font18px; direct CSS declarations support importance/specificity/order, inherited inline tags and relative fonts",
+  "unsupportedExplicit": [
+    "CSS at-rules/external resources",
+    "interactive/sibling/pseudo-element targets",
+    "unmapped paint/layout declarations",
+    "nonalphabetic dominant-baseline contract",
+    "F01.4 syntax/look/resource/export expansion"
+  ],
+  "runtimeObjects": "Only frozen dataclass/scalars/tuples; Canvas adapter owns native objects",
+  "status": "verified_local_f013_slice",
+  "verification": "Mechanical compile/import only before all S2 providers complete",
+  "contractNotes": [
+    "Font shorthand expanded before cascade with longhand resets and importance/order; inline tags can provide both inherited_base and UA/default base",
+    "CurrentColor resolved after final color; custom properties and absolute line-height preserved across native text-run inheritance",
+    "MeasuredTitle.text_anchor is separate from HTML text_align; layout maps start/middle/end at the same source anchor point",
+    "Matched native paint declarations execute or explicitly fail; no ignored structural/interactive CSS",
+    "Theme CSS has only static native semantic targets and applicable paint/font declarations, not arbitrary browser layout or interaction",
+    "Pinned neo dropShadow CSS is valid: source offsets 0px/1px, blur2px, rgba alpha0.25; confirmed by first official computed style. Prior malformed interpretation preserved in initial evidence snapshot.",
+    "CSS declaration winners include generated theme specificity before native paint; inherited ancestor paint does not override explicit child shape rules",
+    "Inherited custom properties resolve on the native style before inline declaration use; inline/current-element !important precedence preserved",
+    "Static HTML controls and retained stylesheet elements are explicit host-boundary diagnostics; ordinary formatted text remains supported"
+  ],
+  "mechanicalEvidence": [
+    "test-runs/F01.3-record-20261105T012651Z-0853bd75/run.json",
+    "test-runs/F01.3-record-20261105T013936Z-aa80f2df/run.json"
+  ],
+  "priorVerificationStatus": "code_complete_unverified",
+  "finalVerification": {
+    "sourceTreeSha256": "5cb792fadbd7685a0d65a4a4d0e397ff59566eae340f4aaa87d0a7041d18b08f",
+    "unitRun": "test-runs/F01.3-batch-20261105T022709Z-dcd8b609/run.json",
+    "summary": "references/f013-verification-summary.json",
+    "installationValidation": false
+  }
+}

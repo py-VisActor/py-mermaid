@@ -1,0 +1,357 @@
+{
+  "schemaVersion": 1,
+  "scope": "BULK_STATIC_31_ENTRIES",
+  "phase": "P3_TARGETED",
+  "status": "targeted_unit_pass_final_visual_pending",
+  "upstream": {
+    "version": "12.2.0",
+    "commit": "1fb7869866dd619168d840291c9c54b4f129758b",
+    "root": ".local/upstream-mermaid",
+    "productionDependency": false
+  },
+  "detectorCount": 6,
+  "diagrams": [
+    {
+      "detector": "swimlane",
+      "nativeModule": "py_mermaid.diagrams.business.swimlane",
+      "entrypoints": [
+        "parse(document,config)",
+        "async build(diagram,painter)"
+      ],
+      "sourceFiles": [
+        "packages/mermaid/src/diagrams/swimlanes/swimlanesDiagram.ts",
+        "packages/mermaid/src/diagrams/swimlanes/styles.ts",
+        "packages/mermaid/src/diagrams/flowchart/flowDiagram.ts",
+        "packages/mermaid/src/diagrams/flowchart/parser/flow.jison",
+        "packages/mermaid/src/rendering-util/rendering-elements/clusters/swimlane.js",
+        "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/index.ts",
+        "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/helpers.ts",
+        "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/edgeLabelNodes.ts",
+        "packages/mermaid/src/rendering-util/rendering-elements/edges.js"
+      ],
+      "implementedBranches": [
+        "exact shared flowchart grammar plus source swimlane header",
+        "default lane/edge-label virtual nodes/DFS cycle reversal",
+        "lane-aware compact and gravity layering/multitree subtree crossing rank optimization",
+        "dummy nodes/lane order 8 deterministic restarts/median transpose/coordinates/group writeback",
+        "complete C-owned orthogonal routing/direction/postprocess source pipeline",
+        "renderer center-ray intersections/line hops/title band+body/LR centered rotation",
+        "explicit layout precedence and real registered provider bridge/F014 resource/math/rich/59shape reuse"
+      ],
+      "behaviorValidation": "NOT_RUN_P1"
+    },
+    {
+      "detector": "agentflow",
+      "nativeModule": "py_mermaid.diagrams.business.agentflow",
+      "entrypoints": [
+        "parse(document,config)",
+        "async build(diagram,painter)"
+      ],
+      "sourceFiles": [
+        "packages/mermaid/src/diagrams/agentflow/parser/agentflow.jison",
+        "packages/mermaid/src/diagrams/agentflow/agentflowDb.ts",
+        "packages/mermaid/src/diagrams/agentflow/shapes.ts",
+        "packages/mermaid/src/diagrams/agentflow/types.ts",
+        "packages/mermaid/src/diagrams/agentflow/diagnostics.ts",
+        "packages/mermaid/src/diagrams/agentflow/renderer.ts",
+        "packages/mermaid/src/diagrams/agentflow/styles.ts",
+        "packages/mermaid/src/diagrams/agentflow/colorSlots.ts"
+      ],
+      "implementedBranches": [
+        "fixed flowchart lexical/edge parser reused with dedicated AgentParser actions",
+        "flow/global/connector containers/declaration merging/global membership/containment cycle diagnostics",
+        "opaque YAML metadata/empty/trailing-comma/prototype key sanitization/edge and container attachments",
+        "removed/unsupported shapes and 7 semantic kind palette slots",
+        "source collapsed descendants and cross-boundary routing/real ELK and explicit registered layouts",
+        "full F014 native label/resource/shape/marker/style renderer shared"
+      ],
+      "behaviorValidation": "NOT_RUN_P1"
+    },
+    {
+      "detector": "eventmodeling",
+      "nativeModule": "py_mermaid.diagrams.business.eventmodeling",
+      "entrypoints": [
+        "parse(document,config)",
+        "async build(diagram,painter)"
+      ],
+      "sourceFiles": [
+        "packages/parser/src/language/eventmodeling/event-modeling.langium",
+        "packages/parser/src/language/eventmodeling/event-modeling-validator.ts",
+        "packages/mermaid/src/diagrams/eventmodeling/db.ts",
+        "packages/mermaid/src/diagrams/eventmodeling/renderer.ts",
+        "packages/mermaid/src/diagrams/eventmodeling/styles.js"
+      ],
+      "implementedBranches": [
+        "tf/timeframe/rf/resetframe qualified entities/source refs/data block+inline/types",
+        "entity/note/given-when-then preservation and source frame type validation/duplicate IDs",
+        "source lane categories/namespace indices/box-size bounds/90px overlap positioning",
+        "previous-cross-lane and explicit-source relation geometry/source data text width correction",
+        "source constant palette + measured safe HTML/rich labels/static style/error paths"
+      ],
+      "behaviorValidation": "NOT_RUN_P1"
+    },
+    {
+      "detector": "ishikawa",
+      "nativeModule": "py_mermaid.diagrams.business.ishikawa",
+      "entrypoints": [
+        "parse(document,config)",
+        "async build(diagram,painter)"
+      ],
+      "sourceFiles": [
+        "packages/mermaid/src/diagrams/ishikawa/parser/ishikawa.jison",
+        "packages/mermaid/src/diagrams/ishikawa/ishikawaDb.ts",
+        "packages/mermaid/src/diagrams/ishikawa/ishikawaRenderer.ts",
+        "packages/mermaid/src/diagrams/ishikawa/ishikawaStyles.ts"
+      ],
+      "implementedBranches": [
+        "indentation stack/base-level normalization and effect title",
+        "alternating top/bottom causes/descendant-dependent spine allocation",
+        "even preorder/odd postorder sub-bones/82degree angle/child-count lengths",
+        "measured effect head/cause boxes/multiline baselines/source rough path options/static CSS"
+      ],
+      "behaviorValidation": "NOT_RUN_P1"
+    },
+    {
+      "detector": "wardley",
+      "nativeModule": "py_mermaid.diagrams.business.wardley",
+      "entrypoints": [
+        "parse(document,config)",
+        "async build(diagram,painter)"
+      ],
+      "sourceFiles": [
+        "packages/parser/src/language/wardley/wardley.langium",
+        "packages/mermaid/src/diagrams/wardley/wardleyParser.ts",
+        "packages/mermaid/src/diagrams/wardley/wardleyBuilder.ts",
+        "packages/mermaid/src/diagrams/wardley/wardleyDb.ts",
+        "packages/mermaid/src/diagrams/wardley/wardleyRenderer.ts",
+        "packages/mermaid/src/diagrams/wardley/styles.ts"
+      ],
+      "implementedBranches": [
+        "size/evolution stages/boundaries/anchors/components/notes",
+        "pipeline synthetic child IDs/parent positioning/duplicate property merge/label reference resolution",
+        "links/arrows/dashed/flow port labels/trends/inertia/build-buy-outsource-market decorators",
+        "annotations/annotations box measured clamp/accelerators/deaccelerators",
+        "author percentage-coordinate projection/source renderer geometry/static CSS and errors"
+      ],
+      "behaviorValidation": "NOT_RUN_P1"
+    },
+    {
+      "detector": "cynefin",
+      "nativeModule": "py_mermaid.diagrams.business.cynefin",
+      "entrypoints": [
+        "parse(document,config)",
+        "async build(diagram,painter)"
+      ],
+      "sourceFiles": [
+        "packages/parser/src/language/cynefin/cynefin.langium",
+        "packages/mermaid/src/diagrams/cynefin/cynefinParser.ts",
+        "packages/mermaid/src/diagrams/cynefin/cynefinDb.ts",
+        "packages/mermaid/src/diagrams/cynefin/cynefinRenderer.ts",
+        "packages/mermaid/src/diagrams/cynefin/cynefinBoundaries.ts",
+        "packages/mermaid/src/diagrams/cynefin/styles.ts"
+      ],
+      "implementedBranches": [
+        "five domain blocks/quoted items/transitions/title/accessibility/last block wins/self-loop diagnostic",
+        "mulberry32/hash/source configurable waviness/cubic fold+horizontal boundary/cliff/ellipse",
+        "domain model and practices labels/measured item badges/three confusion items plus overflow",
+        "source 15percent perpendicular quadratic transition arrows/source static CSS"
+      ],
+      "behaviorValidation": "NOT_RUN_P1"
+    }
+  ],
+  "sourceSHA256": {
+    "packages/mermaid/src/diagrams/swimlanes/swimlanesDiagram.ts": "3846dbd86239ac97b9c6f742bb67d407766882257eb7609fc67c43dc673a4a3f",
+    "packages/mermaid/src/diagrams/swimlanes/styles.ts": "76492245f72aeb9eb91b80f27c5afc77f925b4b91c00917d8400da5be52a65f9",
+    "packages/mermaid/src/diagrams/flowchart/flowDiagram.ts": "beab84a8110410ee57a5aac6ccb45a038a24406460b1c23785e697cee0b4f4c1",
+    "packages/mermaid/src/diagrams/flowchart/parser/flow.jison": "9597faffe2a133b104c6dd4f38a162f6980bff4e0a841a83ff94af3900ea7ba8",
+    "packages/mermaid/src/rendering-util/rendering-elements/clusters/swimlane.js": "335efb574aec102153ee004e47a9192f8560bbb54e6b68c2aa57539782da2950",
+    "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/index.ts": "97ae08d01ffda94c079753cc86ac49b6fb7ff2fcf5566d04c8d4c28c10554bb3",
+    "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/helpers.ts": "4f53b3d1c78b414870fe3a2959344731d6b79363abade679c86f484f4373de59",
+    "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/edgeLabelNodes.ts": "aab21891c7ec62b861c103796bf675b15d76bf26a50d30292023b551e4698d21",
+    "packages/mermaid/src/rendering-util/rendering-elements/edges.js": "8fee7300ea0bffd008f5d2c12a05e85f5ea8bc22a9855d4d2e2b6c0e6c92a33a",
+    "packages/mermaid/src/diagrams/agentflow/parser/agentflow.jison": "105f7e860ac78a25e2bbdcc8dcbc7ab4ee8159be5880eb51455c8cd307253d82",
+    "packages/mermaid/src/diagrams/agentflow/agentflowDb.ts": "aa74eb6cb3eb0821c1e3960eefbbc83afe167bc5dcf9380dc4acfa8fce82b1b6",
+    "packages/mermaid/src/diagrams/agentflow/shapes.ts": "fe78504516fa077f4cf205fcf3a0cc7a8bc161154f8ee86bb16d9d9930913abf",
+    "packages/mermaid/src/diagrams/agentflow/types.ts": "89f861c346921eb471ea14a340a0584e684ab736e70a9e28b5968ce784a2d7f9",
+    "packages/mermaid/src/diagrams/agentflow/diagnostics.ts": "00cfecb15f69c542f74668a179157ecb168d07de2e1d26a2c30e4c1fefd624e2",
+    "packages/mermaid/src/diagrams/agentflow/renderer.ts": "979edf6dd5cd75a6d0bb93c6ccc6502dc1eb2030aac08936c37f411128d16e4c",
+    "packages/mermaid/src/diagrams/agentflow/styles.ts": "58084f2e3c48be969e4c8fc52c2f8902bd0b06bac3025d0b1b01075c30127fa9",
+    "packages/mermaid/src/diagrams/agentflow/colorSlots.ts": "f1ec40bca5526c58ad91ab28ec0cc7b4687cccff1ac926960ddf18715f5e1b5c",
+    "packages/parser/src/language/eventmodeling/event-modeling.langium": "be3da489f5114237acbd7ec50494e8bb48f8e6753b6e2f7f2137dae170000611",
+    "packages/parser/src/language/eventmodeling/event-modeling-validator.ts": "4ec8a64080277af12b5a3b385d964404fad891db9435bfdc72340d7a0c153955",
+    "packages/mermaid/src/diagrams/eventmodeling/db.ts": "472770064b69b9b9e5c3699846378bfec3c205ae394b7810b942d1fcde98417c",
+    "packages/mermaid/src/diagrams/eventmodeling/renderer.ts": "da39533504c85fd9397e97f08e711b3c44ecfda6efc1f792cd7fe312b71cbce7",
+    "packages/mermaid/src/diagrams/eventmodeling/styles.js": "79ad2b3479259ba03189ba413532705250badec92d44fab345998dadfa11e71c",
+    "packages/mermaid/src/diagrams/ishikawa/parser/ishikawa.jison": "1bbf4d461534b1c0d4c9e375bf821fac6219f73add5727e5aa51fe4aa044f57b",
+    "packages/mermaid/src/diagrams/ishikawa/ishikawaDb.ts": "6d489ff30da6d218245aaab53dad412c3d20b9083cc4536a06d8e16bb21320d0",
+    "packages/mermaid/src/diagrams/ishikawa/ishikawaRenderer.ts": "37d469effd37088c6ca348599cc37d17dcf9c242d43950ea9daf10d71db1d2b4",
+    "packages/mermaid/src/diagrams/ishikawa/ishikawaStyles.ts": "9fd5c9508f5560d430fa342fb60a2a5f528951142ef41d8ce0514274453beb00",
+    "packages/parser/src/language/wardley/wardley.langium": "3010dbd4a9c8036e4eac27e35cf842358f0561715c52877c6ab481b8521e17b0",
+    "packages/mermaid/src/diagrams/wardley/wardleyParser.ts": "01ad339d6884fd4aabea7841b8c9c0e5d30c5c3b95973d4a31be6f6d2cf5977f",
+    "packages/mermaid/src/diagrams/wardley/wardleyBuilder.ts": "cdeade146e49b7e45853f0302bf8d7c6c1d4083dac9baa1caf83b03b31d9d800",
+    "packages/mermaid/src/diagrams/wardley/wardleyDb.ts": "29a43cf13de0f0cacc8ba81bc90bb0361f1c047d4e45f1390c70f2956a8ea6e0",
+    "packages/mermaid/src/diagrams/wardley/wardleyRenderer.ts": "6f4964f620c5319e8750624ef3f79ece899f63481020ea23fa2e1fdb42b9a751",
+    "packages/mermaid/src/diagrams/wardley/styles.ts": "880b70243caa4bb22a7ff25e80c5623e95cc68b7d4bb3acb310cdcb6098cba99",
+    "packages/parser/src/language/cynefin/cynefin.langium": "94276271b3dfe6dd78ced62249cd1d69bdd785e1498b90e678f101a23e1d26e0",
+    "packages/mermaid/src/diagrams/cynefin/cynefinParser.ts": "8a416b3264bfef0a1692fccaacc14fa4d1a602f641b35747801913c0a1b82044",
+    "packages/mermaid/src/diagrams/cynefin/cynefinDb.ts": "be60bc5b0a09f66e5d7019bee92b69d9dfc3b125b2ad8f556455fb5df322a555",
+    "packages/mermaid/src/diagrams/cynefin/cynefinRenderer.ts": "08cf1d1913ed1ed7c430122519bbe289e97b61280c47aa839f3bbf8fcf430e51",
+    "packages/mermaid/src/diagrams/cynefin/cynefinBoundaries.ts": "f5c71c15a4277d9ef36d07962ddb13a7b4fe32e4e038eb5fe10a8999a2c4efd2",
+    "packages/mermaid/src/diagrams/cynefin/styles.ts": "3479492007dac22b2154248c49c67fe4e6f0bd05feed7d5fa479e40f40548f93",
+    "packages/mermaid/src/schemas/config.schema.yaml": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+    "packages/parser/src/language/common/common.langium": "d8b0c0056f6339ca6a0d3b966c02b1f4d53ad768069e2889450dc29312f1f65b",
+    "packages/parser/src/language/common/valueConverter.ts": "d93aa5dd1f7fed8aa903f55eb3e463c6b69b455af22004a6405a61c7560f58e5",
+    "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/adjustLayout.ts": "31908eafd54b5f1357a9abf71fcda54835b4f5a160fc541098a90abe81fb1b40",
+    "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/config.ts": "010770f4781e8269e8bdd824856e9920990be6384d745f45b6e09575c0b69bb1",
+    "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/driving-tree.ts": "33e9483e11a9568b2caf0fd23afaaf7fb754973d0fb34a83419083413633eb52",
+    "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/laneOrdering.ts": "a3c799e235e7726a7cdf6d17bf0d6bc7ce06f859c898ccaffc443697caa41f4e",
+    "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/layoutCore.ts": "a3d5c7b71d678013de1b4a22070406651a566c8531b529968638b40fb4e2c154",
+    "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/phase0.helpers.ts": "30649726b2c3a8f329fc23098c0b73ba9ed8d10b1ead16e6568937b5d98961a7",
+    "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/phase1.cycles.ts": "bd38ceac0fecc54f274f7e70390fdf4f5e5bc1741f903d9ce1ba1cc7226f2d86",
+    "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/phase2.crossCounts.ts": "24e91f704b65f18debcb4f233aad4965988fc3996c1f9325f049bfcdb594e92b",
+    "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/phase2.crossLaneAdjust.ts": "d2f1afdfcb2dd8bc902c8cc65f22d25603dac7c873770d2d53dd8e0a9cf14a44",
+    "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/phase2.crossOptimization.ts": "7ef174692931a32cf02d2a372d23dbb423d9738234988ea5716ea7aa3e2c05fd",
+    "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/phase2.dummies.ts": "9988741660b17c1f88823401de7ff074583bda6e7fd7fed0da1d3e2a0b73008a",
+    "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/phase2.gravity.ts": "c007e3fe954e847dfebc3319254cc3f94983eddeab01843ced4fecd1c034b24b",
+    "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/phase2.laneAwareCompact.ts": "743bc91b880209d3d8ea937f55897e9d0d92848d342fc11cdcbf372081476007",
+    "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/phase2.longestPath.ts": "d96c9e2d11d6a31d817fa222819d1d8ecf98d06cc8e2f875791204a967963544",
+    "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/phase2.multitree.core.ts": "63c01632876e44d815a59553e091dbadfc142e64c592808456497da8bbbd0bcd",
+    "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/phase2.multitree.order.ts": "b0e00fab69c98ad07d27209a833f02bb1f8b4836e4a008b70d14fe2189899192",
+    "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/phase2.options.ts": "7c84fa46bc25f6c7ff927c2d13734f5d3bf959258fd61602c42e35c14f233803",
+    "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/phase3.ordering.ts": "72002afbd5f3a9cc33de06b55604c91f03d3f512a343905328d5cfe038c1895b",
+    "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/phase4.coordinates.ts": "0ad3ea496970a399ec79b0dcf1c6b51e3bbed48fafeff6e1bcb06171a5cee889",
+    "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/pipeline.ts": "cdb39643a23248970b8e0379a25c1ac8a424e95cce51a69a804e2355ac49847a",
+    "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/postProcessing.ts": "6fe06709cc55490e0b7a35b4ebb68c8df582d4c73b0870712e85089b904dab08"
+  },
+  "nativeSHA256": {
+    "src/py_mermaid/diagrams/business/__init__.py": "d3d8f0861871403c88aa63c10dff4f759a3a289acaad149c7cc6a26aed5e222a",
+    "src/py_mermaid/diagrams/business/_agent_parser.py": "0531b1d934760bc2c7193f3e1be05827da4cea04e72b56633bdfbb4aea985c63",
+    "src/py_mermaid/diagrams/business/_cynefin_geometry.py": "01e5465e14f823d9c78b960d995146bc062f278ff29fbae1ff2f33e556db7a62",
+    "src/py_mermaid/diagrams/business/_flow_config.py": "0203350e6641560b7af62d47e3e28f82658697bb294050e7c6efab32fbf83240",
+    "src/py_mermaid/diagrams/business/_source_styles.py": "26f9e941b5afc79acc317d93be4f9631962e0e78e44ee7514d62b5af39a803cd",
+    "src/py_mermaid/diagrams/business/_swimlane_intersect.py": "4035f33a4788861443de914909027c7bf46a665e06e782d8b75c2d32770637ea",
+    "src/py_mermaid/diagrams/business/_swimlane_prepare.py": "d454563283eb947baceb8d41616e8dd9f40e0fb25b0f5a8f606150592573a8e3",
+    "src/py_mermaid/diagrams/business/_swimlane_sugiyama.py": "59412f797cf48df17f19311a85b5f15e34ac3712acf3121eda56121a39f92ee8",
+    "src/py_mermaid/diagrams/business/agentflow.py": "dd5133099872d390aa8905906d52ca9950dcddbbd0aa26f2c33f8419055b583a",
+    "src/py_mermaid/diagrams/business/cynefin.py": "61f873c2dfaba7d5b7e1a14e42cd50d3ea21023e8d4c52ad2c48b88a5ede2be2",
+    "src/py_mermaid/diagrams/business/eventmodeling.py": "1ff1f73be70ef280d5f4501986c6ac507836cf45b5b7088ee9c9d339b8fd4a8a",
+    "src/py_mermaid/diagrams/business/ishikawa.py": "0b68459ddcd5b139530034441135c22c7c7b7e658e4e9a0346f26b4374d8e453",
+    "src/py_mermaid/diagrams/business/swimlane.py": "2f9c0665f78e9192ce5bc412988b253da57b59cfed4f4edb038b6575ccfc614c",
+    "src/py_mermaid/diagrams/business/wardley.py": "3e90d8ddc1f2d030844e740d5f6aeb35805c18aa43d1e1ca4a707e1277fae91a"
+  },
+  "nativeAggregateSHA256": "80c127eded6967d3247c930f3d87802d1fb195b226799bd0cf9459623a126e82",
+  "readOnlySharedDependencies": {
+    "src/py_mermaid/diagrams/flowchart/parser.py": "fd9fac7b923516a398d6496b3f0fbb8f40546d7951e1c68d611bd50eb4a6e72e",
+    "src/py_mermaid/geometry/shapes.py": "94fc76f11db69ddd8e5a67ae60deac9c7d8a840d90bfe38459a466c97c580f01",
+    "src/py_mermaid/layout/elk/flowchart.py": "607e68f3a040c7fb75aaaf130a81e7d4a16442654b95b3fba55020f201940ef5",
+    "src/py_mermaid/rendering/skia/scene.py": "e70fccaa3087a6b496dbc67567037409046aeb2186d5cb3002021d1e0d265308"
+  },
+  "unverifiedRisks": [
+    "No parser, layout, native rendering, formal tests, oracle or image behavior executed in P1.",
+    "All functional and visual equivalence remains subject to independently derived P2 assertions and the unified P3 first run."
+  ],
+  "knownHostAdaptations": [
+    "Cynefin source render(id) is represented by Painter.render_id/config.renderId; absent native id defaults deterministically to diagram.kind. A nonzero configured boundary seed still takes precedence.",
+    "Swimlane lane title center rotation is converted to native text top-left rotation coordinates; no geometry scaling or bitmap postprocessing."
+  ],
+  "deferredByUser": [
+    "pie",
+    "quadrantChart",
+    "xychart",
+    "radar",
+    "treemap",
+    "sankey",
+    "venn"
+  ],
+  "collaboratingProvider": {
+    "module": "py_mermaid.diagrams.business._swimlane_routing",
+    "owner": "C",
+    "receipt": "docs/changes/bulk-C-swimlane-routing.json",
+    "sourceMap": "references/bulk-C-swimlane-routing.json",
+    "nativeAggregateSHA256": "85f1d91d4a67bb33cc838af39777349b3dae5c8e3f501fab6010566dae735854"
+  },
+  "mechanicalRuns": [
+    {
+      "run": "test-runs/BULK-record-20261106T035213Z-d232d9fe",
+      "status": "SUCCESS",
+      "checks": [
+        "compileall",
+        "side-effect-free module imports",
+        "parse/build/provider signature reflection"
+      ],
+      "behaviorExecuted": false
+    },
+    {
+      "run": "test-runs/BULK-record-20261106T035505Z-26e365bc",
+      "status": "SUCCESS",
+      "checks": [
+        "two owned files compile",
+        "imports and provider/GraphLayout signature reflection"
+      ],
+      "behaviorExecuted": false
+    },
+    {
+      "run": "test-runs/BULK-record-20261106T035721Z-e7318f02",
+      "status": "SUCCESS",
+      "checks": [
+        "two files compile and imports",
+        "builtin identity helper imports only; no helper or provider behavior called"
+      ],
+      "behaviorExecuted": false
+    }
+  ],
+  "sourceIncompleteBranches": [],
+  "freezeHistory": [
+    {
+      "nativeAggregateSHA256": "b951f830342080d59d2e790ababa6b197a4904a201e4d51738c84b82c9fcf9fd",
+      "mechanicalRun": "test-runs/BULK-record-20261106T035213Z-d232d9fe",
+      "reasonReopened": "Root-authorized two-file P1 fix: preserve generic source lane paint data and route AgentFlow explicit swimlane through its real dedicated scene."
+    },
+    {
+      "nativeAggregateSHA256": "818576055d5b57383f02d73ce99abc083d2f729d0ca27b763251ff84265778b9",
+      "mechanicalRun": "test-runs/BULK-record-20261106T035505Z-26e365bc",
+      "reasonReopened": "Root-authorized provider identity gate: registered replacement under elk/swimlane key must use its actual provider."
+    },
+    {
+      "nativeAggregateSHA256": "3eed7efa4af5551db613c2eb22c75b8f16e308fff2a272e3b00143200702448c",
+      "reasonReopened": "P3 complete first sweep closed before source-backed batch repairs; P1 source state preserved in closed runs and prior receipt."
+    }
+  ],
+  "graphGroupDataContract": {
+    "type": "tuple[immutable FrozenLookup]",
+    "coordinates": "final absolute center x/y; final width/height after source direction transforms",
+    "fields": "entire source group dict, including synthetic default lane, label, parentId, direction, padding, classes/styles/metadata when supplied, swimlaneContentTop and groupTitleRect",
+    "groupsMapping": "only original input parent identities",
+    "consumer": "shared generic painter graph_groups provider; root Flowchart and AgentFlow explicit swimlane use full dedicated FlowchartScene instead"
+  },
+  "providerIdentityGate": "uses_builtin_elk/uses_builtin_swimlane inspect actual registry entry identity; custom replacement under a builtin key goes through registered provider.",
+  "aggregateAlgorithm": "SHA256 canonical JSON(sorted nativeSHA256 keys, separators comma/colon)",
+  "p3Repairs": [
+    {
+      "file": "src/py_mermaid/diagrams/business/wardley.py",
+      "cause": "Line splitting lost source multiline accDescr terminal.",
+      "source": [
+        "packages/parser/src/language/common/common.langium:TitleAndAccessibilities"
+      ],
+      "repair": "Reuse offset-preserving common Langium metadata masking before dedicated Wardley statement records."
+    },
+    {
+      "file": "src/py_mermaid/diagrams/business/ishikawa.py",
+      "cause": "Source parsed numeric font size was passed as theme CSS string in native presentation base.",
+      "source": [
+        "packages/mermaid/src/diagrams/ishikawa/ishikawaRenderer.ts:parseFontSize"
+      ],
+      "repair": "Pass parsed source numeric size to native pure style base; source CSS remains authoritative cascade."
+    },
+    {
+      "file": "src/py_mermaid/diagrams/business/_flow_config.py",
+      "cause": "Old measurement compatibility override rewrote explicit swimlane to elk even for real AgentFlow graph.",
+      "source": [
+        "packages/mermaid/src/diagrams/agentflow/renderer.ts",
+        "packages/mermaid/src/rendering-util/render.ts"
+      ],
+      "repair": "Only measurement_only bridge temporarily selects elk; retain actual source layout selection for real build/provider dispatch."
+    }
+  ],
+  "p3UnitRun": "test-runs/BULK-record-20261106T044818Z-5294681e"
+}

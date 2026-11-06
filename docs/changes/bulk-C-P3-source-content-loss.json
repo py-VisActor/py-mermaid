@@ -1,0 +1,65 @@
+{
+  "schema": "bulk-C-source-content-loss/v1",
+  "phase": "P3",
+  "status": "SOURCE_CONTENT_LOSS_CONFIRMED_NATIVE_REQUIRED_CONTENT_RETAINED",
+  "auditRun": "BULK-record-20261106T052656Z-7ab4fb60",
+  "officialRun": "BULK-P3-official-refresh-20261106T050328Z-0274d04e",
+  "nativeRun": "BULK-P3-joint-cpu-20261106T052353Z-475a66f1",
+  "cases": [
+    {
+      "id": "C-zenuml-source-emoji-colon-override",
+      "officialVisibleText": "",
+      "nativeRequiredText": [
+        "notify()"
+      ],
+      "officialMessages": [],
+      "officialSelfCalls": [],
+      "evidenceSha256": {
+        "test-runs\\BULK-P3-official-refresh-20261106T050328Z-0274d04e\\artifacts\\oracle\\C-zenuml-source-emoji-colon-override.svg": "8fa5b35bb46c4a5549dbb8b2baa533a5ce74486ea875b33ceee8b2f861f2351c",
+        "test-runs\\BULK-P3-official-refresh-20261106T050328Z-0274d04e\\artifacts\\oracle\\C-zenuml-source-emoji-colon-override.png": "98b5e40d6b033947aba19f9cdf755987fd8adb6a38cfa13e4bada26d2340ee9b",
+        "test-runs\\BULK-P3-joint-cpu-20261106T052353Z-475a66f1\\artifacts\\native-cpu\\C-zenuml-source-emoji-colon-override.scene.json": "718f7f2adcb84bea92229b12fe1778d789c48c6b926c98e5775756db4650c96c",
+        "test-runs\\BULK-P3-joint-cpu-20261106T052353Z-475a66f1\\artifacts\\native-cpu\\C-zenuml-source-emoji-colon-override.png": "4cf5cb62a3be2f138e6060bd478537aaf08cbd3ca6aab70e3cbf5fa0c2ac62ec"
+      }
+    },
+    {
+      "id": "C-zenuml-source-emoji-in-conditions",
+      "officialVisibleText": "Aproceed()1.1limited2Alt1[✅ authorized][⚠️ rate]",
+      "nativeRequiredText": [
+        "wait()",
+        "deny()"
+      ],
+      "officialMessages": [
+        "proceed()"
+      ],
+      "officialSelfCalls": [
+        "limited"
+      ],
+      "evidenceSha256": {
+        "test-runs\\BULK-P3-official-refresh-20261106T050328Z-0274d04e\\artifacts\\oracle\\C-zenuml-source-emoji-in-conditions.svg": "0bd62c9638c809d236956f6a86d6c14c2a3b8216034ac0e278227b911cecb7d2",
+        "test-runs\\BULK-P3-official-refresh-20261106T050328Z-0274d04e\\artifacts\\oracle\\C-zenuml-source-emoji-in-conditions.png": "0f137c6611017d2fbbcc63947b27d3f6491da7747e67475002f9136dd45682f8",
+        "test-runs\\BULK-P3-joint-cpu-20261106T052353Z-475a66f1\\artifacts\\native-cpu\\C-zenuml-source-emoji-in-conditions.scene.json": "ae0875facb302e65c4a6291cdc1e0a1820bf3d88c2c35b25919ea4cd14f2e70e",
+        "test-runs\\BULK-P3-joint-cpu-20261106T052353Z-475a66f1\\artifacts\\native-cpu\\C-zenuml-source-emoji-in-conditions.png": "b96e7cb7d6a330b371bac3293fafa8bd75fcaca5f2df92d1a3d970424010db77"
+      }
+    }
+  ],
+  "sources": {
+    "src/g4/sequenceLexer.g4": "9bf0cc267143cce32641831d0a6ca8ee5dbb5de995e2e713f9521f7a06ee2ece",
+    "src/g4/sequenceParser.g4": "9e7624e377f5e08ace461a099e91d90e92ac795f59fd716552c7a5a630cc6c54",
+    "src/generated-parser/sequenceParser.js": "4ba2e378d04e4bf3398873d5cd857bbb62c1eb30a676fc3db4e1dda164b5f60b",
+    "src/parser/index.js": "6115d95c3790918c2e2050d229e5c48fa9ba309ac47baefdc110d0a38fdad7f6",
+    "src/svg/renderToSvg.ts": "5563a02c96212f97a5d0446aa54bec2f947afb092ea25a62d404737606eee156",
+    "e2e/data/compare-cases.js": "afba0305f53310d41262466597aad2799fd6efaa199b32b9e1b6265e69ed973c"
+  },
+  "reasons": {
+    "C-zenuml-source-emoji-colon-override": "Generated emoji() accepts LBRACKET name RBRACKET; COL switches lexer to EVENT. Source template [:red:] does not fit that grammar and parser recovery discards the participants and notify message. RootContext checks _syntaxErrors before parser.prog(), so it still hands the recovered tree to renderToSvg. Actual original SVG has only starter participant, zero messages/selfcalls.",
+    "C-zenuml-source-emoji-in-conditions": "condition accepts atom/expr/inExpr/textExpr, not square-bracket emoji decorators. Recovery on second condition [warning] rate limited consumes wait/deny branches and produces limited selfcall. Actual source SVG shows proceed(), limited and no wait()/deny(). Native explicit structured parser retains the authored branches."
+  },
+  "policy": "Do not delete inputs, IDs, native expectedText or native native-pixel checks. Source content loss requires explicit separate classification and strict official absent/present/counted scene evidence. No production source change is needed for these two upstream recovery defects.",
+  "fixtureSha256": "732db377af6ade9561e74171a812ed8877218a35641b70d44ca76ec2b23c1265",
+  "unitRun": "BULK-record-20261106T052737Z-857eb7ef",
+  "nativeRunAfterClassification": "BULK-batch-20261106T052740Z-93c3f1fd",
+  "methods": 335,
+  "fixtures": 302,
+  "sourceChanged": false,
+  "sourceStopped": true
+}

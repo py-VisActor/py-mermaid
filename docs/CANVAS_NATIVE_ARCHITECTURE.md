@@ -1,3 +1,7 @@
+> 2026-11-05 用户已决定 **完全剥离 Dagre 功能、配置选项、目标依赖和算法回退**，不再暂停待评估，也不作为可选兼容任务。默认 ELK 与其他保留的专用静态算法继续推进。见 [布局策略](LAYOUT_POLICY.md)；下文旧 Dagre 计划/来源说明以此覆盖。
+
+> 2026-11-05 用户范围决策：**全部图种和共享模块只做静态渲染，忽略交互逻辑。** 点击/回调/悬停/导航/命中测试、动画播放、交互元数据与 DOM 无障碍行为不作为交付或验收项；静态画面、资源与输入安全保留。以 [静态范围规则](STATIC_RENDERING_SCOPE.md) 为准，覆盖本文旧交互要求。
+
 # Canvas 原生架构与 DOM 实现淘汰原则
 
 2026-11-04，用户明确：**所有绘制完全使用 py-skia-canvas；尽可能抛弃上游基于 DOM 操作的实现思路与依赖。** 本文将该要求落实为移植边界，替代早期计划中容易被理解为“为 DOM 库寻找一套 Python 替身”的表述。
@@ -14,7 +18,7 @@ Mermaid 文本 + 配置 + 显式资源
   → py-elk / Python 图布局、路由
   → Python 绘制指令：形状 / 路径 / 文本 / 图像 / 裁剪 / 变换
   → py-skia-canvas 绘制与编码
-  → bytes + 尺寸 + diagnostics + 适用的交互/无障碍元数据
+  → bytes + 尺寸 + diagnostics + 必要静态格式信息
 ```
 
 TextRun、LabelBox、绘制指令均是拟定的内部数据职责，不是已经发布的 API。语义模型与几何数据不持有 DOM、SVG element、Canvas 或设备对象。Canvas 测量、绘制和编码留在其 owner 线程，字体 shaping 和设备管理继续由公开 Canvas API 负责。
@@ -26,7 +30,7 @@ TextRun、LabelBox、绘制指令均是拟定的内部数据职责，不是已�
 | 上游机制或依赖 | Python 架构处理 | 仍需保留的功能 |
 | --- | --- | --- |
 | D3 selection、DOM append/attr/style、节点树修改 | 淘汰，直接构造样式值与绘制指令 | 形状、颜色、层叠、变换、文本表达 |
-| D3 transition、DOM 事件、拖拽/缩放/brush 控件 | 淘汰浏览器控件与动画运行层 | 适用的链接/命中区域/交互意图作为数据；不承诺 PNG 能执行浏览器回调 |
+| D3 transition、DOM 事件、拖拽/缩放/brush 控件 | 淘汰浏览器控件与动画运行层 | 完全排除事件、导航、命中测试、动画播放与交互元数据；仅保留初始静态可见样式 |
 | fastdom、requestAnimationFrame、DOM measure/mutate | 淘汰浏览器调度库，用明确的测量→布局→绘制阶段 | 真实测量、正确阶段依赖、异常传播和线程所有权 |
 | getBBox、getBoundingClientRect、getComputedStyle | 生产中淘汰 | Canvas 文字测量、Python 几何包围盒、显式样式解析 |
 | React/ReactDOM、UI 组件树、DOM 虚拟列表/浮层 | 不移植框架，以语义模型和 Canvas 指令重写图形功能 | ZenUML 等实际需要的模型、标签、几何、样式与元数据 |
@@ -34,7 +38,7 @@ TextRun、LabelBox、绘制指令均是拟定的内部数据职责，不是已�
 | Stylis、浏览器 CSS 注入/前缀及级联管线 | 淘汰运行机制，主题/配置解析为 Python 样式 | 所需颜色、字体、边框、背景、spacing、样式优先级及用户样式含义 |
 | DOMPurify 的 DOM 遍历/重写机制 | 不移植 DOM sanitizer，构建面向 Python 输入与资源的安全策略 | 脚本拒绝、链接/资源策略、标签转义、恶意输入诊断 |
 | HTML foreignObject | 不创建 foreignObject 或 HTML 文档 | 支持的富文本含义转换为 TextRun/LabelBox，用 Python 排版和 Canvas 绘制 |
-| dagre-d3-es 的 D3/SVG 渲染与 graphlib 接线 | 淘汰渲染接线，不复刻 graphlib API | 所需有序/复合图语义；显式 Dagre 功能扩展时保留原布局计算 |
+| dagre-d3-es 的 D3/SVG 渲染与 graphlib 接线 | 淘汰渲染接线，不复刻 graphlib API | 目标完全排除 Dagre 算法/包；图结构和几何需求分别由自有模型与纯几何承担 |
 | D3 scales/shape/path/hierarchy/force 等计算 | 保留所用算法或寻找真正等价的 Python 实现 | 数值、刻度、曲线、层级、排序、seed 与停止条件 |
 | ELK、COSE/fCoSE、tidy、Sankey、Venn、Rough 几何 | 保留布局/几何，全部输出给 Canvas | 端口/路由/约束/采样/填充等算法行为 |
 | 其他 native Canvas 后端 | 不接入 | 所有测量/绘制/编码统一由 py-skia-canvas 承担 |
@@ -49,7 +53,7 @@ TextRun、LabelBox、绘制指令均是拟定的内部数据职责，不是已�
 
 CSS 候选仅在保留的用户样式功能需要时提供 tokenizer/选择器计算等工具；html5lib 仅可能用于复杂富文本的输入解析。它们都不是首批的必选运行依赖，更不构成浏览器 DOM/CSS 排版层。普通标签的解析、转义、安全限制、主题样式和字体度量应优先由小型 Python 模块与 Canvas 完成。
 
-DOMPurify 的执行机制被移除后，输入安全、离线资源约束与链接策略仍需要独立实现。解析标签不会自动保证安全；Canvas 不执行脚本也不意味着可以任意读取文件、下载资源或输出未过滤的链接元数据。
+DOMPurify 的执行机制被移除后，输入安全、离线资源约束与链接策略仍需要独立实现。解析标签不会自动保证安全；Canvas 不执行脚本也不意味着可以任意读取文件、下载资源或执行导航；交互链接元数据不属于交付范围。
 
 ## 4. 完整来源树与 Python 目标依赖
 

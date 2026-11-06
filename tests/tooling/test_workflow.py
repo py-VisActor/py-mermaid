@@ -232,6 +232,48 @@ class ReportContractTests(unittest.TestCase):
                 generate(final, oracle, root / "report.html", fixtures=fixture, profiles=["cpu"], scope="test")
             self.assertFalse((root / "report.html").exists())
 
+    def test_expected_render_errors_preserve_parse_success_and_denominator(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root=Path(folder)
+            final,oracle,fixture=self.evidence(root)
+            data=json.loads(fixture.read_text());data['renderErrorCases']=[{'id':'ellipse','text':'A(-x-)','code':'UPSTREAM_SHAPE_MISSING'}]
+            fixture.write_text(json.dumps(data))
+            report_path=final/'compare-cpu/report.json'
+            report=json.loads(report_path.read_text());report['renderErrorCases']=[{'id':'ellipse','status':'PASS','parsed':True,'code':'UPSTREAM_SHAPE_MISSING'}]
+            report_path.write_text(json.dumps(report))
+            (oracle/'ellipse.render-error.json').write_text(json.dumps({'parsed':True,'renderRejected':True,'message':'upstream registry missing'}))
+            output=root/'report.html'
+            generate(final,oracle,output,fixtures=fixture,profiles=['cpu'],scope='test')
+            manifest=json.loads(output.with_suffix('.manifest.json').read_text())
+            self.assertEqual(manifest['renderErrorCases'],1)
+            self.assertEqual(manifest['negativeCases'],0)
+            self.assertIn('"renderError":true',output.read_text(encoding='utf-8'))
+            report['renderErrorCases']=[];report_path.write_text(json.dumps(report))
+            with self.assertRaisesRegex(ValueError,'denominator'):
+                generate(final,oracle,root/'bad.html',fixtures=fixture,profiles=['cpu'],scope='test')
+
+    def test_permanently_excluded_layout_is_preserved_as_policy_not_future_support(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            final, oracle, fixture = self.evidence(root)
+            data = json.loads(fixture.read_text())
+            data['unsupportedCases'] = [{'id': 'removed-layout', 'text': 'flowchart TD\nA',
+                'config': {'layout': 'dagre'}, 'codes': ['UNSUPPORTED_CONFIG'],
+                'scopeDisposition': 'excluded_by_user'}]
+            fixture.write_text(json.dumps(data))
+            report_path = final / 'compare-cpu/report.json'
+            report = json.loads(report_path.read_text())
+            report['unsupportedCases'] = [{'id': 'removed-layout', 'status': 'PASS', 'code': 'UNSUPPORTED_CONFIG'}]
+            report_path.write_text(json.dumps(report))
+            (oracle / 'removed-layout.unsupported.json').write_text(json.dumps({'accepted': True}))
+            output = root / 'report.html'
+            generate(final, oracle, output, fixtures=fixture, profiles=['cpu'], scope='test')
+            html = output.read_text(encoding='utf-8')
+            self.assertIn('"scopeDisposition":"excluded_by_user"', html)
+            self.assertIn('已排除功能 · removed-layout', html)
+            manifest = json.loads(output.with_suffix('.manifest.json').read_text())
+            self.assertEqual(manifest['unsupportedCases'], 1)
+
     def test_preexisting_sidecar_never_leaves_partial_html_or_overwrites_history(self):
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder)

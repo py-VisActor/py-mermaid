@@ -1,0 +1,1294 @@
+{
+  "schema": "py-mermaid-f014-language-assertions/v1",
+  "taskId": "F01.4-S3/parser-config",
+  "status": "repairs_complete_unverified",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "sourceFreeze": "5b0262fdf79a609517ff6080ddd1da50d1649528abea2373f74c3666ee7d14ed",
+  "freezeEvidence": "test-runs/F01.4-s2-source-freeze-20261105T084954Z-d01bc958",
+  "sources": [
+    {
+      "id": "grammar:flow.jison",
+      "path": "packages/mermaid/src/diagrams/flowchart/parser/flow.jison",
+      "symbols": [
+        "40 nonterminals/189 alternatives",
+        "lexical states/source rule order",
+        "all static statement families",
+        "14 click recognition alternatives"
+      ],
+      "sha256": "9597faffe2a133b104c6dd4f38a162f6980bff4e0a841a83ff94af3900ea7ba8",
+      "gitBlobSha256": "e9891eb4f646140e5110e72ef5f79b099677a265ba1a84884b39a573b56d1c68"
+    },
+    {
+      "id": "grammar:flowParser.ts",
+      "path": "packages/mermaid/src/diagrams/flowchart/parser/flowParser.ts",
+      "symbols": [
+        "parse closing-curly whitespace normalization"
+      ],
+      "sha256": "0aa07da223d7e9c723d9d7e660d7afef07b5c5f7d43fbc5bd54674667fcdc753",
+      "gitBlobSha256": "06790d8f74895b5859e81a90eb6b83e538cc40186e44c560065b42924d4d3ebe"
+    },
+    {
+      "id": "db:flowDb.ts",
+      "path": "packages/mermaid/src/diagrams/flowchart/flowDb.ts",
+      "symbols": [
+        "addVertex/addLink/addSingleLink",
+        "destructLink/destructEndLink/destructStartLink",
+        "setDirection",
+        "setClass/addClass/updateLink/updateLinkInterpolate",
+        "getData/collapsed static projection",
+        "getTypeFromVertex/getCompiledStyles"
+      ],
+      "sha256": "33577b9ade8c65be6049c3093089dbf81abf44214f49c2b2ea46434183889288",
+      "gitBlobSha256": "f8b1e686399b850dda39741ef10b763c9611658e50a0416603826a17ef810ec3"
+    },
+    {
+      "id": "db:types.ts",
+      "path": "packages/mermaid/src/diagrams/flowchart/types.ts",
+      "symbols": [
+        "FlowVertex/FlowEdge/FlowClass/FlowSubGraph"
+      ],
+      "sha256": "692016b3acc50f484602f7c1741233156aa4bc4e01caa6ce260bd7e2b9530d8d",
+      "gitBlobSha256": "4a7c30e6c161bf14a9f68524301b8b9a3fcad2c5a0e6d311448dfac7b629a84e"
+    },
+    {
+      "id": "db:types.ts",
+      "path": "packages/mermaid/src/types.ts",
+      "symbols": [
+        "NodeMetaData/EdgeMetaData"
+      ],
+      "sha256": "9c0d56eceae3cb6184b742a74f34b2d5e83e856e2dd80a468f4bfe1d4a0b87ef",
+      "gitBlobSha256": "dce4cb9bea8109ed54227a4dbe1241ac54cc03d9705ccb63228f23b8bd688e5a"
+    },
+    {
+      "id": "shapes:shapes.ts",
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes.ts",
+      "symbols": [
+        "53 shapesDefs",
+        "141 lowercase/no-underscore public aliases",
+        "6 reachable lowercase undocumented keys",
+        "isValidShape prototype in-operator anomaly"
+      ],
+      "sha256": "68fceb790c2a9b65397d96edaf85a50b4ae059a68cf52c83553c4887019f1699",
+      "gitBlobSha256": "078b5361f95a53dbec0ca768772ca21a5afb0997f0757a6aa0af0dd1e6112782"
+    },
+    {
+      "id": "config:config.schema.yaml",
+      "path": "packages/mermaid/src/schemas/config.schema.yaml",
+      "symbols": [
+        "14 own flowchart fields and inherited Base fields",
+        "13 public elk options/enums",
+        "handDrawnSeed number",
+        "deterministicIds/Seed"
+      ],
+      "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+      "gitBlobSha256": "855e6fbb5d278f190f15a7660b44dca6a4699ca8077ab8b35579a4e8a64be019"
+    },
+    {
+      "id": "config:defaultConfig.ts",
+      "path": "packages/mermaid/src/defaultConfig.ts",
+      "symbols": [
+        "9 concrete elk defaults/4 explicit undefined strategy-alignment keys"
+      ],
+      "sha256": "6f2ec3c231ee970fb0368d158975090d488c93c9801a618b06cb18d58488b068",
+      "gitBlobSha256": "f5bb393e7f39ca7ab9bb152be3002ff802487d77db33721ad11c7d03709dc782"
+    },
+    {
+      "id": "config:assignWithDepth.ts",
+      "path": "packages/mermaid/src/assignWithDepth.ts",
+      "symbols": [
+        "bounded merge/null skips/array handling"
+      ],
+      "sha256": "84216a585174308d91550e69fdf0081801cce41c040738190a47ed764d77674f",
+      "gitBlobSha256": "c95205611a00561119c34a8eaa23969c0f3b7f80c82275c226077dd07b5a75f8"
+    },
+    {
+      "id": "config:config.ts",
+      "path": "packages/mermaid/src/config.ts",
+      "symbols": [
+        "appearance resolution and secure keys"
+      ],
+      "sha256": "91dd68a9e7d57c4635a04fab0ccd78ec230b4417a02f4f4b3cd9a6bb445f09ef",
+      "gitBlobSha256": "a2dcc81b3764fec09626dc5a13f97c2bdd860378d6c06e9894357b4af2e87d9e"
+    },
+    {
+      "id": "elk:algorithms.ts",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/elk/algorithms.ts",
+      "symbols": [
+        "6 explicit names plus elk maps layered"
+      ],
+      "sha256": "c728ed061bb5d86ce45857884125d2195a1b876fd6a577ac12a7d622acdef84b",
+      "gitBlobSha256": "7eb7ef78273faa3ec5ccbe32cf420077f91b3d2c52169bbd871ba1d3611fa66c"
+    },
+    {
+      "id": "elk:render.ts",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/elk/render.ts",
+      "symbols": [
+        "CONTAINER_ALGORITHMS8",
+        "dir2ElkDirection default DOWN",
+        "metadata algorithm forwarding"
+      ],
+      "sha256": "6258890b3f311e86e4cd4dc99d480f704fde7473e150dc62b88838c5015c5011",
+      "gitBlobSha256": "3ac28d2f9c7385d56f6374533df854926515be36cc5323f10040d00dd4f1226f"
+    },
+    {
+      "id": "elk:render.spec.ts",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/elk/__tests__/render.spec.ts",
+      "symbols": [
+        "unknown direction -> DOWN",
+        "group algorithms"
+      ],
+      "sha256": "34887a9b567a8079d89d68f0f6841627115dad1f28774805bb5bed055c6026ee",
+      "gitBlobSha256": "35ddaed5ba5740b110ea455566ec56cd748c8bf407a2070c166f34f4ac506e23"
+    },
+    {
+      "id": "static:styles.ts",
+      "path": "packages/mermaid/src/styles.ts",
+      "symbols": [
+        "animation classes initial dash/offset/linecap"
+      ],
+      "sha256": "dd53a582b0c2411e16beeb37f51664968f278b08b97f63fc8808cbc8381f73fb",
+      "gitBlobSha256": "2c6b17f84b2e0a88ebfd9591cb3df7dcb32d7d05561bdceabcd40f8888f327c1"
+    },
+    {
+      "id": "static:edges.js",
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/edges.js",
+      "symbols": [
+        "curve dispatch 13",
+        "animationClass/animatedEdge/initial marker-margin branch"
+      ],
+      "sha256": "8fee7300ea0bffd008f5d2c12a05e85f5ea8bc22a9855d4d2e2b6c0e6c92a33a",
+      "gitBlobSha256": "d439783d84a3c1c220da407bd6d61648cd16fb3ad076accbdfab939194ab273f"
+    },
+    {
+      "id": "static:flowRenderer-v3-unified.ts",
+      "path": "packages/mermaid/src/diagrams/flowchart/flowRenderer-v3-unified.ts",
+      "symbols": [
+        "draw does not reject empty nodes"
+      ],
+      "sha256": "9eba228f1d94dce7cbd6cda7c8baf00eba9f6571d9de26f41c9ebadee62e7d31",
+      "gitBlobSha256": "b34a8d730d0ed39df008a538280de1ce5b5b00feadd8be507c7dea566c67b642"
+    },
+    {
+      "id": "static:setupViewPortForSVG.ts",
+      "path": "packages/mermaid/src/rendering-util/setupViewPortForSVG.ts",
+      "symbols": [
+        "empty bounds plus twice padding"
+      ],
+      "sha256": "8242d3e2112f371b8551c2aeb09680cdc608b8452c6eb82cbd5a2e6d3f465fd4",
+      "gitBlobSha256": "bae77e75582df927d5bd7d0ed34e3db47e52165b660446a5b849aa8282f6e0d1"
+    },
+    {
+      "id": "spec:flow-edges.spec.js",
+      "path": "packages/mermaid/src/diagrams/flowchart/parser/flow-edges.spec.js",
+      "symbols": [
+        "Independent pinned semantic examples, no candidate-derived expectations"
+      ],
+      "sha256": "291840efdb748ef2b5c41aa836ec3e45c78ac58f2eef8ef0174eefd2534a9016",
+      "gitBlobSha256": "f4b2d83c677f794327f5483131e492e52d2a97ef20318a86362d56e912cb79f0"
+    },
+    {
+      "id": "spec:flow-arrows.spec.js",
+      "path": "packages/mermaid/src/diagrams/flowchart/parser/flow-arrows.spec.js",
+      "symbols": [
+        "Independent pinned semantic examples, no candidate-derived expectations"
+      ],
+      "sha256": "e6fc94a94cc39ab86f815620baf0a5c33ffd0b72e217d3f83e49980ff15cfaec",
+      "gitBlobSha256": "025ffc3f3fcee855bb4c9be841c7320e2309888f2206261c9262b9a318815feb"
+    },
+    {
+      "id": "spec:flow-style.spec.js",
+      "path": "packages/mermaid/src/diagrams/flowchart/parser/flow-style.spec.js",
+      "symbols": [
+        "Independent pinned semantic examples, no candidate-derived expectations"
+      ],
+      "sha256": "bfa44a8a28b5c4fab54a36cea679e4a947e2d6fbdbda18a6aa07dfd09003873e",
+      "gitBlobSha256": "7f6638cbd8d81e60aebb25dc05c1d7a53ca2917ba73591611dbe3cdb06981eb7"
+    },
+    {
+      "id": "spec:flow-node-data.spec.js",
+      "path": "packages/mermaid/src/diagrams/flowchart/parser/flow-node-data.spec.js",
+      "symbols": [
+        "Independent pinned semantic examples, no candidate-derived expectations"
+      ],
+      "sha256": "61d09c5024fb7983b8cd50eae44632a347a0aacbdd50e157d428013912679dc9",
+      "gitBlobSha256": "120966e159d0ff1dde1a97aa848db07e89aadd19f4b5420c3c1ad58b3e93e0e0"
+    },
+    {
+      "id": "spec:flow-vertice-chaining.spec.js",
+      "path": "packages/mermaid/src/diagrams/flowchart/parser/flow-vertice-chaining.spec.js",
+      "symbols": [
+        "Independent pinned semantic examples, no candidate-derived expectations"
+      ],
+      "sha256": "70b2eda87930b2bc2558425a721b74261176305d8b6db9e0cf1c3ad79cc0b698",
+      "gitBlobSha256": "2833a1610c3ed721750b2d71ddf3d1e8b3cb5a6c8a76b0b7341a47d81cbbbb2f"
+    },
+    {
+      "id": "spec:flow-direction.spec.js",
+      "path": "packages/mermaid/src/diagrams/flowchart/parser/flow-direction.spec.js",
+      "symbols": [
+        "Independent pinned semantic examples, no candidate-derived expectations"
+      ],
+      "sha256": "ee94e2c1439bfa43b56dedb8d3eda651ddcdd1e4fce9cf0dd474dbd6011f0286",
+      "gitBlobSha256": "507bc69c1302e5635eff505e6535e00805977b23e17171a732355a82cea76687"
+    },
+    {
+      "id": "spec:flow-interactions.spec.js",
+      "path": "packages/mermaid/src/diagrams/flowchart/parser/flow-interactions.spec.js",
+      "symbols": [
+        "Independent pinned semantic examples, no candidate-derived expectations"
+      ],
+      "sha256": "4dc1d91f46533d14f338155d62387f345de2b3e4436117c64b8b6c4149db0671",
+      "gitBlobSha256": "4664958cbedfbdeddff4cc5e8e947842e15f896c80c1678c02292cb354bc3715"
+    },
+    {
+      "id": "spec:flow-lines.spec.js",
+      "path": "packages/mermaid/src/diagrams/flowchart/parser/flow-lines.spec.js",
+      "symbols": [
+        "Independent pinned semantic examples, no candidate-derived expectations"
+      ],
+      "sha256": "ece75a0c370abf31a693f2a5b3f69064b29169ad2d7af19516e6ae7dd0da7dcf",
+      "gitBlobSha256": "af81dfd07f8c977d418551cbde2d65e501958f347adb5f380e8b5696424f0cbf"
+    },
+    {
+      "id": "spec:flow-singlenode.spec.js",
+      "path": "packages/mermaid/src/diagrams/flowchart/parser/flow-singlenode.spec.js",
+      "symbols": [
+        "Independent pinned semantic examples, no candidate-derived expectations"
+      ],
+      "sha256": "04bd8c3cb02cbb3f5afdd9ccb1c97de0667226e7b344fc95762c225725bfb595",
+      "gitBlobSha256": "b747889e1c748f221f55b2cc95a2c4dcfd9b6a677b5cc0cb7766af7c3cb94bb4"
+    },
+    {
+      "id": "spec:subgraph.spec.js",
+      "path": "packages/mermaid/src/diagrams/flowchart/parser/subgraph.spec.js",
+      "symbols": [
+        "Independent pinned semantic examples, no candidate-derived expectations"
+      ],
+      "sha256": "c634dc9065a53b6e45408a6ef48626ab7420a367fc3889b86b80f9883361776d",
+      "gitBlobSha256": "3adbcb03a2be84a76c777502f7772922f05dd93643b2817a73180d11680d9a3f"
+    },
+    {
+      "id": "spec:flow-md-string.spec.js",
+      "path": "packages/mermaid/src/diagrams/flowchart/parser/flow-md-string.spec.js",
+      "symbols": [
+        "Independent pinned semantic examples, no candidate-derived expectations"
+      ],
+      "sha256": "cedd6eceec765abc8467bd8f902ead62919dd23347637a42d247183562979fe1",
+      "gitBlobSha256": "3fbc58cac25ab3d7a70278b7398321bf553ab821d43279eeee563261f5468e77"
+    },
+    {
+      "id": "spec:flow-text.spec.js",
+      "path": "packages/mermaid/src/diagrams/flowchart/parser/flow-text.spec.js",
+      "symbols": [
+        "Independent pinned semantic examples, no candidate-derived expectations"
+      ],
+      "sha256": "2d65566bc468a06cdeb3d53093a2f7a46694edc8209116f0073481059dd3f1e3",
+      "gitBlobSha256": "99de833e5993d41f7ae60605138f24ff8d8417890267fc00d93791f5448af468"
+    }
+  ],
+  "dependencySources": [
+    {
+      "path": ".local/f011-oracle/node_modules/roughjs/package.json",
+      "sha256": "5e7a5b1b095c0f529236f758a579f9e21736745f7cca5ea413f680584d73915a",
+      "symbols": [
+        "Seeded rough source reference"
+      ]
+    },
+    {
+      "path": ".local/f011-oracle/node_modules/roughjs/bin/math.js",
+      "sha256": "edc4fa1aeddfe0bbc8841853373727722d290a7e5f09cfbcd8d2b81e9949c0ec",
+      "symbols": [
+        "Random.seed truthiness before Math.imul"
+      ]
+    },
+    {
+      "path": ".local/f011-oracle/node_modules/roughjs/bin/renderer.js",
+      "sha256": "51966b08ec58bea880cc6895ae17f4d7d72006b4d65a87aefb31867ce31ca8fe",
+      "symbols": [
+        "Seeded rough source reference"
+      ]
+    }
+  ],
+  "assertionGroups": [
+    {
+      "group": "StaticLanguageFixtureTests",
+      "tests": [
+        "StaticLanguageFixtureTests.test_all_handwritten_static_semantic_cases",
+        "StaticLanguageFixtureTests.test_all_source_metadata_shape_aliases",
+        "StaticLanguageFixtureTests.test_independent_fixture_denominator",
+        "StaticLanguageFixtureTests.test_source_parse_invalid_cases",
+        "StaticLanguageFixtureTests.test_source_metadata_and_index_validation_errors",
+        "StaticLanguageFixtureTests.test_user_exclusions_are_not_parse_invalid_fixtures",
+        "StaticLanguageFixtureTests.test_source_anomalies_are_explicit_separate_boundaries"
+      ],
+      "sources": [
+        "grammar:flow.jison",
+        "grammar:flowParser.ts",
+        "db:flowDb.ts",
+        "db:types.ts",
+        "db:types.ts",
+        "shapes:shapes.ts",
+        "spec:flow-edges.spec.js",
+        "spec:flow-arrows.spec.js",
+        "spec:flow-style.spec.js",
+        "spec:flow-node-data.spec.js",
+        "spec:flow-vertice-chaining.spec.js",
+        "spec:flow-direction.spec.js",
+        "spec:flow-interactions.spec.js",
+        "spec:flow-lines.spec.js",
+        "spec:flow-singlenode.spec.js",
+        "spec:subgraph.spec.js",
+        "spec:flow-md-string.spec.js",
+        "spec:flow-text.spec.js",
+        "config:config.schema.yaml",
+        "config:defaultConfig.ts",
+        "config:assignWithDepth.ts",
+        "config:config.ts"
+      ]
+    },
+    {
+      "group": "GrammarTokenSourceTests",
+      "tests": [
+        "GrammarTokenSourceTests.test_all_classic_vertex_alternatives_remain_reachable",
+        "GrammarTokenSourceTests.test_each_identifier_token_alternative_has_reachable_input",
+        "GrammarTokenSourceTests.test_all_header_separator_productions",
+        "GrammarTokenSourceTests.test_document_line_and_empty_alternatives",
+        "GrammarTokenSourceTests.test_text_and_quoted_markdown_label_productions",
+        "GrammarTokenSourceTests.test_unquoted_group_keyword_productions",
+        "GrammarTokenSourceTests.test_source_unicode_range_boundaries",
+        "GrammarTokenSourceTests.test_source_keyword_prefix_and_punctuation_boundaries",
+        "GrammarTokenSourceTests.test_compiled_word_literal_boundaries_apply_to_old_props",
+        "GrammarTokenSourceTests.test_header_space_semicolon_is_invalid_but_node_space_semicolon_is_valid",
+        "GrammarTokenSourceTests.test_flow_yaml_root_fields_can_start_at_column_zero",
+        "GrammarTokenSourceTests.test_public_and_helper_cold_import_paths_do_not_cycle",
+        "GrammarTokenSourceTests.test_metadata_before_and_after_cartesian_members",
+        "GrammarTokenSourceTests.test_style_components_numbers_units_percent_and_spaces"
+      ],
+      "sources": [
+        "grammar:flow.jison",
+        "grammar:flowParser.ts",
+        "db:flowDb.ts",
+        "db:types.ts",
+        "db:types.ts",
+        "spec:flow-edges.spec.js",
+        "spec:flow-arrows.spec.js",
+        "spec:flow-style.spec.js",
+        "spec:flow-node-data.spec.js",
+        "spec:flow-vertice-chaining.spec.js",
+        "spec:flow-direction.spec.js",
+        "spec:flow-interactions.spec.js",
+        "spec:flow-lines.spec.js",
+        "spec:flow-singlenode.spec.js",
+        "spec:subgraph.spec.js",
+        "spec:flow-md-string.spec.js",
+        "spec:flow-text.spec.js"
+      ]
+    },
+    {
+      "group": "EdgeDeclarationSourceTests",
+      "tests": [
+        "EdgeDeclarationSourceTests.test_source_destruct_link_mismatch_branches",
+        "EdgeDeclarationSourceTests.test_source_edge_order_class_and_style_selector_use_source_id",
+        "EdgeDeclarationSourceTests.test_source_user_id_collision_with_generated_id",
+        "EdgeDeclarationSourceTests.test_all_thirteen_edge_curve_names",
+        "EdgeDeclarationSourceTests.test_animation_metadata_and_classes_are_static_values",
+        "EdgeDeclarationSourceTests.test_cartesian_max_edges_boundary"
+      ],
+      "sources": [
+        "grammar:flow.jison",
+        "grammar:flowParser.ts",
+        "db:flowDb.ts",
+        "db:types.ts",
+        "db:types.ts",
+        "spec:flow-edges.spec.js",
+        "spec:flow-arrows.spec.js",
+        "spec:flow-style.spec.js",
+        "spec:flow-node-data.spec.js",
+        "spec:flow-vertice-chaining.spec.js",
+        "spec:flow-direction.spec.js",
+        "spec:flow-interactions.spec.js",
+        "spec:flow-lines.spec.js",
+        "spec:flow-singlenode.spec.js",
+        "spec:subgraph.spec.js",
+        "spec:flow-md-string.spec.js",
+        "spec:flow-text.spec.js",
+        "static:styles.ts",
+        "static:edges.js",
+        "static:flowRenderer-v3-unified.ts",
+        "static:setupViewPortForSVG.ts"
+      ]
+    },
+    {
+      "group": "MetadataCollapseSourceTests",
+      "tests": [
+        "MetadataCollapseSourceTests.test_fourteen_click_productions_have_only_initial_clickable_class",
+        "MetadataCollapseSourceTests.test_all_group_algorithm_metadata_values_are_preserved_for_layout",
+        "MetadataCollapseSourceTests.test_removed_group_layout_family_fails_before_any_canvas_entry",
+        "MetadataCollapseSourceTests.test_node_algorithm_is_opaque_unless_it_is_an_actual_group_selection",
+        "MetadataCollapseSourceTests.test_all_group_directions_and_inheritance",
+        "MetadataCollapseSourceTests.test_group_metadata_before_declaration_is_not_forward_routed",
+        "MetadataCollapseSourceTests.test_edge_metadata_pseudo_member_is_not_a_drawable_node",
+        "MetadataCollapseSourceTests.test_expanded_restores_group_metadata_without_inventing_interaction",
+        "MetadataCollapseSourceTests.test_metadata_truthy_updates_do_not_clear_prior_assets",
+        "MetadataCollapseSourceTests.test_metadata_label_preserves_source_db_markup_before_native_sanitization",
+        "MetadataCollapseSourceTests.test_request_input_and_result_values_are_isolated",
+        "MetadataCollapseSourceTests.test_original_utf16_spans_through_metadata_and_edge_ids"
+      ],
+      "sources": [
+        "grammar:flow.jison",
+        "grammar:flowParser.ts",
+        "db:flowDb.ts",
+        "db:types.ts",
+        "db:types.ts",
+        "elk:algorithms.ts",
+        "elk:render.ts",
+        "elk:render.spec.ts",
+        "spec:flow-edges.spec.js",
+        "spec:flow-arrows.spec.js",
+        "spec:flow-style.spec.js",
+        "spec:flow-node-data.spec.js",
+        "spec:flow-vertice-chaining.spec.js",
+        "spec:flow-direction.spec.js",
+        "spec:flow-interactions.spec.js",
+        "spec:flow-lines.spec.js",
+        "spec:flow-singlenode.spec.js",
+        "spec:subgraph.spec.js",
+        "spec:flow-md-string.spec.js",
+        "spec:flow-text.spec.js"
+      ]
+    },
+    {
+      "group": "ElkPublicConfigurationTests",
+      "tests": [
+        "ElkPublicConfigurationTests.test_seven_source_registered_root_names",
+        "ElkPublicConfigurationTests.test_unregistered_and_removed_root_layouts_explicitly_fail",
+        "ElkPublicConfigurationTests.test_nine_defaults_preserve_four_missing_strategy_keys",
+        "ElkPublicConfigurationTests.test_all_thirteen_public_options_and_no_mutation",
+        "ElkPublicConfigurationTests.test_null_strategy_keeps_source_undefined_distinct_from_explicit_alignment",
+        "ElkPublicConfigurationTests.test_source_option_enums",
+        "ElkPublicConfigurationTests.test_source_schema_layer_bound_has_no_minimum",
+        "ElkPublicConfigurationTests.test_invalid_public_options_are_config_errors_not_engine_fallback",
+        "ElkPublicConfigurationTests.test_handdrawn_look_seed_and_deterministic_id_settings"
+      ],
+      "sources": [
+        "config:config.schema.yaml",
+        "config:defaultConfig.ts",
+        "config:assignWithDepth.ts",
+        "config:config.ts",
+        "elk:algorithms.ts",
+        "elk:render.ts",
+        "elk:render.spec.ts"
+      ]
+    }
+  ],
+  "grammarInventory": {
+    "nonterminals": 40,
+    "alternatives": 189,
+    "productionGroups": {
+      "document-and-separators": {
+        "nonterminals": [
+          "start",
+          "document",
+          "line",
+          "graphConfig",
+          "FirstStmtSeparator",
+          "spaceListNewline",
+          "spaceList",
+          "separator"
+        ],
+        "tests": [
+          "GrammarTokenSourceTests.test_all_header_separator_productions",
+          "GrammarTokenSourceTests.test_document_line_and_empty_alternatives"
+        ],
+        "fixtures": [
+          "implicit-direction",
+          "empty-document",
+          "empty-default-direction",
+          "whitespace-separators"
+        ]
+      },
+      "node-chains-and-metadata": {
+        "nonterminals": [
+          "statement",
+          "shapeData",
+          "vertexStatement",
+          "node",
+          "styledVertex",
+          "vertex"
+        ],
+        "tests": [
+          "GrammarTokenSourceTests.test_all_classic_vertex_alternatives_remain_reachable",
+          "GrammarTokenSourceTests.test_metadata_before_and_after_cartesian_members",
+          "StaticLanguageFixtureTests.test_all_source_metadata_shape_aliases"
+        ],
+        "fixtures": [
+          "cartesian-batch",
+          "metadata-label",
+          "metadata-multiline-yaml",
+          "old-properties"
+        ]
+      },
+      "edge-links-and-text": {
+        "nonterminals": [
+          "link",
+          "edgeText",
+          "linkStatement",
+          "arrowText",
+          "text",
+          "keywords",
+          "textNoTags"
+        ],
+        "tests": [
+          "StaticLanguageFixtureTests.test_all_handwritten_static_semantic_cases",
+          "EdgeDeclarationSourceTests.test_source_destruct_link_mismatch_branches",
+          "GrammarTokenSourceTests.test_text_and_quoted_markdown_label_productions",
+          "GrammarTokenSourceTests.test_unquoted_group_keyword_productions"
+        ],
+        "note": "Existing F012/F013 independent quoted/multiline/Unicode/HTML/Markdown/a11y fixtures remain in scope."
+      },
+      "styles-and-click": {
+        "nonterminals": [
+          "classDefStatement",
+          "classStatement",
+          "clickStatement",
+          "styleStatement",
+          "linkStyleStatement",
+          "numList",
+          "stylesOpt",
+          "style",
+          "styleComponent"
+        ],
+        "tests": [
+          "MetadataCollapseSourceTests.test_fourteen_click_productions_have_only_initial_clickable_class",
+          "GrammarTokenSourceTests.test_style_components_numbers_units_percent_and_spaces",
+          "StaticLanguageFixtureTests.test_all_handwritten_static_semantic_cases"
+        ]
+      },
+      "identifier-token-families": {
+        "nonterminals": [
+          "idStringToken",
+          "textToken",
+          "textNoTagsToken",
+          "edgeTextToken",
+          "alphaNumToken",
+          "idString",
+          "alphaNum",
+          "direction"
+        ],
+        "tests": [
+          "GrammarTokenSourceTests.test_each_identifier_token_alternative_has_reachable_input",
+          "GrammarTokenSourceTests.test_source_keyword_prefix_and_punctuation_boundaries",
+          "GrammarTokenSourceTests.test_source_unicode_range_boundaries",
+          "MetadataCollapseSourceTests.test_all_group_directions_and_inheritance"
+        ]
+      },
+      "dormant-source-grammar": {
+        "nonterminals": [
+          "ending",
+          "endToken"
+        ],
+        "status": "source_unreachable_from_start",
+        "alternatives": 5,
+        "reason": "Neither ending nor endToken is referenced from a production reachable from start."
+      }
+    },
+    "dormantTokenAlternatives": [
+      {
+        "production": "link -> linkStatement TESTSTR SPACE",
+        "reason": "TESTSTR has no lexer emission rule; no public source string can select this alternative."
+      },
+      {
+        "production": "styleComponent -> UNIT | PCT",
+        "reason": "UNIT/PCT have no lexer emission rules; numeric px/% input is covered through actual NUM/NODE_STRING tokens."
+      }
+    ],
+    "coverageMeaning": "Inventory-to-test source mapping, not measured parser branch coverage or a pass claim. No forged inputs emitting absent lexer tokens. Exact observed reachability and every candidate result await initial S4."
+  },
+  "fixtureDenominator": {
+    "semanticPositives": 93,
+    "metadataAliasPositives": 147,
+    "syntaxInvalid": 14,
+    "semanticInvalid": 4,
+    "excluded": 4,
+    "sourceAnomalies": 3
+  },
+  "sourceAnomalySubtypes": {
+    "positive": {
+      "count": 1,
+      "ids": [
+        "BR-source-direction"
+      ],
+      "direction": "source raw BR -> fixed ELK default DOWN -> target canonical TB"
+    },
+    "knownRenderError": {
+      "count": 1,
+      "ids": [
+        "classic-ellipse"
+      ]
+    },
+    "unsafePrototypeSourceDefect": {
+      "count": 1,
+      "ids": [
+        "constructor-source-bug"
+      ]
+    }
+  },
+  "testMethodCounts": {
+    "tests/f014/test_language.py": 54,
+    "tests/f011/test_language.py": 40,
+    "tests/f012/test_language.py": 29,
+    "tests/f013/test_language.py": 63
+  },
+  "fixtures": {
+    "path": "tests/f014/language-cases.json",
+    "sha256": "a35f1b4ba19b2de1568611c7c5d069556a733d3f8b2c75351f0954ff03bc067c",
+    "semanticIds": [
+      "direction-TB",
+      "direction-TD",
+      "direction-BT",
+      "direction-LR",
+      "direction-RL",
+      "direction-left",
+      "direction-right",
+      "direction-up",
+      "direction-down",
+      "implicit-direction",
+      "elk-header",
+      "empty-document",
+      "empty-default-direction",
+      "whitespace-separators",
+      "unicode-identifiers",
+      "punctuated-identifiers",
+      "numeric-identifiers",
+      "cartesian-batch",
+      "cartesian-id-owner",
+      "user-id-duplicate",
+      "generated-id-counters",
+      "edge-open",
+      "edge-point",
+      "edge-circle",
+      "edge-cross",
+      "edge-double-point",
+      "edge-double-circle",
+      "edge-double-cross",
+      "edge-thick-open",
+      "edge-thick-point",
+      "edge-thick-circle",
+      "edge-thick-cross",
+      "edge-thick-double-point",
+      "edge-thick-double-circle",
+      "edge-thick-double-cross",
+      "edge-dotted-open",
+      "edge-dotted-point",
+      "edge-dotted-circle",
+      "edge-dotted-cross",
+      "edge-dotted-double-point",
+      "edge-dotted-double-circle",
+      "edge-dotted-double-cross",
+      "edge-invisible",
+      "edge-normal-long",
+      "edge-thick-long",
+      "edge-dotted-long",
+      "edge-length-cap",
+      "edge-mixed-direct-source",
+      "edge-left-open-source",
+      "inline-normal",
+      "inline-thick",
+      "inline-dotted",
+      "inline-double-cross",
+      "invalid-combination-source",
+      "thick-pipe-label",
+      "dotted-markdown-label",
+      "old-properties",
+      "metadata-label",
+      "metadata-string-label",
+      "metadata-multiline-yaml",
+      "metadata-resource-icon",
+      "metadata-resource-image",
+      "metadata-after-edge",
+      "metadata-before-edge",
+      "metadata-resource-sticky",
+      "style-forward-node",
+      "style-append",
+      "class-definition-order",
+      "class-multi-target",
+      "class-before-target-ignored",
+      "classdef-append-and-comma",
+      "class-comma-not-multiple",
+      "class-escaped-comma",
+      "linkstyle-index-default",
+      "linkstyle-index-list",
+      "linkstyle-default-timing",
+      "linkstyle-interpolate-and-style",
+      "class-edge-id",
+      "class-group",
+      "click-href",
+      "click-url",
+      "click-callback",
+      "click-call",
+      "click-forward-ignored",
+      "collapsed-boundary",
+      "collapsed-nested-outermost",
+      "collapsed-preserve-own-loop",
+      "collapsed-slot-sibling",
+      "group-metadata-algorithm",
+      "group-metadata-unknown-retained",
+      "root-direction-statement-no-change",
+      "source-direction-line-consumption",
+      "handdrawn-config"
+    ],
+    "aliasIds": [
+      "alias-rect",
+      "alias-proc",
+      "alias-process",
+      "alias-rectangle",
+      "alias-rounded",
+      "alias-event",
+      "alias-stadium",
+      "alias-terminal",
+      "alias-pill",
+      "alias-fr-rect",
+      "alias-subprocess",
+      "alias-subproc",
+      "alias-framed-rectangle",
+      "alias-subroutine",
+      "alias-cyl",
+      "alias-db",
+      "alias-database",
+      "alias-cylinder",
+      "alias-datastore",
+      "alias-data-store",
+      "alias-folder",
+      "alias-directory",
+      "alias-bucket",
+      "alias-console",
+      "alias-browser",
+      "alias-person",
+      "alias-circle",
+      "alias-circ",
+      "alias-bang",
+      "alias-cloud",
+      "alias-diam",
+      "alias-decision",
+      "alias-diamond",
+      "alias-question",
+      "alias-hex",
+      "alias-hexagon",
+      "alias-prepare",
+      "alias-lean-r",
+      "alias-lean-right",
+      "alias-in-out",
+      "alias-lean-l",
+      "alias-lean-left",
+      "alias-out-in",
+      "alias-trap-b",
+      "alias-priority",
+      "alias-trapezoid-bottom",
+      "alias-trapezoid",
+      "alias-trap-t",
+      "alias-manual",
+      "alias-trapezoid-top",
+      "alias-inv-trapezoid",
+      "alias-dbl-circ",
+      "alias-double-circle",
+      "alias-doublecircle",
+      "alias-text",
+      "alias-notch-rect",
+      "alias-card",
+      "alias-notched-rectangle",
+      "alias-lin-rect",
+      "alias-lined-rectangle",
+      "alias-lined-process",
+      "alias-lin-proc",
+      "alias-shaded-process",
+      "alias-sm-circ",
+      "alias-start",
+      "alias-small-circle",
+      "alias-fr-circ",
+      "alias-stop",
+      "alias-framed-circle",
+      "alias-fork",
+      "alias-join",
+      "alias-hourglass",
+      "alias-collate",
+      "alias-brace",
+      "alias-comment",
+      "alias-brace-l",
+      "alias-brace-r",
+      "alias-braces",
+      "alias-bolt",
+      "alias-com-link",
+      "alias-lightning-bolt",
+      "alias-doc",
+      "alias-document",
+      "alias-delay",
+      "alias-half-rounded-rectangle",
+      "alias-h-cyl",
+      "alias-das",
+      "alias-horizontal-cylinder",
+      "alias-lin-cyl",
+      "alias-disk",
+      "alias-lined-cylinder",
+      "alias-curv-trap",
+      "alias-curved-trapezoid",
+      "alias-display",
+      "alias-div-rect",
+      "alias-div-proc",
+      "alias-divided-rectangle",
+      "alias-divided-process",
+      "alias-tri",
+      "alias-extract",
+      "alias-triangle",
+      "alias-win-pane",
+      "alias-internal-storage",
+      "alias-window-pane",
+      "alias-f-circ",
+      "alias-junction",
+      "alias-filled-circle",
+      "alias-notch-pent",
+      "alias-loop-limit",
+      "alias-notched-pentagon",
+      "alias-flip-tri",
+      "alias-manual-file",
+      "alias-flipped-triangle",
+      "alias-sl-rect",
+      "alias-manual-input",
+      "alias-sloped-rectangle",
+      "alias-docs",
+      "alias-documents",
+      "alias-st-doc",
+      "alias-stacked-document",
+      "alias-st-rect",
+      "alias-procs",
+      "alias-processes",
+      "alias-stacked-rectangle",
+      "alias-bow-rect",
+      "alias-stored-data",
+      "alias-bow-tie-rectangle",
+      "alias-cross-circ",
+      "alias-summary",
+      "alias-crossed-circle",
+      "alias-tag-doc",
+      "alias-tagged-document",
+      "alias-tag-rect",
+      "alias-tagged-rectangle",
+      "alias-tag-proc",
+      "alias-tagged-process",
+      "alias-flag",
+      "alias-paper-tape",
+      "alias-odd",
+      "alias-lin-doc",
+      "alias-lined-document",
+      "alias-state",
+      "alias-choice",
+      "alias-note",
+      "alias-composite",
+      "alias-icon",
+      "alias-anchor"
+    ],
+    "aliasExpectedOrigin": "Pinned shapes.ts facts only, 53definitions+141lowercase aliases+6undocumented; four literal F014 canonical-contract mappings. No import or invocation of candidate registry used to generate expected aliases."
+  },
+  "knownStaticDiscrepanciesForFirstRun": [
+    {
+      "id": "seed-fraction",
+      "source": "Original seed truthiness precedes imul: first next for0.5/2**32 is0, afterward zero seed uses random branch; config preserves original number.",
+      "s4Resolution": "Source repair landed, pending unified same-candidate behavior regression; original evidence retained."
+    },
+    {
+      "id": "BR-direction",
+      "source": "Confirmed dir2ElkDirection default DOWN; source positive canonicalTB test replaces earlier insufficient source-error assumption. Frozen native still rejects; initial S4 must preserve failure before coordinated repair.",
+      "s4Resolution": "Source repair landed, pending unified same-candidate behavior regression; original evidence retained."
+    },
+    {
+      "id": "TD-inherited-direction",
+      "source": "FlowDB.setDirection canonicalizes TD->TB before addSubGraph inherits root; top-level target preserves legacy TD spelling but inherited group should be actualTB. Frozen native currently copiesTD.",
+      "s4Resolution": "Source repair landed, pending unified same-candidate behavior regression; original evidence retained."
+    },
+    {
+      "id": "empty-graph",
+      "source": "Grammar accepts empty document; flowRenderer no explicit empty guard; viewport empty getBBox gets2*padding (default16). Actual ELK/root render first probe pending. Native session has old EMPTY_DIAGRAM guard. Empty graph success is not a fabricated white stub for a nonempty graph."
+    },
+    {
+      "id": "metadata-label-serialization",
+      "source": "FlowDB metadata doc.label bypasses classic sanitizeText path; quoted physical newline becomes source br/> before YAML load. Fixture preserves that DB body independently; candidate sanitization may canonicalizebr. Final paint still must sanitize via shared provider.",
+      "s4Resolution": "Source repair landed, pending unified same-candidate behavior regression; original evidence retained."
+    }
+  ],
+  "migrations": [
+    {
+      "path": "tests/f011/test_language.py",
+      "detail": "Former direction/header/edge/batch/class/style/click/icon/empty document and handDrawn/curve rejects now explicit positive semantics; math and removed layouts remain errors."
+    },
+    {
+      "path": "tests/f012/test_language.py",
+      "detail": "Remaining newshape/oldprops/style/batch scope rejects become positive values; classic/label/group coverage retained."
+    },
+    {
+      "path": "tests/f013/test_language.py",
+      "detail": "Four former unsupported features asserted via standalone positive texts. Historical unsupported fixture count becomes2(math/removed layout), coordinated root JSON migration; this worker did not alter legacy case JSON."
+    }
+  ],
+  "mechanicalEvidence": "test-runs/F01.4-record-20261105T090609Z-835be58e/run.json",
+  "behaviorExecuted": false,
+  "testsCollected": false,
+  "productSourceChanged": false,
+  "imagesGenerated": false,
+  "installationValidation": "deferred_by_user",
+  "fileIdentities": [
+    {
+      "path": "tests/f014/test_language.py",
+      "sha256": "d87f2cc69362b5ba52378d9f83ae4e5d53240a74df67f277f5153b6a1b205aed"
+    },
+    {
+      "path": "tests/f014/language-cases.json",
+      "sha256": "a35f1b4ba19b2de1568611c7c5d069556a733d3f8b2c75351f0954ff03bc067c"
+    },
+    {
+      "path": "tests/f011/test_language.py",
+      "sha256": "8e5b0e4c129eb8b8c5c13d4db463549f1fb68d0d2710eefcd5dce493897cb8ed"
+    },
+    {
+      "path": "tests/f012/test_language.py",
+      "sha256": "a3860acfabc8364e3366eaba3b7079f641d9878e987e277508e27d19da1cc155"
+    },
+    {
+      "path": "tests/f013/test_language.py",
+      "sha256": "8888c527dc0da46d162989080f55ee6192fd3655abcbb172b794ef4a60e23319"
+    }
+  ],
+  "s4RepairBatch": {
+    "status": "repairs_complete_unverified",
+    "originalSourceFreeze": "5b0262fdf79a609517ff6080ddd1da50d1649528abea2373f74c3666ee7d14ed",
+    "originalSourceZip": "test-runs/F01.4-s2-source-freeze-20261105T084954Z-d01bc958/artifacts/source-candidate.zip",
+    "initialFailureRun": "test-runs/F01.4-batch-20261105T090906Z-11b555ce",
+    "preRepairTestFixtureEvidence": "test-runs/F01.4-parser-repair-inputs-20261105T092030Z-ec6870c3",
+    "repairs": [
+      {
+        "id": "cold-import",
+        "classification": "product import topology",
+        "evidence": "test-runs/F01.4-batch-20261105T090906Z-11b555ce/commands/013-f014-language/stderr.log",
+        "source": "Pure module entry contract; parser package must not eagerly require parsing package that reimports half-initialized parser.",
+        "fix": "Move preprocess/YAML helpers into parse_flowchart/metadata call boundaries, retain syntax-first cold test imports; no aggregator edits."
+      },
+      {
+        "id": "flow-yaml-continuation",
+        "classification": "product source port",
+        "evidence": "test-runs/F01.4-batch-20261105T090906Z-11b555ce/commands/016-f014-styles/stderr.log",
+        "source": "js-yaml4.3 loader readFlowCollection/skipSeparationSpace warns on deficient flow indentation; source FlowDB wraps inline metadata as a root flow map with zero-indent fields.",
+        "fix": "Flow/quoted continuations bypass block-indentation guard, strict block collection indentation remains."
+      },
+      {
+        "id": "compiled-jison-word-boundary",
+        "classification": "product and independent test-design source interpretation",
+        "evidence": "test-runs/F01.4-batch-20261105T090906Z-11b555ce/commands/005-f012-language/stderr.log",
+        "source": "Pinned compiled Jison lexer adds literal word boundaries: v\\b/default\\b/style\\b; first-match options{}. Raw grammar word literals alone were insufficient to infer this build transform.",
+        "fix": "Use ASCII-word boundary checks for literal tokens; key:value and styleNode/classify are genuine source positives. Preserve exact keyword negatives. Do not loosen old-props positive into an unsupported source form."
+      },
+      {
+        "id": "BR-down",
+        "classification": "product source semantics",
+        "source": "elk/render.ts dir2ElkDirection default DOWN; confirmed source BR positive.",
+        "fix": "Target canonical TB, original source text retains BR; no diagonal or algorithm fallback."
+      },
+      {
+        "id": "TD-group-inheritance",
+        "classification": "product source semantics",
+        "source": "FlowDB setDirection TD->TB precedes addSubGraph inheritance.",
+        "fix": "Preserve old public root TD spelling, inherited group effective TB."
+      },
+      {
+        "id": "raw-seed-number",
+        "classification": "product source semantics shared with C",
+        "source": "roughjs Random checks original number truthiness before Math.imul. Truthy0.5/2**32 produces first next0; subsequent seed0 uses random branch, not a permanently deterministic zero stream.",
+        "fix": "Config preserves original finite seed number; C owns generator truthiness-before-imul. Model int|float was updated by root."
+      },
+      {
+        "id": "header-space-semicolon",
+        "classification": "fixture mistake plus permissive product parser",
+        "evidence": "test-runs/F01.4-batch-20261105T090906Z-11b555ce/artifacts/oracle/whitespace-separators.error.json",
+        "source": "FirstStmtSeparator := SEMI | NEWLINE | spaceList NEWLINE, so SPACE+SEMI is invalid.",
+        "fix": "Header-specific check rejects it; node trailing SPACE+SEMI stays valid. Exact bad original input retained as new negative header-semicolon-invalid; positive keeps node semicolons with a legal header newline."
+      },
+      {
+        "id": "metadata-db-serialization",
+        "classification": "product DB body and missing independent visible fixture",
+        "evidence": "test-runs/F01.4-batch-20261105T090906Z-11b555ce/artifacts/oracle/metadata-multiline-yaml.json",
+        "source": "FlowDB metadata doc.label bypasses classic sanitizeText, preserves br/> DB spelling. Source visibleLabel confirms First newline second.",
+        "fix": "Keep metadata body and canonical Mermaid entity transport in model.label; raw_label unchanged. Native provider still always sanitizes before measurement/draw. Add explicit visibleLabels, retain classic sanitizer path."
+      },
+      {
+        "id": "selected-group-layout-family",
+        "classification": "explicit user layout-removal policy",
+        "sourceScope": "Only actual group metadata algorithm selects a group layout; ordinary node algorithm is opaque and an earlier node metadata map is not forwarded to a later group by FlowDB.",
+        "rule": "For an actual group, algorithm must be a string equal to elk or starting elk.; otherwise UNSUPPORTED_CONFIG before any Canvas entry. Unknown elk.* stays raw for the source resolver to ignore; no optional algorithm list expansion.",
+        "negativeFixtures": [
+          "removed-group-layout",
+          "removed-placeholder-group-layout"
+        ],
+        "tests": [
+          "MetadataCollapseSourceTests.test_removed_group_layout_family_fails_before_any_canvas_entry",
+          "MetadataCollapseSourceTests.test_node_algorithm_is_opaque_unless_it_is_an_actual_group_selection"
+        ],
+        "mechanicalEvidence": "test-runs/F01.4-record-20261105T093222Z-4cbb243e/run.json",
+        "behaviorExecuted": false,
+        "note": "No removed-engine identifier, dependency, implementation or fallback string was added to production code."
+      }
+    ],
+    "changedProductFiles": [
+      {
+        "path": "src/py_mermaid/config/flowchart.py",
+        "sha256": "bcc7d8f8e2599d8bbd9433cc37e9665670a7d4feb58f469e23d46ff0090290ab",
+        "beforeSha256": "d7d16ff3a4663fa593769807828cbb2341b88eb44c0c07826eed525b91186adb"
+      },
+      {
+        "path": "src/py_mermaid/diagrams/flowchart/lexical.py",
+        "sha256": "91fd1b80a853d01e1bbced1a7aafcdcc8e0c18a7009ba8617591e3fbeb1da42d",
+        "beforeSha256": "c2478953d3d3f7e33c27cf6ca91db78d245a6dd83d44fafe2f4eb46b1492bb80"
+      },
+      {
+        "path": "src/py_mermaid/diagrams/flowchart/parser.py",
+        "sha256": "7d1f8f4e289a5c95979510ad2a161cb7d50eaa5f48abaf9aa6d226b8daad0151",
+        "beforeSha256": "159a49daa2ae4d3dbb752d06bbeec9bab083dd73735f76460bb2631102915d4c"
+      },
+      {
+        "path": "src/py_mermaid/parsing/yaml_json.py",
+        "sha256": "568345c47a13bfb65651dafa9b4fcec9a65b2ebd646fa470c8d9717dbecea465",
+        "beforeSha256": "d443e7b317a0a46f97ad53906efa5852fbfb3a4140aca9c8cea53e2854a0ca50"
+      }
+    ],
+    "mechanicalEvidence": "test-runs/F01.4-record-20261105T092539Z-5eb7cdf6/run.json",
+    "behaviorExecutedAfterRepair": false,
+    "functionalStatus": "NOT_EVALUATED",
+    "generatedLexerProvenance": {
+      "path": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js",
+      "sha256": "ffd1a76f0553952a344c68a9b1502dd5cfb6faab72541307b74679c5abc9cec8",
+      "section": "flowchart generated lexer options through rules (before conditions)",
+      "sectionSha256": "20564a2b194a3ebf96fb4a32bb029f08410d4498c7b32d986c001020f04a14de",
+      "observedLiterals": [
+        "style\\b",
+        "default\\b",
+        "v\\b",
+        "_self\\b"
+      ],
+      "options": "{} (first-match unless flex enabled)",
+      "productionDependency": false
+    },
+    "finalPolicyMechanicalEvidence": "test-runs/F01.4-record-20261105T093222Z-4cbb243e/run.json"
+  },
+  "generatedLexerProvenance": {
+    "path": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js",
+    "sha256": "ffd1a76f0553952a344c68a9b1502dd5cfb6faab72541307b74679c5abc9cec8",
+    "section": "flowchart generated lexer options through rules (before conditions)",
+    "sectionSha256": "20564a2b194a3ebf96fb4a32bb029f08410d4498c7b32d986c001020f04a14de",
+    "observedLiterals": [
+      "style\\b",
+      "default\\b",
+      "v\\b",
+      "_self\\b"
+    ],
+    "options": "{} (first-match unless flex enabled)",
+    "productionDependency": false
+  },
+  "postRepairTestsExecuted": false,
+  "sharedShapeThemeClosure": {
+    "reason": "F01.4 makes note/state shared shape paint reachable; prior F01.3 flowchart theme closure omitted these fields. No root per-theme fallback is substituted.",
+    "originalFailureEvidence": "test-runs/F01.4-batch-20261105T093450Z-117d64de",
+    "sourcePaintEvidence": "test-runs/F01.4-s4-source-paint-diagnostic-20261105T092448Z-a6b4e487",
+    "sourceCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+    "sources": [
+      {
+        "path": "packages/mermaid/src/themes/theme-base.js",
+        "sha256": "c13caf87f1a547eb65596ebaabf94ad80055546dff5458f3b6475799bb5ec52c",
+        "symbols": [
+          "Theme.constructor",
+          "Theme.updateColors",
+          "Theme.calculate"
+        ],
+        "fields": [
+          "noteBkgColor",
+          "noteBorderColor",
+          "noteTextColor",
+          "stateBorder"
+        ],
+        "theme": "base"
+      },
+      {
+        "path": "packages/mermaid/src/themes/theme-dark.js",
+        "sha256": "79e5faeb17f0ad47c2e97cbbab7491bf12ab93115546eaebda741e00fad75d37",
+        "symbols": [
+          "Theme.constructor",
+          "Theme.updateColors",
+          "Theme.calculate"
+        ],
+        "fields": [
+          "noteBkgColor",
+          "noteBorderColor",
+          "noteTextColor",
+          "stateBorder"
+        ],
+        "theme": "dark"
+      },
+      {
+        "path": "packages/mermaid/src/themes/theme-default.js",
+        "sha256": "c7676f84269d433c83f089bd978439a0d5e783ba48f1dfd87a294efb674e3b66",
+        "symbols": [
+          "Theme.constructor",
+          "Theme.updateColors",
+          "Theme.calculate"
+        ],
+        "fields": [
+          "noteBkgColor",
+          "noteBorderColor",
+          "noteTextColor",
+          "stateBorder"
+        ],
+        "theme": "default"
+      },
+      {
+        "path": "packages/mermaid/src/themes/theme-forest.js",
+        "sha256": "473eed6464c38764c59c15768cdedb44766f40aa736bb96ef1fa94cea2315cc5",
+        "symbols": [
+          "Theme.constructor",
+          "Theme.updateColors",
+          "Theme.calculate"
+        ],
+        "fields": [
+          "noteBkgColor",
+          "noteBorderColor",
+          "noteTextColor",
+          "stateBorder"
+        ],
+        "theme": "forest"
+      },
+      {
+        "path": "packages/mermaid/src/themes/theme-neutral.js",
+        "sha256": "a09bdc75fabfaddb19626f8c8af8e5d9df0dcee31ed09522dcbccd6418ca1a43",
+        "symbols": [
+          "Theme.constructor",
+          "Theme.updateColors",
+          "Theme.calculate"
+        ],
+        "fields": [
+          "noteBkgColor",
+          "noteBorderColor",
+          "noteTextColor",
+          "stateBorder"
+        ],
+        "theme": "neutral"
+      },
+      {
+        "path": "packages/mermaid/src/themes/theme-neo.js",
+        "sha256": "0ef8cf2a93e4629984c6c57382ce69f37d5bffb6a6fe5b949a972ee8d268bf9f",
+        "symbols": [
+          "Theme.constructor",
+          "Theme.updateColors",
+          "Theme.calculate"
+        ],
+        "fields": [
+          "noteBkgColor",
+          "noteBorderColor",
+          "noteTextColor",
+          "stateBorder"
+        ],
+        "theme": "neo"
+      },
+      {
+        "path": "packages/mermaid/src/themes/theme-neo-dark.js",
+        "sha256": "f2d3469f8fe6aae719654bba2fe776802617a72449db8a6a299bc070e07673c3",
+        "symbols": [
+          "Theme.constructor",
+          "Theme.updateColors",
+          "Theme.calculate"
+        ],
+        "fields": [
+          "noteBkgColor",
+          "noteBorderColor",
+          "noteTextColor",
+          "stateBorder"
+        ],
+        "theme": "neo-dark"
+      },
+      {
+        "path": "packages/mermaid/src/themes/theme-redux.js",
+        "sha256": "a2eeb8fc623614c4853e39e90abd1ebf6b8e6f9f4028cf40962d6d6414d6443f",
+        "symbols": [
+          "Theme.constructor",
+          "Theme.updateColors",
+          "Theme.calculate"
+        ],
+        "fields": [
+          "noteBkgColor",
+          "noteBorderColor",
+          "noteTextColor",
+          "stateBorder"
+        ],
+        "theme": "redux"
+      },
+      {
+        "path": "packages/mermaid/src/themes/theme-redux-color.js",
+        "sha256": "5e4278fb33825a501ffae1c6ac13a869763c4e611de9ad6077b58513e4e1b6d0",
+        "symbols": [
+          "Theme.constructor",
+          "Theme.updateColors",
+          "Theme.calculate"
+        ],
+        "fields": [
+          "noteBkgColor",
+          "noteBorderColor",
+          "noteTextColor",
+          "stateBorder"
+        ],
+        "theme": "redux-color"
+      },
+      {
+        "path": "packages/mermaid/src/themes/theme-redux-dark.js",
+        "sha256": "aa769f4fa5992f04bce44af4f1e568d98140477f53406a29a66248b4e6f5d1bc",
+        "symbols": [
+          "Theme.constructor",
+          "Theme.updateColors",
+          "Theme.calculate"
+        ],
+        "fields": [
+          "noteBkgColor",
+          "noteBorderColor",
+          "noteTextColor",
+          "stateBorder"
+        ],
+        "theme": "redux-dark"
+      },
+      {
+        "path": "packages/mermaid/src/themes/theme-redux-dark-color.js",
+        "sha256": "0c1899419d5a06afe61bd183d6fc2b59bf5b1be12528e2bf1c7f3fc36788b535",
+        "symbols": [
+          "Theme.constructor",
+          "Theme.updateColors",
+          "Theme.calculate"
+        ],
+        "fields": [
+          "noteBkgColor",
+          "noteBorderColor",
+          "noteTextColor",
+          "stateBorder"
+        ],
+        "theme": "redux-dark-color"
+      }
+    ],
+    "beforeThemeRulesSha256": "d7f7550c53385af0ce43e00bfc7a6a23f8986998af57186addee39c422b36d69",
+    "themeRulesSha256": "fd2aa045a0ea00a2898fd7da25fa2ef50fee2dac447f980e4ddea9e7b3fb8c85",
+    "portedStatementCount": 68,
+    "assignmentOrder": "Source constructor/updateColors order retained. Existing theme provider: construct, remove calculated sentinels, apply overrides, update, reapply explicit overrides. Dark secondaryTextColor derives in constructor, before overrides. StateBorder source absence is retained; neo-dark commented assignment is not executed.",
+    "scope": "Eleven source themes; null-theme native paint behavior unchanged. No production JS interpreter or upstream runtime dependency.",
+    "testClass": "SharedShapeThemeClosureTests",
+    "addedMethods": 6,
+    "testMethodCount": 54,
+    "behaviorExecuted": false,
+    "status": "code_complete_unverified",
+    "mechanicalEvidence": "test-runs/F01.4-record-20261105T094249Z-46187d2e/run.json",
+    "functionalStatus": "NOT_EVALUATED"
+  },
+  "finalVerification": {
+    "status": "PASS_LOCAL",
+    "sourceTreeSha256": "99a2342681469836c3b7be8be6815b9a82193146331aff51d260823b72b17a2e",
+    "evidence": "references/f014-verification-summary.json"
+  }
+}

@@ -1,0 +1,463 @@
+{
+  "phase": "P1",
+  "status": "code_complete_unverified",
+  "upstreamVersion": "mermaid@12.2.0",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "protocol": "docs/BULK_STATIC_INTERFACES.md v1",
+  "behaviorExecuted": false,
+  "testsDesigned": false,
+  "threadOwnership": "All models frozen/pure; mutable parser/layout state request local; Painter/native session stays on caller owner thread",
+  "sourcePositions": "Family parser offsets are cleaned Python indices; runtime.common.error maps processed_to_raw then original UTF-16 offset and UTF-16 column",
+  "units": "Input grammar indentation counts source characters; all renderer/layout lengths are logical CSS px unless explicitly source bit or column counts",
+  "mechanicalEvidence": [
+    "test-runs/BULK-record-20261106T033019Z-3bf3e44f/run.json",
+    "test-runs/BULK-record-20261106T033206Z-ade40f8b/run.json",
+    "test-runs/BULK-record-20261106T033427Z-44c90684/run.json",
+    "test-runs/BULK-record-20261106T033826Z-f56b2f03/run.json",
+    "test-runs/BULK-record-20261106T034102Z-66d38803/run.json",
+    "test-runs/BULK-record-20261106T035042Z-f770b411/run.json",
+    "test-runs/BULK-record-20261106T035123Z-c9c44f18/run.json"
+  ],
+  "excludedByUser": [
+    "Dagre implementations/dependencies/fallbacks",
+    "click/navigation/callback/hover/animation/interactive DOM behavior"
+  ],
+  "deferred": [
+    "treemap (and six other batch-deferred entries, no new code or verification)"
+  ],
+  "verificationLimit": "Compilation/import/signature binding do not assert parse semantics, configuration compatibility or rendering correctness; independent source tests and official captures start only in P2/P3",
+  "scope": "BULK-A-F06",
+  "entries": [
+    "hierarchy.mindmap",
+    "hierarchy.tree_view"
+  ],
+  "sourceFiles": [
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/mindmap/detector.ts",
+      "sha256": "f1e6486cd28190e5e0778b57752d94f28658f49f9a7a747c4f891fd07fe04637"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/mindmap/mindmap-definition.ts",
+      "sha256": "5b0f9be2591ba6f03421241d3b0858b9fa30226ee6e9ff5b1e89bf562daeab0d"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/mindmap/mindmapDb.ts",
+      "sha256": "df8af0d61221a62053ccacd42b6ff9c95d812139e72e842fbb920044ef2c4223"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/mindmap/mindmapRenderer.ts",
+      "sha256": "bfb0f30c97bbf49f9fd748ddef23bab90ca11cafb44b060b6f494dda5db93c4a"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/mindmap/mindmapTypes.ts",
+      "sha256": "c7dea237b6b11169795fc1f46080cdeaea6b1a82ee9287c525a66c29a459a1dd"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/mindmap/parser/mindmap.jison",
+      "sha256": "85a4b2840ab529bc82c41ea64d9556a7fe4a0552900d1cbdf9484245ba61c8e4"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/mindmap/styles.ts",
+      "sha256": "9a1addfd181f3cdca9bbad4e39a575f57fba9b0f291b56e7c3f545ea43f735ac"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/mindmap/svgDraw.ts",
+      "sha256": "41fb2e6b682a12ddef5d110149b7b27533d2f7e48c1f12d3e514c39af4ab4e4f"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/treeView/boxDrawingPreprocessor.ts",
+      "sha256": "64bf6f14196c9015e9c5b9092b3abe43f128c23edd1e99c9f36fda78c5ba295b"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/treeView/db.ts",
+      "sha256": "ee66902b72ac7ff196b242a01c7a718f036c66f27f22dc8ea3ff9acdb3fa0199"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/treeView/detector.ts",
+      "sha256": "f7b15ed622d67770128f5726ad73ccbdcf807d35830a13d7074275ba6ea5605b"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/treeView/diagram.ts",
+      "sha256": "1df68f32c839aeeec79c4344c31548bd1272f4dc983b882a86d76226e4fada42"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/treeView/icons.ts",
+      "sha256": "d5f03a435b38120fac3c46a3377673d1fc5822c9da9d56276598952a1ca2d1c3"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/treeView/parser.ts",
+      "sha256": "562731fcabb976ac1786c1d506aacea6c32d67028f09c6505f14bd675af333ab"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/treeView/renderer.ts",
+      "sha256": "a53d9284c18c8a74519905aa4582b74fc40941369b2343b90974c7ea0dc4ddd7"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/treeView/styles.ts",
+      "sha256": "77840ccee9caf64e401f9a4986e33518d382d21d7c72c1de1037320fe875555a"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/treeView/types.ts",
+      "sha256": "bf25252f2a87fe73687dd3569227b5c9319d75f0da41302e56de0653e796d950"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/parser/src/language/treeView/index.ts",
+      "sha256": "de1f717c6624665e3c88b3eb86c564e0fbe73a510300acb60503f1ecad53636f"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/parser/src/language/treeView/module.ts",
+      "sha256": "b14cc7948959c0f2dbd892900e73860ccb1c16e35f3318775bddb673aa5ca52d"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/parser/src/language/treeView/tokenBuilder.ts",
+      "sha256": "e0dd01093dc810adeae9968afebc6548593edfc8ef9d79c96c16923d14aaf401"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/parser/src/language/treeView/treeView.langium",
+      "sha256": "9075614655c1977c030884b9613a2ea923653aa73b55218a68d85c46f90f757e"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/parser/src/language/treeView/valueConverter.ts",
+      "sha256": "83c0745f0363edb64dcb150e460a8d60c3a4019022caac24eaa2ae63d950051b"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/rendering-util/layout-algorithms/cose-bilkent/cytoscape-setup.ts",
+      "sha256": "b743cc8f1365b79e8cad555dced1d42fc7f475d958c5e1c902c61142ae0aa1a7"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/rendering-util/layout-algorithms/cose-bilkent/index.ts",
+      "sha256": "5edde16888dad1e8021bc8e308740bfa82ce6263024148b4c796071b7f2029ec"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/rendering-util/layout-algorithms/cose-bilkent/layout.ts",
+      "sha256": "342207b5b31c0771f430634be28edf1dbf844cb053aa754e6a0ad39bdce2961e"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/rendering-util/layout-algorithms/cose-bilkent/render.ts",
+      "sha256": "944345291a215a8894936ed5e7b89ae8e850d86aab7355cbd196c294aa7c3c07"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/rendering-util/layout-algorithms/cose-bilkent/types.ts",
+      "sha256": "ce952366fa32f60c348b3639ad59e974706a4abb1a94ac5750edd3c17b5abc0a"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid-layout-tidy-tree/src/index.ts",
+      "sha256": "f599d7ac5d55e22cd19985efd953aa83e74d61d9ac23afecaa73f5a3a067e860"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid-layout-tidy-tree/src/layout.ts",
+      "sha256": "e487dd6c23a2f2bd67552b26a59e554f02ce84c3cf16c9a10def1b57b93bf049"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid-layout-tidy-tree/src/layouts.ts",
+      "sha256": "d2ec6a52287acf1ee606896539b668e8b2e655b90419277020d9eb3f72f40352"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid-layout-tidy-tree/src/non-layered-tidy-tree-layout.d.ts",
+      "sha256": "a8b158ce7709ced27eb2477ad73f120bf4d3910a3e92e22ead3a49fb5d266f2d"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid-layout-tidy-tree/src/render.ts",
+      "sha256": "9c8d2c1651413bc635943a99c716162a9b99b1fcb45bc3c54b1863c7d428ca25"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid-layout-tidy-tree/src/types.ts",
+      "sha256": "b5f09e7b0ef5e126cbab72f0f1c8b2749c90569ae32f9ab1a2a1ac41e4e0ba11"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/rendering-util/rendering-elements/shapes/circle.ts",
+      "sha256": "0583cce7bef770d20cd108c620ef546ae2cd423da2ebd913a93e6546ff28a167"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/rendering-util/rendering-elements/shapes/mindmapCircle.ts",
+      "sha256": "c31f318bb1a3e03c332915041e9becc63f8ad268a5181195a5daa5ae265c9905"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/rendering-util/rendering-elements/shapes/defaultMindmapNode.ts",
+      "sha256": "bbb2414d9843030b1681033fa846594fc2a86155d754f08ddf43b0f370be4ba6"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/rendering-util/rendering-elements/shapes/roundedRect.ts",
+      "sha256": "ec467557e20d023100fe6be03f3d478b619d5c5b9b0f283f632d90a14593dc10"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/rendering-util/rendering-elements/shapes/squareRect.ts",
+      "sha256": "2456ebbc205f1c73fcaf34e63d055a18b17ae71fbce2b1f4ff08e910d8cc2dfd"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/rendering-util/rendering-elements/shapes/cloud.ts",
+      "sha256": "e00d654039e86ddee967629c830ca0c85bc2de1350a7c5ee777a619a85d60839"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/rendering-util/rendering-elements/shapes/bang.ts",
+      "sha256": "916f0e2b74b80fbbf525f2efbbc2aea2fe87ab0011d30c750f0934c2d197c2e6"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/rendering-util/rendering-elements/shapes/util.ts",
+      "sha256": "bc63b16d067e4dd1c429e9cf249f4d73260819696de122dff0ce16b12db321c1"
+    }
+  ],
+  "productFiles": [
+    {
+      "path": "src/py_mermaid/diagrams/hierarchy/__init__.py",
+      "sha256": "420faaf9d17f5d92ce12f1606f307c4047ec2bdc3bd911e9960a41004392fbfb"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/hierarchy/_cose_tree.py",
+      "sha256": "4308600fb321a5e434e033b67518630e5aecbd3a7b0508c36751d33a779eb1df"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/hierarchy/_tidy.py",
+      "sha256": "d90c556104efbc49474889e10f23f8ac452a7948cb0cfc68b0183e6611dbc561"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/hierarchy/mindmap.py",
+      "sha256": "c0f2a1a27cc933508e89a570b0b94072c28999768b8d5329a9ac7833a20850cb"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/hierarchy/tree_view.py",
+      "sha256": "4f8338f0b935e755ded485f46ea0eb2a1c9fb89475733526db5716259dadd424"
+    }
+  ],
+  "sourceImplemented": {
+    "mindmap": [
+      "Jison NODE/NSTR/NSTR2 lexical shapes and quoted/multiline labels",
+      "DB base-indent normalization, nearest lower-indented parent, one-root error and source ordered numeric IDs",
+      "node classes/icon metadata, branch/depth section colors, effective source styles and all seven DB shape categories",
+      "Root layout presence only (_explicitRootLayout): source force-selects COSE when root layout missing, explicit registered layout honored",
+      "Flat-tree radial/FR-grid spring CoSE1 actual path with cooling/convergence and source findCenterOfTree mutating-list behavior",
+      "Tidy2 first/second walks, extremes/threads/IYL, dual-horizontal adapter, shape-aware terminal routes"
+    ],
+    "treeView": [
+      "Langium indent stack and virtual root directory",
+      "Box-drawing preprocessing standard/heavy characters, spacing/tabs/line offsets",
+      "Quoted names/directories, class/icon/description annotations and repeated-field last assignment",
+      "Source preorder rows, connector trunks, description right alignment, highlight pass growth",
+      "Built-in file/folder SVG and explicit resource IDs/config filename/extension icon policy"
+    ]
+  },
+  "sourceAnomalies": [
+    "Current unified mindmap icon metadata has no icon glyph consumer. Only addSvgBackground is consumed; the old svgDraw icon renderer is inactive. Preserve metadata and SVG background, do not invent a resource glyph/40px footprint. P2 official check required.",
+    "CoSE validateLayoutData requires rootNode and config; public native CoSE gate is restricted to effective mindmap config, not generic unrelated graphs",
+    "Tidy source does not require rootNode: derives first parentless node or first node from edges. Cyclic recursion receives explicit native safety diagnosis, not fake success",
+    "Mindmap cloud/bang source node.intersect is rectangular; tidy adapter separately classifies them as round, preserve that adapter-specific behavior",
+    "No source diagram title paint consumer in current mindmap/treeView renderers; metadata is retained without inventing visible titles"
+  ],
+  "remainingVerification": [
+    "COSE/tidy numerical positions and functional nonoverlap/readability on all source branches",
+    "Quoted/Unicode whitespace and source error remapping after box glyph preprocessing",
+    "Theme styles/class selectors, exact active icon no-glyph source anomaly and SVG background"
+  ],
+  "algorithmDependencies": [
+    {
+      "name": "cytoscape-cose-bilkent",
+      "version": "4.1.0",
+      "license": {
+        "path": ".local/f011-oracle/node_modules/cytoscape-cose-bilkent/LICENSE",
+        "sha256": "440fc58a56a12814e417d2b341da89b050da052dc75bdb235607d37ec5fe74ef"
+      },
+      "sourceFiles": [
+        {
+          "path": ".local/f011-oracle/node_modules/cytoscape-cose-bilkent/src/index.js",
+          "sha256": "c64918213dea57cffef66c8969d45dec6009ac32d2e693f37f090b0d04189f93"
+        }
+      ],
+      "runtimeDependency": false
+    },
+    {
+      "name": "cose-base",
+      "version": "1.0.3",
+      "license": {
+        "path": ".local/f011-oracle/node_modules/cose-base/LICENSE",
+        "sha256": "5fb3cf4a14c3c5af6e473a192df8bca10c77754e3a0c6492c79fb92a76a5478a"
+      },
+      "sourceFiles": [
+        {
+          "path": ".local/f011-oracle/node_modules/cose-base/src/CoSEConstants.js",
+          "sha256": "1a80540a4b2f4cf81edb95297a3d99f33f3027132a801be5b03657834e3722b0"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/cose-base/src/CoSEEdge.js",
+          "sha256": "32ab9e074f92e35d80658244d9d7ab3fab91ee421b08a6e213f86641c2fac37e"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/cose-base/src/CoSEGraph.js",
+          "sha256": "5dfc363115df512d93fd2e0ea9cf0e1c4fc9deae11d8b9ac2b9f58207f67e49b"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/cose-base/src/CoSEGraphManager.js",
+          "sha256": "8a3a1d6e05abdb8d4b8867b89e431919373624448411ba7ee60656e37d08b2d5"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/cose-base/src/CoSELayout.js",
+          "sha256": "334ee18f0966ad5a8b6390953f67b35fdd26da3e7be4facafe7cf1f0552df817"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/cose-base/src/CoSENode.js",
+          "sha256": "ee37e6635103693c8b9749ea1776c194540ecc506902e19752d1c9c2fc63a3b0"
+        }
+      ],
+      "runtimeDependency": false
+    },
+    {
+      "name": "layout-base",
+      "version": "1.0.2",
+      "license": {
+        "path": ".local/f011-oracle/node_modules/layout-base/LICENSE",
+        "sha256": "eabb762d8a95109a39c9be3247325529a5239a7aca327d909c3ccdc41f3a06bf"
+      },
+      "sourceFiles": [
+        {
+          "path": ".local/f011-oracle/node_modules/layout-base/src/fd/FDLayout.js",
+          "sha256": "7219fbce5102d428281e0a2c465ed43b14374ecc7de48612d8ca57f26cad55be"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/layout-base/src/fd/FDLayoutConstants.js",
+          "sha256": "365a2e54dc82be15703440a954f8d5dff6d0414e426acb444ae5f18b49e2510b"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/layout-base/src/fd/FDLayoutEdge.js",
+          "sha256": "bb5e1fcc235d6587f1e20986022c96cf8cad785875fb3894740261f2105aba37"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/layout-base/src/fd/FDLayoutNode.js",
+          "sha256": "18b3bf46f924ba1d8dc0e84567bfe6af9676b25b64825ef7dec5fe3fbff40aca"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/layout-base/src/Layout.js",
+          "sha256": "60b52960899d8ff9bebaa42ef1566bab8e1d020653c9e69a76d8ab83e3e6e6b4"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/layout-base/src/LayoutConstants.js",
+          "sha256": "d3edb1480609dd9617107cae290a43cb80edd395fdb488be9cd4b929a3d38651"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/layout-base/src/LEdge.js",
+          "sha256": "04a69989b17776ab9e50d2694c7a0b164a602850a3f17893c6956c77a91756e0"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/layout-base/src/LGraph.js",
+          "sha256": "e65aa685abafcbe3fea72d72ebe8f1e9c22e8c1588bcfd913f8df154ad765346"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/layout-base/src/LGraphManager.js",
+          "sha256": "4ec4c445464842dc2bed8b5a969872de7be96a21ab24255f143c4a0394e14db7"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/layout-base/src/LGraphObject.js",
+          "sha256": "12dd3054bf21e646066d17ad2419de156f9d5914fdc8379da06b0fea646229f1"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/layout-base/src/LNode.js",
+          "sha256": "e4a40c19d22d744454b1156445dbf12827c235eacd5b00098e61931ba73f4e1b"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/layout-base/src/util/alignment/NeedlemanWunsch.js",
+          "sha256": "dfb10527798a8facc13ac446dfa8d4624e364e5524f57338c5236274e5b96d25"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/layout-base/src/util/DimensionD.js",
+          "sha256": "4e3365f294a6bc592a977c5886a63320911058d0caa5a070820494aee0b70e01"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/layout-base/src/util/Emitter.js",
+          "sha256": "198e359ae3638122c1c15987da4e3d62b408a9ca331fed3939e51d16a9d8686a"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/layout-base/src/util/HashMap.js",
+          "sha256": "3a101dcc890183d330bbacd774f407b3f303fa5e0e0a703e69ca446d95fe7230"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/layout-base/src/util/HashSet.js",
+          "sha256": "d3acfe69252dc176f4fff2193e62cd5882fc97a4547410dd9bbb1d3e4604e4db"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/layout-base/src/util/IGeometry.js",
+          "sha256": "f120d1fe6b8fc2882e944915b731efbbc7504d4aee2296478d775a6e11e48aa6"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/layout-base/src/util/IMath.js",
+          "sha256": "33f4f491ee9b483f0c7860276ab5c83b690bf4749698090a1658e3a6dfeef40d"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/layout-base/src/util/Integer.js",
+          "sha256": "cd3e6ac417aafb85bb157c1c126530763c9c3e918dd32b7ca16bb91dadbc50db"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/layout-base/src/util/LinkedList.js",
+          "sha256": "f35df80e755d850efdaac9b924ff57d33c8026b3a93957427b717d61bb947048"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/layout-base/src/util/Point.js",
+          "sha256": "70670e31d8cda1b2ad7d54fb649dcb02f16f73525a954f3f3f685006581c6ae2"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/layout-base/src/util/PointD.js",
+          "sha256": "024202d658514fff01f18ec40d3a2d927664937df2c07cb2d6e8d75387a74aa4"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/layout-base/src/util/Quicksort.js",
+          "sha256": "1307ad19345937cfc0eac69a3e3dc6083fc2943b51cf513ff5f99c197af9813e"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/layout-base/src/util/RandomSeed.js",
+          "sha256": "34c8cf22738c62ec56a5da3e983d8c142ce5a451ff70cd1848c6e401c0726ef2"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/layout-base/src/util/RectangleD.js",
+          "sha256": "d175bf35848ca186321c146c80699d8fc6f6dc88ffd8a0c7c010cd7bfadb9d7f"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/layout-base/src/util/Transform.js",
+          "sha256": "441a66aeae1257be23f02e44ba2a9b87f5d3bc52f5454a730362e4c2114da7e4"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/layout-base/src/util/UniqueIDGeneretor.js",
+          "sha256": "dc3e0ac98db6012d7a71f423d4934cc76b0b157a8c89015568bc07b409e693dc"
+        }
+      ],
+      "runtimeDependency": false
+    },
+    {
+      "name": "non-layered-tidy-tree-layout",
+      "version": "2.0.2",
+      "license": {
+        "path": ".local/bulk-sources/non-layered-tidy-tree-layout-2.0.2/package/LICENSE",
+        "sha256": "4f2be5251c6ca29343617220bce48bbbe814de871dc42435164442a0c007d11e"
+      },
+      "sourceFiles": [
+        {
+          "path": ".local/bulk-sources/non-layered-tidy-tree-layout-2.0.2/package/src/algorithm.js",
+          "sha256": "c2ec0ef1a36b6ef35d20e2d94637967d205a8afc78947d54807e77495f7294d4"
+        },
+        {
+          "path": ".local/bulk-sources/non-layered-tidy-tree-layout-2.0.2/package/src/helpers.js",
+          "sha256": "e00183b0c1b8f9c84f55ebd9bb7cdc77c3a476bd102b4efb9583064f6b761345"
+        },
+        {
+          "path": ".local/bulk-sources/non-layered-tidy-tree-layout-2.0.2/package/src/index.js",
+          "sha256": "27befdfc33e387d3d0e0260292be51145dbb0d79025a07688a8aec932007d112"
+        }
+      ],
+      "runtimeDependency": false
+    }
+  ],
+  "tidyAcquisition": {
+    "run": "SOURCE-acquire-20261106T031511Z-1eb6d5f2",
+    "tarballSha256": "1e7fbc3c779ea3626e3783042717df64abab7814a1e8be670a4dfb60836a2a72",
+    "integrity": "sha512-gkXMxRzUH+PB0ax9dUN0yYF0S25BqeAYqhgMaLUFmpXLEk7Fcu8f4emJuOAY0V8kjDICxROIKsTAKsV/v355xw=="
+  },
+  "layoutProviders": {
+    "cose-bilkent": "py_mermaid.diagrams.hierarchy._cose_tree:layout",
+    "tidy-tree": "py_mermaid.diagrams.hierarchy._tidy:layout"
+  },
+  "freezeHistory": [
+    {
+      "sourceSha256": "c31540f5231f803abcef9c0e8205e8cd3ef397f97387f86e3746100317c434b3",
+      "mapSha256": "e38d0742ddfba2a2688de092895e19b590b02187b6eb56e7eb2ac191f25dbaf8",
+      "receiptSha256": "efe9737bad7afd6b366e674acc78cc2faf358ee43c521573f252afaaf4123990",
+      "mapSnapshot": "references/bulk-A-F06-sources-freeze-034102Z.json",
+      "receiptSnapshot": "docs/changes/bulk-A-F06-freeze-034102Z.json"
+    }
+  ]
+}

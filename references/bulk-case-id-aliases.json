@@ -1,0 +1,15 @@
+{
+  "schema": "py-mermaid-portable-case-ids/v1",
+  "reason": "Windows case-insensitive paths caused old raw-image/json/svg overwrites; preserve all cases and source inputs, do not reuse affected old evidence",
+  "oldFixtureSha256": "61f8b3a168f08c91fef71edac9cd632940bb77ae0b45379c3dbce24bc610282c",
+  "newFixtureSha256": "c58fe49432176963c9307478fcc96844df521dfcf101baab6ad99aa35336a100",
+  "mapping": {
+    "B-gantt-format-x": "B-gantt-format-unix-ms",
+    "B-gantt-format-X": "B-gantt-format-unix-seconds",
+    "B-gantt-duration-M": "B-gantt-duration-months",
+    "B-gantt-duration-m": "B-gantt-duration-minutes"
+  },
+  "denominatorUnchanged": 115,
+  "oldEvidence": "BULK-P4-final-20261106T053339Z-476daa06; rejected candidate, four B case artifacts cannot independently prove image behavior",
+  "required": "Fresh original and native capture with distinct portable IDs"
+}

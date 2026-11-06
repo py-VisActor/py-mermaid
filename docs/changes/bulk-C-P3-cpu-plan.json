@@ -1,0 +1,27 @@
+{
+  "inputs": [
+    "{repo}/tests/bulk/cases-C.json"
+  ],
+  "steps": [
+    {
+      "name": "c-native-cpu-all302",
+      "argv": [
+        "{python}",
+        "tools/bulk_validate.py",
+        "--fixtures",
+        "tests/bulk/cases-C.json",
+        "--group",
+        "C",
+        "--backend",
+        "cpu",
+        "--out",
+        "{run}/artifacts/native-cpu-C"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src"
+      },
+      "timeoutSeconds": 600
+    }
+  ],
+  "schema": "py-mermaid-command-plan/v1"
+}

@@ -1,0 +1,280 @@
+{
+  "schema": "py-mermaid-f014-resource-cases/v1",
+  "scope": "F01.4",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "origin": "Handwritten source expected semantics and geometric SVG assets; no rendered candidate output or unlicensed assets. SVG images are explicitly encoded offline bytes.",
+  "cases": [
+    {
+      "id": "inline-data-quad",
+      "title": "Explicit offline data URI quadrants",
+      "text": "flowchart TD\nA[\"<img src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MCcgaGVpZ2h0PScyMCcgdmlld0JveD0nMCAwIDQwIDIwJz48cGF0aCBmaWxsPSdyZWQnIGQ9J00wIDBIMjBWMTBIMFonLz48cGF0aCBmaWxsPSdsaW1lJyBkPSdNMjAgMEg0MFYxMEgyMFonLz48cGF0aCBmaWxsPSdibHVlJyBkPSdNMCAxMEgyMFYyMEgwWicvPjxwYXRoIGZpbGw9J3llbGxvdycgZD0nTTIwIDEwSDQwVjIwSDIwWicvPjwvc3ZnPg=='>\"] --> B[Done]",
+      "nodes": [
+        [
+          "A",
+          "<img src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MCcgaGVpZ2h0PScyMCcgdmlld0JveD0nMCAwIDQwIDIwJz48cGF0aCBmaWxsPSdyZWQnIGQ9J00wIDBIMjBWMTBIMFonLz48cGF0aCBmaWxsPSdsaW1lJyBkPSdNMjAgMEg0MFYxMEgyMFonLz48cGF0aCBmaWxsPSdibHVlJyBkPSdNMCAxMEgyMFYyMEgwWicvPjxwYXRoIGZpbGw9J3llbGxvdycgZD0nTTIwIDEwSDQwVjIwSDIwWicvPjwvc3ZnPg==\">"
+        ],
+        [
+          "B",
+          "Done"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "visibleNodes": [
+        [
+          "A",
+          ""
+        ],
+        [
+          "B",
+          "Done"
+        ]
+      ],
+      "direction": "TD",
+      "resourceAssertions": {
+        "images": 1,
+        "colors": [
+          "#ff0000",
+          "#00ff00",
+          "#0000ff",
+          "#ffff00"
+        ],
+        "imageOnlyWidth": 80,
+        "imageOnlyHeight": 40
+      }
+    },
+    {
+      "id": "inline-svg-quad",
+      "title": "Direct inline SVG receives host node fill/stroke; dataURI remains isolated",
+      "text": "flowchart TD\nA[\"<svg xmlns='http://www.w3.org/2000/svg' width='40' height='20' viewBox='0 0 40 20'><path fill='red' d='M0 0H20V10H0Z'/><path fill='lime' d='M20 0H40V10H20Z'/><path fill='blue' d='M0 10H20V20H0Z'/><path fill='yellow' d='M20 10H40V20H20Z'/></svg>\"] --> B[Done]",
+      "nodes": [
+        [
+          "A",
+          "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"40\" height=\"20\" viewBox=\"0 0 40 20\"><path fill=\"red\" d=\"M0 0H20V10H0Z\"></path><path fill=\"lime\" d=\"M20 0H40V10H20Z\"></path><path fill=\"blue\" d=\"M0 10H20V20H0Z\"></path><path fill=\"yellow\" d=\"M20 10H40V20H20Z\"></path></svg>"
+        ],
+        [
+          "B",
+          "Done"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "visibleNodes": [
+        [
+          "A",
+          ""
+        ],
+        [
+          "B",
+          "Done"
+        ]
+      ],
+      "direction": "TD",
+      "resourceAssertions": {
+        "images": 1,
+        "colors": [
+          "#ffffff",
+          "#28253d"
+        ],
+        "hostNodeCss": true,
+        "intrinsicWidth": 40,
+        "intrinsicHeight": 20
+      },
+      "expectedSource": {
+        "path": "test-runs/F01.4-batch-20261105T090906Z-11b555ce/artifacts/oracle/inline-svg-quad.json",
+        "sha256": "990ee2600b658bdfbeccb0e9cad8b8d80d3f65d9baf38d0d378fb31b517e6476",
+        "reason": "Pinned-source DOMPurify canonical serialization uses double quoted attributes and explicit SVG path end tags; expected model value is sanitized source body, visible label remains empty."
+      }
+    },
+    {
+      "id": "asset-data-top",
+      "title": "Image shape data URI with top label and aspect constraint",
+      "text": "flowchart LR\nA@{ img: \"data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MCcgaGVpZ2h0PScyMCcgdmlld0JveD0nMCAwIDQwIDIwJz48cGF0aCBmaWxsPSdyZWQnIGQ9J00wIDBIMjBWMTBIMFonLz48cGF0aCBmaWxsPSdsaW1lJyBkPSdNMjAgMEg0MFYxMEgyMFonLz48cGF0aCBmaWxsPSdibHVlJyBkPSdNMCAxMEgyMFYyMEgwWicvPjxwYXRoIGZpbGw9J3llbGxvdycgZD0nTTIwIDEwSDQwVjIwSDIwWicvPjwvc3ZnPg==\", label: \"Photo\", h: 40, constraint: \"on\", pos: \"t\" } --> B[Done]",
+      "nodes": [
+        [
+          "A",
+          "Photo"
+        ],
+        [
+          "B",
+          "Done"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "visibleNodes": [
+        [
+          "A",
+          "Photo"
+        ],
+        [
+          "B",
+          "Done"
+        ]
+      ],
+      "direction": "LR",
+      "resourceAssertions": {
+        "nodeImages": 1,
+        "assetWidth": 80,
+        "assetHeight": 40,
+        "labelPosition": "t"
+      }
+    },
+    {
+      "id": "handdrawn-static",
+      "title": "Deterministic seeded hand drawn shapes and arrows",
+      "text": "flowchart TD\nA[Start] --> B{Ready?}\nB -->|Yes| C[Done]",
+      "nodes": [
+        [
+          "A",
+          "Start"
+        ],
+        [
+          "B",
+          "Ready?"
+        ],
+        [
+          "C",
+          "Done"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "B",
+          "C"
+        ]
+      ],
+      "direction": "TD",
+      "config": {
+        "look": "handDrawn",
+        "handDrawnSeed": 123
+      },
+      "resourceAssertions": {
+        "deterministicSeed": 123,
+        "hachure": true
+      }
+    },
+    {
+      "id": "static-spacing-shadow",
+      "title": "Native spacing, transform and visible text shadow",
+      "text": "flowchart TD\nA[\"<span style='letter-spacing:2px;word-spacing:5px;text-transform:uppercase;text-shadow:4px 2px 0 red'>ab cd</span>\"]",
+      "nodes": [
+        [
+          "A",
+          "<span style=\"letter-spacing:2px;word-spacing:5px;text-transform:uppercase;text-shadow:4px 2px 0 red\">ab cd</span>"
+        ]
+      ],
+      "edges": [],
+      "visibleNodes": [
+        [
+          "A",
+          "AB CD"
+        ]
+      ],
+      "direction": "TD",
+      "config": {
+        "dompurifyConfig": {}
+      },
+      "resourceAssertions": {
+        "shadowColor": "red",
+        "renderedText": "AB CD"
+      }
+    },
+    {
+      "id": "explicit-icon-bundle",
+      "title": "Explicit offline Iconify name bound to hand-written SVG",
+      "text": "flowchart TD\nA@{ icon: \"test:angle\", form: \"square\", label: \"Icon\" } --> B[Done]",
+      "nodes": [
+        [
+          "A",
+          "Icon"
+        ],
+        [
+          "B",
+          "Done"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "resources": {
+        "icons": [
+          {
+            "id": "test:angle",
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path fill=\"currentColor\" d=\"M0 0H24V8H8V24H0Z\"/></svg>"
+          }
+        ]
+      },
+      "resourceAssertions": {
+        "nodeIcons": 1,
+        "assetWidth": 48,
+        "assetHeight": 48
+      }
+    },
+    {
+      "id": "explicit-font-bundle",
+      "title": "Explicit existing local font alias, no font file redistribution",
+      "text": "flowchart TD\nA[Font WWW] --> B[Done]",
+      "nodes": [
+        [
+          "A",
+          "Font WWW"
+        ],
+        [
+          "B",
+          "Done"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "config": {
+        "fontFamily": "F014ExplicitFace"
+      },
+      "resources": {
+        "fonts": [
+          {
+            "family": "F014ExplicitFace",
+            "path": "C:\\Windows\\Fonts\\arial.ttf",
+            "sha256": "b3658eadae55e682b5f69eb64c439c1ecc8f196c0bb8d4756d145d13bc86476a"
+          }
+        ]
+      },
+      "resourceAssertions": {
+        "fontFamily": "F014ExplicitFace",
+        "fontSha256": "b3658eadae55e682b5f69eb64c439c1ecc8f196c0bb8d4756d145d13bc86476a"
+      }
+    }
+  ],
+  "negativeCases": [],
+  "renderErrorCases": [],
+  "excluded": [
+    "math separate later module",
+    "interactive media player host",
+    "Dagre"
+  ]
+}

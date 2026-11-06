@@ -1,0 +1,86 @@
+{
+  "schema": "py-mermaid-change/v1",
+  "taskId": "20261104-f012-execution",
+  "status": "complete_local_delivery",
+  "objective": "完成F01.2边标签、14可渲染经典形状/明确ellipse源错误、子图及跨组连线与HTML对比验收",
+  "baseCommit": "b5af1879bf64034fae922d3713854ef67c34312f",
+  "plan": "docs/F01_2_EXECUTION_PLAN.md",
+  "interfaces": "docs/F01_2_INTERFACES.md",
+  "startingEvidence": "test-runs/f012-start-20261104",
+  "sourceStatus": "verified",
+  "functionalStatus": "PASS_LOCAL",
+  "installationValidation": "deferred; not executed",
+  "externalActions": {
+    "commit": false,
+    "push": false,
+    "publish": false
+  },
+  "finalSourceTreeSha256": "b4df33aa602c178c9d8fd5f4f39685a68d58c1eaaf863c545f5dce7f3886b5e7",
+  "finalSourceFiles": {
+    "LICENSE": "d925ca50a75467a0a8d28c4f7236922346b52c782cd80840d0aec258eaf4f870",
+    "pyproject.toml": "dc0548ca0adc4d6decb5eca8eb0ccabe706d664bead639c8fd562736f696059f",
+    "README.md": "32e89fcdd7510e84de9415d6e440ce20dcf09fde4504261d2b8b994a25e24c9d",
+    "references/licenses/mermaid-LICENSE": "ec9fb67dcb25eccc416ed56e1aab819222c805a2a4bfe4cb19e7556bf2ffde80",
+    "src/py_mermaid/__init__.py": "24d44ca3e79f9fd539fe3d3a8a1a031fdac7be2ebf05c9f5480474d16117a55a",
+    "src/py_mermaid/api.py": "03df9ba96a30d22caeb785e0c157d58460ab2e22a263dbae462ca65df512a1d6",
+    "src/py_mermaid/config/__init__.py": "0a1a35bc6930e3ec4b021e68d66da16df4f0a576472bc4ec2410598579e6ab4f",
+    "src/py_mermaid/config/flowchart.py": "fa0040b7c12aa05b6743f551906f0e4fe7bebd150a5e45996dd477cd8e4d47e7",
+    "src/py_mermaid/diagrams/__init__.py": "9154145bccf3c978abe2ae3b6934ba969a756e9a6e77bdf2dbf3dbfd373cb619",
+    "src/py_mermaid/diagrams/flowchart/__init__.py": "648b1a3ca353ad86c12facbcb0d900aa2595a274b64b0d2c2a931c131c3c8a96",
+    "src/py_mermaid/diagrams/flowchart/parser.py": "1a6dd122957c0af9f2a6b7db824ac05cee541a7c705ec854c93ad8fc86643452",
+    "src/py_mermaid/geometry/__init__.py": "107fecdf0bc750e9300aae4cd28b545a61b180ef3065996c82d1faed6ae77b82",
+    "src/py_mermaid/geometry/flowchart.py": "dccaa6805901d0bcb502acddf3810302041553569fc9964201ca6d52dabdee5f",
+    "src/py_mermaid/geometry/shapes.py": "f2ea1d864d1a174862189b0a1cbd521bbead5c9f915195d98159bb9135c656c3",
+    "src/py_mermaid/layout/__init__.py": "6d1ecc869efa4cd9a7edd97fbd986cb719aa5509366da8775096b1fbd3074add",
+    "src/py_mermaid/layout/elk/__init__.py": "9baa94a4f1ce971d55a2f5008bd33c126764842ed68909c731f88d822c28498b",
+    "src/py_mermaid/layout/elk/compound.py": "0573e91527216ace90c9068420ff97fb850f3d6cd1e35c750ca632eccba4a3d2",
+    "src/py_mermaid/layout/elk/flowchart.py": "8851aa0a3d53eaef0c69568a93654ad3f92a773bc4943d7b6c4364918126b0be",
+    "src/py_mermaid/model/__init__.py": "dc03b5bae51198aa7a4252ce4f65fb4717b4d1c241f1fed23dd0506f00743b3c",
+    "src/py_mermaid/model/flowchart.py": "4f000087ce7903dff6d238f7cd9186005b621ccb222e0066ce68e0d2090d278d",
+    "src/py_mermaid/parsing/__init__.py": "23cde8ba2b1e5aefd57036a5233180f8b6fe63c5c5a3be1166c3f58de843fb0d",
+    "src/py_mermaid/py.typed": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/py_mermaid/rendering/__init__.py": "ed89819539fa2b113c92aa2530d8598d7a1ba665a8127ab2c1641e6445415573",
+    "src/py_mermaid/rendering/labels/__init__.py": "da026d1ca373bb7b9466a5276dcad5826b8c6b19b3f23c98e1e64ba8259ea2e1",
+    "src/py_mermaid/rendering/labels/plain.py": "fa0bd7c05a82a7412f5cce1fea62acc580b6389789510bc0b893d9eb4e88fac5",
+    "src/py_mermaid/rendering/skia/__init__.py": "60776be795ea6008f72da9be2517dd538cfb7f61f937930944bfa915c706df7a",
+    "src/py_mermaid/rendering/skia/session.py": "0646cc90b92d32adcfcd34a111da426ef36e0e88c1f335b25ed840c610dd53f5",
+    "THIRD_PARTY_NOTICES.md": "fe2ca1cf555ef7b7655c7982ac1e2afbd1b4cfc51f70f04a7f429c7b73516792"
+  },
+  "summary": "references/f012-verification-summary.json",
+  "acceptance": "docs/F01_2_ACCEPTANCE.md",
+  "evidence": {
+    "tests": "test-runs/F01.2-batch-20261104T145729Z-d57a2cd8/run.json",
+    "f012": "test-runs/F01.2-render-20261104T145729Z-0ece5e77/run.json",
+    "f011": "test-runs/F01.1-render-20261104T145729Z-049d66dd/run.json",
+    "qa": "test-runs/F01.2-record-20261104T145912Z-7b9977d3/run.json",
+    "qaRegression": "test-runs/F01.1-record-20261104T145853Z-9beaaeac/run.json"
+  },
+  "testMethods": {
+    "product": 150,
+    "tooling": 17,
+    "total": 167,
+    "groups": {
+      "f011-language": 37,
+      "f011-layout": 21,
+      "f011-canvas": 23,
+      "f011-api": 5,
+      "f012-language": 27,
+      "f012-layout": 19,
+      "f012-canvas": 18,
+      "tooling-workflow": 17
+    }
+  },
+  "report": {
+    "path": "reports/F01.2-render-20261104T145729Z-0ece5e77/index.html",
+    "url": "http://127.0.0.1:8765/F01.2-render-20261104T145729Z-0ece5e77/index.html",
+    "sha256": "d35dac829b0325e3c89c63560dbcd6b646aff04e679867062373f1d9abd09c64",
+    "positiveCases": 35,
+    "negativeCases": 8,
+    "renderErrorCases": 1,
+    "profiles": [
+      "cpu",
+      "auto",
+      "gpu"
+    ]
+  }
+}

@@ -1,0 +1,327 @@
+{
+  "scope": "BULK-A-F02",
+  "phase": "P1",
+  "status": "code_complete_unverified",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "protocol": "docs/BULK_STATIC_INTERFACES.md v1",
+  "sourceFiles": [
+    {
+      "family": "class",
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+      "sha256": "3c99e4613bd8235f4d3485d8444a8b119e8af9ede50f88505c24d5a6cc93280f"
+    },
+    {
+      "family": "class",
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/class/classDb.ts",
+      "sha256": "694ae4bb58801b72cb703cb481e662d4e1a6208b91ab84b574786467ea0054c5"
+    },
+    {
+      "family": "class",
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/class/classTypes.ts",
+      "sha256": "c2440d462496d66a4878a1dbc57a4dbde753b6111820ded7c4f627ccbcfa7c75"
+    },
+    {
+      "family": "class",
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/class/classRenderer-v3-unified.ts",
+      "sha256": "022eeb9a5684c67117e160b64319d287e42a47f21b82c3d87de3a8d2ba70466c"
+    },
+    {
+      "family": "class",
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/class/styles.js",
+      "sha256": "7354ba9c5bba88ce34aa01b7a79e0b92b2ef5b8926a3cca096b1b90fe3de2c2e"
+    },
+    {
+      "family": "state",
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/state/parser/stateDiagram.jison",
+      "sha256": "72568f98201c5ba59dca96842d1805d5a9908c5965d0609ab27f192929285d4d"
+    },
+    {
+      "family": "state",
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/state/stateDb.ts",
+      "sha256": "d940c18d312787065d534c9b3fdaaa780482f1e1e9bc4ce725d17dbd9d750c83"
+    },
+    {
+      "family": "state",
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/state/dataFetcher.ts",
+      "sha256": "dbee4116d81ebdd6f5f3b8444affa77b05a74a6eccea14188161b57ed4334f4a"
+    },
+    {
+      "family": "state",
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/state/stateCommon.ts",
+      "sha256": "7d03ceab062698588d955a5c454fbf9131cb13d3f6f996844ec167a94291ed1c"
+    },
+    {
+      "family": "state",
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/state/stateRenderer-v3-unified.ts",
+      "sha256": "ce23db314dbc7bafc7e27e6c84bd64b75ab9a07d8caa30c413e2026925eca2ba"
+    },
+    {
+      "family": "state",
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/state/styles.js",
+      "sha256": "094b0e36c072b90091fdbd00c7002c4bc152b7374ee6291d306131038308a510"
+    },
+    {
+      "family": "er",
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/er/parser/erDiagram.jison",
+      "sha256": "6aa3496c3d7fc2319ce303b4e95e1061f5a9002667ea29300a86ab9f198da6ef"
+    },
+    {
+      "family": "er",
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/er/erDb.ts",
+      "sha256": "7800855c5dae29064e45a051109247e25e53667dd9d2d13df01f98f4333cfdea"
+    },
+    {
+      "family": "er",
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/er/erTypes.ts",
+      "sha256": "c1a7b2f43ae7394f1ccdf1b812183a1f0d283b8d88945dda82deacaccc963d06"
+    },
+    {
+      "family": "er",
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/er/erRenderer-unified.ts",
+      "sha256": "7bb69400be2e4be8f48453397c726b35ae5bc74b28a4dd82287d0aefcfd1063f"
+    },
+    {
+      "family": "er",
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/er/styles.ts",
+      "sha256": "e780bd31f1c8e6671bbdec47247b7cd23d0a515dcb26eb1c4c1f5c1b349e1f01"
+    },
+    {
+      "family": "requirement",
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/requirement/parser/requirementDiagram.jison",
+      "sha256": "44692497660e25f6fe5d51fb3ea7ed17159bbf27bd901632127342e135bff635"
+    },
+    {
+      "family": "requirement",
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/requirement/requirementDb.ts",
+      "sha256": "b9194fabe62a41dd076949d10cc3e20eb3c04175c03d6a02803d3e01dbb5573e"
+    },
+    {
+      "family": "requirement",
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/requirement/types.ts",
+      "sha256": "de230e9149b2cd373f6ebdf5b8e3d1293f3d6cac6b9d294e12fafb294c0e8ec4"
+    },
+    {
+      "family": "requirement",
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/requirement/requirementRenderer.ts",
+      "sha256": "fb45cff7f776a71000f03fb6302f00e86ff2c82941e43387abe327fb8bd4afa9"
+    },
+    {
+      "family": "requirement",
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/requirement/styles.js",
+      "sha256": "c2ff4dc0146421e4762b97ff37d040bd3f3a2fee683f412be5dad4771240a5f2"
+    },
+    {
+      "family": "usecase",
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/usecase/parser/usecase.tokens.ts",
+      "sha256": "fdec27e1b88ec649f3959de59b1bff1d29cddd5f3ffc2bb8b73edffca51fedef"
+    },
+    {
+      "family": "usecase",
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/usecase/parser/usecase.parser.ts",
+      "sha256": "5de9335d83bd4a8a45ad28cd84862f717f5f1bcef58b7df1018aee8554bc7d2d"
+    },
+    {
+      "family": "usecase",
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/usecase/parser/usecase.visitor.ts",
+      "sha256": "066354d43e79544f6e92d02a5aa76e89a2ad10098f1361539fbdd3406f65e58d"
+    },
+    {
+      "family": "usecase",
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/usecase/parser/usecaseModelBuilder.ts",
+      "sha256": "45ac8b19f30f247cd0ccb15fac0e2ffe483d2b1ced5171578a11d88099b8ff5d"
+    },
+    {
+      "family": "usecase",
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/usecase/parser/usecaseJson.ts",
+      "sha256": "582da8ced9d8e1604c965714a7f179b77ab1c993d40d24b5d8c5992a27cc2159"
+    },
+    {
+      "family": "usecase",
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/usecase/usecaseDb.ts",
+      "sha256": "f6d8d55ec60610679de910b0e3985e2fb442d34f3a43659d16a3a45ae100af4d"
+    },
+    {
+      "family": "usecase",
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/usecase/usecaseRenderer.ts",
+      "sha256": "42a65a7620309ea8c13b5c75b21bc162357d5e1111125f7fcf33a936e957bd3a"
+    },
+    {
+      "family": "usecase",
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/usecase/usecaseTypes.ts",
+      "sha256": "a1edc96955c9527ed43090565e6112c5393222698753487fb7f9f0f40c756905"
+    },
+    {
+      "family": "usecase",
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/usecase/styles.ts",
+      "sha256": "198c99e54297acb6b9b1289db81698efceb976b5b612505fb0b7665afefab52d"
+    },
+    {
+      "family": "c4",
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+      "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766"
+    },
+    {
+      "family": "c4",
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/c4/c4Db.ts",
+      "sha256": "461e4c00f8c5dfe0db51cc1b8e12bb7106b7f722752e016cd1e5730369aa7b36"
+    },
+    {
+      "family": "c4",
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/c4/c4Renderer.ts",
+      "sha256": "d58ffb63def9c7117a332a0a94ec3b30fd7d34ba93ccb590d3e148a69460c909"
+    },
+    {
+      "family": "c4",
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/c4/c4ShapeAdapter.ts",
+      "sha256": "84edb89d1e6393b82db03dcefb56bd256014e40399e5eed4708d2daef97ed167"
+    },
+    {
+      "family": "c4",
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/c4/svgDraw.ts",
+      "sha256": "c635c9557d676f9e983a55bd0383e9b0eb39207eabaa844767e9da84fe7182c8"
+    },
+    {
+      "family": "c4",
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/c4/c4Types.ts",
+      "sha256": "e676377330094890fb9584540dee11515debce7698c93bad0883efe9b56b5e70"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/rendering-util/rendering-elements/shapes/usecaseActor.ts",
+      "sha256": "efb852bb8e69fd0bceace380d38a001ed6bdf87c114803a61c643ded8fe543ec"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/rendering-util/rendering-elements/shapes/usecaseActorAwesome.ts",
+      "sha256": "b4d0c6920ff6c09289eb983e80ae4e629eb04abe09a8465106d38e3bdd79889c"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/rendering-util/rendering-elements/shapes/usecaseActorHollow.ts",
+      "sha256": "7a0fc3cdff1999455bd7ae775df80d523a259abe1d8e96eaebcf27618c734aec"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/rendering-util/rendering-elements/shapes/usecaseActorIcon.ts",
+      "sha256": "d94b6372e11d652830d4827870d2a3d7c3ea53c83dc086188e64240e7deac617"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/rendering-util/rendering-elements/shapes/usecaseBusiness.ts",
+      "sha256": "1b073a934d0a00fe6f707367cd83a516e0a871d9bbf93ab09546fb50dce43770"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/rendering-util/rendering-elements/shapes/usecaseEllipse.ts",
+      "sha256": "409e01f96b043df54419fc7274e1695d81f04a0ead5663c177716c00b6228b31"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/rendering-util/rendering-elements/shapes/usecaseJsonTable.ts",
+      "sha256": "f71575dc3715ac30c21e274ebd4f263de1d5350bf3cb0f5205bd199ddad62a69"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/rendering-util/rendering-elements/shapes/classBox.ts",
+      "sha256": "7523a7e1bc504d4b56050e3f3f7dfd3aeb3156124e11856218ad6edf8101b541"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/rendering-util/rendering-elements/shapes/requirementBox.ts",
+      "sha256": "cdf4643c518101a3dbd9058621a98b4a7214b5c0e97d483f407ec10471e3d656"
+    }
+  ],
+  "productFiles": [
+    {
+      "path": "src/py_mermaid/diagrams/modeling/__init__.py",
+      "sha256": "9d858e7d83430dfa88fe5ce02c9ea7f9954706766f5d9c99c8e75714b0a220ab"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/modeling/_support.py",
+      "sha256": "49b89cce465ed22210e16ba7c984616a465addb4c2ed6fd8fc4e51d7f2572733"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/modeling/_usecase_glyphs.py",
+      "sha256": "ede5ab50ef595ab3de6824d769ae8dd104b1c6f7cf6162078aa0f20a0d8da6e4"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/modeling/c4.py",
+      "sha256": "2189ae9f785091b7e916a523d909b8d4e89f5e9116fc060b97631fa0cfd95640"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/modeling/class_diagram.py",
+      "sha256": "0204f35df4796c3a095b8a83a7b633e19d175d2000ed48e1398da975f75a12a5"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/modeling/er.py",
+      "sha256": "2132794a454154194d5b2f35c820b48a5ab99e0c9dab4fd7bb1acc9a558dd7f9"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/modeling/requirement.py",
+      "sha256": "0a0a02ba4c815b9ef8319e456aebf42a6d5a949cc60a4475a6aec4b644fe6016"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/modeling/state_diagram.py",
+      "sha256": "5f8c8a7c6b5c495a2004e8c45a7a9492b71cc47761e3183a565dfd62fb8452b9"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/modeling/usecase.py",
+      "sha256": "1aab4d6f1e047cf420ef853683ca24f8cdbd085a52b3bed7bc4d1f321097e720"
+    }
+  ],
+  "entries": [
+    "modeling.class_diagram",
+    "modeling.state_diagram",
+    "modeling.er",
+    "modeling.requirement",
+    "modeling.usecase",
+    "modeling.c4"
+  ],
+  "sourceImplemented": [
+    "Class members/methods/generic/visibility/classifiers, namespaces, notes, classDef/style/cssClass, all UML relation end kinds and lollipop interface creation",
+    "State aliases/composites/fork/join/choice/start/end/concurrent regions, descriptions, notes, local directions, class/style and scale metadata",
+    "ER entity aliases/attributes/keys/comments, cardinalities and identification patterns, subgraphs and styles",
+    "Six requirement categories, element fields, all seven relation types, typed risk/verify enums and style/class metadata",
+    "Usecase lexical modes, actor/usecase/boundary declarations, metadata, rich labels/stereotypes, explicit relations and semantic relationship type validation, ordered JSON data tables, deferred assignments, static animation exclusion",
+    "C4 five headers, 20 element kinds, nested boundary/deployment kinds, all relation/update macros and named overrides, original source Bounds/grid packing and relationship path forms"
+  ],
+  "providers": [
+    "runtime.common pure preprocessing/security/freeze/error/font source values",
+    "runtime.graph layout_graph measured real ELK and explicit registered providers; config always forwarded",
+    "runtime.graph.finish_graph shared ELK straightenEdges/lineHops/rounded path after family source clipping",
+    "Painter style/rough/gradient/shadow/path transform/text/icon resource/svg/shape_geometry/viewport_width"
+  ],
+  "pendingSourceAudit": [],
+  "mechanicalEvidence": [
+    "test-runs/BULK-record-20261106T033019Z-3bf3e44f/run.json",
+    "test-runs/BULK-record-20261106T033206Z-ade40f8b/run.json",
+    "test-runs/BULK-record-20261106T033427Z-44c90684/run.json",
+    "test-runs/BULK-record-20261106T033826Z-f56b2f03/run.json",
+    "test-runs/BULK-record-20261106T034102Z-66d38803/run.json"
+  ],
+  "behaviorExecuted": false,
+  "testsDesigned": false,
+  "limitations": [
+    "Dagre and interactive behavior excluded by user scope",
+    "No production Node/DOM/JS/native object serialization",
+    "No P1 grammar behavior/oracle/image tests; compile does not imply compatibility"
+  ],
+  "upstreamVersion": "mermaid@12.2.0",
+  "threadOwnership": "All models frozen/pure; mutable parser/layout state request local; Painter/native session stays on caller owner thread",
+  "sourcePositions": "Family parser offsets are cleaned Python indices; runtime.common.error maps processed_to_raw then original UTF-16 offset and UTF-16 column",
+  "units": "Input grammar indentation counts source characters; all renderer/layout lengths are logical CSS px unless explicitly source bit or column counts",
+  "excludedByUser": [
+    "Dagre implementations/dependencies/fallbacks",
+    "click/navigation/callback/hover/animation/interactive DOM behavior"
+  ],
+  "deferred": [
+    "treemap (and six other batch-deferred entries, no new code or verification)"
+  ],
+  "verificationLimit": "Compilation/import/signature binding do not assert parse semantics, configuration compatibility or rendering correctness; independent source tests and official captures start only in P2/P3",
+  "sourceAnomalies": [
+    "Class renderer consumes state.nodeSpacing/rankSpacing/titleTopMargin in fixed source, not the similarly named class fields",
+    "Only first class annotation is drawn, while all annotations remain in DB values",
+    "State standalone floating note production has no DB action; hideEmptyDescription/scale retained with the fixed source runtime consumption",
+    "C4 uses source Bounds.insert/grid placement; relational directional names do not select another graph algorithm; sprite attribute reserves header area but does not load an icon in the active source",
+    "C4 relationship shape boundaries use the actual pure shape handler intersection; actor/choice/circle/ellipse F02 endpoints clipped according to fixed source node.intersect",
+    "Usecase includes source four actor paths (normal/hollow/awesome/icon), business circle chord/ellipse marker, role/rotate palette, declared actor/usecase font settings and minimum label width",
+    "Usecase spreadPorts is forwarded as source implicit CENTER port alignment; source does not synthesize explicit port placement"
+  ],
+  "remainingVerification": [
+    "All retained grammar productions, malformed-input lexer boundaries, duplicate/forward declarations and original UTF16 spans",
+    "Font metrics/HTML-SVG label line boxes, all theme palette and CSS precedence branches",
+    "ELK group local direction/compound routing, UML/cardinality/contains markers and native shape intersections",
+    "C4 grid and dynamic relationship numbering, usecase nested JSON key order and all metadata validation branches"
+  ]
+}

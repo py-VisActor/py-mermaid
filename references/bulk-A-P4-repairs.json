@@ -1,0 +1,447 @@
+{
+  "scope": "BULK-A-P4-repair",
+  "status": "related_source_unit_CPU_pass_pending_joint_refreeze",
+  "initialP4Evidence": "test-runs/BULK-P4-final-20261106T053339Z-476daa06",
+  "sources": [
+    {
+      "path": "packages/mermaid/src/diagrams/c4/c4ShapeAdapter.ts",
+      "sha256": "84edb89d1e6393b82db03dcefb56bd256014e40399e5eed4708d2daef97ed167",
+      "symbol": "buildC4Node width target and useHtmlLabels false",
+      "line": 161,
+      "commit": "1fb7869866dd619168d840291c9c54b4f129758b"
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/c4/styles.js",
+      "sha256": "49497fd74d1eded27720289aaf5fdd5da2bece52b2a4ab293acb8627ea4e953d",
+      "symbol": "elementFontStyles CSSOM, per-type parent font, c4-name bold/type .75em/descr .82em",
+      "line": 1,
+      "commit": "1fb7869866dd619168d840291c9c54b4f129758b"
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/c4LabelHelper.ts",
+      "sha256": "a26c5e1621e6a3e1c6a4d79b06c51b6c6af0dde24a176d260469acb070179ff5",
+      "symbol": "SECTION_GAP=3, wrap width node.width-2padding, independent centered sections",
+      "line": 9,
+      "commit": "1fb7869866dd619168d840291c9c54b4f129758b"
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/drawRect.ts",
+      "sha256": "1d03397624d31f5a244f32260fd8d109dd41751f1970858feb453f09a95d849e",
+      "symbol": "totalWidth max(node.width,bbox+2padding), rectangle intersection",
+      "line": 20,
+      "commit": "1fb7869866dd619168d840291c9c54b4f129758b"
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/c4/svgDraw.ts",
+      "sha256": "c635c9557d676f9e983a55bd0383e9b0eb39207eabaa844767e9da84fe7182c8",
+      "symbol": "legacy boundary fontSize JS +2/-2 and source relation intersection",
+      "line": 160,
+      "commit": "1fb7869866dd619168d840291c9c54b4f129758b"
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/block/renderHelpers.ts",
+      "sha256": "09c3ed7bf23b8a73cf3836798dd9b4b51e0494f33d0d926bad5ed364414b4428",
+      "symbol": "positionNode uses node center after actual source shape insertion",
+      "line": 1,
+      "commit": "1fb7869866dd619168d840291c9c54b4f129758b"
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/blockArrow.ts",
+      "sha256": "1a64d1cf137f5737dadf0970d36e9a4d0092d839af9f14f54cd853e9c6e84be8",
+      "symbol": "natural direction outline own bbox independent of uniform cell",
+      "line": 1,
+      "commit": "1fb7869866dd619168d840291c9c54b4f129758b"
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/classBox.ts",
+      "sha256": "7523a7e1bc504d4b56050e3f3f7dfd3aeb3156124e11856218ad6edf8101b541",
+      "symbol": "styles2String label color inherited by text; node fill separate",
+      "line": 31,
+      "commit": "1fb7869866dd619168d840291c9c54b4f129758b"
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/note.ts",
+      "sha256": "f358bb583f624930c1118e91a6cf07db949c1ad6ac722f9d0ae4207118c1d552",
+      "symbol": "rough.rectangle note silhouette and centered label, no dog-ear",
+      "line": 26,
+      "commit": "1fb7869866dd619168d840291c9c54b4f129758b"
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/packet/styles.ts",
+      "sha256": "79714446f3f325d06e940f2c7918a4c6b2e4bd672262a68f4f7cb36768e3285a",
+      "symbol": "font-size raw CSS values for packetByte/Label/Title",
+      "line": 22,
+      "commit": "1fb7869866dd619168d840291c9c54b4f129758b"
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/treeView/styles.ts",
+      "sha256": "77840ccee9caf64e401f9a4986e33518d382d21d7c72c1de1037320fe875555a",
+      "symbol": "raw CSS labelFontSize shared label and description",
+      "line": 31,
+      "commit": "1fb7869866dd619168d840291c9c54b4f129758b"
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/usecase/usecaseRenderer.ts",
+      "sha256": "42a65a7620309ea8c13b5c75b21bc162357d5e1111125f7fcf33a936e957bd3a",
+      "symbol": "numeric actor/usecase font fields explicitly interpolated with px",
+      "line": 224,
+      "commit": "1fb7869866dd619168d840291c9c54b4f129758b"
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/architecture/architectureRenderer.ts",
+      "sha256": "a033c3e3d0b7e1106ec47631145da06ec075967b5b9e0f7937d619b4714eacdc",
+      "symbol": "numeric fontSize explicitly interpolated with px",
+      "line": 426,
+      "commit": "1fb7869866dd619168d840291c9c54b4f129758b"
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/mindmap/mindmapDb.ts",
+      "sha256": "df8af0d61221a62053ccacd42b6ff9c95d812139e72e842fbb920044ef2c4223",
+      "symbol": "edge curve basis",
+      "line": 334,
+      "commit": "1fb7869866dd619168d840291c9c54b4f129758b"
+    },
+    {
+      "path": "packages/mermaid-layout-tidy-tree/src/render.ts",
+      "sha256": "9c8d2c1651413bc635943a99c716162a9b99b1fcb45bc3c54b1863c7d428ca25",
+      "symbol": "source calculated points passed through shared insertEdge",
+      "line": 140,
+      "commit": "1fb7869866dd619168d840291c9c54b4f129758b"
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/edges.js",
+      "sha256": "8fee7300ea0bffd008f5d2c12a05e85f5ea8bc22a9855d4d2e2b6c0e6c92a33a",
+      "symbol": "basis selects d3 curveBasis",
+      "line": 732,
+      "commit": "1fb7869866dd619168d840291c9c54b4f129758b"
+    },
+    {
+      "package": "d3-shape",
+      "version": "3.2.0",
+      "source": "../../../node_modules/.pnpm/d3-shape@3.2.0/node_modules/d3-shape/src/curve/basis.js",
+      "sourceContentSha256": "2b75b71399e8d92d021e28bb2b4f7d6c41e3d2dff89f69c877ea7f664698086b",
+      "transport": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+      "transportSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679",
+      "symbol": "Basis.point/lineEnd and cubic point; source-map content, not a claim of upstream repository byte identity",
+      "license": "references/licenses/d3-shape-LICENSE",
+      "licenseSha256": "2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3"
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/kanban/kanbanDb.ts",
+      "sha256": "5e96a2a5d8df7ce08c79c0da7fe4edc4decceb8dfe7b27434f799dcdfc2ad38a",
+      "symbol": "getData sets section.look only; item lacks look",
+      "line": 62
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/kanban/kanbanRenderer.ts",
+      "sha256": "29c2ce818767cb4d4d16144081ea49273bd4a504ae733678228777e8a4c1ceee",
+      "symbol": "section.height=WIDTH*3; later select(rect) only resizes crisp section",
+      "line": 52
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/clusters.js",
+      "sha256": "65363a1bb619eb0d0e0635f3c3bd4410c2ade873053ea864506a3323496f940b",
+      "symbol": "kanbanSection rough path with .7 roughness, fillWeight4; backgroundStyles fill-to-stroke and source CSS colors",
+      "line": 308
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/kanbanItem.ts",
+      "sha256": "46876506f1e2387287cd17708defc9d8a49088fa6c3e7358adb5b353c7a8e34d",
+      "symbol": "item.look handDrawn selects rough; missing look goes crisp and draws priority line; ticket+baseUrl inserts link",
+      "line": 46
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/kanban/styles.ts",
+      "sha256": "ba154bb13d665273fac6e0c1365c63415bb5b31a985362e6d2ffcb71d3c4b9a3",
+      "symbol": ".kanban-ticket-link unconditional text-decoration underline; section path/rect fill and stroke",
+      "line": 25
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/handDrawnShapeStyles.ts",
+      "sha256": "baf8572491842caa518e8ba35a313253ede78ba2fef9b4c43ac9a4b910630402",
+      "symbol": "userNodeOverrides hachure gap1.5; cluster overrides fillWeight4",
+      "line": 108
+    }
+  ],
+  "changes": [
+    {
+      "id": "C4-boundary-intersection",
+      "detail": "Use a real rectangle-ray port before shape clipping; rectangle handlers keep source rectangle intersection. A center port is not an edge point."
+    },
+    {
+      "id": "C4-label-measurement",
+      "detail": "Per actual element type CSS font: source name bold, type=.75, descr=.82; 3px section gap, source width target and wrapping width minus padding, 12px rounded CSS corners. Legacy boundary +2/-2 keeps JS numeric/string branch; invalid CSSOM font declarations inherit parent whole."
+    },
+    {
+      "id": "Block-natural-outline-center",
+      "detail": "Translate natural arrow outline by half the final cell-natural bbox delta; preserve factory dimensions and shape rather than stretch it or move only the label."
+    },
+    {
+      "id": "Source-label-currentColor",
+      "detail": "Only label subtree projects current_color to actual text_color. Shapes retain their fill/stroke. Class/ER/requirement/state nodes and compound labels, nonactor usecase labels, Block/mindmap and edge label inherited color reviewed. Actor caption/glyph siblings retain dedicated actor_styles contract; shared F014 apply_declarations untouched."
+    },
+    {
+      "id": "CSS-font-units",
+      "detail": "Packet/TreeView raw CSS and C4 CSSOM values use NativePainter.font_size with actual SVG inherited base; numeric geometry converter remains unchanged. Source Usecase/Architecture numeric px fields remain numeric source branches."
+    },
+    {
+      "id": "Unified-note-shape",
+      "detail": "Correct shared modeling note to source rectangle with centered measured text, no invented dog-ear. Covers class/state/usecase."
+    },
+    {
+      "id": "Mindmap-basis",
+      "detail": "Native tidy source graph matched newly correctly loaded canonical oracle; consume source curve=basis by pure Python d3-shape 3.2 open-line cubic algorithm. Two-point COSE edges retain exact straight line."
+    },
+    {
+      "id": "Kanban-static-ticket-decoration",
+      "detail": "Ordinary .kanban-ticket-link initialization CSS, not hover or excluded navigation. A ticket consumer already passed underline to run; root Canvas public API repair now paints actual colored descriptor. Independent baseline-region pixel/no-URL/erased-line/glyph-no-duplication regression."
+    },
+    {
+      "id": "Kanban-section-item-look",
+      "detail": "Source getData section carries look but item does not. Item remains crisp, with priority stripe even in handDrawn diagram; global look must not be invented on child."
+    },
+    {
+      "id": "Kanban-handDrawn-frame-height",
+      "detail": "Source initializes WIDTH*3 and resizes only a selected rect, so handDrawn path retains actual original height. Native preserves this visible source branch instead of shrinking path to item count."
+    },
+    {
+      "id": "Kanban-source-dense-hachure",
+      "detail": "Explicit source cluster options .7 roughness, hachure gap1.5, fillWeight4, request seed; path CSS source section colors. Child has no hachure. Native lower-half real pixels and seed42 repeat test protect against hollow/stub output."
+    }
+  ],
+  "products": [
+    {
+      "path": "src/py_mermaid/diagrams/modeling/_support.py",
+      "sha256": "1a47ea0aa579923b30bf243a1bc3c04f3f876224438715ea768c6395af953c83"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/modeling/class_diagram.py",
+      "sha256": "244802450607e3431b9b5b0a94f402656afe1c0b7bcc188a4f0d4174c1683c9a"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/modeling/state_diagram.py",
+      "sha256": "c0ef575e39efad97e6cedc34c535a71265ba652366245cccda0fe79509c00aee"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/modeling/er.py",
+      "sha256": "bf193779c5b5c73f3c47b7026225b7b9f026d57fa95b57a60135ffd3fa142175"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/modeling/requirement.py",
+      "sha256": "a16a245c9802e95d0f74866d80c5bc92df932048fa35620f5078acd4b63c91ac"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/modeling/usecase.py",
+      "sha256": "d31bbae9abae3e2756cdd539918c6b263ae8e18362aa72fcd2ad1032a0a166ec"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/modeling/c4.py",
+      "sha256": "43484b86045bc8ae25c8fcf92148d443ca8fc9c74b1b8753cb816abc8e3d1d9c"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/hierarchy/mindmap.py",
+      "sha256": "163d0e9f4a92fcfef11e50c2d507a72135e261ec345ef28a33ea785213e61c9d"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/hierarchy/tree_view.py",
+      "sha256": "a1a9a3404f758be010d4c17a437a54d9a2229407c73c468c1ffa6a44dde9d27c"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/structures/block.py",
+      "sha256": "52d0611c0998b1fd7365e5a9cce57427ac6da61bd3dcf2b7d0e090776e408252"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/structures/packet.py",
+      "sha256": "e8c29aab0868e1186689a7dda511289102532a7c1b47a8ac4b32c628a6bfa03f"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/structures/kanban.py",
+      "sha256": "499b8f3e8fb0088c1629dc725fe1a2c812d0c067f22732793337f05946ac0512"
+    }
+  ],
+  "tests": "tests/bulk/a/test_visual_repairs.py",
+  "newMethods": 18,
+  "finalUnit": {
+    "run": "BULK-record-20261106T064625Z-614b5bc7",
+    "tests": 599,
+    "actualExitCode": 0,
+    "sourceUnchanged": true
+  },
+  "finalCPU": {
+    "run": "BULK-batch-20261106T064638Z-f2b6df11",
+    "cases": 194,
+    "counts": {
+      "CHECKS_PASSED": 171,
+      "EXPECTED_ERROR": 22,
+      "EXCLUDED": 1
+    },
+    "actualExitCode": 0,
+    "sourceUnchanged": true
+  },
+  "manualReview": [
+    {
+      "case": "A-c4-all-relations",
+      "nativeRun": "BULK-batch-20261106T061407Z-cafa9701",
+      "officialRun": "BULK-P3-official-refresh-20261106T050328Z-0274d04e",
+      "observed": "All relation endpoints touch source/target boundaries; labels occupy gaps, no blue-node intrusion. Host viewport row packing remains governed by explicit documented native viewport."
+    },
+    {
+      "case": "A-block-all-arrow-factories",
+      "nativeRun": "BULK-batch-20261106T061407Z-cafa9701",
+      "officialRun": "BULK-P3-official-refresh-20261106T050328Z-0274d04e",
+      "observed": "All 15 labels aligned with actual natural outlines, no former right-shifted overflow."
+    },
+    {
+      "case": "A-class-notes-styles",
+      "nativeRun": "BULK-batch-20261106T061623Z-970e2aee",
+      "officialRun": "BULK-P3-official-refresh-20261106T050328Z-0274d04e",
+      "observed": "A is actual dark red, pink fill/dark border retained; note now source yellow rectangle."
+    },
+    {
+      "case": "A-mindmap-explicit-tidy",
+      "nativeRun": "BULK-batch-20261106T061407Z-cafa9701",
+      "officialRun": "BULK-P3-canonical-tidy-provider-20261106T061016Z-0c788e76",
+      "observed": "First/Third left, Second/Fourth right; Leaf on First branch; actual curved basis edges match registered canonical tidy source. Older COSE fallback picture not used as tidy oracle."
+    },
+    {
+      "case": "A-c4-all-element-kinds",
+      "nativeRun": "BULK-batch-20261106T061623Z-970e2aee",
+      "observed": "All 20 type labels, descriptions and person/cylinder/queue silhouettes visible without content overlap."
+    },
+    {
+      "case": "A-usecase-json-note",
+      "nativeRun": "BULK-batch-20261106T061623Z-970e2aee",
+      "observed": "Source rectangular Reference note attached to User, JSON name/Alice and roles/Reader/Writer retained."
+    },
+    {
+      "case": "A-er-attributes",
+      "nativeRun": "BULK-batch-20261106T061623Z-970e2aee",
+      "observed": "All attributes/keys/comments and places relation/cardinality geometry remain visible."
+    }
+  ],
+  "casesAInputChanged": false,
+  "sharedFilesChanged": false,
+  "productionJS": false,
+  "installation": false,
+  "history": [
+    "BULK-record-20261106T061130Z-6eda2fd2",
+    "BULK-record-20261106T061334Z-a388ceaf",
+    "BULK-record-20261106T061356Z-e6b6c95a",
+    "BULK-batch-20261106T061407Z-cafa9701",
+    "BULK-record-20261106T061546Z-ce69c5a9",
+    "BULK-record-20261106T061611Z-3bd59d9f",
+    "BULK-batch-20261106T061623Z-970e2aee",
+    "BULK-record-20261106T064022Z-e9489ff8",
+    "BULK-record-20261106T064038Z-8dd050da",
+    "BULK-record-20261106T064046Z-5987abfb",
+    "BULK-batch-20261106T064058Z-eb77bb32",
+    "BULK-record-20261106T064604Z-5e6fd661"
+  ],
+  "testDesignCorrections": [
+    "New C4 font test must concatenate/locate wrapped Software/System runs, not assume one trace event; mathematical font expectations unchanged.",
+    "New TreeView input uses canonical treeView-beta and ## description annotation, not invented syntax.",
+    "New Usecase group regression uses canonical systemBoundary/end, not rectangle braces."
+  ],
+  "limits": [
+    "Local A success is not joint global P4/P5 approval.",
+    "Full official/native export/profile and pixel review remain root gates; installation remains paused."
+  ],
+  "historicalExpectationCorrection": {
+    "methodId": "test_kanban_handdrawn_does_not_draw_priority_line_source_branch",
+    "oldAssumption": "global handDrawn applies to both section and item, so item priority is omitted",
+    "correction": "method ID preserved, expects actual item crisp branch and priority present; source getData and refreshed official PNG prove missing child.look",
+    "evidence": "test-runs/BULK-P3-fixed-original-refresh-20261106T062015Z-fe05c71f/artifacts/oracle/A-kanban-handdrawn.json"
+  },
+  "newPixelTestDesignCorrection": "Decorated ticket ink bbox may extend lower; require baseline/x/y/advance and upper glyph pixels unchanged, not equal ink height.",
+  "decorationAndKanbanManualReview": [
+    {
+      "case": "A-kanban-fields",
+      "A": {
+        "path": "test-runs/BULK-P3-fixed-original-refresh-20261106T062015Z-fe05c71f/artifacts/oracle/A-kanban-fields.png",
+        "sha256": "099ce988a33aa228dd39a7899d8bcea7ee661cd664c326e6e7cb55a85bd6dc52"
+      },
+      "B": {
+        "path": "test-runs/BULK-batch-20261106T064638Z-f2b6df11/artifacts/native-cpu-A/A-kanban-fields.png",
+        "sha256": "a8bbe36a9657df5816f30ee08594647689a0c2e3ccec958af701f5ba94711757"
+      },
+      "manualObserved": "Ticket with no URL stays unadorned; Work/T-1/Alice and priority color visible."
+    },
+    {
+      "case": "A-kanban-flat-deep",
+      "A": {
+        "path": "test-runs/BULK-P3-fixed-original-refresh-20261106T062015Z-fe05c71f/artifacts/oracle/A-kanban-flat-deep.png",
+        "sha256": "6aace4d8d7c6736d8c36523175e810a3219a2d232b545f37551c0ca5d6d706f1"
+      },
+      "B": {
+        "path": "test-runs/BULK-batch-20261106T064638Z-f2b6df11/artifacts/native-cpu-A/A-kanban-flat-deep.png",
+        "sha256": "edb2a5fa627c6b42655f9b6f87d4b4a2956b01d231f03ee6db9fe3aa8929b4d5"
+      },
+      "manualObserved": "All Child/Leaf/Other flattened into Todo and Finished in Done; no label overlap/crop."
+    },
+    {
+      "case": "A-kanban-handdrawn",
+      "A": {
+        "path": "test-runs/BULK-P3-fixed-original-refresh-20261106T062015Z-fe05c71f/artifacts/oracle/A-kanban-handdrawn.png",
+        "sha256": "8a5f4b6cbf1720627a914ffdcab1c488cffb25352fbfd02ace5b9fdc3acfe89b"
+      },
+      "B": {
+        "path": "test-runs/BULK-batch-20261106T064638Z-f2b6df11/artifacts/native-cpu-A/A-kanban-handdrawn.png",
+        "sha256": "260e2ba999758898c6ac44e33321f608970b83765def651e79563f86d1aaf57d"
+      },
+      "manualObserved": "Full WIDTH*3 painted sections, crisp Bold task/Completed cards and orange High stripe visible; original natural seed0 jitter is not treated as hash equivalence."
+    },
+    {
+      "case": "A-kanban-label-update",
+      "A": {
+        "path": "test-runs/BULK-P3-fixed-original-refresh-20261106T062015Z-fe05c71f/artifacts/oracle/A-kanban-label-update.png",
+        "sha256": "5508b7baeb7fdde4b0bd6b59aad4a9d2849283b84623f97b08f5a57a9a64a233"
+      },
+      "B": {
+        "path": "test-runs/BULK-batch-20261106T064638Z-f2b6df11/artifacts/native-cpu-A/A-kanban-label-update.png",
+        "sha256": "afd18a464af46b944fc93bbd4966499c1bdd643a8f86cb92b86fa1ce4a104b3a"
+      },
+      "manualObserved": "Updated New label retained in Todo."
+    },
+    {
+      "case": "A-kanban-less-indent",
+      "A": {
+        "path": "test-runs/BULK-P3-fixed-original-refresh-20261106T062015Z-fe05c71f/artifacts/oracle/A-kanban-less-indent.png",
+        "sha256": "1abbd07ec94c8ed44ca6601f946a3e4358b2095361fa79fad9c13be2d90c70b3"
+      },
+      "B": {
+        "path": "test-runs/BULK-batch-20261106T064638Z-f2b6df11/artifacts/native-cpu-A/A-kanban-less-indent.png",
+        "sha256": "7aa269858c5089099cfbe01c504aba8d78457fe24956d52785ca32e1b2ab2858"
+      },
+      "manualObserved": "Bad retained under Todo source delayed-level semantics."
+    },
+    {
+      "case": "A-kanban-multiline-yaml",
+      "A": {
+        "path": "test-runs/BULK-P3-fixed-original-refresh-20261106T062015Z-fe05c71f/artifacts/oracle/A-kanban-multiline-yaml.png",
+        "sha256": "52f4059499eca67eb827bc85c8b15fbcebf2cd21eba3093b499437dd7683ad7a"
+      },
+      "B": {
+        "path": "test-runs/BULK-batch-20261106T064638Z-f2b6df11/artifacts/native-cpu-A/A-kanban-multiline-yaml.png",
+        "sha256": "db34035f4b5604de646b3a449dc13228158b06cfcf47bea3e55da210b5bd138d"
+      },
+      "manualObserved": "Multiline task/T-7/Alice all visible."
+    },
+    {
+      "case": "A-kanban-priority-enum",
+      "A": {
+        "path": "test-runs/BULK-P3-fixed-original-refresh-20261106T062015Z-fe05c71f/artifacts/oracle/A-kanban-priority-enum.png",
+        "sha256": "8a5f6ed7b5ca94104e34e3abe6bfbfc3bb4f017951cc18ace66700763da1486f"
+      },
+      "B": {
+        "path": "test-runs/BULK-batch-20261106T064638Z-f2b6df11/artifacts/native-cpu-A/A-kanban-priority-enum.png",
+        "sha256": "2f6d7edcaa9b1f3e2d2929b8ca1da2814e397793f7b0d2e102c9d87f67792718"
+      },
+      "manualObserved": "All five priority colors, assignee Alice and actual T-0..T-4 underlines visible."
+    }
+  ],
+  "nonKanbanPNGByteCheck": {
+    "comparedAgainst": "test-runs/BULK-batch-20261106T061832Z-cb122f04/artifacts/native-cpu-A",
+    "changed": [],
+    "scope": "all current non-Kanban native PNG files; permits reuse of previously observed exact bytes"
+  }
+}

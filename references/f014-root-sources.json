@@ -1,0 +1,1275 @@
+{
+  "schema": "py-mermaid-source-map/v1",
+  "taskId": "F01.4-S2/root",
+  "interfaceVersion": "f014-v1",
+  "status": "code_complete_unverified",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "sources": [
+    {
+      "upstreamPath": "packages/mermaid/src/styles.ts",
+      "sha256": "dd53a582b0c2411e16beeb37f51664968f278b08b97f63fc8808cbc8381f73fb",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/diagrams/flowchart/styles.ts",
+      "sha256": "697ffb86fef2787307ddc42cd5d3d1544042f08c2452e170691d28ab3d252a50",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/diagrams/flowchart/flowDb.ts",
+      "sha256": "33577b9ade8c65be6049c3093089dbf81abf44214f49c2b2ea46434183889288",
+      "pythonPaths": [
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes.ts",
+      "sha256": "68fceb790c2a9b65397d96edaf85a50b4ae059a68cf52c83553c4887019f1699",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/anchor.ts",
+      "sha256": "38a5f0e6776808bb05530a8aabb759f2eee0538f462683fc58e8749478eecda1",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/bang.ts",
+      "sha256": "916f0e2b74b80fbbf525f2efbbc2aea2fe87ab0011d30c750f0934c2d197c2e6",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/blockArrow.spec.ts",
+      "sha256": "d93a6bcdd01dcf9d32a564168b0a5d13e86fca71882d9ad1258b578119c17142",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/bowTieRect.ts",
+      "sha256": "9c5112a2d59d4b6d01a77c60b3ba3b4e62bf37ac1a223905294a863a157e32b8",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/browser.ts",
+      "sha256": "fb8eb3fe2afab8103e4ce68dbceec951e4a4536d00085c2a5c68cc270be9dbc8",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/bucket.ts",
+      "sha256": "0191b27069c6c24e94f2ddfbc0b5b7efe4034772eb48977158044a598bda8966",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/c4LabelHelper.spec.ts",
+      "sha256": "2ed5695df895fb15a834a41c74f6e2d68c2cda1f67bc0336ca2bed9730ff00e4",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/c4LabelHelper.ts",
+      "sha256": "a26c5e1621e6a3e1c6a4d79b06c51b6c6af0dde24a176d260469acb070179ff5",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/card.ts",
+      "sha256": "317a71daa342b874a80340ce9f6ab483c6af931a10a605f4bdbcb3c8b65edde7",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/choice.ts",
+      "sha256": "9ef0b9719308f150162ec95fc34a676e1f2cc984ad55d767bf503efe684d2b09",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/circle.ts",
+      "sha256": "0583cce7bef770d20cd108c620ef546ae2cd423da2ebd913a93e6546ff28a167",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/cloud.ts",
+      "sha256": "e00d654039e86ddee967629c830ca0c85bc2de1350a7c5ee777a619a85d60839",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/collapsedGroup.ts",
+      "sha256": "7241a9e4c26783bdb1e8c31398e1572751d42836a5ce7f1b2726e07b179cc2f3",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/composite.ts",
+      "sha256": "11b1b96bef6540baf469dddd8bb1641c7f253cef84675b9b4714fafa349b4907",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/console.ts",
+      "sha256": "d6a808c2f59ee2c84aff09c2548ed3747e931917652d55d8b8bd25e06a1bff78",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/crossedCircle.ts",
+      "sha256": "3a16ed8e5476a347251dbe9882cc8a2abd32c6ad577b7785dcf3ed6235068a14",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/curlyBraceLeft.ts",
+      "sha256": "15474b80ba0a458d368b9d11ca73e83469f9cd326228dfdf186ccfd8938bd4b9",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/curlyBraceRight.ts",
+      "sha256": "8624f15cef09e91f40b6886645f43f1d85253f2fbc76b03f138da9b72a24d684",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/curlyBraces.ts",
+      "sha256": "5fc286eac7c5fae29acb602e0cc8dafda2bff8985b32b621a4974a5a2e45bc2c",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/curvedTrapezoid.ts",
+      "sha256": "e862aea5b76ccf498de0ea7cf5632ff139b348c5c6b8248fff1d7308202faa31",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/cylinder.ts",
+      "sha256": "66cf21a2d0777a3a2188ac616d68bbd62e4569615e570c150a45e3c08477a9a0",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/datastore.ts",
+      "sha256": "9e72da4a720c6166d642ee81a2d3cf2a813cb466ab8a4e547048b702fc8889d1",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/defaultMindmapNode.spec.ts",
+      "sha256": "07fe107f791302ad98fe56820488affd664538d5683c38ca3aff638e3ac1d672",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/defaultMindmapNode.ts",
+      "sha256": "bbb2414d9843030b1681033fa846594fc2a86155d754f08ddf43b0f370be4ba6",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/dividedRect.ts",
+      "sha256": "69feb6ef1045fe448f652ae4b278c83ef2dcca6299862b18adcb039f1a0b38f4",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/document.ts",
+      "sha256": "2e5bb5812a6c0795bf623d9d305cf1ab5d8919f366f7f5835006d8ac485365b6",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/doubleCircle.ts",
+      "sha256": "e13030a09455da35a76545c9f27d7c07c3ba450fa065a65d367d40a824bfbc3e",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/filledCircle.ts",
+      "sha256": "f739ab95cdfb5dc60cf2cc94291aea68286284d0e59c942b23196e9fd8428922",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/flippedTriangle.ts",
+      "sha256": "01e5cda4bddcba59148c84ea19cf54a48ddb8aed95a81c51fc4249a2911913c0",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/folder.ts",
+      "sha256": "0a085a1ae59e5c5e1baf89a8f7bdac460b0aec12dc8b79139a612ac6473aca9c",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/forkJoin.ts",
+      "sha256": "7404023ae8027f3ab6ef55835265693f9bc1320f344b99692e7502523947b24c",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/halfRoundedRectangle.ts",
+      "sha256": "3bf05dece425a5dd6fc0068270799821cb053abdd5381cfefc22f55267e28b97",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/handDrawnShapeStyles.spec.ts",
+      "sha256": "869c42175c2d998006b823d4cc1ab7ccdba69025711c7263b15d21e674aebe3a",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/handDrawnShapeStyles.ts",
+      "sha256": "baf8572491842caa518e8ba35a313253ede78ba2fef9b4c43ac9a4b910630402",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/hexagon.ts",
+      "sha256": "2c5d559cf52495aee42b250c6ca556be1f5f0c244ee2993d53d22d405d52dcf3",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/hourglass.ts",
+      "sha256": "e8068645013010879c257d9915863ddb6c0903e08920f4010b780651ba2bbc05",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/icon.ts",
+      "sha256": "a028ca7caedf32fdfa446580f5be98920470291265287411faac4ee7d9c60ab3",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/iconCircle.ts",
+      "sha256": "d15247aa1307553bc43cdfe3868e51bc9cb753ea8838a63330ee4c27c5923180",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/iconRounded.ts",
+      "sha256": "e9b824c82ae44cf320f32ce4e442d90e4a62fc210bcbb5ff0ec687e47a0461a8",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/iconSquare.ts",
+      "sha256": "f71a625ceb9fff9923f55f3a6ccc0f87adde548543a193c8e210dc7df085eace",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/imageSquare.ts",
+      "sha256": "22a78817d3bd27eb0df0be111c5abf74395c3e1963043dd3e8f168c824a0db9d",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/insertPolygonShape.ts",
+      "sha256": "56279058530c0e398a835d3932e672be2a44111da30b92920435d3584e306c86",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/invertedTrapezoid.ts",
+      "sha256": "811f49eeba78032b5a64f2266d57d7c220ea1841c45f35b854d6381a68a93e1a",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/labelContainment.spec.ts",
+      "sha256": "50948df9d1f3fccef565c0c6f3079c63b3a106275473a4f725e666673fb478db",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/labelImageUtils.spec.ts",
+      "sha256": "61daa652c2e73e90d72bf91f57c3c90e53583203d12480044fc6c9d1a55ec496",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/labelImageUtils.ts",
+      "sha256": "f80fc624d2e80a07b9f48bae108f6253488f347a6cfe58d4d6d78f71edb1d2f8",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/leanLeft.ts",
+      "sha256": "7a156d3830ee833484e381351bd2f298b79c11081595e8bfaae224c7288608aa",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/leanRight.ts",
+      "sha256": "92c03498df78448186f2114231439338c73e7a8d6a2ad47ad1d7dea1b336f56c",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/lightningBolt.ts",
+      "sha256": "476602e2399b30d993164b169789cce8889710b980f18796cb91ff9173ffa812",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/linedCylinder.ts",
+      "sha256": "4119a7da7bfab12258249838ab623e90b78cb3dafe1d0763aaf7ec14144fa152",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/linedWaveEdgedRect.ts",
+      "sha256": "4a8e3b1dbc07a03a8092aeda3d90eabd398a46373cc1b8aa5b938fbee8ce1c64",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/mindmapCircle.ts",
+      "sha256": "c31f318bb1a3e03c332915041e9becc63f8ad268a5181195a5daa5ae265c9905",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/multiRect.ts",
+      "sha256": "f68940be4c4d4a3195c1f9866e35b290033c45492d65608d9fcdc6caa2a3defe",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/multiWaveEdgedRectangle.ts",
+      "sha256": "00e8977d7d816b058514f49c4462693ba94f0136a6bdb8956d30bb0cc0e15f25",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/note.ts",
+      "sha256": "f358bb583f624930c1118e91a6cf07db949c1ad6ac722f9d0ae4207118c1d552",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/person.ts",
+      "sha256": "05ee5fb12d01178388b3d3a76b98be1f349328bdaeacbc4565adf2bb63fca918",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/question.ts",
+      "sha256": "c662ad9199b6de3b38580bc59adc15c8e0d05162cae777dcc3c605fbaaa96b06",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/rectLeftInvArrow.ts",
+      "sha256": "62472fe5c9d63775db12dfc6914f9995681cdbfe193b945b13bb6216f687f06e",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/rectWithTitle.ts",
+      "sha256": "5474f2e5ab691f52ad1ee0a4f423823c617d2b0ec13534188365d5f8794217da",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/roundedRect.ts",
+      "sha256": "ec467557e20d023100fe6be03f3d478b619d5c5b9b0f283f632d90a14593dc10",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/roundedRectPath.ts",
+      "sha256": "9b1d3ab51537998de31cd7c3121b68c4e022aa3b690329cfe81afeb17f7ff314",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/shadedProcess.ts",
+      "sha256": "f02ccae800648954ca8191b547feef6d4c3a9dbc3e465baabb79fa46e05fd52d",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/slopedRect.ts",
+      "sha256": "b653163277a4c6378f976a1d672831ce59ea1ef11509814b567268135e5c9072",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/squareRect.spec.ts",
+      "sha256": "86527cf7b48309b8d0bcd865521246a0f1e6f9a82969d2e745f07fceca4be527",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/squareRect.ts",
+      "sha256": "2456ebbc205f1c73fcaf34e63d055a18b17ae71fbce2b1f4ff08e910d8cc2dfd",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/stadium.spec.ts",
+      "sha256": "997072d746a99320bde91f7c39715a7edf46f964d07ee8484b6bb910caba38dc",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/stadium.ts",
+      "sha256": "cb15be21132dbb2eb118815b37f3b9cdc08e4f6d4ffe63c408a04796ee6b5b6a",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/state.ts",
+      "sha256": "c017fe054d1a4c5ebb6721c2fcc0e8ae8300c6293836c53ab6972c52a3bc9dc1",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/stateEnd.ts",
+      "sha256": "f2b812d2e8502f02cf9bbce8bb5f50b0cd6243f1a1bb913bf624d9cce6bab60b",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/stateStart.ts",
+      "sha256": "f21e7f8fd0f198a2f4eba6230c6deb754c00460741b522dffe36b87911561890",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/subroutine.ts",
+      "sha256": "bbf3ec95a0518b5796bdf23e17375323b000a02051a9b1119cf91adeab69b4a4",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/taggedRect.ts",
+      "sha256": "a1b1f3b2f94b396c0de673b4b2c36419187fe6f9ffa0ebd5ba72dae30a48a2f5",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/taggedWaveEdgedRectangle.ts",
+      "sha256": "a353ea047525965d80c1a88ace34202220330a8d86d43f3104cdb81845866c1e",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/text.ts",
+      "sha256": "3cf54477f3b313c908764d42ef6388f7990b87326e533080a91a9b8140fa0475",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/tiltedCylinder.ts",
+      "sha256": "f1db4931703ad635574d6e74f791f0e53afe0057db5191041290331ea3b73a1a",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/trapezoid.ts",
+      "sha256": "7347c2439b54e296ff6e426bc5aefcd00236b78d4c0f859258feae83c1183cfe",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/trapezoidalPentagon.ts",
+      "sha256": "05ff40df81f00b7ab1b58e956f403111234744f17bfb711792ded16f95430659",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/triangle.ts",
+      "sha256": "f84b7a9a0ea9b3a40a5e84dff0a22c3916ab1fc3524472538386adae741a5e59",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/usecaseActor.ts",
+      "sha256": "efb852bb8e69fd0bceace380d38a001ed6bdf87c114803a61c643ded8fe543ec",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/usecaseActorAwesome.ts",
+      "sha256": "b4d0c6920ff6c09289eb983e80ae4e629eb04abe09a8465106d38e3bdd79889c",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/usecaseActorHollow.ts",
+      "sha256": "7a0fc3cdff1999455bd7ae775df80d523a259abe1d8e96eaebcf27618c734aec",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/usecaseActorIcon.ts",
+      "sha256": "d94b6372e11d652830d4827870d2a3d7c3ea53c83dc086188e64240e7deac617",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/usecaseBusiness.ts",
+      "sha256": "1b073a934d0a00fe6f707367cd83a516e0a871d9bbf93ab09546fb50dce43770",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/usecaseEllipse.ts",
+      "sha256": "409e01f96b043df54419fc7274e1695d81f04a0ead5663c177716c00b6228b31",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/usecaseJsonTable.ts",
+      "sha256": "f71575dc3715ac30c21e274ebd4f263de1d5350bf3cb0f5205bd199ddad62a69",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/usecaseShapes.spec.ts",
+      "sha256": "ac41dcca74921f42633763e8e5ff0b4d24c1a0a5b9003a62b99e7f0735ea3994",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/util.spec.ts",
+      "sha256": "a9b3fa3d30992031527dfa740bd3f2d1275c0a30e17fe8c33c8dc083fdec5bf3",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/util.ts",
+      "sha256": "bc63b16d067e4dd1c429e9cf249f4d73260819696de122dff0ce16b12db321c1",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/waveEdgedRectangle.ts",
+      "sha256": "a066fcfd862375723fe98133162d819cea4e0aac0973a4e604328a9554e2ee18",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/waveRectangle.ts",
+      "sha256": "1c8b359205a52e0e40a93bdddc9157aa52443a53184b0c3553c43b0462f7ef31",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/windowPane.ts",
+      "sha256": "0437321115389a46f2a97de77be390bfd54b6e07fe72dad333aabff634b55bea",
+      "pythonPaths": [
+        "src/py_mermaid/model/flowchart.py",
+        "src/py_mermaid/api.py",
+        "src/py_mermaid/__init__.py",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/geometry/path_geometry.py",
+        "src/py_mermaid/geometry/shape_registry.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/drawRect.ts",
+      "sha256": "1d03397624d31f5a244f32260fd8d109dd41751f1970858feb453f09a95d849e",
+      "pythonPaths": [
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/rendering/styles/flowchart.py"
+      ]
+    }
+  ],
+  "contracts": {
+    "units": "logical px; top-left measured node paths; absolute routed edges",
+    "ownership": "all semantic/path/style/resource values immutable; native objects confined to Canvas owner",
+    "exports": "png jpg jpeg webp svg pdf through public Canvas encoding",
+    "shapeNames": "53 fixed public definitions plus source-reachable internal handlers; alias inventory is not coverage",
+    "intersections": "orthogonal port axis; nonaxis center ray; source virtual rectangles retained; actual cached ink centered in expanded engine box",
+    "styles": "source compileStyles class order then local; text and node properties projected separately; animation t0 only",
+    "exceptions": "explicit MermaidError; classic ellipse upstream handler missing; math separately deferred by user"
+  },
+  "scopeExclusions": {
+    "math": "deferred_by_user_separate_shared_module",
+    "dagre": "excluded_by_user",
+    "interactive": "excluded_by_static_scope",
+    "installationValidation": "deferred_by_user"
+  },
+  "mechanicalEvidence": [
+    "test-runs/F01.4-record-20261105T084528Z-c136b865/run.json",
+    "test-runs/F01.4-record-20261105T084725Z-bb77d6c9/run.json"
+  ],
+  "functionalStatus": "NOT_EVALUATED_CURRENT_SCOPE",
+  "visualQaRepairs": {
+    "horizontalCylinder": "Right end cap from tiltedCylinder createCylinderPathD/createInnerCylinderPathD; independent S16-S18 geometry, pixel and injected-old-direction controls",
+    "inlineSvgHostCss": "resolve_inline_svg_style supplies source .node physical-tag CSS without applying outer shape inline paint to child SVG"
+  },
+  "finalVerification": {
+    "status": "PASS_LOCAL",
+    "sourceTreeSha256": "99a2342681469836c3b7be8be6815b9a82193146331aff51d260823b72b17a2e",
+    "evidence": "references/f014-verification-summary.json"
+  }
+}

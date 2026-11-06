@@ -1,0 +1,129 @@
+{
+  "schema": "bulk-C-source-map/v1",
+  "phase": "P1",
+  "status": "code_complete_unverified",
+  "mermaidVersion": "12.2.0",
+  "mermaidCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "sourceOnly": true,
+  "behaviorTestsRun": false,
+  "oracleRun": false,
+  "imagesGenerated": false,
+  "production": "Pure Python semantic values and dedicated layout; public root Painter only, no browser/JS/other native backend",
+  "threadOwnership": "Parser/model/layout values are immutable; Painter/native allocation is root owner-thread only",
+  "errors": "runtime.common.error maps cleaned offsets to raw UTF16 SourceSpan; parser-specific syntax/lifecycle diagnostics remain explicit",
+  "detectors": [
+    "railroad",
+    "railroadEbnf",
+    "railroadAbnf",
+    "railroadPeg"
+  ],
+  "sources": {
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\diagrams\\railroad\\abnfDetector.spec.ts": "4b504bbc40f403dbf223637211ca1a89ea9ca231e19ecea246a5e80710569f27",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\diagrams\\railroad\\abnfDetector.ts": "fd38fa7c6e11d32bc9cae2cdd0aed43f2f9cc1aa453350bdbb7e70b8552ac42f",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\diagrams\\railroad\\abnfDiagram.ts": "87c456de8a560cd155415d5861693bb6e5bcc7429cf40bfa49b7a21d0c09d40c",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\diagrams\\railroad\\ebnfDetector.spec.ts": "821b71e722c1abfeac08e1644d85073cef15dc244c7a124f69523b80e5ccb5f6",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\diagrams\\railroad\\ebnfDetector.ts": "99c240f413e2810f967534d86c6c6ad7c182c1491b62fc88efe89f4bcdd0342e",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\diagrams\\railroad\\ebnfDiagram.ts": "ac700dc8e5b552e51ce389559c003242a5515630278c1f6efea26dc7d79564f2",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\diagrams\\railroad\\parser\\abnfDiagram.spec.ts": "c7c05c81333ea050c7ece97549ad0cba0cdba9ea3af79bb90377b41e5d4dfe6c",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\diagrams\\railroad\\parser\\abnfParser.ts": "f6d7c15a91c27c3da8cca009098600f2242c4d0537795fe264411db3d0d1f25b",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\diagrams\\railroad\\parser\\ebnfDiagram.spec.ts": "61a418ee731a0306d22c0995418e765d4f61d77cfcba9a3064e8f3f7cb232ab4",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\diagrams\\railroad\\parser\\ebnfParser.ts": "3e73f095daa9c9b11599cb958ad606291b86f1055c8d0d883dffdb2a2ed489f6",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\diagrams\\railroad\\parser\\pegDiagram.spec.ts": "2304b5b9a97df691bb7d9fd2fb0890ba0d1153e0ab5ccccefd62035ec7600363",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\diagrams\\railroad\\parser\\pegParser.ts": "7874c8fa0f4a2d1a113d012ee63826413682df1db7d1d8c78f185e4ae1451b6c",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\diagrams\\railroad\\parser\\railroadDiagram.spec.ts": "e205614e37a2ee1d9083d94835adb163a1ce83c3e3a2206c49a91156d148c1fc",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\diagrams\\railroad\\parser\\railroadParser.ts": "8fc3c8fe74ed288fbb536f1b2fe29e8df7411f7fbcc652871ffc7f0ae5f7550e",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\diagrams\\railroad\\pegDetector.spec.ts": "d670ca97b4d15010812aecc3e298989d5451d5143140aac44f3be328ac06ec7a",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\diagrams\\railroad\\pegDetector.ts": "0e625108150e543f01f96a22eb965c01c766e3fc331cb8cca2d0d9bc10ca26ea",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\diagrams\\railroad\\pegDiagram.ts": "8760710d142c7d4e4a7e9cbb0552bed8787478cb1504fe4e09aa3f0461caddf5",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\diagrams\\railroad\\railroadDb.spec.ts": "8d0c9650f2b4b5c3cab893cd6f52ae07c211724497f6ef7bee094132191f81d9",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\diagrams\\railroad\\railroadDb.ts": "9b2e20b2ab632f02dc1d0050d10fd75a3b49208a754ef5fd2998fe1199cd5b25",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\diagrams\\railroad\\railroadDetector.spec.ts": "ae0bbd62d3a3f36a2aac86c17ac666996d14c32a899c94686b60a1db4e857ad2",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\diagrams\\railroad\\railroadDetector.ts": "421118de2cdb25184050ab3d5133fdc8544167c7579ceddfd2ed4d56c23fa07d",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\diagrams\\railroad\\railroadDiagram.ts": "4d0d5922ba7b3afe7e9cc17ad02387d75d7830a7e633c8b81a6444533c922d30",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\diagrams\\railroad\\railroadRenderer.spec.ts": "b20084967a310157e8c1ed60a4e98dbc1dff18aa4c02be3d954f542cfb9dec33",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\diagrams\\railroad\\railroadRenderer.ts": "0c1c644cec140ba51f9acf31a47ad7015b4c9d85741a723f1f216e5753bad03a",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\diagrams\\railroad\\railroadTypes.ts": "75528ce0f742a4cc96751cdee7e3ae38b9f9a91687f88a8a166be0e674cc8e30",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\diagrams\\railroad\\styles.spec.ts": "4b69b35b0a79afda9cc3ee6ab8de30a941b6391ab6c77b308547014794dfddd6",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\diagrams\\railroad\\styles.ts": "595aadfbfd8ad925e6cc63e05180f1b9b6f5247e99beb94eb62aca72be083bed",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\schemas\\config.schema.yaml": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\parser\\src\\language\\railroad\\railroad.langium": "f8ea8e7422b881e5ffd7504e09042ae0b33419083efe7426a660d91a8f01dfd7",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\parser\\src\\language\\railroad\\valueConverter.ts": "b859387231c331767546250d90573093ab029356539f22a7fd615a9f834fddad",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\parser\\src\\language\\railroad-abnf\\railroad-abnf.langium": "d156141dab0c649a6a063c59a5d277aec56eda295f955d5c65c28cffe077ad84",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\parser\\src\\language\\railroad-abnf\\valueConverter.ts": "efc4e44899d3a3dddf0c7743ff5f1821d3253a8fad9a4cb51b1d72b453b58732",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\parser\\src\\language\\railroad-ebnf\\railroad-ebnf.langium": "0c59cd62d20bb8117c310c8597d97889cf7baba7a0f80cc5d73657b3419cfc3b",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\parser\\src\\language\\railroad-ebnf\\valueConverter.ts": "729241721eb38c5984b113e5205dc021229ce89e59f77155b7f66d3a5271fbed",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\parser\\src\\language\\railroad-peg\\railroad-peg.langium": "61696990f899dbbe531dd79dde0dda434a92c3169aaa0c1e3b27564b7c980dd9",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\parser\\src\\language\\railroad-peg\\valueConverter.ts": "0e467fd095c3c3b046248c190186626ef9a475946b3a4b201b15595abce3ea78"
+  },
+  "implementations": {
+    "C:\\code\\py-visactor\\py-mermaid\\src\\py_mermaid\\diagrams\\railroad\\__init__.py": "78d18a55ddb85967cd8cdb420e52670002890d748472be91d86d4c44525d3a4b",
+    "C:\\code\\py-visactor\\py-mermaid\\src\\py_mermaid\\diagrams\\railroad\\layout.py": "016cc2b31b08c8305df0681cd3b6c368c4479b20243d61039f6c0c107577562e",
+    "C:\\code\\py-visactor\\py-mermaid\\src\\py_mermaid\\diagrams\\railroad\\model.py": "f49afe67da2fb4187d280b16aaed7449b517f192b34e49982080b9f5fb1e98c2",
+    "C:\\code\\py-visactor\\py-mermaid\\src\\py_mermaid\\diagrams\\railroad\\parser.py": "26e4f5646ed029739f767a2c084e4a01cab42d234393067e18df0a9bd7c52c84"
+  },
+  "branches": {
+    "railroad": [
+      "8 source constructors:sequence,choice,optional,oneOrMore,zeroOrMore,terminal,nonterminal,special",
+      "unary choice/sequence AST collapse",
+      "terminal escapes andquoted title",
+      "empty rule list",
+      "duplicate rule declarations preserved in order"
+    ],
+    "EBNF": [
+      "=/::= and semicolon rules",
+      "alternative/concatenation with optionalcomma",
+      "terminal/nonterminal/special/group/optional/repetition primaries",
+      "?/*/+/-exception postfixes",
+      "ISO and C comments"
+    ],
+    "ABNF": [
+      "string/rulename/%x/%d/%b numeric terminals",
+      "groups/optional groups",
+      "exact/bounded/open repetition(min,max)",
+      "alternation / and concatenation",
+      "source semicolon terminators"
+    ],
+    "PEG": [
+      "ordered choice /",
+      "prefix &/! source special label projection",
+      "suffix ?/*/+",
+      "literal/identifier/group/any .",
+      "hash comments"
+    ],
+    "geometry": [
+      "leaf measured dimensions+padding",
+      "recursive horizontalSequence baseline alignment",
+      "choice vertical alternatives with source arc sweep",
+      "optional upper bypass",
+      "repetition lower return loop plus zero-or-more bypass",
+      "rule name and start/end markers",
+      "empty source viewport200x100"
+    ],
+    "style": [
+      "source sanitized style values/numbers/fonts",
+      "theme-variable fallbacks and per-railroad overrides",
+      "terminal/nonterminal/special/rule-name CSStargets",
+      "gradient/shadow/blend via shared ResolvedStyle",
+      "source sanitization recursively applied before immutable AST"
+    ]
+  },
+  "sourceInertOptions": [
+    "Fixed source renderer does not consume compactMode orshowMarkers, despite option declarations; actual renderer always paints markers",
+    "ABNF maximum retained in pure AST but fixed renderer bases loop geometry only onminimum",
+    "Source title retained in DB/model but current railroadRenderer does not draw it"
+  ],
+  "nativeAdaptations": [
+    "Dedicated recursive arcs/geometry port; noELK/flowchart substitution",
+    "Text metrics from public Canvas replace temporary SVGgetBBox"
+  ],
+  "remainingVerification": [
+    "Four complete grammar spec corpora and actual source image geometry remain unexecuted P2/P3"
+  ],
+  "P3": {
+    "receipt": "docs/changes/bulk-C-P3.json",
+    "targetedUnitRun": "BULK-record-20261106T045020Z-ea2286dc",
+    "targetedCpuRun": "BULK-batch-20261106T045023Z-16c153f1",
+    "ownedProductSha256": "687b02793f788b1520afea3d5994688af1e80963bb3aa966baf147f34a9fb26f",
+    "jointAcceptance": false
+  }
+}

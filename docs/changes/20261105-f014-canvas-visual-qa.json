@@ -1,0 +1,391 @@
+{
+  "schema": "py-mermaid-visual-qa/v1",
+  "taskId": "20261105-f014-canvas-visual-qa",
+  "candidateSha256": "1f17a467bfd7f8f7e7f53710c88a1280bda03f3ba412968c5d3d9a1575812a80",
+  "status": "FAIL_MANUAL_QA",
+  "viewedCount": 36,
+  "viewed": [
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/compare-cpu/handdrawn-shapes-1.png",
+      "sha256": "a707cf53237663122acf1454930e7c5c9968681ac7d675e05a197245a614d47a",
+      "size": [
+        2208,
+        136
+      ],
+      "actuallyViewedWith": "functions.view_image"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/oracle/handdrawn-shapes-1.png",
+      "sha256": "f2be92accdc4ed350db4e04f93b13fb3686143da0c5820e4a3cce820f925870e",
+      "size": [
+        1600,
+        93
+      ],
+      "actuallyViewedWith": "functions.view_image"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/compare-cpu/handdrawn-shapes-2.png",
+      "sha256": "d3bc3372eb96b04422d3f9d4751f04c0fb41de25f93ce9c1209136259b0db12e",
+      "size": [
+        2453,
+        195
+      ],
+      "actuallyViewedWith": "functions.view_image"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/oracle/handdrawn-shapes-2.png",
+      "sha256": "530a19ac065352bad6e3f90d9f7c3965aaa415670c461035b781b1c5b6f13c07",
+      "size": [
+        1600,
+        123
+      ],
+      "actuallyViewedWith": "functions.view_image"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/compare-cpu/handdrawn-shapes-3.png",
+      "sha256": "3ea0926339e95d68cbdfbb85e7a677e34f6bf777ee7a128bf1ddf142fc0dfe31",
+      "size": [
+        1714,
+        123
+      ],
+      "actuallyViewedWith": "functions.view_image"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/oracle/handdrawn-shapes-3.png",
+      "sha256": "14144148bea04b1fef5a7be1de22d66ccac4bc153a1a597c0b16167f9ea4337a",
+      "size": [
+        1600,
+        105
+      ],
+      "actuallyViewedWith": "functions.view_image"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/compare-cpu/handdrawn-shapes-4.png",
+      "sha256": "f31a8d06e945c858975a4570ad3ea69ef8807f6fe367208a75651853fb20ddc5",
+      "size": [
+        2116,
+        181
+      ],
+      "actuallyViewedWith": "functions.view_image"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/oracle/handdrawn-shapes-4.png",
+      "sha256": "e0c1e4979dcc36b8700eac8937761dfb4539731a357bff7133dd1bb83f0dca41",
+      "size": [
+        1600,
+        132
+      ],
+      "actuallyViewedWith": "functions.view_image"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/compare-cpu/handdrawn-shapes-5.png",
+      "sha256": "ccbaed5f21abdefc448f3df0773be94b60dfe7f9e7488473a6190b1f0b5318dd",
+      "size": [
+        969,
+        89
+      ],
+      "actuallyViewedWith": "functions.view_image"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/oracle/handdrawn-shapes-5.png",
+      "sha256": "ebd6a5568a1c6b82ba0e60a9069b4816cbccdec76b45cccf621e6f302dfdeb9a",
+      "size": [
+        977,
+        84
+      ],
+      "actuallyViewedWith": "functions.view_image"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/compare-cpu/layout-labelless-alignment-gallery.png",
+      "sha256": "cd2b01cd5aa4277c178b91cf4dd0ab5ef2c62189067b8897511ba2bc4c4d7e0d",
+      "size": [
+        93,
+        586
+      ],
+      "actuallyViewedWith": "functions.view_image"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/oracle/layout-labelless-alignment-gallery.png",
+      "sha256": "d4ed6b685a797ae57b5402a6f3fde08562e4a08a83b659e78680c49e44ab1772",
+      "size": [
+        88,
+        594
+      ],
+      "actuallyViewedWith": "functions.view_image"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/compare-cpu/inline-data-quad.png",
+      "sha256": "d2122ee8d15bb0fc13082cffb85180851eb63376d7472f33d771319728233827",
+      "size": [
+        176,
+        173
+      ],
+      "actuallyViewedWith": "functions.view_image"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/oracle/inline-data-quad.png",
+      "sha256": "ee5381181a7453ef6ab62fd8c2d71d0ac1a38e38f28ad305e934673b65936eed",
+      "size": [
+        168,
+        165
+      ],
+      "actuallyViewedWith": "functions.view_image"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/compare-cpu/inline-svg-quad.png",
+      "sha256": "d2122ee8d15bb0fc13082cffb85180851eb63376d7472f33d771319728233827",
+      "size": [
+        176,
+        173
+      ],
+      "actuallyViewedWith": "functions.view_image"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/oracle/inline-svg-quad.png",
+      "sha256": "c165b75e1f8df7ab920c70a6b6b18c125443c62cc7fbee729f62bf5f5487a9dc",
+      "size": [
+        168,
+        151
+      ],
+      "actuallyViewedWith": "functions.view_image"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/compare-cpu/asset-data-top.png",
+      "sha256": "905574119985e8532041f21c3cdb6663722d3ef4b195d923de7841ca1e4b6d6c",
+      "size": [
+        336,
+        93
+      ],
+      "actuallyViewedWith": "functions.view_image"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/oracle/asset-data-top.png",
+      "sha256": "8db639e9fa82b2488b4ed6ab97040e8d80fa90d32f1bd85d15e88ff464774ffd",
+      "size": [
+        288,
+        89
+      ],
+      "actuallyViewedWith": "functions.view_image"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/compare-cpu/explicit-icon-bundle.png",
+      "sha256": "8f5c0cb26d9ab43b2eef0d80cf20665c1f2172a57de2590c67e4dd6ee566dba2",
+      "size": [
+        176,
+        205
+      ],
+      "actuallyViewedWith": "functions.view_image"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/oracle/explicit-icon-bundle.png",
+      "sha256": "c79795b052190bcae73a815fe08448c81743f1cdd9ae98d54f839c63c4008e92",
+      "size": [
+        168,
+        197
+      ],
+      "actuallyViewedWith": "functions.view_image"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/compare-cpu/explicit-font-bundle.png",
+      "sha256": "19f6eea3a9459872bb993c4430912c47f9c5791ed02636763a615ede4c9f5d4f",
+      "size": [
+        176,
+        154
+      ],
+      "actuallyViewedWith": "functions.view_image"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/oracle/explicit-font-bundle.png",
+      "sha256": "37c864615bcfb60847b09c3474fa91a8b9b175bd68be97f460389d503985b1e1",
+      "size": [
+        168,
+        146
+      ],
+      "actuallyViewedWith": "functions.view_image"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/compare-cpu/static-spacing-shadow.png",
+      "sha256": "49d9a09da8d69538a276603ae517d523c099dfdbcbce406574a3e44350e1904e",
+      "size": [
+        176,
+        69
+      ],
+      "actuallyViewedWith": "functions.view_image"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/oracle/static-spacing-shadow.png",
+      "sha256": "249bc55192cee83ef6a10d0bad60f273c83a078a03562404895ac1573b65c796",
+      "size": [
+        168,
+        61
+      ],
+      "actuallyViewedWith": "functions.view_image"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/compare-cpu/virtual-fill-datastore.png",
+      "sha256": "67d6d5aca2d60c617be2a80b88f59063ffa4eddc6033bce1fedbebf3b74adbbe",
+      "size": [
+        204,
+        75
+      ],
+      "actuallyViewedWith": "functions.view_image"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/oracle/virtual-fill-datastore.png",
+      "sha256": "72e1d9c485260f93168b9766a1ba45ef9c839929c8c89e0c19771dd84464cddf",
+      "size": [
+        196,
+        67
+      ],
+      "actuallyViewedWith": "functions.view_image"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/compare-cpu/virtual-fill-brace.png",
+      "sha256": "7957afb61ad9cfd0e7794242349058fc8a2ab123dab73c058f0a5bc350d177c9",
+      "size": [
+        180,
+        81
+      ],
+      "actuallyViewedWith": "functions.view_image"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/oracle/virtual-fill-brace.png",
+      "sha256": "8f7e8e3351ba78f78d4ffc237165d67b6392dbd82fdc8f97afdaba15616e8955",
+      "size": [
+        168,
+        59
+      ],
+      "actuallyViewedWith": "functions.view_image"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/compare-cpu/virtual-fill-brace-r.png",
+      "sha256": "88cddad9bf75f5b991856b11a38e25d663fa774e572bb490d58a7bdec91cea33",
+      "size": [
+        180,
+        81
+      ],
+      "actuallyViewedWith": "functions.view_image"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/oracle/virtual-fill-brace-r.png",
+      "sha256": "b4998b00fd6b8821ba36b92ba6b8e654309c13a658b6cd1b8e1ffed22f4fe0d4",
+      "size": [
+        182,
+        71
+      ],
+      "actuallyViewedWith": "functions.view_image"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/compare-cpu/virtual-fill-braces.png",
+      "sha256": "032651b8063b6d9ba869321b0c7f7fb2f315e0b39a54c4cde9b23d65ea9329a1",
+      "size": [
+        190,
+        81
+      ],
+      "actuallyViewedWith": "functions.view_image"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/oracle/virtual-fill-braces.png",
+      "sha256": "17d29c3ecfe7431d96e6df7d5c98258b8940665757b2f2e534ca2f0bb0eedaf3",
+      "size": [
+        185,
+        71
+      ],
+      "actuallyViewedWith": "functions.view_image"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/compare-cpu/shape-h-cyl.png",
+      "sha256": "4a68ed7cda68aced4e13798e7174b21e23e92260b9dbaee9e2a53a3dc2f65431",
+      "size": [
+        172,
+        57
+      ],
+      "actuallyViewedWith": "functions.view_image"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/oracle/shape-h-cyl.png",
+      "sha256": "981c8f21aed4f8c766966c0ffd84bbae92ffcbdc2c23d1a24b1d007104be5fdd",
+      "size": [
+        164,
+        49
+      ],
+      "actuallyViewedWith": "functions.view_image"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/compare-cpu/shape-browser.png",
+      "sha256": "cb2413898e9e2d81abf4bd8797d11b697e4d817dcf4755fe0eb20ac9a4209760",
+      "size": [
+        174,
+        93
+      ],
+      "actuallyViewedWith": "functions.view_image"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/oracle/shape-browser.png",
+      "sha256": "74c71e2e1ede40a1337e47c4438f959e94102c0659906c67abb4cd9ac4ba60d5",
+      "size": [
+        166,
+        85
+      ],
+      "actuallyViewedWith": "functions.view_image"
+    }
+  ],
+  "positiveFindings": [
+    "Five seeded handDrawn galleries contain readable labels and distinguishable overall shape families, no clipped/missing ordinary labels.",
+    "Labelless9 gallery actual relationships connect and all9 shapes render without phantom text boxes; stateStart/stateEnd content distinction still defective as separately recorded.",
+    "Explicit dataURI/native image four quadrants and offline icon content are present; explicit font text and Done labels readable.",
+    "datastore fill is light red with only top/bottom red edges, matching source; three braces keep white/unfilled bodies with red braces, matching source.",
+    "Browser normal3 rounddots and addressbar visible; handdrawn decorativemarkers differ slightly in shape, source mild rounding differs."
+  ],
+  "defects": [
+    {
+      "id": "F014-STATE-HOLLOW-LAYER",
+      "severity": "blocking",
+      "cases": [
+        "handdrawn-shapes-3",
+        "layout-labelless-alignment-gallery"
+      ],
+      "actual": "Python stateStart and stateEnd dark disks/scribbles; official hollow circle and small inner ring; filledCircle correctly stays dark.",
+      "sourceCause": "RoughSVG.draw paints fillSketch first and final path second. Source .node path CSS fills final continuous ellipse with mainBkg despite fill=none presentation, hiding hatch. Native only projected hatch stroke and omitted later outline fill. Generic native arc rough.stroke_path has separate moves, so its implicit fill alone cannot close full ellipse.",
+      "checkerGap": "Any-ink checks/labelzero/seed stability and representative first-hatch fill metadata did not verify center region or marker distinction.",
+      "sourceEvidence": "test-runs/F01.4-s4-source-paint-diagnostic-20261105T092448Z-a6b4e487/artifacts/oracle/handDrawn-sm-circ.svg",
+      "beforeFixArchive": "test-runs/F01.4-state-hollow-before-fix-evidence-20261105T105859Z-73322a0d",
+      "fixStatus": "Renderer minimal source paint projection implemented; targeted realAPI opaque center/ring/disk negative-control test passed, final candidate matrix pending."
+    },
+    {
+      "id": "F014-TEXT-SHADOW-MASK",
+      "severity": "blocking",
+      "cases": [
+        "static-spacing-shadow"
+      ],
+      "actual": "Python shows solid red rectangular shadow/background behind black letters; official shows actual red glyph silhouettes offset from black letters.",
+      "checkerGap": "Current test counts red+dark within bounds and does not reject a red rectangle; source form/content of shadow must be tested.",
+      "fixStatus": "Reported to coordinator, no source change for this issue yet."
+    },
+    {
+      "id": "F014-INLINE-SVG-HOST-CSS",
+      "severity": "blocking",
+      "cases": [
+        "inline-svg-quad"
+      ],
+      "actual": "Python shows authored4 colored quadrants; official directinlineSVG path fills become white with nodeBorder stroke under host .node path CSS. Both dataURI quadrants remain correctly colored because image document isolated.",
+      "sourceCause": "Inline SVG serialized into independent native Image does not receive surrounding host CSS; directSVG versus dataURI provenance is currently erased.",
+      "fixStatus": "Reported to coordinator, no source change yet."
+    },
+    {
+      "id": "F014-HCYL-CAP-SIDE",
+      "severity": "source-geometry",
+      "cases": [
+        "shape-h-cyl",
+        "handdrawn-shapes-3"
+      ],
+      "actual": "Python full ellipse endcap is on left, official full ellipse is on right; label remains readable and type recognizable but inner detail handedness differs.",
+      "fixStatus": "Reported to root geometry owner; not modified by C."
+    }
+  ],
+  "minorSourceDifferences": [
+    "Photo/icon label backgrounds in Python span measured label width while official gray area hugs text; image-only dataURI horizontal position centered in Python versus left in source container.",
+    "Browser addressbar corners less rounded, handdrawn small chrome dots rougher than source static circles."
+  ],
+  "sourceStateAfterQA": "Only coordinator-authorized state-layer fix/test performed, other defects not silently patched. Original final candidate and all original PNGs remain preserved."
+}

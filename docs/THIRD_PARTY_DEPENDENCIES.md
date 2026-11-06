@@ -1,3 +1,5 @@
+> 2026-11-05 用户已决定 **完全剥离 Dagre 功能、配置选项、目标依赖和算法回退**，不再暂停待评估，也不作为可选兼容任务。默认 ELK 与其他保留的专用静态算法继续推进。见 [布局策略](LAYOUT_POLICY.md)；下文旧 Dagre 计划/来源说明以此覆盖。
+
 # Mermaid 第三方依赖盘点
 
 2026-11-04，依据本仓库锁定的 **Mermaid 12.2.0**，commit `1fb7869866dd619168d840291c9c54b4f129758b`。审计输入为只读 `.local/upstream-mermaid` 的五个产品包、根工作区清单、`pnpm-lock.yaml`、补丁和源码 import。这里的版本均为该锁文件的实际解析版本，不是在线最新版。
@@ -15,7 +17,7 @@
 | 包 | 锁定版本 | 主要职责及 Python 迁移边界 |
 | --- | --- | --- |
 | `elkjs` | 0.9.3 | ELK 图布局、端口/分组/路由；按用户决定接入独立 `py-elk`，接入尚未实施 |
-| `dagre-d3-es` | 7.0.14 | Dagre 分层布局、内部 graphlib、D3 渲染辅助；显式 Dagre 等路径仍需覆盖 |
+| `dagre-d3-es` | 7.0.14 | Dagre 分层布局、内部 graphlib、D3 渲染辅助；原源码用途；目标 Dagre 功能与依赖已排除 |
 | `d3` | 7.9.0 | 数据处理、比例尺、轴、弧/曲线、层级/力导向及 SVG/DOM 操作；保留所用计算语义，绘制映射到 Canvas |
 | `d3-sankey` | 0.12.3 | Sankey 节点/流量/连线布局 |
 | `cytoscape` | 3.34.0 | 图模型与布局基础，architecture 等使用 |
@@ -90,7 +92,7 @@
 
 1. 预处理、frontmatter、安全/配置和解析器：固定输入、错误与模型边界。
 2. 标签测量、默认 ELK 的 py-elk 适配和 Canvas 最小真实输出，支撑 M3 flowchart。
-3. Dagre/graphlib、D3 所用计算、COSE/fCoSE、tidy、Sankey、Venn，按实际图种依赖展开。
+3. 自有图模型、D3 所用计算、COSE/fCoSE、tidy、Sankey、Venn，按实际图种依赖展开。
 4. Markdown/HTML/CSS/math、RoughJS、图标/字体/资源、主题等共享能力逐项扩全。
 5. ZenUML 独立审计与迁移；最终统一验证完整产品和打包运行依赖。
 

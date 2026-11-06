@@ -68,9 +68,10 @@ def check(root: Path = ROOT) -> dict:
         if any(expected[key][field] != actual[key].get(field) for field in ("source", "scope")):
             errors.append(f"Diagram source/scope differs: {key}")
     stages = ledger["stages"]
+    component_stages=ledger.get('componentStages',stages)
     for item in [*ledger["diagrams"], *ledger["crossCutting"]]:
         for field in ("status", "parser", "layout", "canvas"):
-            if field in item and item[field] not in stages:
+            if field in item and item[field] not in (stages if field=='status' else component_stages):
                 errors.append(f"Unknown stage: {item['id']}.{field}")
         advanced = any(item.get(f, "planned") not in ("planned", "inventoried")
                        for f in ("status", "parser", "layout", "canvas"))
@@ -81,11 +82,13 @@ def check(root: Path = ROOT) -> dict:
                 errors.append(f"Invalid evidence file: {item['id']}")
             elif hashlib.sha256((root / evidence['path']).read_bytes()).hexdigest() != evidence.get("sha256"):
                 errors.append(f"Evidence hash differs: {item['id']}")
-    expected_dependencies = [f"py-skia-canvas=={lock['canvas']['version']}", "py-visactor-elk==0.1.0"]
+    math_lock=json.loads((root/'references/math-release-lock.json').read_text('utf-8'))
+    expected_dependencies = [f"py-skia-canvas=={lock['canvas']['version']}", "py-visactor-elk==0.1.0",
+                             f"{math_lock['distribution']}=={math_lock['version']}"]
     if expected_dependencies[0] not in project["dependencies"]:
         errors.append("Canvas dependency differs from lock")
     elif project["dependencies"] != expected_dependencies:
-        errors.append("Runtime dependencies differ from pinned Canvas/ELK requirements")
+        errors.append("Runtime dependencies differ from pinned Canvas/ELK/published math requirements")
     if project["requires-python"] != lock["canvas"]["requiresPython"]:
         errors.append("Python support differs from locked Canvas ABI scope")
     tree = ast.parse((root / "src/py_mermaid/__init__.py").read_text(encoding="utf-8"))
@@ -151,7 +154,7 @@ def check(root: Path = ROOT) -> dict:
     for directory in ("src", "scripts", "examples", "tests/bootstrap"):
         for path in (root / directory).rglob("*.py"):
             try:
-                ast.parse(path.read_text(encoding="utf-8"))
+                ast.parse(path.read_text(encoding="utf-8-sig"))
             except SyntaxError:
                 errors.append(f"Invalid Python source: {path.relative_to(root)}")
     return {"status": "BOOTSTRAP_VALIDATED" if not errors else "INCOMPLETE",

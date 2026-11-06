@@ -1,0 +1,86 @@
+{
+  "scope": "F01.4",
+  "cases": [
+    {
+      "id": "static-style-overview",
+      "title": "Class, style, linkStyle and initial dash",
+      "text": "flowchart LR\nA[Input]:::hot e1@-->|read| B[Store]\nB o--o C[Check]\nC x--x D[Done]\nD --- E[Open]\nclassDef hot fill:#e0f2fe,stroke:#0369a1,color:#0c4a6e,font-weight:bold\nstyle B fill:#fef3c7,stroke:#92400e\nlinkStyle 0 stroke:#0369a1,stroke-width:3px\ne1@{animate: true}",
+      "nodes": [
+        [
+          "A",
+          "Input"
+        ],
+        [
+          "B",
+          "Store"
+        ],
+        [
+          "C",
+          "Check"
+        ],
+        [
+          "D",
+          "Done"
+        ],
+        [
+          "E",
+          "Open"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "B",
+          "C"
+        ],
+        [
+          "C",
+          "D"
+        ],
+        [
+          "D",
+          "E"
+        ]
+      ],
+      "direction": "LR",
+      "groups": [],
+      "edgeLabels": [
+        "read",
+        "",
+        "",
+        ""
+      ],
+      "formats": {
+        "A": [
+          {
+            "text": "Input",
+            "weight": 700,
+            "color": "#0c4a6e"
+          }
+        ]
+      },
+      "source": "FlowDB compileStyles; edges.js markers and animation t0"
+    },
+    {
+      "id": "static-text-properties",
+      "title": "Native measured spacing, transform and shadow",
+      "text": "flowchart TD\nA[Alpha words]:::styled\nclassDef styled color:#123456,font-size:20px,letter-spacing:1px,word-spacing:3px,text-transform:uppercase,text-shadow:1px 2px 1px #cccccc",
+      "nodes": [
+        [
+          "A",
+          "Alpha words"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "visibleLabels": {
+        "A": "ALPHA WORDS"
+      },
+      "source": "styles2String label properties + native Canvas measured spacing"
+    }
+  ]
+}

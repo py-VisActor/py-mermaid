@@ -1,0 +1,40 @@
+{
+  "schema": "py-mermaid-change/v1",
+  "taskId": "20261104-f012-layout-tests",
+  "phase": "F01.2-S3",
+  "status": "test_design_complete_unrun",
+  "candidateSourceIdentity": "3d846b5df224e167a528a73c52d359388fda5e508b561fa876e4bd1b20785c2e",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "changedPaths": [
+    "tests/f012/test_layout.py",
+    "references/f012-layout-assertions.json"
+  ],
+  "sourceSha256": {
+    "tests/f012/test_layout.py": "bd37d7afad0970e69b8c3fee57e5e629cf8834d0f5ceb9b789a3924f34809c69",
+    "references/f012-layout-assertions.json": "7f435af9cbef31680b15129076947b743514cabab0c63bbfde71a5d7f9106120"
+  },
+  "commands": [
+    {
+      "command": "C:/venvs/pymmd-20261102/Scripts/python.exe -m compileall -q tests/f012/test_layout.py",
+      "exitCode": 0
+    },
+    {
+      "command": "PYTHONPATH=src C:/venvs/pymmd-20261102/Scripts/python.exe -c <unittest.TestLoader discover test_layout.py and count only>",
+      "exitCode": 0,
+      "stdout": "Collected F01.2 layout methods:16; No behavior tests executed",
+      "behaviorExecuted": false
+    }
+  ],
+  "productSourcesModified": false,
+  "behaviorRun": false,
+  "installationRun": false,
+  "testMethodCount": 16,
+  "nextAction": "Coordinator freezes all S3 groups then runs initial common-candidate S4 groups before fixes",
+  "limitations": [
+    "No runtime/semantic passes claimed from compilation or test collection",
+    "No product private helpers imported to calculate expected coordinates",
+    "Synthetic raw JSON used only for explicit boundary controls; primary13test methods invoke actual installed pyelk after real public Canvas measurement",
+    "No installation validation; static collection only in S3",
+    "Cross-version routes may differ; assertions use functional/geometry relations, not old elkjs coordinate equality"
+  ]
+}

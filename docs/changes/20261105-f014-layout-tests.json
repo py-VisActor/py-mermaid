@@ -1,0 +1,90 @@
+{
+  "schema": "py-mermaid-change/v1",
+  "taskId": "F01.4-S3/layout-shapes",
+  "status": "tests_authored_behavior_not_run",
+  "frozenCandidate": "5b0262fdf79a609517ff6080ddd1da50d1649528abea2373f74c3666ee7d14ed",
+  "counts": {
+    "layoutMethods": 34,
+    "shapeMethods": 14,
+    "sourceDefinitions": 53,
+    "additionalMetadataHandlers": 6,
+    "publicEnumSubcases": 26,
+    "reportFixtures": 32
+  },
+  "changedFiles": {
+    "tests/f014/test_layout.py": "8aaf6ebe698b22029a30bb04ec93c71c79f645630caff4c21d3b79dcaa58d26c",
+    "tests/f014/test_shapes.py": "dfbc11b0acd9379f3f0d085d99ed4749e7ae5a7ed5c9801795ef9fcf43affcc2",
+    "tests/f014/layout-cases.json": "0253470f4471eee38560a1e4be893d6a1bf7da9eef38474265e9dd2e1d983963",
+    "references/f014-layout-assertions.json": "12e8091d00c535f305bf69cc52c32eb4a2828d59420dc098c3922e84ebbda79c",
+    "tests/f012/test_layout.py": "d18b49ff667c57b52d4737909325230861a9a0bba4ecbedcbdf19f3a9b7990c5",
+    "tests/f013/test_layout.py": "16029c0b626805915819d7b8489f0fe6af6cded3d9ed52d0accce9b2b5f03cad"
+  },
+  "verification": [
+    {
+      "run": "F01.4-record-20261105T090124Z-9496d358",
+      "status": "SUCCESS",
+      "sourceTreeSha256": "5b0262fdf79a609517ff6080ddd1da50d1649528abea2373f74c3666ee7d14ed",
+      "manifestSha256": "8a5d2f436015078a4534f815f35c1a0430830f22b3ce96aed0663590e78a66ea",
+      "commands": [
+        {
+          "argv": [
+            "C:/venvs/pymmd-20261102/Scripts/python.exe",
+            "-m",
+            "py_compile",
+            "tests/f014/test_layout.py",
+            "tests/f014/test_shapes.py",
+            "tests/f012/test_layout.py",
+            "tests/f013/test_layout.py"
+          ],
+          "exitCode": 0,
+          "stdout": "commands/001-layout-shapes-s3-compile/stdout.log",
+          "stderr": "commands/001-layout-shapes-s3-compile/stderr.log"
+        }
+      ]
+    },
+    {
+      "run": "F01.4-record-20261105T090132Z-78e4fb6a",
+      "status": "SUCCESS",
+      "sourceTreeSha256": "5b0262fdf79a609517ff6080ddd1da50d1649528abea2373f74c3666ee7d14ed",
+      "manifestSha256": "d5fbdd770c8d0d67dd80b35ca45bc6f41c7858cc47eb24455415f45c87298221",
+      "commands": [
+        {
+          "argv": [
+            "C:/venvs/pymmd-20261102/Scripts/python.exe",
+            "-c",
+            "import unittest,json; from pathlib import Path; loader=unittest.TestLoader(); suites=[loader.discover('tests/f014',pattern=p) for p in ('test_layout.py','test_shapes.py')]; print(dict(zip(('layout','shapes'),(s.countTestCases() for s in suites)))); assert not loader.errors,loader.errors; cases=json.loads(Path('tests/f014/layout-cases.json').read_text(encoding='utf-8'))['cases']; assert len({c['id'] for c in cases})==len(cases)==32; print('COLLECT_ONLY: no suite.run or behavioral geometry/engine/native call')"
+          ],
+          "exitCode": 0,
+          "stdout": "commands/001-layout-shapes-s3-collect/stdout.log",
+          "stderr": "commands/001-layout-shapes-s3-collect/stderr.log"
+        }
+      ]
+    },
+    {
+      "run": "F01.4-record-20261105T090356Z-08bcaaf4",
+      "status": "SUCCESS",
+      "sourceTreeSha256": "5b0262fdf79a609517ff6080ddd1da50d1649528abea2373f74c3666ee7d14ed",
+      "manifestSha256": "17591a37d8665a399629627d47ec8bf392033c674ee5b9571abd253a2db36d70",
+      "commands": [
+        {
+          "argv": [
+            "C:/venvs/pymmd-20261102/Scripts/python.exe",
+            "-c",
+            "import py_compile,unittest,json; from pathlib import Path; files=('tests/f014/test_layout.py','tests/f014/test_shapes.py','tests/f012/test_layout.py','tests/f013/test_layout.py'); [py_compile.compile(p,doraise=True) for p in files]; loader=unittest.TestLoader(); counts=[loader.discover('tests/f014',pattern=p).countTestCases() for p in ('test_layout.py','test_shapes.py')]; assert counts==[34,14],counts; assert not loader.errors,loader.errors; ledger=json.loads(Path('references/f014-layout-assertions.json').read_text(encoding='utf-8')); assert len(ledger['tests'])==48; cases=json.loads(Path('tests/f014/layout-cases.json').read_text(encoding='utf-8'))['cases']; assert len({c['id'] for c in cases})==len(cases)==32; print({'collected':dict(zip(('layout','shapes'),counts)),'fixtures':len(cases),'behavior':'NOT_RUN'}); print('Only compilation,collection,JSON validation; no unittest runner or production function calls')"
+          ],
+          "exitCode": 0,
+          "stdout": "commands/001-layout-shapes-s3-final-mechanical/stdout.log",
+          "stderr": "commands/001-layout-shapes-s3-final-mechanical/stderr.log"
+        }
+      ]
+    }
+  ],
+  "sourceModified": false,
+  "behaviorExecuted": false,
+  "migration": "Authorized raw-engine vs final-paint contract migration preserves old shape boundary/orthogonality/content-center semantics and tolerances. No expected coordinate golden or acceptance relaxation.",
+  "limitations": [
+    "No tests,layout,Canvas/native geometry,PNG or oracle behavior executed by this S3 worker.",
+    "All 48 method expectations await coordinator unified first run; no behavioral pass inferred from collection."
+  ],
+  "next": "Coordinator freeze tests and run full S4 batch with original failures preserved."
+}

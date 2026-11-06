@@ -1,0 +1,472 @@
+{
+  "scope": "F01.4",
+  "sourceTreeSha256": "99a2342681469836c3b7be8be6815b9a82193146331aff51d260823b72b17a2e",
+  "wheelSha256": null,
+  "tests": {
+    "passed": 486,
+    "total": 486,
+    "groups": [
+      {
+        "run": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\F01.4-batch-20261105T111527Z-f645b0b6",
+        "group": "f011-language",
+        "passed": 40
+      },
+      {
+        "run": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\F01.4-batch-20261105T111527Z-f645b0b6",
+        "group": "f011-layout",
+        "passed": 21
+      },
+      {
+        "run": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\F01.4-batch-20261105T111527Z-f645b0b6",
+        "group": "f011-canvas",
+        "passed": 23
+      },
+      {
+        "run": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\F01.4-batch-20261105T111527Z-f645b0b6",
+        "group": "f011-api",
+        "passed": 5
+      },
+      {
+        "run": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\F01.4-batch-20261105T111527Z-f645b0b6",
+        "group": "f012-language",
+        "passed": 29
+      },
+      {
+        "run": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\F01.4-batch-20261105T111527Z-f645b0b6",
+        "group": "f012-layout",
+        "passed": 19
+      },
+      {
+        "run": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\F01.4-batch-20261105T111527Z-f645b0b6",
+        "group": "f012-canvas",
+        "passed": 18
+      },
+      {
+        "run": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\F01.4-batch-20261105T111527Z-f645b0b6",
+        "group": "f013-language",
+        "passed": 63
+      },
+      {
+        "run": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\F01.4-batch-20261105T111527Z-f645b0b6",
+        "group": "f013-layout",
+        "passed": 14
+      },
+      {
+        "run": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\F01.4-batch-20261105T111527Z-f645b0b6",
+        "group": "f013-styles",
+        "passed": 16
+      },
+      {
+        "run": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\F01.4-batch-20261105T111527Z-f645b0b6",
+        "group": "f013-canvas",
+        "passed": 33
+      },
+      {
+        "run": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\F01.4-batch-20261105T111527Z-f645b0b6",
+        "group": "tooling",
+        "passed": 34
+      },
+      {
+        "run": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\F01.4-batch-20261105T111527Z-f645b0b6",
+        "group": "f014-language",
+        "passed": 54
+      },
+      {
+        "run": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\F01.4-batch-20261105T111527Z-f645b0b6",
+        "group": "f014-layout",
+        "passed": 39
+      },
+      {
+        "run": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\F01.4-batch-20261105T111527Z-f645b0b6",
+        "group": "f014-shapes",
+        "passed": 18
+      },
+      {
+        "run": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\F01.4-batch-20261105T111527Z-f645b0b6",
+        "group": "f014-styles",
+        "passed": 19
+      },
+      {
+        "run": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\F01.4-batch-20261105T111527Z-f645b0b6",
+        "group": "f014-canvas",
+        "passed": 41
+      }
+    ]
+  },
+  "profiles": {
+    "cpu": {
+      "cases": 200,
+      "negativeCases": 18,
+      "renderErrorCases": 2,
+      "unsupportedCases": 4,
+      "functionalStatus": "PASS"
+    },
+    "auto": {
+      "cases": 200,
+      "negativeCases": 18,
+      "renderErrorCases": 2,
+      "unsupportedCases": 4,
+      "functionalStatus": "PASS"
+    },
+    "gpu": {
+      "cases": 200,
+      "negativeCases": 18,
+      "renderErrorCases": 2,
+      "unsupportedCases": 4,
+      "functionalStatus": "PASS"
+    }
+  },
+  "legacyVisualRegressions": {
+    "run": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\F01.4-batch-20261105T111527Z-b69f15af",
+    "profiles": {
+      "f011": {
+        "cpu": {
+          "cases": 12,
+          "negativeCases": 3,
+          "renderErrorCases": 0,
+          "unsupportedCases": 0
+        },
+        "auto": {
+          "cases": 12,
+          "negativeCases": 3,
+          "renderErrorCases": 0,
+          "unsupportedCases": 0
+        },
+        "gpu": {
+          "cases": 12,
+          "negativeCases": 3,
+          "renderErrorCases": 0,
+          "unsupportedCases": 0
+        }
+      },
+      "f012": {
+        "cpu": {
+          "cases": 35,
+          "negativeCases": 8,
+          "renderErrorCases": 1,
+          "unsupportedCases": 0
+        },
+        "auto": {
+          "cases": 35,
+          "negativeCases": 8,
+          "renderErrorCases": 1,
+          "unsupportedCases": 0
+        },
+        "gpu": {
+          "cases": 35,
+          "negativeCases": 8,
+          "renderErrorCases": 1,
+          "unsupportedCases": 0
+        }
+      },
+      "f013": {
+        "cpu": {
+          "cases": 50,
+          "negativeCases": 8,
+          "renderErrorCases": 1,
+          "unsupportedCases": 2
+        },
+        "auto": {
+          "cases": 50,
+          "negativeCases": 8,
+          "renderErrorCases": 1,
+          "unsupportedCases": 2
+        },
+        "gpu": {
+          "cases": 50,
+          "negativeCases": 8,
+          "renderErrorCases": 1,
+          "unsupportedCases": 2
+        }
+      }
+    }
+  },
+  "functionalStatus": "PASS",
+  "installationValidation": {
+    "status": "NOT_EXECUTED"
+  },
+  "note": "Actual same-candidate results; math independently deferred; Dagre/interaction excluded; no installation/build/publish",
+  "schema": "py-mermaid-f014-verification-summary/v1",
+  "status": "PASS_LOCAL",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "sourceFiles": {
+    "LICENSE": "d925ca50a75467a0a8d28c4f7236922346b52c782cd80840d0aec258eaf4f870",
+    "pyproject.toml": "e6e4685b408fc18b73a4bc6875c9929dff2631648b1787278c167724b9f451f0",
+    "README.md": "2aff563843e6b7fa17cd960fbf01cbc6e3fec8871d12813fd4961c715ec7491a",
+    "references/licenses/khroma-LICENSE": "66b333b0f66759a0b710459e03f7029abe17f4358114a128d2c972e642961b49",
+    "references/licenses/mermaid-LICENSE": "ec9fb67dcb25eccc416ed56e1aab819222c805a2a4bfe4cb19e7556bf2ffde80",
+    "references/licenses/roughjs-LICENSE": "dca9a392272606ac748ac0976a2a1133f14eef841c27beaa51a844d53c56a09d",
+    "src/py_mermaid/__init__.py": "8bfa0a155132d32d5716046ff71d353836148b94901c7a206e75145d0f402e68",
+    "src/py_mermaid/api.py": "8d9439400a45368d857ff97d01d2061489f2e9bf0611afd2c0a947a719eb9667",
+    "src/py_mermaid/config/__init__.py": "0a1a35bc6930e3ec4b021e68d66da16df4f0a576472bc4ec2410598579e6ab4f",
+    "src/py_mermaid/config/color_names.py": "53d1453fb57e005c66543e099172dd159a650522f6428c2bca32907ed20c6ca4",
+    "src/py_mermaid/config/colors.py": "37aa0d65e01bb10a253a90c2a66bfe5c003121b9726de4955b53c68e5be5bf3a",
+    "src/py_mermaid/config/elk.py": "cf9d99b7c7b334f26dc36b95ac1b0d34af089e193097e6e0d6f219bdadb06e02",
+    "src/py_mermaid/config/flowchart.py": "bcc7d8f8e2599d8bbd9433cc37e9665670a7d4feb58f469e23d46ff0090290ab",
+    "src/py_mermaid/config/source_keys.py": "0ae56a02cb58872c0f11a2bf49b26de413616807f1f832db56f0fbbd19b86141",
+    "src/py_mermaid/config/theme_rules.py": "fd2aa045a0ea00a2898fd7da25fa2ef50fee2dac447f980e4ddea9e7b3fb8c85",
+    "src/py_mermaid/config/themes.py": "96883a186702040397632e5726f6bb8a004dd57ea4ae3bd6c232531f4d046d61",
+    "src/py_mermaid/config/values.py": "a637721f11866e18a1f6de2595358eb80a427501094420ef914006376b114789",
+    "src/py_mermaid/diagrams/__init__.py": "9154145bccf3c978abe2ae3b6934ba969a756e9a6e77bdf2dbf3dbfd373cb619",
+    "src/py_mermaid/diagrams/flowchart/__init__.py": "648b1a3ca353ad86c12facbcb0d900aa2595a274b64b0d2c2a931c131c3c8a96",
+    "src/py_mermaid/diagrams/flowchart/lexical.py": "91fd1b80a853d01e1bbced1a7aafcdcc8e0c18a7009ba8617591e3fbeb1da42d",
+    "src/py_mermaid/diagrams/flowchart/parser.py": "7d1f8f4e289a5c95979510ad2a161cb7d50eaa5f48abaf9aa6d226b8daad0151",
+    "src/py_mermaid/diagrams/flowchart/syntax.py": "47fe17165ba7dae86f628ebebd3038da7177c2592c7c00af006ff7075cc94d19",
+    "src/py_mermaid/geometry/__init__.py": "107fecdf0bc750e9300aae4cd28b545a61b180ef3065996c82d1faed6ae77b82",
+    "src/py_mermaid/geometry/edges/__init__.py": "26cbc445bdcf626c9e8e054330804c277fe6718ecc0bc86969a516b4048100d2",
+    "src/py_mermaid/geometry/edges/alignment.py": "ccbf30ce7b3749bf708bbd9078940bebed658113ec73cd6b4f353b82ce6b1c49",
+    "src/py_mermaid/geometry/edges/paths.py": "4cca5fd64b89dc9da1ce8b0b54a6681cb7f7a4ed7023c1e0aa944c7223f75739",
+    "src/py_mermaid/geometry/edges/pipeline.py": "368dca37a3f65dc5d71d7e32432452d3fd224e959022c15c909ac511f9154a74",
+    "src/py_mermaid/geometry/flowchart.py": "ea8ec1510211813e3829ea468dadb9a3ca91bd6f91a4462bf25696a47aa26a5e",
+    "src/py_mermaid/geometry/path_geometry.py": "d5d95b42c6f56b240a9918c9e34b29d5d6b1852a21fb8f9cc76c702ae8e1c7b4",
+    "src/py_mermaid/geometry/rough.py": "2b82b47819993fcba9d01a443e7887fd37d067ba76598ed1fe2dedf12f2cc86c",
+    "src/py_mermaid/geometry/shape_registry.py": "6b9cb66f463d2e2fed5aa4ba418c497c498870d6855825d7b71effdeffd1b27a",
+    "src/py_mermaid/geometry/shapes.py": "94fc76f11db69ddd8e5a67ae60deac9c7d8a840d90bfe38459a466c97c580f01",
+    "src/py_mermaid/layout/__init__.py": "6d1ecc869efa4cd9a7edd97fbd986cb719aa5509366da8775096b1fbd3074add",
+    "src/py_mermaid/layout/elk/__init__.py": "9baa94a4f1ce971d55a2f5008bd33c126764842ed68909c731f88d822c28498b",
+    "src/py_mermaid/layout/elk/compound.py": "379ef3b9a47d3ebf91583973be3365b5d24a65977d47463131a45aa41d65b446",
+    "src/py_mermaid/layout/elk/flowchart.py": "607e68f3a040c7fb75aaaf130a81e7d4a16442654b95b3fba55020f201940ef5",
+    "src/py_mermaid/layout/elk/options.py": "241b4b90902ff3d4f784351d20d11336af59be2d24309844f3c64aa758d46677",
+    "src/py_mermaid/model/__init__.py": "dc03b5bae51198aa7a4252ce4f65fb4717b4d1c241f1fed23dd0506f00743b3c",
+    "src/py_mermaid/model/flowchart.py": "0f073ecdc89a4fb9fd364af17431016e815f131e79d777d3fc56c3cf02dc2772",
+    "src/py_mermaid/parsing/__init__.py": "b927e8e23113a95e0258b2c5c085251b941dbb16f7cb78552319ab44b5785974",
+    "src/py_mermaid/parsing/preprocess.py": "9a6ebcfa5629b239e8c9516b25fe15e5d65f5cc11f8d111c9ef5d8c48e3a0d94",
+    "src/py_mermaid/parsing/yaml_json.py": "568345c47a13bfb65651dafa9b4fcec9a65b2ebd646fa470c8d9717dbecea465",
+    "src/py_mermaid/py.typed": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/py_mermaid/rendering/__init__.py": "ed89819539fa2b113c92aa2530d8598d7a1ba665a8127ab2c1641e6445415573",
+    "src/py_mermaid/rendering/labels/__init__.py": "5081ad1eea53fb7fde3208c095c5d409a90d144b9758c89f8c3177ef08345a55",
+    "src/py_mermaid/rendering/labels/plain.py": "fa0bd7c05a82a7412f5cce1fea62acc580b6389789510bc0b893d9eb4e88fac5",
+    "src/py_mermaid/rendering/labels/rich.py": "41e0c463f6007d0ebf9fe4a795176b5772730cd54bc2fb87c80aacc47aede83d",
+    "src/py_mermaid/rendering/labels/sanitize.py": "3246bfd1a322ba481849d1ac9f77602787f8a08490089847f3b4f239ea266726",
+    "src/py_mermaid/rendering/skia/__init__.py": "60776be795ea6008f72da9be2517dd538cfb7f61f937930944bfa915c706df7a",
+    "src/py_mermaid/rendering/skia/session.py": "7295a128bd275cff50a5c83bf658b8d055c790a43335feba046ae54a21ff8e65",
+    "src/py_mermaid/rendering/styles/__init__.py": "1294d44dcafa9f89a808eae202d6cdcb20a0ffccfec7855ad84ace98f82b7c37",
+    "src/py_mermaid/rendering/styles/flowchart.py": "1be113a5c9853a98250b8fc1f6d9ede84915104b3b74c08593f07b06d2289e31",
+    "src/py_mermaid/resources/__init__.py": "900cc92343f24c7b2787454c1bbc6f87b3321eaeafbba0e0d87a41d29be8f4d5",
+    "src/py_mermaid/resources/geometry.py": "a9f5f89ff41be174162647b843b0aef8367e342e87f92b8626c2012142e4a7d0",
+    "src/py_mermaid/resources/svg.py": "c1fa49a8695a4e0e877c340a06348cbf0211385189a919725d2f34da0f666720",
+    "THIRD_PARTY_NOTICES.md": "b9c3537c1fba3a03d7612974137654115120b80f7afe0227108ba843484fd48c"
+  },
+  "testMethods": {
+    "groups": {
+      "f011-language": 40,
+      "f011-layout": 21,
+      "f011-canvas": 23,
+      "f011-api": 5,
+      "f012-language": 29,
+      "f012-layout": 19,
+      "f012-canvas": 18,
+      "f013-language": 63,
+      "f013-layout": 14,
+      "f013-styles": 16,
+      "f013-canvas": 33,
+      "tooling": 34,
+      "f014-language": 54,
+      "f014-layout": 39,
+      "f014-shapes": 18,
+      "f014-styles": 19,
+      "f014-canvas": 41
+    },
+    "product": 452,
+    "tooling": 34,
+    "total": 486
+  },
+  "engines": {
+    "cpu": {
+      "api": "Vulkan",
+      "device": "CPU-based renderer (GPU manually disabled)",
+      "driver": "N/A",
+      "renderer": "CPU",
+      "textContrast": "0.0",
+      "textGamma": "1.4",
+      "threads": "20"
+    },
+    "auto": {
+      "api": "Vulkan",
+      "device": "Discrete GPU (NVIDIA GeForce RTX 5080)",
+      "driver": "NvidiaProprietary (595.95)",
+      "renderer": "GPU",
+      "textContrast": "0.0",
+      "textGamma": "1.4",
+      "threads": "20"
+    },
+    "gpu": {
+      "api": "Vulkan",
+      "device": "Discrete GPU (NVIDIA GeForce RTX 5080)",
+      "driver": "NvidiaProprietary (595.95)",
+      "renderer": "GPU",
+      "textContrast": "0.0",
+      "textGamma": "1.4",
+      "threads": "20"
+    }
+  },
+  "proofRuns": {
+    "unit": "test-runs/F01.4-batch-20261105T111527Z-f645b0b6",
+    "legacy": "test-runs/F01.4-batch-20261105T111527Z-b69f15af",
+    "matrix": "test-runs/F01.4-batch-20261105T111527Z-8d3c0855",
+    "delivery": "test-runs/F01.4-batch-20261105T112340Z-561d6761",
+    "report": "test-runs/F01.4-report-20261105T112346Z-b7014c54",
+    "htmlQa": "test-runs/F01.4-batch-20261105T112429Z-4de4e10e"
+  },
+  "visualReport": {
+    "path": "reports/F01.4-report-20261105T112346Z-b7014c54/index.html",
+    "url": "http://127.0.0.1:8765/F01.4-report-20261105T112346Z-b7014c54/index.html",
+    "sha256": "271ca3c79dc4b429c569cf91ca5021a23928a105affac1645f37eb77c979261b",
+    "bytes": 22284537
+  },
+  "htmlQa": {
+    "path": "test-runs/F01.4-batch-20261105T112429Z-4de4e10e/artifacts/html-qa/report.json",
+    "status": "PASS",
+    "profileCaseViews": 600,
+    "errorCases": 24,
+    "exportDownloads": 5,
+    "externalRequests": 0,
+    "desktopAndMobile": true,
+    "sha256": "7ea59dca81be05e5596c4f97382076adbed0d8656388b0b20c981177f687217a",
+    "bytes": 57547
+  },
+  "manualQa": {
+    "docs/changes/20261105-f014-fixed-canvas-visual-qa.json": {
+      "sha256": "5e5372b6b457c626cdabfb20584bbeab19aa7d107b7b319855e5d8e6d40bd2ec",
+      "bytes": 12485
+    },
+    "docs/changes/20261105-f014-fixed-layout-visual-qa.json": {
+      "sha256": "8b52aa05b2a2871ef8d15bad141016ac634e2a9131543c5ea070101aac5f0666",
+      "bytes": 9412
+    }
+  },
+  "exportSamples": {
+    "schema": "py-mermaid-static-exports/v1",
+    "samples": [
+      {
+        "file": "workflow.png",
+        "mime": "image/png",
+        "width": 684,
+        "height": 299,
+        "bytes": 24834,
+        "sha256": "dea7024c3bf5b074209412a9a463386ebd98503b5059f49056680e89906783a1",
+        "backend": {
+          "api": "Vulkan",
+          "device": "CPU-based renderer (GPU manually disabled)",
+          "driver": "N/A",
+          "renderer": "CPU",
+          "textContrast": "0.0",
+          "textGamma": "1.4",
+          "threads": "20"
+        }
+      },
+      {
+        "file": "workflow.jpg",
+        "mime": "image/jpeg",
+        "width": 684,
+        "height": 299,
+        "bytes": 25369,
+        "sha256": "a2bc04f6f9bbce7fdebaaa828585570e46a2e04dc529146fbc892983c21fea9f",
+        "backend": {
+          "api": "Vulkan",
+          "device": "CPU-based renderer (GPU manually disabled)",
+          "driver": "N/A",
+          "renderer": "CPU",
+          "textContrast": "0.0",
+          "textGamma": "1.4",
+          "threads": "20"
+        }
+      },
+      {
+        "file": "workflow.webp",
+        "mime": "image/webp",
+        "width": 684,
+        "height": 299,
+        "bytes": 12228,
+        "sha256": "4d6e0f37e381e47b4a8357eeed7ce11be27db9b9fd9729d151c085294f3c0cc8",
+        "backend": {
+          "api": "Vulkan",
+          "device": "CPU-based renderer (GPU manually disabled)",
+          "driver": "N/A",
+          "renderer": "CPU",
+          "textContrast": "0.0",
+          "textGamma": "1.4",
+          "threads": "20"
+        }
+      },
+      {
+        "file": "workflow.svg",
+        "mime": "image/svg+xml",
+        "width": 684,
+        "height": 299,
+        "bytes": 58154,
+        "sha256": "677f67f9903dce8b91d4809e9a1ef8f36206ddf8407ce11f0a78b5d4ab116f33",
+        "backend": {
+          "api": "Vulkan",
+          "device": "CPU-based renderer (GPU manually disabled)",
+          "driver": "N/A",
+          "renderer": "CPU",
+          "textContrast": "0.0",
+          "textGamma": "1.4",
+          "threads": "20"
+        }
+      },
+      {
+        "file": "workflow.pdf",
+        "mime": "application/pdf",
+        "width": 684,
+        "height": 299,
+        "bytes": 41298,
+        "sha256": "6ecdf7d6eeb655ff6645a6e699272473f30e830614b75157d33f421b327a1f21",
+        "backend": {
+          "api": "Vulkan",
+          "device": "CPU-based renderer (GPU manually disabled)",
+          "driver": "N/A",
+          "renderer": "CPU",
+          "textContrast": "0.0",
+          "textGamma": "1.4",
+          "threads": "20"
+        }
+      }
+    ]
+  },
+  "preservedFailureRuns": [
+    "test-runs/F01.4-batch-20261105T090906Z-11b555ce/run.json",
+    "test-runs/F01.4-batch-20261105T093450Z-117d64de/run.json",
+    "test-runs/F01.4-batch-20261105T101147Z-4bebc8c5/run.json",
+    "test-runs/F01.4-batch-20261105T102819Z-d7782f21/run.json",
+    "test-runs/F01.4-batch-20261105T105110Z-6906eea1/run.json",
+    "test-runs/F01.4-batch-20261105T105135Z-494f82f8/run.json",
+    "test-runs/F01.4-batch-20261105T112046Z-f03d5ea5/run.json",
+    "test-runs/F01.4-batch-20261105T112408Z-8cd7ebf5/run.json",
+    "test-runs/F01.4-record-20261105T110911Z-4d6b37be/run.json",
+    "test-runs/F01.4-render-20261105T094826Z-6a1e89f5/run.json",
+    "test-runs/F01.4-render-20261105T095716Z-34580992/run.json",
+    "test-runs/F01.4-report-20261105T101546Z-51099b9d/run.json",
+    "test-runs/F01.4-shadow-inline-svg-targeted-20261105T111351Z-de863c78/run.json"
+  ],
+  "scopePolicy": {
+    "math": "独立共享模块，后续实现",
+    "Dagre": "完全排除，无配置/依赖/回退",
+    "interaction": "所有模块只做静态渲染",
+    "installation": "按用户要求暂缓，本轮未执行"
+  },
+  "environmentLimitations": [
+    "Windows local verification only",
+    "Linux and no-loader not verified",
+    "System fallback fonts are not redistributed"
+  ],
+  "externalActions": {
+    "commit": false,
+    "push": false,
+    "publish": false
+  },
+  "qaToolRepair": {
+    "reason": "Self-contained HTML exceeds Chromium inspector response-body cache; direct HTTP read fingerprints bytes while browser assertions validate rendered content",
+    "evidence": "test-runs/F01.4-batch-20261105T112429Z-4de4e10e",
+    "script": {
+      "sha256": "f959a47fb5a51d14be26f98b0b0e45a2bc958c69875ace7bdffaf5820e580477",
+      "bytes": 5950
+    }
+  },
+  "presentationOnlyCorrections": {
+    "evidence": "test-runs/F01.4-batch-20261105T112340Z-561d6761/commands/001-immutable-matrix-copy-and-verification-archive/stdout.log",
+    "contract": "Two display titles corrected; all execution inputs and assertions verified unchanged"
+  },
+  "postDocumentationAudit": "test-runs/F01.4-batch-20261105T112742Z-ea0270ea/run.json"
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "py-mermaid-change/v1",
+  "taskId": "20261104-f012-elk",
+  "phase": "F01.2-S2",
+  "status": "code_complete_unverified",
+  "baseCommit": "b5af1879bf64034fae922d3713854ef67c34312f",
+  "startingState": {
+    "source": "docs/F01_2_EXECUTION_PLAN.md:S0",
+    "preexistingChangesPreserved": true
+  },
+  "scope": "Compound/group and center-label adapter plus shared geometry bounds; consume sole external shape provider",
+  "changedPaths": [
+    "src/py_mermaid/layout/elk/flowchart.py",
+    "src/py_mermaid/layout/elk/compound.py",
+    "src/py_mermaid/geometry/flowchart.py",
+    "references/f012-elk-sources.json"
+  ],
+  "sourceSha256": {
+    "src/py_mermaid/layout/elk/flowchart.py": "8851aa0a3d53eaef0c69568a93654ad3f92a773bc4943d7b6c4364918126b0be",
+    "src/py_mermaid/layout/elk/compound.py": "5d85cac789f3da52bf92b61d7cba131fccd63b27b2f62dbf81fa6fff30c4275d",
+    "src/py_mermaid/geometry/flowchart.py": "dccaa6805901d0bcb502acddf3810302041553569fc9964201ca6d52dabdee5f",
+    "references/f012-elk-sources.json": "36269fea53c18d944bc74818af50e643568b5e92acbcb253f1952b8e592b78db"
+  },
+  "commands": [
+    {
+      "command": "C:/venvs/pymmd-20261102/Scripts/python.exe -m compileall -q src/py_mermaid/layout/elk src/py_mermaid/geometry/flowchart.py",
+      "exitCode": 0,
+      "scope": "Compilation only"
+    },
+    {
+      "command": "PYTHONPATH=src C:/venvs/pymmd-20261102/Scripts/python.exe -c <import layout_flowchart/compound/shape_outline_intersection; inspect.signature>",
+      "exitCode": 0,
+      "stdout": "(diagram: 'Flowchart', measured: 'tuple[MeasuredNode, ...]', *, measured_groups: 'tuple[MeasuredGroup, ...]' = (), measured_edge_labels: 'tuple[MeasuredEdgeLabel, ...]' = ()) -> 'FlowLayout'\ncompound/shape provider imports OK; no layout run\n",
+      "scope": "Mechanical imports and signature; no behavior invocation"
+    }
+  ],
+  "knownScopeBoundaries": [
+    "Full Mermaid ELK wrapper equivalence: source terminal-jog straightening and line-hop painter are not newly ported by F01.2; full real engine route preserved",
+    "Runtime behavior verification, installed-package validation or source oracle parity from compile/import",
+    "Other algorithms, styles, metadata shapes, rich labels or terminal cardinality labels"
+  ],
+  "remainingWork": [
+    "S3 source-derived tests and malformed-result negative controls",
+    "S4 genuine pyelk nested/directional/cross-group/group-to-group/ancestor-edge/empty-group runs and root-cause repairs if needed",
+    "S5 real Canvas render content/shape endpoint/group title/edge label/no-clipping checks; no installation per current scope"
+  ],
+  "nextAction": "Coordinator integrates S2 and freezes one candidate before source-derived S3 test authoring",
+  "commitPushPublish": false,
+  "installationRun": false,
+  "behaviorRun": false
+}

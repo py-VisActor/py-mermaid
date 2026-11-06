@@ -1,0 +1,1183 @@
+{
+  "schema": "py-mermaid-f012-cases/v1",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "origin": "Hand-authored from pinned flow.jison productions, FlowDB semantics and upstream specs. No candidate output used. Shapes use grammar names; nodes omit group endpoint placeholders; groups use DB close order and direct membership.",
+  "cases": [
+    {
+      "id": "shape-square",
+      "title": "Classic square",
+      "text": "flowchart TD\nA[Rectangle] --> B[Next]",
+      "nodes": [
+        [
+          "A",
+          "Rectangle"
+        ],
+        [
+          "B",
+          "Next"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "shapes": {
+        "A": "square",
+        "B": "square"
+      }
+    },
+    {
+      "id": "shape-round",
+      "title": "Classic round",
+      "text": "flowchart TD\nA(Rounded) --> B[Next]",
+      "nodes": [
+        [
+          "A",
+          "Rounded"
+        ],
+        [
+          "B",
+          "Next"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "shapes": {
+        "A": "round",
+        "B": "square"
+      }
+    },
+    {
+      "id": "shape-stadium",
+      "title": "Classic stadium",
+      "text": "flowchart TD\nA([Stadium]) --> B[Next]",
+      "nodes": [
+        [
+          "A",
+          "Stadium"
+        ],
+        [
+          "B",
+          "Next"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "shapes": {
+        "A": "stadium",
+        "B": "square"
+      }
+    },
+    {
+      "id": "shape-subroutine",
+      "title": "Classic subroutine",
+      "text": "flowchart TD\nA[[Subroutine]] --> B[Next]",
+      "nodes": [
+        [
+          "A",
+          "Subroutine"
+        ],
+        [
+          "B",
+          "Next"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "shapes": {
+        "A": "subroutine",
+        "B": "square"
+      }
+    },
+    {
+      "id": "shape-cylinder",
+      "title": "Classic cylinder",
+      "text": "flowchart TD\nA[(Database)] --> B[Next]",
+      "nodes": [
+        [
+          "A",
+          "Database"
+        ],
+        [
+          "B",
+          "Next"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "shapes": {
+        "A": "cylinder",
+        "B": "square"
+      }
+    },
+    {
+      "id": "shape-circle",
+      "title": "Classic circle",
+      "text": "flowchart TD\nA((Circle)) --> B[Next]",
+      "nodes": [
+        [
+          "A",
+          "Circle"
+        ],
+        [
+          "B",
+          "Next"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "shapes": {
+        "A": "circle",
+        "B": "square"
+      }
+    },
+    {
+      "id": "shape-doublecircle",
+      "title": "Classic doublecircle",
+      "text": "flowchart TD\nA(((Double Circle))) --> B[Next]",
+      "nodes": [
+        [
+          "A",
+          "Double Circle"
+        ],
+        [
+          "B",
+          "Next"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "shapes": {
+        "A": "doublecircle",
+        "B": "square"
+      }
+    },
+    {
+      "id": "shape-diamond",
+      "title": "Classic diamond",
+      "text": "flowchart TD\nA{Decision} --> B[Next]",
+      "nodes": [
+        [
+          "A",
+          "Decision"
+        ],
+        [
+          "B",
+          "Next"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "shapes": {
+        "A": "diamond",
+        "B": "square"
+      }
+    },
+    {
+      "id": "shape-hexagon",
+      "title": "Classic hexagon",
+      "text": "flowchart TD\nA{{Hexagon}} --> B[Next]",
+      "nodes": [
+        [
+          "A",
+          "Hexagon"
+        ],
+        [
+          "B",
+          "Next"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "shapes": {
+        "A": "hexagon",
+        "B": "square"
+      }
+    },
+    {
+      "id": "shape-odd",
+      "title": "Classic odd",
+      "text": "flowchart TD\nA>Asymmetric] --> B[Next]",
+      "nodes": [
+        [
+          "A",
+          "Asymmetric"
+        ],
+        [
+          "B",
+          "Next"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "shapes": {
+        "A": "odd",
+        "B": "square"
+      }
+    },
+    {
+      "id": "shape-trapezoid",
+      "title": "Classic trapezoid",
+      "text": "flowchart TD\nA[/Trapezoid\\] --> B[Next]",
+      "nodes": [
+        [
+          "A",
+          "Trapezoid"
+        ],
+        [
+          "B",
+          "Next"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "shapes": {
+        "A": "trapezoid",
+        "B": "square"
+      }
+    },
+    {
+      "id": "shape-inv_trapezoid",
+      "title": "Classic inv_trapezoid",
+      "text": "flowchart TD\nA[\\Inverted/] --> B[Next]",
+      "nodes": [
+        [
+          "A",
+          "Inverted"
+        ],
+        [
+          "B",
+          "Next"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "shapes": {
+        "A": "inv_trapezoid",
+        "B": "square"
+      }
+    },
+    {
+      "id": "shape-lean_right",
+      "title": "Classic lean_right",
+      "text": "flowchart TD\nA[/Lean Right/] --> B[Next]",
+      "nodes": [
+        [
+          "A",
+          "Lean Right"
+        ],
+        [
+          "B",
+          "Next"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "shapes": {
+        "A": "lean_right",
+        "B": "square"
+      }
+    },
+    {
+      "id": "shape-lean_left",
+      "title": "Classic lean_left",
+      "text": "flowchart TD\nA[\\Lean Left\\] --> B[Next]",
+      "nodes": [
+        [
+          "A",
+          "Lean Left"
+        ],
+        [
+          "B",
+          "Next"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "shapes": {
+        "A": "lean_left",
+        "B": "square"
+      }
+    },
+    {
+      "id": "edge-label-pipe",
+      "title": "Pipe ordinary edge label",
+      "text": "flowchart TD\nA[Start] -->|Approved| B[Done]",
+      "nodes": [
+        [
+          "A",
+          "Start"
+        ],
+        [
+          "B",
+          "Done"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeLabels": [
+        "Approved"
+      ]
+    },
+    {
+      "id": "edge-label-inline",
+      "title": "Inline ordinary edge label",
+      "text": "graph LR\nA[Start] -- Go shopping --> B[Done]",
+      "nodes": [
+        [
+          "A",
+          "Start"
+        ],
+        [
+          "B",
+          "Done"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "LR",
+      "edgeLabels": [
+        "Go shopping"
+      ]
+    },
+    {
+      "id": "edge-label-unicode-multiline",
+      "title": "Unicode multiline edge label",
+      "text": "flowchart TD\nA[开始] -->|\"条件\\n第二行\"| B[结束]",
+      "nodes": [
+        [
+          "A",
+          "开始"
+        ],
+        [
+          "B",
+          "结束"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeLabels": [
+        "条件\n第二行"
+      ]
+    },
+    {
+      "id": "nested-groups",
+      "title": "Nested source groups",
+      "text": "flowchart TD\nsubgraph O[Outer]\nA[Alpha]\nsubgraph I[Inner]\nB[Beta] --> C[Gamma]\nend\nA --> B\nend",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ],
+        [
+          "C",
+          "Gamma"
+        ]
+      ],
+      "edges": [
+        [
+          "B",
+          "C"
+        ],
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "groups": [
+        {
+          "id": "I",
+          "label": "Inner",
+          "members": [
+            "C",
+            "B"
+          ],
+          "parent_id": "O",
+          "direction": null
+        },
+        {
+          "id": "O",
+          "label": "Outer",
+          "members": [
+            "A",
+            "I"
+          ],
+          "parent_id": null,
+          "direction": null
+        }
+      ]
+    },
+    {
+      "id": "cross-group-nodes",
+      "title": "Cross-group node edge",
+      "text": "flowchart LR\nsubgraph L[Left]\nA[Left node]\nend\nsubgraph R[Right]\nB[Right node]\nend\nA -->|Across| B",
+      "nodes": [
+        [
+          "A",
+          "Left node"
+        ],
+        [
+          "B",
+          "Right node"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "LR",
+      "edgeLabels": [
+        "Across"
+      ],
+      "groups": [
+        {
+          "id": "L",
+          "label": "Left",
+          "members": [
+            "A"
+          ],
+          "parent_id": null,
+          "direction": null
+        },
+        {
+          "id": "R",
+          "label": "Right",
+          "members": [
+            "B"
+          ],
+          "parent_id": null,
+          "direction": null
+        }
+      ]
+    },
+    {
+      "id": "group-endpoints",
+      "title": "Group endpoint and group-to-group edges",
+      "text": "flowchart TD\nsubgraph S[Source]\nA[Inside source]\nend\nsubgraph T[Target]\nB[Inside target]\nend\nS -->|Groups| T\nA --> T",
+      "nodes": [
+        [
+          "A",
+          "Inside source"
+        ],
+        [
+          "B",
+          "Inside target"
+        ]
+      ],
+      "edges": [
+        [
+          "S",
+          "T"
+        ],
+        [
+          "A",
+          "T"
+        ]
+      ],
+      "direction": "TD",
+      "edgeLabels": [
+        "Groups",
+        ""
+      ],
+      "groups": [
+        {
+          "id": "S",
+          "label": "Source",
+          "members": [
+            "A"
+          ],
+          "parent_id": null,
+          "direction": null
+        },
+        {
+          "id": "T",
+          "label": "Target",
+          "members": [
+            "B"
+          ],
+          "parent_id": null,
+          "direction": null
+        }
+      ]
+    },
+    {
+      "id": "ancestor-group-endpoint",
+      "title": "Ancestor group to descendant node",
+      "text": "flowchart TD\nsubgraph O[Outer]\nsubgraph I[Inner]\nA[Descendant]\nend\nend\nO -->|Inside| A",
+      "nodes": [
+        [
+          "A",
+          "Descendant"
+        ]
+      ],
+      "edges": [
+        [
+          "O",
+          "A"
+        ]
+      ],
+      "direction": "TD",
+      "edgeLabels": [
+        "Inside"
+      ],
+      "groups": [
+        {
+          "id": "I",
+          "label": "Inner",
+          "members": [
+            "A"
+          ],
+          "parent_id": "O",
+          "direction": null
+        },
+        {
+          "id": "O",
+          "label": "Outer",
+          "members": [
+            "I"
+          ],
+          "parent_id": null,
+          "direction": null
+        }
+      ]
+    },
+    {
+      "id": "repeated-group",
+      "title": "Repeated group keeps first title and direction",
+      "text": "flowchart LR\nsubgraph S[First]\ndirection TB\nx[One]\nend\nsubgraph S[Second]\ndirection RL\ny[Two]\nend\nx --> y",
+      "nodes": [
+        [
+          "x",
+          "One"
+        ],
+        [
+          "y",
+          "Two"
+        ]
+      ],
+      "edges": [
+        [
+          "x",
+          "y"
+        ]
+      ],
+      "direction": "LR",
+      "groups": [
+        {
+          "id": "S",
+          "label": "First",
+          "members": [
+            "x",
+            "y"
+          ],
+          "parent_id": null,
+          "direction": "TB"
+        }
+      ]
+    },
+    {
+      "id": "subgraph-direction",
+      "title": "Explicit subgraph direction",
+      "text": "flowchart TD\nsubgraph S[Local LR]\ndirection LR\nA[First] --> B[Second]\nend",
+      "nodes": [
+        [
+          "A",
+          "First"
+        ],
+        [
+          "B",
+          "Second"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "groups": [
+        {
+          "id": "S",
+          "label": "Local LR",
+          "members": [
+            "B",
+            "A"
+          ],
+          "parent_id": null,
+          "direction": "LR"
+        }
+      ]
+    },
+    {
+      "id": "inherit-root-direction",
+      "title": "Configured root direction inheritance",
+      "text": "flowchart LR\nsubgraph S[Inherited]\nA[First] --> B[Second]\nend",
+      "nodes": [
+        [
+          "A",
+          "First"
+        ],
+        [
+          "B",
+          "Second"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "LR",
+      "config": {
+        "flowchart": {
+          "inheritDir": true
+        }
+      },
+      "groups": [
+        {
+          "id": "S",
+          "label": "Inherited",
+          "members": [
+            "B",
+            "A"
+          ],
+          "parent_id": null,
+          "direction": "LR"
+        }
+      ]
+    },
+    {
+      "id": "empty-group",
+      "title": "Empty named subgraph",
+      "text": "flowchart TD\nsubgraph E[Empty]\nend",
+      "nodes": [],
+      "edges": [],
+      "direction": "TD",
+      "groups": [
+        {
+          "id": "E",
+          "label": "Empty",
+          "members": [],
+          "parent_id": null,
+          "direction": null
+        }
+      ]
+    },
+    {
+      "id": "groups-only",
+      "title": "Nested empty groups without leaf nodes",
+      "text": "flowchart TD\nsubgraph O[Outer]\nsubgraph I[Inner]\nend\nend",
+      "nodes": [],
+      "edges": [],
+      "direction": "TD",
+      "groups": [
+        {
+          "id": "I",
+          "label": "Inner",
+          "members": [],
+          "parent_id": "O",
+          "direction": null
+        },
+        {
+          "id": "O",
+          "label": "Outer",
+          "members": [
+            "I"
+          ],
+          "parent_id": null,
+          "direction": null
+        }
+      ]
+    },
+    {
+      "id": "selfloop-label",
+      "title": "Shaped self-loop with label",
+      "text": "flowchart TD\nA((Loop)) -->|Again| A",
+      "nodes": [
+        [
+          "A",
+          "Loop"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "direction": "TD",
+      "shapes": {
+        "A": "circle"
+      },
+      "edgeLabels": [
+        "Again"
+      ]
+    },
+    {
+      "id": "parallel-edge-labels",
+      "title": "Parallel edges retain distinct labels",
+      "text": "flowchart LR\nA[Start] -->|First| B[End]\nA -- Second --> B",
+      "nodes": [
+        [
+          "A",
+          "Start"
+        ],
+        [
+          "B",
+          "End"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "LR",
+      "edgeLabels": [
+        "First",
+        "Second"
+      ]
+    },
+    {
+      "id": "forward-group-endpoint",
+      "title": "Forward group endpoint reference",
+      "text": "flowchart TD\nG --> Z[Outside]\nsubgraph G[Later group]\nA[Inside]\nend",
+      "nodes": [
+        [
+          "Z",
+          "Outside"
+        ],
+        [
+          "A",
+          "Inside"
+        ]
+      ],
+      "edges": [
+        [
+          "G",
+          "Z"
+        ]
+      ],
+      "direction": "TD",
+      "groups": [
+        {
+          "id": "G",
+          "label": "Later group",
+          "members": [
+            "A"
+          ],
+          "parent_id": null,
+          "direction": null
+        }
+      ]
+    },
+    {
+      "id": "automatic-group-ids",
+      "title": "Repeated anonymous titles get distinct IDs",
+      "text": "flowchart TD\nsubgraph \"Same Title\"\nA[One]\nend\nsubgraph \"Same Title\"\nB[Two]\nend",
+      "nodes": [
+        [
+          "A",
+          "One"
+        ],
+        [
+          "B",
+          "Two"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "groups": [
+        {
+          "id": "subGraph0",
+          "label": "Same Title",
+          "members": [
+            "A"
+          ],
+          "parent_id": null,
+          "direction": null
+        },
+        {
+          "id": "subGraph1",
+          "label": "Same Title",
+          "members": [
+            "B"
+          ],
+          "parent_id": null,
+          "direction": null
+        }
+      ]
+    },
+    {
+      "id": "nested-automatic-group-ids",
+      "title": "Automatic IDs follow close-order counter",
+      "text": "flowchart TD\nsubgraph \"Outer Title\"\nsubgraph \"Inner Title\"\nA[One]\nend\nend",
+      "nodes": [
+        [
+          "A",
+          "One"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "groups": [
+        {
+          "id": "subGraph0",
+          "label": "Inner Title",
+          "members": [
+            "A"
+          ],
+          "parent_id": "subGraph1",
+          "direction": null
+        },
+        {
+          "id": "subGraph1",
+          "label": "Outer Title",
+          "members": [
+            "subGraph0"
+          ],
+          "parent_id": null,
+          "direction": null
+        }
+      ]
+    },
+    {
+      "id": "first-group-membership",
+      "title": "Existing membership wins over later references",
+      "text": "flowchart TD\nsubgraph One\nA[One]\nend\nsubgraph Two\nA\nB[Two]\nend",
+      "nodes": [
+        [
+          "A",
+          "One"
+        ],
+        [
+          "B",
+          "Two"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "groups": [
+        {
+          "id": "One",
+          "label": "One",
+          "members": [
+            "A"
+          ],
+          "parent_id": null,
+          "direction": null
+        },
+        {
+          "id": "Two",
+          "label": "Two",
+          "members": [
+            "B"
+          ],
+          "parent_id": null,
+          "direction": null
+        }
+      ]
+    },
+    {
+      "id": "nested-repeated-id",
+      "title": "Nested same-ID subgraphs flatten",
+      "text": "flowchart LR\nsubgraph S\nsubgraph S\nx[One]\nend\ny[Two]\nend",
+      "nodes": [
+        [
+          "x",
+          "One"
+        ],
+        [
+          "y",
+          "Two"
+        ]
+      ],
+      "edges": [],
+      "direction": "LR",
+      "groups": [
+        {
+          "id": "S",
+          "label": "S",
+          "members": [
+            "x",
+            "y"
+          ],
+          "parent_id": null,
+          "direction": null
+        }
+      ]
+    },
+    {
+      "id": "long-group-title",
+      "title": "Long title across INCLUDE_CHILDREN hierarchy",
+      "text": "flowchart TD\nsubgraph G[\"Long Group Title for Hierarchical Routing and Visible Containment - 分组标题\"]\nA[Inside first] --> B[Inside second]\nend\nZ[Outside]\nB --> Z",
+      "nodes": [
+        [
+          "A",
+          "Inside first"
+        ],
+        [
+          "B",
+          "Inside second"
+        ],
+        [
+          "Z",
+          "Outside"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "B",
+          "Z"
+        ]
+      ],
+      "direction": "TD",
+      "groups": [
+        {
+          "id": "G",
+          "label": "Long Group Title for Hierarchical Routing and Visible Containment - 分组标题",
+          "members": [
+            "B",
+            "A"
+          ],
+          "parent_id": null,
+          "direction": null
+        }
+      ],
+      "purpose": "Additional S4 regression for long group-title fit when an internal-to-external edge requires INCLUDE_CHILDREN."
+    },
+    {
+      "id": "enhanced-overview",
+      "title": "Shapes, ordinary labels and nested input/processing/storage groups",
+      "text": "flowchart LR\nsubgraph IN[Input]\n    A([Start]) -->|Request| B{Valid?}\nend\nsubgraph WORK[Processing]\n    subgraph STORE[Storage]\n        C[(Database)]\n    end\n    D[[Transform]] -->|Save| C\nend\nB -->|Yes| D\nB -->|No| E((Stop))\n",
+      "nodes": [
+        [
+          "A",
+          "Start"
+        ],
+        [
+          "B",
+          "Valid?"
+        ],
+        [
+          "C",
+          "Database"
+        ],
+        [
+          "D",
+          "Transform"
+        ],
+        [
+          "E",
+          "Stop"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "D",
+          "C"
+        ],
+        [
+          "B",
+          "D"
+        ],
+        [
+          "B",
+          "E"
+        ]
+      ],
+      "edgeLabels": [
+        "Request",
+        "Save",
+        "Yes",
+        "No"
+      ],
+      "shapes": {
+        "A": "stadium",
+        "B": "diamond",
+        "C": "cylinder",
+        "D": "subroutine",
+        "E": "circle"
+      },
+      "direction": "LR",
+      "groups": [
+        {
+          "id": "IN",
+          "label": "Input",
+          "members": [
+            "B",
+            "A"
+          ],
+          "parent_id": null,
+          "direction": null
+        },
+        {
+          "id": "STORE",
+          "label": "Storage",
+          "members": [
+            "C"
+          ],
+          "parent_id": "WORK",
+          "direction": null
+        },
+        {
+          "id": "WORK",
+          "label": "Processing",
+          "members": [
+            "STORE",
+            "D"
+          ],
+          "parent_id": null,
+          "direction": null
+        }
+      ],
+      "purpose": "Additional S4 integrated visual report example, text from examples/enhanced_flowchart.py; expected graph/groups handwritten from grammar and FlowDB actions."
+    }
+  ],
+  "negativeCases": [
+    {
+      "id": "missing-end",
+      "text": "flowchart TD\nsubgraph S\nA[Node]"
+    },
+    {
+      "id": "unmatched-end",
+      "text": "flowchart TD\nend"
+    },
+    {
+      "id": "unclosed-classic-shape",
+      "text": "flowchart TD\nA((Circle)"
+    },
+    {
+      "id": "unclosed-edge-pipe",
+      "text": "flowchart TD\nA -->|Missing B"
+    },
+    {
+      "id": "missing-edge-target",
+      "text": "flowchart TD\nA -- Label -->"
+    },
+    {
+      "id": "invalid-quoted-edge",
+      "text": "flowchart TD\nA -->|\"Unclosed| B"
+    },
+    {
+      "id": "mismatched-node-delimiter",
+      "text": "flowchart TD\nA[Node) --> B"
+    },
+    {
+      "id": "inline-comment-invalid",
+      "text": "flowchart TD\nA --> B %% same-line comment"
+    }
+  ],
+  "renderErrorCases": [
+    {
+      "id": "ellipse-upstream",
+      "text": "flowchart TD\nA(-Ellipse-)",
+      "code": "UPSTREAM_SHAPE_MISSING"
+    }
+  ],
+  "scope": "F01.2"
+}

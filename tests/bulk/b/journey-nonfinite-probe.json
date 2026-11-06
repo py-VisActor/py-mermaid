@@ -1,0 +1,11 @@
+{
+  "schema":"py-mermaid-bulk-cases/v1",
+  "group":"B",
+  "cases":[{
+    "id":"B-journey-nonfinite-source-probe","kind":"journey",
+    "source":"journey\nNaN score:NaN\nPositive:Infinity\nNegative:-Infinity\n",
+    "config":{},"expect":"render","expectedText":["NaN score","Positive","Negative"],"expectedErrorCodes":[],
+    "features":["sourceNumberNonfinite","svgAttributeDefaultZero","invalidTranslateIdentity"],
+    "origin":{"path":"packages/mermaid/src/diagrams/user-journey/parser/journey.jison","sha256":"40650bb3b7304d27dd9a190c76c34593af8850630985a0423c48fa9375f963c5","symbol":"Synthetic Number NaN/Infinity boundary for svgDraw.drawFace attribute defaults","line":29}
+  }]
+}

@@ -1,0 +1,1414 @@
+{
+  "schema": "py-mermaid-f014-layout-cases/v1",
+  "scope": "F01.4",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "origin": "Hand-authored fixed source algorithm registry, presets, direction productions, metadata and marker syntax. No candidate output, coordinates or rendered expectations. Dagre excluded, math deferred.",
+  "cases": [
+    {
+      "id": "layout-root-elk",
+      "title": "layout root elk",
+      "text": "flowchart TD\nA[Alpha] --> B[Beta] --> C[Gamma]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ],
+        [
+          "C",
+          "Gamma"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "B",
+          "C"
+        ]
+      ],
+      "groups": [],
+      "direction": "TD",
+      "config": {
+        "layout": "elk"
+      }
+    },
+    {
+      "id": "layout-root-elk-stress",
+      "title": "layout root elk stress",
+      "text": "flowchart TD\nA[Alpha] --> B[Beta] --> C[Gamma]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ],
+        [
+          "C",
+          "Gamma"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "B",
+          "C"
+        ]
+      ],
+      "groups": [],
+      "direction": "TD",
+      "config": {
+        "layout": "elk.stress"
+      }
+    },
+    {
+      "id": "layout-root-elk-force",
+      "title": "layout root elk force",
+      "text": "flowchart TD\nA[Alpha] --> B[Beta] --> C[Gamma]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ],
+        [
+          "C",
+          "Gamma"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "B",
+          "C"
+        ]
+      ],
+      "groups": [],
+      "direction": "TD",
+      "config": {
+        "layout": "elk.force"
+      }
+    },
+    {
+      "id": "layout-root-elk-mrtree",
+      "title": "layout root elk mrtree",
+      "text": "flowchart TD\nA[Alpha] --> B[Beta] --> C[Gamma]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ],
+        [
+          "C",
+          "Gamma"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "B",
+          "C"
+        ]
+      ],
+      "groups": [],
+      "direction": "TD",
+      "config": {
+        "layout": "elk.mrtree"
+      }
+    },
+    {
+      "id": "layout-root-elk-sporeOverlap",
+      "title": "layout root elk sporeOverlap",
+      "text": "flowchart TD\nA[Alpha] --> B[Beta] --> C[Gamma]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ],
+        [
+          "C",
+          "Gamma"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "B",
+          "C"
+        ]
+      ],
+      "groups": [],
+      "direction": "TD",
+      "config": {
+        "layout": "elk.sporeOverlap"
+      }
+    },
+    {
+      "id": "layout-root-elk-box",
+      "title": "layout root elk box",
+      "text": "flowchart TD\nA[Alpha] --> B[Beta] --> C[Gamma]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ],
+        [
+          "C",
+          "Gamma"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "B",
+          "C"
+        ]
+      ],
+      "groups": [],
+      "direction": "TD",
+      "config": {
+        "layout": "elk.box"
+      }
+    },
+    {
+      "id": "layout-root-elk-rectpacking",
+      "title": "layout root elk rectpacking",
+      "text": "flowchart TD\nA[Alpha] --> B[Beta] --> C[Gamma]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ],
+        [
+          "C",
+          "Gamma"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "B",
+          "C"
+        ]
+      ],
+      "groups": [],
+      "direction": "TD",
+      "config": {
+        "layout": "elk.rectpacking"
+      }
+    },
+    {
+      "id": "layout-group-elk-layered",
+      "title": "layout group elk layered",
+      "text": "flowchart TD\nsubgraph G[Isolated group]\nA[Alpha] --> B[Beta]\nend\nC[Outside]\nG@{algorithm: elk.layered}",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ],
+        [
+          "C",
+          "Outside"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "groups": [
+        {
+          "id": "G",
+          "label": "Isolated group",
+          "members": [
+            "B",
+            "A"
+          ],
+          "parent_id": null,
+          "direction": null
+        }
+      ],
+      "direction": "TD",
+      "groupMetadata": {
+        "G": {
+          "algorithm": "elk.layered"
+        }
+      }
+    },
+    {
+      "id": "layout-group-elk-box",
+      "title": "layout group elk box",
+      "text": "flowchart TD\nsubgraph G[Isolated group]\nA[Alpha] --> B[Beta]\nend\nC[Outside]\nG@{algorithm: elk.box}",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ],
+        [
+          "C",
+          "Outside"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "groups": [
+        {
+          "id": "G",
+          "label": "Isolated group",
+          "members": [
+            "B",
+            "A"
+          ],
+          "parent_id": null,
+          "direction": null
+        }
+      ],
+      "direction": "TD",
+      "groupMetadata": {
+        "G": {
+          "algorithm": "elk.box"
+        }
+      }
+    },
+    {
+      "id": "layout-group-elk-rectpacking",
+      "title": "layout group elk rectpacking",
+      "text": "flowchart TD\nsubgraph G[Isolated group]\nA[Alpha] --> B[Beta]\nend\nC[Outside]\nG@{algorithm: elk.rectpacking}",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ],
+        [
+          "C",
+          "Outside"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "groups": [
+        {
+          "id": "G",
+          "label": "Isolated group",
+          "members": [
+            "B",
+            "A"
+          ],
+          "parent_id": null,
+          "direction": null
+        }
+      ],
+      "direction": "TD",
+      "groupMetadata": {
+        "G": {
+          "algorithm": "elk.rectpacking"
+        }
+      }
+    },
+    {
+      "id": "layout-group-elk-stress",
+      "title": "layout group elk stress",
+      "text": "flowchart TD\nsubgraph G[Isolated group]\nA[Alpha] --> B[Beta]\nend\nC[Outside]\nG@{algorithm: elk.stress}",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ],
+        [
+          "C",
+          "Outside"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "groups": [
+        {
+          "id": "G",
+          "label": "Isolated group",
+          "members": [
+            "B",
+            "A"
+          ],
+          "parent_id": null,
+          "direction": null
+        }
+      ],
+      "direction": "TD",
+      "groupMetadata": {
+        "G": {
+          "algorithm": "elk.stress"
+        }
+      }
+    },
+    {
+      "id": "layout-group-elk-force",
+      "title": "layout group elk force",
+      "text": "flowchart TD\nsubgraph G[Isolated group]\nA[Alpha] --> B[Beta]\nend\nC[Outside]\nG@{algorithm: elk.force}",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ],
+        [
+          "C",
+          "Outside"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "groups": [
+        {
+          "id": "G",
+          "label": "Isolated group",
+          "members": [
+            "B",
+            "A"
+          ],
+          "parent_id": null,
+          "direction": null
+        }
+      ],
+      "direction": "TD",
+      "groupMetadata": {
+        "G": {
+          "algorithm": "elk.force"
+        }
+      }
+    },
+    {
+      "id": "layout-group-elk-mrtree",
+      "title": "layout group elk mrtree",
+      "text": "flowchart TD\nsubgraph G[Isolated group]\nA[Alpha] --> B[Beta]\nend\nC[Outside]\nG@{algorithm: elk.mrtree}",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ],
+        [
+          "C",
+          "Outside"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "groups": [
+        {
+          "id": "G",
+          "label": "Isolated group",
+          "members": [
+            "B",
+            "A"
+          ],
+          "parent_id": null,
+          "direction": null
+        }
+      ],
+      "direction": "TD",
+      "groupMetadata": {
+        "G": {
+          "algorithm": "elk.mrtree"
+        }
+      }
+    },
+    {
+      "id": "layout-group-elk-radial",
+      "title": "Known source defect: ELK radial container frame",
+      "text": "flowchart TD\nsubgraph G[Isolated group]\nA[Alpha] --> B[Beta]\nend\nC[Outside]\nG@{algorithm: elk.radial}",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ],
+        [
+          "C",
+          "Outside"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "groups": [
+        {
+          "id": "G",
+          "label": "Isolated group",
+          "members": [
+            "B",
+            "A"
+          ],
+          "parent_id": null,
+          "direction": null
+        }
+      ],
+      "direction": "TD",
+      "groupMetadata": {
+        "G": {
+          "algorithm": "elk.radial"
+        }
+      },
+      "knownSourceDefect": {
+        "id": "elk-radial-container-frame",
+        "groups": [
+          "G"
+        ],
+        "evidence": "test-runs/F01.4-batch-20261105T090906Z-11b555ce/artifacts/oracle/layout-group-elk-radial.json + test-runs/f014-radial-raw-initial-001/input.json/output.json/layout.json"
+      }
+    },
+    {
+      "id": "layout-group-elk-sporeOverlap",
+      "title": "layout group elk sporeOverlap",
+      "text": "flowchart TD\nsubgraph G[Isolated group]\nA[Alpha] --> B[Beta]\nend\nC[Outside]\nG@{algorithm: elk.sporeOverlap}",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ],
+        [
+          "C",
+          "Outside"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "groups": [
+        {
+          "id": "G",
+          "label": "Isolated group",
+          "members": [
+            "B",
+            "A"
+          ],
+          "parent_id": null,
+          "direction": null
+        }
+      ],
+      "direction": "TD",
+      "groupMetadata": {
+        "G": {
+          "algorithm": "elk.sporeOverlap"
+        }
+      }
+    },
+    {
+      "id": "layout-direction-td",
+      "title": "layout direction td",
+      "text": "flowchart TD\nA[Alpha] --> B[Beta] --> C[Gamma]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ],
+        [
+          "C",
+          "Gamma"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "B",
+          "C"
+        ]
+      ],
+      "groups": [],
+      "direction": "TD"
+    },
+    {
+      "id": "layout-direction-tb",
+      "title": "layout direction tb",
+      "text": "flowchart TB\nA[Alpha] --> B[Beta] --> C[Gamma]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ],
+        [
+          "C",
+          "Gamma"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "B",
+          "C"
+        ]
+      ],
+      "groups": [],
+      "direction": "TB"
+    },
+    {
+      "id": "layout-direction-lr",
+      "title": "layout direction lr",
+      "text": "flowchart LR\nA[Alpha] --> B[Beta] --> C[Gamma]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ],
+        [
+          "C",
+          "Gamma"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "B",
+          "C"
+        ]
+      ],
+      "groups": [],
+      "direction": "LR"
+    },
+    {
+      "id": "layout-direction-rl",
+      "title": "layout direction rl",
+      "text": "flowchart RL\nA[Alpha] --> B[Beta] --> C[Gamma]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ],
+        [
+          "C",
+          "Gamma"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "B",
+          "C"
+        ]
+      ],
+      "groups": [],
+      "direction": "RL"
+    },
+    {
+      "id": "layout-direction-bt",
+      "title": "layout direction bt",
+      "text": "flowchart BT\nA[Alpha] --> B[Beta] --> C[Gamma]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ],
+        [
+          "C",
+          "Gamma"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "B",
+          "C"
+        ]
+      ],
+      "groups": [],
+      "direction": "BT"
+    },
+    {
+      "id": "layout-preset-default",
+      "title": "layout preset default",
+      "text": "flowchart TD\nA[Entry] --> B[Branch]\nA --> C[Other]\nB --> D[Merge]\nC --> D\nD --> A",
+      "nodes": [
+        [
+          "A",
+          "Entry"
+        ],
+        [
+          "B",
+          "Branch"
+        ],
+        [
+          "C",
+          "Other"
+        ],
+        [
+          "D",
+          "Merge"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "A",
+          "C"
+        ],
+        [
+          "B",
+          "D"
+        ],
+        [
+          "C",
+          "D"
+        ],
+        [
+          "D",
+          "A"
+        ]
+      ],
+      "groups": [],
+      "direction": "TD",
+      "config": {
+        "elk": {
+          "preset": "default",
+          "keepEntryNodeOnTop": true
+        }
+      }
+    },
+    {
+      "id": "layout-preset-legacy",
+      "title": "layout preset legacy",
+      "text": "flowchart TD\nA[Entry] --> B[Branch]\nA --> C[Other]\nB --> D[Merge]\nC --> D\nD --> A",
+      "nodes": [
+        [
+          "A",
+          "Entry"
+        ],
+        [
+          "B",
+          "Branch"
+        ],
+        [
+          "C",
+          "Other"
+        ],
+        [
+          "D",
+          "Merge"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "A",
+          "C"
+        ],
+        [
+          "B",
+          "D"
+        ],
+        [
+          "C",
+          "D"
+        ],
+        [
+          "D",
+          "A"
+        ]
+      ],
+      "groups": [],
+      "direction": "TD",
+      "config": {
+        "elk": {
+          "preset": "legacy",
+          "keepEntryNodeOnTop": true
+        }
+      }
+    },
+    {
+      "id": "layout-preset-modelOrder",
+      "title": "layout preset modelOrder",
+      "text": "flowchart TD\nA[Entry] --> B[Branch]\nA --> C[Other]\nB --> D[Merge]\nC --> D\nD --> A",
+      "nodes": [
+        [
+          "A",
+          "Entry"
+        ],
+        [
+          "B",
+          "Branch"
+        ],
+        [
+          "C",
+          "Other"
+        ],
+        [
+          "D",
+          "Merge"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "A",
+          "C"
+        ],
+        [
+          "B",
+          "D"
+        ],
+        [
+          "C",
+          "D"
+        ],
+        [
+          "D",
+          "A"
+        ]
+      ],
+      "groups": [],
+      "direction": "TD",
+      "config": {
+        "elk": {
+          "preset": "modelOrder",
+          "keepEntryNodeOnTop": true
+        }
+      }
+    },
+    {
+      "id": "layout-preset-depthFirst",
+      "title": "layout preset depthFirst",
+      "text": "flowchart TD\nA[Entry] --> B[Branch]\nA --> C[Other]\nB --> D[Merge]\nC --> D\nD --> A",
+      "nodes": [
+        [
+          "A",
+          "Entry"
+        ],
+        [
+          "B",
+          "Branch"
+        ],
+        [
+          "C",
+          "Other"
+        ],
+        [
+          "D",
+          "Merge"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "A",
+          "C"
+        ],
+        [
+          "B",
+          "D"
+        ],
+        [
+          "C",
+          "D"
+        ],
+        [
+          "D",
+          "A"
+        ]
+      ],
+      "groups": [],
+      "direction": "TD",
+      "config": {
+        "elk": {
+          "preset": "depthFirst",
+          "keepEntryNodeOnTop": true
+        }
+      }
+    },
+    {
+      "id": "layout-hops-true",
+      "title": "layout hops true",
+      "text": "flowchart LR\nA[First] --> X[Last]\nB[Second] --> Y[Other]\nA --> Y\nB --> X",
+      "nodes": [
+        [
+          "A",
+          "First"
+        ],
+        [
+          "X",
+          "Last"
+        ],
+        [
+          "B",
+          "Second"
+        ],
+        [
+          "Y",
+          "Other"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "X"
+        ],
+        [
+          "B",
+          "Y"
+        ],
+        [
+          "A",
+          "Y"
+        ],
+        [
+          "B",
+          "X"
+        ]
+      ],
+      "groups": [],
+      "direction": "LR",
+      "config": {
+        "elk": {
+          "lineHops": true,
+          "forceNodeModelOrder": true,
+          "considerModelOrder": "NODES_AND_EDGES"
+        }
+      }
+    },
+    {
+      "id": "layout-hops-gap",
+      "title": "layout hops gap",
+      "text": "flowchart LR\nA[First] --> X[Last]\nB[Second] --> Y[Other]\nA --> Y\nB --> X",
+      "nodes": [
+        [
+          "A",
+          "First"
+        ],
+        [
+          "X",
+          "Last"
+        ],
+        [
+          "B",
+          "Second"
+        ],
+        [
+          "Y",
+          "Other"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "X"
+        ],
+        [
+          "B",
+          "Y"
+        ],
+        [
+          "A",
+          "Y"
+        ],
+        [
+          "B",
+          "X"
+        ]
+      ],
+      "groups": [],
+      "direction": "LR",
+      "config": {
+        "elk": {
+          "lineHops": "gap",
+          "forceNodeModelOrder": true,
+          "considerModelOrder": "NODES_AND_EDGES"
+        }
+      }
+    },
+    {
+      "id": "layout-hops-false",
+      "title": "layout hops false",
+      "text": "flowchart LR\nA[First] --> X[Last]\nB[Second] --> Y[Other]\nA --> Y\nB --> X",
+      "nodes": [
+        [
+          "A",
+          "First"
+        ],
+        [
+          "X",
+          "Last"
+        ],
+        [
+          "B",
+          "Second"
+        ],
+        [
+          "Y",
+          "Other"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "X"
+        ],
+        [
+          "B",
+          "Y"
+        ],
+        [
+          "A",
+          "Y"
+        ],
+        [
+          "B",
+          "X"
+        ]
+      ],
+      "groups": [],
+      "direction": "LR",
+      "config": {
+        "elk": {
+          "lineHops": false,
+          "forceNodeModelOrder": true,
+          "considerModelOrder": "NODES_AND_EDGES"
+        }
+      }
+    },
+    {
+      "id": "layout-marker-types",
+      "title": "layout marker types",
+      "text": "flowchart LR\nA[Point] <--> B[Circle]\nB o--o C[Cross]\nC x--x D[Invisible]\nD ~~~ E[End]",
+      "nodes": [
+        [
+          "A",
+          "Point"
+        ],
+        [
+          "B",
+          "Circle"
+        ],
+        [
+          "C",
+          "Cross"
+        ],
+        [
+          "D",
+          "Invisible"
+        ],
+        [
+          "E",
+          "End"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "B",
+          "C"
+        ],
+        [
+          "C",
+          "D"
+        ],
+        [
+          "D",
+          "E"
+        ]
+      ],
+      "groups": [],
+      "direction": "LR",
+      "config": {
+        "look": "neo"
+      }
+    },
+    {
+      "id": "layout-packing-cache-ink",
+      "title": "layout packing cache ink",
+      "text": "---\ntitle: Cached ink in expanded physical frames\n---\nflowchart TD\nsubgraph G[Box algorithm]\nA[Small] --> B[A long label WWWWWWWWWWWWWWW]\nend\nG@{algorithm: elk.box}",
+      "nodes": [
+        [
+          "A",
+          "Small"
+        ],
+        [
+          "B",
+          "A long label WWWWWWWWWWWWWWW"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "groups": [
+        {
+          "id": "G",
+          "label": "Box algorithm",
+          "members": [
+            "B",
+            "A"
+          ],
+          "parent_id": null,
+          "direction": null
+        }
+      ],
+      "direction": "TD",
+      "groupMetadata": {
+        "G": {
+          "algorithm": "elk.box"
+        }
+      }
+    },
+    {
+      "id": "layout-nonrouting-selfloop-box",
+      "title": "layout nonrouting selfloop box",
+      "text": "flowchart TD\nA[Self] --> A",
+      "nodes": [
+        [
+          "A",
+          "Self"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "groups": [],
+      "direction": "TD",
+      "config": {
+        "layout": "elk.box"
+      },
+      "sourceDegeneracy": "Nonrouting coincident centre yields no visible loop; semantic edge retained, no fabricated loop"
+    },
+    {
+      "id": "layout-nonrouting-selfloop-rectpacking",
+      "title": "layout nonrouting selfloop rectpacking",
+      "text": "flowchart TD\nA[Self] --> A",
+      "nodes": [
+        [
+          "A",
+          "Self"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "groups": [],
+      "direction": "TD",
+      "config": {
+        "layout": "elk.rectpacking"
+      },
+      "sourceDegeneracy": "Nonrouting coincident centre yields no visible loop; semantic edge retained, no fabricated loop"
+    },
+    {
+      "id": "layout-custom-group-cross-clears",
+      "title": "layout custom group cross clears",
+      "text": "flowchart TD\nsubgraph G[Box becomes inherited]\nA[Alpha] --> B[Beta]\nend\nB --> C[Outside]\nG@{algorithm: elk.box}",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ],
+        [
+          "C",
+          "Outside"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "B",
+          "C"
+        ]
+      ],
+      "groups": [
+        {
+          "id": "G",
+          "label": "Box becomes inherited",
+          "members": [
+            "B",
+            "A"
+          ],
+          "parent_id": null,
+          "direction": null
+        }
+      ],
+      "direction": "TD",
+      "groupMetadata": {
+        "G": {
+          "algorithm": "elk.box"
+        }
+      }
+    },
+    {
+      "id": "layout-labelless-alignment-gallery",
+      "title": "Source small-node anchor alignment: nine labelless shapes",
+      "text": "flowchart TD\nN0@{shape: sm-circ, label: \"Ignored0\"}\nN1@{shape: fr-circ, label: \"Ignored1\"}\nN2@{shape: f-circ, label: \"Ignored2\"}\nN3@{shape: cross-circ, label: \"Ignored3\"}\nN4@{shape: choice, label: \"Ignored4\"}\nN5@{shape: fork, label: \"Ignored5\"}\nN6@{shape: bolt, label: \"Ignored6\"}\nN7@{shape: anchor, label: \"Ignored7\"}\nN8@{shape: hourglass, label: \"Ignored8\"}\nN0 --> N1\nN1 --> N2\nN2 --> N3\nN3 --> N4\nN4 --> N5\nN5 --> N6\nN6 --> N7\nN7 --> N8",
+      "nodes": [
+        [
+          "N0",
+          "Ignored0"
+        ],
+        [
+          "N1",
+          "Ignored1"
+        ],
+        [
+          "N2",
+          "Ignored2"
+        ],
+        [
+          "N3",
+          "Ignored3"
+        ],
+        [
+          "N4",
+          "Ignored4"
+        ],
+        [
+          "N5",
+          "Ignored5"
+        ],
+        [
+          "N6",
+          "Ignored6"
+        ],
+        [
+          "N7",
+          "Ignored7"
+        ],
+        [
+          "N8",
+          "Ignored8"
+        ]
+      ],
+      "edges": [
+        [
+          "N0",
+          "N1"
+        ],
+        [
+          "N1",
+          "N2"
+        ],
+        [
+          "N2",
+          "N3"
+        ],
+        [
+          "N3",
+          "N4"
+        ],
+        [
+          "N4",
+          "N5"
+        ],
+        [
+          "N5",
+          "N6"
+        ],
+        [
+          "N6",
+          "N7"
+        ],
+        [
+          "N7",
+          "N8"
+        ]
+      ],
+      "groups": [],
+      "direction": "TD",
+      "config": {
+        "look": "handDrawn",
+        "handDrawnSeed": 123
+      },
+      "shapes": {
+        "N0": "stateStart",
+        "N1": "stateEnd",
+        "N2": "filledCircle",
+        "N3": "crossedCircle",
+        "N4": "choice",
+        "N5": "forkJoin",
+        "N6": "lightningBolt",
+        "N7": "anchor",
+        "N8": "hourglass"
+      },
+      "sourceSymbols": [
+        "elk/render.ts::alignDegenerateNodeToAnchor",
+        "elk/render.ts::applyElkEdgeLayout alignment prepass"
+      ],
+      "visibleLabels": {
+        "N0": "",
+        "N1": "",
+        "N2": "",
+        "N3": "",
+        "N4": "",
+        "N5": "",
+        "N6": "",
+        "N7": "",
+        "N8": ""
+      },
+      "fillProbes": [
+        {
+          "node": "N0",
+          "x": 0.5,
+          "y": 0.5,
+          "color": "#ffffff"
+        }
+      ],
+      "sourcePaintNote": "The final SVG .node path outline receives opaque CSS fill and covers earlier RoughJS hatch. stateStart must retain a light interior distinct from filledCircle."
+    }
+  ]
+}

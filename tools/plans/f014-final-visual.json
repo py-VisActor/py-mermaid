@@ -1,0 +1,120 @@
+{
+  "schema": "py-mermaid-command-plan/v1",
+  "scope": "F01.4",
+  "description": "Final 200 positive static cases on CPU/auto/GPU, same candidate unit tests and legacy regressions, offline export samples; math deferred, no install",
+  "inputs": [
+    "{repo}/tests/f014/cases.json",
+    "{repo}/test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/oracle/manifest.json"
+  ],
+  "steps": [
+    {
+      "name": "candidate-fixture-source-archive",
+      "argv": [
+        "{python}",
+        "-c",
+        "import sys,shutil,zipfile;from pathlib import Path;sys.path.insert(0,'tools');from run_support import source_identity,write_json;run=Path(sys.argv[1]);candidate=source_identity();write_json(run/'artifacts/source-candidate.json',candidate);shutil.copyfile('tests/f014/cases.json',run/'artifacts/cases.json');archive=zipfile.ZipFile(run/'artifacts/source-candidate.zip','w',zipfile.ZIP_DEFLATED);[archive.write(name,name) for name in candidate['files']];archive.close();verify=zipfile.ZipFile(run/'artifacts/verification-sources.zip','w',zipfile.ZIP_DEFLATED);[verify.write(p,p.as_posix()) for base in ['tests','tools'] for p in Path(base).rglob('*') if p.is_file() and '__pycache__' not in p.parts and p.suffix!='.pyc'];verify.close()",
+        "{run}"
+      ],
+      "timeoutSeconds": 120
+    },
+    {
+      "name": "verified-source-oracle-reuse",
+      "argv": [
+        "{python}",
+        "{repo}/tools/reuse_oracle.py",
+        "--source",
+        "{repo}/test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/oracle",
+        "--source-fixtures",
+        "{repo}/test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/cases.json",
+        "--fixtures",
+        "{run}/artifacts/cases.json",
+        "--refresh",
+        "handdrawn-shapes-3",
+        "layout-labelless-alignment-gallery",
+        "--out",
+        "{run}/artifacts/oracle"
+      ],
+      "timeoutSeconds": 300
+    },
+    {
+      "name": "f014-final-cpu",
+      "argv": [
+        "{python}",
+        "{repo}/tools/f011_validate.py",
+        "--fixtures",
+        "{run}/artifacts/cases.json",
+        "--oracle",
+        "{run}/artifacts/oracle",
+        "--out",
+        "{run}/artifacts/compare-cpu",
+        "--backend",
+        "cpu"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src",
+        "PYTHONIOENCODING": "utf-8",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 2400
+    },
+    {
+      "name": "f014-final-auto",
+      "argv": [
+        "{python}",
+        "{repo}/tools/f011_validate.py",
+        "--fixtures",
+        "{run}/artifacts/cases.json",
+        "--oracle",
+        "{run}/artifacts/oracle",
+        "--out",
+        "{run}/artifacts/compare-auto",
+        "--backend",
+        "auto"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src",
+        "PYTHONIOENCODING": "utf-8",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 2400
+    },
+    {
+      "name": "f014-final-gpu",
+      "argv": [
+        "{python}",
+        "{repo}/tools/f011_validate.py",
+        "--fixtures",
+        "{run}/artifacts/cases.json",
+        "--oracle",
+        "{run}/artifacts/oracle",
+        "--out",
+        "{run}/artifacts/compare-gpu",
+        "--backend",
+        "gpu"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src",
+        "PYTHONIOENCODING": "utf-8",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 2400
+    },
+    {
+      "name": "static-format-samples",
+      "argv": [
+        "{python}",
+        "{repo}/tools/export_static_samples.py",
+        "--out",
+        "{run}/artifacts/static-exports",
+        "--backend",
+        "cpu"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src",
+        "PYTHONIOENCODING": "utf-8",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 180
+    }
+  ]
+}

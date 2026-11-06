@@ -1,0 +1,226 @@
+{
+  "schema": "py-mermaid-visual-qa/v1",
+  "taskId": "F01.4/fixed-layout-visual-qa",
+  "reviewedAtUtc": "2026-11-05T11:22:22.290369+00:00",
+  "status": "PASS_TARGETED_MANUAL_RECHECK",
+  "sourceTreeSha256": "99a2342681469836c3b7be8be6815b9a82193146331aff51d260823b72b17a2e",
+  "matrixRun": "F01.4-batch-20261105T111527Z-8d3c0855",
+  "matrixManifestSha256": "d7424b978106c708a09a5fb3963f0fc927ae1031c79abd498495b5170671773b",
+  "matrixRunStatus": "SUCCESS",
+  "scope": "Only shape-h-cyl,handdrawn-shapes-3 and9-node labelless alignment gallery; official PNG compared with CPU/auto/GPU actual PNGs. This is not a claim to have manually inspected all200cases.",
+  "viewedPNGs": [
+    {
+      "caseId": "shape-h-cyl",
+      "profile": "oracle",
+      "path": "test-runs/F01.4-batch-20261105T111527Z-8d3c0855/artifacts/oracle/shape-h-cyl.png",
+      "sha256": "981c8f21aed4f8c766966c0ffd84bbae92ffcbdc2c23d1a24b1d007104be5fdd",
+      "dimensions": [
+        164,
+        49
+      ],
+      "actuallyViewed": true,
+      "method": "view_image original"
+    },
+    {
+      "caseId": "shape-h-cyl",
+      "profile": "compare-cpu",
+      "path": "test-runs/F01.4-batch-20261105T111527Z-8d3c0855/artifacts/compare-cpu/shape-h-cyl.png",
+      "sha256": "a5e9be1d23e24c18ea3c15478b92e4ef54d68898f5f2fcdaba6fdbd514b9b6e7",
+      "dimensions": [
+        172,
+        57
+      ],
+      "actuallyViewed": true,
+      "method": "view_image original"
+    },
+    {
+      "caseId": "shape-h-cyl",
+      "profile": "compare-auto",
+      "path": "test-runs/F01.4-batch-20261105T111527Z-8d3c0855/artifacts/compare-auto/shape-h-cyl.png",
+      "sha256": "69b7c378bf717528cac22e8a38c121f327f779c70f44b57b5eb42f3b657726bd",
+      "dimensions": [
+        172,
+        57
+      ],
+      "actuallyViewed": true,
+      "method": "view_image original"
+    },
+    {
+      "caseId": "shape-h-cyl",
+      "profile": "compare-gpu",
+      "path": "test-runs/F01.4-batch-20261105T111527Z-8d3c0855/artifacts/compare-gpu/shape-h-cyl.png",
+      "sha256": "69b7c378bf717528cac22e8a38c121f327f779c70f44b57b5eb42f3b657726bd",
+      "dimensions": [
+        172,
+        57
+      ],
+      "actuallyViewed": true,
+      "method": "view_image original"
+    },
+    {
+      "caseId": "handdrawn-shapes-3",
+      "profile": "oracle",
+      "path": "test-runs/F01.4-batch-20261105T111527Z-8d3c0855/artifacts/oracle/handdrawn-shapes-3.png",
+      "sha256": "14144148bea04b1fef5a7be1de22d66ccac4bc153a1a597c0b16167f9ea4337a",
+      "dimensions": [
+        1600,
+        105
+      ],
+      "actuallyViewed": true,
+      "method": "view_image original"
+    },
+    {
+      "caseId": "handdrawn-shapes-3",
+      "profile": "compare-cpu",
+      "path": "test-runs/F01.4-batch-20261105T111527Z-8d3c0855/artifacts/compare-cpu/handdrawn-shapes-3.png",
+      "sha256": "3e395d5f53f18e2cf0a94474f85a6d296d9ead47dcfb679d77d17ff594cd6d7c",
+      "dimensions": [
+        1714,
+        123
+      ],
+      "actuallyViewed": true,
+      "method": "view_image original"
+    },
+    {
+      "caseId": "handdrawn-shapes-3",
+      "profile": "compare-auto",
+      "path": "test-runs/F01.4-batch-20261105T111527Z-8d3c0855/artifacts/compare-auto/handdrawn-shapes-3.png",
+      "sha256": "7b91fc1533f380339db709973179518a8a72ef0b8ec1e9ad828f8d30cd92a70e",
+      "dimensions": [
+        1714,
+        123
+      ],
+      "actuallyViewed": true,
+      "method": "view_image original"
+    },
+    {
+      "caseId": "handdrawn-shapes-3",
+      "profile": "compare-gpu",
+      "path": "test-runs/F01.4-batch-20261105T111527Z-8d3c0855/artifacts/compare-gpu/handdrawn-shapes-3.png",
+      "sha256": "7b91fc1533f380339db709973179518a8a72ef0b8ec1e9ad828f8d30cd92a70e",
+      "dimensions": [
+        1714,
+        123
+      ],
+      "actuallyViewed": true,
+      "method": "view_image original"
+    },
+    {
+      "caseId": "layout-labelless-alignment-gallery",
+      "profile": "oracle",
+      "path": "test-runs/F01.4-batch-20261105T111527Z-8d3c0855/artifacts/oracle/layout-labelless-alignment-gallery.png",
+      "sha256": "d4ed6b685a797ae57b5402a6f3fde08562e4a08a83b659e78680c49e44ab1772",
+      "dimensions": [
+        88,
+        594
+      ],
+      "actuallyViewed": true,
+      "method": "view_image original; gallery additionally viewed as full RGB source/CPU/auto/GPU contact sheet"
+    },
+    {
+      "caseId": "layout-labelless-alignment-gallery",
+      "profile": "compare-cpu",
+      "path": "test-runs/F01.4-batch-20261105T111527Z-8d3c0855/artifacts/compare-cpu/layout-labelless-alignment-gallery.png",
+      "sha256": "0ed8664d4bb938b719a29e53a5c2d233b5525127b4c52c80bc04a2b00303a7a5",
+      "dimensions": [
+        93,
+        586
+      ],
+      "actuallyViewed": true,
+      "method": "view_image original; gallery additionally viewed as full RGB source/CPU/auto/GPU contact sheet"
+    },
+    {
+      "caseId": "layout-labelless-alignment-gallery",
+      "profile": "compare-auto",
+      "path": "test-runs/F01.4-batch-20261105T111527Z-8d3c0855/artifacts/compare-auto/layout-labelless-alignment-gallery.png",
+      "sha256": "fb0396762c674bd208761c5ae763e881ef2c80c0949c3e995b53d418e8f4af93",
+      "dimensions": [
+        93,
+        586
+      ],
+      "actuallyViewed": true,
+      "method": "view_image original; gallery additionally viewed as full RGB source/CPU/auto/GPU contact sheet"
+    },
+    {
+      "caseId": "layout-labelless-alignment-gallery",
+      "profile": "compare-gpu",
+      "path": "test-runs/F01.4-batch-20261105T111527Z-8d3c0855/artifacts/compare-gpu/layout-labelless-alignment-gallery.png",
+      "sha256": "fb0396762c674bd208761c5ae763e881ef2c80c0949c3e995b53d418e8f4af93",
+      "dimensions": [
+        93,
+        586
+      ],
+      "actuallyViewed": true,
+      "method": "view_image original; gallery additionally viewed as full RGB source/CPU/auto/GPU contact sheet"
+    }
+  ],
+  "viewedContactSheet": {
+    "path": "test-runs/f014-fixed-layout-visual-qa-001/gallery-source-cpu-auto-gpu.png",
+    "sha256": "9e691b75edb83d3e1715835cbc1e0838c694c968f90ed962291d19d0aa34b1ca",
+    "actuallyViewed": true,
+    "recordRun": "F01.4-record-20261105T112019Z-1169a33c",
+    "operation": "Independent labeled full-gallery RGB composite from existing PNGs for visual inspection; original source/native files unchanged."
+  },
+  "checks": [
+    {
+      "id": "QA-FIX-CAP",
+      "result": "PASS",
+      "cases": [
+        "shape-h-cyl",
+        "handdrawn-shapes-3"
+      ],
+      "profiles": [
+        "cpu",
+        "auto",
+        "gpu"
+      ],
+      "observed": "Horizontal cylinder complete cap/inner arc is on RIGHT, matching official images. Left remains only outer boundary; no reversed complete left cap. Labels remain readable and uncropped."
+    },
+    {
+      "id": "QA-FIX-STATE-WHITE",
+      "result": "PASS",
+      "cases": [
+        "handdrawn-shapes-3",
+        "layout-labelless-alignment-gallery"
+      ],
+      "profiles": [
+        "cpu",
+        "auto",
+        "gpu"
+      ],
+      "observed": "sm-circ white hollow interior restored; fr-circ keeps white interior/ring distinction. f-circ remains visibly dark filled, preserving contrast among the source node types. Previous dark hatch-filled start-circle defect is no longer visible."
+    },
+    {
+      "id": "QA-FIX-GALLERY",
+      "result": "PASS",
+      "case": "layout-labelless-alignment-gallery",
+      "expectedNodes": 9,
+      "expectedEdges": 8,
+      "profiles": [
+        "cpu",
+        "auto",
+        "gpu"
+      ],
+      "observed": "Complete vertical sequence of source shapes retained, including tiny anchor connection between bolt/hourglass. All8connections remain continuous with attached arrowheads; no Ignored0..8 labels appear; no off-axis detached small node, missing chain segment or image crop observed. Hourglass and top circle both fit viewport."
+    }
+  ],
+  "nonblockingDifferences": "Handdrawn stroke jitter/weight, anti-aliasing, minor label positions and total image dimensions differ from browser oracle. No substantive content loss, reversed cap, wrong state interior or clipping found in this targeted recheck. Pixel equality is not asserted.",
+  "previousQA": {
+    "path": "docs/changes/20261105-f014-layout-visual-qa.json",
+    "sha256UnchangedDuringThisTask": "8e661cfb0add8d20b76eab68cdfffee7348c6cb81075b55854a51d9ac61f1a7d",
+    "statusRetained": "Original reviewed1f17matrix followup_required record remains historical and unchanged by this task."
+  },
+  "readOnlyGuarantees": {
+    "productionSourceEdited": false,
+    "testsEdited": false,
+    "toolsEdited": false,
+    "originalPNGsEdited": false,
+    "fullSuiteOrProductRenderExecutedByThisWorker": false,
+    "actions": "Read existing images/manifests; view_image inspection; create independent contact sheet via existingworkflow; write this one new QA receipt."
+  },
+  "limitations": [
+    "Targeted manual QA of12PNG files/3case families only; coordinator matrix and unit evidence cover wider acceptance.",
+    "Known radial container-frame limitation was not re-opened or generalized by this recheck.",
+    "Narrow GPU gallery original preview was supplemented by full RGB contact inspection of decoded actual file, confirming all content remains present."
+  ]
+}

@@ -1,0 +1,1310 @@
+{
+  "schema": "py-mermaid-f014-parser-sources/v1",
+  "taskId": "F01.4-S2/parser-config",
+  "status": "repairs_complete_unverified",
+  "interfaceVersion": "F01.4-v1",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "baseSourceSha256": "f75ee6fa7fc7d0f3a04df190a125c8553599705c547258ae52c5f73a5b6ba76f",
+  "baseEvidence": "test-runs/F01.4-execution-start-20261105T082500Z-149317c2/run.json",
+  "sources": [
+    {
+      "path": "packages/mermaid/src/diagrams/flowchart/parser/flow.jison",
+      "symbols": [
+        "graphConfig",
+        "idStringToken",
+        "vertexStatement",
+        "node",
+        "styledVertex",
+        "vertex",
+        "link/linkStatement/edgeText/arrowText",
+        "shapeData",
+        "styleStatement/classDefStatement/classStatement",
+        "linkStyleStatement",
+        "clickStatement",
+        "direction"
+      ],
+      "sha256": "9597faffe2a133b104c6dd4f38a162f6980bff4e0a841a83ff94af3900ea7ba8",
+      "gitBlobSha256": "e9891eb4f646140e5110e72ef5f79b099677a265ba1a84884b39a573b56d1c68"
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/flowchart/parser/flowParser.ts",
+      "symbols": [
+        "parse/closing curly whitespace normalization"
+      ],
+      "sha256": "0aa07da223d7e9c723d9d7e660d7afef07b5c5f7d43fbc5bd54674667fcdc753",
+      "gitBlobSha256": "06790d8f74895b5859e81a90eb6b83e538cc40186e44c560065b42924d4d3ebe"
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/flowchart/flowDb.ts",
+      "symbols": [
+        "addVertex",
+        "addSingleLink",
+        "addLink",
+        "destructLink/destructStartLink/destructEndLink",
+        "setDirection",
+        "setClass/addClass",
+        "updateLink/updateLinkInterpolate",
+        "getData/outermostCollapsed",
+        "getTypeFromVertex",
+        "getCompiledStyles"
+      ],
+      "sha256": "33577b9ade8c65be6049c3093089dbf81abf44214f49c2b2ea46434183889288",
+      "gitBlobSha256": "f8b1e686399b850dda39741ef10b763c9611658e50a0416603826a17ef810ec3"
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/flowchart/types.ts",
+      "symbols": [
+        "FlowVertex",
+        "FlowEdge",
+        "FlowClass",
+        "FlowSubGraph",
+        "FlowLink"
+      ],
+      "sha256": "692016b3acc50f484602f7c1741233156aa4bc4e01caa6ce260bd7e2b9530d8d",
+      "gitBlobSha256": "4a7c30e6c161bf14a9f68524301b8b9a3fcad2c5a0e6d311448dfac7b629a84e"
+    },
+    {
+      "path": "packages/mermaid/src/types.ts",
+      "symbols": [
+        "NodeMetaData",
+        "EdgeMetaData"
+      ],
+      "sha256": "9c0d56eceae3cb6184b742a74f34b2d5e83e856e2dd80a468f4bfe1d4a0b87ef",
+      "gitBlobSha256": "dce4cb9bea8109ed54227a4dbe1241ac54cc03d9705ccb63228f23b8bd688e5a"
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes.ts",
+      "symbols": [
+        "shapesDefs",
+        "generateShapeMap",
+        "isValidShape"
+      ],
+      "sha256": "68fceb790c2a9b65397d96edaf85a50b4ae059a68cf52c83553c4887019f1699",
+      "gitBlobSha256": "078b5361f95a53dbec0ca768772ca21a5afb0997f0757a6aa0af0dd1e6112782"
+    },
+    {
+      "path": "packages/mermaid/src/config.ts",
+      "symbols": [
+        "resolveAppearance",
+        "updateCurrentConfig",
+        "sanitize",
+        "evaluate"
+      ],
+      "sha256": "91dd68a9e7d57c4635a04fab0ccd78ec230b4417a02f4f4b3cd9a6bb445f09ef",
+      "gitBlobSha256": "a2dcc81b3764fec09626dc5a13f97c2bdd860378d6c06e9894357b4af2e87d9e"
+    },
+    {
+      "path": "packages/mermaid/src/defaultConfig.ts",
+      "symbols": [
+        "elk explicit undefined keys",
+        "keyify/configKeys"
+      ],
+      "sha256": "6f2ec3c231ee970fb0368d158975090d488c93c9801a618b06cb18d58488b068",
+      "gitBlobSha256": "f5bb393e7f39ca7ab9bb152be3002ff802487d77db33721ad11c7d03709dc782"
+    },
+    {
+      "path": "packages/mermaid/src/schemas/config.schema.yaml",
+      "symbols": [
+        "FlowchartDiagramConfig fourteen own properties",
+        "elk thirteen public properties",
+        "handDrawnSeed",
+        "deterministicIds/deterministicIDSeed"
+      ],
+      "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+      "gitBlobSha256": "855e6fbb5d278f190f15a7660b44dca6a4699ca8077ab8b35579a4e8a64be019"
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/elk/algorithms.ts",
+      "symbols": [
+        "ELK_ALGORITHMS six plus plain elk registration"
+      ],
+      "sha256": "c728ed061bb5d86ce45857884125d2195a1b876fd6a577ac12a7d622acdef84b",
+      "gitBlobSha256": "7eb7ef78273faa3ec5ccbe32cf420077f91b3d2c52169bbd871ba1d3611fa66c"
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/elk/render.ts",
+      "symbols": [
+        "CONTAINER_ALGORITHMS",
+        "resolveContainerAlgorithm",
+        "root options and metadata forwarding"
+      ],
+      "sha256": "6258890b3f311e86e4cd4dc99d480f704fde7473e150dc62b88838c5015c5011",
+      "gitBlobSha256": "3ac28d2f9c7385d56f6374533df854926515be36cc5323f10040d00dd4f1226f"
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/render.ts",
+      "symbols": [
+        "elkLayoutLoaders"
+      ],
+      "sha256": "775ea33dad8132c996f15a7680a0f3d436012b21cdcca065ed84412ee144ddc0",
+      "gitBlobSha256": "9d900493575ce1dd9c834c6ea56d37a2e21b70818be8dcb2b175373330ee1cf2"
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/edges.js",
+      "symbols": [
+        "resolveEdgeCurveType",
+        "curve dispatch",
+        "animate/animation class",
+        "animatedEdge/marker margin selection"
+      ],
+      "sha256": "8fee7300ea0bffd008f5d2c12a05e85f5ea8bc22a9855d4d2e2b6c0e6c92a33a",
+      "gitBlobSha256": "d439783d84a3c1c220da407bd6d61648cd16fb3ad076accbdfab939194ab273f"
+    },
+    {
+      "path": "packages/mermaid/src/styles.ts",
+      "symbols": [
+        "edge-animation-fast/slow static CSS",
+        "filter CSS"
+      ],
+      "sha256": "dd53a582b0c2411e16beeb37f51664968f278b08b97f63fc8808cbc8381f73fb",
+      "gitBlobSha256": "2c6b17f84b2e0a88ebfd9591cb3df7dcb32d7d05561bdceabcd40f8888f327c1"
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/flowchart/flowRenderer-v3-unified.ts",
+      "symbols": [
+        "draw/useMaxWidth/layout selection"
+      ],
+      "sha256": "9eba228f1d94dce7cbd6cda7c8baf00eba9f6571d9de26f41c9ebadee62e7d31",
+      "gitBlobSha256": "b34a8d730d0ed39df008a538280de1ce5b5b00feadd8be507c7dea566c67b642"
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/flowchart/parser/flow-edges.spec.js",
+      "symbols": [
+        "Source semantic examples; formally independent tests are deferred to S3"
+      ],
+      "sha256": "291840efdb748ef2b5c41aa836ec3e45c78ac58f2eef8ef0174eefd2534a9016",
+      "gitBlobSha256": "f4b2d83c677f794327f5483131e492e52d2a97ef20318a86362d56e912cb79f0"
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/flowchart/parser/flow-arrows.spec.js",
+      "symbols": [
+        "Source semantic examples; formally independent tests are deferred to S3"
+      ],
+      "sha256": "e6fc94a94cc39ab86f815620baf0a5c33ffd0b72e217d3f83e49980ff15cfaec",
+      "gitBlobSha256": "025ffc3f3fcee855bb4c9be841c7320e2309888f2206261c9262b9a318815feb"
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/flowchart/parser/flow-style.spec.js",
+      "symbols": [
+        "Source semantic examples; formally independent tests are deferred to S3"
+      ],
+      "sha256": "bfa44a8a28b5c4fab54a36cea679e4a947e2d6fbdbda18a6aa07dfd09003873e",
+      "gitBlobSha256": "7f6638cbd8d81e60aebb25dc05c1d7a53ca2917ba73591611dbe3cdb06981eb7"
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/flowchart/parser/flow-node-data.spec.js",
+      "symbols": [
+        "Source semantic examples; formally independent tests are deferred to S3"
+      ],
+      "sha256": "61d09c5024fb7983b8cd50eae44632a347a0aacbdd50e157d428013912679dc9",
+      "gitBlobSha256": "120966e159d0ff1dde1a97aa848db07e89aadd19f4b5420c3c1ad58b3e93e0e0"
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/flowchart/parser/flow-vertice-chaining.spec.js",
+      "symbols": [
+        "Source semantic examples; formally independent tests are deferred to S3"
+      ],
+      "sha256": "70b2eda87930b2bc2558425a721b74261176305d8b6db9e0cf1c3ad79cc0b698",
+      "gitBlobSha256": "2833a1610c3ed721750b2d71ddf3d1e8b3cb5a6c8a76b0b7341a47d81cbbbb2f"
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/flowchart/parser/flow-direction.spec.js",
+      "symbols": [
+        "Source semantic examples; formally independent tests are deferred to S3"
+      ],
+      "sha256": "ee94e2c1439bfa43b56dedb8d3eda651ddcdd1e4fce9cf0dd474dbd6011f0286",
+      "gitBlobSha256": "507bc69c1302e5635eff505e6535e00805977b23e17171a732355a82cea76687"
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/flowchart/parser/flow-interactions.spec.js",
+      "symbols": [
+        "Source semantic examples; formally independent tests are deferred to S3"
+      ],
+      "sha256": "4dc1d91f46533d14f338155d62387f345de2b3e4436117c64b8b6c4149db0671",
+      "gitBlobSha256": "4664958cbedfbdeddff4cc5e8e947842e15f896c80c1678c02292cb354bc3715"
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/flowchart/parser/flow-lines.spec.js",
+      "symbols": [
+        "Source semantic examples; formally independent tests are deferred to S3"
+      ],
+      "sha256": "ece75a0c370abf31a693f2a5b3f69064b29169ad2d7af19516e6ae7dd0da7dcf",
+      "gitBlobSha256": "af81dfd07f8c977d418551cbde2d65e501958f347adb5f380e8b5696424f0cbf"
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/flowchart/parser/flow-singlenode.spec.js",
+      "symbols": [
+        "Source semantic examples; formally independent tests are deferred to S3"
+      ],
+      "sha256": "04bd8c3cb02cbb3f5afdd9ccb1c97de0667226e7b344fc95762c225725bfb595",
+      "gitBlobSha256": "b747889e1c748f221f55b2cc95a2c4dcfd9b6a677b5cc0cb7766af7c3cb94bb4"
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/flowchart/parser/subgraph.spec.js",
+      "symbols": [
+        "Source semantic examples; formally independent tests are deferred to S3"
+      ],
+      "sha256": "c634dc9065a53b6e45408a6ef48626ab7420a367fc3889b86b80f9883361776d",
+      "gitBlobSha256": "3adbcb03a2be84a76c777502f7772922f05dd93643b2817a73180d11680d9a3f"
+    }
+  ],
+  "productFiles": [
+    {
+      "path": "src/py_mermaid/config/__init__.py",
+      "sha256": "0a1a35bc6930e3ec4b021e68d66da16df4f0a576472bc4ec2410598579e6ab4f"
+    },
+    {
+      "path": "src/py_mermaid/config/color_names.py",
+      "sha256": "53d1453fb57e005c66543e099172dd159a650522f6428c2bca32907ed20c6ca4"
+    },
+    {
+      "path": "src/py_mermaid/config/colors.py",
+      "sha256": "37aa0d65e01bb10a253a90c2a66bfe5c003121b9726de4955b53c68e5be5bf3a"
+    },
+    {
+      "path": "src/py_mermaid/config/elk.py",
+      "sha256": "cf9d99b7c7b334f26dc36b95ac1b0d34af089e193097e6e0d6f219bdadb06e02"
+    },
+    {
+      "path": "src/py_mermaid/config/flowchart.py",
+      "sha256": "bcc7d8f8e2599d8bbd9433cc37e9665670a7d4feb58f469e23d46ff0090290ab"
+    },
+    {
+      "path": "src/py_mermaid/config/source_keys.py",
+      "sha256": "0ae56a02cb58872c0f11a2bf49b26de413616807f1f832db56f0fbbd19b86141"
+    },
+    {
+      "path": "src/py_mermaid/config/theme_rules.py",
+      "sha256": "129b24929010c992513506c22145e9937017971309858fe6716572b6118b62c9"
+    },
+    {
+      "path": "src/py_mermaid/config/themes.py",
+      "sha256": "96883a186702040397632e5726f6bb8a004dd57ea4ae3bd6c232531f4d046d61"
+    },
+    {
+      "path": "src/py_mermaid/config/values.py",
+      "sha256": "a637721f11866e18a1f6de2595358eb80a427501094420ef914006376b114789"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/flowchart/__init__.py",
+      "sha256": "648b1a3ca353ad86c12facbcb0d900aa2595a274b64b0d2c2a931c131c3c8a96"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/flowchart/lexical.py",
+      "sha256": "91fd1b80a853d01e1bbced1a7aafcdcc8e0c18a7009ba8617591e3fbeb1da42d"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/flowchart/parser.py",
+      "sha256": "7d1f8f4e289a5c95979510ad2a161cb7d50eaa5f48abaf9aa6d226b8daad0151"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/flowchart/syntax.py",
+      "sha256": "47fe17165ba7dae86f628ebebd3038da7177c2592c7c00af006ff7075cc94d19"
+    },
+    {
+      "path": "src/py_mermaid/parsing/__init__.py",
+      "sha256": "b927e8e23113a95e0258b2c5c085251b941dbb16f7cb78552319ab44b5785974"
+    },
+    {
+      "path": "src/py_mermaid/parsing/preprocess.py",
+      "sha256": "9a6ebcfa5629b239e8c9516b25fe15e5d65f5cc11f8d111c9ef5d8c48e3a0d94"
+    },
+    {
+      "path": "src/py_mermaid/parsing/yaml_json.py",
+      "sha256": "568345c47a13bfb65651dafa9b4fcec9a65b2ebd646fa470c8d9717dbecea465"
+    }
+  ],
+  "changedFiles": [
+    {
+      "path": "src/py_mermaid/config/elk.py",
+      "sha256": "cf9d99b7c7b334f26dc36b95ac1b0d34af089e193097e6e0d6f219bdadb06e02",
+      "beforeSha256": null
+    },
+    {
+      "path": "src/py_mermaid/config/flowchart.py",
+      "sha256": "d7d16ff3a4663fa593769807828cbb2341b88eb44c0c07826eed525b91186adb",
+      "beforeSha256": "3316f3ed3ba4323a0728f9d843821a2dfb4331ccfb1bf092e45ed6c3fee7dd92"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/flowchart/lexical.py",
+      "sha256": "c2478953d3d3f7e33c27cf6ca91db78d245a6dd83d44fafe2f4eb46b1492bb80",
+      "beforeSha256": null
+    },
+    {
+      "path": "src/py_mermaid/diagrams/flowchart/parser.py",
+      "sha256": "159a49daa2ae4d3dbb752d06bbeec9bab083dd73735f76460bb2631102915d4c",
+      "beforeSha256": "043d35f35d7a7857d7c9bd0a07404a924f0279cff05283ec08cb639e8bb4f633"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/flowchart/syntax.py",
+      "sha256": "47fe17165ba7dae86f628ebebd3038da7177c2592c7c00af006ff7075cc94d19",
+      "beforeSha256": null
+    }
+  ],
+  "inventory": {
+    "grammarNonterminals": 40,
+    "grammarAlternatives": 189,
+    "countMethod": "Strip source comments and count top-level | outside semantic actions/strings, plus one initial alternative for each nonterminal; includes source dormant helpers and 14 click recognition alternatives. Counts are inventory, never coverage/pass counts.",
+    "clickRecognitionAlternatives": 14,
+    "staticStrokeValues": [
+      "normal",
+      "thick",
+      "dotted",
+      "invisible",
+      "INVALID"
+    ],
+    "edgeTypes": [
+      "arrow_open",
+      "arrow_point",
+      "arrow_circle",
+      "arrow_cross",
+      "double_arrow_point",
+      "double_arrow_circle",
+      "double_arrow_cross",
+      "INVALID"
+    ],
+    "rootDirections": [
+      "TD",
+      "TB",
+      "BT",
+      "LR",
+      "RL"
+    ],
+    "rootDirectionAliases": {
+      "<": "RL",
+      ">": "LR",
+      "^": "BT",
+      "v": "TB",
+      "BR": "TB (source dir2ElkDirection default DOWN; source raw BR preserved)"
+    },
+    "unicodeIdentifierRanges": 409,
+    "metadataPublicShapeDefinitions": 53,
+    "publicLowercaseAliases": 141,
+    "additionalLowercaseRegistryKeys": [
+      "state",
+      "choice",
+      "note",
+      "composite",
+      "icon",
+      "anchor"
+    ],
+    "metadataShapeAliasesTotal": 147,
+    "nodeConsumedMetadataKeys": [
+      "shape",
+      "label",
+      "labelType",
+      "icon",
+      "form",
+      "pos",
+      "img",
+      "constraint",
+      "w",
+      "h"
+    ],
+    "edgeConsumedMetadataKeys": [
+      "animate",
+      "animation",
+      "curve"
+    ],
+    "groupMetadataKeys": "opaque merged mapping; view is consumed for static collapsed projection, algorithm forwarded",
+    "curves": [
+      "basis",
+      "bumpX",
+      "bumpY",
+      "cardinal",
+      "catmullRom",
+      "linear",
+      "monotoneX",
+      "monotoneY",
+      "natural",
+      "step",
+      "stepAfter",
+      "stepBefore",
+      "rounded"
+    ],
+    "rootLayouts": [
+      "elk",
+      "elk.stress",
+      "elk.force",
+      "elk.mrtree",
+      "elk.sporeOverlap",
+      "elk.box",
+      "elk.rectpacking"
+    ],
+    "elkPublicOptionCount": 13,
+    "elkUndefinedStrategies": [
+      "nodePlacementStrategy",
+      "nodePlacementAlignment",
+      "layeringStrategy",
+      "cycleBreakingStrategy"
+    ]
+  },
+  "contracts": {
+    "identities": "old id=eN retained; source_id is source user/generated edge identity. Cartesian links apply user ID only to last-start/first-end; duplicate user IDs fall back to generated source ID; source duplicate pair counters are 0,2,3,... .",
+    "classesStyles": "Source declaration encounter order retained. class assignments affect existing nodes/first matching edge/groups only. ClassDefinition style/text_style append semantics and escaped comma conversion are preserved. styles remain declarative pure strings, with no execution.",
+    "metadata": "Safe JSON-schema YAML, zero-indent flow continuations supported. Metadata doc.label retains source DB markup/canonical entities; unlike classic textObj it bypasses parser sanitizer. Native shared provider obligatorily sanitizes raw_label before measurement/paint. Unknown metadata provenance remains pure frozen values.",
+    "collapse": "FlowDB static projection hides descendants of outermost collapsed group, converts visible collapsed group to FlowNode(shape=collapsedGroup,color_index=original source preorder slot), rewrites boundary edge endpoints and drops only collapse-induced self-loops; stable logical/source edge IDs survive projection. Visible groups retain only actual node/group member IDs, matching getData rather than raw DB edge-metadata pseudo-members.",
+    "config": "Seven registered ELK names, thirteen public options, nine defaults and four unspecified strategy keys. Original finite handDrawnSeed number is preserved until roughjs-compatible truthiness/Math.imul at draw time; no eager int32 normalization.",
+    "staticInteraction": "All click grammar shapes are recognized safely, and URL/callback/tooltip execution/activation/metadata are ignored. Only source clickable class is retained for initial CSS. animate/animation fields and class style declarations are pure data; root painter consumes initial dash/marker state, no player/event host.",
+    "purity": "No production Node/JS/DOM/browser invocation; runtime has no .local/source checkout dependency. Parsing/config remain request-local pure values. Native assets and seeded rough paths belong to C/geometry owners.",
+    "hostSettings": "flowchart.useMaxWidth is a source SVG responsive-host attribute; flowchart.useWidth is not consumed by pinned flowRenderer-v3. arrowMarkerAbsolute is a host reference concern. Values remain in config_layers; no invented Canvas geometry option.",
+    "groupAlgorithmPolicy": "For an actual group, algorithm must be a string equal to elk or starting elk.; otherwise UNSUPPORTED_CONFIG before any Canvas entry. Unknown elk.* stays raw for the source resolver to ignore; no optional algorithm list expansion."
+  },
+  "exceptions": [
+    "INVALID_SYNTAX",
+    "INVALID_YAML",
+    "INVALID_METADATA",
+    "UNSUPPORTED_SHAPE",
+    "UNSUPPORTED_DIRECTION",
+    "UNSUPPORTED_CONFIG",
+    "INVALID_CONFIG",
+    "INVALID_EDGE_INDEX",
+    "MAX_TEXT_SIZE_EXCEEDED",
+    "MAX_EDGES_EXCEEDED",
+    "INVALID_GROUP_HIERARCHY"
+  ],
+  "mechanicalEvidence": "test-runs/F01.4-record-20261105T084905Z-99a1b77a/run.json",
+  "behaviorExecuted": false,
+  "testsWritten": false,
+  "limitations": [
+    {
+      "id": "math",
+      "status": "deferred_by_user_to_separate_module",
+      "detail": "Mathematical label $$ syntax fails explicitly; no KaTeX/math implementation or dependency added."
+    },
+    {
+      "id": "dagre",
+      "status": "excluded_by_user",
+      "detail": "Not a registered target layout, plugin or fallback. Explicit unsupported layout fails before Canvas."
+    },
+    {
+      "id": "interactive-behavior",
+      "status": "excluded_by_static_scope",
+      "detail": "No callback execution, links, tooltips, events, animation playback or interactive export host."
+    },
+    {
+      "id": "classic-ellipse",
+      "status": "upstream_render_defect_preserved",
+      "detail": "Classic ellipse syntax parses, source renderer has no ellipse shape; native renderer must report UPSTREAM_SHAPE_MISSING rather than invent an ellipse."
+    },
+    {
+      "id": "BR-direction",
+      "status": "source_positive_canonicalized",
+      "detail": "Initial source-anomaly rejection was incorrect: fixed ELK dir2ElkDirection default is DOWN. BR now maps to target TB with original text unchanged; not an algorithm fallback."
+    },
+    {
+      "id": "constructor-shape",
+      "status": "upstream_prototype_bug_not_implemented",
+      "detail": "Source isValidShape uses in on an ordinary object, allowing constructor through lookup. Target explicit147-alias registry safely rejects it, rather than invoking a Python class as painter."
+    },
+    {
+      "id": "invalid-edge-combination",
+      "status": "source_anomaly_preserved",
+      "detail": "Mismatched split markers/strokes retain edge_type/stroke INVALID, min_length None and source-derived default none/point markers; static painter may use its source default branch. No grammar rejection invented."
+    },
+    {
+      "id": "verification",
+      "status": "unverified",
+      "detail": "Only compile/import/signature checks ran for this candidate. All functional semantics, resources, Canvas, layout and export require independent S3/S4 verification; no coverage inferred from the grammar inventory."
+    }
+  ],
+  "sourceHashConvention": "sha256 is exact local bytes; gitBlobSha256 is locked git show bytes; Windows checkout CRLF differences are explicit.",
+  "s4RepairBatch": {
+    "status": "repairs_complete_unverified",
+    "originalSourceFreeze": "5b0262fdf79a609517ff6080ddd1da50d1649528abea2373f74c3666ee7d14ed",
+    "originalSourceZip": "test-runs/F01.4-s2-source-freeze-20261105T084954Z-d01bc958/artifacts/source-candidate.zip",
+    "initialFailureRun": "test-runs/F01.4-batch-20261105T090906Z-11b555ce",
+    "preRepairTestFixtureEvidence": "test-runs/F01.4-parser-repair-inputs-20261105T092030Z-ec6870c3",
+    "repairs": [
+      {
+        "id": "cold-import",
+        "classification": "product import topology",
+        "evidence": "test-runs/F01.4-batch-20261105T090906Z-11b555ce/commands/013-f014-language/stderr.log",
+        "source": "Pure module entry contract; parser package must not eagerly require parsing package that reimports half-initialized parser.",
+        "fix": "Move preprocess/YAML helpers into parse_flowchart/metadata call boundaries, retain syntax-first cold test imports; no aggregator edits."
+      },
+      {
+        "id": "flow-yaml-continuation",
+        "classification": "product source port",
+        "evidence": "test-runs/F01.4-batch-20261105T090906Z-11b555ce/commands/016-f014-styles/stderr.log",
+        "source": "js-yaml4.3 loader readFlowCollection/skipSeparationSpace warns on deficient flow indentation; source FlowDB wraps inline metadata as a root flow map with zero-indent fields.",
+        "fix": "Flow/quoted continuations bypass block-indentation guard, strict block collection indentation remains."
+      },
+      {
+        "id": "compiled-jison-word-boundary",
+        "classification": "product and independent test-design source interpretation",
+        "evidence": "test-runs/F01.4-batch-20261105T090906Z-11b555ce/commands/005-f012-language/stderr.log",
+        "source": "Pinned compiled Jison lexer adds literal word boundaries: v\\b/default\\b/style\\b; first-match options{}. Raw grammar word literals alone were insufficient to infer this build transform.",
+        "fix": "Use ASCII-word boundary checks for literal tokens; key:value and styleNode/classify are genuine source positives. Preserve exact keyword negatives. Do not loosen old-props positive into an unsupported source form."
+      },
+      {
+        "id": "BR-down",
+        "classification": "product source semantics",
+        "source": "elk/render.ts dir2ElkDirection default DOWN; confirmed source BR positive.",
+        "fix": "Target canonical TB, original source text retains BR; no diagonal or algorithm fallback."
+      },
+      {
+        "id": "TD-group-inheritance",
+        "classification": "product source semantics",
+        "source": "FlowDB setDirection TD->TB precedes addSubGraph inheritance.",
+        "fix": "Preserve old public root TD spelling, inherited group effective TB."
+      },
+      {
+        "id": "raw-seed-number",
+        "classification": "product source semantics shared with C",
+        "source": "roughjs Random checks original number truthiness before Math.imul. Truthy0.5/2**32 produces first next0; subsequent seed0 uses random branch, not a permanently deterministic zero stream.",
+        "fix": "Config preserves original finite seed number; C owns generator truthiness-before-imul. Model int|float was updated by root."
+      },
+      {
+        "id": "header-space-semicolon",
+        "classification": "fixture mistake plus permissive product parser",
+        "evidence": "test-runs/F01.4-batch-20261105T090906Z-11b555ce/artifacts/oracle/whitespace-separators.error.json",
+        "source": "FirstStmtSeparator := SEMI | NEWLINE | spaceList NEWLINE, so SPACE+SEMI is invalid.",
+        "fix": "Header-specific check rejects it; node trailing SPACE+SEMI stays valid. Exact bad original input retained as new negative header-semicolon-invalid; positive keeps node semicolons with a legal header newline."
+      },
+      {
+        "id": "metadata-db-serialization",
+        "classification": "product DB body and missing independent visible fixture",
+        "evidence": "test-runs/F01.4-batch-20261105T090906Z-11b555ce/artifacts/oracle/metadata-multiline-yaml.json",
+        "source": "FlowDB metadata doc.label bypasses classic sanitizeText, preserves br/> DB spelling. Source visibleLabel confirms First newline second.",
+        "fix": "Keep metadata body and canonical Mermaid entity transport in model.label; raw_label unchanged. Native provider still always sanitizes before measurement/draw. Add explicit visibleLabels, retain classic sanitizer path."
+      },
+      {
+        "id": "selected-group-layout-family",
+        "classification": "explicit user layout-removal policy",
+        "sourceScope": "Only actual group metadata algorithm selects a group layout; ordinary node algorithm is opaque and an earlier node metadata map is not forwarded to a later group by FlowDB.",
+        "rule": "For an actual group, algorithm must be a string equal to elk or starting elk.; otherwise UNSUPPORTED_CONFIG before any Canvas entry. Unknown elk.* stays raw for the source resolver to ignore; no optional algorithm list expansion.",
+        "negativeFixtures": [
+          "removed-group-layout",
+          "removed-placeholder-group-layout"
+        ],
+        "tests": [
+          "MetadataCollapseSourceTests.test_removed_group_layout_family_fails_before_any_canvas_entry",
+          "MetadataCollapseSourceTests.test_node_algorithm_is_opaque_unless_it_is_an_actual_group_selection"
+        ],
+        "mechanicalEvidence": "test-runs/F01.4-record-20261105T093222Z-4cbb243e/run.json",
+        "behaviorExecuted": false,
+        "note": "No removed-engine identifier, dependency, implementation or fallback string was added to production code."
+      }
+    ],
+    "changedProductFiles": [
+      {
+        "path": "src/py_mermaid/config/flowchart.py",
+        "sha256": "bcc7d8f8e2599d8bbd9433cc37e9665670a7d4feb58f469e23d46ff0090290ab",
+        "beforeSha256": "d7d16ff3a4663fa593769807828cbb2341b88eb44c0c07826eed525b91186adb"
+      },
+      {
+        "path": "src/py_mermaid/diagrams/flowchart/lexical.py",
+        "sha256": "91fd1b80a853d01e1bbced1a7aafcdcc8e0c18a7009ba8617591e3fbeb1da42d",
+        "beforeSha256": "c2478953d3d3f7e33c27cf6ca91db78d245a6dd83d44fafe2f4eb46b1492bb80"
+      },
+      {
+        "path": "src/py_mermaid/diagrams/flowchart/parser.py",
+        "sha256": "7d1f8f4e289a5c95979510ad2a161cb7d50eaa5f48abaf9aa6d226b8daad0151",
+        "beforeSha256": "159a49daa2ae4d3dbb752d06bbeec9bab083dd73735f76460bb2631102915d4c"
+      },
+      {
+        "path": "src/py_mermaid/parsing/yaml_json.py",
+        "sha256": "568345c47a13bfb65651dafa9b4fcec9a65b2ebd646fa470c8d9717dbecea465",
+        "beforeSha256": "d443e7b317a0a46f97ad53906efa5852fbfb3a4140aca9c8cea53e2854a0ca50"
+      }
+    ],
+    "mechanicalEvidence": "test-runs/F01.4-record-20261105T092539Z-5eb7cdf6/run.json",
+    "behaviorExecutedAfterRepair": false,
+    "functionalStatus": "NOT_EVALUATED",
+    "generatedLexerProvenance": {
+      "path": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js",
+      "sha256": "ffd1a76f0553952a344c68a9b1502dd5cfb6faab72541307b74679c5abc9cec8",
+      "section": "flowchart generated lexer options through rules (before conditions)",
+      "sectionSha256": "20564a2b194a3ebf96fb4a32bb029f08410d4498c7b32d986c001020f04a14de",
+      "observedLiterals": [
+        "style\\b",
+        "default\\b",
+        "v\\b",
+        "_self\\b"
+      ],
+      "options": "{} (first-match unless flex enabled)",
+      "productionDependency": false
+    },
+    "finalPolicyMechanicalEvidence": "test-runs/F01.4-record-20261105T093222Z-4cbb243e/run.json"
+  },
+  "sharedShapeThemeClosure": {
+    "reason": "F01.4 makes note/state shared shape paint reachable; prior F01.3 flowchart theme closure omitted these fields. No root per-theme fallback is substituted.",
+    "originalFailureEvidence": "test-runs/F01.4-batch-20261105T093450Z-117d64de",
+    "sourcePaintEvidence": "test-runs/F01.4-s4-source-paint-diagnostic-20261105T092448Z-a6b4e487",
+    "sourceCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+    "sources": [
+      {
+        "path": "packages/mermaid/src/themes/theme-base.js",
+        "sha256": "c13caf87f1a547eb65596ebaabf94ad80055546dff5458f3b6475799bb5ec52c",
+        "symbols": [
+          "Theme.constructor",
+          "Theme.updateColors",
+          "Theme.calculate"
+        ],
+        "fields": [
+          "noteBkgColor",
+          "noteBorderColor",
+          "noteTextColor",
+          "stateBorder"
+        ],
+        "theme": "base"
+      },
+      {
+        "path": "packages/mermaid/src/themes/theme-dark.js",
+        "sha256": "79e5faeb17f0ad47c2e97cbbab7491bf12ab93115546eaebda741e00fad75d37",
+        "symbols": [
+          "Theme.constructor",
+          "Theme.updateColors",
+          "Theme.calculate"
+        ],
+        "fields": [
+          "noteBkgColor",
+          "noteBorderColor",
+          "noteTextColor",
+          "stateBorder"
+        ],
+        "theme": "dark"
+      },
+      {
+        "path": "packages/mermaid/src/themes/theme-default.js",
+        "sha256": "c7676f84269d433c83f089bd978439a0d5e783ba48f1dfd87a294efb674e3b66",
+        "symbols": [
+          "Theme.constructor",
+          "Theme.updateColors",
+          "Theme.calculate"
+        ],
+        "fields": [
+          "noteBkgColor",
+          "noteBorderColor",
+          "noteTextColor",
+          "stateBorder"
+        ],
+        "theme": "default"
+      },
+      {
+        "path": "packages/mermaid/src/themes/theme-forest.js",
+        "sha256": "473eed6464c38764c59c15768cdedb44766f40aa736bb96ef1fa94cea2315cc5",
+        "symbols": [
+          "Theme.constructor",
+          "Theme.updateColors",
+          "Theme.calculate"
+        ],
+        "fields": [
+          "noteBkgColor",
+          "noteBorderColor",
+          "noteTextColor",
+          "stateBorder"
+        ],
+        "theme": "forest"
+      },
+      {
+        "path": "packages/mermaid/src/themes/theme-neutral.js",
+        "sha256": "a09bdc75fabfaddb19626f8c8af8e5d9df0dcee31ed09522dcbccd6418ca1a43",
+        "symbols": [
+          "Theme.constructor",
+          "Theme.updateColors",
+          "Theme.calculate"
+        ],
+        "fields": [
+          "noteBkgColor",
+          "noteBorderColor",
+          "noteTextColor",
+          "stateBorder"
+        ],
+        "theme": "neutral"
+      },
+      {
+        "path": "packages/mermaid/src/themes/theme-neo.js",
+        "sha256": "0ef8cf2a93e4629984c6c57382ce69f37d5bffb6a6fe5b949a972ee8d268bf9f",
+        "symbols": [
+          "Theme.constructor",
+          "Theme.updateColors",
+          "Theme.calculate"
+        ],
+        "fields": [
+          "noteBkgColor",
+          "noteBorderColor",
+          "noteTextColor",
+          "stateBorder"
+        ],
+        "theme": "neo"
+      },
+      {
+        "path": "packages/mermaid/src/themes/theme-neo-dark.js",
+        "sha256": "f2d3469f8fe6aae719654bba2fe776802617a72449db8a6a299bc070e07673c3",
+        "symbols": [
+          "Theme.constructor",
+          "Theme.updateColors",
+          "Theme.calculate"
+        ],
+        "fields": [
+          "noteBkgColor",
+          "noteBorderColor",
+          "noteTextColor",
+          "stateBorder"
+        ],
+        "theme": "neo-dark"
+      },
+      {
+        "path": "packages/mermaid/src/themes/theme-redux.js",
+        "sha256": "a2eeb8fc623614c4853e39e90abd1ebf6b8e6f9f4028cf40962d6d6414d6443f",
+        "symbols": [
+          "Theme.constructor",
+          "Theme.updateColors",
+          "Theme.calculate"
+        ],
+        "fields": [
+          "noteBkgColor",
+          "noteBorderColor",
+          "noteTextColor",
+          "stateBorder"
+        ],
+        "theme": "redux"
+      },
+      {
+        "path": "packages/mermaid/src/themes/theme-redux-color.js",
+        "sha256": "5e4278fb33825a501ffae1c6ac13a869763c4e611de9ad6077b58513e4e1b6d0",
+        "symbols": [
+          "Theme.constructor",
+          "Theme.updateColors",
+          "Theme.calculate"
+        ],
+        "fields": [
+          "noteBkgColor",
+          "noteBorderColor",
+          "noteTextColor",
+          "stateBorder"
+        ],
+        "theme": "redux-color"
+      },
+      {
+        "path": "packages/mermaid/src/themes/theme-redux-dark.js",
+        "sha256": "aa769f4fa5992f04bce44af4f1e568d98140477f53406a29a66248b4e6f5d1bc",
+        "symbols": [
+          "Theme.constructor",
+          "Theme.updateColors",
+          "Theme.calculate"
+        ],
+        "fields": [
+          "noteBkgColor",
+          "noteBorderColor",
+          "noteTextColor",
+          "stateBorder"
+        ],
+        "theme": "redux-dark"
+      },
+      {
+        "path": "packages/mermaid/src/themes/theme-redux-dark-color.js",
+        "sha256": "0c1899419d5a06afe61bd183d6fc2b59bf5b1be12528e2bf1c7f3fc36788b535",
+        "symbols": [
+          "Theme.constructor",
+          "Theme.updateColors",
+          "Theme.calculate"
+        ],
+        "fields": [
+          "noteBkgColor",
+          "noteBorderColor",
+          "noteTextColor",
+          "stateBorder"
+        ],
+        "theme": "redux-dark-color"
+      }
+    ],
+    "beforeThemeRulesSha256": "d7f7550c53385af0ce43e00bfc7a6a23f8986998af57186addee39c422b36d69",
+    "themeRulesSha256": "fd2aa045a0ea00a2898fd7da25fa2ef50fee2dac447f980e4ddea9e7b3fb8c85",
+    "portedStatementCount": 68,
+    "assignmentOrder": "Source constructor/updateColors order retained. Existing theme provider: construct, remove calculated sentinels, apply overrides, update, reapply explicit overrides. Dark secondaryTextColor derives in constructor, before overrides. StateBorder source absence is retained; neo-dark commented assignment is not executed.",
+    "scope": "Eleven source themes; null-theme native paint behavior unchanged. No production JS interpreter or upstream runtime dependency.",
+    "testClass": "SharedShapeThemeClosureTests",
+    "addedMethods": 6,
+    "testMethodCount": 54,
+    "behaviorExecuted": false,
+    "status": "code_complete_unverified",
+    "mechanicalEvidence": "test-runs/F01.4-record-20261105T094249Z-46187d2e/run.json",
+    "functionalStatus": "NOT_EVALUATED",
+    "statements": [
+      {
+        "theme": "base",
+        "phase": "construct",
+        "field": "noteBkgColor",
+        "sourceLine": 19,
+        "sourceExpression": "'#fff5ad'"
+      },
+      {
+        "theme": "base",
+        "phase": "construct",
+        "field": "noteTextColor",
+        "sourceLine": 20,
+        "sourceExpression": "'#333'"
+      },
+      {
+        "theme": "base",
+        "phase": "update",
+        "field": "noteBorderColor",
+        "sourceLine": 45,
+        "sourceExpression": "this.noteBorderColor || mkBorder(this.noteBkgColor, this.darkMode)"
+      },
+      {
+        "theme": "base",
+        "phase": "update",
+        "field": "noteBkgColor",
+        "sourceLine": 46,
+        "sourceExpression": "this.noteBkgColor || '#fff5ad'"
+      },
+      {
+        "theme": "base",
+        "phase": "update",
+        "field": "noteTextColor",
+        "sourceLine": 47,
+        "sourceExpression": "this.noteTextColor || '#333'"
+      },
+      {
+        "theme": "dark",
+        "phase": "construct",
+        "field": "secondaryTextColor",
+        "sourceLine": 14,
+        "sourceExpression": "invert(this.secondaryColor)"
+      },
+      {
+        "theme": "dark",
+        "phase": "construct",
+        "field": "noteBorderColor",
+        "sourceLine": 56,
+        "sourceExpression": "'calculated'"
+      },
+      {
+        "theme": "dark",
+        "phase": "construct",
+        "field": "noteBkgColor",
+        "sourceLine": 57,
+        "sourceExpression": "'#fff5ad'"
+      },
+      {
+        "theme": "dark",
+        "phase": "construct",
+        "field": "noteTextColor",
+        "sourceLine": 58,
+        "sourceExpression": "'calculated'"
+      },
+      {
+        "theme": "dark",
+        "phase": "update",
+        "field": "noteBorderColor",
+        "sourceLine": 143,
+        "sourceExpression": "this.secondaryBorderColor"
+      },
+      {
+        "theme": "dark",
+        "phase": "update",
+        "field": "noteBkgColor",
+        "sourceLine": 144,
+        "sourceExpression": "this.secondBkg"
+      },
+      {
+        "theme": "dark",
+        "phase": "update",
+        "field": "noteTextColor",
+        "sourceLine": 145,
+        "sourceExpression": "this.secondaryTextColor"
+      },
+      {
+        "theme": "default",
+        "phase": "construct",
+        "field": "noteBorderColor",
+        "sourceLine": 65,
+        "sourceExpression": "'calculated'"
+      },
+      {
+        "theme": "default",
+        "phase": "construct",
+        "field": "noteBkgColor",
+        "sourceLine": 66,
+        "sourceExpression": "'#fff5ad'"
+      },
+      {
+        "theme": "default",
+        "phase": "construct",
+        "field": "noteTextColor",
+        "sourceLine": 67,
+        "sourceExpression": "'calculated'"
+      },
+      {
+        "theme": "default",
+        "phase": "update",
+        "field": "noteBorderColor",
+        "sourceLine": 215,
+        "sourceExpression": "this.border2"
+      },
+      {
+        "theme": "default",
+        "phase": "update",
+        "field": "noteTextColor",
+        "sourceLine": 216,
+        "sourceExpression": "this.actorTextColor"
+      },
+      {
+        "theme": "forest",
+        "phase": "construct",
+        "field": "noteBorderColor",
+        "sourceLine": 58,
+        "sourceExpression": "'calculated'"
+      },
+      {
+        "theme": "forest",
+        "phase": "construct",
+        "field": "noteBkgColor",
+        "sourceLine": 59,
+        "sourceExpression": "'#fff5ad'"
+      },
+      {
+        "theme": "forest",
+        "phase": "construct",
+        "field": "noteTextColor",
+        "sourceLine": 60,
+        "sourceExpression": "'calculated'"
+      },
+      {
+        "theme": "forest",
+        "phase": "update",
+        "field": "noteBorderColor",
+        "sourceLine": 120,
+        "sourceExpression": "this.border2"
+      },
+      {
+        "theme": "forest",
+        "phase": "update",
+        "field": "noteTextColor",
+        "sourceLine": 121,
+        "sourceExpression": "this.actorTextColor"
+      },
+      {
+        "theme": "neutral",
+        "phase": "construct",
+        "field": "noteBorderColor",
+        "sourceLine": 70,
+        "sourceExpression": "'calculated'"
+      },
+      {
+        "theme": "neutral",
+        "phase": "construct",
+        "field": "noteBkgColor",
+        "sourceLine": 71,
+        "sourceExpression": "'calculated'"
+      },
+      {
+        "theme": "neutral",
+        "phase": "construct",
+        "field": "noteTextColor",
+        "sourceLine": 72,
+        "sourceExpression": "'calculated'"
+      },
+      {
+        "theme": "neutral",
+        "phase": "update",
+        "field": "noteBorderColor",
+        "sourceLine": 145,
+        "sourceExpression": "'#999'"
+      },
+      {
+        "theme": "neutral",
+        "phase": "update",
+        "field": "noteBkgColor",
+        "sourceLine": 146,
+        "sourceExpression": "'#666'"
+      },
+      {
+        "theme": "neutral",
+        "phase": "update",
+        "field": "noteTextColor",
+        "sourceLine": 147,
+        "sourceExpression": "'#fff'"
+      },
+      {
+        "theme": "neutral",
+        "phase": "update",
+        "field": "stateBorder",
+        "sourceLine": 242,
+        "sourceExpression": "this.stateBorder || '#000'"
+      },
+      {
+        "theme": "neo",
+        "phase": "construct",
+        "field": "noteBkgColor",
+        "sourceLine": 20,
+        "sourceExpression": "'#fff5ad'"
+      },
+      {
+        "theme": "neo",
+        "phase": "construct",
+        "field": "noteTextColor",
+        "sourceLine": 21,
+        "sourceExpression": "'#333'"
+      },
+      {
+        "theme": "neo",
+        "phase": "construct",
+        "field": "stateBorder",
+        "sourceLine": 34,
+        "sourceExpression": "'#000000'"
+      },
+      {
+        "theme": "neo",
+        "phase": "update",
+        "field": "noteBorderColor",
+        "sourceLine": 65,
+        "sourceExpression": "this.noteBorderColor || mkBorder(this.noteBkgColor, this.darkMode)"
+      },
+      {
+        "theme": "neo",
+        "phase": "update",
+        "field": "noteBkgColor",
+        "sourceLine": 66,
+        "sourceExpression": "this.noteBkgColor || '#fff5ad'"
+      },
+      {
+        "theme": "neo",
+        "phase": "update",
+        "field": "noteTextColor",
+        "sourceLine": 67,
+        "sourceExpression": "this.noteTextColor || '#333'"
+      },
+      {
+        "theme": "neo-dark",
+        "phase": "construct",
+        "field": "noteBkgColor",
+        "sourceLine": 41,
+        "sourceExpression": "'#fff5ad'"
+      },
+      {
+        "theme": "neo-dark",
+        "phase": "construct",
+        "field": "noteTextColor",
+        "sourceLine": 42,
+        "sourceExpression": "'#333'"
+      },
+      {
+        "theme": "neo-dark",
+        "phase": "update",
+        "field": "noteBorderColor",
+        "sourceLine": 81,
+        "sourceExpression": "this.noteBorderColor || mkBorder(this.noteBkgColor, this.darkMode)"
+      },
+      {
+        "theme": "neo-dark",
+        "phase": "update",
+        "field": "noteBkgColor",
+        "sourceLine": 82,
+        "sourceExpression": "this.noteBkgColor || '#fff5ad'"
+      },
+      {
+        "theme": "neo-dark",
+        "phase": "update",
+        "field": "noteTextColor",
+        "sourceLine": 83,
+        "sourceExpression": "this.noteTextColor || '#333'"
+      },
+      {
+        "theme": "redux",
+        "phase": "construct",
+        "field": "noteBkgColor",
+        "sourceLine": 20,
+        "sourceExpression": "'#fff5ad'"
+      },
+      {
+        "theme": "redux",
+        "phase": "construct",
+        "field": "noteTextColor",
+        "sourceLine": 21,
+        "sourceExpression": "'#28253D'"
+      },
+      {
+        "theme": "redux",
+        "phase": "construct",
+        "field": "stateBorder",
+        "sourceLine": 35,
+        "sourceExpression": "'#28253D'"
+      },
+      {
+        "theme": "redux",
+        "phase": "construct",
+        "field": "noteBorderColor",
+        "sourceLine": 44,
+        "sourceExpression": "'#FACC15'"
+      },
+      {
+        "theme": "redux",
+        "phase": "update",
+        "field": "noteBorderColor",
+        "sourceLine": 71,
+        "sourceExpression": "this.noteBorderColor || mkBorder(this.noteBkgColor, this.darkMode)"
+      },
+      {
+        "theme": "redux",
+        "phase": "update",
+        "field": "noteBkgColor",
+        "sourceLine": 72,
+        "sourceExpression": "this.noteBkgColor || '#FEF9C3'"
+      },
+      {
+        "theme": "redux",
+        "phase": "update",
+        "field": "noteTextColor",
+        "sourceLine": 73,
+        "sourceExpression": "this.noteTextColor || '#28253D'"
+      },
+      {
+        "theme": "redux-dark",
+        "phase": "construct",
+        "field": "noteBkgColor",
+        "sourceLine": 41,
+        "sourceExpression": "this.noteBkgColor ?? '#FEF9C3'"
+      },
+      {
+        "theme": "redux-dark",
+        "phase": "construct",
+        "field": "noteTextColor",
+        "sourceLine": 42,
+        "sourceExpression": "this.noteTextColor ?? '#28253D'"
+      },
+      {
+        "theme": "redux-dark",
+        "phase": "construct",
+        "field": "stateBorder",
+        "sourceLine": 51,
+        "sourceExpression": "'#FFFFFF'"
+      },
+      {
+        "theme": "redux-dark",
+        "phase": "construct",
+        "field": "noteBorderColor",
+        "sourceLine": 69,
+        "sourceExpression": "'#FACC15'"
+      },
+      {
+        "theme": "redux-dark",
+        "phase": "update",
+        "field": "noteBorderColor",
+        "sourceLine": 89,
+        "sourceExpression": "this.noteBorderColor || mkBorder(this.noteBkgColor, this.darkMode)"
+      },
+      {
+        "theme": "redux-dark",
+        "phase": "update",
+        "field": "noteBkgColor",
+        "sourceLine": 90,
+        "sourceExpression": "this.noteBkgColor || '#fff5ad'"
+      },
+      {
+        "theme": "redux-dark",
+        "phase": "update",
+        "field": "noteTextColor",
+        "sourceLine": 91,
+        "sourceExpression": "this.noteTextColor || '#FFFFFF'"
+      },
+      {
+        "theme": "redux-color",
+        "phase": "construct",
+        "field": "noteBkgColor",
+        "sourceLine": 20,
+        "sourceExpression": "'#fff5ad'"
+      },
+      {
+        "theme": "redux-color",
+        "phase": "construct",
+        "field": "noteTextColor",
+        "sourceLine": 21,
+        "sourceExpression": "'#28253D'"
+      },
+      {
+        "theme": "redux-color",
+        "phase": "construct",
+        "field": "stateBorder",
+        "sourceLine": 35,
+        "sourceExpression": "'#28253D'"
+      },
+      {
+        "theme": "redux-color",
+        "phase": "construct",
+        "field": "noteBorderColor",
+        "sourceLine": 56,
+        "sourceExpression": "'#FACC15'"
+      },
+      {
+        "theme": "redux-color",
+        "phase": "update",
+        "field": "noteBorderColor",
+        "sourceLine": 119,
+        "sourceExpression": "this.noteBorderColor || mkBorder(this.noteBkgColor, this.darkMode)"
+      },
+      {
+        "theme": "redux-color",
+        "phase": "update",
+        "field": "noteBkgColor",
+        "sourceLine": 120,
+        "sourceExpression": "this.noteBkgColor || '#fff5ad'"
+      },
+      {
+        "theme": "redux-color",
+        "phase": "update",
+        "field": "noteTextColor",
+        "sourceLine": 121,
+        "sourceExpression": "this.noteTextColor || '#28253D'"
+      },
+      {
+        "theme": "redux-dark-color",
+        "phase": "construct",
+        "field": "noteBkgColor",
+        "sourceLine": 41,
+        "sourceExpression": "this.noteBkgColor ?? '#FEF9C3'"
+      },
+      {
+        "theme": "redux-dark-color",
+        "phase": "construct",
+        "field": "noteTextColor",
+        "sourceLine": 42,
+        "sourceExpression": "this.noteTextColor ?? '#28253D'"
+      },
+      {
+        "theme": "redux-dark-color",
+        "phase": "construct",
+        "field": "stateBorder",
+        "sourceLine": 51,
+        "sourceExpression": "'#FFFFFF'"
+      },
+      {
+        "theme": "redux-dark-color",
+        "phase": "construct",
+        "field": "noteBorderColor",
+        "sourceLine": 69,
+        "sourceExpression": "'#FACC15'"
+      },
+      {
+        "theme": "redux-dark-color",
+        "phase": "update",
+        "field": "noteBorderColor",
+        "sourceLine": 121,
+        "sourceExpression": "this.noteBorderColor || mkBorder(this.noteBkgColor, this.darkMode)"
+      },
+      {
+        "theme": "redux-dark-color",
+        "phase": "update",
+        "field": "noteBkgColor",
+        "sourceLine": 122,
+        "sourceExpression": "this.noteBkgColor || '#fff5ad'"
+      },
+      {
+        "theme": "redux-dark-color",
+        "phase": "update",
+        "field": "noteTextColor",
+        "sourceLine": 123,
+        "sourceExpression": "this.noteTextColor || '#FFFFFF'"
+      }
+    ]
+  },
+  "finalVerification": {
+    "status": "PASS_LOCAL",
+    "sourceTreeSha256": "99a2342681469836c3b7be8be6815b9a82193146331aff51d260823b72b17a2e",
+    "evidence": "references/f014-verification-summary.json"
+  }
+}

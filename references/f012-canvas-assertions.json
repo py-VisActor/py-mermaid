@@ -1,0 +1,489 @@
+{
+  "schema": "py-mermaid-f012-assertions/v1",
+  "taskId": "F01.2-S3/canvas",
+  "frozenSourceSha256": "3d846b5df224e167a528a73c52d359388fda5e508b561fa876e4bd1b20785c2e",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "testPath": "tests/f012/test_canvas.py",
+  "testSha256": "f4d6ca1ab7da25dcef6aad67f5d4c44137e2fcdb6c4583e4e6e32e8cf115651c",
+  "count": 18,
+  "sources": [
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/squareRect.ts",
+      "symbols": [
+        "squareRect"
+      ],
+      "sha256": "2456ebbc205f1c73fcaf34e63d055a18b17ae71fbce2b1f4ff08e910d8cc2dfd",
+      "pythonPath": "src/py_mermaid/geometry/shapes.py"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/roundedRect.ts",
+      "symbols": [
+        "roundedRect"
+      ],
+      "sha256": "ec467557e20d023100fe6be03f3d478b619d5c5b9b0f283f632d90a14593dc10",
+      "pythonPath": "src/py_mermaid/geometry/shapes.py"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/drawRect.ts",
+      "symbols": [
+        "drawRect"
+      ],
+      "sha256": "1d03397624d31f5a244f32260fd8d109dd41751f1970858feb453f09a95d849e",
+      "pythonPath": "src/py_mermaid/geometry/shapes.py"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/stadium.ts",
+      "symbols": [
+        "stadium"
+      ],
+      "sha256": "cb15be21132dbb2eb118815b37f3b9cdc08e4f6d4ffe63c408a04796ee6b5b6a",
+      "pythonPath": "src/py_mermaid/geometry/shapes.py"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/subroutine.ts",
+      "symbols": [
+        "subroutine"
+      ],
+      "sha256": "bbf3ec95a0518b5796bdf23e17375323b000a02051a9b1119cf91adeab69b4a4",
+      "pythonPath": "src/py_mermaid/geometry/shapes.py"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/cylinder.ts",
+      "symbols": [
+        "cylinder"
+      ],
+      "sha256": "66cf21a2d0777a3a2188ac616d68bbd62e4569615e570c150a45e3c08477a9a0",
+      "pythonPath": "src/py_mermaid/geometry/shapes.py"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/circle.ts",
+      "symbols": [
+        "circle"
+      ],
+      "sha256": "0583cce7bef770d20cd108c620ef546ae2cd423da2ebd913a93e6546ff28a167",
+      "pythonPath": "src/py_mermaid/geometry/shapes.py"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/doubleCircle.ts",
+      "symbols": [
+        "doubleCircle"
+      ],
+      "sha256": "e13030a09455da35a76545c9f27d7c07c3ba450fa065a65d367d40a824bfbc3e",
+      "pythonPath": "src/py_mermaid/geometry/shapes.py"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/question.ts",
+      "symbols": [
+        "question"
+      ],
+      "sha256": "c662ad9199b6de3b38580bc59adc15c8e0d05162cae777dcc3c605fbaaa96b06",
+      "pythonPath": "src/py_mermaid/geometry/shapes.py"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/hexagon.ts",
+      "symbols": [
+        "hexagon"
+      ],
+      "sha256": "2c5d559cf52495aee42b250c6ca556be1f5f0c244ee2993d53d22d405d52dcf3",
+      "pythonPath": "src/py_mermaid/geometry/shapes.py"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/leanLeft.ts",
+      "symbols": [
+        "leanLeft"
+      ],
+      "sha256": "7a156d3830ee833484e381351bd2f298b79c11081595e8bfaae224c7288608aa",
+      "pythonPath": "src/py_mermaid/geometry/shapes.py"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/leanRight.ts",
+      "symbols": [
+        "leanRight"
+      ],
+      "sha256": "92c03498df78448186f2114231439338c73e7a8d6a2ad47ad1d7dea1b336f56c",
+      "pythonPath": "src/py_mermaid/geometry/shapes.py"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/trapezoid.ts",
+      "symbols": [
+        "trapezoid"
+      ],
+      "sha256": "7347c2439b54e296ff6e426bc5aefcd00236b78d4c0f859258feae83c1183cfe",
+      "pythonPath": "src/py_mermaid/geometry/shapes.py"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/invertedTrapezoid.ts",
+      "symbols": [
+        "invertedTrapezoid"
+      ],
+      "sha256": "811f49eeba78032b5a64f2266d57d7c220ea1841c45f35b854d6381a68a93e1a",
+      "pythonPath": "src/py_mermaid/geometry/shapes.py"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/rectLeftInvArrow.ts",
+      "symbols": [
+        "rectLeftInvArrow"
+      ],
+      "sha256": "62472fe5c9d63775db12dfc6914f9995681cdbfe193b945b13bb6216f687f06e",
+      "pythonPath": "src/py_mermaid/geometry/shapes.py"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/insertPolygonShape.ts",
+      "symbols": [
+        "insertPolygonShape"
+      ],
+      "sha256": "56279058530c0e398a835d3932e672be2a44111da30b92920435d3584e306c86",
+      "pythonPath": "src/py_mermaid/geometry/shapes.py"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/util.ts",
+      "symbols": [
+        "util"
+      ],
+      "sha256": "bc63b16d067e4dd1c429e9cf249f4d73260819696de122dff0ce16b12db321c1",
+      "pythonPath": "src/py_mermaid/rendering/labels/plain.py"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/diagrams/flowchart/parser/flow.jison",
+      "symbols": [
+        "vertex"
+      ],
+      "sha256": "9597faffe2a133b104c6dd4f38a162f6980bff4e0a841a83ff94af3900ea7ba8",
+      "pythonPath": "src/py_mermaid/geometry/shapes.py"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/diagrams/flowchart/flowDb.ts",
+      "symbols": [
+        "getTypeFromVertex",
+        "addNodeFromVertex",
+        "getData"
+      ],
+      "sha256": "33577b9ade8c65be6049c3093089dbf81abf44214f49c2b2ea46434183889288",
+      "pythonPath": "src/py_mermaid/geometry/shapes.py"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/edges.js",
+      "symbols": [
+        "insertEdgeLabel"
+      ],
+      "sha256": "8fee7300ea0bffd008f5d2c12a05e85f5ea8bc22a9855d4d2e2b6c0e6c92a33a",
+      "pythonPath": "src/py_mermaid/rendering/skia/session.py"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/clusters.js",
+      "symbols": [
+        "rect"
+      ],
+      "sha256": "65363a1bb619eb0d0e0635f3c3bd4410c2ade873053ea864506a3323496f940b",
+      "pythonPath": "src/py_mermaid/rendering/skia/session.py"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/createText.ts",
+      "symbols": [
+        "createText",
+        "addHtmlSpan"
+      ],
+      "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+      "pythonPath": "src/py_mermaid/rendering/labels/plain.py"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/handle-markdown-text.ts",
+      "symbols": [
+        "nonMarkdownToHTML",
+        "nonMarkdownToLines"
+      ],
+      "sha256": "6f99a7b3f5b11f87f5509a370663f14650f8f8c3cbb9a34ea496a1aa183cd0ca",
+      "pythonPath": "src/py_mermaid/rendering/labels/plain.py"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/splitText.ts",
+      "symbols": [
+        "splitWordToFitWidth"
+      ],
+      "sha256": "3dab45fa82a11d7410a306819c7a01c0dc25aab5810cba0127d0adf00547f40e",
+      "pythonPath": "src/py_mermaid/rendering/labels/plain.py"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/themes/theme-redux-color.js",
+      "symbols": [
+        "Theme"
+      ],
+      "sha256": "5e4278fb33825a501ffae1c6ac13a869763c4e611de9ad6077b58513e4e1b6d0",
+      "pythonPath": "src/py_mermaid/rendering/skia/session.py"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/diagrams/flowchart/styles.ts",
+      "symbols": [
+        "genColor",
+        "getStyles"
+      ],
+      "sha256": "697ffb86fef2787307ddc42cd5d3d1544042f08c2452e170691d28ab3d252a50",
+      "pythonPath": "src/py_mermaid/rendering/skia/session.py"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/styles.ts",
+      "symbols": [
+        "getStyles"
+      ],
+      "sha256": "dd53a582b0c2411e16beeb37f51664968f278b08b97f63fc8808cbc8381f73fb",
+      "pythonPath": "src/py_mermaid/rendering/skia/session.py"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/insertLookDefs.ts",
+      "symbols": [
+        "insertLookDefs"
+      ],
+      "sha256": "9810059f11462129a1518d3b1fa3950e9e16a959dbe92abc732aa5e714a2eb13",
+      "pythonPath": "src/py_mermaid/rendering/skia/session.py"
+    }
+  ],
+  "assertions": [
+    {
+      "id": "F012-CANVAS-ALL-FOURTEEN-SOURCE-DIMENSION-FORMULAS",
+      "test": "ShapeGeometrySourceTests.test_all_fourteen_source_dimension_formulas",
+      "status": "targeted_verified",
+      "expectedSource": "fixed flow.jison shape handlers, group palette/title rules and edge-label source width/background; independent public a18 path predicates and PNG decoded pixel checks",
+      "testOnlyInputs": "Manual placements and contrast background isolate drawing, no production oracle/layout coordinate fixtures",
+      "cases": 14,
+      "evidence": "test-runs\\F01.2-circle-shadow-fix-20261104T145220Z-f7b4cdfc/run.json"
+    },
+    {
+      "id": "F012-CANVAS-LABEL-BOXES-FIT-TRUE-OUTLINES-NOT-JUST-BOUNDING-RECTS",
+      "test": "ShapeGeometrySourceTests.test_label_boxes_fit_true_outlines_not_just_bounding_rects",
+      "status": "targeted_verified",
+      "expectedSource": "fixed flow.jison shape handlers, group palette/title rules and edge-label source width/background; independent public a18 path predicates and PNG decoded pixel checks",
+      "testOnlyInputs": "Manual placements and contrast background isolate drawing, no production oracle/layout coordinate fixtures",
+      "cases": 14,
+      "evidence": "test-runs\\F01.2-circle-shadow-fix-20261104T145220Z-f7b4cdfc/run.json"
+    },
+    {
+      "id": "F012-CANVAS-CIRCLE-MEASUREMENT-HAS-NO-RECTANGULAR-MINIMUM",
+      "test": "ShapeGeometrySourceTests.test_circle_measurement_has_no_rectangular_minimum",
+      "status": "targeted_verified",
+      "expectedSource": "fixed flow.jison shape handlers, group palette/title rules and edge-label source width/background; independent public a18 path predicates and PNG decoded pixel checks",
+      "testOnlyInputs": "Manual placements and contrast background isolate drawing, no production oracle/layout coordinate fixtures",
+      "cases": 1,
+      "evidence": "test-runs\\F01.2-circle-shadow-fix-20261104T145220Z-f7b4cdfc/run.json"
+    },
+    {
+      "id": "F012-CANVAS-SOURCE-INNER-DETAIL-PATHS-AND-ASYMMETRIC-LABELS",
+      "test": "ShapeGeometrySourceTests.test_source_inner_detail_paths_and_asymmetric_labels",
+      "status": "targeted_verified",
+      "expectedSource": "fixed flow.jison shape handlers, group palette/title rules and edge-label source width/background; independent public a18 path predicates and PNG decoded pixel checks",
+      "testOnlyInputs": "Manual placements and contrast background isolate drawing, no production oracle/layout coordinate fixtures",
+      "cases": 1,
+      "evidence": "test-runs\\F01.2-circle-shadow-fix-20261104T145220Z-f7b4cdfc/run.json"
+    },
+    {
+      "id": "F012-CANVAS-OFFCENTER-PORTS-STAY-ORTHOGONAL-AND-TOUCH-REAL-OUTLINE",
+      "test": "ShapeGeometrySourceTests.test_offcenter_ports_stay_orthogonal_and_touch_real_outline",
+      "status": "targeted_verified",
+      "expectedSource": "fixed flow.jison shape handlers, group palette/title rules and edge-label source width/background; independent public a18 path predicates and PNG decoded pixel checks",
+      "testOnlyInputs": "Manual placements and contrast background isolate drawing, no production oracle/layout coordinate fixtures",
+      "cases": 14,
+      "evidence": "test-runs\\F01.2-circle-shadow-fix-20261104T145220Z-f7b4cdfc/run.json"
+    },
+    {
+      "id": "F012-CANVAS-ELLIPSE-PRESERVES-UPSTREAM-MISSING-HANDLER-ERROR",
+      "test": "ShapeGeometrySourceTests.test_ellipse_preserves_upstream_missing_handler_error",
+      "status": "targeted_verified",
+      "expectedSource": "fixed flow.jison shape handlers, group palette/title rules and edge-label source width/background; independent public a18 path predicates and PNG decoded pixel checks",
+      "testOnlyInputs": "Manual placements and contrast background isolate drawing, no production oracle/layout coordinate fixtures",
+      "cases": 1,
+      "evidence": "test-runs\\F01.2-circle-shadow-fix-20261104T145220Z-f7b4cdfc/run.json"
+    },
+    {
+      "id": "F012-CANVAS-ALL-FOURTEEN-ARE-DRAWN-WITH-VISIBLE-LABEL-AND-TRUE-SILHOUETTE",
+      "test": "ClassicShapePixelTests.test_all_fourteen_are_drawn_with_visible_label_and_true_silhouette",
+      "status": "targeted_verified",
+      "expectedSource": "fixed flow.jison shape handlers, group palette/title rules and edge-label source width/background; independent public a18 path predicates and PNG decoded pixel checks",
+      "testOnlyInputs": "Manual placements and contrast background isolate drawing, no production oracle/layout coordinate fixtures",
+      "cases": 14,
+      "evidence": "test-runs\\F01.2-circle-shadow-fix-20261104T145220Z-f7b4cdfc/run.json"
+    },
+    {
+      "id": "F012-CANVAS-CIRCLE-AND-DOUBLECIRCLE-ACTUAL-OUTER-AND-INNER-SHADOWS",
+      "test": "ClassicShapePixelTests.test_circle_and_doublecircle_actual_outer_and_inner_shadows",
+      "expectedSource": "fixed styles.ts circle filter and independently composed doubleCircle SVG elements; outer/inner actual PNG shadow pixel regions",
+      "status": "targeted_verified",
+      "evidence": "test-runs\\F01.2-circle-shadow-fix-20261104T145220Z-f7b4cdfc/run.json"
+    },
+    {
+      "id": "F012-CANVAS-SUBROUTINE-DOUBLECIRCLE-AND-CYLINDER-INTERNAL-MARKS-ARE-PIXELS",
+      "test": "ClassicShapePixelTests.test_subroutine_doublecircle_and_cylinder_internal_marks_are_pixels",
+      "status": "targeted_verified",
+      "expectedSource": "fixed flow.jison shape handlers, group palette/title rules and edge-label source width/background; independent public a18 path predicates and PNG decoded pixel checks",
+      "testOnlyInputs": "Manual placements and contrast background isolate drawing, no production oracle/layout coordinate fixtures",
+      "cases": 1,
+      "evidence": "test-runs\\F01.2-circle-shadow-fix-20261104T145220Z-f7b4cdfc/run.json"
+    },
+    {
+      "id": "F012-CANVAS-ANNOTATION-MEASUREMENT-HAS-ROLE-SPECIFIC-WIDTH-POLICY",
+      "test": "AnnotationAndGroupCanvasTests.test_annotation_measurement_has_role_specific_width_policy",
+      "status": "targeted_verified",
+      "expectedSource": "fixed flow.jison shape handlers, group palette/title rules and edge-label source width/background; independent public a18 path predicates and PNG decoded pixel checks",
+      "testOnlyInputs": "Manual placements and contrast background isolate drawing, no production oracle/layout coordinate fixtures",
+      "cases": 1,
+      "evidence": "test-runs\\F01.2-circle-shadow-fix-20261104T145220Z-f7b4cdfc/run.json"
+    },
+    {
+      "id": "F012-CANVAS-EDGE-LABEL-BACKGROUND-MASKS-ROUTE-AND-TEXT-IS-VISIBLE",
+      "test": "AnnotationAndGroupCanvasTests.test_edge_label_background_masks_route_and_text_is_visible",
+      "status": "targeted_verified",
+      "expectedSource": "fixed flow.jison shape handlers, group palette/title rules and edge-label source width/background; independent public a18 path predicates and PNG decoded pixel checks",
+      "testOnlyInputs": "Manual placements and contrast background isolate drawing, no production oracle/layout coordinate fixtures",
+      "cases": 1,
+      "evidence": "test-runs\\F01.2-circle-shadow-fix-20261104T145220Z-f7b4cdfc/run.json"
+    },
+    {
+      "id": "F012-CANVAS-NESTED-GROUPS-HAVE-PALETTE-ACTUAL-PIXELS-AND-VISIBLE-TITLES",
+      "test": "AnnotationAndGroupCanvasTests.test_nested_groups_have_palette_actual_pixels_and_visible_titles",
+      "status": "targeted_verified",
+      "expectedSource": "fixed flow.jison shape handlers, group palette/title rules and edge-label source width/background; independent public a18 path predicates and PNG decoded pixel checks",
+      "testOnlyInputs": "Manual placements and contrast background isolate drawing, no production oracle/layout coordinate fixtures",
+      "cases": 1,
+      "evidence": "test-runs\\F01.2-circle-shadow-fix-20261104T145220Z-f7b4cdfc/run.json"
+    },
+    {
+      "id": "F012-CANVAS-GROUP-ONLY-DIAGRAM-IS-ACTUALLY-DRAWN",
+      "test": "AnnotationAndGroupCanvasTests.test_group_only_diagram_is_actually_drawn",
+      "status": "targeted_verified",
+      "expectedSource": "fixed flow.jison shape handlers, group palette/title rules and edge-label source width/background; independent public a18 path predicates and PNG decoded pixel checks",
+      "testOnlyInputs": "Manual placements and contrast background isolate drawing, no production oracle/layout coordinate fixtures",
+      "cases": 1,
+      "evidence": "test-runs\\F01.2-circle-shadow-fix-20261104T145220Z-f7b4cdfc/run.json"
+    },
+    {
+      "id": "F012-CANVAS-REAL-NESTED-GROUP-CROSS-CONNECTION-AND-EDGE-LABEL-PIXELS",
+      "test": "AnnotationAndGroupCanvasTests.test_real_nested_group_cross_connection_and_edge_label_pixels",
+      "status": "targeted_verified",
+      "expectedSource": "fixed flow.jison shape handlers, group palette/title rules and edge-label source width/background; independent public a18 path predicates and PNG decoded pixel checks",
+      "testOnlyInputs": "Manual placements and contrast background isolate drawing, no production oracle/layout coordinate fixtures",
+      "cases": 1,
+      "evidence": "test-runs\\F01.2-circle-shadow-fix-20261104T145220Z-f7b4cdfc/run.json"
+    },
+    {
+      "id": "F012-CANVAS-ANNOTATIONS-OWNER-THREAD-AND-REPEAT-CALL-ISOLATION",
+      "test": "AnnotationAndGroupCanvasTests.test_annotations_owner_thread_and_repeat_call_isolation",
+      "status": "targeted_verified",
+      "expectedSource": "fixed flow.jison shape handlers, group palette/title rules and edge-label source width/background; independent public a18 path predicates and PNG decoded pixel checks",
+      "testOnlyInputs": "Manual placements and contrast background isolate drawing, no production oracle/layout coordinate fixtures",
+      "cases": 1,
+      "evidence": "test-runs\\F01.2-circle-shadow-fix-20261104T145220Z-f7b4cdfc/run.json"
+    },
+    {
+      "id": "F012-CANVAS-MISSING-ANNOTATIONS-ARE-AN-ERROR-NOT-SILENT-CONTENT-LOSS",
+      "test": "AnnotationAndGroupCanvasTests.test_missing_annotations_are_an_error_not_silent_content_loss",
+      "status": "targeted_verified",
+      "expectedSource": "fixed flow.jison shape handlers, group palette/title rules and edge-label source width/background; independent public a18 path predicates and PNG decoded pixel checks",
+      "testOnlyInputs": "Manual placements and contrast background isolate drawing, no production oracle/layout coordinate fixtures",
+      "cases": 1,
+      "evidence": "test-runs\\F01.2-circle-shadow-fix-20261104T145220Z-f7b4cdfc/run.json"
+    },
+    {
+      "id": "F012-CANVAS-BLANK-PNG-CANNOT-PASS-UNCHANGED-TRACE",
+      "test": "PixelContentNegativeControls.test_blank_png_cannot_pass_unchanged_trace",
+      "status": "targeted_verified",
+      "expectedSource": "fixed flow.jison shape handlers, group palette/title rules and edge-label source width/background; independent public a18 path predicates and PNG decoded pixel checks",
+      "testOnlyInputs": "Manual placements and contrast background isolate drawing, no production oracle/layout coordinate fixtures",
+      "cases": 1,
+      "evidence": "test-runs\\F01.2-circle-shadow-fix-20261104T145220Z-f7b4cdfc/run.json"
+    },
+    {
+      "id": "F012-CANVAS-MISSING-TEXT-TRACE-CANNOT-PASS-A-PLAUSIBLE-PNG",
+      "test": "PixelContentNegativeControls.test_missing_text_trace_cannot_pass_a_plausible_png",
+      "status": "targeted_verified",
+      "expectedSource": "fixed flow.jison shape handlers, group palette/title rules and edge-label source width/background; independent public a18 path predicates and PNG decoded pixel checks",
+      "testOnlyInputs": "Manual placements and contrast background isolate drawing, no production oracle/layout coordinate fixtures",
+      "cases": 1,
+      "evidence": "test-runs\\F01.2-circle-shadow-fix-20261104T145220Z-f7b4cdfc/run.json"
+    }
+  ],
+  "mechanicalChecks": [
+    {
+      "command": [
+        "C:\\venvs\\pymmd-20261102\\Scripts\\python.exe",
+        "-m",
+        "compileall",
+        "-q",
+        "tests/f012/test_canvas.py"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\venvs\\pymmd-20261102\\Scripts\\python.exe",
+        "-c",
+        "import sys,importlib.util,unittest; sys.path.insert(0,'src'); spec=importlib.util.spec_from_file_location('f012_canvas_tests','tests/f012/test_canvas.py'); module=importlib.util.module_from_spec(spec); spec.loader.exec_module(module); print('Collected',unittest.defaultTestLoader.loadTestsFromModule(module).countTestCases(),'tests; no behavior executed')"
+      ],
+      "exitCode": 0,
+      "stdout": "Collected 17 tests; no behavior executed\n",
+      "stderr": ""
+    }
+  ],
+  "imageReviewRecommendations": [
+    "14-shape gallery with ordinary and multiline long labels, including circle/doublecircle and concave odd; inspect real outer contours and internal subroutine/cylinder/ring marks",
+    "Nested outer+inner groups with different palette slots and titles, inside/outside cross-group edges; inspect parent contains child/label space and no group-background overpaint",
+    "One edge label over a visible route, plus multiline/Unicode labels; inspect source gray background masks line and all text remains readable",
+    "LR graph with off-center ports on diamond/stadium/circle/cylinder and group endpoints; inspect orthogonal last stub touches real outline",
+    "Only empty group and one deeply nested case; inspect title remains visible with no leaf nodes and full shadow bounds"
+  ],
+  "limits": [
+    "Pillow only decodes/constructs test controls, never acts as production rendering backend",
+    "Image pixel presence does not alone prove correct CJK font glyph coverage",
+    "No cross-renderer zero-pixel-difference or coordinate equality requirement",
+    "Tests collected only; no product behavior, source modifications or install validation in S3"
+  ],
+  "history": [
+    {
+      "count": 17,
+      "testSha256": "2432933f91dbfc80850395f0aaed2fe1eb96e638ba499efc6c1afc905e4d7dc2",
+      "status": "Initial17 methods passed but independent visual QA discovered incorrect circle-no-shadow expectation; old source/test snapshots retained in failed QA run"
+    }
+  ],
+  "sourceCorrection": [
+    {
+      "issueId": "F012-CANVAS-CIRCLE-SHADOW",
+      "oldIncorrectReading": "The adjacent .neo-line path filter:none rule was misattributed to .node circle",
+      "correctSource": "styles.ts [data-look=neo].node circle resolves options.dropShadow; outer and inner doublecircle SVG circles independently filtered/filled/stroked",
+      "originalFailedQa": "test-runs/F01.2-visual-qa-initial-20261104T145126Z-c8c94288",
+      "fixRun": "test-runs\\F01.2-circle-shadow-fix-20261104T145220Z-f7b4cdfc",
+      "actualPngReview": "test-runs\\F01.2-visual-qa-circular-fixed-20261104T145322Z-46380ea2"
+    }
+  ],
+  "postFixSourceIdentity": {
+    "sourceTreeSha256": "31735d8fe4c8fd7a8e4738514f01df45e5ca0559042381776a657eed4d284825",
+    "files": {
+      "LICENSE": "d925ca50a75467a0a8d28c4f7236922346b52c782cd80840d0aec258eaf4f870",
+      "pyproject.toml": "dc0548ca0adc4d6decb5eca8eb0ccabe706d664bead639c8fd562736f696059f",
+      "README.md": "32e89fcdd7510e84de9415d6e440ce20dcf09fde4504261d2b8b994a25e24c9d",
+      "references/licenses/mermaid-LICENSE": "ec9fb67dcb25eccc416ed56e1aab819222c805a2a4bfe4cb19e7556bf2ffde80",
+      "src/py_mermaid/__init__.py": "24d44ca3e79f9fd539fe3d3a8a1a031fdac7be2ebf05c9f5480474d16117a55a",
+      "src/py_mermaid/api.py": "03df9ba96a30d22caeb785e0c157d58460ab2e22a263dbae462ca65df512a1d6",
+      "src/py_mermaid/config/__init__.py": "0a1a35bc6930e3ec4b021e68d66da16df4f0a576472bc4ec2410598579e6ab4f",
+      "src/py_mermaid/config/flowchart.py": "fa0040b7c12aa05b6743f551906f0e4fe7bebd150a5e45996dd477cd8e4d47e7",
+      "src/py_mermaid/diagrams/__init__.py": "9154145bccf3c978abe2ae3b6934ba969a756e9a6e77bdf2dbf3dbfd373cb619",
+      "src/py_mermaid/diagrams/flowchart/__init__.py": "648b1a3ca353ad86c12facbcb0d900aa2595a274b64b0d2c2a931c131c3c8a96",
+      "src/py_mermaid/diagrams/flowchart/parser.py": "1a6dd122957c0af9f2a6b7db824ac05cee541a7c705ec854c93ad8fc86643452",
+      "src/py_mermaid/geometry/__init__.py": "107fecdf0bc750e9300aae4cd28b545a61b180ef3065996c82d1faed6ae77b82",
+      "src/py_mermaid/geometry/flowchart.py": "dccaa6805901d0bcb502acddf3810302041553569fc9964201ca6d52dabdee5f",
+      "src/py_mermaid/geometry/shapes.py": "f2ea1d864d1a174862189b0a1cbd521bbead5c9f915195d98159bb9135c656c3",
+      "src/py_mermaid/layout/__init__.py": "6d1ecc869efa4cd9a7edd97fbd986cb719aa5509366da8775096b1fbd3074add",
+      "src/py_mermaid/layout/elk/__init__.py": "9baa94a4f1ce971d55a2f5008bd33c126764842ed68909c731f88d822c28498b",
+      "src/py_mermaid/layout/elk/compound.py": "0573e91527216ace90c9068420ff97fb850f3d6cd1e35c750ca632eccba4a3d2",
+      "src/py_mermaid/layout/elk/flowchart.py": "8851aa0a3d53eaef0c69568a93654ad3f92a773bc4943d7b6c4364918126b0be",
+      "src/py_mermaid/model/__init__.py": "dc03b5bae51198aa7a4252ce4f65fb4717b4d1c241f1fed23dd0506f00743b3c",
+      "src/py_mermaid/model/flowchart.py": "4f000087ce7903dff6d238f7cd9186005b621ccb222e0066ce68e0d2090d278d",
+      "src/py_mermaid/parsing/__init__.py": "23cde8ba2b1e5aefd57036a5233180f8b6fe63c5c5a3be1166c3f58de843fb0d",
+      "src/py_mermaid/py.typed": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "src/py_mermaid/rendering/__init__.py": "ed89819539fa2b113c92aa2530d8598d7a1ba665a8127ab2c1641e6445415573",
+      "src/py_mermaid/rendering/labels/__init__.py": "da026d1ca373bb7b9466a5276dcad5826b8c6b19b3f23c98e1e64ba8259ea2e1",
+      "src/py_mermaid/rendering/labels/plain.py": "fa0bd7c05a82a7412f5cce1fea62acc580b6389789510bc0b893d9eb4e88fac5",
+      "src/py_mermaid/rendering/skia/__init__.py": "60776be795ea6008f72da9be2517dd538cfb7f61f937930944bfa915c706df7a",
+      "src/py_mermaid/rendering/skia/session.py": "0646cc90b92d32adcfcd34a111da426ef36e0e88c1f335b25ed840c610dd53f5",
+      "THIRD_PARTY_NOTICES.md": "b7961f2fb396a53491b5d840649c696ff97daf0b8607ede40b91a3ecef07281f"
+    }
+  }
+}

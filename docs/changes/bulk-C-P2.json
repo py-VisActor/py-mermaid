@@ -1,0 +1,97 @@
+{
+  "schema": "py-mermaid-bulk-test-receipt/v1",
+  "group": "C",
+  "phase": "P2",
+  "status": "designed_not_executed",
+  "candidateSourceSha256": "97b353ebf7e176a750a736a714c85638e0a497b722e451dc77570579a2d36cbb",
+  "assertionMap": "references/bulk-C-assertions.json",
+  "fixture": "tests/bulk/cases-C.json",
+  "fixtureSha256": "77c097e848db57816f5343d6fccc0725f39ef6b39a08d7786e77d324967cc5a6",
+  "counts": {
+    "discoveredMethods": 331,
+    "byModule": {
+      "info": 3,
+      "railroad4": 68,
+      "sequence": 53,
+      "routing": 30,
+      "zenuml": 177
+    },
+    "staticPythonAssertionCallSites": 243,
+    "literalRailroadSourceCases": 60,
+    "literalRailroadOriginalAssertions": 136,
+    "zenSourceVisualCases": 148,
+    "emojiReferenceRows": 93,
+    "emojiDirectExpectedComparisons": 186,
+    "arrowParameterRows": 26,
+    "actorParameterRows": 8,
+    "signatureParameterRows": 11,
+    "nativeAsyncMethods": 9,
+    "fixtures": 302,
+    "fixtureKinds": {
+      "sequence": 63,
+      "railroad": 26,
+      "railroadEbnf": 12,
+      "railroadAbnf": 10,
+      "railroadPeg": 12,
+      "zenuml": 176,
+      "info": 3
+    },
+    "fixtureExpectations": {
+      "render": 294,
+      "syntax_error": 8
+    }
+  },
+  "mechanicalRuns": [
+    "BULK-record-20261106T042009Z-ec17b405",
+    "BULK-record-20261106T042009Z-9739a9e6",
+    "BULK-record-20261106T042333Z-d721b830",
+    "BULK-record-20261106T042334Z-9e39fc9a"
+  ],
+  "mechanicalResult": "SUCCESS compile and unittest discovery only; sourceUnchanged=true",
+  "futureArgv": [
+    "python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests/bulk/c",
+    "-t",
+    "tests/bulk",
+    "-v"
+  ],
+  "dependencies": [
+    "existing public py-skia-canvas0.1.0a18",
+    "existing Pillow only for development PNG decode",
+    "public py-visactor-katex dependency for math fixtures",
+    "source JS oracle only under root tools, not executed here"
+  ],
+  "executed": {
+    "productParse": false,
+    "productBuild": false,
+    "layout": false,
+    "nativeAllocation": false,
+    "formalUnitTests": false,
+    "oracle": false,
+    "images": false
+  },
+  "files": {
+    "tests/bulk/c/__init__.py": "6d32ed94b50481a7fb1d54d82c9024f372ba836dbc081981144db22dc03d14bc",
+    "tests/bulk/c/_support.py": "b6603e1b522f711979389f2939343cd0d0f1bce8a06f75080a7fea1dd8cab43d",
+    "tests/bulk/c/railroad-source-cases.json": "c4472143ff3865c0317e22971be0879c26f79862b0647515a80d398371c9da27",
+    "tests/bulk/c/test_info.py": "0b2cb54d0fd9cee7d8059c3050782af2eac7deeb2dfca59e0e43a9ee2c7ae74d",
+    "tests/bulk/c/test_railroad.py": "7fbd6a27e4820bc95444c98fa62c10c15b2b7754747b6b2d39f0d5b1cdd6806d",
+    "tests/bulk/c/test_sequence.py": "beddb1826d3fc7824439382aead67b7575c785ec5c8d1f3fa02549a60df31502",
+    "tests/bulk/c/test_swimlane_routing.py": "ed174dd9814267032c93d86309966b5758ae68faecea1ea3256b6ccb3839fd53",
+    "tests/bulk/c/test_zenuml.py": "20a28e51e0ebfcc352c2d9093fb611f728077d5f8ea5c0de4271ae2a226e88b0",
+    "tests/bulk/c/zen-assets.json": "f1edb3767dacba79a8bb48397865d58aaad9d807890705612347c95d0a04e511",
+    "tests/bulk/c/zen-emoji-source.json": "22cb999cef2bcf1831fcfa6c1c55ead96c4c85d21f1db510b7a13dfa2fe05363",
+    "tests/bulk/c/zen-visual-source-cases.json": "1ae8ff8a4bbbdab3b4df4bb1b678b1c126c4391e1c9c4dc6838b8d3b08f4ede0",
+    "tests/bulk/cases-C.json": "77c097e848db57816f5343d6fccc0725f39ef6b39a08d7786e77d324967cc5a6"
+  },
+  "writesStopped": true,
+  "limitations": [
+    "Behavior, exact native pixels, official source render classifications and numerical regressions have not been executed. Source-derived suspicions are preserved for grouped P3 first run.",
+    "Device/export/lifecycle/resource-security full matrices are root-owned shared tests; C native tests focus family semantics/geometry/paint and source vendor asset preservation.",
+    "Source editor incomplete-recovery metadata are indexed separately; native complete-input diagnostic assertions do not falsely claim identical ANTLR error text."
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "schema": "py-mermaid-bulk-C-repair/v1",
+  "phase": "P3",
+  "status": "targeted_checks_passed_pending_joint_candidate_and_official_visual_review",
+  "firstRun": "BULK-P3-first-20261106T042952Z-978737eb",
+  "unitRun": "BULK-record-20261106T045020Z-ea2286dc",
+  "cpuRun": "BULK-batch-20261106T045023Z-16c153f1",
+  "methods": 334,
+  "fixtures": 302,
+  "pureRoutingMethods": 30,
+  "sourceSha256": "687b02793f788b1520afea3d5994688af1e80963bb3aa966baf147f34a9fb26f",
+  "sourceHashMethod": "sha256(canonical sorted compact JSON path->sha256 over C owned product files, assets included, pycache excluded)",
+  "files": {
+    "src/py_mermaid/diagrams/business/_swimlane_routing/__init__.py": "a0872233b4fb985c7e9ef3c8214e51869c4cd88d425f532aeab6a99cc6c15c6a",
+    "src/py_mermaid/diagrams/business/_swimlane_routing/detours.py": "1286cd2e791ff5589b6eb7cf8e1d0c8ec1dc7db830708e205ecd60be09439695",
+    "src/py_mermaid/diagrams/business/_swimlane_routing/direction.py": "704f61e6334035affd24f4e22f40ce4328e9bc2c22733f9ad927110d68c32c35",
+    "src/py_mermaid/diagrams/business/_swimlane_routing/endpoint_clip.py": "c78c8106840b04d7fb3110d19b50a96c1a75d4b5745eca26bdf1882e0f91234d",
+    "src/py_mermaid/diagrams/business/_swimlane_routing/geometry.py": "ff80abe76b4381d44a866948f499814d694f4a727530052521517e118f475503",
+    "src/py_mermaid/diagrams/business/_swimlane_routing/label_anchoring.py": "6d9d968a3252723d0bf8a2c7d03b7fc19175af86201d552b85acb81cb2361d08",
+    "src/py_mermaid/diagrams/business/_swimlane_routing/materialized.py": "621023f77414e94acbe69ee048466959fd3d5397e68c7aedc3bf6c40a188aaa3",
+    "src/py_mermaid/diagrams/business/_swimlane_routing/router.py": "64caadc01cba284bda4168296d9ff8316bdc671a7b075d1c2c7b03be9e214a24",
+    "src/py_mermaid/diagrams/business/_swimlane_routing/shared_tracks.py": "abe833d3ddfb48dcc6bedde8c96c51c5910bae754774a1a7cbbd3f8364bc8c56",
+    "src/py_mermaid/diagrams/business/_swimlane_routing/terminal_routes.py": "de48c8b38fc0b8faf3f853df4be47698ffc208f7463501efe221978ccea0f7d1",
+    "src/py_mermaid/diagrams/business/_swimlane_routing/validation.py": "e3fd59df65ea474eb4e812382510fc23b4cf6f13a9f284ded5a7d7337f15af4e",
+    "src/py_mermaid/diagrams/info/__init__.py": "3789d7fa8f1d383647b3a42de54d586b40756273e4b1dbf8f04ab2c1bfa4284c",
+    "src/py_mermaid/diagrams/railroad/__init__.py": "78d18a55ddb85967cd8cdb420e52670002890d748472be91d86d4c44525d3a4b",
+    "src/py_mermaid/diagrams/railroad/layout.py": "016cc2b31b08c8305df0681cd3b6c368c4479b20243d61039f6c0c107577562e",
+    "src/py_mermaid/diagrams/railroad/model.py": "f49afe67da2fb4187d280b16aaed7449b517f192b34e49982080b9f5fb1e98c2",
+    "src/py_mermaid/diagrams/railroad/parser.py": "e523ecdd94b19508be0f06d956b10f4d1330a7a4faabb00caff3839f8f5238a0",
+    "src/py_mermaid/diagrams/sequence/__init__.py": "6e726c93d670e2f3fb9bbaf48ad2c5a36de032552669e819c4f976cb99507326",
+    "src/py_mermaid/diagrams/sequence/layout.py": "6e53faa4ecf4c2af2df49855978a6eba9756370b2df2634019f675de0096c624",
+    "src/py_mermaid/diagrams/sequence/model.py": "e08b36a53ae3e1070b0359413e142bf29b1a7d4bdc52d54c2253ae5a92a4c677",
+    "src/py_mermaid/diagrams/sequence/parser.py": "dcc0731aca75c83464c45e01daef92a255cfc56f538ca500e92b372a92f9738f",
+    "src/py_mermaid/diagrams/sequence/presentation.py": "192341bea642c119a8107443290a298177c2f8a5ea3847aef12e8725da031f5e",
+    "src/py_mermaid/diagrams/zenuml/__init__.py": "0cc8def7994025c755e3ee3ec81ecb49fccfe89697ca845981fba3c46f81ebdf",
+    "src/py_mermaid/diagrams/zenuml/assets/actor.svg": "502a5b8566f9d7f3621c9459c3d35cd25a8628fbca4c123d0b023f88a2a333cd",
+    "src/py_mermaid/diagrams/zenuml/assets/alt-fragment.svg": "661310f14d8779bcf6a8171a28905dcc6db69ec8919703bc6c55c5d074815440",
+    "src/py_mermaid/diagrams/zenuml/assets/azurefunction.svg": "1a6c9c108d5f63f7b78bc6fbc464059acd2eaa8c1d111e9bcd28a8b2cdf470b9",
+    "src/py_mermaid/diagrams/zenuml/assets/boundary.svg": "4c3f60734af2fbd2191f880b2d2ec55225ff339b59f0bdcd4fe77d3b54dbd2f5",
+    "src/py_mermaid/diagrams/zenuml/assets/control.svg": "64d9aa04d905c62762ab7bf19e7f42ba78b4843d026e7d3823db6addb613cae8",
+    "src/py_mermaid/diagrams/zenuml/assets/critical-fragment.svg": "2b2634f268f04784d5b9afd5e00cf4eeedd89e78bb52aa7e90228efc68922431",
+    "src/py_mermaid/diagrams/zenuml/assets/database.svg": "c400ec7b8da9a1c8e4324e02feb4b4743c528ad45ea0d5d443feb15315b7e400",
+    "src/py_mermaid/diagrams/zenuml/assets/ec2.svg": "155b13065f4420c794f71fcc3c5d3f78be4e1e53d65f3b5388ec7742f8875ddb",
+    "src/py_mermaid/diagrams/zenuml/assets/entity.svg": "0ebeda02e1922d323d7118b7f6025ef28043ceb940b64ba87576cabf009d257d",
+    "src/py_mermaid/diagrams/zenuml/assets/iam.svg": "2bdcac04a28e4b5bdfc3cd35d7ca496ad1f6fa0bc70e5f9200599b443af71624",
+    "src/py_mermaid/diagrams/zenuml/assets/lambda.svg": "6f29b9801170221431fbc78f67b689a9580c62f64e453f8d18a5cefd807636bf",
+    "src/py_mermaid/diagrams/zenuml/assets/LICENSE-core": "d4a77cbf1dc0975cd4be7266972dc6d3a6c6d68d43235384d6e4b6f12934e978",
+    "src/py_mermaid/diagrams/zenuml/assets/loop-fragment.svg": "24d3b7bf2b3c53d7463201af017ca46b47cfe8d8ab67c48f2e064d9430a8876e",
+    "src/py_mermaid/diagrams/zenuml/assets/Microsoft_Terms_of_Use.pdf": "983e83cef1a8f85164760b076a96df54cb50af345861cb1d8344040037d0531c",
+    "src/py_mermaid/diagrams/zenuml/assets/opt-fragment.svg": "f06ceede25ac9ab4c669cf9f158b44cfdec7ab6aedf9f49613ba085f592d0dbf",
+    "src/py_mermaid/diagrams/zenuml/assets/par-fragment.svg": "82abd7f9b1386281ebaceabf3fbbbab1123cb7e851857e84550f38c39bc5f3be",
+    "src/py_mermaid/diagrams/zenuml/assets/ref-fragment.svg": "60d4a29de41e8a6738b5776d4409c55cc72a35fb02a2ccc1d19e00c92d3f6587",
+    "src/py_mermaid/diagrams/zenuml/assets/section-fragment.svg": "81fb298a6460f96bc68a79613673b35d1d232ed23f68bfa13ef92cedd0a3c9d2",
+    "src/py_mermaid/diagrams/zenuml/assets/sns.svg": "1e3d19286abcc04364d5a2e8f83faa1dddf1657d68a1d9e9c6bfe351f0c5e242",
+    "src/py_mermaid/diagrams/zenuml/assets/sqs.svg": "39915b6e2eb2d77286a905bb0ca94912bca36605d518433db3b3f0d113e5d07d",
+    "src/py_mermaid/diagrams/zenuml/assets/try-catch-fragment.svg": "b48b67f7f6d53fc424611cec28f424020434dbd5f46105782e2eb883e398df50",
+    "src/py_mermaid/diagrams/zenuml/emoji.py": "840bdacc296cfe42d0eee5d6877e5771cb7603a65890c94c44266f61033822ad",
+    "src/py_mermaid/diagrams/zenuml/geometry.py": "fc178b482615005904007e30f7f023fbc5e64bfb9979f516dd2ba3040077e8d1",
+    "src/py_mermaid/diagrams/zenuml/layout.py": "842c791c05327c65a9d2bbca605641b418c2bdf348c386b088635ecaf9b76fc0",
+    "src/py_mermaid/diagrams/zenuml/model.py": "1f92e43f38c7aa9a7d31802aea10439f3ada8e88bc9a87a2b26feafb87e42953",
+    "src/py_mermaid/diagrams/zenuml/parser.py": "0196ef6a16d75ceea4a742eda3c1b7735c76922b3699a1fae9f13c1147b22a41"
+  },
+  "fixtureSha256": "3496ba5c04d2889c81b022d5e41017663c24b019ceddc486d0339b6647d6c170",
+  "fixes": [
+    {
+      "product": "zenuml/emoji.py and layout.py",
+      "source": [
+        "src/emoji/resolveEmoji.ts:29-47",
+        "src/utils/messageStyling.ts:153-181",
+        "src/components/Comment/Comment.ts:65-110"
+      ],
+      "reason": "CSS-first values stay CSS; explicit colon names override; only common [] comment styles create emoji prefixes; comment/message own styles override common.",
+      "evidence": "BULK-record-20261106T044657Z-4f1e2271"
+    },
+    {
+      "product": "zenuml/parser.py",
+      "source": [
+        "src/g4/sequenceLexer.g4:ID/ARROW/AWAIT",
+        "src/g4/sequenceParser.g4:methodName/emoji/messageBody"
+      ],
+      "reason": "Identifier cannot consume arrow hyphen; await remains modifier after assignment; emoji decorators parsed on chained method signatures; _STARTER_ is not duplicated."
+    },
+    {
+      "product": "zenuml/layout.py",
+      "source": [
+        "src/svg/components/participant.ts:69-97",
+        "src/emoji/resolveEmoji.ts:getEmojiUnicode"
+      ],
+      "reason": "Explicit participant shortcode :red: normalizes to red before builtin glyph lookup; real red-circle pixel region independently asserted.",
+      "evidence": "BULK-batch-20261106T044854Z-15a94a5e/artifacts/native-cpu-C/C-zenuml-source-emoji-colon-override.png"
+    },
+    {
+      "product": "railroad/parser.py",
+      "source": [
+        "packages/parser/src/language/railroad-peg/railroad-peg.langium:PegPrimary/PegLiteral",
+        "packages/mermaid/src/diagrams/railroad/parser/ebnfDiagram.spec.ts",
+        "packages/mermaid/src/diagrams/railroad/parser/pegDiagram.spec.ts:148"
+      ],
+      "reason": "Quoted terminal values remain string tokens; slash/star/parentheses inside strings cannot be mistaken for grammar punctuation."
+    },
+    {
+      "product": "info/__init__.py",
+      "source": [
+        "packages/parser/src/language/info/info.langium:TitleAndAccessibilities"
+      ],
+      "reason": "Retain parsed source title in pure semantic model; source renderer still only draws version."
+    },
+    {
+      "product": "zenuml/layout.py builtin asset adapter",
+      "source": [
+        "src/diagrams/zenuml/assets/try-catch-fragment.svg",
+        "locked core src/svg/assets/try-catch-fragment.svg"
+      ],
+      "reason": "Remove only exact fixed MIT icon external W3C DOCTYPE from the transient encoded bytes. Original asset bytes/license untouched; no entities, internal subset, external fetch or user SVG validation exception.",
+      "evidence": "BULK-batch-20261106T044743Z-7be7353d (18 actual UNSAFE_RESOURCE failures)"
+    }
+  ],
+  "testBindings": [
+    {
+      "method": "four negative methods in sequence/railroad/zenuml tests",
+      "reason": "Nest assertRaises inside subTest so unexpected errors retain their real traceback; assertion codes/spans unchanged."
+    },
+    {
+      "method": "test_recursive_routes_and_visible_leaf_text_in_all_dialects",
+      "reason": "PEG fixed grammar has literal/id/group/any but no character-class production; replace invalid [0-9]+ fixture with valid (\"0\" / \"9\")+ without removing recursive/PNG/leaf assertions."
+    },
+    {
+      "method": "test_railroadPeg_spec_008 and predicate parameter method",
+      "reason": "Original upstream spec asserts raw transform text &\"a\"; public DB addRule applies common sanitizeAstNode/sanitizeText so model text is &amp;\"a\". Preserve literal fixture source and original assertion; adapt only expected public DB layer."
+    },
+    {
+      "method": "test_vendor_icons_keep_original_bytes_colors_and_square_ratio",
+      "reason": "Source build renders all participant headers and footers: 6 icons twice=12 assets; retain source SHA/ratio/actual color checks."
+    },
+    {
+      "fixture": "C-zenuml-source-vertical-6",
+      "reason": "Source JS template authored backslash+t; JavaScript evaluates it as a tab. Decode authored escape in fixture without changing TeX/other input."
+    },
+    {
+      "fixture": "C-railroad-spec-017",
+      "reason": "Fixed empty rules renderer intentionally returns blank200x100; explicit expectedEmpty contract verifies exact size/background/no ink and nonblank mutation negative control. It does not authorize generic blank positive output."
+    }
+  ],
+  "retainedFailedRuns": [
+    "BULK-record-20261106T044429Z-a2f488bd",
+    "BULK-record-20261106T044544Z-cac5d918",
+    "BULK-record-20261106T044657Z-4f1e2271",
+    "BULK-batch-20261106T044743Z-7be7353d",
+    "BULK-batch-20261106T044854Z-15a94a5e"
+  ],
+  "toolInvocationErrors": [
+    "BULK-record-20261106T044424Z-ef76f1c5 (directory --input not allowed)",
+    "BULK-batch-20261106T044732Z-0b144db6 (plan missing schema)"
+  ],
+  "manualImagesViewed": [
+    {
+      "run": "BULK-batch-20261106T044854Z-15a94a5e",
+      "ids": [
+        "C-zenuml-source-emoji-colon-override",
+        "C-zenuml-source-emoji-nested-mixed",
+        "C-zenuml-source-demo1-smoke",
+        "C-zenuml-cloud-gallery"
+      ]
+    },
+    {
+      "run": "BULK-batch-20261106T045023Z-16c153f1",
+      "ids": [
+        "C-zenuml-source-emoji-colon-override",
+        "C-sequence-fragments",
+        "C-zenuml-tcf"
+      ]
+    }
+  ],
+  "manualObservations": [
+    "Explicit red participant was visibly literal/overlapping before fix, now real red circle and Alert are both present.",
+    "Vendor six icons retain original colors and square aspect; headers and footers both visible.",
+    "Nested alt/tcf and sequence loop/opt/alt/par have visible labels, branches and routes.",
+    "Large demo1 has dense numbering/labels and very long creation label extending its box. Needs official side-by-side review before asserting parity; native-only view is not full acceptance."
+  ],
+  "remainingVerification": [
+    "Joint source candidate freeze",
+    "Official C source sweep/root tools comparison",
+    "Cross backend/export/full legacy by root"
+  ],
+  "sourceStopped": true,
+  "contentLossFollowup": {
+    "receipt": "docs/changes/bulk-C-P3-source-content-loss.json",
+    "methods": 335,
+    "fixtureSha256": "732db377af6ade9561e74171a812ed8877218a35641b70d44ca76ec2b23c1265",
+    "unitRun": "BULK-record-20261106T052737Z-857eb7ef",
+    "cpuRun": "BULK-batch-20261106T052740Z-93c3f1fd",
+    "productChanged": false
+  }
+}

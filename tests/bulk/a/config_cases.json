@@ -1,0 +1,3093 @@
+{
+  "rows": [
+    {
+      "id": "classDiagram-theme",
+      "kind": "classDiagram",
+      "section": "class",
+      "source": "classDiagram\nclass A",
+      "property": "theme",
+      "expected": "redux-color",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "ClassDiagramConfig.properties.theme.default",
+        "line": 1775
+      }
+    },
+    {
+      "id": "classDiagram-look",
+      "kind": "classDiagram",
+      "section": "class",
+      "source": "classDiagram\nclass A",
+      "property": "look",
+      "expected": "neo",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "ClassDiagramConfig.properties.look.default",
+        "line": 1778
+      }
+    },
+    {
+      "id": "classDiagram-titleTopMargin",
+      "kind": "classDiagram",
+      "section": "class",
+      "source": "classDiagram\nclass A",
+      "property": "titleTopMargin",
+      "expected": 25,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "ClassDiagramConfig.properties.titleTopMargin.default",
+        "line": 1781
+      },
+      "schemaDefault": 25,
+      "runtimeAbsent": true,
+      "runtimeOrigin": {
+        "path": "packages/mermaid/src/defaultConfig.ts",
+        "line": 71,
+        "symbol": "class reconstructed from scratch, deliberately omits schema padding and other legacy fields"
+      }
+    },
+    {
+      "id": "classDiagram-dividerMargin",
+      "kind": "classDiagram",
+      "section": "class",
+      "source": "classDiagram\nclass A",
+      "property": "dividerMargin",
+      "expected": 10,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "ClassDiagramConfig.properties.dividerMargin.default",
+        "line": 1786
+      },
+      "schemaDefault": 10,
+      "runtimeAbsent": true,
+      "runtimeOrigin": {
+        "path": "packages/mermaid/src/defaultConfig.ts",
+        "line": 71,
+        "symbol": "class reconstructed from scratch, deliberately omits schema padding and other legacy fields"
+      }
+    },
+    {
+      "id": "classDiagram-padding",
+      "kind": "classDiagram",
+      "section": "class",
+      "source": "classDiagram\nclass A",
+      "property": "padding",
+      "expected": 5,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "ClassDiagramConfig.properties.padding.default",
+        "line": 1789
+      },
+      "schemaDefault": 5,
+      "runtimeAbsent": true,
+      "runtimeOrigin": {
+        "path": "packages/mermaid/src/defaultConfig.ts",
+        "line": 71,
+        "symbol": "class reconstructed from scratch, deliberately omits schema padding and other legacy fields"
+      }
+    },
+    {
+      "id": "classDiagram-textHeight",
+      "kind": "classDiagram",
+      "section": "class",
+      "source": "classDiagram\nclass A",
+      "property": "textHeight",
+      "expected": 10,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "ClassDiagramConfig.properties.textHeight.default",
+        "line": 1792
+      },
+      "schemaDefault": 10,
+      "runtimeAbsent": true,
+      "runtimeOrigin": {
+        "path": "packages/mermaid/src/defaultConfig.ts",
+        "line": 71,
+        "symbol": "class reconstructed from scratch, deliberately omits schema padding and other legacy fields"
+      }
+    },
+    {
+      "id": "classDiagram-htmlLabels",
+      "kind": "classDiagram",
+      "section": "class",
+      "source": "classDiagram\nclass A",
+      "property": "htmlLabels",
+      "expected": false,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "ClassDiagramConfig.properties.htmlLabels.default",
+        "line": 1803
+      },
+      "schemaDefault": false,
+      "runtimeAbsent": true,
+      "runtimeOrigin": {
+        "path": "packages/mermaid/src/defaultConfig.ts",
+        "line": 71,
+        "symbol": "class reconstructed from scratch, deliberately omits schema padding and other legacy fields"
+      }
+    },
+    {
+      "id": "classDiagram-hideEmptyMembersBox",
+      "kind": "classDiagram",
+      "section": "class",
+      "source": "classDiagram\nclass A",
+      "property": "hideEmptyMembersBox",
+      "expected": false,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "ClassDiagramConfig.properties.hideEmptyMembersBox.default",
+        "line": 1806
+      }
+    },
+    {
+      "id": "classDiagram-hierarchicalNamespaces",
+      "kind": "classDiagram",
+      "section": "class",
+      "source": "classDiagram\nclass A",
+      "property": "hierarchicalNamespaces",
+      "expected": true,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "ClassDiagramConfig.properties.hierarchicalNamespaces.default",
+        "line": 1809
+      }
+    },
+    {
+      "id": "stateDiagram-theme",
+      "kind": "stateDiagram",
+      "section": "state",
+      "source": "stateDiagram-v2\nA",
+      "property": "theme",
+      "expected": "redux-color",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "StateDiagramConfig.properties.theme.default",
+        "line": 1677
+      }
+    },
+    {
+      "id": "stateDiagram-look",
+      "kind": "stateDiagram",
+      "section": "state",
+      "source": "stateDiagram-v2\nA",
+      "property": "look",
+      "expected": "neo",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "StateDiagramConfig.properties.look.default",
+        "line": 1680
+      }
+    },
+    {
+      "id": "stateDiagram-layout",
+      "kind": "stateDiagram",
+      "section": "state",
+      "source": "stateDiagram-v2\nA",
+      "property": "layout",
+      "expected": "elk",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "StateDiagramConfig.properties.layout.default",
+        "line": 1683
+      }
+    },
+    {
+      "id": "stateDiagram-wrappingWidth",
+      "kind": "stateDiagram",
+      "section": "state",
+      "source": "stateDiagram-v2\nA",
+      "property": "wrappingWidth",
+      "expected": 120,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "StateDiagramConfig.properties.wrappingWidth.default",
+        "line": 1686
+      }
+    },
+    {
+      "id": "stateDiagram-minNodeWidth",
+      "kind": "stateDiagram",
+      "section": "state",
+      "source": "stateDiagram-v2\nA",
+      "property": "minNodeWidth",
+      "expected": 120,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "StateDiagramConfig.properties.minNodeWidth.default",
+        "line": 1694
+      }
+    },
+    {
+      "id": "stateDiagram-titleTopMargin",
+      "kind": "stateDiagram",
+      "section": "state",
+      "source": "stateDiagram-v2\nA",
+      "property": "titleTopMargin",
+      "expected": 25,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "StateDiagramConfig.properties.titleTopMargin.default",
+        "line": 1704
+      }
+    },
+    {
+      "id": "stateDiagram-dividerMargin",
+      "kind": "stateDiagram",
+      "section": "state",
+      "source": "stateDiagram-v2\nA",
+      "property": "dividerMargin",
+      "expected": 10,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "StateDiagramConfig.properties.dividerMargin.default",
+        "line": 1710
+      }
+    },
+    {
+      "id": "stateDiagram-sizeUnit",
+      "kind": "stateDiagram",
+      "section": "state",
+      "source": "stateDiagram-v2\nA",
+      "property": "sizeUnit",
+      "expected": 5,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "StateDiagramConfig.properties.sizeUnit.default",
+        "line": 1713
+      }
+    },
+    {
+      "id": "stateDiagram-padding",
+      "kind": "stateDiagram",
+      "section": "state",
+      "source": "stateDiagram-v2\nA",
+      "property": "padding",
+      "expected": 8,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "StateDiagramConfig.properties.padding.default",
+        "line": 1716
+      }
+    },
+    {
+      "id": "stateDiagram-textHeight",
+      "kind": "stateDiagram",
+      "section": "state",
+      "source": "stateDiagram-v2\nA",
+      "property": "textHeight",
+      "expected": 10,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "StateDiagramConfig.properties.textHeight.default",
+        "line": 1719
+      }
+    },
+    {
+      "id": "stateDiagram-titleShift",
+      "kind": "stateDiagram",
+      "section": "state",
+      "source": "stateDiagram-v2\nA",
+      "property": "titleShift",
+      "expected": -15,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "StateDiagramConfig.properties.titleShift.default",
+        "line": 1722
+      }
+    },
+    {
+      "id": "stateDiagram-noteMargin",
+      "kind": "stateDiagram",
+      "section": "state",
+      "source": "stateDiagram-v2\nA",
+      "property": "noteMargin",
+      "expected": 10,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "StateDiagramConfig.properties.noteMargin.default",
+        "line": 1725
+      }
+    },
+    {
+      "id": "stateDiagram-forkWidth",
+      "kind": "stateDiagram",
+      "section": "state",
+      "source": "stateDiagram-v2\nA",
+      "property": "forkWidth",
+      "expected": 70,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "StateDiagramConfig.properties.forkWidth.default",
+        "line": 1734
+      }
+    },
+    {
+      "id": "stateDiagram-forkHeight",
+      "kind": "stateDiagram",
+      "section": "state",
+      "source": "stateDiagram-v2\nA",
+      "property": "forkHeight",
+      "expected": 7,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "StateDiagramConfig.properties.forkHeight.default",
+        "line": 1737
+      }
+    },
+    {
+      "id": "stateDiagram-miniPadding",
+      "kind": "stateDiagram",
+      "section": "state",
+      "source": "stateDiagram-v2\nA",
+      "property": "miniPadding",
+      "expected": 2,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "StateDiagramConfig.properties.miniPadding.default",
+        "line": 1741
+      }
+    },
+    {
+      "id": "stateDiagram-fontSizeFactor",
+      "kind": "stateDiagram",
+      "section": "state",
+      "source": "stateDiagram-v2\nA",
+      "property": "fontSizeFactor",
+      "expected": 5.02,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "StateDiagramConfig.properties.fontSizeFactor.default",
+        "line": 1744
+      }
+    },
+    {
+      "id": "stateDiagram-fontSize",
+      "kind": "stateDiagram",
+      "section": "state",
+      "source": "stateDiagram-v2\nA",
+      "property": "fontSize",
+      "expected": 24,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "StateDiagramConfig.properties.fontSize.default",
+        "line": 1751
+      }
+    },
+    {
+      "id": "stateDiagram-labelHeight",
+      "kind": "stateDiagram",
+      "section": "state",
+      "source": "stateDiagram-v2\nA",
+      "property": "labelHeight",
+      "expected": 16,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "StateDiagramConfig.properties.labelHeight.default",
+        "line": 1754
+      }
+    },
+    {
+      "id": "stateDiagram-edgeLengthFactor",
+      "kind": "stateDiagram",
+      "section": "state",
+      "source": "stateDiagram-v2\nA",
+      "property": "edgeLengthFactor",
+      "expected": "20",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "StateDiagramConfig.properties.edgeLengthFactor.default",
+        "line": 1757
+      }
+    },
+    {
+      "id": "stateDiagram-compositTitleSize",
+      "kind": "stateDiagram",
+      "section": "state",
+      "source": "stateDiagram-v2\nA",
+      "property": "compositTitleSize",
+      "expected": 35,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "StateDiagramConfig.properties.compositTitleSize.default",
+        "line": 1760
+      }
+    },
+    {
+      "id": "stateDiagram-radius",
+      "kind": "stateDiagram",
+      "section": "state",
+      "source": "stateDiagram-v2\nA",
+      "property": "radius",
+      "expected": 5,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "StateDiagramConfig.properties.radius.default",
+        "line": 1763
+      }
+    },
+    {
+      "id": "er-theme",
+      "kind": "er",
+      "section": "er",
+      "source": "erDiagram\nA",
+      "property": "theme",
+      "expected": "redux-color",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "ErDiagramConfig.properties.theme.default",
+        "line": 1600
+      }
+    },
+    {
+      "id": "er-look",
+      "kind": "er",
+      "section": "er",
+      "source": "erDiagram\nA",
+      "property": "look",
+      "expected": "neo",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "ErDiagramConfig.properties.look.default",
+        "line": 1603
+      }
+    },
+    {
+      "id": "er-titleTopMargin",
+      "kind": "er",
+      "section": "er",
+      "source": "erDiagram\nA",
+      "property": "titleTopMargin",
+      "expected": 25,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "ErDiagramConfig.properties.titleTopMargin.default",
+        "line": 1606
+      }
+    },
+    {
+      "id": "er-diagramPadding",
+      "kind": "er",
+      "section": "er",
+      "source": "erDiagram\nA",
+      "property": "diagramPadding",
+      "expected": 20,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "ErDiagramConfig.properties.diagramPadding.default",
+        "line": 1609
+      }
+    },
+    {
+      "id": "er-layoutDirection",
+      "kind": "er",
+      "section": "er",
+      "source": "erDiagram\nA",
+      "property": "layoutDirection",
+      "expected": "TB",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "ErDiagramConfig.properties.layoutDirection.default",
+        "line": 1616
+      }
+    },
+    {
+      "id": "er-minEntityWidth",
+      "kind": "er",
+      "section": "er",
+      "source": "erDiagram\nA",
+      "property": "minEntityWidth",
+      "expected": 100,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "ErDiagramConfig.properties.minEntityWidth.default",
+        "line": 1626
+      }
+    },
+    {
+      "id": "er-minEntityHeight",
+      "kind": "er",
+      "section": "er",
+      "source": "erDiagram\nA",
+      "property": "minEntityHeight",
+      "expected": 75,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "ErDiagramConfig.properties.minEntityHeight.default",
+        "line": 1631
+      }
+    },
+    {
+      "id": "er-entityPadding",
+      "kind": "er",
+      "section": "er",
+      "source": "erDiagram\nA",
+      "property": "entityPadding",
+      "expected": 15,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "ErDiagramConfig.properties.entityPadding.default",
+        "line": 1636
+      }
+    },
+    {
+      "id": "er-nodeSpacing",
+      "kind": "er",
+      "section": "er",
+      "source": "erDiagram\nA",
+      "property": "nodeSpacing",
+      "expected": 140,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "ErDiagramConfig.properties.nodeSpacing.default",
+        "line": 1643
+      }
+    },
+    {
+      "id": "er-rankSpacing",
+      "kind": "er",
+      "section": "er",
+      "source": "erDiagram\nA",
+      "property": "rankSpacing",
+      "expected": 80,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "ErDiagramConfig.properties.rankSpacing.default",
+        "line": 1647
+      }
+    },
+    {
+      "id": "er-stroke",
+      "kind": "er",
+      "section": "er",
+      "source": "erDiagram\nA",
+      "property": "stroke",
+      "expected": "gray",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "ErDiagramConfig.properties.stroke.default",
+        "line": 1651
+      }
+    },
+    {
+      "id": "er-fill",
+      "kind": "er",
+      "section": "er",
+      "source": "erDiagram\nA",
+      "property": "fill",
+      "expected": "honeydew",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "ErDiagramConfig.properties.fill.default",
+        "line": 1655
+      }
+    },
+    {
+      "id": "er-fontSize",
+      "kind": "er",
+      "section": "er",
+      "source": "erDiagram\nA",
+      "property": "fontSize",
+      "expected": 12,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "ErDiagramConfig.properties.fontSize.default",
+        "line": 1659
+      }
+    },
+    {
+      "id": "requirement-theme",
+      "kind": "requirement",
+      "section": "requirement",
+      "source": "requirementDiagram\nrequirement R {\n}",
+      "property": "theme",
+      "expected": "redux-color",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "RequirementDiagramConfig.properties.theme.default",
+        "line": 1097
+      }
+    },
+    {
+      "id": "requirement-look",
+      "kind": "requirement",
+      "section": "requirement",
+      "source": "requirementDiagram\nrequirement R {\n}",
+      "property": "look",
+      "expected": "neo",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "RequirementDiagramConfig.properties.look.default",
+        "line": 1100
+      }
+    },
+    {
+      "id": "requirement-rect_fill",
+      "kind": "requirement",
+      "section": "requirement",
+      "source": "requirementDiagram\nrequirement R {\n}",
+      "property": "rect_fill",
+      "expected": "#f9f9f9",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "RequirementDiagramConfig.properties.rect_fill.default",
+        "line": 1103
+      }
+    },
+    {
+      "id": "requirement-text_color",
+      "kind": "requirement",
+      "section": "requirement",
+      "source": "requirementDiagram\nrequirement R {\n}",
+      "property": "text_color",
+      "expected": "#333",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "RequirementDiagramConfig.properties.text_color.default",
+        "line": 1106
+      }
+    },
+    {
+      "id": "requirement-rect_border_size",
+      "kind": "requirement",
+      "section": "requirement",
+      "source": "requirementDiagram\nrequirement R {\n}",
+      "property": "rect_border_size",
+      "expected": "0.5px",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "RequirementDiagramConfig.properties.rect_border_size.default",
+        "line": 1109
+      }
+    },
+    {
+      "id": "requirement-rect_border_color",
+      "kind": "requirement",
+      "section": "requirement",
+      "source": "requirementDiagram\nrequirement R {\n}",
+      "property": "rect_border_color",
+      "expected": "#bbb",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "RequirementDiagramConfig.properties.rect_border_color.default",
+        "line": 1112
+      }
+    },
+    {
+      "id": "requirement-rect_min_width",
+      "kind": "requirement",
+      "section": "requirement",
+      "source": "requirementDiagram\nrequirement R {\n}",
+      "property": "rect_min_width",
+      "expected": 200,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "RequirementDiagramConfig.properties.rect_min_width.default",
+        "line": 1115
+      }
+    },
+    {
+      "id": "requirement-rect_min_height",
+      "kind": "requirement",
+      "section": "requirement",
+      "source": "requirementDiagram\nrequirement R {\n}",
+      "property": "rect_min_height",
+      "expected": 200,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "RequirementDiagramConfig.properties.rect_min_height.default",
+        "line": 1118
+      }
+    },
+    {
+      "id": "requirement-fontSize",
+      "kind": "requirement",
+      "section": "requirement",
+      "source": "requirementDiagram\nrequirement R {\n}",
+      "property": "fontSize",
+      "expected": 14,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "RequirementDiagramConfig.properties.fontSize.default",
+        "line": 1121
+      }
+    },
+    {
+      "id": "requirement-rect_padding",
+      "kind": "requirement",
+      "section": "requirement",
+      "source": "requirementDiagram\nrequirement R {\n}",
+      "property": "rect_padding",
+      "expected": 10,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "RequirementDiagramConfig.properties.rect_padding.default",
+        "line": 1124
+      }
+    },
+    {
+      "id": "requirement-line_height",
+      "kind": "requirement",
+      "section": "requirement",
+      "source": "requirementDiagram\nrequirement R {\n}",
+      "property": "line_height",
+      "expected": 20,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "RequirementDiagramConfig.properties.line_height.default",
+        "line": 1127
+      }
+    },
+    {
+      "id": "usecase-theme",
+      "kind": "usecase",
+      "section": "usecase",
+      "source": "usecase-beta\nA",
+      "property": "theme",
+      "expected": "redux-color",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "UsecaseDiagramConfig.properties.theme.default",
+        "line": 2949
+      }
+    },
+    {
+      "id": "usecase-look",
+      "kind": "usecase",
+      "section": "usecase",
+      "source": "usecase-beta\nA",
+      "property": "look",
+      "expected": "neo",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "UsecaseDiagramConfig.properties.look.default",
+        "line": 2952
+      }
+    },
+    {
+      "id": "usecase-wrappingWidth",
+      "kind": "usecase",
+      "section": "usecase",
+      "source": "usecase-beta\nA",
+      "property": "wrappingWidth",
+      "expected": 120,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "UsecaseDiagramConfig.properties.wrappingWidth.default",
+        "line": 2955
+      }
+    },
+    {
+      "id": "usecase-minNodeWidth",
+      "kind": "usecase",
+      "section": "usecase",
+      "source": "usecase-beta\nA",
+      "property": "minNodeWidth",
+      "expected": 120,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "UsecaseDiagramConfig.properties.minNodeWidth.default",
+        "line": 2958
+      }
+    },
+    {
+      "id": "usecase-actorFontSize",
+      "kind": "usecase",
+      "section": "usecase",
+      "source": "usecase-beta\nA",
+      "property": "actorFontSize",
+      "expected": 14,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "UsecaseDiagramConfig.properties.actorFontSize.default",
+        "line": 2961
+      }
+    },
+    {
+      "id": "usecase-actorFontFamily",
+      "kind": "usecase",
+      "section": "usecase",
+      "source": "usecase-beta\nA",
+      "property": "actorFontFamily",
+      "expected": "\"Open Sans\", sans-serif",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "UsecaseDiagramConfig.properties.actorFontFamily.default",
+        "line": 2966
+      }
+    },
+    {
+      "id": "usecase-actorFontWeight",
+      "kind": "usecase",
+      "section": "usecase",
+      "source": "usecase-beta\nA",
+      "property": "actorFontWeight",
+      "expected": "normal",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "UsecaseDiagramConfig.properties.actorFontWeight.default",
+        "line": 2977
+      }
+    },
+    {
+      "id": "usecase-usecaseFontSize",
+      "kind": "usecase",
+      "section": "usecase",
+      "source": "usecase-beta\nA",
+      "property": "usecaseFontSize",
+      "expected": 12,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "UsecaseDiagramConfig.properties.usecaseFontSize.default",
+        "line": 2986
+      }
+    },
+    {
+      "id": "usecase-usecaseFontFamily",
+      "kind": "usecase",
+      "section": "usecase",
+      "source": "usecase-beta\nA",
+      "property": "usecaseFontFamily",
+      "expected": "\"Open Sans\", sans-serif",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "UsecaseDiagramConfig.properties.usecaseFontFamily.default",
+        "line": 2991
+      }
+    },
+    {
+      "id": "usecase-usecaseFontWeight",
+      "kind": "usecase",
+      "section": "usecase",
+      "source": "usecase-beta\nA",
+      "property": "usecaseFontWeight",
+      "expected": "normal",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "UsecaseDiagramConfig.properties.usecaseFontWeight.default",
+        "line": 2999
+      }
+    },
+    {
+      "id": "usecase-nodeSpacing",
+      "kind": "usecase",
+      "section": "usecase",
+      "source": "usecase-beta\nA",
+      "property": "nodeSpacing",
+      "expected": 50,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "UsecaseDiagramConfig.properties.nodeSpacing.default",
+        "line": 3007
+      }
+    },
+    {
+      "id": "usecase-rankSpacing",
+      "kind": "usecase",
+      "section": "usecase",
+      "source": "usecase-beta\nA",
+      "property": "rankSpacing",
+      "expected": 50,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "UsecaseDiagramConfig.properties.rankSpacing.default",
+        "line": 3012
+      }
+    },
+    {
+      "id": "usecase-diagramPadding",
+      "kind": "usecase",
+      "section": "usecase",
+      "source": "usecase-beta\nA",
+      "property": "diagramPadding",
+      "expected": 20,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "UsecaseDiagramConfig.properties.diagramPadding.default",
+        "line": 3017
+      }
+    },
+    {
+      "id": "usecase-colorScheme",
+      "kind": "usecase",
+      "section": "usecase",
+      "source": "usecase-beta\nA",
+      "property": "colorScheme",
+      "expected": "role",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "UsecaseDiagramConfig.properties.colorScheme.default",
+        "line": 3022
+      }
+    },
+    {
+      "id": "c4-diagramMarginX",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "diagramMarginX",
+      "expected": 50,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.diagramMarginX.default",
+        "line": 543
+      }
+    },
+    {
+      "id": "c4-diagramMarginY",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "diagramMarginY",
+      "expected": 10,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.diagramMarginY.default",
+        "line": 549
+      }
+    },
+    {
+      "id": "c4-c4ShapeMargin",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "c4ShapeMargin",
+      "expected": 50,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.c4ShapeMargin.default",
+        "line": 555
+      }
+    },
+    {
+      "id": "c4-c4ShapePadding",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "c4ShapePadding",
+      "expected": 20,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.c4ShapePadding.default",
+        "line": 560
+      }
+    },
+    {
+      "id": "c4-width",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "width",
+      "expected": 216,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.width.default",
+        "line": 565
+      }
+    },
+    {
+      "id": "c4-height",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "height",
+      "expected": 60,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.height.default",
+        "line": 570
+      }
+    },
+    {
+      "id": "c4-boxMargin",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "boxMargin",
+      "expected": 10,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.boxMargin.default",
+        "line": 575
+      }
+    },
+    {
+      "id": "c4-c4ShapeInRow",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "c4ShapeInRow",
+      "expected": 4,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.c4ShapeInRow.default",
+        "line": 580
+      }
+    },
+    {
+      "id": "c4-nextLinePaddingX",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "nextLinePaddingX",
+      "expected": 0,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.nextLinePaddingX.default",
+        "line": 585
+      }
+    },
+    {
+      "id": "c4-c4BoundaryInRow",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "c4BoundaryInRow",
+      "expected": 2,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.c4BoundaryInRow.default",
+        "line": 589
+      }
+    },
+    {
+      "id": "c4-personFontSize",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "personFontSize",
+      "expected": 14,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.personFontSize.default",
+        "line": 598
+      }
+    },
+    {
+      "id": "c4-personFontFamily",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "personFontFamily",
+      "expected": "\"Open Sans\", sans-serif",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.personFontFamily.default",
+        "line": 602
+      }
+    },
+    {
+      "id": "c4-personFontWeight",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "personFontWeight",
+      "expected": "normal",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.personFontWeight.default",
+        "line": 606
+      }
+    },
+    {
+      "id": "c4-external_personFontSize",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "external_personFontSize",
+      "expected": 14,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.external_personFontSize.default",
+        "line": 610
+      }
+    },
+    {
+      "id": "c4-external_personFontFamily",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "external_personFontFamily",
+      "expected": "\"Open Sans\", sans-serif",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.external_personFontFamily.default",
+        "line": 614
+      }
+    },
+    {
+      "id": "c4-external_personFontWeight",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "external_personFontWeight",
+      "expected": "normal",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.external_personFontWeight.default",
+        "line": 618
+      }
+    },
+    {
+      "id": "c4-systemFontSize",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "systemFontSize",
+      "expected": 14,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.systemFontSize.default",
+        "line": 622
+      }
+    },
+    {
+      "id": "c4-systemFontFamily",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "systemFontFamily",
+      "expected": "\"Open Sans\", sans-serif",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.systemFontFamily.default",
+        "line": 626
+      }
+    },
+    {
+      "id": "c4-systemFontWeight",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "systemFontWeight",
+      "expected": "normal",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.systemFontWeight.default",
+        "line": 630
+      }
+    },
+    {
+      "id": "c4-external_systemFontSize",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "external_systemFontSize",
+      "expected": 14,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.external_systemFontSize.default",
+        "line": 634
+      }
+    },
+    {
+      "id": "c4-external_systemFontFamily",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "external_systemFontFamily",
+      "expected": "\"Open Sans\", sans-serif",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.external_systemFontFamily.default",
+        "line": 638
+      }
+    },
+    {
+      "id": "c4-external_systemFontWeight",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "external_systemFontWeight",
+      "expected": "normal",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.external_systemFontWeight.default",
+        "line": 642
+      }
+    },
+    {
+      "id": "c4-system_dbFontSize",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "system_dbFontSize",
+      "expected": 14,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.system_dbFontSize.default",
+        "line": 646
+      }
+    },
+    {
+      "id": "c4-system_dbFontFamily",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "system_dbFontFamily",
+      "expected": "\"Open Sans\", sans-serif",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.system_dbFontFamily.default",
+        "line": 650
+      }
+    },
+    {
+      "id": "c4-system_dbFontWeight",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "system_dbFontWeight",
+      "expected": "normal",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.system_dbFontWeight.default",
+        "line": 654
+      }
+    },
+    {
+      "id": "c4-external_system_dbFontSize",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "external_system_dbFontSize",
+      "expected": 14,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.external_system_dbFontSize.default",
+        "line": 658
+      }
+    },
+    {
+      "id": "c4-external_system_dbFontFamily",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "external_system_dbFontFamily",
+      "expected": "\"Open Sans\", sans-serif",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.external_system_dbFontFamily.default",
+        "line": 662
+      }
+    },
+    {
+      "id": "c4-external_system_dbFontWeight",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "external_system_dbFontWeight",
+      "expected": "normal",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.external_system_dbFontWeight.default",
+        "line": 666
+      }
+    },
+    {
+      "id": "c4-system_queueFontSize",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "system_queueFontSize",
+      "expected": 14,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.system_queueFontSize.default",
+        "line": 670
+      }
+    },
+    {
+      "id": "c4-system_queueFontFamily",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "system_queueFontFamily",
+      "expected": "\"Open Sans\", sans-serif",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.system_queueFontFamily.default",
+        "line": 674
+      }
+    },
+    {
+      "id": "c4-system_queueFontWeight",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "system_queueFontWeight",
+      "expected": "normal",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.system_queueFontWeight.default",
+        "line": 678
+      }
+    },
+    {
+      "id": "c4-external_system_queueFontSize",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "external_system_queueFontSize",
+      "expected": 14,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.external_system_queueFontSize.default",
+        "line": 682
+      }
+    },
+    {
+      "id": "c4-external_system_queueFontFamily",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "external_system_queueFontFamily",
+      "expected": "\"Open Sans\", sans-serif",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.external_system_queueFontFamily.default",
+        "line": 686
+      }
+    },
+    {
+      "id": "c4-external_system_queueFontWeight",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "external_system_queueFontWeight",
+      "expected": "normal",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.external_system_queueFontWeight.default",
+        "line": 690
+      }
+    },
+    {
+      "id": "c4-boundaryFontSize",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "boundaryFontSize",
+      "expected": 14,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.boundaryFontSize.default",
+        "line": 694
+      }
+    },
+    {
+      "id": "c4-boundaryFontFamily",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "boundaryFontFamily",
+      "expected": "\"Open Sans\", sans-serif",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.boundaryFontFamily.default",
+        "line": 698
+      }
+    },
+    {
+      "id": "c4-boundaryFontWeight",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "boundaryFontWeight",
+      "expected": "normal",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.boundaryFontWeight.default",
+        "line": 702
+      }
+    },
+    {
+      "id": "c4-messageFontSize",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "messageFontSize",
+      "expected": 12,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.messageFontSize.default",
+        "line": 706
+      }
+    },
+    {
+      "id": "c4-messageFontFamily",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "messageFontFamily",
+      "expected": "\"Open Sans\", sans-serif",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.messageFontFamily.default",
+        "line": 710
+      }
+    },
+    {
+      "id": "c4-messageFontWeight",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "messageFontWeight",
+      "expected": "normal",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.messageFontWeight.default",
+        "line": 714
+      }
+    },
+    {
+      "id": "c4-containerFontSize",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "containerFontSize",
+      "expected": 14,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.containerFontSize.default",
+        "line": 719
+      }
+    },
+    {
+      "id": "c4-containerFontFamily",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "containerFontFamily",
+      "expected": "\"Open Sans\", sans-serif",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.containerFontFamily.default",
+        "line": 723
+      }
+    },
+    {
+      "id": "c4-containerFontWeight",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "containerFontWeight",
+      "expected": "normal",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.containerFontWeight.default",
+        "line": 727
+      }
+    },
+    {
+      "id": "c4-external_containerFontSize",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "external_containerFontSize",
+      "expected": 14,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.external_containerFontSize.default",
+        "line": 731
+      }
+    },
+    {
+      "id": "c4-external_containerFontFamily",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "external_containerFontFamily",
+      "expected": "\"Open Sans\", sans-serif",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.external_containerFontFamily.default",
+        "line": 735
+      }
+    },
+    {
+      "id": "c4-external_containerFontWeight",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "external_containerFontWeight",
+      "expected": "normal",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.external_containerFontWeight.default",
+        "line": 739
+      }
+    },
+    {
+      "id": "c4-container_dbFontSize",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "container_dbFontSize",
+      "expected": 14,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.container_dbFontSize.default",
+        "line": 744
+      }
+    },
+    {
+      "id": "c4-container_dbFontFamily",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "container_dbFontFamily",
+      "expected": "\"Open Sans\", sans-serif",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.container_dbFontFamily.default",
+        "line": 748
+      }
+    },
+    {
+      "id": "c4-container_dbFontWeight",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "container_dbFontWeight",
+      "expected": "normal",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.container_dbFontWeight.default",
+        "line": 752
+      }
+    },
+    {
+      "id": "c4-external_container_dbFontSize",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "external_container_dbFontSize",
+      "expected": 14,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.external_container_dbFontSize.default",
+        "line": 756
+      }
+    },
+    {
+      "id": "c4-external_container_dbFontFamily",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "external_container_dbFontFamily",
+      "expected": "\"Open Sans\", sans-serif",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.external_container_dbFontFamily.default",
+        "line": 760
+      }
+    },
+    {
+      "id": "c4-external_container_dbFontWeight",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "external_container_dbFontWeight",
+      "expected": "normal",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.external_container_dbFontWeight.default",
+        "line": 764
+      }
+    },
+    {
+      "id": "c4-container_queueFontSize",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "container_queueFontSize",
+      "expected": 14,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.container_queueFontSize.default",
+        "line": 769
+      }
+    },
+    {
+      "id": "c4-container_queueFontFamily",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "container_queueFontFamily",
+      "expected": "\"Open Sans\", sans-serif",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.container_queueFontFamily.default",
+        "line": 773
+      }
+    },
+    {
+      "id": "c4-container_queueFontWeight",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "container_queueFontWeight",
+      "expected": "normal",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.container_queueFontWeight.default",
+        "line": 777
+      }
+    },
+    {
+      "id": "c4-external_container_queueFontSize",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "external_container_queueFontSize",
+      "expected": 14,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.external_container_queueFontSize.default",
+        "line": 781
+      }
+    },
+    {
+      "id": "c4-external_container_queueFontFamily",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "external_container_queueFontFamily",
+      "expected": "\"Open Sans\", sans-serif",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.external_container_queueFontFamily.default",
+        "line": 785
+      }
+    },
+    {
+      "id": "c4-external_container_queueFontWeight",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "external_container_queueFontWeight",
+      "expected": "normal",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.external_container_queueFontWeight.default",
+        "line": 789
+      }
+    },
+    {
+      "id": "c4-componentFontSize",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "componentFontSize",
+      "expected": 14,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.componentFontSize.default",
+        "line": 794
+      }
+    },
+    {
+      "id": "c4-componentFontFamily",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "componentFontFamily",
+      "expected": "\"Open Sans\", sans-serif",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.componentFontFamily.default",
+        "line": 798
+      }
+    },
+    {
+      "id": "c4-componentFontWeight",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "componentFontWeight",
+      "expected": "normal",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.componentFontWeight.default",
+        "line": 802
+      }
+    },
+    {
+      "id": "c4-external_componentFontSize",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "external_componentFontSize",
+      "expected": 14,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.external_componentFontSize.default",
+        "line": 806
+      }
+    },
+    {
+      "id": "c4-external_componentFontFamily",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "external_componentFontFamily",
+      "expected": "\"Open Sans\", sans-serif",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.external_componentFontFamily.default",
+        "line": 810
+      }
+    },
+    {
+      "id": "c4-external_componentFontWeight",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "external_componentFontWeight",
+      "expected": "normal",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.external_componentFontWeight.default",
+        "line": 814
+      }
+    },
+    {
+      "id": "c4-component_dbFontSize",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "component_dbFontSize",
+      "expected": 14,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.component_dbFontSize.default",
+        "line": 819
+      }
+    },
+    {
+      "id": "c4-component_dbFontFamily",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "component_dbFontFamily",
+      "expected": "\"Open Sans\", sans-serif",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.component_dbFontFamily.default",
+        "line": 823
+      }
+    },
+    {
+      "id": "c4-component_dbFontWeight",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "component_dbFontWeight",
+      "expected": "normal",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.component_dbFontWeight.default",
+        "line": 827
+      }
+    },
+    {
+      "id": "c4-external_component_dbFontSize",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "external_component_dbFontSize",
+      "expected": 14,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.external_component_dbFontSize.default",
+        "line": 831
+      }
+    },
+    {
+      "id": "c4-external_component_dbFontFamily",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "external_component_dbFontFamily",
+      "expected": "\"Open Sans\", sans-serif",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.external_component_dbFontFamily.default",
+        "line": 835
+      }
+    },
+    {
+      "id": "c4-external_component_dbFontWeight",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "external_component_dbFontWeight",
+      "expected": "normal",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.external_component_dbFontWeight.default",
+        "line": 839
+      }
+    },
+    {
+      "id": "c4-component_queueFontSize",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "component_queueFontSize",
+      "expected": 14,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.component_queueFontSize.default",
+        "line": 844
+      }
+    },
+    {
+      "id": "c4-component_queueFontFamily",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "component_queueFontFamily",
+      "expected": "\"Open Sans\", sans-serif",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.component_queueFontFamily.default",
+        "line": 848
+      }
+    },
+    {
+      "id": "c4-component_queueFontWeight",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "component_queueFontWeight",
+      "expected": "normal",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.component_queueFontWeight.default",
+        "line": 852
+      }
+    },
+    {
+      "id": "c4-external_component_queueFontSize",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "external_component_queueFontSize",
+      "expected": 14,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.external_component_queueFontSize.default",
+        "line": 856
+      }
+    },
+    {
+      "id": "c4-external_component_queueFontFamily",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "external_component_queueFontFamily",
+      "expected": "\"Open Sans\", sans-serif",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.external_component_queueFontFamily.default",
+        "line": 860
+      }
+    },
+    {
+      "id": "c4-external_component_queueFontWeight",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "external_component_queueFontWeight",
+      "expected": "normal",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.external_component_queueFontWeight.default",
+        "line": 864
+      }
+    },
+    {
+      "id": "c4-wrap",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "wrap",
+      "expected": true,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.wrap.default",
+        "line": 869
+      }
+    },
+    {
+      "id": "c4-wrapPadding",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "wrapPadding",
+      "expected": 10,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.wrapPadding.default",
+        "line": 873
+      }
+    },
+    {
+      "id": "c4-person_bg_color",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "person_bg_color",
+      "expected": "#08427B",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.person_bg_color.default",
+        "line": 881
+      }
+    },
+    {
+      "id": "c4-person_border_color",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "person_border_color",
+      "expected": "#073B6F",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.person_border_color.default",
+        "line": 884
+      }
+    },
+    {
+      "id": "c4-external_person_bg_color",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "external_person_bg_color",
+      "expected": "#686868",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.external_person_bg_color.default",
+        "line": 887
+      }
+    },
+    {
+      "id": "c4-external_person_border_color",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "external_person_border_color",
+      "expected": "#8A8A8A",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.external_person_border_color.default",
+        "line": 890
+      }
+    },
+    {
+      "id": "c4-system_bg_color",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "system_bg_color",
+      "expected": "#1168BD",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.system_bg_color.default",
+        "line": 893
+      }
+    },
+    {
+      "id": "c4-system_border_color",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "system_border_color",
+      "expected": "#3C7FC0",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.system_border_color.default",
+        "line": 896
+      }
+    },
+    {
+      "id": "c4-system_db_bg_color",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "system_db_bg_color",
+      "expected": "#1168BD",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.system_db_bg_color.default",
+        "line": 899
+      }
+    },
+    {
+      "id": "c4-system_db_border_color",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "system_db_border_color",
+      "expected": "#3C7FC0",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.system_db_border_color.default",
+        "line": 902
+      }
+    },
+    {
+      "id": "c4-system_queue_bg_color",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "system_queue_bg_color",
+      "expected": "#1168BD",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.system_queue_bg_color.default",
+        "line": 905
+      }
+    },
+    {
+      "id": "c4-system_queue_border_color",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "system_queue_border_color",
+      "expected": "#3C7FC0",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.system_queue_border_color.default",
+        "line": 908
+      }
+    },
+    {
+      "id": "c4-external_system_bg_color",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "external_system_bg_color",
+      "expected": "#999999",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.external_system_bg_color.default",
+        "line": 911
+      }
+    },
+    {
+      "id": "c4-external_system_border_color",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "external_system_border_color",
+      "expected": "#8A8A8A",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.external_system_border_color.default",
+        "line": 914
+      }
+    },
+    {
+      "id": "c4-external_system_db_bg_color",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "external_system_db_bg_color",
+      "expected": "#999999",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.external_system_db_bg_color.default",
+        "line": 917
+      }
+    },
+    {
+      "id": "c4-external_system_db_border_color",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "external_system_db_border_color",
+      "expected": "#8A8A8A",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.external_system_db_border_color.default",
+        "line": 920
+      }
+    },
+    {
+      "id": "c4-external_system_queue_bg_color",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "external_system_queue_bg_color",
+      "expected": "#999999",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.external_system_queue_bg_color.default",
+        "line": 923
+      }
+    },
+    {
+      "id": "c4-external_system_queue_border_color",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "external_system_queue_border_color",
+      "expected": "#8A8A8A",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.external_system_queue_border_color.default",
+        "line": 926
+      }
+    },
+    {
+      "id": "c4-container_bg_color",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "container_bg_color",
+      "expected": "#438DD5",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.container_bg_color.default",
+        "line": 929
+      }
+    },
+    {
+      "id": "c4-container_border_color",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "container_border_color",
+      "expected": "#3C7FC0",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.container_border_color.default",
+        "line": 932
+      }
+    },
+    {
+      "id": "c4-container_db_bg_color",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "container_db_bg_color",
+      "expected": "#438DD5",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.container_db_bg_color.default",
+        "line": 935
+      }
+    },
+    {
+      "id": "c4-container_db_border_color",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "container_db_border_color",
+      "expected": "#3C7FC0",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.container_db_border_color.default",
+        "line": 938
+      }
+    },
+    {
+      "id": "c4-container_queue_bg_color",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "container_queue_bg_color",
+      "expected": "#438DD5",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.container_queue_bg_color.default",
+        "line": 941
+      }
+    },
+    {
+      "id": "c4-container_queue_border_color",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "container_queue_border_color",
+      "expected": "#3C7FC0",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.container_queue_border_color.default",
+        "line": 944
+      }
+    },
+    {
+      "id": "c4-external_container_bg_color",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "external_container_bg_color",
+      "expected": "#B3B3B3",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.external_container_bg_color.default",
+        "line": 947
+      }
+    },
+    {
+      "id": "c4-external_container_border_color",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "external_container_border_color",
+      "expected": "#A6A6A6",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.external_container_border_color.default",
+        "line": 950
+      }
+    },
+    {
+      "id": "c4-external_container_db_bg_color",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "external_container_db_bg_color",
+      "expected": "#B3B3B3",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.external_container_db_bg_color.default",
+        "line": 953
+      }
+    },
+    {
+      "id": "c4-external_container_db_border_color",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "external_container_db_border_color",
+      "expected": "#A6A6A6",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.external_container_db_border_color.default",
+        "line": 956
+      }
+    },
+    {
+      "id": "c4-external_container_queue_bg_color",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "external_container_queue_bg_color",
+      "expected": "#B3B3B3",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.external_container_queue_bg_color.default",
+        "line": 959
+      }
+    },
+    {
+      "id": "c4-external_container_queue_border_color",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "external_container_queue_border_color",
+      "expected": "#A6A6A6",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.external_container_queue_border_color.default",
+        "line": 962
+      }
+    },
+    {
+      "id": "c4-component_bg_color",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "component_bg_color",
+      "expected": "#85BBF0",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.component_bg_color.default",
+        "line": 965
+      }
+    },
+    {
+      "id": "c4-component_border_color",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "component_border_color",
+      "expected": "#78A8D8",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.component_border_color.default",
+        "line": 968
+      }
+    },
+    {
+      "id": "c4-component_db_bg_color",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "component_db_bg_color",
+      "expected": "#85BBF0",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.component_db_bg_color.default",
+        "line": 971
+      }
+    },
+    {
+      "id": "c4-component_db_border_color",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "component_db_border_color",
+      "expected": "#78A8D8",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.component_db_border_color.default",
+        "line": 974
+      }
+    },
+    {
+      "id": "c4-component_queue_bg_color",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "component_queue_bg_color",
+      "expected": "#85BBF0",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.component_queue_bg_color.default",
+        "line": 977
+      }
+    },
+    {
+      "id": "c4-component_queue_border_color",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "component_queue_border_color",
+      "expected": "#78A8D8",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.component_queue_border_color.default",
+        "line": 980
+      }
+    },
+    {
+      "id": "c4-external_component_bg_color",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "external_component_bg_color",
+      "expected": "#CCCCCC",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.external_component_bg_color.default",
+        "line": 983
+      }
+    },
+    {
+      "id": "c4-external_component_border_color",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "external_component_border_color",
+      "expected": "#BFBFBF",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.external_component_border_color.default",
+        "line": 986
+      }
+    },
+    {
+      "id": "c4-external_component_db_bg_color",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "external_component_db_bg_color",
+      "expected": "#CCCCCC",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.external_component_db_bg_color.default",
+        "line": 989
+      }
+    },
+    {
+      "id": "c4-external_component_db_border_color",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "external_component_db_border_color",
+      "expected": "#BFBFBF",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.external_component_db_border_color.default",
+        "line": 992
+      }
+    },
+    {
+      "id": "c4-external_component_queue_bg_color",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "external_component_queue_bg_color",
+      "expected": "#CCCCCC",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.external_component_queue_bg_color.default",
+        "line": 995
+      }
+    },
+    {
+      "id": "c4-external_component_queue_border_color",
+      "kind": "c4",
+      "section": "c4",
+      "source": "C4Context\nPerson(a,\"A\")",
+      "property": "external_component_queue_border_color",
+      "expected": "#BFBFBF",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "C4DiagramConfig.properties.external_component_queue_border_color.default",
+        "line": 998
+      }
+    },
+    {
+      "id": "mindmap-colorBy",
+      "kind": "mindmap",
+      "section": "mindmap",
+      "source": "mindmap\nroot",
+      "property": "colorBy",
+      "expected": "branch",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "MindmapDiagramConfig.properties.colorBy.default",
+        "line": 1218
+      }
+    },
+    {
+      "id": "mindmap-padding",
+      "kind": "mindmap",
+      "section": "mindmap",
+      "source": "mindmap\nroot",
+      "property": "padding",
+      "expected": 10,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "MindmapDiagramConfig.properties.padding.default",
+        "line": 1228
+      }
+    },
+    {
+      "id": "mindmap-maxNodeWidth",
+      "kind": "mindmap",
+      "section": "mindmap",
+      "source": "mindmap\nroot",
+      "property": "maxNodeWidth",
+      "expected": 200,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "MindmapDiagramConfig.properties.maxNodeWidth.default",
+        "line": 1231
+      }
+    },
+    {
+      "id": "mindmap-layoutAlgorithm",
+      "kind": "mindmap",
+      "section": "mindmap",
+      "source": "mindmap\nroot",
+      "property": "layoutAlgorithm",
+      "expected": "cose-bilkent",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "MindmapDiagramConfig.properties.layoutAlgorithm.default",
+        "line": 1234
+      }
+    },
+    {
+      "id": "treeView-rowIndent",
+      "kind": "treeView",
+      "section": "treeView",
+      "source": "treeView-beta\nroot",
+      "property": "rowIndent",
+      "expected": 10,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "TreeViewDiagramConfig.properties.rowIndent.default",
+        "line": 2823
+      }
+    },
+    {
+      "id": "treeView-paddingX",
+      "kind": "treeView",
+      "section": "treeView",
+      "source": "treeView-beta\nroot",
+      "property": "paddingX",
+      "expected": 5,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "TreeViewDiagramConfig.properties.paddingX.default",
+        "line": 2828
+      }
+    },
+    {
+      "id": "treeView-paddingY",
+      "kind": "treeView",
+      "section": "treeView",
+      "source": "treeView-beta\nroot",
+      "property": "paddingY",
+      "expected": 5,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "TreeViewDiagramConfig.properties.paddingY.default",
+        "line": 2833
+      }
+    },
+    {
+      "id": "treeView-lineThickness",
+      "kind": "treeView",
+      "section": "treeView",
+      "source": "treeView-beta\nroot",
+      "property": "lineThickness",
+      "expected": 1,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "TreeViewDiagramConfig.properties.lineThickness.default",
+        "line": 2838
+      }
+    },
+    {
+      "id": "treeView-showIcons",
+      "kind": "treeView",
+      "section": "treeView",
+      "source": "treeView-beta\nroot",
+      "property": "showIcons",
+      "expected": false,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "TreeViewDiagramConfig.properties.showIcons.default",
+        "line": 2843
+      }
+    },
+    {
+      "id": "treeView-defaultIconPack",
+      "kind": "treeView",
+      "section": "treeView",
+      "source": "treeView-beta\nroot",
+      "property": "defaultIconPack",
+      "expected": "",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "TreeViewDiagramConfig.properties.defaultIconPack.default",
+        "line": 2849
+      }
+    },
+    {
+      "id": "packet-rowHeight",
+      "kind": "packet",
+      "section": "packet",
+      "source": "packet\n0: \"Bit\"",
+      "property": "rowHeight",
+      "expected": 32,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "PacketDiagramConfig.properties.rowHeight.default",
+        "line": 2744
+      }
+    },
+    {
+      "id": "packet-bitWidth",
+      "kind": "packet",
+      "section": "packet",
+      "source": "packet\n0: \"Bit\"",
+      "property": "bitWidth",
+      "expected": 32,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "PacketDiagramConfig.properties.bitWidth.default",
+        "line": 2749
+      }
+    },
+    {
+      "id": "packet-bitsPerRow",
+      "kind": "packet",
+      "section": "packet",
+      "source": "packet\n0: \"Bit\"",
+      "property": "bitsPerRow",
+      "expected": 32,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "PacketDiagramConfig.properties.bitsPerRow.default",
+        "line": 2754
+      }
+    },
+    {
+      "id": "packet-showBits",
+      "kind": "packet",
+      "section": "packet",
+      "source": "packet\n0: \"Bit\"",
+      "property": "showBits",
+      "expected": true,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "PacketDiagramConfig.properties.showBits.default",
+        "line": 2759
+      }
+    },
+    {
+      "id": "packet-bitOrder",
+      "kind": "packet",
+      "section": "packet",
+      "source": "packet\n0: \"Bit\"",
+      "property": "bitOrder",
+      "expected": "ascending",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "PacketDiagramConfig.properties.bitOrder.default",
+        "line": 2763
+      }
+    },
+    {
+      "id": "packet-paddingX",
+      "kind": "packet",
+      "section": "packet",
+      "source": "packet\n0: \"Bit\"",
+      "property": "paddingX",
+      "expected": 5,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "PacketDiagramConfig.properties.paddingX.default",
+        "line": 2777
+      }
+    },
+    {
+      "id": "packet-paddingY",
+      "kind": "packet",
+      "section": "packet",
+      "source": "packet\n0: \"Bit\"",
+      "property": "paddingY",
+      "expected": 5,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "PacketDiagramConfig.properties.paddingY.default",
+        "line": 2782
+      }
+    },
+    {
+      "id": "block-padding",
+      "kind": "block",
+      "section": "block",
+      "source": "block\nA",
+      "property": "padding",
+      "expected": 8,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "BlockDiagramConfig.properties.padding.default",
+        "line": 2795
+      }
+    },
+    {
+      "id": "kanban-padding",
+      "kind": "kanban",
+      "section": "kanban",
+      "source": "kanban\nTodo",
+      "property": "padding",
+      "expected": 8,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "KanbanDiagramConfig.properties.padding.default",
+        "line": 1263
+      }
+    },
+    {
+      "id": "kanban-sectionWidth",
+      "kind": "kanban",
+      "section": "kanban",
+      "source": "kanban\nTodo",
+      "property": "sectionWidth",
+      "expected": 200,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "KanbanDiagramConfig.properties.sectionWidth.default",
+        "line": 1266
+      }
+    },
+    {
+      "id": "kanban-ticketBaseUrl",
+      "kind": "kanban",
+      "section": "kanban",
+      "source": "kanban\nTodo",
+      "property": "ticketBaseUrl",
+      "expected": "",
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "KanbanDiagramConfig.properties.ticketBaseUrl.default",
+        "line": 1269
+      }
+    },
+    {
+      "id": "architecture-padding",
+      "kind": "architecture",
+      "section": "architecture",
+      "source": "architecture-beta\nservice a",
+      "property": "padding",
+      "expected": 40,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "ArchitectureDiagramConfig.properties.padding.default",
+        "line": 1149
+      }
+    },
+    {
+      "id": "architecture-iconSize",
+      "kind": "architecture",
+      "section": "architecture",
+      "source": "architecture-beta\nservice a",
+      "property": "iconSize",
+      "expected": 80,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "ArchitectureDiagramConfig.properties.iconSize.default",
+        "line": 1152
+      }
+    },
+    {
+      "id": "architecture-fontSize",
+      "kind": "architecture",
+      "section": "architecture",
+      "source": "architecture-beta\nservice a",
+      "property": "fontSize",
+      "expected": 16,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "ArchitectureDiagramConfig.properties.fontSize.default",
+        "line": 1155
+      }
+    },
+    {
+      "id": "architecture-randomize",
+      "kind": "architecture",
+      "section": "architecture",
+      "source": "architecture-beta\nservice a",
+      "property": "randomize",
+      "expected": false,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "ArchitectureDiagramConfig.properties.randomize.default",
+        "line": 1158
+      }
+    },
+    {
+      "id": "architecture-nodeSeparation",
+      "kind": "architecture",
+      "section": "architecture",
+      "source": "architecture-beta\nservice a",
+      "property": "nodeSeparation",
+      "expected": 75,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "ArchitectureDiagramConfig.properties.nodeSeparation.default",
+        "line": 1168
+      }
+    },
+    {
+      "id": "architecture-idealEdgeLengthMultiplier",
+      "kind": "architecture",
+      "section": "architecture",
+      "source": "architecture-beta\nservice a",
+      "property": "idealEdgeLengthMultiplier",
+      "expected": 1.5,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "ArchitectureDiagramConfig.properties.idealEdgeLengthMultiplier.default",
+        "line": 1175
+      }
+    },
+    {
+      "id": "architecture-edgeElasticity",
+      "kind": "architecture",
+      "section": "architecture",
+      "source": "architecture-beta\nservice a",
+      "property": "edgeElasticity",
+      "expected": 0.45,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "ArchitectureDiagramConfig.properties.edgeElasticity.default",
+        "line": 1182
+      }
+    },
+    {
+      "id": "architecture-numIter",
+      "kind": "architecture",
+      "section": "architecture",
+      "source": "architecture-beta\nservice a",
+      "property": "numIter",
+      "expected": 2500,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "ArchitectureDiagramConfig.properties.numIter.default",
+        "line": 1189
+      }
+    },
+    {
+      "id": "architecture-seed",
+      "kind": "architecture",
+      "section": "architecture",
+      "source": "architecture-beta\nservice a",
+      "property": "seed",
+      "expected": 1,
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "ArchitectureDiagramConfig.properties.seed.default",
+        "line": 1195
+      }
+    },
+    {
+      "id": "treeView-filenameIcons",
+      "kind": "treeView",
+      "section": "treeView",
+      "source": "treeView-beta\nroot",
+      "property": "filenameIcons",
+      "expected": {},
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "TreeViewDiagramConfig.properties.filenameIcons.default (literal empty mapping)",
+        "line": 2847
+      }
+    },
+    {
+      "id": "treeView-extensionIcons",
+      "kind": "treeView",
+      "section": "treeView",
+      "source": "treeView-beta\nroot",
+      "property": "extensionIcons",
+      "expected": {},
+      "origin": {
+        "path": "packages/mermaid/src/schemas/config.schema.yaml",
+        "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+        "symbol": "TreeViewDiagramConfig.properties.extensionIcons.default (literal empty mapping)",
+        "line": 2847
+      }
+    }
+  ],
+  "unresolvedSourceDefaultSyntax": [],
+  "policyExcludedDefaults": []
+}

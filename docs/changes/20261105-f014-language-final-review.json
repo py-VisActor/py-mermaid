@@ -1,0 +1,190 @@
+{
+  "schema": "py-mermaid-readonly-language-review/v1",
+  "taskId": "F01.4-language-final-review",
+  "date": "2026-11-05",
+  "reviewType": "read_only_source_inventory_assertion_fixture_and_existing_evidence_audit",
+  "status": "NO_ADDITIONAL_STATIC_LANGUAGE_ENTRY_OMISSION_IDENTIFIED",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "reviewedRun": "test-runs/F01.4-batch-20261105T105322Z-17ce76c6/run.json",
+  "reviewedRunSha256": "1e9aff960b01436fa56ad449f279e804c8c057d057e5634fb9f1cfbc7b9bc0be",
+  "reviewedSourceTreeSha256": "1f17a467bfd7f8f7e7f53710c88a1280bda03f3ba412968c5d3d9a1575812a80",
+  "runStatus": "SUCCESS",
+  "runSourceUnchanged": true,
+  "allCommandExitCodesZero": true,
+  "totalTests": 478,
+  "productTests": 445,
+  "toolTests": 33,
+  "languageTests": 186,
+  "languageGroups": [
+    {
+      "group": "f011-language",
+      "tests": 40,
+      "exitCode": 0,
+      "stderr": "test-runs/F01.4-batch-20261105T105322Z-17ce76c6/commands/001-f011-language/stderr.log"
+    },
+    {
+      "group": "f012-language",
+      "tests": 29,
+      "exitCode": 0,
+      "stderr": "test-runs/F01.4-batch-20261105T105322Z-17ce76c6/commands/005-f012-language/stderr.log"
+    },
+    {
+      "group": "f013-language",
+      "tests": 63,
+      "exitCode": 0,
+      "stderr": "test-runs/F01.4-batch-20261105T105322Z-17ce76c6/commands/008-f013-language/stderr.log"
+    },
+    {
+      "group": "f014-language",
+      "tests": 54,
+      "exitCode": 0,
+      "stderr": "test-runs/F01.4-batch-20261105T105322Z-17ce76c6/commands/013-f014-language/stderr.log"
+    }
+  ],
+  "inventory": {
+    "grammarNonterminals": 40,
+    "grammarAlternatives": 189,
+    "metadataAliases": 147,
+    "semanticPositiveFixtures": 93,
+    "syntaxNegativeFixtures": 14,
+    "semanticErrorFixtures": 4,
+    "explicitExclusions": 4,
+    "sourceAnomalyFixtures": 3,
+    "meaning": "Inventory-to-independent-assertion mapping, not measured branch coverage or all possible input coverage."
+  },
+  "reviewedStaticEntryFamilies": [
+    "graph/flowchart headers, explicit/implicit/alias directions, separators and empty documents",
+    "classic vertices, metadata/YAML, identifier/token families, quoted/plain/Markdown labels and original UTF16 spans",
+    "Cartesian vertex chains, generated/user edge IDs and declaration order, every stroke/marker/min-length branch including INVALID",
+    "subgraphs, nested membership and direction inheritance, cross-group/group endpoints, static collapse projection",
+    "style/classDef/class/linkStyle, source curve options, static click recognition and initial clickable class",
+    "preprocessing/frontmatter/directive layers, themes including null, HTML/Markdown/entities/security and limits inherited from F011-F013 tests",
+    "ELK seven root registrations and thirteen public options, handDrawn source seed timing, shared note/state theme defaults and overrides"
+  ],
+  "sourceDormantSeparatelyAccounted": [
+    "ending/endToken: five alternatives unreachable from start",
+    "TESTSTR link alternative: no lexer token emission",
+    "UNIT/PCT styleComponent alternatives: no lexer token emission; reachable numeric unit/% text tested through emitted tokens"
+  ],
+  "explicitScope": [
+    "Math remains user-deferred to a separate module.",
+    "Dagre selection, implementation, dependency and algorithm fallback are user-excluded.",
+    "Interactive execution/navigation/tooltips/events and animation playback are excluded; static initial appearance remains represented.",
+    "Classic ellipse upstream rendering defect and constructor prototype-lookup anomaly are separate boundaries, not successful static rendering claims."
+  ],
+  "ownedSourceIdentitiesMatchReviewedRun": [
+    {
+      "path": "src/py_mermaid/config/__init__.py",
+      "matchesReviewedRun": true
+    },
+    {
+      "path": "src/py_mermaid/config/color_names.py",
+      "matchesReviewedRun": true
+    },
+    {
+      "path": "src/py_mermaid/config/colors.py",
+      "matchesReviewedRun": true
+    },
+    {
+      "path": "src/py_mermaid/config/elk.py",
+      "matchesReviewedRun": true
+    },
+    {
+      "path": "src/py_mermaid/config/flowchart.py",
+      "matchesReviewedRun": true
+    },
+    {
+      "path": "src/py_mermaid/config/source_keys.py",
+      "matchesReviewedRun": true
+    },
+    {
+      "path": "src/py_mermaid/config/theme_rules.py",
+      "matchesReviewedRun": true
+    },
+    {
+      "path": "src/py_mermaid/config/themes.py",
+      "matchesReviewedRun": true
+    },
+    {
+      "path": "src/py_mermaid/config/values.py",
+      "matchesReviewedRun": true
+    },
+    {
+      "path": "src/py_mermaid/diagrams/flowchart/__init__.py",
+      "matchesReviewedRun": true
+    },
+    {
+      "path": "src/py_mermaid/diagrams/flowchart/lexical.py",
+      "matchesReviewedRun": true
+    },
+    {
+      "path": "src/py_mermaid/diagrams/flowchart/parser.py",
+      "matchesReviewedRun": true
+    },
+    {
+      "path": "src/py_mermaid/diagrams/flowchart/syntax.py",
+      "matchesReviewedRun": true
+    },
+    {
+      "path": "src/py_mermaid/parsing/__init__.py",
+      "matchesReviewedRun": true
+    },
+    {
+      "path": "src/py_mermaid/parsing/preprocess.py",
+      "matchesReviewedRun": true
+    },
+    {
+      "path": "src/py_mermaid/parsing/yaml_json.py",
+      "matchesReviewedRun": true
+    }
+  ],
+  "limitations": [
+    "Read-only review does not execute a fresh parser, test, official oracle or image comparison.",
+    "The successful batch is unit evidence for its recorded source only; its generic logger functionalStatus is NOT_EVALUATED, so this receipt relies on actual unittest stderr counts/OK and command exit codes rather than logger status alone.",
+    "Source maps retain historical S2/S3 unverified fields and pre-repair identities; current behavior evidence is the explicit reviewed run and subsequent repair records.",
+    "Human QA has identified state-circle opaque CSS fill layering outside language semantics. C is repairing it; root must rerun the new candidate before final acceptance.",
+    "No new installation, commit, push, product/test/tool change or whole-repository audit performed."
+  ],
+  "inputs": [
+    {
+      "path": "references/f014-parser-sources.json",
+      "sha256": "92ec435c90fcd71a51fc481bdf71c0581f78d8bb11702d556183ed9825a856f9"
+    },
+    {
+      "path": "references/f014-language-assertions.json",
+      "sha256": "6c9ae39d40d8543d75c3da643cc6f26d3f49382952613d9c7c963630a0bae933"
+    },
+    {
+      "path": "tests/f014/test_language.py",
+      "sha256": "74c5e9ffe693983dd97bf5874cc8641e8207a45d6793b364a3c0abfb8dc77093"
+    },
+    {
+      "path": "tests/f014/language-cases.json",
+      "sha256": "e4c5dc43f89876be1075dc94aea7b31de1f185898a88054c79529a2d937ac926"
+    },
+    {
+      "path": "tests/f011/test_language.py",
+      "sha256": "8e5b0e4c129eb8b8c5c13d4db463549f1fb68d0d2710eefcd5dce493897cb8ed"
+    },
+    {
+      "path": "tests/f012/test_language.py",
+      "sha256": "a3860acfabc8364e3366eaba3b7079f641d9878e987e277508e27d19da1cc155"
+    },
+    {
+      "path": "tests/f013/test_language.py",
+      "sha256": "8888c527dc0da46d162989080f55ee6192fd3655abcbb172b794ef4a60e23319"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/flowchart/parser/flow.jison",
+      "sha256": "9597faffe2a133b104c6dd4f38a162f6980bff4e0a841a83ff94af3900ea7ba8"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/flowchart/flowDb.ts",
+      "sha256": "33577b9ade8c65be6049c3093089dbf81abf44214f49c2b2ea46434183889288"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/schemas/config.schema.yaml",
+      "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8"
+    }
+  ]
+}

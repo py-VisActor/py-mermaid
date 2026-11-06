@@ -1,0 +1,55 @@
+{
+  "schema": "py-mermaid-layout-removal-verification/v1",
+  "status": "PASS_LOCAL",
+  "date": "2026-11-05",
+  "layoutPolicy": "references/layout-policy.json",
+  "sourceTreeSha256": "f75ee6fa7fc7d0f3a04df190a125c8553599705c547258ae52c5f73a5b6ba76f",
+  "previousSourceTreeSha256": "5cb792fadbd7685a0d65a4a4d0e397ff59566eae340f4aaa87d0a7041d18b08f",
+  "changedProductIdentityFiles": [
+    "README.md",
+    "src/py_mermaid/config/flowchart.py"
+  ],
+  "productionSourceDagreReferences": 0,
+  "dagreRuntimeDependencyDeclared": false,
+  "defaultLayout": "elk",
+  "activeTasks": 60,
+  "removedTask": "P1-10",
+  "sourceGraphNodesAndEdgesPreserved": true,
+  "excludedSourceDagreNodes": 1,
+  "testMethods": {
+    "product": 280,
+    "tooling": 26,
+    "dependency": 14,
+    "groups": {
+      "f011-language": 39,
+      "f011-layout": 21,
+      "f011-canvas": 23,
+      "f011-api": 5,
+      "f012-language": 29,
+      "f012-layout": 19,
+      "f012-canvas": 18,
+      "f013-language": 63,
+      "f013-layout": 14,
+      "f013-styles": 16,
+      "f013-canvas": 33,
+      "tooling": 26
+    }
+  },
+  "checks": [
+    "test-runs/no-dagre-batch-20261105T081650Z-c2bc9fd2",
+    "test-runs/no-dagre-record-20261105T081650Z-ca5456ba",
+    "test-runs/no-dagre-record-20261105T081650Z-d3c67c4c",
+    "test-runs/no-dagre-record-20261105T081650Z-084690bb",
+    "test-runs/no-dagre-record-20261105T081933Z-17756c6d",
+    "test-runs/no-dagre-record-20261105T081933Z-40a1c9f6"
+  ],
+  "negativeCoverage": "Root/scoped/site/frontmatter/init/initialize removed-layout requests fail before Canvas allocation; no fallback; default config remains elk",
+  "visualEvidence": "Prior F01.3 render reports retained as historical candidates. No visual rerender for this rejected-config diagnostic and scope/docs change; accepted-input drawing code unchanged.",
+  "installationValidation": "not executed",
+  "externalActions": {
+    "commit": false,
+    "push": false,
+    "publish": false
+  },
+  "finalVerificationRun": "C:/code/py-visactor/py-mermaid/test-runs/no-dagre-final-verification-20261105T082036Z-5c43ce0f/run.json"
+}

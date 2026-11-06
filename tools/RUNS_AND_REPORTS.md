@@ -1,5 +1,8 @@
 # 日志与渲染报告复用规范 v1
 
+2026-11-06：31 入口静态批次工具已进入 P2 设计，入口 [BULK_REPORTS](BULK_REPORTS.md)。
+`run_bulk.py` 复用同一 Run 标准，扩展来源校验、全分组首跑和通用 A/B HTML；下文 F01 工具继续保留供历史回归。
+
 统一入口是 [workflow.py](workflow.py)，使用Python标准库管理执行记录；所有命令都不会安装依赖。当前场景适配器为F01.1，产品的parse/render和安装验证不因日志标准化而扩大范围。已有历史报告、失败和日志原样保留，新执行使用新run，不将旧数据补写成新验证。
 
 ## 直接复用
@@ -90,7 +93,19 @@ python tools/workflow.py verify --run test-runs/<run-id>
 }
 ```
 
-final目录需要summary.json、source-candidate.json及每个compare-profile的report.json、场景JSON、PNG和诊断报告；oracle需要identity/manifest、场景、PNG和非法输入记录。当前场景结构沿用F01.1比较器：diagram nodes/edges、layout、trace、绘制节点/边和PNG指标。后续图种可复用日志/模板，但专用语义数据若不同，须先增加相应适配，不能靠改标题就宣称全图种兼容。
+final目录需要summary.json、source-candidate.json及每个compare-profile的report.json、场景JSON、PNG和诊断报告；oracle需要identity/manifest、场景、PNG和错误记录。F01.1/F01.2场景包括diagram nodes/edges/groups、经典shape、独立edge labels、真实layout与trace、实际绘制节点/边/组/标签及PNG指标。后续图种可复用日志/模板，但专用语义数据若不同，须先增加相应适配，不能靠改标题就宣称全图种兼容。
+
+fixtures的`negativeCases`只放官方语法非法输入；`renderErrorCases`单独记录能解析但固定上游无法渲染的案例（F01.2经典ellipse）。每例有id/text/code，oracle记录parsed/renderRejected与原错误，Python需解析成功并匹配明确错误code；不伪造PNG。报告分别核对三类分母。每个正例可带config、shapes、edgeLabels、groups及独立手写语义期望；渲染批次同时传递config给A/B。`--default-case`可指定报告默认显示的正例。
+
+F01.2复用入口：
+
+```shell
+python tools/workflow.py batch --plan tools/plans/f012-tests.json --keep-going
+python tools/workflow.py render --scope F01.2 --fixtures tests/f012/cases.json --profiles cpu auto gpu --title "流程图增强 · F01.2 对比" --default-case enhanced-overview
+python tools/workflow.py record --scope F01.2 --name html-qa -- node tools/qa_html_report.cjs --url http://127.0.0.1:8765/<run-id>/index.html --out test-runs/<new-qa-dir>
+```
+
+`qa_html_report.cjs`仅使用已有开发浏览器依赖，逐正例/错误例及后端验证HTML导航、图片原始尺寸、输入文本与保存结果，检查叠加/诊断模式、桌面/移动布局和浏览器错误，保存截图及QA JSON；不执行产品渲染或安装。开发浏览器工具不进入生产依赖。
 
 报告按fixture ID、profile分母、固定来源commit、候选身份、PNG尺寸和SHA校验输入；缺失/重复/错配产物明确失败并留日志，不生成成功白图或隐去难例。失败结果有完整图片时仍按原状态展示FAIL，不提升为PASS。HTML/template/case标题/profile选择已解耦，不再在脚本里写执行日期与固定run目录。
 
@@ -105,3 +120,26 @@ python tools/serve_reports.py --root reports --host 127.0.0.1 --port 8765
 本地URL为 `http://127.0.0.1:8765/`，具体报告使用相应子路径。默认只监听loopback、只服务reports目录。新启动的服务会创建标准serve run，启动信息含pid、URL、root与日志目录；访问事件写events.ndjson，同时输出UTF-8 NDJSON。Ctrl+C退出后完成manifest；被强制结束时RUNNING记录表示尚未正常收口，verify不会伪称完整。
 
 本次此前启动的8765服务保持运行，既有URL不变；它早于新日志模块启动，终端会话日志按历史记录保留，不伪装成新格式。下次直接使用上述命令即可获得标准服务日志。安装验证继续暂缓。
+
+
+## F01.3 复用约定
+
+F01.3 使用相同 `batch`、`render`、`report`、`verify` 入口：测试计划是 `tools/plans/f013-tests.json`，输入为 `tests/f013/cases.json`，交付报告配置为 `tools/report_specs/f013-final.json`，默认显示 `rich-overview`。`qa_html_report.cjs` 遍历所有正例/后端和错误例，校验图片原始尺寸、源输入、各显示模式、桌面与移动布局以及无外部请求；它只查看已保存报告。
+
+## F01.4 静态收口复用
+
+`assemble_f014_cases.py` 只组装独立来源夹具，不从候选输出生成期望。先运行 `workflow.py batch --plan tools/plans/f014-unit-tests.json --keep-going`，再执行 `f014-legacy-visual.json` 和 `f014-final-visual.json`；全部通过后，`f014-delivery.json` 将矩阵证据复制到新目录，汇总同候选结果并生成 HTML。每次运行创建新目录，失败不覆盖。计划中明确引用的历史证据路径属于该次候选输入；换候选时更新引用，不能把旧通过结果改写成新结果。
+
+`reuse_oracle.py` 校验固定来源身份、案例分母、执行输入及复制后的每个文件 SHA；新增或改变的案例必须显式 `--refresh`，删除案例拒绝复用。无 refresh 时重新校验固定源码身份，直接复用不可变 A 图；CPU/auto/GPU 的 B 图始终从当前候选重新生成。来源采集保留 SVG 的真实绘制顺序：手绘状态圆最后的 CSS 不透明 outline fill 会覆盖先前 hatch，不能只用底层 computed stroke 推断可见底色。
+
+`export_static_samples.py` 经公开 API 生成五种真实静态导出。`finalize_static_evidence.py` 核验同一源码、实际 unittest 数和三后端完整分母，生成 summary 与 report spec；`workflow.py report` 将已保存证据生成可下载导出样例的单文件 HTML。`qa_html_report.cjs` 验证所有案例、后端、错误页、显示模式、导出指纹、桌面/移动布局和无外部请求。人工看图另存 receipt，自动 PASS 不能替代人工核查。
+
+大型单文件 HTML 可能超过 Chromium inspector 的响应体缓存。QA 用独立 HTTP 读取计算文件 SHA，浏览器继续逐项验证实际加载页面；不依赖 inspector 的 `response.body()` 缓存，也不跳过案例遍历。
+
+增加独立第四类 `unsupportedCases`：官方语法接受，Python 对本切片范围外的输入返回列明的 `codes`。该类只执行官方 parse，不为 Dagre/新语法等范围外功能触发官方渲染，也不生成成功 PNG。原语法负例、上游渲染缺陷和正例分母保持独立。
+
+富文本核对同时使用手写意图、官方真实 computed styles/文字 run 与 Python 实际 PNG。多行边界允许软换行，同一行格式 run 不允许凭空加空格；一像素线可有分数覆盖，但颜色须符合预期前景/背景混合。空 `<br/>` 边标签没有可见文字，不能要求一个空文字事件作为漏绘负控。边标签可以同时有外层与 run 背景，检查实际文字容纳和背景存在，不将重复合法事件判为漏绘。
+
+非有限 JavaScript 主题值通过 `scene_codec.py` 的显式 `$jsNumber` 标签保存，不能输出裸 NaN/Infinity 导致 HTML JSON.parse 失败。sandbox 对照保留原 iframe HTML，并只展开原始 SVG 进行截图；不调整其布局和样式。纯 Python 产品路径不使用该研发转换。
+
+Windows 活跃 manifest 使用原子替换；只有临时共享/访问锁错误才做有上限重试，持久失败仍抛出，旧完整文件保持。关闭后的 run 不重写；原始失败、错误断言快照及后续修复证据分别存储。详情与本轮实际结果见 `docs/F01_3_ACCEPTANCE.md`。

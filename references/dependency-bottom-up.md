@@ -360,7 +360,7 @@
 | 6 | C0005 ↻ | `@babel/core@7.29.7` | trace-then-rewrite-surface | Python 重写/追踪调用面 | D10 |
 | 6 | C0005 ↻ | `@babel/helper-module-transforms@7.29.7(@babel/core@7.29.7)` | trace-then-rewrite-surface | Python 重写/追踪调用面 | D10 |
 | 6 | C0030 | `@headlessui/react@2.2.10(react-dom@19.2.5(react@19.2.5))(react@19.2.5)` | discard-browser-layer | Python 重写/追踪调用面 | D10 |
-| 6 | C0182 | `dagre-d3-es@7.0.14` | retain-layout-and-graph-meaning-only | Python 重写/追踪调用面 | D07 |
+| 6 | C0182 | `dagre-d3-es@7.0.14` | excluded-by-user | 不进入目标运行时（用户排除） | D07 |
 | 6 | C0211 | `glob@10.4.5` | stdlib-with-adapter-and-trace | pathlib, glob, os, io | D02 |
 | 6 | C0355 | `workspace:packages/mermaid-layout-tidy-tree` | assemble-python | Python 重写/追踪调用面 | D09 |
 | 7 | C0231 | `jotai@2.19.1(@babel/core@7.29.7)(@babel/template@7.29.7)(@types/react@19.2.15)(react@19.2.5)` | replace-ui-state-with-python-data | Python 重写/追踪调用面 | D10 |

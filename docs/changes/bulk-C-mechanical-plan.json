@@ -1,0 +1,35 @@
+{
+  "schema": "py-mermaid-command-plan/v1",
+  "inputs": [
+    "{repo}/references/bulk-C-sequence.json",
+    "{repo}/references/bulk-C-railroad.json",
+    "{repo}/references/bulk-C-zenuml.json",
+    "{repo}/references/bulk-C-info.json"
+  ],
+  "steps": [
+    {
+      "name": "C-seven-provider-compile",
+      "argv": [
+        "{python}",
+        "-m",
+        "compileall",
+        "-q",
+        "src/py_mermaid/diagrams/sequence",
+        "src/py_mermaid/diagrams/railroad",
+        "src/py_mermaid/diagrams/zenuml",
+        "src/py_mermaid/diagrams/info"
+      ]
+    },
+    {
+      "name": "C-pure-import-and-interface-signatures",
+      "argv": [
+        "{python}",
+        "-c",
+        "import importlib,inspect,json; names=('sequence','railroad','zenuml','info'); modules=[importlib.import_module('py_mermaid.diagrams.'+name) for name in names]; rows=[{'module':m.__name__,'parse':str(inspect.signature(m.parse)),'build':str(inspect.signature(m.build)),'asyncBuild':inspect.iscoroutinefunction(m.build)} for m in modules]; assert all(r['asyncBuild'] for r in rows); from py_mermaid.rendering.skia.scene import Painter; print(json.dumps({'providers':rows,'Painter.measure':str(inspect.signature(Painter.measure)),'Painter.text':str(inspect.signature(Painter.text)),'Painter.style':str(inspect.signature(Painter.style)),'Painter.asset':str(inspect.signature(Painter.asset)),'nativeObjectsCreated':False},indent=2))"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src"
+      }
+    }
+  ]
+}

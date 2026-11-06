@@ -1,0 +1,84 @@
+{
+  "phase": "P1",
+  "status": "code_complete_unverified",
+  "upstreamVersion": "mermaid@12.2.0",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "protocol": "docs/BULK_STATIC_INTERFACES.md v1",
+  "behaviorExecuted": false,
+  "testsDesigned": false,
+  "threadOwnership": "All models frozen/pure; mutable parser/layout state request local; Painter/native session stays on caller owner thread",
+  "sourcePositions": "Family parser offsets are cleaned Python indices; runtime.common.error maps processed_to_raw then original UTF-16 offset and UTF-16 column",
+  "units": "Input grammar indentation counts source characters; all renderer/layout lengths are logical CSS px unless explicitly source bit or column counts",
+  "mechanicalEvidence": [
+    "test-runs/BULK-record-20261106T033019Z-3bf3e44f/run.json",
+    "test-runs/BULK-record-20261106T033206Z-ade40f8b/run.json",
+    "test-runs/BULK-record-20261106T033427Z-44c90684/run.json",
+    "test-runs/BULK-record-20261106T033826Z-f56b2f03/run.json",
+    "test-runs/BULK-record-20261106T034102Z-66d38803/run.json"
+  ],
+  "excludedByUser": [
+    "Dagre implementations/dependencies/fallbacks",
+    "click/navigation/callback/hover/animation/interactive DOM behavior"
+  ],
+  "deferred": [
+    "treemap (and six other batch-deferred entries, no new code or verification)"
+  ],
+  "verificationLimit": "Compilation/import/signature binding do not assert parse semantics, configuration compatibility or rendering correctness; independent source tests and official captures start only in P2/P3",
+  "task": "BULK-A-F02",
+  "sourceMap": "references/bulk-A-F02-sources.json",
+  "files": [
+    {
+      "path": "src/py_mermaid/diagrams/modeling/__init__.py",
+      "sha256": "9d858e7d83430dfa88fe5ce02c9ea7f9954706766f5d9c99c8e75714b0a220ab"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/modeling/_support.py",
+      "sha256": "49b89cce465ed22210e16ba7c984616a465addb4c2ed6fd8fc4e51d7f2572733"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/modeling/_usecase_glyphs.py",
+      "sha256": "ede5ab50ef595ab3de6824d769ae8dd104b1c6f7cf6162078aa0f20a0d8da6e4"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/modeling/c4.py",
+      "sha256": "2189ae9f785091b7e916a523d909b8d4e89f5e9116fc060b97631fa0cfd95640"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/modeling/class_diagram.py",
+      "sha256": "0204f35df4796c3a095b8a83a7b633e19d175d2000ed48e1398da975f75a12a5"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/modeling/er.py",
+      "sha256": "2132794a454154194d5b2f35c820b48a5ab99e0c9dab4fd7bb1acc9a558dd7f9"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/modeling/requirement.py",
+      "sha256": "0a0a02ba4c815b9ef8319e456aebf42a6d5a949cc60a4475a6aec4b644fe6016"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/modeling/state_diagram.py",
+      "sha256": "5f8c8a7c6b5c495a2004e8c45a7a9492b71cc47761e3183a565dfd62fb8452b9"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/modeling/usecase.py",
+      "sha256": "1aab4d6f1e047cf420ef853683ca24f8cdbd085a52b3bed7bc4d1f321097e720"
+    }
+  ],
+  "completedEntries": [
+    "modeling.class_diagram",
+    "modeling.state_diagram",
+    "modeling.er",
+    "modeling.requirement",
+    "modeling.usecase",
+    "modeling.c4"
+  ],
+  "implementationStatus": "code_complete_unverified; P1 source dispatch and static behavior implemented, P2 independent source coverage and P3 first executions outstanding",
+  "actualRemaining": "No deferred treemap work; all listed remainingVerification remain unexecuted; architecture numericPortDifferences explicitly retained",
+  "failedMechanicalEvidenceRetained": [
+    "BULK-record-20261106T023915Z-67970785 (PowerShell argv quote issue)",
+    "BULK-record-20261106T033146Z-6d96e14f (mechanical import lacked PYTHONPATH)"
+  ],
+  "sourceMapSha256": "4e084e82bd9176c3bd7a42339d4ef990758318e47edc8c772b357f558ebc563c",
+  "ACombinedSourceSha256": "c31540f5231f803abcef9c0e8205e8cd3ef397f97387f86e3746100317c434b3",
+  "sourceFrozen": true
+}

@@ -1,0 +1,78 @@
+{
+  "phase": "P1",
+  "status": "code_complete_unverified",
+  "upstreamVersion": "mermaid@12.2.0",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "protocol": "docs/BULK_STATIC_INTERFACES.md v1",
+  "behaviorExecuted": false,
+  "testsDesigned": false,
+  "threadOwnership": "All models frozen/pure; mutable parser/layout state request local; Painter/native session stays on caller owner thread",
+  "sourcePositions": "Family parser offsets are cleaned Python indices; runtime.common.error maps processed_to_raw then original UTF-16 offset and UTF-16 column",
+  "units": "Input grammar indentation counts source characters; all renderer/layout lengths are logical CSS px unless explicitly source bit or column counts",
+  "mechanicalEvidence": [
+    "test-runs/BULK-record-20261106T033019Z-3bf3e44f/run.json",
+    "test-runs/BULK-record-20261106T033206Z-ade40f8b/run.json",
+    "test-runs/BULK-record-20261106T033427Z-44c90684/run.json",
+    "test-runs/BULK-record-20261106T033826Z-f56b2f03/run.json",
+    "test-runs/BULK-record-20261106T034102Z-66d38803/run.json"
+  ],
+  "excludedByUser": [
+    "Dagre implementations/dependencies/fallbacks",
+    "click/navigation/callback/hover/animation/interactive DOM behavior"
+  ],
+  "deferred": [
+    "treemap (and six other batch-deferred entries, no new code or verification)"
+  ],
+  "verificationLimit": "Compilation/import/signature binding do not assert parse semantics, configuration compatibility or rendering correctness; independent source tests and official captures start only in P2/P3",
+  "task": "BULK-A-F08",
+  "sourceMap": "references/bulk-A-F08-sources.json",
+  "files": [
+    {
+      "path": "src/py_mermaid/diagrams/structures/__init__.py",
+      "sha256": "4bfc1c26791ccc0b2dbfd4690855b5f5268488fca0cca59bc41936dcb6ce5682"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/structures/_architecture_icons.py",
+      "sha256": "448e43f40ccfd6b16d0e648a2a59a685c27f71de737dfff2c264ede12b075c57"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/structures/_block_arrows.py",
+      "sha256": "2b86262b35094544859e770f8490eda65432807687b513f60f4b8da4a0d3a4e8"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/structures/_fcose.py",
+      "sha256": "76119ebba4097d4a209d840324a74ab9acc3ebfbf9a47bbe6fbee7ee37775082"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/structures/architecture.py",
+      "sha256": "e86e795ba19e0de8900c279b313b6637ac1f43446da37416611e9951d9e6a8a3"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/structures/block.py",
+      "sha256": "d4bf9e6da393192a6727bbc927f821e10bb77034475f4efa0dfcaab81c8f24d6"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/structures/kanban.py",
+      "sha256": "6fbc6c85cab128ba008a0f15363c5cfd9a794640374616227ac8c053a1a72140"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/structures/packet.py",
+      "sha256": "d953e14649daf9d09c773910332478f768c57cc1059c2c9208528ac4f2c5f4ea"
+    }
+  ],
+  "completedEntries": [
+    "structures.block",
+    "structures.packet",
+    "structures.kanban",
+    "structures.architecture"
+  ],
+  "implementationStatus": "code_complete_unverified; P1 source dispatch and static behavior implemented, P2 independent source coverage and P3 first executions outstanding",
+  "actualRemaining": "No deferred treemap work; all listed remainingVerification remain unexecuted; architecture numericPortDifferences explicitly retained",
+  "failedMechanicalEvidenceRetained": [
+    "BULK-record-20261106T023915Z-67970785 (PowerShell argv quote issue)",
+    "BULK-record-20261106T033146Z-6d96e14f (mechanical import lacked PYTHONPATH)"
+  ],
+  "sourceMapSha256": "1818a3c4e363a9e263de36fd7c7daa0d02804d5b68e6211b14f530dc7722432d",
+  "ACombinedSourceSha256": "c31540f5231f803abcef9c0e8205e8cd3ef397f97387f86e3746100317c434b3",
+  "sourceFrozen": true
+}

@@ -1,3 +1,7 @@
+> 2026-11-05 用户已决定 **完全剥离 Dagre 功能、配置选项、目标依赖和算法回退**，不再暂停待评估，也不作为可选兼容任务。默认 ELK 与其他保留的专用静态算法继续推进。见 [布局策略](LAYOUT_POLICY.md)；下文旧 Dagre 计划/来源说明以此覆盖。
+
+> 2026-11-05 用户范围决策：**全部图种和共享模块只做静态渲染，忽略交互逻辑。** 点击/回调/悬停/导航/命中测试、动画播放、交互元数据与 DOM 无障碍行为不作为交付或验收项；静态画面、资源与输入安全保留。以 [静态范围规则](STATIC_RENDERING_SCOPE.md) 为准，覆盖本文旧交互要求。
+
 > 2026-11-04 当前执行范围仅F01.1基础流程图，已实现接口见 [使用说明](F01_1_USAGE.md)，本地结果见 [验收记录](F01_1_ACCEPTANCE.md)。安装验证按用户最新要求暂缓，后续不继续或复跑。下方完整迁移范围和旧时序仅作后续规划/历史来源，当前以 [F01.1计划](F01_1_EXECUTION_PLAN.md) 为准。
 
 # API 与 spec 兼容规则
@@ -14,7 +18,7 @@
 
 - 固定 Mermaid 12.2.0 commit；tag 和关键 SHA 在 lock。Node A 使用该官方基线，并记录 npm integrity、node/browser/字体、layout/plugin 版本。
 - detect 顺序、别名、默认布局、frontmatter/directive/config 合并、themeVariables、CSS 优先级与错误从源码登记，不凭记忆实现。
-- 本基线 schema 的根 `layout` 默认 `elk`；完整构建含 ELK，tiny 缺失时按上游规则回退 Dagre。Python 不能因 ELK 尚未实现而擅自改默认；显式 Dagre 原型不能作为默认布局验收。detector 的实际注册调用顺序与 import 文件清单分别审计。
+- 本基线 schema 的根 `layout` 默认 `elk`；完整构建含 ELK，tiny 缺失时原实现回退 Dagre（仅来源事实，目标不迁移该回退）。Python 不能因 ELK 尚未实现而擅自改默认；目标已删除 Dagre 与算法回退，显式请求必须拒绝。detector 的实际注册调用顺序与 import 文件清单分别审计。
 - JS 的缺省/undefined/null/false/0/空串、Number、日期/时区、Unicode/UTF-16 位置、异常条件建立明确 Python 映射；不能直接用 Python `len` 代替 UTF-16 索引。
 - 每种 grammar 同时验证合法/非法/不完整输入、注释/转义、嵌套与恢复；错误行列和 side effect 留证据。
 
@@ -34,12 +38,12 @@
 | SVG text 与 getBBox/getComputedTextLength | 同一声明字体，记录浏览器与 Canvas 测量/fallback 差异，逐断言核对 | planned |
 | HTML foreignObject、Markdown、CSS | 将所需标签/换行/样式含义解析为 Python text runs/boxes 并用 Canvas 绘制；不建立 foreignObject、DOM 或通用浏览器 CSS 排版器，不默默丢失内容 | open functional mapping |
 | KaTeX/math、图标/iconify、外部图像 | 固定依赖/许可和资源输入，定义离线表达或显式不支持，不能丢失内容 | open mapping |
-| click/link、DOM callbacks、bindFunctions | 静态输出携带链接/交互元数据，明确 Python 接口与不可等价项 | open mapping |
-| securityLevel、sanitizer、URL policy | Python 标签/链接/资源策略与恶意输入断言；不复刻 DOMPurify 的 DOM 操作机制 | planned |
-| accTitle/accDescr、SVG metadata | 语义模型保留；按导出格式登记元数据，不伪称 PNG 有 DOM accessibility tree | planned |
+| click/link、DOM callbacks、bindFunctions | 识别相应语法时安全忽略行为，不要求链接/回调/命中区域等交互元数据 | excluded_by_static_scope |
+| securityLevel、sanitizer、URL policy | 保留 Python 标签/资源安全与恶意输入断言；不执行导航/脚本，不复刻 DOMPurify 的 DOM 操作机制 | planned |
+| accTitle/accDescr、SVG metadata | 兼容保留既有纯值；只验证必要静态格式结构，不要求 DOM/ARIA、屏幕阅读器行为或新增无障碍导出协议 | static-only |
 | handdrawn/rough 随机性、布局插件 | 保留 seed/算法/选项及依赖来源，未实现模式明确失败 | planned |
 
-不可等价项保留在分母；改变默认行为或降低兼容标准需用户决策。支持状态不能仅看方法是否存在。
+保留功能的不可等价项仍需记录；用户明确排除的纯交互断言保留来源并标为 excluded_by_static_scope，不计待迁移或通过。其他默认行为/兼容变更仍需用户决策。支持状态不能仅看方法是否存在。
 
 完整宿主/source map/依赖工作分解见 [实施方案](IMPLEMENTATION_PLAN.md)和 [M1/M4 任务](TASKS.md)。测试入口还须包含 `import.meta.vitest` 等内联测试；现有文件名索引不代表全部 assertion 已被发现。
 

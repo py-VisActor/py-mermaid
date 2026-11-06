@@ -1,0 +1,1627 @@
+{
+  "schema": "py-mermaid-bulk-cases/v1",
+  "group": "shared",
+  "cases": [
+    {
+      "id": "shared-theme-base",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[Start] -->|next| B[Done]",
+      "config": {
+        "theme": "base"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/flowchart/parser/flow.jison",
+        "sha256": "9597faffe2a133b104c6dd4f38a162f6980bff4e0a841a83ff94af3900ea7ba8",
+        "symbol": "document / vertexStatement / linkStatement",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "themes-css-cascade"
+      ],
+      "expectedText": [
+        "Start",
+        "next",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-theme-dark",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[Start] -->|next| B[Done]",
+      "config": {
+        "theme": "dark"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/flowchart/parser/flow.jison",
+        "sha256": "9597faffe2a133b104c6dd4f38a162f6980bff4e0a841a83ff94af3900ea7ba8",
+        "symbol": "document / vertexStatement / linkStatement",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "themes-css-cascade"
+      ],
+      "expectedText": [
+        "Start",
+        "next",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-theme-default",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[Start] -->|next| B[Done]",
+      "config": {
+        "theme": "default"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/flowchart/parser/flow.jison",
+        "sha256": "9597faffe2a133b104c6dd4f38a162f6980bff4e0a841a83ff94af3900ea7ba8",
+        "symbol": "document / vertexStatement / linkStatement",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "themes-css-cascade"
+      ],
+      "expectedText": [
+        "Start",
+        "next",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-theme-forest",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[Start] -->|next| B[Done]",
+      "config": {
+        "theme": "forest"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/flowchart/parser/flow.jison",
+        "sha256": "9597faffe2a133b104c6dd4f38a162f6980bff4e0a841a83ff94af3900ea7ba8",
+        "symbol": "document / vertexStatement / linkStatement",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "themes-css-cascade"
+      ],
+      "expectedText": [
+        "Start",
+        "next",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-theme-neutral",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[Start] -->|next| B[Done]",
+      "config": {
+        "theme": "neutral"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/flowchart/parser/flow.jison",
+        "sha256": "9597faffe2a133b104c6dd4f38a162f6980bff4e0a841a83ff94af3900ea7ba8",
+        "symbol": "document / vertexStatement / linkStatement",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "themes-css-cascade"
+      ],
+      "expectedText": [
+        "Start",
+        "next",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-theme-neo",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[Start] -->|next| B[Done]",
+      "config": {
+        "theme": "neo"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/flowchart/parser/flow.jison",
+        "sha256": "9597faffe2a133b104c6dd4f38a162f6980bff4e0a841a83ff94af3900ea7ba8",
+        "symbol": "document / vertexStatement / linkStatement",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "themes-css-cascade"
+      ],
+      "expectedText": [
+        "Start",
+        "next",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-theme-neo-dark",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[Start] -->|next| B[Done]",
+      "config": {
+        "theme": "neo-dark"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/flowchart/parser/flow.jison",
+        "sha256": "9597faffe2a133b104c6dd4f38a162f6980bff4e0a841a83ff94af3900ea7ba8",
+        "symbol": "document / vertexStatement / linkStatement",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "themes-css-cascade"
+      ],
+      "expectedText": [
+        "Start",
+        "next",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-theme-redux",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[Start] -->|next| B[Done]",
+      "config": {
+        "theme": "redux"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/flowchart/parser/flow.jison",
+        "sha256": "9597faffe2a133b104c6dd4f38a162f6980bff4e0a841a83ff94af3900ea7ba8",
+        "symbol": "document / vertexStatement / linkStatement",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "themes-css-cascade"
+      ],
+      "expectedText": [
+        "Start",
+        "next",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-theme-redux-dark",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[Start] -->|next| B[Done]",
+      "config": {
+        "theme": "redux-dark"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/flowchart/parser/flow.jison",
+        "sha256": "9597faffe2a133b104c6dd4f38a162f6980bff4e0a841a83ff94af3900ea7ba8",
+        "symbol": "document / vertexStatement / linkStatement",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "themes-css-cascade"
+      ],
+      "expectedText": [
+        "Start",
+        "next",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-theme-redux-color",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[Start] -->|next| B[Done]",
+      "config": {
+        "theme": "redux-color"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/flowchart/parser/flow.jison",
+        "sha256": "9597faffe2a133b104c6dd4f38a162f6980bff4e0a841a83ff94af3900ea7ba8",
+        "symbol": "document / vertexStatement / linkStatement",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "themes-css-cascade"
+      ],
+      "expectedText": [
+        "Start",
+        "next",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-theme-redux-dark-color",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[Start] -->|next| B[Done]",
+      "config": {
+        "theme": "redux-dark-color"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/flowchart/parser/flow.jison",
+        "sha256": "9597faffe2a133b104c6dd4f38a162f6980bff4e0a841a83ff94af3900ea7ba8",
+        "symbol": "document / vertexStatement / linkStatement",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "themes-css-cascade"
+      ],
+      "expectedText": [
+        "Start",
+        "next",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-flowchart-elk",
+      "kind": "flowchart-elk",
+      "source": "flowchart-elk\nA[Start] --> B[Done]",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/flowchart/parser/flow.jison",
+        "sha256": "9597faffe2a133b104c6dd4f38a162f6980bff4e0a841a83ff94af3900ea7ba8",
+        "symbol": "document / vertexStatement / linkStatement",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "layout-engines"
+      ],
+      "expectedText": [
+        "Start",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-unicode-rich",
+      "kind": "flowchart-v2",
+      "source": "flowchart TD\nA[\"<b>Bold</b><br/>静态 😀\"] --> B[\"`**Done**`\"]",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/flowchart/parser/flow.jison",
+        "sha256": "9597faffe2a133b104c6dd4f38a162f6980bff4e0a841a83ff94af3900ea7ba8",
+        "symbol": "document / vertexStatement / linkStatement",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "text-html-markdown-math"
+      ],
+      "expectedText": [
+        "Bold",
+        "静态",
+        "😀",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-math",
+      "kind": "flowchart-v2",
+      "source": "flowchart TD\nA[\"Before $$\\frac{1}{2}$$ after\"] --> B[Done]",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/flowchart/parser/flow.jison",
+        "sha256": "9597faffe2a133b104c6dd4f38a162f6980bff4e0a841a83ff94af3900ea7ba8",
+        "symbol": "document / vertexStatement / linkStatement",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "formal-katex",
+        "text-html-markdown-math"
+      ],
+      "expectedText": [
+        "Before",
+        "after",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-handdrawn",
+      "kind": "flowchart-v2",
+      "source": "flowchart TD\nA[Start] --> B{Choice} --> C((Done))",
+      "config": {
+        "look": "handDrawn",
+        "handDrawnSeed": 42
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/flowchart/parser/flow.jison",
+        "sha256": "9597faffe2a133b104c6dd4f38a162f6980bff4e0a841a83ff94af3900ea7ba8",
+        "symbol": "document / vertexStatement / linkStatement",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "handdrawn-random-seed"
+      ],
+      "expectedText": [
+        "Start",
+        "Choice",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-layout-elk",
+      "kind": "flowchart-v2",
+      "source": "flowchart TD\nA[Start] --> B[Done]",
+      "config": {
+        "layout": "elk"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/flowchart/parser/flow.jison",
+        "sha256": "9597faffe2a133b104c6dd4f38a162f6980bff4e0a841a83ff94af3900ea7ba8",
+        "symbol": "document / vertexStatement / linkStatement",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "layout-engines"
+      ],
+      "expectedText": [
+        "Start",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-layout-elk.stress",
+      "kind": "flowchart-v2",
+      "source": "flowchart TD\nA[Start] --> B[Done]",
+      "config": {
+        "layout": "elk.stress"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/flowchart/parser/flow.jison",
+        "sha256": "9597faffe2a133b104c6dd4f38a162f6980bff4e0a841a83ff94af3900ea7ba8",
+        "symbol": "document / vertexStatement / linkStatement",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "layout-engines"
+      ],
+      "expectedText": [
+        "Start",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-layout-elk.force",
+      "kind": "flowchart-v2",
+      "source": "flowchart TD\nA[Start] --> B[Done]",
+      "config": {
+        "layout": "elk.force"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/flowchart/parser/flow.jison",
+        "sha256": "9597faffe2a133b104c6dd4f38a162f6980bff4e0a841a83ff94af3900ea7ba8",
+        "symbol": "document / vertexStatement / linkStatement",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "layout-engines"
+      ],
+      "expectedText": [
+        "Start",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-layout-elk.mrtree",
+      "kind": "flowchart-v2",
+      "source": "flowchart TD\nA[Start] --> B[Done]",
+      "config": {
+        "layout": "elk.mrtree"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/flowchart/parser/flow.jison",
+        "sha256": "9597faffe2a133b104c6dd4f38a162f6980bff4e0a841a83ff94af3900ea7ba8",
+        "symbol": "document / vertexStatement / linkStatement",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "layout-engines"
+      ],
+      "expectedText": [
+        "Start",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-layout-elk.sporeOverlap",
+      "kind": "flowchart-v2",
+      "source": "flowchart TD\nA[Start] --> B[Done]",
+      "config": {
+        "layout": "elk.sporeOverlap"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/flowchart/parser/flow.jison",
+        "sha256": "9597faffe2a133b104c6dd4f38a162f6980bff4e0a841a83ff94af3900ea7ba8",
+        "symbol": "document / vertexStatement / linkStatement",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "layout-engines"
+      ],
+      "expectedText": [
+        "Start",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-layout-elk.box",
+      "kind": "flowchart-v2",
+      "source": "flowchart TD\nA[Start] --> B[Done]",
+      "config": {
+        "layout": "elk.box"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/flowchart/parser/flow.jison",
+        "sha256": "9597faffe2a133b104c6dd4f38a162f6980bff4e0a841a83ff94af3900ea7ba8",
+        "symbol": "document / vertexStatement / linkStatement",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "layout-engines"
+      ],
+      "expectedText": [
+        "Start",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-layout-elk.rectpacking",
+      "kind": "flowchart-v2",
+      "source": "flowchart TD\nA[Start] --> B[Done]",
+      "config": {
+        "layout": "elk.rectpacking"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/flowchart/parser/flow.jison",
+        "sha256": "9597faffe2a133b104c6dd4f38a162f6980bff4e0a841a83ff94af3900ea7ba8",
+        "symbol": "document / vertexStatement / linkStatement",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "layout-engines"
+      ],
+      "expectedText": [
+        "Start",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-flow-swimlane",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nsubgraph Team\nA[Start] --> B[Done]\nend",
+      "config": {
+        "layout": "swimlane"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/flowchart/parser/flow.jison",
+        "sha256": "9597faffe2a133b104c6dd4f38a162f6980bff4e0a841a83ff94af3900ea7ba8",
+        "symbol": "document / vertexStatement / linkStatement",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "layout-engines",
+        "source-static-swimlane-groups"
+      ],
+      "expectedText": [
+        "Team",
+        "Start",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-theme-base-overrides-0",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[Start] --> B[Done]",
+      "config": {
+        "theme": "base",
+        "themeVariables": {
+          "primaryColor": "#13579b",
+          "darkMode": true
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/themes/theme-base.js",
+        "sha256": "c13caf87f1a547eb65596ebaabf94ad80055546dff5458f3b6475799bb5ec52c",
+        "symbol": "constructor / updateColors / getThemeVariables overrides",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "themes-css-cascade"
+      ],
+      "expectedText": [
+        "Start",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-theme-base-overrides-1",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[Start] --> B[Done]",
+      "config": {
+        "theme": "base",
+        "themeVariables": {
+          "fontSize": "22px",
+          "fontFamily": "Courier New",
+          "lineColor": "#f03060"
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/themes/theme-base.js",
+        "sha256": "c13caf87f1a547eb65596ebaabf94ad80055546dff5458f3b6475799bb5ec52c",
+        "symbol": "constructor / updateColors / getThemeVariables overrides",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "themes-css-cascade"
+      ],
+      "expectedText": [
+        "Start",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-theme-base-overrides-2",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[Start] --> B[Done]",
+      "config": {
+        "theme": "base",
+        "themeVariables": {
+          "background": "#151923",
+          "mainBkg": "#abcced",
+          "nodeBorder": "#765432",
+          "useGradient": false
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/themes/theme-base.js",
+        "sha256": "c13caf87f1a547eb65596ebaabf94ad80055546dff5458f3b6475799bb5ec52c",
+        "symbol": "constructor / updateColors / getThemeVariables overrides",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "themes-css-cascade"
+      ],
+      "expectedText": [
+        "Start",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-theme-dark-overrides-0",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[Start] --> B[Done]",
+      "config": {
+        "theme": "dark",
+        "themeVariables": {
+          "primaryColor": "#13579b",
+          "darkMode": true
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/themes/theme-dark.js",
+        "sha256": "79e5faeb17f0ad47c2e97cbbab7491bf12ab93115546eaebda741e00fad75d37",
+        "symbol": "constructor / updateColors / getThemeVariables overrides",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "themes-css-cascade"
+      ],
+      "expectedText": [
+        "Start",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-theme-dark-overrides-1",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[Start] --> B[Done]",
+      "config": {
+        "theme": "dark",
+        "themeVariables": {
+          "fontSize": "22px",
+          "fontFamily": "Courier New",
+          "lineColor": "#f03060"
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/themes/theme-dark.js",
+        "sha256": "79e5faeb17f0ad47c2e97cbbab7491bf12ab93115546eaebda741e00fad75d37",
+        "symbol": "constructor / updateColors / getThemeVariables overrides",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "themes-css-cascade"
+      ],
+      "expectedText": [
+        "Start",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-theme-dark-overrides-2",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[Start] --> B[Done]",
+      "config": {
+        "theme": "dark",
+        "themeVariables": {
+          "background": "#151923",
+          "mainBkg": "#abcced",
+          "nodeBorder": "#765432",
+          "useGradient": false
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/themes/theme-dark.js",
+        "sha256": "79e5faeb17f0ad47c2e97cbbab7491bf12ab93115546eaebda741e00fad75d37",
+        "symbol": "constructor / updateColors / getThemeVariables overrides",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "themes-css-cascade"
+      ],
+      "expectedText": [
+        "Start",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-theme-default-overrides-0",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[Start] --> B[Done]",
+      "config": {
+        "theme": "default",
+        "themeVariables": {
+          "primaryColor": "#13579b",
+          "darkMode": true
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/themes/theme-default.js",
+        "sha256": "c7676f84269d433c83f089bd978439a0d5e783ba48f1dfd87a294efb674e3b66",
+        "symbol": "constructor / updateColors / getThemeVariables overrides",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "themes-css-cascade"
+      ],
+      "expectedText": [
+        "Start",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-theme-default-overrides-1",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[Start] --> B[Done]",
+      "config": {
+        "theme": "default",
+        "themeVariables": {
+          "fontSize": "22px",
+          "fontFamily": "Courier New",
+          "lineColor": "#f03060"
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/themes/theme-default.js",
+        "sha256": "c7676f84269d433c83f089bd978439a0d5e783ba48f1dfd87a294efb674e3b66",
+        "symbol": "constructor / updateColors / getThemeVariables overrides",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "themes-css-cascade"
+      ],
+      "expectedText": [
+        "Start",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-theme-default-overrides-2",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[Start] --> B[Done]",
+      "config": {
+        "theme": "default",
+        "themeVariables": {
+          "background": "#151923",
+          "mainBkg": "#abcced",
+          "nodeBorder": "#765432",
+          "useGradient": false
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/themes/theme-default.js",
+        "sha256": "c7676f84269d433c83f089bd978439a0d5e783ba48f1dfd87a294efb674e3b66",
+        "symbol": "constructor / updateColors / getThemeVariables overrides",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "themes-css-cascade"
+      ],
+      "expectedText": [
+        "Start",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-theme-forest-overrides-0",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[Start] --> B[Done]",
+      "config": {
+        "theme": "forest",
+        "themeVariables": {
+          "primaryColor": "#13579b",
+          "darkMode": true
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/themes/theme-forest.js",
+        "sha256": "473eed6464c38764c59c15768cdedb44766f40aa736bb96ef1fa94cea2315cc5",
+        "symbol": "constructor / updateColors / getThemeVariables overrides",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "themes-css-cascade"
+      ],
+      "expectedText": [
+        "Start",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-theme-forest-overrides-1",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[Start] --> B[Done]",
+      "config": {
+        "theme": "forest",
+        "themeVariables": {
+          "fontSize": "22px",
+          "fontFamily": "Courier New",
+          "lineColor": "#f03060"
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/themes/theme-forest.js",
+        "sha256": "473eed6464c38764c59c15768cdedb44766f40aa736bb96ef1fa94cea2315cc5",
+        "symbol": "constructor / updateColors / getThemeVariables overrides",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "themes-css-cascade"
+      ],
+      "expectedText": [
+        "Start",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-theme-forest-overrides-2",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[Start] --> B[Done]",
+      "config": {
+        "theme": "forest",
+        "themeVariables": {
+          "background": "#151923",
+          "mainBkg": "#abcced",
+          "nodeBorder": "#765432",
+          "useGradient": false
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/themes/theme-forest.js",
+        "sha256": "473eed6464c38764c59c15768cdedb44766f40aa736bb96ef1fa94cea2315cc5",
+        "symbol": "constructor / updateColors / getThemeVariables overrides",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "themes-css-cascade"
+      ],
+      "expectedText": [
+        "Start",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-theme-neutral-overrides-0",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[Start] --> B[Done]",
+      "config": {
+        "theme": "neutral",
+        "themeVariables": {
+          "primaryColor": "#13579b",
+          "darkMode": true
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/themes/theme-neutral.js",
+        "sha256": "a09bdc75fabfaddb19626f8c8af8e5d9df0dcee31ed09522dcbccd6418ca1a43",
+        "symbol": "constructor / updateColors / getThemeVariables overrides",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "themes-css-cascade"
+      ],
+      "expectedText": [
+        "Start",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-theme-neutral-overrides-1",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[Start] --> B[Done]",
+      "config": {
+        "theme": "neutral",
+        "themeVariables": {
+          "fontSize": "22px",
+          "fontFamily": "Courier New",
+          "lineColor": "#f03060"
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/themes/theme-neutral.js",
+        "sha256": "a09bdc75fabfaddb19626f8c8af8e5d9df0dcee31ed09522dcbccd6418ca1a43",
+        "symbol": "constructor / updateColors / getThemeVariables overrides",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "themes-css-cascade"
+      ],
+      "expectedText": [
+        "Start",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-theme-neutral-overrides-2",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[Start] --> B[Done]",
+      "config": {
+        "theme": "neutral",
+        "themeVariables": {
+          "background": "#151923",
+          "mainBkg": "#abcced",
+          "nodeBorder": "#765432",
+          "useGradient": false
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/themes/theme-neutral.js",
+        "sha256": "a09bdc75fabfaddb19626f8c8af8e5d9df0dcee31ed09522dcbccd6418ca1a43",
+        "symbol": "constructor / updateColors / getThemeVariables overrides",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "themes-css-cascade"
+      ],
+      "expectedText": [
+        "Start",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-theme-neo-overrides-0",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[Start] --> B[Done]",
+      "config": {
+        "theme": "neo",
+        "themeVariables": {
+          "primaryColor": "#13579b",
+          "darkMode": true
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/themes/theme-neo.js",
+        "sha256": "0ef8cf2a93e4629984c6c57382ce69f37d5bffb6a6fe5b949a972ee8d268bf9f",
+        "symbol": "constructor / updateColors / getThemeVariables overrides",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "themes-css-cascade"
+      ],
+      "expectedText": [
+        "Start",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-theme-neo-overrides-1",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[Start] --> B[Done]",
+      "config": {
+        "theme": "neo",
+        "themeVariables": {
+          "fontSize": "22px",
+          "fontFamily": "Courier New",
+          "lineColor": "#f03060"
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/themes/theme-neo.js",
+        "sha256": "0ef8cf2a93e4629984c6c57382ce69f37d5bffb6a6fe5b949a972ee8d268bf9f",
+        "symbol": "constructor / updateColors / getThemeVariables overrides",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "themes-css-cascade"
+      ],
+      "expectedText": [
+        "Start",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-theme-neo-overrides-2",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[Start] --> B[Done]",
+      "config": {
+        "theme": "neo",
+        "themeVariables": {
+          "background": "#151923",
+          "mainBkg": "#abcced",
+          "nodeBorder": "#765432",
+          "useGradient": false
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/themes/theme-neo.js",
+        "sha256": "0ef8cf2a93e4629984c6c57382ce69f37d5bffb6a6fe5b949a972ee8d268bf9f",
+        "symbol": "constructor / updateColors / getThemeVariables overrides",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "themes-css-cascade"
+      ],
+      "expectedText": [
+        "Start",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-theme-neo-dark-overrides-0",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[Start] --> B[Done]",
+      "config": {
+        "theme": "neo-dark",
+        "themeVariables": {
+          "primaryColor": "#13579b",
+          "darkMode": true
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/themes/theme-neo-dark.js",
+        "sha256": "f2d3469f8fe6aae719654bba2fe776802617a72449db8a6a299bc070e07673c3",
+        "symbol": "constructor / updateColors / getThemeVariables overrides",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "themes-css-cascade"
+      ],
+      "expectedText": [
+        "Start",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-theme-neo-dark-overrides-1",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[Start] --> B[Done]",
+      "config": {
+        "theme": "neo-dark",
+        "themeVariables": {
+          "fontSize": "22px",
+          "fontFamily": "Courier New",
+          "lineColor": "#f03060"
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/themes/theme-neo-dark.js",
+        "sha256": "f2d3469f8fe6aae719654bba2fe776802617a72449db8a6a299bc070e07673c3",
+        "symbol": "constructor / updateColors / getThemeVariables overrides",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "themes-css-cascade"
+      ],
+      "expectedText": [
+        "Start",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-theme-neo-dark-overrides-2",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[Start] --> B[Done]",
+      "config": {
+        "theme": "neo-dark",
+        "themeVariables": {
+          "background": "#151923",
+          "mainBkg": "#abcced",
+          "nodeBorder": "#765432",
+          "useGradient": false
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/themes/theme-neo-dark.js",
+        "sha256": "f2d3469f8fe6aae719654bba2fe776802617a72449db8a6a299bc070e07673c3",
+        "symbol": "constructor / updateColors / getThemeVariables overrides",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "themes-css-cascade"
+      ],
+      "expectedText": [
+        "Start",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-theme-redux-overrides-0",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[Start] --> B[Done]",
+      "config": {
+        "theme": "redux",
+        "themeVariables": {
+          "primaryColor": "#13579b",
+          "darkMode": true
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/themes/theme-redux.js",
+        "sha256": "a2eeb8fc623614c4853e39e90abd1ebf6b8e6f9f4028cf40962d6d6414d6443f",
+        "symbol": "constructor / updateColors / getThemeVariables overrides",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "themes-css-cascade"
+      ],
+      "expectedText": [
+        "Start",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-theme-redux-overrides-1",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[Start] --> B[Done]",
+      "config": {
+        "theme": "redux",
+        "themeVariables": {
+          "fontSize": "22px",
+          "fontFamily": "Courier New",
+          "lineColor": "#f03060"
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/themes/theme-redux.js",
+        "sha256": "a2eeb8fc623614c4853e39e90abd1ebf6b8e6f9f4028cf40962d6d6414d6443f",
+        "symbol": "constructor / updateColors / getThemeVariables overrides",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "themes-css-cascade"
+      ],
+      "expectedText": [
+        "Start",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-theme-redux-overrides-2",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[Start] --> B[Done]",
+      "config": {
+        "theme": "redux",
+        "themeVariables": {
+          "background": "#151923",
+          "mainBkg": "#abcced",
+          "nodeBorder": "#765432",
+          "useGradient": false
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/themes/theme-redux.js",
+        "sha256": "a2eeb8fc623614c4853e39e90abd1ebf6b8e6f9f4028cf40962d6d6414d6443f",
+        "symbol": "constructor / updateColors / getThemeVariables overrides",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "themes-css-cascade"
+      ],
+      "expectedText": [
+        "Start",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-theme-redux-dark-overrides-0",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[Start] --> B[Done]",
+      "config": {
+        "theme": "redux-dark",
+        "themeVariables": {
+          "primaryColor": "#13579b",
+          "darkMode": true
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/themes/theme-redux-dark.js",
+        "sha256": "aa769f4fa5992f04bce44af4f1e568d98140477f53406a29a66248b4e6f5d1bc",
+        "symbol": "constructor / updateColors / getThemeVariables overrides",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "themes-css-cascade"
+      ],
+      "expectedText": [
+        "Start",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-theme-redux-dark-overrides-1",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[Start] --> B[Done]",
+      "config": {
+        "theme": "redux-dark",
+        "themeVariables": {
+          "fontSize": "22px",
+          "fontFamily": "Courier New",
+          "lineColor": "#f03060"
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/themes/theme-redux-dark.js",
+        "sha256": "aa769f4fa5992f04bce44af4f1e568d98140477f53406a29a66248b4e6f5d1bc",
+        "symbol": "constructor / updateColors / getThemeVariables overrides",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "themes-css-cascade"
+      ],
+      "expectedText": [
+        "Start",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-theme-redux-dark-overrides-2",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[Start] --> B[Done]",
+      "config": {
+        "theme": "redux-dark",
+        "themeVariables": {
+          "background": "#151923",
+          "mainBkg": "#abcced",
+          "nodeBorder": "#765432",
+          "useGradient": false
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/themes/theme-redux-dark.js",
+        "sha256": "aa769f4fa5992f04bce44af4f1e568d98140477f53406a29a66248b4e6f5d1bc",
+        "symbol": "constructor / updateColors / getThemeVariables overrides",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "themes-css-cascade"
+      ],
+      "expectedText": [
+        "Start",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-theme-redux-color-overrides-0",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[Start] --> B[Done]",
+      "config": {
+        "theme": "redux-color",
+        "themeVariables": {
+          "primaryColor": "#13579b",
+          "darkMode": true
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/themes/theme-redux-color.js",
+        "sha256": "5e4278fb33825a501ffae1c6ac13a869763c4e611de9ad6077b58513e4e1b6d0",
+        "symbol": "constructor / updateColors / getThemeVariables overrides",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "themes-css-cascade"
+      ],
+      "expectedText": [
+        "Start",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-theme-redux-color-overrides-1",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[Start] --> B[Done]",
+      "config": {
+        "theme": "redux-color",
+        "themeVariables": {
+          "fontSize": "22px",
+          "fontFamily": "Courier New",
+          "lineColor": "#f03060"
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/themes/theme-redux-color.js",
+        "sha256": "5e4278fb33825a501ffae1c6ac13a869763c4e611de9ad6077b58513e4e1b6d0",
+        "symbol": "constructor / updateColors / getThemeVariables overrides",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "themes-css-cascade"
+      ],
+      "expectedText": [
+        "Start",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-theme-redux-color-overrides-2",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[Start] --> B[Done]",
+      "config": {
+        "theme": "redux-color",
+        "themeVariables": {
+          "background": "#151923",
+          "mainBkg": "#abcced",
+          "nodeBorder": "#765432",
+          "useGradient": false
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/themes/theme-redux-color.js",
+        "sha256": "5e4278fb33825a501ffae1c6ac13a869763c4e611de9ad6077b58513e4e1b6d0",
+        "symbol": "constructor / updateColors / getThemeVariables overrides",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "themes-css-cascade"
+      ],
+      "expectedText": [
+        "Start",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-theme-redux-dark-color-overrides-0",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[Start] --> B[Done]",
+      "config": {
+        "theme": "redux-dark-color",
+        "themeVariables": {
+          "primaryColor": "#13579b",
+          "darkMode": true
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/themes/theme-redux-dark-color.js",
+        "sha256": "0c1899419d5a06afe61bd183d6fc2b59bf5b1be12528e2bf1c7f3fc36788b535",
+        "symbol": "constructor / updateColors / getThemeVariables overrides",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "themes-css-cascade"
+      ],
+      "expectedText": [
+        "Start",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-theme-redux-dark-color-overrides-1",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[Start] --> B[Done]",
+      "config": {
+        "theme": "redux-dark-color",
+        "themeVariables": {
+          "fontSize": "22px",
+          "fontFamily": "Courier New",
+          "lineColor": "#f03060"
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/themes/theme-redux-dark-color.js",
+        "sha256": "0c1899419d5a06afe61bd183d6fc2b59bf5b1be12528e2bf1c7f3fc36788b535",
+        "symbol": "constructor / updateColors / getThemeVariables overrides",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "themes-css-cascade"
+      ],
+      "expectedText": [
+        "Start",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-theme-redux-dark-color-overrides-2",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[Start] --> B[Done]",
+      "config": {
+        "theme": "redux-dark-color",
+        "themeVariables": {
+          "background": "#151923",
+          "mainBkg": "#abcced",
+          "nodeBorder": "#765432",
+          "useGradient": false
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/themes/theme-redux-dark-color.js",
+        "sha256": "0c1899419d5a06afe61bd183d6fc2b59bf5b1be12528e2bf1c7f3fc36788b535",
+        "symbol": "constructor / updateColors / getThemeVariables overrides",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "themes-css-cascade"
+      ],
+      "expectedText": [
+        "Start",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-palette-short",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nsubgraph Team\nA[Start] --> B[Done]\nend",
+      "config": {
+        "theme": "redux-color",
+        "themeVariables": {
+          "borderColorArray": [
+            "#111111",
+            "#222222"
+          ],
+          "bkgColorArray": [
+            "#333333",
+            "#444444"
+          ],
+          "clusterBkg": "#aaaaaa",
+          "clusterBorder": "#bbbbbb",
+          "mainBkg": "#555555"
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/themes/theme-redux-color.js",
+        "sha256": "5e4278fb33825a501ffae1c6ac13a869763c4e611de9ad6077b58513e4e1b6d0",
+        "symbol": "updateColors fillType/venn short-array and modulo-zero JavaScript semantics",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "themes-css-cascade",
+        "short-user-palettes"
+      ],
+      "expectedText": [
+        "Team",
+        "Start",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-palette-empty-border",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nsubgraph Team\nA[Start] --> B[Done]\nend",
+      "config": {
+        "theme": "redux-color",
+        "themeVariables": {
+          "borderColorArray": [],
+          "bkgColorArray": [
+            "#333333",
+            "#444444"
+          ],
+          "clusterBkg": "#aaaaaa",
+          "clusterBorder": "#bbbbbb",
+          "mainBkg": "#555555"
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/themes/theme-redux-color.js",
+        "sha256": "5e4278fb33825a501ffae1c6ac13a869763c4e611de9ad6077b58513e4e1b6d0",
+        "symbol": "updateColors fillType/venn short-array and modulo-zero JavaScript semantics",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "themes-css-cascade",
+        "short-user-palettes"
+      ],
+      "expectedText": [
+        "Team",
+        "Start",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "shared-theme-null",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[Start] --> B[Done]",
+      "config": {
+        "theme": "null"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/config.ts",
+        "sha256": "91dd68a9e7d57c4635a04fab0ccd78ec230b4417a02f4f4b3cd9a6bb445f09ef",
+        "symbol": "isUsableAppearance null sentinel",
+        "line": 1,
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "themes-css-cascade"
+      ],
+      "expectedText": [
+        "Start",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "schema": "py-mermaid-command-plan/v1",
+  "scope": "F01.4",
+  "description": "Post-documentation final local delivery audit and current handoff snapshot; no install/build/commit/push",
+  "inputs": [
+    "{repo}/references/f014-verification-summary.json",
+    "{repo}/docs/F01_4_ACCEPTANCE.md",
+    "{repo}/docs/execution-state.json"
+  ],
+  "steps": [
+    {
+      "name": "final-candidate-doc-report-handoff-audit",
+      "argv": [
+        "{python}",
+        "-c",
+        "import sys,json,hashlib,urllib.request,zipfile;from pathlib import Path;sys.path.insert(0,'tools');from run_support import source_identity;v=json.loads(Path('references/f014-verification-summary.json').read_text('utf-8'));assert v['sourceTreeSha256']==source_identity()['sourceTreeSha256'];assert v['status']=='PASS_LOCAL' and v['testMethods']['total']==486;state=json.loads(Path('docs/execution-state.json').read_text('utf-8'));assert state['currentScopeStatus']=='complete_local_delivery' and not state['activeLeases'];response=urllib.request.urlopen(v['visualReport']['url']);assert response.status==200 and hashlib.sha256(response.read()).hexdigest()==v['visualReport']['sha256'];archive=zipfile.ZipFile(Path(sys.argv[1])/'artifacts/final-handoff-snapshot.zip','w',zipfile.ZIP_DEFLATED);[archive.write(p,p.as_posix()) for base in ['docs','references','tests','tools'] for p in Path(base).rglob('*') if p.is_file() and '__pycache__' not in p.parts and p.suffix!='.pyc'];archive.write('AGENTS.md','AGENTS.md');archive.close();print(json.dumps({'sourceUnchanged':True,'tests':486,'functionalStatus':'PASS_LOCAL','reportHttpAndSha':'PASS','installation':'NOT_EXECUTED','handoffArchive':'final-handoff-snapshot.zip'}))",
+        "{run}"
+      ],
+      "timeoutSeconds": 120
+    },
+    {
+      "name": "git-whitespace-check",
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "timeoutSeconds": 60
+    },
+    {
+      "name": "final-html-qa-log-integrity",
+      "argv": [
+        "{python}",
+        "{repo}/tools/workflow.py",
+        "verify",
+        "--run",
+        "{repo}/test-runs/F01.4-batch-20261105T112429Z-4de4e10e"
+      ],
+      "timeoutSeconds": 120
+    }
+  ]
+}

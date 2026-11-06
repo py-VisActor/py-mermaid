@@ -1,0 +1,14 @@
+{
+  "schema": "py-mermaid-render-report-spec/v1",
+  "scope": "F01.3",
+  "title": "主题与富文本 · F01.3 对比",
+  "final": "test-runs/F01.3-render-20261105T022709Z-575768e1/artifacts",
+  "oracle": "test-runs/F01.3-render-20261105T022709Z-575768e1/artifacts/oracle",
+  "fixtures": "test-runs/F01.3-render-20261105T022709Z-575768e1/artifacts/cases.json",
+  "profiles": [
+    "cpu",
+    "auto",
+    "gpu"
+  ],
+  "defaultCase": "rich-overview"
+}

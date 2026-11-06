@@ -1,0 +1,49 @@
+{
+  "schema": "bulk-C-source-map/v1",
+  "phase": "P1",
+  "status": "code_complete_unverified",
+  "mermaidVersion": "12.2.0",
+  "mermaidCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "sourceOnly": true,
+  "behaviorTestsRun": false,
+  "oracleRun": false,
+  "imagesGenerated": false,
+  "production": "Pure Python semantic values and dedicated layout; public root Painter only, no browser/JS/other native backend",
+  "threadOwnership": "Parser/model/layout values are immutable; Painter/native allocation is root owner-thread only",
+  "errors": "runtime.common.error maps cleaned offsets to raw UTF16 SourceSpan; parser-specific syntax/lifecycle diagnostics remain explicit",
+  "detectors": [
+    "info"
+  ],
+  "sources": {
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\diagrams\\info\\info.spec.ts": "657636f92f1e8474f487ed841a2a0cc11c96cb512a80d9314297c6d30bc0f492",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\diagrams\\info\\infoDb.ts": "93519803430a8c8feda7ce021dd3e297d0908da0ed6c7549eab9dfef65720dcb",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\diagrams\\info\\infoDetector.ts": "e51c401135a4f265c0f05f1072691f167f67e45294ad894aa1e7e616df8f66a2",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\diagrams\\info\\infoDiagram.ts": "669cbf4da178a24cf6e4160631947275c3bf2e32417da2918c11956fd863e53f",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\diagrams\\info\\infoParser.ts": "f27d797139814fb202cce838f92ff1519152ed6a853c3cca91c9000dc15870f7",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\diagrams\\info\\infoRenderer.ts": "100b9e0f2afe51cd725b5818d1423d871deeaa950c8bcb31c04c403c4f7454a9",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\diagrams\\info\\infoTypes.ts": "f3822c45679f5968563d0ad3afe625cf9e9cd8040f95c462ac6d331d677e31ba",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\parser\\src\\language\\common\\common.langium": "d8b0c0056f6339ca6a0d3b966c02b1f4d53ad768069e2889450dc29312f1f65b",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\parser\\src\\language\\info\\info.langium": "5175bc256e9a9321413ad26a474f3b487cff5e291549b8da8c78e759cd7bae4f"
+  },
+  "implementations": {
+    "C:\\code\\py-visactor\\py-mermaid\\src\\py_mermaid\\diagrams\\info\\__init__.py": "3c5bff4e719ea8757f0dffb47f18edd9a1abaeea060b0c2d470a216babfc3ea7"
+  },
+  "branches": [
+    "info/showInfo grammar withsource title/accessibility accepted",
+    "invalidtrailingtokens explicitspan error",
+    "source fixedversion v12.2.0 atbaseline(100,40),32pxtext",
+    "source viewport400x100",
+    "showInfo/title metadata do notalterfixedrendereroutput",
+    "themeCSS version target measured/drawn bysame style"
+  ],
+  "remainingVerification": [
+    "Sourcegrammar/actualversionpixels/backend/export checks remainP2/P3"
+  ],
+  "P3": {
+    "receipt": "docs/changes/bulk-C-P3.json",
+    "targetedUnitRun": "BULK-record-20261106T045020Z-ea2286dc",
+    "targetedCpuRun": "BULK-batch-20261106T045023Z-16c153f1",
+    "ownedProductSha256": "687b02793f788b1520afea3d5994688af1e80963bb3aa966baf147f34a9fb26f",
+    "jointAcceptance": false
+  }
+}

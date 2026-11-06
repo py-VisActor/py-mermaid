@@ -140,11 +140,17 @@ class CanvasMeasurementTests(unittest.TestCase):
         self.assertEqual(second.font_size, 14)
         self.assertNotEqual(first.site_font_size, second.site_font_size)
 
-    def test_rich_content_rejected_instead_of_stripped(self):
-        for text in ("<b>secret</b>", "`markdown`", "$$x$$"):
-            with self.subTest(text=text), self.assertRaises(MermaidError) as caught:
-                CanvasSession("cpu").measure(diagram_for_labels(text))
-            self.assertEqual(caught.exception.code, "UNSUPPORTED_SYNTAX")
+    def test_rich_content_f013_scope_migration(self):
+        # F011 rejected all rich inputs. F013 intentionally supports HTML text
+        # and Markdown, while math retains an explicit deferred diagnostic.
+        bold = CanvasSession("cpu").measure(diagram_for_labels("<b>secret</b>"))[0]
+        self.assertEqual("".join(run.text for run in bold.runs), "secret")
+        self.assertTrue(all(run.font_weight == "bold" for run in bold.runs))
+        literal = CanvasSession("cpu").measure(diagram_for_labels("`markdown`"))[0]
+        self.assertEqual("".join(run.text for run in literal.runs), "`markdown`")
+        mathematical = CanvasSession("cpu").measure(diagram_for_labels("$$x$$"))[0]
+        self.assertTrue(any(run.kind == 'math' and run.math_key for run in mathematical.runs))
+        self.assertGreater(mathematical.label_height, 0)
 
 
 class CanvasContentTests(unittest.TestCase):

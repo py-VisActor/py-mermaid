@@ -1,0 +1,84 @@
+{
+  "schema": "py-mermaid-change/v1",
+  "taskId": "F01.4-S4/cylinder-cap-tests",
+  "status": "targeted_pass_global_candidate_recheck_pending",
+  "scope": "Independent fixed-source horizontal cylinder cap geometry and actual API PNG negative control; classic/neo/handDrawn",
+  "changedFiles": {
+    "tests/f014/test_shapes.py": "4cd9360fbeda3011e929284b1f31af1d0b1d51b28026826e292ed24015da5407",
+    "references/f014-layout-assertions.json": "abdc2ecbcb40ab0cb5d109a485f77581c495dd9f0c21803e6f448637f2028fea",
+    "references/f014-elk-sources.json": "cf0c427d9182aa501ebbafb6d6867e648baf553b9d15c00f118b9e332fc1225f"
+  },
+  "newMethods": 3,
+  "shapeMethodsTotal": 18,
+  "regressionEvidence": {
+    "sourcePath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/tiltedCylinder.ts",
+    "sourceSha256": "f1db4931703ad635574d6e74f791f0e53afe0057db5191041290331ea3b73a1a",
+    "symbols": [
+      "createCylinderPathD",
+      "createOuterCylinderPathD",
+      "createInnerCylinderPathD",
+      "tiltedCylinder"
+    ],
+    "derivation": "Source inner arc is appended on right x=width, or x=width/2 before only outer translation in handDrawn. With bbox normalization outerW=bodyWidth+2rx, inner arc spans [bodyWidth,bodyWidth+rx]=[outerW-2rx,outerW-rx]. Left body has no mirrored inner arc. h=labelHeight+(neo12 ornodePadding/2), rx=(h/2)/(2.5+h/50).",
+    "positiveGeometry": "Classic,neo,handDrawn source factory dimensions and right-component bounds compared with independent public native Path2D bounds; all inner components must lie on right half.",
+    "positivePNG": "Real render API + real ELK + native Canvas. Source analytic inner tangent outerW-2rx must contain dark PNG pixels, counterfactual2rx on left must stay white. minNodeWidth160 with shortCap text isolates probes from glyphs.",
+    "negativeControl": "Only in-memory session measurement shape factory patched to return deliberate left inner arc. Actual public API still layouts/renders it; same pixel probe must see erroneous left ink and no right inner ink. This catches the original fault instead of trusting trace/path declarations. No production file changed.",
+    "looks": [
+      "classic",
+      "neo",
+      "handDrawn"
+    ],
+    "targetedRun": "F01.4-record-20261105T110836Z-14293d6c",
+    "sourceTreeSha256": "0d5ab374782239caca46fd5505112f6d8d57a3fe276ea87c98d8155a05421ede",
+    "methods": 3,
+    "subcases": 9,
+    "artifactSha256": {
+      "test-runs/f014-cylinder-cap-targeted-001/injected-left-cap-classic.png": "43fe0d721b97dae0b89827cb699658f9fe0380689db1cf1a1263cb251f985d1d",
+      "test-runs/f014-cylinder-cap-targeted-001/injected-left-cap-handDrawn.png": "1620358bc9d53d6e8ee77d6e0c15c3c8f5e9140e71563f195af098052fb89a8f",
+      "test-runs/f014-cylinder-cap-targeted-001/injected-left-cap-neo.png": "2a91a3bd2284a0c93cc3e9a87bab9c303042fa0688794a267fe396dcfd59d691",
+      "test-runs/f014-cylinder-cap-targeted-001/right-cap-classic.png": "b40af0dbca1bc1be18589042ac98f46fbbc5f4e651fa25122b37501ef1dadac8",
+      "test-runs/f014-cylinder-cap-targeted-001/right-cap-handDrawn.png": "f03c5697c1bf058b667a4c33f85baa7d7713174133eb7b7b9d969b24cfa0c001",
+      "test-runs/f014-cylinder-cap-targeted-001/right-cap-neo.png": "11aea17de81300b45074794f0fa17baeb24f464a28bcdff06e3ca104de012c27"
+    },
+    "status": "targeted_pass_global_candidate_recheck_pending"
+  },
+  "verification": {
+    "run": "F01.4-record-20261105T110836Z-14293d6c",
+    "status": "SUCCESS",
+    "sourceTreeSha256": "0d5ab374782239caca46fd5505112f6d8d57a3fe276ea87c98d8155a05421ede",
+    "manifestSha256": "02fffe1edd546b58e96fc8679ca8b6c4e37e44f21bd19da8825fc123a8384e6c",
+    "commands": [
+      {
+        "argv": [
+          "C:/venvs/pymmd-20261102/Scripts/python.exe",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests/f014",
+          "-p",
+          "test_shapes.py",
+          "-k",
+          "s16",
+          "-k",
+          "s17",
+          "-k",
+          "s18",
+          "-v"
+        ],
+        "exitCode": 0,
+        "stdout": "commands/001-cylinder-cap-source-and-pixel-controls/stdout.log",
+        "stderr": "commands/001-cylinder-cap-source-and-pixel-controls/stderr.log"
+      }
+    ]
+  },
+  "productionSourceChangedByThisWorker": false,
+  "testsStopped": true,
+  "fullSuiteRunByThisWorker": false,
+  "notes": [
+    "Root owns source part arc correction, Canvas owner owns rendering; neither owner file edited here.",
+    "6actualPNG artifacts:3correct right-cap views and3deliberate left-cap fault controls. Do not treat injected-left files as production output.",
+    "Manual view_image inspected correct classic/neo/handDrawn and injected handDrawn PNGs.",
+    "Coordinator owns final source freeze/full-unit/all-profile verification."
+  ]
+}

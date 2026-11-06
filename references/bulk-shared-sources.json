@@ -1,0 +1,178 @@
+{
+  "schema": "py-mermaid-source-map/v1",
+  "taskId": "BULK-SHARED",
+  "phase": "P1",
+  "status": "code_complete_unverified",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "sources": [
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagram-api/diagram-orchestration.ts",
+      "sha256": "f2b9df976bcdd3470b02bdaeb8bd56691825ea49b1e8c01eb0ea68306a7d3866",
+      "symbols": [
+        "addDiagrams"
+      ]
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagram-api/detectType.ts",
+      "sha256": "5f2103ea6c95196400dd6dd99143f4dde07668ba69e54c40805bc90adfd4b7c1",
+      "symbols": [
+        "detectType",
+        "addDetector",
+        "registerLazyLoadedDiagrams"
+      ]
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/render.ts",
+      "sha256": "775ea33dad8132c996f15a7680a0f3d436012b21cdcca065ed84412ee144ddc0",
+      "symbols": [
+        "registerLayoutLoaders",
+        "getLayoutLoaderDefinition",
+        "getRegisteredLayoutAlgorithm"
+      ]
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/elk/algorithms.ts",
+      "sha256": "c728ed061bb5d86ce45857884125d2195a1b876fd6a577ac12a7d622acdef84b",
+      "symbols": [
+        "ELK_ALGORITHMS"
+      ]
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/elk/render.ts",
+      "sha256": "6258890b3f311e86e4cd4dc99d480f704fde7473e150dc62b88838c5015c5011",
+      "symbols": [
+        "applyElkEdgeLayout",
+        "straightenEdgeTerminals",
+        "applyElkLineJumps"
+      ]
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/config.ts",
+      "sha256": "91dd68a9e7d57c4635a04fab0ccd78ec230b4417a02f4f4b3cd9a6bb445f09ef",
+      "symbols": [
+        "getEffectiveHtmlLabels",
+        "getUserDefinedConfig"
+      ]
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/defaultConfig.ts",
+      "sha256": "6f2ec3c231ee970fb0368d158975090d488c93c9801a618b06cb18d58488b068",
+      "symbols": [
+        "defaultConfig"
+      ]
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/mermaidAPI.ts",
+      "sha256": "c38ef136d815a638993d271f253d2ca825046fb97292d30a7a4de8ea57fc0318",
+      "symbols": [
+        "processAndSetConfigs",
+        "render",
+        "parse"
+      ]
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/common/common.ts",
+      "sha256": "b14851667f7d45d101d4e028204babb1628faefe4812a88ae2d8acac72f8e144",
+      "symbols": [
+        "sanitizeText"
+      ]
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/labelImageUtils.ts",
+      "sha256": "f80fc624d2e80a07b9f48bae108f6253488f347a6cfe58d4d6d78f71edb1d2f8",
+      "symbols": [
+        "configureLabelImages"
+      ]
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/createText.ts",
+      "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+      "symbols": [
+        "createText"
+      ]
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/cynefin/cynefinBoundaries.ts",
+      "sha256": "f5c71c15a4277d9ef36d07962ddb13a7b4fe32e4e038eb5fe10a8999a2c4efd2",
+      "symbols": [
+        "resolveSeed"
+      ]
+    }
+  ],
+  "themeSourceMap": "references/bulk-themes-sources.json",
+  "contracts": {
+    "units": "logical px; degree text rotation; six-coefficient affine paths",
+    "threading": "native allocations and exports remain on Painter/CanvasSession owner",
+    "diagramModel": "frozen dataclasses/tuples/scalars; scene metadata recursively frozen",
+    "UTF16": "source spans are raw 1-based line/0-based UTF16 column; cleaned boundaries map raw offsets; length budgets count UTF16 units",
+    "layoutProvider": "async measured pure graph -> GraphLayout, lazy module:symbol, no fallback",
+    "errors": "MermaidError for declared input/config/dependency/layout/format/owner failures",
+    "resources": "explicit ResourceBundle or self-contained safe image data URI; exact bytes validated after icon tint",
+    "scope": "references/bulk-scope.json"
+  },
+  "nativeHostAdaptations": {
+    "viewportWidth": "explicit value, default1200 for original screen.availWidth",
+    "renderId": "explicit value, defaultdiagram.kind for source render(id) consumers",
+    "canvasEffects": "public native vector/alpha composition; no browser screenshots or image comparison postprocessing"
+  },
+  "behaviorVerified": false,
+  "remaining": [
+    "final source-branch audit",
+    "full retained-provider assembly after workers finish",
+    "P2 independent source tests",
+    "P3 first grouped execution",
+    "P4 frozen-candidate verification",
+    "P5 same-candidate HTML/report evidence"
+  ],
+  "p1Freeze": {
+    "schema": "py-mermaid-change-receipt/v1",
+    "phase": "P1",
+    "status": "code_complete_unverified",
+    "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+    "scope": "references/bulk-scope.json",
+    "sourceIdentity": "97b353ebf7e176a750a736a714c85638e0a497b722e451dc77570579a2d36cbb",
+    "wholeAssemblyRun": "BULK-P1-assembly-20261106T040205Z-6d6594fb",
+    "freezeRun": "BULK-P1-freeze-20261106T040338Z-8ecb17c2",
+    "providers": 31,
+    "newProviders": 29,
+    "boundDirectPainterCalls": 301,
+    "presentationForwardedCalls": 115,
+    "nativeObjectsCreated": false,
+    "behavioralTestsRun": false,
+    "oracleRun": false,
+    "imagesGenerated": false,
+    "rootPostFreezeCorrections": [
+      "helper effective htmlLabels uses shared resolved policy rather than null/falsy shortcut",
+      "helper synthetic group uses already validated source font units",
+      "tree_view raw-regex spelling removes SyntaxWarning without changing pattern",
+      "source flow layout registration overrides honored",
+      "generic nonrouting ELK center rays preserve source paint behavior",
+      "explicit generic Swimlane preserves source group decorations"
+    ],
+    "sharedSourceMap": "references/bulk-shared-sources.json",
+    "receipts": [
+      "bulk-A-F02",
+      "bulk-A-F06",
+      "bulk-A-F08",
+      "bulk-A-swimlane-groups",
+      "bulk-B-temporal",
+      "bulk-B-business",
+      "bulk-C-P1",
+      "bulk-C-swimlane-routing",
+      "bulk-shared-brightness"
+    ],
+    "nextPhase": "P2 source-independent test design; do not mutate product until P3 grouped failures"
+  }
+}

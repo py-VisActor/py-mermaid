@@ -1,0 +1,83 @@
+{
+  "schema": "py-mermaid-change/v1",
+  "taskId": "20261105-f014-root-tests",
+  "status": "verified_local_static_scope",
+  "phase": "S3",
+  "sourceCandidate": "99a2342681469836c3b7be8be6815b9a82193146331aff51d260823b72b17a2e",
+  "assertions": "references/f014-style-assertions.json",
+  "files": {
+    "tests/f014/test_styles.py": {
+      "sha256": "114a9252605310ec8ea1c231c66ca41e57d56e673ba3600d379982270b26443f",
+      "bytes": 9777
+    },
+    "tests/f014/shape-cases.json": {
+      "sha256": "47979eec150ac1e467d738e52792de4072f9a0fb5d360ec1f7fc96ea08d398c6",
+      "bytes": 43083
+    },
+    "tests/f014/style-cases.json": {
+      "sha256": "3c712c457bde2f8ba9be113b0732a1d59a857802ddcb3affab65121414e63be0",
+      "bytes": 2010
+    },
+    "tools/static_flowchart_checks.py": {
+      "sha256": "89bde488854fbc8940276c86f937ec46f8b910a9f4019a12f337d452eee3250a",
+      "bytes": 17976
+    },
+    "tools/f011_validate.py": {
+      "sha256": "aa996e3a66c85515f8714bef9f7eede6d822679511e092a11b213bdbabb5ba4e",
+      "bytes": 21914
+    },
+    "tools/oracle/f011_capture.cjs": {
+      "sha256": "c443600213c611d6348156135b7f672ed9cc1661b90551afbeb275983ce1ea6e",
+      "bytes": 21181
+    },
+    "tests/tooling/test_static_flowchart_checks.py": {
+      "sha256": "8d47d03018500d80e46cb082080313908d9e24687ee61f46cfb38b317a90b980",
+      "bytes": 2704
+    },
+    "tests/f011/test_api.py": {
+      "sha256": "df4a22af82eb2e348edda40c4420d1f29e5ec07483fa032255b8184d44eb1182",
+      "bytes": 2145
+    },
+    "tests/f011/test_canvas.py": {
+      "sha256": "f7450e66b4bdcc8410a135776131fa766b30a081f19705b01aa96dff27a5f79a",
+      "bytes": 20277
+    },
+    "tests/f013/test_canvas.py": {
+      "sha256": "ef336e6b81ca2016cb67365ecfd825271551a3c1f9e8af360d0bc4988f125df9",
+      "bytes": 24895
+    },
+    "src/py_mermaid/rendering/styles/__init__.py": {
+      "sha256": "1294d44dcafa9f89a808eae202d6cdcb20a0ffccfec7855ad84ace98f82b7c37",
+      "bytes": 316
+    },
+    "tools/qa_html_report.cjs": {
+      "sha256": "f959a47fb5a51d14be26f98b0b0e45a2bc958c69875ace7bdffaf5820e580477",
+      "bytes": 5950
+    },
+    "tools/reuse_oracle.py": {
+      "sha256": "e0928f43d923be92dde1b743a01cd4338705ff3bd4ce98f1dd1956c69c4bdfe0",
+      "bytes": 4888
+    },
+    "tools/finalize_static_evidence.py": {
+      "sha256": "45ef3917edb1ae718e427a3ebe10757df08ddd3ce9d6650a5e24d0aa7e112db1",
+      "bytes": 4691
+    }
+  },
+  "mechanicalEvidence": [
+    "test-runs/F01.4-record-20261105T085819Z-047c70ac/run.json"
+  ],
+  "functionalStatus": "PASS_LOCAL",
+  "next": "本轮完成；数学模块独立后续，安装验证暂缓",
+  "initialStatus": "designed_unexecuted",
+  "sameCandidateUnitEvidence": "test-runs/F01.4-batch-20261105T111527Z-f645b0b6/run.json",
+  "sameCandidateUnitMethods": 486,
+  "verificationSummary": "references/f014-verification-summary.json",
+  "finalProofRuns": {
+    "unit": "test-runs/F01.4-batch-20261105T111527Z-f645b0b6",
+    "legacy": "test-runs/F01.4-batch-20261105T111527Z-b69f15af",
+    "matrix": "test-runs/F01.4-batch-20261105T111527Z-8d3c0855",
+    "delivery": "test-runs/F01.4-batch-20261105T112340Z-561d6761",
+    "report": "test-runs/F01.4-report-20261105T112346Z-b7014c54",
+    "htmlQa": "test-runs/F01.4-batch-20261105T112429Z-4de4e10e"
+  }
+}

@@ -2,7 +2,7 @@
   "schema": "py-mermaid-feature-module-plan/v1",
   "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
   "status": "planned-not-implemented",
-  "selectionRule": "Choose a user-visible feature first, then migrate only its required dependency surfaces bottom-up. Preserve all other scope.",
+  "selectionRule": "Choose a static user-visible feature, migrate required dependency surfaces bottom-up, retain other static scope and original source inventory; interactive behaviors excluded by user.",
   "features": [
     {
       "id": "F01",
@@ -13,7 +13,6 @@
       ],
       "dependencyFamilies": [
         "elkjs",
-        "dagre-d3-es",
         "d3"
       ],
       "sharedModules": [
@@ -41,7 +40,6 @@
         "c4"
       ],
       "dependencyFamilies": [
-        "dagre-d3-es",
         "elkjs",
         "d3"
       ],
@@ -354,7 +352,7 @@
         "D07"
       ],
       "crossCutting": [
-        "layout-engines-dagre-elk-tidy"
+        "layout-engines"
       ],
       "dependsOn": [
         "C03",
@@ -391,7 +389,7 @@
     },
     {
       "id": "C08",
-      "name": "资源、安全与交互元数据",
+      "name": "静态资源与安全",
       "workPackages": [
         "D02",
         "D05",
@@ -404,6 +402,11 @@
       ],
       "dependsOn": [
         "C01"
+      ],
+      "excludedAspects": [
+        "links-interaction-behavior",
+        "interactive-metadata",
+        "dom-accessibility-behavior"
       ]
     }
   ],
@@ -464,7 +467,8 @@
       },
       {
         "id": "F01.4",
-        "scope": "全部 flowchart 语法、显式 Dagre、其他 ELK 算法与选项、资源/交互、手绘和其他导出逐步扩全"
+        "scope": "flowchart 静态语法/shape/style/config、ELK 算法与选项、静态资源/标签、手绘和静态导出；Dagre 与交互逻辑/交互元数据排除",
+        "assessment": "docs/F01_4_ASSESSMENT.md"
       }
     ],
     "verification": "P1 writes all feature source with mechanical checks only; P2 designs source-derived tests; P3 first grouped product runs and unified fixes; P4 final full validation.",
@@ -525,5 +529,32 @@
     "firstProductTestExecutionPhase": "P3",
     "finalFullValidationPhase": "P4"
   },
-  "renderValidationPolicy": "references/render-validation-policy.json"
+  "renderValidationPolicy": "references/render-validation-policy.json",
+  "targetScope": "static-rendering-only",
+  "scopePolicy": "references/static-rendering-scope.json",
+  "layoutPolicy": "references/layout-policy.json",
+  "activeBatchScope": {
+    "date": "2026-11-06",
+    "decision": "defer selected diagrams for current batch; keep execution paused",
+    "deferredDetectors": [
+      "pie",
+      "quadrantChart",
+      "xychart",
+      "radar",
+      "treemap",
+      "sankey",
+      "venn"
+    ],
+    "deferredStatus": "deferred_by_user",
+    "upstreamInventoryDetectors": 38,
+    "batchDetectors": 31,
+    "batchNewDetectors": 29,
+    "flowchartRegressionDetectors": [
+      "flowchart-v2",
+      "flowchart-elk"
+    ],
+    "preserveExistingCodeAndEvidence": true,
+    "resumeAuthorized": true,
+    "document": "docs/BULK_STATIC_EXECUTION.md"
+  }
 }

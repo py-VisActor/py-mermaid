@@ -1,0 +1,64 @@
+{
+  "schema": "py-mermaid-source-assertions/v1",
+  "scope": "F01.4",
+  "area": "static styles and report evidence",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "sourceMap": "references/f014-root-sources.json",
+  "origin": "Literal source compileStyles/styles2String/classes/static CSS + independent pixel mutation controls; no candidate outputs used",
+  "methods": [
+    "test_inline_svg_host_css_overrides_presentation_but_not_own_inline",
+    "test_class_default_node_explicit_and_local_order",
+    "test_local_styles_win_theme_css_important",
+    "test_class_declaration_append_and_local_last",
+    "test_class_paint_does_not_color_label_as_fill",
+    "test_svg_text_local_color_becomes_fill",
+    "test_default_and_per_edge_styles_and_label_color",
+    "test_named_edge_class_and_direct_metadata_animation_snapshot",
+    "test_animated_explicit_dash_and_cap_override",
+    "test_class_animation_only_disables_neo_gap_not_metadata_dash_class",
+    "test_stroke_source_defaults",
+    "test_static_clickable_class_css_and_hover_ignored",
+    "test_text_shape_has_no_default_frame",
+    "test_special_shapes_actual_static_css_and_handdrawn_pattern",
+    "test_collapsed_group_keeps_palette_slot_and_override",
+    "test_spacing_units_and_signed_offsets",
+    "test_text_transform_wrap_hyphen_and_shadow_intents",
+    "test_new_text_properties_inherit_and_initial",
+    "test_invalid_static_css_is_explicit_and_input_immutable"
+  ],
+  "mechanicalEvidence": "test-runs/F01.4-record-20261105T085819Z-047c70ac/run.json",
+  "status": "designed_unexecuted",
+  "sourceCandidate": "5b0262fdf79a609517ff6080ddd1da50d1649528abea2373f74c3666ee7d14ed",
+  "reportFixtures": [
+    "tests/f014/shape-cases.json",
+    "tests/f014/style-cases.json"
+  ],
+  "legacyMigrations": {
+    "tests/f011/test_api.py": "SVG is now supported; negative export is TIFF, invalid backend still rejected",
+    "tests/f011/test_canvas.py": "Math separate shared module returns UNSUPPORTED_SYNTAX",
+    "tests/f013/test_canvas.py": "Offline remote image without bundle returns RESOURCE_NOT_FOUND; math separate module returns UNSUPPORTED_SYNTAX"
+  },
+  "scopeExclusions": {
+    "math": "deferred_by_user",
+    "dagre": "excluded_by_user",
+    "interaction": "excluded_by_static_scope",
+    "installation": "not executed"
+  },
+  "qaRepairContracts": [
+    {
+      "source": "packages/mermaid/src/diagrams/flowchart/styles.ts:162-169; packages/mermaid/src/styles.ts:129-132",
+      "contract": "Direct inline SVG physical tags inherit host node CSS; SVG inside img/data URI is isolated; own inline style and important precedence preserved",
+      "method": "test_inline_svg_host_css_overrides_presentation_but_not_own_inline",
+      "evidence": "test-runs/F01.4-record-20261105T110922Z-4f73d384/run.json"
+    },
+    {
+      "contract": "Local source-derived stateStart white-center probe rejects preserved dark fill despite white background and valid trace",
+      "evidence": "test-runs/F01.4-batch-20261105T105736Z-f58b9be2/run.json"
+    }
+  ],
+  "finalVerification": {
+    "status": "PASS_LOCAL",
+    "sourceTreeSha256": "99a2342681469836c3b7be8be6815b9a82193146331aff51d260823b72b17a2e",
+    "evidence": "references/f014-verification-summary.json"
+  }
+}

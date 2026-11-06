@@ -1,0 +1,1884 @@
+{
+  "schema": "py-mermaid-f014-shape-cases/v1",
+  "scope": "F01.4",
+  "origin": "Fixed source shape definitions and literal handler contracts; no candidate rendering used",
+  "cases": [
+    {
+      "id": "shape-rect",
+      "title": "Source shape rect",
+      "text": "flowchart TD\nA@{shape: rect, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "square"
+      },
+      "oracleShapes": {
+        "A": "rect"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / squareRect.ts"
+    },
+    {
+      "id": "shape-rounded",
+      "title": "Source shape rounded",
+      "text": "flowchart TD\nA@{shape: rounded, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "round"
+      },
+      "oracleShapes": {
+        "A": "rounded"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / roundedRect.ts"
+    },
+    {
+      "id": "shape-stadium",
+      "title": "Source shape stadium",
+      "text": "flowchart TD\nA@{shape: stadium, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "stadium"
+      },
+      "oracleShapes": {
+        "A": "stadium"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / stadium.ts"
+    },
+    {
+      "id": "shape-fr-rect",
+      "title": "Source shape fr-rect",
+      "text": "flowchart TD\nA@{shape: fr-rect, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "subroutine"
+      },
+      "oracleShapes": {
+        "A": "fr-rect"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / subroutine.ts"
+    },
+    {
+      "id": "shape-cyl",
+      "title": "Source shape cyl",
+      "text": "flowchart TD\nA@{shape: cyl, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "cylinder"
+      },
+      "oracleShapes": {
+        "A": "cyl"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / cylinder.ts"
+    },
+    {
+      "id": "shape-datastore",
+      "title": "Source shape datastore",
+      "text": "flowchart TD\nA@{shape: datastore, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "datastore"
+      },
+      "oracleShapes": {
+        "A": "datastore"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / datastore.ts"
+    },
+    {
+      "id": "shape-folder",
+      "title": "Source shape folder",
+      "text": "flowchart TD\nA@{shape: folder, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "folder"
+      },
+      "oracleShapes": {
+        "A": "folder"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / folder.ts"
+    },
+    {
+      "id": "shape-bucket",
+      "title": "Source shape bucket",
+      "text": "flowchart TD\nA@{shape: bucket, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "bucket"
+      },
+      "oracleShapes": {
+        "A": "bucket"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / bucket.ts"
+    },
+    {
+      "id": "shape-console",
+      "title": "Source shape console",
+      "text": "flowchart TD\nA@{shape: console, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "consoleWindow"
+      },
+      "oracleShapes": {
+        "A": "console"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / consoleWindow.ts"
+    },
+    {
+      "id": "shape-browser",
+      "title": "Source shape browser",
+      "text": "flowchart TD\nA@{shape: browser, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "browser"
+      },
+      "oracleShapes": {
+        "A": "browser"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / browser.ts"
+    },
+    {
+      "id": "shape-person",
+      "title": "Source shape person",
+      "text": "flowchart TD\nA@{shape: person, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "person"
+      },
+      "oracleShapes": {
+        "A": "person"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / person.ts"
+    },
+    {
+      "id": "shape-circle",
+      "title": "Source shape circle",
+      "text": "flowchart TD\nA@{shape: circle, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "circle"
+      },
+      "oracleShapes": {
+        "A": "circle"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / circle.ts"
+    },
+    {
+      "id": "shape-bang",
+      "title": "Source shape bang",
+      "text": "flowchart TD\nA@{shape: bang, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "bang"
+      },
+      "oracleShapes": {
+        "A": "bang"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / bang.ts"
+    },
+    {
+      "id": "shape-cloud",
+      "title": "Source shape cloud",
+      "text": "flowchart TD\nA@{shape: cloud, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "cloud"
+      },
+      "oracleShapes": {
+        "A": "cloud"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / cloud.ts"
+    },
+    {
+      "id": "shape-diam",
+      "title": "Source shape diam",
+      "text": "flowchart TD\nA@{shape: diam, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "diamond"
+      },
+      "oracleShapes": {
+        "A": "diam"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / question.ts"
+    },
+    {
+      "id": "shape-hex",
+      "title": "Source shape hex",
+      "text": "flowchart TD\nA@{shape: hex, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "hexagon"
+      },
+      "oracleShapes": {
+        "A": "hex"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / hexagon.ts"
+    },
+    {
+      "id": "shape-lean-r",
+      "title": "Source shape lean-r",
+      "text": "flowchart TD\nA@{shape: lean-r, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "lean_right"
+      },
+      "oracleShapes": {
+        "A": "lean-r"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / lean_right.ts"
+    },
+    {
+      "id": "shape-lean-l",
+      "title": "Source shape lean-l",
+      "text": "flowchart TD\nA@{shape: lean-l, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "lean_left"
+      },
+      "oracleShapes": {
+        "A": "lean-l"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / lean_left.ts"
+    },
+    {
+      "id": "shape-trap-b",
+      "title": "Source shape trap-b",
+      "text": "flowchart TD\nA@{shape: trap-b, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "trapezoid"
+      },
+      "oracleShapes": {
+        "A": "trap-b"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / trapezoid.ts"
+    },
+    {
+      "id": "shape-trap-t",
+      "title": "Source shape trap-t",
+      "text": "flowchart TD\nA@{shape: trap-t, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "inv_trapezoid"
+      },
+      "oracleShapes": {
+        "A": "trap-t"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / inv_trapezoid.ts"
+    },
+    {
+      "id": "shape-dbl-circ",
+      "title": "Source shape dbl-circ",
+      "text": "flowchart TD\nA@{shape: dbl-circ, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "doublecircle"
+      },
+      "oracleShapes": {
+        "A": "dbl-circ"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / doublecircle.ts"
+    },
+    {
+      "id": "shape-text",
+      "title": "Source shape text",
+      "text": "flowchart TD\nA@{shape: text, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "text"
+      },
+      "oracleShapes": {
+        "A": "text"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / text.ts"
+    },
+    {
+      "id": "shape-notch-rect",
+      "title": "Source shape notch-rect",
+      "text": "flowchart TD\nA@{shape: notch-rect, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "card"
+      },
+      "oracleShapes": {
+        "A": "notch-rect"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / card.ts"
+    },
+    {
+      "id": "shape-lin-rect",
+      "title": "Source shape lin-rect",
+      "text": "flowchart TD\nA@{shape: lin-rect, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "shadedProcess"
+      },
+      "oracleShapes": {
+        "A": "lin-rect"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / shadedProcess.ts"
+    },
+    {
+      "id": "shape-sm-circ",
+      "title": "Source shape sm-circ",
+      "text": "flowchart TD\nA@{shape: sm-circ, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "stateStart"
+      },
+      "oracleShapes": {
+        "A": "sm-circ"
+      },
+      "visibleLabels": {
+        "A": ""
+      },
+      "source": "shapesDefs.ts / stateStart.ts"
+    },
+    {
+      "id": "shape-fr-circ",
+      "title": "Source shape fr-circ",
+      "text": "flowchart TD\nA@{shape: fr-circ, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "stateEnd"
+      },
+      "oracleShapes": {
+        "A": "fr-circ"
+      },
+      "visibleLabels": {
+        "A": ""
+      },
+      "source": "shapesDefs.ts / stateEnd.ts"
+    },
+    {
+      "id": "shape-fork",
+      "title": "Source shape fork",
+      "text": "flowchart TD\nA@{shape: fork, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "forkJoin"
+      },
+      "oracleShapes": {
+        "A": "fork"
+      },
+      "visibleLabels": {
+        "A": ""
+      },
+      "source": "shapesDefs.ts / forkJoin.ts"
+    },
+    {
+      "id": "shape-hourglass",
+      "title": "Source shape hourglass",
+      "text": "flowchart TD\nA@{shape: hourglass, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "hourglass"
+      },
+      "oracleShapes": {
+        "A": "hourglass"
+      },
+      "visibleLabels": {
+        "A": ""
+      },
+      "source": "shapesDefs.ts / hourglass.ts"
+    },
+    {
+      "id": "shape-brace",
+      "title": "Source shape brace",
+      "text": "flowchart TD\nA@{shape: brace, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "curlyBraceLeft"
+      },
+      "oracleShapes": {
+        "A": "brace"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / curlyBraceLeft.ts"
+    },
+    {
+      "id": "shape-brace-r",
+      "title": "Source shape brace-r",
+      "text": "flowchart TD\nA@{shape: brace-r, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "curlyBraceRight"
+      },
+      "oracleShapes": {
+        "A": "brace-r"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / curlyBraceRight.ts"
+    },
+    {
+      "id": "shape-braces",
+      "title": "Source shape braces",
+      "text": "flowchart TD\nA@{shape: braces, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "curlyBraces"
+      },
+      "oracleShapes": {
+        "A": "braces"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / curlyBraces.ts"
+    },
+    {
+      "id": "shape-bolt",
+      "title": "Source shape bolt",
+      "text": "flowchart TD\nA@{shape: bolt, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "lightningBolt"
+      },
+      "oracleShapes": {
+        "A": "bolt"
+      },
+      "visibleLabels": {
+        "A": ""
+      },
+      "source": "shapesDefs.ts / lightningBolt.ts"
+    },
+    {
+      "id": "shape-doc",
+      "title": "Source shape doc",
+      "text": "flowchart TD\nA@{shape: doc, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "waveEdgedRectangle"
+      },
+      "oracleShapes": {
+        "A": "doc"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / waveEdgedRectangle.ts"
+    },
+    {
+      "id": "shape-delay",
+      "title": "Source shape delay",
+      "text": "flowchart TD\nA@{shape: delay, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "halfRoundedRectangle"
+      },
+      "oracleShapes": {
+        "A": "delay"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / halfRoundedRectangle.ts"
+    },
+    {
+      "id": "shape-h-cyl",
+      "title": "Source shape h-cyl",
+      "text": "flowchart TD\nA@{shape: h-cyl, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "tiltedCylinder"
+      },
+      "oracleShapes": {
+        "A": "h-cyl"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / tiltedCylinder.ts"
+    },
+    {
+      "id": "shape-lin-cyl",
+      "title": "Source shape lin-cyl",
+      "text": "flowchart TD\nA@{shape: lin-cyl, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "linedCylinder"
+      },
+      "oracleShapes": {
+        "A": "lin-cyl"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / linedCylinder.ts"
+    },
+    {
+      "id": "shape-curv-trap",
+      "title": "Source shape curv-trap",
+      "text": "flowchart TD\nA@{shape: curv-trap, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "curvedTrapezoid"
+      },
+      "oracleShapes": {
+        "A": "curv-trap"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / curvedTrapezoid.ts"
+    },
+    {
+      "id": "shape-div-rect",
+      "title": "Source shape div-rect",
+      "text": "flowchart TD\nA@{shape: div-rect, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "dividedRectangle"
+      },
+      "oracleShapes": {
+        "A": "div-rect"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / dividedRectangle.ts"
+    },
+    {
+      "id": "shape-tri",
+      "title": "Source shape tri",
+      "text": "flowchart TD\nA@{shape: tri, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "triangle"
+      },
+      "oracleShapes": {
+        "A": "tri"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / triangle.ts"
+    },
+    {
+      "id": "shape-win-pane",
+      "title": "Source shape win-pane",
+      "text": "flowchart TD\nA@{shape: win-pane, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "windowPane"
+      },
+      "oracleShapes": {
+        "A": "win-pane"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / windowPane.ts"
+    },
+    {
+      "id": "shape-f-circ",
+      "title": "Source shape f-circ",
+      "text": "flowchart TD\nA@{shape: f-circ, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "filledCircle"
+      },
+      "oracleShapes": {
+        "A": "f-circ"
+      },
+      "visibleLabels": {
+        "A": ""
+      },
+      "source": "shapesDefs.ts / filledCircle.ts"
+    },
+    {
+      "id": "shape-notch-pent",
+      "title": "Source shape notch-pent",
+      "text": "flowchart TD\nA@{shape: notch-pent, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "trapezoidalPentagon"
+      },
+      "oracleShapes": {
+        "A": "notch-pent"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / trapezoidalPentagon.ts"
+    },
+    {
+      "id": "shape-flip-tri",
+      "title": "Source shape flip-tri",
+      "text": "flowchart TD\nA@{shape: flip-tri, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "flippedTriangle"
+      },
+      "oracleShapes": {
+        "A": "flip-tri"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / flippedTriangle.ts"
+    },
+    {
+      "id": "shape-sl-rect",
+      "title": "Source shape sl-rect",
+      "text": "flowchart TD\nA@{shape: sl-rect, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "slopedRect"
+      },
+      "oracleShapes": {
+        "A": "sl-rect"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / slopedRect.ts"
+    },
+    {
+      "id": "shape-docs",
+      "title": "Source shape docs",
+      "text": "flowchart TD\nA@{shape: docs, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "multiWaveEdgedRectangle"
+      },
+      "oracleShapes": {
+        "A": "docs"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / multiWaveEdgedRectangle.ts"
+    },
+    {
+      "id": "shape-st-rect",
+      "title": "Source shape st-rect",
+      "text": "flowchart TD\nA@{shape: st-rect, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "multiRect"
+      },
+      "oracleShapes": {
+        "A": "st-rect"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / multiRect.ts"
+    },
+    {
+      "id": "shape-bow-rect",
+      "title": "Source shape bow-rect",
+      "text": "flowchart TD\nA@{shape: bow-rect, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "bowTieRect"
+      },
+      "oracleShapes": {
+        "A": "bow-rect"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / bowTieRect.ts"
+    },
+    {
+      "id": "shape-cross-circ",
+      "title": "Source shape cross-circ",
+      "text": "flowchart TD\nA@{shape: cross-circ, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "crossedCircle"
+      },
+      "oracleShapes": {
+        "A": "cross-circ"
+      },
+      "visibleLabels": {
+        "A": ""
+      },
+      "source": "shapesDefs.ts / crossedCircle.ts"
+    },
+    {
+      "id": "shape-tag-doc",
+      "title": "Source shape tag-doc",
+      "text": "flowchart TD\nA@{shape: tag-doc, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "taggedWaveEdgedRectangle"
+      },
+      "oracleShapes": {
+        "A": "tag-doc"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / taggedWaveEdgedRectangle.ts"
+    },
+    {
+      "id": "shape-tag-rect",
+      "title": "Source shape tag-rect",
+      "text": "flowchart TD\nA@{shape: tag-rect, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "taggedRect"
+      },
+      "oracleShapes": {
+        "A": "tag-rect"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / taggedRect.ts"
+    },
+    {
+      "id": "shape-flag",
+      "title": "Source shape flag",
+      "text": "flowchart TD\nA@{shape: flag, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "waveRectangle"
+      },
+      "oracleShapes": {
+        "A": "flag"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / waveRectangle.ts"
+    },
+    {
+      "id": "shape-odd",
+      "title": "Source shape odd",
+      "text": "flowchart TD\nA@{shape: odd, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "odd"
+      },
+      "oracleShapes": {
+        "A": "odd"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / rect_left_inv_arrow.ts"
+    },
+    {
+      "id": "shape-lin-doc",
+      "title": "Source shape lin-doc",
+      "text": "flowchart TD\nA@{shape: lin-doc, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "linedWaveEdgedRect"
+      },
+      "oracleShapes": {
+        "A": "lin-doc"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / linedWaveEdgedRect.ts"
+    },
+    {
+      "id": "shape-internal-state",
+      "title": "Source reachable state",
+      "text": "flowchart LR\nA@{shape: state, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "LR",
+      "shapes": {
+        "A": "state"
+      },
+      "oracleShapes": {
+        "A": "state"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapes.ts reachable undocumented handler"
+    },
+    {
+      "id": "shape-internal-choice",
+      "title": "Source reachable choice",
+      "text": "flowchart LR\nA@{shape: choice, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "LR",
+      "shapes": {
+        "A": "choice"
+      },
+      "oracleShapes": {
+        "A": "choice"
+      },
+      "visibleLabels": {
+        "A": ""
+      },
+      "source": "shapes.ts reachable undocumented handler"
+    },
+    {
+      "id": "shape-internal-note",
+      "title": "Source reachable note",
+      "text": "flowchart LR\nA@{shape: note, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "LR",
+      "shapes": {
+        "A": "note"
+      },
+      "oracleShapes": {
+        "A": "note"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapes.ts reachable undocumented handler"
+    },
+    {
+      "id": "shape-internal-composite",
+      "title": "Source reachable composite",
+      "text": "flowchart LR\nA@{shape: composite, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "LR",
+      "shapes": {
+        "A": "composite"
+      },
+      "oracleShapes": {
+        "A": "composite"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapes.ts reachable undocumented handler"
+    },
+    {
+      "id": "shape-internal-anchor",
+      "title": "Source reachable anchor",
+      "text": "flowchart LR\nA@{shape: anchor, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "LR",
+      "shapes": {
+        "A": "anchor"
+      },
+      "oracleShapes": {
+        "A": "anchor"
+      },
+      "visibleLabels": {
+        "A": ""
+      },
+      "source": "shapes.ts reachable undocumented handler"
+    },
+    {
+      "id": "handdrawn-shapes-1",
+      "title": "Seeded source shape gallery 1",
+      "text": "flowchart TB\nN0@{shape: rect, label: \"rect\"}\nN1@{shape: rounded, label: \"rounded\"}\nN2@{shape: stadium, label: \"stadium\"}\nN3@{shape: fr-rect, label: \"fr-rect\"}\nN4@{shape: cyl, label: \"cyl\"}\nN5@{shape: datastore, label: \"datastore\"}\nN6@{shape: folder, label: \"folder\"}\nN7@{shape: bucket, label: \"bucket\"}\nN8@{shape: console, label: \"console\"}\nN9@{shape: browser, label: \"browser\"}\nN10@{shape: person, label: \"person\"}\nN11@{shape: circle, label: \"circle\"}",
+      "nodes": [
+        [
+          "N0",
+          "rect"
+        ],
+        [
+          "N1",
+          "rounded"
+        ],
+        [
+          "N2",
+          "stadium"
+        ],
+        [
+          "N3",
+          "fr-rect"
+        ],
+        [
+          "N4",
+          "cyl"
+        ],
+        [
+          "N5",
+          "datastore"
+        ],
+        [
+          "N6",
+          "folder"
+        ],
+        [
+          "N7",
+          "bucket"
+        ],
+        [
+          "N8",
+          "console"
+        ],
+        [
+          "N9",
+          "browser"
+        ],
+        [
+          "N10",
+          "person"
+        ],
+        [
+          "N11",
+          "circle"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TB",
+      "shapes": {
+        "N0": "square",
+        "N1": "round",
+        "N2": "stadium",
+        "N3": "subroutine",
+        "N4": "cylinder",
+        "N5": "datastore",
+        "N6": "folder",
+        "N7": "bucket",
+        "N8": "consoleWindow",
+        "N9": "browser",
+        "N10": "person",
+        "N11": "circle"
+      },
+      "oracleShapes": {
+        "N0": "rect",
+        "N1": "rounded",
+        "N2": "stadium",
+        "N3": "fr-rect",
+        "N4": "cyl",
+        "N5": "datastore",
+        "N6": "folder",
+        "N7": "bucket",
+        "N8": "console",
+        "N9": "browser",
+        "N10": "person",
+        "N11": "circle"
+      },
+      "visibleLabels": {
+        "N0": "rect",
+        "N1": "rounded",
+        "N2": "stadium",
+        "N3": "fr-rect",
+        "N4": "cyl",
+        "N5": "datastore",
+        "N6": "folder",
+        "N7": "bucket",
+        "N8": "console",
+        "N9": "browser",
+        "N10": "person",
+        "N11": "circle"
+      },
+      "config": {
+        "look": "handDrawn",
+        "handDrawnSeed": 42
+      },
+      "source": "Fixed shape handlers + roughjs4.6.6 seeded rough paths"
+    },
+    {
+      "id": "handdrawn-shapes-2",
+      "title": "Seeded source shape gallery 2",
+      "text": "flowchart TB\nN0@{shape: bang, label: \"bang\"}\nN1@{shape: cloud, label: \"cloud\"}\nN2@{shape: diam, label: \"diam\"}\nN3@{shape: hex, label: \"hex\"}\nN4@{shape: lean-r, label: \"lean-r\"}\nN5@{shape: lean-l, label: \"lean-l\"}\nN6@{shape: trap-b, label: \"trap-b\"}\nN7@{shape: trap-t, label: \"trap-t\"}\nN8@{shape: dbl-circ, label: \"dbl-circ\"}\nN9@{shape: text, label: \"text\"}\nN10@{shape: notch-rect, label: \"notch-rect\"}\nN11@{shape: lin-rect, label: \"lin-rect\"}",
+      "nodes": [
+        [
+          "N0",
+          "bang"
+        ],
+        [
+          "N1",
+          "cloud"
+        ],
+        [
+          "N2",
+          "diam"
+        ],
+        [
+          "N3",
+          "hex"
+        ],
+        [
+          "N4",
+          "lean-r"
+        ],
+        [
+          "N5",
+          "lean-l"
+        ],
+        [
+          "N6",
+          "trap-b"
+        ],
+        [
+          "N7",
+          "trap-t"
+        ],
+        [
+          "N8",
+          "dbl-circ"
+        ],
+        [
+          "N9",
+          "text"
+        ],
+        [
+          "N10",
+          "notch-rect"
+        ],
+        [
+          "N11",
+          "lin-rect"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TB",
+      "shapes": {
+        "N0": "bang",
+        "N1": "cloud",
+        "N2": "diamond",
+        "N3": "hexagon",
+        "N4": "lean_right",
+        "N5": "lean_left",
+        "N6": "trapezoid",
+        "N7": "inv_trapezoid",
+        "N8": "doublecircle",
+        "N9": "text",
+        "N10": "card",
+        "N11": "shadedProcess"
+      },
+      "oracleShapes": {
+        "N0": "bang",
+        "N1": "cloud",
+        "N2": "diam",
+        "N3": "hex",
+        "N4": "lean-r",
+        "N5": "lean-l",
+        "N6": "trap-b",
+        "N7": "trap-t",
+        "N8": "dbl-circ",
+        "N9": "text",
+        "N10": "notch-rect",
+        "N11": "lin-rect"
+      },
+      "visibleLabels": {
+        "N0": "bang",
+        "N1": "cloud",
+        "N2": "diam",
+        "N3": "hex",
+        "N4": "lean-r",
+        "N5": "lean-l",
+        "N6": "trap-b",
+        "N7": "trap-t",
+        "N8": "dbl-circ",
+        "N9": "text",
+        "N10": "notch-rect",
+        "N11": "lin-rect"
+      },
+      "config": {
+        "look": "handDrawn",
+        "handDrawnSeed": 42
+      },
+      "source": "Fixed shape handlers + roughjs4.6.6 seeded rough paths"
+    },
+    {
+      "id": "handdrawn-shapes-3",
+      "title": "Seeded source shape gallery 3",
+      "text": "flowchart TB\nN0@{shape: sm-circ, label: \"sm-circ\"}\nN1@{shape: fr-circ, label: \"fr-circ\"}\nN2@{shape: fork, label: \"fork\"}\nN3@{shape: hourglass, label: \"hourglass\"}\nN4@{shape: brace, label: \"brace\"}\nN5@{shape: brace-r, label: \"brace-r\"}\nN6@{shape: braces, label: \"braces\"}\nN7@{shape: bolt, label: \"bolt\"}\nN8@{shape: doc, label: \"doc\"}\nN9@{shape: delay, label: \"delay\"}\nN10@{shape: h-cyl, label: \"h-cyl\"}\nN11@{shape: lin-cyl, label: \"lin-cyl\"}",
+      "nodes": [
+        [
+          "N0",
+          "sm-circ"
+        ],
+        [
+          "N1",
+          "fr-circ"
+        ],
+        [
+          "N2",
+          "fork"
+        ],
+        [
+          "N3",
+          "hourglass"
+        ],
+        [
+          "N4",
+          "brace"
+        ],
+        [
+          "N5",
+          "brace-r"
+        ],
+        [
+          "N6",
+          "braces"
+        ],
+        [
+          "N7",
+          "bolt"
+        ],
+        [
+          "N8",
+          "doc"
+        ],
+        [
+          "N9",
+          "delay"
+        ],
+        [
+          "N10",
+          "h-cyl"
+        ],
+        [
+          "N11",
+          "lin-cyl"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TB",
+      "shapes": {
+        "N0": "stateStart",
+        "N1": "stateEnd",
+        "N2": "forkJoin",
+        "N3": "hourglass",
+        "N4": "curlyBraceLeft",
+        "N5": "curlyBraceRight",
+        "N6": "curlyBraces",
+        "N7": "lightningBolt",
+        "N8": "waveEdgedRectangle",
+        "N9": "halfRoundedRectangle",
+        "N10": "tiltedCylinder",
+        "N11": "linedCylinder"
+      },
+      "oracleShapes": {
+        "N0": "sm-circ",
+        "N1": "fr-circ",
+        "N2": "fork",
+        "N3": "hourglass",
+        "N4": "brace",
+        "N5": "brace-r",
+        "N6": "braces",
+        "N7": "bolt",
+        "N8": "doc",
+        "N9": "delay",
+        "N10": "h-cyl",
+        "N11": "lin-cyl"
+      },
+      "visibleLabels": {
+        "N0": "",
+        "N1": "",
+        "N2": "",
+        "N3": "",
+        "N4": "brace",
+        "N5": "brace-r",
+        "N6": "braces",
+        "N7": "",
+        "N8": "doc",
+        "N9": "delay",
+        "N10": "h-cyl",
+        "N11": "lin-cyl"
+      },
+      "config": {
+        "look": "handDrawn",
+        "handDrawnSeed": 42
+      },
+      "source": "Fixed shape handlers + roughjs4.6.6 seeded rough paths",
+      "fillProbes": [
+        {
+          "node": "N0",
+          "x": 0.5,
+          "y": 0.5,
+          "color": "#ffffff"
+        }
+      ],
+      "sourcePaintNote": "The final SVG .node path outline receives opaque CSS fill and covers earlier RoughJS hatch. stateStart must retain a light interior distinct from filledCircle."
+    },
+    {
+      "id": "handdrawn-shapes-4",
+      "title": "Seeded source shape gallery 4",
+      "text": "flowchart TB\nN0@{shape: curv-trap, label: \"curv-trap\"}\nN1@{shape: div-rect, label: \"div-rect\"}\nN2@{shape: tri, label: \"tri\"}\nN3@{shape: win-pane, label: \"win-pane\"}\nN4@{shape: f-circ, label: \"f-circ\"}\nN5@{shape: notch-pent, label: \"notch-pent\"}\nN6@{shape: flip-tri, label: \"flip-tri\"}\nN7@{shape: sl-rect, label: \"sl-rect\"}\nN8@{shape: docs, label: \"docs\"}\nN9@{shape: st-rect, label: \"st-rect\"}\nN10@{shape: bow-rect, label: \"bow-rect\"}\nN11@{shape: cross-circ, label: \"cross-circ\"}",
+      "nodes": [
+        [
+          "N0",
+          "curv-trap"
+        ],
+        [
+          "N1",
+          "div-rect"
+        ],
+        [
+          "N2",
+          "tri"
+        ],
+        [
+          "N3",
+          "win-pane"
+        ],
+        [
+          "N4",
+          "f-circ"
+        ],
+        [
+          "N5",
+          "notch-pent"
+        ],
+        [
+          "N6",
+          "flip-tri"
+        ],
+        [
+          "N7",
+          "sl-rect"
+        ],
+        [
+          "N8",
+          "docs"
+        ],
+        [
+          "N9",
+          "st-rect"
+        ],
+        [
+          "N10",
+          "bow-rect"
+        ],
+        [
+          "N11",
+          "cross-circ"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TB",
+      "shapes": {
+        "N0": "curvedTrapezoid",
+        "N1": "dividedRectangle",
+        "N2": "triangle",
+        "N3": "windowPane",
+        "N4": "filledCircle",
+        "N5": "trapezoidalPentagon",
+        "N6": "flippedTriangle",
+        "N7": "slopedRect",
+        "N8": "multiWaveEdgedRectangle",
+        "N9": "multiRect",
+        "N10": "bowTieRect",
+        "N11": "crossedCircle"
+      },
+      "oracleShapes": {
+        "N0": "curv-trap",
+        "N1": "div-rect",
+        "N2": "tri",
+        "N3": "win-pane",
+        "N4": "f-circ",
+        "N5": "notch-pent",
+        "N6": "flip-tri",
+        "N7": "sl-rect",
+        "N8": "docs",
+        "N9": "st-rect",
+        "N10": "bow-rect",
+        "N11": "cross-circ"
+      },
+      "visibleLabels": {
+        "N0": "curv-trap",
+        "N1": "div-rect",
+        "N2": "tri",
+        "N3": "win-pane",
+        "N4": "",
+        "N5": "notch-pent",
+        "N6": "flip-tri",
+        "N7": "sl-rect",
+        "N8": "docs",
+        "N9": "st-rect",
+        "N10": "bow-rect",
+        "N11": ""
+      },
+      "config": {
+        "look": "handDrawn",
+        "handDrawnSeed": 42
+      },
+      "source": "Fixed shape handlers + roughjs4.6.6 seeded rough paths"
+    },
+    {
+      "id": "handdrawn-shapes-5",
+      "title": "Seeded source shape gallery 5",
+      "text": "flowchart TB\nN0@{shape: tag-doc, label: \"tag-doc\"}\nN1@{shape: tag-rect, label: \"tag-rect\"}\nN2@{shape: flag, label: \"flag\"}\nN3@{shape: odd, label: \"odd\"}\nN4@{shape: lin-doc, label: \"lin-doc\"}",
+      "nodes": [
+        [
+          "N0",
+          "tag-doc"
+        ],
+        [
+          "N1",
+          "tag-rect"
+        ],
+        [
+          "N2",
+          "flag"
+        ],
+        [
+          "N3",
+          "odd"
+        ],
+        [
+          "N4",
+          "lin-doc"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TB",
+      "shapes": {
+        "N0": "taggedWaveEdgedRectangle",
+        "N1": "taggedRect",
+        "N2": "waveRectangle",
+        "N3": "odd",
+        "N4": "linedWaveEdgedRect"
+      },
+      "oracleShapes": {
+        "N0": "tag-doc",
+        "N1": "tag-rect",
+        "N2": "flag",
+        "N3": "odd",
+        "N4": "lin-doc"
+      },
+      "visibleLabels": {
+        "N0": "tag-doc",
+        "N1": "tag-rect",
+        "N2": "flag",
+        "N3": "odd",
+        "N4": "lin-doc"
+      },
+      "config": {
+        "look": "handDrawn",
+        "handDrawnSeed": 42
+      },
+      "source": "Fixed shape handlers + roughjs4.6.6 seeded rough paths"
+    }
+  ]
+}

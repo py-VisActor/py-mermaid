@@ -2,6 +2,8 @@
 .venv/
 venv/
 test-runs/
+# Generated local reports and downloadable archives; tracked baselines remain.
+/reports/
 dist/
 build/
 *.egg-info/

@@ -1,0 +1,147 @@
+{
+  "schema": "py-mermaid-source-assessment/v1",
+  "scope": "F01.4 Dagre source usage",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "dependency": "dagre-d3-es@7.0.14",
+  "sourceFiles": {
+    ".local/upstream-mermaid/packages/mermaid/src/rendering-util/render.ts": {
+      "sha256": "775ea33dad8132c996f15a7680a0f3d436012b21cdcca065ed84412ee144ddc0",
+      "bytes": 5215
+    },
+    ".local/upstream-mermaid/packages/mermaid/src/diagrams/flowchart/flowRenderer-v3-unified.ts": {
+      "sha256": "9eba228f1d94dce7cbd6cda7c8baf00eba9f6571d9de26f41c9ebadee62e7d31",
+      "bytes": 2173
+    },
+    ".local/upstream-mermaid/packages/mermaid/src/diagrams/flowchart/flowRenderer-elk-default.spec.ts": {
+      "sha256": "afafe1ff416b84c447158e2524644fee6b92518a4c4ed87a18d0484515a842f1",
+      "bytes": 2712
+    },
+    ".local/upstream-mermaid/packages/mermaid/src/rendering-util/layout-algorithms/dagre/index.js": {
+      "sha256": "3f366de80d978873099c7c9bf7ceaa61f779dba372a4dc11dab3ec61e000512e",
+      "bytes": 28296
+    },
+    ".local/upstream-mermaid/packages/mermaid/src/rendering-util/layout-algorithms/dagre/mermaid-graphlib.js": {
+      "sha256": "8eff208d3b11645dea47ffcd6e7ad7bfd3b0032a3612b9ba3506633510497a2d",
+      "bytes": 14531
+    },
+    ".local/upstream-mermaid/packages/mermaid/src/schemas/config.schema.yaml": {
+      "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+      "bytes": 113614
+    },
+    ".local/f011-oracle/node_modules/dagre-d3-es/package.json": {
+      "sha256": "24643bcd30aef3932d4776eae974005354e34eb1036c24e6090b8a38b05fcc8e",
+      "bytes": 1646
+    },
+    ".local/f011-oracle/node_modules/dagre-d3-es/src/dagre/layout.js": {
+      "sha256": "76d6a92030279ea5c22bd034d71debdf6d46f2e56b94c26babd6a34e907e192c",
+      "bytes": 12135
+    },
+    ".local/f011-oracle/node_modules/dagre-d3-es/src/dagre/rank/index.js": {
+      "sha256": "d6bda6a568923fa8aa6e425b44e10dbd777ea8a07afa7b0306adc53cfe840669",
+      "bytes": 1307
+    },
+    ".local/f011-oracle/node_modules/dagre-d3-es/src/graphlib/index.js": {
+      "sha256": "28aa8766dadb4ad2e4e0ad5a1fbb508c43fd9a274bcca19e0d5651948015f171",
+      "bytes": 135
+    },
+    ".local/upstream-mermaid/packages/mermaid/src/diagram-api/diagram-orchestration.ts": {
+      "sha256": "f2b9df976bcdd3470b02bdaeb8bd56691825ea49b1e8c01eb0ea68306a7d3866",
+      "bytes": 4518
+    },
+    ".local/upstream-mermaid/packages/mermaid/src/config.appearance.spec.ts": {
+      "sha256": "079a5591f20825164d9913b80733bc91bd2743a1dec1129fa69367a5e5d6dc9f",
+      "bytes": 13440
+    },
+    ".local/upstream-mermaid/packages/mermaid/src/diagrams/class/classDetector-V2.ts": {
+      "sha256": "1a6c58983e963f02cd5e6b04cef3257ae9b70b705e463a7ab4445afc3aa1b6dd",
+      "bytes": 559
+    },
+    ".local/upstream-mermaid/packages/mermaid/src/diagrams/class/classDiagram-v2.ts": {
+      "sha256": "db24470e0ae5e00211452ed1e5ec7f27060a24998c6e031514e9a10600d928b5",
+      "bytes": 570
+    },
+    ".local/upstream-mermaid/packages/mermaid/src/diagrams/class/classRenderer-v3-unified.ts": {
+      "sha256": "022eeb9a5684c67117e160b64319d287e42a47f21b82c3d87de3a8d2ba70466c",
+      "bytes": 2983
+    },
+    ".local/upstream-mermaid/packages/mermaid/src/diagrams/state/stateDetector-V2.ts": {
+      "sha256": "6c8672b3636568741a3f09d641886349064937e9cfde2d48fab7dbb46f05020b",
+      "bytes": 559
+    },
+    ".local/upstream-mermaid/packages/mermaid/src/diagrams/state/stateDiagram-v2.ts": {
+      "sha256": "7242664b054dd1c66bc62105554c646f0b0e605ad7e30423f21f53b388dd6ca8",
+      "bytes": 571
+    },
+    ".local/upstream-mermaid/packages/mermaid/src/diagrams/state/stateRenderer-v3-unified.ts": {
+      "sha256": "ce23db314dbc7bafc7e27e6c84bd64b75ab9a07d8caa30c413e2026925eca2ba",
+      "bytes": 5403
+    },
+    ".local/upstream-mermaid/packages/mermaid/src/diagrams/er/erDetector.ts": {
+      "sha256": "412182f33add1a6281bf9c49951af979b6694610847996690995216f8a2bef55",
+      "bytes": 471
+    },
+    ".local/upstream-mermaid/packages/mermaid/src/diagrams/er/erDiagram.ts": {
+      "sha256": "9446d2a8d5e91f24968cab0d079e2fb45b9020658ff3fd5191beb7094b55a6c8",
+      "bytes": 343
+    },
+    ".local/upstream-mermaid/packages/mermaid/src/diagrams/er/erRenderer-unified.ts": {
+      "sha256": "7bb69400be2e4be8f48453397c726b35ae5bc74b28a4dd82287d0aefcfd1063f",
+      "bytes": 3435
+    },
+    ".local/upstream-mermaid/packages/mermaid/src/diagrams/usecase/usecaseDb.ts": {
+      "sha256": "f6d8d55ec60610679de910b0e3985e2fb442d34f3a43659d16a3a45ae100af4d",
+      "bytes": 19033
+    },
+    ".local/upstream-mermaid/packages/mermaid/src/diagrams/usecase/usecaseRenderer.ts": {
+      "sha256": "42a65a7620309ea8c13b5c75b21bc162357d5e1111125f7fcf33a936e957bd3a",
+      "bytes": 11464
+    },
+    ".local/upstream-mermaid/packages/mermaid/src/diagrams/block/renderHelpers.ts": {
+      "sha256": "09c3ed7bf23b8a73cf3836798dd9b4b51e0494f33d0d926bad5ed364414b4428",
+      "bytes": 9227
+    },
+    ".local/upstream-mermaid/packages/mermaid/src/diagrams/flowchart/flowChartShapes.js": {
+      "sha256": "89dbfb40949c1707d35b540ae28afd9e70fbc8c71ff55aac34cec9095a486142",
+      "bytes": 8841
+    },
+    ".local/upstream-mermaid/packages/mermaid/src/rendering-util/createGraph.ts": {
+      "sha256": "ec7fef8159d654cfe0dce23ec6c9c7470b200ba2595ac9c45a4be622ccf9fab5",
+      "bytes": 8614
+    },
+    ".local/upstream-mermaid/packages/mermaid/src/diagrams/class/classRenderer.js": {
+      "sha256": "3379ac656622f29028c3880fcecaa8a4985c9133ecf16ceac4915c5e1ec056fb",
+      "bytes": 7679
+    },
+    ".local/upstream-mermaid/packages/mermaid/src/diagrams/state/stateRenderer.js": {
+      "sha256": "70fffe306da304635e109d0bf38269d72adb9a82620269b9e0da34212cad8ac6",
+      "bytes": 8831
+    },
+    ".local/upstream-mermaid/packages/mermaid/src/diagrams/er/erRenderer.js": {
+      "sha256": "01de563da934f1739b96e63e03200a1bc99f019c7331017af25ee188f3776175",
+      "bytes": 24887
+    }
+  },
+  "document": "docs/F01_4_ASSESSMENT.md",
+  "defaultFullFlowchart": "elk",
+  "dagreSelection": [
+    "explicit registered layout:dagre",
+    "fallback when requested layout is unregistered, including ELK in tiny build"
+  ],
+  "fallbackOnLayoutComputationError": false,
+  "coreCall": "dagreLayout(graph)",
+  "interactiveLogicNeededForLayout": false,
+  "productCodeChanged": false,
+  "algorithmImplementationStarted": false,
+  "nonFallbackRequirementAudit": {
+    "scope": "fixed built-in normal detector entry paths; static source review, not diagram execution",
+    "mandatory": "Explicit effective layout:dagre compatibility",
+    "otherMandatoryDefaultDiagramAlgorithmsFound": false,
+    "legacyRenderers": "Direct Dagre calls exist; current class/state/ER detector paths select unified renderers",
+    "usecaseInitialDagreValue": "Overwritten by renderer using effective configured layout",
+    "graphlibAndIntersections": "Graph/geometry helpers do not mandate Dagre layout algorithm",
+    "dropExplicitDagreSupportAuthorized": true,
+    "evidenceRun": "C:/code/py-visactor/py-mermaid/test-runs/scope-dagre-requirement-audit-20261105T080548Z-e2e578a2/run.json"
+  },
+  "targetDisposition": "excluded_by_user",
+  "layoutPolicy": "references/layout-policy.json"
+}

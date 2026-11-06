@@ -1,0 +1,1248 @@
+{
+  "schema": "py-mermaid-f012-language-assertions/v1",
+  "phase": "F01.2-S3",
+  "status": "test_design_complete",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "frozenSourceIdentity": "3d846b5df224e167a528a73c52d359388fda5e508b561fa876e4bd1b20785c2e",
+  "frozenSourceEvidence": "test-runs/F01.2-s2-freeze-20261104T144018Z-77e0606b",
+  "sources": [
+    {
+      "id": "SRC01",
+      "path": "packages/mermaid/src/diagrams/flowchart/parser/flow.jison",
+      "symbols": [
+        "vertex",
+        "link",
+        "edgeText",
+        "arrowText",
+        "statement/subgraph",
+        "direction",
+        "vertexStatement"
+      ],
+      "sha256": "9597faffe2a133b104c6dd4f38a162f6980bff4e0a841a83ff94af3900ea7ba8"
+    },
+    {
+      "id": "SRC02",
+      "path": "packages/mermaid/src/diagrams/flowchart/flowDb.ts",
+      "symbols": [
+        "addVertex",
+        "addSingleLink",
+        "addSubGraph",
+        "makeUniq",
+        "getData/subGraphParent/declarationIndex"
+      ],
+      "sha256": "33577b9ade8c65be6049c3093089dbf81abf44214f49c2b2ea46434183889288"
+    },
+    {
+      "id": "SRC03",
+      "path": "packages/mermaid/src/diagrams/flowchart/parser/flow-singlenode.spec.js",
+      "symbols": [
+        "classic square/round/circle/subroutine/cylinder/trapezoid shapes"
+      ],
+      "sha256": "04bd8c3cb02cbb3f5afdd9ccb1c97de0667226e7b344fc95762c225725bfb595"
+    },
+    {
+      "id": "SRC04",
+      "path": "packages/mermaid/src/diagrams/flowchart/parser/flow-text.spec.js",
+      "symbols": [
+        "ordinary edge text",
+        "quoted vertex labels",
+        "invalid mixed strings/text"
+      ],
+      "sha256": "2d65566bc468a06cdeb3d53093a2f7a46694edc8209116f0073481059dd3f1e3"
+    },
+    {
+      "id": "SRC05",
+      "path": "packages/mermaid/src/diagrams/flowchart/parser/subgraph.spec.js",
+      "symbols": [
+        "subgraph explicit and anonymous ids",
+        "nested subgraphs",
+        "direction TD",
+        "reversed chain members"
+      ],
+      "sha256": "c634dc9065a53b6e45408a6ef48626ab7420a367fc3889b86b80f9883361776d"
+    },
+    {
+      "id": "SRC06",
+      "path": "packages/mermaid/src/diagrams/flowchart/flowDb.spec.ts",
+      "symbols": [
+        "flow db repeated subgraph ids (issue #8326)",
+        "keeps first declaration title",
+        "nested same id flatten",
+        "empty first declaration merge"
+      ],
+      "sha256": "828fd2f790ec7357905adcb92896b1f34a93710934268cfac584623795bacfe0"
+    },
+    {
+      "id": "SRC07",
+      "path": "packages/mermaid/src/schemas/config.schema.yaml",
+      "symbols": [
+        "FlowchartDiagramConfig.inheritDir",
+        "FlowchartDiagramConfig.subGraphTitleMargin"
+      ],
+      "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8"
+    },
+    {
+      "id": "SRC08",
+      "path": "packages/mermaid/src/diagram-api/comments.ts",
+      "symbols": [
+        "cleanupComments"
+      ],
+      "sha256": "aa637df212ecc22cbcb12387af31a4d0f8c266ece03cc6134d46dd9427acd120"
+    },
+    {
+      "id": "SRC09",
+      "path": "packages/mermaid/src/rendering-util/handle-markdown-text.ts",
+      "symbols": [
+        "nonMarkdownToHTML",
+        "nonMarkdownToLines"
+      ],
+      "sha256": "6f99a7b3f5b11f87f5509a370663f14650f8f8c3cbb9a34ea496a1aa183cd0ca"
+    },
+    {
+      "id": "SRC10",
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes.ts",
+      "symbols": [
+        "registry; missing legacy ellipse handler"
+      ],
+      "sha256": "68fceb790c2a9b65397d96edaf85a50b4ae059a68cf52c83553c4887019f1699"
+    },
+    {
+      "id": "SCOPE",
+      "path": "docs/F01_2_EXECUTION_PLAN.md",
+      "sha256": "ff39d5b6f401191f5c253380e5c2baadd46d14152954fc7702236dbe94613638"
+    },
+    {
+      "id": "CONTRACT",
+      "path": "docs/F01_2_INTERFACES.md",
+      "sha256": "6296de662009d627c611473a7da4b0f05ff2ac7086b38b1606d99aab9f3a5357"
+    },
+    {
+      "id": "EXAMPLE",
+      "path": "examples/enhanced_flowchart.py",
+      "symbols": [
+        "SOURCE"
+      ],
+      "sha256": "ad2877b79089ca6065f6228bba98ac59177e0837cfd88745689d0d0349f17638",
+      "role": "Integrated example input only; expected nodes/shapes/groups/edge labels handwritten from pinned source rules."
+    }
+  ],
+  "assertions": [
+    {
+      "id": "F012-LANG-001",
+      "entry": "test_language.EnhancedLanguageTests.test_handwritten_positive_semantics",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC05",
+        "SRC06",
+        "SRC07",
+        "CONTRACT"
+      ],
+      "basis": "Handwritten graph/group expectations from upstream reductions, DB membership and first declaration semantics."
+    },
+    {
+      "id": "F012-LANG-002",
+      "entry": "test_language.EnhancedLanguageTests.test_shape_fixture_denominator_is_complete",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC03",
+        "SRC10"
+      ],
+      "basis": "Classic grammar shape names and DB update rules; ellipse missing registry handler kept separate from grammar negatives."
+    },
+    {
+      "id": "F012-LANG-003",
+      "entry": "test_language.EnhancedLanguageTests.test_shape_redeclaration_updates_but_bare_reference_preserves",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC03",
+        "SRC10"
+      ],
+      "basis": "Classic grammar shape names and DB update rules; ellipse missing registry handler kept separate from grammar negatives."
+    },
+    {
+      "id": "F012-LANG-004",
+      "entry": "test_language.EnhancedLanguageTests.test_quoted_plain_labels_across_classic_delimiters",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC03",
+        "SRC10"
+      ],
+      "basis": "Classic grammar shape names and DB update rules; ellipse missing registry handler kept separate from grammar negatives."
+    },
+    {
+      "id": "F012-LANG-005",
+      "entry": "test_language.EnhancedLanguageTests.test_ellipse_preserves_upstream_parse_semantics",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC03",
+        "SRC10"
+      ],
+      "basis": "Classic grammar shape names and DB update rules; ellipse missing registry handler kept separate from grammar negatives."
+    },
+    {
+      "id": "F012-LANG-006",
+      "entry": "test_language.EnhancedLanguageTests.test_both_edge_label_syntaxes_agree",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC04",
+        "SRC09",
+        "CONTRACT"
+      ],
+      "basis": "Independent edge text/quote/newline productions and raw source position arithmetic."
+    },
+    {
+      "id": "F012-LANG-007",
+      "entry": "test_language.EnhancedLanguageTests.test_quoted_inline_edge_label",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC04",
+        "SRC09",
+        "CONTRACT"
+      ],
+      "basis": "Independent edge text/quote/newline productions and raw source position arithmetic."
+    },
+    {
+      "id": "F012-LANG-008",
+      "entry": "test_language.EnhancedLanguageTests.test_multiline_edge_labels_and_link_whitespace",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC04",
+        "SRC09",
+        "CONTRACT"
+      ],
+      "basis": "Independent edge text/quote/newline productions and raw source position arithmetic."
+    },
+    {
+      "id": "F012-LANG-009",
+      "entry": "test_language.EnhancedLanguageTests.test_label_spans_use_raw_text_and_utf16_units",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC04",
+        "SRC09",
+        "CONTRACT"
+      ],
+      "basis": "Independent edge text/quote/newline productions and raw source position arithmetic."
+    },
+    {
+      "id": "F012-LANG-010",
+      "entry": "test_language.EnhancedLanguageTests.test_unlabelled_edges_have_no_label_span",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC04",
+        "SRC09",
+        "CONTRACT"
+      ],
+      "basis": "Independent edge text/quote/newline productions and raw source position arithmetic."
+    },
+    {
+      "id": "F012-LANG-011",
+      "entry": "test_language.EnhancedLanguageTests.test_group_chain_member_order_is_source_db_order",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC05",
+        "SRC06",
+        "SRC07",
+        "CONTRACT"
+      ],
+      "basis": "Handwritten graph/group expectations from upstream reductions, DB membership and first declaration semantics."
+    },
+    {
+      "id": "F012-LANG-012",
+      "entry": "test_language.EnhancedLanguageTests.test_group_close_order_differs_from_colour_preorder",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC05",
+        "SRC06",
+        "SRC07",
+        "CONTRACT"
+      ],
+      "basis": "Handwritten graph/group expectations from upstream reductions, DB membership and first declaration semantics."
+    },
+    {
+      "id": "F012-LANG-013",
+      "entry": "test_language.EnhancedLanguageTests.test_group_source_span_covers_original_block",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC05",
+        "SRC06",
+        "SRC07",
+        "CONTRACT"
+      ],
+      "basis": "Handwritten graph/group expectations from upstream reductions, DB membership and first declaration semantics."
+    },
+    {
+      "id": "F012-LANG-014",
+      "entry": "test_language.EnhancedLanguageTests.test_membership_and_parent_references_agree",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC05",
+        "SRC06",
+        "SRC07",
+        "CONTRACT"
+      ],
+      "basis": "Handwritten graph/group expectations from upstream reductions, DB membership and first declaration semantics."
+    },
+    {
+      "id": "F012-LANG-015",
+      "entry": "test_language.EnhancedLanguageTests.test_subgraph_direction_denominator",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC05",
+        "SRC06",
+        "SRC07",
+        "CONTRACT"
+      ],
+      "basis": "Handwritten graph/group expectations from upstream reductions, DB membership and first declaration semantics."
+    },
+    {
+      "id": "F012-LANG-016",
+      "entry": "test_language.EnhancedLanguageTests.test_last_subgraph_direction_wins",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC05",
+        "SRC06",
+        "SRC07",
+        "CONTRACT"
+      ],
+      "basis": "Handwritten graph/group expectations from upstream reductions, DB membership and first declaration semantics."
+    },
+    {
+      "id": "F012-LANG-017",
+      "entry": "test_language.EnhancedLanguageTests.test_absent_direction_is_none_by_default",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC05",
+        "SRC06",
+        "SRC07",
+        "CONTRACT"
+      ],
+      "basis": "Handwritten graph/group expectations from upstream reductions, DB membership and first declaration semantics."
+    },
+    {
+      "id": "F012-LANG-018",
+      "entry": "test_language.EnhancedLanguageTests.test_inherit_direction_uses_root_not_parent_override",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC05",
+        "SRC06",
+        "SRC07",
+        "CONTRACT"
+      ],
+      "basis": "Handwritten graph/group expectations from upstream reductions, DB membership and first declaration semantics."
+    },
+    {
+      "id": "F012-LANG-019",
+      "entry": "test_language.EnhancedLanguageTests.test_automatic_counter_includes_explicit_declarations",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC05",
+        "SRC06",
+        "SRC07",
+        "CONTRACT"
+      ],
+      "basis": "Handwritten graph/group expectations from upstream reductions, DB membership and first declaration semantics."
+    },
+    {
+      "id": "F012-LANG-020",
+      "entry": "test_language.EnhancedLanguageTests.test_forward_group_reference_does_not_create_duplicate_node",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC05",
+        "SRC06",
+        "SRC07",
+        "CONTRACT"
+      ],
+      "basis": "Handwritten graph/group expectations from upstream reductions, DB membership and first declaration semantics."
+    },
+    {
+      "id": "F012-LANG-021",
+      "entry": "test_language.EnhancedLanguageTests.test_repeated_group_keeps_first_title_and_direction",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC05",
+        "SRC06",
+        "SRC07",
+        "CONTRACT"
+      ],
+      "basis": "Handwritten graph/group expectations from upstream reductions, DB membership and first declaration semantics."
+    },
+    {
+      "id": "F012-LANG-022",
+      "entry": "test_language.EnhancedLanguageTests.test_group_and_label_state_isolated_after_failure",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC04",
+        "SRC09",
+        "CONTRACT"
+      ],
+      "basis": "Independent edge text/quote/newline productions and raw source position arithmetic."
+    },
+    {
+      "id": "F012-LANG-023",
+      "entry": "test_language.EnhancedLanguageTests.test_official_invalid_sources_rejected_with_spans",
+      "sources": [
+        "SRC01",
+        "SRC08",
+        "SCOPE"
+      ],
+      "basis": "Grammar-invalid fixtures separated from valid-but-outside-scope rejection assertions."
+    },
+    {
+      "id": "F012-LANG-024",
+      "entry": "test_language.EnhancedLanguageTests.test_later_slice_exclusions_are_explicit_errors",
+      "sources": [
+        "SRC01",
+        "SRC08",
+        "SCOPE"
+      ],
+      "basis": "Grammar-invalid fixtures separated from valid-but-outside-scope rejection assertions."
+    },
+    {
+      "id": "F012-LANG-025",
+      "entry": "test_language.EnhancedConfigurationTests.test_new_defaults_and_title_margin_values",
+      "sources": [
+        "SRC07",
+        "CONTRACT"
+      ],
+      "basis": "Pinned schema and scoped config contract; values hand-authored."
+    },
+    {
+      "id": "F012-LANG-026",
+      "entry": "test_language.EnhancedConfigurationTests.test_partial_title_margin_preserves_default",
+      "sources": [
+        "SRC07",
+        "CONTRACT"
+      ],
+      "basis": "Pinned schema and scoped config contract; values hand-authored."
+    },
+    {
+      "id": "F012-LANG-027",
+      "entry": "test_language.EnhancedConfigurationTests.test_invalid_group_configuration_rejected",
+      "sources": [
+        "SRC07",
+        "CONTRACT"
+      ],
+      "basis": "Pinned schema and scoped config contract; values hand-authored."
+    }
+  ],
+  "fixtureAssertions": [
+    {
+      "id": "F012-CASE-shape-square",
+      "caseId": "shape-square",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC03"
+      ],
+      "expectedFields": [
+        "nodes",
+        "edges",
+        "direction",
+        "shapes"
+      ]
+    },
+    {
+      "id": "F012-CASE-shape-round",
+      "caseId": "shape-round",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC03"
+      ],
+      "expectedFields": [
+        "nodes",
+        "edges",
+        "direction",
+        "shapes"
+      ]
+    },
+    {
+      "id": "F012-CASE-shape-stadium",
+      "caseId": "shape-stadium",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC03"
+      ],
+      "expectedFields": [
+        "nodes",
+        "edges",
+        "direction",
+        "shapes"
+      ]
+    },
+    {
+      "id": "F012-CASE-shape-subroutine",
+      "caseId": "shape-subroutine",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC03"
+      ],
+      "expectedFields": [
+        "nodes",
+        "edges",
+        "direction",
+        "shapes"
+      ]
+    },
+    {
+      "id": "F012-CASE-shape-cylinder",
+      "caseId": "shape-cylinder",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC03"
+      ],
+      "expectedFields": [
+        "nodes",
+        "edges",
+        "direction",
+        "shapes"
+      ]
+    },
+    {
+      "id": "F012-CASE-shape-circle",
+      "caseId": "shape-circle",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC03"
+      ],
+      "expectedFields": [
+        "nodes",
+        "edges",
+        "direction",
+        "shapes"
+      ]
+    },
+    {
+      "id": "F012-CASE-shape-doublecircle",
+      "caseId": "shape-doublecircle",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC03"
+      ],
+      "expectedFields": [
+        "nodes",
+        "edges",
+        "direction",
+        "shapes"
+      ]
+    },
+    {
+      "id": "F012-CASE-shape-diamond",
+      "caseId": "shape-diamond",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC03"
+      ],
+      "expectedFields": [
+        "nodes",
+        "edges",
+        "direction",
+        "shapes"
+      ]
+    },
+    {
+      "id": "F012-CASE-shape-hexagon",
+      "caseId": "shape-hexagon",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC03"
+      ],
+      "expectedFields": [
+        "nodes",
+        "edges",
+        "direction",
+        "shapes"
+      ]
+    },
+    {
+      "id": "F012-CASE-shape-odd",
+      "caseId": "shape-odd",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC03"
+      ],
+      "expectedFields": [
+        "nodes",
+        "edges",
+        "direction",
+        "shapes"
+      ]
+    },
+    {
+      "id": "F012-CASE-shape-trapezoid",
+      "caseId": "shape-trapezoid",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC03"
+      ],
+      "expectedFields": [
+        "nodes",
+        "edges",
+        "direction",
+        "shapes"
+      ]
+    },
+    {
+      "id": "F012-CASE-shape-inv_trapezoid",
+      "caseId": "shape-inv_trapezoid",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC03"
+      ],
+      "expectedFields": [
+        "nodes",
+        "edges",
+        "direction",
+        "shapes"
+      ]
+    },
+    {
+      "id": "F012-CASE-shape-lean_right",
+      "caseId": "shape-lean_right",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC03"
+      ],
+      "expectedFields": [
+        "nodes",
+        "edges",
+        "direction",
+        "shapes"
+      ]
+    },
+    {
+      "id": "F012-CASE-shape-lean_left",
+      "caseId": "shape-lean_left",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC03"
+      ],
+      "expectedFields": [
+        "nodes",
+        "edges",
+        "direction",
+        "shapes"
+      ]
+    },
+    {
+      "id": "F012-CASE-edge-label-pipe",
+      "caseId": "edge-label-pipe",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC04",
+        "SRC05",
+        "SRC06",
+        "SRC07",
+        "SRC09"
+      ],
+      "expectedFields": [
+        "nodes",
+        "edges",
+        "direction",
+        "edgeLabels"
+      ]
+    },
+    {
+      "id": "F012-CASE-edge-label-inline",
+      "caseId": "edge-label-inline",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC04",
+        "SRC05",
+        "SRC06",
+        "SRC07",
+        "SRC09"
+      ],
+      "expectedFields": [
+        "nodes",
+        "edges",
+        "direction",
+        "edgeLabels"
+      ]
+    },
+    {
+      "id": "F012-CASE-edge-label-unicode-multiline",
+      "caseId": "edge-label-unicode-multiline",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC04",
+        "SRC05",
+        "SRC06",
+        "SRC07",
+        "SRC09"
+      ],
+      "expectedFields": [
+        "nodes",
+        "edges",
+        "direction",
+        "edgeLabels"
+      ]
+    },
+    {
+      "id": "F012-CASE-nested-groups",
+      "caseId": "nested-groups",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC04",
+        "SRC05",
+        "SRC06",
+        "SRC07",
+        "SRC09"
+      ],
+      "expectedFields": [
+        "nodes",
+        "edges",
+        "direction",
+        "groups"
+      ]
+    },
+    {
+      "id": "F012-CASE-cross-group-nodes",
+      "caseId": "cross-group-nodes",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC04",
+        "SRC05",
+        "SRC06",
+        "SRC07",
+        "SRC09"
+      ],
+      "expectedFields": [
+        "nodes",
+        "edges",
+        "direction",
+        "edgeLabels",
+        "groups"
+      ]
+    },
+    {
+      "id": "F012-CASE-group-endpoints",
+      "caseId": "group-endpoints",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC04",
+        "SRC05",
+        "SRC06",
+        "SRC07",
+        "SRC09"
+      ],
+      "expectedFields": [
+        "nodes",
+        "edges",
+        "direction",
+        "edgeLabels",
+        "groups"
+      ]
+    },
+    {
+      "id": "F012-CASE-ancestor-group-endpoint",
+      "caseId": "ancestor-group-endpoint",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC04",
+        "SRC05",
+        "SRC06",
+        "SRC07",
+        "SRC09"
+      ],
+      "expectedFields": [
+        "nodes",
+        "edges",
+        "direction",
+        "edgeLabels",
+        "groups"
+      ]
+    },
+    {
+      "id": "F012-CASE-repeated-group",
+      "caseId": "repeated-group",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC04",
+        "SRC05",
+        "SRC06",
+        "SRC07",
+        "SRC09"
+      ],
+      "expectedFields": [
+        "nodes",
+        "edges",
+        "direction",
+        "groups"
+      ]
+    },
+    {
+      "id": "F012-CASE-subgraph-direction",
+      "caseId": "subgraph-direction",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC04",
+        "SRC05",
+        "SRC06",
+        "SRC07",
+        "SRC09"
+      ],
+      "expectedFields": [
+        "nodes",
+        "edges",
+        "direction",
+        "groups"
+      ]
+    },
+    {
+      "id": "F012-CASE-inherit-root-direction",
+      "caseId": "inherit-root-direction",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC04",
+        "SRC05",
+        "SRC06",
+        "SRC07",
+        "SRC09"
+      ],
+      "expectedFields": [
+        "nodes",
+        "edges",
+        "direction",
+        "groups",
+        "config"
+      ]
+    },
+    {
+      "id": "F012-CASE-empty-group",
+      "caseId": "empty-group",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC04",
+        "SRC05",
+        "SRC06",
+        "SRC07",
+        "SRC09"
+      ],
+      "expectedFields": [
+        "nodes",
+        "edges",
+        "direction",
+        "groups"
+      ]
+    },
+    {
+      "id": "F012-CASE-groups-only",
+      "caseId": "groups-only",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC04",
+        "SRC05",
+        "SRC06",
+        "SRC07",
+        "SRC09"
+      ],
+      "expectedFields": [
+        "nodes",
+        "edges",
+        "direction",
+        "groups"
+      ]
+    },
+    {
+      "id": "F012-CASE-selfloop-label",
+      "caseId": "selfloop-label",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC04",
+        "SRC05",
+        "SRC06",
+        "SRC07",
+        "SRC09"
+      ],
+      "expectedFields": [
+        "nodes",
+        "edges",
+        "direction",
+        "shapes",
+        "edgeLabels"
+      ]
+    },
+    {
+      "id": "F012-CASE-parallel-edge-labels",
+      "caseId": "parallel-edge-labels",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC04",
+        "SRC05",
+        "SRC06",
+        "SRC07",
+        "SRC09"
+      ],
+      "expectedFields": [
+        "nodes",
+        "edges",
+        "direction",
+        "edgeLabels"
+      ]
+    },
+    {
+      "id": "F012-CASE-forward-group-endpoint",
+      "caseId": "forward-group-endpoint",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC04",
+        "SRC05",
+        "SRC06",
+        "SRC07",
+        "SRC09"
+      ],
+      "expectedFields": [
+        "nodes",
+        "edges",
+        "direction",
+        "groups"
+      ]
+    },
+    {
+      "id": "F012-CASE-automatic-group-ids",
+      "caseId": "automatic-group-ids",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC04",
+        "SRC05",
+        "SRC06",
+        "SRC07",
+        "SRC09"
+      ],
+      "expectedFields": [
+        "nodes",
+        "edges",
+        "direction",
+        "groups"
+      ]
+    },
+    {
+      "id": "F012-CASE-nested-automatic-group-ids",
+      "caseId": "nested-automatic-group-ids",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC04",
+        "SRC05",
+        "SRC06",
+        "SRC07",
+        "SRC09"
+      ],
+      "expectedFields": [
+        "nodes",
+        "edges",
+        "direction",
+        "groups"
+      ]
+    },
+    {
+      "id": "F012-CASE-first-group-membership",
+      "caseId": "first-group-membership",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC04",
+        "SRC05",
+        "SRC06",
+        "SRC07",
+        "SRC09"
+      ],
+      "expectedFields": [
+        "nodes",
+        "edges",
+        "direction",
+        "groups"
+      ]
+    },
+    {
+      "id": "F012-CASE-nested-repeated-id",
+      "caseId": "nested-repeated-id",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC04",
+        "SRC05",
+        "SRC06",
+        "SRC07",
+        "SRC09"
+      ],
+      "expectedFields": [
+        "nodes",
+        "edges",
+        "direction",
+        "groups"
+      ]
+    },
+    {
+      "id": "F012-CASE-long-group-title",
+      "caseId": "long-group-title",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC05",
+        "SRC06",
+        "CONTRACT"
+      ],
+      "expectedFields": [
+        "nodes",
+        "edges",
+        "direction",
+        "groups"
+      ],
+      "addedPhase": "F01.2-S4",
+      "basis": "Additional S4 regression for long group-title fit when an internal-to-external edge requires INCLUDE_CHILDREN."
+    },
+    {
+      "id": "F012-CASE-enhanced-overview",
+      "caseId": "enhanced-overview",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC05",
+        "SRC06",
+        "CONTRACT"
+      ],
+      "expectedFields": [
+        "nodes",
+        "edges",
+        "direction",
+        "shapes",
+        "edgeLabels",
+        "groups"
+      ],
+      "addedPhase": "F01.2-S4",
+      "basis": "Additional S4 integrated visual report example, text from examples/enhanced_flowchart.py; expected graph/groups handwritten from grammar and FlowDB actions."
+    }
+  ],
+  "counts": {
+    "testMethods": 27,
+    "positiveFixtures": 35,
+    "officialGrammarNegativeFixtures": 8,
+    "knownUpstreamRenderErrorFixtures": 1
+  },
+  "officialInvalidCases": [
+    {
+      "id": "F012-INVALID-missing-end",
+      "caseId": "missing-end",
+      "sources": [
+        "SRC01",
+        "SRC08"
+      ]
+    },
+    {
+      "id": "F012-INVALID-unmatched-end",
+      "caseId": "unmatched-end",
+      "sources": [
+        "SRC01",
+        "SRC08"
+      ]
+    },
+    {
+      "id": "F012-INVALID-unclosed-classic-shape",
+      "caseId": "unclosed-classic-shape",
+      "sources": [
+        "SRC01",
+        "SRC08"
+      ]
+    },
+    {
+      "id": "F012-INVALID-unclosed-edge-pipe",
+      "caseId": "unclosed-edge-pipe",
+      "sources": [
+        "SRC01",
+        "SRC08"
+      ]
+    },
+    {
+      "id": "F012-INVALID-missing-edge-target",
+      "caseId": "missing-edge-target",
+      "sources": [
+        "SRC01",
+        "SRC08"
+      ]
+    },
+    {
+      "id": "F012-INVALID-invalid-quoted-edge",
+      "caseId": "invalid-quoted-edge",
+      "sources": [
+        "SRC01",
+        "SRC08"
+      ]
+    },
+    {
+      "id": "F012-INVALID-mismatched-node-delimiter",
+      "caseId": "mismatched-node-delimiter",
+      "sources": [
+        "SRC01",
+        "SRC08"
+      ]
+    },
+    {
+      "id": "F012-INVALID-inline-comment-invalid",
+      "caseId": "inline-comment-invalid",
+      "sources": [
+        "SRC01",
+        "SRC08"
+      ]
+    }
+  ],
+  "knownUpstreamError": [
+    {
+      "id": "F012-UPSTREAM-ELLIPSE",
+      "caseId": "ellipse-upstream",
+      "sources": [
+        "SRC01",
+        "SRC02",
+        "SRC10"
+      ],
+      "expected": "parse succeeds with ellipse kind; rendering explicitly fails UPSTREAM_SHAPE_MISSING"
+    }
+  ],
+  "f011AssertionMigration": {
+    "beforeCommittedFileSha256": "6ffdf035d5438aa2782cf74cd6cb0e48d63841b435ce1fd51b47e318dceda3dd",
+    "method": "LanguageTests.test_valid_mermaid_outside_slice_rejected",
+    "promotedAssertions": [
+      "round node",
+      "diamond node",
+      "circle node",
+      "pipe edge label",
+      "basic subgraph"
+    ],
+    "replacement": "LanguageTests.test_f012_promoted_features_have_positive_semantics",
+    "policy": "Five prior excluded cases explicitly gain positive semantic assertions. Remaining exclusions retained; no skip, deletion of difficult expectation or changed accepted fixture.",
+    "updatedFileSha256": "76e04a7070762d74dd4fe1ba0f3053548491da17c22c8611381c17d144ac2f95"
+  },
+  "entry": "PYTHONPATH=src python -m unittest discover -s tests/f012 -p test_language.py -v",
+  "mechanicalEvidence": "test-runs/f012-s3-language-collect-20261104T144454Z/manifest.json",
+  "expectationIndependence": "All semantic graphs, groups/member order, shape names, labels and invalid inputs authored by hand from pinned source/spec. Candidate parser used only for import/collection; never called to produce expected values.",
+  "designBoundaries": [
+    "Original 33 render-positive fixtures exclude known-broken unnamed empty subgraph source path; explicit-ID empty subgraph and group-only semantics are covered.",
+    "Ellipse is a parse-positive/render-error fixture, not an official parse-invalid negative.",
+    "Members are direct DB members, groups are close order, colors independently use containment preorder.",
+    "Root directions remain TD/LR; all five group direction spellings represented in tests.",
+    "Other arrow/marker/styles/rich label/new shape metadata exclusions are tested separately from official-invalid fixtures.",
+    "Installation validation remains deferred by user instruction.",
+    "No behavioral test body or rendering was run in S3."
+  ],
+  "staticQuestions": [
+    "Source shape-specific quote handling and actual line break acceptance may differ by lexer state; first independent S4 run and official capture must retain any discrepancy.",
+    "Cross-hierarchy direction behavior uses a different pyelk algorithm baseline; parser preserves source direction and must not precompensate."
+  ],
+  "files": [
+    {
+      "path": "tests/f012/test_language.py",
+      "sha256": "24433284fff86a8275cb9bffce2b406ff9b52dd26ccaffa6a2cb0e144f05810a"
+    },
+    {
+      "path": "tests/f012/cases.json",
+      "sha256": "8c781f539212f0391ad77b28cedb118f4aa695335794bd00fe12986b32f9cf0f"
+    },
+    {
+      "path": "tests/f011/test_language.py",
+      "sha256": "76e04a7070762d74dd4fe1ba0f3053548491da17c22c8611381c17d144ac2f95"
+    }
+  ],
+  "collectionProbeCorrection": {
+    "previousRun": "test-runs/f012-s3-language-20261104T144433Z/manifest.json",
+    "reason": "Collecting two same-named test_language modules in one interpreter triggered unittest module import collision. Separate interpreter collection fixes the probe; test modules and product unchanged. No test body executed in either run."
+  },
+  "s4RegressionAppendix": {
+    "phase": "F01.2-S4",
+    "originalPositiveCount": 33,
+    "originalIds": [
+      "shape-square",
+      "shape-round",
+      "shape-stadium",
+      "shape-subroutine",
+      "shape-cylinder",
+      "shape-circle",
+      "shape-doublecircle",
+      "shape-diamond",
+      "shape-hexagon",
+      "shape-odd",
+      "shape-trapezoid",
+      "shape-inv_trapezoid",
+      "shape-lean_right",
+      "shape-lean_left",
+      "edge-label-pipe",
+      "edge-label-inline",
+      "edge-label-unicode-multiline",
+      "nested-groups",
+      "cross-group-nodes",
+      "group-endpoints",
+      "ancestor-group-endpoint",
+      "repeated-group",
+      "subgraph-direction",
+      "inherit-root-direction",
+      "empty-group",
+      "groups-only",
+      "selfloop-label",
+      "parallel-edge-labels",
+      "forward-group-endpoint",
+      "automatic-group-ids",
+      "nested-automatic-group-ids",
+      "first-group-membership",
+      "nested-repeated-id"
+    ],
+    "addedCaseIds": [
+      "long-group-title",
+      "enhanced-overview"
+    ],
+    "newPositiveCount": 35,
+    "beforeSnapshot": "test-runs/F01.2-report-regression-design-20261104T145053Z-e877db87/artifacts/cases-before.json",
+    "evidence": "test-runs/F01.2-report-regression-design-20261104T145053Z-e877db87/run.json",
+    "unchangedOriginalOracleEvidence": "test-runs/f012-s4-oracle-initial-002",
+    "expectationSource": "Handwritten from existing pinned grammar and FlowDB membership semantics; no product parser or renderer called."
+  }
+}

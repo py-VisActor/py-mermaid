@@ -1,3 +1,5 @@
-* text=auto eol=lf
+# Validation manifests hash exact source/evidence bytes. Keep checkout and
+# staged bytes identical on every platform; do not normalize existing CRLF.
+* -text whitespace=cr-at-eol
 *.png binary
 *.woff2 binary

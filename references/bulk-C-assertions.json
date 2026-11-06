@@ -1,0 +1,4147 @@
+{
+  "schema": "py-mermaid-bulk-assertions/v1",
+  "group": "C",
+  "phase": "P2",
+  "candidateSourceSha256": "97b353ebf7e176a750a736a714c85638e0a497b722e451dc77570579a2d36cbb",
+  "status": "designed_not_executed",
+  "counts": {
+    "discoveredMethods": 331,
+    "byModule": {
+      "info": 3,
+      "railroad4": 68,
+      "sequence": 53,
+      "routing": 30,
+      "zenuml": 177
+    },
+    "staticPythonAssertionCallSites": 243,
+    "literalRailroadSourceCases": 60,
+    "literalRailroadOriginalAssertions": 136,
+    "zenSourceVisualCases": 148,
+    "emojiReferenceRows": 93,
+    "emojiDirectExpectedComparisons": 186,
+    "arrowParameterRows": 26,
+    "actorParameterRows": 8,
+    "signatureParameterRows": 11,
+    "nativeAsyncMethods": 9,
+    "fixtures": 302,
+    "fixtureKinds": {
+      "sequence": 63,
+      "railroad": 26,
+      "railroadEbnf": 12,
+      "railroadAbnf": 10,
+      "railroadPeg": 12,
+      "zenuml": 176,
+      "info": 3
+    },
+    "fixtureExpectations": {
+      "render": 294,
+      "syntax_error": 8
+    }
+  },
+  "blocks": [
+    {
+      "id": "C-sequence",
+      "tests": "tests/bulk/c/test_sequence.py",
+      "source": [
+        "packages/mermaid/src/diagrams/sequence/parser/sequenceDiagram.jison",
+        "packages/mermaid/src/diagrams/sequence/sequenceDb.ts",
+        "packages/mermaid/src/diagrams/sequence/actorBands.ts",
+        "packages/mermaid/src/diagrams/sequence/svgDraw.js"
+      ],
+      "coverage": [
+        "26 literal arrow spellings",
+        "8 participant kinds",
+        "implicit/declaration/aliases/keyword/prototype ids",
+        "activation stack/shorthand",
+        "notes three placements",
+        "autonumber decimals/zero/default/off/config and thousandths boundary",
+        "create/destroy matching errors",
+        "all loop/opt/alt/par/par_over/critical/break/rect and nested section order",
+        "box membership",
+        "wrap/nowrap/newline/entities and property metadata",
+        "classic/neo glyph bands and actor/database label alignment",
+        "actual PNG per-label ink and styled parent text pixels"
+      ]
+    },
+    {
+      "id": "C-railroad4",
+      "tests": "tests/bulk/c/test_railroad.py",
+      "source": [
+        "packages/mermaid/src/diagrams/railroad/parser/railroadDiagram.spec.ts",
+        "packages/mermaid/src/diagrams/railroad/parser/ebnfDiagram.spec.ts",
+        "packages/mermaid/src/diagrams/railroad/parser/abnfDiagram.spec.ts",
+        "packages/mermaid/src/diagrams/railroad/parser/pegDiagram.spec.ts",
+        "packages/mermaid/src/diagrams/railroad/railroadDb.ts",
+        "packages/mermaid/src/diagrams/railroad/railroadRenderer.ts"
+      ],
+      "coverage": [
+        "60 exact literal input source cases",
+        "136 original toBe/toHaveLength assertions, AST field mapping only",
+        "negative missing header/semicolon/unterminated string",
+        "DB duplicate array order versus map overwrite",
+        "ABNF numeric spellings and PEG predicates",
+        "recursive source size formulas and real PNG leaf text",
+        "source-unconsumed compactMode/showMarkers retained"
+      ]
+    },
+    {
+      "id": "C-zenuml",
+      "tests": "tests/bulk/c/test_zenuml.py",
+      "repository": "zenuml-core",
+      "source": [
+        "test/unit/parser",
+        "src/svg/buildGeometry.ts",
+        "src/svg/icons.ts",
+        "src/positioning/david/DavidEisenstat.ts",
+        "src/emoji/builtinEmojis.ts",
+        "src/emoji/resolveEmoji.spec.ts",
+        "e2e/data/compare-cases.js"
+      ],
+      "coverage": [
+        "148 exact source CASES literal fixtures and separately discovered semantic methods",
+        "11 signature/assignment parameter rows",
+        "participant group/type/stereotype/width/alias/starter",
+        "sync/async/self/nested returns/creation/ref/divider/if/elseif/try/catch/finally/control fragments",
+        "93 independent builtin Unicode reference rows with colon and CSS-first collision",
+        "all11 builtin icon types and6 vendor source-byte SHA/ratio/color assertions",
+        "exact two-node numerical solution and feasible/minimal multi-node span constraints",
+        "actual PNG nested message/return content and known source resources"
+      ]
+    },
+    {
+      "id": "C-info",
+      "tests": "tests/bulk/c/test_info.py",
+      "source": [
+        "packages/mermaid/src/diagrams/info/infoRenderer.ts"
+      ],
+      "coverage": [
+        "showInfo/title/negative syntax",
+        "fixed v12.2.0 text,32px,400x100 and real ink"
+      ]
+    },
+    {
+      "id": "C-swimlane-routing",
+      "tests": "tests/bulk/c/test_swimlane_routing.py",
+      "source": [
+        "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/direction/geometry.spec.ts",
+        "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/direction.materializedGeometry.spec.ts",
+        "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/orthogonalRouter/__tests__/raykov.repro_crossing.spec.ts",
+        "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/orthogonalRouter/router.ts",
+        "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/postProcessing.ts"
+      ],
+      "coverage": [
+        "literal strict/T/shared/collinear/diagonal epsilon tables",
+        "real node bounds, exclusions/shrink",
+        "source port path matrix and simplification",
+        "four directions and title band rects",
+        "corner clearance and duplicate handoff idempotence",
+        "label middle segment/lane reparenting",
+        "source materialized16pixel terminal lane gap",
+        "source hugging rail y=-20 and transactional crossings1->0 and2->0",
+        "independent determinant crossing helper, not product geometry",
+        "A* blocker avoidance/cardinal ports/fanout/collinear chain",
+        "opaque fields preserved and layout-only virtual edges removed"
+      ]
+    }
+  ],
+  "exactRailroadAssertions": [
+    {
+      "id": "railroad-spec-000",
+      "kind": "railroad",
+      "name": "should parse terminal",
+      "source": "\n        railroad-beta\n        rule = terminal(\"hello\") ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/railroadDiagram.spec.ts",
+      "line": 11,
+      "checks": [
+        {
+          "path": [
+            "rules"
+          ],
+          "op": "length",
+          "value": 1
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "name"
+          ],
+          "op": "equal",
+          "value": "rule"
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "kind"
+          ],
+          "op": "equal",
+          "value": "terminal"
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "text"
+          ],
+          "op": "equal",
+          "value": "hello"
+        }
+      ]
+    },
+    {
+      "id": "railroad-spec-001",
+      "kind": "railroad",
+      "name": "should parse nonterminal",
+      "source": "\n        railroad-beta\n        rule = nonterminal(\"expression\") ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/railroadDiagram.spec.ts",
+      "line": 27,
+      "checks": [
+        {
+          "path": [
+            "rules"
+          ],
+          "op": "length",
+          "value": 1
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "kind"
+          ],
+          "op": "equal",
+          "value": "nonterminal"
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "text"
+          ],
+          "op": "equal",
+          "value": "expression"
+        }
+      ]
+    },
+    {
+      "id": "railroad-spec-002",
+      "kind": "railroad",
+      "name": "should parse sequence",
+      "source": "\n        railroad-beta\n        rule = sequence(terminal(\"a\"), terminal(\"b\"), terminal(\"c\")) ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/railroadDiagram.spec.ts",
+      "line": 42,
+      "checks": [
+        {
+          "path": [
+            "rules"
+          ],
+          "op": "length",
+          "value": 1
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "kind"
+          ],
+          "op": "equal",
+          "value": "sequence"
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "children"
+          ],
+          "op": "length",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "railroad-spec-003",
+      "kind": "railroad",
+      "name": "should collapse single-element sequence",
+      "source": "\n        railroad-beta\n        rule = sequence(terminal(\"a\")) ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/railroadDiagram.spec.ts",
+      "line": 57,
+      "checks": [
+        {
+          "path": [
+            "rules"
+          ],
+          "op": "length",
+          "value": 1
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "kind"
+          ],
+          "op": "equal",
+          "value": "terminal"
+        }
+      ]
+    },
+    {
+      "id": "railroad-spec-004",
+      "kind": "railroad",
+      "name": "should parse choice",
+      "source": "\n        railroad-beta\n        rule = choice(terminal(\"a\"), terminal(\"b\"), terminal(\"c\")) ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/railroadDiagram.spec.ts",
+      "line": 69,
+      "checks": [
+        {
+          "path": [
+            "rules"
+          ],
+          "op": "length",
+          "value": 1
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "kind"
+          ],
+          "op": "equal",
+          "value": "choice"
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "children"
+          ],
+          "op": "length",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "railroad-spec-005",
+      "kind": "railroad",
+      "name": "should collapse single-element choice",
+      "source": "\n        railroad-beta\n        rule = choice(terminal(\"a\")) ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/railroadDiagram.spec.ts",
+      "line": 84,
+      "checks": [
+        {
+          "path": [
+            "rules"
+          ],
+          "op": "length",
+          "value": 1
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "kind"
+          ],
+          "op": "equal",
+          "value": "terminal"
+        }
+      ]
+    },
+    {
+      "id": "railroad-spec-006",
+      "kind": "railroad",
+      "name": "should parse optional",
+      "source": "\n        railroad-beta\n        rule = optional(terminal(\"a\")) ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/railroadDiagram.spec.ts",
+      "line": 96,
+      "checks": [
+        {
+          "path": [
+            "rules"
+          ],
+          "op": "length",
+          "value": 1
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "kind"
+          ],
+          "op": "equal",
+          "value": "optional"
+        }
+      ]
+    },
+    {
+      "id": "railroad-spec-007",
+      "kind": "railroad",
+      "name": "should parse zeroOrMore",
+      "source": "\n        railroad-beta\n        rule = zeroOrMore(terminal(\"a\")) ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/railroadDiagram.spec.ts",
+      "line": 108,
+      "checks": [
+        {
+          "path": [
+            "rules"
+          ],
+          "op": "length",
+          "value": 1
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "kind"
+          ],
+          "op": "equal",
+          "value": "repetition"
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "minimum"
+          ],
+          "op": "equal",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "railroad-spec-008",
+      "kind": "railroad",
+      "name": "should parse oneOrMore",
+      "source": "\n        railroad-beta\n        rule = oneOrMore(terminal(\"a\")) ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/railroadDiagram.spec.ts",
+      "line": 123,
+      "checks": [
+        {
+          "path": [
+            "rules"
+          ],
+          "op": "length",
+          "value": 1
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "kind"
+          ],
+          "op": "equal",
+          "value": "repetition"
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "minimum"
+          ],
+          "op": "equal",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "railroad-spec-009",
+      "kind": "railroad",
+      "name": "should parse special",
+      "source": "\n        railroad-beta\n        rule = special(\"any character\") ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/railroadDiagram.spec.ts",
+      "line": 138,
+      "checks": [
+        {
+          "path": [
+            "rules"
+          ],
+          "op": "length",
+          "value": 1
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "kind"
+          ],
+          "op": "equal",
+          "value": "special"
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "text"
+          ],
+          "op": "equal",
+          "value": "any character"
+        }
+      ]
+    },
+    {
+      "id": "railroad-spec-010",
+      "kind": "railroad",
+      "name": "should parse title",
+      "source": "\n        railroad-beta\n        title \"Test Grammar\"\n        rule = terminal(\"a\") ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/railroadDiagram.spec.ts",
+      "line": 153,
+      "checks": [
+        {
+          "path": [
+            "title"
+          ],
+          "op": "equal",
+          "value": "Test Grammar"
+        }
+      ]
+    },
+    {
+      "id": "railroad-spec-011",
+      "kind": "railroad",
+      "name": "should parse multiple rules",
+      "source": "\n        railroad-beta\n        rule1 = terminal(\"a\") ;\n        rule2 = terminal(\"b\") ;\n        rule3 = terminal(\"c\") ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/railroadDiagram.spec.ts",
+      "line": 166,
+      "checks": [
+        {
+          "path": [
+            "rules"
+          ],
+          "op": "length",
+          "value": 3
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "name"
+          ],
+          "op": "equal",
+          "value": "rule1"
+        },
+        {
+          "path": [
+            "rules",
+            1,
+            "name"
+          ],
+          "op": "equal",
+          "value": "rule2"
+        },
+        {
+          "path": [
+            "rules",
+            2,
+            "name"
+          ],
+          "op": "equal",
+          "value": "rule3"
+        }
+      ]
+    },
+    {
+      "id": "railroad-spec-012",
+      "kind": "railroad",
+      "name": "should handle nested structures",
+      "source": "\n        railroad-beta\n        rule = sequence(\n            choice(terminal(\"a\"), terminal(\"b\")),\n            oneOrMore(choice(terminal(\"c\"), terminal(\"d\")))\n        ) ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/railroadDiagram.spec.ts",
+      "line": 182,
+      "checks": [
+        {
+          "path": [
+            "rules"
+          ],
+          "op": "length",
+          "value": 1
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "kind"
+          ],
+          "op": "equal",
+          "value": "sequence"
+        }
+      ]
+    },
+    {
+      "id": "railroad-spec-013",
+      "kind": "railroad",
+      "name": "should parse complex expression grammar",
+      "source": "\n        railroad-beta\n        digit = choice(\n            terminal(\"0\"), terminal(\"1\"), terminal(\"2\"),\n            terminal(\"3\"), terminal(\"4\"), terminal(\"5\"),\n            terminal(\"6\"), terminal(\"7\"), terminal(\"8\"), terminal(\"9\")\n        ) ;\n        number = oneOrMore(nonterminal(\"digit\")) ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/railroadDiagram.spec.ts",
+      "line": 197,
+      "checks": [
+        {
+          "path": [
+            "rules"
+          ],
+          "op": "length",
+          "value": 2
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "name"
+          ],
+          "op": "equal",
+          "value": "digit"
+        },
+        {
+          "path": [
+            "rules",
+            1,
+            "name"
+          ],
+          "op": "equal",
+          "value": "number"
+        }
+      ]
+    },
+    {
+      "id": "railroad-spec-014",
+      "kind": "railroad",
+      "name": "should throw on missing railroad-beta keyword",
+      "source": "\n        rule = terminal(\"a\") ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/railroadDiagram.spec.ts",
+      "line": 217,
+      "checks": []
+    },
+    {
+      "id": "railroad-spec-015",
+      "kind": "railroad",
+      "name": "should throw on missing semicolon",
+      "source": "\n        railroad-beta\n        rule = terminal(\"a\")\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/railroadDiagram.spec.ts",
+      "line": 225,
+      "checks": []
+    },
+    {
+      "id": "railroad-spec-016",
+      "kind": "railroad",
+      "name": "should throw on unterminated string",
+      "source": "\n        railroad-beta\n        rule = terminal(\"unclosed) ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/railroadDiagram.spec.ts",
+      "line": 234,
+      "checks": []
+    },
+    {
+      "id": "railroad-spec-017",
+      "kind": "railroad",
+      "name": "should handle empty rules list",
+      "source": "\n        railroad-beta\n        title \"Empty Grammar\"\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/railroadDiagram.spec.ts",
+      "line": 245,
+      "checks": [
+        {
+          "path": [
+            "rules"
+          ],
+          "op": "length",
+          "value": 0
+        },
+        {
+          "path": [
+            "title"
+          ],
+          "op": "equal",
+          "value": "Empty Grammar"
+        }
+      ]
+    },
+    {
+      "id": "railroad-spec-018",
+      "kind": "railroad",
+      "name": "should handle whitespace in strings",
+      "source": "\n        railroad-beta\n        rule = terminal(\"hello world\") ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/railroadDiagram.spec.ts",
+      "line": 257,
+      "checks": [
+        {
+          "path": [
+            "rules"
+          ],
+          "op": "length",
+          "value": 1
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "text"
+          ],
+          "op": "equal",
+          "value": "hello world"
+        }
+      ]
+    },
+    {
+      "id": "railroad-spec-019",
+      "kind": "railroad",
+      "name": "should handle underscore in rule names",
+      "source": "\n        railroad-beta\n        my_rule = terminal(\"test\") ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/railroadDiagram.spec.ts",
+      "line": 271,
+      "checks": [
+        {
+          "path": [
+            "rules"
+          ],
+          "op": "length",
+          "value": 1
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "name"
+          ],
+          "op": "equal",
+          "value": "my_rule"
+        }
+      ]
+    },
+    {
+      "id": "railroad-spec-020",
+      "kind": "railroad",
+      "name": "should handle numbers in rule names",
+      "source": "\n        railroad-beta\n        rule123 = terminal(\"test\") ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/railroadDiagram.spec.ts",
+      "line": 283,
+      "checks": [
+        {
+          "path": [
+            "rules"
+          ],
+          "op": "length",
+          "value": 1
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "name"
+          ],
+          "op": "equal",
+          "value": "rule123"
+        }
+      ]
+    },
+    {
+      "id": "railroad-spec-021",
+      "kind": "railroad",
+      "name": "should parse deeply nested IR",
+      "source": "\n        railroad-beta\n        rule = sequence(\n            choice(terminal(\"a\"), terminal(\"b\")),\n            choice(terminal(\"c\"), terminal(\"d\"))\n        ) ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/railroadDiagram.spec.ts",
+      "line": 295,
+      "checks": [
+        {
+          "path": [
+            "rules"
+          ],
+          "op": "length",
+          "value": 1
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "kind"
+          ],
+          "op": "equal",
+          "value": "sequence"
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "children"
+          ],
+          "op": "length",
+          "value": 2
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "children",
+            0,
+            "kind"
+          ],
+          "op": "equal",
+          "value": "choice"
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "children",
+            1,
+            "kind"
+          ],
+          "op": "equal",
+          "value": "choice"
+        }
+      ]
+    },
+    {
+      "id": "railroad-spec-022",
+      "kind": "railroad",
+      "name": "should parse zeroOrMore with choice",
+      "source": "\n        railroad-beta\n        rule = zeroOrMore(choice(terminal(\"a\"), terminal(\"b\"))) ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/railroadDiagram.spec.ts",
+      "line": 315,
+      "checks": [
+        {
+          "path": [
+            "rules"
+          ],
+          "op": "length",
+          "value": 1
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "kind"
+          ],
+          "op": "equal",
+          "value": "repetition"
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "children",
+            0,
+            "kind"
+          ],
+          "op": "equal",
+          "value": "choice"
+        }
+      ]
+    },
+    {
+      "id": "railroad-spec-023",
+      "kind": "railroad",
+      "name": "should parse block comments",
+      "source": "\n        railroad-beta\n        /* this is a comment */\n        rule = terminal(\"a\") ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/railroadDiagram.spec.ts",
+      "line": 330,
+      "checks": [
+        {
+          "path": [
+            "rules"
+          ],
+          "op": "length",
+          "value": 1
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "kind"
+          ],
+          "op": "equal",
+          "value": "terminal"
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "text"
+          ],
+          "op": "equal",
+          "value": "a"
+        }
+      ]
+    },
+    {
+      "id": "railroad-spec-024",
+      "kind": "railroad",
+      "name": "should parse an expression grammar",
+      "source": "\n        railroad-beta\n        title \"Simple Expression\"\n        expression = sequence(\n            nonterminal(\"term\"),\n            zeroOrMore(sequence(\n                choice(terminal(\"+\"), terminal(\"-\")),\n                nonterminal(\"term\")\n            ))\n        ) ;\n        term = sequence(\n            nonterminal(\"factor\"),\n            zeroOrMore(sequence(\n                choice(terminal(\"*\"), terminal(\"/\")),\n                nonterminal(\"factor\")\n            ))\n        ) ;\n        factor = choice(\n            nonterminal(\"number\"),\n            sequence(terminal(\"(\"), nonterminal(\"expression\"), terminal(\")\"))\n        ) ;\n        number = oneOrMore(nonterminal(\"digit\")) ;\n        digit = choice(\n            terminal(\"0\"), terminal(\"1\"), terminal(\"2\"),\n            terminal(\"3\"), terminal(\"4\"), terminal(\"5\"),\n            terminal(\"6\"), terminal(\"7\"), terminal(\"8\"), terminal(\"9\")\n        ) ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/railroadDiagram.spec.ts",
+      "line": 348,
+      "checks": [
+        {
+          "path": [
+            "rules"
+          ],
+          "op": "length",
+          "value": 5
+        },
+        {
+          "path": [
+            "title"
+          ],
+          "op": "equal",
+          "value": "Simple Expression"
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "name"
+          ],
+          "op": "equal",
+          "value": "expression"
+        },
+        {
+          "path": [
+            "rules",
+            1,
+            "name"
+          ],
+          "op": "equal",
+          "value": "term"
+        },
+        {
+          "path": [
+            "rules",
+            2,
+            "name"
+          ],
+          "op": "equal",
+          "value": "factor"
+        },
+        {
+          "path": [
+            "rules",
+            3,
+            "name"
+          ],
+          "op": "equal",
+          "value": "number"
+        },
+        {
+          "path": [
+            "rules",
+            4,
+            "name"
+          ],
+          "op": "equal",
+          "value": "digit"
+        }
+      ]
+    },
+    {
+      "id": "railroad-spec-025",
+      "kind": "railroad",
+      "name": "should parse JSON grammar excerpt",
+      "source": "\n        railroad-beta\n        title \"JSON Subset\"\n        value = choice(\n            nonterminal(\"string\"),\n            nonterminal(\"number\"),\n            terminal(\"true\"),\n            terminal(\"false\"),\n            terminal(\"null\")\n        ) ;\n        string = sequence(\n            terminal(\"\\\"\"),\n            zeroOrMore(nonterminal(\"character\")),\n            terminal(\"\\\"\")\n        ) ;\n        number = oneOrMore(nonterminal(\"digit\")) ;\n        character = choice(nonterminal(\"letter\"), nonterminal(\"digit\")) ;\n        letter = choice(terminal(\"a\"), terminal(\"b\"), terminal(\"c\")) ;\n        digit = choice(terminal(\"0\"), terminal(\"1\"), terminal(\"2\")) ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/railroadDiagram.spec.ts",
+      "line": 389,
+      "checks": [
+        {
+          "path": [
+            "rules"
+          ],
+          "op": "length",
+          "value": 6
+        },
+        {
+          "path": [
+            "title"
+          ],
+          "op": "equal",
+          "value": "JSON Subset"
+        }
+      ]
+    },
+    {
+      "id": "railroadEbnf-spec-000",
+      "kind": "railroadEbnf",
+      "name": "should parse simple terminal",
+      "source": "\n        railroad-ebnf-beta\n        rule = \"terminal\" ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/ebnfDiagram.spec.ts",
+      "line": 11,
+      "checks": [
+        {
+          "path": [
+            "rules"
+          ],
+          "op": "length",
+          "value": 1
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "name"
+          ],
+          "op": "equal",
+          "value": "rule"
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "kind"
+          ],
+          "op": "equal",
+          "value": "terminal"
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "text"
+          ],
+          "op": "equal",
+          "value": "terminal"
+        }
+      ]
+    },
+    {
+      "id": "railroadEbnf-spec-001",
+      "kind": "railroadEbnf",
+      "name": "should parse non-terminal reference",
+      "source": "\n        railroad-ebnf-beta\n        rule = other_rule ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/ebnfDiagram.spec.ts",
+      "line": 27,
+      "checks": [
+        {
+          "path": [
+            "rules"
+          ],
+          "op": "length",
+          "value": 1
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "kind"
+          ],
+          "op": "equal",
+          "value": "nonterminal"
+        }
+      ]
+    },
+    {
+      "id": "railroadEbnf-spec-002",
+      "kind": "railroadEbnf",
+      "name": "should parse sequence",
+      "source": "\n        railroad-ebnf-beta\n        rule = \"a\" \"b\" \"c\" ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/ebnfDiagram.spec.ts",
+      "line": 39,
+      "checks": [
+        {
+          "path": [
+            "rules"
+          ],
+          "op": "length",
+          "value": 1
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "kind"
+          ],
+          "op": "equal",
+          "value": "sequence"
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "children"
+          ],
+          "op": "length",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "railroadEbnf-spec-003",
+      "kind": "railroadEbnf",
+      "name": "should parse choice",
+      "source": "\n        railroad-ebnf-beta\n        rule = \"a\" | \"b\" | \"c\" ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/ebnfDiagram.spec.ts",
+      "line": 54,
+      "checks": [
+        {
+          "path": [
+            "rules"
+          ],
+          "op": "length",
+          "value": 1
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "kind"
+          ],
+          "op": "equal",
+          "value": "choice"
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "children"
+          ],
+          "op": "length",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "railroadEbnf-spec-004",
+      "kind": "railroadEbnf",
+      "name": "should parse optional (W3C)",
+      "source": "\n        railroad-ebnf-beta\n        rule = \"a\"? ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/ebnfDiagram.spec.ts",
+      "line": 69,
+      "checks": [
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "kind"
+          ],
+          "op": "equal",
+          "value": "optional"
+        }
+      ]
+    },
+    {
+      "id": "railroadEbnf-spec-005",
+      "kind": "railroadEbnf",
+      "name": "should parse optional (ISO)",
+      "source": "\n        railroad-ebnf-beta\n        rule = [ \"a\" ] ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/ebnfDiagram.spec.ts",
+      "line": 78,
+      "checks": [
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "kind"
+          ],
+          "op": "equal",
+          "value": "optional"
+        }
+      ]
+    },
+    {
+      "id": "railroadEbnf-spec-006",
+      "kind": "railroadEbnf",
+      "name": "should parse repetition zero-or-more",
+      "source": "\n        railroad-ebnf-beta\n        rule = \"a\"* ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/ebnfDiagram.spec.ts",
+      "line": 87,
+      "checks": [
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "kind"
+          ],
+          "op": "equal",
+          "value": "repetition"
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "minimum"
+          ],
+          "op": "equal",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "railroadEbnf-spec-007",
+      "kind": "railroadEbnf",
+      "name": "should parse repetition one-or-more",
+      "source": "\n        railroad-ebnf-beta\n        rule = \"a\"+ ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/ebnfDiagram.spec.ts",
+      "line": 100,
+      "checks": [
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "kind"
+          ],
+          "op": "equal",
+          "value": "repetition"
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "minimum"
+          ],
+          "op": "equal",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "railroadEbnf-spec-008",
+      "kind": "railroadEbnf",
+      "name": "should parse ISO repetition",
+      "source": "\n        railroad-ebnf-beta\n        rule = { \"a\" } ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/ebnfDiagram.spec.ts",
+      "line": 113,
+      "checks": [
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "kind"
+          ],
+          "op": "equal",
+          "value": "repetition"
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "minimum"
+          ],
+          "op": "equal",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "railroadEbnf-spec-009",
+      "kind": "railroadEbnf",
+      "name": "should parse title",
+      "source": "\n        railroad-ebnf-beta\n        title \"Test Grammar\"\n        rule = \"a\" ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/ebnfDiagram.spec.ts",
+      "line": 126,
+      "checks": [
+        {
+          "path": [
+            "title"
+          ],
+          "op": "equal",
+          "value": "Test Grammar"
+        }
+      ]
+    },
+    {
+      "id": "railroadEbnf-spec-010",
+      "kind": "railroadEbnf",
+      "name": "should parse special sequence",
+      "source": "\n        railroad-ebnf-beta\n        rule = ? special ? ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/ebnfDiagram.spec.ts",
+      "line": 136,
+      "checks": [
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "kind"
+          ],
+          "op": "equal",
+          "value": "special"
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "text"
+          ],
+          "op": "equal",
+          "value": "special"
+        }
+      ]
+    },
+    {
+      "id": "railroadEbnf-spec-011",
+      "kind": "railroadEbnf",
+      "name": "should parse expression grammar",
+      "source": "\n        railroad-ebnf-beta\n        title \"Simple Expression\"\n        expression = term ( \"+\" term | \"-\" term )* ;\n        term = factor ( \"*\" factor | \"/\" factor )* ;\n        factor = number | \"(\" expression \")\" ;\n        number = digit+ ;\n        digit = \"0\" | \"1\" | \"2\" | \"3\" | \"4\" | \"5\" | \"6\" | \"7\" | \"8\" | \"9\" ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/ebnfDiagram.spec.ts",
+      "line": 151,
+      "checks": [
+        {
+          "path": [
+            "rules"
+          ],
+          "op": "length",
+          "value": 5
+        },
+        {
+          "path": [
+            "title"
+          ],
+          "op": "equal",
+          "value": "Simple Expression"
+        }
+      ]
+    },
+    {
+      "id": "railroadAbnf-spec-000",
+      "kind": "railroadAbnf",
+      "name": "should parse string literal",
+      "source": "\n        railroad-abnf-beta\n        rule = \"hello\" ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/abnfDiagram.spec.ts",
+      "line": 11,
+      "checks": [
+        {
+          "path": [
+            "rules"
+          ],
+          "op": "length",
+          "value": 1
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "name"
+          ],
+          "op": "equal",
+          "value": "rule"
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "kind"
+          ],
+          "op": "equal",
+          "value": "terminal"
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "text"
+          ],
+          "op": "equal",
+          "value": "hello"
+        }
+      ]
+    },
+    {
+      "id": "railroadAbnf-spec-001",
+      "kind": "railroadAbnf",
+      "name": "should parse numeric value",
+      "source": "\n        railroad-abnf-beta\n        rule = %x41 ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/abnfDiagram.spec.ts",
+      "line": 27,
+      "checks": [
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "kind"
+          ],
+          "op": "equal",
+          "value": "terminal"
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "text"
+          ],
+          "op": "equal",
+          "value": "%x41"
+        }
+      ]
+    },
+    {
+      "id": "railroadAbnf-spec-002",
+      "kind": "railroadAbnf",
+      "name": "should parse rule name reference",
+      "source": "\n        railroad-abnf-beta\n        rule = other-rule ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/abnfDiagram.spec.ts",
+      "line": 40,
+      "checks": [
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "kind"
+          ],
+          "op": "equal",
+          "value": "nonterminal"
+        }
+      ]
+    },
+    {
+      "id": "railroadAbnf-spec-003",
+      "kind": "railroadAbnf",
+      "name": "should parse concatenation",
+      "source": "\n        railroad-abnf-beta\n        rule = \"a\" \"b\" \"c\" ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/abnfDiagram.spec.ts",
+      "line": 49,
+      "checks": [
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "kind"
+          ],
+          "op": "equal",
+          "value": "sequence"
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "children"
+          ],
+          "op": "length",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "railroadAbnf-spec-004",
+      "kind": "railroadAbnf",
+      "name": "should parse alternation",
+      "source": "\n        railroad-abnf-beta\n        rule = \"a\" / \"b\" / \"c\" ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/abnfDiagram.spec.ts",
+      "line": 62,
+      "checks": [
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "kind"
+          ],
+          "op": "equal",
+          "value": "choice"
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "children"
+          ],
+          "op": "length",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "railroadAbnf-spec-005",
+      "kind": "railroadAbnf",
+      "name": "should parse optional group",
+      "source": "\n        railroad-abnf-beta\n        rule = [ \"a\" ] ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/abnfDiagram.spec.ts",
+      "line": 75,
+      "checks": [
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "kind"
+          ],
+          "op": "equal",
+          "value": "optional"
+        }
+      ]
+    },
+    {
+      "id": "railroadAbnf-spec-006",
+      "kind": "railroadAbnf",
+      "name": "should parse zero-or-more repetition",
+      "source": "\n        railroad-abnf-beta\n        rule = *\"a\" ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/abnfDiagram.spec.ts",
+      "line": 84,
+      "checks": [
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "kind"
+          ],
+          "op": "equal",
+          "value": "repetition"
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "minimum"
+          ],
+          "op": "equal",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "railroadAbnf-spec-007",
+      "kind": "railroadAbnf",
+      "name": "should parse one-or-more repetition",
+      "source": "\n        railroad-abnf-beta\n        rule = 1*\"a\" ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/abnfDiagram.spec.ts",
+      "line": 97,
+      "checks": [
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "kind"
+          ],
+          "op": "equal",
+          "value": "repetition"
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "minimum"
+          ],
+          "op": "equal",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "railroadAbnf-spec-008",
+      "kind": "railroadAbnf",
+      "name": "should parse title",
+      "source": "\n        railroad-abnf-beta\n        title \"Test Grammar\"\n        rule = \"a\" ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/abnfDiagram.spec.ts",
+      "line": 110,
+      "checks": [
+        {
+          "path": [
+            "title"
+          ],
+          "op": "equal",
+          "value": "Test Grammar"
+        }
+      ]
+    },
+    {
+      "id": "railroadAbnf-spec-009",
+      "kind": "railroadAbnf",
+      "name": "should parse URI-like grammar",
+      "source": "\n        railroad-abnf-beta\n        title \"URI\"\n        URI = scheme \":\" hier-part ;\n        scheme = ALPHA *( ALPHA / DIGIT / \"+\" / \"-\" / \".\" ) ;\n        hier-part = \"//\" authority path-abempty ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/abnfDiagram.spec.ts",
+      "line": 122,
+      "checks": [
+        {
+          "path": [
+            "rules"
+          ],
+          "op": "length",
+          "value": 3
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "name"
+          ],
+          "op": "equal",
+          "value": "URI"
+        },
+        {
+          "path": [
+            "rules",
+            1,
+            "name"
+          ],
+          "op": "equal",
+          "value": "scheme"
+        },
+        {
+          "path": [
+            "rules",
+            2,
+            "name"
+          ],
+          "op": "equal",
+          "value": "hier-part"
+        }
+      ]
+    },
+    {
+      "id": "railroadPeg-spec-000",
+      "kind": "railroadPeg",
+      "name": "should parse literal",
+      "source": "\n        railroad-peg-beta\n        rule <- \"hello\" ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/pegDiagram.spec.ts",
+      "line": 11,
+      "checks": [
+        {
+          "path": [
+            "rules"
+          ],
+          "op": "length",
+          "value": 1
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "name"
+          ],
+          "op": "equal",
+          "value": "rule"
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "kind"
+          ],
+          "op": "equal",
+          "value": "terminal"
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "text"
+          ],
+          "op": "equal",
+          "value": "hello"
+        }
+      ]
+    },
+    {
+      "id": "railroadPeg-spec-001",
+      "kind": "railroadPeg",
+      "name": "should parse identifier reference",
+      "source": "\n        railroad-peg-beta\n        rule <- other_rule ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/pegDiagram.spec.ts",
+      "line": 27,
+      "checks": [
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "kind"
+          ],
+          "op": "equal",
+          "value": "nonterminal"
+        }
+      ]
+    },
+    {
+      "id": "railroadPeg-spec-002",
+      "kind": "railroadPeg",
+      "name": "should parse sequence",
+      "source": "\n        railroad-peg-beta\n        rule <- \"a\" \"b\" \"c\" ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/pegDiagram.spec.ts",
+      "line": 36,
+      "checks": [
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "kind"
+          ],
+          "op": "equal",
+          "value": "sequence"
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "children"
+          ],
+          "op": "length",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "railroadPeg-spec-003",
+      "kind": "railroadPeg",
+      "name": "should parse ordered choice",
+      "source": "\n        railroad-peg-beta\n        rule <- \"a\" / \"b\" / \"c\" ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/pegDiagram.spec.ts",
+      "line": 49,
+      "checks": [
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "kind"
+          ],
+          "op": "equal",
+          "value": "choice"
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "children"
+          ],
+          "op": "length",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "railroadPeg-spec-004",
+      "kind": "railroadPeg",
+      "name": "should parse optional suffix",
+      "source": "\n        railroad-peg-beta\n        rule <- \"a\"? ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/pegDiagram.spec.ts",
+      "line": 62,
+      "checks": [
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "kind"
+          ],
+          "op": "equal",
+          "value": "optional"
+        }
+      ]
+    },
+    {
+      "id": "railroadPeg-spec-005",
+      "kind": "railroadPeg",
+      "name": "should parse zero-or-more suffix",
+      "source": "\n        railroad-peg-beta\n        rule <- \"a\"* ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/pegDiagram.spec.ts",
+      "line": 71,
+      "checks": [
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "kind"
+          ],
+          "op": "equal",
+          "value": "repetition"
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "minimum"
+          ],
+          "op": "equal",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "railroadPeg-spec-006",
+      "kind": "railroadPeg",
+      "name": "should parse one-or-more suffix",
+      "source": "\n        railroad-peg-beta\n        rule <- \"a\"+ ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/pegDiagram.spec.ts",
+      "line": 84,
+      "checks": [
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "kind"
+          ],
+          "op": "equal",
+          "value": "repetition"
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "minimum"
+          ],
+          "op": "equal",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "railroadPeg-spec-007",
+      "kind": "railroadPeg",
+      "name": "should parse any character",
+      "source": "\n        railroad-peg-beta\n        rule <- . ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/pegDiagram.spec.ts",
+      "line": 97,
+      "checks": [
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "kind"
+          ],
+          "op": "equal",
+          "value": "special"
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "text"
+          ],
+          "op": "equal",
+          "value": "."
+        }
+      ]
+    },
+    {
+      "id": "railroadPeg-spec-008",
+      "kind": "railroadPeg",
+      "name": "should parse lookahead prefix",
+      "source": "\n        railroad-peg-beta\n        rule <- &\"a\" ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/pegDiagram.spec.ts",
+      "line": 110,
+      "checks": [
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "kind"
+          ],
+          "op": "equal",
+          "value": "special"
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "text"
+          ],
+          "op": "equal",
+          "value": "&\"a\""
+        }
+      ]
+    },
+    {
+      "id": "railroadPeg-spec-009",
+      "kind": "railroadPeg",
+      "name": "should parse not-predicate prefix",
+      "source": "\n        railroad-peg-beta\n        rule <- !\"a\" ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/pegDiagram.spec.ts",
+      "line": 123,
+      "checks": [
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "kind"
+          ],
+          "op": "equal",
+          "value": "special"
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "definition",
+            "text"
+          ],
+          "op": "equal",
+          "value": "!\"a\""
+        }
+      ]
+    },
+    {
+      "id": "railroadPeg-spec-010",
+      "kind": "railroadPeg",
+      "name": "should parse title",
+      "source": "\n        railroad-peg-beta\n        title \"Test Grammar\"\n        rule <- \"a\" ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/pegDiagram.spec.ts",
+      "line": 136,
+      "checks": [
+        {
+          "path": [
+            "title"
+          ],
+          "op": "equal",
+          "value": "Test Grammar"
+        }
+      ]
+    },
+    {
+      "id": "railroadPeg-spec-011",
+      "kind": "railroadPeg",
+      "name": "should parse expression grammar",
+      "source": "\n        railroad-peg-beta\n        title \"Calculator\"\n        Expression <- Term ((\"+\" / \"-\") Term)* ;\n        Term <- Factor ((\"*\" / \"/\") Factor)* ;\n        Factor <- Number / \"(\" Expression \")\" ;\n        Number <- Digit+ ;\n        Digit <- \"0\" / \"1\" / \"2\" / \"3\" / \"4\" / \"5\" / \"6\" / \"7\" / \"8\" / \"9\" ;\n      ",
+      "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/pegDiagram.spec.ts",
+      "line": 148,
+      "checks": [
+        {
+          "path": [
+            "rules"
+          ],
+          "op": "length",
+          "value": 5
+        },
+        {
+          "path": [
+            "title"
+          ],
+          "op": "equal",
+          "value": "Calculator"
+        },
+        {
+          "path": [
+            "rules",
+            0,
+            "name"
+          ],
+          "op": "equal",
+          "value": "Expression"
+        }
+      ]
+    }
+  ],
+  "sourceSpecInventory": [
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/sequence/actorBandModel.spec.ts",
+      "sha256": "b472d732c6eece80546c7f0b87692afce90f15495253a328beaa03ec70adebbe",
+      "testDeclarations": 5,
+      "assertionSites": 12,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/sequence/actorSizing.spec.ts",
+      "sha256": "77f3886baac95c2ae02220cbf04531b84820ef9d248066b078aac2db7003d50c",
+      "testDeclarations": 6,
+      "assertionSites": 8,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/sequence/keywordActors.spec.ts",
+      "sha256": "b5a82c57a05e291311f384d29fd02fbdd890afcc5c4b089a77888eaa96d6a2ac",
+      "testDeclarations": 11,
+      "assertionSites": 16,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/sequence/lifelineStart.spec.ts",
+      "sha256": "b7f3d39dfbb385ecb7329ffce0e9ad2d79dfcacac89b1ceced2a24c6c31b6c06",
+      "testDeclarations": 6,
+      "assertionSites": 6,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/sequence/noteFontWeight.spec.ts",
+      "sha256": "3431c229d008afaae7ca24219e384b281692229fef42c71b509425b7650a8727",
+      "testDeclarations": 2,
+      "assertionSites": 4,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/sequence/palettePicking.spec.ts",
+      "sha256": "e47e673d55dadbbb99892586b1649103b8cee0ba95f2ea888503c1d4354832b8",
+      "testDeclarations": 8,
+      "assertionSites": 15,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/sequence/rectSectionFill.spec.ts",
+      "sha256": "903ab85ff0a581539cc543a8e247a4430d2e171a2c61f511f75f01d6e36a75d6",
+      "testDeclarations": 3,
+      "assertionSites": 3,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/sequence/sequenceDiagram.spec.js",
+      "sha256": "97e008d30f8d1ae2ff2f88d2eea0da6ab82f610df1a655daf1022fba23ed4d20",
+      "testDeclarations": 144,
+      "assertionSites": 622,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.spec.js",
+      "sha256": "7764bdaa1a0b2fd430018f9b84f36b388815f4564f2d90160fa7d07e5fcf1ea7",
+      "testDeclarations": 1,
+      "assertionSites": 4,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/sequence/svgDraw.spec.js",
+      "sha256": "ab181fd4e1af8a497c4dcb67a28448ccf087234540cd270c90c32cab56e0c5b5",
+      "testDeclarations": 11,
+      "assertionSites": 68,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/railroad/abnfDetector.spec.ts",
+      "sha256": "4b504bbc40f403dbf223637211ca1a89ea9ca231e19ecea246a5e80710569f27",
+      "testDeclarations": 6,
+      "assertionSites": 11,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/railroad/ebnfDetector.spec.ts",
+      "sha256": "821b71e722c1abfeac08e1644d85073cef15dc244c7a124f69523b80e5ccb5f6",
+      "testDeclarations": 6,
+      "assertionSites": 11,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/railroad/parser/abnfDiagram.spec.ts",
+      "sha256": "c7c05c81333ea050c7ece97549ad0cba0cdba9ea3af79bb90377b41e5d4dfe6c",
+      "testDeclarations": 12,
+      "assertionSites": 23,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/railroad/parser/ebnfDiagram.spec.ts",
+      "sha256": "61a418ee731a0306d22c0995418e765d4f61d77cfcba9a3064e8f3f7cb232ab4",
+      "testDeclarations": 14,
+      "assertionSites": 27,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/railroad/parser/pegDiagram.spec.ts",
+      "sha256": "2304b5b9a97df691bb7d9fd2fb0890ba0d1153e0ab5ccccefd62035ec7600363",
+      "testDeclarations": 14,
+      "assertionSites": 26,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/railroad/parser/railroadDiagram.spec.ts",
+      "sha256": "e205614e37a2ee1d9083d94835adb163a1ce83c3e3a2206c49a91156d148c1fc",
+      "testDeclarations": 26,
+      "assertionSites": 69,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/railroad/pegDetector.spec.ts",
+      "sha256": "d670ca97b4d15010812aecc3e298989d5451d5143140aac44f3be328ac06ec7a",
+      "testDeclarations": 6,
+      "assertionSites": 11,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/railroad/railroadDb.spec.ts",
+      "sha256": "8d0c9650f2b4b5c3cab893cd6f52ae07c211724497f6ef7bee094132191f81d9",
+      "testDeclarations": 12,
+      "assertionSites": 25,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/railroad/railroadDetector.spec.ts",
+      "sha256": "ae0bbd62d3a3f36a2aac86c17ac666996d14c32a899c94686b60a1db4e857ad2",
+      "testDeclarations": 14,
+      "assertionSites": 15,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/railroad/railroadRenderer.spec.ts",
+      "sha256": "b20084967a310157e8c1ed60a4e98dbc1dff18aa4c02be3d954f542cfb9dec33",
+      "testDeclarations": 6,
+      "assertionSites": 24,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/railroad/styles.spec.ts",
+      "sha256": "4b69b35b0a79afda9cc3ee6ab8de30a941b6391ab6c77b308547014794dfddd6",
+      "testDeclarations": 18,
+      "assertionSites": 67,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/info/info.spec.ts",
+      "sha256": "657636f92f1e8474f487ed841a2a0cc11c96cb512a80d9314297c6d30bc0f492",
+      "testDeclarations": 4,
+      "assertionSites": 4,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/10-node-placement.ddlt.spec.ts",
+      "sha256": "c451c091736b7797114eab00322506ee32709e450c53421eb0563aeba7219a81",
+      "testDeclarations": 6,
+      "assertionSites": 12,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/14-messy-layout.ddlt.spec.ts",
+      "sha256": "7e659f38a0b76c519ce31fe905872c291f5ad129b3b230279a076af3329fab8c",
+      "testDeclarations": 2,
+      "assertionSites": 5,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/15-border-hugging-compare.ddlt.spec.ts",
+      "sha256": "a4cab34b2a225c90da207c7dfdb11636185601aa43cce13e8a7c6bae93763cd2",
+      "testDeclarations": 1,
+      "assertionSites": 2,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/15-border-hugging-lr.ddlt.spec.ts",
+      "sha256": "bce0bb2387cd255875e68a56b97ed885ca630d690e9a9710b70d56db87dbfcae",
+      "testDeclarations": 1,
+      "assertionSites": 3,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/16-intake-cycle-lr.ddlt.spec.ts",
+      "sha256": "a19a87dd6f3d98c17b4360ac0384e4cde11c61fc01732ac89518b3b7805c95ab",
+      "testDeclarations": 2,
+      "assertionSites": 3,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/4-car-fun-sales-tb.ddlt.spec.ts",
+      "sha256": "f0da5e629d9e6a921d9601750144f5969341d4ff8875f24cda57d955b2f6ee8e",
+      "testDeclarations": 2,
+      "assertionSites": 3,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/5-car-fun-sales-wide-tb.ddlt.spec.ts",
+      "sha256": "459af201103b27acc02368067d6bd0ac2fdbecf2539f3c7118c166dd52a385ad",
+      "testDeclarations": 5,
+      "assertionSites": 19,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/6-legal-constr-sales.ddlt.spec.ts",
+      "sha256": "b7ab046b1d6617a220990178ca862db48c777a0240d9bc2061ef4a88e7e26a7a",
+      "testDeclarations": 3,
+      "assertionSites": 6,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/7-car-sales-constr.ddlt.spec.ts",
+      "sha256": "c2f458a679398eabbe1de737dc9f03cbed972c547a66d866dc40dc047c0c9b13",
+      "testDeclarations": 3,
+      "assertionSites": 8,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/8-query-process-2.ddlt.spec.ts",
+      "sha256": "50556fdf6e637e05d7f479ca844e59432793567b62d07948c40175a5f8ad11ee",
+      "testDeclarations": 5,
+      "assertionSites": 11,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/direction.endpointClip.spec.ts",
+      "sha256": "d5f4464147440f452a85b6bd2d24f7ec8a5f7312330546e088b5f615820f77d9",
+      "testDeclarations": 6,
+      "assertionSites": 6,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/direction.geometry.spec.ts",
+      "sha256": "79cd152880e3168cb23e1d40d8c5ca9844005eab6d1eb38d8c3fd4c283952d9f",
+      "testDeclarations": 5,
+      "assertionSites": 5,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/direction.lr.transform.spec.ts",
+      "sha256": "52bb7a98e45265602aedb61ea482966c3b9be549c0cf1eef4baec2c6114be23f",
+      "testDeclarations": 7,
+      "assertionSites": 29,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/direction.materializedGeometry.spec.ts",
+      "sha256": "e92ab09a5dbfc5bde0e417fb3f16c99058ac8d2d265f68241267e8a06121cc6f",
+      "testDeclarations": 10,
+      "assertionSites": 20,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/direction.portSwap.spec.ts",
+      "sha256": "d7af2b59c7515520c848e9340f60d0eb1b82b70a662fda99caba2d2a2591ab3c",
+      "testDeclarations": 1,
+      "assertionSites": 1,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/direction.sharedTrackNudging.spec.ts",
+      "sha256": "2a276e8404d62fd398b61bd0c739a355329901cdbeca10d90e50b1640d4c52d4",
+      "testDeclarations": 2,
+      "assertionSites": 6,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/direction.terminalStub.spec.ts",
+      "sha256": "94cc107785c019868ef59ab7435539c568fec4c36b98718bd03fcc849d71e36a",
+      "testDeclarations": 1,
+      "assertionSites": 1,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/edgeLabelNodes.spec.ts",
+      "sha256": "604b56287ee0b7ff2aa4addf440275258715dfedc9ebf3a12d62bd2ddc015467",
+      "testDeclarations": 5,
+      "assertionSites": 37,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/helpers.laneHeights.spec.ts",
+      "sha256": "04831a63e1ea01f08131cb992495d2e6af3ab6c4133f79389c7c9632ed5f8989",
+      "testDeclarations": 2,
+      "assertionSites": 5,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/helpers.prepareLayout.spec.ts",
+      "sha256": "deac880894b7799c614607ca3839759ea10942bdef5d69c8663de610010a3fde",
+      "testDeclarations": 5,
+      "assertionSites": 11,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/laneOrdering.spec.ts",
+      "sha256": "23cf8551a0069d46c7609aad271632bc298c7c7a920c812ae414ea545fc7bc21",
+      "testDeclarations": 3,
+      "assertionSites": 4,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/laneTitleBands.spec.ts",
+      "sha256": "b051002823c407d8d47604c6d98cbd27079d1d5a451ddc370304ced59a14bee1",
+      "testDeclarations": 5,
+      "assertionSites": 5,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/phase0.helpers.spec.ts",
+      "sha256": "b37f7e1c4ca36bb3e7b28b94ecb5101e576e8d9730190ea23c4e6dca02a808d7",
+      "testDeclarations": 6,
+      "assertionSites": 16,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/phase1.cycles.spec.ts",
+      "sha256": "64276cd100d601b55e36343e2499f171b910e6f2a634ea656ec2932f19e21976",
+      "testDeclarations": 8,
+      "assertionSites": 19,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/phase2.compact.lanes.spec.ts",
+      "sha256": "d69ac9b2302392518b29a29bae7411f175610251d31ac5ad7bad7835e3a19768",
+      "testDeclarations": 1,
+      "assertionSites": 3,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/phase2.compact.spec.ts",
+      "sha256": "a0171231bcbd2cc9fecd8ba7ba9dee5d16155e6160040be977ed6ab40e985a0f",
+      "testDeclarations": 1,
+      "assertionSites": 4,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/phase2.layering.spec.ts",
+      "sha256": "18416b60bb5ec3cd3bc773781a9331fed0b39d83fe76da1f3f590cd1d925a60e",
+      "testDeclarations": 7,
+      "assertionSites": 23,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/phase3.ordering.spec.ts",
+      "sha256": "5e1cac83f3a46469049a8db302306daa48d466302f2e262d1ebebd3303170c6f",
+      "testDeclarations": 4,
+      "assertionSites": 7,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/phase4.coordinates.spec.ts",
+      "sha256": "941861cec0e20d83cd6fa0570d98c5fe193a2e5264a587457d5af8ed0a7d6442",
+      "testDeclarations": 1,
+      "assertionSites": 6,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/phase4.lanes.columns.spec.ts",
+      "sha256": "d334be797e696687e719be62ae77aca2e1b644edc26a03a7c72186f5f0999d1f",
+      "testDeclarations": 1,
+      "assertionSites": 3,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/phase4.lanes.spec.ts",
+      "sha256": "4cc4fec9b2866fdd132b719a97672e1f50504cc8ff23f43f17bbeac72447a395",
+      "testDeclarations": 1,
+      "assertionSites": 1,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/phase5.pipeline.spec.ts",
+      "sha256": "692e29612e41356e96d6dcc2bd70e37c002e2ecd3a8ddae83c8a320b7e7e9cdd",
+      "testDeclarations": 3,
+      "assertionSites": 7,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/pipeline.hoe.lr.spec.ts",
+      "sha256": "804765759b8ec69d4e3f0635db396c952e00aa5ccd08b69055c5dfe4cc318dce",
+      "testDeclarations": 4,
+      "assertionSites": 5,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/pipeline.knsv3.lr.spec.ts",
+      "sha256": "1ad2dbab2125514810ca4d8912788bc84c11958a7b2d462c5b7f7e638f1ecdce",
+      "testDeclarations": 3,
+      "assertionSites": 8,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/pipeline.lr.e2e.spec.ts",
+      "sha256": "ed4919b9631d5b35571eaa73c658a02f853d7ec3e5dafd704e933a1d23063d44",
+      "testDeclarations": 1,
+      "assertionSites": 3,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/postProcessing.spec.ts",
+      "sha256": "8dbfba387f80c40b884a1dadbdadce5f41ede89b629dbc771a316353012558d1",
+      "testDeclarations": 1,
+      "assertionSites": 5,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/sameRankDetour.spec.ts",
+      "sha256": "240aa1fb22ace9cd4b56071ac8e5fa2237872f4fc42ff60cea40e5834e63915f",
+      "testDeclarations": 1,
+      "assertionSites": 1,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/sourceOrder.spec.ts",
+      "sha256": "531f22ac221733754c91c6d5bfee9f6aa05ccd934a9706d59b6eab431952480f",
+      "testDeclarations": 4,
+      "assertionSites": 5,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/direction/geometry.spec.ts",
+      "sha256": "0153bfe8ce71d50f2daad54d466bb50b2ce7c5a08e4f556da641ae2bfd6c36d1",
+      "testDeclarations": 12,
+      "assertionSites": 25,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/mermaid-work.ddlt.spec.ts",
+      "sha256": "b7edad9026f036ffd08d4929ba4a1fef67191c6242b9f372a32b0fdfdae76337",
+      "testDeclarations": 4,
+      "assertionSites": 18,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/orthogonalRouter/__tests__/raykov.crossing.spec.ts",
+      "sha256": "ba89fa3150ea20cf4eae07349ec6609325942dc4533e2c83c84b3281dacdbefa",
+      "testDeclarations": 1,
+      "assertionSites": 1,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/orthogonalRouter/__tests__/raykov.detour.spec.ts",
+      "sha256": "281398219d39a64af44c242be73e1e18e3ade56e46f2abfab353b1f6cba00f47",
+      "testDeclarations": 1,
+      "assertionSites": 4,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/orthogonalRouter/__tests__/raykov.issues.spec.ts",
+      "sha256": "8b3e20027b65b06f62e1f8a040aad787e6e115bd78628e31d9d307ea75f95458",
+      "testDeclarations": 10,
+      "assertionSites": 36,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/orthogonalRouter/__tests__/raykov.repro_crossing.spec.ts",
+      "sha256": "98c24287fffbe2847af92a5c6d8b045f65c521d9f62fa79624aab1105954f81a",
+      "testDeclarations": 3,
+      "assertionSites": 12,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/orthogonalRouter/__tests__/raykov.router.spec.ts",
+      "sha256": "5fb6ea10d6c782cc5f4fe2456c872287deba3419c6682a0258752d41a4f3b208",
+      "testDeclarations": 13,
+      "assertionSites": 48,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/orthogonalRouter/__tests__/raykov.wide_node.spec.ts",
+      "sha256": "d6fff7f8877dd3777e9cbd6a835c4dae156ece92ac93b020822328f4bfe4b712",
+      "testDeclarations": 3,
+      "assertionSites": 3,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/pebr-3-process-too-wide-in-lane.ddlt.spec.ts",
+      "sha256": "ca512fb0fef5b56a114b70c3c448fcf7133ac4f2993290c736ad2575dd8583f8",
+      "testDeclarations": 1,
+      "assertionSites": 5,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/phase2.layering.spec.ts",
+      "sha256": "cf5ff6433e5de2cadf7163c69e1cb92deca325bfb64b9ee566ad4fb77a049271",
+      "testDeclarations": 2,
+      "assertionSites": 3,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/query-process.ddlt.spec.ts",
+      "sha256": "46dc44584b42cf70f8868aa025c1e2849a04b8b500fee31a1b687fedaa319380",
+      "testDeclarations": 10,
+      "assertionSites": 17,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/simple-2.ddlt.spec.ts",
+      "sha256": "9c081dc397bcadb9d67cb708a5499ce4800e31079d16e3946e3d66cc6077cf5d",
+      "testDeclarations": 4,
+      "assertionSites": 11,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/addons/Owner.spec.ts",
+      "sha256": "9d72d6d74d678b64366878e9cb066d33b33fe78fc68ad64ce2f9186b709c321c",
+      "testDeclarations": 4,
+      "assertionSites": 4,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/alt.spec.js",
+      "sha256": "f840c5bd00350d937eea2156ec12bef065155548ce1ff5ed63a15a460643a31a",
+      "testDeclarations": 5,
+      "assertionSites": 11,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/async-message.spec.js",
+      "sha256": "9e59467b4edca693d6bc7dda5d4d8a7f4f2d8c3e539a002c4c7e0caabdcac148",
+      "testDeclarations": 1,
+      "assertionSites": 4,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/chain-message.spec.js",
+      "sha256": "5ac51ae78ab6aa6fb43e5f6837e9ead75aac683cb626baa3946a8e88c075d1df",
+      "testDeclarations": 5,
+      "assertionSites": 6,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/child-fragment-detector.spec.js",
+      "sha256": "d2e91455aeaea8e4579b100e4c455b33caca70c988fbb9e6d130e605e5317331",
+      "testDeclarations": 6,
+      "assertionSites": 6,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/comment.spec.js",
+      "sha256": "4aadcfce75b107cee6fff24b28a291eca35a596399bc3de766f5f5ae824e87ad",
+      "testDeclarations": 4,
+      "assertionSites": 4,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/condition/Condition.spec.ts",
+      "sha256": "097ed136d3ec3d9919c1e1b5311b7111da09b5a6b0b3657f1ba3a3c370664f58",
+      "testDeclarations": 2,
+      "assertionSites": 2,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/critical-condition.spec.ts",
+      "sha256": "4378af2a40b56f89e0d466e170688a315496564f34b6125691c7489a93bccde2",
+      "testDeclarations": 7,
+      "assertionSites": 9,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/critical.spec.js",
+      "sha256": "9f2ff82fc47e003a480acb929b7fedaa3f16bbf7dd806e5c3696bd7df425161a",
+      "testDeclarations": 2,
+      "assertionSites": 7,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/digit-leading-name.spec.ts",
+      "sha256": "2bac5e3107c9621021b9e758ddc6ba3921b1bda219e77e67c33a8a3a1b22fec0",
+      "testDeclarations": 5,
+      "assertionSites": 9,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/if-text-condition.spec.ts",
+      "sha256": "332fc723608ccc28e8e2a9c15a04b923b77853904d3a00d377175bf6def2847c",
+      "testDeclarations": 6,
+      "assertionSites": 7,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/index.spec.js",
+      "sha256": "7cc5ed71bbf5b2c580a08c9e371c4e93778a8fc6d0838f3ef93370f7a13171fa",
+      "testDeclarations": 6,
+      "assertionSites": 15,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/is-current.spec.js",
+      "sha256": "80f617aec266e3ad3847f8317b3cfdf6a2c77dbcac41f0431a2f63ab37af8fc6",
+      "testDeclarations": 3,
+      "assertionSites": 4,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/loop-text-condition.spec.ts",
+      "sha256": "55859db2f2d05eb2987837bb0d410e73114ffc4e26d8bbcee7b8a53ffa6f7dfd",
+      "testDeclarations": 6,
+      "assertionSites": 7,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/loop.spec.js",
+      "sha256": "8c67aadc541516e0ed96bdc9d6f0550f9148dc88da19e18e9ada10dec2815c92",
+      "testDeclarations": 3,
+      "assertionSites": 5,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/opt-condition.spec.ts",
+      "sha256": "77ea15d5031520d578b02aa874922bf6445f57ab986f5bc13a43e0c623a40fcd",
+      "testDeclarations": 7,
+      "assertionSites": 9,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/opt.spec.js",
+      "sha256": "9d8ff09cea1bb4e519ef2098e71992715c15c97af0bc85b3bd1f5b7bc6266b54",
+      "testDeclarations": 1,
+      "assertionSites": 4,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/origin.spec.js",
+      "sha256": "cd5013c84ea6b4467ec923f9721f70abbaba8ae55e92de62fec83bc3c131e0c8",
+      "testDeclarations": 15,
+      "assertionSites": 54,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/par-condition.spec.ts",
+      "sha256": "c2f5329d8a23c1e38216942911b7dec816508a68479b8e2c8e72573dad494f9d",
+      "testDeclarations": 6,
+      "assertionSites": 8,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/par.spec.js",
+      "sha256": "1a679769c92aeb008a54a337b0e2afde0680f388892af51fc842649bb5eb2b89",
+      "testDeclarations": 1,
+      "assertionSites": 4,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/participant.group.spec.js",
+      "sha256": "f5129e6d4406604477f3a3f0d421cfe3022b841b69c75eb0c7c430239d09abee",
+      "testDeclarations": 3,
+      "assertionSites": 7,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/participant.interface.spec.js",
+      "sha256": "c6359941558c08e00c8893f1ba08807bb6c086a25605e438af149dfd4d7c8714",
+      "testDeclarations": 2,
+      "assertionSites": 6,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/participant.spec.js",
+      "sha256": "be14af91b2fbc18b54d613206536953146c04ff2d7a002cdc854854fd942cfed",
+      "testDeclarations": 12,
+      "assertionSites": 28,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/performance.spec.js",
+      "sha256": "ad2a87704b0357ed40f675b06cc7c962dfffd616c53d91de36b278c56d02059d",
+      "testDeclarations": 4,
+      "assertionSites": 0,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/return.spec.js",
+      "sha256": "8dddc6fbe8ddac9ca5a94f5be294204e10b9c998461d86f5a6bbcd33ba2d51e7",
+      "testDeclarations": 5,
+      "assertionSites": 10,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/section.spec.js",
+      "sha256": "10ad5909d7d8a5cfbbd418304e31014dc4cf48019e3a9f00b6f06fb13ed79f89",
+      "testDeclarations": 2,
+      "assertionSites": 6,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/simpe-message.spec.js",
+      "sha256": "25e50f6974b5aba5f28e4901b134a2f3699fba597762b4be7d9da4b9681ef889",
+      "testDeclarations": 8,
+      "assertionSites": 17,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/starter.spec.js",
+      "sha256": "bd38a54f66d1c66be5906e5fb10e9ee3bdace77bd3d6697807653eb6fa544687",
+      "testDeclarations": 1,
+      "assertionSites": 1,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/textExpr.spec.ts",
+      "sha256": "56df0345e9785d5139bac9b78fbfe0806bd988c8e4356854a474dfa2f15d228e",
+      "testDeclarations": 4,
+      "assertionSites": 5,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/title.spec.js",
+      "sha256": "0fbf6d31f057a561f46293a31fa4ce73900e888b5dc010abb859052b10d866c7",
+      "testDeclarations": 1,
+      "assertionSites": 1,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/to-collector.spec.js",
+      "sha256": "72482f4a189f0cf9e24b8cb00fb1db394e77b3b44e0f1cbeb7f0463b2109739c",
+      "testDeclarations": 32,
+      "assertionSites": 88,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/try.catch.finally.spec.js",
+      "sha256": "1ff4079f059512ce194a9ecf05b16a9dd7420b17afbbf46f05bfb3195e40dde1",
+      "testDeclarations": 5,
+      "assertionSites": 9,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "src/svg/buildGeometry.spec.ts",
+      "sha256": "4e9aaa1237706f0c05a0587a1ae86abf90ffddf255a77e105afc72775f36f312",
+      "testDeclarations": 4,
+      "assertionSites": 9,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "src/svg/geometry.spec.ts",
+      "sha256": "0c57b47ce653fddeef1f91ecdec32d4545784939ab533ad478b12dd2c172ee7b",
+      "testDeclarations": 14,
+      "assertionSites": 62,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "src/svg/icons.spec.ts",
+      "sha256": "5fbf68d36a29c814e99b2781ab272fd351231a76f301f338c9054cbe6715b784",
+      "testDeclarations": 6,
+      "assertionSites": 31,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "src/svg/renderToSvg.spec.ts",
+      "sha256": "aa423c86d670a843d678811b7559afc55ef9076d3623990221c5b5b115aefbc0",
+      "testDeclarations": 46,
+      "assertionSites": 126,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "src/emoji/emojiService.spec.ts",
+      "sha256": "c508e75773971dc02ef352d68f3ef7e2e713f9a45b7666db9651f6488f814295",
+      "testDeclarations": 4,
+      "assertionSites": 6,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "src/emoji/resolveEmoji.spec.ts",
+      "sha256": "07a07198ee74e62871a0f75e6bdbf20ab5d0df8a9a38ab60bb256726d6af2318",
+      "testDeclarations": 16,
+      "assertionSites": 32,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "src/positioning/Anchor2.spec.ts",
+      "sha256": "29fe92b8da0b37d7415dcdafb9df1805812be9997079be991238f935b42bd185",
+      "testDeclarations": 5,
+      "assertionSites": 9,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "src/positioning/Coordinates.spec.ts",
+      "sha256": "941a079655f5a0db57a051f2f685e21b6dae7a70dd58343c430b4d4c81c92a34",
+      "testDeclarations": 9,
+      "assertionSites": 21,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "src/positioning/david/DavidEisenstat.spec.ts",
+      "sha256": "c068881e3347dd021fc837d23eeeabf31c7358b514bbca3734ee2a26d869ba27",
+      "testDeclarations": 1,
+      "assertionSites": 1,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "src/positioning/FrameBorder.spec.ts",
+      "sha256": "8bb44c70c80ac6bfb62add0e363bcb1e6a137d2191a03f84f553737eba4f7fc4",
+      "testDeclarations": 7,
+      "assertionSites": 7,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "src/positioning/MessageCollector.spec.ts",
+      "sha256": "0627ce80b45f7e4d73f9e79eaed330353055eb946f6d86f9c49a6905d1f4f3a8",
+      "testDeclarations": 6,
+      "assertionSites": 6,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "src/positioning/VerticalCoordinates.spec.ts",
+      "sha256": "e6e653a2e81d336aeba441ed07a9d0ed018e1acc8201f1957078017ed7598a60",
+      "testDeclarations": 12,
+      "assertionSites": 16,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "src/positioning/WidthProviderOnCanvas.spec.ts",
+      "sha256": "42cb87e3c180854539ac26ad7068dc95d03beecd59b87735542883f328958612",
+      "testDeclarations": 8,
+      "assertionSites": 8,
+      "note": "Lexical source inventory; parameter expansion/helpers not falsely counted as executed assertions. Coverage is indexed by production branches and exact replay tables below."
+    }
+  ],
+  "sourceFiles": [
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/info/info.spec.ts",
+      "sha256": "657636f92f1e8474f487ed841a2a0cc11c96cb512a80d9314297c6d30bc0f492"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/info/infoRenderer.ts",
+      "sha256": "100b9e0f2afe51cd725b5818d1423d871deeaa950c8bcb31c04c403c4f7454a9"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/railroad/abnfDetector.spec.ts",
+      "sha256": "4b504bbc40f403dbf223637211ca1a89ea9ca231e19ecea246a5e80710569f27"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/railroad/ebnfDetector.spec.ts",
+      "sha256": "821b71e722c1abfeac08e1644d85073cef15dc244c7a124f69523b80e5ccb5f6"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/railroad/parser/abnfDiagram.spec.ts",
+      "sha256": "c7c05c81333ea050c7ece97549ad0cba0cdba9ea3af79bb90377b41e5d4dfe6c"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/railroad/parser/ebnfDiagram.spec.ts",
+      "sha256": "61a418ee731a0306d22c0995418e765d4f61d77cfcba9a3064e8f3f7cb232ab4"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/railroad/parser/pegDiagram.spec.ts",
+      "sha256": "2304b5b9a97df691bb7d9fd2fb0890ba0d1153e0ab5ccccefd62035ec7600363"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/railroad/parser/railroadDiagram.spec.ts",
+      "sha256": "e205614e37a2ee1d9083d94835adb163a1ce83c3e3a2206c49a91156d148c1fc"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/railroad/pegDetector.spec.ts",
+      "sha256": "d670ca97b4d15010812aecc3e298989d5451d5143140aac44f3be328ac06ec7a"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/railroad/railroadDb.spec.ts",
+      "sha256": "8d0c9650f2b4b5c3cab893cd6f52ae07c211724497f6ef7bee094132191f81d9"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/railroad/railroadDetector.spec.ts",
+      "sha256": "ae0bbd62d3a3f36a2aac86c17ac666996d14c32a899c94686b60a1db4e857ad2"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/railroad/railroadRenderer.spec.ts",
+      "sha256": "b20084967a310157e8c1ed60a4e98dbc1dff18aa4c02be3d954f542cfb9dec33"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/railroad/styles.spec.ts",
+      "sha256": "4b69b35b0a79afda9cc3ee6ab8de30a941b6391ab6c77b308547014794dfddd6"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/sequence/actorBandModel.spec.ts",
+      "sha256": "b472d732c6eece80546c7f0b87692afce90f15495253a328beaa03ec70adebbe"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/sequence/actorSizing.spec.ts",
+      "sha256": "77f3886baac95c2ae02220cbf04531b84820ef9d248066b078aac2db7003d50c"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/sequence/keywordActors.spec.ts",
+      "sha256": "b5a82c57a05e291311f384d29fd02fbdd890afcc5c4b089a77888eaa96d6a2ac"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/sequence/lifelineStart.spec.ts",
+      "sha256": "b7f3d39dfbb385ecb7329ffce0e9ad2d79dfcacac89b1ceced2a24c6c31b6c06"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/sequence/noteFontWeight.spec.ts",
+      "sha256": "3431c229d008afaae7ca24219e384b281692229fef42c71b509425b7650a8727"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/sequence/palettePicking.spec.ts",
+      "sha256": "e47e673d55dadbbb99892586b1649103b8cee0ba95f2ea888503c1d4354832b8"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/sequence/parser/sequenceDiagram.jison",
+      "sha256": "45c71ea8dfd62594c9b315f7285efa497ed8f88219ec016625c37d4bd5823ebf"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/sequence/rectSectionFill.spec.ts",
+      "sha256": "903ab85ff0a581539cc543a8e247a4430d2e171a2c61f511f75f01d6e36a75d6"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/sequence/sequenceDiagram.spec.js",
+      "sha256": "97e008d30f8d1ae2ff2f88d2eea0da6ab82f610df1a655daf1022fba23ed4d20"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.spec.js",
+      "sha256": "7764bdaa1a0b2fd430018f9b84f36b388815f4564f2d90160fa7d07e5fcf1ea7"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/sequence/styles.js",
+      "sha256": "f80f572951cb6367a52b9ceeb443ce2872a020d8356ce14685237ff0b9bbcfa4"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/sequence/svgDraw.js",
+      "sha256": "54dfd9f1a67bf7e935a4800150a086818fe639ada82f06c3b1c7cb04874023db"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/sequence/svgDraw.spec.js",
+      "sha256": "ab181fd4e1af8a497c4dcb67a28448ccf087234540cd270c90c32cab56e0c5b5"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/10-node-placement.ddlt.spec.ts",
+      "sha256": "c451c091736b7797114eab00322506ee32709e450c53421eb0563aeba7219a81"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/14-messy-layout.ddlt.spec.ts",
+      "sha256": "7e659f38a0b76c519ce31fe905872c291f5ad129b3b230279a076af3329fab8c"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/15-border-hugging-compare.ddlt.spec.ts",
+      "sha256": "a4cab34b2a225c90da207c7dfdb11636185601aa43cce13e8a7c6bae93763cd2"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/15-border-hugging-lr.ddlt.spec.ts",
+      "sha256": "bce0bb2387cd255875e68a56b97ed885ca630d690e9a9710b70d56db87dbfcae"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/16-intake-cycle-lr.ddlt.spec.ts",
+      "sha256": "a19a87dd6f3d98c17b4360ac0384e4cde11c61fc01732ac89518b3b7805c95ab"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/4-car-fun-sales-tb.ddlt.spec.ts",
+      "sha256": "f0da5e629d9e6a921d9601750144f5969341d4ff8875f24cda57d955b2f6ee8e"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/5-car-fun-sales-wide-tb.ddlt.spec.ts",
+      "sha256": "459af201103b27acc02368067d6bd0ac2fdbecf2539f3c7118c166dd52a385ad"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/6-legal-constr-sales.ddlt.spec.ts",
+      "sha256": "b7ab046b1d6617a220990178ca862db48c777a0240d9bc2061ef4a88e7e26a7a"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/7-car-sales-constr.ddlt.spec.ts",
+      "sha256": "c2f458a679398eabbe1de737dc9f03cbed972c547a66d866dc40dc047c0c9b13"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/8-query-process-2.ddlt.spec.ts",
+      "sha256": "50556fdf6e637e05d7f479ca844e59432793567b62d07948c40175a5f8ad11ee"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/direction.endpointClip.spec.ts",
+      "sha256": "d5f4464147440f452a85b6bd2d24f7ec8a5f7312330546e088b5f615820f77d9"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/direction.geometry.spec.ts",
+      "sha256": "79cd152880e3168cb23e1d40d8c5ca9844005eab6d1eb38d8c3fd4c283952d9f"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/direction.lr.transform.spec.ts",
+      "sha256": "52bb7a98e45265602aedb61ea482966c3b9be549c0cf1eef4baec2c6114be23f"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/direction.materializedGeometry.spec.ts",
+      "sha256": "e92ab09a5dbfc5bde0e417fb3f16c99058ac8d2d265f68241267e8a06121cc6f"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/direction.portSwap.spec.ts",
+      "sha256": "d7af2b59c7515520c848e9340f60d0eb1b82b70a662fda99caba2d2a2591ab3c"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/direction.sharedTrackNudging.spec.ts",
+      "sha256": "2a276e8404d62fd398b61bd0c739a355329901cdbeca10d90e50b1640d4c52d4"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/direction.terminalStub.spec.ts",
+      "sha256": "94cc107785c019868ef59ab7435539c568fec4c36b98718bd03fcc849d71e36a"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/edgeLabelNodes.spec.ts",
+      "sha256": "604b56287ee0b7ff2aa4addf440275258715dfedc9ebf3a12d62bd2ddc015467"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/helpers.laneHeights.spec.ts",
+      "sha256": "04831a63e1ea01f08131cb992495d2e6af3ab6c4133f79389c7c9632ed5f8989"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/helpers.prepareLayout.spec.ts",
+      "sha256": "deac880894b7799c614607ca3839759ea10942bdef5d69c8663de610010a3fde"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/laneOrdering.spec.ts",
+      "sha256": "23cf8551a0069d46c7609aad271632bc298c7c7a920c812ae414ea545fc7bc21"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/laneTitleBands.spec.ts",
+      "sha256": "b051002823c407d8d47604c6d98cbd27079d1d5a451ddc370304ced59a14bee1"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/phase0.helpers.spec.ts",
+      "sha256": "b37f7e1c4ca36bb3e7b28b94ecb5101e576e8d9730190ea23c4e6dca02a808d7"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/phase1.cycles.spec.ts",
+      "sha256": "64276cd100d601b55e36343e2499f171b910e6f2a634ea656ec2932f19e21976"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/phase2.compact.lanes.spec.ts",
+      "sha256": "d69ac9b2302392518b29a29bae7411f175610251d31ac5ad7bad7835e3a19768"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/phase2.compact.spec.ts",
+      "sha256": "a0171231bcbd2cc9fecd8ba7ba9dee5d16155e6160040be977ed6ab40e985a0f"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/phase2.layering.spec.ts",
+      "sha256": "18416b60bb5ec3cd3bc773781a9331fed0b39d83fe76da1f3f590cd1d925a60e"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/phase3.ordering.spec.ts",
+      "sha256": "5e1cac83f3a46469049a8db302306daa48d466302f2e262d1ebebd3303170c6f"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/phase4.coordinates.spec.ts",
+      "sha256": "941861cec0e20d83cd6fa0570d98c5fe193a2e5264a587457d5af8ed0a7d6442"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/phase4.lanes.columns.spec.ts",
+      "sha256": "d334be797e696687e719be62ae77aca2e1b644edc26a03a7c72186f5f0999d1f"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/phase4.lanes.spec.ts",
+      "sha256": "4cc4fec9b2866fdd132b719a97672e1f50504cc8ff23f43f17bbeac72447a395"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/phase5.pipeline.spec.ts",
+      "sha256": "692e29612e41356e96d6dcc2bd70e37c002e2ecd3a8ddae83c8a320b7e7e9cdd"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/pipeline.hoe.lr.spec.ts",
+      "sha256": "804765759b8ec69d4e3f0635db396c952e00aa5ccd08b69055c5dfe4cc318dce"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/pipeline.knsv3.lr.spec.ts",
+      "sha256": "1ad2dbab2125514810ca4d8912788bc84c11958a7b2d462c5b7f7e638f1ecdce"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/pipeline.lr.e2e.spec.ts",
+      "sha256": "ed4919b9631d5b35571eaa73c658a02f853d7ec3e5dafd704e933a1d23063d44"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/postProcessing.spec.ts",
+      "sha256": "8dbfba387f80c40b884a1dadbdadce5f41ede89b629dbc771a316353012558d1"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/sameRankDetour.spec.ts",
+      "sha256": "240aa1fb22ace9cd4b56071ac8e5fa2237872f4fc42ff60cea40e5834e63915f"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/__tests__/sourceOrder.spec.ts",
+      "sha256": "531f22ac221733754c91c6d5bfee9f6aa05ccd934a9706d59b6eab431952480f"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/direction/geometry.spec.ts",
+      "sha256": "0153bfe8ce71d50f2daad54d466bb50b2ce7c5a08e4f556da641ae2bfd6c36d1"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/mermaid-work.ddlt.spec.ts",
+      "sha256": "b7edad9026f036ffd08d4929ba4a1fef67191c6242b9f372a32b0fdfdae76337"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/orthogonalRouter/__tests__/raykov.crossing.spec.ts",
+      "sha256": "ba89fa3150ea20cf4eae07349ec6609325942dc4533e2c83c84b3281dacdbefa"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/orthogonalRouter/__tests__/raykov.detour.spec.ts",
+      "sha256": "281398219d39a64af44c242be73e1e18e3ade56e46f2abfab353b1f6cba00f47"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/orthogonalRouter/__tests__/raykov.issues.spec.ts",
+      "sha256": "8b3e20027b65b06f62e1f8a040aad787e6e115bd78628e31d9d307ea75f95458"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/orthogonalRouter/__tests__/raykov.repro_crossing.spec.ts",
+      "sha256": "98c24287fffbe2847af92a5c6d8b045f65c521d9f62fa79624aab1105954f81a"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/orthogonalRouter/__tests__/raykov.router.spec.ts",
+      "sha256": "5fb6ea10d6c782cc5f4fe2456c872287deba3419c6682a0258752d41a4f3b208"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/orthogonalRouter/__tests__/raykov.wide_node.spec.ts",
+      "sha256": "d6fff7f8877dd3777e9cbd6a835c4dae156ece92ac93b020822328f4bfe4b712"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/pebr-3-process-too-wide-in-lane.ddlt.spec.ts",
+      "sha256": "ca512fb0fef5b56a114b70c3c448fcf7133ac4f2993290c736ad2575dd8583f8"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/phase2.layering.spec.ts",
+      "sha256": "cf5ff6433e5de2cadf7163c69e1cb92deca325bfb64b9ee566ad4fb77a049271"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/query-process.ddlt.spec.ts",
+      "sha256": "46dc44584b42cf70f8868aa025c1e2849a04b8b500fee31a1b687fedaa319380"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/simple-2.ddlt.spec.ts",
+      "sha256": "9c081dc397bcadb9d67cb708a5499ce4800e31079d16e3946e3d66cc6077cf5d"
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "e2e/data/compare-cases.js",
+      "sha256": "afba0305f53310d41262466597aad2799fd6efaa199b32b9e1b6265e69ed973c"
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "src/emoji/emojiService.spec.ts",
+      "sha256": "c508e75773971dc02ef352d68f3ef7e2e713f9a45b7666db9651f6488f814295"
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "src/emoji/resolveEmoji.spec.ts",
+      "sha256": "07a07198ee74e62871a0f75e6bdbf20ab5d0df8a9a38ab60bb256726d6af2318"
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "src/parser/Divider/DividerContext.ts",
+      "sha256": "c585a8be6bb0f8bb3e488078fe69fbb34448b58d5bd04c1bc6f96d59d1e343c1"
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "src/positioning/Anchor2.spec.ts",
+      "sha256": "29fe92b8da0b37d7415dcdafb9df1805812be9997079be991238f935b42bd185"
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "src/positioning/Coordinates.spec.ts",
+      "sha256": "941a079655f5a0db57a051f2f685e21b6dae7a70dd58343c430b4d4c81c92a34"
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "src/positioning/FrameBorder.spec.ts",
+      "sha256": "8bb44c70c80ac6bfb62add0e363bcb1e6a137d2191a03f84f553737eba4f7fc4"
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "src/positioning/MessageCollector.spec.ts",
+      "sha256": "0627ce80b45f7e4d73f9e79eaed330353055eb946f6d86f9c49a6905d1f4f3a8"
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "src/positioning/VerticalCoordinates.spec.ts",
+      "sha256": "e6e653a2e81d336aeba441ed07a9d0ed018e1acc8201f1957078017ed7598a60"
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "src/positioning/WidthProviderOnCanvas.spec.ts",
+      "sha256": "42cb87e3c180854539ac26ad7068dc95d03beecd59b87735542883f328958612"
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "src/positioning/david/DavidEisenstat.spec.ts",
+      "sha256": "c068881e3347dd021fc837d23eeeabf31c7358b514bbca3734ee2a26d869ba27"
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "src/svg/buildGeometry.spec.ts",
+      "sha256": "4e9aaa1237706f0c05a0587a1ae86abf90ffddf255a77e105afc72775f36f312"
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "src/svg/buildGeometry.ts",
+      "sha256": "f73a916895b5972c3a97b5be22fe281f94d9d8bce6ba78a8c0b3f48f994dd127"
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "src/svg/geometry.spec.ts",
+      "sha256": "0c57b47ce653fddeef1f91ecdec32d4545784939ab533ad478b12dd2c172ee7b"
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "src/svg/icons.spec.ts",
+      "sha256": "5fbf68d36a29c814e99b2781ab272fd351231a76f301f338c9054cbe6715b784"
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "src/svg/icons.ts",
+      "sha256": "67004203b0c73d2c2ab4d183fca32e7d160979423b70e09dcb00ff198442fcc9"
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "src/svg/renderToSvg.spec.ts",
+      "sha256": "aa423c86d670a843d678811b7559afc55ef9076d3623990221c5b5b115aefbc0"
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/addons/Owner.spec.ts",
+      "sha256": "9d72d6d74d678b64366878e9cb066d33b33fe78fc68ad64ce2f9186b709c321c"
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/alt.spec.js",
+      "sha256": "f840c5bd00350d937eea2156ec12bef065155548ce1ff5ed63a15a460643a31a"
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/async-message.spec.js",
+      "sha256": "9e59467b4edca693d6bc7dda5d4d8a7f4f2d8c3e539a002c4c7e0caabdcac148"
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/chain-message.spec.js",
+      "sha256": "5ac51ae78ab6aa6fb43e5f6837e9ead75aac683cb626baa3946a8e88c075d1df"
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/child-fragment-detector.spec.js",
+      "sha256": "d2e91455aeaea8e4579b100e4c455b33caca70c988fbb9e6d130e605e5317331"
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/comment.spec.js",
+      "sha256": "4aadcfce75b107cee6fff24b28a291eca35a596399bc3de766f5f5ae824e87ad"
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/condition/Condition.spec.ts",
+      "sha256": "097ed136d3ec3d9919c1e1b5311b7111da09b5a6b0b3657f1ba3a3c370664f58"
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/critical-condition.spec.ts",
+      "sha256": "4378af2a40b56f89e0d466e170688a315496564f34b6125691c7489a93bccde2"
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/critical.spec.js",
+      "sha256": "9f2ff82fc47e003a480acb929b7fedaa3f16bbf7dd806e5c3696bd7df425161a"
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/digit-leading-name.spec.ts",
+      "sha256": "2bac5e3107c9621021b9e758ddc6ba3921b1bda219e77e67c33a8a3a1b22fec0"
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/if-text-condition.spec.ts",
+      "sha256": "332fc723608ccc28e8e2a9c15a04b923b77853904d3a00d377175bf6def2847c"
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/index.spec.js",
+      "sha256": "7cc5ed71bbf5b2c580a08c9e371c4e93778a8fc6d0838f3ef93370f7a13171fa"
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/is-current.spec.js",
+      "sha256": "80f617aec266e3ad3847f8317b3cfdf6a2c77dbcac41f0431a2f63ab37af8fc6"
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/loop-text-condition.spec.ts",
+      "sha256": "55859db2f2d05eb2987837bb0d410e73114ffc4e26d8bbcee7b8a53ffa6f7dfd"
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/loop.spec.js",
+      "sha256": "8c67aadc541516e0ed96bdc9d6f0550f9148dc88da19e18e9ada10dec2815c92"
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/opt-condition.spec.ts",
+      "sha256": "77ea15d5031520d578b02aa874922bf6445f57ab986f5bc13a43e0c623a40fcd"
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/opt.spec.js",
+      "sha256": "9d8ff09cea1bb4e519ef2098e71992715c15c97af0bc85b3bd1f5b7bc6266b54"
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/origin.spec.js",
+      "sha256": "cd5013c84ea6b4467ec923f9721f70abbaba8ae55e92de62fec83bc3c131e0c8"
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/par-condition.spec.ts",
+      "sha256": "c2f5329d8a23c1e38216942911b7dec816508a68479b8e2c8e72573dad494f9d"
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/par.spec.js",
+      "sha256": "1a679769c92aeb008a54a337b0e2afde0680f388892af51fc842649bb5eb2b89"
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/participant.group.spec.js",
+      "sha256": "f5129e6d4406604477f3a3f0d421cfe3022b841b69c75eb0c7c430239d09abee"
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/participant.interface.spec.js",
+      "sha256": "c6359941558c08e00c8893f1ba08807bb6c086a25605e438af149dfd4d7c8714"
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/participant.spec.js",
+      "sha256": "be14af91b2fbc18b54d613206536953146c04ff2d7a002cdc854854fd942cfed"
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/performance.spec.js",
+      "sha256": "ad2a87704b0357ed40f675b06cc7c962dfffd616c53d91de36b278c56d02059d"
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/return.spec.js",
+      "sha256": "8dddc6fbe8ddac9ca5a94f5be294204e10b9c998461d86f5a6bbcd33ba2d51e7"
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/section.spec.js",
+      "sha256": "10ad5909d7d8a5cfbbd418304e31014dc4cf48019e3a9f00b6f06fb13ed79f89"
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/simpe-message.spec.js",
+      "sha256": "25e50f6974b5aba5f28e4901b134a2f3699fba597762b4be7d9da4b9681ef889"
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/starter.spec.js",
+      "sha256": "bd38a54f66d1c66be5906e5fb10e9ee3bdace77bd3d6697807653eb6fa544687"
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/textExpr.spec.ts",
+      "sha256": "56df0345e9785d5139bac9b78fbfe0806bd988c8e4356854a474dfa2f15d228e"
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/title.spec.js",
+      "sha256": "0fbf6d31f057a561f46293a31fa4ce73900e888b5dc010abb859052b10d866c7"
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/to-collector.spec.js",
+      "sha256": "72482f4a189f0cf9e24b8cb00fb1db394e77b3b44e0f1cbeb7f0463b2109739c"
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "test/unit/parser/try.catch.finally.spec.js",
+      "sha256": "1ff4079f059512ce194a9ecf05b16a9dd7420b17afbbf46f05bfb3195e40dde1"
+    }
+  ],
+  "staticMethodSites": [
+    {
+      "file": "tests/bulk/c/test_info.py",
+      "line": 6,
+      "method": "test_show_info_flag_and_source_title",
+      "assertionSites": 3
+    },
+    {
+      "file": "tests/bulk/c/test_info.py",
+      "line": 11,
+      "method": "test_unknown_body_rejected_with_exact_family_error",
+      "assertionSites": 3
+    },
+    {
+      "file": "tests/bulk/c/test_info.py",
+      "line": 18,
+      "method": "test_source_version_at_source_viewport_and_real_ink",
+      "assertionSites": 3
+    },
+    {
+      "file": "tests/bulk/c/test_railroad.py",
+      "line": 11,
+      "method": "test_missing_semicolon_in_every_dialect",
+      "assertionSites": 3
+    },
+    {
+      "file": "tests/bulk/c/test_railroad.py",
+      "line": 17,
+      "method": "test_db_rule_order_retains_duplicates_while_lookup_updates",
+      "assertionSites": 2
+    },
+    {
+      "file": "tests/bulk/c/test_railroad.py",
+      "line": 23,
+      "method": "test_abnf_numeric_terminal_retains_source_not_decoded_char",
+      "assertionSites": 1
+    },
+    {
+      "file": "tests/bulk/c/test_railroad.py",
+      "line": 29,
+      "method": "test_peg_predicates_are_source_special_literals",
+      "assertionSites": 2
+    },
+    {
+      "file": "tests/bulk/c/test_railroad.py",
+      "line": 35,
+      "method": "test_ebnf_precedence_and_grouping",
+      "assertionSites": 6
+    },
+    {
+      "file": "tests/bulk/c/test_railroad.py",
+      "line": 64,
+      "method": "test_source_leaf_padding_and_recursive_optional_dimensions",
+      "assertionSites": 7
+    },
+    {
+      "file": "tests/bulk/c/test_railroad.py",
+      "line": 78,
+      "method": "test_source_unconsumed_marker_toggle_does_not_invent_a_branch",
+      "assertionSites": 2
+    },
+    {
+      "file": "tests/bulk/c/test_railroad.py",
+      "line": 86,
+      "method": "test_recursive_routes_and_visible_leaf_text_in_all_dialects",
+      "assertionSites": 4
+    },
+    {
+      "file": "tests/bulk/c/test_sequence.py",
+      "line": 13,
+      "method": "test_actor_menu_keyword_parameter_tables_and_prototype_names",
+      "assertionSites": 2
+    },
+    {
+      "file": "tests/bulk/c/test_sequence.py",
+      "line": 22,
+      "method": "test_autonumber_thousandths_source_negative_boundary",
+      "assertionSites": 2
+    },
+    {
+      "file": "tests/bulk/c/test_sequence.py",
+      "line": 28,
+      "method": "test_implicit_actor_order_then_alias_redeclaration",
+      "assertionSites": 3
+    },
+    {
+      "file": "tests/bulk/c/test_sequence.py",
+      "line": 34,
+      "method": "test_nested_activation_stack_and_shorthand_order",
+      "assertionSites": 2
+    },
+    {
+      "file": "tests/bulk/c/test_sequence.py",
+      "line": 39,
+      "method": "test_note_placements_and_two_actor_over",
+      "assertionSites": 2
+    },
+    {
+      "file": "tests/bulk/c/test_sequence.py",
+      "line": 44,
+      "method": "test_autonumber_start_step_off_keeps_internal_counter",
+      "assertionSites": 1
+    },
+    {
+      "file": "tests/bulk/c/test_sequence.py",
+      "line": 48,
+      "method": "test_zero_start_and_zero_step_follow_source_or_default",
+      "assertionSites": 1
+    },
+    {
+      "file": "tests/bulk/c/test_sequence.py",
+      "line": 52,
+      "method": "test_show_sequence_numbers_config_can_force_visibility",
+      "assertionSites": 1
+    },
+    {
+      "file": "tests/bulk/c/test_sequence.py",
+      "line": 56,
+      "method": "test_wrap_overrides_default_and_message_semicolon",
+      "assertionSites": 3
+    },
+    {
+      "file": "tests/bulk/c/test_sequence.py",
+      "line": 61,
+      "method": "test_actor_boxes_members_color_and_declaration_order",
+      "assertionSites": 5
+    },
+    {
+      "file": "tests/bulk/c/test_sequence.py",
+      "line": 67,
+      "method": "test_create_destroy_attach_to_matching_messages",
+      "assertionSites": 2
+    },
+    {
+      "file": "tests/bulk/c/test_sequence.py",
+      "line": 72,
+      "method": "test_fragment_actions_and_section_order",
+      "assertionSites": 1
+    },
+    {
+      "file": "tests/bulk/c/test_sequence.py",
+      "line": 77,
+      "method": "test_every_simple_fragment_emits_balanced_actions",
+      "assertionSites": 2
+    },
+    {
+      "file": "tests/bulk/c/test_sequence.py",
+      "line": 85,
+      "method": "test_central_connections_cover_source_target_and_dual",
+      "assertionSites": 2
+    },
+    {
+      "file": "tests/bulk/c/test_sequence.py",
+      "line": 91,
+      "method": "test_exact_lifecycle_and_fragment_errors_have_raw_spans",
+      "assertionSites": 4
+    },
+    {
+      "file": "tests/bulk/c/test_sequence.py",
+      "line": 99,
+      "method": "test_properties_remain_static_metadata_and_accessibility_not_messages",
+      "assertionSites": 3
+    },
+    {
+      "file": "tests/bulk/c/test_sequence.py",
+      "line": 126,
+      "method": "test_classic_and_neo_actor_database_label_baseline_and_glyph_bands",
+      "assertionSites": 4
+    },
+    {
+      "file": "tests/bulk/c/test_sequence.py",
+      "line": 140,
+      "method": "test_messages_activations_notes_and_fragment_have_ink_and_order",
+      "assertionSites": 3
+    },
+    {
+      "file": "tests/bulk/c/test_sequence.py",
+      "line": 152,
+      "method": "test_parent_text_class_css_applies_real_red_italic_pixels",
+      "assertionSites": 3
+    },
+    {
+      "file": "tests/bulk/c/test_swimlane_routing.py",
+      "line": 34,
+      "method": "test_crossing_source_spec_strict_t_shared_collinear_and_diagonal",
+      "assertionSites": 2
+    },
+    {
+      "file": "tests/bulk/c/test_swimlane_routing.py",
+      "line": 42,
+      "method": "test_caller_epsilon_is_not_ignored",
+      "assertionSites": 1
+    },
+    {
+      "file": "tests/bulk/c/test_swimlane_routing.py",
+      "line": 46,
+      "method": "test_real_bounds_exclude_group_label_and_zero_width",
+      "assertionSites": 2
+    },
+    {
+      "file": "tests/bulk/c/test_swimlane_routing.py",
+      "line": 52,
+      "method": "test_segment_rect_exclusions_and_shrink_source_spec",
+      "assertionSites": 3
+    },
+    {
+      "file": "tests/bulk/c/test_swimlane_routing.py",
+      "line": 59,
+      "method": "test_hvh_vhv_and_diagonal_rejection",
+      "assertionSites": 2
+    },
+    {
+      "file": "tests/bulk/c/test_swimlane_routing.py",
+      "line": 64,
+      "method": "test_overlap_touch_and_parallel_gap",
+      "assertionSites": 3
+    },
+    {
+      "file": "tests/bulk/c/test_swimlane_routing.py",
+      "line": 70,
+      "method": "test_simplification_removes_backtrack_and_collinear_only",
+      "assertionSites": 3
+    },
+    {
+      "file": "tests/bulk/c/test_swimlane_routing.py",
+      "line": 76,
+      "method": "test_port_path_source_side_matrix_and_rejected_reverse",
+      "assertionSites": 4
+    },
+    {
+      "file": "tests/bulk/c/test_swimlane_routing.py",
+      "line": 85,
+      "method": "test_bt_mirrors_centers_points_and_title_rect",
+      "assertionSites": 4
+    },
+    {
+      "file": "tests/bulk/c/test_swimlane_routing.py",
+      "line": 92,
+      "method": "test_lr_and_rl_scale_progression_but_preserve_node_dimensions",
+      "assertionSites": 4
+    },
+    {
+      "file": "tests/bulk/c/test_swimlane_routing.py",
+      "line": 100,
+      "method": "test_lr_lane_header_is_vertical_and_contains_children",
+      "assertionSites": 5
+    },
+    {
+      "file": "tests/bulk/c/test_swimlane_routing.py",
+      "line": 109,
+      "method": "test_clip_inside_runs_to_actual_rect_boundaries",
+      "assertionSites": 1
+    },
+    {
+      "file": "tests/bulk/c/test_swimlane_routing.py",
+      "line": 114,
+      "method": "test_renderer_handoff_duplicates_only_nonstraight_terminals_idempotently",
+      "assertionSites": 2
+    },
+    {
+      "file": "tests/bulk/c/test_swimlane_routing.py",
+      "line": 120,
+      "method": "test_short_straight_corners_shift_inside_four_pixel_clearance",
+      "assertionSites": 1
+    },
+    {
+      "file": "tests/bulk/c/test_swimlane_routing.py",
+      "line": 125,
+      "method": "test_label_anchors_to_middle_segment_and_reparents_into_lane",
+      "assertionSites": 1
+    },
+    {
+      "file": "tests/bulk/c/test_swimlane_routing.py",
+      "line": 133,
+      "method": "test_source_shared_terminal_face_exact_and_near_sixteen_spacing",
+      "assertionSites": 3
+    },
+    {
+      "file": "tests/bulk/c/test_swimlane_routing.py",
+      "line": 144,
+      "method": "test_source_obstacle_hugging_rail_exact_twenty_clearance",
+      "assertionSites": 1
+    },
+    {
+      "file": "tests/bulk/c/test_swimlane_routing.py",
+      "line": 151,
+      "method": "test_source_destination_pair_transaction_removes_crossing",
+      "assertionSites": 4
+    },
+    {
+      "file": "tests/bulk/c/test_swimlane_routing.py",
+      "line": 159,
+      "method": "test_source_external_channel_transaction_reassigns_tracks",
+      "assertionSites": 4
+    },
+    {
+      "file": "tests/bulk/c/test_swimlane_routing.py",
+      "line": 166,
+      "method": "test_redundant_rectangular_terminal_dogleg_collapses",
+      "assertionSites": 1
+    },
+    {
+      "file": "tests/bulk/c/test_swimlane_routing.py",
+      "line": 171,
+      "method": "test_redundant_jog_shortcut_preserves_destination_and_reduces_bends",
+      "assertionSites": 1
+    },
+    {
+      "file": "tests/bulk/c/test_swimlane_routing.py",
+      "line": 176,
+      "method": "test_shared_interior_nudge_uses_seven_pixel_gap_without_new_crossings",
+      "assertionSites": 2
+    },
+    {
+      "file": "tests/bulk/c/test_swimlane_routing.py",
+      "line": 183,
+      "method": "test_top_title_band_lifts_four_pixels_clear_of_final_rail",
+      "assertionSites": 2
+    },
+    {
+      "file": "tests/bulk/c/test_swimlane_routing.py",
+      "line": 189,
+      "method": "test_left_title_band_moves_for_horizontal_and_vertical_rail",
+      "assertionSites": 2
+    },
+    {
+      "file": "tests/bulk/c/test_swimlane_routing.py",
+      "line": 195,
+      "method": "test_validation_reports_exact_foreign_node_overlap_and_cross_pair",
+      "assertionSites": 3
+    },
+    {
+      "file": "tests/bulk/c/test_swimlane_routing.py",
+      "line": 206,
+      "method": "test_source_collinear_chain_short_edge_centered_long_edge_detours",
+      "assertionSites": 4
+    },
+    {
+      "file": "tests/bulk/c/test_swimlane_routing.py",
+      "line": 224,
+      "method": "test_source_four_cardinal_port_cases",
+      "assertionSites": 3
+    },
+    {
+      "file": "tests/bulk/c/test_swimlane_routing.py",
+      "line": 232,
+      "method": "test_astar_routes_around_blocker_without_crossing_its_open_interior",
+      "assertionSites": 4
+    },
+    {
+      "file": "tests/bulk/c/test_swimlane_routing.py",
+      "line": 241,
+      "method": "test_all_direction_pipeline_and_layout_only_removal",
+      "assertionSites": 4
+    },
+    {
+      "file": "tests/bulk/c/test_swimlane_routing.py",
+      "line": 251,
+      "method": "test_fanout_distributes_ports_and_preserves_opaque_source_values",
+      "assertionSites": 3
+    },
+    {
+      "file": "tests/bulk/c/test_zenuml.py",
+      "line": 14,
+      "method": "test_explicit_participant_width_alias_stereotype_and_type",
+      "assertionSites": 2
+    },
+    {
+      "file": "tests/bulk/c/test_zenuml.py",
+      "line": 20,
+      "method": "test_quoted_async_endpoints",
+      "assertionSites": 3
+    },
+    {
+      "file": "tests/bulk/c/test_zenuml.py",
+      "line": 25,
+      "method": "test_group_members_and_order",
+      "assertionSites": 2
+    },
+    {
+      "file": "tests/bulk/c/test_zenuml.py",
+      "line": 30,
+      "method": "test_origin_and_starter_are_not_invented_message_nodes",
+      "assertionSites": 2
+    },
+    {
+      "file": "tests/bulk/c/test_zenuml.py",
+      "line": 35,
+      "method": "test_nested_sync_scope_and_self_call",
+      "assertionSites": 3
+    },
+    {
+      "file": "tests/bulk/c/test_zenuml.py",
+      "line": 42,
+      "method": "test_if_else_if_else_branch_order",
+      "assertionSites": 4
+    },
+    {
+      "file": "tests/bulk/c/test_zenuml.py",
+      "line": 48,
+      "method": "test_try_catch_finally_keeps_section_return_values",
+      "assertionSites": 3
+    },
+    {
+      "file": "tests/bulk/c/test_zenuml.py",
+      "line": 53,
+      "method": "test_control_conditions_preserve_text_and_nested_calls",
+      "assertionSites": 3
+    },
+    {
+      "file": "tests/bulk/c/test_zenuml.py",
+      "line": 59,
+      "method": "test_creation_assignment_and_constructor_participant",
+      "assertionSites": 4
+    },
+    {
+      "file": "tests/bulk/c/test_zenuml.py",
+      "line": 64,
+      "method": "test_ref_and_divider_static_shapes",
+      "assertionSites": 4
+    },
+    {
+      "file": "tests/bulk/c/test_zenuml.py",
+      "line": 70,
+      "method": "test_comment_belongs_to_following_message",
+      "assertionSites": 2
+    },
+    {
+      "file": "tests/bulk/c/test_zenuml.py",
+      "line": 74,
+      "method": "test_dedicated_parser_rejects_unclosed_delimiters_with_raw_location",
+      "assertionSites": 4
+    },
+    {
+      "file": "tests/bulk/c/test_zenuml.py",
+      "line": 81,
+      "method": "test_all_builtin_types_are_semantic_participant_annotations",
+      "assertionSites": 2
+    },
+    {
+      "file": "tests/bulk/c/test_zenuml.py",
+      "line": 121,
+      "method": "test_all_source_builtin_shortcodes_and_css_first_collision",
+      "assertionSites": 5
+    },
+    {
+      "file": "tests/bulk/c/test_zenuml.py",
+      "line": 132,
+      "method": "test_two_participant_constraint_has_exact_minimal_span",
+      "assertionSites": 1
+    },
+    {
+      "file": "tests/bulk/c/test_zenuml.py",
+      "line": 136,
+      "method": "test_chain_and_spanning_constraints_minimum_total_width",
+      "assertionSites": 3
+    },
+    {
+      "file": "tests/bulk/c/test_zenuml.py",
+      "line": 148,
+      "method": "test_nested_calls_returns_fragments_actual_content_and_geometry",
+      "assertionSites": 4
+    },
+    {
+      "file": "tests/bulk/c/test_zenuml.py",
+      "line": 160,
+      "method": "test_vendor_icons_keep_original_bytes_colors_and_square_ratio",
+      "assertionSites": 4
+    }
+  ],
+  "nativeMethods": [
+    "test_info.py.test_source_version_at_source_viewport_and_real_ink",
+    "test_railroad.py.test_source_leaf_padding_and_recursive_optional_dimensions",
+    "test_railroad.py.test_source_unconsumed_marker_toggle_does_not_invent_a_branch",
+    "test_railroad.py.test_recursive_routes_and_visible_leaf_text_in_all_dialects",
+    "test_sequence.py.test_classic_and_neo_actor_database_label_baseline_and_glyph_bands",
+    "test_sequence.py.test_messages_activations_notes_and_fragment_have_ink_and_order",
+    "test_sequence.py.test_parent_text_class_css_applies_real_red_italic_pixels",
+    "test_zenuml.py.test_nested_calls_returns_fragments_actual_content_and_geometry",
+    "test_zenuml.py.test_vendor_icons_keep_original_bytes_colors_and_square_ratio"
+  ],
+  "sourceUnconsumed": [
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/railroad/railroadRenderer.ts",
+      "symbol": "renderRule/renderDiagram",
+      "fields": [
+        "compactMode",
+        "showMarkers",
+        "title",
+        "repetition.max"
+      ],
+      "meaning": "No branch consumes these controls in the fixed renderer; do not invent visual differences. showMarkers:false explicitly tested to retain source markers."
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "src/parser/index.js",
+      "symbol": "rootContext/SeqErrorListener",
+      "meaning": "ANTLR collects syntax error details and editor recovery; malformed complete-input diagnostics of the native adapter are separately indexed as adapter boundaries, not asserted to be identical ANTLR recovery prose."
+    }
+  ],
+  "pendingP3Suspicions": [
+    {
+      "source": "zenuml-core/src/emoji/resolveEmoji.spec.ts CSS-first red versus [:red:]",
+      "test": "ZenPurePositioning.test_all_source_builtin_shortcodes_and_css_first_collision",
+      "meaning": "Frozen native resolve helper may substitute [red] despite source CSS-first literal behavior; retain first failure and diagnose in P3, no source modified."
+    },
+    {
+      "source": "railroadDb.addRule rules.push versus ruleMap.set",
+      "test": "RailroadSourceCases.test_db_rule_order_retains_duplicates_while_lookup_updates",
+      "meaning": "Independent expectation retains duplicate array slots even though map lookup overwrites; do not weaken to match candidate."
+    }
+  ],
+  "normalizations": [
+    "Railroad source AST type/value/name/elements/alternatives/element/min/max mapped to frozen model kind/text/children/children[0]/minimum/maximum; original expected scalar values unchanged.",
+    "Zen source interface maps participant stereotype delimiters to displayed stereotype text; raw syntax retained in fixture provenance.",
+    "Source lexical source-spec counts are inventory only; exact assertion totals are not invented for helper-generated or trace-dependent assertions."
+  ],
+  "executed": {
+    "productParse": false,
+    "productBuild": false,
+    "layout": false,
+    "nativeAllocation": false,
+    "formalUnitTests": false,
+    "oracle": false,
+    "images": false
+  },
+  "files": {
+    "tests/bulk/c/__init__.py": "6d32ed94b50481a7fb1d54d82c9024f372ba836dbc081981144db22dc03d14bc",
+    "tests/bulk/c/_support.py": "b6603e1b522f711979389f2939343cd0d0f1bce8a06f75080a7fea1dd8cab43d",
+    "tests/bulk/c/railroad-source-cases.json": "c4472143ff3865c0317e22971be0879c26f79862b0647515a80d398371c9da27",
+    "tests/bulk/c/test_info.py": "0b2cb54d0fd9cee7d8059c3050782af2eac7deeb2dfca59e0e43a9ee2c7ae74d",
+    "tests/bulk/c/test_railroad.py": "7fbd6a27e4820bc95444c98fa62c10c15b2b7754747b6b2d39f0d5b1cdd6806d",
+    "tests/bulk/c/test_sequence.py": "beddb1826d3fc7824439382aead67b7575c785ec5c8d1f3fa02549a60df31502",
+    "tests/bulk/c/test_swimlane_routing.py": "ed174dd9814267032c93d86309966b5758ae68faecea1ea3256b6ccb3839fd53",
+    "tests/bulk/c/test_zenuml.py": "20a28e51e0ebfcc352c2d9093fb611f728077d5f8ea5c0de4271ae2a226e88b0",
+    "tests/bulk/c/zen-assets.json": "f1edb3767dacba79a8bb48397865d58aaad9d807890705612347c95d0a04e511",
+    "tests/bulk/c/zen-emoji-source.json": "22cb999cef2bcf1831fcfa6c1c55ead96c4c85d21f1db510b7a13dfa2fe05363",
+    "tests/bulk/c/zen-visual-source-cases.json": "1ae8ff8a4bbbdab3b4df4bb1b678b1c126c4391e1c9c4dc6838b8d3b08f4ede0",
+    "tests/bulk/cases-C.json": "77c097e848db57816f5343d6fccc0725f39ef6b39a08d7786e77d324967cc5a6"
+  },
+  "P3": {
+    "methods": 334,
+    "newMethods": [
+      "test_comment_css_first_and_common_only_emoji_source_priority",
+      "test_source_tcf_builtin_is_offline_and_visible",
+      "test_explicit_participant_emoji_is_unicode_not_shortcode_ink"
+    ],
+    "testBindings": [
+      {
+        "method": "four negative methods in sequence/railroad/zenuml tests",
+        "reason": "Nest assertRaises inside subTest so unexpected errors retain their real traceback; assertion codes/spans unchanged."
+      },
+      {
+        "method": "test_recursive_routes_and_visible_leaf_text_in_all_dialects",
+        "reason": "PEG fixed grammar has literal/id/group/any but no character-class production; replace invalid [0-9]+ fixture with valid (\"0\" / \"9\")+ without removing recursive/PNG/leaf assertions."
+      },
+      {
+        "method": "test_railroadPeg_spec_008 and predicate parameter method",
+        "reason": "Original upstream spec asserts raw transform text &\"a\"; public DB addRule applies common sanitizeAstNode/sanitizeText so model text is &amp;\"a\". Preserve literal fixture source and original assertion; adapt only expected public DB layer."
+      },
+      {
+        "method": "test_vendor_icons_keep_original_bytes_colors_and_square_ratio",
+        "reason": "Source build renders all participant headers and footers: 6 icons twice=12 assets; retain source SHA/ratio/actual color checks."
+      },
+      {
+        "fixture": "C-zenuml-source-vertical-6",
+        "reason": "Source JS template authored backslash+t; JavaScript evaluates it as a tab. Decode authored escape in fixture without changing TeX/other input."
+      },
+      {
+        "fixture": "C-railroad-spec-017",
+        "reason": "Fixed empty rules renderer intentionally returns blank200x100; explicit expectedEmpty contract verifies exact size/background/no ink and nonblank mutation negative control. It does not authorize generic blank positive output."
+      }
+    ],
+    "receipt": "docs/changes/bulk-C-P3.json",
+    "fixtureSha256": "3496ba5c04d2889c81b022d5e41017663c24b019ceddc486d0339b6647d6c170",
+    "sourceContentLoss": {
+      "receipt": "docs/changes/bulk-C-P3-source-content-loss.json",
+      "schema": "upstream_defect/content_loss; full native expectedText retained",
+      "methods": 335,
+      "nativeRenderCases": 292,
+      "sourceContentLossCases": 2,
+      "negativeCases": 8,
+      "fixtureSha256": "732db377af6ade9561e74171a812ed8877218a35641b70d44ca76ec2b23c1265"
+    }
+  },
+  "P4": {
+    "receipt": "docs/changes/bulk-C-P4-repair.json",
+    "methods": 351,
+    "nativeCases": 302,
+    "strictOriginalCases": 148,
+    "mutationTrials": 1597,
+    "newTests": {
+      "tests/bulk/c/test_sequence_p4.py": "6cef150430e03746275fd8195748c8131c7c05ef2205b35f376c074610a5601e",
+      "tests/bulk/c/test_zenuml_p4.py": "393824e47d5542a05168e652d62531f21d679a5e880ba4740b745171abdd5510"
+    },
+    "independentReference": "tests/bulk/c/zen-parity-source-reference.json",
+    "referenceSha256": "6477178016972efc7d56a3fd2066add17e58ec4ea195756bcade08794ea1a9db",
+    "toolSha256": "0e500cae09ac5beabeac9e4d3a359c8ac591af691e8ab723c00c589e1d309bc8"
+  },
+  "sequenceLifelineComputedStyle": {
+    "status": "RESOLVED_SOURCE_AND_ACTUAL_PAINT",
+    "presentationAttribute": ".5px",
+    "computedStrokeWidth": 2,
+    "source": "packages/mermaid/src/diagrams/sequence/styles.js:144-146 (.actor-man circle, line); svgDraw.js:413 presentation attribute .5px",
+    "cascade": "Comma selector second arm is every line. CSS stroke-width2px overrides presentation stroke-width .5px; themeCSS remains applicable. Native presentation._shape(method=line) already supplies2 before themeCSS. No product change needed.",
+    "assertion": "tests/bulk/c/test_sequence_p4.py:test_source_dangling_css_shadow_not_invented_for_note actual native lifeline trace stroke_width==2 plus existing real PNG text/paint assertions",
+    "run": "BULK-record-20261106T064630Z-21205b77",
+    "testSha256": "8197e405e7966b81a6736d9e29d6721ae9a6d4e6c27801957311ba692432cf08"
+  }
+}

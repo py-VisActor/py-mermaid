@@ -1,0 +1,213 @@
+{
+  "schema": "py-mermaid-f012-source-map/v1",
+  "taskId": "F01.2-S2/elk",
+  "status": "targeted_verified_not_final_full",
+  "interfaceVersion": "F01.2-v2",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "sources": [
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/layout-algorithms/elk/render.ts",
+      "symbols": [
+        "createRootElkGraph",
+        "buildSubgraphLayoutOptions",
+        "addVertices",
+        "addEdgesToElkGraph",
+        "configureCrossHierarchyEdges",
+        "setIncludeChildrenPolicy",
+        "evenGroupFrames",
+        "applyElkEdgeLayout",
+        "calcOffset"
+      ],
+      "sha256": "6258890b3f311e86e4cd4dc99d480f704fde7473e150dc62b88838c5015c5011"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/layout-algorithms/elk/subgraphFeedbackEdges.ts",
+      "symbols": [
+        "findSubgraphFeedbackEdges"
+      ],
+      "sha256": "b2924ce5c1c619ff902e0eeed1a79fa7e725c5e800c707d23cda22ad6a2304cc"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/layout-algorithms/elk/find-common-ancestor.ts",
+      "symbols": [
+        "findCommonAncestor"
+      ],
+      "sha256": "d92c7ae94e36404c49c4c1f81d56e3f498a43b868951459516e65e3e838bc868"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/clusters.js",
+      "symbols": [
+        "rect",
+        "label title positioning"
+      ],
+      "sha256": "65363a1bb619eb0d0e0635f3c3bd4410c2ade873053ea864506a3323496f940b"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/diagrams/flowchart/flowDb.ts",
+      "symbols": [
+        "getData",
+        "group reverse reduction order and leaf insertion order"
+      ],
+      "sha256": "33577b9ade8c65be6049c3093089dbf81abf44214f49c2b2ea46434183889288"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/defaultConfig.ts",
+      "symbols": [
+        "config.elk"
+      ],
+      "sha256": "6f2ec3c231ee970fb0368d158975090d488c93c9801a618b06cb18d58488b068"
+    }
+  ],
+  "pythonPaths": [
+    "src/py_mermaid/layout/elk/flowchart.py",
+    "src/py_mermaid/layout/elk/compound.py",
+    "src/py_mermaid/geometry/flowchart.py"
+  ],
+  "providerBoundary": {
+    "shapes": "geometry/shapes.py owned by canvas_labels; only consume CLASSIC_SHAPES and shape_outline_intersection",
+    "measurements": "No Canvas here; complete MeasuredNode/MeasuredGroup/MeasuredEdgeLabel tuples explicitly injected",
+    "layout": "Only actual pyelk.ELK 0.1.0 async invocation with context-managed worker; no fallback or coordinate fixture"
+  },
+  "coordinateContract": {
+    "nodeInput": "Fixed actual measured dimensions; no input positions",
+    "groups": "Source inner padding24; group-specific options; measured titles; empty groups receive title-based dimensions but no fixed coordinates",
+    "nodesOutput": "Recursive parent-local x/y summed exactly once into absolute top-left boxes",
+    "routesAndLabels": "Use pyelk JSON container-local export; translate by original immutable container origin, never painted frame; preserve all sections/start/bends/end",
+    "frames": "Deepest-first inward-only source evenGroupFrames using child geometry, internal lanes and group endpoint anchors; immutable engine_origin retained",
+    "titles": "Center on final painted frame, top at frame.y + source title margin, measured title width/height",
+    "shapeAttachments": "Only semantic leaf shape endpoints clipped by sole shared shape provider along actual orthogonal departure; groups retain rectangular attachments"
+  },
+  "pureStateAndValidation": [
+    "Group/node shared unique string namespace; unique edge ids",
+    "Unknown parent or endpoint, parent cycles and missing/duplicate/invalid measurement ids rejected before native invocation",
+    "Positive finite node/edge label dimensions; finite nonnegative title measurement",
+    "Output exact full element/edge ids and unchanged parent relationships, fixed leaf sizes, finite group/route/label coordinates, complete center label id and unchanged measured label dimensions",
+    "Collapsed-subgraph feedback DFS preserves declaration edge order; reverse only those source-defined feedback edges and restore semantic route orientation"
+  ],
+  "sourceOptions": [
+    "Root defaults and F01.1 square/no-group/no-label signature/path retained",
+    "Flowchart spacing fields remain present but unused by fixed ELK root; no invented mapping",
+    "Group explicit direction gets SEPARATE_CHILDREN and mapped DOWN/UP/LEFT/RIGHT; crossing endpoints force INCLUDE_CHILDREN up to LCA without erasing direction metadata",
+    "Group child order follows source reversed groups then inserted leaf nodes, not reversed grammar-chain members"
+  ],
+  "versionBoundary": [
+    "Mermaid fixed adapter uses elkjs0.9.3; runtime intentionally uses independently released pyelk0.1.0 targetingELK0.12.1, per authorization",
+    "pyelk execution/json_transfer.py output container determines section/label frame; adapter does not force older reference coordinates",
+    "INCLUDE_CHILDREN direction resolution is left to real pyelk; no manual coordinate correction to simulate separate layout"
+  ],
+  "referenceProviderSources": [
+    {
+      "path": "py-elk/src/pyelk/execution/json_transfer.py",
+      "sha256": "4d15ec866a33b00469e07b4bcd507e3d94dc402a202e6586190e1168e2dc67fd"
+    },
+    {
+      "path": "py-elk/src/pyelk/algorithms/layered/native_import_hierarchical.py",
+      "sha256": "5f0cd992f59a5d8ef63ccf2f686f95e193a98a0bccaed88b8c3ff2600cfaa925"
+    }
+  ],
+  "notClaimed": [
+    "Full Mermaid ELK wrapper equivalence: source terminal-jog straightening and line-hop painter are not newly ported by F01.2; full real engine route preserved",
+    "Runtime behavior verification, installed-package validation or source oracle parity from compile/import",
+    "Other algorithms, styles, metadata shapes, rich labels or terminal cardinality labels"
+  ],
+  "remainingWork": [
+    "S3 source-derived tests and malformed-result negative controls",
+    "S4 genuine pyelk nested/directional/cross-group/group-to-group/ancestor-edge/empty-group runs and root-cause repairs if needed",
+    "S5 real Canvas render content/shape endpoint/group title/edge label/no-clipping checks; no installation per current scope"
+  ],
+  "titleFloorCorrection": {
+    "problem": "Returned compound group frame was narrower than its physically measured title under inherited vertical INCLUDE_CHILDREN.",
+    "rootCause": "Pinned pyelk0.1.0 applies the populated compound minimum in its hierarchical/transposed native frame; inherited vertical compound groups differ from standalone SEPARATE_CHILDREN graphs. The source Mermaid width-only public minimum therefore constrained the wrong physical dimension in this provider path.",
+    "sourceSymbols": [
+      "pyelk/algorithms/layered/native_import_hierarchical.py:import_hierarchical_graph",
+      "pyelk/algorithms/layered/directions_general.py:_transpose",
+      "pyelk/algorithms/layered/hierarchical_resize.py:resize_hierarchical_graph"
+    ],
+    "adaptation": "After source crossing policies settle, resolve group hierarchy/run direction. Only populated INCLUDE_CHILDREN vertical groups use the measured physical title width in minimum y: (0,title_width+group_padding). Horizontal, standalone separate-direction and empty groups keep source x/y. No coordinates supplied and no post-layout frame enlargement.",
+    "guard": "Reject a returned engine group narrower than its measured title floor rather than render an unreadable title.",
+    "unicodeRawBefore": {
+      "titleWidth": 305.78125,
+      "minimumPhysicalWidth": 313.78125,
+      "rawGroupWidth": 247.23046875,
+      "titleX": 12.0,
+      "frameX": 41.275390625
+    },
+    "unicodeRawAfter": {
+      "titleWidth": 305.78125,
+      "minimumPhysicalWidth": 313.78125,
+      "rawGroupWidth": 313.78125,
+      "titleX": 16.0,
+      "frameX": 12.0
+    },
+    "rejectedProbeAlternatives": [
+      "Typed vector object: true provider LOCAL_PROPERTY_SCALAR_REQUIRED; raw failure retained",
+      "Supplying raw width alone: did not preserve width",
+      "Both-axis minimum: diagnostic only; not used because it introduces an unnecessary minimum height"
+    ],
+    "diagnosticLimit": "First ASCII-degraded PowerShell probe remains archived at test-runs/F01.2-title-floor-diagnosis-20261104T144859Z-202af147; Unicode-exact re-probe above supersedes it for the original L13 fixture.",
+    "evidence": [
+      {
+        "run": "test-runs/F01.2-title-floor-unicode-diagnosis-20261104T145031Z-dbc72e15",
+        "runManifestSha256": "f9c54601fd00731e6c1a083e7be971b19162fa5da2eeb0e695e5b9488d6e900b",
+        "sourceTreeSha256": "10cdffe7c181727d5feab46dea6f9df05c028e744acb545bd0e43e60dc5b306e",
+        "sourceUnchangedDuringRun": true,
+        "commands": [
+          {
+            "name": "exact-unicode-title-probes",
+            "exitCode": 0,
+            "stdout": "commands/001-exact-unicode-title-probes/stdout.log",
+            "stdoutSha256": "5d563590f493c816a77cb41abedbeadde456d8baa22b2c2f8f058dd9652e4e4c",
+            "stderr": "commands/001-exact-unicode-title-probes/stderr.log",
+            "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ]
+      },
+      {
+        "run": "test-runs/F01.2-title-floor-targeted-20261104T145132Z-7503f1fe",
+        "runManifestSha256": "58a4cc302fa688c9bfc7c0c93cdd70516793915ced41ed75a05bda09525f3983",
+        "sourceTreeSha256": "630f80f74c69f43054d718a1f045af5440266531b911aa168efa62581e92af01",
+        "sourceUnchangedDuringRun": true,
+        "commands": [
+          {
+            "name": "compound-layout-regression",
+            "exitCode": 0,
+            "stdout": "commands/001-compound-layout-regression/stdout.log",
+            "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "stderr": "commands/001-compound-layout-regression/stderr.log",
+            "stderrSha256": "400535dbe038a5d72a2b4c10c18795574c42c4b6ebfd8a0630068a23c687609e"
+          }
+        ]
+      },
+      {
+        "run": "test-runs/F01.2-title-floor-fixed-raw-20261104T145231Z-8a7d945a",
+        "runManifestSha256": "f91ac17e9392cee63b72df55cb3db690d2d536265d642368828938b64a5dc16e",
+        "sourceTreeSha256": "31735d8fe4c8fd7a8e4738514f01df45e5ca0559042381776a657eed4d284825",
+        "sourceUnchangedDuringRun": true,
+        "commands": [
+          {
+            "name": "final-raw-title-probes",
+            "exitCode": 0,
+            "stdout": "commands/001-final-raw-title-probes/stdout.log",
+            "stdoutSha256": "ca43d818034b9ba7d5f390bdae1b942b660c76b16fcdbdf5663f0987d0f49200",
+            "stderr": "commands/001-final-raw-title-probes/stderr.log",
+            "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "name": "title-floor-negative-control",
+            "exitCode": 0,
+            "stdout": "commands/002-title-floor-negative-control/stdout.log",
+            "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "stderr": "commands/002-title-floor-negative-control/stderr.log",
+            "stderrSha256": "ca5d1e9d6fe7abc69bae24b614a3735c4f2d83837e8a6428ef3d2848ed684ba2"
+          }
+        ]
+      }
+    ],
+    "remainingVerification": "Coordinator S5 unified final candidate, including Canvas/session changes after the targeted layout suite; no final full pass inferred."
+  },
+  "moduleSourceSha256": {
+    "src/py_mermaid/layout/elk/flowchart.py": "8851aa0a3d53eaef0c69568a93654ad3f92a773bc4943d7b6c4364918126b0be",
+    "src/py_mermaid/layout/elk/compound.py": "0573e91527216ace90c9068420ff97fb850f3d6cd1e35c750ca632eccba4a3d2",
+    "src/py_mermaid/geometry/flowchart.py": "dccaa6805901d0bcb502acddf3810302041553569fc9964201ca6d52dabdee5f"
+  }
+}

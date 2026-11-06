@@ -1,0 +1,5431 @@
+{
+  "schema": "py-mermaid-f014-language-cases/v1",
+  "scope": "F01.4-language",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "sourceFreeze": "5b0262fdf79a609517ff6080ddd1da50d1649528abea2373f74c3666ee7d14ed",
+  "origin": "Independent fixed grammar/FlowDB/spec expectations. Shapes aliases extracted as source facts from pinned53definitions plus6 reachable lowercase undocumented names, mapped through four literal frozen contract canonical names. Never candidate-generated expected values. Language-only cases are not render acceptance evidence.",
+  "cases": [
+    {
+      "id": "direction-TB",
+      "title": "direction TB",
+      "text": "flowchart TB\nA --> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TB"
+    },
+    {
+      "id": "direction-TD",
+      "title": "direction TD",
+      "text": "flowchart TD\nA --> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD"
+    },
+    {
+      "id": "direction-BT",
+      "title": "direction BT",
+      "text": "flowchart BT\nA --> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "BT"
+    },
+    {
+      "id": "direction-LR",
+      "title": "direction LR",
+      "text": "flowchart LR\nA --> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "LR"
+    },
+    {
+      "id": "direction-RL",
+      "title": "direction RL",
+      "text": "flowchart RL\nA --> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "RL"
+    },
+    {
+      "id": "direction-left",
+      "title": "direction left",
+      "text": "flowchart <\nA --> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "RL"
+    },
+    {
+      "id": "direction-right",
+      "title": "direction right",
+      "text": "flowchart >\nA --> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "LR"
+    },
+    {
+      "id": "direction-up",
+      "title": "direction up",
+      "text": "flowchart ^\nA --> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "BT"
+    },
+    {
+      "id": "direction-down",
+      "title": "direction down",
+      "text": "flowchart v\nA --> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TB"
+    },
+    {
+      "id": "implicit-direction",
+      "title": "implicit direction",
+      "text": "flowchart\nA --> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TB"
+    },
+    {
+      "id": "elk-header",
+      "title": "elk header",
+      "text": "flowchart-elk LR\nA --> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "LR"
+    },
+    {
+      "id": "empty-document",
+      "title": "empty document",
+      "text": "graph TD",
+      "nodes": [],
+      "edges": [],
+      "direction": "TD"
+    },
+    {
+      "id": "empty-default-direction",
+      "title": "empty default direction",
+      "text": "graph",
+      "nodes": [],
+      "edges": [],
+      "direction": "TB"
+    },
+    {
+      "id": "whitespace-separators",
+      "title": "whitespace separators",
+      "text": " \n graph TD \n A; \n\t B ;",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "sourceCorrection": "Original header SPACE+SEMI is invalid: FirstStmtSeparator permits SEMI, NEWLINE, or spaceList NEWLINE. Retained original exact input as header-semicolon-invalid; this positive keeps whitespace and node semicolon semantics."
+    },
+    {
+      "id": "unicode-identifiers",
+      "title": "unicode identifiers",
+      "text": "flowchart TD\n中文[Alpha] --> 节点[Beta]",
+      "nodes": [
+        [
+          "中文",
+          "Alpha"
+        ],
+        [
+          "节点",
+          "Beta"
+        ]
+      ],
+      "edges": [
+        [
+          "中文",
+          "节点"
+        ]
+      ],
+      "direction": "TD"
+    },
+    {
+      "id": "punctuated-identifiers",
+      "title": "punctuated identifiers",
+      "text": "flowchart TD\nA.foo[First] --> B/bar[Second]",
+      "nodes": [
+        [
+          "A.foo",
+          "First"
+        ],
+        [
+          "B/bar",
+          "Second"
+        ]
+      ],
+      "edges": [
+        [
+          "A.foo",
+          "B/bar"
+        ]
+      ],
+      "direction": "TD"
+    },
+    {
+      "id": "numeric-identifiers",
+      "title": "numeric identifiers",
+      "text": "flowchart TD\n123[One] --> 456[Two]",
+      "nodes": [
+        [
+          "123",
+          "One"
+        ],
+        [
+          "456",
+          "Two"
+        ]
+      ],
+      "edges": [
+        [
+          "123",
+          "456"
+        ]
+      ],
+      "direction": "TD"
+    },
+    {
+      "id": "cartesian-batch",
+      "title": "cartesian batch",
+      "text": "flowchart TD\nA & B --> C & D --> E",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ],
+        [
+          "C",
+          "C"
+        ],
+        [
+          "D",
+          "D"
+        ],
+        [
+          "E",
+          "E"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "C"
+        ],
+        [
+          "A",
+          "D"
+        ],
+        [
+          "B",
+          "C"
+        ],
+        [
+          "B",
+          "D"
+        ],
+        [
+          "C",
+          "E"
+        ],
+        [
+          "D",
+          "E"
+        ]
+      ],
+      "direction": "TD"
+    },
+    {
+      "id": "cartesian-id-owner",
+      "title": "cartesian id owner",
+      "text": "flowchart TD\nA & B edge1@--> C & D",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ],
+        [
+          "C",
+          "C"
+        ],
+        [
+          "D",
+          "D"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "C"
+        ],
+        [
+          "A",
+          "D"
+        ],
+        [
+          "B",
+          "C"
+        ],
+        [
+          "B",
+          "D"
+        ]
+      ],
+      "direction": "TD",
+      "sourceIds": [
+        "L_A_C_0",
+        "L_A_D_0",
+        "edge1",
+        "L_B_D_0"
+      ],
+      "userIds": [
+        false,
+        false,
+        true,
+        false
+      ]
+    },
+    {
+      "id": "user-id-duplicate",
+      "title": "user id duplicate",
+      "text": "flowchart TD\nA edge1@--> B\nA edge1@--> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "sourceIds": [
+        "edge1",
+        "L_A_B_2"
+      ],
+      "userIds": [
+        true,
+        false
+      ]
+    },
+    {
+      "id": "generated-id-counters",
+      "title": "generated id counters",
+      "text": "flowchart TD\nA --> B\nA --> B\nA --> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "A",
+          "B"
+        ],
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "sourceIds": [
+        "L_A_B_0",
+        "L_A_B_2",
+        "L_A_B_3"
+      ]
+    },
+    {
+      "id": "edge-open",
+      "title": "edge open",
+      "text": "flowchart TD\nA --- B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "arrow_open",
+          "stroke": "normal",
+          "minLength": 1,
+          "startMarker": "none",
+          "endMarker": "none"
+        }
+      ]
+    },
+    {
+      "id": "edge-point",
+      "title": "edge point",
+      "text": "flowchart TD\nA --> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "arrow_point",
+          "stroke": "normal",
+          "minLength": 1,
+          "startMarker": "none",
+          "endMarker": "point"
+        }
+      ]
+    },
+    {
+      "id": "edge-circle",
+      "title": "edge circle",
+      "text": "flowchart TD\nA --o B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "arrow_circle",
+          "stroke": "normal",
+          "minLength": 1,
+          "startMarker": "none",
+          "endMarker": "circle"
+        }
+      ]
+    },
+    {
+      "id": "edge-cross",
+      "title": "edge cross",
+      "text": "flowchart TD\nA --x B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "arrow_cross",
+          "stroke": "normal",
+          "minLength": 1,
+          "startMarker": "none",
+          "endMarker": "cross"
+        }
+      ]
+    },
+    {
+      "id": "edge-double-point",
+      "title": "edge double point",
+      "text": "flowchart TD\nA <--> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "double_arrow_point",
+          "stroke": "normal",
+          "minLength": 1,
+          "startMarker": "point",
+          "endMarker": "point"
+        }
+      ]
+    },
+    {
+      "id": "edge-double-circle",
+      "title": "edge double circle",
+      "text": "flowchart TD\nA o--o B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "double_arrow_circle",
+          "stroke": "normal",
+          "minLength": 1,
+          "startMarker": "circle",
+          "endMarker": "circle"
+        }
+      ]
+    },
+    {
+      "id": "edge-double-cross",
+      "title": "edge double cross",
+      "text": "flowchart TD\nA x--x B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "double_arrow_cross",
+          "stroke": "normal",
+          "minLength": 1,
+          "startMarker": "cross",
+          "endMarker": "cross"
+        }
+      ]
+    },
+    {
+      "id": "edge-thick-open",
+      "title": "edge thick open",
+      "text": "flowchart TD\nA === B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "arrow_open",
+          "stroke": "thick",
+          "minLength": 1,
+          "startMarker": "none",
+          "endMarker": "none"
+        }
+      ]
+    },
+    {
+      "id": "edge-thick-point",
+      "title": "edge thick point",
+      "text": "flowchart TD\nA ==> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "arrow_point",
+          "stroke": "thick",
+          "minLength": 1,
+          "startMarker": "none",
+          "endMarker": "point"
+        }
+      ]
+    },
+    {
+      "id": "edge-thick-circle",
+      "title": "edge thick circle",
+      "text": "flowchart TD\nA ==o B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "arrow_circle",
+          "stroke": "thick",
+          "minLength": 1,
+          "startMarker": "none",
+          "endMarker": "circle"
+        }
+      ]
+    },
+    {
+      "id": "edge-thick-cross",
+      "title": "edge thick cross",
+      "text": "flowchart TD\nA ==x B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "arrow_cross",
+          "stroke": "thick",
+          "minLength": 1,
+          "startMarker": "none",
+          "endMarker": "cross"
+        }
+      ]
+    },
+    {
+      "id": "edge-thick-double-point",
+      "title": "edge thick double point",
+      "text": "flowchart TD\nA <==> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "double_arrow_point",
+          "stroke": "thick",
+          "minLength": 1,
+          "startMarker": "point",
+          "endMarker": "point"
+        }
+      ]
+    },
+    {
+      "id": "edge-thick-double-circle",
+      "title": "edge thick double circle",
+      "text": "flowchart TD\nA o==o B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "double_arrow_circle",
+          "stroke": "thick",
+          "minLength": 1,
+          "startMarker": "circle",
+          "endMarker": "circle"
+        }
+      ]
+    },
+    {
+      "id": "edge-thick-double-cross",
+      "title": "edge thick double cross",
+      "text": "flowchart TD\nA x==x B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "double_arrow_cross",
+          "stroke": "thick",
+          "minLength": 1,
+          "startMarker": "cross",
+          "endMarker": "cross"
+        }
+      ]
+    },
+    {
+      "id": "edge-dotted-open",
+      "title": "edge dotted open",
+      "text": "flowchart TD\nA -.- B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "arrow_open",
+          "stroke": "dotted",
+          "minLength": 1,
+          "startMarker": "none",
+          "endMarker": "none"
+        }
+      ]
+    },
+    {
+      "id": "edge-dotted-point",
+      "title": "edge dotted point",
+      "text": "flowchart TD\nA -.-> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "arrow_point",
+          "stroke": "dotted",
+          "minLength": 1,
+          "startMarker": "none",
+          "endMarker": "point"
+        }
+      ]
+    },
+    {
+      "id": "edge-dotted-circle",
+      "title": "edge dotted circle",
+      "text": "flowchart TD\nA -.-o B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "arrow_circle",
+          "stroke": "dotted",
+          "minLength": 1,
+          "startMarker": "none",
+          "endMarker": "circle"
+        }
+      ]
+    },
+    {
+      "id": "edge-dotted-cross",
+      "title": "edge dotted cross",
+      "text": "flowchart TD\nA -.-x B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "arrow_cross",
+          "stroke": "dotted",
+          "minLength": 1,
+          "startMarker": "none",
+          "endMarker": "cross"
+        }
+      ]
+    },
+    {
+      "id": "edge-dotted-double-point",
+      "title": "edge dotted double point",
+      "text": "flowchart TD\nA <-.-> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "double_arrow_point",
+          "stroke": "dotted",
+          "minLength": 1,
+          "startMarker": "point",
+          "endMarker": "point"
+        }
+      ]
+    },
+    {
+      "id": "edge-dotted-double-circle",
+      "title": "edge dotted double circle",
+      "text": "flowchart TD\nA o-.-o B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "double_arrow_circle",
+          "stroke": "dotted",
+          "minLength": 1,
+          "startMarker": "circle",
+          "endMarker": "circle"
+        }
+      ]
+    },
+    {
+      "id": "edge-dotted-double-cross",
+      "title": "edge dotted double cross",
+      "text": "flowchart TD\nA x-.-x B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "double_arrow_cross",
+          "stroke": "dotted",
+          "minLength": 1,
+          "startMarker": "cross",
+          "endMarker": "cross"
+        }
+      ]
+    },
+    {
+      "id": "edge-invisible",
+      "title": "edge invisible",
+      "text": "flowchart TD\nA ~~~ B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "arrow_open",
+          "stroke": "invisible",
+          "minLength": 1,
+          "startMarker": "none",
+          "endMarker": "none"
+        }
+      ]
+    },
+    {
+      "id": "edge-normal-long",
+      "title": "edge normal long",
+      "text": "flowchart TD\nA ----> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "arrow_point",
+          "stroke": "normal",
+          "minLength": 3,
+          "startMarker": "none",
+          "endMarker": "point"
+        }
+      ]
+    },
+    {
+      "id": "edge-thick-long",
+      "title": "edge thick long",
+      "text": "flowchart TD\nA ====> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "arrow_point",
+          "stroke": "thick",
+          "minLength": 3,
+          "startMarker": "none",
+          "endMarker": "point"
+        }
+      ]
+    },
+    {
+      "id": "edge-dotted-long",
+      "title": "edge dotted long",
+      "text": "flowchart TD\nA -...-> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "arrow_point",
+          "stroke": "dotted",
+          "minLength": 3,
+          "startMarker": "none",
+          "endMarker": "point"
+        }
+      ]
+    },
+    {
+      "id": "edge-length-cap",
+      "title": "edge length cap",
+      "text": "flowchart TD\nA ---------------> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "arrow_point",
+          "stroke": "normal",
+          "minLength": 10,
+          "startMarker": "none",
+          "endMarker": "point"
+        }
+      ]
+    },
+    {
+      "id": "edge-mixed-direct-source",
+      "title": "edge mixed direct source",
+      "text": "flowchart TD\nA x--> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "arrow_point",
+          "stroke": "normal",
+          "minLength": 2,
+          "startMarker": "none",
+          "endMarker": "point"
+        }
+      ]
+    },
+    {
+      "id": "edge-left-open-source",
+      "title": "edge left open source",
+      "text": "flowchart TD\nA <--- B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "arrow_open",
+          "stroke": "normal",
+          "minLength": 2,
+          "startMarker": "none",
+          "endMarker": "none"
+        }
+      ]
+    },
+    {
+      "id": "inline-normal",
+      "title": "inline normal",
+      "text": "flowchart TD\nA -- Label --> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeLabels": [
+        "Label"
+      ],
+      "edgeSemantics": [
+        {
+          "type": "arrow_point",
+          "stroke": "normal",
+          "minLength": 1,
+          "startMarker": "none",
+          "endMarker": "point"
+        }
+      ]
+    },
+    {
+      "id": "inline-thick",
+      "title": "inline thick",
+      "text": "flowchart TD\nA == Label ==> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeLabels": [
+        "Label"
+      ],
+      "edgeSemantics": [
+        {
+          "type": "arrow_point",
+          "stroke": "thick",
+          "minLength": 1,
+          "startMarker": "none",
+          "endMarker": "point"
+        }
+      ]
+    },
+    {
+      "id": "inline-dotted",
+      "title": "inline dotted",
+      "text": "flowchart TD\nA -. Label .-> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeLabels": [
+        "Label"
+      ],
+      "edgeSemantics": [
+        {
+          "type": "arrow_point",
+          "stroke": "dotted",
+          "minLength": 1,
+          "startMarker": "none",
+          "endMarker": "point"
+        }
+      ]
+    },
+    {
+      "id": "inline-double-cross",
+      "title": "inline double cross",
+      "text": "flowchart TD\nA x-- Label --x B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeLabels": [
+        "Label"
+      ],
+      "edgeSemantics": [
+        {
+          "type": "double_arrow_cross",
+          "stroke": "normal",
+          "minLength": 1,
+          "startMarker": "cross",
+          "endMarker": "cross"
+        }
+      ]
+    },
+    {
+      "id": "invalid-combination-source",
+      "title": "invalid combination source",
+      "text": "flowchart TD\nA x-- Label --> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeLabels": [
+        "Label"
+      ],
+      "edgeSemantics": [
+        {
+          "type": "INVALID",
+          "stroke": "INVALID",
+          "minLength": null,
+          "startMarker": "none",
+          "endMarker": "point"
+        }
+      ]
+    },
+    {
+      "id": "thick-pipe-label",
+      "title": "thick pipe label",
+      "text": "flowchart TD\nA ==>|\"Plain label\"| B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeLabels": [
+        "Plain label"
+      ],
+      "edgeSemantics": [
+        {
+          "type": "arrow_point",
+          "stroke": "thick",
+          "minLength": 1,
+          "startMarker": "none",
+          "endMarker": "point"
+        }
+      ]
+    },
+    {
+      "id": "dotted-markdown-label",
+      "title": "dotted markdown label",
+      "text": "flowchart TD\nA -.->|\"`**Ready**`\"| B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeLabels": [
+        "**Ready**"
+      ],
+      "edgeLabelKinds": [
+        "markdown"
+      ]
+    },
+    {
+      "id": "old-properties",
+      "title": "old properties",
+      "text": "flowchart TD\nA[|field:value|Alpha] --> B",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "props": {
+        "A": {
+          "field": "value"
+        }
+      }
+    },
+    {
+      "id": "metadata-label",
+      "title": "metadata label",
+      "text": "flowchart TD\nA@{shape: rounded, label: \"**Alpha**\"} --> B",
+      "nodes": [
+        [
+          "A",
+          "**Alpha**"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "shapes": {
+        "A": "round"
+      },
+      "labelKinds": {
+        "A": "markdown"
+      },
+      "metadata": {
+        "A": {
+          "shape": "rounded",
+          "label": "**Alpha**"
+        }
+      },
+      "visibleLabels": {
+        "A": "Alpha"
+      },
+      "formats": {
+        "A": [
+          {
+            "text": "Alpha",
+            "weight": 700
+          }
+        ]
+      }
+    },
+    {
+      "id": "metadata-string-label",
+      "title": "metadata string label",
+      "text": "flowchart TD\nA@{shape: rect, label: \"<b>Alpha</b>\", labelType: string}",
+      "nodes": [
+        [
+          "A",
+          "<b>Alpha</b>"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "labelKinds": {
+        "A": "text"
+      },
+      "visibleLabels": {
+        "A": "Alpha"
+      },
+      "formats": {
+        "A": [
+          {
+            "text": "Alpha",
+            "weight": 700
+          }
+        ]
+      }
+    },
+    {
+      "id": "metadata-multiline-yaml",
+      "title": "metadata multiline yaml",
+      "text": "flowchart TD\nA@{\nshape: cyl\nlabel: \"First\n  second\"\nlabelType: text\n}",
+      "nodes": [
+        [
+          "A",
+          "First<br/>second"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "cylinder"
+      },
+      "visibleLabels": {
+        "A": "First\nsecond"
+      },
+      "sourceObservation": "Official initial DB body keeps br/> spelling; visibleLabel independently proves the two-line text. Native measurement still sanitizes raw_label."
+    },
+    {
+      "id": "metadata-resource-icon",
+      "title": "metadata resource icon",
+      "text": "flowchart TD\nA@{icon: \"demo:check\", form: circle, pos: b, w: 48, h: 48}",
+      "nodes": [
+        [
+          "A",
+          ""
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "iconCircle"
+      },
+      "metadata": {
+        "A": {
+          "icon": "demo:check",
+          "form": "circle",
+          "pos": "b",
+          "w": 48,
+          "h": 48
+        }
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "metadata-resource-image",
+      "title": "metadata resource image",
+      "text": "flowchart TD\nA@{img: \"logo\", label: Logo, w: \"64\", h: \"32\", constraint: on}",
+      "nodes": [
+        [
+          "A",
+          "Logo"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "imageSquare"
+      },
+      "labelKinds": {
+        "A": "markdown"
+      },
+      "metadata": {
+        "A": {
+          "img": "logo",
+          "label": "Logo",
+          "w": "64",
+          "h": "32",
+          "constraint": "on"
+        }
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "metadata-after-edge",
+      "title": "metadata after edge",
+      "text": "flowchart TD\nA e1@--> B\ne1@{curve: step, animate: true, animation: slow}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "sourceIds": [
+        "e1"
+      ],
+      "userIds": [
+        true
+      ],
+      "edgeCurves": [
+        "step"
+      ],
+      "edgeAnimations": [
+        {
+          "animate": true,
+          "animation": "slow"
+        }
+      ]
+    },
+    {
+      "id": "metadata-before-edge",
+      "title": "metadata before edge",
+      "text": "flowchart TD\ne1@{curve: step}\nA e1@--> B",
+      "nodes": [
+        [
+          "e1",
+          "e1"
+        ],
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "sourceIds": [
+        "e1"
+      ],
+      "userIds": [
+        true
+      ],
+      "edgeCurves": [
+        "basis"
+      ]
+    },
+    {
+      "id": "metadata-resource-sticky",
+      "title": "metadata resource sticky",
+      "text": "flowchart TD\nA@{img: logo, w: 40}\nA[Updated]",
+      "nodes": [
+        [
+          "A",
+          "Updated"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "imageSquare"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "style-forward-node",
+      "title": "style forward node",
+      "text": "flowchart TD\nstyle A fill:red,stroke:blue\nA[Alpha] --> B",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "nodeStyles": {
+        "A": [
+          "fill:red",
+          "stroke:blue"
+        ]
+      }
+    },
+    {
+      "id": "style-append",
+      "title": "style append",
+      "text": "flowchart TD\nA --> B\nstyle A fill:red\nstyle A stroke:blue",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "nodeStyles": {
+        "A": [
+          "fill:red",
+          "stroke:blue"
+        ]
+      }
+    },
+    {
+      "id": "class-definition-order",
+      "title": "class definition order",
+      "text": "flowchart TD\nA:::hot --> B\nclassDef hot fill:red,color:white",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "nodeClasses": {
+        "A": [
+          "hot"
+        ]
+      },
+      "classDefinitions": [
+        {
+          "name": "hot",
+          "styles": [
+            "fill:red",
+            "color:white"
+          ],
+          "textStyles": [
+            "color:white"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "class-multi-target",
+      "title": "class multi target",
+      "text": "flowchart TD\nA --> B\nclass A,B hot\nclassDef hot stroke:red",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "nodeClasses": {
+        "A": [
+          "hot"
+        ],
+        "B": [
+          "hot"
+        ]
+      },
+      "classDefinitions": [
+        {
+          "name": "hot",
+          "styles": [
+            "stroke:red"
+          ],
+          "textStyles": []
+        }
+      ]
+    },
+    {
+      "id": "class-before-target-ignored",
+      "title": "class before target ignored",
+      "text": "flowchart TD\nclass A hot\nA --> B\nclassDef hot fill:red",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "nodeClasses": {
+        "A": []
+      },
+      "classDefinitions": [
+        {
+          "name": "hot",
+          "styles": [
+            "fill:red"
+          ],
+          "textStyles": []
+        }
+      ]
+    },
+    {
+      "id": "classdef-append-and-comma",
+      "title": "classdef append and comma",
+      "text": "flowchart TD\nA --> B\nclassDef red,blue fill:red\nclassDef red stroke:blue,color:white",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "classDefinitions": [
+        {
+          "name": "red",
+          "styles": [
+            "fill:red",
+            "stroke:blue",
+            "color:white"
+          ],
+          "textStyles": [
+            "color:white"
+          ]
+        },
+        {
+          "name": "blue",
+          "styles": [
+            "fill:red"
+          ],
+          "textStyles": []
+        }
+      ]
+    },
+    {
+      "id": "class-comma-not-multiple",
+      "title": "class comma not multiple",
+      "text": "flowchart TD\nA --> B\nclass A red,blue",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "nodeClasses": {
+        "A": [
+          "red,blue"
+        ]
+      }
+    },
+    {
+      "id": "class-escaped-comma",
+      "title": "class escaped comma",
+      "text": "flowchart TD\nA --> B\nclassDef dash stroke-dasharray:5\\,3,color:red",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "classDefinitions": [
+        {
+          "name": "dash",
+          "styles": [
+            "stroke-dasharray:5,3",
+            "color:red"
+          ],
+          "textStyles": [
+            "color:red"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "linkstyle-index-default",
+      "title": "linkstyle index default",
+      "text": "flowchart TD\nA --> B\nlinkStyle default stroke:red\nlinkStyle 0 stroke:blue",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "defaultEdgeStyles": [
+        "stroke:red"
+      ],
+      "edgeStyles": [
+        [
+          "stroke:blue",
+          "fill:none"
+        ]
+      ]
+    },
+    {
+      "id": "linkstyle-index-list",
+      "title": "linkstyle index list",
+      "text": "flowchart TD\nA --> B --> C\nlinkStyle 0,1 stroke:red,fill:none",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ],
+        [
+          "C",
+          "C"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "B",
+          "C"
+        ]
+      ],
+      "direction": "TD",
+      "edgeStyles": [
+        [
+          "stroke:red",
+          "fill:none"
+        ],
+        [
+          "stroke:red",
+          "fill:none"
+        ]
+      ]
+    },
+    {
+      "id": "linkstyle-default-timing",
+      "title": "linkstyle default timing",
+      "text": "flowchart TD\nlinkStyle default interpolate step\nA --> B\nlinkStyle default interpolate linear\nB --> C",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ],
+        [
+          "C",
+          "C"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "B",
+          "C"
+        ]
+      ],
+      "direction": "TD",
+      "edgeCurves": [
+        "step",
+        "linear"
+      ],
+      "defaultEdgeCurve": "linear"
+    },
+    {
+      "id": "linkstyle-interpolate-and-style",
+      "title": "linkstyle interpolate and style",
+      "text": "flowchart TD\nA --> B\nlinkStyle 0 interpolate cardinal stroke:blue",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeCurves": [
+        "cardinal"
+      ],
+      "edgeStyles": [
+        [
+          "stroke:blue",
+          "fill:none"
+        ]
+      ]
+    },
+    {
+      "id": "class-edge-id",
+      "title": "class edge id",
+      "text": "flowchart TD\nA e1@--> B\nclass e1 active\nclassDef active stroke:red",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "sourceIds": [
+        "e1"
+      ],
+      "edgeClasses": [
+        [
+          "active"
+        ]
+      ],
+      "classDefinitions": [
+        {
+          "name": "active",
+          "styles": [
+            "stroke:red"
+          ],
+          "textStyles": []
+        }
+      ]
+    },
+    {
+      "id": "class-group",
+      "title": "class group",
+      "text": "flowchart TD\nsubgraph G[Group]\nA\nend\nclass G active\nclassDef active fill:red",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "groups": [
+        {
+          "id": "G",
+          "label": "Group",
+          "members": [
+            "A"
+          ],
+          "parent_id": null,
+          "direction": null
+        }
+      ],
+      "groupClasses": {
+        "G": [
+          "active"
+        ]
+      }
+    },
+    {
+      "id": "click-href",
+      "title": "click href",
+      "text": "flowchart TD\nA --> B\nclick A href \"https://example.invalid\" \"Tooltip\" _blank",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "nodeClasses": {
+        "A": [
+          "clickable"
+        ]
+      }
+    },
+    {
+      "id": "click-url",
+      "title": "click url",
+      "text": "flowchart TD\nA --> B\nclick A \"javascript:alert(1)\" \"Ignored tooltip\"",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "nodeClasses": {
+        "A": [
+          "clickable"
+        ]
+      }
+    },
+    {
+      "id": "click-callback",
+      "title": "click callback",
+      "text": "flowchart TD\nA --> B\nclick A callback \"Tooltip\"",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "nodeClasses": {
+        "A": [
+          "clickable"
+        ]
+      }
+    },
+    {
+      "id": "click-call",
+      "title": "click call",
+      "text": "flowchart TD\nA --> B\nclick A call callback(\"x\",42) \"Tooltip\"",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "nodeClasses": {
+        "A": [
+          "clickable"
+        ]
+      }
+    },
+    {
+      "id": "click-forward-ignored",
+      "title": "click forward ignored",
+      "text": "flowchart TD\nclick A callback\nA --> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "nodeClasses": {
+        "A": []
+      }
+    },
+    {
+      "id": "collapsed-boundary",
+      "title": "collapsed boundary",
+      "text": "flowchart TD\nsubgraph G[Group]\nA --> B\nend\nB --> Z\nG@{view: collapsed}",
+      "nodes": [
+        [
+          "G",
+          "Group"
+        ],
+        [
+          "Z",
+          "Z"
+        ]
+      ],
+      "edges": [
+        [
+          "G",
+          "Z"
+        ]
+      ],
+      "direction": "TD",
+      "shapes": {
+        "G": "collapsedGroup"
+      },
+      "colorIndices": {
+        "G": 0
+      },
+      "sourceIds": [
+        "L_B_Z_0"
+      ]
+    },
+    {
+      "id": "collapsed-nested-outermost",
+      "title": "collapsed nested outermost",
+      "text": "flowchart TD\nsubgraph O[Outer]\nsubgraph I[Inner]\nA\nend\nB\nend\nA --> Z\nI@{view: collapsed}\nO@{view: collapsed}",
+      "nodes": [
+        [
+          "O",
+          "Outer"
+        ],
+        [
+          "Z",
+          "Z"
+        ]
+      ],
+      "edges": [
+        [
+          "O",
+          "Z"
+        ]
+      ],
+      "direction": "TD",
+      "shapes": {
+        "O": "collapsedGroup"
+      },
+      "colorIndices": {
+        "O": 0
+      }
+    },
+    {
+      "id": "collapsed-preserve-own-loop",
+      "title": "collapsed preserve own loop",
+      "text": "flowchart TD\nsubgraph G[Group]\nA\nend\nG --> G\nG@{view: collapsed}",
+      "nodes": [
+        [
+          "G",
+          "Group"
+        ]
+      ],
+      "edges": [
+        [
+          "G",
+          "G"
+        ]
+      ],
+      "direction": "TD",
+      "shapes": {
+        "G": "collapsedGroup"
+      }
+    },
+    {
+      "id": "collapsed-slot-sibling",
+      "title": "collapsed slot sibling",
+      "text": "flowchart TD\nsubgraph G[First]\nA\nend\nsubgraph H[Second]\nB\nend\nG@{view: collapsed}",
+      "nodes": [
+        [
+          "G",
+          "First"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "G": "collapsedGroup"
+      },
+      "groups": [
+        {
+          "id": "H",
+          "label": "Second",
+          "members": [
+            "B"
+          ],
+          "parent_id": null,
+          "direction": null
+        }
+      ],
+      "colorIndices": {
+        "G": 0
+      },
+      "groupColorIndices": {
+        "H": 1
+      }
+    },
+    {
+      "id": "group-metadata-algorithm",
+      "title": "group metadata algorithm",
+      "text": "flowchart LR\nsubgraph G[Group]\nA --> B\nend\nG@{algorithm: elk.box}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "LR",
+      "groups": [
+        {
+          "id": "G",
+          "label": "Group",
+          "members": [
+            "B",
+            "A"
+          ],
+          "parent_id": null,
+          "direction": null
+        }
+      ],
+      "groupMetadata": {
+        "G": {
+          "algorithm": "elk.box"
+        }
+      }
+    },
+    {
+      "id": "group-metadata-unknown-retained",
+      "title": "group metadata unknown retained",
+      "text": "flowchart TD\nsubgraph G\nA\nend\nG@{algorithm: elk.unknown, extra: value}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "groups": [
+        {
+          "id": "G",
+          "label": "G",
+          "members": [
+            "A"
+          ],
+          "parent_id": null,
+          "direction": null
+        }
+      ],
+      "groupMetadata": {
+        "G": {
+          "algorithm": "elk.unknown",
+          "extra": "value"
+        }
+      }
+    },
+    {
+      "id": "root-direction-statement-no-change",
+      "title": "root direction statement no change",
+      "text": "flowchart LR\ndirection BT\nA --> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "LR"
+    },
+    {
+      "id": "source-direction-line-consumption",
+      "title": "source direction line consumption",
+      "text": "flowchart TD\nsubgraph G\ndirection LR; A --> B\nC\nend",
+      "nodes": [
+        [
+          "C",
+          "C"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "groups": [
+        {
+          "id": "G",
+          "label": "G",
+          "members": [
+            "C"
+          ],
+          "parent_id": null,
+          "direction": "LR"
+        }
+      ]
+    },
+    {
+      "id": "handdrawn-config",
+      "title": "handdrawn config",
+      "text": "flowchart TD\nA --> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "config": {
+        "look": "handDrawn",
+        "handDrawnSeed": 19
+      },
+      "expectedConfig": {
+        "look": "handDrawn",
+        "hand_drawn_seed": 19
+      }
+    }
+  ],
+  "aliasCases": [
+    {
+      "id": "alias-rect",
+      "title": "Metadata shape rect",
+      "text": "flowchart TD\nA@{shape: rect}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "square"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-proc",
+      "title": "Metadata shape proc",
+      "text": "flowchart TD\nA@{shape: proc}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "square"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-process",
+      "title": "Metadata shape process",
+      "text": "flowchart TD\nA@{shape: process}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "square"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-rectangle",
+      "title": "Metadata shape rectangle",
+      "text": "flowchart TD\nA@{shape: rectangle}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "square"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-rounded",
+      "title": "Metadata shape rounded",
+      "text": "flowchart TD\nA@{shape: rounded}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "round"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-event",
+      "title": "Metadata shape event",
+      "text": "flowchart TD\nA@{shape: event}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "round"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-stadium",
+      "title": "Metadata shape stadium",
+      "text": "flowchart TD\nA@{shape: stadium}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "stadium"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-terminal",
+      "title": "Metadata shape terminal",
+      "text": "flowchart TD\nA@{shape: terminal}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "stadium"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-pill",
+      "title": "Metadata shape pill",
+      "text": "flowchart TD\nA@{shape: pill}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "stadium"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-fr-rect",
+      "title": "Metadata shape fr-rect",
+      "text": "flowchart TD\nA@{shape: fr-rect}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "subroutine"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-subprocess",
+      "title": "Metadata shape subprocess",
+      "text": "flowchart TD\nA@{shape: subprocess}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "subroutine"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-subproc",
+      "title": "Metadata shape subproc",
+      "text": "flowchart TD\nA@{shape: subproc}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "subroutine"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-framed-rectangle",
+      "title": "Metadata shape framed-rectangle",
+      "text": "flowchart TD\nA@{shape: framed-rectangle}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "subroutine"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-subroutine",
+      "title": "Metadata shape subroutine",
+      "text": "flowchart TD\nA@{shape: subroutine}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "subroutine"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-cyl",
+      "title": "Metadata shape cyl",
+      "text": "flowchart TD\nA@{shape: cyl}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "cylinder"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-db",
+      "title": "Metadata shape db",
+      "text": "flowchart TD\nA@{shape: db}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "cylinder"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-database",
+      "title": "Metadata shape database",
+      "text": "flowchart TD\nA@{shape: database}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "cylinder"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-cylinder",
+      "title": "Metadata shape cylinder",
+      "text": "flowchart TD\nA@{shape: cylinder}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "cylinder"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-datastore",
+      "title": "Metadata shape datastore",
+      "text": "flowchart TD\nA@{shape: datastore}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "datastore"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-data-store",
+      "title": "Metadata shape data-store",
+      "text": "flowchart TD\nA@{shape: data-store}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "datastore"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-folder",
+      "title": "Metadata shape folder",
+      "text": "flowchart TD\nA@{shape: folder}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "folder"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-directory",
+      "title": "Metadata shape directory",
+      "text": "flowchart TD\nA@{shape: directory}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "folder"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-bucket",
+      "title": "Metadata shape bucket",
+      "text": "flowchart TD\nA@{shape: bucket}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "bucket"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-console",
+      "title": "Metadata shape console",
+      "text": "flowchart TD\nA@{shape: console}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "consoleWindow"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-browser",
+      "title": "Metadata shape browser",
+      "text": "flowchart TD\nA@{shape: browser}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "browser"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-person",
+      "title": "Metadata shape person",
+      "text": "flowchart TD\nA@{shape: person}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "person"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-circle",
+      "title": "Metadata shape circle",
+      "text": "flowchart TD\nA@{shape: circle}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "circle"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-circ",
+      "title": "Metadata shape circ",
+      "text": "flowchart TD\nA@{shape: circ}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "circle"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-bang",
+      "title": "Metadata shape bang",
+      "text": "flowchart TD\nA@{shape: bang}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "bang"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-cloud",
+      "title": "Metadata shape cloud",
+      "text": "flowchart TD\nA@{shape: cloud}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "cloud"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-diam",
+      "title": "Metadata shape diam",
+      "text": "flowchart TD\nA@{shape: diam}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "diamond"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-decision",
+      "title": "Metadata shape decision",
+      "text": "flowchart TD\nA@{shape: decision}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "diamond"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-diamond",
+      "title": "Metadata shape diamond",
+      "text": "flowchart TD\nA@{shape: diamond}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "diamond"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-question",
+      "title": "Metadata shape question",
+      "text": "flowchart TD\nA@{shape: question}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "diamond"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-hex",
+      "title": "Metadata shape hex",
+      "text": "flowchart TD\nA@{shape: hex}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "hexagon"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-hexagon",
+      "title": "Metadata shape hexagon",
+      "text": "flowchart TD\nA@{shape: hexagon}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "hexagon"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-prepare",
+      "title": "Metadata shape prepare",
+      "text": "flowchart TD\nA@{shape: prepare}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "hexagon"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-lean-r",
+      "title": "Metadata shape lean-r",
+      "text": "flowchart TD\nA@{shape: lean-r}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "lean_right"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-lean-right",
+      "title": "Metadata shape lean-right",
+      "text": "flowchart TD\nA@{shape: lean-right}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "lean_right"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-in-out",
+      "title": "Metadata shape in-out",
+      "text": "flowchart TD\nA@{shape: in-out}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "lean_right"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-lean-l",
+      "title": "Metadata shape lean-l",
+      "text": "flowchart TD\nA@{shape: lean-l}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "lean_left"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-lean-left",
+      "title": "Metadata shape lean-left",
+      "text": "flowchart TD\nA@{shape: lean-left}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "lean_left"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-out-in",
+      "title": "Metadata shape out-in",
+      "text": "flowchart TD\nA@{shape: out-in}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "lean_left"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-trap-b",
+      "title": "Metadata shape trap-b",
+      "text": "flowchart TD\nA@{shape: trap-b}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "trapezoid"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-priority",
+      "title": "Metadata shape priority",
+      "text": "flowchart TD\nA@{shape: priority}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "trapezoid"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-trapezoid-bottom",
+      "title": "Metadata shape trapezoid-bottom",
+      "text": "flowchart TD\nA@{shape: trapezoid-bottom}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "trapezoid"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-trapezoid",
+      "title": "Metadata shape trapezoid",
+      "text": "flowchart TD\nA@{shape: trapezoid}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "trapezoid"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-trap-t",
+      "title": "Metadata shape trap-t",
+      "text": "flowchart TD\nA@{shape: trap-t}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "inv_trapezoid"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-manual",
+      "title": "Metadata shape manual",
+      "text": "flowchart TD\nA@{shape: manual}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "inv_trapezoid"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-trapezoid-top",
+      "title": "Metadata shape trapezoid-top",
+      "text": "flowchart TD\nA@{shape: trapezoid-top}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "inv_trapezoid"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-inv-trapezoid",
+      "title": "Metadata shape inv-trapezoid",
+      "text": "flowchart TD\nA@{shape: inv-trapezoid}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "inv_trapezoid"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-dbl-circ",
+      "title": "Metadata shape dbl-circ",
+      "text": "flowchart TD\nA@{shape: dbl-circ}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "doublecircle"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-double-circle",
+      "title": "Metadata shape double-circle",
+      "text": "flowchart TD\nA@{shape: double-circle}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "doublecircle"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-doublecircle",
+      "title": "Metadata shape doublecircle",
+      "text": "flowchart TD\nA@{shape: doublecircle}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "doublecircle"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-text",
+      "title": "Metadata shape text",
+      "text": "flowchart TD\nA@{shape: text}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "text"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-notch-rect",
+      "title": "Metadata shape notch-rect",
+      "text": "flowchart TD\nA@{shape: notch-rect}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "card"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-card",
+      "title": "Metadata shape card",
+      "text": "flowchart TD\nA@{shape: card}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "card"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-notched-rectangle",
+      "title": "Metadata shape notched-rectangle",
+      "text": "flowchart TD\nA@{shape: notched-rectangle}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "card"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-lin-rect",
+      "title": "Metadata shape lin-rect",
+      "text": "flowchart TD\nA@{shape: lin-rect}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "shadedProcess"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-lined-rectangle",
+      "title": "Metadata shape lined-rectangle",
+      "text": "flowchart TD\nA@{shape: lined-rectangle}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "shadedProcess"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-lined-process",
+      "title": "Metadata shape lined-process",
+      "text": "flowchart TD\nA@{shape: lined-process}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "shadedProcess"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-lin-proc",
+      "title": "Metadata shape lin-proc",
+      "text": "flowchart TD\nA@{shape: lin-proc}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "shadedProcess"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-shaded-process",
+      "title": "Metadata shape shaded-process",
+      "text": "flowchart TD\nA@{shape: shaded-process}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "shadedProcess"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-sm-circ",
+      "title": "Metadata shape sm-circ",
+      "text": "flowchart TD\nA@{shape: sm-circ}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "stateStart"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-start",
+      "title": "Metadata shape start",
+      "text": "flowchart TD\nA@{shape: start}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "stateStart"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-small-circle",
+      "title": "Metadata shape small-circle",
+      "text": "flowchart TD\nA@{shape: small-circle}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "stateStart"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-fr-circ",
+      "title": "Metadata shape fr-circ",
+      "text": "flowchart TD\nA@{shape: fr-circ}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "stateEnd"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-stop",
+      "title": "Metadata shape stop",
+      "text": "flowchart TD\nA@{shape: stop}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "stateEnd"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-framed-circle",
+      "title": "Metadata shape framed-circle",
+      "text": "flowchart TD\nA@{shape: framed-circle}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "stateEnd"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-fork",
+      "title": "Metadata shape fork",
+      "text": "flowchart TD\nA@{shape: fork}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "forkJoin"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-join",
+      "title": "Metadata shape join",
+      "text": "flowchart TD\nA@{shape: join}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "forkJoin"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-hourglass",
+      "title": "Metadata shape hourglass",
+      "text": "flowchart TD\nA@{shape: hourglass}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "hourglass"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-collate",
+      "title": "Metadata shape collate",
+      "text": "flowchart TD\nA@{shape: collate}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "hourglass"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-brace",
+      "title": "Metadata shape brace",
+      "text": "flowchart TD\nA@{shape: brace}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "curlyBraceLeft"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-comment",
+      "title": "Metadata shape comment",
+      "text": "flowchart TD\nA@{shape: comment}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "curlyBraceLeft"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-brace-l",
+      "title": "Metadata shape brace-l",
+      "text": "flowchart TD\nA@{shape: brace-l}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "curlyBraceLeft"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-brace-r",
+      "title": "Metadata shape brace-r",
+      "text": "flowchart TD\nA@{shape: brace-r}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "curlyBraceRight"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-braces",
+      "title": "Metadata shape braces",
+      "text": "flowchart TD\nA@{shape: braces}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "curlyBraces"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-bolt",
+      "title": "Metadata shape bolt",
+      "text": "flowchart TD\nA@{shape: bolt}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "lightningBolt"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-com-link",
+      "title": "Metadata shape com-link",
+      "text": "flowchart TD\nA@{shape: com-link}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "lightningBolt"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-lightning-bolt",
+      "title": "Metadata shape lightning-bolt",
+      "text": "flowchart TD\nA@{shape: lightning-bolt}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "lightningBolt"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-doc",
+      "title": "Metadata shape doc",
+      "text": "flowchart TD\nA@{shape: doc}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "waveEdgedRectangle"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-document",
+      "title": "Metadata shape document",
+      "text": "flowchart TD\nA@{shape: document}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "waveEdgedRectangle"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-delay",
+      "title": "Metadata shape delay",
+      "text": "flowchart TD\nA@{shape: delay}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "halfRoundedRectangle"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-half-rounded-rectangle",
+      "title": "Metadata shape half-rounded-rectangle",
+      "text": "flowchart TD\nA@{shape: half-rounded-rectangle}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "halfRoundedRectangle"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-h-cyl",
+      "title": "Metadata shape h-cyl",
+      "text": "flowchart TD\nA@{shape: h-cyl}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "tiltedCylinder"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-das",
+      "title": "Metadata shape das",
+      "text": "flowchart TD\nA@{shape: das}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "tiltedCylinder"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-horizontal-cylinder",
+      "title": "Metadata shape horizontal-cylinder",
+      "text": "flowchart TD\nA@{shape: horizontal-cylinder}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "tiltedCylinder"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-lin-cyl",
+      "title": "Metadata shape lin-cyl",
+      "text": "flowchart TD\nA@{shape: lin-cyl}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "linedCylinder"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-disk",
+      "title": "Metadata shape disk",
+      "text": "flowchart TD\nA@{shape: disk}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "linedCylinder"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-lined-cylinder",
+      "title": "Metadata shape lined-cylinder",
+      "text": "flowchart TD\nA@{shape: lined-cylinder}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "linedCylinder"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-curv-trap",
+      "title": "Metadata shape curv-trap",
+      "text": "flowchart TD\nA@{shape: curv-trap}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "curvedTrapezoid"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-curved-trapezoid",
+      "title": "Metadata shape curved-trapezoid",
+      "text": "flowchart TD\nA@{shape: curved-trapezoid}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "curvedTrapezoid"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-display",
+      "title": "Metadata shape display",
+      "text": "flowchart TD\nA@{shape: display}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "curvedTrapezoid"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-div-rect",
+      "title": "Metadata shape div-rect",
+      "text": "flowchart TD\nA@{shape: div-rect}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "dividedRectangle"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-div-proc",
+      "title": "Metadata shape div-proc",
+      "text": "flowchart TD\nA@{shape: div-proc}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "dividedRectangle"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-divided-rectangle",
+      "title": "Metadata shape divided-rectangle",
+      "text": "flowchart TD\nA@{shape: divided-rectangle}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "dividedRectangle"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-divided-process",
+      "title": "Metadata shape divided-process",
+      "text": "flowchart TD\nA@{shape: divided-process}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "dividedRectangle"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-tri",
+      "title": "Metadata shape tri",
+      "text": "flowchart TD\nA@{shape: tri}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "triangle"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-extract",
+      "title": "Metadata shape extract",
+      "text": "flowchart TD\nA@{shape: extract}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "triangle"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-triangle",
+      "title": "Metadata shape triangle",
+      "text": "flowchart TD\nA@{shape: triangle}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "triangle"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-win-pane",
+      "title": "Metadata shape win-pane",
+      "text": "flowchart TD\nA@{shape: win-pane}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "windowPane"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-internal-storage",
+      "title": "Metadata shape internal-storage",
+      "text": "flowchart TD\nA@{shape: internal-storage}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "windowPane"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-window-pane",
+      "title": "Metadata shape window-pane",
+      "text": "flowchart TD\nA@{shape: window-pane}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "windowPane"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-f-circ",
+      "title": "Metadata shape f-circ",
+      "text": "flowchart TD\nA@{shape: f-circ}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "filledCircle"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-junction",
+      "title": "Metadata shape junction",
+      "text": "flowchart TD\nA@{shape: junction}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "filledCircle"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-filled-circle",
+      "title": "Metadata shape filled-circle",
+      "text": "flowchart TD\nA@{shape: filled-circle}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "filledCircle"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-notch-pent",
+      "title": "Metadata shape notch-pent",
+      "text": "flowchart TD\nA@{shape: notch-pent}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "trapezoidalPentagon"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-loop-limit",
+      "title": "Metadata shape loop-limit",
+      "text": "flowchart TD\nA@{shape: loop-limit}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "trapezoidalPentagon"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-notched-pentagon",
+      "title": "Metadata shape notched-pentagon",
+      "text": "flowchart TD\nA@{shape: notched-pentagon}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "trapezoidalPentagon"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-flip-tri",
+      "title": "Metadata shape flip-tri",
+      "text": "flowchart TD\nA@{shape: flip-tri}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "flippedTriangle"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-manual-file",
+      "title": "Metadata shape manual-file",
+      "text": "flowchart TD\nA@{shape: manual-file}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "flippedTriangle"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-flipped-triangle",
+      "title": "Metadata shape flipped-triangle",
+      "text": "flowchart TD\nA@{shape: flipped-triangle}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "flippedTriangle"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-sl-rect",
+      "title": "Metadata shape sl-rect",
+      "text": "flowchart TD\nA@{shape: sl-rect}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "slopedRect"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-manual-input",
+      "title": "Metadata shape manual-input",
+      "text": "flowchart TD\nA@{shape: manual-input}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "slopedRect"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-sloped-rectangle",
+      "title": "Metadata shape sloped-rectangle",
+      "text": "flowchart TD\nA@{shape: sloped-rectangle}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "slopedRect"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-docs",
+      "title": "Metadata shape docs",
+      "text": "flowchart TD\nA@{shape: docs}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "multiWaveEdgedRectangle"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-documents",
+      "title": "Metadata shape documents",
+      "text": "flowchart TD\nA@{shape: documents}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "multiWaveEdgedRectangle"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-st-doc",
+      "title": "Metadata shape st-doc",
+      "text": "flowchart TD\nA@{shape: st-doc}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "multiWaveEdgedRectangle"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-stacked-document",
+      "title": "Metadata shape stacked-document",
+      "text": "flowchart TD\nA@{shape: stacked-document}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "multiWaveEdgedRectangle"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-st-rect",
+      "title": "Metadata shape st-rect",
+      "text": "flowchart TD\nA@{shape: st-rect}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "multiRect"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-procs",
+      "title": "Metadata shape procs",
+      "text": "flowchart TD\nA@{shape: procs}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "multiRect"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-processes",
+      "title": "Metadata shape processes",
+      "text": "flowchart TD\nA@{shape: processes}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "multiRect"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-stacked-rectangle",
+      "title": "Metadata shape stacked-rectangle",
+      "text": "flowchart TD\nA@{shape: stacked-rectangle}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "multiRect"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-bow-rect",
+      "title": "Metadata shape bow-rect",
+      "text": "flowchart TD\nA@{shape: bow-rect}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "bowTieRect"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-stored-data",
+      "title": "Metadata shape stored-data",
+      "text": "flowchart TD\nA@{shape: stored-data}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "bowTieRect"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-bow-tie-rectangle",
+      "title": "Metadata shape bow-tie-rectangle",
+      "text": "flowchart TD\nA@{shape: bow-tie-rectangle}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "bowTieRect"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-cross-circ",
+      "title": "Metadata shape cross-circ",
+      "text": "flowchart TD\nA@{shape: cross-circ}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "crossedCircle"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-summary",
+      "title": "Metadata shape summary",
+      "text": "flowchart TD\nA@{shape: summary}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "crossedCircle"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-crossed-circle",
+      "title": "Metadata shape crossed-circle",
+      "text": "flowchart TD\nA@{shape: crossed-circle}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "crossedCircle"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-tag-doc",
+      "title": "Metadata shape tag-doc",
+      "text": "flowchart TD\nA@{shape: tag-doc}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "taggedWaveEdgedRectangle"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-tagged-document",
+      "title": "Metadata shape tagged-document",
+      "text": "flowchart TD\nA@{shape: tagged-document}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "taggedWaveEdgedRectangle"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-tag-rect",
+      "title": "Metadata shape tag-rect",
+      "text": "flowchart TD\nA@{shape: tag-rect}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "taggedRect"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-tagged-rectangle",
+      "title": "Metadata shape tagged-rectangle",
+      "text": "flowchart TD\nA@{shape: tagged-rectangle}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "taggedRect"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-tag-proc",
+      "title": "Metadata shape tag-proc",
+      "text": "flowchart TD\nA@{shape: tag-proc}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "taggedRect"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-tagged-process",
+      "title": "Metadata shape tagged-process",
+      "text": "flowchart TD\nA@{shape: tagged-process}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "taggedRect"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-flag",
+      "title": "Metadata shape flag",
+      "text": "flowchart TD\nA@{shape: flag}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "waveRectangle"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-paper-tape",
+      "title": "Metadata shape paper-tape",
+      "text": "flowchart TD\nA@{shape: paper-tape}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "waveRectangle"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-odd",
+      "title": "Metadata shape odd",
+      "text": "flowchart TD\nA@{shape: odd}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "odd"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-lin-doc",
+      "title": "Metadata shape lin-doc",
+      "text": "flowchart TD\nA@{shape: lin-doc}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "linedWaveEdgedRect"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-lined-document",
+      "title": "Metadata shape lined-document",
+      "text": "flowchart TD\nA@{shape: lined-document}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "linedWaveEdgedRect"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-state",
+      "title": "Metadata shape state",
+      "text": "flowchart TD\nA@{shape: state}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "state"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-choice",
+      "title": "Metadata shape choice",
+      "text": "flowchart TD\nA@{shape: choice}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "choice"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-note",
+      "title": "Metadata shape note",
+      "text": "flowchart TD\nA@{shape: note}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "note"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-composite",
+      "title": "Metadata shape composite",
+      "text": "flowchart TD\nA@{shape: composite}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "composite"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-icon",
+      "title": "Metadata shape icon",
+      "text": "flowchart TD\nA@{shape: icon}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "icon"
+      },
+      "parserOnly": true
+    },
+    {
+      "id": "alias-anchor",
+      "title": "Metadata shape anchor",
+      "text": "flowchart TD\nA@{shape: anchor}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "anchor"
+      },
+      "parserOnly": true
+    }
+  ],
+  "negativeCases": [
+    {
+      "id": "missing-target",
+      "text": "flowchart TD\nA -->"
+    },
+    {
+      "id": "missing-end",
+      "text": "flowchart TD\nsubgraph G\nA"
+    },
+    {
+      "id": "unmatched-end",
+      "text": "flowchart TD\nend"
+    },
+    {
+      "id": "unclosed-shape",
+      "text": "flowchart TD\nA((Circle)"
+    },
+    {
+      "id": "unclosed-pipe",
+      "text": "flowchart TD\nA -->|Label B"
+    },
+    {
+      "id": "unclosed-metadata",
+      "text": "flowchart TD\nA@{shape: rect"
+    },
+    {
+      "id": "metadata-bad-yaml",
+      "text": "flowchart TD\nA@{label: [bad}"
+    },
+    {
+      "id": "missing-style",
+      "text": "flowchart TD\nA\nstyle A"
+    },
+    {
+      "id": "missing-class",
+      "text": "flowchart TD\nA\nclass A"
+    },
+    {
+      "id": "missing-click-target",
+      "text": "flowchart TD\nA\nclick A"
+    },
+    {
+      "id": "unclosed-click-quote",
+      "text": "flowchart TD\nA\nclick A \"bad"
+    },
+    {
+      "id": "unclosed-callback",
+      "text": "flowchart TD\nA\nclick A call callback("
+    },
+    {
+      "id": "incomplete-link-id",
+      "text": "flowchart TD\nA e1@ B"
+    },
+    {
+      "id": "header-semicolon-invalid",
+      "text": " \n graph TD ; \n A; \n\t B ;",
+      "origin": "Original failing whitespace-separators positive from initial S4; official rejected header SEMI after SPACE.",
+      "officialEvidence": "test-runs/F01.4-batch-20261105T090906Z-11b555ce/artifacts/oracle/whitespace-separators.error.json"
+    }
+  ],
+  "semanticErrorCases": [
+    {
+      "id": "unknown-shape",
+      "text": "flowchart TD\nA@{shape: missing}",
+      "code": "UNSUPPORTED_SHAPE"
+    },
+    {
+      "id": "uppercase-shape",
+      "text": "flowchart TD\nA@{shape: Rectangle}",
+      "code": "UNSUPPORTED_SHAPE"
+    },
+    {
+      "id": "underscore-shape",
+      "text": "flowchart TD\nA@{shape: lean_right}",
+      "code": "UNSUPPORTED_SHAPE"
+    },
+    {
+      "id": "linkstyle-range",
+      "text": "flowchart TD\nA --> B\nlinkStyle 5 stroke:red",
+      "code": "INVALID_EDGE_INDEX"
+    }
+  ],
+  "excludedCases": [
+    {
+      "id": "math-separate",
+      "text": "flowchart TD\nA[\"$$x^2$$\"]",
+      "codes": [
+        "UNSUPPORTED_SYNTAX"
+      ],
+      "reason": "math deferred to independent module by user"
+    },
+    {
+      "id": "removed-layout",
+      "text": "flowchart TD\nA --> B",
+      "config": {
+        "layout": "dagre"
+      },
+      "codes": [
+        "UNSUPPORTED_CONFIG"
+      ],
+      "reason": "layout removed by user"
+    },
+    {
+      "id": "removed-group-layout",
+      "text": "flowchart TD\nsubgraph G\nA\nend\nG@{algorithm: dagre}",
+      "codes": [
+        "UNSUPPORTED_CONFIG"
+      ],
+      "reason": "User policy removes non-ELK family group layout selection before Canvas; source may ignore an unknown group algorithm but target must not silently accept this explicit request."
+    },
+    {
+      "id": "removed-placeholder-group-layout",
+      "text": "flowchart TD\nG --> Z\nsubgraph G\nA\nend\nG@{algorithm: dagre-wrapper}",
+      "codes": [
+        "UNSUPPORTED_CONFIG"
+      ],
+      "reason": "A forward group endpoint placeholder must not bypass the same actual-group algorithm policy."
+    }
+  ],
+  "sourceAnomalyCases": [
+    {
+      "id": "classic-ellipse",
+      "text": "flowchart TD\nA(-Ellipse-)",
+      "code": "UPSTREAM_SHAPE_MISSING",
+      "sourceParseAccepted": true
+    },
+    {
+      "id": "constructor-source-bug",
+      "text": "flowchart TD\nA@{shape: constructor}",
+      "sourceParseAccepted": true,
+      "nativeCode": "UNSUPPORTED_SHAPE",
+      "reason": "upstream in-operator prototype shape lookup bug; explicit registry is safe"
+    },
+    {
+      "id": "BR-source-direction",
+      "text": "flowchart BR\nA --> B",
+      "sourceParseAccepted": true,
+      "reason": "FlowDB keeps raw BR but fixed dir2ElkDirection default explicitly maps it to DOWN; target canonical spelling TB, not diagonal layout.",
+      "title": "Source BR direction is statically DOWN",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TB",
+      "sourceRawDirection": "BR",
+      "expectation": "positive"
+    }
+  ],
+  "denominator": {
+    "semanticPositives": 93,
+    "metadataAliasPositives": 147,
+    "syntaxInvalid": 14,
+    "semanticInvalid": 4,
+    "excluded": 4,
+    "sourceAnomalies": 3
+  }
+}

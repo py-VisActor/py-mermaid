@@ -1,0 +1,125 @@
+{
+  "scope": "F01.4",
+  "cases": [
+    {
+      "id": "virtual-fill-datastore",
+      "title": "Static visible fill datastore",
+      "text": "flowchart TD\nA@{shape: datastore, label: Alpha}\nstyle A fill:#fee2e2,stroke:#b91c1c",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "datastore"
+      },
+      "oracleShapes": {
+        "A": "datastore"
+      },
+      "fillProbes": [
+        {
+          "node": "A",
+          "x": 0.8,
+          "y": 0.5,
+          "color": "#fee2e2"
+        }
+      ],
+      "sourcePaintEvidence": "test-runs/F01.4-render-20261105T094826Z-6a1e89f5/artifacts/oracle/virtual-fill-datastore.png"
+    },
+    {
+      "id": "virtual-fill-brace",
+      "title": "Static visible fill brace",
+      "text": "flowchart TD\nA@{shape: brace, label: Alpha}\nstyle A fill:#fee2e2,stroke:#b91c1c",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "curlyBraceLeft"
+      },
+      "oracleShapes": {
+        "A": "brace"
+      },
+      "fillProbes": [
+        {
+          "node": "A",
+          "x": 0.8,
+          "y": 0.5,
+          "color": "#ffffff"
+        }
+      ],
+      "sourcePaintNote": "Fixed RoughJS brace uses unfilled stroke subpaths; CSS fill does not fill the virtual label body. Official 80%/50% pixel is white.",
+      "sourcePaintEvidence": "test-runs/F01.4-render-20261105T094826Z-6a1e89f5/artifacts/oracle/virtual-fill-brace.png"
+    },
+    {
+      "id": "virtual-fill-brace-r",
+      "title": "Static visible fill brace-r",
+      "text": "flowchart TD\nA@{shape: brace-r, label: Alpha}\nstyle A fill:#fee2e2,stroke:#b91c1c",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "curlyBraceRight"
+      },
+      "oracleShapes": {
+        "A": "brace-r"
+      },
+      "fillProbes": [
+        {
+          "node": "A",
+          "x": 0.8,
+          "y": 0.5,
+          "color": "#ffffff"
+        }
+      ],
+      "sourcePaintNote": "Fixed RoughJS brace uses unfilled stroke subpaths; CSS fill does not fill the virtual label body. Official 80%/50% pixel is white.",
+      "sourcePaintEvidence": "test-runs/F01.4-render-20261105T094826Z-6a1e89f5/artifacts/oracle/virtual-fill-brace-r.png"
+    },
+    {
+      "id": "virtual-fill-braces",
+      "title": "Static visible fill braces",
+      "text": "flowchart TD\nA@{shape: braces, label: Alpha}\nstyle A fill:#fee2e2,stroke:#b91c1c",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "curlyBraces"
+      },
+      "oracleShapes": {
+        "A": "braces"
+      },
+      "fillProbes": [
+        {
+          "node": "A",
+          "x": 0.8,
+          "y": 0.5,
+          "color": "#ffffff"
+        }
+      ],
+      "sourcePaintNote": "Fixed RoughJS brace uses unfilled stroke subpaths; CSS fill does not fill the virtual label body. Official 80%/50% pixel is white.",
+      "sourcePaintEvidence": "test-runs/F01.4-render-20261105T094826Z-6a1e89f5/artifacts/oracle/virtual-fill-braces.png"
+    }
+  ],
+  "negativeCases": []
+}

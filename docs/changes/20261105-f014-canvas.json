@@ -1,0 +1,220 @@
+{
+  "schema": "py-mermaid-change/v1",
+  "taskId": "20261105-f014-canvas",
+  "status": "code_complete_unverified",
+  "interfaceVersion": "F01.4-v1",
+  "startingSource": "F013 accepted f75ee6; existing changes preserved",
+  "changedPaths": [
+    "src/py_mermaid/resources/__init__.py",
+    "src/py_mermaid/resources/geometry.py",
+    "src/py_mermaid/geometry/rough.py",
+    "src/py_mermaid/rendering/labels/__init__.py",
+    "src/py_mermaid/rendering/labels/plain.py",
+    "src/py_mermaid/rendering/labels/rich.py",
+    "src/py_mermaid/rendering/labels/sanitize.py",
+    "src/py_mermaid/rendering/skia/__init__.py",
+    "src/py_mermaid/rendering/skia/session.py",
+    "references/f014-canvas-sources.json"
+  ],
+  "sourceSha256": {
+    "src/py_mermaid/resources/__init__.py": "900cc92343f24c7b2787454c1bbc6f87b3321eaeafbba0e0d87a41d29be8f4d5",
+    "src/py_mermaid/resources/geometry.py": "a9f5f89ff41be174162647b843b0aef8367e342e87f92b8626c2012142e4a7d0",
+    "src/py_mermaid/geometry/rough.py": "2b82b47819993fcba9d01a443e7887fd37d067ba76598ed1fe2dedf12f2cc86c",
+    "src/py_mermaid/rendering/labels/__init__.py": "5081ad1eea53fb7fde3208c095c5d409a90d144b9758c89f8c3177ef08345a55",
+    "src/py_mermaid/rendering/labels/plain.py": "fa0bd7c05a82a7412f5cce1fea62acc580b6389789510bc0b893d9eb4e88fac5",
+    "src/py_mermaid/rendering/labels/rich.py": "41e0c463f6007d0ebf9fe4a795176b5772730cd54bc2fb87c80aacc47aede83d",
+    "src/py_mermaid/rendering/labels/sanitize.py": "3246bfd1a322ba481849d1ac9f77602787f8a08490089847f3b4f239ea266726",
+    "src/py_mermaid/rendering/skia/__init__.py": "60776be795ea6008f72da9be2517dd538cfb7f61f937930944bfa915c706df7a",
+    "src/py_mermaid/rendering/skia/session.py": "7295a128bd275cff50a5c83bf658b8d055c790a43335feba046ae54a21ff8e65",
+    "references/f014-canvas-sources.json": "5ce4d436abc66c18c26c9600824f1b5d745c7ce4c6b88e002efd79d7b7b7cf87",
+    "src/py_mermaid/resources/svg.py": "c1fa49a8695a4e0e877c340a06348cbf0211385189a919725d2f34da0f666720"
+  },
+  "run": "test-runs/F01.4-s2-canvas-mechanical-20261105T084915Z-74395c67",
+  "commands": [
+    {
+      "argv": [
+        "C:/venvs/pymmd-20261102/Scripts/python.exe",
+        "-m",
+        "compileall",
+        "-q",
+        "src/py_mermaid/resources",
+        "src/py_mermaid/geometry/rough.py",
+        "src/py_mermaid/rendering/labels",
+        "src/py_mermaid/rendering/skia"
+      ],
+      "exitCode": 0
+    },
+    {
+      "argv": [
+        "C:/venvs/pymmd-20261102/Scripts/python.exe",
+        "-c",
+        "import inspect; from py_mermaid.rendering.skia import CanvasSession; from py_mermaid.resources import ResourceStore,ResourceBundle; from py_mermaid.resources.geometry import resource_geometry; from py_mermaid.geometry.rough import rough_path; from py_mermaid.geometry.shapes import shape_geometry,LABELLESS_SHAPES; from py_mermaid.geometry.edges import edge_markers; print(inspect.signature(CanvasSession)); print(inspect.signature(CanvasSession.render)); print(inspect.signature(shape_geometry)); print(inspect.signature(resource_geometry)); print(inspect.signature(rough_path)); print(inspect.signature(edge_markers))"
+      ],
+      "exitCode": 0
+    }
+  ],
+  "functionalStatus": "NOT_EVALUATED",
+  "boundaries": [
+    "No networking or implicit files from markup; caller resource bundle/fonts paths are explicit.",
+    "HTML audio/video interactive controls and SVG foreignObject/animations are outside static native host; missing mapping explicitly diagnosed.",
+    "Legacy FontAwesome external CSS/name-to-font-glyph host is replaced by explicit same-ID offline IconResource, not fetched CSS.",
+    "hyphens:auto needs language dictionary and explicitly raises UNSUPPORTED_CSS; no unimplemented effect silently accepted.",
+    "Rough arbitrary SVG curves use pure endpoint conversion/cubic jitter and scanline flattening; exact RoughJS ellipse sampling is not claimed pixel-identical. Actual ink/readability/seed stability require S3/S4.",
+    "Icon SVG natural viewBox dimensions drive native Image assets; browser SVG getBBox ink differences remain subject to official geometry QA."
+  ],
+  "sourceStopped": true,
+  "nextStep": "Root whole-source freeze, then independent S3 assertions, unified first behavior/oracle/images in S4. No installation validation.",
+  "s3": {
+    "status": "tests_code_complete_unverified",
+    "run": "test-runs/F01.4-s3-canvas-collect-20261105T085610Z-b0d6c2b5",
+    "count": 33,
+    "testSha256": {
+      "tests/f014/test_canvas.py": "774d1f3fd98c17d1263e1e745c67ed050862cd46e8da04afab7352183670b27d",
+      "tests/f014/resource-cases.json": "027a609208f2bc05ed3c809f2b66aecea7699777f422d52b82fbf03df82b6586",
+      "references/f014-canvas-assertions.json": "633556aa4f10979c93ea20fd76aaa2be41c1f914536dee82a5b18d9e64f27c22"
+    },
+    "commands": [
+      {
+        "argv": [
+          "C:/venvs/pymmd-20261102/Scripts/python.exe",
+          "-m",
+          "compileall",
+          "-q",
+          "tests/f014/test_canvas.py"
+        ],
+        "exitCode": 0
+      },
+      {
+        "argv": [
+          "C:/venvs/pymmd-20261102/Scripts/python.exe",
+          "-c",
+          "import unittest; suite=unittest.TestLoader().discover('tests/f014',pattern='test_canvas.py'); print('collected:',suite.countTestCases()); errors=[str(x) for x in suite if 'FailedTest' in str(x)]; print('import failures:',errors); assert not errors"
+        ],
+        "exitCode": 0
+      }
+    ],
+    "sourceUnmodified": true,
+    "functionalStatus": "NOT_EVALUATED",
+    "nextStep": "Unified S4 initial behavior, preserve all failures for source/test root-cause review."
+  },
+  "s4": {
+    "status": "fixes_complete_unverified",
+    "run": "test-runs/F01.4-s4-canvas-fix-mechanical-20261105T092430Z-c7dbebc4",
+    "sourceStopped": true,
+    "count": 35,
+    "commands": [
+      {
+        "argv": [
+          "C:/venvs/pymmd-20261102/Scripts/python.exe",
+          "-m",
+          "compileall",
+          "-q",
+          "src/py_mermaid/geometry/rough.py",
+          "src/py_mermaid/rendering/skia/session.py",
+          "src/py_mermaid/rendering/labels/rich.py",
+          "tests/f014/test_canvas.py"
+        ],
+        "exitCode": 0
+      },
+      {
+        "argv": [
+          "C:/venvs/pymmd-20261102/Scripts/python.exe",
+          "-c",
+          "import inspect,unittest; from py_mermaid.geometry.rough import rough_path; from py_mermaid.model.flowchart import ShapePart; print(inspect.signature(rough_path)); print(inspect.signature(ShapePart)); suite=unittest.TestLoader().discover('tests/f014',pattern='test_canvas.py'); print('collected:',suite.countTestCases())"
+        ],
+        "exitCode": 0
+      }
+    ],
+    "testSha256": {
+      "tests/f014/test_canvas.py": "f5a3b83c6fb6d73f4cf797c07bad96ade652e25dc410632a96b6c5fadab8505b",
+      "tests/f014/resource-cases.json": "e35fcddda0c7be714a6e23573ada6fc52f6914712ba0c61494840a587485278d",
+      "references/f014-canvas-assertions.json": "b005bccb220439b2445316cf659d27d30421f8220bf0d4eaf788124968697e02"
+    },
+    "initialFailuresPreserved": true,
+    "sourceOnlyDiagnostic": "test-runs/F01.4-s4-hachure-source-diagnostic-20261105T091850Z-e5d30277",
+    "functionalStatus": "NOT_EVALUATED",
+    "nextStep": "All owners freeze, coordinator runs unified related regressions, then true visual/export QA.",
+    "sourcePaintProjection": {
+      "run": "test-runs/F01.4-source-hachure-paint-mechanical-20261105T092751Z-0cb4822c",
+      "exitCode": 0,
+      "sourceSha256": "f5a78d7daeebe6170fe6ca6f80ce0768d56e5ea33f9e36bea5d4e92b8b8ecc6e",
+      "sourceStopped": true,
+      "functionalStatus": "NOT_EVALUATED"
+    },
+    "emptyGateFollowup": {
+      "run": "test-runs/F01.4-empty-session-gate-fix-mechanical-20261105T093706Z-ef5782c8",
+      "exitCode": 0,
+      "sourceSha256": "f7e7fcb76e87864a561af7556a3c8439d1c8dbe4109fbf5e7a61f0804518ed21",
+      "sourceStopped": true,
+      "functionalStatus": "NOT_EVALUATED"
+    },
+    "datastoreClosedFill": {
+      "run": "test-runs/F01.4-datastore-paint-outline-mechanical-20261105T095258Z-05bf8e63",
+      "exitCode": 0,
+      "sourceSha256": "6728e779f705a77bcf3c58a770e07611170a956e2e26bd467c5696ccdd4f2fc9",
+      "testSha256": "52f3334ce636ecdf20e84967523a0ffcca1fbed2439320974a1e4343b3c14443",
+      "methodCount": 36,
+      "sourceStopped": true,
+      "functionalStatus": "NOT_EVALUATED"
+    },
+    "labellessAndPartDash": {
+      "run": "test-runs/F01.4-labelless-parts-dash-mechanical-20261105T102704Z-c90b88c2",
+      "exitCodes": [
+        0,
+        0
+      ],
+      "sourceSha256": "fd57b65aeddd2ba88c31d4f1e5163d5d6bbfff7e9f6402e26df1563ee2f8f8d8",
+      "testSha256": "8295850229034fc7246f9f468bbaecad9598020d0a8882c59bfae96b75f3ed9a",
+      "methodCount": 38,
+      "sourceStopped": true,
+      "functionalStatus": "NOT_EVALUATED"
+    },
+    "placedNodePaintBox": {
+      "run": "test-runs/F01.4-placed-node-paint-box-mechanical-20261105T103643Z-3cef63d0",
+      "exitCode": 0,
+      "sourceSha256": "3b0e2f91514e82752cf04273d11896fe2b7e94b1c35f7bbad7abc345263fec7c",
+      "sourceStopped": true,
+      "functionalStatus": "NOT_EVALUATED",
+      "testsUnchanged": true
+    },
+    "placedGroupPaintBox": {
+      "run": "test-runs/F01.4-placed-group-paint-box-mechanical-20261105T103748Z-60e69542",
+      "exitCode": 0,
+      "sourceSha256": "7253ad5c29e6cd795bf7970e7a38cb88301575c817d5378d1de0ea8239d057e7",
+      "sourceStopped": true,
+      "functionalStatus": "NOT_EVALUATED",
+      "testsUnchanged": true
+    },
+    "stateHollowLayer": {
+      "beforeFix": "test-runs/F01.4-state-hollow-before-fix-evidence-20261105T105859Z-73322a0d",
+      "targetedRun": "test-runs/F01.4-state-hollow-targeted-20261105T105946Z-89983f9e",
+      "targetedPassed": 1,
+      "sourceSha256": "bfbcac15d5769d3194da087238b83eaed207b18d527a734322dddb7ec26edc25",
+      "testSha256": "24486d35ea4292f48c18367263b86c85d48e331c395687d3cb31543ebaa2d162",
+      "testCount": 39,
+      "sourceStopped": true,
+      "globalFunctionalStatus": "NOT_EVALUATED",
+      "otherManualQaDefectsRemain": true
+    },
+    "shadowAndInlineSvg": {
+      "status": "targeted_verified_full_candidate_pending",
+      "beforeFix": "test-runs/F01.4-shadow-inline-svg-before-fix-evidence-20261105T110755Z-94c32093",
+      "runs": [
+        "test-runs/F01.4-shadow-inline-svg-targeted-20261105T111351Z-de863c78",
+        "test-runs/F01.4-inline-svg-xml-encoding-targeted-20261105T111420Z-1c96ee02"
+      ],
+      "sourceSha256": {
+        "src/py_mermaid/rendering/skia/session.py": "7295a128bd275cff50a5c83bf658b8d055c790a43335feba046ae54a21ff8e65",
+        "src/py_mermaid/rendering/labels/rich.py": "41e0c463f6007d0ebf9fe4a795176b5772730cd54bc2fb87c80aacc47aede83d",
+        "src/py_mermaid/resources/svg.py": "c1fa49a8695a4e0e877c340a06348cbf0211385189a919725d2f34da0f666720"
+      },
+      "testSha256": "32ee8e0235893f82d1817a1448ef7d1dfeb895acd5bfc052d3beb5317494458d",
+      "fixtureSha256": "64a3dc19b33051bbfdb9f0b3c41a125f15ed3205c0cfdb362975889a44783301",
+      "testMethodCount": 41,
+      "newMethodCount": 2,
+      "sourceStopped": true,
+      "manualQaOriginalStillFail": true,
+      "fullSuiteNotRun": true
+    }
+  }
+}

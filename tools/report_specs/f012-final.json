@@ -1,0 +1,14 @@
+{
+  "schema": "py-mermaid-render-report-spec/v1",
+  "scope": "F01.2",
+  "title": "流程图增强 · F01.2 对比",
+  "final": "test-runs/F01.2-render-20261104T145729Z-0ece5e77/artifacts",
+  "oracle": "test-runs/F01.2-render-20261104T145729Z-0ece5e77/artifacts/oracle",
+  "fixtures": "test-runs/F01.2-render-20261104T145729Z-0ece5e77/artifacts/cases.json",
+  "profiles": [
+    "cpu",
+    "auto",
+    "gpu"
+  ],
+  "defaultCase": "enhanced-overview"
+}

@@ -1,0 +1,5500 @@
+{
+  "schema": "bulk-A-language/v1",
+  "cases": [
+    {
+      "id": "class-direction-TB",
+      "kind": "classDiagram",
+      "source": "classDiagram\ndirection TB\nclass A",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+        "sha256": "3c99e4613bd8235f4d3485d8444a8b119e8af9ede50f88505c24d5a6cc93280f",
+        "symbol": "direction and classIdentifier",
+        "line": 1
+      },
+      "checks": {
+        "direction": "TB",
+        "classes.A.label": "A"
+      },
+      "lengths": {
+        "classes": 1
+      }
+    },
+    {
+      "id": "class-direction-BT",
+      "kind": "classDiagram",
+      "source": "classDiagram\ndirection BT\nclass A",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+        "sha256": "3c99e4613bd8235f4d3485d8444a8b119e8af9ede50f88505c24d5a6cc93280f",
+        "symbol": "direction and classIdentifier",
+        "line": 1
+      },
+      "checks": {
+        "direction": "BT",
+        "classes.A.label": "A"
+      },
+      "lengths": {
+        "classes": 1
+      }
+    },
+    {
+      "id": "class-direction-LR",
+      "kind": "classDiagram",
+      "source": "classDiagram\ndirection LR\nclass A",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+        "sha256": "3c99e4613bd8235f4d3485d8444a8b119e8af9ede50f88505c24d5a6cc93280f",
+        "symbol": "direction and classIdentifier",
+        "line": 1
+      },
+      "checks": {
+        "direction": "LR",
+        "classes.A.label": "A"
+      },
+      "lengths": {
+        "classes": 1
+      }
+    },
+    {
+      "id": "class-direction-RL",
+      "kind": "classDiagram",
+      "source": "classDiagram\ndirection RL\nclass A",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+        "sha256": "3c99e4613bd8235f4d3485d8444a8b119e8af9ede50f88505c24d5a6cc93280f",
+        "symbol": "direction and classIdentifier",
+        "line": 1
+      },
+      "checks": {
+        "direction": "RL",
+        "classes.A.label": "A"
+      },
+      "lengths": {
+        "classes": 1
+      }
+    },
+    {
+      "id": "class-relation-4",
+      "kind": "classDiagram",
+      "source": "classDiagram\nA \"1\" <|-- \"many\" B : relates",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+        "sha256": "3c99e4613bd8235f4d3485d8444a8b119e8af9ede50f88505c24d5a6cc93280f",
+        "symbol": "relationStatement/relationType; classDb.getArrowMarker",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.source": "A",
+        "relations.0.target": "B",
+        "relations.0.start_marker": "extension",
+        "relations.0.end_marker": "none",
+        "relations.0.dashed": false,
+        "relations.0.source_label": "1",
+        "relations.0.target_label": "many",
+        "relations.0.label": "relates"
+      },
+      "lengths": {
+        "classes": 2,
+        "relations": 1
+      }
+    },
+    {
+      "id": "class-relation-5",
+      "kind": "classDiagram",
+      "source": "classDiagram\nA \"1\" --|> \"many\" B : relates",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+        "sha256": "3c99e4613bd8235f4d3485d8444a8b119e8af9ede50f88505c24d5a6cc93280f",
+        "symbol": "relationStatement/relationType; classDb.getArrowMarker",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.source": "A",
+        "relations.0.target": "B",
+        "relations.0.start_marker": "none",
+        "relations.0.end_marker": "extension",
+        "relations.0.dashed": false,
+        "relations.0.source_label": "1",
+        "relations.0.target_label": "many",
+        "relations.0.label": "relates"
+      },
+      "lengths": {
+        "classes": 2,
+        "relations": 1
+      }
+    },
+    {
+      "id": "class-relation-6",
+      "kind": "classDiagram",
+      "source": "classDiagram\nA \"1\" *-- \"many\" B : relates",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+        "sha256": "3c99e4613bd8235f4d3485d8444a8b119e8af9ede50f88505c24d5a6cc93280f",
+        "symbol": "relationStatement/relationType; classDb.getArrowMarker",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.source": "A",
+        "relations.0.target": "B",
+        "relations.0.start_marker": "composition",
+        "relations.0.end_marker": "none",
+        "relations.0.dashed": false,
+        "relations.0.source_label": "1",
+        "relations.0.target_label": "many",
+        "relations.0.label": "relates"
+      },
+      "lengths": {
+        "classes": 2,
+        "relations": 1
+      }
+    },
+    {
+      "id": "class-relation-7",
+      "kind": "classDiagram",
+      "source": "classDiagram\nA \"1\" --* \"many\" B : relates",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+        "sha256": "3c99e4613bd8235f4d3485d8444a8b119e8af9ede50f88505c24d5a6cc93280f",
+        "symbol": "relationStatement/relationType; classDb.getArrowMarker",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.source": "A",
+        "relations.0.target": "B",
+        "relations.0.start_marker": "none",
+        "relations.0.end_marker": "composition",
+        "relations.0.dashed": false,
+        "relations.0.source_label": "1",
+        "relations.0.target_label": "many",
+        "relations.0.label": "relates"
+      },
+      "lengths": {
+        "classes": 2,
+        "relations": 1
+      }
+    },
+    {
+      "id": "class-relation-8",
+      "kind": "classDiagram",
+      "source": "classDiagram\nA \"1\" o-- \"many\" B : relates",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+        "sha256": "3c99e4613bd8235f4d3485d8444a8b119e8af9ede50f88505c24d5a6cc93280f",
+        "symbol": "relationStatement/relationType; classDb.getArrowMarker",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.source": "A",
+        "relations.0.target": "B",
+        "relations.0.start_marker": "aggregation",
+        "relations.0.end_marker": "none",
+        "relations.0.dashed": false,
+        "relations.0.source_label": "1",
+        "relations.0.target_label": "many",
+        "relations.0.label": "relates"
+      },
+      "lengths": {
+        "classes": 2,
+        "relations": 1
+      }
+    },
+    {
+      "id": "class-relation-9",
+      "kind": "classDiagram",
+      "source": "classDiagram\nA \"1\" --o \"many\" B : relates",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+        "sha256": "3c99e4613bd8235f4d3485d8444a8b119e8af9ede50f88505c24d5a6cc93280f",
+        "symbol": "relationStatement/relationType; classDb.getArrowMarker",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.source": "A",
+        "relations.0.target": "B",
+        "relations.0.start_marker": "none",
+        "relations.0.end_marker": "aggregation",
+        "relations.0.dashed": false,
+        "relations.0.source_label": "1",
+        "relations.0.target_label": "many",
+        "relations.0.label": "relates"
+      },
+      "lengths": {
+        "classes": 2,
+        "relations": 1
+      }
+    },
+    {
+      "id": "class-relation-10",
+      "kind": "classDiagram",
+      "source": "classDiagram\nA \"1\" --> \"many\" B : relates",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+        "sha256": "3c99e4613bd8235f4d3485d8444a8b119e8af9ede50f88505c24d5a6cc93280f",
+        "symbol": "relationStatement/relationType; classDb.getArrowMarker",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.source": "A",
+        "relations.0.target": "B",
+        "relations.0.start_marker": "none",
+        "relations.0.end_marker": "dependency",
+        "relations.0.dashed": false,
+        "relations.0.source_label": "1",
+        "relations.0.target_label": "many",
+        "relations.0.label": "relates"
+      },
+      "lengths": {
+        "classes": 2,
+        "relations": 1
+      }
+    },
+    {
+      "id": "class-relation-11",
+      "kind": "classDiagram",
+      "source": "classDiagram\nA \"1\" <-- \"many\" B : relates",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+        "sha256": "3c99e4613bd8235f4d3485d8444a8b119e8af9ede50f88505c24d5a6cc93280f",
+        "symbol": "relationStatement/relationType; classDb.getArrowMarker",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.source": "A",
+        "relations.0.target": "B",
+        "relations.0.start_marker": "dependency",
+        "relations.0.end_marker": "none",
+        "relations.0.dashed": false,
+        "relations.0.source_label": "1",
+        "relations.0.target_label": "many",
+        "relations.0.label": "relates"
+      },
+      "lengths": {
+        "classes": 2,
+        "relations": 1
+      }
+    },
+    {
+      "id": "class-relation-12",
+      "kind": "classDiagram",
+      "source": "classDiagram\nA \"1\" ..> \"many\" B : relates",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+        "sha256": "3c99e4613bd8235f4d3485d8444a8b119e8af9ede50f88505c24d5a6cc93280f",
+        "symbol": "relationStatement/relationType; classDb.getArrowMarker",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.source": "A",
+        "relations.0.target": "B",
+        "relations.0.start_marker": "none",
+        "relations.0.end_marker": "dependency",
+        "relations.0.dashed": true,
+        "relations.0.source_label": "1",
+        "relations.0.target_label": "many",
+        "relations.0.label": "relates"
+      },
+      "lengths": {
+        "classes": 2,
+        "relations": 1
+      }
+    },
+    {
+      "id": "class-relation-13",
+      "kind": "classDiagram",
+      "source": "classDiagram\nA \"1\" <.. \"many\" B : relates",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+        "sha256": "3c99e4613bd8235f4d3485d8444a8b119e8af9ede50f88505c24d5a6cc93280f",
+        "symbol": "relationStatement/relationType; classDb.getArrowMarker",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.source": "A",
+        "relations.0.target": "B",
+        "relations.0.start_marker": "dependency",
+        "relations.0.end_marker": "none",
+        "relations.0.dashed": true,
+        "relations.0.source_label": "1",
+        "relations.0.target_label": "many",
+        "relations.0.label": "relates"
+      },
+      "lengths": {
+        "classes": 2,
+        "relations": 1
+      }
+    },
+    {
+      "id": "class-relation-14",
+      "kind": "classDiagram",
+      "source": "classDiagram\nA \"1\" .. \"many\" B : relates",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+        "sha256": "3c99e4613bd8235f4d3485d8444a8b119e8af9ede50f88505c24d5a6cc93280f",
+        "symbol": "relationStatement/relationType; classDb.getArrowMarker",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.source": "A",
+        "relations.0.target": "B",
+        "relations.0.start_marker": "none",
+        "relations.0.end_marker": "none",
+        "relations.0.dashed": true,
+        "relations.0.source_label": "1",
+        "relations.0.target_label": "many",
+        "relations.0.label": "relates"
+      },
+      "lengths": {
+        "classes": 2,
+        "relations": 1
+      }
+    },
+    {
+      "id": "class-relation-15",
+      "kind": "classDiagram",
+      "source": "classDiagram\nA \"1\" -- \"many\" B : relates",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+        "sha256": "3c99e4613bd8235f4d3485d8444a8b119e8af9ede50f88505c24d5a6cc93280f",
+        "symbol": "relationStatement/relationType; classDb.getArrowMarker",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.source": "A",
+        "relations.0.target": "B",
+        "relations.0.start_marker": "none",
+        "relations.0.end_marker": "none",
+        "relations.0.dashed": false,
+        "relations.0.source_label": "1",
+        "relations.0.target_label": "many",
+        "relations.0.label": "relates"
+      },
+      "lengths": {
+        "classes": 2,
+        "relations": 1
+      }
+    },
+    {
+      "id": "class-compartments",
+      "kind": "classDiagram",
+      "source": "classDiagram\nclass Account {\n+String owner\n-int balance\n+deposit(int amount) bool\n#calculate()*\n+count$\n}",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+        "sha256": "3c99e4613bd8235f4d3485d8444a8b119e8af9ede50f88505c24d5a6cc93280f",
+        "symbol": "members right recursion, ClassMember.parseMember/parseClassifier",
+        "line": 1
+      },
+      "checks": {
+        "classes.Account.members.0.visibility": "+",
+        "classes.Account.members.0.id": "String owner",
+        "classes.Account.members.1.visibility": "-",
+        "classes.Account.methods.0.id": "deposit",
+        "classes.Account.methods.0.parameters": "int amount",
+        "classes.Account.methods.0.return_type": "bool",
+        "classes.Account.methods.1.classifier": "*",
+        "classes.Account.members.2.classifier": "$"
+      },
+      "lengths": {
+        "classes.Account.members": 3,
+        "classes.Account.methods": 2
+      }
+    },
+    {
+      "id": "class-generic-label",
+      "kind": "classDiagram",
+      "source": "classDiagram\nclass Box~T~[\"Box label\"]\nBox~T~ : +get() T",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+        "sha256": "3c99e4613bd8235f4d3485d8444a8b119e8af9ede50f88505c24d5a6cc93280f",
+        "symbol": "className GENERICTYPE/setClassLabel/parseGenericTypes",
+        "line": 1
+      },
+      "checks": {
+        "classes.Box.label": "Box label",
+        "classes.Box.generic_type": "T",
+        "classes.Box.methods.0.id": "get"
+      },
+      "lengths": {
+        "classes": 1
+      }
+    },
+    {
+      "id": "class-namespaces",
+      "kind": "classDiagram",
+      "source": "classDiagram\nnamespace Company {\n class User\n namespace Model {\n class Record\n }\n}\nclass Outside",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+        "sha256": "3c99e4613bd8235f4d3485d8444a8b119e8af9ede50f88505c24d5a6cc93280f",
+        "symbol": "namespace stack and addClassesToNamespace; classDb.addClassesToNamespace retains local class IDs (official A-class-namespaces snapshot)",
+        "line": 1
+      },
+      "checks": {
+        "classes.User.parent": "Company",
+        "classes.Record.parent": "Company.Model"
+      },
+      "lengths": {
+        "namespaces": 2,
+        "classes": 3
+      }
+    },
+    {
+      "id": "class-multiple-annotation",
+      "kind": "classDiagram",
+      "source": "classDiagram\nclass A\n<<interface>> A\n<<service>> A",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+        "sha256": "3c99e4613bd8235f4d3485d8444a8b119e8af9ede50f88505c24d5a6cc93280f",
+        "symbol": "annotationStatement/addAnnotation; only first annotation drawn",
+        "line": 1
+      },
+      "checks": {
+        "classes.A.annotations": [
+          "interface",
+          "service"
+        ]
+      },
+      "lengths": {}
+    },
+    {
+      "id": "class-bare-noop",
+      "kind": "classDiagram",
+      "source": "classDiagram\nBareClass\nclass Present",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+        "sha256": "3c99e4613bd8235f4d3485d8444a8b119e8af9ede50f88505c24d5a6cc93280f",
+        "symbol": "memberStatement className production has no DB action",
+        "line": 1
+      },
+      "checks": {
+        "classes.Present.label": "Present"
+      },
+      "lengths": {
+        "classes": 1
+      },
+      "absent": [
+        "classes.BareClass"
+      ]
+    },
+    {
+      "id": "class-notes-styles",
+      "kind": "classDiagram",
+      "source": "classDiagram\nclass A:::highlight\nnote for A \"A note\"\nclassDef highlight fill:#fee,color:#900\nstyle A stroke:#123",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+        "sha256": "3c99e4613bd8235f4d3485d8444a8b119e8af9ede50f88505c24d5a6cc93280f",
+        "symbol": "classIdentifier STYLE_SEPARATOR/noteStatement/style/classDef",
+        "line": 1
+      },
+      "checks": {
+        "classes.A.classes": [
+          "default",
+          "highlight"
+        ],
+        "notes.0.text": "A note",
+        "notes.0.target": "A",
+        "classes.A.styles": [
+          [
+            "stroke",
+            "#123"
+          ]
+        ]
+      },
+      "lengths": {
+        "notes": 1,
+        "definitions": 1
+      }
+    },
+    {
+      "id": "state-direction-TB",
+      "kind": "stateDiagram",
+      "source": "stateDiagram-v2\ndirection TB\n[*] --> Active\nActive --> [*]",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/state/parser/stateDiagram.jison",
+        "sha256": "72568f98201c5ba59dca96842d1805d5a9908c5965d0609ab27f192929285d4d",
+        "symbol": "direction/idStatement start/end in StateDB.extract",
+        "line": 1
+      },
+      "checks": {
+        "direction": "TB",
+        "states.root_start.kind": "start",
+        "states.root_end.kind": "end",
+        "relations.0.target": "Active",
+        "relations.1.source": "Active"
+      },
+      "lengths": {
+        "states": 3,
+        "relations": 2
+      }
+    },
+    {
+      "id": "state-direction-BT",
+      "kind": "stateDiagram",
+      "source": "stateDiagram-v2\ndirection BT\n[*] --> Active\nActive --> [*]",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/state/parser/stateDiagram.jison",
+        "sha256": "72568f98201c5ba59dca96842d1805d5a9908c5965d0609ab27f192929285d4d",
+        "symbol": "direction/idStatement start/end in StateDB.extract",
+        "line": 1
+      },
+      "checks": {
+        "direction": "BT",
+        "states.root_start.kind": "start",
+        "states.root_end.kind": "end",
+        "relations.0.target": "Active",
+        "relations.1.source": "Active"
+      },
+      "lengths": {
+        "states": 3,
+        "relations": 2
+      }
+    },
+    {
+      "id": "state-direction-LR",
+      "kind": "stateDiagram",
+      "source": "stateDiagram-v2\ndirection LR\n[*] --> Active\nActive --> [*]",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/state/parser/stateDiagram.jison",
+        "sha256": "72568f98201c5ba59dca96842d1805d5a9908c5965d0609ab27f192929285d4d",
+        "symbol": "direction/idStatement start/end in StateDB.extract",
+        "line": 1
+      },
+      "checks": {
+        "direction": "LR",
+        "states.root_start.kind": "start",
+        "states.root_end.kind": "end",
+        "relations.0.target": "Active",
+        "relations.1.source": "Active"
+      },
+      "lengths": {
+        "states": 3,
+        "relations": 2
+      }
+    },
+    {
+      "id": "state-direction-RL",
+      "kind": "stateDiagram",
+      "source": "stateDiagram-v2\ndirection RL\n[*] --> Active\nActive --> [*]",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/state/parser/stateDiagram.jison",
+        "sha256": "72568f98201c5ba59dca96842d1805d5a9908c5965d0609ab27f192929285d4d",
+        "symbol": "direction/idStatement start/end in StateDB.extract",
+        "line": 1
+      },
+      "checks": {
+        "direction": "RL",
+        "states.root_start.kind": "start",
+        "states.root_end.kind": "end",
+        "relations.0.target": "Active",
+        "relations.1.source": "Active"
+      },
+      "lengths": {
+        "states": 3,
+        "relations": 2
+      }
+    },
+    {
+      "id": "state-special-choice",
+      "kind": "stateDiagram",
+      "source": "stateDiagram-v2\nstate decision <<choice>>\nA --> decision",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/state/parser/stateDiagram.jison",
+        "sha256": "72568f98201c5ba59dca96842d1805d5a9908c5965d0609ab27f192929285d4d",
+        "symbol": "idStatement SPECIAL_STYPE production",
+        "line": 1
+      },
+      "checks": {
+        "states.decision.kind": "choice",
+        "relations.0.target": "decision"
+      },
+      "lengths": {
+        "states": 2
+      }
+    },
+    {
+      "id": "state-special-fork",
+      "kind": "stateDiagram",
+      "source": "stateDiagram-v2\nstate decision <<fork>>\nA --> decision",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/state/parser/stateDiagram.jison",
+        "sha256": "72568f98201c5ba59dca96842d1805d5a9908c5965d0609ab27f192929285d4d",
+        "symbol": "idStatement SPECIAL_STYPE production",
+        "line": 1
+      },
+      "checks": {
+        "states.decision.kind": "fork",
+        "relations.0.target": "decision"
+      },
+      "lengths": {
+        "states": 2
+      }
+    },
+    {
+      "id": "state-special-join",
+      "kind": "stateDiagram",
+      "source": "stateDiagram-v2\nstate decision <<join>>\nA --> decision",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/state/parser/stateDiagram.jison",
+        "sha256": "72568f98201c5ba59dca96842d1805d5a9908c5965d0609ab27f192929285d4d",
+        "symbol": "idStatement SPECIAL_STYPE production",
+        "line": 1
+      },
+      "checks": {
+        "states.decision.kind": "join",
+        "relations.0.target": "decision"
+      },
+      "lengths": {
+        "states": 2
+      }
+    },
+    {
+      "id": "state-nested-local-direction",
+      "kind": "stateDiagram",
+      "source": "stateDiagram-v2\nstate Outer {\n direction LR\n state Inner {\n A --> B : inside\n }\n}\nC --> Outer",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/state/parser/stateDiagram.jison",
+        "sha256": "72568f98201c5ba59dca96842d1805d5a9908c5965d0609ab27f192929285d4d",
+        "symbol": "COMPOSIT_STATE STRUCT_START document STRUCT_STOP; local direction",
+        "line": 1
+      },
+      "checks": {
+        "states.Inner.parent": "Outer",
+        "states.A.parent": "Inner",
+        "states.B.parent": "Inner",
+        "states.Outer.direction": "LR",
+        "relations.0.label": "inside"
+      },
+      "lengths": {
+        "relations": 2
+      }
+    },
+    {
+      "id": "state-descriptions-notes",
+      "kind": "stateDiagram",
+      "source": "stateDiagram-v2\nstate \"Order open\" as Open\nOpen : First detail\nnote right of Open : Review carefully",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/state/parser/stateDiagram.jison",
+        "sha256": "72568f98201c5ba59dca96842d1805d5a9908c5965d0609ab27f192929285d4d",
+        "symbol": "STATE_DESCR AS ID; note statement/trimColon",
+        "line": 1
+      },
+      "checks": {
+        "states.Open.labels": [
+          "Order open",
+          "First detail"
+        ],
+        "notes.0.target": "Open",
+        "notes.0.side": "right of",
+        "notes.0.text": "Review carefully"
+      },
+      "lengths": {
+        "notes": 1
+      }
+    },
+    {
+      "id": "state-concurrent",
+      "kind": "stateDiagram",
+      "source": "stateDiagram-v2\nstate Parallel {\n A --> B\n --\n C --> D\n}",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/state/parser/stateDiagram.jison",
+        "sha256": "72568f98201c5ba59dca96842d1805d5a9908c5965d0609ab27f192929285d4d",
+        "symbol": "DIVIDER concurrent regions, two region containers plus source states",
+        "line": 1
+      },
+      "checks": {
+        "states.Parallel.group": true
+      },
+      "lengths": {
+        "states": 7,
+        "relations": 2
+      }
+    },
+    {
+      "id": "state-empty-description-metadata",
+      "kind": "stateDiagram",
+      "source": "stateDiagram-v2\nhide empty description\nscale 2 width\nA --> B",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/state/parser/stateDiagram.jison",
+        "sha256": "72568f98201c5ba59dca96842d1805d5a9908c5965d0609ab27f192929285d4d",
+        "symbol": "HIDE_EMPTY/scale WIDTH are retained source metadata; SCALE lexer consumes trailing width",
+        "line": 1
+      },
+      "checks": {
+        "hide_empty": true,
+        "scale": 2.0
+      },
+      "lengths": {}
+    },
+    {
+      "id": "er-cardinality-left-only_one",
+      "kind": "er",
+      "source": "erDiagram\nA ||--o{ B : owns",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/er/parser/erDiagram.jison",
+        "sha256": "6aa3496c3d7fc2319ce303b4e95e1061f5a9002667ea29300a86ab9f198da6ef",
+        "symbol": "cardinality relSpec; native public symbolic cardinality values",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.start_marker": "one",
+        "relations.0.end_marker": "zero_many",
+        "relations.0.dashed": false,
+        "relations.0.label": "owns"
+      },
+      "lengths": {
+        "entities": 2
+      }
+    },
+    {
+      "id": "er-cardinality-left-zero_or_one",
+      "kind": "er",
+      "source": "erDiagram\nA |o--o{ B : owns",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/er/parser/erDiagram.jison",
+        "sha256": "6aa3496c3d7fc2319ce303b4e95e1061f5a9002667ea29300a86ab9f198da6ef",
+        "symbol": "cardinality relSpec; native public symbolic cardinality values",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.start_marker": "zero_one",
+        "relations.0.end_marker": "zero_many",
+        "relations.0.dashed": false,
+        "relations.0.label": "owns"
+      },
+      "lengths": {
+        "entities": 2
+      }
+    },
+    {
+      "id": "er-cardinality-left-one_or_more",
+      "kind": "er",
+      "source": "erDiagram\nA }|--o{ B : owns",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/er/parser/erDiagram.jison",
+        "sha256": "6aa3496c3d7fc2319ce303b4e95e1061f5a9002667ea29300a86ab9f198da6ef",
+        "symbol": "cardinality relSpec; native public symbolic cardinality values",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.start_marker": "one_many",
+        "relations.0.end_marker": "zero_many",
+        "relations.0.dashed": false,
+        "relations.0.label": "owns"
+      },
+      "lengths": {
+        "entities": 2
+      }
+    },
+    {
+      "id": "er-cardinality-left-zero_or_more",
+      "kind": "er",
+      "source": "erDiagram\nA }o--o{ B : owns",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/er/parser/erDiagram.jison",
+        "sha256": "6aa3496c3d7fc2319ce303b4e95e1061f5a9002667ea29300a86ab9f198da6ef",
+        "symbol": "cardinality relSpec; native public symbolic cardinality values",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.start_marker": "zero_many",
+        "relations.0.end_marker": "zero_many",
+        "relations.0.dashed": false,
+        "relations.0.label": "owns"
+      },
+      "lengths": {
+        "entities": 2
+      }
+    },
+    {
+      "id": "er-attributes",
+      "kind": "er",
+      "source": "erDiagram\nCUSTOMER [Client] {\n int id PK \"Primary identifier\"\n string name\n string email UK, FK \"Contact\"\n}\nCUSTOMER ||..o{ ORDER : places",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/er/parser/erDiagram.jison",
+        "sha256": "6aa3496c3d7fc2319ce303b4e95e1061f5a9002667ea29300a86ab9f198da6ef",
+        "symbol": "entityName alias; attributes/key/comment; addAttributes reverse list order",
+        "line": 1
+      },
+      "checks": {
+        "entities.CUSTOMER.alias": "Client",
+        "entities.CUSTOMER.id": "entity-CUSTOMER-0",
+        "entities.CUSTOMER.attributes.0.type": "int",
+        "entities.CUSTOMER.attributes.0.name": "id",
+        "entities.CUSTOMER.attributes.0.keys": [
+          "PK"
+        ],
+        "entities.CUSTOMER.attributes.0.comment": "Primary identifier",
+        "entities.CUSTOMER.attributes.2.keys": [
+          "UK",
+          "FK"
+        ],
+        "relations.0.dashed": true
+      },
+      "lengths": {
+        "entities.CUSTOMER.attributes": 3
+      }
+    },
+    {
+      "id": "er-group-direction",
+      "kind": "er",
+      "source": "erDiagram\nsubgraph sales [Sales]\ndirection LR\nCUSTOMER\nORDER\nend\nCUSTOMER ||--o{ ORDER : places",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/er/parser/erDiagram.jison",
+        "sha256": "6aa3496c3d7fc2319ce303b4e95e1061f5a9002667ea29300a86ab9f198da6ef",
+        "symbol": "subgraphHeader/addSubGraph/setDirection group semantics",
+        "line": 1
+      },
+      "checks": {
+        "groups.sales.label": "Sales",
+        "groups.sales.direction": "LR",
+        "entities.CUSTOMER.parent": "sales",
+        "entities.ORDER.parent": "sales"
+      },
+      "lengths": {
+        "groups": 1
+      }
+    },
+    {
+      "id": "requirement-type-requirement",
+      "kind": "requirement",
+      "source": "requirementDiagram\nrequirement R {\nid: 1\ntext: \"Required behavior\"\nrisk: high\nverifymethod: test\n}",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/requirement/parser/requirementDiagram.jison",
+        "sha256": "44692497660e25f6fe5d51fb3ea7ed17159bbf27bd901632127342e135bff635",
+        "symbol": "requirementType enum and requirementBody fields",
+        "line": 1
+      },
+      "checks": {
+        "requirements.R.requirement_id": "1",
+        "requirements.R.text": "Required behavior",
+        "requirements.R.risk": "High",
+        "requirements.R.verify_method": "Test"
+      },
+      "lengths": {
+        "requirements": 1,
+        "elements": 0
+      }
+    },
+    {
+      "id": "requirement-type-functionalRequirement",
+      "kind": "requirement",
+      "source": "requirementDiagram\nfunctionalRequirement R {\nid: 1\ntext: \"Required behavior\"\nrisk: high\nverifymethod: test\n}",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/requirement/parser/requirementDiagram.jison",
+        "sha256": "44692497660e25f6fe5d51fb3ea7ed17159bbf27bd901632127342e135bff635",
+        "symbol": "requirementType enum and requirementBody fields",
+        "line": 1
+      },
+      "checks": {
+        "requirements.R.requirement_id": "1",
+        "requirements.R.text": "Required behavior",
+        "requirements.R.risk": "High",
+        "requirements.R.verify_method": "Test"
+      },
+      "lengths": {
+        "requirements": 1,
+        "elements": 0
+      }
+    },
+    {
+      "id": "requirement-type-interfaceRequirement",
+      "kind": "requirement",
+      "source": "requirementDiagram\ninterfaceRequirement R {\nid: 1\ntext: \"Required behavior\"\nrisk: high\nverifymethod: test\n}",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/requirement/parser/requirementDiagram.jison",
+        "sha256": "44692497660e25f6fe5d51fb3ea7ed17159bbf27bd901632127342e135bff635",
+        "symbol": "requirementType enum and requirementBody fields",
+        "line": 1
+      },
+      "checks": {
+        "requirements.R.requirement_id": "1",
+        "requirements.R.text": "Required behavior",
+        "requirements.R.risk": "High",
+        "requirements.R.verify_method": "Test"
+      },
+      "lengths": {
+        "requirements": 1,
+        "elements": 0
+      }
+    },
+    {
+      "id": "requirement-type-performanceRequirement",
+      "kind": "requirement",
+      "source": "requirementDiagram\nperformanceRequirement R {\nid: 1\ntext: \"Required behavior\"\nrisk: high\nverifymethod: test\n}",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/requirement/parser/requirementDiagram.jison",
+        "sha256": "44692497660e25f6fe5d51fb3ea7ed17159bbf27bd901632127342e135bff635",
+        "symbol": "requirementType enum and requirementBody fields",
+        "line": 1
+      },
+      "checks": {
+        "requirements.R.requirement_id": "1",
+        "requirements.R.text": "Required behavior",
+        "requirements.R.risk": "High",
+        "requirements.R.verify_method": "Test"
+      },
+      "lengths": {
+        "requirements": 1,
+        "elements": 0
+      }
+    },
+    {
+      "id": "requirement-type-physicalRequirement",
+      "kind": "requirement",
+      "source": "requirementDiagram\nphysicalRequirement R {\nid: 1\ntext: \"Required behavior\"\nrisk: high\nverifymethod: test\n}",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/requirement/parser/requirementDiagram.jison",
+        "sha256": "44692497660e25f6fe5d51fb3ea7ed17159bbf27bd901632127342e135bff635",
+        "symbol": "requirementType enum and requirementBody fields",
+        "line": 1
+      },
+      "checks": {
+        "requirements.R.requirement_id": "1",
+        "requirements.R.text": "Required behavior",
+        "requirements.R.risk": "High",
+        "requirements.R.verify_method": "Test"
+      },
+      "lengths": {
+        "requirements": 1,
+        "elements": 0
+      }
+    },
+    {
+      "id": "requirement-type-designConstraint",
+      "kind": "requirement",
+      "source": "requirementDiagram\ndesignConstraint R {\nid: 1\ntext: \"Required behavior\"\nrisk: high\nverifymethod: test\n}",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/requirement/parser/requirementDiagram.jison",
+        "sha256": "44692497660e25f6fe5d51fb3ea7ed17159bbf27bd901632127342e135bff635",
+        "symbol": "requirementType enum and requirementBody fields",
+        "line": 1
+      },
+      "checks": {
+        "requirements.R.requirement_id": "1",
+        "requirements.R.text": "Required behavior",
+        "requirements.R.risk": "High",
+        "requirements.R.verify_method": "Test"
+      },
+      "lengths": {
+        "requirements": 1,
+        "elements": 0
+      }
+    },
+    {
+      "id": "requirement-fields-low-analysis",
+      "kind": "requirement",
+      "source": "requirementDiagram\nrequirement R {\nrisk: low\nverifymethod: analysis\n}",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/requirement/parser/requirementDiagram.jison",
+        "sha256": "44692497660e25f6fe5d51fb3ea7ed17159bbf27bd901632127342e135bff635",
+        "symbol": "riskLevel x verifyType complete enum Cartesian product",
+        "line": 1
+      },
+      "checks": {
+        "requirements.R.risk": "Low",
+        "requirements.R.verify_method": "Analysis"
+      },
+      "lengths": {}
+    },
+    {
+      "id": "requirement-fields-low-demonstration",
+      "kind": "requirement",
+      "source": "requirementDiagram\nrequirement R {\nrisk: low\nverifymethod: demonstration\n}",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/requirement/parser/requirementDiagram.jison",
+        "sha256": "44692497660e25f6fe5d51fb3ea7ed17159bbf27bd901632127342e135bff635",
+        "symbol": "riskLevel x verifyType complete enum Cartesian product",
+        "line": 1
+      },
+      "checks": {
+        "requirements.R.risk": "Low",
+        "requirements.R.verify_method": "Demonstration"
+      },
+      "lengths": {}
+    },
+    {
+      "id": "requirement-fields-low-inspection",
+      "kind": "requirement",
+      "source": "requirementDiagram\nrequirement R {\nrisk: low\nverifymethod: inspection\n}",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/requirement/parser/requirementDiagram.jison",
+        "sha256": "44692497660e25f6fe5d51fb3ea7ed17159bbf27bd901632127342e135bff635",
+        "symbol": "riskLevel x verifyType complete enum Cartesian product",
+        "line": 1
+      },
+      "checks": {
+        "requirements.R.risk": "Low",
+        "requirements.R.verify_method": "Inspection"
+      },
+      "lengths": {}
+    },
+    {
+      "id": "requirement-fields-low-test",
+      "kind": "requirement",
+      "source": "requirementDiagram\nrequirement R {\nrisk: low\nverifymethod: test\n}",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/requirement/parser/requirementDiagram.jison",
+        "sha256": "44692497660e25f6fe5d51fb3ea7ed17159bbf27bd901632127342e135bff635",
+        "symbol": "riskLevel x verifyType complete enum Cartesian product",
+        "line": 1
+      },
+      "checks": {
+        "requirements.R.risk": "Low",
+        "requirements.R.verify_method": "Test"
+      },
+      "lengths": {}
+    },
+    {
+      "id": "requirement-fields-medium-analysis",
+      "kind": "requirement",
+      "source": "requirementDiagram\nrequirement R {\nrisk: medium\nverifymethod: analysis\n}",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/requirement/parser/requirementDiagram.jison",
+        "sha256": "44692497660e25f6fe5d51fb3ea7ed17159bbf27bd901632127342e135bff635",
+        "symbol": "riskLevel x verifyType complete enum Cartesian product",
+        "line": 1
+      },
+      "checks": {
+        "requirements.R.risk": "Medium",
+        "requirements.R.verify_method": "Analysis"
+      },
+      "lengths": {}
+    },
+    {
+      "id": "requirement-fields-medium-demonstration",
+      "kind": "requirement",
+      "source": "requirementDiagram\nrequirement R {\nrisk: medium\nverifymethod: demonstration\n}",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/requirement/parser/requirementDiagram.jison",
+        "sha256": "44692497660e25f6fe5d51fb3ea7ed17159bbf27bd901632127342e135bff635",
+        "symbol": "riskLevel x verifyType complete enum Cartesian product",
+        "line": 1
+      },
+      "checks": {
+        "requirements.R.risk": "Medium",
+        "requirements.R.verify_method": "Demonstration"
+      },
+      "lengths": {}
+    },
+    {
+      "id": "requirement-fields-medium-inspection",
+      "kind": "requirement",
+      "source": "requirementDiagram\nrequirement R {\nrisk: medium\nverifymethod: inspection\n}",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/requirement/parser/requirementDiagram.jison",
+        "sha256": "44692497660e25f6fe5d51fb3ea7ed17159bbf27bd901632127342e135bff635",
+        "symbol": "riskLevel x verifyType complete enum Cartesian product",
+        "line": 1
+      },
+      "checks": {
+        "requirements.R.risk": "Medium",
+        "requirements.R.verify_method": "Inspection"
+      },
+      "lengths": {}
+    },
+    {
+      "id": "requirement-fields-medium-test",
+      "kind": "requirement",
+      "source": "requirementDiagram\nrequirement R {\nrisk: medium\nverifymethod: test\n}",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/requirement/parser/requirementDiagram.jison",
+        "sha256": "44692497660e25f6fe5d51fb3ea7ed17159bbf27bd901632127342e135bff635",
+        "symbol": "riskLevel x verifyType complete enum Cartesian product",
+        "line": 1
+      },
+      "checks": {
+        "requirements.R.risk": "Medium",
+        "requirements.R.verify_method": "Test"
+      },
+      "lengths": {}
+    },
+    {
+      "id": "requirement-fields-high-analysis",
+      "kind": "requirement",
+      "source": "requirementDiagram\nrequirement R {\nrisk: high\nverifymethod: analysis\n}",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/requirement/parser/requirementDiagram.jison",
+        "sha256": "44692497660e25f6fe5d51fb3ea7ed17159bbf27bd901632127342e135bff635",
+        "symbol": "riskLevel x verifyType complete enum Cartesian product",
+        "line": 1
+      },
+      "checks": {
+        "requirements.R.risk": "High",
+        "requirements.R.verify_method": "Analysis"
+      },
+      "lengths": {}
+    },
+    {
+      "id": "requirement-fields-high-demonstration",
+      "kind": "requirement",
+      "source": "requirementDiagram\nrequirement R {\nrisk: high\nverifymethod: demonstration\n}",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/requirement/parser/requirementDiagram.jison",
+        "sha256": "44692497660e25f6fe5d51fb3ea7ed17159bbf27bd901632127342e135bff635",
+        "symbol": "riskLevel x verifyType complete enum Cartesian product",
+        "line": 1
+      },
+      "checks": {
+        "requirements.R.risk": "High",
+        "requirements.R.verify_method": "Demonstration"
+      },
+      "lengths": {}
+    },
+    {
+      "id": "requirement-fields-high-inspection",
+      "kind": "requirement",
+      "source": "requirementDiagram\nrequirement R {\nrisk: high\nverifymethod: inspection\n}",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/requirement/parser/requirementDiagram.jison",
+        "sha256": "44692497660e25f6fe5d51fb3ea7ed17159bbf27bd901632127342e135bff635",
+        "symbol": "riskLevel x verifyType complete enum Cartesian product",
+        "line": 1
+      },
+      "checks": {
+        "requirements.R.risk": "High",
+        "requirements.R.verify_method": "Inspection"
+      },
+      "lengths": {}
+    },
+    {
+      "id": "requirement-fields-high-test",
+      "kind": "requirement",
+      "source": "requirementDiagram\nrequirement R {\nrisk: high\nverifymethod: test\n}",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/requirement/parser/requirementDiagram.jison",
+        "sha256": "44692497660e25f6fe5d51fb3ea7ed17159bbf27bd901632127342e135bff635",
+        "symbol": "riskLevel x verifyType complete enum Cartesian product",
+        "line": 1
+      },
+      "checks": {
+        "requirements.R.risk": "High",
+        "requirements.R.verify_method": "Test"
+      },
+      "lengths": {}
+    },
+    {
+      "id": "requirement-relation-contains",
+      "kind": "requirement",
+      "source": "requirementDiagram\nrequirement R {\n}\nelement E {\ntype: source\ndocref: document\n}\nR - contains -> E",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/requirement/parser/requirementDiagram.jison",
+        "sha256": "44692497660e25f6fe5d51fb3ea7ed17159bbf27bd901632127342e135bff635",
+        "symbol": "relationshipType complete enum; elementBody",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.source": "R",
+        "relations.0.target": "E",
+        "elements.E.type": "source",
+        "elements.E.doc_ref": "document"
+      },
+      "lengths": {
+        "relations": 1
+      }
+    },
+    {
+      "id": "requirement-relation-copies",
+      "kind": "requirement",
+      "source": "requirementDiagram\nrequirement R {\n}\nelement E {\ntype: source\ndocref: document\n}\nR - copies -> E",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/requirement/parser/requirementDiagram.jison",
+        "sha256": "44692497660e25f6fe5d51fb3ea7ed17159bbf27bd901632127342e135bff635",
+        "symbol": "relationshipType complete enum; elementBody",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.source": "R",
+        "relations.0.target": "E",
+        "elements.E.type": "source",
+        "elements.E.doc_ref": "document"
+      },
+      "lengths": {
+        "relations": 1
+      }
+    },
+    {
+      "id": "requirement-relation-derives",
+      "kind": "requirement",
+      "source": "requirementDiagram\nrequirement R {\n}\nelement E {\ntype: source\ndocref: document\n}\nR - derives -> E",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/requirement/parser/requirementDiagram.jison",
+        "sha256": "44692497660e25f6fe5d51fb3ea7ed17159bbf27bd901632127342e135bff635",
+        "symbol": "relationshipType complete enum; elementBody",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.source": "R",
+        "relations.0.target": "E",
+        "elements.E.type": "source",
+        "elements.E.doc_ref": "document"
+      },
+      "lengths": {
+        "relations": 1
+      }
+    },
+    {
+      "id": "requirement-relation-satisfies",
+      "kind": "requirement",
+      "source": "requirementDiagram\nrequirement R {\n}\nelement E {\ntype: source\ndocref: document\n}\nR - satisfies -> E",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/requirement/parser/requirementDiagram.jison",
+        "sha256": "44692497660e25f6fe5d51fb3ea7ed17159bbf27bd901632127342e135bff635",
+        "symbol": "relationshipType complete enum; elementBody",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.source": "R",
+        "relations.0.target": "E",
+        "elements.E.type": "source",
+        "elements.E.doc_ref": "document"
+      },
+      "lengths": {
+        "relations": 1
+      }
+    },
+    {
+      "id": "requirement-relation-verifies",
+      "kind": "requirement",
+      "source": "requirementDiagram\nrequirement R {\n}\nelement E {\ntype: source\ndocref: document\n}\nR - verifies -> E",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/requirement/parser/requirementDiagram.jison",
+        "sha256": "44692497660e25f6fe5d51fb3ea7ed17159bbf27bd901632127342e135bff635",
+        "symbol": "relationshipType complete enum; elementBody",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.source": "R",
+        "relations.0.target": "E",
+        "elements.E.type": "source",
+        "elements.E.doc_ref": "document"
+      },
+      "lengths": {
+        "relations": 1
+      }
+    },
+    {
+      "id": "requirement-relation-refines",
+      "kind": "requirement",
+      "source": "requirementDiagram\nrequirement R {\n}\nelement E {\ntype: source\ndocref: document\n}\nR - refines -> E",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/requirement/parser/requirementDiagram.jison",
+        "sha256": "44692497660e25f6fe5d51fb3ea7ed17159bbf27bd901632127342e135bff635",
+        "symbol": "relationshipType complete enum; elementBody",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.source": "R",
+        "relations.0.target": "E",
+        "elements.E.type": "source",
+        "elements.E.doc_ref": "document"
+      },
+      "lengths": {
+        "relations": 1
+      }
+    },
+    {
+      "id": "requirement-relation-traces",
+      "kind": "requirement",
+      "source": "requirementDiagram\nrequirement R {\n}\nelement E {\ntype: source\ndocref: document\n}\nR - traces -> E",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/requirement/parser/requirementDiagram.jison",
+        "sha256": "44692497660e25f6fe5d51fb3ea7ed17159bbf27bd901632127342e135bff635",
+        "symbol": "relationshipType complete enum; elementBody",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.source": "R",
+        "relations.0.target": "E",
+        "elements.E.type": "source",
+        "elements.E.doc_ref": "document"
+      },
+      "lengths": {
+        "relations": 1
+      }
+    },
+    {
+      "id": "c4-header-C4Context",
+      "kind": "c4",
+      "source": "C4Context\nPerson(a,\"Alice\",\"User\")\nSystem(b,\"Billing\",\"System\")\nRel(a,b,\"Uses\")",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "five C4 headers, person/system/rel DB parameter assignment",
+        "line": 1
+      },
+      "checks": {
+        "variant": "C4Context",
+        "elements.a.kind": "person",
+        "elements.a.label": "Alice",
+        "relations.0.source": "a",
+        "relations.0.target": "b",
+        "relations.0.label": "Uses"
+      },
+      "lengths": {
+        "elements": 2
+      }
+    },
+    {
+      "id": "c4-header-C4Container",
+      "kind": "c4",
+      "source": "C4Container\nPerson(a,\"Alice\",\"User\")\nSystem(b,\"Billing\",\"System\")\nRel(a,b,\"Uses\")",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "five C4 headers, person/system/rel DB parameter assignment",
+        "line": 1
+      },
+      "checks": {
+        "variant": "C4Container",
+        "elements.a.kind": "person",
+        "elements.a.label": "Alice",
+        "relations.0.source": "a",
+        "relations.0.target": "b",
+        "relations.0.label": "Uses"
+      },
+      "lengths": {
+        "elements": 2
+      }
+    },
+    {
+      "id": "c4-header-C4Component",
+      "kind": "c4",
+      "source": "C4Component\nPerson(a,\"Alice\",\"User\")\nSystem(b,\"Billing\",\"System\")\nRel(a,b,\"Uses\")",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "five C4 headers, person/system/rel DB parameter assignment",
+        "line": 1
+      },
+      "checks": {
+        "variant": "C4Component",
+        "elements.a.kind": "person",
+        "elements.a.label": "Alice",
+        "relations.0.source": "a",
+        "relations.0.target": "b",
+        "relations.0.label": "Uses"
+      },
+      "lengths": {
+        "elements": 2
+      }
+    },
+    {
+      "id": "c4-header-C4Dynamic",
+      "kind": "c4",
+      "source": "C4Dynamic\nPerson(a,\"Alice\",\"User\")\nSystem(b,\"Billing\",\"System\")\nRel(a,b,\"Uses\")",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "five C4 headers, person/system/rel DB parameter assignment",
+        "line": 1
+      },
+      "checks": {
+        "variant": "C4Dynamic",
+        "elements.a.kind": "person",
+        "elements.a.label": "Alice",
+        "relations.0.source": "a",
+        "relations.0.target": "b",
+        "relations.0.label": "Uses"
+      },
+      "lengths": {
+        "elements": 2
+      }
+    },
+    {
+      "id": "c4-header-C4Deployment",
+      "kind": "c4",
+      "source": "C4Deployment\nPerson(a,\"Alice\",\"User\")\nSystem(b,\"Billing\",\"System\")\nRel(a,b,\"Uses\")",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "five C4 headers, person/system/rel DB parameter assignment",
+        "line": 1
+      },
+      "checks": {
+        "variant": "C4Deployment",
+        "elements.a.kind": "person",
+        "elements.a.label": "Alice",
+        "relations.0.source": "a",
+        "relations.0.target": "b",
+        "relations.0.label": "Uses"
+      },
+      "lengths": {
+        "elements": 2
+      }
+    },
+    {
+      "id": "c4-element-Person",
+      "kind": "c4",
+      "source": "C4Context\nPerson(a,\"Alpha\",\"Tech\",\"Description\")",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "C4 c4Shape parameter names from Jison semantic actions",
+        "line": 1
+      },
+      "checks": {
+        "elements.a.kind": "person",
+        "elements.a.label": "Alpha"
+      },
+      "lengths": {
+        "elements": 1
+      }
+    },
+    {
+      "id": "c4-element-Person_Ext",
+      "kind": "c4",
+      "source": "C4Context\nPerson_Ext(a,\"Alpha\",\"Tech\",\"Description\")",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "C4 c4Shape parameter names from Jison semantic actions",
+        "line": 1
+      },
+      "checks": {
+        "elements.a.kind": "external_person",
+        "elements.a.label": "Alpha"
+      },
+      "lengths": {
+        "elements": 1
+      }
+    },
+    {
+      "id": "c4-element-System",
+      "kind": "c4",
+      "source": "C4Context\nSystem(a,\"Alpha\",\"Tech\",\"Description\")",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "C4 c4Shape parameter names from Jison semantic actions",
+        "line": 1
+      },
+      "checks": {
+        "elements.a.kind": "system",
+        "elements.a.label": "Alpha"
+      },
+      "lengths": {
+        "elements": 1
+      }
+    },
+    {
+      "id": "c4-element-SystemDb",
+      "kind": "c4",
+      "source": "C4Context\nSystemDb(a,\"Alpha\",\"Tech\",\"Description\")",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "C4 c4Shape parameter names from Jison semantic actions",
+        "line": 1
+      },
+      "checks": {
+        "elements.a.kind": "system_db",
+        "elements.a.label": "Alpha"
+      },
+      "lengths": {
+        "elements": 1
+      }
+    },
+    {
+      "id": "c4-element-SystemQueue",
+      "kind": "c4",
+      "source": "C4Context\nSystemQueue(a,\"Alpha\",\"Tech\",\"Description\")",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "C4 c4Shape parameter names from Jison semantic actions",
+        "line": 1
+      },
+      "checks": {
+        "elements.a.kind": "system_queue",
+        "elements.a.label": "Alpha"
+      },
+      "lengths": {
+        "elements": 1
+      }
+    },
+    {
+      "id": "c4-element-System_Ext",
+      "kind": "c4",
+      "source": "C4Context\nSystem_Ext(a,\"Alpha\",\"Tech\",\"Description\")",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "C4 c4Shape parameter names from Jison semantic actions",
+        "line": 1
+      },
+      "checks": {
+        "elements.a.kind": "external_system",
+        "elements.a.label": "Alpha"
+      },
+      "lengths": {
+        "elements": 1
+      }
+    },
+    {
+      "id": "c4-element-SystemDb_Ext",
+      "kind": "c4",
+      "source": "C4Context\nSystemDb_Ext(a,\"Alpha\",\"Tech\",\"Description\")",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "C4 c4Shape parameter names from Jison semantic actions",
+        "line": 1
+      },
+      "checks": {
+        "elements.a.kind": "external_system_db",
+        "elements.a.label": "Alpha"
+      },
+      "lengths": {
+        "elements": 1
+      }
+    },
+    {
+      "id": "c4-element-SystemQueue_Ext",
+      "kind": "c4",
+      "source": "C4Context\nSystemQueue_Ext(a,\"Alpha\",\"Tech\",\"Description\")",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "C4 c4Shape parameter names from Jison semantic actions",
+        "line": 1
+      },
+      "checks": {
+        "elements.a.kind": "external_system_queue",
+        "elements.a.label": "Alpha"
+      },
+      "lengths": {
+        "elements": 1
+      }
+    },
+    {
+      "id": "c4-element-Container",
+      "kind": "c4",
+      "source": "C4Context\nContainer(a,\"Alpha\",\"Tech\",\"Description\")",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "C4 c4Shape parameter names from Jison semantic actions",
+        "line": 1
+      },
+      "checks": {
+        "elements.a.kind": "container",
+        "elements.a.label": "Alpha"
+      },
+      "lengths": {
+        "elements": 1
+      }
+    },
+    {
+      "id": "c4-element-ContainerDb",
+      "kind": "c4",
+      "source": "C4Context\nContainerDb(a,\"Alpha\",\"Tech\",\"Description\")",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "C4 c4Shape parameter names from Jison semantic actions",
+        "line": 1
+      },
+      "checks": {
+        "elements.a.kind": "container_db",
+        "elements.a.label": "Alpha"
+      },
+      "lengths": {
+        "elements": 1
+      }
+    },
+    {
+      "id": "c4-element-ContainerQueue",
+      "kind": "c4",
+      "source": "C4Context\nContainerQueue(a,\"Alpha\",\"Tech\",\"Description\")",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "C4 c4Shape parameter names from Jison semantic actions",
+        "line": 1
+      },
+      "checks": {
+        "elements.a.kind": "container_queue",
+        "elements.a.label": "Alpha"
+      },
+      "lengths": {
+        "elements": 1
+      }
+    },
+    {
+      "id": "c4-element-Container_Ext",
+      "kind": "c4",
+      "source": "C4Context\nContainer_Ext(a,\"Alpha\",\"Tech\",\"Description\")",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "C4 c4Shape parameter names from Jison semantic actions",
+        "line": 1
+      },
+      "checks": {
+        "elements.a.kind": "external_container",
+        "elements.a.label": "Alpha"
+      },
+      "lengths": {
+        "elements": 1
+      }
+    },
+    {
+      "id": "c4-element-ContainerDb_Ext",
+      "kind": "c4",
+      "source": "C4Context\nContainerDb_Ext(a,\"Alpha\",\"Tech\",\"Description\")",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "C4 c4Shape parameter names from Jison semantic actions",
+        "line": 1
+      },
+      "checks": {
+        "elements.a.kind": "external_container_db",
+        "elements.a.label": "Alpha"
+      },
+      "lengths": {
+        "elements": 1
+      }
+    },
+    {
+      "id": "c4-element-ContainerQueue_Ext",
+      "kind": "c4",
+      "source": "C4Context\nContainerQueue_Ext(a,\"Alpha\",\"Tech\",\"Description\")",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "C4 c4Shape parameter names from Jison semantic actions",
+        "line": 1
+      },
+      "checks": {
+        "elements.a.kind": "external_container_queue",
+        "elements.a.label": "Alpha"
+      },
+      "lengths": {
+        "elements": 1
+      }
+    },
+    {
+      "id": "c4-element-Component",
+      "kind": "c4",
+      "source": "C4Context\nComponent(a,\"Alpha\",\"Tech\",\"Description\")",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "C4 c4Shape parameter names from Jison semantic actions",
+        "line": 1
+      },
+      "checks": {
+        "elements.a.kind": "component",
+        "elements.a.label": "Alpha"
+      },
+      "lengths": {
+        "elements": 1
+      }
+    },
+    {
+      "id": "c4-element-ComponentDb",
+      "kind": "c4",
+      "source": "C4Context\nComponentDb(a,\"Alpha\",\"Tech\",\"Description\")",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "C4 c4Shape parameter names from Jison semantic actions",
+        "line": 1
+      },
+      "checks": {
+        "elements.a.kind": "component_db",
+        "elements.a.label": "Alpha"
+      },
+      "lengths": {
+        "elements": 1
+      }
+    },
+    {
+      "id": "c4-element-ComponentQueue",
+      "kind": "c4",
+      "source": "C4Context\nComponentQueue(a,\"Alpha\",\"Tech\",\"Description\")",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "C4 c4Shape parameter names from Jison semantic actions",
+        "line": 1
+      },
+      "checks": {
+        "elements.a.kind": "component_queue",
+        "elements.a.label": "Alpha"
+      },
+      "lengths": {
+        "elements": 1
+      }
+    },
+    {
+      "id": "c4-element-Component_Ext",
+      "kind": "c4",
+      "source": "C4Context\nComponent_Ext(a,\"Alpha\",\"Tech\",\"Description\")",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "C4 c4Shape parameter names from Jison semantic actions",
+        "line": 1
+      },
+      "checks": {
+        "elements.a.kind": "external_component",
+        "elements.a.label": "Alpha"
+      },
+      "lengths": {
+        "elements": 1
+      }
+    },
+    {
+      "id": "c4-element-ComponentDb_Ext",
+      "kind": "c4",
+      "source": "C4Context\nComponentDb_Ext(a,\"Alpha\",\"Tech\",\"Description\")",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "C4 c4Shape parameter names from Jison semantic actions",
+        "line": 1
+      },
+      "checks": {
+        "elements.a.kind": "external_component_db",
+        "elements.a.label": "Alpha"
+      },
+      "lengths": {
+        "elements": 1
+      }
+    },
+    {
+      "id": "c4-element-ComponentQueue_Ext",
+      "kind": "c4",
+      "source": "C4Context\nComponentQueue_Ext(a,\"Alpha\",\"Tech\",\"Description\")",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "C4 c4Shape parameter names from Jison semantic actions",
+        "line": 1
+      },
+      "checks": {
+        "elements.a.kind": "external_component_queue",
+        "elements.a.label": "Alpha"
+      },
+      "lengths": {
+        "elements": 1
+      }
+    },
+    {
+      "id": "c4-boundary-Enterprise_Boundary",
+      "kind": "c4",
+      "source": "C4Deployment\nEnterprise_Boundary(g,\"Group\") {\nPerson(a,\"Actor\")\n}",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "all C4 boundary/deployment productions and parentBoundary stack",
+        "line": 1
+      },
+      "checks": {
+        "elements.a.parent": "g",
+        "boundaries.g.label": "Group"
+      },
+      "lengths": {
+        "boundaries": 1
+      }
+    },
+    {
+      "id": "c4-boundary-System_Boundary",
+      "kind": "c4",
+      "source": "C4Deployment\nSystem_Boundary(g,\"Group\") {\nPerson(a,\"Actor\")\n}",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "all C4 boundary/deployment productions and parentBoundary stack",
+        "line": 1
+      },
+      "checks": {
+        "elements.a.parent": "g",
+        "boundaries.g.label": "Group"
+      },
+      "lengths": {
+        "boundaries": 1
+      }
+    },
+    {
+      "id": "c4-boundary-Container_Boundary",
+      "kind": "c4",
+      "source": "C4Deployment\nContainer_Boundary(g,\"Group\") {\nPerson(a,\"Actor\")\n}",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "all C4 boundary/deployment productions and parentBoundary stack",
+        "line": 1
+      },
+      "checks": {
+        "elements.a.parent": "g",
+        "boundaries.g.label": "Group"
+      },
+      "lengths": {
+        "boundaries": 1
+      }
+    },
+    {
+      "id": "c4-boundary-Boundary",
+      "kind": "c4",
+      "source": "C4Deployment\nBoundary(g,\"Group\") {\nPerson(a,\"Actor\")\n}",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "all C4 boundary/deployment productions and parentBoundary stack",
+        "line": 1
+      },
+      "checks": {
+        "elements.a.parent": "g",
+        "boundaries.g.label": "Group"
+      },
+      "lengths": {
+        "boundaries": 1
+      }
+    },
+    {
+      "id": "c4-boundary-Deployment_Node",
+      "kind": "c4",
+      "source": "C4Deployment\nDeployment_Node(g,\"Group\") {\nPerson(a,\"Actor\")\n}",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "all C4 boundary/deployment productions and parentBoundary stack",
+        "line": 1
+      },
+      "checks": {
+        "elements.a.parent": "g",
+        "boundaries.g.label": "Group"
+      },
+      "lengths": {
+        "boundaries": 1
+      }
+    },
+    {
+      "id": "c4-boundary-Node",
+      "kind": "c4",
+      "source": "C4Deployment\nNode(g,\"Group\") {\nPerson(a,\"Actor\")\n}",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "all C4 boundary/deployment productions and parentBoundary stack",
+        "line": 1
+      },
+      "checks": {
+        "elements.a.parent": "g",
+        "boundaries.g.label": "Group"
+      },
+      "lengths": {
+        "boundaries": 1
+      }
+    },
+    {
+      "id": "c4-boundary-Node_L",
+      "kind": "c4",
+      "source": "C4Deployment\nNode_L(g,\"Group\") {\nPerson(a,\"Actor\")\n}",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "all C4 boundary/deployment productions and parentBoundary stack",
+        "line": 1
+      },
+      "checks": {
+        "elements.a.parent": "g",
+        "boundaries.g.label": "Group"
+      },
+      "lengths": {
+        "boundaries": 1
+      }
+    },
+    {
+      "id": "c4-boundary-Node_R",
+      "kind": "c4",
+      "source": "C4Deployment\nNode_R(g,\"Group\") {\nPerson(a,\"Actor\")\n}",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "all C4 boundary/deployment productions and parentBoundary stack",
+        "line": 1
+      },
+      "checks": {
+        "elements.a.parent": "g",
+        "boundaries.g.label": "Group"
+      },
+      "lengths": {
+        "boundaries": 1
+      }
+    },
+    {
+      "id": "c4-relation-Rel",
+      "kind": "c4",
+      "source": "C4Context\nPerson(a,\"A\")\nSystem(b,\"B\")\nRel(a,b,\"Uses\",\"HTTPS\")",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "relationship alias productions; directional names preserve the source relation type",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.source": "a",
+        "relations.0.target": "b",
+        "relations.0.label": "Uses"
+      },
+      "lengths": {
+        "relations": 1
+      }
+    },
+    {
+      "id": "c4-relation-BiRel",
+      "kind": "c4",
+      "source": "C4Context\nPerson(a,\"A\")\nSystem(b,\"B\")\nBiRel(a,b,\"Uses\",\"HTTPS\")",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "relationship alias productions; directional names preserve the source relation type",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.source": "a",
+        "relations.0.target": "b",
+        "relations.0.label": "Uses"
+      },
+      "lengths": {
+        "relations": 1
+      }
+    },
+    {
+      "id": "c4-relation-Rel_U",
+      "kind": "c4",
+      "source": "C4Context\nPerson(a,\"A\")\nSystem(b,\"B\")\nRel_U(a,b,\"Uses\",\"HTTPS\")",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "relationship alias productions; directional names preserve the source relation type",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.source": "a",
+        "relations.0.target": "b",
+        "relations.0.label": "Uses"
+      },
+      "lengths": {
+        "relations": 1
+      }
+    },
+    {
+      "id": "c4-relation-Rel_Up",
+      "kind": "c4",
+      "source": "C4Context\nPerson(a,\"A\")\nSystem(b,\"B\")\nRel_Up(a,b,\"Uses\",\"HTTPS\")",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "relationship alias productions; directional names preserve the source relation type",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.source": "a",
+        "relations.0.target": "b",
+        "relations.0.label": "Uses"
+      },
+      "lengths": {
+        "relations": 1
+      }
+    },
+    {
+      "id": "c4-relation-Rel_D",
+      "kind": "c4",
+      "source": "C4Context\nPerson(a,\"A\")\nSystem(b,\"B\")\nRel_D(a,b,\"Uses\",\"HTTPS\")",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "relationship alias productions; directional names preserve the source relation type",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.source": "a",
+        "relations.0.target": "b",
+        "relations.0.label": "Uses"
+      },
+      "lengths": {
+        "relations": 1
+      }
+    },
+    {
+      "id": "c4-relation-Rel_Down",
+      "kind": "c4",
+      "source": "C4Context\nPerson(a,\"A\")\nSystem(b,\"B\")\nRel_Down(a,b,\"Uses\",\"HTTPS\")",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "relationship alias productions; directional names preserve the source relation type",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.source": "a",
+        "relations.0.target": "b",
+        "relations.0.label": "Uses"
+      },
+      "lengths": {
+        "relations": 1
+      }
+    },
+    {
+      "id": "c4-relation-Rel_L",
+      "kind": "c4",
+      "source": "C4Context\nPerson(a,\"A\")\nSystem(b,\"B\")\nRel_L(a,b,\"Uses\",\"HTTPS\")",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "relationship alias productions; directional names preserve the source relation type",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.source": "a",
+        "relations.0.target": "b",
+        "relations.0.label": "Uses"
+      },
+      "lengths": {
+        "relations": 1
+      }
+    },
+    {
+      "id": "c4-relation-Rel_Left",
+      "kind": "c4",
+      "source": "C4Context\nPerson(a,\"A\")\nSystem(b,\"B\")\nRel_Left(a,b,\"Uses\",\"HTTPS\")",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "relationship alias productions; directional names preserve the source relation type",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.source": "a",
+        "relations.0.target": "b",
+        "relations.0.label": "Uses"
+      },
+      "lengths": {
+        "relations": 1
+      }
+    },
+    {
+      "id": "c4-relation-Rel_R",
+      "kind": "c4",
+      "source": "C4Context\nPerson(a,\"A\")\nSystem(b,\"B\")\nRel_R(a,b,\"Uses\",\"HTTPS\")",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "relationship alias productions; directional names preserve the source relation type",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.source": "a",
+        "relations.0.target": "b",
+        "relations.0.label": "Uses"
+      },
+      "lengths": {
+        "relations": 1
+      }
+    },
+    {
+      "id": "c4-relation-Rel_Right",
+      "kind": "c4",
+      "source": "C4Context\nPerson(a,\"A\")\nSystem(b,\"B\")\nRel_Right(a,b,\"Uses\",\"HTTPS\")",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "relationship alias productions; directional names preserve the source relation type",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.source": "a",
+        "relations.0.target": "b",
+        "relations.0.label": "Uses"
+      },
+      "lengths": {
+        "relations": 1
+      }
+    },
+    {
+      "id": "c4-relation-Rel_Back",
+      "kind": "c4",
+      "source": "C4Context\nPerson(a,\"A\")\nSystem(b,\"B\")\nRel_Back(a,b,\"Uses\",\"HTTPS\")",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "relationship alias productions; directional names preserve the source relation type",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.source": "a",
+        "relations.0.target": "b",
+        "relations.0.label": "Uses"
+      },
+      "lengths": {
+        "relations": 1
+      }
+    },
+    {
+      "id": "c4-updates",
+      "kind": "c4",
+      "source": "C4Context\nPerson(a,\"A\")\nSystem(b,\"B\")\nRel(a,b,\"Uses\")\nUpdateElementStyle(a,$bgColor=\"#fee\",$fontColor=\"#123\")\nUpdateRelStyle(a,b,$lineColor=\"#456\",$offsetX=\"12\")\nUpdateLayoutConfig($c4ShapeInRow=\"2\",$c4BoundaryInRow=\"1\")",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "UpdateElementStyle/UpdateRelStyle/UpdateLayoutConfig named slot overrides",
+        "line": 1
+      },
+      "checks": {
+        "shape_in_row": 2,
+        "boundary_in_row": 1
+      },
+      "lengths": {}
+    },
+    {
+      "id": "usecase-actor-references",
+      "kind": "usecase",
+      "source": "usecase-beta\nactor User, Admin\nUser --> Login\nAdmin --> Logout",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/usecase/usecase.spec.ts",
+        "sha256": "e4909e78d291c258164485dd70bddb3b708c31250c3b79845c527dbec55e3f9b",
+        "symbol": "actor multiple declaration, forward implicit use cases and association relationships",
+        "line": 1
+      },
+      "checks": {
+        "nodes.User.kind": "actor",
+        "nodes.Admin.kind": "actor",
+        "nodes.Login.kind": "usecase",
+        "nodes.Logout.kind": "usecase",
+        "edges.0.source": "User",
+        "edges.1.target": "Logout"
+      },
+      "lengths": {
+        "nodes": 4,
+        "edges": 2
+      }
+    },
+    {
+      "id": "usecase-actor-normal",
+      "kind": "usecase",
+      "source": "usecase-beta\nactor User@{type: normal, business: true}\nUser --> Login",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/usecase/usecase.spec.ts",
+        "sha256": "e4909e78d291c258164485dd70bddb3b708c31250c3b79845c527dbec55e3f9b",
+        "symbol": "actor metadata type/business and four-variant actor renderer",
+        "line": 1
+      },
+      "checks": {
+        "nodes.User.kind": "actor"
+      },
+      "lengths": {
+        "edges": 1
+      }
+    },
+    {
+      "id": "usecase-actor-hollow",
+      "kind": "usecase",
+      "source": "usecase-beta\nactor User@{type: hollow, business: true}\nUser --> Login",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/usecase/usecase.spec.ts",
+        "sha256": "e4909e78d291c258164485dd70bddb3b708c31250c3b79845c527dbec55e3f9b",
+        "symbol": "actor metadata type/business and four-variant actor renderer",
+        "line": 1
+      },
+      "checks": {
+        "nodes.User.kind": "actor"
+      },
+      "lengths": {
+        "edges": 1
+      }
+    },
+    {
+      "id": "usecase-actor-awesome",
+      "kind": "usecase",
+      "source": "usecase-beta\nactor User@{type: awesome, business: false}\nUser --> Login",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/usecase/usecase.spec.ts",
+        "sha256": "e4909e78d291c258164485dd70bddb3b708c31250c3b79845c527dbec55e3f9b",
+        "symbol": "actor metadata type/business and four-variant actor renderer",
+        "line": 1
+      },
+      "checks": {
+        "nodes.User.kind": "actor"
+      },
+      "lengths": {
+        "edges": 1
+      }
+    },
+    {
+      "id": "usecase-package-boundary",
+      "kind": "usecase",
+      "source": "usecase-beta\nsystemBoundary sb[\"Payments\"]@{type: package}\n actor Clerk(\"Payment clerk\")\n Authorize(\"Authorize payment\")\nend\nClerk --> Authorize",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/usecase/usecase.spec.ts",
+        "sha256": "e4909e78d291c258164485dd70bddb3b708c31250c3b79845c527dbec55e3f9b",
+        "symbol": "systemBoundary id label metadata/type package and declaration membership",
+        "line": 1
+      },
+      "checks": {
+        "boundaries.sb.label": "Payments",
+        "boundaries.sb.shape": "package",
+        "nodes.Clerk.parent": "sb",
+        "nodes.Clerk.label": "Payment clerk",
+        "nodes.Authorize.parent": "sb"
+      },
+      "lengths": {
+        "boundaries": 1
+      }
+    },
+    {
+      "id": "usecase-include",
+      "kind": "usecase",
+      "source": "usecase-beta\nLogin ..> : include Validate",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/usecase/usecase.spec.ts",
+        "sha256": "e4909e78d291c258164485dd70bddb3b708c31250c3b79845c527dbec55e3f9b",
+        "symbol": "semantic include/extend relationship between use cases",
+        "line": 1
+      },
+      "checks": {
+        "edges.0.kind": "include",
+        "edges.0.dashed": true,
+        "edges.0.source": "Login",
+        "edges.0.target": "Validate"
+      },
+      "lengths": {
+        "edges": 1
+      }
+    },
+    {
+      "id": "usecase-extend",
+      "kind": "usecase",
+      "source": "usecase-beta\nLogin ..> : extend Validate",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/usecase/usecase.spec.ts",
+        "sha256": "e4909e78d291c258164485dd70bddb3b708c31250c3b79845c527dbec55e3f9b",
+        "symbol": "semantic include/extend relationship between use cases",
+        "line": 1
+      },
+      "checks": {
+        "edges.0.kind": "extend",
+        "edges.0.dashed": true,
+        "edges.0.source": "Login",
+        "edges.0.target": "Validate"
+      },
+      "lengths": {
+        "edges": 1
+      }
+    },
+    {
+      "id": "usecase-explicit-edge",
+      "kind": "usecase",
+      "source": "usecase-beta\nactor User\nUser e1@--> Login",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/usecase/usecase.spec.ts",
+        "sha256": "e4909e78d291c258164485dd70bddb3b708c31250c3b79845c527dbec55e3f9b",
+        "symbol": "explicit edge ID association production",
+        "line": 1
+      },
+      "checks": {
+        "edges.0.id": "e1",
+        "edges.0.explicit": true
+      },
+      "lengths": {}
+    },
+    {
+      "id": "usecase-markdown",
+      "kind": "usecase",
+      "source": "usecase-beta\nactor User(\"`**Staff**`\")\nUser --> Login(\"`*Sign in*`\")",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/usecase/usecase.spec.ts",
+        "sha256": "e4909e78d291c258164485dd70bddb3b708c31250c3b79845c527dbec55e3f9b",
+        "symbol": "MarkdownString lexical token preserves body markup",
+        "line": 1
+      },
+      "checks": {
+        "nodes.User.label_kind": "markdown",
+        "nodes.User.label": "**Staff**",
+        "nodes.Login.label_kind": "markdown",
+        "nodes.Login.label": "*Sign in*"
+      },
+      "lengths": {}
+    },
+    {
+      "id": "usecase-json-note",
+      "kind": "usecase",
+      "source": "usecase-beta\njson Data@{\"name\":\"Alice\",\"roles\":[\"Reader\",\"Writer\"]}\nactor User\nnote for User \"Reference\"",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/usecase/usecase.spec.ts",
+        "sha256": "e4909e78d291c258164485dd70bddb3b708c31250c3b79845c527dbec55e3f9b",
+        "symbol": "ordered JSON nodes and note target resolution",
+        "line": 1
+      },
+      "checks": {
+        "nodes.Data.kind": "json",
+        "nodes.Data.value.properties.0.0": "name"
+      },
+      "lengths": {
+        "nodes": 3
+      }
+    },
+    {
+      "id": "mindmap-shape-rect-119",
+      "kind": "mindmap",
+      "source": "mindmap\nroot[Title]",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/mindmap/parser/mindmap.jison",
+        "sha256": "85a4b2840ab529bc82c41ea64d9556a7fe4a0552900d1cbdf9484245ba61c8e4",
+        "symbol": "MindmapDB.getType complete switch plus default unmatched lexical opener cases",
+        "line": 1
+      },
+      "checks": {
+        "nodes.0.node_id": "root",
+        "nodes.0.label": "Title",
+        "nodes.0.shape": "rect",
+        "nodes.0.level": 0
+      },
+      "lengths": {
+        "nodes": 1
+      }
+    },
+    {
+      "id": "mindmap-shape-rounded-120",
+      "kind": "mindmap",
+      "source": "mindmap\nroot(Title)",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/mindmap/parser/mindmap.jison",
+        "sha256": "85a4b2840ab529bc82c41ea64d9556a7fe4a0552900d1cbdf9484245ba61c8e4",
+        "symbol": "MindmapDB.getType complete switch plus default unmatched lexical opener cases",
+        "line": 1
+      },
+      "checks": {
+        "nodes.0.node_id": "root",
+        "nodes.0.label": "Title",
+        "nodes.0.shape": "rounded",
+        "nodes.0.level": 0
+      },
+      "lengths": {
+        "nodes": 1
+      }
+    },
+    {
+      "id": "mindmap-shape-circle-121",
+      "kind": "mindmap",
+      "source": "mindmap\nroot((Title))",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/mindmap/parser/mindmap.jison",
+        "sha256": "85a4b2840ab529bc82c41ea64d9556a7fe4a0552900d1cbdf9484245ba61c8e4",
+        "symbol": "MindmapDB.getType complete switch plus default unmatched lexical opener cases",
+        "line": 1
+      },
+      "checks": {
+        "nodes.0.node_id": "root",
+        "nodes.0.label": "Title",
+        "nodes.0.shape": "circle",
+        "nodes.0.level": 0
+      },
+      "lengths": {
+        "nodes": 1
+      }
+    },
+    {
+      "id": "mindmap-shape-cloud-122",
+      "kind": "mindmap",
+      "source": "mindmap\nroot)Title(",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/mindmap/parser/mindmap.jison",
+        "sha256": "85a4b2840ab529bc82c41ea64d9556a7fe4a0552900d1cbdf9484245ba61c8e4",
+        "symbol": "MindmapDB.getType complete switch plus default unmatched lexical opener cases",
+        "line": 1
+      },
+      "checks": {
+        "nodes.0.node_id": "root",
+        "nodes.0.label": "Title",
+        "nodes.0.shape": "cloud",
+        "nodes.0.level": 0
+      },
+      "lengths": {
+        "nodes": 1
+      }
+    },
+    {
+      "id": "mindmap-shape-bang-123",
+      "kind": "mindmap",
+      "source": "mindmap\nroot))Title((",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/mindmap/parser/mindmap.jison",
+        "sha256": "85a4b2840ab529bc82c41ea64d9556a7fe4a0552900d1cbdf9484245ba61c8e4",
+        "symbol": "MindmapDB.getType complete switch plus default unmatched lexical opener cases",
+        "line": 1
+      },
+      "checks": {
+        "nodes.0.node_id": "root",
+        "nodes.0.label": "Title",
+        "nodes.0.shape": "bang",
+        "nodes.0.level": 0
+      },
+      "lengths": {
+        "nodes": 1
+      }
+    },
+    {
+      "id": "mindmap-shape-hexagon-124",
+      "kind": "mindmap",
+      "source": "mindmap\nroot{{Title}}",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/mindmap/parser/mindmap.jison",
+        "sha256": "85a4b2840ab529bc82c41ea64d9556a7fe4a0552900d1cbdf9484245ba61c8e4",
+        "symbol": "MindmapDB.getType complete switch plus default unmatched lexical opener cases",
+        "line": 1
+      },
+      "checks": {
+        "nodes.0.node_id": "root",
+        "nodes.0.label": "Title",
+        "nodes.0.shape": "hexagon",
+        "nodes.0.level": 0
+      },
+      "lengths": {
+        "nodes": 1
+      }
+    },
+    {
+      "id": "mindmap-shape-default-125",
+      "kind": "mindmap",
+      "source": "mindmap\nroot(-Title-)",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/mindmap/parser/mindmap.jison",
+        "sha256": "85a4b2840ab529bc82c41ea64d9556a7fe4a0552900d1cbdf9484245ba61c8e4",
+        "symbol": "NODE unquoted NODE_DESCR greedy minus before ) versus quoted close (-/-) getType default anomaly",
+        "line": 1
+      },
+      "checks": {
+        "nodes.0.node_id": "root",
+        "nodes.0.label": "Title-",
+        "nodes.0.shape": "default",
+        "nodes.0.level": 0
+      },
+      "lengths": {
+        "nodes": 1
+      }
+    },
+    {
+      "id": "mindmap-shape-default-126",
+      "kind": "mindmap",
+      "source": "mindmap\nroot-)Title(-",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/mindmap/parser/mindmap.jison",
+        "sha256": "85a4b2840ab529bc82c41ea64d9556a7fe4a0552900d1cbdf9484245ba61c8e4",
+        "symbol": "MindmapDB.getType complete switch plus default unmatched lexical opener cases",
+        "line": 1
+      },
+      "checks": {
+        "nodes.0.node_id": "root-",
+        "nodes.0.label": "Title",
+        "nodes.0.shape": "cloud",
+        "nodes.0.level": 0
+      },
+      "lengths": {
+        "nodes": 1
+      }
+    },
+    {
+      "id": "mindmap-hierarchy",
+      "kind": "mindmap",
+      "source": "mindmap\n    root\n      Child\n        Leaf\n      Other",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/mindmap/parser/mindmap.jison",
+        "sha256": "85a4b2840ab529bc82c41ea64d9556a7fe4a0552900d1cbdf9484245ba61c8e4",
+        "symbol": "MMP-2/MMP-4 nearest lower indentation and assignSections branch colors",
+        "line": 1
+      },
+      "checks": {
+        "nodes.0.node_id": "root",
+        "nodes.1.parent": "0",
+        "nodes.2.parent": "1",
+        "nodes.3.parent": "0",
+        "nodes.1.section": 0,
+        "nodes.2.section": 0,
+        "nodes.3.section": 1,
+        "nodes.2.depth": 2
+      },
+      "lengths": {
+        "nodes": 4
+      }
+    },
+    {
+      "id": "mindmap-depth-colors",
+      "kind": "mindmap",
+      "source": "mindmap\nroot\n  Child\n    Leaf\n  Other",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/mindmap/parser/mindmap.jison",
+        "sha256": "85a4b2840ab529bc82c41ea64d9556a7fe4a0552900d1cbdf9484245ba61c8e4",
+        "symbol": "assignSections config.colorBy depth uses structural depth, not indentation width",
+        "line": 1
+      },
+      "checks": {
+        "nodes.1.section": 0,
+        "nodes.2.section": 1,
+        "nodes.3.section": 0
+      },
+      "lengths": {},
+      "config": {
+        "mindmap": {
+          "colorBy": "depth"
+        }
+      }
+    },
+    {
+      "id": "mindmap-decorators",
+      "kind": "mindmap",
+      "source": "mindmap\nroot\n  child\n  ::icon(fa:book)\n  :::highlight",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/mindmap/parser/mindmap.jison",
+        "sha256": "85a4b2840ab529bc82c41ea64d9556a7fe4a0552900d1cbdf9484245ba61c8e4",
+        "symbol": "decorateNode on last inserted node; active render icon unconsumed anomaly",
+        "line": 1
+      },
+      "checks": {
+        "nodes.1.icon": "fa:book",
+        "nodes.1.classes": [
+          "highlight"
+        ]
+      },
+      "lengths": {}
+    },
+    {
+      "id": "tree-basic",
+      "kind": "treeView",
+      "source": "treeView-beta\nsrc/\n  index.py\n  readme.md ## Description",
+      "origin": {
+        "path": "packages/parser/src/language/treeView/treeView.langium",
+        "sha256": "9075614655c1977c030884b9613a2ea923653aa73b55218a68d85c46f90f757e",
+        "symbol": "TreeViewDB virtual root/indent stack/directory trailing slash/description",
+        "line": 1
+      },
+      "checks": {
+        "nodes.0.name": "/",
+        "nodes.1.directory": true,
+        "nodes.1.name": "src",
+        "nodes.2.parent": 1,
+        "nodes.3.description": "Description"
+      },
+      "lengths": {
+        "nodes": 4
+      }
+    },
+    {
+      "id": "tree-box-drawing",
+      "kind": "treeView",
+      "source": "treeView-beta\nproject/\n\u251c\u2500\u2500 main.py\n\u2514\u2500\u2500 docs/\n    \u2514\u2500\u2500 readme.md",
+      "origin": {
+        "path": "packages/parser/src/language/treeView/treeView.langium",
+        "sha256": "9075614655c1977c030884b9613a2ea923653aa73b55218a68d85c46f90f757e",
+        "symbol": "boxDrawingPreprocessor standard glyphs, depth mapping and parent stack",
+        "line": 1
+      },
+      "checks": {
+        "nodes.2.parent": 1,
+        "nodes.3.parent": 1,
+        "nodes.4.parent": 3,
+        "nodes.4.name": "readme.md"
+      },
+      "lengths": {
+        "nodes": 5
+      }
+    },
+    {
+      "id": "tree-annotations",
+      "kind": "treeView",
+      "source": "treeView-beta\n\"Folder name/\" :::highlight icon(folder) ## Documentation\n  \"a b.txt\" icon()",
+      "origin": {
+        "path": "packages/parser/src/language/treeView/treeView.langium",
+        "sha256": "9075614655c1977c030884b9613a2ea923653aa73b55218a68d85c46f90f757e",
+        "symbol": "NAME/CLASS/ICON/DESC value-converter annotation productions",
+        "line": 1
+      },
+      "checks": {
+        "nodes.1.css_class": "highlight",
+        "nodes.1.icon": "folder",
+        "nodes.1.description": "Documentation",
+        "nodes.2.name": "a b.txt",
+        "nodes.2.icon": "none"
+      },
+      "lengths": {}
+    },
+    {
+      "id": "tree-heavy-box",
+      "kind": "treeView",
+      "source": "treeView-beta\nroot/\n\u2523\u2501\u2501 main\n\u2517\u2501\u2501 other",
+      "origin": {
+        "path": "packages/parser/src/language/treeView/treeView.langium",
+        "sha256": "9075614655c1977c030884b9613a2ea923653aa73b55218a68d85c46f90f757e",
+        "symbol": "boxDrawingPreprocessor heavy branch glyphs",
+        "line": 1
+      },
+      "checks": {
+        "nodes.2.parent": 1,
+        "nodes.3.parent": 1
+      },
+      "lengths": {
+        "nodes": 4
+      }
+    },
+    {
+      "id": "block-shape-square",
+      "kind": "block",
+      "source": "block\nA[\"Alpha\"]",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "nodeShapeNLabel STR; BlockDB.typeStr2Type full classic table",
+        "line": 1
+      },
+      "checks": {
+        "nodes.A.label": "Alpha",
+        "nodes.A.shape": "square",
+        "nodes.A.span": 1
+      },
+      "lengths": {
+        "nodes": 2
+      }
+    },
+    {
+      "id": "block-shape-round",
+      "kind": "block",
+      "source": "block\nA(\"Alpha\")",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "nodeShapeNLabel STR; BlockDB.typeStr2Type full classic table",
+        "line": 1
+      },
+      "checks": {
+        "nodes.A.label": "Alpha",
+        "nodes.A.shape": "round",
+        "nodes.A.span": 1
+      },
+      "lengths": {
+        "nodes": 2
+      }
+    },
+    {
+      "id": "block-shape-circle",
+      "kind": "block",
+      "source": "block\nA((\"Alpha\"))",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "nodeShapeNLabel STR; BlockDB.typeStr2Type full classic table",
+        "line": 1
+      },
+      "checks": {
+        "nodes.A.label": "Alpha",
+        "nodes.A.shape": "circle",
+        "nodes.A.span": 1
+      },
+      "lengths": {
+        "nodes": 2
+      }
+    },
+    {
+      "id": "block-shape-odd",
+      "kind": "block",
+      "source": "block\nA>\"Alpha\"]",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "nodeShapeNLabel STR; BlockDB.typeStr2Type full classic table",
+        "line": 1
+      },
+      "checks": {
+        "nodes.A.label": "Alpha",
+        "nodes.A.shape": "odd",
+        "nodes.A.span": 1
+      },
+      "lengths": {
+        "nodes": 2
+      }
+    },
+    {
+      "id": "block-shape-diamond",
+      "kind": "block",
+      "source": "block\nA{\"Alpha\"}",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "nodeShapeNLabel STR; BlockDB.typeStr2Type full classic table",
+        "line": 1
+      },
+      "checks": {
+        "nodes.A.label": "Alpha",
+        "nodes.A.shape": "diamond",
+        "nodes.A.span": 1
+      },
+      "lengths": {
+        "nodes": 2
+      }
+    },
+    {
+      "id": "block-shape-hexagon",
+      "kind": "block",
+      "source": "block\nA{{\"Alpha\"}}",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "nodeShapeNLabel STR; BlockDB.typeStr2Type full classic table",
+        "line": 1
+      },
+      "checks": {
+        "nodes.A.label": "Alpha",
+        "nodes.A.shape": "hexagon",
+        "nodes.A.span": 1
+      },
+      "lengths": {
+        "nodes": 2
+      }
+    },
+    {
+      "id": "block-shape-stadium",
+      "kind": "block",
+      "source": "block\nA([\"Alpha\"])",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "nodeShapeNLabel STR; BlockDB.typeStr2Type full classic table",
+        "line": 1
+      },
+      "checks": {
+        "nodes.A.label": "Alpha",
+        "nodes.A.shape": "stadium",
+        "nodes.A.span": 1
+      },
+      "lengths": {
+        "nodes": 2
+      }
+    },
+    {
+      "id": "block-shape-subroutine",
+      "kind": "block",
+      "source": "block\nA[[\"Alpha\"]]",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "nodeShapeNLabel STR; BlockDB.typeStr2Type full classic table",
+        "line": 1
+      },
+      "checks": {
+        "nodes.A.label": "Alpha",
+        "nodes.A.shape": "subroutine",
+        "nodes.A.span": 1
+      },
+      "lengths": {
+        "nodes": 2
+      }
+    },
+    {
+      "id": "block-shape-cylinder",
+      "kind": "block",
+      "source": "block\nA[(\"Alpha\")]",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "nodeShapeNLabel STR; BlockDB.typeStr2Type full classic table",
+        "line": 1
+      },
+      "checks": {
+        "nodes.A.label": "Alpha",
+        "nodes.A.shape": "cylinder",
+        "nodes.A.span": 1
+      },
+      "lengths": {
+        "nodes": 2
+      }
+    },
+    {
+      "id": "block-shape-doublecircle",
+      "kind": "block",
+      "source": "block\nA(((\"Alpha\")))",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "nodeShapeNLabel STR; BlockDB.typeStr2Type full classic table",
+        "line": 1
+      },
+      "checks": {
+        "nodes.A.label": "Alpha",
+        "nodes.A.shape": "doublecircle",
+        "nodes.A.span": 1
+      },
+      "lengths": {
+        "nodes": 2
+      }
+    },
+    {
+      "id": "block-shape-lean_right",
+      "kind": "block",
+      "source": "block\nA[/\"Alpha\"/]",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "nodeShapeNLabel STR; BlockDB.typeStr2Type full classic table",
+        "line": 1
+      },
+      "checks": {
+        "nodes.A.label": "Alpha",
+        "nodes.A.shape": "lean_right",
+        "nodes.A.span": 1
+      },
+      "lengths": {
+        "nodes": 2
+      }
+    },
+    {
+      "id": "block-shape-lean_left",
+      "kind": "block",
+      "source": "block\nA[\\\"Alpha\"\\]",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "nodeShapeNLabel STR; BlockDB.typeStr2Type full classic table",
+        "line": 1
+      },
+      "checks": {
+        "nodes.A.label": "Alpha",
+        "nodes.A.shape": "lean_left",
+        "nodes.A.span": 1
+      },
+      "lengths": {
+        "nodes": 2
+      }
+    },
+    {
+      "id": "block-shape-trapezoid",
+      "kind": "block",
+      "source": "block\nA[/\"Alpha\"\\]",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "nodeShapeNLabel STR; BlockDB.typeStr2Type full classic table",
+        "line": 1
+      },
+      "checks": {
+        "nodes.A.label": "Alpha",
+        "nodes.A.shape": "trapezoid",
+        "nodes.A.span": 1
+      },
+      "lengths": {
+        "nodes": 2
+      }
+    },
+    {
+      "id": "block-shape-inv_trapezoid",
+      "kind": "block",
+      "source": "block\nA[\\\"Alpha\"/]",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "nodeShapeNLabel STR; BlockDB.typeStr2Type full classic table",
+        "line": 1
+      },
+      "checks": {
+        "nodes.A.label": "Alpha",
+        "nodes.A.shape": "inv_trapezoid",
+        "nodes.A.span": 1
+      },
+      "lengths": {
+        "nodes": 2
+      }
+    },
+    {
+      "id": "block-arrow-right",
+      "kind": "block",
+      "source": "block-beta\nA<[\"Arrow\"]>(right)",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "BLOCK_ARROW/ARROW_DIR directions and expandAndDeduplicateDirections",
+        "line": 1
+      },
+      "checks": {
+        "nodes.A.shape": "block_arrow",
+        "nodes.A.directions": [
+          "right"
+        ]
+      },
+      "lengths": {}
+    },
+    {
+      "id": "block-arrow-left",
+      "kind": "block",
+      "source": "block-beta\nA<[\"Arrow\"]>(left)",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "BLOCK_ARROW/ARROW_DIR directions and expandAndDeduplicateDirections",
+        "line": 1
+      },
+      "checks": {
+        "nodes.A.shape": "block_arrow",
+        "nodes.A.directions": [
+          "left"
+        ]
+      },
+      "lengths": {}
+    },
+    {
+      "id": "block-arrow-up",
+      "kind": "block",
+      "source": "block-beta\nA<[\"Arrow\"]>(up)",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "BLOCK_ARROW/ARROW_DIR directions and expandAndDeduplicateDirections",
+        "line": 1
+      },
+      "checks": {
+        "nodes.A.shape": "block_arrow",
+        "nodes.A.directions": [
+          "up"
+        ]
+      },
+      "lengths": {}
+    },
+    {
+      "id": "block-arrow-down",
+      "kind": "block",
+      "source": "block-beta\nA<[\"Arrow\"]>(down)",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "BLOCK_ARROW/ARROW_DIR directions and expandAndDeduplicateDirections",
+        "line": 1
+      },
+      "checks": {
+        "nodes.A.shape": "block_arrow",
+        "nodes.A.directions": [
+          "down"
+        ]
+      },
+      "lengths": {}
+    },
+    {
+      "id": "block-arrow-x",
+      "kind": "block",
+      "source": "block-beta\nA<[\"Arrow\"]>(x)",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "BLOCK_ARROW/ARROW_DIR directions and expandAndDeduplicateDirections",
+        "line": 1
+      },
+      "checks": {
+        "nodes.A.shape": "block_arrow",
+        "nodes.A.directions": [
+          "x"
+        ]
+      },
+      "lengths": {}
+    },
+    {
+      "id": "block-arrow-y",
+      "kind": "block",
+      "source": "block-beta\nA<[\"Arrow\"]>(y)",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "BLOCK_ARROW/ARROW_DIR directions and expandAndDeduplicateDirections",
+        "line": 1
+      },
+      "checks": {
+        "nodes.A.shape": "block_arrow",
+        "nodes.A.directions": [
+          "y"
+        ]
+      },
+      "lengths": {}
+    },
+    {
+      "id": "block-arrow-right-left-up-down",
+      "kind": "block",
+      "source": "block-beta\nA<[\"Arrow\"]>(right,left,up,down)",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "BLOCK_ARROW/ARROW_DIR directions and expandAndDeduplicateDirections",
+        "line": 1
+      },
+      "checks": {
+        "nodes.A.shape": "block_arrow",
+        "nodes.A.directions": [
+          "right",
+          "left",
+          "up",
+          "down"
+        ]
+      },
+      "lengths": {}
+    },
+    {
+      "id": "block-nested-spans",
+      "kind": "block",
+      "source": "block\ncolumns 3\nA:2\nspace\nblock:Group\n columns 2\n B C\nend\nD",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "columns/SPACE_BLOCK/id-block nested hierarchy and widthInColumns",
+        "line": 1
+      },
+      "checks": {
+        "nodes.root.columns": 3,
+        "nodes.A.span": 2,
+        "nodes.Group.shape": "composite",
+        "nodes.Group.columns": 2,
+        "nodes.B.parent": "Group",
+        "nodes.C.parent": "Group"
+      },
+      "lengths": {
+        "nodes.Group.children": 2
+      }
+    },
+    {
+      "id": "block-repeat-update",
+      "kind": "block",
+      "source": "block\nA\nA[\"Updated\"]\nB\nA --> B",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "BlockDB.populateBlockDatabase first occurrence placement, later label/type aggregation",
+        "line": 1
+      },
+      "checks": {
+        "nodes.A.label": "Updated",
+        "nodes.A.shape": "square"
+      },
+      "lengths": {
+        "nodes": 3,
+        "edges": 1
+      }
+    },
+    {
+      "id": "block-link-157",
+      "kind": "block",
+      "source": "block\nA --> B",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "LINK edgeStrToStartData/EdgeData/Thickness/Pattern; source tilde retained solid pattern",
+        "line": 1
+      },
+      "checks": {
+        "edges.0.source": "A",
+        "edges.0.target": "B",
+        "edges.0.start_marker": "open",
+        "edges.0.end_marker": "point",
+        "edges.0.thick": false,
+        "edges.0.dotted": false
+      },
+      "lengths": {
+        "edges": 1
+      }
+    },
+    {
+      "id": "block-link-158",
+      "kind": "block",
+      "source": "block\nA <--> B",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "LINK edgeStrToStartData/EdgeData/Thickness/Pattern; source tilde retained solid pattern",
+        "line": 1
+      },
+      "checks": {
+        "edges.0.source": "A",
+        "edges.0.target": "B",
+        "edges.0.start_marker": "point",
+        "edges.0.end_marker": "point",
+        "edges.0.thick": false,
+        "edges.0.dotted": false
+      },
+      "lengths": {
+        "edges": 1
+      }
+    },
+    {
+      "id": "block-link-159",
+      "kind": "block",
+      "source": "block\nA o--x B",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "LINK edgeStrToStartData/EdgeData/Thickness/Pattern; source tilde retained solid pattern",
+        "line": 1
+      },
+      "checks": {
+        "edges.0.source": "A",
+        "edges.0.target": "B",
+        "edges.0.start_marker": "circle",
+        "edges.0.end_marker": "cross",
+        "edges.0.thick": false,
+        "edges.0.dotted": false
+      },
+      "lengths": {
+        "edges": 1
+      }
+    },
+    {
+      "id": "block-link-160",
+      "kind": "block",
+      "source": "block\nA ==> B",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "LINK edgeStrToStartData/EdgeData/Thickness/Pattern; source tilde retained solid pattern",
+        "line": 1
+      },
+      "checks": {
+        "edges.0.source": "A",
+        "edges.0.target": "B",
+        "edges.0.start_marker": "open",
+        "edges.0.end_marker": "point",
+        "edges.0.thick": true,
+        "edges.0.dotted": false
+      },
+      "lengths": {
+        "edges": 1
+      }
+    },
+    {
+      "id": "block-link-161",
+      "kind": "block",
+      "source": "block\nA -.-> B",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "LINK edgeStrToStartData/EdgeData/Thickness/Pattern; source tilde retained solid pattern",
+        "line": 1
+      },
+      "checks": {
+        "edges.0.source": "A",
+        "edges.0.target": "B",
+        "edges.0.start_marker": "open",
+        "edges.0.end_marker": "point",
+        "edges.0.thick": false,
+        "edges.0.dotted": true
+      },
+      "lengths": {
+        "edges": 1
+      }
+    },
+    {
+      "id": "block-link-162",
+      "kind": "block",
+      "source": "block\nA ~~~ B",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "LINK edgeStrToStartData/EdgeData/Thickness/Pattern; source tilde retained solid pattern",
+        "line": 1
+      },
+      "checks": {
+        "edges.0.source": "A",
+        "edges.0.target": "B",
+        "edges.0.start_marker": "open",
+        "edges.0.end_marker": "none",
+        "edges.0.thick": false,
+        "edges.0.dotted": false
+      },
+      "lengths": {
+        "edges": 1
+      }
+    },
+    {
+      "id": "packet-split-source-snapshot",
+      "kind": "packet",
+      "source": "packet\n0-10: \"test\"\n11-90: \"multiple\"",
+      "origin": {
+        "path": "packages/parser/src/language/packet/packet.langium",
+        "sha256": "bf479a00c688630d713efcb850076f16c4758f7cb426b49c973b67b40ea001f0",
+        "symbol": "packet.spec.ts should split into multiple rows (inline snapshot)",
+        "line": 1
+      },
+      "checks": {
+        "words.0.0.start": 0,
+        "words.0.0.end": 10,
+        "words.0.1.start": 11,
+        "words.0.1.end": 31,
+        "words.1.0.start": 32,
+        "words.1.0.end": 63,
+        "words.2.0.start": 64,
+        "words.2.0.end": 90,
+        "words.2.0.label": "multiple"
+      },
+      "lengths": {
+        "words": 3
+      }
+    },
+    {
+      "id": "packet-exact-boundary",
+      "kind": "packet",
+      "source": "packet\n0-16: \"test\"\n17-63: \"multiple\"",
+      "origin": {
+        "path": "packages/parser/src/language/packet/packet.langium",
+        "sha256": "bf479a00c688630d713efcb850076f16c4758f7cb426b49c973b67b40ea001f0",
+        "symbol": "packet.spec.ts exact row boundary inline snapshot",
+        "line": 1
+      },
+      "checks": {
+        "words.0.1.end": 31,
+        "words.1.0.start": 32,
+        "words.1.0.end": 63
+      },
+      "lengths": {
+        "words": 2
+      }
+    },
+    {
+      "id": "packet-relative-counts",
+      "kind": "packet",
+      "source": "packet-beta\n+8: \"first\"\n+24: \"second\"\n+1: \"last\"",
+      "origin": {
+        "path": "packages/parser/src/language/packet/packet.langium",
+        "sha256": "bf479a00c688630d713efcb850076f16c4758f7cb426b49c973b67b40ea001f0",
+        "symbol": "PacketBlock +bits, lastBit contiguity and default one-bit field",
+        "line": 1
+      },
+      "checks": {
+        "words.0.0.start": 0,
+        "words.0.0.end": 7,
+        "words.0.1.start": 8,
+        "words.0.1.end": 31,
+        "words.1.0.start": 32,
+        "words.1.0.end": 32
+      },
+      "lengths": {
+        "words": 2
+      }
+    },
+    {
+      "id": "packet-config-eight",
+      "kind": "packet",
+      "source": "packet\n0-17: \"field\"",
+      "origin": {
+        "path": "packages/parser/src/language/packet/packet.langium",
+        "sha256": "bf479a00c688630d713efcb850076f16c4758f7cb426b49c973b67b40ea001f0",
+        "symbol": "getNextFittingBlock with explicit bitsPerRow",
+        "line": 1
+      },
+      "checks": {
+        "words.0.0.end": 7,
+        "words.1.0.start": 8,
+        "words.2.0.end": 17
+      },
+      "lengths": {
+        "words": 3
+      },
+      "config": {
+        "packet": {
+          "bitsPerRow": 8
+        }
+      }
+    },
+    {
+      "id": "packet-metadata",
+      "kind": "packet",
+      "source": "packet title Register\naccTitle: Bits\naccDescr: Visible register\n0: \"On\"",
+      "origin": {
+        "path": "packages/parser/src/language/packet/packet.langium",
+        "sha256": "bf479a00c688630d713efcb850076f16c4758f7cb426b49c973b67b40ea001f0",
+        "symbol": "TitleAndAccessibilities and PacketBlock single start",
+        "line": 1
+      },
+      "checks": {
+        "title": "Register",
+        "acc_title": "Bits",
+        "acc_description": "Visible register",
+        "words.0.0.label": "On"
+      },
+      "lengths": {}
+    },
+    {
+      "id": "kanban-flat-deep",
+      "kind": "kanban",
+      "source": "kanban\nTodo\n  Child\n    Leaf\n  Other\nDone\n  Finished",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/kanban/parser/kanban.jison",
+        "sha256": "b59eba92f4caf14b99343d4058880d958d4326b01dc1d1b4feba710ff94ed0af",
+        "symbol": "KNBN-4 deep levels stay flat within current section; multiple sections",
+        "line": 1
+      },
+      "checks": {
+        "nodes.Todo.parent": null,
+        "nodes.Child.parent": "Todo",
+        "nodes.Leaf.parent": "Todo",
+        "nodes.Other.parent": "Todo",
+        "nodes.Finished.parent": "Done"
+      },
+      "lengths": {
+        "sections": 2,
+        "nodes": 6
+      }
+    },
+    {
+      "id": "kanban-fields",
+      "kind": "kanban",
+      "source": "kanban\nTodo\n  issue[Work]@{ticket: T-1, assigned: Alice, priority: High, icon: fa:book}",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/kanban/parser/kanban.jison",
+        "sha256": "b59eba92f4caf14b99343d4058880d958d4326b01dc1d1b4feba710ff94ed0af",
+        "symbol": "KanbanDB.addNode YAML JSON_SCHEMA metadata truthy field coercion",
+        "line": 1
+      },
+      "checks": {
+        "nodes.issue.label": "Work",
+        "nodes.issue.ticket": "T-1",
+        "nodes.issue.assigned": "Alice",
+        "nodes.issue.priority": "High",
+        "nodes.issue.icon": "fa:book"
+      },
+      "lengths": {}
+    },
+    {
+      "id": "kanban-label-update",
+      "kind": "kanban",
+      "source": "kanban\nTodo\n  task[Old]@{label: New}\n  ::icon(fa:check)\n  :::highlight",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/kanban/parser/kanban.jison",
+        "sha256": "b59eba92f4caf14b99343d4058880d958d4326b01dc1d1b4feba710ff94ed0af",
+        "symbol": "addNode metadata label; decorateNode last inserted node",
+        "line": 1
+      },
+      "checks": {
+        "nodes.task.label": "New",
+        "nodes.task.icon": "fa:check",
+        "nodes.task.classes": [
+          "highlight"
+        ]
+      },
+      "lengths": {}
+    },
+    {
+      "id": "architecture-populate-order",
+      "kind": "architecture",
+      "source": "architecture-beta\nservice app(server)[Application] in cloud\ngroup cloud(cloud)[Cloud]\njunction hub in cloud\napp:R -- L:hub",
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "Architecture parser populateDb groups before services/junctions, edges after declarations",
+        "line": 1
+      },
+      "checks": {
+        "groups.cloud.label": "Cloud",
+        "nodes.app.parent": "cloud",
+        "nodes.app.icon": "server",
+        "nodes.hub.kind": "junction",
+        "edges.0.source_dir": "R",
+        "edges.0.target_dir": "L"
+      },
+      "lengths": {
+        "groups": 1,
+        "nodes": 2
+      }
+    },
+    {
+      "id": "architecture-direction-LL",
+      "kind": "architecture",
+      "source": "architecture-beta\nservice a\nservice b\na:L -- L:b",
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "Arrow all16direction pairs; same-direction records retained though excluded from spatial map",
+        "line": 1
+      },
+      "checks": {
+        "edges.0.source_dir": "L",
+        "edges.0.target_dir": "L",
+        "edges.0.source": "a",
+        "edges.0.target": "b"
+      },
+      "lengths": {
+        "edges": 1
+      }
+    },
+    {
+      "id": "architecture-direction-LR",
+      "kind": "architecture",
+      "source": "architecture-beta\nservice a\nservice b\na:L -- R:b",
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "Arrow all16direction pairs; same-direction records retained though excluded from spatial map",
+        "line": 1
+      },
+      "checks": {
+        "edges.0.source_dir": "L",
+        "edges.0.target_dir": "R",
+        "edges.0.source": "a",
+        "edges.0.target": "b"
+      },
+      "lengths": {
+        "edges": 1
+      }
+    },
+    {
+      "id": "architecture-direction-LT",
+      "kind": "architecture",
+      "source": "architecture-beta\nservice a\nservice b\na:L -- T:b",
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "Arrow all16direction pairs; same-direction records retained though excluded from spatial map",
+        "line": 1
+      },
+      "checks": {
+        "edges.0.source_dir": "L",
+        "edges.0.target_dir": "T",
+        "edges.0.source": "a",
+        "edges.0.target": "b"
+      },
+      "lengths": {
+        "edges": 1
+      }
+    },
+    {
+      "id": "architecture-direction-LB",
+      "kind": "architecture",
+      "source": "architecture-beta\nservice a\nservice b\na:L -- B:b",
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "Arrow all16direction pairs; same-direction records retained though excluded from spatial map",
+        "line": 1
+      },
+      "checks": {
+        "edges.0.source_dir": "L",
+        "edges.0.target_dir": "B",
+        "edges.0.source": "a",
+        "edges.0.target": "b"
+      },
+      "lengths": {
+        "edges": 1
+      }
+    },
+    {
+      "id": "architecture-direction-RL",
+      "kind": "architecture",
+      "source": "architecture-beta\nservice a\nservice b\na:R -- L:b",
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "Arrow all16direction pairs; same-direction records retained though excluded from spatial map",
+        "line": 1
+      },
+      "checks": {
+        "edges.0.source_dir": "R",
+        "edges.0.target_dir": "L",
+        "edges.0.source": "a",
+        "edges.0.target": "b"
+      },
+      "lengths": {
+        "edges": 1
+      }
+    },
+    {
+      "id": "architecture-direction-RR",
+      "kind": "architecture",
+      "source": "architecture-beta\nservice a\nservice b\na:R -- R:b",
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "Arrow all16direction pairs; same-direction records retained though excluded from spatial map",
+        "line": 1
+      },
+      "checks": {
+        "edges.0.source_dir": "R",
+        "edges.0.target_dir": "R",
+        "edges.0.source": "a",
+        "edges.0.target": "b"
+      },
+      "lengths": {
+        "edges": 1
+      }
+    },
+    {
+      "id": "architecture-direction-RT",
+      "kind": "architecture",
+      "source": "architecture-beta\nservice a\nservice b\na:R -- T:b",
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "Arrow all16direction pairs; same-direction records retained though excluded from spatial map",
+        "line": 1
+      },
+      "checks": {
+        "edges.0.source_dir": "R",
+        "edges.0.target_dir": "T",
+        "edges.0.source": "a",
+        "edges.0.target": "b"
+      },
+      "lengths": {
+        "edges": 1
+      }
+    },
+    {
+      "id": "architecture-direction-RB",
+      "kind": "architecture",
+      "source": "architecture-beta\nservice a\nservice b\na:R -- B:b",
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "Arrow all16direction pairs; same-direction records retained though excluded from spatial map",
+        "line": 1
+      },
+      "checks": {
+        "edges.0.source_dir": "R",
+        "edges.0.target_dir": "B",
+        "edges.0.source": "a",
+        "edges.0.target": "b"
+      },
+      "lengths": {
+        "edges": 1
+      }
+    },
+    {
+      "id": "architecture-direction-TL",
+      "kind": "architecture",
+      "source": "architecture-beta\nservice a\nservice b\na:T -- L:b",
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "Arrow all16direction pairs; same-direction records retained though excluded from spatial map",
+        "line": 1
+      },
+      "checks": {
+        "edges.0.source_dir": "T",
+        "edges.0.target_dir": "L",
+        "edges.0.source": "a",
+        "edges.0.target": "b"
+      },
+      "lengths": {
+        "edges": 1
+      }
+    },
+    {
+      "id": "architecture-direction-TR",
+      "kind": "architecture",
+      "source": "architecture-beta\nservice a\nservice b\na:T -- R:b",
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "Arrow all16direction pairs; same-direction records retained though excluded from spatial map",
+        "line": 1
+      },
+      "checks": {
+        "edges.0.source_dir": "T",
+        "edges.0.target_dir": "R",
+        "edges.0.source": "a",
+        "edges.0.target": "b"
+      },
+      "lengths": {
+        "edges": 1
+      }
+    },
+    {
+      "id": "architecture-direction-TT",
+      "kind": "architecture",
+      "source": "architecture-beta\nservice a\nservice b\na:T -- T:b",
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "Arrow all16direction pairs; same-direction records retained though excluded from spatial map",
+        "line": 1
+      },
+      "checks": {
+        "edges.0.source_dir": "T",
+        "edges.0.target_dir": "T",
+        "edges.0.source": "a",
+        "edges.0.target": "b"
+      },
+      "lengths": {
+        "edges": 1
+      }
+    },
+    {
+      "id": "architecture-direction-TB",
+      "kind": "architecture",
+      "source": "architecture-beta\nservice a\nservice b\na:T -- B:b",
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "Arrow all16direction pairs; same-direction records retained though excluded from spatial map",
+        "line": 1
+      },
+      "checks": {
+        "edges.0.source_dir": "T",
+        "edges.0.target_dir": "B",
+        "edges.0.source": "a",
+        "edges.0.target": "b"
+      },
+      "lengths": {
+        "edges": 1
+      }
+    },
+    {
+      "id": "architecture-direction-BL",
+      "kind": "architecture",
+      "source": "architecture-beta\nservice a\nservice b\na:B -- L:b",
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "Arrow all16direction pairs; same-direction records retained though excluded from spatial map",
+        "line": 1
+      },
+      "checks": {
+        "edges.0.source_dir": "B",
+        "edges.0.target_dir": "L",
+        "edges.0.source": "a",
+        "edges.0.target": "b"
+      },
+      "lengths": {
+        "edges": 1
+      }
+    },
+    {
+      "id": "architecture-direction-BR",
+      "kind": "architecture",
+      "source": "architecture-beta\nservice a\nservice b\na:B -- R:b",
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "Arrow all16direction pairs; same-direction records retained though excluded from spatial map",
+        "line": 1
+      },
+      "checks": {
+        "edges.0.source_dir": "B",
+        "edges.0.target_dir": "R",
+        "edges.0.source": "a",
+        "edges.0.target": "b"
+      },
+      "lengths": {
+        "edges": 1
+      }
+    },
+    {
+      "id": "architecture-direction-BT",
+      "kind": "architecture",
+      "source": "architecture-beta\nservice a\nservice b\na:B -- T:b",
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "Arrow all16direction pairs; same-direction records retained though excluded from spatial map",
+        "line": 1
+      },
+      "checks": {
+        "edges.0.source_dir": "B",
+        "edges.0.target_dir": "T",
+        "edges.0.source": "a",
+        "edges.0.target": "b"
+      },
+      "lengths": {
+        "edges": 1
+      }
+    },
+    {
+      "id": "architecture-direction-BB",
+      "kind": "architecture",
+      "source": "architecture-beta\nservice a\nservice b\na:B -- B:b",
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "Arrow all16direction pairs; same-direction records retained though excluded from spatial map",
+        "line": 1
+      },
+      "checks": {
+        "edges.0.source_dir": "B",
+        "edges.0.target_dir": "B",
+        "edges.0.source": "a",
+        "edges.0.target": "b"
+      },
+      "lengths": {
+        "edges": 1
+      }
+    },
+    {
+      "id": "architecture-arrow-label",
+      "kind": "architecture",
+      "source": "architecture-beta\nservice a(server)[API]\nservice b(database)[Storage]\na:R <-[HTTPS]-> L:b",
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "Arrow optional ARROW_INTO on both ends and ARCH_TITLE conversion",
+        "line": 1
+      },
+      "checks": {
+        "edges.0.label": "HTTPS",
+        "edges.0.source_arrow": true,
+        "edges.0.target_arrow": true
+      },
+      "lengths": {}
+    },
+    {
+      "id": "architecture-group-boundary",
+      "kind": "architecture",
+      "source": "architecture-beta\ngroup g1\ngroup g2\nservice a in g1\nservice b in g2\na{group}:R -- L:b{group}",
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "ARROW_GROUP traversal between distinct parent groups",
+        "line": 1
+      },
+      "checks": {
+        "edges.0.source_group": true,
+        "edges.0.target_group": true,
+        "nodes.a.parent": "g1",
+        "nodes.b.parent": "g2"
+      },
+      "lengths": {}
+    },
+    {
+      "id": "architecture-align",
+      "kind": "architecture",
+      "source": "architecture-beta\nservice a\nservice b\njunction c\nalign row a b\nalign column b c",
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "Alignment directional members >=2, addLayoutHint unique/reference checks",
+        "line": 1
+      },
+      "checks": {
+        "alignments": [
+          [
+            "row",
+            [
+              "a",
+              "b"
+            ]
+          ],
+          [
+            "column",
+            [
+              "b",
+              "c"
+            ]
+          ]
+        ]
+      },
+      "lengths": {
+        "nodes": 3
+      }
+    },
+    {
+      "id": "architecture-icontext-title",
+      "kind": "architecture",
+      "source": "architecture-beta\nservice api \"<b>API</b>\"[\"Public [endpoint]\"]",
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "Service STRING iconText and quoted ARCH_TITLE with brackets",
+        "line": 1
+      },
+      "checks": {
+        "nodes.api.icon_text": "<b>API</b>",
+        "nodes.api.label": "Public [endpoint]"
+      },
+      "lengths": {}
+    },
+    {
+      "id": "class-unclosed",
+      "kind": "classDiagram",
+      "source": "classDiagram\nclass A {\n+x",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+        "sha256": "3c99e4613bd8235f4d3485d8444a8b119e8af9ede50f88505c24d5a6cc93280f",
+        "symbol": "classStatement requires STRUCT_STOP",
+        "line": 1
+      },
+      "checks": {},
+      "lengths": {},
+      "errors": [
+        "SYNTAX_ERROR"
+      ]
+    },
+    {
+      "id": "class-bad-namespace-relation",
+      "kind": "classDiagram",
+      "source": "classDiagram\nnamespace N {\n A --> B\n}",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+        "sha256": "3c99e4613bd8235f4d3485d8444a8b119e8af9ede50f88505c24d5a6cc93280f",
+        "symbol": "classStatements inside namespace excludes relationStatement",
+        "line": 1
+      },
+      "checks": {},
+      "lengths": {},
+      "errors": [
+        "SYNTAX_ERROR"
+      ]
+    },
+    {
+      "id": "state-unclosed",
+      "kind": "stateDiagram",
+      "source": "stateDiagram-v2\nstate Outer {\nA --> B",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/state/parser/stateDiagram.jison",
+        "sha256": "72568f98201c5ba59dca96842d1805d5a9908c5965d0609ab27f192929285d4d",
+        "symbol": "COMPOSIT_STATE requires STRUCT_STOP",
+        "line": 1
+      },
+      "checks": {},
+      "lengths": {},
+      "errors": [
+        "SYNTAX_ERROR"
+      ]
+    },
+    {
+      "id": "er-unclosed",
+      "kind": "er",
+      "source": "erDiagram\nA {\nint id",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/er/parser/erDiagram.jison",
+        "sha256": "6aa3496c3d7fc2319ce303b4e95e1061f5a9002667ea29300a86ab9f198da6ef",
+        "symbol": "attributes block requires BLOCK_STOP",
+        "line": 1
+      },
+      "checks": {},
+      "lengths": {},
+      "errors": [
+        "SYNTAX_ERROR"
+      ]
+    },
+    {
+      "id": "requirement-risk-invalid",
+      "kind": "requirement",
+      "source": "requirementDiagram\nrequirement R {\nrisk: severe\n}",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/requirement/parser/requirementDiagram.jison",
+        "sha256": "44692497660e25f6fe5d51fb3ea7ed17159bbf27bd901632127342e135bff635",
+        "symbol": "riskLevel closed enum",
+        "line": 1
+      },
+      "checks": {},
+      "lengths": {},
+      "errors": [
+        "SYNTAX_ERROR"
+      ]
+    },
+    {
+      "id": "requirement-verify-invalid",
+      "kind": "requirement",
+      "source": "requirementDiagram\nrequirement R {\nverifymethod: prove\n}",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/requirement/parser/requirementDiagram.jison",
+        "sha256": "44692497660e25f6fe5d51fb3ea7ed17159bbf27bd901632127342e135bff635",
+        "symbol": "verifyType closed enum",
+        "line": 1
+      },
+      "checks": {},
+      "lengths": {},
+      "errors": [
+        "SYNTAX_ERROR"
+      ]
+    },
+    {
+      "id": "mindmap-multiple-roots",
+      "kind": "mindmap",
+      "source": "mindmap\nRoot\nOther",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/mindmap/parser/mindmap.jison",
+        "sha256": "85a4b2840ab529bc82c41ea64d9556a7fe4a0552900d1cbdf9484245ba61c8e4",
+        "symbol": "MMP-5 one root",
+        "line": 1
+      },
+      "checks": {},
+      "lengths": {},
+      "errors": [
+        "MULTIPLE_ROOTS"
+      ]
+    },
+    {
+      "id": "mindmap-bad-indent-root",
+      "kind": "mindmap",
+      "source": "mindmap\n    Root\n  Other",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/mindmap/parser/mindmap.jison",
+        "sha256": "85a4b2840ab529bc82c41ea64d9556a7fe4a0552900d1cbdf9484245ba61c8e4",
+        "symbol": "MMP-6 no parent with lower level",
+        "line": 1
+      },
+      "checks": {},
+      "lengths": {},
+      "errors": [
+        "MULTIPLE_ROOTS"
+      ]
+    },
+    {
+      "id": "mindmap-unclosed",
+      "kind": "mindmap",
+      "source": "mindmap\nA[\"Missing\"",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/mindmap/parser/mindmap.jison",
+        "sha256": "85a4b2840ab529bc82c41ea64d9556a7fe4a0552900d1cbdf9484245ba61c8e4",
+        "symbol": "NODE requires NODE_DEND",
+        "line": 1
+      },
+      "checks": {},
+      "lengths": {},
+      "errors": [
+        "SYNTAX_ERROR"
+      ]
+    },
+    {
+      "id": "packet-gap",
+      "kind": "packet",
+      "source": "packet\n0-16: \"First\"\n18-20: \"Gap\"",
+      "origin": {
+        "path": "packages/parser/src/language/packet/packet.langium",
+        "sha256": "bf479a00c688630d713efcb850076f16c4758f7cb426b49c973b67b40ea001f0",
+        "symbol": "packet.spec contiguity rejects skipped bit",
+        "line": 1
+      },
+      "checks": {},
+      "lengths": {},
+      "errors": [
+        "INVALID_PACKET_RANGE"
+      ]
+    },
+    {
+      "id": "packet-reversed",
+      "kind": "packet",
+      "source": "packet\n0-3: \"First\"\n4-2: \"Reverse\"",
+      "origin": {
+        "path": "packages/parser/src/language/packet/packet.langium",
+        "sha256": "bf479a00c688630d713efcb850076f16c4758f7cb426b49c973b67b40ea001f0",
+        "symbol": "packet.spec reversed end/start rejects",
+        "line": 1
+      },
+      "checks": {},
+      "lengths": {},
+      "errors": [
+        "INVALID_PACKET_RANGE"
+      ]
+    },
+    {
+      "id": "packet-zero",
+      "kind": "packet",
+      "source": "packet\n+0: \"Zero\"",
+      "origin": {
+        "path": "packages/parser/src/language/packet/packet.langium",
+        "sha256": "bf479a00c688630d713efcb850076f16c4758f7cb426b49c973b67b40ea001f0",
+        "symbol": "packet.spec zero-bit field rejects",
+        "line": 1
+      },
+      "checks": {},
+      "lengths": {},
+      "errors": [
+        "INVALID_PACKET_RANGE"
+      ]
+    },
+    {
+      "id": "packet-unquoted",
+      "kind": "packet",
+      "source": "packet\n0-7: Field",
+      "origin": {
+        "path": "packages/parser/src/language/packet/packet.langium",
+        "sha256": "bf479a00c688630d713efcb850076f16c4758f7cb426b49c973b67b40ea001f0",
+        "symbol": "PacketBlock label requires STRING",
+        "line": 1
+      },
+      "checks": {},
+      "lengths": {},
+      "errors": [
+        "SYNTAX_ERROR"
+      ]
+    },
+    {
+      "id": "kanban-less-indent",
+      "kind": "kanban",
+      "source": "kanban\n    Todo\n  Bad",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/kanban/parser/kanban.jison",
+        "sha256": "b59eba92f4caf14b99343d4058880d958d4326b01dc1d1b4feba710ff94ed0af",
+        "symbol": "kanbanDb.getSection scans prior nodes: second lower level retained; official refresh captured Todo(group4)/Bad(parent Todo,level2)",
+        "line": 1
+      },
+      "checks": {
+        "nodes.Todo.parent": null,
+        "nodes.Todo.level": 4,
+        "nodes.Bad.parent": "Todo",
+        "nodes.Bad.level": 2,
+        "sections": [
+          "Todo"
+        ]
+      },
+      "lengths": {
+        "nodes": 2
+      }
+    },
+    {
+      "id": "kanban-uppercase-shape",
+      "kind": "kanban",
+      "source": "kanban\nTodo\n  item@{shape: RECT}",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/kanban/parser/kanban.jison",
+        "sha256": "b59eba92f4caf14b99343d4058880d958d4326b01dc1d1b4feba710ff94ed0af",
+        "symbol": "KanbanDB validates lower-case shape before semantic getData",
+        "line": 1
+      },
+      "checks": {},
+      "lengths": {},
+      "errors": [
+        "INVALID_SHAPE"
+      ]
+    },
+    {
+      "id": "block-unclosed",
+      "kind": "block",
+      "source": "block\nblock:Group\nA",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "blockStatement requires end",
+        "line": 1
+      },
+      "checks": {},
+      "lengths": {},
+      "errors": [
+        "SYNTAX_ERROR"
+      ]
+    },
+    {
+      "id": "block-unquoted",
+      "kind": "block",
+      "source": "block\nA[Alpha]",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "nodeShapeNLabel consumes STR, unquoted NODE_DESCR unreachable",
+        "line": 1
+      },
+      "checks": {},
+      "lengths": {},
+      "errors": [
+        "SYNTAX_ERROR"
+      ]
+    },
+    {
+      "id": "block-bad-arrow-direction",
+      "kind": "block",
+      "source": "block\nA<[\"Arrow\"]>(north)",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "ARROW_DIR closed direction enum",
+        "line": 1
+      },
+      "checks": {},
+      "lengths": {},
+      "errors": [
+        "SYNTAX_ERROR"
+      ]
+    },
+    {
+      "id": "architecture-duplicate",
+      "kind": "architecture",
+      "source": "architecture-beta\nservice a\nservice a",
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "registeredIds duplicate rejects",
+        "line": 1
+      },
+      "checks": {},
+      "lengths": {},
+      "errors": [
+        "DUPLICATE_ID"
+      ]
+    },
+    {
+      "id": "architecture-parent-missing",
+      "kind": "architecture",
+      "source": "architecture-beta\nservice a in missing",
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "addService parent must already be registered group",
+        "line": 1
+      },
+      "checks": {},
+      "lengths": {},
+      "errors": [
+        "UNKNOWN_PARENT"
+      ]
+    },
+    {
+      "id": "architecture-parent-self",
+      "kind": "architecture",
+      "source": "architecture-beta\ngroup a in a",
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "addGroup cannot contain itself",
+        "line": 1
+      },
+      "checks": {},
+      "lengths": {},
+      "errors": [
+        "INVALID_PARENT"
+      ]
+    },
+    {
+      "id": "architecture-missing-edge-endpoint",
+      "kind": "architecture",
+      "source": "architecture-beta\nservice a\na:R -- L:missing",
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "addEdge endpoint reference check",
+        "line": 1
+      },
+      "checks": {},
+      "lengths": {},
+      "errors": [
+        "UNKNOWN_REFERENCE"
+      ]
+    },
+    {
+      "id": "architecture-align-unknown",
+      "kind": "architecture",
+      "source": "architecture-beta\nservice a\nalign row a missing",
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "addLayoutHint references service/junction",
+        "line": 1
+      },
+      "checks": {},
+      "lengths": {},
+      "errors": [
+        "UNKNOWN_REFERENCE"
+      ]
+    },
+    {
+      "id": "architecture-align-duplicate",
+      "kind": "architecture",
+      "source": "architecture-beta\nservice a\nalign row a a",
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "addLayoutHint rejects duplicate member",
+        "line": 1
+      },
+      "checks": {},
+      "lengths": {},
+      "errors": [
+        "DUPLICATE_ID"
+      ]
+    },
+    {
+      "id": "architecture-group-modifier-same-parent",
+      "kind": "architecture",
+      "source": "architecture-beta\ngroup g\nservice a in g\nservice b in g\na{group}:R -- L:b",
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "addEdge group boundary modifier rejects same-parent traversal",
+        "line": 1
+      },
+      "checks": {},
+      "lengths": {},
+      "errors": [
+        "INVALID_GROUP_EDGE"
+      ]
+    },
+    {
+      "id": "usecase-actor-include",
+      "kind": "usecase",
+      "source": "usecase-beta\nactor User\nUser ..> : include Login",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/usecase/usecase.spec.ts",
+        "sha256": "e4909e78d291c258164485dd70bddb3b708c31250c3b79845c527dbec55e3f9b",
+        "symbol": "include requires two use cases",
+        "line": 1
+      },
+      "checks": {},
+      "lengths": {},
+      "errors": [
+        "SYNTAX_ERROR",
+        "INVALID_RELATION"
+      ]
+    },
+    {
+      "id": "usecase-source-relation-0",
+      "kind": "usecase",
+      "source": "usecase-beta\nA --> B",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/usecase/parser/usecase.parser.spec.ts",
+        "sha256": "ea6aa795a86558f2b13848953dc9da65972e19fd38383be961113519f8ecad6d",
+        "line": 104,
+        "symbol": "accepts canonical relation %s source it.each parameter table"
+      },
+      "checks": {
+        "edges.0.source": "A",
+        "edges.0.target": "B",
+        "edges.0.start_marker": "none",
+        "edges.0.end_marker": "point",
+        "edges.0.min_length": 1
+      },
+      "lengths": {
+        "nodes": 2,
+        "edges": 1
+      }
+    },
+    {
+      "id": "usecase-source-relation-1",
+      "kind": "usecase",
+      "source": "usecase-beta\nA <-- B",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/usecase/parser/usecase.parser.spec.ts",
+        "sha256": "ea6aa795a86558f2b13848953dc9da65972e19fd38383be961113519f8ecad6d",
+        "line": 104,
+        "symbol": "accepts canonical relation %s source it.each parameter table"
+      },
+      "checks": {
+        "edges.0.source": "A",
+        "edges.0.target": "B",
+        "edges.0.start_marker": "point",
+        "edges.0.end_marker": "none",
+        "edges.0.min_length": 1
+      },
+      "lengths": {
+        "nodes": 2,
+        "edges": 1
+      }
+    },
+    {
+      "id": "usecase-source-relation-2",
+      "kind": "usecase",
+      "source": "usecase-beta\nA -- B",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/usecase/parser/usecase.parser.spec.ts",
+        "sha256": "ea6aa795a86558f2b13848953dc9da65972e19fd38383be961113519f8ecad6d",
+        "line": 104,
+        "symbol": "accepts canonical relation %s source it.each parameter table"
+      },
+      "checks": {
+        "edges.0.source": "A",
+        "edges.0.target": "B",
+        "edges.0.start_marker": "none",
+        "edges.0.end_marker": "none",
+        "edges.0.min_length": 1
+      },
+      "lengths": {
+        "nodes": 2,
+        "edges": 1
+      }
+    },
+    {
+      "id": "usecase-source-relation-3",
+      "kind": "usecase",
+      "source": "usecase-beta\nA --o B",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/usecase/parser/usecase.parser.spec.ts",
+        "sha256": "ea6aa795a86558f2b13848953dc9da65972e19fd38383be961113519f8ecad6d",
+        "line": 104,
+        "symbol": "accepts canonical relation %s source it.each parameter table"
+      },
+      "checks": {
+        "edges.0.source": "A",
+        "edges.0.target": "B",
+        "edges.0.start_marker": "none",
+        "edges.0.end_marker": "circle",
+        "edges.0.min_length": 1
+      },
+      "lengths": {
+        "nodes": 2,
+        "edges": 1
+      }
+    },
+    {
+      "id": "usecase-source-relation-4",
+      "kind": "usecase",
+      "source": "usecase-beta\nA o-- B",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/usecase/parser/usecase.parser.spec.ts",
+        "sha256": "ea6aa795a86558f2b13848953dc9da65972e19fd38383be961113519f8ecad6d",
+        "line": 104,
+        "symbol": "accepts canonical relation %s source it.each parameter table"
+      },
+      "checks": {
+        "edges.0.source": "A",
+        "edges.0.target": "B",
+        "edges.0.start_marker": "circle",
+        "edges.0.end_marker": "none",
+        "edges.0.min_length": 1
+      },
+      "lengths": {
+        "nodes": 2,
+        "edges": 1
+      }
+    },
+    {
+      "id": "usecase-source-relation-5",
+      "kind": "usecase",
+      "source": "usecase-beta\nA --x B",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/usecase/parser/usecase.parser.spec.ts",
+        "sha256": "ea6aa795a86558f2b13848953dc9da65972e19fd38383be961113519f8ecad6d",
+        "line": 104,
+        "symbol": "accepts canonical relation %s source it.each parameter table"
+      },
+      "checks": {
+        "edges.0.source": "A",
+        "edges.0.target": "B",
+        "edges.0.start_marker": "none",
+        "edges.0.end_marker": "cross",
+        "edges.0.min_length": 1
+      },
+      "lengths": {
+        "nodes": 2,
+        "edges": 1
+      }
+    },
+    {
+      "id": "usecase-source-relation-6",
+      "kind": "usecase",
+      "source": "usecase-beta\nA x-- B",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/usecase/parser/usecase.parser.spec.ts",
+        "sha256": "ea6aa795a86558f2b13848953dc9da65972e19fd38383be961113519f8ecad6d",
+        "line": 104,
+        "symbol": "accepts canonical relation %s source it.each parameter table"
+      },
+      "checks": {
+        "edges.0.source": "A",
+        "edges.0.target": "B",
+        "edges.0.start_marker": "cross",
+        "edges.0.end_marker": "none",
+        "edges.0.min_length": 1
+      },
+      "lengths": {
+        "nodes": 2,
+        "edges": 1
+      }
+    },
+    {
+      "id": "usecase-source-relation-7",
+      "kind": "usecase",
+      "source": "usecase-beta\nA -- \"starts session\" --> B",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/usecase/parser/usecase.parser.spec.ts",
+        "sha256": "ea6aa795a86558f2b13848953dc9da65972e19fd38383be961113519f8ecad6d",
+        "line": 104,
+        "symbol": "accepts canonical relation %s source it.each parameter table"
+      },
+      "checks": {
+        "edges.0.source": "A",
+        "edges.0.target": "B",
+        "edges.0.start_marker": "none",
+        "edges.0.end_marker": "point",
+        "edges.0.min_length": 1
+      },
+      "lengths": {
+        "nodes": 2,
+        "edges": 1
+      }
+    },
+    {
+      "id": "usecase-source-relation-8",
+      "kind": "usecase",
+      "source": "usecase-beta\nA <-- \"reverse label\" -- B",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/usecase/parser/usecase.parser.spec.ts",
+        "sha256": "ea6aa795a86558f2b13848953dc9da65972e19fd38383be961113519f8ecad6d",
+        "line": 104,
+        "symbol": "accepts canonical relation %s source it.each parameter table"
+      },
+      "checks": {
+        "edges.0.source": "A",
+        "edges.0.target": "B",
+        "edges.0.start_marker": "point",
+        "edges.0.end_marker": "none",
+        "edges.0.min_length": 1
+      },
+      "lengths": {
+        "nodes": 2,
+        "edges": 1
+      }
+    },
+    {
+      "id": "usecase-source-relation-9",
+      "kind": "usecase",
+      "source": "usecase-beta\nA -- label -- B",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/usecase/parser/usecase.parser.spec.ts",
+        "sha256": "ea6aa795a86558f2b13848953dc9da65972e19fd38383be961113519f8ecad6d",
+        "line": 104,
+        "symbol": "accepts canonical relation %s source it.each parameter table"
+      },
+      "checks": {
+        "edges.0.source": "A",
+        "edges.0.target": "B",
+        "edges.0.start_marker": "none",
+        "edges.0.end_marker": "none",
+        "edges.0.min_length": 1
+      },
+      "lengths": {
+        "nodes": 2,
+        "edges": 1
+      }
+    },
+    {
+      "id": "usecase-source-relation-10",
+      "kind": "usecase",
+      "source": "usecase-beta\nA -- label --o B",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/usecase/parser/usecase.parser.spec.ts",
+        "sha256": "ea6aa795a86558f2b13848953dc9da65972e19fd38383be961113519f8ecad6d",
+        "line": 104,
+        "symbol": "accepts canonical relation %s source it.each parameter table"
+      },
+      "checks": {
+        "edges.0.source": "A",
+        "edges.0.target": "B",
+        "edges.0.start_marker": "none",
+        "edges.0.end_marker": "circle",
+        "edges.0.min_length": 1
+      },
+      "lengths": {
+        "nodes": 2,
+        "edges": 1
+      }
+    },
+    {
+      "id": "usecase-source-relation-11",
+      "kind": "usecase",
+      "source": "usecase-beta\nA o-- label -- B",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/usecase/parser/usecase.parser.spec.ts",
+        "sha256": "ea6aa795a86558f2b13848953dc9da65972e19fd38383be961113519f8ecad6d",
+        "line": 104,
+        "symbol": "accepts canonical relation %s source it.each parameter table"
+      },
+      "checks": {
+        "edges.0.source": "A",
+        "edges.0.target": "B",
+        "edges.0.start_marker": "circle",
+        "edges.0.end_marker": "none",
+        "edges.0.min_length": 1
+      },
+      "lengths": {
+        "nodes": 2,
+        "edges": 1
+      }
+    },
+    {
+      "id": "usecase-source-relation-12",
+      "kind": "usecase",
+      "source": "usecase-beta\nA -- label --x B",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/usecase/parser/usecase.parser.spec.ts",
+        "sha256": "ea6aa795a86558f2b13848953dc9da65972e19fd38383be961113519f8ecad6d",
+        "line": 104,
+        "symbol": "accepts canonical relation %s source it.each parameter table"
+      },
+      "checks": {
+        "edges.0.source": "A",
+        "edges.0.target": "B",
+        "edges.0.start_marker": "none",
+        "edges.0.end_marker": "cross",
+        "edges.0.min_length": 1
+      },
+      "lengths": {
+        "nodes": 2,
+        "edges": 1
+      }
+    },
+    {
+      "id": "usecase-source-relation-13",
+      "kind": "usecase",
+      "source": "usecase-beta\nA x-- label -- B",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/usecase/parser/usecase.parser.spec.ts",
+        "sha256": "ea6aa795a86558f2b13848953dc9da65972e19fd38383be961113519f8ecad6d",
+        "line": 104,
+        "symbol": "accepts canonical relation %s source it.each parameter table"
+      },
+      "checks": {
+        "edges.0.source": "A",
+        "edges.0.target": "B",
+        "edges.0.start_marker": "cross",
+        "edges.0.end_marker": "none",
+        "edges.0.min_length": 1
+      },
+      "lengths": {
+        "nodes": 2,
+        "edges": 1
+      }
+    },
+    {
+      "id": "usecase-source-relation-14",
+      "kind": "usecase",
+      "source": "usecase-beta\nA ---> B",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/usecase/parser/usecase.parser.spec.ts",
+        "sha256": "ea6aa795a86558f2b13848953dc9da65972e19fd38383be961113519f8ecad6d",
+        "line": 104,
+        "symbol": "accepts canonical relation %s source it.each parameter table"
+      },
+      "checks": {
+        "edges.0.source": "A",
+        "edges.0.target": "B",
+        "edges.0.start_marker": "none",
+        "edges.0.end_marker": "point",
+        "edges.0.min_length": 2
+      },
+      "lengths": {
+        "nodes": 2,
+        "edges": 1
+      }
+    },
+    {
+      "id": "usecase-source-relation-15",
+      "kind": "usecase",
+      "source": "usecase-beta\nA <---- B",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/usecase/parser/usecase.parser.spec.ts",
+        "sha256": "ea6aa795a86558f2b13848953dc9da65972e19fd38383be961113519f8ecad6d",
+        "line": 104,
+        "symbol": "accepts canonical relation %s source it.each parameter table"
+      },
+      "checks": {
+        "edges.0.source": "A",
+        "edges.0.target": "B",
+        "edges.0.start_marker": "point",
+        "edges.0.end_marker": "none",
+        "edges.0.min_length": 3
+      },
+      "lengths": {
+        "nodes": 2,
+        "edges": 1
+      }
+    },
+    {
+      "id": "usecase-source-relation-16",
+      "kind": "usecase",
+      "source": "usecase-beta\nA ---- B",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/usecase/parser/usecase.parser.spec.ts",
+        "sha256": "ea6aa795a86558f2b13848953dc9da65972e19fd38383be961113519f8ecad6d",
+        "line": 104,
+        "symbol": "accepts canonical relation %s source it.each parameter table"
+      },
+      "checks": {
+        "edges.0.source": "A",
+        "edges.0.target": "B",
+        "edges.0.start_marker": "none",
+        "edges.0.end_marker": "none",
+        "edges.0.min_length": 3
+      },
+      "lengths": {
+        "nodes": 2,
+        "edges": 1
+      }
+    },
+    {
+      "id": "usecase-source-relation-17",
+      "kind": "usecase",
+      "source": "usecase-beta\nA -- longer ----> B",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/usecase/parser/usecase.parser.spec.ts",
+        "sha256": "ea6aa795a86558f2b13848953dc9da65972e19fd38383be961113519f8ecad6d",
+        "line": 104,
+        "symbol": "accepts canonical relation %s source it.each parameter table"
+      },
+      "checks": {
+        "edges.0.source": "A",
+        "edges.0.target": "B",
+        "edges.0.start_marker": "none",
+        "edges.0.end_marker": "point",
+        "edges.0.min_length": 3
+      },
+      "lengths": {
+        "nodes": 2,
+        "edges": 1
+      }
+    },
+    {
+      "id": "usecase-source-relation-18",
+      "kind": "usecase",
+      "source": "usecase-beta\nA login@--> B",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/usecase/parser/usecase.parser.spec.ts",
+        "sha256": "ea6aa795a86558f2b13848953dc9da65972e19fd38383be961113519f8ecad6d",
+        "line": 104,
+        "symbol": "accepts canonical relation %s source it.each parameter table"
+      },
+      "checks": {
+        "edges.0.source": "A",
+        "edges.0.target": "B",
+        "edges.0.start_marker": "none",
+        "edges.0.end_marker": "point",
+        "edges.0.min_length": 1
+      },
+      "lengths": {
+        "nodes": 2,
+        "edges": 1
+      }
+    },
+    {
+      "id": "usecase-business-awesome-rejected",
+      "kind": "usecase",
+      "source": "usecase-beta\nactor User@{type: awesome, business: true}",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/usecase/parser/usecaseModelBuilder.ts",
+        "sha256": "45ac8b19f30f247cd0ccb15fac0e2ffe483d2b1ced5171578a11d88099b8ff5d",
+        "symbol": "resolveActor rejects business actor unless normal/hollow",
+        "line": 1
+      },
+      "checks": {},
+      "lengths": {},
+      "errors": [
+        "SYNTAX_ERROR"
+      ]
+    },
+    {
+      "id": "class-header-v2",
+      "kind": "classDiagram",
+      "source": "classDiagram-v2\nclass A",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+        "sha256": "3c99e4613bd8235f4d3485d8444a8b119e8af9ede50f88505c24d5a6cc93280f",
+        "symbol": "source header alias production",
+        "line": 1
+      },
+      "checks": {
+        "classes.A.label": "A"
+      },
+      "lengths": {}
+    },
+    {
+      "id": "state-header-legacy",
+      "kind": "stateDiagram",
+      "source": "stateDiagram\nA --> B",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/state/parser/stateDiagram.jison",
+        "sha256": "72568f98201c5ba59dca96842d1805d5a9908c5965d0609ab27f192929285d4d",
+        "symbol": "source header alias production",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.source": "A",
+        "relations.0.target": "B"
+      },
+      "lengths": {}
+    },
+    {
+      "id": "er-word-cardinality-0",
+      "kind": "er",
+      "source": "erDiagram\nA one or zero--o{ B : relates",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/er/parser/erDiagram.jison",
+        "sha256": "6aa3496c3d7fc2319ce303b4e95e1061f5a9002667ea29300a86ab9f198da6ef",
+        "symbol": "closed source cardinality lexical alias table, native symbolic marker correspondence",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.start_marker": "zero_one",
+        "relations.0.end_marker": "zero_many"
+      },
+      "lengths": {
+        "entities": 2,
+        "relations": 1
+      }
+    },
+    {
+      "id": "er-word-cardinality-1",
+      "kind": "er",
+      "source": "erDiagram\nA zero or one--o{ B : relates",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/er/parser/erDiagram.jison",
+        "sha256": "6aa3496c3d7fc2319ce303b4e95e1061f5a9002667ea29300a86ab9f198da6ef",
+        "symbol": "closed source cardinality lexical alias table, native symbolic marker correspondence",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.start_marker": "zero_one",
+        "relations.0.end_marker": "zero_many"
+      },
+      "lengths": {
+        "entities": 2,
+        "relations": 1
+      }
+    },
+    {
+      "id": "er-word-cardinality-2",
+      "kind": "er",
+      "source": "erDiagram\nA zero or more--o{ B : relates",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/er/parser/erDiagram.jison",
+        "sha256": "6aa3496c3d7fc2319ce303b4e95e1061f5a9002667ea29300a86ab9f198da6ef",
+        "symbol": "closed source cardinality lexical alias table, native symbolic marker correspondence",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.start_marker": "zero_many",
+        "relations.0.end_marker": "zero_many"
+      },
+      "lengths": {
+        "entities": 2,
+        "relations": 1
+      }
+    },
+    {
+      "id": "er-word-cardinality-3",
+      "kind": "er",
+      "source": "erDiagram\nA zero or many--o{ B : relates",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/er/parser/erDiagram.jison",
+        "sha256": "6aa3496c3d7fc2319ce303b4e95e1061f5a9002667ea29300a86ab9f198da6ef",
+        "symbol": "closed source cardinality lexical alias table, native symbolic marker correspondence",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.start_marker": "zero_many",
+        "relations.0.end_marker": "zero_many"
+      },
+      "lengths": {
+        "entities": 2,
+        "relations": 1
+      }
+    },
+    {
+      "id": "er-word-cardinality-4",
+      "kind": "er",
+      "source": "erDiagram\nA 0+--o{ B : relates",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/er/parser/erDiagram.jison",
+        "sha256": "6aa3496c3d7fc2319ce303b4e95e1061f5a9002667ea29300a86ab9f198da6ef",
+        "symbol": "closed source cardinality lexical alias table, native symbolic marker correspondence",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.start_marker": "zero_many",
+        "relations.0.end_marker": "zero_many"
+      },
+      "lengths": {
+        "entities": 2,
+        "relations": 1
+      }
+    },
+    {
+      "id": "er-word-cardinality-5",
+      "kind": "er",
+      "source": "erDiagram\nA many(0)--o{ B : relates",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/er/parser/erDiagram.jison",
+        "sha256": "6aa3496c3d7fc2319ce303b4e95e1061f5a9002667ea29300a86ab9f198da6ef",
+        "symbol": "closed source cardinality lexical alias table, native symbolic marker correspondence",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.start_marker": "zero_many",
+        "relations.0.end_marker": "zero_many"
+      },
+      "lengths": {
+        "entities": 2,
+        "relations": 1
+      }
+    },
+    {
+      "id": "er-word-cardinality-6",
+      "kind": "er",
+      "source": "erDiagram\nA many--o{ B : relates",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/er/parser/erDiagram.jison",
+        "sha256": "6aa3496c3d7fc2319ce303b4e95e1061f5a9002667ea29300a86ab9f198da6ef",
+        "symbol": "closed source cardinality lexical alias table, native symbolic marker correspondence",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.start_marker": "zero_many",
+        "relations.0.end_marker": "zero_many"
+      },
+      "lengths": {
+        "entities": 2,
+        "relations": 1
+      }
+    },
+    {
+      "id": "er-word-cardinality-7",
+      "kind": "er",
+      "source": "erDiagram\nA one or more--o{ B : relates",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/er/parser/erDiagram.jison",
+        "sha256": "6aa3496c3d7fc2319ce303b4e95e1061f5a9002667ea29300a86ab9f198da6ef",
+        "symbol": "closed source cardinality lexical alias table, native symbolic marker correspondence",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.start_marker": "one_many",
+        "relations.0.end_marker": "zero_many"
+      },
+      "lengths": {
+        "entities": 2,
+        "relations": 1
+      }
+    },
+    {
+      "id": "er-word-cardinality-8",
+      "kind": "er",
+      "source": "erDiagram\nA one or many--o{ B : relates",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/er/parser/erDiagram.jison",
+        "sha256": "6aa3496c3d7fc2319ce303b4e95e1061f5a9002667ea29300a86ab9f198da6ef",
+        "symbol": "closed source cardinality lexical alias table, native symbolic marker correspondence",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.start_marker": "one_many",
+        "relations.0.end_marker": "zero_many"
+      },
+      "lengths": {
+        "entities": 2,
+        "relations": 1
+      }
+    },
+    {
+      "id": "er-word-cardinality-9",
+      "kind": "er",
+      "source": "erDiagram\nA 1+--o{ B : relates",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/er/parser/erDiagram.jison",
+        "sha256": "6aa3496c3d7fc2319ce303b4e95e1061f5a9002667ea29300a86ab9f198da6ef",
+        "symbol": "closed source cardinality lexical alias table, native symbolic marker correspondence",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.start_marker": "one_many",
+        "relations.0.end_marker": "zero_many"
+      },
+      "lengths": {
+        "entities": 2,
+        "relations": 1
+      }
+    },
+    {
+      "id": "er-word-cardinality-10",
+      "kind": "er",
+      "source": "erDiagram\nA many(1)--o{ B : relates",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/er/parser/erDiagram.jison",
+        "sha256": "6aa3496c3d7fc2319ce303b4e95e1061f5a9002667ea29300a86ab9f198da6ef",
+        "symbol": "closed source cardinality lexical alias table, native symbolic marker correspondence",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.start_marker": "one_many",
+        "relations.0.end_marker": "zero_many"
+      },
+      "lengths": {
+        "entities": 2,
+        "relations": 1
+      }
+    },
+    {
+      "id": "er-word-cardinality-11",
+      "kind": "er",
+      "source": "erDiagram\nA one--o{ B : relates",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/er/parser/erDiagram.jison",
+        "sha256": "6aa3496c3d7fc2319ce303b4e95e1061f5a9002667ea29300a86ab9f198da6ef",
+        "symbol": "closed source cardinality lexical alias table, native symbolic marker correspondence",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.start_marker": "one",
+        "relations.0.end_marker": "zero_many"
+      },
+      "lengths": {
+        "entities": 2,
+        "relations": 1
+      }
+    },
+    {
+      "id": "er-word-cardinality-12",
+      "kind": "er",
+      "source": "erDiagram\nA only one--o{ B : relates",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/er/parser/erDiagram.jison",
+        "sha256": "6aa3496c3d7fc2319ce303b4e95e1061f5a9002667ea29300a86ab9f198da6ef",
+        "symbol": "closed source cardinality lexical alias table, native symbolic marker correspondence",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.start_marker": "one",
+        "relations.0.end_marker": "zero_many"
+      },
+      "lengths": {
+        "entities": 2,
+        "relations": 1
+      }
+    },
+    {
+      "id": "er-word-cardinality-13",
+      "kind": "er",
+      "source": "erDiagram\nA 1--o{ B : relates",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/er/parser/erDiagram.jison",
+        "sha256": "6aa3496c3d7fc2319ce303b4e95e1061f5a9002667ea29300a86ab9f198da6ef",
+        "symbol": "closed source cardinality lexical alias table, native symbolic marker correspondence",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.start_marker": "one",
+        "relations.0.end_marker": "zero_many"
+      },
+      "lengths": {
+        "entities": 2,
+        "relations": 1
+      }
+    },
+    {
+      "id": "er-word-cardinality-14",
+      "kind": "er",
+      "source": "erDiagram\nA u--o{ B : relates",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/er/parser/erDiagram.jison",
+        "sha256": "6aa3496c3d7fc2319ce303b4e95e1061f5a9002667ea29300a86ab9f198da6ef",
+        "symbol": "closed source cardinality lexical alias table, native symbolic marker correspondence",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.start_marker": "parent",
+        "relations.0.end_marker": "zero_many"
+      },
+      "lengths": {
+        "entities": 2,
+        "relations": 1
+      }
+    },
+    {
+      "id": "er-identification-0",
+      "kind": "er",
+      "source": "erDiagram\nA || -- o{ B : relates",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/er/parser/erDiagram.jison",
+        "sha256": "6aa3496c3d7fc2319ce303b4e95e1061f5a9002667ea29300a86ab9f198da6ef",
+        "symbol": "IDENTIFYING/NON_IDENTIFYING complete lexical alias table",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.dashed": false
+      },
+      "lengths": {
+        "relations": 1
+      }
+    },
+    {
+      "id": "er-identification-1",
+      "kind": "er",
+      "source": "erDiagram\nA || .. o{ B : relates",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/er/parser/erDiagram.jison",
+        "sha256": "6aa3496c3d7fc2319ce303b4e95e1061f5a9002667ea29300a86ab9f198da6ef",
+        "symbol": "IDENTIFYING/NON_IDENTIFYING complete lexical alias table",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.dashed": true
+      },
+      "lengths": {
+        "relations": 1
+      }
+    },
+    {
+      "id": "er-identification-2",
+      "kind": "er",
+      "source": "erDiagram\nA || .- o{ B : relates",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/er/parser/erDiagram.jison",
+        "sha256": "6aa3496c3d7fc2319ce303b4e95e1061f5a9002667ea29300a86ab9f198da6ef",
+        "symbol": "IDENTIFYING/NON_IDENTIFYING complete lexical alias table",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.dashed": true
+      },
+      "lengths": {
+        "relations": 1
+      }
+    },
+    {
+      "id": "er-identification-3",
+      "kind": "er",
+      "source": "erDiagram\nA || -. o{ B : relates",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/er/parser/erDiagram.jison",
+        "sha256": "6aa3496c3d7fc2319ce303b4e95e1061f5a9002667ea29300a86ab9f198da6ef",
+        "symbol": "IDENTIFYING/NON_IDENTIFYING complete lexical alias table",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.dashed": true
+      },
+      "lengths": {
+        "relations": 1
+      }
+    },
+    {
+      "id": "er-identification-4",
+      "kind": "er",
+      "source": "erDiagram\nA || to o{ B : relates",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/er/parser/erDiagram.jison",
+        "sha256": "6aa3496c3d7fc2319ce303b4e95e1061f5a9002667ea29300a86ab9f198da6ef",
+        "symbol": "IDENTIFYING/NON_IDENTIFYING complete lexical alias table",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.dashed": false
+      },
+      "lengths": {
+        "relations": 1
+      }
+    },
+    {
+      "id": "er-identification-5",
+      "kind": "er",
+      "source": "erDiagram\nA || optionally to o{ B : relates",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/er/parser/erDiagram.jison",
+        "sha256": "6aa3496c3d7fc2319ce303b4e95e1061f5a9002667ea29300a86ab9f198da6ef",
+        "symbol": "IDENTIFYING/NON_IDENTIFYING complete lexical alias table",
+        "line": 1
+      },
+      "checks": {
+        "relations.0.dashed": true
+      },
+      "lengths": {
+        "relations": 1
+      }
+    },
+    {
+      "id": "class-visibility-261",
+      "kind": "classDiagram",
+      "source": "classDiagram\nA : +getTime() int",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/classTypes.spec.ts",
+        "sha256": "aaec4b8bb3f9bdc7da4be4cb78379d0aea0650bc772737d13a993edee985c190",
+        "symbol": "ClassMember source parameter/visibility test family",
+        "line": 1
+      },
+      "checks": {
+        "classes.A.methods.0.visibility": "+",
+        "classes.A.methods.0.id": "getTime",
+        "classes.A.methods.0.parameters": "",
+        "classes.A.methods.0.return_type": "int"
+      },
+      "lengths": {
+        "classes.A.methods": 1
+      }
+    },
+    {
+      "id": "class-visibility-262",
+      "kind": "classDiagram",
+      "source": "classDiagram\nA : +getTime(int) int",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/classTypes.spec.ts",
+        "sha256": "aaec4b8bb3f9bdc7da4be4cb78379d0aea0650bc772737d13a993edee985c190",
+        "symbol": "ClassMember source parameter/visibility test family",
+        "line": 1
+      },
+      "checks": {
+        "classes.A.methods.0.visibility": "+",
+        "classes.A.methods.0.id": "getTime",
+        "classes.A.methods.0.parameters": "int",
+        "classes.A.methods.0.return_type": "int"
+      },
+      "lengths": {
+        "classes.A.methods": 1
+      }
+    },
+    {
+      "id": "class-visibility-263",
+      "kind": "classDiagram",
+      "source": "classDiagram\nA : +getTime(int count) int",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/classTypes.spec.ts",
+        "sha256": "aaec4b8bb3f9bdc7da4be4cb78379d0aea0650bc772737d13a993edee985c190",
+        "symbol": "ClassMember source parameter/visibility test family",
+        "line": 1
+      },
+      "checks": {
+        "classes.A.methods.0.visibility": "+",
+        "classes.A.methods.0.id": "getTime",
+        "classes.A.methods.0.parameters": "int count",
+        "classes.A.methods.0.return_type": "int"
+      },
+      "lengths": {
+        "classes.A.methods": 1
+      }
+    },
+    {
+      "id": "class-visibility-264",
+      "kind": "classDiagram",
+      "source": "classDiagram\nA : +getTime(count int) int",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/classTypes.spec.ts",
+        "sha256": "aaec4b8bb3f9bdc7da4be4cb78379d0aea0650bc772737d13a993edee985c190",
+        "symbol": "ClassMember source parameter/visibility test family",
+        "line": 1
+      },
+      "checks": {
+        "classes.A.methods.0.visibility": "+",
+        "classes.A.methods.0.id": "getTime",
+        "classes.A.methods.0.parameters": "count int",
+        "classes.A.methods.0.return_type": "int"
+      },
+      "lengths": {
+        "classes.A.methods": 1
+      }
+    },
+    {
+      "id": "class-visibility-265",
+      "kind": "classDiagram",
+      "source": "classDiagram\nA : -getTime() int",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/classTypes.spec.ts",
+        "sha256": "aaec4b8bb3f9bdc7da4be4cb78379d0aea0650bc772737d13a993edee985c190",
+        "symbol": "ClassMember source parameter/visibility test family",
+        "line": 1
+      },
+      "checks": {
+        "classes.A.methods.0.visibility": "-",
+        "classes.A.methods.0.id": "getTime",
+        "classes.A.methods.0.parameters": "",
+        "classes.A.methods.0.return_type": "int"
+      },
+      "lengths": {
+        "classes.A.methods": 1
+      }
+    },
+    {
+      "id": "class-visibility-266",
+      "kind": "classDiagram",
+      "source": "classDiagram\nA : -getTime(int) int",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/classTypes.spec.ts",
+        "sha256": "aaec4b8bb3f9bdc7da4be4cb78379d0aea0650bc772737d13a993edee985c190",
+        "symbol": "ClassMember source parameter/visibility test family",
+        "line": 1
+      },
+      "checks": {
+        "classes.A.methods.0.visibility": "-",
+        "classes.A.methods.0.id": "getTime",
+        "classes.A.methods.0.parameters": "int",
+        "classes.A.methods.0.return_type": "int"
+      },
+      "lengths": {
+        "classes.A.methods": 1
+      }
+    },
+    {
+      "id": "class-visibility-267",
+      "kind": "classDiagram",
+      "source": "classDiagram\nA : -getTime(int count) int",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/classTypes.spec.ts",
+        "sha256": "aaec4b8bb3f9bdc7da4be4cb78379d0aea0650bc772737d13a993edee985c190",
+        "symbol": "ClassMember source parameter/visibility test family",
+        "line": 1
+      },
+      "checks": {
+        "classes.A.methods.0.visibility": "-",
+        "classes.A.methods.0.id": "getTime",
+        "classes.A.methods.0.parameters": "int count",
+        "classes.A.methods.0.return_type": "int"
+      },
+      "lengths": {
+        "classes.A.methods": 1
+      }
+    },
+    {
+      "id": "class-visibility-268",
+      "kind": "classDiagram",
+      "source": "classDiagram\nA : -getTime(count int) int",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/classTypes.spec.ts",
+        "sha256": "aaec4b8bb3f9bdc7da4be4cb78379d0aea0650bc772737d13a993edee985c190",
+        "symbol": "ClassMember source parameter/visibility test family",
+        "line": 1
+      },
+      "checks": {
+        "classes.A.methods.0.visibility": "-",
+        "classes.A.methods.0.id": "getTime",
+        "classes.A.methods.0.parameters": "count int",
+        "classes.A.methods.0.return_type": "int"
+      },
+      "lengths": {
+        "classes.A.methods": 1
+      }
+    },
+    {
+      "id": "class-visibility-269",
+      "kind": "classDiagram",
+      "source": "classDiagram\nA : #getTime() int",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/classTypes.spec.ts",
+        "sha256": "aaec4b8bb3f9bdc7da4be4cb78379d0aea0650bc772737d13a993edee985c190",
+        "symbol": "ClassMember source parameter/visibility test family",
+        "line": 1
+      },
+      "checks": {
+        "classes.A.methods.0.visibility": "#",
+        "classes.A.methods.0.id": "getTime",
+        "classes.A.methods.0.parameters": "",
+        "classes.A.methods.0.return_type": "int"
+      },
+      "lengths": {
+        "classes.A.methods": 1
+      }
+    },
+    {
+      "id": "class-visibility-270",
+      "kind": "classDiagram",
+      "source": "classDiagram\nA : #getTime(int) int",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/classTypes.spec.ts",
+        "sha256": "aaec4b8bb3f9bdc7da4be4cb78379d0aea0650bc772737d13a993edee985c190",
+        "symbol": "ClassMember source parameter/visibility test family",
+        "line": 1
+      },
+      "checks": {
+        "classes.A.methods.0.visibility": "#",
+        "classes.A.methods.0.id": "getTime",
+        "classes.A.methods.0.parameters": "int",
+        "classes.A.methods.0.return_type": "int"
+      },
+      "lengths": {
+        "classes.A.methods": 1
+      }
+    },
+    {
+      "id": "class-visibility-271",
+      "kind": "classDiagram",
+      "source": "classDiagram\nA : #getTime(int count) int",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/classTypes.spec.ts",
+        "sha256": "aaec4b8bb3f9bdc7da4be4cb78379d0aea0650bc772737d13a993edee985c190",
+        "symbol": "ClassMember source parameter/visibility test family",
+        "line": 1
+      },
+      "checks": {
+        "classes.A.methods.0.visibility": "#",
+        "classes.A.methods.0.id": "getTime",
+        "classes.A.methods.0.parameters": "int count",
+        "classes.A.methods.0.return_type": "int"
+      },
+      "lengths": {
+        "classes.A.methods": 1
+      }
+    },
+    {
+      "id": "class-visibility-272",
+      "kind": "classDiagram",
+      "source": "classDiagram\nA : #getTime(count int) int",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/classTypes.spec.ts",
+        "sha256": "aaec4b8bb3f9bdc7da4be4cb78379d0aea0650bc772737d13a993edee985c190",
+        "symbol": "ClassMember source parameter/visibility test family",
+        "line": 1
+      },
+      "checks": {
+        "classes.A.methods.0.visibility": "#",
+        "classes.A.methods.0.id": "getTime",
+        "classes.A.methods.0.parameters": "count int",
+        "classes.A.methods.0.return_type": "int"
+      },
+      "lengths": {
+        "classes.A.methods": 1
+      }
+    },
+    {
+      "id": "class-visibility-273",
+      "kind": "classDiagram",
+      "source": "classDiagram\nA : ~getTime() int",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/classTypes.spec.ts",
+        "sha256": "aaec4b8bb3f9bdc7da4be4cb78379d0aea0650bc772737d13a993edee985c190",
+        "symbol": "ClassMember source parameter/visibility test family",
+        "line": 1
+      },
+      "checks": {
+        "classes.A.methods.0.visibility": "~",
+        "classes.A.methods.0.id": "getTime",
+        "classes.A.methods.0.parameters": "",
+        "classes.A.methods.0.return_type": "int"
+      },
+      "lengths": {
+        "classes.A.methods": 1
+      }
+    },
+    {
+      "id": "class-visibility-274",
+      "kind": "classDiagram",
+      "source": "classDiagram\nA : ~getTime(int) int",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/classTypes.spec.ts",
+        "sha256": "aaec4b8bb3f9bdc7da4be4cb78379d0aea0650bc772737d13a993edee985c190",
+        "symbol": "ClassMember source parameter/visibility test family",
+        "line": 1
+      },
+      "checks": {
+        "classes.A.methods.0.visibility": "~",
+        "classes.A.methods.0.id": "getTime",
+        "classes.A.methods.0.parameters": "int",
+        "classes.A.methods.0.return_type": "int"
+      },
+      "lengths": {
+        "classes.A.methods": 1
+      }
+    },
+    {
+      "id": "class-visibility-275",
+      "kind": "classDiagram",
+      "source": "classDiagram\nA : ~getTime(int count) int",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/classTypes.spec.ts",
+        "sha256": "aaec4b8bb3f9bdc7da4be4cb78379d0aea0650bc772737d13a993edee985c190",
+        "symbol": "ClassMember source parameter/visibility test family",
+        "line": 1
+      },
+      "checks": {
+        "classes.A.methods.0.visibility": "~",
+        "classes.A.methods.0.id": "getTime",
+        "classes.A.methods.0.parameters": "int count",
+        "classes.A.methods.0.return_type": "int"
+      },
+      "lengths": {
+        "classes.A.methods": 1
+      }
+    },
+    {
+      "id": "class-visibility-276",
+      "kind": "classDiagram",
+      "source": "classDiagram\nA : ~getTime(count int) int",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/classTypes.spec.ts",
+        "sha256": "aaec4b8bb3f9bdc7da4be4cb78379d0aea0650bc772737d13a993edee985c190",
+        "symbol": "ClassMember source parameter/visibility test family",
+        "line": 1
+      },
+      "checks": {
+        "classes.A.methods.0.visibility": "~",
+        "classes.A.methods.0.id": "getTime",
+        "classes.A.methods.0.parameters": "count int",
+        "classes.A.methods.0.return_type": "int"
+      },
+      "lengths": {
+        "classes.A.methods": 1
+      }
+    },
+    {
+      "id": "c4-repeated-declaration-update",
+      "kind": "c4",
+      "source": "C4Context\nPerson(a,\"Old\")\nPerson(a,\"New\")\nSystem(b,\"B\")\nRel(a,b,\"Old relation\")\nRel(a,b,\"New relation\")",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/c4Db.ts",
+        "sha256": "461e4c00f8c5dfe0db51cc1b8e12bb7106b7f722752e016cd1e5730369aa7b36",
+        "symbol": "addPersonOrSystem/addRel alias and endpoint-pair updates preserve identity",
+        "line": 1
+      },
+      "checks": {
+        "elements.a.label": "New",
+        "relations.0.label": "New relation"
+      },
+      "lengths": {
+        "elements": 2,
+        "relations": 1
+      }
+    },
+    {
+      "id": "requirement-duplicate-first-wins",
+      "kind": "requirement",
+      "source": "requirementDiagram\nrequirement R {\nid: First\nid: Later\ntext: FirstText\ntext: LaterText\n}",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/requirement/parser/requirementDiagram.jison",
+        "sha256": "44692497660e25f6fe5d51fb3ea7ed17159bbf27bd901632127342e135bff635",
+        "symbol": "right-recursive requirementBody semantic actions mean earliest repeated field wins",
+        "line": 1
+      },
+      "checks": {
+        "requirements.R.requirement_id": "First",
+        "requirements.R.text": "FirstText"
+      },
+      "lengths": {
+        "requirements": 1
+      }
+    },
+    {
+      "id": "block-quoted-link-label",
+      "kind": "block",
+      "source": "block\nA -- \"works\" --> B",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "START_LINK LINK_LABEL STR LINK quoted text production",
+        "line": 1
+      },
+      "checks": {
+        "edges.0.label": "works",
+        "edges.0.source": "A",
+        "edges.0.target": "B"
+      },
+      "lengths": {
+        "edges": 1
+      }
+    },
+    {
+      "id": "state-empty-description-metadata-missing-width",
+      "kind": "stateDiagram",
+      "source": "stateDiagram-v2\nhide empty description\nscale 2\nA --> B",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/state/parser/stateDiagram.jison",
+        "sha256": "72568f98201c5ba59dca96842d1805d5a9908c5965d0609ab27f192929285d4d",
+        "symbol": "HIDE_EMPTY/scale WIDTH are retained source metadata",
+        "line": 1
+      },
+      "errors": [
+        "SYNTAX_ERROR"
+      ]
+    },
+    {
+      "id": "usecase-json-note-json-target-invalid",
+      "kind": "usecase",
+      "source": "usecase-beta\njson Data@{\"name\":\"Alice\",\"roles\":[\"Reader\",\"Writer\"]}\nnote for Data \"Reference\"",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/usecase/usecase.spec.ts",
+        "sha256": "e4909e78d291c258164485dd70bddb3b708c31250c3b79845c527dbec55e3f9b",
+        "symbol": "ordered JSON nodes and note target resolution",
+        "line": 1
+      },
+      "errors": [
+        "SYNTAX_ERROR"
+      ]
+    },
+    {
+      "id": "kanban-less-indent-third-node-error",
+      "kind": "kanban",
+      "source": "kanban\n    Todo\n  Bad\nOther",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/kanban/parser/kanban.jison",
+        "sha256": "b59eba92f4caf14b99343d4058880d958d4326b01dc1d1b4feba710ff94ed0af",
+        "symbol": "kanban.spec.ts KNBN-6 real root in wrong place; third add sees previous lower-level node",
+        "line": 1
+      },
+      "checks": {},
+      "lengths": {},
+      "errors": [
+        "INVALID_SECTION"
+      ]
+    }
+  ]
+}

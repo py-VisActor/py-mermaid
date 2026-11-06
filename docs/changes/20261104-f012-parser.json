@@ -1,0 +1,56 @@
+{
+  "schema": "py-mermaid-change/v1",
+  "taskId": "20261104-f012-parser",
+  "ownerAgent": "/root/parser_config",
+  "phase": "F01.2-S2",
+  "status": "code_complete_unverified",
+  "baseline": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "baseCommit": "b5af1879bf64034fae922d3713854ef67c34312f",
+  "scope": "classical flowchart shapes, ordinary edge labels, subgraphs and source-derived config additions",
+  "preservedUserWork": true,
+  "changedFiles": [
+    {
+      "path": "src/py_mermaid/config/flowchart.py",
+      "sha256": "fa0040b7c12aa05b6743f551906f0e4fe7bebd150a5e45996dd477cd8e4d47e7"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/flowchart/parser.py",
+      "sha256": "1a6dd122957c0af9f2a6b7db824ac05cee541a7c705ec854c93ad8fc86643452"
+    }
+  ],
+  "sourceMap": "references\\f012-parser-sources.json",
+  "mechanicalEvidence": "test-runs/f012-s2-parser-20261104T143900Z/manifest.json",
+  "checks": [
+    {
+      "command": [
+        "C:\\venvs\\pymmd-20261102\\Scripts\\python.exe",
+        "-m",
+        "compileall",
+        "-q",
+        "src/py_mermaid/config",
+        "src/py_mermaid/diagrams/flowchart"
+      ],
+      "exitCode": 0,
+      "stdout": "check-1.stdout.txt",
+      "stderr": "check-1.stderr.txt"
+    },
+    {
+      "command": [
+        "C:\\venvs\\pymmd-20261102\\Scripts\\python.exe",
+        "-c",
+        "import inspect; from py_mermaid.config import resolve_config; from py_mermaid.parsing import parse_flowchart; from py_mermaid.model.flowchart import FlowGroup; print(inspect.signature(parse_flowchart)); print(inspect.signature(resolve_config)); print(inspect.signature(FlowGroup))"
+      ],
+      "exitCode": 0,
+      "stdout": "check-2.stdout.txt",
+      "stderr": "check-2.stderr.txt"
+    }
+  ],
+  "limitations": [
+    "ellipse parses to its source shape kind but fixed upstream handler registry lacks ellipse; rendering is an explicit upstream-gap error by separately owned Canvas code.",
+    "Unnamed empty subgraph source path calls addSubGraph with undefined ID in grammar while implementation dereferences _id.text; explicit local contract retains generated ID/empty label pending independent official probe.",
+    "Group direction handling differs across independent pyelk baseline; parser preserves declared semantics without compensation.",
+    "No behavior tests run in S2. Original F01.1 scope-rejection tests need explicit S3 migration for newly supported syntax."
+  ],
+  "nextAction": "S3 independent source-derived tests and F01.1 assertion migration; no installation validation",
+  "commitPushPublish": false
+}

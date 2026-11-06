@@ -1,0 +1,1522 @@
+{
+  "schema": "py-mermaid-f013-cases/v1",
+  "scope": "F01.3",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "origin": "Handwritten pinned-source expectations. nodes/edgeLabels/groups are sanitized DB bodies, custom entities canonicalized to HTML entities (upstream internal fl placeholders are transport encoding); visible* fields independently describe rendered text. No candidate output used.",
+  "cases": [
+    {
+      "id": "theme-base",
+      "title": "Registered theme base",
+      "text": "flowchart TD\nA[Alpha] --> B[Beta]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "config": {
+        "theme": "base"
+      },
+      "expectedConfig": {
+        "theme": "base",
+        "font_size": 16,
+        "font_family": "\"trebuchet ms\", verdana, arial, sans-serif",
+        "fill": "#fff4dd"
+      }
+    },
+    {
+      "id": "theme-dark",
+      "title": "Registered theme dark",
+      "text": "flowchart TD\nA[Alpha] --> B[Beta]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "config": {
+        "theme": "dark"
+      },
+      "expectedConfig": {
+        "theme": "dark",
+        "font_size": 16,
+        "font_family": "\"trebuchet ms\", verdana, arial, sans-serif",
+        "fill": "#1f2020"
+      }
+    },
+    {
+      "id": "theme-default",
+      "title": "Registered theme default",
+      "text": "flowchart TD\nA[Alpha] --> B[Beta]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "config": {
+        "theme": "default"
+      },
+      "expectedConfig": {
+        "theme": "default",
+        "font_size": 16,
+        "font_family": "\"trebuchet ms\", verdana, arial, sans-serif",
+        "fill": "#ECECFF"
+      }
+    },
+    {
+      "id": "theme-forest",
+      "title": "Registered theme forest",
+      "text": "flowchart TD\nA[Alpha] --> B[Beta]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "config": {
+        "theme": "forest"
+      },
+      "expectedConfig": {
+        "theme": "forest",
+        "font_size": 16,
+        "font_family": "\"trebuchet ms\", verdana, arial, sans-serif",
+        "fill": "#cde498"
+      }
+    },
+    {
+      "id": "theme-neutral",
+      "title": "Registered theme neutral",
+      "text": "flowchart TD\nA[Alpha] --> B[Beta]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "config": {
+        "theme": "neutral"
+      },
+      "expectedConfig": {
+        "theme": "neutral",
+        "font_size": 16,
+        "font_family": "\"trebuchet ms\", verdana, arial, sans-serif",
+        "fill": "#eee"
+      }
+    },
+    {
+      "id": "theme-neo",
+      "title": "Registered theme neo",
+      "text": "flowchart TD\nA[Alpha] --> B[Beta]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "config": {
+        "theme": "neo"
+      },
+      "expectedConfig": {
+        "theme": "neo",
+        "font_size": 14,
+        "font_family": "arial, sans-serif",
+        "fill": "#ffffff"
+      }
+    },
+    {
+      "id": "theme-neo-dark",
+      "title": "Registered theme neo-dark",
+      "text": "flowchart TD\nA[Alpha] --> B[Beta]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "config": {
+        "theme": "neo-dark"
+      },
+      "expectedConfig": {
+        "theme": "neo-dark",
+        "font_size": 14,
+        "font_family": "arial, sans-serif",
+        "fill": "#2a2020"
+      }
+    },
+    {
+      "id": "theme-redux",
+      "title": "Registered theme redux",
+      "text": "flowchart TD\nA[Alpha] --> B[Beta]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "config": {
+        "theme": "redux"
+      },
+      "expectedConfig": {
+        "theme": "redux",
+        "font_size": 14,
+        "font_family": "\"Recursive Variable\", arial, sans-serif",
+        "fill": "#ffffff"
+      }
+    },
+    {
+      "id": "theme-redux-dark",
+      "title": "Registered theme redux-dark",
+      "text": "flowchart TD\nA[Alpha] --> B[Beta]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "config": {
+        "theme": "redux-dark"
+      },
+      "expectedConfig": {
+        "theme": "redux-dark",
+        "font_size": 14,
+        "font_family": "\"Recursive Variable\", arial, sans-serif",
+        "fill": "#111113"
+      }
+    },
+    {
+      "id": "theme-redux-color",
+      "title": "Registered theme redux-color",
+      "text": "flowchart TD\nA[Alpha] --> B[Beta]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "config": {
+        "theme": "redux-color"
+      },
+      "expectedConfig": {
+        "theme": "redux-color",
+        "font_size": 14,
+        "font_family": "\"Recursive Variable\", arial, sans-serif",
+        "fill": "#ffffff"
+      }
+    },
+    {
+      "id": "theme-redux-dark-color",
+      "title": "Registered theme redux-dark-color",
+      "text": "flowchart TD\nA[Alpha] --> B[Beta]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "config": {
+        "theme": "redux-dark-color"
+      },
+      "expectedConfig": {
+        "theme": "redux-dark-color",
+        "font_size": 14,
+        "font_family": "\"Recursive Variable\", arial, sans-serif",
+        "fill": "#111113"
+      }
+    },
+    {
+      "id": "theme-null",
+      "title": "Registered theme null",
+      "text": "flowchart TD\nA[Alpha] --> B[Beta]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "config": {
+        "theme": "null"
+      },
+      "expectedConfig": {
+        "theme": "null",
+        "font_size": 16,
+        "font_family": "\"trebuchet ms\", verdana, arial, sans-serif",
+        "fill": "#ECECFF"
+      }
+    },
+    {
+      "id": "title-unicode-crlf",
+      "title": "Frontmatter title and CRLF raw mapping",
+      "text": "---\r\ntitle: Release 😀 中文\r\n---\r\n%% heading\r\nflowchart TD\r\nA[Alpha] --> B[Beta]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "diagramTitle": "Release 😀 中文"
+    },
+    {
+      "id": "title-boolean",
+      "title": "JSON schema boolean title",
+      "text": "---\ntitle: true\n---\nflowchart TD\nA[Alpha] --> B[Beta]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "diagramTitle": "true"
+    },
+    {
+      "id": "title-literal",
+      "title": "Literal YAML title block",
+      "text": "---\ntitle: |-\n  First line\n  Second line\n---\nflowchart TD\nA[Alpha] --> B[Beta]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "diagramTitle": "First line\nSecond line"
+    },
+    {
+      "id": "title-folded",
+      "title": "Folded YAML title block",
+      "text": "---\ntitle: >-\n  Release one\n  release two\n---\nflowchart TD\nA[Alpha] --> B[Beta]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "diagramTitle": "Release one release two"
+    },
+    {
+      "id": "frontmatter-indent",
+      "title": "Indented delimiters and config",
+      "text": "  ---\n  title: Indented title\n  config:\n    htmlLabels: false\n  ---\n  flowchart TD\nA[Alpha] --> B[Beta]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "diagramTitle": "Indented title",
+      "expectedConfig": {
+        "html_labels": false
+      }
+    },
+    {
+      "id": "yaml-flow-config",
+      "title": "Flow YAML collection config",
+      "text": "---\nconfig: {theme: forest, flowchart: {wrappingWidth: 180, titleTopMargin: 30}}\n---\nflowchart TD\nA[Alpha] --> B[Beta]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "expectedConfig": {
+        "theme": "forest",
+        "wrapping_width": 180,
+        "title_top_margin": 30
+      }
+    },
+    {
+      "id": "yaml-alias-config",
+      "title": "Alias mapping reused as diagram config",
+      "text": "---\nsettings: &appearance\n  htmlLabels: false\n  theme: neutral\nconfig: *appearance\n---\nflowchart TD\nA[Alpha] --> B[Beta]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "expectedConfig": {
+        "theme": "neutral",
+        "html_labels": false
+      }
+    },
+    {
+      "id": "directive-init",
+      "title": "Init theme override",
+      "text": "%%{init: {\"theme\":\"dark\"}}%%\nflowchart TD\nA[Alpha] --> B[Beta]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "expectedConfig": {
+        "theme": "dark"
+      }
+    },
+    {
+      "id": "directive-initialize",
+      "title": "Initialize spelling and single quotes",
+      "text": "%%{initialize: {'theme':'forest'}}%%\nflowchart TD\nA[Alpha] --> B[Beta]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "expectedConfig": {
+        "theme": "forest"
+      }
+    },
+    {
+      "id": "directive-legacy-config",
+      "title": "Legacy config moves into flowchart",
+      "text": "%%{init: {\"config\":{\"wrappingWidth\":150}}}%%\nflowchart TD\nA[Alpha] --> B[Beta]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "expectedConfig": {
+        "wrapping_width": 150
+      }
+    },
+    {
+      "id": "directive-layer-priority",
+      "title": "Directive beats frontmatter beats site",
+      "text": "---\nconfig:\n  theme: forest\n  flowchart: {wrappingWidth: 140}\n---\n%%{init: {\"theme\":\"dark\",\"flowchart\":{\"wrappingWidth\":170}}}%%\nflowchart TD\nA[Alpha] --> B[Beta]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "config": {
+        "theme": "neutral",
+        "flowchart": {
+          "wrappingWidth": 130
+        }
+      },
+      "expectedConfig": {
+        "theme": "dark",
+        "wrapping_width": 170
+      }
+    },
+    {
+      "id": "directive-multiple",
+      "title": "Later init wins and merges independent keys",
+      "text": "%%{init: {\"theme\":\"dark\",\"flowchart\":{\"wrappingWidth\":150}}}%%\n%%{init: {\"theme\":\"forest\",\"flowchart\":{\"titleTopMargin\":40}}}%%\nflowchart TD\nA[Alpha] --> B[Beta]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "expectedConfig": {
+        "theme": "forest",
+        "wrapping_width": 150,
+        "title_top_margin": 40
+      }
+    },
+    {
+      "id": "directive-secure",
+      "title": "Secure root limits and security cannot be changed",
+      "text": "%%{init: {\"securityLevel\":\"loose\",\"maxEdges\":1,\"maxTextSize\":1,\"__proto__\":{},\"properties\":1}}%%\nflowchart TD\nA[Alpha] --> B[Beta]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "config": {
+        "maxEdges": 3,
+        "maxTextSize": 2000
+      },
+      "expectedConfig": {
+        "security_level": "strict",
+        "max_edges": 3,
+        "max_text_size": 2000
+      }
+    },
+    {
+      "id": "html-bold",
+      "title": "HTML bold node",
+      "text": "flowchart TD\nA[\"<b>Bold</b>\"]",
+      "nodes": [
+        [
+          "A",
+          "<b>Bold</b>"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "visibleLabels": {
+        "A": "Bold"
+      },
+      "formats": {
+        "A": [
+          {
+            "text": "Bold",
+            "weight": "bold"
+          }
+        ]
+      }
+    },
+    {
+      "id": "html-italic",
+      "title": "HTML italic Unicode node",
+      "text": "flowchart TD\nA[\"<i>Italic 中文</i>\"]",
+      "nodes": [
+        [
+          "A",
+          "<i>Italic 中文</i>"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "visibleLabels": {
+        "A": "Italic 中文"
+      },
+      "formats": {
+        "A": [
+          {
+            "text": "Italic 中文",
+            "style": "italic"
+          }
+        ]
+      }
+    },
+    {
+      "id": "html-break",
+      "title": "HTML explicit line break",
+      "text": "flowchart TD\nA[\"First<br/>Second\"]",
+      "nodes": [
+        [
+          "A",
+          "First<br>Second"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "visibleLabels": {
+        "A": "First\nSecond"
+      }
+    },
+    {
+      "id": "html-svg-mode",
+      "title": "HTML source with htmlLabels false",
+      "text": "flowchart TD\nA[\"<b>Bold</b>\"]",
+      "nodes": [
+        [
+          "A",
+          "<b>Bold</b>"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "config": {
+        "htmlLabels": false
+      },
+      "expectedConfig": {
+        "html_labels": false
+      },
+      "visibleLabels": {
+        "A": "<b> Bold </b>"
+      },
+      "sourceObservation": "Initial official SVG text capture keeps tag spellings as literal text with token spaces when htmlLabels=false; source DB body remains sanitized markup."
+    },
+    {
+      "id": "html-script-strict",
+      "title": "Strict security removes script and content",
+      "text": "flowchart TD\nA[\"Safe<script>alert(1)</script>Text\"]",
+      "nodes": [
+        [
+          "A",
+          "SafeText"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "visibleLabels": {
+        "A": "SafeText"
+      }
+    },
+    {
+      "id": "html-event-attribute",
+      "title": "Event attribute is removed by sanitation",
+      "text": "flowchart TD\nA[\"<b onclick='alert(1)'>Safe</b>\"]",
+      "nodes": [
+        [
+          "A",
+          "<b>Safe</b>"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "visibleLabels": {
+        "A": "Safe"
+      }
+    },
+    {
+      "id": "markdown-node",
+      "title": "Markdown emphasis node",
+      "text": "flowchart TD\nA[\"`**Bold** and *Italic*`\"]",
+      "nodes": [
+        [
+          "A",
+          "**Bold** and *Italic*"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "labelKinds": {
+        "A": "markdown"
+      },
+      "visibleLabels": {
+        "A": "Bold and Italic"
+      },
+      "formats": {
+        "A": [
+          {
+            "text": "Bold",
+            "weight": "bold"
+          },
+          {
+            "text": "Italic",
+            "style": "italic"
+          }
+        ]
+      }
+    },
+    {
+      "id": "markdown-edge-pipe",
+      "title": "Markdown pipe edge",
+      "text": "flowchart TD\nA[Alpha] -->|\"`**Ready**`\"| B[Beta]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeLabels": [
+        "**Ready**"
+      ],
+      "visibleEdgeLabels": [
+        "Ready"
+      ],
+      "edgeLabelKinds": [
+        "markdown"
+      ],
+      "edgeFormats": [
+        [
+          {
+            "text": "Ready",
+            "weight": "bold"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "markdown-edge-inline",
+      "title": "Markdown inline edge",
+      "text": "flowchart TD\nA[Alpha] -- \"`*Next*`\" --> B[Beta]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeLabels": [
+        "*Next*"
+      ],
+      "visibleEdgeLabels": [
+        "Next"
+      ],
+      "edgeLabelKinds": [
+        "markdown"
+      ],
+      "edgeFormats": [
+        [
+          {
+            "text": "Next",
+            "style": "italic"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "markdown-group",
+      "title": "Markdown group title",
+      "text": "flowchart TD\nsubgraph G[\"`**Group** title`\"]\nA[Alpha]\nend",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "groups": [
+        {
+          "id": "G",
+          "label": "**Group** title",
+          "members": [
+            "A"
+          ],
+          "parent_id": null,
+          "direction": null
+        }
+      ],
+      "groupLabelKinds": {
+        "G": "markdown"
+      },
+      "visibleGroupLabels": {
+        "G": "Group title"
+      },
+      "groupFormats": {
+        "G": [
+          {
+            "text": "Group",
+            "weight": "bold"
+          }
+        ]
+      }
+    },
+    {
+      "id": "markdown-multiline",
+      "title": "Markdown multiline Unicode",
+      "text": "flowchart TD\nA[\"`First **line**\n第二行`\"]",
+      "nodes": [
+        [
+          "A",
+          "First **line**\n第二行"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "labelKinds": {
+        "A": "markdown"
+      },
+      "visibleLabels": {
+        "A": "First line\n第二行"
+      }
+    },
+    {
+      "id": "markdown-nowrap",
+      "title": "Markdown wrapping can be disabled",
+      "text": "flowchart TD\nA[\"`A long **Markdown** sentence stays on one line`\"]",
+      "nodes": [
+        [
+          "A",
+          "A long **Markdown** sentence stays on one line"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "labelKinds": {
+        "A": "markdown"
+      },
+      "visibleLabels": {
+        "A": "A long Markdown sentence stays on one line"
+      },
+      "config": {
+        "markdownAutoWrap": false
+      },
+      "expectedConfig": {
+        "markdown_auto_wrap": false
+      }
+    },
+    {
+      "id": "entities-html",
+      "title": "Standard HTML entity is decoded once",
+      "text": "flowchart TD\nA[\"Fish &amp; Chips &lt;3\"]",
+      "nodes": [
+        [
+          "A",
+          "Fish &amp; Chips &lt;3"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "visibleLabels": {
+        "A": "Fish & Chips <3"
+      }
+    },
+    {
+      "id": "entities-mermaid",
+      "title": "Custom Mermaid named and numeric entities",
+      "text": "flowchart TD\nA[\"#quot;Hi#quot; #35; #9829;\"]",
+      "nodes": [
+        [
+          "A",
+          "&quot;Hi&quot; &#35; &#9829;"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "visibleLabels": {
+        "A": "\"Hi\" # ♥"
+      },
+      "semanticEntityEncoding": "canonical-html-entities"
+    },
+    {
+      "id": "security-loose",
+      "title": "Security loose still sanitizes scripts",
+      "text": "flowchart TD\nA[\"Safe<script>alert(1)</script><b>Bold</b>\"]",
+      "nodes": [
+        [
+          "A",
+          "Safe<b>Bold</b>"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "config": {
+        "securityLevel": "loose"
+      },
+      "expectedConfig": {
+        "security_level": "loose"
+      },
+      "visibleLabels": {
+        "A": "SafeBold"
+      }
+    },
+    {
+      "id": "security-antiscript",
+      "title": "Security antiscript still sanitizes scripts",
+      "text": "flowchart TD\nA[\"Safe<script>alert(1)</script><b>Bold</b>\"]",
+      "nodes": [
+        [
+          "A",
+          "Safe<b>Bold</b>"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "config": {
+        "securityLevel": "antiscript"
+      },
+      "expectedConfig": {
+        "security_level": "antiscript"
+      },
+      "visibleLabels": {
+        "A": "SafeBold"
+      }
+    },
+    {
+      "id": "security-sandbox",
+      "title": "Security sandbox still sanitizes scripts",
+      "text": "flowchart TD\nA[\"Safe<script>alert(1)</script><b>Bold</b>\"]",
+      "nodes": [
+        [
+          "A",
+          "Safe<b>Bold</b>"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "config": {
+        "securityLevel": "sandbox"
+      },
+      "expectedConfig": {
+        "security_level": "sandbox"
+      },
+      "visibleLabels": {
+        "A": "SafeBold"
+      }
+    },
+    {
+      "id": "dompurify-allow-tags",
+      "title": "Site sanitizer allows only selected tags",
+      "text": "flowchart TD\nA[\"A <i>Italic</i> <b>Bold</b>\"]",
+      "nodes": [
+        [
+          "A",
+          "A Italic <b>Bold</b>"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "config": {
+        "dompurifyConfig": {
+          "ALLOWED_TAGS": [
+            "b"
+          ]
+        }
+      },
+      "visibleLabels": {
+        "A": "A Italic Bold"
+      }
+    },
+    {
+      "id": "theme-css-native-paint",
+      "title": "User CSS explicit important paint",
+      "text": "flowchart TD\nA[Alpha] --> B[Beta]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "config": {
+        "themeCSS": ".node rect { fill: #ffeedd !important; stroke: #123456 !important; } .nodeLabel { color: #112233 !important; }"
+      },
+      "expectedConfig": {
+        "theme_css": ".node rect { fill: #ffeedd !important; stroke: #123456 !important; } .nodeLabel { color: #112233 !important; }"
+      },
+      "formats": {
+        "A": [
+          {
+            "text": "Alpha",
+            "color": "#112233"
+          }
+        ]
+      },
+      "visibleLabels": {
+        "A": "Alpha",
+        "B": "Beta"
+      }
+    },
+    {
+      "id": "theme-vars-native-paint",
+      "title": "Explicit theme variables font and fill",
+      "text": "flowchart TD\nA[Alpha] --> B[Beta]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "config": {
+        "theme": "base",
+        "themeVariables": {
+          "mainBkg": "#ffeedd",
+          "nodeBorder": "#123456",
+          "nodeTextColor": "#112233",
+          "fontSize": "18px",
+          "fontFamily": "Arial"
+        }
+      },
+      "expectedConfig": {
+        "font_family": "Arial",
+        "font_size": 18,
+        "fill": "#ffeedd",
+        "stroke": "#123456",
+        "text_color": "#112233"
+      },
+      "formats": {
+        "A": [
+          {
+            "text": "Alpha",
+            "color": "#112233",
+            "fontSize": 18
+          }
+        ]
+      },
+      "visibleLabels": {
+        "A": "Alpha",
+        "B": "Beta"
+      }
+    },
+    {
+      "id": "a11y-single-line",
+      "title": "Accessibility title and description",
+      "text": "flowchart TD\naccTitle: Accessible title\naccDescr: Accessible description\nA[Alpha] --> B[Beta]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "accTitle": "Accessible title",
+      "accDescription": "Accessible description"
+    },
+    {
+      "id": "a11y-multiline",
+      "title": "Accessibility multiline description",
+      "text": "flowchart TD\naccTitle: Flow overview\naccDescr {\nFirst line\n第二行\n}\nA[Alpha] --> B[Beta]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "accTitle": "Flow overview",
+      "accDescription": "First line\n第二行"
+    },
+    {
+      "id": "rich-overview",
+      "title": "Rich configuration and labels overview",
+      "text": "---\ntitle: Rich flow 中文\nconfig:\n  theme: redux-color\n---\nflowchart TD\nsubgraph G[\"`**Input** stage`\"]\nA[\"<b>Start</b>\"] -->|\"`*Validate*`\"| B{\"Ready?\"}\nend\nB -- \"<i>Yes</i>\" --> C[\"`**Done**`\"]",
+      "nodes": [
+        [
+          "A",
+          "<b>Start</b>"
+        ],
+        [
+          "B",
+          "Ready?"
+        ],
+        [
+          "C",
+          "**Done**"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "B",
+          "C"
+        ]
+      ],
+      "direction": "TD",
+      "shapes": {
+        "B": "diamond"
+      },
+      "edgeLabels": [
+        "*Validate*",
+        "<i>Yes</i>"
+      ],
+      "groups": [
+        {
+          "id": "G",
+          "label": "**Input** stage",
+          "members": [
+            "B",
+            "A"
+          ],
+          "parent_id": null,
+          "direction": null
+        }
+      ],
+      "labelKinds": {
+        "C": "markdown"
+      },
+      "edgeLabelKinds": [
+        "markdown",
+        "text"
+      ],
+      "groupLabelKinds": {
+        "G": "markdown"
+      },
+      "visibleLabels": {
+        "A": "Start",
+        "B": "Ready?",
+        "C": "Done"
+      },
+      "visibleEdgeLabels": [
+        "Validate",
+        "Yes"
+      ],
+      "visibleGroupLabels": {
+        "G": "Input stage"
+      },
+      "diagramTitle": "Rich flow 中文"
+    },
+    {
+      "id": "title-hidden",
+      "title": "Hidden diagram title remains in semantic metadata",
+      "text": "---\ntitle: Hidden original title\n---\nflowchart TD\nA[Alpha] --> B[Beta]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "config": {
+        "themeCSS": ".flowchartTitleText { display: none; }"
+      },
+      "diagramTitle": "Hidden original title",
+      "visibleDiagramTitle": "",
+      "purpose": "S4 regression: display:none must suppress native title measurement/paint while preserving source title metadata."
+    },
+    {
+      "id": "empty-rich-edge",
+      "title": "HTML-only break edge label has no visible text",
+      "text": "flowchart TD\nA[Alpha] -->|\"<br/>\"| B[Beta]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeLabels": [
+        "<br>"
+      ],
+      "visibleEdgeLabels": [
+        ""
+      ],
+      "purpose": "S4 regression: safe DOM sanitizer canonicalizes br markup; rendered edge label has empty visible content, with no invented nonempty label."
+    }
+  ],
+  "negativeCases": [
+    {
+      "id": "invalid-yaml-tag",
+      "text": "---\n!!!\n---\nflowchart TD\nA[Alpha] --> B[Beta]"
+    },
+    {
+      "id": "invalid-yaml-flow",
+      "text": "---\nconfig: {theme: dark\n---\nflowchart TD\nA[Alpha] --> B[Beta]"
+    },
+    {
+      "id": "duplicate-yaml-key",
+      "text": "---\ntitle: One\ntitle: Two\n---\nflowchart TD\nA[Alpha] --> B[Beta]"
+    },
+    {
+      "id": "undefined-yaml-alias",
+      "text": "---\nconfig: *missing\n---\nflowchart TD\nA[Alpha] --> B[Beta]"
+    },
+    {
+      "id": "unclosed-markdown",
+      "text": "flowchart TD\nA[\"`Missing close\"]"
+    },
+    {
+      "id": "unclosed-html-label",
+      "text": "flowchart TD\nA[\"<b>Unclosed]"
+    },
+    {
+      "id": "missing-end",
+      "text": "flowchart TD\nsubgraph G[\"`Title`\"]\nA"
+    },
+    {
+      "id": "unclosed-rich-edge",
+      "text": "flowchart TD\nA -->|\"`Missing`\" B"
+    }
+  ],
+  "unsupportedCases": [
+    {
+      "id": "math",
+      "text": "flowchart TD\nA[\"$$x^2$$\"]",
+      "codes": [
+        "UNSUPPORTED_SYNTAX"
+      ],
+      "title": "数学正式模块集成回归（原延期案例）",
+      "scopeDisposition": "implemented_by_math_module",
+      "originalScopeDisposition": "deferred_by_user_separate_module",
+      "promotedMath": {
+        "formulas": [
+          "x^2"
+        ],
+        "glyphs": [
+          "x",
+          "2"
+        ],
+        "source": "KaTeX superscript math layout, retained historical case ID, actual glyphs/vertical positions/PNG ink checked by f011_validate"
+      },
+      "reason": "Historical deferred math case now verifies formally integrated py-visactor-katex==0.1.0; no denominator removal"
+    },
+    {
+      "id": "dagre-layout",
+      "text": "flowchart TD\nA[Alpha] --> B[Beta]",
+      "config": {
+        "layout": "dagre"
+      },
+      "codes": [
+        "UNSUPPORTED_CONFIG"
+      ],
+      "scopeDisposition": "excluded_by_user",
+      "title": "已排除功能：Dagre",
+      "policy": "references/layout-policy.json"
+    }
+  ],
+  "renderErrorCases": [
+    {
+      "id": "ellipse-upstream",
+      "text": "flowchart TD\nA(-Ellipse-)",
+      "code": "UPSTREAM_SHAPE_MISSING"
+    }
+  ],
+  "migratedCases": [
+    {
+      "id": "icon",
+      "text": "flowchart TD\nA[\"fa:fa-home\"]",
+      "config": null,
+      "reason": "Supported retained F01.4 static capability; tested in F01.4 source assertions/fixtures, no longer an expected rejection"
+    },
+    {
+      "id": "new-shape",
+      "text": "flowchart TD\nA@{ shape: hourglass }",
+      "config": null,
+      "reason": "Supported retained F01.4 static capability; tested in F01.4 source assertions/fixtures, no longer an expected rejection"
+    },
+    {
+      "id": "style-statement",
+      "text": "flowchart TD\nA;style A fill:red",
+      "config": null,
+      "reason": "Supported retained F01.4 static capability; tested in F01.4 source assertions/fixtures, no longer an expected rejection"
+    },
+    {
+      "id": "hand-drawn-look",
+      "text": "flowchart TD\nA[Alpha] --> B[Beta]",
+      "config": {
+        "look": "handDrawn"
+      },
+      "reason": "Supported retained F01.4 static capability; tested in F01.4 source assertions/fixtures, no longer an expected rejection"
+    }
+  ]
+}

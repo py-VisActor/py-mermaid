@@ -1,0 +1,103 @@
+{
+  "schema": "py-mermaid-change/v1",
+  "taskId": "20261105-f013-language",
+  "ownerAgent": "/root/parser_config",
+  "phase": "F01.3-S3",
+  "status": "targeted_checks_passed_full_acceptance_pending",
+  "baseline": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "sourceFreeze": "5a7264af3a00dc705df6824d83311e3e3b67d80b39457ecfeba5aec19293d771",
+  "candidateModified": false,
+  "testFiles": [
+    {
+      "path": "tests/f013/test_language.py",
+      "sha256": "81332c64522c78f1e472cb01c086a8cd83372b321eed0a29daca280b1b72a362"
+    },
+    {
+      "path": "tests/f013/cases.json",
+      "sha256": "b65754f2310ed4bdc4c2b0e8369f7cf04d059e72ab831736a27380b8f1ec694b"
+    },
+    {
+      "path": "tests/f011/test_language.py",
+      "sha256": "2b924bb5f3f45711c80d5dfea3f2129df0ca0b51deae885f56dd4ca0addb7bbc"
+    },
+    {
+      "path": "tests/f012/test_language.py",
+      "sha256": "9909942d018b6f40831603c66766686886638582bcb355821523f1708237bc18"
+    }
+  ],
+  "assertionMap": "references/f013-language-assertions.json",
+  "assertionMapSha256": "b3c4b132c81fd531f23e48e791b8745c56afa4843b9226e6329041e57774eb8a",
+  "behaviorExecuted": true,
+  "installationValidation": "deferred_by_user",
+  "next": "Root unified final freeze and complete grouped/A-B acceptance; retained first failure evidence.",
+  "mechanicalEvidence": "test-runs/F01.3-language-design-final-20261105T015509Z-d36448b2/run.json",
+  "s4RepairBatch": {
+    "preservedInitialEvidence": "test-runs/F01.3-initial-evidence-snapshot-20261105T021024Z-38c90a72",
+    "preservedInitialSourceSha256": "5a7264af3a00dc705df6824d83311e3e3b67d80b39457ecfeba5aec19293d771",
+    "fixes": [
+      {
+        "id": "config-section-merge",
+        "source": "assignWithDepth.ts null skip/array sources; config.ts resolveAppearance",
+        "change": "Validate effective flowchart section after source merge; raw null/empty list retain defaults, array mapping sources merge in order.",
+        "regression": "ConfigurationLayerSourceTests.test_null_and_array_flowchart_sections_follow_merge_before_validation"
+      },
+      {
+        "id": "markdown-body-span",
+        "source": "flow.jison MD_STR excludes delimiter tokens; F01.3 raw-label body contract",
+        "change": "Use body start+1/end-1 only for Markdown; retain original raw map and UTF16 conversion.",
+        "regression": "PreprocessPositionTests.test_markdown_node_span_excludes_quote_and_tick_delimiters"
+      },
+      {
+        "id": "unclosed-markdown",
+        "source": "flow.jison md_string only closes backtick+doublequote; official initial negative rejects",
+        "change": "Quoted label beginning Markdown tick must have closing tick; node/edge/group share check.",
+        "regression": "RichFixtureLanguageTests.test_unclosed_markdown_in_node_edge_and_group_is_parse_error"
+      },
+      {
+        "id": "yaml-numeric-4.3",
+        "source": "Pinned embedded js-yaml@4.3.0 type/int.js and type/float.js",
+        "change": "No underscore cleanup, lowercase base prefixes, exact special-value cases, finite numeric resolution, JS Number integer rounding and precise leading-dot float sign grammar.",
+        "regression": "YamlJsonSchemaTests.test_pinned_numeric_case_and_float_grammar_boundaries;test_yaml_integers_use_js_number_rounding"
+      },
+      {
+        "id": "yaml-block-keep",
+        "source": "js-yaml loader readBlockScalar/CHOMPING_KEEP",
+        "change": "Discard split terminal sentinel rather than counting it as an extra physical blank line; preserve meaningful trailing blank lines.",
+        "regression": "YamlJsonSchemaTests.test_keep_chomp_counts_real_trailing_linebreaks"
+      },
+      {
+        "id": "neo-shadow-correction",
+        "source": "theme-neo.js:40 and styles.ts filter interpolation",
+        "change": "Default literal remains byte-for-byte unchanged. It has balanced parentheses and a legal trailing CSS declaration semicolon. Scalar shadow parser now strips only declaration terminator for recognition, producing dx0/dy1/alpha.25. Earlier malformed-string analysis was incorrect.",
+        "regression": "ConfigurationLayerSourceTests.test_neo_shadow_keeps_source_string_and_parses_declaration_semicolon"
+      },
+      {
+        "id": "html-svg-fixture-correction",
+        "source": "Official initial A html-svg-mode visible text capture; HTML disabled SVG text token semantics",
+        "change": "Fixture DB body remains <b>Bold</b>; independent visible expectation corrected from Bold to literal <b> Bold </b>. C owns corresponding text rendering."
+      }
+    ],
+    "targetedEvidence": [
+      "test-runs/F01.3-record-20261105T021506Z-233f8f28/run.json",
+      "test-runs/F01.3-record-20261105T021513Z-b93aefe4/run.json"
+    ],
+    "installationValidation": "deferred_by_user"
+  },
+  "testMethodCounts": {
+    "F013": 62,
+    "F011": 39,
+    "F012": 29,
+    "F013PlusF011TargetedExecuted": 101,
+    "F012NotRerunInThisBatch": true
+  },
+  "additionalRegressionCases": {
+    "ids": [
+      "title-hidden",
+      "empty-rich-edge"
+    ],
+    "origin": "Root-approved S4 real-root-cause regression additions to original48; independent pinned styles.ts title selector/user CSS semantics and grammar/common sanitizer edge markup expectation.",
+    "status": "awaiting_root_unified_official_and_final_regression",
+    "original48EvidencePreserved": true,
+    "newBehaviorExecuted": false
+  }
+}

@@ -1,0 +1,245 @@
+{
+  "schema": "py-mermaid-change-receipt/v1",
+  "phase": "P3_repair_after_initial_P4",
+  "status": "ROOT_RELATED_PASS_STOPPED_PENDING_JOINT_P4",
+  "initialP4": "BULK-P4-final-20261106T053339Z-476daa06",
+  "changes": [
+    "Owner-thread CSS font units using actual public Canvas x/zero metrics, additive real path dash/marker tracing and marker stroke width",
+    "Old F014 exact source fractional colors and negative hue assertions; independent tooling CSS HSL normalization with wrong-hue rejection",
+    "Retain historical F013/F014 math IDs, promote to exact formula/glyph/baseline/PNG ink assertions using formally integrated math package",
+    "Canonical tidy extension registration/type erasure/import transport explicitly recorded, actual loader invocation mandatory; no installation",
+    "Reject nonportable case IDs before any artifact writing; preserve four Gantt inputs with explicit ID aliases and rerender requirement",
+    "Full P4 integrates 148-source Zen structure/paint/negative-controls per backend; reused original and legacy oracles require exact source/fixture fingerprints",
+    "Raw image HTML self-contained; browser QA verifies every PNG/SVG byte and count, type representatives, filtering, decoding, desktop/mobile; acceptance banner requires same-candidate closed full P4 and hashed image review",
+    "Static text-decoration adapts explicit Canvas color and single-line descriptor using transparent-glyph passes for additional lines; glyph fill once; shadows share adapter; triple actual-line and erased-line negative controls"
+  ],
+  "rootFileSha256": {
+    "src/py_mermaid/model/flowchart.py": "1fe5ac21e6e845493c341c344a220e3ca546316503e8844b4eabdb790467046d",
+    "src/py_mermaid/rendering/skia/session.py": "836c70af70afe3895e89e3a77d81f29a8552350a1b22ad90041998130e0a47ec",
+    "src/py_mermaid/rendering/skia/scene.py": "a6e113dc6123be54bfa4f4c08138e64e97438fc2a9deda2beada57db6c6a76ac",
+    "tools/check_bulk_acceptance_controls.py": "fec3b8e243c60c6f03f35cd45b29744831b66877126077a1545f4bc316ae3641",
+    "tools/bulk_support.py": "0870758b7e64171a06e906650815d02922b86d8e205ae4ac2ff2e6061538c119",
+    "tools/run_bulk.py": "db7f1918ae85decf2168c2ceaaa871db57e54ebb2bcbf6ee7bf497ba45d2adc0",
+    "tools/oracle/bulk_capture.cjs": "587bc9f78cbb2fb125d7b763bd11f813146e464310fcc9f2facc7f2f394c3e3b",
+    "tools/oracle/f011_capture.cjs": "a5f293053eda3efa8cdd756f0d97b4a72ce85b5d36547da0b97dae19fefa8f8b",
+    "tools/rich_scene_checks.py": "f5feabf18fecbc718e62ee7adcf5f3ad797e4e02d455412852af45861e62c986",
+    "tools/build_bulk_report.py": "aca1a30a03166b416e8441a5c385a14f649b178fcf9460da1c4efa8838b5c251",
+    "tools/qa_bulk_report.cjs": "f5fa266fc59f016b9c0f495232c46c4e3e7a063929363f3c5a34a07172ee1af2",
+    "tests/bulk/shared/test_native.py": "5ad5f77b028a4e7f24c35d6a954d8bd890d462edfd7360007883afdf37bd982f",
+    "tests/f013/cases.json": "f8540332770ef6c6998325ef0dea655f0bc34e0dc907dc29a47805c2d00a43ee",
+    "tests/f014/cases.json": "f5d30347341718c22b6406fa561f7f45555755229cff1e195b631ce6010d902a",
+    "tests/f014/test_language.py": "e473cbc50e575acece317dc2074247c941a7fe0d3ec76c09226e2ac63cefea02",
+    "tests/f014/test_canvas.py": "ca65f073b172785e0abec1d707bb4558ac9e1cd1ecff700d4b57ae9b092d2f41",
+    "tests/tooling/test_bulk_fixture_identity.py": "0ee701b91541263e51515d6396b1440cb45b7e1d984953487af49a639b1a0953",
+    "tests/tooling/test_rich_scene_checks.py": "2db9070f18e923396e3f3edd8ba5f7418b8aec5df20b6268265523020b45b9a4"
+  },
+  "relatedEvidence": [
+    {
+      "runId": "BULK-P3-shared-visual-repair-20261106T060739Z-1f8095db",
+      "path": "test-runs\\BULK-P3-shared-visual-repair-20261106T060739Z-1f8095db\\run.json",
+      "sha256": "64f4c7158d0e013f1da629e564367d4791e272017df53e7129b1155287fe6e93",
+      "executionStatus": "FAILED",
+      "sourceUnchanged": true,
+      "commands": [
+        {
+          "name": "bulk-shared",
+          "exitCode": 1
+        },
+        {
+          "name": "f014",
+          "exitCode": 0
+        },
+        {
+          "name": "tooling",
+          "exitCode": 0
+        }
+      ]
+    },
+    {
+      "runId": "BULK-P3-tidy-oracle-and-shared-20261106T060923Z-b51c1f37",
+      "path": "test-runs\\BULK-P3-tidy-oracle-and-shared-20261106T060923Z-b51c1f37\\run.json",
+      "sha256": "7122c327d952a40dbd129c585109d372c443e913e079e672edbb8d8f7f323dec",
+      "executionStatus": "FAILED",
+      "sourceUnchanged": true,
+      "commands": [
+        {
+          "name": "canonical-tidy-capture",
+          "exitCode": 1
+        },
+        {
+          "name": "shared-63",
+          "exitCode": 0
+        }
+      ]
+    },
+    {
+      "runId": "BULK-P3-canonical-tidy-provider-20261106T061016Z-0c788e76",
+      "path": "test-runs\\BULK-P3-canonical-tidy-provider-20261106T061016Z-0c788e76\\run.json",
+      "sha256": "d975431da891ebd6e4702dcda664b72fbf1f3d6a4069dc4df0f27e5caed72d6c",
+      "executionStatus": "SUCCESS",
+      "sourceUnchanged": false,
+      "commands": [
+        {
+          "name": "original-provider",
+          "exitCode": 0
+        }
+      ]
+    },
+    {
+      "runId": "BULK-P3-portable-evidence-controls-20261106T061832Z-90dec231",
+      "path": "test-runs\\BULK-P3-portable-evidence-controls-20261106T061832Z-90dec231\\run.json",
+      "sha256": "9c02a1a2a733f6eb8b5f8be4c751fdd271ae033a48c197eb3b958d907645c8ff",
+      "executionStatus": "SUCCESS",
+      "sourceUnchanged": true,
+      "commands": [
+        {
+          "name": "tooling",
+          "exitCode": 0
+        },
+        {
+          "name": "all-fixture-portability-and-source",
+          "exitCode": 0
+        }
+      ]
+    },
+    {
+      "runId": "BULK-P3-legacy-color-math-repair-20261106T061858Z-5b64365c",
+      "path": "test-runs\\BULK-P3-legacy-color-math-repair-20261106T061858Z-5b64365c\\run.json",
+      "sha256": "34317ac01ea91cf5f237a87f58f81925f4cdd9d0c51d7f2c3cfcef610525818e",
+      "executionStatus": "SUCCESS",
+      "sourceUnchanged": true,
+      "commands": [
+        {
+          "name": "f013-full-cpu",
+          "exitCode": 0
+        },
+        {
+          "name": "f014-retained-math-id-cpu",
+          "exitCode": 0
+        }
+      ]
+    },
+    {
+      "runId": "BULK-P3-viewer-validation-20261106T061528Z-bad59616",
+      "path": "test-runs\\BULK-P3-viewer-validation-20261106T061528Z-bad59616\\run.json",
+      "sha256": "aca18b45c40252bd6e10d54e600b86c057a418e0e8abeb032964ded671e3ca5e",
+      "executionStatus": "FAILED",
+      "sourceUnchanged": true,
+      "commands": [
+        {
+          "name": "build-diagnostic-only-viewer",
+          "exitCode": 0
+        },
+        {
+          "name": "browser-and-raw-byte-qa",
+          "exitCode": 1
+        }
+      ]
+    },
+    {
+      "runId": "BULK-P3-evidence-incident-20261106T061416Z-28547325",
+      "path": "test-runs\\BULK-P3-evidence-incident-20261106T061416Z-28547325\\run.json",
+      "sha256": "33774992e6cdd6676d4d42b060a74127ad1e0001af7837408953f76c6dfba097",
+      "executionStatus": "ERROR",
+      "sourceUnchanged": true,
+      "commands": []
+    },
+    {
+      "runId": "BULK-P3-evidence-incident-confirmation-20261106T061455Z-3ff27247",
+      "path": "test-runs\\BULK-P3-evidence-incident-confirmation-20261106T061455Z-3ff27247\\run.json",
+      "sha256": "cb21cb2f4735392fb4ac87125bd7a99b8c9ad2536961ee79c55ac0346804895e",
+      "executionStatus": "SUCCESS",
+      "sourceUnchanged": true,
+      "commands": []
+    },
+    {
+      "runId": "BULK-P3-public-decoration-probe-20261106T063431Z-f23966d9",
+      "path": "test-runs\\BULK-P3-public-decoration-probe-20261106T063431Z-f23966d9\\run.json",
+      "sha256": "0caa753a836e70bd8539286841709df1c05fbc2e0219379aea5b9fc9cb06490e",
+      "executionStatus": "SUCCESS",
+      "sourceUnchanged": true,
+      "commands": []
+    },
+    {
+      "runId": "BULK-P3-public-decoration-transparent-glyph-20261106T063555Z-d9097ef7",
+      "path": "test-runs\\BULK-P3-public-decoration-transparent-glyph-20261106T063555Z-d9097ef7\\run.json",
+      "sha256": "118a14a50d0c92a5d3073b51dfa6226ba1e4ceb87fe78d11fd2bbc6630adeb4f",
+      "executionStatus": "SUCCESS",
+      "sourceUnchanged": true,
+      "commands": []
+    },
+    {
+      "runId": "BULK-P3-css-decoration-repair-20261106T063921Z-fe1475d5",
+      "path": "test-runs\\BULK-P3-css-decoration-repair-20261106T063921Z-fe1475d5\\run.json",
+      "sha256": "e0849a3cdcee8ece1e454e42dc4eb82b6fd117d0ae2c801a2b1f8c06ad7e6b75",
+      "executionStatus": "SUCCESS",
+      "sourceUnchanged": false,
+      "commands": [
+        {
+          "name": "shared-all",
+          "exitCode": 0
+        },
+        {
+          "name": "f014-all",
+          "exitCode": 0
+        }
+      ]
+    },
+    {
+      "runId": "BULK-P3-joint-repair-freeze-20261106T065048Z-c13d6d0d",
+      "path": "test-runs\\BULK-P3-joint-repair-freeze-20261106T065048Z-c13d6d0d\\run.json",
+      "sha256": "be533d9a9e44930c7c08b31d009e8d728c7d46df446962fd053bad8530564320",
+      "executionStatus": "SUCCESS",
+      "sourceUnchanged": true,
+      "commands": [
+        {
+          "name": "compile",
+          "exitCode": 0
+        },
+        {
+          "name": "shared-final",
+          "exitCode": 0
+        },
+        {
+          "name": "tooling-final",
+          "exitCode": 0
+        },
+        {
+          "name": "collection",
+          "exitCode": 0
+        },
+        {
+          "name": "assembly",
+          "exitCode": 0
+        },
+        {
+          "name": "fixture-freeze",
+          "exitCode": 0
+        },
+        {
+          "name": "original-run-integrity",
+          "exitCode": 0
+        }
+      ]
+    }
+  ],
+  "evidenceCollision": {
+    "mapping": "references/bulk-case-id-aliases.json",
+    "oldFourCasesRejectedForIndependentImageProof": true,
+    "sourceInputsAndDenominatorPreserved": true
+  },
+  "incident": "BULK-P3-evidence-incident-confirmation-20261106T061455Z-3ff27247/artifacts/incident.json",
+  "source": {
+    "CSS": "Source source-relative fontsize/CSS units resolved with public Canvas metrics; not a browser runtime",
+    "themes": "Fixed original bulk theme variable parity and Khroma operations; do not round channels prematurely",
+    "tidy": "canonical git blobs packages/mermaid-layout-tidy-tree/src/{layouts,render,layout}.ts and non-layered-tidy-tree-layout@2.0.2 immutable JS files"
+  },
+  "limitations": [
+    "Related runs occurred while other owners repaired; they are not joint-candidate acceptance",
+    "Initial diagnostic viewer byte-count rejection correctly exposed case-insensitive artifact collision; initial candidate remains rejected",
+    "Final P4, final source-image review, final viewer QA and delivery still required",
+    "Installation, commit, push and publication not performed"
+  ],
+  "refrozenCandidate": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
+  "freezeRun": "test-runs\\BULK-P3-joint-repair-freeze-20261106T065048Z-c13d6d0d"
+}

@@ -1,0 +1,352 @@
+{
+  "schema": "py-mermaid-bulk-C-P4-repair/v1",
+  "status": "RELATED_PASS_SOURCE_STOPPED_PENDING_FINAL_JOINT_P4",
+  "sourceStopped": true,
+  "productSha256": "ee919bfc306821bd40612950a499f99f1951aacb01a43f47176f965ec292f19c",
+  "productHashMethod": "sha256 canonical sorted compact JSON path-to-sha256 of all C owned product files/assets; excludes pycache",
+  "products": {
+    "src/py_mermaid/diagrams/business/_swimlane_routing/__init__.py": "a0872233b4fb985c7e9ef3c8214e51869c4cd88d425f532aeab6a99cc6c15c6a",
+    "src/py_mermaid/diagrams/business/_swimlane_routing/detours.py": "1286cd2e791ff5589b6eb7cf8e1d0c8ec1dc7db830708e205ecd60be09439695",
+    "src/py_mermaid/diagrams/business/_swimlane_routing/direction.py": "704f61e6334035affd24f4e22f40ce4328e9bc2c22733f9ad927110d68c32c35",
+    "src/py_mermaid/diagrams/business/_swimlane_routing/endpoint_clip.py": "c78c8106840b04d7fb3110d19b50a96c1a75d4b5745eca26bdf1882e0f91234d",
+    "src/py_mermaid/diagrams/business/_swimlane_routing/geometry.py": "ff80abe76b4381d44a866948f499814d694f4a727530052521517e118f475503",
+    "src/py_mermaid/diagrams/business/_swimlane_routing/label_anchoring.py": "6d9d968a3252723d0bf8a2c7d03b7fc19175af86201d552b85acb81cb2361d08",
+    "src/py_mermaid/diagrams/business/_swimlane_routing/materialized.py": "621023f77414e94acbe69ee048466959fd3d5397e68c7aedc3bf6c40a188aaa3",
+    "src/py_mermaid/diagrams/business/_swimlane_routing/router.py": "64caadc01cba284bda4168296d9ff8316bdc671a7b075d1c2c7b03be9e214a24",
+    "src/py_mermaid/diagrams/business/_swimlane_routing/shared_tracks.py": "abe833d3ddfb48dcc6bedde8c96c51c5910bae754774a1a7cbbd3f8364bc8c56",
+    "src/py_mermaid/diagrams/business/_swimlane_routing/terminal_routes.py": "de48c8b38fc0b8faf3f853df4be47698ffc208f7463501efe221978ccea0f7d1",
+    "src/py_mermaid/diagrams/business/_swimlane_routing/validation.py": "e3fd59df65ea474eb4e812382510fc23b4cf6f13a9f284ded5a7d7337f15af4e",
+    "src/py_mermaid/diagrams/info/__init__.py": "3789d7fa8f1d383647b3a42de54d586b40756273e4b1dbf8f04ab2c1bfa4284c",
+    "src/py_mermaid/diagrams/railroad/__init__.py": "78d18a55ddb85967cd8cdb420e52670002890d748472be91d86d4c44525d3a4b",
+    "src/py_mermaid/diagrams/railroad/layout.py": "016cc2b31b08c8305df0681cd3b6c368c4479b20243d61039f6c0c107577562e",
+    "src/py_mermaid/diagrams/railroad/model.py": "f49afe67da2fb4187d280b16aaed7449b517f192b34e49982080b9f5fb1e98c2",
+    "src/py_mermaid/diagrams/railroad/parser.py": "e523ecdd94b19508be0f06d956b10f4d1330a7a4faabb00caff3839f8f5238a0",
+    "src/py_mermaid/diagrams/sequence/__init__.py": "6e726c93d670e2f3fb9bbaf48ad2c5a36de032552669e819c4f976cb99507326",
+    "src/py_mermaid/diagrams/sequence/layout.py": "fc89a1bbfaa66c7fdf41f87521f6f344e92ea3e0e324ba9217555697b470be75",
+    "src/py_mermaid/diagrams/sequence/model.py": "e08b36a53ae3e1070b0359413e142bf29b1a7d4bdc52d54c2253ae5a92a4c677",
+    "src/py_mermaid/diagrams/sequence/parser.py": "dcc0731aca75c83464c45e01daef92a255cfc56f538ca500e92b372a92f9738f",
+    "src/py_mermaid/diagrams/sequence/presentation.py": "8de72776aa193b53327765352a5dfd923f72041a6d0a0211c1ae5a32b2485f19",
+    "src/py_mermaid/diagrams/zenuml/__init__.py": "0cc8def7994025c755e3ee3ec81ecb49fccfe89697ca845981fba3c46f81ebdf",
+    "src/py_mermaid/diagrams/zenuml/assets/actor.svg": "502a5b8566f9d7f3621c9459c3d35cd25a8628fbca4c123d0b023f88a2a333cd",
+    "src/py_mermaid/diagrams/zenuml/assets/alt-fragment.svg": "661310f14d8779bcf6a8171a28905dcc6db69ec8919703bc6c55c5d074815440",
+    "src/py_mermaid/diagrams/zenuml/assets/azurefunction.svg": "1a6c9c108d5f63f7b78bc6fbc464059acd2eaa8c1d111e9bcd28a8b2cdf470b9",
+    "src/py_mermaid/diagrams/zenuml/assets/boundary.svg": "4c3f60734af2fbd2191f880b2d2ec55225ff339b59f0bdcd4fe77d3b54dbd2f5",
+    "src/py_mermaid/diagrams/zenuml/assets/control.svg": "64d9aa04d905c62762ab7bf19e7f42ba78b4843d026e7d3823db6addb613cae8",
+    "src/py_mermaid/diagrams/zenuml/assets/critical-fragment.svg": "2b2634f268f04784d5b9afd5e00cf4eeedd89e78bb52aa7e90228efc68922431",
+    "src/py_mermaid/diagrams/zenuml/assets/database.svg": "c400ec7b8da9a1c8e4324e02feb4b4743c528ad45ea0d5d443feb15315b7e400",
+    "src/py_mermaid/diagrams/zenuml/assets/ec2.svg": "155b13065f4420c794f71fcc3c5d3f78be4e1e53d65f3b5388ec7742f8875ddb",
+    "src/py_mermaid/diagrams/zenuml/assets/entity.svg": "0ebeda02e1922d323d7118b7f6025ef28043ceb940b64ba87576cabf009d257d",
+    "src/py_mermaid/diagrams/zenuml/assets/iam.svg": "2bdcac04a28e4b5bdfc3cd35d7ca496ad1f6fa0bc70e5f9200599b443af71624",
+    "src/py_mermaid/diagrams/zenuml/assets/lambda.svg": "6f29b9801170221431fbc78f67b689a9580c62f64e453f8d18a5cefd807636bf",
+    "src/py_mermaid/diagrams/zenuml/assets/LICENSE-core": "d4a77cbf1dc0975cd4be7266972dc6d3a6c6d68d43235384d6e4b6f12934e978",
+    "src/py_mermaid/diagrams/zenuml/assets/loop-fragment.svg": "24d3b7bf2b3c53d7463201af017ca46b47cfe8d8ab67c48f2e064d9430a8876e",
+    "src/py_mermaid/diagrams/zenuml/assets/Microsoft_Terms_of_Use.pdf": "983e83cef1a8f85164760b076a96df54cb50af345861cb1d8344040037d0531c",
+    "src/py_mermaid/diagrams/zenuml/assets/opt-fragment.svg": "f06ceede25ac9ab4c669cf9f158b44cfdec7ab6aedf9f49613ba085f592d0dbf",
+    "src/py_mermaid/diagrams/zenuml/assets/par-fragment.svg": "82abd7f9b1386281ebaceabf3fbbbab1123cb7e851857e84550f38c39bc5f3be",
+    "src/py_mermaid/diagrams/zenuml/assets/ref-fragment.svg": "60d4a29de41e8a6738b5776d4409c55cc72a35fb02a2ccc1d19e00c92d3f6587",
+    "src/py_mermaid/diagrams/zenuml/assets/section-fragment.svg": "81fb298a6460f96bc68a79613673b35d1d232ed23f68bfa13ef92cedd0a3c9d2",
+    "src/py_mermaid/diagrams/zenuml/assets/sns.svg": "1e3d19286abcc04364d5a2e8f83faa1dddf1657d68a1d9e9c6bfe351f0c5e242",
+    "src/py_mermaid/diagrams/zenuml/assets/sqs.svg": "39915b6e2eb2d77286a905bb0ca94912bca36605d518433db3b3f0d113e5d07d",
+    "src/py_mermaid/diagrams/zenuml/assets/try-catch-fragment.svg": "b48b67f7f6d53fc424611cec28f424020434dbd5f46105782e2eb883e398df50",
+    "src/py_mermaid/diagrams/zenuml/emoji.py": "840bdacc296cfe42d0eee5d6877e5771cb7603a65890c94c44266f61033822ad",
+    "src/py_mermaid/diagrams/zenuml/geometry.py": "d9dc47378a9d0d5d08ac3d9572d1a37e00fc5948ad81afa4ad187a271bc6528b",
+    "src/py_mermaid/diagrams/zenuml/layout.py": "824799bc0a898b266d8d00e5d67b97521731dfede3cc07183a98205fd6b6ff7b",
+    "src/py_mermaid/diagrams/zenuml/model.py": "05ecfe619c92e6704f2e08a080425349cc28af64ef9e02d916d8d4da4b0a8a61",
+    "src/py_mermaid/diagrams/zenuml/parser.py": "d8ef79becf9cbef6e50f21f6fbe2baa8c2acac0f506cab07c256f334d12bb6a6"
+  },
+  "fullSourceIdentityAtRelatedRun": "60c0e85dc31d1b77001e55cfc0556fd5ab7196190f416a35539bda1ee020af1c",
+  "methods": 351,
+  "preservedOriginalMethods": 335,
+  "newSourceIndependentMethods": 16,
+  "unitRun": "BULK-record-20261106T063958Z-0ee0d63d",
+  "cpuAndParityRun": "BULK-batch-20261106T064003Z-00bc0419",
+  "nativeCases": 302,
+  "nativeFailed": 0,
+  "parityCases": 148,
+  "parityCounts": {
+    "PASS": 148
+  },
+  "casesCUnchangedSha256": "732db377af6ade9561e74171a812ed8877218a35641b70d44ca76ec2b23c1265",
+  "fixturePolicy": "No source/ID/expectedText edits;292render+2exact reviewed content_loss requiring full native author intent+8negative retained. Parent owns combined670 fixtures.",
+  "tool": {
+    "file": "tools/check_zenuml_parity.py",
+    "sha256": "0e500cae09ac5beabeac9e4d3a359c8ac591af691e8ab723c00c589e1d309bc8",
+    "schema": "py-mermaid-zenuml-parity/v1",
+    "argv": [
+      "--fixtures",
+      "FILE",
+      "--oracle",
+      "DIR",
+      "--native",
+      "DIR",
+      "--out",
+      "NEW_DIR"
+    ],
+    "positiveFields": [
+      "participant multiplicity/top headers (no unconsumed footer)",
+      "participant label/emoji/stereotype/icon presence",
+      "left-right participant order",
+      "sync/async/self/creation/keyword-return/assignment-return label/number/end identity/arrow kind",
+      "source constant relative lifeline and occurrence-wall offsets",
+      "marker physical path connection and stroke width",
+      "actual emitted dash",
+      "fragment kind/visible kind/condition paint/sections/separators",
+      "group membership",
+      "fragment spatial participant containment",
+      "actual comments/divider content",
+      "text/line/marker/asset PNG ink"
+    ],
+    "coordinatePolicy": "No equality of absolute A/B positions or raster sizes. Endpoints compare fixed source relative wall offsets within1.01px; straight line-to-marker tip<=1.1px.",
+    "contentLossPolicy": "Exact2ID+original absent/present transcript+participant list, full independent native call/participant/section/wall contracts; never class-wide bypass.",
+    "controls": {
+      "extra-footer": 148,
+      "white-png": 148,
+      "wrong-number": 144,
+      "wrong-arrow": 144,
+      "missing-line": 144,
+      "wrong-occurrence-wall": 143,
+      "missing-glyph-event": 144,
+      "disconnected-marker": 144,
+      "erased-glyph-png": 144,
+      "erased-arrow-png": 144,
+      "number-overlaps-glyph": 24,
+      "missing-fragment-condition": 40,
+      "missing-section-label": 26,
+      "missing-separator": 31,
+      "solid-creation": 29
+    },
+    "controlTrials": 1597,
+    "controlArtifacts": "test-runs/BULK-batch-20261106T064003Z-00bc0419/artifacts/zen-parity/<id>.controls/",
+    "controlsPersisted": "Each mutated native JSON is stored with verdict; white/erased glyph/erased arrow derived PNGs are stored. Original A/B never overwritten."
+  },
+  "sourceChanges": [
+    "Zen lexer actual TITLE/EVENT whole-line modes; all WHILE/SECTION/return annotation aliases; source formatted string/typed assignment/emoji bare function semantics and participant declaration order.",
+    "Zen cumulative section numbering; separate assignment return assignee and number; source sync/async/return/creation wall endpoints;2px marker strokes;creation dashed/open and precise target frame edges; exact source self-return native paths.",
+    "Zen actual FrameBorder/global shift/spatial nesting/near-full extension; explicit-return participant contribution; all section/par separators; source visible KindLabel,partialopacity brackets/catch/finally backgrounds;fragment comments and context-dependent comment anchors; source divider equals cleanup.",
+    "Zen actual SVG entry never paints footer; creation headers emitted once. Source max250 box with unclipped long text retained.",
+    "Zen comments consume source Marked static tokens (code/bold/em/br) with own safe native projection; source-unconsumed link/heading/list punctuation preserved;Mermaid KaTeX/icon/backslash-newline transport not incorrectly activated.",
+    "Sequence bracketed control labels and middle anchors; source inline3,3 section dash after CSS cascade, ordinary userCSS cannot override it but!important can;2px source line CSS;no invented note/labelBox shadow for dangling source filter references,actor prefixed filters retained."
+  ],
+  "publicAdditiveFields": {
+    "Statement": [
+      "assignee",
+      "return_explicit",
+      "source_text"
+    ],
+    "ZenLayout": [
+      "paint_ir (pure bind-to-actual-paint metadata, checker verifies labels/numbers/paths/marker/dash against real trace)"
+    ]
+  },
+  "sources": {
+    ".local/bulk-sources/zenuml/source/src/g4/sequenceLexer.g4": "9bf0cc267143cce32641831d0a6ca8ee5dbb5de995e2e713f9521f7a06ee2ece",
+    ".local/bulk-sources/zenuml/source/src/g4/sequenceParser.g4": "9e7624e377f5e08ace461a099e91d90e92ac795f59fd716552c7a5a630cc6c54",
+    ".local/bulk-sources/zenuml/source/src/utils/StringUtil.ts": "c1143f4a04b9552096ddf00da44cc3633c1986d5f765e20264a77634b19b9da4",
+    ".local/bulk-sources/zenuml/source/src/svg/walkStatements.ts": "43fbfcf7515b14602734c060f79b109df94e123f685b64a4bae8480db05317ad",
+    ".local/bulk-sources/zenuml/source/src/svg/buildStatementGeometry.ts": "30afc8cf61570f959140dd6508e044b7d115ef3920030846909af64de9717524",
+    ".local/bulk-sources/zenuml/source/src/svg/buildFragmentGeometry.ts": "7d681b394563ecee28ad55ed4c5674e576f63f6f2e4c12c8d39555587ee1a54e",
+    ".local/bulk-sources/zenuml/source/src/svg/buildGeometry.ts": "f73a916895b5972c3a97b5be22fe281f94d9d8bce6ba78a8c0b3f48f994dd127",
+    ".local/bulk-sources/zenuml/source/src/svg/renderToSvg.ts": "5563a02c96212f97a5d0446aa54bec2f947afb092ea25a62d404737606eee156",
+    ".local/bulk-sources/zenuml/source/src/svg/components/creation.ts": "a1c688b5ee4337547bd58cf4f52ee203ec9d76188a9aaf3ae7f088498782ab07",
+    ".local/bulk-sources/zenuml/source/src/svg/components/message.ts": "1de2823789560677c5b81017e1c2adfa68ba34897f2bdabdc852265279827c85",
+    ".local/bulk-sources/zenuml/source/src/svg/components/return.ts": "05f5a2406579a60250c11baf96b228a4049808698ae79ab771bc540d5b3b346a",
+    ".local/bulk-sources/zenuml/source/src/svg/components/fragment.ts": "73c805092b4107fb966b2c7eed66b30d86f35ba1a188f62c5ecc957138859508",
+    ".local/bulk-sources/zenuml/source/src/svg/components/participant.ts": "67f32c0aadef4b0da557935ae2595159663fdb56f212860e0a99d95a4039479e",
+    ".local/bulk-sources/zenuml/source/src/svg/components/comment.ts": "de16149e5f49bce9c09e0093836425e28b3810df1e53c607db8aaf968ef5efc1",
+    ".local/bulk-sources/zenuml/source/src/svg/components/divider.ts": "3e9f86d1d0807237a32f2b447013cdaa0fe7c1dddc8869b0d2ac2d57a7b5f830",
+    ".local/bulk-sources/zenuml/source/src/svg/buildGeometry.spec.ts": "4e9aaa1237706f0c05a0587a1ae86abf90ffddf255a77e105afc72775f36f312",
+    ".local/bulk-sources/zenuml/source/src/positioning/Constants.ts": "3dc7bad46f17c885ebb0c89ef81917a3775fdded94da750358094e9149ab8090",
+    ".local/bulk-sources/zenuml/source/src/positioning/Coordinates.ts": "c41c425ff4297c1fcac1a3ee70c03f5678ce71ac4bc5d95b1cc5234564b67884",
+    ".local/bulk-sources/zenuml/source/src/positioning/FrameBorder.ts": "99fb2218455a3e748d3f2208431da0e5348b2821fa07aad5c89800574c1937af",
+    ".local/bulk-sources/zenuml/source/src/parser/FrameBuilder.ts": "52e44e0646231f2e6c38dd9c61932ee2e28e11ba1f2c672f2f955744165ec822",
+    ".local/bulk-sources/zenuml/source/src/positioning/LocalParticipants.ts": "394d6453611594e468f2af2b8c861013ef9fbc282cdd68f2e9c659d670ac842d",
+    ".local/upstream-mermaid/packages/mermaid/src/diagrams/sequence/svgDraw.js": "54dfd9f1a67bf7e935a4800150a086818fe639ada82f06c3b1c7cb04874023db",
+    ".local/upstream-mermaid/packages/mermaid/src/diagrams/sequence/styles.js": "f80f572951cb6367a52b9ceeb443ce2872a020d8356ce14685237ff0b9bbcfa4"
+  },
+  "manualQA": {
+    "status": "NO_UNRESOLVED_SUBSTANTIVE_DEFECT_IN_SELECTED_RAW_VIEWS",
+    "selectedPairs": [
+      {
+        "id": "C-sequence-critical-break-rect",
+        "officialPNG": "test-runs/BULK-P3-official-refresh-20261106T050328Z-0274d04e/artifacts/oracle/C-sequence-critical-break-rect.png",
+        "officialSha256": "3e86d59254df93f041d5087fe1d70941a45616df20406a9efd2f1b2d9cdaf399",
+        "nativePNG": "test-runs/BULK-batch-20261106T064003Z-00bc0419/artifacts/native-cpu-C/C-sequence-critical-break-rect.png",
+        "nativeSha256": "d9699bcd3a1e5de5c13b7a8ee328fda070c8455f66794866e3e8e77d8a3ac509",
+        "actualViewPath": "test-runs/BULK-batch-20261106T063609Z-774cfdee/artifacts/native-cpu-C/C-sequence-critical-break-rect.png",
+        "viewedSha256": "d9699bcd3a1e5de5c13b7a8ee328fda070c8455f66794866e3e8e77d8a3ac509",
+        "finalIdenticalToViewed": true
+      },
+      {
+        "id": "C-sequence-notes",
+        "officialPNG": "test-runs/BULK-P3-official-refresh-20261106T050328Z-0274d04e/artifacts/oracle/C-sequence-notes.png",
+        "officialSha256": "740a541a202f81f457c5c3d1704c7d02817199614d46692157832e81805006c7",
+        "nativePNG": "test-runs/BULK-batch-20261106T064003Z-00bc0419/artifacts/native-cpu-C/C-sequence-notes.png",
+        "nativeSha256": "3d369bff26c55da3dade0b9bd2ed50eadeba99edfcfa117ac3fd49360f4c49b8",
+        "actualViewPath": "test-runs/BULK-batch-20261106T063609Z-774cfdee/artifacts/native-cpu-C/C-sequence-notes.png",
+        "viewedSha256": "3d369bff26c55da3dade0b9bd2ed50eadeba99edfcfa117ac3fd49360f4c49b8",
+        "finalIdenticalToViewed": true
+      },
+      {
+        "id": "C-info-show",
+        "officialPNG": "test-runs/BULK-P3-official-refresh-20261106T050328Z-0274d04e/artifacts/oracle/C-info-show.png",
+        "officialSha256": "2d93fa954736d1ff6c2413b85c9fc357470a3af668f2c0e807f609e8047c3d95",
+        "nativePNG": "test-runs/BULK-batch-20261106T064003Z-00bc0419/artifacts/native-cpu-C/C-info-show.png",
+        "nativeSha256": "6b687e0380daf11ca2eaea133ba69a64e923b969092cabeb814b94025a427518",
+        "actualViewPath": "test-runs/BULK-batch-20261106T063609Z-774cfdee/artifacts/native-cpu-C/C-info-show.png",
+        "viewedSha256": "6b687e0380daf11ca2eaea133ba69a64e923b969092cabeb814b94025a427518",
+        "finalIdenticalToViewed": true
+      },
+      {
+        "id": "C-railroad-spec-011",
+        "officialPNG": "test-runs/BULK-P3-official-refresh-20261106T050328Z-0274d04e/artifacts/oracle/C-railroad-spec-011.png",
+        "officialSha256": "b20486987dfc67cc3aeb403a9eb863aeed5de44fd5c8283a2e6dc270052d3886",
+        "nativePNG": "test-runs/BULK-batch-20261106T064003Z-00bc0419/artifacts/native-cpu-C/C-railroad-spec-011.png",
+        "nativeSha256": "3fa08573603af8d1d619b4cda0cb68bfd671fcdc32062e384ebf6a1d8d941201",
+        "actualViewPath": "test-runs/BULK-batch-20261106T063609Z-774cfdee/artifacts/native-cpu-C/C-railroad-spec-011.png",
+        "viewedSha256": "3fa08573603af8d1d619b4cda0cb68bfd671fcdc32062e384ebf6a1d8d941201",
+        "finalIdenticalToViewed": true
+      },
+      {
+        "id": "C-railroadEbnf-spec-011",
+        "officialPNG": "test-runs/BULK-P3-official-refresh-20261106T050328Z-0274d04e/artifacts/oracle/C-railroadEbnf-spec-011.png",
+        "officialSha256": "c5b2c88ff43b238a6379ba9d48ab43abf0638937f4728631488b8923ad22e589",
+        "nativePNG": "test-runs/BULK-batch-20261106T064003Z-00bc0419/artifacts/native-cpu-C/C-railroadEbnf-spec-011.png",
+        "nativeSha256": "8dd25b3432d5be862890c54f70cf4f1d5820ab7134bd117fe74399990c65f629",
+        "actualViewPath": "test-runs/BULK-batch-20261106T063609Z-774cfdee/artifacts/native-cpu-C/C-railroadEbnf-spec-011.png",
+        "viewedSha256": "8dd25b3432d5be862890c54f70cf4f1d5820ab7134bd117fe74399990c65f629",
+        "finalIdenticalToViewed": true
+      },
+      {
+        "id": "C-railroadAbnf-spec-009",
+        "officialPNG": "test-runs/BULK-P3-official-refresh-20261106T050328Z-0274d04e/artifacts/oracle/C-railroadAbnf-spec-009.png",
+        "officialSha256": "8c305ff31afedf795cecf384efd6e5acfb5edf1a6bfc81dbbae0cd5c876010c7",
+        "nativePNG": "test-runs/BULK-batch-20261106T064003Z-00bc0419/artifacts/native-cpu-C/C-railroadAbnf-spec-009.png",
+        "nativeSha256": "8bc7240d43f05bf52d6a50f80c89727bebd1522f52de9b492ece20476abff74b",
+        "actualViewPath": "test-runs/BULK-batch-20261106T063609Z-774cfdee/artifacts/native-cpu-C/C-railroadAbnf-spec-009.png",
+        "viewedSha256": "8bc7240d43f05bf52d6a50f80c89727bebd1522f52de9b492ece20476abff74b",
+        "finalIdenticalToViewed": true
+      },
+      {
+        "id": "C-railroadPeg-spec-011",
+        "officialPNG": "test-runs/BULK-P3-official-refresh-20261106T050328Z-0274d04e/artifacts/oracle/C-railroadPeg-spec-011.png",
+        "officialSha256": "6421258c775725327085fefe3827dae934931a4417684d0030c17505362b235d",
+        "nativePNG": "test-runs/BULK-batch-20261106T064003Z-00bc0419/artifacts/native-cpu-C/C-railroadPeg-spec-011.png",
+        "nativeSha256": "a9cc84698b02ce3fa9e8db861a9d9c1bd6797aef63b637c7afc88194d0cd312a",
+        "actualViewPath": "test-runs/BULK-batch-20261106T063609Z-774cfdee/artifacts/native-cpu-C/C-railroadPeg-spec-011.png",
+        "viewedSha256": "a9cc84698b02ce3fa9e8db861a9d9c1bd6797aef63b637c7afc88194d0cd312a",
+        "finalIdenticalToViewed": true
+      },
+      {
+        "id": "C-zenuml-source-demo1-smoke",
+        "officialPNG": "test-runs/BULK-P3-official-refresh-20261106T050328Z-0274d04e/artifacts/oracle/C-zenuml-source-demo1-smoke.png",
+        "officialSha256": "c93b95a7d3aa5b891608443e5ea12f5b4dee6a6aca93ddfcdcab5e6f79e74061",
+        "nativePNG": "test-runs/BULK-batch-20261106T064003Z-00bc0419/artifacts/native-cpu-C/C-zenuml-source-demo1-smoke.png",
+        "nativeSha256": "98c600fa079a97fa08bf051d155f8bad8ca3f6a81a016acd04a174855005a183",
+        "actualViewPath": "test-runs/BULK-batch-20261106T063609Z-774cfdee/artifacts/native-cpu-C/C-zenuml-source-demo1-smoke.png",
+        "viewedSha256": "98c600fa079a97fa08bf051d155f8bad8ca3f6a81a016acd04a174855005a183",
+        "finalIdenticalToViewed": true
+      },
+      {
+        "id": "C-zenuml-source-demo3-nested-fragments",
+        "officialPNG": "test-runs/BULK-P3-official-refresh-20261106T050328Z-0274d04e/artifacts/oracle/C-zenuml-source-demo3-nested-fragments.png",
+        "officialSha256": "f88b22bdc2683c399b8ffa27f2b65b02c283abccbc5cc862d0f04c96375ccd2a",
+        "nativePNG": "test-runs/BULK-batch-20261106T064003Z-00bc0419/artifacts/native-cpu-C/C-zenuml-source-demo3-nested-fragments.png",
+        "nativeSha256": "8c79161da121df1ab6e4c0df21bbef917b2fe4258d822f21d753ce272522c89c",
+        "actualViewPath": "test-runs/BULK-batch-20261106T063609Z-774cfdee/artifacts/native-cpu-C/C-zenuml-source-demo3-nested-fragments.png",
+        "viewedSha256": "8c79161da121df1ab6e4c0df21bbef917b2fe4258d822f21d753ce272522c89c",
+        "finalIdenticalToViewed": true
+      },
+      {
+        "id": "C-zenuml-source-emoji-all-features",
+        "officialPNG": "test-runs/BULK-P3-official-refresh-20261106T050328Z-0274d04e/artifacts/oracle/C-zenuml-source-emoji-all-features.png",
+        "officialSha256": "fa69c17e3db3ff7890ee489e1bd5e1663cb592d356df0abdf96a452df89dc676",
+        "nativePNG": "test-runs/BULK-batch-20261106T064003Z-00bc0419/artifacts/native-cpu-C/C-zenuml-source-emoji-all-features.png",
+        "nativeSha256": "a1da30c777a7e2334857e2d0e8cd5f34fa44de9097be20ab455cc62339288709",
+        "actualViewPath": "test-runs/BULK-batch-20261106T063609Z-774cfdee/artifacts/native-cpu-C/C-zenuml-source-emoji-all-features.png",
+        "viewedSha256": "a1da30c777a7e2334857e2d0e8cd5f34fa44de9097be20ab455cc62339288709",
+        "finalIdenticalToViewed": true
+      },
+      {
+        "id": "C-zenuml-source-emoji-fragments-return",
+        "officialPNG": "test-runs/BULK-P3-official-refresh-20261106T050328Z-0274d04e/artifacts/oracle/C-zenuml-source-emoji-fragments-return.png",
+        "officialSha256": "c4e93c50ac0278643c58e1895c3628f4ad34cfe8942fb1fdf7f9dec83ced4237",
+        "nativePNG": "test-runs/BULK-batch-20261106T064003Z-00bc0419/artifacts/native-cpu-C/C-zenuml-source-emoji-fragments-return.png",
+        "nativeSha256": "2bc9c10739e3cfcacc0de451e11de4951bbe95144b4acdb628d32a855bb1400a",
+        "actualViewPath": "test-runs/BULK-batch-20261106T063609Z-774cfdee/artifacts/native-cpu-C/C-zenuml-source-emoji-fragments-return.png",
+        "viewedSha256": "2bc9c10739e3cfcacc0de451e11de4951bbe95144b4acdb628d32a855bb1400a",
+        "finalIdenticalToViewed": true
+      },
+      {
+        "id": "C-zenuml-source-repro-icon-stereo-group",
+        "officialPNG": "test-runs/BULK-P3-official-refresh-20261106T050328Z-0274d04e/artifacts/oracle/C-zenuml-source-repro-icon-stereo-group.png",
+        "officialSha256": "9dd083ba05b76bad1da7bfd682287436244970dcfb78b3f2644c48da8101180f",
+        "nativePNG": "test-runs/BULK-batch-20261106T064003Z-00bc0419/artifacts/native-cpu-C/C-zenuml-source-repro-icon-stereo-group.png",
+        "nativeSha256": "28c6fca5e9a04bd07d18e826d25ebad8b28c53dc635a031c666d346a702ab079",
+        "actualViewPath": "test-runs/BULK-batch-20261106T063609Z-774cfdee/artifacts/native-cpu-C/C-zenuml-source-repro-icon-stereo-group.png",
+        "viewedSha256": "28c6fca5e9a04bd07d18e826d25ebad8b28c53dc635a031c666d346a702ab079",
+        "finalIdenticalToViewed": true
+      },
+      {
+        "id": "C-zenuml-cloud-gallery",
+        "officialPNG": "test-runs/BULK-P3-official-refresh-20261106T050328Z-0274d04e/artifacts/oracle/C-zenuml-cloud-gallery.png",
+        "officialSha256": "85d8fe48123267b3943ff15cd0de5f38ff1fbad3dc51ca4a4759915f03b0474b",
+        "nativePNG": "test-runs/BULK-batch-20261106T064003Z-00bc0419/artifacts/native-cpu-C/C-zenuml-cloud-gallery.png",
+        "nativeSha256": "5e952249aef2920d7f68880af4e9fed8cfd3539d5ac1dbee165464781cdd1273",
+        "actualViewPath": "test-runs/BULK-batch-20261106T063609Z-774cfdee/artifacts/native-cpu-C/C-zenuml-cloud-gallery.png",
+        "viewedSha256": "5e952249aef2920d7f68880af4e9fed8cfd3539d5ac1dbee165464781cdd1273",
+        "finalIdenticalToViewed": true
+      }
+    ],
+    "observations": [
+      "Demo1 numbers are now left-anchored by right edge, self-call glyphs clear; alt/tcf numbering accumulates;allcreation arrows dashed/open;forEach rendersLoop;headersTry/Alt/Par correct;all returns and assignment numbers present.",
+      "Long creation participant text still exceeds250px box in both original A and native;do not crop/expand to invent different source behavior.",
+      "Nested demo3 frames surround same participant columns as A,including self-only regions;source returns attach to occurrence walls.",
+      "Source-unconsumed footer absent;vendor6 icons retain original colors/bytes/aspect;glyphs/notes/railroad branches andall7kind representative text are present.",
+      "Sequence critical/break conditions show source brackets and middle anchors;section line3,3;source nonfunctional unprefixed shadow is not invented."
+    ],
+    "naturalDifferences": [
+      "Font raster/metrics,absolute spacing/diagram dimensions remain native-engine differences.",
+      "Native viewport may expose full left sequence number ink that original SVGclips at its outerframe."
+    ]
+  },
+  "retainedFailedRuns": [
+    "BULK-P4-final-20261106T053339Z-476daa06",
+    "BULK-record-20261106T060857Z-4c6a0b05",
+    "BULK-batch-20261106T061136Z-ac74b132",
+    "BULK-record-20261106T061307Z-67958546",
+    "BULK-record-20261106T061510Z-cccd9f55",
+    "BULK-batch-20261106T061520Z-1650ba5a",
+    "BULK-batch-20261106T062011Z-b01872f4",
+    "BULK-batch-20261106T062324Z-ec161a48",
+    "BULK-batch-20261106T062655Z-70c93836",
+    "BULK-batch-20261106T062846Z-e7d28941",
+    "BULK-batch-20261106T063609Z-774cfdee"
+  ],
+  "testProbeCorrections": [
+    "Original P3 footer12asset assertion inferred unused helper/React UI;actual fixed renderToSvg entry paints only6 headers. Original failure and source evidence retained;assertion strengthened withsource no-footer/long-label native PNG test.",
+    "Reference comments are text.comment-text (not g.comment);FrozenMap serialized entries require pure codec; source channel assertions remain unchanged.",
+    "One newly authored source literal was damaged by PowerShell codepage into?; useASCII unicodeescapes,original failedunit retained.",
+    "Mutation revealed content_loss branch initially did not separately pin section labels; strengthened exact author-intent fragment tuple andmutations,not weakened source requirements."
+  ],
+  "immutabilityIncident": "BULK-P3-evidence-incident-confirmation-20261106T061455Z-3ff27247/artifacts/incident.json",
+  "incidentPolicy": "Accidental zen-parity-second preserved in separate incident quarantine by parent;original manifest/artifact set andall recordedbytes verifiedunchanged. Never use accidental directory asoriginalevidence.",
+  "remainingVerification": [
+    "Parent finaljoint candidate freeze andfull unit/native/export/legacy backend matrix",
+    "Original A recapture strict input/plugin/source identity matching",
+    "Final parent manual acceptance bound to finaljointcandidate; this related receipt is not final whole-project acceptance"
+  ],
+  "limits": [
+    "Original editor-tolerant ANTLR malformed/incomplete recovery prose is not claimed identical;complete source static branches and2 exact reviewed source content-loss cases have explicit contracts.",
+    "Source image/font natural layout differences are not hidden by coordinate matching or an opaque image-similarity threshold.",
+    "No DAGRE,interactions,productionJS/DOM/other renderer added;no install/commit/push/publish."
+  ],
+  "sequenceLifelineComputedStyle": {
+    "status": "RESOLVED_SOURCE_AND_ACTUAL_PAINT",
+    "presentationAttribute": ".5px",
+    "computedStrokeWidth": 2,
+    "source": "packages/mermaid/src/diagrams/sequence/styles.js:144-146 (.actor-man circle, line); svgDraw.js:413 presentation attribute .5px",
+    "cascade": "Comma selector second arm is every line. CSS stroke-width2px overrides presentation stroke-width .5px; themeCSS remains applicable. Native presentation._shape(method=line) already supplies2 before themeCSS. No product change needed.",
+    "assertion": "tests/bulk/c/test_sequence_p4.py:test_source_dangling_css_shadow_not_invented_for_note actual native lifeline trace stroke_width==2 plus existing real PNG text/paint assertions",
+    "run": "BULK-record-20261106T064630Z-21205b77",
+    "testSha256": "8197e405e7966b81a6736d9e29d6721ae9a6d4e6c27801957311ba692432cf08"
+  }
+}

@@ -1,0 +1,195 @@
+{
+  "schema": "bulk-C-change-receipt/v1",
+  "phase": "P1",
+  "status": "code_complete_unverified",
+  "scope": [
+    "sequence",
+    "railroad",
+    "railroadEbnf",
+    "railroadAbnf",
+    "railroadPeg",
+    "zenuml",
+    "info"
+  ],
+  "authority": "Root resumed P1 after user continue;31-entry batch withstatistics4/treemap/sankey/venn deferred; C retained7 unchanged",
+  "baseline": {
+    "mermaid": "12.2.0",
+    "commit": "1fb7869866dd619168d840291c9c54b4f129758b",
+    "zenumlCore": "3.49.2",
+    "coreCommit": "213c239587ffa1f3dbb54d8b64468c3038ced55d",
+    "existingDirtyTree": "Preserved; root start snapshot BULK-start-20261106T021725Z-6f4d326b; C onlywrites dedicatedfamily directories, bulk-C maps/receipts and authorized ZenUML sourcecache"
+  },
+  "providers": {
+    "sequence": "py_mermaid.diagrams.sequence",
+    "railroad": "py_mermaid.diagrams.railroad",
+    "railroadEbnf": "py_mermaid.diagrams.railroad",
+    "railroadAbnf": "py_mermaid.diagrams.railroad",
+    "railroadPeg": "py_mermaid.diagrams.railroad",
+    "zenuml": "py_mermaid.diagrams.zenuml",
+    "info": "py_mermaid.diagrams.info"
+  },
+  "code": {
+    "ownedSubtreeSHA256": "8a589ccc0909453eb7f9e45527afaa6b116a52c845b4a8f31be82bd058f766d9",
+    "files": {
+      "src/py_mermaid/diagrams/sequence/layout.py": "6e53faa4ecf4c2af2df49855978a6eba9756370b2df2634019f675de0096c624",
+      "src/py_mermaid/diagrams/sequence/model.py": "e08b36a53ae3e1070b0359413e142bf29b1a7d4bdc52d54c2253ae5a92a4c677",
+      "src/py_mermaid/diagrams/sequence/parser.py": "dcc0731aca75c83464c45e01daef92a255cfc56f538ca500e92b372a92f9738f",
+      "src/py_mermaid/diagrams/sequence/presentation.py": "192341bea642c119a8107443290a298177c2f8a5ea3847aef12e8725da031f5e",
+      "src/py_mermaid/diagrams/sequence/__init__.py": "6e726c93d670e2f3fb9bbaf48ad2c5a36de032552669e819c4f976cb99507326",
+      "src/py_mermaid/diagrams/railroad/layout.py": "016cc2b31b08c8305df0681cd3b6c368c4479b20243d61039f6c0c107577562e",
+      "src/py_mermaid/diagrams/railroad/model.py": "f49afe67da2fb4187d280b16aaed7449b517f192b34e49982080b9f5fb1e98c2",
+      "src/py_mermaid/diagrams/railroad/parser.py": "26e4f5646ed029739f767a2c084e4a01cab42d234393067e18df0a9bd7c52c84",
+      "src/py_mermaid/diagrams/railroad/__init__.py": "78d18a55ddb85967cd8cdb420e52670002890d748472be91d86d4c44525d3a4b",
+      "src/py_mermaid/diagrams/zenuml/emoji.py": "baf1396d38172d23011b5c88a59c26d5924caa8d34f95faf742746e6e2dfcd03",
+      "src/py_mermaid/diagrams/zenuml/geometry.py": "fc178b482615005904007e30f7f023fbc5e64bfb9979f516dd2ba3040077e8d1",
+      "src/py_mermaid/diagrams/zenuml/layout.py": "ec81de59391b3dc895d6d7b844c21f5aa00c00f319b10d72293924e09b0473c8",
+      "src/py_mermaid/diagrams/zenuml/model.py": "1f92e43f38c7aa9a7d31802aea10439f3ada8e88bc9a87a2b26feafb87e42953",
+      "src/py_mermaid/diagrams/zenuml/parser.py": "3f3f40b45086331d17a2dd31e7e812f55595a1d3f3f80a651296f53eccc46eea",
+      "src/py_mermaid/diagrams/zenuml/__init__.py": "0cc8def7994025c755e3ee3ec81ecb49fccfe89697ca845981fba3c46f81ebdf",
+      "src/py_mermaid/diagrams/zenuml/assets/actor.svg": "502a5b8566f9d7f3621c9459c3d35cd25a8628fbca4c123d0b023f88a2a333cd",
+      "src/py_mermaid/diagrams/zenuml/assets/alt-fragment.svg": "661310f14d8779bcf6a8171a28905dcc6db69ec8919703bc6c55c5d074815440",
+      "src/py_mermaid/diagrams/zenuml/assets/azurefunction.svg": "1a6c9c108d5f63f7b78bc6fbc464059acd2eaa8c1d111e9bcd28a8b2cdf470b9",
+      "src/py_mermaid/diagrams/zenuml/assets/boundary.svg": "4c3f60734af2fbd2191f880b2d2ec55225ff339b59f0bdcd4fe77d3b54dbd2f5",
+      "src/py_mermaid/diagrams/zenuml/assets/control.svg": "64d9aa04d905c62762ab7bf19e7f42ba78b4843d026e7d3823db6addb613cae8",
+      "src/py_mermaid/diagrams/zenuml/assets/critical-fragment.svg": "2b2634f268f04784d5b9afd5e00cf4eeedd89e78bb52aa7e90228efc68922431",
+      "src/py_mermaid/diagrams/zenuml/assets/database.svg": "c400ec7b8da9a1c8e4324e02feb4b4743c528ad45ea0d5d443feb15315b7e400",
+      "src/py_mermaid/diagrams/zenuml/assets/ec2.svg": "155b13065f4420c794f71fcc3c5d3f78be4e1e53d65f3b5388ec7742f8875ddb",
+      "src/py_mermaid/diagrams/zenuml/assets/entity.svg": "0ebeda02e1922d323d7118b7f6025ef28043ceb940b64ba87576cabf009d257d",
+      "src/py_mermaid/diagrams/zenuml/assets/iam.svg": "2bdcac04a28e4b5bdfc3cd35d7ca496ad1f6fa0bc70e5f9200599b443af71624",
+      "src/py_mermaid/diagrams/zenuml/assets/lambda.svg": "6f29b9801170221431fbc78f67b689a9580c62f64e453f8d18a5cefd807636bf",
+      "src/py_mermaid/diagrams/zenuml/assets/LICENSE-core": "d4a77cbf1dc0975cd4be7266972dc6d3a6c6d68d43235384d6e4b6f12934e978",
+      "src/py_mermaid/diagrams/zenuml/assets/loop-fragment.svg": "24d3b7bf2b3c53d7463201af017ca46b47cfe8d8ab67c48f2e064d9430a8876e",
+      "src/py_mermaid/diagrams/zenuml/assets/Microsoft_Terms_of_Use.pdf": "983e83cef1a8f85164760b076a96df54cb50af345861cb1d8344040037d0531c",
+      "src/py_mermaid/diagrams/zenuml/assets/opt-fragment.svg": "f06ceede25ac9ab4c669cf9f158b44cfdec7ab6aedf9f49613ba085f592d0dbf",
+      "src/py_mermaid/diagrams/zenuml/assets/par-fragment.svg": "82abd7f9b1386281ebaceabf3fbbbab1123cb7e851857e84550f38c39bc5f3be",
+      "src/py_mermaid/diagrams/zenuml/assets/ref-fragment.svg": "60d4a29de41e8a6738b5776d4409c55cc72a35fb02a2ccc1d19e00c92d3f6587",
+      "src/py_mermaid/diagrams/zenuml/assets/section-fragment.svg": "81fb298a6460f96bc68a79613673b35d1d232ed23f68bfa13ef92cedd0a3c9d2",
+      "src/py_mermaid/diagrams/zenuml/assets/sns.svg": "1e3d19286abcc04364d5a2e8f83faa1dddf1657d68a1d9e9c6bfe351f0c5e242",
+      "src/py_mermaid/diagrams/zenuml/assets/sqs.svg": "39915b6e2eb2d77286a905bb0ca94912bca36605d518433db3b3f0d113e5d07d",
+      "src/py_mermaid/diagrams/zenuml/assets/try-catch-fragment.svg": "b48b67f7f6d53fc424611cec28f424020434dbd5f46105782e2eb883e398df50",
+      "src/py_mermaid/diagrams/info/__init__.py": "3c5bff4e719ea8757f0dffb47f18edd9a1abaeea060b0c2d470a216babfc3ea7"
+    },
+    "pythonFiles": 16,
+    "builtinSvgAssets": 19,
+    "hashAlgorithm": "sha256 of newline-joined sorted relative path + NUL + file sha256"
+  },
+  "mechanicalVerification": {
+    "run": "BULK-batch-20261106T031634Z-cc390546",
+    "status": "SUCCESS",
+    "commands": [
+      {
+        "name": "C-seven-provider-compile",
+        "argv": [
+          "C:\\venvs\\pymmd-20261102\\Scripts\\python.exe",
+          "-m",
+          "compileall",
+          "-q",
+          "src/py_mermaid/diagrams/sequence",
+          "src/py_mermaid/diagrams/railroad",
+          "src/py_mermaid/diagrams/zenuml",
+          "src/py_mermaid/diagrams/info"
+        ],
+        "cwd": "C:\\code\\py-visactor\\py-mermaid",
+        "startedAtUtc": "2026-11-06T03:16:34.644+00:00",
+        "timeoutSeconds": null,
+        "finishedAtUtc": "2026-11-06T03:16:34.741+00:00",
+        "exitCode": 0,
+        "status": "SUCCESS",
+        "stdout": "commands/001-C-seven-provider-compile/stdout.log",
+        "stderr": "commands/001-C-seven-provider-compile/stderr.log",
+        "toolFiles": {},
+        "durationSeconds": 0.094212,
+        "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "C-pure-import-and-interface-signatures",
+        "argv": [
+          "C:\\venvs\\pymmd-20261102\\Scripts\\python.exe",
+          "-c",
+          "import importlib,inspect,json; names=('sequence','railroad','zenuml','info'); modules=[importlib.import_module('py_mermaid.diagrams.'+name) for name in names]; rows=[{'module':m.__name__,'parse':str(inspect.signature(m.parse)),'build':str(inspect.signature(m.build)),'asyncBuild':inspect.iscoroutinefunction(m.build)} for m in modules]; assert all(r['asyncBuild'] for r in rows); from py_mermaid.rendering.skia.scene import Painter; print(json.dumps({'providers':rows,'Painter.measure':str(inspect.signature(Painter.measure)),'Painter.text':str(inspect.signature(Painter.text)),'Painter.style':str(inspect.signature(Painter.style)),'Painter.asset':str(inspect.signature(Painter.asset)),'nativeObjectsCreated':False},indent=2))"
+        ],
+        "cwd": "C:\\code\\py-visactor\\py-mermaid",
+        "startedAtUtc": "2026-11-06T03:16:34.745+00:00",
+        "timeoutSeconds": null,
+        "finishedAtUtc": "2026-11-06T03:16:34.927+00:00",
+        "exitCode": 0,
+        "status": "SUCCESS",
+        "stdout": "commands/002-C-pure-import-and-interface-signatures/stdout.log",
+        "stderr": "commands/002-C-pure-import-and-interface-signatures/stderr.log",
+        "toolFiles": {},
+        "durationSeconds": 0.180595,
+        "stdoutSha256": "2d6665e08fe81d0d0f144a8296f285b4f56f29b5af50126befc50532a9be2010",
+        "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ],
+    "runManifestSHA256": "56a2c2e11e504b7a9707f0151c7fd7821141cdaf479c73e3916f8849db3088a7",
+    "types": "compileall/import/signature only",
+    "nativeAllocation": "NoCanvas/Context/Image/FontLibrary instances created; provider build/parse notcalled"
+  },
+  "behaviorVerified": false,
+  "testsDesigned": false,
+  "testOrOracleOrImageExecution": [],
+  "sourceMaps": {
+    "references\\bulk-C-info.json": "2ce50caf3f158c081231e3f9ec2086295d97c93fd3045e35f2a2fc3c553172fe",
+    "references\\bulk-C-railroad.json": "d1cbff1e51f4d09a3f17e90b1dc035dc5b7180680fc471a1837bfb98d023b77d",
+    "references\\bulk-C-sequence.json": "cd2f02f920db8e39f36cc4b6f80125259e63ab22704b77bd187ad281eef1cd0c",
+    "references\\bulk-C-zenuml.json": "27c14177055e3dd46470360621030909be082085a668a76e1fadf8e489a0b0d3"
+  },
+  "publicInterfacesConsumed": [
+    "runtime.common.make_diagram/config_dict/error/sanitize_text/label_config",
+    "Painter owner-thread native methods",
+    "Painter.style ->ResolvedStyle; style=measure/text/primitive",
+    "Painter label_kind markdown",
+    "Painter safe self-contained dataURI asset;coloronlyforcoreicons",
+    "Painter rough_enabled defaultsFalse asfixedsourceignoreshandDrawn"
+  ],
+  "semanticDenominator": {
+    "sequence": "8 participant types,26arrowterminals,3centralconnections,lifecycle/activation/notes/allfragmentfamilies/numbering/box/wrap/styles/resources",
+    "railroad": "all4 fixed Langium grammar frontends andrecursivearcgeometry",
+    "zenuml": "61 generatedparser grammar rules reviewed; native lex/scoped recursive semantics,specialized dual-number spacing,temporal VM,11builtinparticipant+8fragmenticons,93emojis",
+    "info": "info/showInfo/title/accessibility/fixedversionrenderer"
+  },
+  "nativeAdaptations": [
+    "Browsertextmetrics/getBBox ->actualpublicCanvasmeasure",
+    "DOM/CSSlayout andreturnzeroheightdebt ->directvisible16pxreturnallocation,immutablegeometry",
+    "GenericD3/React/ANTLRhostimplementations discarded; parser/model/layout functionality retained",
+    "Source unusedrailroadcompactMode/showMarkers/maximum repetition andtitle behaviors explicitly retained rather than invented"
+  ],
+  "excludedByUser": [
+    "Dagre",
+    "click/navigation/callbacks/popup/hit-testing/animation playback/DOMaccessibilitybehavior",
+    "sourceeditorinteractiveANTLRrecoverysurface; nativeinvalidinputusesexplicitspans"
+  ],
+  "licenses": {
+    "core": "MIT;coreLICENSE retained in zen assets",
+    "vendor": "6 AWS/Azurediagramicons retainoriginalbytes/color/proportions andseparatevendor terms; Azure originalPDF retained; rootauthorizedafterreadingofficialterms",
+    "packageData": "diagrams/zenuml/assets/* required; rootnotified"
+  },
+  "remainingGaps": [],
+  "remainingUnverified": [
+    "Noformalunit/nativePNG/oracle/backend/export execution inP1",
+    "ExactsourceANTLReditorerrorrecovery strings are notclaimed; production malformedinputraisesexpliciterror",
+    "Nativeparallel-overlabelheaderreservation anddirectreturngeometry require independentP2 source/visual coverage",
+    "AllnewCsource mustbe tested in thenewjointcandidate; oldflow/mathresults arenot newfamilyacceptance"
+  ],
+  "next": "Stop Cproductwrites afterP1; root freeze all owners,then independentP2tests anduniformP3firstrun. No commit/push/install/publish performed.",
+  "p1StaticCorrections": [
+    {
+      "previousOwnedSubtreeSHA256": "de5f558310b2475da42945ac902d314fa67b416c1231ed3034964f7fce5235e9",
+      "newOwnedSubtreeSHA256": "8a589ccc0909453eb7f9e45527afaa6b116a52c845b4a8f31be82bd058f766d9",
+      "file": "src/py_mermaid/diagrams/sequence/presentation.py",
+      "fileSha256": "192341bea642c119a8107443290a298177c2f8a5ea3847aef12e8725da031f5e",
+      "source": "svgDraw.js:290-300 parent text class then child tspan",
+      "reason": "Shared P1 source audit identified missing computed-parent text CSS cascade; root reopened this one file only.",
+      "mechanicalRuns": [
+        "BULK-record-20261106T034321Z-e493cf3b",
+        "BULK-record-20261106T034322Z-ddde439c"
+      ],
+      "status": "code_complete_unverified",
+      "behaviorCalled": false,
+      "nativeAllocated": false,
+      "testsDesigned": false
+    }
+  ]
+}

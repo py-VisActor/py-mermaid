@@ -1,0 +1,317 @@
+{
+  "schema": "py-mermaid-source-map/v1",
+  "taskId": "F01.3-S2/canvas",
+  "interfaceVersion": "F01.3-v3",
+  "status": "verified_local_f013_slice",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "sources": [
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/createText.ts",
+      "symbols": [
+        "createText",
+        "createFormattedText"
+      ],
+      "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+      "pythonPaths": [
+        "src/py_mermaid/rendering/labels/rich.py",
+        "src/py_mermaid/rendering/labels/sanitize.py",
+        "src/py_mermaid/rendering/skia/session.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/handle-markdown-text.ts",
+      "symbols": [
+        "markdownToHTML",
+        "markdownToLines",
+        "nonMarkdownToHTML",
+        "nonMarkdownToLines"
+      ],
+      "sha256": "6f99a7b3f5b11f87f5509a370663f14650f8f8c3cbb9a34ea496a1aa183cd0ca",
+      "pythonPaths": [
+        "src/py_mermaid/rendering/labels/rich.py",
+        "src/py_mermaid/rendering/labels/sanitize.py",
+        "src/py_mermaid/rendering/skia/session.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/diagrams/common/common.ts",
+      "symbols": [
+        "sanitizeText",
+        "sanitizeMore",
+        "removeScript"
+      ],
+      "sha256": "b14851667f7d45d101d4e028204babb1628faefe4812a88ae2d8acac72f8e144",
+      "pythonPaths": [
+        "src/py_mermaid/rendering/labels/rich.py",
+        "src/py_mermaid/rendering/labels/sanitize.py",
+        "src/py_mermaid/rendering/skia/session.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/utils.ts",
+      "symbols": [
+        "decodeEntities",
+        "encodeEntities",
+        "insertTitle"
+      ],
+      "sha256": "5968be88bf78df0ccb211f2ddba50e505099607a2770435577deed94551e4c05",
+      "pythonPaths": [
+        "src/py_mermaid/rendering/labels/rich.py",
+        "src/py_mermaid/rendering/labels/sanitize.py",
+        "src/py_mermaid/rendering/skia/session.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/styles.ts",
+      "symbols": [
+        "getStyles"
+      ],
+      "sha256": "dd53a582b0c2411e16beeb37f51664968f278b08b97f63fc8808cbc8381f73fb",
+      "pythonPaths": [
+        "src/py_mermaid/rendering/labels/rich.py",
+        "src/py_mermaid/rendering/labels/sanitize.py",
+        "src/py_mermaid/rendering/skia/session.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/insertLookDefs.ts",
+      "symbols": [
+        "insertLookDefs"
+      ],
+      "sha256": "9810059f11462129a1518d3b1fa3950e9e16a959dbe92abc732aa5e714a2eb13",
+      "pythonPaths": [
+        "src/py_mermaid/rendering/labels/rich.py",
+        "src/py_mermaid/rendering/labels/sanitize.py",
+        "src/py_mermaid/rendering/skia/session.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/diagrams/flowchart/styles.ts",
+      "symbols": [
+        "getStyles"
+      ],
+      "sha256": "697ffb86fef2787307ddc42cd5d3d1544042f08c2452e170691d28ab3d252a50",
+      "pythonPaths": [
+        "src/py_mermaid/rendering/labels/rich.py",
+        "src/py_mermaid/rendering/labels/sanitize.py",
+        "src/py_mermaid/rendering/skia/session.py"
+      ]
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/squareRect.ts",
+      "symbols": [
+        "squareRect"
+      ],
+      "sha256": "2456ebbc205f1c73fcaf34e63d055a18b17ae71fbce2b1f4ff08e910d8cc2dfd",
+      "pythonPath": "src/py_mermaid/geometry/shapes.py"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/roundedRect.ts",
+      "symbols": [
+        "roundedRect"
+      ],
+      "sha256": "ec467557e20d023100fe6be03f3d478b619d5c5b9b0f283f632d90a14593dc10",
+      "pythonPath": "src/py_mermaid/geometry/shapes.py"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/drawRect.ts",
+      "symbols": [
+        "drawRect"
+      ],
+      "sha256": "1d03397624d31f5a244f32260fd8d109dd41751f1970858feb453f09a95d849e",
+      "pythonPath": "src/py_mermaid/geometry/shapes.py"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/stadium.ts",
+      "symbols": [
+        "stadium"
+      ],
+      "sha256": "cb15be21132dbb2eb118815b37f3b9cdc08e4f6d4ffe63c408a04796ee6b5b6a",
+      "pythonPath": "src/py_mermaid/geometry/shapes.py"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/subroutine.ts",
+      "symbols": [
+        "subroutine"
+      ],
+      "sha256": "bbf3ec95a0518b5796bdf23e17375323b000a02051a9b1119cf91adeab69b4a4",
+      "pythonPath": "src/py_mermaid/geometry/shapes.py"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/cylinder.ts",
+      "symbols": [
+        "cylinder"
+      ],
+      "sha256": "66cf21a2d0777a3a2188ac616d68bbd62e4569615e570c150a45e3c08477a9a0",
+      "pythonPath": "src/py_mermaid/geometry/shapes.py"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/circle.ts",
+      "symbols": [
+        "circle"
+      ],
+      "sha256": "0583cce7bef770d20cd108c620ef546ae2cd423da2ebd913a93e6546ff28a167",
+      "pythonPath": "src/py_mermaid/geometry/shapes.py"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/doubleCircle.ts",
+      "symbols": [
+        "doubleCircle"
+      ],
+      "sha256": "e13030a09455da35a76545c9f27d7c07c3ba450fa065a65d367d40a824bfbc3e",
+      "pythonPath": "src/py_mermaid/geometry/shapes.py"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/question.ts",
+      "symbols": [
+        "question"
+      ],
+      "sha256": "c662ad9199b6de3b38580bc59adc15c8e0d05162cae777dcc3c605fbaaa96b06",
+      "pythonPath": "src/py_mermaid/geometry/shapes.py"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/hexagon.ts",
+      "symbols": [
+        "hexagon"
+      ],
+      "sha256": "2c5d559cf52495aee42b250c6ca556be1f5f0c244ee2993d53d22d405d52dcf3",
+      "pythonPath": "src/py_mermaid/geometry/shapes.py"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/leanLeft.ts",
+      "symbols": [
+        "leanLeft"
+      ],
+      "sha256": "7a156d3830ee833484e381351bd2f298b79c11081595e8bfaae224c7288608aa",
+      "pythonPath": "src/py_mermaid/geometry/shapes.py"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/leanRight.ts",
+      "symbols": [
+        "leanRight"
+      ],
+      "sha256": "92c03498df78448186f2114231439338c73e7a8d6a2ad47ad1d7dea1b336f56c",
+      "pythonPath": "src/py_mermaid/geometry/shapes.py"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/trapezoid.ts",
+      "symbols": [
+        "trapezoid"
+      ],
+      "sha256": "7347c2439b54e296ff6e426bc5aefcd00236b78d4c0f859258feae83c1183cfe",
+      "pythonPath": "src/py_mermaid/geometry/shapes.py"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/invertedTrapezoid.ts",
+      "symbols": [
+        "invertedTrapezoid"
+      ],
+      "sha256": "811f49eeba78032b5a64f2266d57d7c220ea1841c45f35b854d6381a68a93e1a",
+      "pythonPath": "src/py_mermaid/geometry/shapes.py"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/rectLeftInvArrow.ts",
+      "symbols": [
+        "rectLeftInvArrow"
+      ],
+      "sha256": "62472fe5c9d63775db12dfc6914f9995681cdbfe193b945b13bb6216f687f06e",
+      "pythonPath": "src/py_mermaid/geometry/shapes.py"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/insertPolygonShape.ts",
+      "symbols": [
+        "insertPolygonShape"
+      ],
+      "sha256": "56279058530c0e398a835d3932e672be2a44111da30b92920435d3584e306c86",
+      "pythonPath": "src/py_mermaid/geometry/shapes.py"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/util.ts",
+      "symbols": [
+        "util"
+      ],
+      "sha256": "bc63b16d067e4dd1c429e9cf249f4d73260819696de122dff0ce16b12db321c1",
+      "pythonPath": "src/py_mermaid/rendering/labels/plain.py"
+    }
+  ],
+  "contracts": {
+    "provider": "rendering.labels.sanitize:sanitize_markup(text, config)->str; pure serialized safe markup, no native imports",
+    "input": "raw_label preferred; one Mermaid entity conversion, one HTML entity interpretation; security policy is effective FlowConfig.dompurify_config and dompurify_provided",
+    "measurement": "Real a18 Context.measureText for each final font/style/direction; immutable advance/ink metrics and runs; logical px. No Canvas or native font escapes owner thread. HTML line-height including absolute px; SVG createFormattedText line-height1.1. Ink overhang and shifted baselines preserved.",
+    "richText": "HTML true inert inline/block/list/table text, bold/emphasis, font/presentation attrs before tag CSS before inline CSS, decorations/backgrounds, preserved whitespace and explicit breaks; HTML false literal sanitized tags, source Markdown strong/em with source token omission diagnostic. Runs are authoritative; compatibility lines are not redrawn.",
+    "styles": "resolve_style is root-owned. Measurement and drawing consume same font/style; inline child opacity multiplies parent opacity. Native gradients and blur-filter shadows consume resolved style; shadow bounds include 3*blur footprint. Circle/doublecircle independent shadows retained.",
+    "title": "insertTitle pure text at resolved18px default, actual ink metrics and text_anchor; layout title box supplied by layout owner, real draw trace diagram-title",
+    "shape": "Existing14 classic shapes only, classic versus neo source dimensions, theme round radius and hexagon divisor synchronized with outline intersection(config=...).",
+    "nativeAPI": "py_skia_canvas 0.1.0a18 public Canvas,Context,Path2D; real measureText/fillText, textDecoration/direction, createLinearGradient/addColorStop,filter blur/drawCanvas/source-in,toBuffer PNG; auto default retained/cpu public setter/gpu actual device required. Family trailing semicolon is declaration separator normalization only."
+  },
+  "traceKinds": [
+    "viewport",
+    "group-shadow",
+    "group",
+    "group-title",
+    "edge",
+    "arrow",
+    "shadow",
+    "node",
+    "text",
+    "edge-label-background",
+    "edge-label",
+    "node-detail-shadow",
+    "diagram-title",
+    "text-background",
+    "group-title-background"
+  ],
+  "explicitBoundaries": [
+    {
+      "code": "DEFERRED_F014_LABEL",
+      "scope": "HTML math, image/media/SVG/icons and paint resources; F01.4 paused; no production browser fallback"
+    },
+    {
+      "code": "DEFERRED_HTML_CONTROL",
+      "scope": "input/select/button/textarea/form/meter/progress/datalist/option require native host mapping; ordinary HTML text remains implemented"
+    },
+    {
+      "code": "UNSUPPORTED_LABEL_STYLE_ELEMENT",
+      "scope": "custom sanitizer retained style element requires stylesheet host mapping; themeCSS consumed through root resolver"
+    },
+    {
+      "code": "UNSUPPORTED_SANITIZER_CONFIG",
+      "scope": "unknown or browser-only DOMPurify options explicitly rejected, not silently ignored"
+    },
+    {
+      "code": "UPSTREAM_SHAPE_MISSING",
+      "scope": "classic ellipse source handler remains absent"
+    },
+    {
+      "diagnostic": "SOURCE_MARKDOWN_TOKEN_OMISSION:codespan|link|image",
+      "scope": "SVG false upstream paragraph ignores codespan/link/image tokens; retained as explicit diagnostic, pending official S3 probe"
+    }
+  ],
+  "verification": "Only compile/import/signature checks in S2. No behavioral, native object creation, PNG, oracle, test or installation run. Semantic fidelity and browser CSS/HTML layout differences require S3/S4; no functional PASS inferred.",
+  "s4Corrections": [
+    {
+      "originalEvidence": "test-runs/F01.3-initial-evidence-snapshot-20261105T021024Z-38c90a72",
+      "font": "Config retains raw family; measured runs use actual Canvas font value after trailing declaration delimiter normalization.",
+      "svgText": "nonMarkdownToLines literal tag tokenization and one-space word joins ported; safe serialized attributes retained.",
+      "sanitizer": "common.ts hook temporary data attribute transports target across sanitizer then target restore and _blank rel=noopener; default FORBID_TAGS style excludes style ELEMENT only, inline styles valid in missing and explicit{} branches.",
+      "title": "MeasuredAnnotations.title_suppressed is explicit pure data only for resolved display:none; renderer verifies title presence and suppression consistency."
+    },
+    {
+      "issue": "F013_REAL_ITALIC_FONT_NORMAL_AMBIGUITY",
+      "oldCandidate": "5f3a manual QA failure preserved by coordinator",
+      "rootCause": "a18 public CSSfont parser reads italic normal as normal400; numeric400/700 preserves requested italic and bold. Recursive absent but Arial/Times italic faces present; not missing-face fallback.",
+      "fix": "Only public Canvas font-value normalization in shared measure/draw _run_font: normal?400,bold?700,numeric preserved; no dependency change or synthetic transforms.",
+      "probe": "test-runs/F01.3-italic-public-api-probe-corrected-20261105T022414Z-291f4813",
+      "pixelEvidence": "test-runs/F01.3-italic-pixel-evidence-20261105T022451Z-84fd1389",
+      "evidence": "Recursive fallback14px old italic normal versus upright: zero changed pixels; italic400 versus upright:954 changed pixels. 40px:5924 changed pixels. Native font readback confirms style.",
+      "verification": "Independent literal italic400 reference and upright negative control on node/edge/group actual PNG pixels, plus normal700/italic700 bold and bolditalic references."
+    }
+  ],
+  "priorVerificationStatus": "code_complete_unverified",
+  "finalVerification": {
+    "sourceTreeSha256": "5cb792fadbd7685a0d65a4a4d0e397ff59566eae340f4aaa87d0a7041d18b08f",
+    "unitRun": "test-runs/F01.3-batch-20261105T022709Z-dcd8b609/run.json",
+    "summary": "references/f013-verification-summary.json",
+    "installationValidation": false
+  }
+}

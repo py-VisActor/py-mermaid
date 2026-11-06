@@ -5,12 +5,12 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "py-mermaid"
 version = "0.0.1a0"
-description = "Basic Mermaid flowcharts in Python, built on py-skia-canvas and pyelk"
+description = "Static Mermaid diagrams in Python, built on py-skia-canvas, pyelk and py-katex"
 readme = "README.md"
 requires-python = ">=3.13,<3.14"
 license = "MIT"
-license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md", "references/licenses/mermaid-LICENSE"]
-dependencies = ["py-skia-canvas==0.1.0a18", "py-visactor-elk==0.1.0"]
+license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md", "references/licenses/*"]
+dependencies = ["py-skia-canvas==0.1.0a18", "py-visactor-elk==0.1.0", "py-visactor-katex==0.1.0"]
 classifiers = [
   "Development Status :: 3 - Alpha",
   "Programming Language :: Python :: 3.13",
@@ -19,6 +19,9 @@ classifiers = [
 
 [project.optional-dependencies]
 dev = ["build==1.6.1", "setuptools==84.2.1", "wheel==0.48.0"]
+
+[project.scripts]
+py-mermaid = "py_mermaid.cli:main"
 
 [project.urls]
 Repository = "https://github.com/py-VisActor/py-mermaid"
@@ -29,4 +32,4 @@ Issues = "https://github.com/py-VisActor/py-mermaid/issues"
 where = ["src"]
 
 [tool.setuptools.package-data]
-py_mermaid = ["py.typed"]
+py_mermaid = ["py.typed", "data/*.json", "diagrams/zenuml/assets/*"]

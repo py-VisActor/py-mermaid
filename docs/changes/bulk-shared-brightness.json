@@ -1,0 +1,83 @@
+{
+  "schema": "py-mermaid-change-receipt/v1",
+  "phase": "P1",
+  "status": "code_complete_unverified",
+  "authority": "Root temporarily transferred exactly five shared files; added asset/svg style request. Original C7 and routing stayed frozen.",
+  "sourceVersion": "mermaid@12.2.0",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "ownedFiles": {
+    "src/py_mermaid/model/flowchart.py": "de42bdd0f343be29608370c8df051df84e985ebc9c633edc149576fc175e1310",
+    "src/py_mermaid/rendering/labels/rich.py": "449eb741760f8b43c67d03c7ea4f55473fd2243e33dfb895e06569360223928d",
+    "src/py_mermaid/rendering/styles/flowchart.py": "ac393556f75d14df69a4814130210060ad20f3069603941e0ac93dec62111772",
+    "src/py_mermaid/rendering/skia/session.py": "dc8fcac936f56be998b545567d7cc3e88ef2fe8c08cc85c379b0dd4437832cf3",
+    "src/py_mermaid/rendering/skia/scene.py": "e70fccaa3087a6b496dbc67567037409046aeb2186d5cb3002021d1e0d265308"
+  },
+  "ownedSourceSha256": "7a32c1f5db5d14028bfd5229c7eead16862c78c126b71541413b8376ca7fde26",
+  "hashAlgorithm": "sha256 sorted relative path+NUL+fileSHA newline-joined",
+  "sourceMap": [
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/timeline/styles.js",
+      "sha256": "6be688e61d5b19800e1d2404c06f35b77a11f95db4df0908f5a0ab05ba4c8077",
+      "role": "line198 filter brightness(120%)"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/styles.ts",
+      "sha256": "dd53a582b0c2411e16beeb37f51664968f278b08b97f63fc8808cbc8381f73fb",
+      "role": "source neo filter defaults and cascade"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/rendering-util/createText.ts",
+      "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+      "role": "source native-projected label host styles"
+    },
+    {
+      "path": "C:/venvs/pymmd-20261102/Lib/site-packages/py_skia_canvas/_effects.py",
+      "sha256": "403ccf8586256ec2c2406763a8ac409860f4f796823b50795a5dc5335cbe339c",
+      "role": "public ordered Context.filter brightness/drop-shadow API; Canvas0.1.0a18"
+    }
+  ],
+  "contracts": {
+    "ResolvedStyle": [
+      "brightness:float=1.0",
+      "filter_chain:tuple[str,...]=()"
+    ],
+    "MeasuredTextRun": [
+      "brightness:float=1.0",
+      "filter_chain:tuple[str,...]=()",
+      "filter_shadow:tuple[float,float,float]|None=None"
+    ],
+    "DrawEvent": [
+      "brightness:float=1.0",
+      "filter_chain:tuple[str,...]=()",
+      "blend_mode:str=source-over"
+    ],
+    "Painter.asset": "asset(resource_id,x,y,w,h,*,kind=image,id=,color=None,style:ResolvedStyle|None=None)",
+    "Painter.svg": "svg(svg,x,y,w,h,*,id=,color=None,style:ResolvedStyle|None=None)"
+  },
+  "implementation": [
+    "CSS winner preserves ordered brightness(number or percentage) plus at most one drop-shadow/builtinurl; none/initial/unset clear native chain and shadow; inherit copies computed filter fields. No RGB rewriting.",
+    "Path/text/math/inlineasset drawing uses public Context.filter; each Fragment preserves local effect in its measured run. Explicitly filtered math composites via public Canvas intermediate so inner KaTeX group filter cannot overwrite host filter.",
+    "Original Painter._path_shadow SourceAlpha mask/recolor method retained. Explicit native filter chains skip manual shadow, preventing duplication. Filter shadow extents included in text/math/asset/path bounds.",
+    "Painter.asset/svg style display:none skips loading and command emission; opacity/filter/blend applied to actual drawing and recorded in trace. Actual asset rectangle remains separate from extended filter bounds.",
+    "Old flowchart semantic attribute selectors no longer vanish: class presence/token~= checks actual semantic classes; data-look/data-theme/id/data-id operators supported; malformed/unsupported attrs explicitly error.",
+    "Root align sentinel/dash sentinel/gradient registry/paint_resources/independent fill-stroke directions and tint validation retained."
+  ],
+  "limits": [
+    "Only source-needed brightness and single drop-shadow combinations claimed. Repeated brightness, multiple shadows and other filter functions explicitly UNSUPPORTED_THEME_CSS.",
+    "Semantic class full-string order/prefix/substring matching explicitly unsupported; presence and token~= supported.",
+    "No behavior/native/filter/image validation performed in P1; rendering and pixel correctness remain NOT_EVALUATED."
+  ],
+  "mechanicalRuns": [
+    "BULK-record-20261106T034942Z-2153ce6f",
+    "BULK-record-20261106T034942Z-53f9792e",
+    "BULK-record-20261106T035141Z-a6383144",
+    "BULK-record-20261106T035142Z-4157e770"
+  ],
+  "mechanicalResult": "SUCCESS compile/import/signature only",
+  "functionalStatus": "NOT_EVALUATED",
+  "nativeAllocated": false,
+  "behaviorCalled": false,
+  "testsDesigned": false,
+  "imagesGenerated": false,
+  "productWritesStopped": true
+}

@@ -1,0 +1,227 @@
+{
+  "schemaVersion": 1,
+  "scope": "BULK_STATIC_31_ENTRIES",
+  "phase": "P4_REPAIR",
+  "status": "targeted_tests_pass_final_joint_candidate_pending",
+  "upstream": {
+    "version": "12.2.0",
+    "commit": "1fb7869866dd619168d840291c9c54b4f129758b",
+    "root": ".local/upstream-mermaid",
+    "productionDependency": false
+  },
+  "detectorCount": 4,
+  "diagrams": [
+    {
+      "detector": "gantt",
+      "nativeModule": "py_mermaid.diagrams.temporal.gantt",
+      "entrypoints": [
+        "parse(document,config)",
+        "async build(diagram,painter)"
+      ],
+      "sourceFiles": [
+        "packages/mermaid/src/diagrams/gantt/parser/gantt.jison",
+        "packages/mermaid/src/diagrams/gantt/ganttDb.js",
+        "packages/mermaid/src/diagrams/gantt/ganttRenderer.js",
+        "packages/mermaid/src/diagrams/gantt/styles.js"
+      ],
+      "implementedBranches": [
+        "dateFormat/axisFormat/tickInterval/includes/excludes/weekdays/weekends/inclusiveEndDates/topAxis/todayMarker",
+        "task IDs/dependency after latest/until earliest/duration/exclusion extension/compact lane packing",
+        "calendar time ticks/month-year clamping/DST/extended Gregorian years",
+        "active/done/critical/milestone/vertical/clickable visible CSS/error paths"
+      ],
+      "behaviorValidation": "NOT_RUN_P1"
+    },
+    {
+      "detector": "journey",
+      "nativeModule": "py_mermaid.diagrams.temporal.journey",
+      "entrypoints": [
+        "parse(document,config)",
+        "async build(diagram,painter)"
+      ],
+      "sourceFiles": [
+        "packages/mermaid/src/diagrams/user-journey/parser/journey.jison",
+        "packages/mermaid/src/diagrams/user-journey/journeyDb.js",
+        "packages/mermaid/src/diagrams/user-journey/journeyRenderer.ts",
+        "packages/mermaid/src/diagrams/user-journey/svgDraw.js",
+        "packages/mermaid/src/diagrams/user-journey/styles.js"
+      ],
+      "implementedBranches": [
+        "sections/task scores/actors/accessibility",
+        "actor sorted legend and measured word wrapping/hyphenation",
+        "section spans/task rectangles/score emotion geometry/annular mouths",
+        "source actor/task classes and complete static default stylesheet"
+      ],
+      "behaviorValidation": "NOT_RUN_P1"
+    },
+    {
+      "detector": "timeline",
+      "nativeModule": "py_mermaid.diagrams.temporal.timeline",
+      "entrypoints": [
+        "parse(document,config)",
+        "async build(diagram,painter)"
+      ],
+      "sourceFiles": [
+        "packages/mermaid/src/diagrams/timeline/parser/timeline.jison",
+        "packages/mermaid/src/diagrams/timeline/timelineDb.js",
+        "packages/mermaid/src/diagrams/timeline/timelineRenderer.ts",
+        "packages/mermaid/src/diagrams/timeline/timelineRendererVertical.ts",
+        "packages/mermaid/src/diagrams/timeline/svgDraw.js",
+        "packages/mermaid/src/diagrams/timeline/styles.js"
+      ],
+      "implementedBranches": [
+        "LR/TD period/event/section grammar/accessibility",
+        "source virtual object-label measurement and per-section maxima",
+        "dedicated horizontal/vertical period-event column placement",
+        "redux/classic corners/palette dual gate/gradient/shadow/event brightness CSS"
+      ],
+      "behaviorValidation": "NOT_RUN_P1"
+    },
+    {
+      "detector": "gitGraph",
+      "nativeModule": "py_mermaid.diagrams.temporal.gitgraph",
+      "entrypoints": [
+        "parse(document,config)",
+        "async build(diagram,painter)"
+      ],
+      "sourceFiles": [
+        "packages/parser/src/language/gitGraph/gitGraph.langium",
+        "packages/parser/src/language/gitGraph/reference.langium",
+        "packages/mermaid/src/diagrams/git/gitGraphParser.ts",
+        "packages/mermaid/src/diagrams/git/gitGraphAst.ts",
+        "packages/mermaid/src/diagrams/git/gitGraphRenderer.ts",
+        "packages/mermaid/src/diagrams/git/styles.js"
+      ],
+      "implementedBranches": [
+        "commit/branch/order/checkout/switch/merge/cherry-pick/tags/type/id/message",
+        "branch DAG/merge/cherry-pick errors/source random generated IDs",
+        "LR/TB/BT sequential and parallel positions/branch collision rerouting",
+        "normal/reverse/highlight/merge/cherry glyphs/labels/tags/source theme CSS"
+      ],
+      "behaviorValidation": "NOT_RUN_P1"
+    }
+  ],
+  "sourceSHA256": {
+    "packages/mermaid/src/diagrams/gantt/parser/gantt.jison": "15023f6e7af35588a206dddf176d7af763729d2bf76ea3de52f1bbe0f4a203ae",
+    "packages/mermaid/src/diagrams/gantt/ganttDb.js": "d783881e9e5966aabc87f6dc170aa0a88ece551c48c49ba0693aa5271e3accec",
+    "packages/mermaid/src/diagrams/gantt/ganttRenderer.js": "bf1c7231c8666070124eed4f6078b1d62ab4dea0973c44cc5d6264469961e488",
+    "packages/mermaid/src/diagrams/gantt/styles.js": "8e8f606fe9423e2dec6e3e5c0b347c024b80f050011c88ca3a3df4a009019ed7",
+    "packages/mermaid/src/diagrams/user-journey/parser/journey.jison": "40650bb3b7304d27dd9a190c76c34593af8850630985a0423c48fa9375f963c5",
+    "packages/mermaid/src/diagrams/user-journey/journeyDb.js": "686d76d800479eba1a68a2421c41eda469a09ed62356a849d976a7548b78e779",
+    "packages/mermaid/src/diagrams/user-journey/journeyRenderer.ts": "bd96cb487f8121f21fa02524f32d2d880afd09934a2db71e51c51fbc4898d6a6",
+    "packages/mermaid/src/diagrams/user-journey/svgDraw.js": "b3b41ecbddaa7b484a158c753932b4ec04fdcaee88bd2711f44dd401e6b89a7d",
+    "packages/mermaid/src/diagrams/user-journey/styles.js": "94803ec99cd36192500f6026826876eb2336d685123c8f14f489280b05d07409",
+    "packages/mermaid/src/diagrams/timeline/parser/timeline.jison": "a201fb1c13cd90ed99ddd9cf9f8526e0e7314ff7e55a4a11b41bcd9cb3201695",
+    "packages/mermaid/src/diagrams/timeline/timelineDb.js": "316f9ac2daefea4c6b42b975c18294b3696da05d0ba1edd32ae4c3c05f84a24f",
+    "packages/mermaid/src/diagrams/timeline/timelineRenderer.ts": "631fe02b6c20ec231121375787f43e737be25588f4e58e7874afa0df6c9896a5",
+    "packages/mermaid/src/diagrams/timeline/timelineRendererVertical.ts": "4075869707788ddc2cf24344a65e8c4c929402721da925c39b84dcab141f81a1",
+    "packages/mermaid/src/diagrams/timeline/svgDraw.js": "adf47cff43567f23db1817720ff97d11499df22e165a48c413624769f515f786",
+    "packages/mermaid/src/diagrams/timeline/styles.js": "6be688e61d5b19800e1d2404c06f35b77a11f95db4df0908f5a0ab05ba4c8077",
+    "packages/parser/src/language/gitGraph/gitGraph.langium": "6f3b9c256a1a91964572617aa172f2f0d6a8f8be3d32412f7d90c3982d18b71e",
+    "packages/parser/src/language/gitGraph/reference.langium": "c71835ae53791642d8229594b2d6f6964526be909f82a2ab27f4af563f9fb78c",
+    "packages/mermaid/src/diagrams/git/gitGraphParser.ts": "5912598f2e3de2d054d2c8b06b148da9e9375454ded919e1f794b0739739c0a9",
+    "packages/mermaid/src/diagrams/git/gitGraphAst.ts": "f3f5e20cd227b55a62e3bfbab8604ef66a48c44a47fa38f9db57b12ebc121abd",
+    "packages/mermaid/src/diagrams/git/gitGraphRenderer.ts": "d90f6685b76b2f33bebd6e5b47912c076e77f3180c3e27d821ae06261f1aac81",
+    "packages/mermaid/src/diagrams/git/styles.js": "c1991b7c9c58461203857f1e8846e56fb1949e791a7a18d2c8ec780e7c5dab94",
+    "packages/mermaid/src/schemas/config.schema.yaml": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+    "packages/parser/src/language/common/common.langium": "d8b0c0056f6339ca6a0d3b966c02b1f4d53ad768069e2889450dc29312f1f65b",
+    "packages/parser/src/language/common/valueConverter.ts": "d93aa5dd1f7fed8aa903f55eb3e463c6b69b455af22004a6405a61c7560f58e5"
+  },
+  "nativeSHA256": {
+    "src/py_mermaid/diagrams/temporal/gantt.py": "5bf9076c592982424140f685f70989f6d081b4fe894512fc0c3ecf419b1c3148",
+    "src/py_mermaid/diagrams/temporal/gitgraph.py": "1a4f5af2020d6b41efce16c00a09b119d909181bdbddcf430910cb755a03b43a",
+    "src/py_mermaid/diagrams/temporal/journey.py": "3f6667afbeb608cda4ade772ac6018e16c8a90ea7bb62781994b9c7b170e18a6",
+    "src/py_mermaid/diagrams/temporal/timeline.py": "63471b526ab2d7ed53b149f96dd6752d577810d254d676d9b6978b9351788b7a",
+    "src/py_mermaid/diagrams/temporal/_civil.py": "6eadb3bd77584d9bca970219398c5f908119f2ccef72916f007d536b12c0fad4",
+    "src/py_mermaid/diagrams/temporal/_dates.py": "d41b4b90b00786a1c622285a367a4cb38cc5e65454ce94d9a18ce6d5608349d9",
+    "src/py_mermaid/diagrams/temporal/_git_layout.py": "017ffa6e6cffa8e3d268d23ea00e6970fa527dbba740901867ecd74d5b316d01",
+    "src/py_mermaid/diagrams/temporal/_paint.py": "03e0351abba8ba60ef75d85cef21e9374bb50c47aedfb5d4a35dff40f3f4926a",
+    "src/py_mermaid/diagrams/temporal/_source_styles.py": "7948dc4e98a0501183df0eca4f268784c347c23bf98a228873fb0cf4a0cacc35",
+    "src/py_mermaid/diagrams/temporal/_syntax.py": "e691a0c333a91dfac049be7beaf36b72c9328e8c0c41e76a41fa81a9469e5f72",
+    "src/py_mermaid/diagrams/temporal/__init__.py": "1985c5a8a929517d99683cee489f4ae00cdd901fc23606504e03e56ffa0b2cc5"
+  },
+  "nativeAggregateSHA256": "1dd1dfa1bb8694fb54989ae927dc4761ab9d10a6e9c42228a2c88e24eefcb24f",
+  "readOnlySharedDependencies": {
+    "src/py_mermaid/diagrams/charts/_syntax.py": "df968c143dc57aee9f24149fdcdc12425129149679ab5933e93786fed83333fd",
+    "src/py_mermaid/diagrams/charts/_scales.py": "671c8d5d9400ece5c20b8499a9ecc42716cc1df0bd2463c5c0b84f00280da102"
+  },
+  "unverifiedRisks": [
+    "No parser, layout, native rendering, formal tests, oracle or image behavior executed in P1.",
+    "All functional and visual equivalence remains subject to independently derived P2 assertions and the unified P3 first run."
+  ],
+  "knownHostAdaptations": [
+    "Gantt viewport width is explicit Painter.viewport_width when source parentElement.offsetWidth is unavailable.",
+    "Gantt dates outside Python datetime year range use proleptic Gregorian scalar dates; extended-year timestamp timezone conversion uses native host UTC offset, while ordinary dates retain host datetime and DST.",
+    "Generated Git commit IDs retain source nondeterministic seven-hex random identity; authored IDs remain exact.",
+    "Canvas antialiasing replaces the SVG crispEdges sampling hint; source milestone rotate45 scale.8 is represented by transformed pure polygon vertices.",
+    "Read-only chart lexical/scales helpers are retained shared numeric code; deferred chart detectors are not counted as completed."
+  ],
+  "deferredByUser": [
+    "pie",
+    "quadrantChart",
+    "xychart",
+    "radar",
+    "treemap",
+    "sankey",
+    "venn"
+  ],
+  "mechanicalRuns": [
+    {
+      "run": "test-runs/BULK-record-20261106T035213Z-d232d9fe",
+      "status": "SUCCESS",
+      "checks": [
+        "compileall",
+        "side-effect-free module imports",
+        "parse/build/provider signature reflection"
+      ],
+      "behaviorExecuted": false
+    }
+  ],
+  "sourceIncompleteBranches": [],
+  "freezeHistory": [
+    {
+      "nativeAggregateSHA256": "43c035e3b45a6ee569f02613b40de31d4d7dee3b4cef26c2e1ed9f57b79de940",
+      "reasonReopened": "P3 complete first sweep closed before source-backed batch repairs; P1 source state preserved in closed runs and prior receipt."
+    },
+    {
+      "nativeAggregateSHA256": "142567297211e54c7e59076267f3b1422b69d5fba5ee6c427b8ca751d8fe978f",
+      "reasonReopened": "First P4 automated candidate rejected by real manual QA; Journey source-unit/FO/activity repairs plus corrected original SVG nonfinite defaults."
+    }
+  ],
+  "aggregateAlgorithm": "SHA256 canonical JSON(sorted nativeSHA256 keys, separators comma/colon)",
+  "p3Repairs": [
+    {
+      "file": "src/py_mermaid/diagrams/temporal/journey.py",
+      "cause": "Source taskData requires one character; raw whitespace Number coercion differs from bare empty colon. Source Number may NaN/Infinity; source invalid face invisible but task/actor/axis content valid.",
+      "source": [
+        "packages/mermaid/src/diagrams/user-journey/parser/journey.jison:29",
+        "packages/mermaid/src/diagrams/user-journey/journeyDb.js:addTask",
+        "packages/mermaid/src/diagrams/user-journey/svgDraw.js:drawTask"
+      ],
+      "repair": "Retain raw task-data characters and source Number results; only invalid face geometry omitted with explicit diagnostic, all real valid task paints retained."
+    },
+    {
+      "file": "src/py_mermaid/diagrams/temporal/_source_styles.py",
+      "cause": "Fixed Journey source SCSS nests rect inside .edgeLabel; shared static CSS accepts flat declarations. HTML tooltip styles are interaction-only.",
+      "source": [
+        "packages/mermaid/src/diagrams/user-journey/styles.js:getStyles"
+      ],
+      "repair": "Expand exact source child selector .edgeLabel rect; exclude div.mermaidTooltip block only, retaining all static task/actor/face rules."
+    }
+  ],
+  "p3UnitRun": "test-runs/BULK-record-20261106T044818Z-5294681e",
+  "p4Repairs": {
+    "journey.py": [
+      "NativePainter.font_size retains CSS units against actual parent size/family/weight",
+      "FO plain DOM text in a normal-line-height table cell, fixed viewport clip and actual width wrapping",
+      "old single SVG baseline y+h/2+5 with inherited root font",
+      "tspan only <br> split, source task font and symmetric dy",
+      "source bounds.stopx uses task.x+diagramMarginX+taskMargin; activity endpoint stopx+2mx-4",
+      "actor legend source maxWidth threshold and20px line slots",
+      "source nonfinite cy attributes default independently0; NaN neutral line; +/-Infinity ignored translate leaves origin mouth clipped at root x0",
+      "getNoteRect default #666 border retained"
+    ],
+    "supersedesEarlierIncorrectInterpretation": "P3 said NaN/Infinity face invisible; original source A SVG/PNG proves default0 face and invalid transform identity. Original P3 receipts and approvals are preserved unchanged.",
+    "sourceOracleProbe": "test-runs/BULK-batch-20261106T061304Z-7b9bba54/artifacts/oracle/B-journey-nonfinite-source-probe.svg"
+  }
+}

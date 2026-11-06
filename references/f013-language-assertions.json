@@ -1,0 +1,860 @@
+{
+  "schema": "py-mermaid-f013-language-assertions/v1",
+  "taskId": "F01.3-S3/parser-config",
+  "status": "verified_local_f013_slice",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "sourceFreeze": "5a7264af3a00dc705df6824d83311e3e3b67d80b39457ecfeba5aec19293d771",
+  "sources": [
+    {
+      "id": "grammar:flow.jison",
+      "path": "packages/mermaid/src/diagrams/flowchart/parser/flow.jison",
+      "symbols": [
+        "STR",
+        "MD_STR",
+        "text",
+        "edgeText",
+        "arrowText",
+        "statement/accessibility"
+      ],
+      "sha256": "9597faffe2a133b104c6dd4f38a162f6980bff4e0a841a83ff94af3900ea7ba8",
+      "gitBlobSha256": "e9891eb4f646140e5110e72ef5f79b099677a265ba1a84884b39a573b56d1c68"
+    },
+    {
+      "id": "grammar:flowDb.ts",
+      "path": "packages/mermaid/src/diagrams/flowchart/flowDb.ts",
+      "symbols": [
+        "addVertex",
+        "addSingleLink",
+        "addSubGraph"
+      ],
+      "sha256": "33577b9ade8c65be6049c3093089dbf81abf44214f49c2b2ea46434183889288",
+      "gitBlobSha256": "f8b1e686399b850dda39741ef10b763c9611658e50a0416603826a17ef810ec3"
+    },
+    {
+      "id": "grammar:Diagram.ts",
+      "path": "packages/mermaid/src/Diagram.ts",
+      "symbols": [
+        "fromText/encodeEntities"
+      ],
+      "sha256": "ea89f69368ddf3c386f3012fd912ae79c012f87e2a91e1bb2d2236e74d23dbec",
+      "gitBlobSha256": "38ae9e46ea095bf4c76e4d12f2042f71aed4fa8f3810443c8db5f2f15dc7e609"
+    },
+    {
+      "id": "grammar:utils.ts",
+      "path": "packages/mermaid/src/utils.ts",
+      "symbols": [
+        "encodeEntities",
+        "decodeEntities"
+      ],
+      "sha256": "5968be88bf78df0ccb211f2ddba50e505099607a2770435577deed94551e4c05",
+      "gitBlobSha256": "4880a24ada719172bc45652cefa9a2defd6e8aaeba9ebbd7862108dd930baca9"
+    },
+    {
+      "id": "preprocess:preprocess.ts",
+      "path": "packages/mermaid/src/preprocess.ts",
+      "symbols": [
+        "cleanupText",
+        "processFrontmatter",
+        "processDirectives",
+        "preprocessDiagram"
+      ],
+      "sha256": "db337ae9cc0f7ff189cc50d06d6fb28452dfbc37294f56a966dc3f48b2a628e0",
+      "gitBlobSha256": "8a58dda4b0f5481c743704c2c16512d9326e9153a637abdd1b943df1c4410052"
+    },
+    {
+      "id": "preprocess:frontmatter.ts",
+      "path": "packages/mermaid/src/diagram-api/frontmatter.ts",
+      "symbols": [
+        "extractFrontMatter/JSON_SCHEMA/dedent"
+      ],
+      "sha256": "32064e56308192d63355b5719a54172ce9269b9d30ccfddcfbdd11b71ddf5e0a",
+      "gitBlobSha256": "5fe9872a75c7f89bc3edb7876948b9dbbe9a844cabb8dfe57d254d3b0eba9ed1"
+    },
+    {
+      "id": "preprocess:frontmatter.spec.ts",
+      "path": "packages/mermaid/src/diagram-api/frontmatter.spec.ts",
+      "symbols": [
+        "empty/scalar/boolean/indented/block/error cases"
+      ],
+      "sha256": "06d924fda15fbdcc44125c959312b977c6f4cb42361b54a1372c069f6e587bf5",
+      "gitBlobSha256": "78f1267615f2716bb4312a6d240f15259ae629f6db87dc9fd5cd5a70869e8c1b"
+    },
+    {
+      "id": "preprocess:regexes.ts",
+      "path": "packages/mermaid/src/diagram-api/regexes.ts",
+      "symbols": [
+        "matchFrontMatter",
+        "directiveRegex"
+      ],
+      "sha256": "fdb09d839e27f7b71fc2193282649a4d2e1169531c8a62ee3a4c4e0bd1883e7d",
+      "gitBlobSha256": "2bda6a34c0762faab8abb7c3f09ebee2a5919d6bea874e2eae0b3fa7d15065e8"
+    },
+    {
+      "id": "preprocess:regexes.spec.ts",
+      "path": "packages/mermaid/src/diagram-api/regexes.spec.ts",
+      "symbols": [
+        "indent and closing boundaries"
+      ],
+      "sha256": "ed8c0cf2bfcc3857a7e3622a0cf9844ba507bbed124708b2d0b68d6145c7cad1",
+      "gitBlobSha256": "f8d937a8cf10f739f168a367d53d6461626dd550fe00c5f17692b7d664c18028"
+    },
+    {
+      "id": "preprocess:comments.ts",
+      "path": "packages/mermaid/src/diagram-api/comments.ts",
+      "symbols": [
+        "cleanupComments"
+      ],
+      "sha256": "aa637df212ecc22cbcb12387af31a4d0f8c266ece03cc6134d46dd9427acd120",
+      "gitBlobSha256": "3592fb8d68ad83644816b7cb08bc8da4faff47e43332ba446b5d45666520ed60"
+    },
+    {
+      "id": "preprocess:comments.spec.ts",
+      "path": "packages/mermaid/src/diagram-api/comments.spec.ts",
+      "symbols": [
+        "cleanup comments"
+      ],
+      "sha256": "ae1b5ad3fd3a920cb2469faf441afc5bee65752b02282f68eb192ee0f5efc473",
+      "gitBlobSha256": "e5e39fe6ab38b2ce1267e4bd098f8d3f64b1077cb4d30ca830a7fbec1679c076"
+    },
+    {
+      "id": "config:config.ts",
+      "path": "packages/mermaid/src/config.ts",
+      "symbols": [
+        "resolveAppearance",
+        "updateCurrentConfig",
+        "sanitize",
+        "evaluate",
+        "getEffectiveHtmlLabels"
+      ],
+      "sha256": "91dd68a9e7d57c4635a04fab0ccd78ec230b4417a02f4f4b3cd9a6bb445f09ef",
+      "gitBlobSha256": "a2dcc81b3764fec09626dc5a13f97c2bdd860378d6c06e9894357b4af2e87d9e"
+    },
+    {
+      "id": "config:mermaidAPI.ts",
+      "path": "packages/mermaid/src/mermaidAPI.ts",
+      "symbols": [
+        "initialize/fontFamily bridge",
+        "processAndSetConfigs",
+        "maxTextSize"
+      ],
+      "sha256": "c38ef136d815a638993d271f253d2ca825046fb97292d30a7a4de8ea57fc0318",
+      "gitBlobSha256": "8a2c16049850db1fa83395adf9fb379f4c35b194c93bd0005cf6cb7c056e2e97"
+    },
+    {
+      "id": "config:assignWithDepth.ts",
+      "path": "packages/mermaid/src/assignWithDepth.ts",
+      "symbols": [
+        "assignWithDepth depth2/arrayIncludes/null/type-mismatch"
+      ],
+      "sha256": "84216a585174308d91550e69fdf0081801cce41c040738190a47ed764d77674f",
+      "gitBlobSha256": "c95205611a00561119c34a8eaa23969c0f3b7f80c82275c226077dd07b5a75f8"
+    },
+    {
+      "id": "config:utils.ts",
+      "path": "packages/mermaid/src/utils.ts",
+      "symbols": [
+        "detectInit",
+        "detectDirective",
+        "cleanAndMerge"
+      ],
+      "sha256": "5968be88bf78df0ccb211f2ddba50e505099607a2770435577deed94551e4c05",
+      "gitBlobSha256": "4880a24ada719172bc45652cefa9a2defd6e8aaeba9ebbd7862108dd930baca9"
+    },
+    {
+      "id": "config:sanitizeDirective.ts",
+      "path": "packages/mermaid/src/utils/sanitizeDirective.ts",
+      "symbols": [
+        "sanitizeDirective",
+        "sanitizeCss",
+        "configKeys"
+      ],
+      "sha256": "b4b3a906c608be0dc3b72136680c8d29bd87978857da6ba8234adede06b0ffa1",
+      "gitBlobSha256": "582df24b6ef1cf21ec48df458508042a4aac48bec23342b4f12dc20c952e8973"
+    },
+    {
+      "id": "config:defaultConfig.ts",
+      "path": "packages/mermaid/src/defaultConfig.ts",
+      "symbols": [
+        "config/keyify"
+      ],
+      "sha256": "6f2ec3c231ee970fb0368d158975090d488c93c9801a618b06cb18d58488b068",
+      "gitBlobSha256": "f5bb393e7f39ca7ab9bb152be3002ff802487d77db33721ad11c7d03709dc782"
+    },
+    {
+      "id": "config:config.schema.yaml",
+      "path": "packages/mermaid/src/schemas/config.schema.yaml",
+      "symbols": [
+        "flowchart defaults/secure/root settings"
+      ],
+      "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+      "gitBlobSha256": "855e6fbb5d278f190f15a7660b44dca6a4699ca8077ab8b35579a4e8a64be019"
+    },
+    {
+      "id": "sanitizer:common.ts",
+      "path": "packages/mermaid/src/diagrams/common/common.ts",
+      "symbols": [
+        "sanitizeMore",
+        "sanitizeText",
+        "removeScript"
+      ],
+      "sha256": "b14851667f7d45d101d4e028204babb1628faefe4812a88ae2d8acac72f8e144",
+      "gitBlobSha256": "bf6a0cc85de418bb8171735a7317fd7e84f8ad79f4e975e378130f11728efb67"
+    },
+    {
+      "id": "color:theme-base.js",
+      "path": "packages/mermaid/src/themes/theme-base.js",
+      "symbols": [
+        "updateColors/mainBkg/nodeBorder",
+        "calculate/explicit nodeBorder gradient"
+      ],
+      "sha256": "c13caf87f1a547eb65596ebaabf94ad80055546dff5458f3b6475799bb5ec52c",
+      "gitBlobSha256": "c680265d95221e1639d8eb9e3c345a945b432aea3843f48b12ea1adcd3aeacf4"
+    },
+    {
+      "id": "color:theme-helpers.js",
+      "path": "packages/mermaid/src/themes/theme-helpers.js",
+      "symbols": [
+        "mkBorder",
+        "applyOverride"
+      ],
+      "sha256": "8bcfaf8426fcff2d033843ca2c38d3bdc23f8443c5721c686951b56e9c612289",
+      "gitBlobSha256": "b90c76526681923e1efb82ae925105a49a2a6d6e5a0cb9363ab8e8778505d06c"
+    },
+    {
+      "id": "themes:theme-base.js",
+      "path": "packages/mermaid/src/themes/theme-base.js",
+      "symbols": [
+        "Theme constructor constants",
+        "updateColors",
+        "calculate overrides"
+      ],
+      "sha256": "c13caf87f1a547eb65596ebaabf94ad80055546dff5458f3b6475799bb5ec52c",
+      "gitBlobSha256": "c680265d95221e1639d8eb9e3c345a945b432aea3843f48b12ea1adcd3aeacf4"
+    },
+    {
+      "id": "themes:theme-dark.js",
+      "path": "packages/mermaid/src/themes/theme-dark.js",
+      "symbols": [
+        "Theme constructor constants",
+        "updateColors",
+        "calculate overrides"
+      ],
+      "sha256": "79e5faeb17f0ad47c2e97cbbab7491bf12ab93115546eaebda741e00fad75d37",
+      "gitBlobSha256": "d22b8ab46292bd1406d8b8b28d42ea7b5dcebd0a7aba1dc10c392b9843d4a2bb"
+    },
+    {
+      "id": "themes:theme-default.js",
+      "path": "packages/mermaid/src/themes/theme-default.js",
+      "symbols": [
+        "Theme constructor constants",
+        "updateColors",
+        "calculate overrides"
+      ],
+      "sha256": "c7676f84269d433c83f089bd978439a0d5e783ba48f1dfd87a294efb674e3b66",
+      "gitBlobSha256": "322992e004caf49cf8c21e5e8a01371af8bec116aeb24a7eadd872bcd3359d28"
+    },
+    {
+      "id": "themes:theme-forest.js",
+      "path": "packages/mermaid/src/themes/theme-forest.js",
+      "symbols": [
+        "Theme constructor constants",
+        "updateColors",
+        "calculate overrides"
+      ],
+      "sha256": "473eed6464c38764c59c15768cdedb44766f40aa736bb96ef1fa94cea2315cc5",
+      "gitBlobSha256": "3db01e30413f02613f19a125bc49e5efe06e9190cbe2af028fc3729200a641c1"
+    },
+    {
+      "id": "themes:theme-neutral.js",
+      "path": "packages/mermaid/src/themes/theme-neutral.js",
+      "symbols": [
+        "Theme constructor constants",
+        "updateColors",
+        "calculate overrides"
+      ],
+      "sha256": "a09bdc75fabfaddb19626f8c8af8e5d9df0dcee31ed09522dcbccd6418ca1a43",
+      "gitBlobSha256": "7a4d9eae887870469c3338c73564767bffa75b2cbc7af0f67b84a3c63539a092"
+    },
+    {
+      "id": "themes:theme-neo.js",
+      "path": "packages/mermaid/src/themes/theme-neo.js",
+      "symbols": [
+        "Theme constructor constants",
+        "updateColors",
+        "calculate overrides"
+      ],
+      "sha256": "0ef8cf2a93e4629984c6c57382ce69f37d5bffb6a6fe5b949a972ee8d268bf9f",
+      "gitBlobSha256": "217eb2eee43f7bfe8eeaca07f8b766d145d58c87dbe683fadf102f26f4abae81"
+    },
+    {
+      "id": "themes:theme-neo-dark.js",
+      "path": "packages/mermaid/src/themes/theme-neo-dark.js",
+      "symbols": [
+        "Theme constructor constants",
+        "updateColors",
+        "calculate overrides"
+      ],
+      "sha256": "f2d3469f8fe6aae719654bba2fe776802617a72449db8a6a299bc070e07673c3",
+      "gitBlobSha256": "a1944074ec1f1b74bdf4078061a610cd12921fb158a2d66a96511c593d4fa2f4"
+    },
+    {
+      "id": "themes:theme-redux.js",
+      "path": "packages/mermaid/src/themes/theme-redux.js",
+      "symbols": [
+        "Theme constructor constants",
+        "updateColors",
+        "calculate overrides"
+      ],
+      "sha256": "a2eeb8fc623614c4853e39e90abd1ebf6b8e6f9f4028cf40962d6d6414d6443f",
+      "gitBlobSha256": "8f22d1e3a0d27c142663eb4a96efbca8010ea8b556b130bc14c8467d94587fbc"
+    },
+    {
+      "id": "themes:theme-redux-dark.js",
+      "path": "packages/mermaid/src/themes/theme-redux-dark.js",
+      "symbols": [
+        "Theme constructor constants",
+        "updateColors",
+        "calculate overrides"
+      ],
+      "sha256": "aa769f4fa5992f04bce44af4f1e568d98140477f53406a29a66248b4e6f5d1bc",
+      "gitBlobSha256": "4c8b914442bcc899bc35c9bd31ae15881782cb9734288d6fdd96c15f0736477a"
+    },
+    {
+      "id": "themes:theme-redux-color.js",
+      "path": "packages/mermaid/src/themes/theme-redux-color.js",
+      "symbols": [
+        "Theme constructor constants",
+        "updateColors",
+        "calculate overrides"
+      ],
+      "sha256": "5e4278fb33825a501ffae1c6ac13a869763c4e611de9ad6077b58513e4e1b6d0",
+      "gitBlobSha256": "8979bb59dfbdf14b3290dfe1bfe96a755b2d637427939ff2396c9b76f3b86574"
+    },
+    {
+      "id": "themes:theme-redux-dark-color.js",
+      "path": "packages/mermaid/src/themes/theme-redux-dark-color.js",
+      "symbols": [
+        "Theme constructor constants",
+        "updateColors",
+        "calculate overrides"
+      ],
+      "sha256": "0c1899419d5a06afe61bd183d6fc2b59bf5b1be12528e2bf1c7f3fc36788b535",
+      "gitBlobSha256": "9895ec00395ec584c98aaef3b3aead4258f592a1b8fd777b090a55085c28a5ed"
+    },
+    {
+      "id": "themes:index.js",
+      "path": "packages/mermaid/src/themes/index.js",
+      "symbols": [
+        "eleven-theme registry; null is absent"
+      ],
+      "sha256": "6277f68da19a2b75f2e6b60c02d590c71a1da926b50969f2523f66e372a40861",
+      "gitBlobSha256": "a4f303a2a18a1fcdef028827cc2aa8c2a0b5b27ea438295ed3c4dec3ce71fc09"
+    }
+  ],
+  "embeddedYamlSources": [
+    {
+      "id": "yaml:str.js",
+      "path": "../../../node_modules/.pnpm/js-yaml@4.3.0/node_modules/js-yaml/lib/type/str.js",
+      "sha256": "1f8725eac2dc7bed4b91610f21796ed3c057cee44b81a1ae8cc9beb9cd6c63ff",
+      "symbols": [
+        "resolve/construct JSON_SCHEMA type"
+      ],
+      "container": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+      "containerSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679"
+    },
+    {
+      "id": "yaml:seq.js",
+      "path": "../../../node_modules/.pnpm/js-yaml@4.3.0/node_modules/js-yaml/lib/type/seq.js",
+      "sha256": "3a38b7f3242737c2e21462c42a8da1682325686cb2b30dc3630e515cf9c45522",
+      "symbols": [
+        "resolve/construct JSON_SCHEMA type"
+      ],
+      "container": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+      "containerSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679"
+    },
+    {
+      "id": "yaml:map.js",
+      "path": "../../../node_modules/.pnpm/js-yaml@4.3.0/node_modules/js-yaml/lib/type/map.js",
+      "sha256": "6dd30a02cabaccf71c230464537bda5785093da80cd3319ed3a6481206e2ec7d",
+      "symbols": [
+        "resolve/construct JSON_SCHEMA type"
+      ],
+      "container": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+      "containerSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679"
+    },
+    {
+      "id": "yaml:failsafe.js-schema",
+      "path": "../../../node_modules/.pnpm/js-yaml@4.3.0/node_modules/js-yaml/lib/schema/failsafe.js",
+      "sha256": "8e109fccabab5c066b66113f5d68bb74372f48bf589de39e44ed26432a98a27a",
+      "symbols": [
+        "JSON_SCHEMA/load/read/compose loader rules"
+      ],
+      "container": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+      "containerSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679"
+    },
+    {
+      "id": "yaml:null.js",
+      "path": "../../../node_modules/.pnpm/js-yaml@4.3.0/node_modules/js-yaml/lib/type/null.js",
+      "sha256": "5eea804da258ba10fa736199ed0cef9d89dbb01eac1c1bd3609a79a132d1885e",
+      "symbols": [
+        "resolve/construct JSON_SCHEMA type"
+      ],
+      "container": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+      "containerSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679"
+    },
+    {
+      "id": "yaml:bool.js",
+      "path": "../../../node_modules/.pnpm/js-yaml@4.3.0/node_modules/js-yaml/lib/type/bool.js",
+      "sha256": "cc0d255ac6c55064421c19bbea312dcb9e22aee49fa9f8461723d9fbf7a0f8b3",
+      "symbols": [
+        "resolve/construct JSON_SCHEMA type"
+      ],
+      "container": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+      "containerSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679"
+    },
+    {
+      "id": "yaml:int.js",
+      "path": "../../../node_modules/.pnpm/js-yaml@4.3.0/node_modules/js-yaml/lib/type/int.js",
+      "sha256": "9d428a6e6de891a52b2b5ebd2bf09f9d1f9506514aaf35c6428f0111ecf86fdb",
+      "symbols": [
+        "resolve/construct JSON_SCHEMA type"
+      ],
+      "container": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+      "containerSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679"
+    },
+    {
+      "id": "yaml:float.js",
+      "path": "../../../node_modules/.pnpm/js-yaml@4.3.0/node_modules/js-yaml/lib/type/float.js",
+      "sha256": "42b4d238e5d00267fe126996b912f34506d273c39725524d662626bb9e2d4e7e",
+      "symbols": [
+        "resolve/construct JSON_SCHEMA type"
+      ],
+      "container": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+      "containerSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679"
+    },
+    {
+      "id": "yaml:json.js-schema",
+      "path": "../../../node_modules/.pnpm/js-yaml@4.3.0/node_modules/js-yaml/lib/schema/json.js",
+      "sha256": "b08f46efd2c45c46c6d3eaf9b05489356d80391c5f7d5094fb8ec7713e796281",
+      "symbols": [
+        "JSON_SCHEMA/load/read/compose loader rules"
+      ],
+      "container": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+      "containerSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679"
+    },
+    {
+      "id": "yaml:loader.js",
+      "path": "../../../node_modules/.pnpm/js-yaml@4.3.0/node_modules/js-yaml/lib/loader.js",
+      "sha256": "8b6c0d49b3cf2f3e423242b3edf4187a69aa8e35c44aa8d716af500edc6914e6",
+      "symbols": [
+        "JSON_SCHEMA/load/read/compose loader rules"
+      ],
+      "container": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+      "containerSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679"
+    }
+  ],
+  "assertionGroups": [
+    {
+      "group": "RichFixtureLanguageTests",
+      "tests": [
+        "RichFixtureLanguageTests.test_handwritten_semantic_cases",
+        "RichFixtureLanguageTests.test_fixture_denominator_and_theme_registry",
+        "RichFixtureLanguageTests.test_official_parse_invalid_cases",
+        "RichFixtureLanguageTests.test_deferred_scope_is_separate_from_invalid_grammar",
+        "RichFixtureLanguageTests.test_raw_label_preserves_markup_entities_and_markdown_body",
+        "RichFixtureLanguageTests.test_unclosed_markdown_in_node_edge_and_group_is_parse_error",
+        "RichFixtureLanguageTests.test_rich_labels_do_not_leak_across_redeclaration_or_requests"
+      ],
+      "sources": [
+        "grammar:flow.jison",
+        "grammar:flowDb.ts",
+        "grammar:Diagram.ts",
+        "grammar:utils.ts",
+        "preprocess:preprocess.ts",
+        "preprocess:frontmatter.ts",
+        "preprocess:frontmatter.spec.ts",
+        "preprocess:regexes.ts",
+        "preprocess:regexes.spec.ts",
+        "preprocess:comments.ts",
+        "preprocess:comments.spec.ts",
+        "sanitizer:common.ts",
+        "themes:theme-base.js",
+        "themes:theme-dark.js",
+        "themes:theme-default.js",
+        "themes:theme-forest.js",
+        "themes:theme-neutral.js",
+        "themes:theme-neo.js",
+        "themes:theme-neo-dark.js",
+        "themes:theme-redux.js",
+        "themes:theme-redux-dark.js",
+        "themes:theme-redux-color.js",
+        "themes:theme-redux-dark-color.js",
+        "themes:index.js",
+        "config:config.ts",
+        "config:mermaidAPI.ts",
+        "config:assignWithDepth.ts",
+        "config:utils.ts",
+        "config:sanitizeDirective.ts",
+        "config:defaultConfig.ts",
+        "config:config.schema.yaml"
+      ],
+      "origin": "Handwritten expectations from pinned symbols/specs; no candidate calls or snapshots generated expected values."
+    },
+    {
+      "group": "YamlJsonSchemaTests",
+      "tests": [
+        "YamlJsonSchemaTests.test_null_and_boolean_three_case_forms",
+        "YamlJsonSchemaTests.test_non_json_booleans_timestamps_and_underscores_stay_strings",
+        "YamlJsonSchemaTests.test_json_schema_numeric_bases_signs_and_float_forms",
+        "YamlJsonSchemaTests.test_pinned_numeric_case_and_float_grammar_boundaries",
+        "YamlJsonSchemaTests.test_yaml_integers_use_js_number_rounding",
+        "YamlJsonSchemaTests.test_quoted_strings_and_escapes",
+        "YamlJsonSchemaTests.test_flow_and_block_collections",
+        "YamlJsonSchemaTests.test_comments_and_plain_string_hash",
+        "YamlJsonSchemaTests.test_block_literal_chomp_and_fold",
+        "YamlJsonSchemaTests.test_keep_chomp_counts_real_trailing_linebreaks",
+        "YamlJsonSchemaTests.test_multiline_plain_and_quoted_folding",
+        "YamlJsonSchemaTests.test_aliases_and_json_schema_merge_key",
+        "YamlJsonSchemaTests.test_explicit_json_tags",
+        "YamlJsonSchemaTests.test_explicit_and_coerced_mapping_keys",
+        "YamlJsonSchemaTests.test_yaml_invalid_structures_and_unknown_tags"
+      ],
+      "sources": [
+        "yaml:str.js",
+        "yaml:seq.js",
+        "yaml:map.js",
+        "yaml:failsafe.js-schema",
+        "yaml:null.js",
+        "yaml:bool.js",
+        "yaml:int.js",
+        "yaml:float.js",
+        "yaml:json.js-schema",
+        "yaml:loader.js"
+      ],
+      "origin": "Handwritten expectations from pinned symbols/specs; no candidate calls or snapshots generated expected values."
+    },
+    {
+      "group": "PreprocessPositionTests",
+      "tests": [
+        "PreprocessPositionTests.test_frontmatter_empty_scalar_array_and_unknown_metadata",
+        "PreprocessPositionTests.test_frontmatter_false_zero_and_array_title_js_coercion",
+        "PreprocessPositionTests.test_frontmatter_only_at_start_and_exact_indent",
+        "PreprocessPositionTests.test_cleanup_stages_and_html_attribute_quotes",
+        "PreprocessPositionTests.test_processed_boundary_map_is_monotonic_and_original",
+        "PreprocessPositionTests.test_node_edge_group_label_spans_reference_original_utf16",
+        "PreprocessPositionTests.test_markdown_node_span_excludes_quote_and_tick_delimiters",
+        "PreprocessPositionTests.test_parse_error_after_frontmatter_comments_crlf_and_unicode",
+        "PreprocessPositionTests.test_yaml_error_span_is_in_original_frontmatter",
+        "PreprocessPositionTests.test_empty_comment_marker_is_not_removed_by_cleanup_regex",
+        "PreprocessPositionTests.test_wrap_nowrap_directives_preserve_source_precedence",
+        "PreprocessPositionTests.test_malformed_init_is_removed_without_poisoning_next_request"
+      ],
+      "sources": [
+        "preprocess:preprocess.ts",
+        "preprocess:frontmatter.ts",
+        "preprocess:frontmatter.spec.ts",
+        "preprocess:regexes.ts",
+        "preprocess:regexes.spec.ts",
+        "preprocess:comments.ts",
+        "preprocess:comments.spec.ts",
+        "grammar:flow.jison",
+        "grammar:flowDb.ts",
+        "grammar:Diagram.ts",
+        "grammar:utils.ts",
+        "config:config.ts",
+        "config:mermaidAPI.ts",
+        "config:assignWithDepth.ts",
+        "config:utils.ts",
+        "config:sanitizeDirective.ts",
+        "config:defaultConfig.ts",
+        "config:config.schema.yaml"
+      ],
+      "origin": "Handwritten expectations from pinned symbols/specs; no candidate calls or snapshots generated expected values."
+    },
+    {
+      "group": "ConfigurationLayerSourceTests",
+      "tests": [
+        "ConfigurationLayerSourceTests.test_null_and_array_flowchart_sections_follow_merge_before_validation",
+        "ConfigurationLayerSourceTests.test_neo_shadow_keeps_source_string_and_parses_declaration_semicolon",
+        "ConfigurationLayerSourceTests.test_config_layer_order_and_original_values_are_frozen",
+        "ConfigurationLayerSourceTests.test_theme_precedence_scoped_over_top_within_each_layer",
+        "ConfigurationLayerSourceTests.test_null_theme_keeps_site_variables_and_default_look",
+        "ConfigurationLayerSourceTests.test_root_font_family_bridges_but_root_size_is_site_only",
+        "ConfigurationLayerSourceTests.test_theme_variables_font_size_css_units",
+        "ConfigurationLayerSourceTests.test_root_and_diagram_html_evaluate_truth_table",
+        "ConfigurationLayerSourceTests.test_markdown_auto_wrap_only_boolean_false_disables",
+        "ConfigurationLayerSourceTests.test_secure_keys_protected_recursively",
+        "ConfigurationLayerSourceTests.test_user_secure_extension_protects_theme",
+        "ConfigurationLayerSourceTests.test_prototype_schema_metadata_unknown_and_null_directive_keys_are_removed",
+        "ConfigurationLayerSourceTests.test_in_document_dompurify_is_not_a_known_default_config_key",
+        "ConfigurationLayerSourceTests.test_dompurify_missing_empty_and_null_are_distinct",
+        "ConfigurationLayerSourceTests.test_in_document_css_balance_and_unsafe_strings",
+        "ConfigurationLayerSourceTests.test_theme_variable_directive_value_filter_is_source_restrictive",
+        "ConfigurationLayerSourceTests.test_request_state_isolation_after_yaml_and_config_failure",
+        "ConfigurationLayerSourceTests.test_cleaned_text_budget_counts_utf16_at_boundary",
+        "ConfigurationLayerSourceTests.test_secure_edge_budget_boundary_and_no_truncation"
+      ],
+      "sources": [
+        "config:config.ts",
+        "config:mermaidAPI.ts",
+        "config:assignWithDepth.ts",
+        "config:utils.ts",
+        "config:sanitizeDirective.ts",
+        "config:defaultConfig.ts",
+        "config:config.schema.yaml",
+        "themes:theme-base.js",
+        "themes:theme-dark.js",
+        "themes:theme-default.js",
+        "themes:theme-forest.js",
+        "themes:theme-neutral.js",
+        "themes:theme-neo.js",
+        "themes:theme-neo-dark.js",
+        "themes:theme-redux.js",
+        "themes:theme-redux-dark.js",
+        "themes:theme-redux-color.js",
+        "themes:theme-redux-dark-color.js",
+        "themes:index.js",
+        "preprocess:preprocess.ts",
+        "preprocess:frontmatter.ts",
+        "preprocess:frontmatter.spec.ts",
+        "preprocess:regexes.ts",
+        "preprocess:regexes.spec.ts",
+        "preprocess:comments.ts",
+        "preprocess:comments.spec.ts",
+        "sanitizer:common.ts"
+      ],
+      "origin": "Handwritten expectations from pinned symbols/specs; no candidate calls or snapshots generated expected values."
+    },
+    {
+      "group": "PureMergeSourceTests",
+      "tests": [
+        "PureMergeSourceTests.test_depth_two_and_null_skip_follow_assign_with_depth",
+        "PureMergeSourceTests.test_object_scalar_mismatches_do_not_clobber",
+        "PureMergeSourceTests.test_array_union_has_js_identity_and_boolean_numeric_distinction",
+        "PureMergeSourceTests.test_array_of_sources_merges_in_order_into_object",
+        "PureMergeSourceTests.test_frontmatter_directive_lodash_array_index_merge_is_distinct"
+      ],
+      "sources": [
+        "config:config.ts",
+        "config:mermaidAPI.ts",
+        "config:assignWithDepth.ts",
+        "config:utils.ts",
+        "config:sanitizeDirective.ts",
+        "config:defaultConfig.ts",
+        "config:config.schema.yaml"
+      ],
+      "origin": "Handwritten expectations from pinned symbols/specs; no candidate calls or snapshots generated expected values."
+    },
+    {
+      "group": "ThemeColorSourceTests",
+      "tests": [
+        "ThemeColorSourceTests.test_css_color_forms_have_independently_known_channels",
+        "ThemeColorSourceTests.test_base_primary_border_derivation_preserves_source_hsl",
+        "ThemeColorSourceTests.test_explicit_node_border_disables_base_gradient_unless_explicit",
+        "ThemeColorSourceTests.test_theme_effective_variables_are_request_local"
+      ],
+      "sources": [
+        "color:theme-base.js",
+        "color:theme-helpers.js",
+        "themes:theme-base.js",
+        "themes:theme-dark.js",
+        "themes:theme-default.js",
+        "themes:theme-forest.js",
+        "themes:theme-neutral.js",
+        "themes:theme-neo.js",
+        "themes:theme-neo-dark.js",
+        "themes:theme-redux.js",
+        "themes:theme-redux-dark.js",
+        "themes:theme-redux-color.js",
+        "themes:theme-redux-dark-color.js",
+        "themes:index.js"
+      ],
+      "origin": "Handwritten expectations from pinned symbols/specs; no candidate calls or snapshots generated expected values."
+    }
+  ],
+  "fixtureDenominator": {
+    "positives": 50,
+    "themeVariants": 12,
+    "officialParseInvalid": 8,
+    "unsupportedScope": 6,
+    "knownUpstreamRenderError": 1
+  },
+  "fixtureIds": [
+    "theme-base",
+    "theme-dark",
+    "theme-default",
+    "theme-forest",
+    "theme-neutral",
+    "theme-neo",
+    "theme-neo-dark",
+    "theme-redux",
+    "theme-redux-dark",
+    "theme-redux-color",
+    "theme-redux-dark-color",
+    "theme-null",
+    "title-unicode-crlf",
+    "title-boolean",
+    "title-literal",
+    "title-folded",
+    "frontmatter-indent",
+    "yaml-flow-config",
+    "yaml-alias-config",
+    "directive-init",
+    "directive-initialize",
+    "directive-legacy-config",
+    "directive-layer-priority",
+    "directive-multiple",
+    "directive-secure",
+    "html-bold",
+    "html-italic",
+    "html-break",
+    "html-svg-mode",
+    "html-script-strict",
+    "html-event-attribute",
+    "markdown-node",
+    "markdown-edge-pipe",
+    "markdown-edge-inline",
+    "markdown-group",
+    "markdown-multiline",
+    "markdown-nowrap",
+    "entities-html",
+    "entities-mermaid",
+    "security-loose",
+    "security-antiscript",
+    "security-sandbox",
+    "dompurify-allow-tags",
+    "theme-css-native-paint",
+    "theme-vars-native-paint",
+    "a11y-single-line",
+    "a11y-multiline",
+    "rich-overview",
+    "title-hidden",
+    "empty-rich-edge"
+  ],
+  "semanticContract": "L1 body is sanitized DB markup. Mermaid custom entities use canonical HTML-entity spelling (decodeEntities transport only), never html.unescape; visible strings/runs handwritten independently. HTML br DOM serialization expected <br>. Ordinary compatible labels retain legacy slice whitespace contract.",
+  "testDesignObservations": [
+    {
+      "id": "yaml-number-underscores",
+      "source": "Pinned sourcemap js-yaml@4.3.0 type/int and type/float reject underscore digits; candidate static reader currently strips underscores. Expected tests preserve source result string; await S4 first failure.",
+      "s4Resolution": "Confirmed and repaired in source; original failing evidence preserved; independent expectations retained."
+    },
+    {
+      "id": "null-object-config",
+      "source": "assignWithDepth ignores null and loops array-of-sources without clobbering object. Former F011 null/empty flowchart and paddingNull scope reject assertions now positive defaults; no behavior execution.",
+      "s4Resolution": "Confirmed and repaired in source; original failing evidence preserved; independent expectations retained."
+    },
+    {
+      "id": "empty-percent-comment",
+      "source": "cleanupComments requires nonempty [^newline]+ after marker, so bare %% stays in cleaned text. Direct preprocessing assertion avoids guessing combined Jison behavior."
+    },
+    {
+      "id": "unclosed-markdown",
+      "source": "MD_STR lexer closes on backtick+doublequote; missing delimiter is independently expected invalid; official first probe must confirm without rewriting failed evidence.",
+      "s4Resolution": "Confirmed and repaired in source; original failing evidence preserved; independent expectations retained."
+    },
+    {
+      "id": "power-shell-unicode",
+      "source": "Initial fixture stdin generation lost nonASCII. Preserved original design snapshot test-runs/F01.3-language-unicode-design-snapshot-20261105T015339Z-1fa5b7ca then repaired from original hand-authored literals using ASCII Unicode escapes. This precedes all behavior runs."
+    },
+    {
+      "id": "html-svg-mode-source-correction",
+      "source": "Initial official L3 visible text capture is literal <b> Bold </b>, not styled Bold, when htmlLabels=false. Changed only visible expectation; DB sanitized body remains <b>Bold</b>; initial incorrect fixture is preserved in initial-evidence-snapshot."
+    }
+  ],
+  "migrations": [
+    {
+      "path": "tests/f011/test_language.py",
+      "reason": "F013 promotes HTML/Markdown/entities, accTitle, YAML/directives, themes/classic/security/themeVariables/string evaluate/null merge from scope rejects to explicit positive semantics. All F014 arrows/classes/style/resources/layout exclusions remain negative boundary checks."
+    },
+    {
+      "path": "tests/f012/test_language.py",
+      "reason": "F013 HTML edge/Markdown node gain concrete positives; null group-margin preserves default by assignWithDepth. Other F014 exclusions remain."
+    }
+  ],
+  "behaviorExecuted": true,
+  "installationValidation": "deferred_by_user",
+  "boundaries": [
+    "These are independent source-based tests, not a universal js-yaml test suite or coverage claim.",
+    "No geometry/Canvas tests execute in this language group; visible* and formats provide independently authored A/B fixture assertions.",
+    "Unsupported cases are legal official grammar and require specific Python boundary error codes, separate from genuine parse-invalid cases.",
+    "No F014/Dagre behavior is evaluated."
+  ],
+  "mechanicalEvidence": "test-runs/F01.3-language-design-final-20261105T015509Z-d36448b2/run.json",
+  "s4RepairBatch": {
+    "preservedInitialEvidence": "test-runs/F01.3-initial-evidence-snapshot-20261105T021024Z-38c90a72",
+    "preservedInitialSourceSha256": "5a7264af3a00dc705df6824d83311e3e3b67d80b39457ecfeba5aec19293d771",
+    "fixes": [
+      {
+        "id": "config-section-merge",
+        "source": "assignWithDepth.ts null skip/array sources; config.ts resolveAppearance",
+        "change": "Validate effective flowchart section after source merge; raw null/empty list retain defaults, array mapping sources merge in order.",
+        "regression": "ConfigurationLayerSourceTests.test_null_and_array_flowchart_sections_follow_merge_before_validation"
+      },
+      {
+        "id": "markdown-body-span",
+        "source": "flow.jison MD_STR excludes delimiter tokens; F01.3 raw-label body contract",
+        "change": "Use body start+1/end-1 only for Markdown; retain original raw map and UTF16 conversion.",
+        "regression": "PreprocessPositionTests.test_markdown_node_span_excludes_quote_and_tick_delimiters"
+      },
+      {
+        "id": "unclosed-markdown",
+        "source": "flow.jison md_string only closes backtick+doublequote; official initial negative rejects",
+        "change": "Quoted label beginning Markdown tick must have closing tick; node/edge/group share check.",
+        "regression": "RichFixtureLanguageTests.test_unclosed_markdown_in_node_edge_and_group_is_parse_error"
+      },
+      {
+        "id": "yaml-numeric-4.3",
+        "source": "Pinned embedded js-yaml@4.3.0 type/int.js and type/float.js",
+        "change": "No underscore cleanup, lowercase base prefixes, exact special-value cases, finite numeric resolution, JS Number integer rounding and precise leading-dot float sign grammar.",
+        "regression": "YamlJsonSchemaTests.test_pinned_numeric_case_and_float_grammar_boundaries;test_yaml_integers_use_js_number_rounding"
+      },
+      {
+        "id": "yaml-block-keep",
+        "source": "js-yaml loader readBlockScalar/CHOMPING_KEEP",
+        "change": "Discard split terminal sentinel rather than counting it as an extra physical blank line; preserve meaningful trailing blank lines.",
+        "regression": "YamlJsonSchemaTests.test_keep_chomp_counts_real_trailing_linebreaks"
+      },
+      {
+        "id": "neo-shadow-correction",
+        "source": "theme-neo.js:40 and styles.ts filter interpolation",
+        "change": "Default literal remains byte-for-byte unchanged. It has balanced parentheses and a legal trailing CSS declaration semicolon. Scalar shadow parser now strips only declaration terminator for recognition, producing dx0/dy1/alpha.25. Earlier malformed-string analysis was incorrect.",
+        "regression": "ConfigurationLayerSourceTests.test_neo_shadow_keeps_source_string_and_parses_declaration_semicolon"
+      },
+      {
+        "id": "html-svg-fixture-correction",
+        "source": "Official initial A html-svg-mode visible text capture; HTML disabled SVG text token semantics",
+        "change": "Fixture DB body remains <b>Bold</b>; independent visible expectation corrected from Bold to literal <b> Bold </b>. C owns corresponding text rendering."
+      }
+    ],
+    "targetedEvidence": [
+      "test-runs/F01.3-record-20261105T021506Z-233f8f28/run.json",
+      "test-runs/F01.3-record-20261105T021513Z-b93aefe4/run.json"
+    ],
+    "installationValidation": "deferred_by_user",
+    "targetedLanguageEvidenceFixtureCount": 48
+  },
+  "testMethodCounts": {
+    "F013": 62,
+    "F011": 39,
+    "F012": 29,
+    "F013PlusF011TargetedExecuted": 101,
+    "F012NotRerunInThisBatch": true
+  },
+  "s4AdditionalRegressionCases": {
+    "ids": [
+      "title-hidden",
+      "empty-rich-edge"
+    ],
+    "origin": "Root-approved S4 real-root-cause regression additions to original48; independent pinned styles.ts title selector/user CSS semantics and grammar/common sanitizer edge markup expectation.",
+    "status": "awaiting_root_unified_official_and_final_regression",
+    "original48EvidencePreserved": true,
+    "newBehaviorExecuted": false
+  },
+  "priorVerificationStatus": "targeted_checks_passed_full_acceptance_pending",
+  "finalVerification": {
+    "sourceTreeSha256": "5cb792fadbd7685a0d65a4a4d0e397ff59566eae340f4aaa87d0a7041d18b08f",
+    "unitRun": "test-runs/F01.3-batch-20261105T022709Z-dcd8b609/run.json",
+    "summary": "references/f013-verification-summary.json",
+    "installationValidation": false
+  }
+}

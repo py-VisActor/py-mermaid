@@ -1,3 +1,7 @@
+> 2026-11-05 用户已决定 **完全剥离 Dagre 功能、配置选项、目标依赖和算法回退**，不再暂停待评估，也不作为可选兼容任务。默认 ELK 与其他保留的专用静态算法继续推进。见 [布局策略](LAYOUT_POLICY.md)；下文旧 Dagre 计划/来源说明以此覆盖。
+
+> 2026-11-05 用户范围决策：**全部图种和共享模块只做静态渲染，忽略交互逻辑。** 点击/回调/悬停/导航/命中测试、动画播放、交互元数据与 DOM 无障碍行为不作为交付或验收项；静态画面、资源与输入安全保留。以 [静态范围规则](STATIC_RENDERING_SCOPE.md) 为准，覆盖本文旧交互要求。
+
 # 全部源码完成后的来源导向测试与统一修复方案
 
 主执行顺序与任务 ID 以 [FULL_MIGRATION_PLAN](FULL_MIGRATION_PLAN.md)和[机器任务图](../references/migration-execution.json)为准。
@@ -67,7 +71,7 @@ status / candidate_source_sha / wheel_sha / evidence_paths_and_sha256
 | `tests/unit/model/` | 有序/复合图、节点边引用、分组、元数据与状态隔离 | 从原 DB/语义行为独立导出规范化模型 |
 | `tests/unit/labels/`、`tests/unit/styles/` | text runs、换行/转义、富文本/数学 box、主题颜色、样式优先级、字体测量输入 | 原配置与排版行为、独立公式；真实度量另有受控 Canvas 边界检查 |
 | `tests/unit/geometry/`、`tests/unit/algorithms/` | 曲线/弧/采样、交点、marker、scale/tick、树/力导向/区域算法、退化输入 | 原算法、独立数学性质与固定 seed；不能只验证坐标有限 |
-| `tests/unit/layout/` | py-elk 输入/选项/端口/分组/标签转换，Dagre/COSE/tidy/其他适配返回几何 | 适配契约与原路径；局部隔离用例不替代真实引擎集成 |
+| `tests/unit/layout/` | py-elk 输入/选项/端口/分组/标签转换，COSE/tidy/其他适配返回几何 | 适配契约与原路径；局部隔离用例不替代真实引擎集成 |
 | `tests/unit/rendering/` | 已布局数据到类型化绘制指令，层叠/clip/transform/颜色/线宽、viewport | 独立几何/样式断言，不比较 DOM 节点树或 React 调用次数 |
 | `tests/unit/resources/`、`tests/unit/security/` | 离线资源、图标解析、恶意 URL/标签、大小/深度限制、缺资源与异常 | 明确攻击/负例和策略表；安全结果不能仅靠截图判断 |
 | `tests/integration/diagrams/` | 全部 detector 的 text→model→measure→layout→draw 路径 | 同输入官方 A 与 Python B；包括真实 py-elk 调用和 Canvas 输出 |
@@ -115,8 +119,8 @@ P3 先按公共模块和图种分组运行 P2 已写好的测试，对环境/设
 | --- | --- | --- |
 | 0 安全/执行阻断 | 非法输入导致执行脚本/任意资源访问、挂死、公共 import/契约接线错误 | 安全/核心 owner 先处理，保留失败后回跑攻击/阻断用例及实际受影响入口 |
 | 1 公共语义/测量 | 默认 ELK、配置覆盖、UTF-16、稳定顺序、字体/label box、主题颜色 | 公共模块 owner 单点修复；回跑相关公共单元及引用该面的图种 |
-| 2 专用算法/图种 | grammar/模型、Dagre/COSE/tidy/其他布局、图形端点或 marker | 对应 owner 修复；算法边界单元加上所有已知受影响图种 |
-| 3 资源/导出/平台 | 缺字体、CJK/RTL/emoji、SVG/PDF 字体/页/链接、GPU/CPU/no-loader、并发 | 资源/Canvas/打包 owner 按真实平台和后端复核，不用 CPU 结果替代 GPU |
+| 2 专用算法/图种 | grammar/模型、COSE/tidy/其他布局、图形端点或 marker | 对应 owner 修复；算法边界单元加上所有已知受影响图种 |
+| 3 资源/导出/平台 | 缺字体、CJK/RTL/emoji、SVG/PDF 静态字体/页/文字与路径、GPU/CPU/no-loader、并发 | 资源/Canvas/打包 owner 按真实平台和后端复核，不用 CPU 结果替代 GPU |
 
 并行修复采用不同路径单 owner 和接口变更通知；公共模型/样式/布局协议变更由其 owner 提供影响清单，其他角色只修自己的调用侧。统一集成后才更新候选和结果索引，不能让多个 agent 同时修改公共文件或互相覆盖报告。
 
@@ -136,7 +140,7 @@ P3 的相关回归完成后，建立最终源码树和实际候选包，固定�
 | 输入/配置 | 所有 grammar 正负输入、检测/别名、schema/default/主题/look、资源/安全、特殊 JS 值、UTF-16/日期/locale |
 | 布局与绘制 | 默认真实 ELK、显式其他布局/选项/插件，组/端口/反馈边/路由/label/形状/marker/裁剪、专用算法与 seed |
 | 标签与字体 | 普通/HTML 含义/Markdown/math；同字体、fallback、缺字体、CJK/RTL/emoji/组合字符和度量边界 |
-| 导出 | 所有宣称格式 PNG/JPEG/WebP/SVG/PDF，尺寸/density/透明/背景、页/字体/文本/链接/元数据；有损编码与向量栅格化单独规则 |
+| 导出 | 所有宣称格式 PNG/JPEG/WebP/SVG/PDF，尺寸/density/透明/背景、页/字体/文本/静态格式结构（交互链接与事件元数据排除）；有损编码与向量栅格化单独规则 |
 | 平台/设备 | CPython 3.13，Windows AMD64、Linux glibc 2.28+ x86_64；默认 auto、CPU、GPU-required、no-loader 的适用场景 |
 | 生命周期/可靠性 | owner 线程、worker 自建对象、连续/并发、取消/异常恢复/GC、空/大/深输入、时间/内存资源上限与性能基线 |
 | 包与离线部署 | 同一新 wheel 仓库外隔离安装，无 Node/浏览器/JS/`.local` 或隐式下载；实际包内容、入口、依赖/native/字体/资源 SHA 与第三方许可 |

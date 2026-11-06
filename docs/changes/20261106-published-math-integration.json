@@ -1,0 +1,39 @@
+{
+  "schema": "py-mermaid-change-receipt/v1",
+  "task": "20261106-published-math-integration",
+  "status": "PASS_INSTALLED_PUBLISHED_MATH",
+  "baselineRun": "test-runs/MATH-PYPI-start-20261106T010230Z-45d3d401",
+  "startingDirtyStatusLines": 210,
+  "scope": "Switch declared dependency to py-visactor-katex==0.1.0; retain py_katex imports and existing static behavior",
+  "changedRuntimeFiles": [
+    "src/py_mermaid/rendering/labels/math.py"
+  ],
+  "runtimeDelta": "Only the missing-dependency message changed; math bridge/rendering logic byte-identical after reversing that message.",
+  "validationRun": "test-runs/MATH-PYPI-batch-20261106T010610Z-054fd721",
+  "deliveryRun": "test-runs/MATH-PYPI-delivery-20261106T010903Z-4dd7a953",
+  "evidenceSha256": "e08eb25e2ce1bbfab04990c13b1326f1618b606681263810133fdc06f341e153",
+  "dependencyLock": "references/math-release-lock.json",
+  "summary": "references/math-published-integration.json",
+  "verification": {
+    "externalEnvironments": 2,
+    "uniqueUnitMethods": 22,
+    "methodExecutions": 44,
+    "views": 48,
+    "formatExports": 30,
+    "profiles": [
+      "cpu",
+      "auto",
+      "gpu"
+    ],
+    "noPythonPath": true,
+    "emptyPath": true,
+    "allRuntimeModulesInstalledInVenv": true
+  },
+  "limits": [
+    "Only affected published math integration and local package installation verified on Windows.",
+    "Historical core/legacy reports retain their original source candidates.",
+    "No commit, push or py-mermaid publication in this task."
+  ],
+  "developmentInterpreterSetupRun": "test-runs/MATH-PYPI-batch-20261106T011025Z-597cb94c",
+  "finalAuditRun": "test-runs/MATH-PYPI-final-audit-20261106T011056Z-5cf4c16a"
+}

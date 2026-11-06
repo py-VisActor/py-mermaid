@@ -32,7 +32,7 @@ class PublicAPI(unittest.TestCase):
         asyncio.run(inside())
 
     def test_reject_unsupported_export_and_backend(self):
-        for kwargs, code in [({'format':'svg'}, 'UNSUPPORTED_FORMAT'),
+        for kwargs, code in [({'format':'tiff'}, 'UNSUPPORTED_FORMAT'),
                              ({'backend':'silent-fallback'}, 'INVALID_BACKEND')]:
             with self.subTest(kwargs=kwargs), self.assertRaises(MermaidError) as error:
                 render('flowchart TD\nA', **kwargs)

@@ -1,0 +1,124 @@
+{
+  "schema": "py-mermaid-change/v1",
+  "taskId": "20261104-f012-canvas",
+  "executionTask": "F01.2-S2/canvas",
+  "status": "targeted_verified",
+  "baseCommit": "b5af1879bf64034fae922d3713854ef67c34312f",
+  "startingState": {
+    "evidence": [
+      "test-runs\\f012-start-20261104"
+    ],
+    "preexistingChangesPreserved": true
+  },
+  "changedPaths": [
+    "src/py_mermaid/geometry/shapes.py",
+    "src/py_mermaid/rendering/labels/__init__.py",
+    "src/py_mermaid/rendering/labels/plain.py",
+    "src/py_mermaid/rendering/skia/session.py",
+    "references/f012-canvas-sources.json"
+  ],
+  "sourceSha256": {
+    "src/py_mermaid/geometry/shapes.py": "f2ea1d864d1a174862189b0a1cbd521bbead5c9f915195d98159bb9135c656c3",
+    "src/py_mermaid/rendering/labels/__init__.py": "da026d1ca373bb7b9466a5276dcad5826b8c6b19b3f23c98e1e64ba8259ea2e1",
+    "src/py_mermaid/rendering/labels/plain.py": "fa0bd7c05a82a7412f5cce1fea62acc580b6389789510bc0b893d9eb4e88fac5",
+    "src/py_mermaid/rendering/skia/session.py": "01a20aaffb2fa21fa3401006f02ed61cbc499e794f4c91024cfc842a3a2c5dfe",
+    "references/f012-canvas-sources.json": "ce3cf94693a2f80f9cae7f16191a86d7cbb3e8006ad596b0792a953c5557b9aa"
+  },
+  "commands": [
+    {
+      "command": [
+        "C:\\venvs\\pymmd-20261102\\Scripts\\python.exe",
+        "-m",
+        "compileall",
+        "-q",
+        "src/py_mermaid/geometry/shapes.py",
+        "src/py_mermaid/rendering/labels",
+        "src/py_mermaid/rendering/skia"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\venvs\\pymmd-20261102\\Scripts\\python.exe",
+        "-c",
+        "import inspect; from py_mermaid.geometry.shapes import ShapeGeometry,shape_geometry,shape_outline_intersection; from py_mermaid.rendering.skia import CanvasSession; print(inspect.signature(shape_geometry)); print(inspect.signature(shape_outline_intersection)); print(inspect.signature(CanvasSession.measure_annotations)); print(inspect.signature(CanvasSession.render)); print('compile/import only; no native objects or product behavior')"
+      ],
+      "exitCode": 0,
+      "stdout": "(kind: 'str', label_width: 'float', label_height: 'float', config: 'FlowConfig') -> 'ShapeGeometry'\n(kind: 'str', box: 'Box', port: 'Point', toward: 'Point') -> 'Point'\n(self, diagram: 'Flowchart') -> 'MeasuredAnnotations'\n(self, diagram: 'Flowchart', measured: 'tuple[MeasuredNode, ...]', layout: 'FlowLayout', *, annotations: 'MeasuredAnnotations | None' = None) -> 'RenderResult'\ncompile/import only; no native objects or product behavior\n",
+      "stderr": ""
+    }
+  ],
+  "evidence": [
+    {
+      "path": "test-runs\\f012-s2-canvas-mechanical-001\\manifest.json",
+      "sha256": "60c95608f15f4a95b6e141b1bb6266170b502b8c85bd710bfb3164ed1ab36493"
+    }
+  ],
+  "implementation": [
+    "14 classic shapes with source dimensions/path/detail lines/label offsets",
+    "Shared pure shape geometry and orthogonal outline intersection; ellipse explicit upstream missing",
+    "Node, group title and edge label real Canvas measurement via injected public API",
+    "Group palette/frame/title/shadow and edge label backgrounds/content in output",
+    "Native-free path values in contracts, owner-only public Path2D/Canvas execution",
+    "Bounds include all group/node outlines/shadows/text, label boxes, all sections/arrows"
+  ],
+  "limits": [
+    "All F01.2 behavior remains unverified at S2",
+    "No ellipse renderer fabricated",
+    "No arbitrary shapes/style framework or alternate renderer",
+    "No installation/packaging validation run per user steering"
+  ],
+  "nextAction": "Coordinator freezes S2 candidate; independent source-based S3 tests then grouped S4 first behavior execution",
+  "testDesign": {
+    "phase": "F01.2-S3",
+    "status": "test_design_complete_not_run",
+    "changedPaths": [
+      "tests/f012/test_canvas.py",
+      "references/f012-canvas-assertions.json"
+    ],
+    "sourceSha256": {
+      "tests/f012/test_canvas.py": "2432933f91dbfc80850395f0aaed2fe1eb96e638ba499efc6c1afc905e4d7dc2",
+      "references/f012-canvas-assertions.json": "0ca94efca9c92c7a2bcc3d6b866969a3e64ae6597d4504011a16a5e3e9591e9f"
+    },
+    "mechanicalChecks": [
+      {
+        "command": [
+          "C:\\venvs\\pymmd-20261102\\Scripts\\python.exe",
+          "-m",
+          "compileall",
+          "-q",
+          "tests/f012/test_canvas.py"
+        ],
+        "exitCode": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "C:\\venvs\\pymmd-20261102\\Scripts\\python.exe",
+          "-c",
+          "import sys,importlib.util,unittest; sys.path.insert(0,'src'); spec=importlib.util.spec_from_file_location('f012_canvas_tests','tests/f012/test_canvas.py'); module=importlib.util.module_from_spec(spec); spec.loader.exec_module(module); print('Collected',unittest.defaultTestLoader.loadTestsFromModule(module).countTestCases(),'tests; no behavior executed')"
+        ],
+        "exitCode": 0,
+        "stdout": "Collected 17 tests; no behavior executed\n",
+        "stderr": ""
+      }
+    ],
+    "frozenSourceSha256": "3d846b5df224e167a528a73c52d359388fda5e508b561fa876e4bd1b20785c2e"
+  },
+  "s4Correction": {
+    "issueId": "F012-CANVAS-CIRCLE-SHADOW",
+    "failureQa": "test-runs/F01.2-visual-qa-initial-20261104T145126Z-c8c94288/run.json",
+    "fixRun": "test-runs\\F01.2-circle-shadow-fix-20261104T145220Z-f7b4cdfc/run.json",
+    "actualPostFixPngQa": "test-runs\\F01.2-visual-qa-circular-fixed-20261104T145322Z-46380ea2/run.json",
+    "checks": "18 F01.2 Canvas +23 F01.1 Canvas passed, compile and actual circular PNG capture exit0; no full slice/installation verification claimed",
+    "sourceSha256": {
+      "src/py_mermaid/rendering/skia/session.py": "0646cc90b92d32adcfcd34a111da426ef36e0e88c1f335b25ed840c610dd53f5",
+      "tests/f012/test_canvas.py": "f4d6ca1ab7da25dcef6aad67f5d4c44137e2fcdb6c4583e4e6e32e8cf115651c",
+      "references/f012-canvas-sources.json": "caca504a3c75445065f39a018c75f21f0501b9473fd7729d37c9b180345faf75",
+      "references/f012-canvas-assertions.json": "93ec38b381ceba22c9c0418ef2a47a69d9a3113db61ab35ccd94956a7ed0c501"
+    }
+  }
+}

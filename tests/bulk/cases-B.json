@@ -1,0 +1,3009 @@
+{
+  "schema": "py-mermaid-bulk-cases/v1",
+  "group": "B",
+  "cases": [
+    {
+      "id": "B-gantt-calendar-tags",
+      "kind": "gantt",
+      "source": "gantt\ntitle Project\ndateFormat YYYY-MM-DD\naxisFormat %d/%m\ntodayMarker off\nsection Build\nDraft :done, a, 2024-02-28, 2d\nWork :active, crit, b, after a, 2d\nRelease :milestone, c, after b, 0d\nCut :vert, v, 2024-03-02, 0d\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/gantt/parser/gantt.jison",
+        "sha256": "15023f6e7af35588a206dddf176d7af763729d2bf76ea3de52f1bbe0f4a203ae",
+        "symbol": "synthetic production/renderer boundary: tags,milestone,vertical,dependency,dateFormat,axisFormat",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "tags",
+        "milestone",
+        "vertical",
+        "dependency",
+        "dateFormat",
+        "axisFormat"
+      ],
+      "expectedText": [
+        "Project",
+        "Build",
+        "Draft",
+        "Work",
+        "Release",
+        "Cut"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-gantt-excludes-includes",
+      "kind": "gantt",
+      "source": "gantt\ndateFormat YYYY-MM-DD\nexcludes weekends, 2024-01-08\nincludes 2024-01-06\nweekend friday\nweekday monday\ntickInterval 1week\ntopAxis\ntodayMarker off\nsection S\nTask :a, 2024-01-05, 5d\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/gantt/parser/gantt.jison",
+        "sha256": "15023f6e7af35588a206dddf176d7af763729d2bf76ea3de52f1bbe0f4a203ae",
+        "symbol": "synthetic production/renderer boundary: exclusion,inclusion,weekendFriday,tickWeek,topAxis",
+        "line": 1
+      },
+      "expect": "upstream_defect",
+      "features": [
+        "exclusion",
+        "inclusion",
+        "weekendFriday",
+        "tickWeek",
+        "topAxis",
+        "sourceJisonTopAxisMissingMethod"
+      ],
+      "expectedText": [
+        "Task",
+        "S"
+      ],
+      "expectedErrorCodes": [],
+      "notes": "Fixed gantt.jison:141 calls yy.TopAxis(); ganttDb exports enableTopAxis/topAxisEnabled. Official first-run TypeError preserved."
+    },
+    {
+      "id": "B-gantt-inclusive-until",
+      "kind": "gantt",
+      "source": "gantt\ndateFormat YYYY-MM-DD\ninclusiveEndDates\ntodayMarker off\nA :a, 2024-01-01, 2024-01-03\nB :b, 2023-12-30, until a\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/gantt/parser/gantt.jison",
+        "sha256": "15023f6e7af35588a206dddf176d7af763729d2bf76ea3de52f1bbe0f4a203ae",
+        "symbol": "synthetic production/renderer boundary: inclusiveEndDates,until",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "inclusiveEndDates",
+        "until"
+      ],
+      "expectedText": [
+        "A",
+        "B"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-gantt-compact",
+      "kind": "gantt",
+      "source": "gantt\ndateFormat YYYY-MM-DD\ntodayMarker off\nsection S\nA :a, 2024-01-01, 2d\nB :b, 2024-01-03, 2d\nC :c, 2024-01-02, 2d\n",
+      "config": {
+        "gantt": {
+          "displayMode": "compact",
+          "useWidth": 700
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/gantt/parser/gantt.jison",
+        "sha256": "15023f6e7af35588a206dddf176d7af763729d2bf76ea3de52f1bbe0f4a203ae",
+        "symbol": "synthetic production/renderer boundary: compact,overlap,laneReuse",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "compact",
+        "overlap",
+        "laneReuse"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "C"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-gantt-format-datetime",
+      "kind": "gantt",
+      "source": "gantt\ndateFormat YYYY-MM-DD HH:mm\ntodayMarker off\nA :a, 2024-03-10 01:30, 2h\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/gantt/parser/gantt.jison",
+        "sha256": "15023f6e7af35588a206dddf176d7af763729d2bf76ea3de52f1bbe0f4a203ae",
+        "symbol": "synthetic production/renderer boundary: dateFormat,timestampStartQuirk,subdayDuration",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "dateFormat",
+        "timestampStartQuirk",
+        "subdayDuration"
+      ],
+      "expectedText": [
+        "A"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-gantt-format-unix-ms",
+      "kind": "gantt",
+      "source": "gantt\ndateFormat x\ntodayMarker off\nA :a, 1704067200000, 1d\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/gantt/parser/gantt.jison",
+        "sha256": "15023f6e7af35588a206dddf176d7af763729d2bf76ea3de52f1bbe0f4a203ae",
+        "symbol": "synthetic production/renderer boundary: dateFormat,timestampStartQuirk,subdayDuration",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "dateFormat",
+        "timestampStartQuirk",
+        "subdayDuration"
+      ],
+      "expectedText": [
+        "A"
+      ],
+      "expectedErrorCodes": [],
+      "previousEvidenceId": "B-gantt-format-x"
+    },
+    {
+      "id": "B-gantt-format-unix-seconds",
+      "kind": "gantt",
+      "source": "gantt\ndateFormat X\ntodayMarker off\nA :a, 1704067200000, 1d\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/gantt/parser/gantt.jison",
+        "sha256": "15023f6e7af35588a206dddf176d7af763729d2bf76ea3de52f1bbe0f4a203ae",
+        "symbol": "synthetic production/renderer boundary: dateFormat,timestampStartQuirk,subdayDuration",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "dateFormat",
+        "timestampStartQuirk",
+        "subdayDuration"
+      ],
+      "expectedText": [
+        "A"
+      ],
+      "expectedErrorCodes": [],
+      "previousEvidenceId": "B-gantt-format-X"
+    },
+    {
+      "id": "B-gantt-year-zero",
+      "kind": "gantt",
+      "source": "gantt\ntodayMarker off\nCalendar :a, 0000-01-01, 2d\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/gantt/parser/gantt.jison",
+        "sha256": "15023f6e7af35588a206dddf176d7af763729d2bf76ea3de52f1bbe0f4a203ae",
+        "symbol": "synthetic production/renderer boundary: extendedYear,nativeDateFallback",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "extendedYear",
+        "nativeDateFallback"
+      ],
+      "expectedText": [
+        "Calendar"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-gantt-far-positive",
+      "kind": "gantt",
+      "source": "gantt\ntodayMarker off\nCalendar :a, +010000-01-01, 2d\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/gantt/parser/gantt.jison",
+        "sha256": "15023f6e7af35588a206dddf176d7af763729d2bf76ea3de52f1bbe0f4a203ae",
+        "symbol": "synthetic production/renderer boundary: extendedYear,nativeDateFallback",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "extendedYear",
+        "nativeDateFallback"
+      ],
+      "expectedText": [
+        "Calendar"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-gantt-far-negative",
+      "kind": "gantt",
+      "source": "gantt\ntodayMarker off\nCalendar :a, -010000-01-01, 2d\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/gantt/parser/gantt.jison",
+        "sha256": "15023f6e7af35588a206dddf176d7af763729d2bf76ea3de52f1bbe0f4a203ae",
+        "symbol": "synthetic production/renderer boundary: extendedYear,nativeDateFallback",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "extendedYear",
+        "nativeDateFallback"
+      ],
+      "expectedText": [
+        "Calendar"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-gantt-click-visible-class",
+      "kind": "gantt",
+      "source": "gantt\ndateFormat YYYY-MM-DD\ntodayMarker off\nLinked :a, 2024-01-01, 1d\nclick a href \"https://example.invalid\"\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/gantt/parser/gantt.jison",
+        "sha256": "15023f6e7af35588a206dddf176d7af763729d2bf76ea3de52f1bbe0f4a203ae",
+        "symbol": "synthetic production/renderer boundary: clickableVisibleCSS,interactionExcluded",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "clickableVisibleCSS",
+        "interactionExcluded"
+      ],
+      "expectedText": [
+        "Linked"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-gantt-bad-task",
+      "kind": "gantt",
+      "source": "gantt\nNo colon\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/gantt/parser/gantt.jison",
+        "sha256": "15023f6e7af35588a206dddf176d7af763729d2bf76ea3de52f1bbe0f4a203ae",
+        "symbol": "synthetic production/renderer boundary: syntaxError",
+        "line": 1
+      },
+      "expect": "syntax_error",
+      "features": [
+        "syntaxError"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "SYNTAX_ERROR"
+      ]
+    },
+    {
+      "id": "B-gantt-cyclic",
+      "kind": "gantt",
+      "source": "gantt\ndateFormat YYYY-MM-DD\nA :a, after b, 1d\nB :b, after a, 1d\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/gantt/parser/gantt.jison",
+        "sha256": "15023f6e7af35588a206dddf176d7af763729d2bf76ea3de52f1bbe0f4a203ae",
+        "symbol": "synthetic production/renderer boundary: cycleError",
+        "line": 1
+      },
+      "expect": "upstream_defect",
+      "features": [
+        "cycleError",
+        "sourceNonfiniteScheduleDegenerateRender"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "CYCLIC_GANTT_DEPENDENCY"
+      ],
+      "officialExpect": "degenerate_render",
+      "sourceGeometry": {
+        "nonfiniteAttributes": [
+          "x",
+          "width",
+          "x1",
+          "x2"
+        ],
+        "minimumMatches": 4
+      },
+      "sourceBehavior": {
+        "processed": false,
+        "startAndEndDatesAbsent": true,
+        "maximumRetryPasses": 10,
+        "officialRenderRejected": false,
+        "nativeExpectedErrorCode": "CYCLIC_GANTT_DEPENDENCY",
+        "evidence": "references/bulk-B-gantt-cycle-evidence.json",
+        "svg": "test-runs/BULK-P3-official-refresh-20261106T050328Z-0274d04e/artifacts/oracle/B-gantt-cyclic.svg",
+        "png": "test-runs/BULK-P3-official-refresh-20261106T050328Z-0274d04e/artifacts/oracle/B-gantt-cyclic.png"
+      },
+      "notes": "Source returns SVG with processed=false tasks, missing start/end dates and NaN task/label/today coordinates. Exact native cycle diagnostic remains required; do not classify source as renderRejected."
+    },
+    {
+      "id": "B-gantt-missing-previous",
+      "kind": "gantt",
+      "source": "gantt\nA :1d\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/gantt/parser/gantt.jison",
+        "sha256": "15023f6e7af35588a206dddf176d7af763729d2bf76ea3de52f1bbe0f4a203ae",
+        "symbol": "synthetic production/renderer boundary: missingPrevious",
+        "line": 1
+      },
+      "expect": "error",
+      "features": [
+        "missingPrevious"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "MISSING_PREVIOUS_TASK"
+      ]
+    },
+    {
+      "id": "B-gantt-bad-date",
+      "kind": "gantt",
+      "source": "gantt\ndateFormat YYYY-MM-DD\nA :a, impossible, 1d\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/gantt/parser/gantt.jison",
+        "sha256": "15023f6e7af35588a206dddf176d7af763729d2bf76ea3de52f1bbe0f4a203ae",
+        "symbol": "synthetic production/renderer boundary: dateError",
+        "line": 1
+      },
+      "expect": "error",
+      "features": [
+        "dateError"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "INVALID_DATE"
+      ]
+    },
+    {
+      "id": "B-journey-actors-emotions",
+      "kind": "journey",
+      "source": "journey\ntitle Shopping\nsection Travel\nKeys:5:Dad\nDrive:3:Dad,Mum,Kid\nsection Return\nTraffic:1:Mum\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/user-journey/parser/journey.jison",
+        "sha256": "40650bb3b7304d27dd9a190c76c34593af8850630985a0423c48fa9375f963c5",
+        "symbol": "synthetic production/renderer boundary: actorsSorted,scores135,sections,faces",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "actorsSorted",
+        "scores135",
+        "sections",
+        "faces"
+      ],
+      "expectedText": [
+        "Shopping",
+        "Travel",
+        "Return",
+        "Keys",
+        "Drive",
+        "Traffic",
+        "Dad",
+        "Mum",
+        "Kid"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-journey-fractional-empty",
+      "kind": "journey",
+      "source": "journey\nAlone:2.5\nEmpty:\nHigh:8:Alice\nLow:-1:Bob\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/user-journey/parser/journey.jison",
+        "sha256": "40650bb3b7304d27dd9a190c76c34593af8850630985a0423c48fa9375f963c5",
+        "symbol": "synthetic production/renderer boundary: fractionScore,emptyScore,unclampedFiniteScore",
+        "line": 1
+      },
+      "expect": "syntax_error",
+      "features": [
+        "fractionScore",
+        "emptyScore",
+        "unclampedFiniteScore"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "SYNTAX_ERROR"
+      ],
+      "notes": "Original retained negative: bare Empty: violates taskData :[^#\\n;]+. A space after colon is legal Number whitespace => zero."
+    },
+    {
+      "id": "B-journey-wrapped",
+      "kind": "journey",
+      "source": "journey\nsection This is a longer journey section\nA journey task with several words:4:Person with a long name\n",
+      "config": {
+        "journey": {
+          "width": 120,
+          "taskMargin": 30,
+          "maxLabelWidth": 100
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/user-journey/parser/journey.jison",
+        "sha256": "40650bb3b7304d27dd9a190c76c34593af8850630985a0423c48fa9375f963c5",
+        "symbol": "synthetic production/renderer boundary: wrap,actorLegend,customSizing",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "wrap",
+        "actorLegend",
+        "customSizing"
+      ],
+      "expectedText": [
+        "A journey task with several words"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-journey-bad-score",
+      "kind": "journey",
+      "source": "journey\nTask:not-number\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/user-journey/parser/journey.jison",
+        "sha256": "40650bb3b7304d27dd9a190c76c34593af8850630985a0423c48fa9375f963c5",
+        "symbol": "synthetic production/renderer boundary: scoreError",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "sourceNumberNaN",
+        "visibleTaskWithoutInvalidFace"
+      ],
+      "expectedText": [
+        "Task"
+      ],
+      "expectedErrorCodes": [],
+      "notes": "Official first-run DB score={$jsNumber:NaN}; source task card/label/axis paint while SVG face NaN coordinates do not. Native retains score and explicit diagnostic."
+    },
+    {
+      "id": "B-timeline-direction-LR",
+      "kind": "timeline",
+      "source": "timeline LR\ntitle Releases\nsection Early\n2000 : One : Two\n : Continuation\nsection Late\n2001 : Three\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/timeline/parser/timeline.jison",
+        "sha256": "a201fb1c13cd90ed99ddd9cf9f8526e0e7314ff7e55a4a11b41bcd9cb3201695",
+        "symbol": "synthetic production/renderer boundary: directionLR,continuation,multiEvent,section",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "directionLR",
+        "continuation",
+        "multiEvent",
+        "section"
+      ],
+      "expectedText": [
+        "Releases",
+        "Early",
+        "Late",
+        "2000",
+        "2001",
+        "One",
+        "Two",
+        "Continuation",
+        "Three"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-timeline-direction-TD",
+      "kind": "timeline",
+      "source": "timeline TD\ntitle Releases\nsection Early\n2000 : One : Two\n : Continuation\nsection Late\n2001 : Three\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/timeline/parser/timeline.jison",
+        "sha256": "a201fb1c13cd90ed99ddd9cf9f8526e0e7314ff7e55a4a11b41bcd9cb3201695",
+        "symbol": "synthetic production/renderer boundary: directionTD,continuation,multiEvent,section",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "directionTD",
+        "continuation",
+        "multiEvent",
+        "section"
+      ],
+      "expectedText": [
+        "Releases",
+        "Early",
+        "Late",
+        "2000",
+        "2001",
+        "One",
+        "Two",
+        "Continuation",
+        "Three"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-timeline-no-section",
+      "kind": "timeline",
+      "source": "timeline\nA : Event one\nB : Event two\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/timeline/parser/timeline.jison",
+        "sha256": "a201fb1c13cd90ed99ddd9cf9f8526e0e7314ff7e55a4a11b41bcd9cb3201695",
+        "symbol": "synthetic production/renderer boundary: multicolorWithoutSections",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "multicolorWithoutSections"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "Event one",
+        "Event two"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-timeline-wrapped",
+      "kind": "timeline",
+      "source": "timeline TD\nA long period label with many words : A long event description that wraps over multiple lines\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/timeline/parser/timeline.jison",
+        "sha256": "a201fb1c13cd90ed99ddd9cf9f8526e0e7314ff7e55a4a11b41bcd9cb3201695",
+        "symbol": "synthetic production/renderer boundary: longLabels,TDMeasuredHeight",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "longLabels",
+        "TDMeasuredHeight"
+      ],
+      "expectedText": [
+        "A long period label with many words",
+        "A long event description that wraps over multiple lines"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-timeline-orphan",
+      "kind": "timeline",
+      "source": "timeline\n : Orphan\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/timeline/parser/timeline.jison",
+        "sha256": "a201fb1c13cd90ed99ddd9cf9f8526e0e7314ff7e55a4a11b41bcd9cb3201695",
+        "symbol": "synthetic production/renderer boundary: eventBeforePeriod",
+        "line": 1
+      },
+      "expect": "syntax_error",
+      "features": [
+        "eventBeforePeriod"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "MISSING_TIMELINE_PERIOD"
+      ]
+    },
+    {
+      "id": "B-gitGraph-LR-serial",
+      "kind": "gitGraph",
+      "source": "gitGraph LR:\ncommit id:\"A\" msg:\"Start\" tag:\"v1\"\nbranch dev order:2\ncommit id:\"B\" type:HIGHLIGHT\ncheckout main\ncommit id:\"C\" type:REVERSE\nmerge dev id:\"M\" tag:\"release\"\n",
+      "config": {
+        "gitGraph": {
+          "parallelCommits": false,
+          "rotateCommitLabel": false
+        }
+      },
+      "origin": {
+        "path": "packages/parser/src/language/gitGraph/gitGraph.langium",
+        "sha256": "6f3b9c256a1a91964572617aa172f2f0d6a8f8be3d32412f7d90c3982d18b71e",
+        "symbol": "synthetic production/renderer boundary: directionLR,serial,merge,highlight,reverse,tags",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "directionLR",
+        "serial",
+        "merge",
+        "highlight",
+        "reverse",
+        "tags"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "C",
+        "M",
+        "main",
+        "dev",
+        "v1",
+        "release"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-gitGraph-LR-parallel",
+      "kind": "gitGraph",
+      "source": "gitGraph LR:\ncommit id:\"A\" msg:\"Start\" tag:\"v1\"\nbranch dev order:2\ncommit id:\"B\" type:HIGHLIGHT\ncheckout main\ncommit id:\"C\" type:REVERSE\nmerge dev id:\"M\" tag:\"release\"\n",
+      "config": {
+        "gitGraph": {
+          "parallelCommits": true,
+          "rotateCommitLabel": false
+        }
+      },
+      "origin": {
+        "path": "packages/parser/src/language/gitGraph/gitGraph.langium",
+        "sha256": "6f3b9c256a1a91964572617aa172f2f0d6a8f8be3d32412f7d90c3982d18b71e",
+        "symbol": "synthetic production/renderer boundary: directionLR,parallel,merge,highlight,reverse,tags",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "directionLR",
+        "parallel",
+        "merge",
+        "highlight",
+        "reverse",
+        "tags"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "C",
+        "M",
+        "main",
+        "dev",
+        "v1",
+        "release"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-gitGraph-TB-serial",
+      "kind": "gitGraph",
+      "source": "gitGraph TB:\ncommit id:\"A\" msg:\"Start\" tag:\"v1\"\nbranch dev order:2\ncommit id:\"B\" type:HIGHLIGHT\ncheckout main\ncommit id:\"C\" type:REVERSE\nmerge dev id:\"M\" tag:\"release\"\n",
+      "config": {
+        "gitGraph": {
+          "parallelCommits": false,
+          "rotateCommitLabel": false
+        }
+      },
+      "origin": {
+        "path": "packages/parser/src/language/gitGraph/gitGraph.langium",
+        "sha256": "6f3b9c256a1a91964572617aa172f2f0d6a8f8be3d32412f7d90c3982d18b71e",
+        "symbol": "synthetic production/renderer boundary: directionTB,serial,merge,highlight,reverse,tags",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "directionTB",
+        "serial",
+        "merge",
+        "highlight",
+        "reverse",
+        "tags"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "C",
+        "M",
+        "main",
+        "dev",
+        "v1",
+        "release"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-gitGraph-TB-parallel",
+      "kind": "gitGraph",
+      "source": "gitGraph TB:\ncommit id:\"A\" msg:\"Start\" tag:\"v1\"\nbranch dev order:2\ncommit id:\"B\" type:HIGHLIGHT\ncheckout main\ncommit id:\"C\" type:REVERSE\nmerge dev id:\"M\" tag:\"release\"\n",
+      "config": {
+        "gitGraph": {
+          "parallelCommits": true,
+          "rotateCommitLabel": false
+        }
+      },
+      "origin": {
+        "path": "packages/parser/src/language/gitGraph/gitGraph.langium",
+        "sha256": "6f3b9c256a1a91964572617aa172f2f0d6a8f8be3d32412f7d90c3982d18b71e",
+        "symbol": "synthetic production/renderer boundary: directionTB,parallel,merge,highlight,reverse,tags",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "directionTB",
+        "parallel",
+        "merge",
+        "highlight",
+        "reverse",
+        "tags"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "C",
+        "M",
+        "main",
+        "dev",
+        "v1",
+        "release"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-gitGraph-BT-serial",
+      "kind": "gitGraph",
+      "source": "gitGraph BT:\ncommit id:\"A\" msg:\"Start\" tag:\"v1\"\nbranch dev order:2\ncommit id:\"B\" type:HIGHLIGHT\ncheckout main\ncommit id:\"C\" type:REVERSE\nmerge dev id:\"M\" tag:\"release\"\n",
+      "config": {
+        "gitGraph": {
+          "parallelCommits": false,
+          "rotateCommitLabel": false
+        }
+      },
+      "origin": {
+        "path": "packages/parser/src/language/gitGraph/gitGraph.langium",
+        "sha256": "6f3b9c256a1a91964572617aa172f2f0d6a8f8be3d32412f7d90c3982d18b71e",
+        "symbol": "synthetic production/renderer boundary: directionBT,serial,merge,highlight,reverse,tags",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "directionBT",
+        "serial",
+        "merge",
+        "highlight",
+        "reverse",
+        "tags"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "C",
+        "M",
+        "main",
+        "dev",
+        "v1",
+        "release"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-gitGraph-BT-parallel",
+      "kind": "gitGraph",
+      "source": "gitGraph BT:\ncommit id:\"A\" msg:\"Start\" tag:\"v1\"\nbranch dev order:2\ncommit id:\"B\" type:HIGHLIGHT\ncheckout main\ncommit id:\"C\" type:REVERSE\nmerge dev id:\"M\" tag:\"release\"\n",
+      "config": {
+        "gitGraph": {
+          "parallelCommits": true,
+          "rotateCommitLabel": false
+        }
+      },
+      "origin": {
+        "path": "packages/parser/src/language/gitGraph/gitGraph.langium",
+        "sha256": "6f3b9c256a1a91964572617aa172f2f0d6a8f8be3d32412f7d90c3982d18b71e",
+        "symbol": "synthetic production/renderer boundary: directionBT,parallel,merge,highlight,reverse,tags",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "directionBT",
+        "parallel",
+        "merge",
+        "highlight",
+        "reverse",
+        "tags"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "C",
+        "M",
+        "main",
+        "dev",
+        "v1",
+        "release"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-gitGraph-cherry",
+      "kind": "gitGraph",
+      "source": "gitGraph\ncommit id:\"A\"\nbranch dev\ncommit id:\"B\"\ncheckout main\ncommit id:\"C\"\ncherry-pick id:\"B\" tag:\"Picked\"\n",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/gitGraph/gitGraph.langium",
+        "sha256": "6f3b9c256a1a91964572617aa172f2f0d6a8f8be3d32412f7d90c3982d18b71e",
+        "symbol": "synthetic production/renderer boundary: cherryPick,branchCheckout",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "cherryPick",
+        "branchCheckout"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "C",
+        "Picked"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-gitGraph-branch-hidden",
+      "kind": "gitGraph",
+      "source": "gitGraph\ncommit id:\"A\" tag:\"v1\"\ncommit id:\"B\"\n",
+      "config": {
+        "gitGraph": {
+          "showBranches": false,
+          "showCommitLabel": false
+        }
+      },
+      "origin": {
+        "path": "packages/parser/src/language/gitGraph/gitGraph.langium",
+        "sha256": "6f3b9c256a1a91964572617aa172f2f0d6a8f8be3d32412f7d90c3982d18b71e",
+        "symbol": "synthetic production/renderer boundary: showBranchesFalse,showCommitLabelFalse",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "showBranchesFalse",
+        "showCommitLabelFalse"
+      ],
+      "expectedText": [
+        "v1"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-gitGraph-unknown-branch",
+      "kind": "gitGraph",
+      "source": "gitGraph\ncheckout unknown\n",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/gitGraph/gitGraph.langium",
+        "sha256": "6f3b9c256a1a91964572617aa172f2f0d6a8f8be3d32412f7d90c3982d18b71e",
+        "symbol": "synthetic production/renderer boundary: unknownBranch",
+        "line": 1
+      },
+      "expect": "syntax_error",
+      "features": [
+        "unknownBranch"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "UNKNOWN_GIT_BRANCH"
+      ]
+    },
+    {
+      "id": "B-gitGraph-self-merge",
+      "kind": "gitGraph",
+      "source": "gitGraph\ncommit id:\"A\"\nmerge main\n",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/gitGraph/gitGraph.langium",
+        "sha256": "6f3b9c256a1a91964572617aa172f2f0d6a8f8be3d32412f7d90c3982d18b71e",
+        "symbol": "synthetic production/renderer boundary: invalidMerge",
+        "line": 1
+      },
+      "expect": "syntax_error",
+      "features": [
+        "invalidMerge"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "INVALID_GIT_MERGE"
+      ]
+    },
+    {
+      "id": "B-gitGraph-semicolon",
+      "kind": "gitGraph",
+      "source": "gitGraph\ncommit;commit\n",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/gitGraph/gitGraph.langium",
+        "sha256": "6f3b9c256a1a91964572617aa172f2f0d6a8f8be3d32412f7d90c3982d18b71e",
+        "symbol": "synthetic production/renderer boundary: newlinesRequired",
+        "line": 1
+      },
+      "expect": "syntax_error",
+      "features": [
+        "newlinesRequired"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "SYNTAX_ERROR"
+      ]
+    },
+    {
+      "id": "B-swimlane-direction-TB",
+      "kind": "swimlane",
+      "source": "swimlane-beta TB\nsubgraph L[Left lane]\n A[Start]\n C{Choice}\n A --> C\nend\nsubgraph R[Right lane]\n B([Done])\nend\nC -->|Handoff| B\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/swimlanes/swimlanesDiagram.ts",
+        "sha256": "3846dbd86239ac97b9c6f742bb67d407766882257eb7609fc67c43dc673a4a3f",
+        "symbol": "synthetic production/renderer boundary: directionTB,crossLane,edgeLabel,nonRectangle",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "directionTB",
+        "crossLane",
+        "edgeLabel",
+        "nonRectangle"
+      ],
+      "expectedText": [
+        "Left lane",
+        "Right lane",
+        "Start",
+        "Choice",
+        "Done",
+        "Handoff"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-swimlane-direction-TD",
+      "kind": "swimlane",
+      "source": "swimlane-beta TD\nsubgraph L[Left lane]\n A[Start]\n C{Choice}\n A --> C\nend\nsubgraph R[Right lane]\n B([Done])\nend\nC -->|Handoff| B\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/swimlanes/swimlanesDiagram.ts",
+        "sha256": "3846dbd86239ac97b9c6f742bb67d407766882257eb7609fc67c43dc673a4a3f",
+        "symbol": "synthetic production/renderer boundary: directionTD,crossLane,edgeLabel,nonRectangle",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "directionTD",
+        "crossLane",
+        "edgeLabel",
+        "nonRectangle"
+      ],
+      "expectedText": [
+        "Left lane",
+        "Right lane",
+        "Start",
+        "Choice",
+        "Done",
+        "Handoff"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-swimlane-direction-LR",
+      "kind": "swimlane",
+      "source": "swimlane-beta LR\nsubgraph L[Left lane]\n A[Start]\n C{Choice}\n A --> C\nend\nsubgraph R[Right lane]\n B([Done])\nend\nC -->|Handoff| B\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/swimlanes/swimlanesDiagram.ts",
+        "sha256": "3846dbd86239ac97b9c6f742bb67d407766882257eb7609fc67c43dc673a4a3f",
+        "symbol": "synthetic production/renderer boundary: directionLR,crossLane,edgeLabel,nonRectangle",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "directionLR",
+        "crossLane",
+        "edgeLabel",
+        "nonRectangle"
+      ],
+      "expectedText": [
+        "Left lane",
+        "Right lane",
+        "Start",
+        "Choice",
+        "Done",
+        "Handoff"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-swimlane-direction-RL",
+      "kind": "swimlane",
+      "source": "swimlane-beta RL\nsubgraph L[Left lane]\n A[Start]\n C{Choice}\n A --> C\nend\nsubgraph R[Right lane]\n B([Done])\nend\nC -->|Handoff| B\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/swimlanes/swimlanesDiagram.ts",
+        "sha256": "3846dbd86239ac97b9c6f742bb67d407766882257eb7609fc67c43dc673a4a3f",
+        "symbol": "synthetic production/renderer boundary: directionRL,crossLane,edgeLabel,nonRectangle",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "directionRL",
+        "crossLane",
+        "edgeLabel",
+        "nonRectangle"
+      ],
+      "expectedText": [
+        "Left lane",
+        "Right lane",
+        "Start",
+        "Choice",
+        "Done",
+        "Handoff"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-swimlane-direction-BT",
+      "kind": "swimlane",
+      "source": "swimlane-beta BT\nsubgraph L[Left lane]\n A[Start]\n C{Choice}\n A --> C\nend\nsubgraph R[Right lane]\n B([Done])\nend\nC -->|Handoff| B\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/swimlanes/swimlanesDiagram.ts",
+        "sha256": "3846dbd86239ac97b9c6f742bb67d407766882257eb7609fc67c43dc673a4a3f",
+        "symbol": "synthetic production/renderer boundary: directionBT,crossLane,edgeLabel,nonRectangle",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "directionBT",
+        "crossLane",
+        "edgeLabel",
+        "nonRectangle"
+      ],
+      "expectedText": [
+        "Left lane",
+        "Right lane",
+        "Start",
+        "Choice",
+        "Done",
+        "Handoff"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-swimlane-nested-cycle",
+      "kind": "swimlane",
+      "source": "swimlane-beta TB\nsubgraph L[Outer]\n subgraph N[Nested]\n A[One]\n B[Two]\n end\n C[Three]\nend\nA --> B\nB --> C\nC --> A\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/swimlanes/swimlanesDiagram.ts",
+        "sha256": "3846dbd86239ac97b9c6f742bb67d407766882257eb7609fc67c43dc673a4a3f",
+        "symbol": "synthetic production/renderer boundary: nested,cycleReversal,allEdgesRetained",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "nested",
+        "cycleReversal",
+        "allEdgesRetained"
+      ],
+      "expectedText": [
+        "Outer",
+        "Nested",
+        "One",
+        "Two",
+        "Three"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-swimlane-default-lane",
+      "kind": "swimlane",
+      "source": "swimlane-beta LR\nA[Loose] -->|Next| B[Other]\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/swimlanes/swimlanesDiagram.ts",
+        "sha256": "3846dbd86239ac97b9c6f742bb67d407766882257eb7609fc67c43dc673a4a3f",
+        "symbol": "synthetic production/renderer boundary: syntheticDefaultLane,labelNode",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "syntheticDefaultLane",
+        "labelNode"
+      ],
+      "expectedText": [
+        "Loose",
+        "Other",
+        "Next"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-swimlane-hops-false",
+      "kind": "swimlane",
+      "source": "swimlane-beta TB\nsubgraph L[Left]\n A --> B\nend\nsubgraph R[Right]\n C --> D\nend\nA --> D\nC --> B\n",
+      "config": {
+        "swimlane": {
+          "lineHops": false
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/swimlanes/swimlanesDiagram.ts",
+        "sha256": "3846dbd86239ac97b9c6f742bb67d407766882257eb7609fc67c43dc673a4a3f",
+        "symbol": "synthetic production/renderer boundary: lineHops,crossing",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "lineHops",
+        "crossing"
+      ],
+      "expectedText": [
+        "Left",
+        "Right",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-swimlane-hops-gap",
+      "kind": "swimlane",
+      "source": "swimlane-beta TB\nsubgraph L[Left]\n A --> B\nend\nsubgraph R[Right]\n C --> D\nend\nA --> D\nC --> B\n",
+      "config": {
+        "swimlane": {
+          "lineHops": "gap"
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/swimlanes/swimlanesDiagram.ts",
+        "sha256": "3846dbd86239ac97b9c6f742bb67d407766882257eb7609fc67c43dc673a4a3f",
+        "symbol": "synthetic production/renderer boundary: lineHops,crossing",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "lineHops",
+        "crossing"
+      ],
+      "expectedText": [
+        "Left",
+        "Right",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-swimlane-hops-true",
+      "kind": "swimlane",
+      "source": "swimlane-beta TB\nsubgraph L[Left]\n A --> B\nend\nsubgraph R[Right]\n C --> D\nend\nA --> D\nC --> B\n",
+      "config": {
+        "swimlane": {
+          "lineHops": true
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/swimlanes/swimlanesDiagram.ts",
+        "sha256": "3846dbd86239ac97b9c6f742bb67d407766882257eb7609fc67c43dc673a4a3f",
+        "symbol": "synthetic production/renderer boundary: lineHops,crossing",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "lineHops",
+        "crossing"
+      ],
+      "expectedText": [
+        "Left",
+        "Right",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-swimlane-explicit-elk",
+      "kind": "swimlane",
+      "source": "swimlane-beta TB\nsubgraph L[Lane]\n A --> B\nend\n",
+      "config": {
+        "layout": "elk"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/swimlanes/swimlanesDiagram.ts",
+        "sha256": "3846dbd86239ac97b9c6f742bb67d407766882257eb7609fc67c43dc673a4a3f",
+        "symbol": "synthetic production/renderer boundary: explicitLayoutELK",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "explicitLayoutELK"
+      ],
+      "expectedText": [
+        "Lane",
+        "A",
+        "B"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-swimlane-no-ignore",
+      "kind": "swimlane",
+      "source": "swimlane-beta TB\nsubgraph L[Left]\n A --> B\nend\nsubgraph R[Right]\n C --> D\nend\nB --> C\n",
+      "config": {
+        "swimlane": {
+          "ignoreCrossLaneEdges": false,
+          "optimizeCrossings": true
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/swimlanes/swimlanesDiagram.ts",
+        "sha256": "3846dbd86239ac97b9c6f742bb67d407766882257eb7609fc67c43dc673a4a3f",
+        "symbol": "synthetic production/renderer boundary: ignoreCrossLaneEdgesFalse,optimizeCrossings",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "ignoreCrossLaneEdgesFalse",
+        "optimizeCrossings"
+      ],
+      "expectedText": [
+        "Left",
+        "Right",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-agentflow-all-kinds",
+      "kind": "agentflow",
+      "source": "agentflow-beta TB\nconnector API[API]\nflow F[Team]\n i@{ shape: input, label: Input }\n t@{ shape: task, label: Task }\n tool@{ shape: tool, label: Tool }\n d@{ shape: decision, label: Decide }\n r@{ shape: refdoc, label: Guide }\n a@{ shape: action, label: Act }\n i --> t --> tool --> d --> a\n tool -.- r\n a --x API\nend\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/agentflow/parser/agentflow.jison",
+        "sha256": "105f7e860ac78a25e2bbdcc8dcbc7ab4ee8159be5880eb51455c8cd307253d82",
+        "symbol": "synthetic production/renderer boundary: sevenKinds,flow,connector,sequence,reference,failure",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "sevenKinds",
+        "flow",
+        "connector",
+        "sequence",
+        "reference",
+        "failure"
+      ],
+      "expectedText": [
+        "API",
+        "Team",
+        "Input",
+        "Task",
+        "Tool",
+        "Decide",
+        "Guide",
+        "Act"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-agentflow-global-nested",
+      "kind": "agentflow",
+      "source": "agentflow-beta LR\nglobal\n G[Shared]\nend\nflow Outer[Outer]\n flow Inner[Inner]\n  A[Work] --> G\n end\nend\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/agentflow/parser/agentflow.jison",
+        "sha256": "105f7e860ac78a25e2bbdcc8dcbc7ab4ee8159be5880eb51455c8cd307253d82",
+        "symbol": "synthetic production/renderer boundary: global,nestedFlow,crossContainer",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "global",
+        "nestedFlow",
+        "crossContainer"
+      ],
+      "expectedText": [
+        "Shared",
+        "Outer",
+        "Inner",
+        "Work"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-agentflow-swimlane",
+      "kind": "agentflow",
+      "source": "agentflow-beta TB\nflow A[Agent A]\n X[Work]\nend\nflow B[Agent B]\n Y[Result]\nend\nX -->|Send| Y\n",
+      "config": {
+        "layout": "swimlane"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/agentflow/parser/agentflow.jison",
+        "sha256": "105f7e860ac78a25e2bbdcc8dcbc7ab4ee8159be5880eb51455c8cd307253d82",
+        "symbol": "synthetic production/renderer boundary: explicitSwimlane,flowBridge",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "explicitSwimlane",
+        "flowBridge"
+      ],
+      "expectedText": [
+        "Agent A",
+        "Agent B",
+        "Work",
+        "Result",
+        "Send"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-agentflow-metadata",
+      "kind": "agentflow",
+      "source": "agentflow-beta TB\nA[Work]\nA@{ shape: tool, custom: value, retry: 2, model: m }\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/agentflow/parser/agentflow.jison",
+        "sha256": "105f7e860ac78a25e2bbdcc8dcbc7ab4ee8159be5880eb51455c8cd307253d82",
+        "symbol": "synthetic production/renderer boundary: opaqueMetadata,reservedChecksUnconsumed",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "opaqueMetadata",
+        "reservedChecksUnconsumed"
+      ],
+      "expectedText": [
+        "Work"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-eventmodeling-all-types",
+      "kind": "eventmodeling",
+      "source": "eventmodeling\ntitle Order\ntf 1 ui Page\ntf 2 cmd Place\ntf 3 evt Placed\ntf 4 rmo Orders\ntf 5 pcr React\n",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/eventmodeling/event-modeling.langium",
+        "sha256": "be3da489f5114237acbd7ec50494e8bb48f8e6753b6e2f7f2137dae170000611",
+        "symbol": "synthetic production/renderer boundary: fiveTypes,inferredRelations,lanes,titleSourceUnconsumed",
+        "line": 1
+      },
+      "expect": "upstream_defect",
+      "features": [
+        "fiveTypes",
+        "inferredRelations",
+        "lanes",
+        "titleSourceUnconsumed",
+        "declaredTitlePublishedLexerMismatch"
+      ],
+      "expectedText": [
+        "Page",
+        "Place",
+        "Placed",
+        "Orders",
+        "React"
+      ],
+      "expectedErrorCodes": [],
+      "notes": "event-modeling.langium declares title=EM_TITLE; published source lexer rejects title at EOF. Official repaired-oracle error retained in 044453Z-0f6c21dc."
+    },
+    {
+      "id": "B-eventmodeling-data",
+      "kind": "eventmodeling",
+      "source": "eventmodeling\ndata payload {\n \"count\": 2\n}\ntf 1 ui Page [[payload]]\ntf 2 cmd Submit `json` {\"id\":1}\n",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/eventmodeling/event-modeling.langium",
+        "sha256": "be3da489f5114237acbd7ec50494e8bb48f8e6753b6e2f7f2137dae170000611",
+        "symbol": "synthetic production/renderer boundary: dataBlock,dataReference,dataInline",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "dataBlock",
+        "dataReference",
+        "dataInline"
+      ],
+      "expectedText": [
+        "Page",
+        "Submit"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-eventmodeling-reset-multi",
+      "kind": "eventmodeling",
+      "source": "eventmodeling\ntf 1 cmd Place\ntf 2 cmd Pay\nrf 3 evt Placed ->> 1 ->> 2\nrf 4 ui Empty\n",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/eventmodeling/event-modeling.langium",
+        "sha256": "be3da489f5114237acbd7ec50494e8bb48f8e6753b6e2f7f2137dae170000611",
+        "symbol": "synthetic production/renderer boundary: multipleSources,reset,noResetInference",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "multipleSources",
+        "reset",
+        "noResetInference"
+      ],
+      "expectedText": [
+        "Place",
+        "Pay",
+        "Placed",
+        "Empty"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-eventmodeling-namespace-source-defect",
+      "kind": "eventmodeling",
+      "source": "eventmodeling\ntf 1 ui shop.Page\ntf 2 ui shop.Other\n",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/eventmodeling/event-modeling.langium",
+        "sha256": "be3da489f5114237acbd7ec50494e8bb48f8e6753b6e2f7f2137dae170000611",
+        "symbol": "synthetic production/renderer boundary: namespaceLaneRepetition,sourceInheritedNamespaceLookupDefect",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "namespaceLaneRepetition",
+        "sourceInheritedNamespaceLookupDefect"
+      ],
+      "expectedText": [
+        "Page",
+        "Other"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-eventmodeling-duplicate-id",
+      "kind": "eventmodeling",
+      "source": "eventmodeling\ntf 1 ui Page\nrf 1 cmd Submit\n",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/eventmodeling/event-modeling.langium",
+        "sha256": "be3da489f5114237acbd7ec50494e8bb48f8e6753b6e2f7f2137dae170000611",
+        "symbol": "synthetic production/renderer boundary: duplicateID",
+        "line": 1
+      },
+      "expect": "syntax_error",
+      "features": [
+        "duplicateID"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "SYNTAX_ERROR"
+      ]
+    },
+    {
+      "id": "B-ishikawa-deep",
+      "kind": "ishikawa",
+      "source": "ishikawa\nLate delivery\n People\n  Training\n   Practice\n  Staffing\n Process\n  Review\n Machines\n  Maintenance\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/ishikawa/parser/ishikawa.jison",
+        "sha256": "1bbf4d461534b1c0d4c9e375bf821fac6219f73add5727e5aa51fe4aa044f57b",
+        "symbol": "synthetic production/renderer boundary: alternatingBones,deepTree,flattenParity",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "alternatingBones",
+        "deepTree",
+        "flattenParity"
+      ],
+      "expectedText": [
+        "Late delivery",
+        "People",
+        "Training",
+        "Practice",
+        "Staffing",
+        "Process",
+        "Review",
+        "Machines",
+        "Maintenance"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-ishikawa-long-label",
+      "kind": "ishikawa",
+      "source": "ishikawa-beta\nAn effect label with enough words to wrap\n First top level cause\n  A detailed secondary cause with many words\n Second cause\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/ishikawa/parser/ishikawa.jison",
+        "sha256": "1bbf4d461534b1c0d4c9e375bf821fac6219f73add5727e5aa51fe4aa044f57b",
+        "symbol": "synthetic production/renderer boundary: headWrap,descendantWrap",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "headWrap",
+        "descendantWrap"
+      ],
+      "expectedText": [
+        "First top level cause",
+        "Second cause"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-wardley-full",
+      "kind": "wardley",
+      "source": "wardley-beta\ntitle Strategy\nsize [900, 600]\nanchor User [0.9, 0.5]\ncomponent API [0.7, 0.3] label [8, -8] (build) inertia\ncomponent Data [0.4, 0.8] (buy)\nUser -> API\nAPI -.-> Data\nevolve API 0.7\nnote \"Risk\" [0.6, 0.6]\n",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/wardley/wardley.langium",
+        "sha256": "3010dbd4a9c8036e4eac27e35cf842358f0561715c52877c6ab481b8521e17b0",
+        "symbol": "synthetic production/renderer boundary: projection,anchor,link,dash,evolve,inertia,strategy,note",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "projection",
+        "anchor",
+        "link",
+        "dash",
+        "evolve",
+        "inertia",
+        "strategy",
+        "note"
+      ],
+      "expectedText": [
+        "Strategy",
+        "User",
+        "API",
+        "Data",
+        "Risk"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-wardley-pipeline",
+      "kind": "wardley",
+      "source": "wardley-beta\ncomponent Compute [0.4, 0.5]\npipeline Compute {\n component Custom [0.2]\n component Utility [0.8]\n}\n",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/wardley/wardley.langium",
+        "sha256": "3010dbd4a9c8036e4eac27e35cf842358f0561715c52877c6ab481b8521e17b0",
+        "symbol": "synthetic production/renderer boundary: pipeline,childCoordinates",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "pipeline",
+        "childCoordinates"
+      ],
+      "expectedText": [
+        "Compute",
+        "Custom",
+        "Utility"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-wardley-stages-decorators",
+      "kind": "wardley",
+      "source": "wardley-beta\nevolution Genesis -> Custom -> Product -> Utility\ncomponent A [0.8, 0.2] (market)\ncomponent B [0.4, 0.6] (outsource)\naccelerator \"Faster\" [0.6, 0.4]\ndeaccelerator \"Slower\" [0.3, 0.7]\n",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/wardley/wardley.langium",
+        "sha256": "3010dbd4a9c8036e4eac27e35cf842358f0561715c52877c6ab481b8521e17b0",
+        "symbol": "synthetic production/renderer boundary: customStages,market,outsource,accelerators",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "customStages",
+        "market",
+        "outsource",
+        "accelerators"
+      ],
+      "expectedText": [
+        "Genesis",
+        "Custom",
+        "Product",
+        "Utility",
+        "A",
+        "B",
+        "Faster",
+        "Slower"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-wardley-bad-coordinate",
+      "kind": "wardley",
+      "source": "wardley-beta\ncomponent A [101.0, 0.5]\n",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/wardley/wardley.langium",
+        "sha256": "3010dbd4a9c8036e4eac27e35cf842358f0561715c52877c6ab481b8521e17b0",
+        "symbol": "synthetic production/renderer boundary: coordinateBounds",
+        "line": 1
+      },
+      "expect": "syntax_error",
+      "features": [
+        "coordinateBounds"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "SYNTAX_ERROR"
+      ]
+    },
+    {
+      "id": "B-cynefin-full",
+      "kind": "cynefin",
+      "source": "cynefin-beta\ntitle Sense making\ncomplex\n \"Probe\"\ncomplicated\n \"Analyse\"\nclear\n \"Repeat\"\nchaotic\n \"Act\"\nconfusion\n \"One\"\n \"Two\"\n \"Three\"\n \"Hidden\"\ncomplex --> complicated : \"Learn\"\ncomplicated --> clear\n",
+      "config": {
+        "cynefin": {
+          "seed": 17
+        }
+      },
+      "origin": {
+        "path": "packages/parser/src/language/cynefin/cynefin.langium",
+        "sha256": "94276271b3dfe6dd78ced62249cd1d69bdd785e1498b90e678f101a23e1d26e0",
+        "symbol": "synthetic production/renderer boundary: allDomains,transitions,overflow,seed",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "allDomains",
+        "transitions",
+        "overflow",
+        "seed"
+      ],
+      "expectedText": [
+        "Sense making",
+        "Probe",
+        "Analyse",
+        "Repeat",
+        "Act",
+        "One",
+        "Two",
+        "Three",
+        "+1 more",
+        "Learn"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-cynefin-no-description",
+      "kind": "cynefin",
+      "source": "cynefin-beta:\nclear\n \"Repeat\"\n",
+      "config": {
+        "cynefin": {
+          "showDomainDescriptions": false,
+          "boundaryAmplitude": 0,
+          "seed": 5
+        }
+      },
+      "origin": {
+        "path": "packages/parser/src/language/cynefin/cynefin.langium",
+        "sha256": "94276271b3dfe6dd78ced62249cd1d69bdd785e1498b90e678f101a23e1d26e0",
+        "symbol": "synthetic production/renderer boundary: descriptionFalse,amplitudeZero",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "descriptionFalse",
+        "amplitudeZero"
+      ],
+      "expectedText": [
+        "Clear",
+        "Repeat"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-cynefin-host-seed",
+      "kind": "cynefin",
+      "source": "cynefin-beta\ncomplex\n \"Probe\"\n",
+      "config": {
+        "renderId": "native-host-id",
+        "cynefin": {
+          "seed": 0
+        }
+      },
+      "origin": {
+        "path": "packages/parser/src/language/cynefin/cynefin.langium",
+        "sha256": "94276271b3dfe6dd78ced62249cd1d69bdd785e1498b90e678f101a23e1d26e0",
+        "symbol": "synthetic production/renderer boundary: renderIDHostAdaptation,seedZero",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "renderIDHostAdaptation",
+        "seedZero"
+      ],
+      "expectedText": [
+        "Probe"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-cynefin-bad-domain",
+      "kind": "cynefin",
+      "source": "cynefin-beta\nunknown\n \"x\"\n",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/cynefin/cynefin.langium",
+        "sha256": "94276271b3dfe6dd78ced62249cd1d69bdd785e1498b90e678f101a23e1d26e0",
+        "symbol": "synthetic production/renderer boundary: unknownDomain",
+        "line": 1
+      },
+      "expect": "syntax_error",
+      "features": [
+        "unknownDomain"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "SYNTAX_ERROR"
+      ]
+    },
+    {
+      "id": "B-wardley-annotations",
+      "kind": "wardley",
+      "source": "wardley-beta\ncomponent A [0.8, 0.2]\ncomponent B [0.2, 0.8]\nA -> B ;dependency\nannotations [0.6, 0.4]\nannotation 1, [0.4, 0.6] \"Risk\"\n",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/wardley/wardley.langium",
+        "sha256": "3010dbd4a9c8036e4eac27e35cf842358f0561715c52877c6ab481b8521e17b0",
+        "symbol": "synthetic production/renderer boundary: annotation,annotationBox,linkLabel,sourceSemicolonPreserved",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "annotation",
+        "annotationBox",
+        "linkLabel",
+        "sourceSemicolonPreserved"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "Risk"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-eventmodeling-notes-gwt",
+      "kind": "eventmodeling",
+      "source": "eventmodeling\nentity Order\ntf 1 ui Page\nnote 1 {\nNote text\n}\ngwt 1 given ui Order when cmd Order then evt Order\n",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/eventmodeling/event-modeling.langium",
+        "sha256": "be3da489f5114237acbd7ec50494e8bb48f8e6753b6e2f7f2137dae170000611",
+        "symbol": "synthetic production/renderer boundary: entity,note,gwt,sourceUnconsumedMetadata",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "entity",
+        "note",
+        "gwt",
+        "sourceUnconsumedMetadata"
+      ],
+      "expectedText": [
+        "Page"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-eventmodeling-future-source",
+      "kind": "eventmodeling",
+      "source": "eventmodeling\ntf 1 evt Placed ->> 2\ntf 2 cmd Place\n",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/eventmodeling/event-modeling.langium",
+        "sha256": "be3da489f5114237acbd7ec50494e8bb48f8e6753b6e2f7f2137dae170000611",
+        "symbol": "synthetic production/renderer boundary: forwardReference,sourceOnlyAlreadyPlacedRelations",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "forwardReference",
+        "sourceOnlyAlreadyPlacedRelations"
+      ],
+      "expectedText": [
+        "Placed",
+        "Place"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-timeline-multicolor-disabled",
+      "kind": "timeline",
+      "source": "timeline\nA : First\nB : Second\n",
+      "config": {
+        "timeline": {
+          "disableMulticolor": true
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/timeline/parser/timeline.jison",
+        "sha256": "a201fb1c13cd90ed99ddd9cf9f8526e0e7314ff7e55a4a11b41bcd9cb3201695",
+        "symbol": "synthetic production/renderer boundary: disableMulticolor",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "disableMulticolor"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "First",
+        "Second"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-gantt-duration-months",
+      "kind": "gantt",
+      "source": "gantt\ndateFormat YYYY-MM-DD HH:mm:ss\ntodayMarker off\nCalendar:a, 2024-01-31 10:00:00, 1M\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/gantt/parser/gantt.jison",
+        "sha256": "15023f6e7af35588a206dddf176d7af763729d2bf76ea3de52f1bbe0f4a203ae",
+        "symbol": "synthetic production/renderer boundary: durationM,calendarVsEpoch",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "durationM",
+        "calendarVsEpoch"
+      ],
+      "expectedText": [
+        "Calendar"
+      ],
+      "expectedErrorCodes": [],
+      "previousEvidenceId": "B-gantt-duration-M"
+    },
+    {
+      "id": "B-gantt-duration-y",
+      "kind": "gantt",
+      "source": "gantt\ndateFormat YYYY-MM-DD HH:mm:ss\ntodayMarker off\nCalendar:a, 2024-01-31 10:00:00, 1y\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/gantt/parser/gantt.jison",
+        "sha256": "15023f6e7af35588a206dddf176d7af763729d2bf76ea3de52f1bbe0f4a203ae",
+        "symbol": "synthetic production/renderer boundary: durationy,calendarVsEpoch",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "durationy",
+        "calendarVsEpoch"
+      ],
+      "expectedText": [
+        "Calendar"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-gantt-duration-w",
+      "kind": "gantt",
+      "source": "gantt\ndateFormat YYYY-MM-DD HH:mm:ss\ntodayMarker off\nCalendar:a, 2024-01-31 10:00:00, 1w\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/gantt/parser/gantt.jison",
+        "sha256": "15023f6e7af35588a206dddf176d7af763729d2bf76ea3de52f1bbe0f4a203ae",
+        "symbol": "synthetic production/renderer boundary: durationw,calendarVsEpoch",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "durationw",
+        "calendarVsEpoch"
+      ],
+      "expectedText": [
+        "Calendar"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-gantt-duration-h",
+      "kind": "gantt",
+      "source": "gantt\ndateFormat YYYY-MM-DD HH:mm:ss\ntodayMarker off\nCalendar:a, 2024-01-31 10:00:00, 12h\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/gantt/parser/gantt.jison",
+        "sha256": "15023f6e7af35588a206dddf176d7af763729d2bf76ea3de52f1bbe0f4a203ae",
+        "symbol": "synthetic production/renderer boundary: durationh,calendarVsEpoch",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "durationh",
+        "calendarVsEpoch"
+      ],
+      "expectedText": [
+        "Calendar"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-gantt-duration-minutes",
+      "kind": "gantt",
+      "source": "gantt\ndateFormat YYYY-MM-DD HH:mm:ss\ntodayMarker off\nCalendar:a, 2024-01-31 10:00:00, 30m\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/gantt/parser/gantt.jison",
+        "sha256": "15023f6e7af35588a206dddf176d7af763729d2bf76ea3de52f1bbe0f4a203ae",
+        "symbol": "synthetic production/renderer boundary: durationm,calendarVsEpoch",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "durationm",
+        "calendarVsEpoch"
+      ],
+      "expectedText": [
+        "Calendar"
+      ],
+      "expectedErrorCodes": [],
+      "previousEvidenceId": "B-gantt-duration-m"
+    },
+    {
+      "id": "B-gantt-duration-s",
+      "kind": "gantt",
+      "source": "gantt\ndateFormat YYYY-MM-DD HH:mm:ss\ntodayMarker off\nCalendar:a, 2024-01-31 10:00:00, 90s\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/gantt/parser/gantt.jison",
+        "sha256": "15023f6e7af35588a206dddf176d7af763729d2bf76ea3de52f1bbe0f4a203ae",
+        "symbol": "synthetic production/renderer boundary: durations,calendarVsEpoch",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "durations",
+        "calendarVsEpoch"
+      ],
+      "expectedText": [
+        "Calendar"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-gantt-duration-ms",
+      "kind": "gantt",
+      "source": "gantt\ndateFormat YYYY-MM-DD HH:mm:ss\ntodayMarker off\nCalendar:a, 2024-01-31 10:00:00, 500ms\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/gantt/parser/gantt.jison",
+        "sha256": "15023f6e7af35588a206dddf176d7af763729d2bf76ea3de52f1bbe0f4a203ae",
+        "symbol": "synthetic production/renderer boundary: durationms,calendarVsEpoch",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "durationms",
+        "calendarVsEpoch"
+      ],
+      "expectedText": [
+        "Calendar"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-agentflow-conformance-complete-example",
+      "kind": "agentflow",
+      "source": "%% §17 Complete Example — Coffee Team coffee-website builder (v0.8.1).\nagentflow-beta TB\n  connector llm_api[\"LLM API\"]\n  llm_api@{ protocol: \"http\", endpoint: \"https://api.example.com/chat\" }\n\n  flow coffee_team[\"Coffee Team\"]\n    city[\"city\"]\n    city@{ shape: input, type: \"String\", value: \"Stockholm\" }\n\n    flow researcher[\"Researcher\"]\n      research_loc[\"research_location\"]\n      research_loc@{ shape: tool, params: \"city :: String\", returns: \"String\", cache: \"24h\" }\n      write_copy[\"write_copy\"]\n      write_copy@{ shape: tool, connectorRef: \"llm_api.chat\", params: \"brief :: String\", returns: \"CoffeeCopy\", retry: 2 }\n      city --> research_loc --> write_copy\n    end\n    researcher@{ model: \"claude-sonnet-4-20250514\", instruction: \"Research the city and draft English coffee copy citing sources.\" }\n\n    flow translator[\"Translator\"]\n      translate_sv[\"translate_to_swedish\"]\n      translate_sv@{ shape: tool, connectorRef: \"llm_api.chat\", params: \"english :: CoffeeCopy\", returns: \"BilingualPage\" }\n    end\n    translator@{ model: \"claude-sonnet-4-20250514\" }\n\n    flow designer[\"Designer\"]\n      gen_html[\"generate_html\"]\n      gen_html@{ shape: tool, connectorRef: \"llm_api.chat\", params: \"page :: BilingualPage\", returns: \"String\" }\n      style_guide[\"Nordic Brand Guide\"]\n      style_guide@{ shape: refdoc }\n      gen_html -.- style_guide\n    end\n    designer@{ model: \"claude-sonnet-4-20250514\", instruction: \"Render the bilingual page as semantic HTML following the brand guide.\" }\n\n    researcher --> translator --> designer\n  end\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/agentflow/conformance/fixtures/complete-example-agentflow.mmd",
+        "sha256": "fde56a977ad433405d223a220c04b1140fdf2e778e393afb27b34d665dc6c150",
+        "symbol": "verbatim source conformance fixture; .expected.json is fixed source semantic receipt",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "upstreamVerbatimConformance",
+        "complete-example-agentflow"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-agentflow-conformance-smoke-valid",
+      "kind": "agentflow",
+      "source": "agentflow-beta TB\n  input[\"x\"]\n  input@{ shape: input }\n  a[\"Alpha\"]\n  b[\"Beta\"]\n  input --> a --> b\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/agentflow/conformance/fixtures/smoke-valid-agentflow.mmd",
+        "sha256": "9edb0b4067c2455b26dff6782667bcc4eb270b7bb54ea279e78101476794e9f2",
+        "symbol": "verbatim source conformance fixture; .expected.json is fixed source semantic receipt",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "upstreamVerbatimConformance",
+        "smoke-valid-agentflow"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-agentflow-conformance-pattern-reference-doc",
+      "kind": "agentflow",
+      "source": "%% §16 Reference Document Pattern — `-.-` reference edge to a refdoc node.\nagentflow-beta TB\n  query[\"query\"]\n  query@{ shape: input }\n  gen_html[\"generate_html\"]\n  style_guide[\"Brand Guide\"]\n  style_guide@{ shape: refdoc }\n  query --> gen_html\n  gen_html -.- style_guide\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/agentflow/conformance/fixtures/pattern-reference-doc-agentflow.mmd",
+        "sha256": "7d943055cf86f097163903e332ed250871e0cc3b3ea2ffd5c9e3884de25b8c13",
+        "symbol": "verbatim source conformance fixture; .expected.json is fixed source semantic receipt",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "upstreamVerbatimConformance",
+        "pattern-reference-doc-agentflow"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-agentflow-conformance-pattern-parallel",
+      "kind": "agentflow",
+      "source": "%% §16 Parallel Execution Pattern — `&` fan-out in edges only.\nagentflow-beta TB\n  query[\"query\"]\n  query@{ shape: input }\n  orchestrator[\"Orchestrate\"]\n  search[\"Search\"]\n  analyze[\"Analyze\"]\n  validate[\"Validate\"]\n  query --> orchestrator --> search & analyze & validate\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/agentflow/conformance/fixtures/pattern-parallel-agentflow.mmd",
+        "sha256": "f176c5e291d6f371a5a82723da482e397fe046fac5834b4d4ab1fa9e8e291fb5",
+        "symbol": "verbatim source conformance fixture; .expected.json is fixed source semantic receipt",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "upstreamVerbatimConformance",
+        "pattern-parallel-agentflow"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-agentflow-conformance-pattern-connector-dotted-form",
+      "kind": "agentflow",
+      "source": "%% Connector reference validator — dotted-operation form uses\n%% prefix-before-first-dot for resolution. With a declared `github`\n%% connector, `github.create_issue` resolves cleanly.\nagentflow-beta TB\n  connector github[\"GitHub\"]\n  payload[\"payload\"]\n  payload@{ shape: input }\n  create_issue[\"Create Issue\"]\n  create_issue@{ shape: tool, connectorRef: \"github.create_issue\" }\n  payload --> create_issue\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/agentflow/conformance/fixtures/pattern-connector-dotted-form-agentflow.mmd",
+        "sha256": "33828dec230e2408f9b510516cc0838e35aaf76e142a7ebe939de7511f985996",
+        "symbol": "verbatim source conformance fixture; .expected.json is fixed source semantic receipt",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "upstreamVerbatimConformance",
+        "pattern-connector-dotted-form-agentflow"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-agentflow-conformance-warning-shape-unsupported",
+      "kind": "agentflow",
+      "source": "%% A Mermaid-valid shape that's not in agentflow's v0.8.1 catalogue and\n%% not in the removed-shape blacklist emits a SHAPE_UNSUPPORTED warning\n%% from transformData. (Removed shapes like `cylinder`, `doc`, `procs`\n%% emit SHAPE_REMOVED at error tier — see those fixtures.)\nagentflow-beta TB\n  input[\"q\"]\n  input@{ shape: input }\n  x[\"X\"]\n  y[\"Y\"]\n  x@{ shape: \"triangle\" }\n  input --> x --> y\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/agentflow/conformance/fixtures/warning-shape-unsupported-agentflow.mmd",
+        "sha256": "fbdb4b3d9d9ebbd1094b18594d91468782da9288a703e3830b7248135e1f9dda",
+        "symbol": "verbatim source conformance fixture; .expected.json is fixed source semantic receipt",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "upstreamVerbatimConformance",
+        "warning-shape-unsupported-agentflow"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-agentflow-conformance-error-shape-removed",
+      "kind": "agentflow",
+      "source": "%% `cylinder` is one of the shapes v0.8.1 removed (§4.3.3). It is a hard error:\n%% the node still renders, coerced to the default shape, but the diagram is\n%% classified `error` rather than `warning`.\nagentflow-beta TB\n  input[\"q\"]\n  input@{ shape: input }\n  store[\"Store\"]\n  store@{ shape: \"cylinder\" }\n  input --> store\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/agentflow/conformance/fixtures/error-shape-removed-agentflow.mmd",
+        "sha256": "715e077a8cbf39d118161470c7e8d595b0ef73cf73262e1e9592a6cda5bec474",
+        "symbol": "verbatim source conformance fixture; .expected.json is fixed source semantic receipt",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "upstreamVerbatimConformance",
+        "error-shape-removed-agentflow"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-agentflow-conformance-parse-error-unterminated-container",
+      "kind": "agentflow",
+      "source": "%% A `flow` block with no `end`. The JISON parser raises, so no semantic model\n%% is produced and the outcome is `parse-error` rather than any diagnostic.\nagentflow-beta TB\n  flow orphan[\"Orphan\"]\n    a[\"Alpha\"]\n    b[\"Beta\"]\n    a --> b\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/agentflow/conformance/fixtures/parse-error-unterminated-container-agentflow.mmd",
+        "sha256": "1c58a51dc829a203a0bbbae036fcdb6bd57fff89bfb8a8baff5168311696b817",
+        "symbol": "verbatim source conformance fixture; .expected.json is fixed source semantic receipt",
+        "line": 1
+      },
+      "expect": "syntax_error",
+      "features": [
+        "upstreamVerbatimConformance",
+        "parse-error-unterminated-container-agentflow"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "INVALID_SYNTAX"
+      ]
+    },
+    {
+      "id": "B-timeline-theme-default",
+      "kind": "timeline",
+      "source": "timeline\nsection Releases\n2024 : Launch\n",
+      "config": {
+        "theme": "default"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/timeline/parser/timeline.jison",
+        "sha256": "a201fb1c13cd90ed99ddd9cf9f8526e0e7314ff7e55a4a11b41bcd9cb3201695",
+        "symbol": "synthetic production/renderer boundary: themedefault,gradient,shadow,eventBrightness",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "themedefault",
+        "gradient",
+        "shadow",
+        "eventBrightness"
+      ],
+      "expectedText": [
+        "Releases",
+        "2024",
+        "Launch"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-gitGraph-theme-default",
+      "kind": "gitGraph",
+      "source": "gitGraph\ncommit id:\"A\" tag:\"v1\"\nbranch dev\ncommit id:\"B\" type:HIGHLIGHT\n",
+      "config": {
+        "theme": "default",
+        "gitGraph": {
+          "rotateCommitLabel": false
+        }
+      },
+      "origin": {
+        "path": "packages/parser/src/language/gitGraph/gitGraph.langium",
+        "sha256": "6f3b9c256a1a91964572617aa172f2f0d6a8f8be3d32412f7d90c3982d18b71e",
+        "symbol": "synthetic production/renderer boundary: themedefault,gradient,shadow,commitShapes",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "themedefault",
+        "gradient",
+        "shadow",
+        "commitShapes"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "main",
+        "dev",
+        "v1"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-timeline-theme-dark",
+      "kind": "timeline",
+      "source": "timeline\nsection Releases\n2024 : Launch\n",
+      "config": {
+        "theme": "dark"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/timeline/parser/timeline.jison",
+        "sha256": "a201fb1c13cd90ed99ddd9cf9f8526e0e7314ff7e55a4a11b41bcd9cb3201695",
+        "symbol": "synthetic production/renderer boundary: themedark,gradient,shadow,eventBrightness",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "themedark",
+        "gradient",
+        "shadow",
+        "eventBrightness"
+      ],
+      "expectedText": [
+        "Releases",
+        "2024",
+        "Launch"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-gitGraph-theme-dark",
+      "kind": "gitGraph",
+      "source": "gitGraph\ncommit id:\"A\" tag:\"v1\"\nbranch dev\ncommit id:\"B\" type:HIGHLIGHT\n",
+      "config": {
+        "theme": "dark",
+        "gitGraph": {
+          "rotateCommitLabel": false
+        }
+      },
+      "origin": {
+        "path": "packages/parser/src/language/gitGraph/gitGraph.langium",
+        "sha256": "6f3b9c256a1a91964572617aa172f2f0d6a8f8be3d32412f7d90c3982d18b71e",
+        "symbol": "synthetic production/renderer boundary: themedark,gradient,shadow,commitShapes",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "themedark",
+        "gradient",
+        "shadow",
+        "commitShapes"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "main",
+        "dev",
+        "v1"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-timeline-theme-forest",
+      "kind": "timeline",
+      "source": "timeline\nsection Releases\n2024 : Launch\n",
+      "config": {
+        "theme": "forest"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/timeline/parser/timeline.jison",
+        "sha256": "a201fb1c13cd90ed99ddd9cf9f8526e0e7314ff7e55a4a11b41bcd9cb3201695",
+        "symbol": "synthetic production/renderer boundary: themeforest,gradient,shadow,eventBrightness",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "themeforest",
+        "gradient",
+        "shadow",
+        "eventBrightness"
+      ],
+      "expectedText": [
+        "Releases",
+        "2024",
+        "Launch"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-gitGraph-theme-forest",
+      "kind": "gitGraph",
+      "source": "gitGraph\ncommit id:\"A\" tag:\"v1\"\nbranch dev\ncommit id:\"B\" type:HIGHLIGHT\n",
+      "config": {
+        "theme": "forest",
+        "gitGraph": {
+          "rotateCommitLabel": false
+        }
+      },
+      "origin": {
+        "path": "packages/parser/src/language/gitGraph/gitGraph.langium",
+        "sha256": "6f3b9c256a1a91964572617aa172f2f0d6a8f8be3d32412f7d90c3982d18b71e",
+        "symbol": "synthetic production/renderer boundary: themeforest,gradient,shadow,commitShapes",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "themeforest",
+        "gradient",
+        "shadow",
+        "commitShapes"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "main",
+        "dev",
+        "v1"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-timeline-theme-neutral",
+      "kind": "timeline",
+      "source": "timeline\nsection Releases\n2024 : Launch\n",
+      "config": {
+        "theme": "neutral"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/timeline/parser/timeline.jison",
+        "sha256": "a201fb1c13cd90ed99ddd9cf9f8526e0e7314ff7e55a4a11b41bcd9cb3201695",
+        "symbol": "synthetic production/renderer boundary: themeneutral,gradient,shadow,eventBrightness",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "themeneutral",
+        "gradient",
+        "shadow",
+        "eventBrightness"
+      ],
+      "expectedText": [
+        "Releases",
+        "2024",
+        "Launch"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-gitGraph-theme-neutral",
+      "kind": "gitGraph",
+      "source": "gitGraph\ncommit id:\"A\" tag:\"v1\"\nbranch dev\ncommit id:\"B\" type:HIGHLIGHT\n",
+      "config": {
+        "theme": "neutral",
+        "gitGraph": {
+          "rotateCommitLabel": false
+        }
+      },
+      "origin": {
+        "path": "packages/parser/src/language/gitGraph/gitGraph.langium",
+        "sha256": "6f3b9c256a1a91964572617aa172f2f0d6a8f8be3d32412f7d90c3982d18b71e",
+        "symbol": "synthetic production/renderer boundary: themeneutral,gradient,shadow,commitShapes",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "themeneutral",
+        "gradient",
+        "shadow",
+        "commitShapes"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "main",
+        "dev",
+        "v1"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-timeline-theme-base",
+      "kind": "timeline",
+      "source": "timeline\nsection Releases\n2024 : Launch\n",
+      "config": {
+        "theme": "base"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/timeline/parser/timeline.jison",
+        "sha256": "a201fb1c13cd90ed99ddd9cf9f8526e0e7314ff7e55a4a11b41bcd9cb3201695",
+        "symbol": "synthetic production/renderer boundary: themebase,gradient,shadow,eventBrightness",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "themebase",
+        "gradient",
+        "shadow",
+        "eventBrightness"
+      ],
+      "expectedText": [
+        "Releases",
+        "2024",
+        "Launch"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-gitGraph-theme-base",
+      "kind": "gitGraph",
+      "source": "gitGraph\ncommit id:\"A\" tag:\"v1\"\nbranch dev\ncommit id:\"B\" type:HIGHLIGHT\n",
+      "config": {
+        "theme": "base",
+        "gitGraph": {
+          "rotateCommitLabel": false
+        }
+      },
+      "origin": {
+        "path": "packages/parser/src/language/gitGraph/gitGraph.langium",
+        "sha256": "6f3b9c256a1a91964572617aa172f2f0d6a8f8be3d32412f7d90c3982d18b71e",
+        "symbol": "synthetic production/renderer boundary: themebase,gradient,shadow,commitShapes",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "themebase",
+        "gradient",
+        "shadow",
+        "commitShapes"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "main",
+        "dev",
+        "v1"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-timeline-theme-neo",
+      "kind": "timeline",
+      "source": "timeline\nsection Releases\n2024 : Launch\n",
+      "config": {
+        "theme": "neo"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/timeline/parser/timeline.jison",
+        "sha256": "a201fb1c13cd90ed99ddd9cf9f8526e0e7314ff7e55a4a11b41bcd9cb3201695",
+        "symbol": "synthetic production/renderer boundary: themeneo,gradient,shadow,eventBrightness",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "themeneo",
+        "gradient",
+        "shadow",
+        "eventBrightness"
+      ],
+      "expectedText": [
+        "Releases",
+        "2024",
+        "Launch"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-gitGraph-theme-neo",
+      "kind": "gitGraph",
+      "source": "gitGraph\ncommit id:\"A\" tag:\"v1\"\nbranch dev\ncommit id:\"B\" type:HIGHLIGHT\n",
+      "config": {
+        "theme": "neo",
+        "gitGraph": {
+          "rotateCommitLabel": false
+        }
+      },
+      "origin": {
+        "path": "packages/parser/src/language/gitGraph/gitGraph.langium",
+        "sha256": "6f3b9c256a1a91964572617aa172f2f0d6a8f8be3d32412f7d90c3982d18b71e",
+        "symbol": "synthetic production/renderer boundary: themeneo,gradient,shadow,commitShapes",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "themeneo",
+        "gradient",
+        "shadow",
+        "commitShapes"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "main",
+        "dev",
+        "v1"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-timeline-theme-neo-dark",
+      "kind": "timeline",
+      "source": "timeline\nsection Releases\n2024 : Launch\n",
+      "config": {
+        "theme": "neo-dark"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/timeline/parser/timeline.jison",
+        "sha256": "a201fb1c13cd90ed99ddd9cf9f8526e0e7314ff7e55a4a11b41bcd9cb3201695",
+        "symbol": "synthetic production/renderer boundary: themeneo-dark,gradient,shadow,eventBrightness",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "themeneo-dark",
+        "gradient",
+        "shadow",
+        "eventBrightness"
+      ],
+      "expectedText": [
+        "Releases",
+        "2024",
+        "Launch"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-gitGraph-theme-neo-dark",
+      "kind": "gitGraph",
+      "source": "gitGraph\ncommit id:\"A\" tag:\"v1\"\nbranch dev\ncommit id:\"B\" type:HIGHLIGHT\n",
+      "config": {
+        "theme": "neo-dark",
+        "gitGraph": {
+          "rotateCommitLabel": false
+        }
+      },
+      "origin": {
+        "path": "packages/parser/src/language/gitGraph/gitGraph.langium",
+        "sha256": "6f3b9c256a1a91964572617aa172f2f0d6a8f8be3d32412f7d90c3982d18b71e",
+        "symbol": "synthetic production/renderer boundary: themeneo-dark,gradient,shadow,commitShapes",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "themeneo-dark",
+        "gradient",
+        "shadow",
+        "commitShapes"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "main",
+        "dev",
+        "v1"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-timeline-theme-redux",
+      "kind": "timeline",
+      "source": "timeline\nsection Releases\n2024 : Launch\n",
+      "config": {
+        "theme": "redux"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/timeline/parser/timeline.jison",
+        "sha256": "a201fb1c13cd90ed99ddd9cf9f8526e0e7314ff7e55a4a11b41bcd9cb3201695",
+        "symbol": "synthetic production/renderer boundary: themeredux,gradient,shadow,eventBrightness",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "themeredux",
+        "gradient",
+        "shadow",
+        "eventBrightness"
+      ],
+      "expectedText": [
+        "Releases",
+        "2024",
+        "Launch"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-gitGraph-theme-redux",
+      "kind": "gitGraph",
+      "source": "gitGraph\ncommit id:\"A\" tag:\"v1\"\nbranch dev\ncommit id:\"B\" type:HIGHLIGHT\n",
+      "config": {
+        "theme": "redux",
+        "gitGraph": {
+          "rotateCommitLabel": false
+        }
+      },
+      "origin": {
+        "path": "packages/parser/src/language/gitGraph/gitGraph.langium",
+        "sha256": "6f3b9c256a1a91964572617aa172f2f0d6a8f8be3d32412f7d90c3982d18b71e",
+        "symbol": "synthetic production/renderer boundary: themeredux,gradient,shadow,commitShapes",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "themeredux",
+        "gradient",
+        "shadow",
+        "commitShapes"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "main",
+        "dev",
+        "v1"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-timeline-theme-redux-dark",
+      "kind": "timeline",
+      "source": "timeline\nsection Releases\n2024 : Launch\n",
+      "config": {
+        "theme": "redux-dark"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/timeline/parser/timeline.jison",
+        "sha256": "a201fb1c13cd90ed99ddd9cf9f8526e0e7314ff7e55a4a11b41bcd9cb3201695",
+        "symbol": "synthetic production/renderer boundary: themeredux-dark,gradient,shadow,eventBrightness",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "themeredux-dark",
+        "gradient",
+        "shadow",
+        "eventBrightness"
+      ],
+      "expectedText": [
+        "Releases",
+        "2024",
+        "Launch"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-gitGraph-theme-redux-dark",
+      "kind": "gitGraph",
+      "source": "gitGraph\ncommit id:\"A\" tag:\"v1\"\nbranch dev\ncommit id:\"B\" type:HIGHLIGHT\n",
+      "config": {
+        "theme": "redux-dark",
+        "gitGraph": {
+          "rotateCommitLabel": false
+        }
+      },
+      "origin": {
+        "path": "packages/parser/src/language/gitGraph/gitGraph.langium",
+        "sha256": "6f3b9c256a1a91964572617aa172f2f0d6a8f8be3d32412f7d90c3982d18b71e",
+        "symbol": "synthetic production/renderer boundary: themeredux-dark,gradient,shadow,commitShapes",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "themeredux-dark",
+        "gradient",
+        "shadow",
+        "commitShapes"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "main",
+        "dev",
+        "v1"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-timeline-theme-redux-color",
+      "kind": "timeline",
+      "source": "timeline\nsection Releases\n2024 : Launch\n",
+      "config": {
+        "theme": "redux-color"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/timeline/parser/timeline.jison",
+        "sha256": "a201fb1c13cd90ed99ddd9cf9f8526e0e7314ff7e55a4a11b41bcd9cb3201695",
+        "symbol": "synthetic production/renderer boundary: themeredux-color,gradient,shadow,eventBrightness",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "themeredux-color",
+        "gradient",
+        "shadow",
+        "eventBrightness"
+      ],
+      "expectedText": [
+        "Releases",
+        "2024",
+        "Launch"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-gitGraph-theme-redux-color",
+      "kind": "gitGraph",
+      "source": "gitGraph\ncommit id:\"A\" tag:\"v1\"\nbranch dev\ncommit id:\"B\" type:HIGHLIGHT\n",
+      "config": {
+        "theme": "redux-color",
+        "gitGraph": {
+          "rotateCommitLabel": false
+        }
+      },
+      "origin": {
+        "path": "packages/parser/src/language/gitGraph/gitGraph.langium",
+        "sha256": "6f3b9c256a1a91964572617aa172f2f0d6a8f8be3d32412f7d90c3982d18b71e",
+        "symbol": "synthetic production/renderer boundary: themeredux-color,gradient,shadow,commitShapes",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "themeredux-color",
+        "gradient",
+        "shadow",
+        "commitShapes"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "main",
+        "dev",
+        "v1"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-timeline-theme-redux-dark-color",
+      "kind": "timeline",
+      "source": "timeline\nsection Releases\n2024 : Launch\n",
+      "config": {
+        "theme": "redux-dark-color"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/timeline/parser/timeline.jison",
+        "sha256": "a201fb1c13cd90ed99ddd9cf9f8526e0e7314ff7e55a4a11b41bcd9cb3201695",
+        "symbol": "synthetic production/renderer boundary: themeredux-dark-color,gradient,shadow,eventBrightness",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "themeredux-dark-color",
+        "gradient",
+        "shadow",
+        "eventBrightness"
+      ],
+      "expectedText": [
+        "Releases",
+        "2024",
+        "Launch"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-gitGraph-theme-redux-dark-color",
+      "kind": "gitGraph",
+      "source": "gitGraph\ncommit id:\"A\" tag:\"v1\"\nbranch dev\ncommit id:\"B\" type:HIGHLIGHT\n",
+      "config": {
+        "theme": "redux-dark-color",
+        "gitGraph": {
+          "rotateCommitLabel": false
+        }
+      },
+      "origin": {
+        "path": "packages/parser/src/language/gitGraph/gitGraph.langium",
+        "sha256": "6f3b9c256a1a91964572617aa172f2f0d6a8f8be3d32412f7d90c3982d18b71e",
+        "symbol": "synthetic production/renderer boundary: themeredux-dark-color,gradient,shadow,commitShapes",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "themeredux-dark-color",
+        "gradient",
+        "shadow",
+        "commitShapes"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "main",
+        "dev",
+        "v1"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-ishikawa-handdrawn",
+      "kind": "ishikawa",
+      "source": "ishikawa\nEffect\n Cause\n  Detail\n",
+      "config": {
+        "look": "handDrawn",
+        "handDrawnSeed": 11
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/ishikawa/parser/ishikawa.jison",
+        "sha256": "1bbf4d461534b1c0d4c9e375bf821fac6219f73add5727e5aa51fe4aa044f57b",
+        "symbol": "synthetic production/renderer boundary: handDrawn,sourceRoughOptions",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "handDrawn",
+        "sourceRoughOptions"
+      ],
+      "expectedText": [
+        "Effect",
+        "Cause",
+        "Detail"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-agentflow-handdrawn",
+      "kind": "agentflow",
+      "source": "agentflow-beta TB\nflow Team[Team]\n A[Work] --> B[Done]\nend\n",
+      "config": {
+        "look": "handDrawn",
+        "handDrawnSeed": 11
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/agentflow/parser/agentflow.jison",
+        "sha256": "105f7e860ac78a25e2bbdcc8dcbc7ab4ee8159be5880eb51455c8cd307253d82",
+        "symbol": "synthetic production/renderer boundary: handDrawn,sourceRoughOptions",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "handDrawn",
+        "sourceRoughOptions"
+      ],
+      "expectedText": [
+        "Team",
+        "Work",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-swimlane-handdrawn",
+      "kind": "swimlane",
+      "source": "swimlane-beta LR\nsubgraph L[Lane]\n A[Work] --> B[Done]\nend\n",
+      "config": {
+        "look": "handDrawn",
+        "handDrawnSeed": 11
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/swimlanes/swimlanesDiagram.ts",
+        "sha256": "3846dbd86239ac97b9c6f742bb67d407766882257eb7609fc67c43dc673a4a3f",
+        "symbol": "synthetic production/renderer boundary: handDrawn,sourceRoughOptions",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "handDrawn",
+        "sourceRoughOptions"
+      ],
+      "expectedText": [
+        "Lane",
+        "Work",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-gantt-excludes-includes-valid",
+      "kind": "gantt",
+      "source": "gantt\ndateFormat YYYY-MM-DD\nexcludes weekends, 2024-01-08\nincludes 2024-01-06\nweekend friday\nweekday monday\ntickInterval 1week\ntodayMarker off\nsection S\nTask :a, 2024-01-05, 5d\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/gantt/parser/gantt.jison",
+        "sha256": "15023f6e7af35588a206dddf176d7af763729d2bf76ea3de52f1bbe0f4a203ae",
+        "symbol": "synthetic production/renderer boundary: exclusion,inclusion,weekendFriday,tickWeek",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "exclusion",
+        "inclusion",
+        "weekendFriday",
+        "tickWeek"
+      ],
+      "expectedText": [
+        "Task",
+        "S"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-gantt-top-axis-config",
+      "kind": "gantt",
+      "source": "gantt\ndateFormat YYYY-MM-DD\nexcludes weekends, 2024-01-08\nincludes 2024-01-06\nweekend friday\nweekday monday\ntickInterval 1week\ntodayMarker off\nsection S\nTask :a, 2024-01-05, 5d\n",
+      "config": {
+        "gantt": {
+          "topAxis": true
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/gantt/parser/gantt.jison",
+        "sha256": "15023f6e7af35588a206dddf176d7af763729d2bf76ea3de52f1bbe0f4a203ae",
+        "symbol": "synthetic production/renderer boundary: topAxisConfig,topAxisRendererBranch",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "topAxisConfig",
+        "topAxisRendererBranch"
+      ],
+      "expectedText": [
+        "Task",
+        "S"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-journey-fractional-space-valid",
+      "kind": "journey",
+      "source": "journey\nAlone:2.5\nEmpty: \nHigh:8:Alice\nLow:-1:Bob\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/user-journey/parser/journey.jison",
+        "sha256": "40650bb3b7304d27dd9a190c76c34593af8850630985a0423c48fa9375f963c5",
+        "symbol": "synthetic production/renderer boundary: fractionScore,whitespaceZero,unclampedFiniteScore",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "fractionScore",
+        "whitespaceZero",
+        "unclampedFiniteScore"
+      ],
+      "expectedText": [
+        "Alone",
+        "Empty",
+        "High",
+        "Low"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-eventmodeling-all-types-valid",
+      "kind": "eventmodeling",
+      "source": "eventmodeling\ntf 1 ui Page\ntf 2 cmd Place\ntf 3 evt Placed\ntf 4 rmo Orders\ntf 5 pcr React\n",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/eventmodeling/event-modeling.langium",
+        "sha256": "be3da489f5114237acbd7ec50494e8bb48f8e6753b6e2f7f2137dae170000611",
+        "symbol": "synthetic production/renderer boundary: fiveTypes,inferredRelations,lanes",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "fiveTypes",
+        "inferredRelations",
+        "lanes"
+      ],
+      "expectedText": [
+        "Page",
+        "Place",
+        "Placed",
+        "Orders",
+        "React"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-eventmodeling-frontmatter-title",
+      "kind": "eventmodeling",
+      "source": "---\ntitle: Order\n---\neventmodeling\ntf 1 ui Page\ntf 2 cmd Place\ntf 3 evt Placed\ntf 4 rmo Orders\ntf 5 pcr React\n",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/eventmodeling/event-modeling.langium",
+        "sha256": "be3da489f5114237acbd7ec50494e8bb48f8e6753b6e2f7f2137dae170000611",
+        "symbol": "synthetic production/renderer boundary: frontmatterTitle,sourceUnconsumedTitle,fiveTypes",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "frontmatterTitle",
+        "sourceUnconsumedTitle",
+        "fiveTypes"
+      ],
+      "expectedText": [
+        "Page",
+        "Place",
+        "Placed",
+        "Orders",
+        "React"
+      ],
+      "expectedErrorCodes": []
+    }
+  ]
+}

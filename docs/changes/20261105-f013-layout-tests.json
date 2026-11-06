@@ -1,0 +1,64 @@
+{
+  "schema": "py-mermaid-change/v1",
+  "taskId": "F01.3-S3/layout-styles",
+  "status": "tests_authored_behavior_not_run",
+  "baseline": "mermaid@12.2.0 1fb7869866dd619168d840291c9c54b4f129758b / py-visactor-elk0.1.0",
+  "frozenCandidate": "5a7264af3a00dc705df6824d83311e3e3b67d80b39457ecfeba5aec19293d771",
+  "scope": "29 independent source-derived tests; no product edits, Dagre/F014 suspended",
+  "changedFiles": {
+    "tests/f013/test_layout.py": "534b70b7f325e1278ca72e4a28d9fe0f63cfe1d96a5a25fa58c45329a3be7109",
+    "tests/f013/test_styles.py": "e1f54a989aeaed929973677d841e89facadc1f200d7028a271a3ff5bcaafc7d4",
+    "tests/f012/test_layout.py": "d60303387d571bf6c40b3059ccf5682a822c7a2d99f41585918a599fb051c230",
+    "references/f013-layout-assertions.json": "173d03c116a2d9aba115599a745909c8bdb2bc96db5854ca64b60090f8ac6f10"
+  },
+  "migration": "F012 C02 width0 invalid changes to width-1 with explicit F013 legal empty-rich positive test; source acceptance expanded, negative validation retained.",
+  "verification": {
+    "run": "test-runs/F01.3-layout-styles-s3-final-mechanical-20261105T015514Z-dcf029c1",
+    "commands": [
+      {
+        "argv": [
+          "C:\\venvs\\pymmd-20261102\\Scripts\\python.exe",
+          "-m",
+          "py_compile",
+          "tests/f013/test_layout.py",
+          "tests/f013/test_styles.py",
+          "tests/f012/test_layout.py"
+        ],
+        "exitCode": 0,
+        "stdout": "commands/001-compile/stdout.log",
+        "stderr": "commands/001-compile/stderr.log"
+      },
+      {
+        "argv": [
+          "C:\\venvs\\pymmd-20261102\\Scripts\\python.exe",
+          "-c",
+          "import unittest; loader=unittest.TestLoader(); suites=[loader.discover('tests/f013',pattern=p) for p in ('test_layout.py','test_styles.py')]; counts=[s.countTestCases() for s in suites]; print(dict(zip(('layout','styles'),counts))); assert counts==[13,16], counts; assert not loader.errors, loader.errors; print('COLLECT_ONLY; behavior NOT_RUN')"
+        ],
+        "exitCode": 0,
+        "stdout": "commands/002-collect-only/stdout.log",
+        "stderr": "commands/002-collect-only/stderr.log"
+      },
+      {
+        "argv": [
+          "C:\\venvs\\pymmd-20261102\\Scripts\\python.exe",
+          "-c",
+          "import json; from pathlib import Path; x=json.loads(Path('references/f013-layout-assertions.json').read_text(encoding='utf-8')); assert len(x['tests'])==29; print('29 source-derived entries; behavior NOT_RUN')"
+        ],
+        "exitCode": 0,
+        "stdout": "commands/003-ledger-json/stdout.log",
+        "stderr": "commands/003-ledger-json/stderr.log"
+      }
+    ],
+    "runManifestSha256": "94e0eca79797954f056b6b2eac8b3b746d0177a08757acf6c10ab7938a553127",
+    "behaviorExecuted": false,
+    "collected": {
+      "layout": 13,
+      "styles": 16
+    }
+  },
+  "limitations": [
+    "Behavior NOT_RUN pending coordinator unified S3 first run",
+    "Source semantic questions preserved in assertion ledger rather than changing candidate or expectations"
+  ],
+  "next": "Freeze S3 suite and unified first run; classify any behavioral failures with original evidence."
+}

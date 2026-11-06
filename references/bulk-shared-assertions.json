@@ -1,0 +1,376 @@
+{
+  "schema": "py-mermaid-bulk-assertions/v1",
+  "group": "shared",
+  "phase": "P2",
+  "status": "designed_unexecuted",
+  "productBehaviorExecuted": false,
+  "P1SourceTreeSha256": "97b353ebf7e176a750a736a714c85638e0a497b722e451dc77570579a2d36cbb",
+  "sourceFiles": [
+    {
+      "path": "packages/mermaid/src/config.spec.ts",
+      "sha256": "b5a26f828d9c914cf80de5a361eada4e63b0389e76b731c98404c01fc76f6047"
+    },
+    {
+      "path": "packages/mermaid/src/config.ts",
+      "sha256": "91dd68a9e7d57c4635a04fab0ccd78ec230b4417a02f4f4b3cd9a6bb445f09ef"
+    },
+    {
+      "path": "packages/mermaid/src/preprocess.ts",
+      "sha256": "db337ae9cc0f7ff189cc50d06d6fb28452dfbc37294f56a966dc3f48b2a628e0"
+    },
+    {
+      "path": "packages/mermaid/src/diagram-api/diagramAPI.spec.ts",
+      "sha256": "b90e3731832a26addeae6c8129fe57fadc0b7d03c8d5e4df6af39dc5ba88eb8d"
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/createText.ts",
+      "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865"
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/insertLookDefs.ts",
+      "sha256": "9810059f11462129a1518d3b1fa3950e9e16a959dbe92abc732aa5e714a2eb13"
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/common/common.spec.ts",
+      "sha256": "5b9492aaa8b06a2ba9099dd7e1d7bd5975d6cd154f812eb1f95cc2810279afa8"
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/elk/render.ts",
+      "sha256": "6258890b3f311e86e4cd4dc99d480f704fde7473e150dc62b88838c5015c5011"
+    },
+    {
+      "path": ".build/jsonSchema.ts",
+      "sha256": "0933883cc0bfef84c255e9a138258fcb59ede9a39367414d26a5873edd5ce95c"
+    }
+  ],
+  "methods": [
+    {
+      "test": "tests/bulk/shared/test_cli.py:CLIContracts.test_input_file_is_not_overwritten_by_either_output",
+      "line": 17,
+      "staticAssertionCallsites": 3
+    },
+    {
+      "test": "tests/bulk/shared/test_cli.py:CLIContracts.test_real_stdin_and_metadata_explicit_output_with_unicode_path",
+      "line": 26,
+      "staticAssertionCallsites": 6
+    },
+    {
+      "test": "tests/bulk/shared/test_cli.py:CLIContracts.test_invalid_config_and_resource_manifest_are_json_errors",
+      "line": 36,
+      "staticAssertionCallsites": 2
+    },
+    {
+      "test": "tests/bulk/shared/test_cli.py:CLIContracts.test_parser_failure_preserves_precise_json_diagnostic",
+      "line": 45,
+      "staticAssertionCallsites": 3
+    },
+    {
+      "test": "tests/bulk/shared/test_cli.py:CLIContracts.test_production_runs_without_node_browser_or_local_source_on_path",
+      "line": 51,
+      "staticAssertionCallsites": 2
+    },
+    {
+      "test": "tests/bulk/shared/test_configuration.py:ConfigurationContracts.test_source_default_swimlane_layering_and_preset_elision",
+      "line": 18,
+      "staticAssertionCallsites": 6
+    },
+    {
+      "test": "tests/bulk/shared/test_configuration.py:ConfigurationContracts.test_secure_keys_from_site_resist_directive_overrides",
+      "line": 27,
+      "staticAssertionCallsites": 3
+    },
+    {
+      "test": "tests/bulk/shared/test_configuration.py:ConfigurationContracts.test_railroad_aliases_retain_directive_font_configuration",
+      "line": 35,
+      "staticAssertionCallsites": 3
+    },
+    {
+      "test": "tests/bulk/shared/test_configuration.py:ConfigurationContracts.test_scoped_source_theme_look_layout_precedence",
+      "line": 44,
+      "staticAssertionCallsites": 4
+    },
+    {
+      "test": "tests/bulk/shared/test_configuration.py:ConfigurationContracts.test_root_layout_explicitness_is_separate_from_family_scope",
+      "line": 51,
+      "staticAssertionCallsites": 3
+    },
+    {
+      "test": "tests/bulk/shared/test_configuration.py:ConfigurationContracts.test_unusable_scoped_theme_falls_through_to_sibling_root",
+      "line": 58,
+      "staticAssertionCallsites": 1
+    },
+    {
+      "test": "tests/bulk/shared/test_configuration.py:ConfigurationContracts.test_source_diagram_default_wins_global_default_but_not_user_root",
+      "line": 67,
+      "staticAssertionCallsites": 4
+    },
+    {
+      "test": "tests/bulk/shared/test_configuration.py:ConfigurationContracts.test_config_mutation_does_not_leak_between_diagrams",
+      "line": 76,
+      "staticAssertionCallsites": 2
+    },
+    {
+      "test": "tests/bulk/shared/test_configuration.py:ConfigurationContracts.test_all_eleven_themes_compute_full_family_variables",
+      "line": 84,
+      "staticAssertionCallsites": 4
+    },
+    {
+      "test": "tests/bulk/shared/test_configuration.py:ConfigurationContracts.test_input_limits_use_utf16_not_python_scalar_length",
+      "line": 95,
+      "staticAssertionCallsites": 5
+    },
+    {
+      "test": "tests/bulk/shared/test_configuration.py:ConfigurationContracts.test_raw_source_error_maps_crlf_directive_and_surrogate_columns",
+      "line": 105,
+      "staticAssertionCallsites": 4
+    },
+    {
+      "test": "tests/bulk/shared/test_configuration.py:ConfigurationContracts.test_explicit_error_unknown_and_excluded_dagre_are_precise_errors",
+      "line": 115,
+      "staticAssertionCallsites": 2
+    },
+    {
+      "test": "tests/bulk/shared/test_configuration.py:ConfigurationContracts.test_provider_registration_order_replacement_and_actual_model",
+      "line": 121,
+      "staticAssertionCallsites": 4
+    },
+    {
+      "test": "tests/bulk/shared/test_configuration.py:ConfigurationContracts.test_layout_registration_replacement_owns_builtin_name_without_fallback",
+      "line": 137,
+      "staticAssertionCallsites": 6
+    },
+    {
+      "test": "tests/bulk/shared/test_layout_plugins.py:LayoutAdapterContracts.test_custom_provider_receives_exact_measured_values_and_no_shadow_layout",
+      "line": 15,
+      "staticAssertionCallsites": 6
+    },
+    {
+      "test": "tests/bulk/shared/test_layout_plugins.py:LayoutAdapterContracts.test_provider_failure_and_invalid_result_are_not_elk_fallback",
+      "line": 26,
+      "staticAssertionCallsites": 3
+    },
+    {
+      "test": "tests/bulk/shared/test_layout_plugins.py:LayoutAdapterContracts.test_cancellation_propagates_to_active_provider_finally",
+      "line": 36,
+      "staticAssertionCallsites": 2
+    },
+    {
+      "test": "tests/bulk/shared/test_layout_plugins.py:LayoutAdapterContracts.test_builtin_elk_graph_hierarchy_edge_identity_and_finite_routes",
+      "line": 48,
+      "staticAssertionCallsites": 10
+    },
+    {
+      "test": "tests/bulk/shared/test_native.py:NativePainterContracts.test_compound_child_attribute_negation_and_specificity",
+      "line": 45,
+      "staticAssertionCallsites": 4
+    },
+    {
+      "test": "tests/bulk/shared/test_native.py:NativePainterContracts.test_family_sheet_precedes_user_css_and_important_cascade",
+      "line": 54,
+      "staticAssertionCallsites": 2
+    },
+    {
+      "test": "tests/bulk/shared/test_native.py:NativePainterContracts.test_nested_svg_tspan_own_declaration_beats_inherited_important",
+      "line": 60,
+      "staticAssertionCallsites": 2
+    },
+    {
+      "test": "tests/bulk/shared/test_native.py:NativePainterContracts.test_registered_horizontal_gradient_is_real_native_color",
+      "line": 66,
+      "staticAssertionCallsites": 3
+    },
+    {
+      "test": "tests/bulk/shared/test_native.py:NativePainterContracts.test_css_none_removes_gradient_in_later_rule",
+      "line": 76,
+      "staticAssertionCallsites": 2
+    },
+    {
+      "test": "tests/bulk/shared/test_native.py:NativePainterContracts.test_hidden_asset_does_not_load_and_opacity_paints_real_composite",
+      "line": 82,
+      "staticAssertionCallsites": 3
+    },
+    {
+      "test": "tests/bulk/shared/test_native.py:NativePainterContracts.test_affine_path_and_negative_origin_ink_are_retained",
+      "line": 91,
+      "staticAssertionCallsites": 6
+    },
+    {
+      "test": "tests/bulk/shared/test_native.py:NativePainterContracts.test_clip_before_rotated_text_is_global_and_really_applied",
+      "line": 99,
+      "staticAssertionCallsites": 3
+    },
+    {
+      "test": "tests/bulk/shared/test_native.py:NativePainterContracts.test_dashes_inherit_and_explicit_empty_dash_clears",
+      "line": 108,
+      "staticAssertionCallsites": 1
+    },
+    {
+      "test": "tests/bulk/shared/test_native.py:NativePainterContracts.test_html_default_false_and_explicit_override_remain_distinct",
+      "line": 115,
+      "staticAssertionCallsites": 3
+    },
+    {
+      "test": "tests/bulk/shared/test_native.py:NativePainterContracts.test_html_rich_text_math_uses_formal_dependency_real_glyphs",
+      "line": 123,
+      "staticAssertionCallsites": 5
+    },
+    {
+      "test": "tests/bulk/shared/test_native.py:NativePainterContracts.test_explicit_offline_font_controls_actual_generic_measure_and_draw",
+      "line": 133,
+      "staticAssertionCallsites": 4
+    },
+    {
+      "test": "tests/bulk/shared/test_native.py:NativePainterContracts.test_generic_static_label_sanitization_preserves_visible_anchor_caption",
+      "line": 144,
+      "staticAssertionCallsites": 4
+    },
+    {
+      "test": "tests/bulk/shared/test_native.py:NativePainterContracts.test_brightness_and_shadow_filters_paint_without_rectangular_glyph_fill",
+      "line": 153,
+      "staticAssertionCallsites": 3
+    },
+    {
+      "test": "tests/bulk/shared/test_native.py:NativePainterContracts.test_seeded_handdrawn_geometry_repeats_but_differs_by_seed",
+      "line": 162,
+      "staticAssertionCallsites": 3
+    },
+    {
+      "test": "tests/bulk/shared/test_native.py:NativePainterContracts.test_source_marker_topologies_not_placeholder_rectangles",
+      "line": 171,
+      "staticAssertionCallsites": 2
+    },
+    {
+      "test": "tests/bulk/shared/test_native.py:NativePainterContracts.test_native_owner_thread_rejects_foreign_use_and_bytes_cross_thread",
+      "line": 179,
+      "staticAssertionCallsites": 3
+    },
+    {
+      "test": "tests/bulk/shared/test_native.py:NativePainterContracts.test_resource_hash_and_svg_active_external_content_rejected",
+      "line": 188,
+      "staticAssertionCallsites": 4
+    },
+    {
+      "test": "tests/bulk/shared/test_native.py:NativePainterContracts.test_tint_cannot_inject_markup_or_external_resource",
+      "line": 199,
+      "staticAssertionCallsites": 2
+    },
+    {
+      "test": "tests/bulk/shared/test_native.py:NativePainterContracts.test_generic_scene_native_exports_contain_shape_and_text",
+      "line": 205,
+      "staticAssertionCallsites": 9
+    },
+    {
+      "test": "tests/bulk/shared/test_native.py:PublicAsyncContracts.test_generic_info_device_profiles_actual_output",
+      "line": 222,
+      "staticAssertionCallsites": 3
+    },
+    {
+      "test": "tests/bulk/shared/test_native.py:PublicAsyncContracts.test_sync_render_inside_active_loop_and_invalid_api_options",
+      "line": 230,
+      "staticAssertionCallsites": 4
+    }
+  ],
+  "methodCount": 45,
+  "methodCountIsCoveragePercentage": false,
+  "crossCutting": {
+    "preprocessing-frontmatter-directives": {
+      "owner": "C01",
+      "status": "designed_unexecuted",
+      "tests": "tests/bulk/shared plus retained original F01/math suites"
+    },
+    "configuration-schema-defaults": {
+      "owner": "C01",
+      "status": "designed_unexecuted",
+      "tests": "tests/bulk/shared plus retained original F01/math suites"
+    },
+    "diagnostics-errors-utf16": {
+      "owner": "C01",
+      "status": "designed_unexecuted",
+      "tests": "tests/bulk/shared plus retained original F01/math suites"
+    },
+    "themes-css-cascade": {
+      "owner": "C04",
+      "status": "designed_unexecuted",
+      "tests": "tests/bulk/shared plus retained original F01/math suites"
+    },
+    "text-html-markdown-math": {
+      "owner": "C04",
+      "status": "designed_unexecuted",
+      "tests": "tests/bulk/shared plus retained original F01/math suites"
+    },
+    "layout-engines": {
+      "owner": "C05",
+      "status": "designed_unexecuted",
+      "tests": "tests/bulk/shared plus retained original F01/math suites"
+    },
+    "handdrawn-random-seed": {
+      "owner": "C06",
+      "status": "designed_unexecuted",
+      "tests": "tests/bulk/shared plus retained original F01/math suites"
+    },
+    "exports-scale-background": {
+      "owner": "C07",
+      "status": "designed_unexecuted",
+      "tests": "tests/bulk/shared plus retained original F01/math suites"
+    },
+    "threading-lifecycle": {
+      "owner": "C07",
+      "status": "designed_unexecuted",
+      "tests": "tests/bulk/shared plus retained original F01/math suites"
+    },
+    "offline-deployment": {
+      "owner": "C07",
+      "status": "designed_unexecuted",
+      "tests": "tests/bulk/shared plus retained original F01/math suites"
+    },
+    "accessibility-metadata": {
+      "owner": "C08",
+      "status": "excluded_by_static_scope",
+      "tests": "tests/bulk/shared plus retained original F01/math suites",
+      "reason": "User excludes all interactive metadata/DOM accessibility behavior; source title visible text remains independently tested"
+    },
+    "links-interaction-security": {
+      "owner": "C08",
+      "status": "designed_unexecuted",
+      "tests": "tests/bulk/shared plus retained original F01/math suites"
+    },
+    "icons-images-resource-policy": {
+      "owner": "C08",
+      "status": "designed_unexecuted",
+      "tests": "tests/bulk/shared plus retained original F01/math suites"
+    }
+  },
+  "regressionSuites": [
+    "tests/f011",
+    "tests/f012",
+    "tests/f013",
+    "tests/f014",
+    "tests/math"
+  ],
+  "legacyVisualPositiveCounts": {
+    "f011": 12,
+    "f012": 35,
+    "f013": 50,
+    "f014": 200
+  },
+  "devices": [
+    "cpu",
+    "auto",
+    "gpu"
+  ],
+  "exports": [
+    "png",
+    "jpg",
+    "webp",
+    "svg",
+    "pdf"
+  ],
+  "knownP3Questions": [
+    "config.ts readAppearance skips unusable scoped themes before sibling/root/next layer; verify frozen implementation behavior",
+    "Dagre removed by user; unsupported names rejected without fallback, not source fallback semantics",
+    "Cross-DOM/Canvas text and layout dimensions differ; independent relationship and actual ink checks are gates",
+    "Some fixtures may be source-blank; confirm official output before explicit source-empty classification"
+  ],
+  "installVerification": false,
+  "renderFixtureCount": 56
+}

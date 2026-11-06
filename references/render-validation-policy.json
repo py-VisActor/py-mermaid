@@ -1,8 +1,8 @@
 {
   "schema": "py-mermaid-render-validation-policy/v1",
-  "version": 1,
+  "version": 2,
   "decision": "user-authorized-functional-parity-not-pixel-parity",
-  "scope": "Planned P2-P4 verification; no renderer/comparator implementation or product acceptance is claimed.",
+  "scope": "Retained static-rendering verification across all modules; historical product evidence remains unchanged.",
   "phaseOrder": [
     "P0",
     "P1",
@@ -12,7 +12,7 @@
     "P5"
   ],
   "crossEngine": {
-    "profile": "dom-vs-canvas-functional",
+    "profile": "dom-vs-canvas-static-functional",
     "functionalParityRequired": true,
     "renderedContentAndRelationshipsRequired": true,
     "geometryQualityRequired": true,
@@ -129,5 +129,13 @@
       "tool-error": 2
     },
     "semanticComparatorImplemented": false
-  }
+  },
+  "targetScope": "static-rendering-only",
+  "scopePolicy": "references/static-rendering-scope.json",
+  "excludedAssertionDisposition": "excluded_by_static_scope",
+  "animationReference": "Initial time t=0; preserve and record initial visible styles; no playback or image postprocessing",
+  "layoutPolicy": "references/layout-policy.json",
+  "excludedAlgorithms": [
+    "dagre"
+  ]
 }

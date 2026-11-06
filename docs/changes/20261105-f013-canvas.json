@@ -1,0 +1,166 @@
+{
+  "schema": "py-mermaid-change/v1",
+  "taskId": "20261105-f013-canvas",
+  "executionTask": "F01.3-S2/canvas",
+  "status": "code_complete_unverified",
+  "startingState": {
+    "evidence": [
+      "test-runs/F01.34-start-20261105T010728Z-1de7376b"
+    ],
+    "preexistingChangesPreserved": true
+  },
+  "changedPaths": [
+    "src/py_mermaid/geometry/shapes.py",
+    "src/py_mermaid/rendering/labels/__init__.py",
+    "src/py_mermaid/rendering/labels/plain.py",
+    "src/py_mermaid/rendering/labels/rich.py",
+    "src/py_mermaid/rendering/labels/sanitize.py",
+    "src/py_mermaid/rendering/skia/__init__.py",
+    "src/py_mermaid/rendering/skia/session.py",
+    "references/f013-canvas-sources.json"
+  ],
+  "sourceSha256": {
+    "src/py_mermaid/geometry/shapes.py": "90e38a7bb923ec55fa3477e471f4cde9fdc4a2a40438b1a5a3520ebbe7dd76d7",
+    "src/py_mermaid/rendering/labels/__init__.py": "5081ad1eea53fb7fde3208c095c5d409a90d144b9758c89f8c3177ef08345a55",
+    "src/py_mermaid/rendering/labels/plain.py": "fa0bd7c05a82a7412f5cce1fea62acc580b6389789510bc0b893d9eb4e88fac5",
+    "src/py_mermaid/rendering/labels/rich.py": "ab7210623f65b3a44776ca3303fa7900d36517d50cfebcfb95e3607c8c2b6b3e",
+    "src/py_mermaid/rendering/labels/sanitize.py": "1b6974fbb5be76fbf3691572d104905c1e9094831bd23b874615682bf710f1eb",
+    "src/py_mermaid/rendering/skia/__init__.py": "60776be795ea6008f72da9be2517dd538cfb7f61f937930944bfa915c706df7a",
+    "src/py_mermaid/rendering/skia/session.py": "c926ea25e87d40bb8a7aba5970d25ec37539284b9f37763a256249c52e2badd3",
+    "references/f013-canvas-sources.json": "e81ce397bb20f95721d85340c565cffa125eaa68bb40f1ec1ea06225a6dc0b41"
+  },
+  "mechanicalRun": "test-runs/F01.3-s2-canvas-mechanical-20261105T014412Z-a8f5ddbd",
+  "commands": [
+    {
+      "argv": [
+        "C:/venvs/pymmd-20261102/Scripts/python.exe",
+        "-m",
+        "compileall",
+        "-q",
+        "src/py_mermaid/rendering/labels",
+        "src/py_mermaid/rendering/skia",
+        "src/py_mermaid/geometry/shapes.py"
+      ],
+      "exitCode": 0
+    },
+    {
+      "argv": [
+        "C:/venvs/pymmd-20261102/Scripts/python.exe",
+        "-c",
+        "import inspect; from py_mermaid.rendering.labels import measure_label,sanitize_markup; from py_mermaid.rendering.skia.session import CanvasSession; from py_mermaid.geometry.shapes import shape_outline_intersection; print(inspect.signature(sanitize_markup)); print(inspect.signature(measure_label)); print(inspect.signature(shape_outline_intersection)); print(inspect.signature(CanvasSession.render))"
+      ],
+      "exitCode": 0
+    }
+  ],
+  "functionalStatus": "NOT_EVALUATED",
+  "sourceFrozenByOwner": true,
+  "limitations": [
+    {
+      "code": "DEFERRED_F014_LABEL",
+      "scope": "HTML math, image/media/SVG/icons and paint resources; F01.4 paused; no production browser fallback"
+    },
+    {
+      "code": "DEFERRED_HTML_CONTROL",
+      "scope": "input/select/button/textarea/form/meter/progress/datalist/option require native host mapping; ordinary HTML text remains implemented"
+    },
+    {
+      "code": "UNSUPPORTED_LABEL_STYLE_ELEMENT",
+      "scope": "custom sanitizer retained style element requires stylesheet host mapping; themeCSS consumed through root resolver"
+    },
+    {
+      "code": "UNSUPPORTED_SANITIZER_CONFIG",
+      "scope": "unknown or browser-only DOMPurify options explicitly rejected, not silently ignored"
+    },
+    {
+      "code": "UPSTREAM_SHAPE_MISSING",
+      "scope": "classic ellipse source handler remains absent"
+    },
+    {
+      "diagnostic": "SOURCE_MARKDOWN_TOKEN_OMISSION:codespan|link|image",
+      "scope": "SVG false upstream paragraph ignores codespan/link/image tokens; retained as explicit diagnostic, pending official S3 probe"
+    }
+  ],
+  "nextStep": "Parent freezes full candidate; independent source-based tests in S3, first behavior/oracle/images in S4. No F013 functional success claimed.",
+  "mechanicalRuns": [
+    "test-runs/F01.3-s2-canvas-mechanical-20261105T014412Z-a8f5ddbd",
+    "test-runs/F01.3-s2-canvas-receipt-20261105T014434Z-54f942bd"
+  ],
+  "s3": {
+    "status": "tests_code_complete_unverified",
+    "candidateSha256": "5a7264af3a00dc705df6824d83311e3e3b67d80b39457ecfeba5aec19293d771",
+    "run": "test-runs/F01.3-s3-canvas-collect-20261105T015023Z-af06c4f1",
+    "count": 29,
+    "testPaths": [
+      "tests/f013/test_canvas.py",
+      "tests/f011/test_canvas.py",
+      "references/f013-canvas-assertions.json"
+    ],
+    "testSha256": {
+      "tests/f013/test_canvas.py": "930604447515d497450576bef635816a756c32b1510e482ca925cae1ae7397e2",
+      "tests/f011/test_canvas.py": "6cd9afb1bab67929794fb9d1a913339ff75213dc280a005b56bd29b28953e402",
+      "references/f013-canvas-assertions.json": "833c44c7b8060e6af32e23f11bedac6aad59429bf22bdeb4ca413b5c9268bf98"
+    },
+    "commands": [
+      {
+        "argv": [
+          "C:/venvs/pymmd-20261102/Scripts/python.exe",
+          "-m",
+          "compileall",
+          "-q",
+          "tests/f013/test_canvas.py",
+          "tests/f011/test_canvas.py"
+        ],
+        "exitCode": 0
+      },
+      {
+        "argv": [
+          "C:/venvs/pymmd-20261102/Scripts/python.exe",
+          "-c",
+          "import unittest; suite=unittest.TestLoader().discover('tests/f013',pattern='test_canvas.py'); print('collected:',suite.countTestCases()); errors=[str(x) for x in suite if 'FailedTest' in str(x)]; print('import failures:',errors); assert not errors"
+        ],
+        "exitCode": 0
+      }
+    ],
+    "functionalStatus": "NOT_EVALUATED",
+    "sourceUnmodified": true,
+    "nextStep": "Parent unified S4 first behavior run; do not infer functional success from compile/collection."
+  },
+  "s4": {
+    "status": "targeted_verified",
+    "runs": [
+      "test-runs/F01.3-s4-canvas-fixes-20261105T021412Z-d007d178",
+      "test-runs/F01.3-s4-sanitizer-hook-20261105T021517Z-2e8651e4"
+    ],
+    "results": {
+      "f013Canvas": 31,
+      "f011Canvas": 23,
+      "noopenerExpandedRegression": 1
+    },
+    "correctedTestExpectations": [
+      "MeasuredGroup fixture uses label_width/label_height per contract",
+      "Default and provided{} inline span style both have real red glyph pixels; FORBID_TAGS style is not FORBID_ATTR style"
+    ],
+    "newTests": [
+      "explicit title suppression versus visible title consistency",
+      "noopener hook on default and ALLOWED_ATTR-restricted sanitizer"
+    ],
+    "originalEvidence": "test-runs/F01.3-initial-evidence-snapshot-20261105T021024Z-38c90a72",
+    "testSha256": {
+      "tests/f013/test_canvas.py": "355b1071deb435b71890c75c94f8f741beb78316b642f8d7111c5fdc1b6e514b",
+      "references/f013-canvas-assertions.json": "1badfadbcef22dea1d209ec137068a991b503393673556a039f45a0c725f90a2"
+    },
+    "sourceStopped": true,
+    "fullSuiteRun": false
+  },
+  "italicFix": {
+    "status": "targeted_verified",
+    "sourceStopped": true,
+    "testCount": 33,
+    "sourceSha256": "c926ea25e87d40bb8a7aba5970d25ec37539284b9f37763a256249c52e2badd3",
+    "testSha256": "9db6549e0bf814101bef55eaf77e35ccb1f9fb351b1615d099ef5cdcce22b89d",
+    "assertionsSha256": "d539780c05622afa453e4fbc2ee7c6c92d4c973f794a034ce084d240968c3326",
+    "finalRun": "test-runs/F01.3-italic-bold-final-canvas-20261105T022617Z-f579f7d5",
+    "previousRegressions": "F01123/F01218 passed with identical final product source in test-runs/F01.3-italic-format-fix-20261105T022534Z-ab85ad8d",
+    "failedAndPassedEvidencePreserved": true
+  }
+}

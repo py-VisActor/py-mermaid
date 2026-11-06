@@ -1,7 +1,7 @@
 {
   "schema": "py-mermaid-compatibility/v1",
   "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
-  "status": "bootstrap",
+  "status": "retained_static_local_verified_installation_deferred",
   "stages": [
     "planned",
     "inventoried",
@@ -15,81 +15,177 @@
       "id": "c4",
       "source": "packages/mermaid/src/diagrams/c4/c4Detector.ts",
       "scope": "core",
-      "status": "inventoried",
-      "parser": "planned",
-      "layout": "planned",
-      "canvas": "planned",
-      "evidence": []
+      "status": "canvas_verified",
+      "parser": "verified",
+      "layout": "verified",
+      "canvas": "verified",
+      "evidence": [
+        {
+          "path": "docs/BULK_STATIC_ACCEPTANCE.md",
+          "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
+        },
+        {
+          "path": "references/bulk-verification-summary.json",
+          "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        }
+      ],
+      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
+      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
+      "batchStatus": "retained_static_local_verified"
     },
     {
       "id": "flowchart-v2",
       "source": "packages/mermaid/src/diagrams/flowchart/flowDetector-v2.ts",
       "scope": "core",
-      "status": "inventoried",
-      "parser": "planned",
-      "layout": "planned",
-      "canvas": "planned",
-      "evidence": []
+      "status": "canvas_verified",
+      "parser": "verified",
+      "layout": "verified",
+      "canvas": "verified",
+      "evidence": [
+        {
+          "path": "docs/BULK_STATIC_ACCEPTANCE.md",
+          "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
+        },
+        {
+          "path": "references/bulk-verification-summary.json",
+          "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        }
+      ],
+      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
+      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
+      "batchStatus": "retained_static_local_verified"
     },
     {
       "id": "agentflow",
       "source": "packages/mermaid/src/diagrams/agentflow/afDetector.ts",
       "scope": "core",
-      "status": "inventoried",
-      "parser": "planned",
-      "layout": "planned",
-      "canvas": "planned",
-      "evidence": []
+      "status": "canvas_verified",
+      "parser": "verified",
+      "layout": "verified",
+      "canvas": "verified",
+      "evidence": [
+        {
+          "path": "docs/BULK_STATIC_ACCEPTANCE.md",
+          "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
+        },
+        {
+          "path": "references/bulk-verification-summary.json",
+          "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        }
+      ],
+      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
+      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
+      "batchStatus": "retained_static_local_verified"
     },
     {
       "id": "swimlane",
       "source": "packages/mermaid/src/diagrams/swimlanes/detector.ts",
       "scope": "core",
-      "status": "inventoried",
-      "parser": "planned",
-      "layout": "planned",
-      "canvas": "planned",
-      "evidence": []
+      "status": "canvas_verified",
+      "parser": "verified",
+      "layout": "verified",
+      "canvas": "verified",
+      "evidence": [
+        {
+          "path": "docs/BULK_STATIC_ACCEPTANCE.md",
+          "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
+        },
+        {
+          "path": "references/bulk-verification-summary.json",
+          "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        }
+      ],
+      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
+      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
+      "batchStatus": "retained_static_local_verified"
     },
     {
       "id": "er",
       "source": "packages/mermaid/src/diagrams/er/erDetector.ts",
       "scope": "core",
-      "status": "inventoried",
-      "parser": "planned",
-      "layout": "planned",
-      "canvas": "planned",
-      "evidence": []
+      "status": "canvas_verified",
+      "parser": "verified",
+      "layout": "verified",
+      "canvas": "verified",
+      "evidence": [
+        {
+          "path": "docs/BULK_STATIC_ACCEPTANCE.md",
+          "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
+        },
+        {
+          "path": "references/bulk-verification-summary.json",
+          "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        }
+      ],
+      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
+      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
+      "batchStatus": "retained_static_local_verified"
     },
     {
       "id": "gitGraph",
       "source": "packages/mermaid/src/diagrams/git/gitGraphDetector.ts",
       "scope": "core",
-      "status": "inventoried",
-      "parser": "planned",
-      "layout": "planned",
-      "canvas": "planned",
-      "evidence": []
+      "status": "canvas_verified",
+      "parser": "verified",
+      "layout": "verified",
+      "canvas": "verified",
+      "evidence": [
+        {
+          "path": "docs/BULK_STATIC_ACCEPTANCE.md",
+          "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
+        },
+        {
+          "path": "references/bulk-verification-summary.json",
+          "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        }
+      ],
+      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
+      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
+      "batchStatus": "retained_static_local_verified"
     },
     {
       "id": "gantt",
       "source": "packages/mermaid/src/diagrams/gantt/ganttDetector.ts",
       "scope": "core",
-      "status": "inventoried",
-      "parser": "planned",
-      "layout": "planned",
-      "canvas": "planned",
-      "evidence": []
+      "status": "canvas_verified",
+      "parser": "verified",
+      "layout": "verified",
+      "canvas": "verified",
+      "evidence": [
+        {
+          "path": "docs/BULK_STATIC_ACCEPTANCE.md",
+          "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
+        },
+        {
+          "path": "references/bulk-verification-summary.json",
+          "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        }
+      ],
+      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
+      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
+      "batchStatus": "retained_static_local_verified"
     },
     {
       "id": "info",
       "source": "packages/mermaid/src/diagrams/info/infoDetector.ts",
       "scope": "core",
-      "status": "inventoried",
-      "parser": "planned",
-      "layout": "planned",
-      "canvas": "planned",
-      "evidence": []
+      "status": "canvas_verified",
+      "parser": "verified",
+      "layout": "verified",
+      "canvas": "verified",
+      "evidence": [
+        {
+          "path": "docs/BULK_STATIC_ACCEPTANCE.md",
+          "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
+        },
+        {
+          "path": "references/bulk-verification-summary.json",
+          "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        }
+      ],
+      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
+      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
+      "batchStatus": "retained_static_local_verified"
     },
     {
       "id": "pie",
@@ -99,7 +195,17 @@
       "parser": "planned",
       "layout": "planned",
       "canvas": "planned",
-      "evidence": []
+      "evidence": [
+        {
+          "path": "docs/BULK_STATIC_ACCEPTANCE.md",
+          "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
+        },
+        {
+          "path": "references/bulk-verification-summary.json",
+          "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        }
+      ],
+      "batchStatus": "deferred_by_user"
     },
     {
       "id": "quadrantChart",
@@ -109,7 +215,17 @@
       "parser": "planned",
       "layout": "planned",
       "canvas": "planned",
-      "evidence": []
+      "evidence": [
+        {
+          "path": "docs/BULK_STATIC_ACCEPTANCE.md",
+          "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
+        },
+        {
+          "path": "references/bulk-verification-summary.json",
+          "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        }
+      ],
+      "batchStatus": "deferred_by_user"
     },
     {
       "id": "xychart",
@@ -119,97 +235,215 @@
       "parser": "planned",
       "layout": "planned",
       "canvas": "planned",
-      "evidence": []
+      "evidence": [
+        {
+          "path": "docs/BULK_STATIC_ACCEPTANCE.md",
+          "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
+        },
+        {
+          "path": "references/bulk-verification-summary.json",
+          "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        }
+      ],
+      "batchStatus": "deferred_by_user"
     },
     {
       "id": "requirement",
       "source": "packages/mermaid/src/diagrams/requirement/requirementDetector.ts",
       "scope": "core",
-      "status": "inventoried",
-      "parser": "planned",
-      "layout": "planned",
-      "canvas": "planned",
-      "evidence": []
+      "status": "canvas_verified",
+      "parser": "verified",
+      "layout": "verified",
+      "canvas": "verified",
+      "evidence": [
+        {
+          "path": "docs/BULK_STATIC_ACCEPTANCE.md",
+          "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
+        },
+        {
+          "path": "references/bulk-verification-summary.json",
+          "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        }
+      ],
+      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
+      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
+      "batchStatus": "retained_static_local_verified"
     },
     {
       "id": "sequence",
       "source": "packages/mermaid/src/diagrams/sequence/sequenceDetector.ts",
       "scope": "core",
-      "status": "inventoried",
-      "parser": "planned",
-      "layout": "planned",
-      "canvas": "planned",
-      "evidence": []
+      "status": "canvas_verified",
+      "parser": "verified",
+      "layout": "verified",
+      "canvas": "verified",
+      "evidence": [
+        {
+          "path": "docs/BULK_STATIC_ACCEPTANCE.md",
+          "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
+        },
+        {
+          "path": "references/bulk-verification-summary.json",
+          "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        }
+      ],
+      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
+      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
+      "batchStatus": "retained_static_local_verified"
     },
     {
       "id": "classDiagram",
       "source": "packages/mermaid/src/diagrams/class/classDetector-V2.ts",
       "scope": "core",
-      "status": "inventoried",
-      "parser": "planned",
-      "layout": "planned",
-      "canvas": "planned",
-      "evidence": []
+      "status": "canvas_verified",
+      "parser": "verified",
+      "layout": "verified",
+      "canvas": "verified",
+      "evidence": [
+        {
+          "path": "docs/BULK_STATIC_ACCEPTANCE.md",
+          "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
+        },
+        {
+          "path": "references/bulk-verification-summary.json",
+          "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        }
+      ],
+      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
+      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
+      "batchStatus": "retained_static_local_verified"
     },
     {
       "id": "stateDiagram",
       "source": "packages/mermaid/src/diagrams/state/stateDetector-V2.ts",
       "scope": "core",
-      "status": "inventoried",
-      "parser": "planned",
-      "layout": "planned",
-      "canvas": "planned",
-      "evidence": []
+      "status": "canvas_verified",
+      "parser": "verified",
+      "layout": "verified",
+      "canvas": "verified",
+      "evidence": [
+        {
+          "path": "docs/BULK_STATIC_ACCEPTANCE.md",
+          "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
+        },
+        {
+          "path": "references/bulk-verification-summary.json",
+          "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        }
+      ],
+      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
+      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
+      "batchStatus": "retained_static_local_verified"
     },
     {
       "id": "journey",
       "source": "packages/mermaid/src/diagrams/user-journey/journeyDetector.ts",
       "scope": "core",
-      "status": "inventoried",
-      "parser": "planned",
-      "layout": "planned",
-      "canvas": "planned",
-      "evidence": []
+      "status": "canvas_verified",
+      "parser": "verified",
+      "layout": "verified",
+      "canvas": "verified",
+      "evidence": [
+        {
+          "path": "docs/BULK_STATIC_ACCEPTANCE.md",
+          "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
+        },
+        {
+          "path": "references/bulk-verification-summary.json",
+          "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        }
+      ],
+      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
+      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
+      "batchStatus": "retained_static_local_verified"
     },
     {
       "id": "flowchart-elk",
       "source": "packages/mermaid/src/diagrams/flowchart/elk/detector.ts",
       "scope": "core",
-      "status": "inventoried",
-      "parser": "planned",
-      "layout": "planned",
-      "canvas": "planned",
-      "evidence": []
+      "status": "canvas_verified",
+      "parser": "verified",
+      "layout": "verified",
+      "canvas": "verified",
+      "evidence": [
+        {
+          "path": "docs/BULK_STATIC_ACCEPTANCE.md",
+          "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
+        },
+        {
+          "path": "references/bulk-verification-summary.json",
+          "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        }
+      ],
+      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
+      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
+      "batchStatus": "retained_static_local_verified"
     },
     {
       "id": "timeline",
       "source": "packages/mermaid/src/diagrams/timeline/detector.ts",
       "scope": "core",
-      "status": "inventoried",
-      "parser": "planned",
-      "layout": "planned",
-      "canvas": "planned",
-      "evidence": []
+      "status": "canvas_verified",
+      "parser": "verified",
+      "layout": "verified",
+      "canvas": "verified",
+      "evidence": [
+        {
+          "path": "docs/BULK_STATIC_ACCEPTANCE.md",
+          "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
+        },
+        {
+          "path": "references/bulk-verification-summary.json",
+          "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        }
+      ],
+      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
+      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
+      "batchStatus": "retained_static_local_verified"
     },
     {
       "id": "mindmap",
       "source": "packages/mermaid/src/diagrams/mindmap/detector.ts",
       "scope": "core",
-      "status": "inventoried",
-      "parser": "planned",
-      "layout": "planned",
-      "canvas": "planned",
-      "evidence": []
+      "status": "canvas_verified",
+      "parser": "verified",
+      "layout": "verified",
+      "canvas": "verified",
+      "evidence": [
+        {
+          "path": "docs/BULK_STATIC_ACCEPTANCE.md",
+          "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
+        },
+        {
+          "path": "references/bulk-verification-summary.json",
+          "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        }
+      ],
+      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
+      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
+      "batchStatus": "retained_static_local_verified"
     },
     {
       "id": "kanban",
       "source": "packages/mermaid/src/diagrams/kanban/detector.ts",
       "scope": "core",
-      "status": "inventoried",
-      "parser": "planned",
-      "layout": "planned",
-      "canvas": "planned",
-      "evidence": []
+      "status": "canvas_verified",
+      "parser": "verified",
+      "layout": "verified",
+      "canvas": "verified",
+      "evidence": [
+        {
+          "path": "docs/BULK_STATIC_ACCEPTANCE.md",
+          "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
+        },
+        {
+          "path": "references/bulk-verification-summary.json",
+          "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        }
+      ],
+      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
+      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
+      "batchStatus": "retained_static_local_verified"
     },
     {
       "id": "sankey",
@@ -219,17 +453,39 @@
       "parser": "planned",
       "layout": "planned",
       "canvas": "planned",
-      "evidence": []
+      "evidence": [
+        {
+          "path": "docs/BULK_STATIC_ACCEPTANCE.md",
+          "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
+        },
+        {
+          "path": "references/bulk-verification-summary.json",
+          "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        }
+      ],
+      "batchStatus": "deferred_by_user"
     },
     {
       "id": "packet",
       "source": "packages/mermaid/src/diagrams/packet/detector.ts",
       "scope": "core",
-      "status": "inventoried",
-      "parser": "planned",
-      "layout": "planned",
-      "canvas": "planned",
-      "evidence": []
+      "status": "canvas_verified",
+      "parser": "verified",
+      "layout": "verified",
+      "canvas": "verified",
+      "evidence": [
+        {
+          "path": "docs/BULK_STATIC_ACCEPTANCE.md",
+          "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
+        },
+        {
+          "path": "references/bulk-verification-summary.json",
+          "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        }
+      ],
+      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
+      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
+      "batchStatus": "retained_static_local_verified"
     },
     {
       "id": "radar",
@@ -239,57 +495,127 @@
       "parser": "planned",
       "layout": "planned",
       "canvas": "planned",
-      "evidence": []
+      "evidence": [
+        {
+          "path": "docs/BULK_STATIC_ACCEPTANCE.md",
+          "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
+        },
+        {
+          "path": "references/bulk-verification-summary.json",
+          "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        }
+      ],
+      "batchStatus": "deferred_by_user"
     },
     {
       "id": "block",
       "source": "packages/mermaid/src/diagrams/block/blockDetector.ts",
       "scope": "core",
-      "status": "inventoried",
-      "parser": "planned",
-      "layout": "planned",
-      "canvas": "planned",
-      "evidence": []
+      "status": "canvas_verified",
+      "parser": "verified",
+      "layout": "verified",
+      "canvas": "verified",
+      "evidence": [
+        {
+          "path": "docs/BULK_STATIC_ACCEPTANCE.md",
+          "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
+        },
+        {
+          "path": "references/bulk-verification-summary.json",
+          "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        }
+      ],
+      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
+      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
+      "batchStatus": "retained_static_local_verified"
     },
     {
       "id": "treeView",
       "source": "packages/mermaid/src/diagrams/treeView/detector.ts",
       "scope": "core",
-      "status": "inventoried",
-      "parser": "planned",
-      "layout": "planned",
-      "canvas": "planned",
-      "evidence": []
+      "status": "canvas_verified",
+      "parser": "verified",
+      "layout": "verified",
+      "canvas": "verified",
+      "evidence": [
+        {
+          "path": "docs/BULK_STATIC_ACCEPTANCE.md",
+          "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
+        },
+        {
+          "path": "references/bulk-verification-summary.json",
+          "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        }
+      ],
+      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
+      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
+      "batchStatus": "retained_static_local_verified"
     },
     {
       "id": "architecture",
       "source": "packages/mermaid/src/diagrams/architecture/architectureDetector.ts",
       "scope": "core",
-      "status": "inventoried",
-      "parser": "planned",
-      "layout": "planned",
-      "canvas": "planned",
-      "evidence": []
+      "status": "canvas_verified",
+      "parser": "verified",
+      "layout": "verified",
+      "canvas": "verified",
+      "evidence": [
+        {
+          "path": "docs/BULK_STATIC_ACCEPTANCE.md",
+          "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
+        },
+        {
+          "path": "references/bulk-verification-summary.json",
+          "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        }
+      ],
+      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
+      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
+      "batchStatus": "retained_static_local_verified"
     },
     {
       "id": "eventmodeling",
       "source": "packages/mermaid/src/diagrams/eventmodeling/detector.ts",
       "scope": "core",
-      "status": "inventoried",
-      "parser": "planned",
-      "layout": "planned",
-      "canvas": "planned",
-      "evidence": []
+      "status": "canvas_verified",
+      "parser": "verified",
+      "layout": "verified",
+      "canvas": "verified",
+      "evidence": [
+        {
+          "path": "docs/BULK_STATIC_ACCEPTANCE.md",
+          "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
+        },
+        {
+          "path": "references/bulk-verification-summary.json",
+          "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        }
+      ],
+      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
+      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
+      "batchStatus": "retained_static_local_verified"
     },
     {
       "id": "ishikawa",
       "source": "packages/mermaid/src/diagrams/ishikawa/ishikawaDetector.ts",
       "scope": "core",
-      "status": "inventoried",
-      "parser": "planned",
-      "layout": "planned",
-      "canvas": "planned",
-      "evidence": []
+      "status": "canvas_verified",
+      "parser": "verified",
+      "layout": "verified",
+      "canvas": "verified",
+      "evidence": [
+        {
+          "path": "docs/BULK_STATIC_ACCEPTANCE.md",
+          "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
+        },
+        {
+          "path": "references/bulk-verification-summary.json",
+          "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        }
+      ],
+      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
+      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
+      "batchStatus": "retained_static_local_verified"
     },
     {
       "id": "venn",
@@ -299,7 +625,17 @@
       "parser": "planned",
       "layout": "planned",
       "canvas": "planned",
-      "evidence": []
+      "evidence": [
+        {
+          "path": "docs/BULK_STATIC_ACCEPTANCE.md",
+          "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
+        },
+        {
+          "path": "references/bulk-verification-summary.json",
+          "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        }
+      ],
+      "batchStatus": "deferred_by_user"
     },
     {
       "id": "treemap",
@@ -309,155 +645,492 @@
       "parser": "planned",
       "layout": "planned",
       "canvas": "planned",
-      "evidence": []
+      "evidence": [
+        {
+          "path": "docs/BULK_STATIC_ACCEPTANCE.md",
+          "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
+        },
+        {
+          "path": "references/bulk-verification-summary.json",
+          "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        }
+      ],
+      "batchStatus": "deferred_by_user"
     },
     {
       "id": "usecase",
       "source": "packages/mermaid/src/diagrams/usecase/usecaseDetector.ts",
       "scope": "core",
-      "status": "inventoried",
-      "parser": "planned",
-      "layout": "planned",
-      "canvas": "planned",
-      "evidence": []
+      "status": "canvas_verified",
+      "parser": "verified",
+      "layout": "verified",
+      "canvas": "verified",
+      "evidence": [
+        {
+          "path": "docs/BULK_STATIC_ACCEPTANCE.md",
+          "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
+        },
+        {
+          "path": "references/bulk-verification-summary.json",
+          "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        }
+      ],
+      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
+      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
+      "batchStatus": "retained_static_local_verified"
     },
     {
       "id": "wardley",
       "source": "packages/mermaid/src/diagrams/wardley/wardleyDetector.ts",
       "scope": "core",
-      "status": "inventoried",
-      "parser": "planned",
-      "layout": "planned",
-      "canvas": "planned",
-      "evidence": []
+      "status": "canvas_verified",
+      "parser": "verified",
+      "layout": "verified",
+      "canvas": "verified",
+      "evidence": [
+        {
+          "path": "docs/BULK_STATIC_ACCEPTANCE.md",
+          "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
+        },
+        {
+          "path": "references/bulk-verification-summary.json",
+          "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        }
+      ],
+      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
+      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
+      "batchStatus": "retained_static_local_verified"
     },
     {
       "id": "cynefin",
       "source": "packages/mermaid/src/diagrams/cynefin/cynefinDetector.ts",
       "scope": "core",
-      "status": "inventoried",
-      "parser": "planned",
-      "layout": "planned",
-      "canvas": "planned",
-      "evidence": []
+      "status": "canvas_verified",
+      "parser": "verified",
+      "layout": "verified",
+      "canvas": "verified",
+      "evidence": [
+        {
+          "path": "docs/BULK_STATIC_ACCEPTANCE.md",
+          "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
+        },
+        {
+          "path": "references/bulk-verification-summary.json",
+          "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        }
+      ],
+      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
+      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
+      "batchStatus": "retained_static_local_verified"
     },
     {
       "id": "railroad",
       "source": "packages/mermaid/src/diagrams/railroad/railroadDetector.ts",
       "scope": "core",
-      "status": "inventoried",
-      "parser": "planned",
-      "layout": "planned",
-      "canvas": "planned",
-      "evidence": []
+      "status": "canvas_verified",
+      "parser": "verified",
+      "layout": "verified",
+      "canvas": "verified",
+      "evidence": [
+        {
+          "path": "docs/BULK_STATIC_ACCEPTANCE.md",
+          "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
+        },
+        {
+          "path": "references/bulk-verification-summary.json",
+          "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        }
+      ],
+      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
+      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
+      "batchStatus": "retained_static_local_verified"
     },
     {
       "id": "railroadEbnf",
       "source": "packages/mermaid/src/diagrams/railroad/ebnfDetector.ts",
       "scope": "core",
-      "status": "inventoried",
-      "parser": "planned",
-      "layout": "planned",
-      "canvas": "planned",
-      "evidence": []
+      "status": "canvas_verified",
+      "parser": "verified",
+      "layout": "verified",
+      "canvas": "verified",
+      "evidence": [
+        {
+          "path": "docs/BULK_STATIC_ACCEPTANCE.md",
+          "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
+        },
+        {
+          "path": "references/bulk-verification-summary.json",
+          "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        }
+      ],
+      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
+      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
+      "batchStatus": "retained_static_local_verified"
     },
     {
       "id": "railroadAbnf",
       "source": "packages/mermaid/src/diagrams/railroad/abnfDetector.ts",
       "scope": "core",
-      "status": "inventoried",
-      "parser": "planned",
-      "layout": "planned",
-      "canvas": "planned",
-      "evidence": []
+      "status": "canvas_verified",
+      "parser": "verified",
+      "layout": "verified",
+      "canvas": "verified",
+      "evidence": [
+        {
+          "path": "docs/BULK_STATIC_ACCEPTANCE.md",
+          "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
+        },
+        {
+          "path": "references/bulk-verification-summary.json",
+          "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        }
+      ],
+      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
+      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
+      "batchStatus": "retained_static_local_verified"
     },
     {
       "id": "railroadPeg",
       "source": "packages/mermaid/src/diagrams/railroad/pegDetector.ts",
       "scope": "core",
-      "status": "inventoried",
-      "parser": "planned",
-      "layout": "planned",
-      "canvas": "planned",
-      "evidence": []
+      "status": "canvas_verified",
+      "parser": "verified",
+      "layout": "verified",
+      "canvas": "verified",
+      "evidence": [
+        {
+          "path": "docs/BULK_STATIC_ACCEPTANCE.md",
+          "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
+        },
+        {
+          "path": "references/bulk-verification-summary.json",
+          "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        }
+      ],
+      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
+      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
+      "batchStatus": "retained_static_local_verified"
     },
     {
       "id": "zenuml",
       "scope": "external_plugin",
       "source": "packages/mermaid-zenuml/src/detector.ts",
-      "status": "inventoried",
-      "parser": "planned",
-      "layout": "planned",
-      "canvas": "planned",
-      "evidence": []
+      "status": "canvas_verified",
+      "parser": "verified",
+      "layout": "verified",
+      "canvas": "verified",
+      "evidence": [
+        {
+          "path": "docs/BULK_STATIC_ACCEPTANCE.md",
+          "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
+        },
+        {
+          "path": "references/bulk-verification-summary.json",
+          "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        }
+      ],
+      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
+      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
+      "batchStatus": "retained_static_local_verified"
     }
   ],
   "crossCutting": [
     {
       "id": "preprocessing-frontmatter-directives",
-      "status": "planned",
-      "evidence": []
+      "status": "canvas_verified",
+      "evidence": [
+        {
+          "path": "docs/BULK_STATIC_ACCEPTANCE.md",
+          "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
+        },
+        {
+          "path": "references/bulk-verification-summary.json",
+          "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        }
+      ],
+      "batchStatus": "retained_static_local_verified",
+      "acceptedScope": "Applicable retained static consumers only; excludes interaction/DOM and deferred diagram consumers; offline runtime verified, fresh installation deferred",
+      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0"
     },
     {
       "id": "configuration-schema-defaults",
-      "status": "planned",
-      "evidence": []
+      "status": "canvas_verified",
+      "evidence": [
+        {
+          "path": "docs/BULK_STATIC_ACCEPTANCE.md",
+          "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
+        },
+        {
+          "path": "references/bulk-verification-summary.json",
+          "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        }
+      ],
+      "batchStatus": "retained_static_local_verified",
+      "acceptedScope": "Applicable retained static consumers only; excludes interaction/DOM and deferred diagram consumers; offline runtime verified, fresh installation deferred",
+      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0"
     },
     {
       "id": "themes-css-cascade",
-      "status": "planned",
-      "evidence": []
+      "status": "canvas_verified",
+      "evidence": [
+        {
+          "path": "docs/BULK_STATIC_ACCEPTANCE.md",
+          "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
+        },
+        {
+          "path": "references/bulk-verification-summary.json",
+          "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        }
+      ],
+      "batchStatus": "retained_static_local_verified",
+      "acceptedScope": "Applicable retained static consumers only; excludes interaction/DOM and deferred diagram consumers; offline runtime verified, fresh installation deferred",
+      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0"
     },
     {
       "id": "text-html-markdown-math",
-      "status": "planned",
-      "evidence": []
+      "status": "canvas_verified",
+      "evidence": [
+        {
+          "path": "docs/BULK_STATIC_ACCEPTANCE.md",
+          "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
+        },
+        {
+          "path": "references/bulk-verification-summary.json",
+          "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        }
+      ],
+      "batchStatus": "retained_static_local_verified",
+      "acceptedScope": "Applicable retained static consumers only; excludes interaction/DOM and deferred diagram consumers; offline runtime verified, fresh installation deferred",
+      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0"
     },
     {
       "id": "accessibility-metadata",
-      "status": "planned",
-      "evidence": []
+      "status": "inventoried",
+      "evidence": [
+        {
+          "path": "docs/BULK_STATIC_ACCEPTANCE.md",
+          "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
+        },
+        {
+          "path": "references/bulk-verification-summary.json",
+          "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        }
+      ],
+      "batchStatus": "excluded_by_static_scope",
+      "acceptedScope": "Static title/description parsing retained where source consumes; DOM accessibility behavior excluded"
     },
     {
       "id": "links-interaction-security",
-      "status": "planned",
-      "evidence": []
+      "status": "canvas_verified",
+      "evidence": [
+        {
+          "path": "docs/BULK_STATIC_ACCEPTANCE.md",
+          "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
+        },
+        {
+          "path": "references/bulk-verification-summary.json",
+          "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        }
+      ],
+      "batchStatus": "retained_static_local_verified",
+      "acceptedScope": "Applicable retained static consumers only; excludes interaction/DOM and deferred diagram consumers; offline runtime verified, fresh installation deferred",
+      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0"
     },
     {
       "id": "icons-images-resource-policy",
-      "status": "planned",
-      "evidence": []
+      "status": "canvas_verified",
+      "evidence": [
+        {
+          "path": "docs/BULK_STATIC_ACCEPTANCE.md",
+          "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
+        },
+        {
+          "path": "references/bulk-verification-summary.json",
+          "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        }
+      ],
+      "batchStatus": "retained_static_local_verified",
+      "acceptedScope": "Applicable retained static consumers only; excludes interaction/DOM and deferred diagram consumers; offline runtime verified, fresh installation deferred",
+      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0"
     },
     {
-      "id": "layout-engines-dagre-elk-tidy",
-      "status": "planned",
-      "evidence": []
+      "id": "layout-engines",
+      "status": "canvas_verified",
+      "evidence": [
+        {
+          "path": "docs/BULK_STATIC_ACCEPTANCE.md",
+          "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
+        },
+        {
+          "path": "references/bulk-verification-summary.json",
+          "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        }
+      ],
+      "sourceId": "layout-engines-dagre-elk-tidy",
+      "excludedAlgorithms": [
+        "dagre"
+      ],
+      "batchStatus": "retained_static_local_verified",
+      "acceptedScope": "Applicable retained static consumers only; excludes interaction/DOM and deferred diagram consumers; offline runtime verified, fresh installation deferred",
+      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0"
     },
     {
       "id": "handdrawn-random-seed",
-      "status": "planned",
-      "evidence": []
+      "status": "canvas_verified",
+      "evidence": [
+        {
+          "path": "docs/BULK_STATIC_ACCEPTANCE.md",
+          "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
+        },
+        {
+          "path": "references/bulk-verification-summary.json",
+          "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        }
+      ],
+      "batchStatus": "retained_static_local_verified",
+      "acceptedScope": "Applicable retained static consumers only; excludes interaction/DOM and deferred diagram consumers; offline runtime verified, fresh installation deferred",
+      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0"
     },
     {
       "id": "exports-scale-background",
-      "status": "planned",
-      "evidence": []
+      "status": "canvas_verified",
+      "evidence": [
+        {
+          "path": "docs/BULK_STATIC_ACCEPTANCE.md",
+          "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
+        },
+        {
+          "path": "references/bulk-verification-summary.json",
+          "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        }
+      ],
+      "batchStatus": "retained_static_local_verified",
+      "acceptedScope": "Applicable retained static consumers only; excludes interaction/DOM and deferred diagram consumers; offline runtime verified, fresh installation deferred",
+      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0"
     },
     {
       "id": "diagnostics-errors-utf16",
-      "status": "planned",
-      "evidence": []
+      "status": "canvas_verified",
+      "evidence": [
+        {
+          "path": "docs/BULK_STATIC_ACCEPTANCE.md",
+          "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
+        },
+        {
+          "path": "references/bulk-verification-summary.json",
+          "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        }
+      ],
+      "batchStatus": "retained_static_local_verified",
+      "acceptedScope": "Applicable retained static consumers only; excludes interaction/DOM and deferred diagram consumers; offline runtime verified, fresh installation deferred",
+      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0"
     },
     {
       "id": "threading-lifecycle",
-      "status": "planned",
-      "evidence": []
+      "status": "canvas_verified",
+      "evidence": [
+        {
+          "path": "docs/BULK_STATIC_ACCEPTANCE.md",
+          "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
+        },
+        {
+          "path": "references/bulk-verification-summary.json",
+          "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        }
+      ],
+      "batchStatus": "retained_static_local_verified",
+      "acceptedScope": "Applicable retained static consumers only; excludes interaction/DOM and deferred diagram consumers; offline runtime verified, fresh installation deferred",
+      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0"
     },
     {
       "id": "offline-deployment",
-      "status": "planned",
-      "evidence": []
+      "status": "canvas_verified",
+      "evidence": [
+        {
+          "path": "docs/BULK_STATIC_ACCEPTANCE.md",
+          "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
+        },
+        {
+          "path": "references/bulk-verification-summary.json",
+          "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        }
+      ],
+      "batchStatus": "retained_static_local_verified",
+      "acceptedScope": "Applicable retained static consumers only; excludes interaction/DOM and deferred diagram consumers; offline runtime verified, fresh installation deferred",
+      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0"
     }
   ],
-  "limitation": "A source-file inventory is not a case/assertion ledger. All Mermaid Python parsing, layout and rendering remain planned."
+  "limitation": "Local retained31 static acceptance, not38 complete, pixel identity, new package installation, distribution release or publication; seven user-deferred entrypoints remain unverified.",
+  "localSlices": {
+    "F01.1": {
+      "status": "verified_local_regression",
+      "evidence": "references/f012-verification-summary.json",
+      "currentRegressionEvidence": "references/f013-verification-summary.json"
+    },
+    "F01.2": {
+      "status": "verified_local",
+      "evidence": "references/f012-verification-summary.json",
+      "fullDiagramCompatibilityClaimed": false,
+      "installationValidation": "deferred",
+      "currentRegressionEvidence": "references/f013-verification-summary.json"
+    },
+    "F01.3": {
+      "status": "verified_local",
+      "evidence": "references/f013-verification-summary.json",
+      "fullDiagramCompatibilityClaimed": false,
+      "installationValidation": "deferred",
+      "deferred": [
+        "F01.4 static expansion"
+      ],
+      "excluded": [
+        "dagre"
+      ]
+    },
+    "BULK-retained-static": {
+      "status": "local_accepted",
+      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
+      "detectors": 31,
+      "deferred": 7,
+      "unitMethods": 1702,
+      "evidence": [
+        {
+          "path": "docs/BULK_STATIC_ACCEPTANCE.md",
+          "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
+        },
+        {
+          "path": "references/bulk-verification-summary.json",
+          "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        }
+      ],
+      "reportUrl": "http://127.0.0.1:8765/BULK-P5-delivery-20261106T071012Z-ec4937fd/index.html"
+    }
+  },
+  "targetScope": "static-rendering-only",
+  "scopePolicy": "references/static-rendering-scope.json",
+  "layoutPolicy": "references/layout-policy.json",
+  "flowchartMathScope": {
+    "status": "formal_dependency_integrated",
+    "distribution": "py-visactor-katex",
+    "version": "0.1.0",
+    "import": "py_katex",
+    "scope": "Source shared-rich-label math branches only",
+    "evidence": [
+      {
+        "path": "docs/BULK_STATIC_ACCEPTANCE.md",
+        "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
+      },
+      {
+        "path": "references/bulk-verification-summary.json",
+        "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+      }
+    ]
+  },
+  "componentStages": [
+    "planned",
+    "inventoried",
+    "implemented",
+    "verified",
+    "not_applicable",
+    "deferred_by_user"
+  ]
 }

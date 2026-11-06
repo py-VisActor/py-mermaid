@@ -1,0 +1,149 @@
+{
+  "schema": "bulk-shared-khroma-repair/v1",
+  "phase": "P3",
+  "status": "targeted_pass_pending_joint_candidate",
+  "library": {
+    "name": "khroma",
+    "version": "2.1.0",
+    "packageSha256": "0d2145738d3cab828da4c5724b45e0dd2577c0ce84503c956d76897e93fa7de2",
+    "runtimeDependency": false
+  },
+  "initialEvidence": "BULK-P3-shared-native-parity-20261106T045717Z-1d6e1678/artifacts/comparison",
+  "sourceSemantics": [
+    {
+      "files": [
+        "color/hsl.ts",
+        "channels/index.ts"
+      ],
+      "contract": "Preserve authored HSL hue/saturation/lightness without RGB roundtrip; white/black/zero-saturation HSL keeps latent channel intent across chained adjustments."
+    },
+    {
+      "files": [
+        "utils/channel.ts"
+      ],
+      "contract": "Hue clamp uses JavaScript remainder (negative stays negative), not modulo normalization; conversion uses original Khroma hue2rgb/rgb2hsl formulas and raw0..255 RGB."
+    },
+    {
+      "files": [
+        "methods/invert.ts",
+        "methods/mix.ts",
+        "color/index.ts",
+        "color/rgb.ts"
+      ],
+      "contract": "Inverse retains fractional rawRGB; source stringify selects RGB for fractional channels instead of early integerHEX quantization."
+    },
+    {
+      "files": [
+        "methods/adjust.ts",
+        "methods/change.ts",
+        "methods/adjust_channel.ts"
+      ],
+      "contract": "adjust skips false/zero/NaN deltas but setter-driven change remains changed; lighten/darken return original only if clamp leaves channel unchanged. Omitted amount propagates source HSL NaN."
+    },
+    {
+      "files": [
+        "color/keyword.ts",
+        "methods/rgba.ts",
+        "color/index.ts"
+      ],
+      "contract": "Keywords remember canonicalHEX even for no-op. rgba numeric/string overload honors source serializer; HSLalpha retains raw source alpha representation."
+    },
+    {
+      "files": [
+        "methods/is_dark.ts",
+        "methods/luminance.ts",
+        "utils/lang.ts",
+        "utils/channel.ts"
+      ],
+      "contract": "Preserve raw255 threshold .03928 and decimal10 JS rounding; public channels keeps normalized raw RGBA without exportedgetter rounding."
+    }
+  ],
+  "product": "src/py_mermaid/config/colors.py",
+  "productSha256": "26389cc297f46aef569121e81f5e334c361238351c7cf28f5abe5b4ce97e0781",
+  "tests": "tests/bulk/shared/test_khroma_exact.py",
+  "testsSha256": "a2f1e9851bb07e5ce6cd10102d46e9104a4a88ef3e9422fe6978c296eabe9c27",
+  "oracle": {
+    "initialRoundedGetterRun": "BULK-record-20261106T050303Z-b410a168",
+    "rawChannelRun": "BULK-record-20261106T050349Z-8a3b7e5d",
+    "operations": 136,
+    "namedColors": 147,
+    "measurement": "Direct fixed npm operations and Color.parse raw channel access; no candidate helper creates expected values. Regular tests use frozen literals and never invoke npm.",
+    "reasonForRawProbeCorrection": "Khroma exported red/alpha/channel getters intentionally round10; normalized Canvas RGBA API must retain raw Color.parse channels. Initial probe failure retained rather than loosen tolerance."
+  },
+  "testsRun": [
+    {
+      "run": "BULK-record-20261106T050359Z-9a8d96cb",
+      "methods": 12,
+      "status": "PASS"
+    },
+    {
+      "run": "BULK-record-20261106T050414Z-d867df4c",
+      "suite": "f013.test_styles",
+      "methods": 16,
+      "status": "PASS"
+    },
+    {
+      "run": "BULK-record-20261106T050414Z-3178ab76",
+      "suite": "f013.test_language",
+      "methods": 63,
+      "status": "PASS"
+    }
+  ],
+  "retainedFailures": [
+    "BULK-record-20261106T050313Z-b8eccf25"
+  ],
+  "invocationErrors": [
+    "BULK-record-20261106T050400Z-256d69cd (f013 has no __init__, corrected discovery without -t tests)"
+  ],
+  "publicContract": "channels(str)->RGBA float0..1 unchanged; no native allocation; no JS runtime dependency; invalid colors remain explicit INVALID_COLOR",
+  "sourceFiles": {
+    ".local/f011-oracle/node_modules/khroma/src/channels/index.ts": "b5dfa8b3e866f10658afad939346579ea645630993e362dfc3ad985ca1600d1b",
+    ".local/f011-oracle/node_modules/khroma/src/channels/reusable.ts": "ec9abcd85721e8d97ef20db82160a3cd8dc3011b17b4df25e52ecf504e4507c4",
+    ".local/f011-oracle/node_modules/khroma/src/channels/type.ts": "7a9e48fd1c0b0f62049abae807e481a92ac283e4b816905952c37f7cb1244379",
+    ".local/f011-oracle/node_modules/khroma/src/color/hex.ts": "6cce403dab79c622d67347a52d0a448c2f8ad264d229aaea5a8420b81776d53e",
+    ".local/f011-oracle/node_modules/khroma/src/color/hsl.ts": "401a5dca80bbe8e613323c08767f4b3a99b425927083bf150010dce0bc108547",
+    ".local/f011-oracle/node_modules/khroma/src/color/index.ts": "6ae47cdc9303dcd6a144f831dbc29a1deb1a4cf9445bd6041e746eb30708361d",
+    ".local/f011-oracle/node_modules/khroma/src/color/keyword.ts": "2c291a653c7bfa775f812818618de9b6fc353f9cdcb02325c952d2fc323636da",
+    ".local/f011-oracle/node_modules/khroma/src/color/rgb.ts": "c8efde4808e7be226ec2a2650bf71063b3e18070f8191c92640d0dab292e0b8a",
+    ".local/f011-oracle/node_modules/khroma/src/methods/adjust.ts": "d0a899c3a92b49a12b02574632f7d11b549896449ef0df6adae02bd1965b691e",
+    ".local/f011-oracle/node_modules/khroma/src/methods/adjust_channel.ts": "83bf0846e16b9d5b2196ba18069e0e2fd131b343de27e83504acd7575e3b5f8e",
+    ".local/f011-oracle/node_modules/khroma/src/methods/alpha.ts": "94f082ce3191f7aaa219eea6c4ceb02393e11bb140d86de33acde2fe9294cde6",
+    ".local/f011-oracle/node_modules/khroma/src/methods/blue.ts": "9786af03d9d8a3b8a91c5cc30ec6ba0552aa6a8a3d550cb202de06c2ffae572d",
+    ".local/f011-oracle/node_modules/khroma/src/methods/change.ts": "f772cb47374c4f279e3f18c41916b57a3cc025cae74ac93658e3749d6eb1f0a1",
+    ".local/f011-oracle/node_modules/khroma/src/methods/channel.ts": "c3798405b063d9a866d5d80dc94cae8b22eed1947e65cb65c3b234d88a5433be",
+    ".local/f011-oracle/node_modules/khroma/src/methods/complement.ts": "ab0073a0822c6ce5012d0a2373fd21cf935a83871e801c85df3f071c736fb059",
+    ".local/f011-oracle/node_modules/khroma/src/methods/contrast.ts": "999c5a1ebebee80311182434f46c74de657a06073fc3c3f1f79e5bddec134acd",
+    ".local/f011-oracle/node_modules/khroma/src/methods/darken.ts": "6d2efed9796afb28b792db3e86655cd33c00b0f2f8d30f2a38aa92f5f928ddc8",
+    ".local/f011-oracle/node_modules/khroma/src/methods/desaturate.ts": "4adb800b0e65250e79b5d37b68838c9eeb9f51a22ce98cb2a78f9807134aa076",
+    ".local/f011-oracle/node_modules/khroma/src/methods/grayscale.ts": "42036271e285308b8c5c2e60d2bb21b8aa0164c3cd0d576240c61497d9ad6aaa",
+    ".local/f011-oracle/node_modules/khroma/src/methods/green.ts": "2e5ce7ff998a055520544144084c74684cd4aa7bfebd59886bf72bf5460e9b54",
+    ".local/f011-oracle/node_modules/khroma/src/methods/hsla.ts": "bc61bfaddfec7cb0adb05b2d5dc162ae5deb0d2443a563ea53108d83493b0ae2",
+    ".local/f011-oracle/node_modules/khroma/src/methods/hue.ts": "1ca5be53c27ba5bcd96f16bf46ecc5e6f2084cb7d5147a3bf353ebbcb00bd2e0",
+    ".local/f011-oracle/node_modules/khroma/src/methods/index.ts": "8fe5e8dd9e2a343c79f05f66c51f127dbb19e3805094d8b18fafdac5f85ff42a",
+    ".local/f011-oracle/node_modules/khroma/src/methods/invert.ts": "d1e68ced59ae6c43cc20760a77b6047d5174d99f67a6334dac5b4dfc1bd21123",
+    ".local/f011-oracle/node_modules/khroma/src/methods/is_dark.ts": "07efdfb5d27911da7892d6febe6c55e059a64684bad28dcc9321011a7e7d4665",
+    ".local/f011-oracle/node_modules/khroma/src/methods/is_light.ts": "5183cdb8b5462430547bf1dd1a7fc4780f15b1a30da9db4246d952e09f132abf",
+    ".local/f011-oracle/node_modules/khroma/src/methods/is_transparent.ts": "00c5ff1eb80c0a7db3cd9955493f99b6c31c4dab8a7e7ea6d35c378c3f5b4a7e",
+    ".local/f011-oracle/node_modules/khroma/src/methods/is_valid.ts": "19b9fd6c42725c2a33469f6c8df2db5e5ffca715f570510699db6d2c2ec01a68",
+    ".local/f011-oracle/node_modules/khroma/src/methods/lighten.ts": "792152d33b46acb6764c101f331639c80ee3b6e786ec25b4bfd66084333cf091",
+    ".local/f011-oracle/node_modules/khroma/src/methods/lightness.ts": "891e3618688c953cf2884ba3d04a997c0ebe10ee0f7ce564643250f670e408d7",
+    ".local/f011-oracle/node_modules/khroma/src/methods/luminance.ts": "9528865f48c81278330ee3026f8485f742cd8f34b9d9f3f86129e4faaaad1227",
+    ".local/f011-oracle/node_modules/khroma/src/methods/mix.ts": "bb1e90b3390294917d41ac4ee049f57cc4e3cf4c6807cd0f8d429bf7e1326627",
+    ".local/f011-oracle/node_modules/khroma/src/methods/opacify.ts": "97d11b0296c9fbef81797a3a2a9139198210af4393da8599eb0b660c16da4b8b",
+    ".local/f011-oracle/node_modules/khroma/src/methods/red.ts": "5e074f3ff6fa7c39fb9325ae21523942bf2416454b2d56c4c8ad98b811c8ec25",
+    ".local/f011-oracle/node_modules/khroma/src/methods/rgba.ts": "959ec3327cb12d790dd7fe8657d1a81b2d9c2ae96e1ad153ca07472fa5bfe94d",
+    ".local/f011-oracle/node_modules/khroma/src/methods/saturate.ts": "d414e1476d0533691795d354822c23b3c2a3678a33aa4fa2f5b67e492b8a2e6f",
+    ".local/f011-oracle/node_modules/khroma/src/methods/saturation.ts": "c7e93d0f2b7044feaa1347639fffa7cf6b127dd9484ffa9482e4ddf8d9dde040",
+    ".local/f011-oracle/node_modules/khroma/src/methods/scale.ts": "3207d76e4518b6616a3c092f25f5ddbe6288145d4da677214021d26c2a5ad253",
+    ".local/f011-oracle/node_modules/khroma/src/methods/to_hex.ts": "0ae483705d239761e78e0e2b0e3712fe76ad44e26c95d0f7a6b06a461f386297",
+    ".local/f011-oracle/node_modules/khroma/src/methods/to_hsla.ts": "1f9e6ced2679ea9e5d2d2dab7456a8c7d56714e66b5ccfd0a700063e3c64b565",
+    ".local/f011-oracle/node_modules/khroma/src/methods/to_keyword.ts": "bff1be9485237f7cd9bf6797b4cf3d958dd140bebecc9b65c1acbd2de0d5b60e",
+    ".local/f011-oracle/node_modules/khroma/src/methods/to_rgba.ts": "025057c7b65b2b958af38ef03ba2594c4163b95fa6cf3fa48fbdfa0080b441d9",
+    ".local/f011-oracle/node_modules/khroma/src/methods/transparentize.ts": "d55dcf6ba5a56cbe66159a12c3e2aa75be8442e88b5fbaae34069898bed4ccde",
+    ".local/f011-oracle/node_modules/khroma/src/utils/channel.ts": "a6cc6f0ab35f36f2693317d5d02302775a0082e66bdc02e49a73f11de5d6ed34",
+    ".local/f011-oracle/node_modules/khroma/src/utils/index.ts": "514467c4e0039e34657ef249f51fb376b8661eef693723bad0047067c5623cf2",
+    ".local/f011-oracle/node_modules/khroma/src/utils/lang.ts": "452f3f24a31bdafa0426fccbafab05902bd0112bcc8ab26b8af62a6f8e47f680",
+    ".local/f011-oracle/node_modules/khroma/src/utils/unit.ts": "0f0f541be7a9686954bedc536ded5c3bc97f5e3e4a19b4b0db3ee361e70724a0"
+  },
+  "sourceStopped": true
+}

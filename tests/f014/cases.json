@@ -1,0 +1,6885 @@
+{
+  "schema": "py-mermaid-f014-cases/v1",
+  "scope": "F01.4",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "origin": "Independent source-derived fragments. Parser aliases remain a separate unit denominator; no candidate rendering manufactures expectations.",
+  "cases": [
+    {
+      "id": "shape-rect",
+      "title": "Source shape rect",
+      "text": "flowchart TD\nA@{shape: rect, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "square"
+      },
+      "oracleShapes": {
+        "A": "rect"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / squareRect.ts",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-rounded",
+      "title": "Source shape rounded",
+      "text": "flowchart TD\nA@{shape: rounded, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "round"
+      },
+      "oracleShapes": {
+        "A": "rounded"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / roundedRect.ts",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-stadium",
+      "title": "Source shape stadium",
+      "text": "flowchart TD\nA@{shape: stadium, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "stadium"
+      },
+      "oracleShapes": {
+        "A": "stadium"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / stadium.ts",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-fr-rect",
+      "title": "Source shape fr-rect",
+      "text": "flowchart TD\nA@{shape: fr-rect, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "subroutine"
+      },
+      "oracleShapes": {
+        "A": "fr-rect"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / subroutine.ts",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-cyl",
+      "title": "Source shape cyl",
+      "text": "flowchart TD\nA@{shape: cyl, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "cylinder"
+      },
+      "oracleShapes": {
+        "A": "cyl"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / cylinder.ts",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-datastore",
+      "title": "Source shape datastore",
+      "text": "flowchart TD\nA@{shape: datastore, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "datastore"
+      },
+      "oracleShapes": {
+        "A": "datastore"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / datastore.ts",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-folder",
+      "title": "Source shape folder",
+      "text": "flowchart TD\nA@{shape: folder, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "folder"
+      },
+      "oracleShapes": {
+        "A": "folder"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / folder.ts",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-bucket",
+      "title": "Source shape bucket",
+      "text": "flowchart TD\nA@{shape: bucket, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "bucket"
+      },
+      "oracleShapes": {
+        "A": "bucket"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / bucket.ts",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-console",
+      "title": "Source shape console",
+      "text": "flowchart TD\nA@{shape: console, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "consoleWindow"
+      },
+      "oracleShapes": {
+        "A": "console"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / consoleWindow.ts",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-browser",
+      "title": "Source shape browser",
+      "text": "flowchart TD\nA@{shape: browser, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "browser"
+      },
+      "oracleShapes": {
+        "A": "browser"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / browser.ts",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-person",
+      "title": "Source shape person",
+      "text": "flowchart TD\nA@{shape: person, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "person"
+      },
+      "oracleShapes": {
+        "A": "person"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / person.ts",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-circle",
+      "title": "Source shape circle",
+      "text": "flowchart TD\nA@{shape: circle, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "circle"
+      },
+      "oracleShapes": {
+        "A": "circle"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / circle.ts",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-bang",
+      "title": "Source shape bang",
+      "text": "flowchart TD\nA@{shape: bang, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "bang"
+      },
+      "oracleShapes": {
+        "A": "bang"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / bang.ts",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-cloud",
+      "title": "Source shape cloud",
+      "text": "flowchart TD\nA@{shape: cloud, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "cloud"
+      },
+      "oracleShapes": {
+        "A": "cloud"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / cloud.ts",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-diam",
+      "title": "Source shape diam",
+      "text": "flowchart TD\nA@{shape: diam, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "diamond"
+      },
+      "oracleShapes": {
+        "A": "diam"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / question.ts",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-hex",
+      "title": "Source shape hex",
+      "text": "flowchart TD\nA@{shape: hex, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "hexagon"
+      },
+      "oracleShapes": {
+        "A": "hex"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / hexagon.ts",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-lean-r",
+      "title": "Source shape lean-r",
+      "text": "flowchart TD\nA@{shape: lean-r, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "lean_right"
+      },
+      "oracleShapes": {
+        "A": "lean-r"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / lean_right.ts",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-lean-l",
+      "title": "Source shape lean-l",
+      "text": "flowchart TD\nA@{shape: lean-l, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "lean_left"
+      },
+      "oracleShapes": {
+        "A": "lean-l"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / lean_left.ts",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-trap-b",
+      "title": "Source shape trap-b",
+      "text": "flowchart TD\nA@{shape: trap-b, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "trapezoid"
+      },
+      "oracleShapes": {
+        "A": "trap-b"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / trapezoid.ts",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-trap-t",
+      "title": "Source shape trap-t",
+      "text": "flowchart TD\nA@{shape: trap-t, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "inv_trapezoid"
+      },
+      "oracleShapes": {
+        "A": "trap-t"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / inv_trapezoid.ts",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-dbl-circ",
+      "title": "Source shape dbl-circ",
+      "text": "flowchart TD\nA@{shape: dbl-circ, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "doublecircle"
+      },
+      "oracleShapes": {
+        "A": "dbl-circ"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / doublecircle.ts",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-text",
+      "title": "Source shape text",
+      "text": "flowchart TD\nA@{shape: text, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "text"
+      },
+      "oracleShapes": {
+        "A": "text"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / text.ts",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-notch-rect",
+      "title": "Source shape notch-rect",
+      "text": "flowchart TD\nA@{shape: notch-rect, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "card"
+      },
+      "oracleShapes": {
+        "A": "notch-rect"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / card.ts",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-lin-rect",
+      "title": "Source shape lin-rect",
+      "text": "flowchart TD\nA@{shape: lin-rect, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "shadedProcess"
+      },
+      "oracleShapes": {
+        "A": "lin-rect"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / shadedProcess.ts",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-sm-circ",
+      "title": "Source shape sm-circ",
+      "text": "flowchart TD\nA@{shape: sm-circ, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "stateStart"
+      },
+      "oracleShapes": {
+        "A": "sm-circ"
+      },
+      "visibleLabels": {
+        "A": ""
+      },
+      "source": "shapesDefs.ts / stateStart.ts",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-fr-circ",
+      "title": "Source shape fr-circ",
+      "text": "flowchart TD\nA@{shape: fr-circ, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "stateEnd"
+      },
+      "oracleShapes": {
+        "A": "fr-circ"
+      },
+      "visibleLabels": {
+        "A": ""
+      },
+      "source": "shapesDefs.ts / stateEnd.ts",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-fork",
+      "title": "Source shape fork",
+      "text": "flowchart TD\nA@{shape: fork, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "forkJoin"
+      },
+      "oracleShapes": {
+        "A": "fork"
+      },
+      "visibleLabels": {
+        "A": ""
+      },
+      "source": "shapesDefs.ts / forkJoin.ts",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-hourglass",
+      "title": "Source shape hourglass",
+      "text": "flowchart TD\nA@{shape: hourglass, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "hourglass"
+      },
+      "oracleShapes": {
+        "A": "hourglass"
+      },
+      "visibleLabels": {
+        "A": ""
+      },
+      "source": "shapesDefs.ts / hourglass.ts",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-brace",
+      "title": "Source shape brace",
+      "text": "flowchart TD\nA@{shape: brace, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "curlyBraceLeft"
+      },
+      "oracleShapes": {
+        "A": "brace"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / curlyBraceLeft.ts",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-brace-r",
+      "title": "Source shape brace-r",
+      "text": "flowchart TD\nA@{shape: brace-r, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "curlyBraceRight"
+      },
+      "oracleShapes": {
+        "A": "brace-r"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / curlyBraceRight.ts",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-braces",
+      "title": "Source shape braces",
+      "text": "flowchart TD\nA@{shape: braces, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "curlyBraces"
+      },
+      "oracleShapes": {
+        "A": "braces"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / curlyBraces.ts",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-bolt",
+      "title": "Source shape bolt",
+      "text": "flowchart TD\nA@{shape: bolt, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "lightningBolt"
+      },
+      "oracleShapes": {
+        "A": "bolt"
+      },
+      "visibleLabels": {
+        "A": ""
+      },
+      "source": "shapesDefs.ts / lightningBolt.ts",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-doc",
+      "title": "Source shape doc",
+      "text": "flowchart TD\nA@{shape: doc, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "waveEdgedRectangle"
+      },
+      "oracleShapes": {
+        "A": "doc"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / waveEdgedRectangle.ts",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-delay",
+      "title": "Source shape delay",
+      "text": "flowchart TD\nA@{shape: delay, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "halfRoundedRectangle"
+      },
+      "oracleShapes": {
+        "A": "delay"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / halfRoundedRectangle.ts",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-h-cyl",
+      "title": "Source shape h-cyl",
+      "text": "flowchart TD\nA@{shape: h-cyl, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "tiltedCylinder"
+      },
+      "oracleShapes": {
+        "A": "h-cyl"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / tiltedCylinder.ts",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-lin-cyl",
+      "title": "Source shape lin-cyl",
+      "text": "flowchart TD\nA@{shape: lin-cyl, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "linedCylinder"
+      },
+      "oracleShapes": {
+        "A": "lin-cyl"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / linedCylinder.ts",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-curv-trap",
+      "title": "Source shape curv-trap",
+      "text": "flowchart TD\nA@{shape: curv-trap, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "curvedTrapezoid"
+      },
+      "oracleShapes": {
+        "A": "curv-trap"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / curvedTrapezoid.ts",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-div-rect",
+      "title": "Source shape div-rect",
+      "text": "flowchart TD\nA@{shape: div-rect, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "dividedRectangle"
+      },
+      "oracleShapes": {
+        "A": "div-rect"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / dividedRectangle.ts",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-tri",
+      "title": "Source shape tri",
+      "text": "flowchart TD\nA@{shape: tri, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "triangle"
+      },
+      "oracleShapes": {
+        "A": "tri"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / triangle.ts",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-win-pane",
+      "title": "Source shape win-pane",
+      "text": "flowchart TD\nA@{shape: win-pane, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "windowPane"
+      },
+      "oracleShapes": {
+        "A": "win-pane"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / windowPane.ts",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-f-circ",
+      "title": "Source shape f-circ",
+      "text": "flowchart TD\nA@{shape: f-circ, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "filledCircle"
+      },
+      "oracleShapes": {
+        "A": "f-circ"
+      },
+      "visibleLabels": {
+        "A": ""
+      },
+      "source": "shapesDefs.ts / filledCircle.ts",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-notch-pent",
+      "title": "Source shape notch-pent",
+      "text": "flowchart TD\nA@{shape: notch-pent, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "trapezoidalPentagon"
+      },
+      "oracleShapes": {
+        "A": "notch-pent"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / trapezoidalPentagon.ts",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-flip-tri",
+      "title": "Source shape flip-tri",
+      "text": "flowchart TD\nA@{shape: flip-tri, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "flippedTriangle"
+      },
+      "oracleShapes": {
+        "A": "flip-tri"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / flippedTriangle.ts",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-sl-rect",
+      "title": "Source shape sl-rect",
+      "text": "flowchart TD\nA@{shape: sl-rect, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "slopedRect"
+      },
+      "oracleShapes": {
+        "A": "sl-rect"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / slopedRect.ts",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-docs",
+      "title": "Source shape docs",
+      "text": "flowchart TD\nA@{shape: docs, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "multiWaveEdgedRectangle"
+      },
+      "oracleShapes": {
+        "A": "docs"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / multiWaveEdgedRectangle.ts",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-st-rect",
+      "title": "Source shape st-rect",
+      "text": "flowchart TD\nA@{shape: st-rect, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "multiRect"
+      },
+      "oracleShapes": {
+        "A": "st-rect"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / multiRect.ts",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-bow-rect",
+      "title": "Source shape bow-rect",
+      "text": "flowchart TD\nA@{shape: bow-rect, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "bowTieRect"
+      },
+      "oracleShapes": {
+        "A": "bow-rect"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / bowTieRect.ts",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-cross-circ",
+      "title": "Source shape cross-circ",
+      "text": "flowchart TD\nA@{shape: cross-circ, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "crossedCircle"
+      },
+      "oracleShapes": {
+        "A": "cross-circ"
+      },
+      "visibleLabels": {
+        "A": ""
+      },
+      "source": "shapesDefs.ts / crossedCircle.ts",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-tag-doc",
+      "title": "Source shape tag-doc",
+      "text": "flowchart TD\nA@{shape: tag-doc, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "taggedWaveEdgedRectangle"
+      },
+      "oracleShapes": {
+        "A": "tag-doc"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / taggedWaveEdgedRectangle.ts",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-tag-rect",
+      "title": "Source shape tag-rect",
+      "text": "flowchart TD\nA@{shape: tag-rect, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "taggedRect"
+      },
+      "oracleShapes": {
+        "A": "tag-rect"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / taggedRect.ts",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-flag",
+      "title": "Source shape flag",
+      "text": "flowchart TD\nA@{shape: flag, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "waveRectangle"
+      },
+      "oracleShapes": {
+        "A": "flag"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / waveRectangle.ts",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-odd",
+      "title": "Source shape odd",
+      "text": "flowchart TD\nA@{shape: odd, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "odd"
+      },
+      "oracleShapes": {
+        "A": "odd"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / rect_left_inv_arrow.ts",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-lin-doc",
+      "title": "Source shape lin-doc",
+      "text": "flowchart TD\nA@{shape: lin-doc, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "linedWaveEdgedRect"
+      },
+      "oracleShapes": {
+        "A": "lin-doc"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapesDefs.ts / linedWaveEdgedRect.ts",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-internal-state",
+      "title": "Source reachable state",
+      "text": "flowchart LR\nA@{shape: state, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "LR",
+      "shapes": {
+        "A": "state"
+      },
+      "oracleShapes": {
+        "A": "state"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapes.ts reachable undocumented handler",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-internal-choice",
+      "title": "Source reachable choice",
+      "text": "flowchart LR\nA@{shape: choice, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "LR",
+      "shapes": {
+        "A": "choice"
+      },
+      "oracleShapes": {
+        "A": "choice"
+      },
+      "visibleLabels": {
+        "A": ""
+      },
+      "source": "shapes.ts reachable undocumented handler",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-internal-note",
+      "title": "Source reachable note",
+      "text": "flowchart LR\nA@{shape: note, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "LR",
+      "shapes": {
+        "A": "note"
+      },
+      "oracleShapes": {
+        "A": "note"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapes.ts reachable undocumented handler",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-internal-composite",
+      "title": "Source reachable composite",
+      "text": "flowchart LR\nA@{shape: composite, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "LR",
+      "shapes": {
+        "A": "composite"
+      },
+      "oracleShapes": {
+        "A": "composite"
+      },
+      "visibleLabels": {
+        "A": "Label"
+      },
+      "source": "shapes.ts reachable undocumented handler",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "shape-internal-anchor",
+      "title": "Source reachable anchor",
+      "text": "flowchart LR\nA@{shape: anchor, label: \"Label\"}",
+      "nodes": [
+        [
+          "A",
+          "Label"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "LR",
+      "shapes": {
+        "A": "anchor"
+      },
+      "oracleShapes": {
+        "A": "anchor"
+      },
+      "visibleLabels": {
+        "A": ""
+      },
+      "source": "shapes.ts reachable undocumented handler",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "handdrawn-shapes-1",
+      "title": "Seeded source shape gallery 1",
+      "text": "flowchart TB\nN0@{shape: rect, label: \"rect\"}\nN1@{shape: rounded, label: \"rounded\"}\nN2@{shape: stadium, label: \"stadium\"}\nN3@{shape: fr-rect, label: \"fr-rect\"}\nN4@{shape: cyl, label: \"cyl\"}\nN5@{shape: datastore, label: \"datastore\"}\nN6@{shape: folder, label: \"folder\"}\nN7@{shape: bucket, label: \"bucket\"}\nN8@{shape: console, label: \"console\"}\nN9@{shape: browser, label: \"browser\"}\nN10@{shape: person, label: \"person\"}\nN11@{shape: circle, label: \"circle\"}",
+      "nodes": [
+        [
+          "N0",
+          "rect"
+        ],
+        [
+          "N1",
+          "rounded"
+        ],
+        [
+          "N2",
+          "stadium"
+        ],
+        [
+          "N3",
+          "fr-rect"
+        ],
+        [
+          "N4",
+          "cyl"
+        ],
+        [
+          "N5",
+          "datastore"
+        ],
+        [
+          "N6",
+          "folder"
+        ],
+        [
+          "N7",
+          "bucket"
+        ],
+        [
+          "N8",
+          "console"
+        ],
+        [
+          "N9",
+          "browser"
+        ],
+        [
+          "N10",
+          "person"
+        ],
+        [
+          "N11",
+          "circle"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TB",
+      "shapes": {
+        "N0": "square",
+        "N1": "round",
+        "N2": "stadium",
+        "N3": "subroutine",
+        "N4": "cylinder",
+        "N5": "datastore",
+        "N6": "folder",
+        "N7": "bucket",
+        "N8": "consoleWindow",
+        "N9": "browser",
+        "N10": "person",
+        "N11": "circle"
+      },
+      "oracleShapes": {
+        "N0": "rect",
+        "N1": "rounded",
+        "N2": "stadium",
+        "N3": "fr-rect",
+        "N4": "cyl",
+        "N5": "datastore",
+        "N6": "folder",
+        "N7": "bucket",
+        "N8": "console",
+        "N9": "browser",
+        "N10": "person",
+        "N11": "circle"
+      },
+      "visibleLabels": {
+        "N0": "rect",
+        "N1": "rounded",
+        "N2": "stadium",
+        "N3": "fr-rect",
+        "N4": "cyl",
+        "N5": "datastore",
+        "N6": "folder",
+        "N7": "bucket",
+        "N8": "console",
+        "N9": "browser",
+        "N10": "person",
+        "N11": "circle"
+      },
+      "config": {
+        "look": "handDrawn",
+        "handDrawnSeed": 42
+      },
+      "source": "Fixed shape handlers + roughjs4.6.6 seeded rough paths",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "handdrawn-shapes-2",
+      "title": "Seeded source shape gallery 2",
+      "text": "flowchart TB\nN0@{shape: bang, label: \"bang\"}\nN1@{shape: cloud, label: \"cloud\"}\nN2@{shape: diam, label: \"diam\"}\nN3@{shape: hex, label: \"hex\"}\nN4@{shape: lean-r, label: \"lean-r\"}\nN5@{shape: lean-l, label: \"lean-l\"}\nN6@{shape: trap-b, label: \"trap-b\"}\nN7@{shape: trap-t, label: \"trap-t\"}\nN8@{shape: dbl-circ, label: \"dbl-circ\"}\nN9@{shape: text, label: \"text\"}\nN10@{shape: notch-rect, label: \"notch-rect\"}\nN11@{shape: lin-rect, label: \"lin-rect\"}",
+      "nodes": [
+        [
+          "N0",
+          "bang"
+        ],
+        [
+          "N1",
+          "cloud"
+        ],
+        [
+          "N2",
+          "diam"
+        ],
+        [
+          "N3",
+          "hex"
+        ],
+        [
+          "N4",
+          "lean-r"
+        ],
+        [
+          "N5",
+          "lean-l"
+        ],
+        [
+          "N6",
+          "trap-b"
+        ],
+        [
+          "N7",
+          "trap-t"
+        ],
+        [
+          "N8",
+          "dbl-circ"
+        ],
+        [
+          "N9",
+          "text"
+        ],
+        [
+          "N10",
+          "notch-rect"
+        ],
+        [
+          "N11",
+          "lin-rect"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TB",
+      "shapes": {
+        "N0": "bang",
+        "N1": "cloud",
+        "N2": "diamond",
+        "N3": "hexagon",
+        "N4": "lean_right",
+        "N5": "lean_left",
+        "N6": "trapezoid",
+        "N7": "inv_trapezoid",
+        "N8": "doublecircle",
+        "N9": "text",
+        "N10": "card",
+        "N11": "shadedProcess"
+      },
+      "oracleShapes": {
+        "N0": "bang",
+        "N1": "cloud",
+        "N2": "diam",
+        "N3": "hex",
+        "N4": "lean-r",
+        "N5": "lean-l",
+        "N6": "trap-b",
+        "N7": "trap-t",
+        "N8": "dbl-circ",
+        "N9": "text",
+        "N10": "notch-rect",
+        "N11": "lin-rect"
+      },
+      "visibleLabels": {
+        "N0": "bang",
+        "N1": "cloud",
+        "N2": "diam",
+        "N3": "hex",
+        "N4": "lean-r",
+        "N5": "lean-l",
+        "N6": "trap-b",
+        "N7": "trap-t",
+        "N8": "dbl-circ",
+        "N9": "text",
+        "N10": "notch-rect",
+        "N11": "lin-rect"
+      },
+      "config": {
+        "look": "handDrawn",
+        "handDrawnSeed": 42
+      },
+      "source": "Fixed shape handlers + roughjs4.6.6 seeded rough paths",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "handdrawn-shapes-3",
+      "title": "Seeded source shape gallery 3",
+      "text": "flowchart TB\nN0@{shape: sm-circ, label: \"sm-circ\"}\nN1@{shape: fr-circ, label: \"fr-circ\"}\nN2@{shape: fork, label: \"fork\"}\nN3@{shape: hourglass, label: \"hourglass\"}\nN4@{shape: brace, label: \"brace\"}\nN5@{shape: brace-r, label: \"brace-r\"}\nN6@{shape: braces, label: \"braces\"}\nN7@{shape: bolt, label: \"bolt\"}\nN8@{shape: doc, label: \"doc\"}\nN9@{shape: delay, label: \"delay\"}\nN10@{shape: h-cyl, label: \"h-cyl\"}\nN11@{shape: lin-cyl, label: \"lin-cyl\"}",
+      "nodes": [
+        [
+          "N0",
+          "sm-circ"
+        ],
+        [
+          "N1",
+          "fr-circ"
+        ],
+        [
+          "N2",
+          "fork"
+        ],
+        [
+          "N3",
+          "hourglass"
+        ],
+        [
+          "N4",
+          "brace"
+        ],
+        [
+          "N5",
+          "brace-r"
+        ],
+        [
+          "N6",
+          "braces"
+        ],
+        [
+          "N7",
+          "bolt"
+        ],
+        [
+          "N8",
+          "doc"
+        ],
+        [
+          "N9",
+          "delay"
+        ],
+        [
+          "N10",
+          "h-cyl"
+        ],
+        [
+          "N11",
+          "lin-cyl"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TB",
+      "shapes": {
+        "N0": "stateStart",
+        "N1": "stateEnd",
+        "N2": "forkJoin",
+        "N3": "hourglass",
+        "N4": "curlyBraceLeft",
+        "N5": "curlyBraceRight",
+        "N6": "curlyBraces",
+        "N7": "lightningBolt",
+        "N8": "waveEdgedRectangle",
+        "N9": "halfRoundedRectangle",
+        "N10": "tiltedCylinder",
+        "N11": "linedCylinder"
+      },
+      "oracleShapes": {
+        "N0": "sm-circ",
+        "N1": "fr-circ",
+        "N2": "fork",
+        "N3": "hourglass",
+        "N4": "brace",
+        "N5": "brace-r",
+        "N6": "braces",
+        "N7": "bolt",
+        "N8": "doc",
+        "N9": "delay",
+        "N10": "h-cyl",
+        "N11": "lin-cyl"
+      },
+      "visibleLabels": {
+        "N0": "",
+        "N1": "",
+        "N2": "",
+        "N3": "",
+        "N4": "brace",
+        "N5": "brace-r",
+        "N6": "braces",
+        "N7": "",
+        "N8": "doc",
+        "N9": "delay",
+        "N10": "h-cyl",
+        "N11": "lin-cyl"
+      },
+      "config": {
+        "look": "handDrawn",
+        "handDrawnSeed": 42
+      },
+      "source": "Fixed shape handlers + roughjs4.6.6 seeded rough paths",
+      "fillProbes": [
+        {
+          "node": "N0",
+          "x": 0.5,
+          "y": 0.5,
+          "color": "#ffffff"
+        }
+      ],
+      "sourcePaintNote": "The final SVG .node path outline receives opaque CSS fill and covers earlier RoughJS hatch. stateStart must retain a light interior distinct from filledCircle.",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "handdrawn-shapes-4",
+      "title": "Seeded source shape gallery 4",
+      "text": "flowchart TB\nN0@{shape: curv-trap, label: \"curv-trap\"}\nN1@{shape: div-rect, label: \"div-rect\"}\nN2@{shape: tri, label: \"tri\"}\nN3@{shape: win-pane, label: \"win-pane\"}\nN4@{shape: f-circ, label: \"f-circ\"}\nN5@{shape: notch-pent, label: \"notch-pent\"}\nN6@{shape: flip-tri, label: \"flip-tri\"}\nN7@{shape: sl-rect, label: \"sl-rect\"}\nN8@{shape: docs, label: \"docs\"}\nN9@{shape: st-rect, label: \"st-rect\"}\nN10@{shape: bow-rect, label: \"bow-rect\"}\nN11@{shape: cross-circ, label: \"cross-circ\"}",
+      "nodes": [
+        [
+          "N0",
+          "curv-trap"
+        ],
+        [
+          "N1",
+          "div-rect"
+        ],
+        [
+          "N2",
+          "tri"
+        ],
+        [
+          "N3",
+          "win-pane"
+        ],
+        [
+          "N4",
+          "f-circ"
+        ],
+        [
+          "N5",
+          "notch-pent"
+        ],
+        [
+          "N6",
+          "flip-tri"
+        ],
+        [
+          "N7",
+          "sl-rect"
+        ],
+        [
+          "N8",
+          "docs"
+        ],
+        [
+          "N9",
+          "st-rect"
+        ],
+        [
+          "N10",
+          "bow-rect"
+        ],
+        [
+          "N11",
+          "cross-circ"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TB",
+      "shapes": {
+        "N0": "curvedTrapezoid",
+        "N1": "dividedRectangle",
+        "N2": "triangle",
+        "N3": "windowPane",
+        "N4": "filledCircle",
+        "N5": "trapezoidalPentagon",
+        "N6": "flippedTriangle",
+        "N7": "slopedRect",
+        "N8": "multiWaveEdgedRectangle",
+        "N9": "multiRect",
+        "N10": "bowTieRect",
+        "N11": "crossedCircle"
+      },
+      "oracleShapes": {
+        "N0": "curv-trap",
+        "N1": "div-rect",
+        "N2": "tri",
+        "N3": "win-pane",
+        "N4": "f-circ",
+        "N5": "notch-pent",
+        "N6": "flip-tri",
+        "N7": "sl-rect",
+        "N8": "docs",
+        "N9": "st-rect",
+        "N10": "bow-rect",
+        "N11": "cross-circ"
+      },
+      "visibleLabels": {
+        "N0": "curv-trap",
+        "N1": "div-rect",
+        "N2": "tri",
+        "N3": "win-pane",
+        "N4": "",
+        "N5": "notch-pent",
+        "N6": "flip-tri",
+        "N7": "sl-rect",
+        "N8": "docs",
+        "N9": "st-rect",
+        "N10": "bow-rect",
+        "N11": ""
+      },
+      "config": {
+        "look": "handDrawn",
+        "handDrawnSeed": 42
+      },
+      "source": "Fixed shape handlers + roughjs4.6.6 seeded rough paths",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "handdrawn-shapes-5",
+      "title": "Seeded source shape gallery 5",
+      "text": "flowchart TB\nN0@{shape: tag-doc, label: \"tag-doc\"}\nN1@{shape: tag-rect, label: \"tag-rect\"}\nN2@{shape: flag, label: \"flag\"}\nN3@{shape: odd, label: \"odd\"}\nN4@{shape: lin-doc, label: \"lin-doc\"}",
+      "nodes": [
+        [
+          "N0",
+          "tag-doc"
+        ],
+        [
+          "N1",
+          "tag-rect"
+        ],
+        [
+          "N2",
+          "flag"
+        ],
+        [
+          "N3",
+          "odd"
+        ],
+        [
+          "N4",
+          "lin-doc"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TB",
+      "shapes": {
+        "N0": "taggedWaveEdgedRectangle",
+        "N1": "taggedRect",
+        "N2": "waveRectangle",
+        "N3": "odd",
+        "N4": "linedWaveEdgedRect"
+      },
+      "oracleShapes": {
+        "N0": "tag-doc",
+        "N1": "tag-rect",
+        "N2": "flag",
+        "N3": "odd",
+        "N4": "lin-doc"
+      },
+      "visibleLabels": {
+        "N0": "tag-doc",
+        "N1": "tag-rect",
+        "N2": "flag",
+        "N3": "odd",
+        "N4": "lin-doc"
+      },
+      "config": {
+        "look": "handDrawn",
+        "handDrawnSeed": 42
+      },
+      "source": "Fixed shape handlers + roughjs4.6.6 seeded rough paths",
+      "sourceFragment": "tests/f014/shape-cases.json"
+    },
+    {
+      "id": "static-style-overview",
+      "title": "Class, style, linkStyle and initial dash",
+      "text": "flowchart LR\nA[Input]:::hot e1@-->|read| B[Store]\nB o--o C[Check]\nC x--x D[Done]\nD --- E[Open]\nclassDef hot fill:#e0f2fe,stroke:#0369a1,color:#0c4a6e,font-weight:bold\nstyle B fill:#fef3c7,stroke:#92400e\nlinkStyle 0 stroke:#0369a1,stroke-width:3px\ne1@{animate: true}",
+      "nodes": [
+        [
+          "A",
+          "Input"
+        ],
+        [
+          "B",
+          "Store"
+        ],
+        [
+          "C",
+          "Check"
+        ],
+        [
+          "D",
+          "Done"
+        ],
+        [
+          "E",
+          "Open"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "B",
+          "C"
+        ],
+        [
+          "C",
+          "D"
+        ],
+        [
+          "D",
+          "E"
+        ]
+      ],
+      "direction": "LR",
+      "groups": [],
+      "edgeLabels": [
+        "read",
+        "",
+        "",
+        ""
+      ],
+      "formats": {
+        "A": [
+          {
+            "text": "Input",
+            "weight": 700,
+            "color": "#0c4a6e"
+          }
+        ]
+      },
+      "source": "FlowDB compileStyles; edges.js markers and animation t0",
+      "sourceFragment": "tests/f014/style-cases.json"
+    },
+    {
+      "id": "static-text-properties",
+      "title": "Native measured spacing, transform and shadow",
+      "text": "flowchart TD\nA[Alpha words]:::styled\nclassDef styled color:#123456,font-size:20px,letter-spacing:1px,word-spacing:3px,text-transform:uppercase,text-shadow:1px 2px 1px #cccccc",
+      "nodes": [
+        [
+          "A",
+          "Alpha words"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "visibleLabels": {
+        "A": "ALPHA WORDS"
+      },
+      "source": "styles2String label properties + native Canvas measured spacing",
+      "sourceFragment": "tests/f014/style-cases.json"
+    },
+    {
+      "id": "direction-TB",
+      "title": "direction TB",
+      "text": "flowchart TB\nA --> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TB",
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "direction-TD",
+      "title": "direction TD",
+      "text": "flowchart TD\nA --> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "direction-BT",
+      "title": "direction BT",
+      "text": "flowchart BT\nA --> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "BT",
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "direction-LR",
+      "title": "direction LR",
+      "text": "flowchart LR\nA --> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "LR",
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "direction-RL",
+      "title": "direction RL",
+      "text": "flowchart RL\nA --> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "RL",
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "direction-left",
+      "title": "direction left",
+      "text": "flowchart <\nA --> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "RL",
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "direction-right",
+      "title": "direction right",
+      "text": "flowchart >\nA --> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "LR",
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "direction-up",
+      "title": "direction up",
+      "text": "flowchart ^\nA --> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "BT",
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "direction-down",
+      "title": "direction down",
+      "text": "flowchart v\nA --> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TB",
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "implicit-direction",
+      "title": "implicit direction",
+      "text": "flowchart\nA --> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TB",
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "elk-header",
+      "title": "elk header",
+      "text": "flowchart-elk LR\nA --> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "LR",
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "empty-document",
+      "title": "empty document",
+      "text": "graph TD",
+      "nodes": [],
+      "edges": [],
+      "direction": "TD",
+      "sourceFragment": "tests/f014/language-cases.json",
+      "expectedEmptyRendering": true,
+      "expectedEmptySize": [
+        16,
+        16
+      ]
+    },
+    {
+      "id": "empty-default-direction",
+      "title": "empty default direction",
+      "text": "graph",
+      "nodes": [],
+      "edges": [],
+      "direction": "TB",
+      "sourceFragment": "tests/f014/language-cases.json",
+      "expectedEmptyRendering": true,
+      "expectedEmptySize": [
+        16,
+        16
+      ]
+    },
+    {
+      "id": "whitespace-separators",
+      "title": "whitespace separators",
+      "text": " \n graph TD \n A; \n\t B ;",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "sourceCorrection": "Original header SPACE+SEMI is invalid: FirstStmtSeparator permits SEMI, NEWLINE, or spaceList NEWLINE. Retained original exact input as header-semicolon-invalid; this positive keeps whitespace and node semicolon semantics.",
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "unicode-identifiers",
+      "title": "unicode identifiers",
+      "text": "flowchart TD\n中文[Alpha] --> 节点[Beta]",
+      "nodes": [
+        [
+          "中文",
+          "Alpha"
+        ],
+        [
+          "节点",
+          "Beta"
+        ]
+      ],
+      "edges": [
+        [
+          "中文",
+          "节点"
+        ]
+      ],
+      "direction": "TD",
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "punctuated-identifiers",
+      "title": "punctuated identifiers",
+      "text": "flowchart TD\nA.foo[First] --> B/bar[Second]",
+      "nodes": [
+        [
+          "A.foo",
+          "First"
+        ],
+        [
+          "B/bar",
+          "Second"
+        ]
+      ],
+      "edges": [
+        [
+          "A.foo",
+          "B/bar"
+        ]
+      ],
+      "direction": "TD",
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "numeric-identifiers",
+      "title": "numeric identifiers",
+      "text": "flowchart TD\n123[One] --> 456[Two]",
+      "nodes": [
+        [
+          "123",
+          "One"
+        ],
+        [
+          "456",
+          "Two"
+        ]
+      ],
+      "edges": [
+        [
+          "123",
+          "456"
+        ]
+      ],
+      "direction": "TD",
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "cartesian-batch",
+      "title": "cartesian batch",
+      "text": "flowchart TD\nA & B --> C & D --> E",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ],
+        [
+          "C",
+          "C"
+        ],
+        [
+          "D",
+          "D"
+        ],
+        [
+          "E",
+          "E"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "C"
+        ],
+        [
+          "A",
+          "D"
+        ],
+        [
+          "B",
+          "C"
+        ],
+        [
+          "B",
+          "D"
+        ],
+        [
+          "C",
+          "E"
+        ],
+        [
+          "D",
+          "E"
+        ]
+      ],
+      "direction": "TD",
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "cartesian-id-owner",
+      "title": "cartesian id owner",
+      "text": "flowchart TD\nA & B edge1@--> C & D",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ],
+        [
+          "C",
+          "C"
+        ],
+        [
+          "D",
+          "D"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "C"
+        ],
+        [
+          "A",
+          "D"
+        ],
+        [
+          "B",
+          "C"
+        ],
+        [
+          "B",
+          "D"
+        ]
+      ],
+      "direction": "TD",
+      "sourceIds": [
+        "L_A_C_0",
+        "L_A_D_0",
+        "edge1",
+        "L_B_D_0"
+      ],
+      "userIds": [
+        false,
+        false,
+        true,
+        false
+      ],
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "user-id-duplicate",
+      "title": "user id duplicate",
+      "text": "flowchart TD\nA edge1@--> B\nA edge1@--> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "sourceIds": [
+        "edge1",
+        "L_A_B_2"
+      ],
+      "userIds": [
+        true,
+        false
+      ],
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "generated-id-counters",
+      "title": "generated id counters",
+      "text": "flowchart TD\nA --> B\nA --> B\nA --> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "A",
+          "B"
+        ],
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "sourceIds": [
+        "L_A_B_0",
+        "L_A_B_2",
+        "L_A_B_3"
+      ],
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "edge-open",
+      "title": "edge open",
+      "text": "flowchart TD\nA --- B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "arrow_open",
+          "stroke": "normal",
+          "minLength": 1,
+          "startMarker": "none",
+          "endMarker": "none"
+        }
+      ],
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "edge-point",
+      "title": "edge point",
+      "text": "flowchart TD\nA --> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "arrow_point",
+          "stroke": "normal",
+          "minLength": 1,
+          "startMarker": "none",
+          "endMarker": "point"
+        }
+      ],
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "edge-circle",
+      "title": "edge circle",
+      "text": "flowchart TD\nA --o B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "arrow_circle",
+          "stroke": "normal",
+          "minLength": 1,
+          "startMarker": "none",
+          "endMarker": "circle"
+        }
+      ],
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "edge-cross",
+      "title": "edge cross",
+      "text": "flowchart TD\nA --x B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "arrow_cross",
+          "stroke": "normal",
+          "minLength": 1,
+          "startMarker": "none",
+          "endMarker": "cross"
+        }
+      ],
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "edge-double-point",
+      "title": "edge double point",
+      "text": "flowchart TD\nA <--> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "double_arrow_point",
+          "stroke": "normal",
+          "minLength": 1,
+          "startMarker": "point",
+          "endMarker": "point"
+        }
+      ],
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "edge-double-circle",
+      "title": "edge double circle",
+      "text": "flowchart TD\nA o--o B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "double_arrow_circle",
+          "stroke": "normal",
+          "minLength": 1,
+          "startMarker": "circle",
+          "endMarker": "circle"
+        }
+      ],
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "edge-double-cross",
+      "title": "edge double cross",
+      "text": "flowchart TD\nA x--x B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "double_arrow_cross",
+          "stroke": "normal",
+          "minLength": 1,
+          "startMarker": "cross",
+          "endMarker": "cross"
+        }
+      ],
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "edge-thick-open",
+      "title": "edge thick open",
+      "text": "flowchart TD\nA === B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "arrow_open",
+          "stroke": "thick",
+          "minLength": 1,
+          "startMarker": "none",
+          "endMarker": "none"
+        }
+      ],
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "edge-thick-point",
+      "title": "edge thick point",
+      "text": "flowchart TD\nA ==> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "arrow_point",
+          "stroke": "thick",
+          "minLength": 1,
+          "startMarker": "none",
+          "endMarker": "point"
+        }
+      ],
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "edge-thick-circle",
+      "title": "edge thick circle",
+      "text": "flowchart TD\nA ==o B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "arrow_circle",
+          "stroke": "thick",
+          "minLength": 1,
+          "startMarker": "none",
+          "endMarker": "circle"
+        }
+      ],
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "edge-thick-cross",
+      "title": "edge thick cross",
+      "text": "flowchart TD\nA ==x B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "arrow_cross",
+          "stroke": "thick",
+          "minLength": 1,
+          "startMarker": "none",
+          "endMarker": "cross"
+        }
+      ],
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "edge-thick-double-point",
+      "title": "edge thick double point",
+      "text": "flowchart TD\nA <==> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "double_arrow_point",
+          "stroke": "thick",
+          "minLength": 1,
+          "startMarker": "point",
+          "endMarker": "point"
+        }
+      ],
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "edge-thick-double-circle",
+      "title": "edge thick double circle",
+      "text": "flowchart TD\nA o==o B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "double_arrow_circle",
+          "stroke": "thick",
+          "minLength": 1,
+          "startMarker": "circle",
+          "endMarker": "circle"
+        }
+      ],
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "edge-thick-double-cross",
+      "title": "edge thick double cross",
+      "text": "flowchart TD\nA x==x B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "double_arrow_cross",
+          "stroke": "thick",
+          "minLength": 1,
+          "startMarker": "cross",
+          "endMarker": "cross"
+        }
+      ],
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "edge-dotted-open",
+      "title": "edge dotted open",
+      "text": "flowchart TD\nA -.- B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "arrow_open",
+          "stroke": "dotted",
+          "minLength": 1,
+          "startMarker": "none",
+          "endMarker": "none"
+        }
+      ],
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "edge-dotted-point",
+      "title": "edge dotted point",
+      "text": "flowchart TD\nA -.-> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "arrow_point",
+          "stroke": "dotted",
+          "minLength": 1,
+          "startMarker": "none",
+          "endMarker": "point"
+        }
+      ],
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "edge-dotted-circle",
+      "title": "edge dotted circle",
+      "text": "flowchart TD\nA -.-o B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "arrow_circle",
+          "stroke": "dotted",
+          "minLength": 1,
+          "startMarker": "none",
+          "endMarker": "circle"
+        }
+      ],
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "edge-dotted-cross",
+      "title": "edge dotted cross",
+      "text": "flowchart TD\nA -.-x B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "arrow_cross",
+          "stroke": "dotted",
+          "minLength": 1,
+          "startMarker": "none",
+          "endMarker": "cross"
+        }
+      ],
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "edge-dotted-double-point",
+      "title": "edge dotted double point",
+      "text": "flowchart TD\nA <-.-> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "double_arrow_point",
+          "stroke": "dotted",
+          "minLength": 1,
+          "startMarker": "point",
+          "endMarker": "point"
+        }
+      ],
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "edge-dotted-double-circle",
+      "title": "edge dotted double circle",
+      "text": "flowchart TD\nA o-.-o B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "double_arrow_circle",
+          "stroke": "dotted",
+          "minLength": 1,
+          "startMarker": "circle",
+          "endMarker": "circle"
+        }
+      ],
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "edge-dotted-double-cross",
+      "title": "edge dotted double cross",
+      "text": "flowchart TD\nA x-.-x B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "double_arrow_cross",
+          "stroke": "dotted",
+          "minLength": 1,
+          "startMarker": "cross",
+          "endMarker": "cross"
+        }
+      ],
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "edge-invisible",
+      "title": "edge invisible",
+      "text": "flowchart TD\nA ~~~ B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "arrow_open",
+          "stroke": "invisible",
+          "minLength": 1,
+          "startMarker": "none",
+          "endMarker": "none"
+        }
+      ],
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "edge-normal-long",
+      "title": "edge normal long",
+      "text": "flowchart TD\nA ----> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "arrow_point",
+          "stroke": "normal",
+          "minLength": 3,
+          "startMarker": "none",
+          "endMarker": "point"
+        }
+      ],
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "edge-thick-long",
+      "title": "edge thick long",
+      "text": "flowchart TD\nA ====> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "arrow_point",
+          "stroke": "thick",
+          "minLength": 3,
+          "startMarker": "none",
+          "endMarker": "point"
+        }
+      ],
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "edge-dotted-long",
+      "title": "edge dotted long",
+      "text": "flowchart TD\nA -...-> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "arrow_point",
+          "stroke": "dotted",
+          "minLength": 3,
+          "startMarker": "none",
+          "endMarker": "point"
+        }
+      ],
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "edge-length-cap",
+      "title": "edge length cap",
+      "text": "flowchart TD\nA ---------------> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "arrow_point",
+          "stroke": "normal",
+          "minLength": 10,
+          "startMarker": "none",
+          "endMarker": "point"
+        }
+      ],
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "edge-mixed-direct-source",
+      "title": "edge mixed direct source",
+      "text": "flowchart TD\nA x--> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "arrow_point",
+          "stroke": "normal",
+          "minLength": 2,
+          "startMarker": "none",
+          "endMarker": "point"
+        }
+      ],
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "edge-left-open-source",
+      "title": "edge left open source",
+      "text": "flowchart TD\nA <--- B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeSemantics": [
+        {
+          "type": "arrow_open",
+          "stroke": "normal",
+          "minLength": 2,
+          "startMarker": "none",
+          "endMarker": "none"
+        }
+      ],
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "inline-normal",
+      "title": "inline normal",
+      "text": "flowchart TD\nA -- Label --> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeLabels": [
+        "Label"
+      ],
+      "edgeSemantics": [
+        {
+          "type": "arrow_point",
+          "stroke": "normal",
+          "minLength": 1,
+          "startMarker": "none",
+          "endMarker": "point"
+        }
+      ],
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "inline-thick",
+      "title": "inline thick",
+      "text": "flowchart TD\nA == Label ==> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeLabels": [
+        "Label"
+      ],
+      "edgeSemantics": [
+        {
+          "type": "arrow_point",
+          "stroke": "thick",
+          "minLength": 1,
+          "startMarker": "none",
+          "endMarker": "point"
+        }
+      ],
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "inline-dotted",
+      "title": "inline dotted",
+      "text": "flowchart TD\nA -. Label .-> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeLabels": [
+        "Label"
+      ],
+      "edgeSemantics": [
+        {
+          "type": "arrow_point",
+          "stroke": "dotted",
+          "minLength": 1,
+          "startMarker": "none",
+          "endMarker": "point"
+        }
+      ],
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "inline-double-cross",
+      "title": "inline double cross",
+      "text": "flowchart TD\nA x-- Label --x B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeLabels": [
+        "Label"
+      ],
+      "edgeSemantics": [
+        {
+          "type": "double_arrow_cross",
+          "stroke": "normal",
+          "minLength": 1,
+          "startMarker": "cross",
+          "endMarker": "cross"
+        }
+      ],
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "invalid-combination-source",
+      "title": "invalid combination source",
+      "text": "flowchart TD\nA x-- Label --> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeLabels": [
+        "Label"
+      ],
+      "edgeSemantics": [
+        {
+          "type": "INVALID",
+          "stroke": "INVALID",
+          "minLength": null,
+          "startMarker": "none",
+          "endMarker": "point"
+        }
+      ],
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "thick-pipe-label",
+      "title": "thick pipe label",
+      "text": "flowchart TD\nA ==>|\"Plain label\"| B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeLabels": [
+        "Plain label"
+      ],
+      "edgeSemantics": [
+        {
+          "type": "arrow_point",
+          "stroke": "thick",
+          "minLength": 1,
+          "startMarker": "none",
+          "endMarker": "point"
+        }
+      ],
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "dotted-markdown-label",
+      "title": "dotted markdown label",
+      "text": "flowchart TD\nA -.->|\"`**Ready**`\"| B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeLabels": [
+        "**Ready**"
+      ],
+      "edgeLabelKinds": [
+        "markdown"
+      ],
+      "sourceFragment": "tests/f014/language-cases.json",
+      "visibleEdgeLabels": [
+        "Ready"
+      ]
+    },
+    {
+      "id": "old-properties",
+      "title": "old properties",
+      "text": "flowchart TD\nA[|field:value|Alpha] --> B",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "props": {
+        "A": {
+          "field": "value"
+        }
+      },
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "metadata-label",
+      "title": "metadata label",
+      "text": "flowchart TD\nA@{shape: rounded, label: \"**Alpha**\"} --> B",
+      "nodes": [
+        [
+          "A",
+          "**Alpha**"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "shapes": {
+        "A": "round"
+      },
+      "labelKinds": {
+        "A": "markdown"
+      },
+      "metadata": {
+        "A": {
+          "shape": "rounded",
+          "label": "**Alpha**"
+        }
+      },
+      "visibleLabels": {
+        "A": "Alpha"
+      },
+      "formats": {
+        "A": [
+          {
+            "text": "Alpha",
+            "weight": 700
+          }
+        ]
+      },
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "metadata-string-label",
+      "title": "metadata string label",
+      "text": "flowchart TD\nA@{shape: rect, label: \"<b>Alpha</b>\", labelType: string}",
+      "nodes": [
+        [
+          "A",
+          "<b>Alpha</b>"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "labelKinds": {
+        "A": "text"
+      },
+      "visibleLabels": {
+        "A": "Alpha"
+      },
+      "formats": {
+        "A": [
+          {
+            "text": "Alpha",
+            "weight": 700
+          }
+        ]
+      },
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "metadata-multiline-yaml",
+      "title": "metadata multiline yaml",
+      "text": "flowchart TD\nA@{\nshape: cyl\nlabel: \"First\n  second\"\nlabelType: text\n}",
+      "nodes": [
+        [
+          "A",
+          "First<br/>second"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "cylinder"
+      },
+      "visibleLabels": {
+        "A": "First\nsecond"
+      },
+      "sourceObservation": "Official initial DB body keeps br/> spelling; visibleLabel independently proves the two-line text. Native measurement still sanitizes raw_label.",
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "metadata-after-edge",
+      "title": "metadata after edge",
+      "text": "flowchart TD\nA e1@--> B\ne1@{curve: step, animate: true, animation: slow}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "sourceIds": [
+        "e1"
+      ],
+      "userIds": [
+        true
+      ],
+      "edgeCurves": [
+        "step"
+      ],
+      "edgeAnimations": [
+        {
+          "animate": true,
+          "animation": "slow"
+        }
+      ],
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "metadata-before-edge",
+      "title": "metadata before edge",
+      "text": "flowchart TD\ne1@{curve: step}\nA e1@--> B",
+      "nodes": [
+        [
+          "e1",
+          "e1"
+        ],
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "sourceIds": [
+        "e1"
+      ],
+      "userIds": [
+        true
+      ],
+      "edgeCurves": [
+        "basis"
+      ],
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "style-forward-node",
+      "title": "style forward node",
+      "text": "flowchart TD\nstyle A fill:red,stroke:blue\nA[Alpha] --> B",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "nodeStyles": {
+        "A": [
+          "fill:red",
+          "stroke:blue"
+        ]
+      },
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "style-append",
+      "title": "style append",
+      "text": "flowchart TD\nA --> B\nstyle A fill:red\nstyle A stroke:blue",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "nodeStyles": {
+        "A": [
+          "fill:red",
+          "stroke:blue"
+        ]
+      },
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "class-definition-order",
+      "title": "class definition order",
+      "text": "flowchart TD\nA:::hot --> B\nclassDef hot fill:red,color:white",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "nodeClasses": {
+        "A": [
+          "hot"
+        ]
+      },
+      "classDefinitions": [
+        {
+          "name": "hot",
+          "styles": [
+            "fill:red",
+            "color:white"
+          ],
+          "textStyles": [
+            "color:white"
+          ]
+        }
+      ],
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "class-multi-target",
+      "title": "class multi target",
+      "text": "flowchart TD\nA --> B\nclass A,B hot\nclassDef hot stroke:red",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "nodeClasses": {
+        "A": [
+          "hot"
+        ],
+        "B": [
+          "hot"
+        ]
+      },
+      "classDefinitions": [
+        {
+          "name": "hot",
+          "styles": [
+            "stroke:red"
+          ],
+          "textStyles": []
+        }
+      ],
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "class-before-target-ignored",
+      "title": "class before target ignored",
+      "text": "flowchart TD\nclass A hot\nA --> B\nclassDef hot fill:red",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "nodeClasses": {
+        "A": []
+      },
+      "classDefinitions": [
+        {
+          "name": "hot",
+          "styles": [
+            "fill:red"
+          ],
+          "textStyles": []
+        }
+      ],
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "classdef-append-and-comma",
+      "title": "classdef append and comma",
+      "text": "flowchart TD\nA --> B\nclassDef red,blue fill:red\nclassDef red stroke:blue,color:white",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "classDefinitions": [
+        {
+          "name": "red",
+          "styles": [
+            "fill:red",
+            "stroke:blue",
+            "color:white"
+          ],
+          "textStyles": [
+            "color:white"
+          ]
+        },
+        {
+          "name": "blue",
+          "styles": [
+            "fill:red"
+          ],
+          "textStyles": []
+        }
+      ],
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "class-comma-not-multiple",
+      "title": "class comma not multiple",
+      "text": "flowchart TD\nA --> B\nclass A red,blue",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "nodeClasses": {
+        "A": [
+          "red,blue"
+        ]
+      },
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "class-escaped-comma",
+      "title": "class escaped comma",
+      "text": "flowchart TD\nA --> B\nclassDef dash stroke-dasharray:5\\,3,color:red",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "classDefinitions": [
+        {
+          "name": "dash",
+          "styles": [
+            "stroke-dasharray:5,3",
+            "color:red"
+          ],
+          "textStyles": [
+            "color:red"
+          ]
+        }
+      ],
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "linkstyle-index-default",
+      "title": "linkstyle index default",
+      "text": "flowchart TD\nA --> B\nlinkStyle default stroke:red\nlinkStyle 0 stroke:blue",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "defaultEdgeStyles": [
+        "stroke:red"
+      ],
+      "edgeStyles": [
+        [
+          "stroke:blue",
+          "fill:none"
+        ]
+      ],
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "linkstyle-index-list",
+      "title": "linkstyle index list",
+      "text": "flowchart TD\nA --> B --> C\nlinkStyle 0,1 stroke:red,fill:none",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ],
+        [
+          "C",
+          "C"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "B",
+          "C"
+        ]
+      ],
+      "direction": "TD",
+      "edgeStyles": [
+        [
+          "stroke:red",
+          "fill:none"
+        ],
+        [
+          "stroke:red",
+          "fill:none"
+        ]
+      ],
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "linkstyle-default-timing",
+      "title": "linkstyle default timing",
+      "text": "flowchart TD\nlinkStyle default interpolate step\nA --> B\nlinkStyle default interpolate linear\nB --> C",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ],
+        [
+          "C",
+          "C"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "B",
+          "C"
+        ]
+      ],
+      "direction": "TD",
+      "edgeCurves": [
+        "step",
+        "linear"
+      ],
+      "defaultEdgeCurve": "linear",
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "linkstyle-interpolate-and-style",
+      "title": "linkstyle interpolate and style",
+      "text": "flowchart TD\nA --> B\nlinkStyle 0 interpolate cardinal stroke:blue",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "edgeCurves": [
+        "cardinal"
+      ],
+      "edgeStyles": [
+        [
+          "stroke:blue",
+          "fill:none"
+        ]
+      ],
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "class-edge-id",
+      "title": "class edge id",
+      "text": "flowchart TD\nA e1@--> B\nclass e1 active\nclassDef active stroke:red",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "sourceIds": [
+        "e1"
+      ],
+      "edgeClasses": [
+        [
+          "active"
+        ]
+      ],
+      "classDefinitions": [
+        {
+          "name": "active",
+          "styles": [
+            "stroke:red"
+          ],
+          "textStyles": []
+        }
+      ],
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "class-group",
+      "title": "class group",
+      "text": "flowchart TD\nsubgraph G[Group]\nA\nend\nclass G active\nclassDef active fill:red",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "groups": [
+        {
+          "id": "G",
+          "label": "Group",
+          "members": [
+            "A"
+          ],
+          "parent_id": null,
+          "direction": null
+        }
+      ],
+      "groupClasses": {
+        "G": [
+          "active"
+        ]
+      },
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "click-href",
+      "title": "click href",
+      "text": "flowchart TD\nA --> B\nclick A href \"https://example.invalid\" \"Tooltip\" _blank",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "nodeClasses": {
+        "A": [
+          "clickable"
+        ]
+      },
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "click-url",
+      "title": "click url",
+      "text": "flowchart TD\nA --> B\nclick A \"javascript:alert(1)\" \"Ignored tooltip\"",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "nodeClasses": {
+        "A": [
+          "clickable"
+        ]
+      },
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "click-callback",
+      "title": "click callback",
+      "text": "flowchart TD\nA --> B\nclick A callback \"Tooltip\"",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "nodeClasses": {
+        "A": [
+          "clickable"
+        ]
+      },
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "click-call",
+      "title": "click call",
+      "text": "flowchart TD\nA --> B\nclick A call callback(\"x\",42) \"Tooltip\"",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "nodeClasses": {
+        "A": [
+          "clickable"
+        ]
+      },
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "click-forward-ignored",
+      "title": "click forward ignored",
+      "text": "flowchart TD\nclick A callback\nA --> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "nodeClasses": {
+        "A": []
+      },
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "collapsed-boundary",
+      "title": "collapsed boundary",
+      "text": "flowchart TD\nsubgraph G[Group]\nA --> B\nend\nB --> Z\nG@{view: collapsed}",
+      "nodes": [
+        [
+          "G",
+          "Group"
+        ],
+        [
+          "Z",
+          "Z"
+        ]
+      ],
+      "edges": [
+        [
+          "G",
+          "Z"
+        ]
+      ],
+      "direction": "TD",
+      "shapes": {
+        "G": "collapsedGroup"
+      },
+      "colorIndices": {
+        "G": 0
+      },
+      "sourceIds": [
+        "L_B_Z_0"
+      ],
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "collapsed-nested-outermost",
+      "title": "collapsed nested outermost",
+      "text": "flowchart TD\nsubgraph O[Outer]\nsubgraph I[Inner]\nA\nend\nB\nend\nA --> Z\nI@{view: collapsed}\nO@{view: collapsed}",
+      "nodes": [
+        [
+          "O",
+          "Outer"
+        ],
+        [
+          "Z",
+          "Z"
+        ]
+      ],
+      "edges": [
+        [
+          "O",
+          "Z"
+        ]
+      ],
+      "direction": "TD",
+      "shapes": {
+        "O": "collapsedGroup"
+      },
+      "colorIndices": {
+        "O": 0
+      },
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "collapsed-preserve-own-loop",
+      "title": "collapsed preserve own loop",
+      "text": "flowchart TD\nsubgraph G[Group]\nA\nend\nG --> G\nG@{view: collapsed}",
+      "nodes": [
+        [
+          "G",
+          "Group"
+        ]
+      ],
+      "edges": [
+        [
+          "G",
+          "G"
+        ]
+      ],
+      "direction": "TD",
+      "shapes": {
+        "G": "collapsedGroup"
+      },
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "collapsed-slot-sibling",
+      "title": "collapsed slot sibling",
+      "text": "flowchart TD\nsubgraph G[First]\nA\nend\nsubgraph H[Second]\nB\nend\nG@{view: collapsed}",
+      "nodes": [
+        [
+          "G",
+          "First"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "shapes": {
+        "G": "collapsedGroup"
+      },
+      "groups": [
+        {
+          "id": "H",
+          "label": "Second",
+          "members": [
+            "B"
+          ],
+          "parent_id": null,
+          "direction": null
+        }
+      ],
+      "colorIndices": {
+        "G": 0
+      },
+      "groupColorIndices": {
+        "H": 1
+      },
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "group-metadata-algorithm",
+      "title": "group metadata algorithm",
+      "text": "flowchart LR\nsubgraph G[Group]\nA --> B\nend\nG@{algorithm: elk.box}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "LR",
+      "groups": [
+        {
+          "id": "G",
+          "label": "Group",
+          "members": [
+            "B",
+            "A"
+          ],
+          "parent_id": null,
+          "direction": null
+        }
+      ],
+      "groupMetadata": {
+        "G": {
+          "algorithm": "elk.box"
+        }
+      },
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "group-metadata-unknown-retained",
+      "title": "group metadata unknown retained",
+      "text": "flowchart TD\nsubgraph G\nA\nend\nG@{algorithm: elk.unknown, extra: value}",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "groups": [
+        {
+          "id": "G",
+          "label": "G",
+          "members": [
+            "A"
+          ],
+          "parent_id": null,
+          "direction": null
+        }
+      ],
+      "groupMetadata": {
+        "G": {
+          "algorithm": "elk.unknown",
+          "extra": "value"
+        }
+      },
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "root-direction-statement-no-change",
+      "title": "root direction statement no change",
+      "text": "flowchart LR\ndirection BT\nA --> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "LR",
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "source-direction-line-consumption",
+      "title": "source direction line consumption",
+      "text": "flowchart TD\nsubgraph G\ndirection LR; A --> B\nC\nend",
+      "nodes": [
+        [
+          "C",
+          "C"
+        ]
+      ],
+      "edges": [],
+      "direction": "TD",
+      "groups": [
+        {
+          "id": "G",
+          "label": "G",
+          "members": [
+            "C"
+          ],
+          "parent_id": null,
+          "direction": "LR"
+        }
+      ],
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "handdrawn-config",
+      "title": "handdrawn config",
+      "text": "flowchart TD\nA --> B",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "config": {
+        "look": "handDrawn",
+        "handDrawnSeed": 19
+      },
+      "expectedConfig": {
+        "look": "handDrawn",
+        "hand_drawn_seed": 19
+      },
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "BR-source-direction",
+      "text": "flowchart BR\nA --> B",
+      "sourceParseAccepted": true,
+      "reason": "FlowDB keeps raw BR but fixed dir2ElkDirection default explicitly maps it to DOWN; target canonical spelling TB, not diagonal layout.",
+      "title": "Source BR direction is statically DOWN",
+      "nodes": [
+        [
+          "A",
+          "A"
+        ],
+        [
+          "B",
+          "B"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TB",
+      "sourceRawDirection": "BR",
+      "expectation": "positive",
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "layout-root-elk",
+      "title": "layout root elk",
+      "text": "flowchart TD\nA[Alpha] --> B[Beta] --> C[Gamma]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ],
+        [
+          "C",
+          "Gamma"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "B",
+          "C"
+        ]
+      ],
+      "groups": [],
+      "direction": "TD",
+      "config": {
+        "layout": "elk"
+      },
+      "sourceFragment": "tests/f014/layout-cases.json"
+    },
+    {
+      "id": "layout-root-elk-stress",
+      "title": "layout root elk stress",
+      "text": "flowchart TD\nA[Alpha] --> B[Beta] --> C[Gamma]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ],
+        [
+          "C",
+          "Gamma"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "B",
+          "C"
+        ]
+      ],
+      "groups": [],
+      "direction": "TD",
+      "config": {
+        "layout": "elk.stress"
+      },
+      "sourceFragment": "tests/f014/layout-cases.json"
+    },
+    {
+      "id": "layout-root-elk-force",
+      "title": "layout root elk force",
+      "text": "flowchart TD\nA[Alpha] --> B[Beta] --> C[Gamma]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ],
+        [
+          "C",
+          "Gamma"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "B",
+          "C"
+        ]
+      ],
+      "groups": [],
+      "direction": "TD",
+      "config": {
+        "layout": "elk.force"
+      },
+      "sourceFragment": "tests/f014/layout-cases.json"
+    },
+    {
+      "id": "layout-root-elk-mrtree",
+      "title": "layout root elk mrtree",
+      "text": "flowchart TD\nA[Alpha] --> B[Beta] --> C[Gamma]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ],
+        [
+          "C",
+          "Gamma"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "B",
+          "C"
+        ]
+      ],
+      "groups": [],
+      "direction": "TD",
+      "config": {
+        "layout": "elk.mrtree"
+      },
+      "sourceFragment": "tests/f014/layout-cases.json"
+    },
+    {
+      "id": "layout-root-elk-sporeOverlap",
+      "title": "layout root elk sporeOverlap",
+      "text": "flowchart TD\nA[Alpha] --> B[Beta] --> C[Gamma]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ],
+        [
+          "C",
+          "Gamma"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "B",
+          "C"
+        ]
+      ],
+      "groups": [],
+      "direction": "TD",
+      "config": {
+        "layout": "elk.sporeOverlap"
+      },
+      "sourceFragment": "tests/f014/layout-cases.json"
+    },
+    {
+      "id": "layout-root-elk-box",
+      "title": "layout root elk box",
+      "text": "flowchart TD\nA[Alpha] --> B[Beta] --> C[Gamma]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ],
+        [
+          "C",
+          "Gamma"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "B",
+          "C"
+        ]
+      ],
+      "groups": [],
+      "direction": "TD",
+      "config": {
+        "layout": "elk.box"
+      },
+      "sourceFragment": "tests/f014/layout-cases.json"
+    },
+    {
+      "id": "layout-root-elk-rectpacking",
+      "title": "layout root elk rectpacking",
+      "text": "flowchart TD\nA[Alpha] --> B[Beta] --> C[Gamma]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ],
+        [
+          "C",
+          "Gamma"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "B",
+          "C"
+        ]
+      ],
+      "groups": [],
+      "direction": "TD",
+      "config": {
+        "layout": "elk.rectpacking"
+      },
+      "sourceFragment": "tests/f014/layout-cases.json"
+    },
+    {
+      "id": "layout-group-elk-layered",
+      "title": "layout group elk layered",
+      "text": "flowchart TD\nsubgraph G[Isolated group]\nA[Alpha] --> B[Beta]\nend\nC[Outside]\nG@{algorithm: elk.layered}",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ],
+        [
+          "C",
+          "Outside"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "groups": [
+        {
+          "id": "G",
+          "label": "Isolated group",
+          "members": [
+            "B",
+            "A"
+          ],
+          "parent_id": null,
+          "direction": null
+        }
+      ],
+      "direction": "TD",
+      "groupMetadata": {
+        "G": {
+          "algorithm": "elk.layered"
+        }
+      },
+      "sourceFragment": "tests/f014/layout-cases.json"
+    },
+    {
+      "id": "layout-group-elk-box",
+      "title": "layout group elk box",
+      "text": "flowchart TD\nsubgraph G[Isolated group]\nA[Alpha] --> B[Beta]\nend\nC[Outside]\nG@{algorithm: elk.box}",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ],
+        [
+          "C",
+          "Outside"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "groups": [
+        {
+          "id": "G",
+          "label": "Isolated group",
+          "members": [
+            "B",
+            "A"
+          ],
+          "parent_id": null,
+          "direction": null
+        }
+      ],
+      "direction": "TD",
+      "groupMetadata": {
+        "G": {
+          "algorithm": "elk.box"
+        }
+      },
+      "sourceFragment": "tests/f014/layout-cases.json"
+    },
+    {
+      "id": "layout-group-elk-rectpacking",
+      "title": "layout group elk rectpacking",
+      "text": "flowchart TD\nsubgraph G[Isolated group]\nA[Alpha] --> B[Beta]\nend\nC[Outside]\nG@{algorithm: elk.rectpacking}",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ],
+        [
+          "C",
+          "Outside"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "groups": [
+        {
+          "id": "G",
+          "label": "Isolated group",
+          "members": [
+            "B",
+            "A"
+          ],
+          "parent_id": null,
+          "direction": null
+        }
+      ],
+      "direction": "TD",
+      "groupMetadata": {
+        "G": {
+          "algorithm": "elk.rectpacking"
+        }
+      },
+      "sourceFragment": "tests/f014/layout-cases.json"
+    },
+    {
+      "id": "layout-group-elk-stress",
+      "title": "layout group elk stress",
+      "text": "flowchart TD\nsubgraph G[Isolated group]\nA[Alpha] --> B[Beta]\nend\nC[Outside]\nG@{algorithm: elk.stress}",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ],
+        [
+          "C",
+          "Outside"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "groups": [
+        {
+          "id": "G",
+          "label": "Isolated group",
+          "members": [
+            "B",
+            "A"
+          ],
+          "parent_id": null,
+          "direction": null
+        }
+      ],
+      "direction": "TD",
+      "groupMetadata": {
+        "G": {
+          "algorithm": "elk.stress"
+        }
+      },
+      "sourceFragment": "tests/f014/layout-cases.json"
+    },
+    {
+      "id": "layout-group-elk-force",
+      "title": "layout group elk force",
+      "text": "flowchart TD\nsubgraph G[Isolated group]\nA[Alpha] --> B[Beta]\nend\nC[Outside]\nG@{algorithm: elk.force}",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ],
+        [
+          "C",
+          "Outside"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "groups": [
+        {
+          "id": "G",
+          "label": "Isolated group",
+          "members": [
+            "B",
+            "A"
+          ],
+          "parent_id": null,
+          "direction": null
+        }
+      ],
+      "direction": "TD",
+      "groupMetadata": {
+        "G": {
+          "algorithm": "elk.force"
+        }
+      },
+      "sourceFragment": "tests/f014/layout-cases.json"
+    },
+    {
+      "id": "layout-group-elk-mrtree",
+      "title": "layout group elk mrtree",
+      "text": "flowchart TD\nsubgraph G[Isolated group]\nA[Alpha] --> B[Beta]\nend\nC[Outside]\nG@{algorithm: elk.mrtree}",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ],
+        [
+          "C",
+          "Outside"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "groups": [
+        {
+          "id": "G",
+          "label": "Isolated group",
+          "members": [
+            "B",
+            "A"
+          ],
+          "parent_id": null,
+          "direction": null
+        }
+      ],
+      "direction": "TD",
+      "groupMetadata": {
+        "G": {
+          "algorithm": "elk.mrtree"
+        }
+      },
+      "sourceFragment": "tests/f014/layout-cases.json"
+    },
+    {
+      "id": "layout-group-elk-radial",
+      "title": "Known source defect: ELK radial container frame",
+      "text": "flowchart TD\nsubgraph G[Isolated group]\nA[Alpha] --> B[Beta]\nend\nC[Outside]\nG@{algorithm: elk.radial}",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ],
+        [
+          "C",
+          "Outside"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "groups": [
+        {
+          "id": "G",
+          "label": "Isolated group",
+          "members": [
+            "B",
+            "A"
+          ],
+          "parent_id": null,
+          "direction": null
+        }
+      ],
+      "direction": "TD",
+      "groupMetadata": {
+        "G": {
+          "algorithm": "elk.radial"
+        }
+      },
+      "knownSourceDefect": {
+        "id": "elk-radial-container-frame",
+        "groups": [
+          "G"
+        ],
+        "evidence": "test-runs/F01.4-batch-20261105T090906Z-11b555ce/artifacts/oracle/layout-group-elk-radial.json + test-runs/f014-radial-raw-initial-001/input.json/output.json/layout.json"
+      },
+      "sourceFragment": "tests/f014/layout-cases.json"
+    },
+    {
+      "id": "layout-group-elk-sporeOverlap",
+      "title": "layout group elk sporeOverlap",
+      "text": "flowchart TD\nsubgraph G[Isolated group]\nA[Alpha] --> B[Beta]\nend\nC[Outside]\nG@{algorithm: elk.sporeOverlap}",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ],
+        [
+          "C",
+          "Outside"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "groups": [
+        {
+          "id": "G",
+          "label": "Isolated group",
+          "members": [
+            "B",
+            "A"
+          ],
+          "parent_id": null,
+          "direction": null
+        }
+      ],
+      "direction": "TD",
+      "groupMetadata": {
+        "G": {
+          "algorithm": "elk.sporeOverlap"
+        }
+      },
+      "sourceFragment": "tests/f014/layout-cases.json"
+    },
+    {
+      "id": "layout-direction-td",
+      "title": "layout direction td",
+      "text": "flowchart TD\nA[Alpha] --> B[Beta] --> C[Gamma]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ],
+        [
+          "C",
+          "Gamma"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "B",
+          "C"
+        ]
+      ],
+      "groups": [],
+      "direction": "TD",
+      "sourceFragment": "tests/f014/layout-cases.json"
+    },
+    {
+      "id": "layout-direction-tb",
+      "title": "layout direction tb",
+      "text": "flowchart TB\nA[Alpha] --> B[Beta] --> C[Gamma]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ],
+        [
+          "C",
+          "Gamma"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "B",
+          "C"
+        ]
+      ],
+      "groups": [],
+      "direction": "TB",
+      "sourceFragment": "tests/f014/layout-cases.json"
+    },
+    {
+      "id": "layout-direction-lr",
+      "title": "layout direction lr",
+      "text": "flowchart LR\nA[Alpha] --> B[Beta] --> C[Gamma]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ],
+        [
+          "C",
+          "Gamma"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "B",
+          "C"
+        ]
+      ],
+      "groups": [],
+      "direction": "LR",
+      "sourceFragment": "tests/f014/layout-cases.json"
+    },
+    {
+      "id": "layout-direction-rl",
+      "title": "layout direction rl",
+      "text": "flowchart RL\nA[Alpha] --> B[Beta] --> C[Gamma]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ],
+        [
+          "C",
+          "Gamma"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "B",
+          "C"
+        ]
+      ],
+      "groups": [],
+      "direction": "RL",
+      "sourceFragment": "tests/f014/layout-cases.json"
+    },
+    {
+      "id": "layout-direction-bt",
+      "title": "layout direction bt",
+      "text": "flowchart BT\nA[Alpha] --> B[Beta] --> C[Gamma]",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ],
+        [
+          "C",
+          "Gamma"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "B",
+          "C"
+        ]
+      ],
+      "groups": [],
+      "direction": "BT",
+      "sourceFragment": "tests/f014/layout-cases.json"
+    },
+    {
+      "id": "layout-preset-default",
+      "title": "layout preset default",
+      "text": "flowchart TD\nA[Entry] --> B[Branch]\nA --> C[Other]\nB --> D[Merge]\nC --> D\nD --> A",
+      "nodes": [
+        [
+          "A",
+          "Entry"
+        ],
+        [
+          "B",
+          "Branch"
+        ],
+        [
+          "C",
+          "Other"
+        ],
+        [
+          "D",
+          "Merge"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "A",
+          "C"
+        ],
+        [
+          "B",
+          "D"
+        ],
+        [
+          "C",
+          "D"
+        ],
+        [
+          "D",
+          "A"
+        ]
+      ],
+      "groups": [],
+      "direction": "TD",
+      "config": {
+        "elk": {
+          "preset": "default",
+          "keepEntryNodeOnTop": true
+        }
+      },
+      "sourceFragment": "tests/f014/layout-cases.json"
+    },
+    {
+      "id": "layout-preset-legacy",
+      "title": "layout preset legacy",
+      "text": "flowchart TD\nA[Entry] --> B[Branch]\nA --> C[Other]\nB --> D[Merge]\nC --> D\nD --> A",
+      "nodes": [
+        [
+          "A",
+          "Entry"
+        ],
+        [
+          "B",
+          "Branch"
+        ],
+        [
+          "C",
+          "Other"
+        ],
+        [
+          "D",
+          "Merge"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "A",
+          "C"
+        ],
+        [
+          "B",
+          "D"
+        ],
+        [
+          "C",
+          "D"
+        ],
+        [
+          "D",
+          "A"
+        ]
+      ],
+      "groups": [],
+      "direction": "TD",
+      "config": {
+        "elk": {
+          "preset": "legacy",
+          "keepEntryNodeOnTop": true
+        }
+      },
+      "sourceFragment": "tests/f014/layout-cases.json"
+    },
+    {
+      "id": "layout-preset-modelOrder",
+      "title": "layout preset modelOrder",
+      "text": "flowchart TD\nA[Entry] --> B[Branch]\nA --> C[Other]\nB --> D[Merge]\nC --> D\nD --> A",
+      "nodes": [
+        [
+          "A",
+          "Entry"
+        ],
+        [
+          "B",
+          "Branch"
+        ],
+        [
+          "C",
+          "Other"
+        ],
+        [
+          "D",
+          "Merge"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "A",
+          "C"
+        ],
+        [
+          "B",
+          "D"
+        ],
+        [
+          "C",
+          "D"
+        ],
+        [
+          "D",
+          "A"
+        ]
+      ],
+      "groups": [],
+      "direction": "TD",
+      "config": {
+        "elk": {
+          "preset": "modelOrder",
+          "keepEntryNodeOnTop": true
+        }
+      },
+      "sourceFragment": "tests/f014/layout-cases.json"
+    },
+    {
+      "id": "layout-preset-depthFirst",
+      "title": "layout preset depthFirst",
+      "text": "flowchart TD\nA[Entry] --> B[Branch]\nA --> C[Other]\nB --> D[Merge]\nC --> D\nD --> A",
+      "nodes": [
+        [
+          "A",
+          "Entry"
+        ],
+        [
+          "B",
+          "Branch"
+        ],
+        [
+          "C",
+          "Other"
+        ],
+        [
+          "D",
+          "Merge"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "A",
+          "C"
+        ],
+        [
+          "B",
+          "D"
+        ],
+        [
+          "C",
+          "D"
+        ],
+        [
+          "D",
+          "A"
+        ]
+      ],
+      "groups": [],
+      "direction": "TD",
+      "config": {
+        "elk": {
+          "preset": "depthFirst",
+          "keepEntryNodeOnTop": true
+        }
+      },
+      "sourceFragment": "tests/f014/layout-cases.json"
+    },
+    {
+      "id": "layout-hops-true",
+      "title": "layout hops true",
+      "text": "flowchart LR\nA[First] --> X[Last]\nB[Second] --> Y[Other]\nA --> Y\nB --> X",
+      "nodes": [
+        [
+          "A",
+          "First"
+        ],
+        [
+          "X",
+          "Last"
+        ],
+        [
+          "B",
+          "Second"
+        ],
+        [
+          "Y",
+          "Other"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "X"
+        ],
+        [
+          "B",
+          "Y"
+        ],
+        [
+          "A",
+          "Y"
+        ],
+        [
+          "B",
+          "X"
+        ]
+      ],
+      "groups": [],
+      "direction": "LR",
+      "config": {
+        "elk": {
+          "lineHops": true,
+          "forceNodeModelOrder": true,
+          "considerModelOrder": "NODES_AND_EDGES"
+        }
+      },
+      "sourceFragment": "tests/f014/layout-cases.json"
+    },
+    {
+      "id": "layout-hops-gap",
+      "title": "layout hops gap",
+      "text": "flowchart LR\nA[First] --> X[Last]\nB[Second] --> Y[Other]\nA --> Y\nB --> X",
+      "nodes": [
+        [
+          "A",
+          "First"
+        ],
+        [
+          "X",
+          "Last"
+        ],
+        [
+          "B",
+          "Second"
+        ],
+        [
+          "Y",
+          "Other"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "X"
+        ],
+        [
+          "B",
+          "Y"
+        ],
+        [
+          "A",
+          "Y"
+        ],
+        [
+          "B",
+          "X"
+        ]
+      ],
+      "groups": [],
+      "direction": "LR",
+      "config": {
+        "elk": {
+          "lineHops": "gap",
+          "forceNodeModelOrder": true,
+          "considerModelOrder": "NODES_AND_EDGES"
+        }
+      },
+      "sourceFragment": "tests/f014/layout-cases.json"
+    },
+    {
+      "id": "layout-hops-false",
+      "title": "layout hops false",
+      "text": "flowchart LR\nA[First] --> X[Last]\nB[Second] --> Y[Other]\nA --> Y\nB --> X",
+      "nodes": [
+        [
+          "A",
+          "First"
+        ],
+        [
+          "X",
+          "Last"
+        ],
+        [
+          "B",
+          "Second"
+        ],
+        [
+          "Y",
+          "Other"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "X"
+        ],
+        [
+          "B",
+          "Y"
+        ],
+        [
+          "A",
+          "Y"
+        ],
+        [
+          "B",
+          "X"
+        ]
+      ],
+      "groups": [],
+      "direction": "LR",
+      "config": {
+        "elk": {
+          "lineHops": false,
+          "forceNodeModelOrder": true,
+          "considerModelOrder": "NODES_AND_EDGES"
+        }
+      },
+      "sourceFragment": "tests/f014/layout-cases.json"
+    },
+    {
+      "id": "layout-marker-types",
+      "title": "layout marker types",
+      "text": "flowchart LR\nA[Point] <--> B[Circle]\nB o--o C[Cross]\nC x--x D[Invisible]\nD ~~~ E[End]",
+      "nodes": [
+        [
+          "A",
+          "Point"
+        ],
+        [
+          "B",
+          "Circle"
+        ],
+        [
+          "C",
+          "Cross"
+        ],
+        [
+          "D",
+          "Invisible"
+        ],
+        [
+          "E",
+          "End"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "B",
+          "C"
+        ],
+        [
+          "C",
+          "D"
+        ],
+        [
+          "D",
+          "E"
+        ]
+      ],
+      "groups": [],
+      "direction": "LR",
+      "config": {
+        "look": "neo"
+      },
+      "sourceFragment": "tests/f014/layout-cases.json"
+    },
+    {
+      "id": "layout-packing-cache-ink",
+      "title": "layout packing cache ink",
+      "text": "---\ntitle: Cached ink in expanded physical frames\n---\nflowchart TD\nsubgraph G[Box algorithm]\nA[Small] --> B[A long label WWWWWWWWWWWWWWW]\nend\nG@{algorithm: elk.box}",
+      "nodes": [
+        [
+          "A",
+          "Small"
+        ],
+        [
+          "B",
+          "A long label WWWWWWWWWWWWWWW"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "groups": [
+        {
+          "id": "G",
+          "label": "Box algorithm",
+          "members": [
+            "B",
+            "A"
+          ],
+          "parent_id": null,
+          "direction": null
+        }
+      ],
+      "direction": "TD",
+      "groupMetadata": {
+        "G": {
+          "algorithm": "elk.box"
+        }
+      },
+      "sourceFragment": "tests/f014/layout-cases.json"
+    },
+    {
+      "id": "layout-nonrouting-selfloop-box",
+      "title": "layout nonrouting selfloop box",
+      "text": "flowchart TD\nA[Self] --> A",
+      "nodes": [
+        [
+          "A",
+          "Self"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "groups": [],
+      "direction": "TD",
+      "config": {
+        "layout": "elk.box"
+      },
+      "sourceDegeneracy": "Nonrouting coincident centre yields no visible loop; semantic edge retained, no fabricated loop",
+      "sourceFragment": "tests/f014/layout-cases.json"
+    },
+    {
+      "id": "layout-nonrouting-selfloop-rectpacking",
+      "title": "layout nonrouting selfloop rectpacking",
+      "text": "flowchart TD\nA[Self] --> A",
+      "nodes": [
+        [
+          "A",
+          "Self"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "A"
+        ]
+      ],
+      "groups": [],
+      "direction": "TD",
+      "config": {
+        "layout": "elk.rectpacking"
+      },
+      "sourceDegeneracy": "Nonrouting coincident centre yields no visible loop; semantic edge retained, no fabricated loop",
+      "sourceFragment": "tests/f014/layout-cases.json"
+    },
+    {
+      "id": "layout-custom-group-cross-clears",
+      "title": "layout custom group cross clears",
+      "text": "flowchart TD\nsubgraph G[Box becomes inherited]\nA[Alpha] --> B[Beta]\nend\nB --> C[Outside]\nG@{algorithm: elk.box}",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ],
+        [
+          "B",
+          "Beta"
+        ],
+        [
+          "C",
+          "Outside"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "B",
+          "C"
+        ]
+      ],
+      "groups": [
+        {
+          "id": "G",
+          "label": "Box becomes inherited",
+          "members": [
+            "B",
+            "A"
+          ],
+          "parent_id": null,
+          "direction": null
+        }
+      ],
+      "direction": "TD",
+      "groupMetadata": {
+        "G": {
+          "algorithm": "elk.box"
+        }
+      },
+      "sourceFragment": "tests/f014/layout-cases.json"
+    },
+    {
+      "id": "layout-labelless-alignment-gallery",
+      "title": "Source small-node anchor alignment: nine labelless shapes",
+      "text": "flowchart TD\nN0@{shape: sm-circ, label: \"Ignored0\"}\nN1@{shape: fr-circ, label: \"Ignored1\"}\nN2@{shape: f-circ, label: \"Ignored2\"}\nN3@{shape: cross-circ, label: \"Ignored3\"}\nN4@{shape: choice, label: \"Ignored4\"}\nN5@{shape: fork, label: \"Ignored5\"}\nN6@{shape: bolt, label: \"Ignored6\"}\nN7@{shape: anchor, label: \"Ignored7\"}\nN8@{shape: hourglass, label: \"Ignored8\"}\nN0 --> N1\nN1 --> N2\nN2 --> N3\nN3 --> N4\nN4 --> N5\nN5 --> N6\nN6 --> N7\nN7 --> N8",
+      "nodes": [
+        [
+          "N0",
+          "Ignored0"
+        ],
+        [
+          "N1",
+          "Ignored1"
+        ],
+        [
+          "N2",
+          "Ignored2"
+        ],
+        [
+          "N3",
+          "Ignored3"
+        ],
+        [
+          "N4",
+          "Ignored4"
+        ],
+        [
+          "N5",
+          "Ignored5"
+        ],
+        [
+          "N6",
+          "Ignored6"
+        ],
+        [
+          "N7",
+          "Ignored7"
+        ],
+        [
+          "N8",
+          "Ignored8"
+        ]
+      ],
+      "edges": [
+        [
+          "N0",
+          "N1"
+        ],
+        [
+          "N1",
+          "N2"
+        ],
+        [
+          "N2",
+          "N3"
+        ],
+        [
+          "N3",
+          "N4"
+        ],
+        [
+          "N4",
+          "N5"
+        ],
+        [
+          "N5",
+          "N6"
+        ],
+        [
+          "N6",
+          "N7"
+        ],
+        [
+          "N7",
+          "N8"
+        ]
+      ],
+      "groups": [],
+      "direction": "TD",
+      "config": {
+        "look": "handDrawn",
+        "handDrawnSeed": 123
+      },
+      "shapes": {
+        "N0": "stateStart",
+        "N1": "stateEnd",
+        "N2": "filledCircle",
+        "N3": "crossedCircle",
+        "N4": "choice",
+        "N5": "forkJoin",
+        "N6": "lightningBolt",
+        "N7": "anchor",
+        "N8": "hourglass"
+      },
+      "sourceSymbols": [
+        "elk/render.ts::alignDegenerateNodeToAnchor",
+        "elk/render.ts::applyElkEdgeLayout alignment prepass"
+      ],
+      "visibleLabels": {
+        "N0": "",
+        "N1": "",
+        "N2": "",
+        "N3": "",
+        "N4": "",
+        "N5": "",
+        "N6": "",
+        "N7": "",
+        "N8": ""
+      },
+      "fillProbes": [
+        {
+          "node": "N0",
+          "x": 0.5,
+          "y": 0.5,
+          "color": "#ffffff"
+        }
+      ],
+      "sourcePaintNote": "The final SVG .node path outline receives opaque CSS fill and covers earlier RoughJS hatch. stateStart must retain a light interior distinct from filledCircle.",
+      "sourceFragment": "tests/f014/layout-cases.json"
+    },
+    {
+      "id": "inline-data-quad",
+      "title": "Explicit offline data URI quadrants",
+      "text": "flowchart TD\nA[\"<img src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MCcgaGVpZ2h0PScyMCcgdmlld0JveD0nMCAwIDQwIDIwJz48cGF0aCBmaWxsPSdyZWQnIGQ9J00wIDBIMjBWMTBIMFonLz48cGF0aCBmaWxsPSdsaW1lJyBkPSdNMjAgMEg0MFYxMEgyMFonLz48cGF0aCBmaWxsPSdibHVlJyBkPSdNMCAxMEgyMFYyMEgwWicvPjxwYXRoIGZpbGw9J3llbGxvdycgZD0nTTIwIDEwSDQwVjIwSDIwWicvPjwvc3ZnPg=='>\"] --> B[Done]",
+      "nodes": [
+        [
+          "A",
+          "<img src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MCcgaGVpZ2h0PScyMCcgdmlld0JveD0nMCAwIDQwIDIwJz48cGF0aCBmaWxsPSdyZWQnIGQ9J00wIDBIMjBWMTBIMFonLz48cGF0aCBmaWxsPSdsaW1lJyBkPSdNMjAgMEg0MFYxMEgyMFonLz48cGF0aCBmaWxsPSdibHVlJyBkPSdNMCAxMEgyMFYyMEgwWicvPjxwYXRoIGZpbGw9J3llbGxvdycgZD0nTTIwIDEwSDQwVjIwSDIwWicvPjwvc3ZnPg==\">"
+        ],
+        [
+          "B",
+          "Done"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "visibleNodes": [
+        [
+          "A",
+          ""
+        ],
+        [
+          "B",
+          "Done"
+        ]
+      ],
+      "direction": "TD",
+      "resourceAssertions": {
+        "images": 1,
+        "colors": [
+          "#ff0000",
+          "#00ff00",
+          "#0000ff",
+          "#ffff00"
+        ],
+        "imageOnlyWidth": 80,
+        "imageOnlyHeight": 40
+      },
+      "sourceFragment": "tests/f014/resource-cases.json",
+      "visibleLabels": {
+        "A": "",
+        "B": "Done"
+      }
+    },
+    {
+      "id": "inline-svg-quad",
+      "title": "Direct inline SVG receives host node fill/stroke; dataURI remains isolated",
+      "text": "flowchart TD\nA[\"<svg xmlns='http://www.w3.org/2000/svg' width='40' height='20' viewBox='0 0 40 20'><path fill='red' d='M0 0H20V10H0Z'/><path fill='lime' d='M20 0H40V10H20Z'/><path fill='blue' d='M0 10H20V20H0Z'/><path fill='yellow' d='M20 10H40V20H20Z'/></svg>\"] --> B[Done]",
+      "nodes": [
+        [
+          "A",
+          "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"40\" height=\"20\" viewBox=\"0 0 40 20\"><path fill=\"red\" d=\"M0 0H20V10H0Z\"></path><path fill=\"lime\" d=\"M20 0H40V10H20Z\"></path><path fill=\"blue\" d=\"M0 10H20V20H0Z\"></path><path fill=\"yellow\" d=\"M20 10H40V20H20Z\"></path></svg>"
+        ],
+        [
+          "B",
+          "Done"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "visibleNodes": [
+        [
+          "A",
+          ""
+        ],
+        [
+          "B",
+          "Done"
+        ]
+      ],
+      "direction": "TD",
+      "resourceAssertions": {
+        "images": 1,
+        "colors": [
+          "#ffffff",
+          "#28253d"
+        ],
+        "hostNodeCss": true,
+        "intrinsicWidth": 40,
+        "intrinsicHeight": 20
+      },
+      "expectedSource": {
+        "path": "test-runs/F01.4-batch-20261105T090906Z-11b555ce/artifacts/oracle/inline-svg-quad.json",
+        "sha256": "990ee2600b658bdfbeccb0e9cad8b8d80d3f65d9baf38d0d378fb31b517e6476",
+        "reason": "Pinned-source DOMPurify canonical serialization uses double quoted attributes and explicit SVG path end tags; expected model value is sanitized source body, visible label remains empty."
+      },
+      "sourceFragment": "tests/f014/resource-cases.json",
+      "visibleLabels": {
+        "A": "",
+        "B": "Done"
+      }
+    },
+    {
+      "id": "asset-data-top",
+      "title": "Image shape data URI with top label and aspect constraint",
+      "text": "flowchart LR\nA@{ img: \"data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MCcgaGVpZ2h0PScyMCcgdmlld0JveD0nMCAwIDQwIDIwJz48cGF0aCBmaWxsPSdyZWQnIGQ9J00wIDBIMjBWMTBIMFonLz48cGF0aCBmaWxsPSdsaW1lJyBkPSdNMjAgMEg0MFYxMEgyMFonLz48cGF0aCBmaWxsPSdibHVlJyBkPSdNMCAxMEgyMFYyMEgwWicvPjxwYXRoIGZpbGw9J3llbGxvdycgZD0nTTIwIDEwSDQwVjIwSDIwWicvPjwvc3ZnPg==\", label: \"Photo\", h: 40, constraint: \"on\", pos: \"t\" } --> B[Done]",
+      "nodes": [
+        [
+          "A",
+          "Photo"
+        ],
+        [
+          "B",
+          "Done"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "visibleNodes": [
+        [
+          "A",
+          "Photo"
+        ],
+        [
+          "B",
+          "Done"
+        ]
+      ],
+      "direction": "LR",
+      "resourceAssertions": {
+        "nodeImages": 1,
+        "assetWidth": 80,
+        "assetHeight": 40,
+        "labelPosition": "t"
+      },
+      "sourceFragment": "tests/f014/resource-cases.json",
+      "visibleLabels": {
+        "A": "Photo",
+        "B": "Done"
+      }
+    },
+    {
+      "id": "handdrawn-static",
+      "title": "Deterministic seeded hand drawn shapes and arrows",
+      "text": "flowchart TD\nA[Start] --> B{Ready?}\nB -->|Yes| C[Done]",
+      "nodes": [
+        [
+          "A",
+          "Start"
+        ],
+        [
+          "B",
+          "Ready?"
+        ],
+        [
+          "C",
+          "Done"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "B",
+          "C"
+        ]
+      ],
+      "direction": "TD",
+      "config": {
+        "look": "handDrawn",
+        "handDrawnSeed": 123
+      },
+      "resourceAssertions": {
+        "deterministicSeed": 123,
+        "hachure": true
+      },
+      "sourceFragment": "tests/f014/resource-cases.json"
+    },
+    {
+      "id": "static-spacing-shadow",
+      "title": "Native spacing, transform and visible text shadow",
+      "text": "flowchart TD\nA[\"<span style='letter-spacing:2px;word-spacing:5px;text-transform:uppercase;text-shadow:4px 2px 0 red'>ab cd</span>\"]",
+      "nodes": [
+        [
+          "A",
+          "<span style=\"letter-spacing:2px;word-spacing:5px;text-transform:uppercase;text-shadow:4px 2px 0 red\">ab cd</span>"
+        ]
+      ],
+      "edges": [],
+      "visibleNodes": [
+        [
+          "A",
+          "AB CD"
+        ]
+      ],
+      "direction": "TD",
+      "config": {
+        "dompurifyConfig": {}
+      },
+      "resourceAssertions": {
+        "shadowColor": "red",
+        "renderedText": "AB CD"
+      },
+      "sourceFragment": "tests/f014/resource-cases.json",
+      "visibleLabels": {
+        "A": "AB CD"
+      }
+    },
+    {
+      "id": "explicit-icon-bundle",
+      "title": "Explicit offline Iconify name bound to hand-written SVG",
+      "text": "flowchart TD\nA@{ icon: \"test:angle\", form: \"square\", label: \"Icon\" } --> B[Done]",
+      "nodes": [
+        [
+          "A",
+          "Icon"
+        ],
+        [
+          "B",
+          "Done"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "resources": {
+        "icons": [
+          {
+            "id": "test:angle",
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path fill=\"currentColor\" d=\"M0 0H24V8H8V24H0Z\"/></svg>"
+          }
+        ]
+      },
+      "resourceAssertions": {
+        "nodeIcons": 1,
+        "assetWidth": 48,
+        "assetHeight": 48
+      },
+      "sourceFragment": "tests/f014/resource-cases.json"
+    },
+    {
+      "id": "explicit-font-bundle",
+      "title": "Explicit existing local font alias, no font file redistribution",
+      "text": "flowchart TD\nA[Font WWW] --> B[Done]",
+      "nodes": [
+        [
+          "A",
+          "Font WWW"
+        ],
+        [
+          "B",
+          "Done"
+        ]
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "direction": "TD",
+      "config": {
+        "fontFamily": "F014ExplicitFace"
+      },
+      "resources": {
+        "fonts": [
+          {
+            "family": "F014ExplicitFace",
+            "path": "C:\\Windows\\Fonts\\arial.ttf",
+            "sha256": "b3658eadae55e682b5f69eb64c439c1ecc8f196c0bb8d4756d145d13bc86476a"
+          }
+        ]
+      },
+      "resourceAssertions": {
+        "fontFamily": "F014ExplicitFace",
+        "fontSha256": "b3658eadae55e682b5f69eb64c439c1ecc8f196c0bb8d4756d145d13bc86476a"
+      },
+      "sourceFragment": "tests/f014/resource-cases.json"
+    },
+    {
+      "id": "virtual-fill-datastore",
+      "title": "Static visible fill datastore",
+      "text": "flowchart TD\nA@{shape: datastore, label: Alpha}\nstyle A fill:#fee2e2,stroke:#b91c1c",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "datastore"
+      },
+      "oracleShapes": {
+        "A": "datastore"
+      },
+      "fillProbes": [
+        {
+          "node": "A",
+          "x": 0.8,
+          "y": 0.5,
+          "color": "#fee2e2"
+        }
+      ],
+      "sourcePaintEvidence": "test-runs/F01.4-render-20261105T094826Z-6a1e89f5/artifacts/oracle/virtual-fill-datastore.png",
+      "sourceFragment": "tests/f014/virtual-cases.json"
+    },
+    {
+      "id": "virtual-fill-brace",
+      "title": "Static visible fill brace",
+      "text": "flowchart TD\nA@{shape: brace, label: Alpha}\nstyle A fill:#fee2e2,stroke:#b91c1c",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "curlyBraceLeft"
+      },
+      "oracleShapes": {
+        "A": "brace"
+      },
+      "fillProbes": [
+        {
+          "node": "A",
+          "x": 0.8,
+          "y": 0.5,
+          "color": "#ffffff"
+        }
+      ],
+      "sourcePaintNote": "Fixed RoughJS brace uses unfilled stroke subpaths; CSS fill does not fill the virtual label body. Official 80%/50% pixel is white.",
+      "sourcePaintEvidence": "test-runs/F01.4-render-20261105T094826Z-6a1e89f5/artifacts/oracle/virtual-fill-brace.png",
+      "sourceFragment": "tests/f014/virtual-cases.json"
+    },
+    {
+      "id": "virtual-fill-brace-r",
+      "title": "Static visible fill brace-r",
+      "text": "flowchart TD\nA@{shape: brace-r, label: Alpha}\nstyle A fill:#fee2e2,stroke:#b91c1c",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "curlyBraceRight"
+      },
+      "oracleShapes": {
+        "A": "brace-r"
+      },
+      "fillProbes": [
+        {
+          "node": "A",
+          "x": 0.8,
+          "y": 0.5,
+          "color": "#ffffff"
+        }
+      ],
+      "sourcePaintNote": "Fixed RoughJS brace uses unfilled stroke subpaths; CSS fill does not fill the virtual label body. Official 80%/50% pixel is white.",
+      "sourcePaintEvidence": "test-runs/F01.4-render-20261105T094826Z-6a1e89f5/artifacts/oracle/virtual-fill-brace-r.png",
+      "sourceFragment": "tests/f014/virtual-cases.json"
+    },
+    {
+      "id": "virtual-fill-braces",
+      "title": "Static visible fill braces",
+      "text": "flowchart TD\nA@{shape: braces, label: Alpha}\nstyle A fill:#fee2e2,stroke:#b91c1c",
+      "nodes": [
+        [
+          "A",
+          "Alpha"
+        ]
+      ],
+      "edges": [],
+      "groups": [],
+      "direction": "TD",
+      "shapes": {
+        "A": "curlyBraces"
+      },
+      "oracleShapes": {
+        "A": "braces"
+      },
+      "fillProbes": [
+        {
+          "node": "A",
+          "x": 0.8,
+          "y": 0.5,
+          "color": "#ffffff"
+        }
+      ],
+      "sourcePaintNote": "Fixed RoughJS brace uses unfilled stroke subpaths; CSS fill does not fill the virtual label body. Official 80%/50% pixel is white.",
+      "sourcePaintEvidence": "test-runs/F01.4-render-20261105T094826Z-6a1e89f5/artifacts/oracle/virtual-fill-braces.png",
+      "sourceFragment": "tests/f014/virtual-cases.json"
+    }
+  ],
+  "negativeCases": [
+    {
+      "id": "missing-target",
+      "text": "flowchart TD\nA -->",
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "missing-end",
+      "text": "flowchart TD\nsubgraph G\nA",
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "unmatched-end",
+      "text": "flowchart TD\nend",
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "unclosed-shape",
+      "text": "flowchart TD\nA((Circle)",
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "unclosed-pipe",
+      "text": "flowchart TD\nA -->|Label B",
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "unclosed-metadata",
+      "text": "flowchart TD\nA@{shape: rect",
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "metadata-bad-yaml",
+      "text": "flowchart TD\nA@{label: [bad}",
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "missing-style",
+      "text": "flowchart TD\nA\nstyle A",
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "missing-class",
+      "text": "flowchart TD\nA\nclass A",
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "missing-click-target",
+      "text": "flowchart TD\nA\nclick A",
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "unclosed-click-quote",
+      "text": "flowchart TD\nA\nclick A \"bad",
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "unclosed-callback",
+      "text": "flowchart TD\nA\nclick A call callback(",
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "incomplete-link-id",
+      "text": "flowchart TD\nA e1@ B",
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "header-semicolon-invalid",
+      "text": " \n graph TD ; \n A; \n\t B ;",
+      "origin": "Original failing whitespace-separators positive from initial S4; official rejected header SEMI after SPACE.",
+      "officialEvidence": "test-runs/F01.4-batch-20261105T090906Z-11b555ce/artifacts/oracle/whitespace-separators.error.json",
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "unknown-shape",
+      "text": "flowchart TD\nA@{shape: missing}",
+      "code": "UNSUPPORTED_SHAPE",
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "uppercase-shape",
+      "text": "flowchart TD\nA@{shape: Rectangle}",
+      "code": "UNSUPPORTED_SHAPE",
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "underscore-shape",
+      "text": "flowchart TD\nA@{shape: lean_right}",
+      "code": "UNSUPPORTED_SHAPE",
+      "sourceFragment": "tests/f014/language-cases.json"
+    },
+    {
+      "id": "linkstyle-range",
+      "text": "flowchart TD\nA --> B\nlinkStyle 5 stroke:red",
+      "code": "INVALID_EDGE_INDEX",
+      "sourceFragment": "tests/f014/language-cases.json"
+    }
+  ],
+  "unsupportedCases": [
+    {
+      "id": "math-separate",
+      "text": "flowchart TD\nA[\"$$x^2$$\"]",
+      "codes": [
+        "UNSUPPORTED_SYNTAX"
+      ],
+      "reason": "Historical deferred math case now verifies formally integrated py-visactor-katex==0.1.0; no denominator removal",
+      "scopeDisposition": "implemented_by_math_module",
+      "originalScopeDisposition": "deferred_by_user_separate_module",
+      "promotedMath": {
+        "formulas": [
+          "x^2"
+        ],
+        "glyphs": [
+          "x",
+          "2"
+        ],
+        "source": "KaTeX superscript math layout, retained historical case ID, actual glyphs/vertical positions/PNG ink checked by f011_validate"
+      }
+    },
+    {
+      "id": "removed-layout",
+      "text": "flowchart TD\nA --> B",
+      "config": {
+        "layout": "dagre"
+      },
+      "codes": [
+        "UNSUPPORTED_CONFIG"
+      ],
+      "reason": "layout removed by user",
+      "scopeDisposition": "excluded_by_user"
+    },
+    {
+      "id": "removed-group-layout",
+      "text": "flowchart TD\nsubgraph G\nA\nend\nG@{algorithm: dagre}",
+      "codes": [
+        "UNSUPPORTED_CONFIG"
+      ],
+      "reason": "User policy removes non-ELK family group layout selection before Canvas; source may ignore an unknown group algorithm but target must not silently accept this explicit request.",
+      "scopeDisposition": "excluded_by_user"
+    },
+    {
+      "id": "removed-placeholder-group-layout",
+      "text": "flowchart TD\nG --> Z\nsubgraph G\nA\nend\nG@{algorithm: dagre-wrapper}",
+      "codes": [
+        "UNSUPPORTED_CONFIG"
+      ],
+      "reason": "A forward group endpoint placeholder must not bypass the same actual-group algorithm policy.",
+      "scopeDisposition": "excluded_by_user"
+    }
+  ],
+  "renderErrorCases": [
+    {
+      "id": "classic-ellipse",
+      "text": "flowchart TD\nA(-Ellipse-)",
+      "code": "UPSTREAM_SHAPE_MISSING",
+      "sourceParseAccepted": true,
+      "allowNativeParseRejection": false,
+      "expectedSourceBlank": false
+    },
+    {
+      "id": "constructor-source-bug",
+      "text": "flowchart TD\nA@{shape: constructor}",
+      "sourceParseAccepted": true,
+      "nativeCode": "UNSUPPORTED_SHAPE",
+      "reason": "upstream in-operator prototype shape lookup bug; explicit registry is safe",
+      "code": "UNSUPPORTED_SHAPE",
+      "allowNativeParseRejection": true,
+      "expectedSourceBlank": true
+    }
+  ],
+  "parserOnlyCases": [
+    {
+      "id": "metadata-resource-icon",
+      "fragment": "tests/f014/language-cases.json",
+      "reason": "Pure parser contract; rendering covered by explicit resource fixtures"
+    },
+    {
+      "id": "metadata-resource-image",
+      "fragment": "tests/f014/language-cases.json",
+      "reason": "Pure parser contract; rendering covered by explicit resource fixtures"
+    },
+    {
+      "id": "metadata-resource-sticky",
+      "fragment": "tests/f014/language-cases.json",
+      "reason": "Pure parser contract; rendering covered by explicit resource fixtures"
+    }
+  ],
+  "aliasParserDenominator": 147,
+  "scopeExclusions": {
+    "math": "implemented by formal py-visactor-katex==0.1.0; historical cases promoted with source/glyph/ink assertions",
+    "dagre": "removed by user",
+    "interaction": "all modules static rendering only",
+    "installation": "deferred by user"
+  }
+}

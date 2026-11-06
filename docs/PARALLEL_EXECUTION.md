@@ -1,3 +1,5 @@
+> 2026-11-05 用户已决定 **完全剥离 Dagre 功能、配置选项、目标依赖和算法回退**，不再暂停待评估，也不作为可选兼容任务。默认 ELK 与其他保留的专用静态算法继续推进。见 [布局策略](LAYOUT_POLICY.md)；下文旧 Dagre 计划/来源说明以此覆盖。
+
 # 并行执行、阶段顺序与协同规范
 
 2026-11-04。本文供后续执行会话直接分发任务。本轮只制定计划，没有实现产品。模块职责见 [MODULE_BOUNDARIES](MODULE_BOUNDARIES.md)，功能分母见 [FEATURE_MIGRATION](FEATURE_MIGRATION.md)和 [feature-modules.json](../references/feature-modules.json)，渲染遵循 [Canvas 原生架构](CANVAS_NATIVE_ARCHITECTURE.md)。
@@ -78,7 +80,7 @@ flowchart TD
 | W0 合同准备（P0） | 读取 parser/配置来源，列功能和源码符号职责 | 核对布局/几何输入输出及 py-elk 边界 | 核对 Canvas 公开能力、文字/样式/资源职责 | 固定首版数据合同、路径 owner、任务账本；不设计正式测试用例 |
 | W1 公共基础 | C03 模型/顺序/源位置，C01 配置与共享预处理，C02 parser 工具 | geometry/numerics 最小纯计算、图结构操作 | display 数据、Canvas 后端与测量协议实现、runtime 基础 | 整合模块依赖；确认 model/纯计算不依赖 Canvas |
 | W2 首个源码链 | F01.1 parser/model，再连续扩 F01 完整语法/语义 | py-elk 适配及 F01 所需真实路由/选项接口 | 普通标签、默认主题样式、形状/箭头/PNG 绘制源码 | 组装 F01.1 接线，再继续 F01.2…F01.4；不以实际绘图测试充当 P1 前置 |
-| W3 关系/时序与布局 | F02：class/state/ER/requirement/usecase/C4 的专用代码 | Dagre 及相关排序/复合图/路由代码 | F03 sequence 专用模型/排布；F12 info；需要时先处理排版扩展 | 将新增公共需求分派 owner；持续维护注册/API 接线 |
+| W3 关系/时序与布局 | F02：class/state/ER/requirement/usecase/C4 的专用代码 | ELK 及关系图所需的排序/复合图/路由适配 | F03 sequence 专用模型/排布；F12 info；需要时先处理排版扩展 | 将新增公共需求分派 owner；持续维护注册/API 接线 |
 | W4 数值/日期与标签扩展 | F04：Gantt/journey/timeline/gitGraph | D3 所用数值/尺度/曲线/层级能力和 F05 数值图表 | 富文本/Markdown/HTML 含义、数学 box、主题/look、字体/资源/安全 | 合并公共扩展；保证调用方使用同一模型与样式职责 |
 | W5 树/结构与力导向 | F06：mindmap/treeView/treemap 专用模型与组装 | 两套 COSE/layout-base、fCoSE、tidy 及其约束/seed/终止代码 | F08：block/packet/kanban/architecture 专用代码 | 按各图种真实前置接线，不强制所有树图共用同一算法 |
 | W6 专用计算与业务图 | F07：Sankey/Venn 模型、配置及装配 | Sankey/Venn 数值布局、专用 swimlane/路由计算 | F09：swimlane/agentflow/eventmodeling/ishikawa/wardley/cynefin 的专用代码 | 处理新形状/分组/资源需求，保证专用实现与公共模块职责不混合 |

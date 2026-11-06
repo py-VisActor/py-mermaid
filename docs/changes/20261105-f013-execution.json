@@ -1,0 +1,49 @@
+{
+  "schema": "py-mermaid-change/v1",
+  "taskId": "20261105-f013-execution",
+  "status": "complete_local",
+  "scope": "F01.3",
+  "scopeRevision": "User deferred F01.4/Dagre before any source implementation",
+  "startingSourceTreeSha256": "b4df33aa602c178c9d8fd5f4f39685a68d58c1eaaf863c545f5dce7f3886b5e7",
+  "startingEvidence": "test-runs/F01.34-start-20261105T010728Z-1de7376b",
+  "installationValidation": "deferred; not executed",
+  "externalActions": {
+    "commit": false,
+    "push": false,
+    "publish": false
+  },
+  "s4InitialExecution": {
+    "frozenSource": "5a7264af3a00dc705df6824d83311e3e3b67d80b39457ecfeba5aec19293d771",
+    "unitRun": "test-runs/F01.3-batch-20261105T020257Z-00d97cd6",
+    "officialRun": "test-runs/F01.3-record-20261105T020413Z-847b4c7c",
+    "nativeCpuRun": "test-runs/F01.3-record-20261105T020636Z-1a981298",
+    "prePatchSnapshot": "test-runs/F01.3-initial-evidence-snapshot-20261105T021024Z-38c90a72",
+    "rootCauses": [
+      "YAML source scalar edge cases, raw spans, config merge and incomplete Markdown",
+      "Zero-width rich edge output and explicit hidden-title state",
+      "Source word spacing in SVG labels and canonical measured font metadata",
+      "CSS unset on noninherited paint fields",
+      "Incorrect test expectations for source neo shadow and default inline styles",
+      "Evidence comparator required opaque stroke cores, collapsed row boundaries, rejected rich run backgrounds and treated partial shape overrides as full maps"
+    ],
+    "evidenceToolRepairRun": "test-runs/F01.3-checker-repair-20261105T021514Z-f0edb46d",
+    "savedInitialScenesRechecked": 48,
+    "remainingInitialSceneDisagreement": "html-svg-mode (known native spacing and fixture expectation repairs owned by C/A)",
+    "previousFailuresPreserved": true
+  },
+  "manualQaRejectedCandidate": {
+    "sourceTreeSha256": "5f3a058baf1157c7b9cc8cabbe0aad9644044875262ec5ee7c3babcd1a5fd9ac",
+    "automatedTests": "277 product + 25 tooling PASS",
+    "automatedComparisons": "F01.1/F01.2/F01.3 cpu/auto/gpu PASS",
+    "manualResult": "FAIL: italic-only labels painted upright despite correct semantic font_style",
+    "rootCause": "Public Canvas font parser treats later normal weight token in italic normal shorthand as a style reset. Numeric weight400 retains actual italic. Font availability confirmed; no dependency changes needed.",
+    "independentProbe": "test-runs/F01.3-italic-public-api-probe-corrected-20261105T022414Z-291f4813",
+    "next": "Normalize native font weight tokens, add independent real-pixel regression, freeze and fully validate new candidate",
+    "originalEvidencePreserved": true
+  },
+  "finalSourceTreeSha256": "5cb792fadbd7685a0d65a4a4d0e397ff59566eae340f4aaa87d0a7041d18b08f",
+  "finalAcceptanceRun": "test-runs/F01.3-final-acceptance-20261105T023245Z-26a7d5ed/run.json",
+  "acceptance": "docs/F01_3_ACCEPTANCE.md",
+  "finalVerification": "references/f013-verification-summary.json",
+  "remainingWork": []
+}

@@ -1,0 +1,131 @@
+{
+  "schema": "bulk-C-source-map/v1",
+  "phase": "P1",
+  "status": "code_complete_unverified",
+  "mermaidVersion": "12.2.0",
+  "mermaidCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "sourceOnly": true,
+  "behaviorTestsRun": false,
+  "oracleRun": false,
+  "imagesGenerated": false,
+  "production": "Pure Python semantic values and dedicated layout; public root Painter only, no browser/JS/other native backend",
+  "threadOwnership": "Parser/model/layout values are immutable; Painter/native allocation is root owner-thread only",
+  "errors": "runtime.common.error maps cleaned offsets to raw UTF16 SourceSpan; parser-specific syntax/lifecycle diagnostics remain explicit",
+  "detectors": [
+    "sequence"
+  ],
+  "sources": {
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\diagrams\\sequence\\actorBandModel.spec.ts": "b472d732c6eece80546c7f0b87692afce90f15495253a328beaa03ec70adebbe",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\diagrams\\sequence\\actorBands.ts": "712f00f0868002300c16b263d38795b6c3e9fc4a0767c1e2031019c23a94517d",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\diagrams\\sequence\\actorSizing.spec.ts": "77f3886baac95c2ae02220cbf04531b84820ef9d248066b078aac2db7003d50c",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\diagrams\\sequence\\keywordActors.spec.ts": "b5a82c57a05e291311f384d29fd02fbdd890afcc5c4b089a77888eaa96d6a2ac",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\diagrams\\sequence\\lifelineStart.spec.ts": "b7f3d39dfbb385ecb7329ffce0e9ad2d79dfcacac89b1ceced2a24c6c31b6c06",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\diagrams\\sequence\\noteFontWeight.spec.ts": "3431c229d008afaae7ca24219e384b281692229fef42c71b509425b7650a8727",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\diagrams\\sequence\\palettePicking.spec.ts": "e47e673d55dadbbb99892586b1649103b8cee0ba95f2ea888503c1d4354832b8",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\diagrams\\sequence\\parser\\sequenceDiagram.jison": "45c71ea8dfd62594c9b315f7285efa497ed8f88219ec016625c37d4bd5823ebf",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\diagrams\\sequence\\rectSectionFill.spec.ts": "903ab85ff0a581539cc543a8e247a4430d2e171a2c61f511f75f01d6e36a75d6",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\diagrams\\sequence\\sequenceDb.ts": "e2a967402784168ec358794dd78db18e28ca94d7d4ca771724c9840374f4e134",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\diagrams\\sequence\\sequenceDetector.ts": "e1b2df4407c736bdd7f6a06abe12759495b316d1cf76f83eb77bd6782d9a412e",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\diagrams\\sequence\\sequenceDiagram.spec.js": "97e008d30f8d1ae2ff2f88d2eea0da6ab82f610df1a655daf1022fba23ed4d20",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\diagrams\\sequence\\sequenceDiagram.ts": "c0cd6245f6b44e2d13e84183d5b40a399f3f3d7477722d8d1c43117f25a55160",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\diagrams\\sequence\\sequenceRenderer.spec.js": "7764bdaa1a0b2fd430018f9b84f36b388815f4564f2d90160fa7d07e5fcf1ea7",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\diagrams\\sequence\\sequenceRenderer.ts": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\diagrams\\sequence\\styles.js": "f80f572951cb6367a52b9ceeb443ce2872a020d8356ce14685237ff0b9bbcfa4",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\diagrams\\sequence\\svgDraw.js": "54dfd9f1a67bf7e935a4800150a086818fe639ada82f06c3b1c7cb04874023db",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\diagrams\\sequence\\svgDraw.spec.js": "ab181fd4e1af8a497c4dcb67a28448ccf087234540cd270c90c32cab56e0c5b5",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\diagrams\\sequence\\types.ts": "ac936688f396b779df69e456db93668a3843e2b21a74c92c5f037e856d255be4",
+    "C:\\code\\py-visactor\\py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\schemas\\config.schema.yaml": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8"
+  },
+  "implementations": {
+    "C:\\code\\py-visactor\\py-mermaid\\src\\py_mermaid\\diagrams\\sequence\\__init__.py": "6e726c93d670e2f3fb9bbaf48ad2c5a36de032552669e819c4f976cb99507326",
+    "C:\\code\\py-visactor\\py-mermaid\\src\\py_mermaid\\diagrams\\sequence\\layout.py": "6e53faa4ecf4c2af2df49855978a6eba9756370b2df2634019f675de0096c624",
+    "C:\\code\\py-visactor\\py-mermaid\\src\\py_mermaid\\diagrams\\sequence\\model.py": "e08b36a53ae3e1070b0359413e142bf29b1a7d4bdc52d54c2253ae5a92a4c677",
+    "C:\\code\\py-visactor\\py-mermaid\\src\\py_mermaid\\diagrams\\sequence\\parser.py": "dcc0731aca75c83464c45e01daef92a255cfc56f538ca500e92b372a92f9738f",
+    "C:\\code\\py-visactor\\py-mermaid\\src\\py_mermaid\\diagrams\\sequence\\presentation.py": "192341bea642c119a8107443290a298177c2f8a5ea3847aef12e8725da031f5e"
+  },
+  "branches": {
+    "grammar": [
+      "case-insensitive sequenceDiagram",
+      "newlines/semicolons and #/%%comments",
+      "quoted metadata with balanced @{ }",
+      "participant/actor aliases and YAML type/alias",
+      "8 participant types",
+      "26 message-arrow terminals including16 half/reverse/dotted variants",
+      "3 central connections",
+      "activation +/- and explicit nested start/end",
+      "create/destroy association and duplicate lifetime errors",
+      "box color/title and duplicate box errors",
+      "loop/opt/alt/else/par/par_over/and/critical/option/break/rect/end",
+      "left/right/over single+pair notes",
+      "wrap/nowrap prefixes",
+      "title/accessibility",
+      "autonumber start/step/off/resume decimal source rounding",
+      "properties static class/icon; link/links/details inert metadata"
+    ],
+    "geometry": [
+      "actor band constants44/6/6, neo shared row vs classic lifeline/glyph branches",
+      "participant-width and label-wrap constraints",
+      "message/span-note monotone spacing constraints",
+      "self-message cubic/rightAngles geometry",
+      "activation stack offsets and3 style slots",
+      "source chronological event bands and lifecycle headers/footer termination",
+      "nested fragment containment and separators",
+      "overlapped parallel body bands with reserved distinct branch title rows",
+      "number badge,all marker families,central circles",
+      "source note/participant/frame colors,palette cycling independent lengths",
+      "source neo shadow dx4/dy4/.06 and theme shadow color"
+    ],
+    "labels": [
+      "source br breaks",
+      "SVG literal markup/ampersands/backslash-n/icon-like text preserved via inert entities",
+      "dedicated source KaTeX branch remains native math",
+      "role-specific font/weight/alignment/wrap and inherited styles",
+      "styles measure and paint through typed ResolvedStyle"
+    ],
+    "configuration": [
+      "all SequenceDiagramConfig static schema keys consumed or source-inert host metadata retained",
+      "textPlacement host variants translated to native text semantics",
+      "forceMenus/links/callbacks excluded_by_static_scope",
+      "useMaxWidth/arrowMarkerAbsolute are DOM sizing/address mechanisms"
+    ]
+  },
+  "knownSourceBranches": [
+    "Unknown metadata participant type parses but fixed source has no draw handler: native raises SOURCE_RENDER_ERROR rather than drawing invented rectangle",
+    "Source creates aliases with full raw ids; never reuses a destroyed id",
+    "Source autonumber0 start/step are ignored by JavaScript ||; numeric counter advances even while invisible"
+  ],
+  "nativeAdaptations": [
+    "DOM text/getBBox measurement replaced by owner-thread actual Canvas text metrics",
+    "Parallel-over content can overlap in time, while branch label bands reserve readable titles",
+    "Browser sizing/filter URL identities discarded; their visible shadows are native paint"
+  ],
+  "remainingVerification": [
+    "P2 source-derived grammar/errors/config/geometry/PNG/CPU-auto-GPU and exports still required",
+    "No P1 compile/import result is a behavior pass"
+  ],
+  "p1StaticCorrections": [
+    {
+      "file": "src/py_mermaid/diagrams/sequence/presentation.py",
+      "source": "packages/mermaid/src/diagrams/sequence/svgDraw.js:290-300",
+      "reason": "Source class belongs to parent SVG text; tspan inherits computed parent before its own stylesheet targets. Previously only descendant tspan selectors matched.",
+      "implementation": "Resolve text(classes,id,svg ancestors), then tspan(base=parent,inherited=parent,ancestors=parent.paint_context) consistently in measure_role and text.",
+      "sourceOnly": true,
+      "behaviorEvaluated": false
+    }
+  ],
+  "P3": {
+    "receipt": "docs/changes/bulk-C-P3.json",
+    "targetedUnitRun": "BULK-record-20261106T045020Z-ea2286dc",
+    "targetedCpuRun": "BULK-batch-20261106T045023Z-16c153f1",
+    "ownedProductSha256": "687b02793f788b1520afea3d5994688af1e80963bb3aa966baf147f34a9fb26f",
+    "jointAcceptance": false
+  },
+  "P4": {
+    "receipt": "docs/changes/bulk-C-P4-repair.json",
+    "status": "RELATED_PASS_SOURCE_STOPPED_PENDING_FINAL_JOINT_P4",
+    "productSha256": "ee919bfc306821bd40612950a499f99f1951aacb01a43f47176f965ec292f19c",
+    "unitRun": "BULK-record-20261106T063958Z-0ee0d63d",
+    "cpuAndParityRun": "BULK-batch-20261106T064003Z-00bc0419",
+    "noFurtherProductWrites": true
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "schema": "py-mermaid-change/v1",
+  "taskId": "20261105-f013-styles",
+  "status": "verified_local",
+  "phase": "F01.3-S5",
+  "sourceMap": "references/f013-styles-sources.json",
+  "sourceSha256": {
+    "src/py_mermaid/rendering/styles/flowchart.py": "544409171a3a5304c5a74b30cb870f3937f75cd42be6ab5374f00f94c13c7c00",
+    "src/py_mermaid/rendering/styles/__init__.py": "c8557b72ebd08eda7ac6434da0ed97831808213a18f122ed796e8c1954b5213c",
+    "src/py_mermaid/model/flowchart.py": "6125bd13eaee44bafc04b7c06d1d979e2bab430917e0f2f941c0cc672700bacb",
+    "src/py_mermaid/api.py": "425a27f9683aef15b6382af1f7b14c4c14c4f87c2c2e371c75fb10ef9e587b60"
+  },
+  "mechanicalOnly": false,
+  "behaviorExecuted": true,
+  "independentReview": "geometry_elk static source audit found 9 issues; corrected before initial behavior execution",
+  "notes": [
+    "Append-only pure data models preserve old argument positions",
+    "F01.4/Dagre deferred by latest user instruction",
+    "No package install or install validation"
+  ],
+  "remainingWork": [],
+  "mechanicalEvidence": "test-runs/F01.3-record-20261105T014058Z-3426beb1/run.json",
+  "sourceMapSha256": "66019a6122db06049dc660cf5637f31deac0db1f8bca9183793229dc7ef4b1a6",
+  "initialS2": {
+    "status": "code_complete_unverified",
+    "phase": "F01.3-S2",
+    "sourceSha256": {
+      "src/py_mermaid/rendering/styles/flowchart.py": "07ad9f9c625c934d0baad4d090449ac3f6642e3746a25287b6b9506959aaa01a",
+      "src/py_mermaid/rendering/styles/__init__.py": "c8557b72ebd08eda7ac6434da0ed97831808213a18f122ed796e8c1954b5213c",
+      "src/py_mermaid/model/flowchart.py": "06000222bd4cf210f423bc8af1bddd56a558482a65396b2cd0976a600b832ed0",
+      "src/py_mermaid/api.py": "05b61824ffafec5267686951f7c937fb245a4fa2ec4ec255f56fec56ceee1cd2"
+    },
+    "mechanicalOnly": true,
+    "behaviorExecuted": false,
+    "remainingWork": [
+      "Source-derived S3 style/paint/label tests",
+      "S4 official computed styles/PNG and negative controls",
+      "Same-candidate final verification"
+    ],
+    "sourceMapSha256": "13970d5a8dbc3470405c111bd864548b7a2cd2d8de0ee2f5c6590a3ace7289ad"
+  },
+  "s4Repairs": [
+    "CSS unset resets noninherited opacity/display/background/filter/decoration to initial values",
+    "Explicit filter inheritance copies pure shadow geometry and paint fields",
+    "Hidden title pure bool distinguishes display:none from missing measurement",
+    "Corrected invalid neo-shadow interpretation with official computed style; no invented shadow repair"
+  ],
+  "finalEvidence": "references/f013-verification-summary.json"
+}

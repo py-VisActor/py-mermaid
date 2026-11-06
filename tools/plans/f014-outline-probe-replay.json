@@ -1,0 +1,16 @@
+{
+  "schema": "py-mermaid-command-plan/v1",
+  "scope": "F01.4",
+  "description": "Independent strengthened local fill probe rejects preserved pre-fix dark state symbols",
+  "steps": [
+    {
+      "name": "replay-pre-fix-state-interior",
+      "argv": [
+        "{python}",
+        "-c",
+        "import sys,json;from pathlib import Path;sys.path.insert(0,'tools');from static_flowchart_checks import check_scene;root=Path('test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts');fixtures=json.loads(Path('tests/f014/cases.json').read_text('utf-8'));ids=['handdrawn-shapes-3','layout-labelless-alignment-gallery'];rows=[];[(rows.append({'id':i,'errors':check_scene(json.loads((root/'compare-cpu'/(i+'.json')).read_text('utf-8')),(root/'compare-cpu'/(i+'.png')).read_bytes(),next(c for c in fixtures['cases'] if c['id']==i))})) for i in ids];print(json.dumps(rows));assert all('L2 missing node fill region N0' in r['errors'] for r in rows)"
+      ],
+      "timeoutSeconds": 60
+    }
+  ]
+}

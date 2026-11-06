@@ -1,0 +1,28 @@
+{
+  "scope": "BULK",
+  "inputs": [
+    "{repo}/tests/bulk/cases-A.json"
+  ],
+  "steps": [
+    {
+      "name": "A-P3-native-cpu-193",
+      "argv": [
+        "{python}",
+        "{repo}/tools/bulk_validate.py",
+        "--fixtures",
+        "{repo}/tests/bulk/cases-A.json",
+        "--group",
+        "A",
+        "--backend",
+        "cpu",
+        "--out",
+        "{run}/artifacts/native-cpu-A"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src"
+      },
+      "timeoutSeconds": 1800
+    }
+  ],
+  "schema": "py-mermaid-command-plan/v1"
+}

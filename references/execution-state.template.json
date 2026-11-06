@@ -118,14 +118,6 @@
       "evidence": [],
       "remainingWork": []
     },
-    "P1-10": {
-      "status": "planned",
-      "ownerAgent": null,
-      "leasedWritePaths": [],
-      "sourceIdentity": null,
-      "evidence": [],
-      "remainingWork": []
-    },
     "P1-11": {
       "status": "planned",
       "ownerAgent": null,
@@ -852,7 +844,7 @@
       "sourceMap": [],
       "verificationStatus": "not-started"
     },
-    "layout-engines-dagre-elk-tidy": {
+    "layout-engines": {
       "moduleOwner": "C05",
       "sourceStatus": "planned",
       "sourceMap": [],
@@ -976,7 +968,6 @@
       "interfaceVersion": null,
       "sourceTasks": [
         "P1-09",
-        "P1-10",
         "P1-11",
         "P1-12",
         "P1-13",
@@ -1055,5 +1046,6 @@
     }
   },
   "retrospectives": [],
-  "renderValidationPolicy": "references/render-validation-policy.json"
+  "renderValidationPolicy": "references/render-validation-policy.json",
+  "layoutPolicy": "references/layout-policy.json"
 }

@@ -1,0 +1,100 @@
+{
+  "schema": "py-mermaid-change/v1",
+  "taskId": "F01.4-S2/elk-edges",
+  "status": "code_complete_unverified",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "scope": "Static flowchart ELK options, algorithms and pure paint geometry; Dagre excluded, math deferred",
+  "changedFiles": {
+    "src/py_mermaid/layout/elk/flowchart.py": "8c2a9526907e894e1477a5f29cf0c7685f10b8137564b8543eb05993dce261eb",
+    "src/py_mermaid/layout/elk/compound.py": "f3e396567ebf69a10b4d9c86db56559fd04f7a9cb63212d1f27094bc4f7a90de",
+    "src/py_mermaid/layout/elk/options.py": "241b4b90902ff3d4f784351d20d11336af59be2d24309844f3c64aa758d46677",
+    "src/py_mermaid/geometry/flowchart.py": "2815b52d078ded8c9bce02e765e06eb547f496c469e90a826f19aaf64fefdadc",
+    "src/py_mermaid/geometry/edges/__init__.py": "297f466bacdb4c1f9202c60b1a803925cba5ef6033936e630e03b788ef6a043d",
+    "src/py_mermaid/geometry/edges/paths.py": "4cca5fd64b89dc9da1ce8b0b54a6681cb7f7a4ed7023c1e0aa944c7223f75739",
+    "src/py_mermaid/geometry/edges/pipeline.py": "25109aa2014555ba99519716af146e4f8c16c45801ed8995778b95c60617f3c2",
+    "references/f014-elk-sources.json": "ff3ca5336a1e883e0457c96d14a4ae155108938d2adc984159440eae6f16c517"
+  },
+  "verification": [
+    {
+      "run": "F01.4-record-20261105T083813Z-108e4dfa",
+      "status": "SUCCESS",
+      "manifestSha256": "1f30b4b1018e261c58a86520dea608a7c12aeada5ed67a3b2b5ca6e4bffc9b46",
+      "sourceTreeSha256": "9691a0e30fa131ef1c79634c7bde5b74ba4172096a637592157fa178bb39083f",
+      "commands": [
+        {
+          "argv": [
+            "C:/venvs/pymmd-20261102/Scripts/python.exe",
+            "-m",
+            "py_compile",
+            "src/py_mermaid/layout/elk/flowchart.py",
+            "src/py_mermaid/layout/elk/compound.py",
+            "src/py_mermaid/layout/elk/options.py",
+            "src/py_mermaid/geometry/flowchart.py",
+            "src/py_mermaid/geometry/edges/__init__.py",
+            "src/py_mermaid/geometry/edges/paths.py",
+            "src/py_mermaid/geometry/edges/pipeline.py"
+          ],
+          "exitCode": 0,
+          "stdout": "commands/001-elk-edges-compile/stdout.log",
+          "stderr": "commands/001-elk-edges-compile/stderr.log"
+        }
+      ]
+    },
+    {
+      "run": "F01.4-record-20261105T084129Z-25c7bec8",
+      "status": "SUCCESS",
+      "manifestSha256": "1929f511ad33e132f0b65404c6a63a55134bdaf2ff46c717ef5fc3ad8fe6e335",
+      "sourceTreeSha256": "6027aec5bf3a28b3fbcf7192b8c3e6fc3547833021a063af7826faacf1620bcc",
+      "commands": [
+        {
+          "argv": [
+            "C:/venvs/pymmd-20261102/Scripts/python.exe",
+            "-c",
+            "import inspect; from py_mermaid.layout.elk import layout_flowchart; from py_mermaid.geometry.edges import MarkerGeometry,edge_markers,finish_edges; from py_mermaid.layout.elk.options import ROOT_ALGORITHMS,CONTAINER_ALGORITHMS,PRESETS; print(inspect.signature(layout_flowchart)); print(inspect.signature(edge_markers)); print(inspect.signature(MarkerGeometry)); print(len(ROOT_ALGORITHMS),len(CONTAINER_ALGORITHMS),len(PRESETS)); print('MECHANICAL_ONLY: no layout, Canvas, geometry function or test executed')"
+          ],
+          "exitCode": 0,
+          "stdout": "commands/001-elk-edges-import-signatures/stdout.log",
+          "stderr": "commands/001-elk-edges-import-signatures/stderr.log"
+        }
+      ]
+    },
+    {
+      "run": "F01.4-record-20261105T084249Z-5df8d274",
+      "status": "SUCCESS",
+      "manifestSha256": "1260dc3eb10ee1e65d54279e39f448c742438556c4de090cff166845549fddd4",
+      "sourceTreeSha256": "1a1efb1ac130407e78446bd09dd1557f6f88b39f190eb2e7fd109bdc05cba941",
+      "commands": [
+        {
+          "argv": [
+            "C:/venvs/pymmd-20261102/Scripts/python.exe",
+            "-m",
+            "py_compile",
+            "src/py_mermaid/layout/elk/flowchart.py",
+            "src/py_mermaid/layout/elk/compound.py",
+            "src/py_mermaid/layout/elk/options.py",
+            "src/py_mermaid/geometry/flowchart.py",
+            "src/py_mermaid/geometry/edges/__init__.py",
+            "src/py_mermaid/geometry/edges/paths.py",
+            "src/py_mermaid/geometry/edges/pipeline.py"
+          ],
+          "exitCode": 0,
+          "stdout": "commands/001-elk-edges-final-compile/stdout.log",
+          "stderr": "commands/001-elk-edges-final-compile/stderr.log"
+        }
+      ]
+    }
+  ],
+  "behaviorTestsExecuted": false,
+  "rendersExecuted": false,
+  "notes": [
+    "Shared model/config/shapes/native drawing owner changes are consumed but not edited by this worker.",
+    "No source lock, ELK baseline, pyproject, tests or acceptance expectations modified.",
+    "Default placement and source policy retained; raw engine data separated from paint postprocessing.",
+    "Source map details known source degeneracy and source comments versus executable behavior; no successful algorithm fallback."
+  ],
+  "limitations": [
+    "S2 only compiled/imported; all behavior and cross-owner rendering remain unverified pending S3/S4.",
+    "No install/build/publish/commit/push executed."
+  ],
+  "sourceStopped": true
+}

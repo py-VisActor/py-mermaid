@@ -1,18 +1,19 @@
-"""F01.1 public orchestration; all native work stays on the calling thread."""
+"""Static diagram orchestration; native work stays on the calling thread."""
 from __future__ import annotations
 
 import asyncio
+from dataclasses import replace
 from collections.abc import Mapping
 from typing import Any
 
-from .model.flowchart import Flowchart, MermaidError, RenderResult
+from .model.flowchart import ExportOptions, Flowchart, MermaidError, RenderResult, ResourceBundle
+from .model.scene import Diagram, DiagramRenderResult
 
 
-def parse(text: str, *, config: Mapping[str, Any] | None = None) -> Flowchart:
-    """Parse a supported basic flowchart without allocating Canvas or ELK."""
-    from .parsing import parse_flowchart
-
-    return parse_flowchart(text, config=config)
+def parse(text: str, *, config: Mapping[str, Any] | None = None) -> Flowchart | Diagram:
+    """Preprocess, detect and parse without allocating Canvas or ELK."""
+    from .runtime.registry import parse_diagram
+    return parse_diagram(text,config=config)
 
 
 async def arender(
@@ -21,24 +22,56 @@ async def arender(
     config: Mapping[str, Any] | None = None,
     format: str = "png",
     backend: str = "auto",
-) -> RenderResult:
-    """Measure, lay out with pyelk and draw PNG on the caller's owner thread.
+    resources: ResourceBundle | None = None,
+    export_options: ExportOptions | None = None,
+) -> RenderResult | DiagramRenderResult:
+    """Measure, lay out with pyelk and export on the caller's owner thread.
 
     No objects are moved to executor threads. Cancellation propagates through
     the layout engine, whose worker lifecycle is owned by its adapter.
     """
-    if format != "png":
-        raise MermaidError("F01.1 supports PNG output only", code="UNSUPPORTED_FORMAT")
+    if format not in {"png", "jpg", "jpeg", "webp", "svg", "pdf"}:
+        raise MermaidError("Unsupported static export format", code="UNSUPPORTED_FORMAT")
     if backend not in ("auto", "cpu", "gpu"):
         raise MermaidError("backend must be auto, cpu or gpu", code="INVALID_BACKEND")
     diagram = parse(text, config=config)
+    if isinstance(diagram,Diagram):
+        from .runtime.registry import provider_for
+        from .rendering.skia.scene import Painter
+        painter=Painter(diagram,backend=backend,resources=resources)
+        scene=await provider_for(diagram.kind).build(diagram,painter)
+        return painter.encode(scene,format=format,export_options=export_options)
+    from .runtime.layouts import uses_builtin_swimlane
+    if uses_builtin_swimlane(diagram.config.layout):
+        from .runtime.configuration import resolve
+        from .runtime.common import make_diagram
+        from .diagrams.business.swimlane import build
+        from .rendering.skia.scene import Painter
+        values=resolve(diagram.source_document,'flowchart',config);values['layout']='swimlane'
+        wrapped=make_diagram(diagram.diagram_type,diagram.source_document,values,diagram)
+        painter=Painter(wrapped,backend=backend,resources=resources)
+        scene=await build(wrapped,painter)
+        result=painter.session.render(scene.flowchart,scene.measured,scene.layout,
+            annotations=scene.annotations,format=format,export_options=export_options,
+            group_overrides=scene.group_overrides,draw_group_override=painter._draw_commands)
+        return replace(result,diagram=diagram,annotations=scene)
     from .layout.elk import layout_flowchart
     from .rendering.skia import CanvasSession
 
-    session = CanvasSession(backend=backend)
+    session = CanvasSession(backend=backend, resources=resources)
     measured = session.measure(diagram)
-    layout = await layout_flowchart(diagram, measured)
-    return session.render(diagram, measured, layout)
+    annotations = session.measure_annotations(diagram)
+    from .runtime.layouts import uses_builtin_elk
+    if uses_builtin_elk(diagram.config.layout):
+        layout = await layout_flowchart(diagram, measured, measured_groups=annotations.groups,
+                                        measured_edge_labels=annotations.edge_labels,
+                                        measured_title=annotations.title,
+                                        title_suppressed=annotations.title_suppressed)
+    else:
+        from .runtime.flow_variants import layout_registered_flowchart
+        layout=await layout_registered_flowchart(diagram,measured,annotations)
+    return session.render(diagram, measured, layout, annotations=annotations,
+                          format=format, export_options=export_options)
 
 
 def render(
@@ -47,8 +80,10 @@ def render(
     config: Mapping[str, Any] | None = None,
     format: str = "png",
     backend: str = "auto",
-) -> RenderResult:
-    """Synchronous PNG renderer; in an event loop use ``await arender(...)``.
+    resources: ResourceBundle | None = None,
+    export_options: ExportOptions | None = None,
+) -> RenderResult | DiagramRenderResult:
+    """Synchronous static renderer; in an event loop use ``await arender(...)``.
 
     Applications using Windows multiprocessing must call this from a guarded
     ``if __name__ == '__main__'`` entry, as required by pyelk's spawn workers.
@@ -56,5 +91,6 @@ def render(
     try:
         asyncio.get_running_loop()
     except RuntimeError:
-        return asyncio.run(arender(text, config=config, format=format, backend=backend))
+        return asyncio.run(arender(text, config=config, format=format, backend=backend,
+                                   resources=resources, export_options=export_options))
     raise MermaidError("Use await arender(...) inside an active event loop", code="ACTIVE_EVENT_LOOP")

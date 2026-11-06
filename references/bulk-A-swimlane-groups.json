@@ -1,0 +1,81 @@
+{
+  "scope": "BULK-A-swimlane-groups",
+  "phase": "P1",
+  "status": "code_complete_unverified",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "sourceFiles": [
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/rendering-util/rendering-elements/clusters/swimlane.js",
+      "sha256": "335efb574aec102153ee004e47a9192f8560bbb54e6b68c2aa57539782da2950",
+      "symbols": [
+        "swimlane: LR/nonLR body/title geometry, title measurement, width floor, label transforms, rough paths"
+      ]
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/helpers.ts",
+      "sha256": "4f53b3d1c78b414870fe3a2959344731d6b79363abade679c86f484f4373de59",
+      "symbols": [
+        "prepareLayoutForSwimlanes: DEFAULT_SWIMLANE_ID loose-node synthesis",
+        "assignTopLaneTitleRect",
+        "writeback final center/size/content-top"
+      ]
+    },
+    {
+      "path": "src/py_mermaid/diagrams/business/swimlane.py",
+      "sha256": "2f9c0665f78e9192ce5bc412988b253da57b59cfed4f4edb038b6575ccfc614c",
+      "symbols": [
+        "_lane_paints pure native source paint reference",
+        "layout_provider complete final group_data contract"
+      ]
+    }
+  ],
+  "productFiles": [
+    {
+      "path": "src/py_mermaid/rendering/skia/graph_groups.py",
+      "sha256": "54fd3b7cedd442be90ab7e8c671077f2b706ebce507da4edcfeadebce4431946",
+      "symbols": [
+        "overlay_swimlane_groups",
+        "_frame/_title identity+role predicates",
+        "_child_style ancestor compositing"
+      ]
+    }
+  ],
+  "interface": "overlay_swimlane_groups(painter,layout,commands)->tuple[Paint,...]; called by Painter.finish only for mermaid-swimlane",
+  "dataContract": {
+    "group_data": "tuple of frozen Mapping; source complete groups, including synthetic lane, final global center x/y,width,height,parentId,label,padding,swimlaneContentTop,direction/look/colorIndex",
+    "identity": "GraphLayout.groups remains input parents; group_data additionally contains source synthetic DefaultLane",
+    "LR": "Final source centers and frame widths/heights already rotated/recomputed by provider. direction remains LR, source ignores contentTop; title x=left+(labelHeight+8)/2, y=groupCenterY, text origin=(cx-labelHeight/2,cy+labelWidth/2), rotation=-90",
+    "otherDirections": "TB/BT/RL use source nonLR top band min(labelHeight,max(0,contentTop-laneTop))",
+    "DefaultLane": "Created only by source prepare when parentless nonGroup nodes exist; id __swimlane_default__, empty label,padding20, next source color slot, requested look/direction. Overlay never synthesizes its own lane or suppresses the source empty-label frame."
+  },
+  "sourceImplemented": [
+    "Top-level source lane title/body rectangles and rotated/nonrotated labels",
+    "Reuse original same-ID title TextBox/rich measured runs and frame ResolvedStyle/palette; synthetic/no-title commands actually measure the source label",
+    "Remove only original same-ID frame/title by semantic role or real cluster paint context; preserve nodes, edges, nested groups and unrelated commands",
+    "Prepend real generated lane paints before all original retained content; no node/edge repaint",
+    "Native rough source .7 roughness/title fillWeight3 branch, palette gate and source CSS classes",
+    "Actual Painter path/text ink participates in finish bounds and budgets; no canvas-only inflation",
+    "Ancestor display/opacity applies new lane children; existing rich run opacity preserved relatively",
+    "Isolated temporary Painter command buffer restored in finally; owner-thread native state never serialized"
+  ],
+  "threadOwnership": "Painter owner-thread only; input/output immutable pure command/geometry values",
+  "units": "Final geometry is logical CSS px and degrees; no engine/drawing coordinate translation recomputed",
+  "mechanicalEvidence": [
+    "test-runs/BULK-record-20261106T035716Z-3221937c/run.json",
+    "test-runs/BULK-record-20261106T035736Z-a7f2530a/run.json"
+  ],
+  "behaviorExecuted": false,
+  "testsDesigned": false,
+  "remainingVerification": [
+    "Independent source TB/BT/RL/LR, nested parent + loose DefaultLane functional captures",
+    "Exact old-command removal: preserve all unrelated same-ID edge roles and all nested groups",
+    "Rich label/palette/title hiding/custom style scope, empty-label and long-label width floors",
+    "Rough ink extents and source frame overlap/readability against actual nodes/routes",
+    "No P1 behavior or rendering PASS inferred; full candidate stays source-unverified"
+  ],
+  "limits": [
+    "Only top-level groups are replaced; nested groups intentionally keep source ordinary group paint",
+    "Original premeasured rich title runs stay intact; no flattening to plain label or guessed label language",
+    "No changes to A12 frozen family products, GraphLayout/provider or other shared files"
+  ]
+}

@@ -1,0 +1,270 @@
+{
+  "scope": "BULK-A-P3",
+  "status": "A_related_unit_and_CPU_pass_pending_global_P4",
+  "initialEvidence": "test-runs/BULK-P3-first-20261106T042952Z-978737eb",
+  "sources": [
+    {
+      "path": "packages/mermaid/src/diagrams/mindmap/parser/mindmap.jison",
+      "sha256": "85a4b2840ab529bc82c41ea64d9556a7fe4a0552900d1cbdf9484245ba61c8e4",
+      "symbol": "INITIAL NODE_ID and NODE NODE_DESCR greedy lexical rules",
+      "line": 34
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/mindmap/mindmapDb.ts",
+      "sha256": "df8af0d61221a62053ccacd42b6ff9c95d812139e72e842fbb920044ef2c4223",
+      "symbol": "getType",
+      "line": 127
+    },
+    {
+      "path": "packages/parser/src/language/architecture/architecture.langium",
+      "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+      "symbol": "ARCH_ICON group/service syntax",
+      "line": 36
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/usecase/parser/usecase.tokens.ts",
+      "sha256": "fdec27e1b88ec649f3959de59b1bff1d29cddd5f3ffc2bb8b73edffca51fedef",
+      "symbol": "UsecaseDiagramKeyword whole header",
+      "line": 1
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/usecase/parser/usecase.visitor.ts",
+      "sha256": "066354d43e79544f6e92d02a5aa76e89a2ad10098f1361539fbdd3406f65e58d",
+      "symbol": "solidMinlen and labelledSolidOperator right token",
+      "line": 686
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/usecase/parser/usecaseModelBuilder.ts",
+      "sha256": "45ac8b19f30f247cd0ccb15fac0e2ffe483d2b1ced5171578a11d88099b8ff5d",
+      "symbol": "materializeNotes actor/usecase target guard",
+      "line": 1
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/requirement/parser/requirementDiagram.jison",
+      "sha256": "44692497660e25f6fe5d51fb3ea7ed17159bbf27bd901632127342e135bff635",
+      "symbol": "reserved tokens vs name unqString/qString",
+      "line": 39
+    },
+    {
+      "path": "packages/mermaid/src/defaultConfig.ts",
+      "sha256": "6f2ec3c231ee970fb0368d158975090d488c93c9801a618b06cb18d58488b068",
+      "symbol": "class runtime reconstructed and intentionally excludes legacy schema defaults",
+      "line": 71
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/packet/renderer.ts",
+      "sha256": "ac2ab5d360fd715deac0d69fc98ab0abbaa3dc8cbc46e20b47723ab4a161b511",
+      "symbol": "rect x and bit-number alignment; width bits*bitWidth-paddingX",
+      "line": 53
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/architecture/architectureStyles.ts",
+      "sha256": "9c7e00969b448298b01f33cb82738fd971d22f4f861eef55b4bbc110299d316d",
+      "symbol": "line-clamp display and overflow; enclosing foreignObject exact icon height",
+      "line": 22
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/architecture/svgDraw.ts",
+      "sha256": "3fb31910400f96127eabf2b8c4106c3a45c0b3a6bc8c03840ecca24e1d6518cd",
+      "symbol": "icon-text foreignObject clipping",
+      "line": 318
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/usecaseActor.ts",
+      "sha256": "efb852bb8e69fd0bceace380d38a001ed6bdf87c114803a61c643ded8fe543ec",
+      "symbol": "awesome source silhouette (transformed native paths lose source numeric literals)",
+      "line": 1
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/kanban/kanbanDb.ts",
+      "sha256": "5e96a2a5d8df7ce08c79c0da7fe4edc4decceb8dfe7b27434f799dcdfc2ad38a",
+      "symbol": "getSection scans nodes already in DB; addNode appends after validation",
+      "line": 25
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/kanban/kanban.spec.ts",
+      "sha256": "bc41aa5ecc8cc95e6f1da10b8a3960e70d43375afc91c576d3a1bc76b96d0021",
+      "symbol": "KNBN-6 real root in wrong place three-node fixture",
+      "line": 98
+    }
+  ],
+  "changes": [
+    {
+      "type": "product",
+      "id": "architecture-regex",
+      "detail": "Escape hyphen position in ASCII icon-name character class; fixes Python PatternError without changing accepted source characters."
+    },
+    {
+      "type": "product",
+      "id": "usecase-header",
+      "detail": "Lex full usecase-beta before generic word/operator tokens."
+    },
+    {
+      "type": "product",
+      "id": "labelled-link-minlen",
+      "detail": "Count solid length from final operator after label, per visitor labelledSolidOperator."
+    },
+    {
+      "type": "product",
+      "id": "nullable-native-edgepaths",
+      "detail": "Treat provider edge_paths=None as no prebuilt path and use real returned routed polyline."
+    },
+    {
+      "type": "product",
+      "id": "mindmap-greedy-minus",
+      "detail": "Mirror source greedy NODE_ID before ) and NODE_DESCR minus consumption; Title-/root- identity confirmed by initial official snapshots."
+    },
+    {
+      "type": "product",
+      "id": "requirement-keyword-id",
+      "detail": "Reject bare lexical reserved keyword as declaration name, preserving quoted strings and safe prefixed identifiers."
+    },
+    {
+      "type": "test-fixture-correction",
+      "id": "class-namespaces",
+      "detail": "Source DB/official getData retains local User/Record IDs with qualified parent namespaces; keep original test method and correct lookup."
+    },
+    {
+      "type": "test-fixture-correction",
+      "id": "class-schema-not-runtime",
+      "detail": "Keep all 5 original generated method IDs but assert absence after explicit defaultConfig.class reconstruction; preserve raw schemaDefault fields."
+    },
+    {
+      "type": "test-fixture-correction",
+      "id": "state-scale",
+      "detail": "Use source scale 2 width positive; preserve original scale 2 as new language/render syntax negative."
+    },
+    {
+      "type": "test-fixture-correction",
+      "id": "requirement-reserved-names",
+      "detail": "Use req_* IDs for 3 verification matrix render positives; preserve originals as 3 syntax negatives."
+    },
+    {
+      "type": "test-fixture-correction",
+      "id": "usecase-json-note",
+      "detail": "Keep JSON positive and attach note to actor; preserve original JSON note target as both unit and render semantic negative."
+    },
+    {
+      "type": "test-binding-correction",
+      "id": "packet-translation",
+      "detail": "Global Scene ink normalization translates source local x=1; bind literal width251 and real rect/start-bit alignment instead of treating canvas origin as source coordinate."
+    },
+    {
+      "type": "test-binding-correction",
+      "id": "actor-cubic",
+      "detail": "Check eight actual transformed cubic segments, not untransformed numeric substring24."
+    },
+    {
+      "type": "test-binding-correction",
+      "id": "architecture-edge-role",
+      "detail": "Polyline trace role is edge; assert real routed path by semantic ID."
+    },
+    {
+      "type": "test-expectation-correction",
+      "id": "architecture-visible-clamp",
+      "detail": "Retain real clip and omitted terminal word assertions; do not require ellipsis visible when source foreignObject clips line-clamp final line. Diagnostic preserves actual clipped runs."
+    },
+    {
+      "type": "product",
+      "id": "er-cardinality-terminal-tangent",
+      "detail": "Use first distinct route control point at each endpoint; swimlane compound routes can repeat endpoint. Retains actual source zero/one/crow geometry instead of emitting zero direction."
+    },
+    {
+      "type": "fixture-resource-correction",
+      "id": "utf8-lf-resource",
+      "detail": "Normalize owned user.svg to UTF8 LF. bulk_support.read_text normalizes CRLF; resource SHA must describe the exact serialized SVG used by native IconResource. No source graphic changes."
+    },
+    {
+      "type": "fixture-source-empty",
+      "id": "source-opacity-empty",
+      "detail": "Keep entire hidden-service source unchanged. Initial official PNG is entirely white; expectedEmpty has reason/background and no native-derived forced dimensions. Unit independently asserts container opacity hides asset and caption."
+    },
+    {
+      "type": "product-and-source-expectation",
+      "id": "kanban-delayed-getSection-check",
+      "detail": "Fixed getSection checks prior nodes only. Original two-node less-indent input now positive Todo(level4)->Bad(level2), matching official refresh snapshot. Third node exposes previously retained lower-level node and rejects, matching KNBN-6 source spec. Original positive ID preserved; true three-node negative appended."
+    }
+  ],
+  "products": [
+    {
+      "path": "src/py_mermaid/diagrams/structures/architecture.py",
+      "sha256": "12ea3b28fb7b9dbcd04031ee31a7ba31e005765959fed844dea9f21ff5ba2dbd"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/modeling/usecase.py",
+      "sha256": "a7730809307f0f8af1827032efa9c9be51a4fbf54d3f5777e666ddc2f7d00640"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/modeling/_support.py",
+      "sha256": "443a419dcc0134af98fe9fd11291392a4b46d02fe3499c3e91c5e01bcb5ca12a"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/hierarchy/mindmap.py",
+      "sha256": "02edbb3aefc45e848732fae3dd5d46522aef540e6542a87c5f645ff721e51bbe"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/modeling/requirement.py",
+      "sha256": "2cc161e3920bca8637a13430c17466b1e002312988ff509c676fc981620c0aca"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/modeling/er.py",
+      "sha256": "3716360a6672770cf135018325bdacfbcffcbf83989d2b5164181840be34610f"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/structures/kanban.py",
+      "sha256": "a676e5d784630f8181d30677bd0c96bf2b61bcfc97d133abdc5460f406ecfc34"
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "global-P4",
+      "detail": "Root final uniform all-groups/profile/export candidate and full visual/source comparisons remain required."
+    }
+  ],
+  "confirmedUpstreamDefect": {
+    "id": "A-architecture-upstream-direct-group-endpoint",
+    "evidence": "test-runs/BULK-P3-first-20261106T042952Z-978737eb/artifacts/oracle/A-architecture-upstream-direct-group-endpoint.error.json",
+    "detail": "Official addEdge directly accesses undefined nodes.get(group).in; native explicit UPSTREAM_ARCHITECTURE_ENDPOINT preserves diagnostic."
+  },
+  "toolNegativeReconfirmed": "test-runs/BULK-P3-shared-and-oracle-repair-20261106T044453Z-0f6c21dc/artifacts/oracle/A-packet-unquoted.error.json",
+  "relatedCPUFirst": "BULK-batch-20261106T045002Z-f394cf6c",
+  "relatedCPUAfterProductRepair": "BULK-batch-20261106T045239Z-a15b8615",
+  "finalRelatedCPU": {
+    "run": "BULK-batch-20261106T051813Z-69e5eb31",
+    "actualExitCode": 0,
+    "actualRunStatus": "SUCCESS",
+    "sourceUnchanged": true,
+    "cases": 194,
+    "counts": {
+      "CHECKS_PASSED": 171,
+      "EXPECTED_ERROR": 22,
+      "EXCLUDED": 1
+    }
+  },
+  "confirmedMindmapELKDefect": {
+    "component": "elkjs",
+    "version": "0.9.3",
+    "packageIdentity": {
+      "path": ".local/f011-oracle/node_modules/elkjs/package.json",
+      "sha256": "fb9bb80b980c72022fb4540b38aa0545242b4eb67b82250aeae2f0beb67eea25"
+    },
+    "sourceLock": {
+      "path": ".local/upstream-mermaid/pnpm-lock.yaml",
+      "sha256": "d7462096ee69a903e00b2beff487977884d1652bf52c7ee7d987e8e778f33227"
+    },
+    "officialEvidence": [
+      {
+        "path": "test-runs/BULK-P3-first-20261106T042952Z-978737eb/artifacts/oracle/A-mindmap-explicit-elk.error.json",
+        "sha256": "1a2c778ff052e7cf91b80d8c30aecf4987a58549d95609f24dbe8b29ae3349d6",
+        "observed": "TypeError cannot read null.re; same bundled ELK vDd/HEd/DEd/LDd stack"
+      },
+      {
+        "path": "test-runs/BULK-P3-official-refresh-20261106T050328Z-0274d04e/artifacts/oracle/A-mindmap-explicit-elk.error.json",
+        "sha256": "34f0435fc7c7a3e172b991f2eb312b1509b712d83414744a20cbffb38a92b8c1",
+        "observed": "TypeError cannot read null.re; same bundled ELK vDd/HEd/DEd/LDd stack"
+      }
+    ],
+    "scope": "Exact original fixture source/config preserved and functional denominator retained; do not generalize to all ELK inputs.",
+    "nativeGate": "nativeMustRender=true, expectedErrorCodes=[]; actual selected PyELK route and visible pixels/text passed final CPU."
+  }
+}

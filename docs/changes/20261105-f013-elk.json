@@ -1,0 +1,203 @@
+{
+  "schema": "py-mermaid-change/v1",
+  "taskId": "20261105-f013-elk",
+  "phase": "F01.3-S2",
+  "status": "code_complete_unverified",
+  "baseCommit": "b5af1879bf64034fae922d3713854ef67c34312f",
+  "authorization": "F01.3 only; Dagre/F01.4 paused by user; owned layout/elk and geometry/flowchart paths",
+  "changedPaths": [
+    "src/py_mermaid/layout/elk/flowchart.py",
+    "src/py_mermaid/layout/elk/compound.py",
+    "src/py_mermaid/geometry/flowchart.py",
+    "references/f013-elk-sources.json"
+  ],
+  "sourceSha256": {
+    "src/py_mermaid/layout/elk/flowchart.py": "149254b145fffee1eb0ccce4e5af9f749907b44574c72bee81b845e033910357",
+    "src/py_mermaid/layout/elk/compound.py": "28edf8beb5147c3c3026f07b94e1d10a92a0dde13016b66499c826bbabe1ec8e",
+    "src/py_mermaid/geometry/flowchart.py": "f1fb56f114f03b2a377441307bfcfb510066f816fb1f2822cb8c0d48c6971759",
+    "references/f013-elk-sources.json": "decf24356e338defd8c1caf3345f67e783815885ef32bf375c3e5b597aff3515"
+  },
+  "mechanicalEvidence": [
+    {
+      "run": "test-runs/F01.3-elk-mechanical-20261105T011825Z-9456e7c3",
+      "runManifestSha256": "7f36730d44e3f863417fad627944a00e53b216fdcdbce4b0ef126cceee58affa",
+      "sourceIdentity": "d3e749d848f12bb323e4893a7c39c55ff49286481bb3c7e7ee4083d82fbe0353",
+      "commands": [
+        {
+          "name": "compile-title-layout",
+          "argv": [
+            "C:\\venvs\\pymmd-20261102\\Scripts\\python.exe",
+            "-m",
+            "compileall",
+            "-q",
+            "src/py_mermaid/layout/elk",
+            "src/py_mermaid/geometry/flowchart.py"
+          ],
+          "exitCode": 0,
+          "stdout": "commands/001-compile-title-layout/stdout.log",
+          "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr": "commands/001-compile-title-layout/stderr.log",
+          "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "name": "import-title-contract",
+          "argv": [
+            "C:\\venvs\\pymmd-20261102\\Scripts\\python.exe",
+            "-c",
+            "import inspect; from py_mermaid.layout.elk import layout_flowchart; from py_mermaid.geometry import geometry_bounds; from py_mermaid.model.flowchart import MeasuredTitle; print(inspect.signature(layout_flowchart)); print(inspect.signature(geometry_bounds)); print('Mechanical import only; no layout executed')"
+          ],
+          "exitCode": 0,
+          "stdout": "commands/002-import-title-contract/stdout.log",
+          "stdoutSha256": "9bb05804f6720a8efaf079b7b8ec282d6c0caf929033f06417adda379b049206",
+          "stderr": "commands/002-import-title-contract/stderr.log",
+          "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "limitation": "This check preceded the final shape config keyword consumer edit; final integration signature check still pending"
+    },
+    {
+      "run": "test-runs/F01.3-elk-final-mechanical-20261105T012020Z-17acc247",
+      "runManifestSha256": "12985a74c05c3b64d964ceaad47204b8e2f501edc1df2bda194bf10c0f4c0e66",
+      "sourceIdentity": "7022a29fca766527ec3147b9a491385dcf5d1773600fbc6819f93db4e9920b44",
+      "sourceUnchangedDuringRun": true,
+      "commands": [
+        {
+          "name": "compile-title-and-rich-layout",
+          "argv": [
+            "C:\\venvs\\pymmd-20261102\\Scripts\\python.exe",
+            "-m",
+            "compileall",
+            "-q",
+            "src/py_mermaid/layout/elk",
+            "src/py_mermaid/geometry/flowchart.py"
+          ],
+          "exitCode": 0,
+          "stdout": "commands/001-compile-title-and-rich-layout/stdout.log",
+          "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr": "commands/001-compile-title-and-rich-layout/stderr.log",
+          "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "name": "inspect-shared-contract",
+          "argv": [
+            "C:\\venvs\\pymmd-20261102\\Scripts\\python.exe",
+            "-c",
+            "import inspect; from py_mermaid.layout.elk import layout_flowchart; from py_mermaid.geometry import geometry_bounds; from py_mermaid.geometry.shapes import shape_outline_intersection; assert 'measured_title' in inspect.signature(layout_flowchart).parameters; assert 'include_engine' in inspect.signature(geometry_bounds).parameters; p=inspect.signature(shape_outline_intersection).parameters['config']; assert p.kind is inspect.Parameter.KEYWORD_ONLY and p.default is None; print(inspect.signature(layout_flowchart)); print(inspect.signature(geometry_bounds)); print(inspect.signature(shape_outline_intersection)); print('Shared contracts match; no product behavior executed')"
+          ],
+          "exitCode": 0,
+          "stdout": "commands/002-inspect-shared-contract/stdout.log",
+          "stdoutSha256": "0facafd29d09e9d10a2f82c755744eaaee9172f1344d6bf7671db9a68aade760",
+          "stderr": "commands/002-inspect-shared-contract/stderr.log",
+          "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "scope": "Final owned source compilation; measured_title/include_engine/shape config shared signatures matched. No layout or Canvas measurement/drawing executed."
+    },
+    {
+      "run": "test-runs/F01.3-title-anchor-mechanical-20261105T012702Z-bc7a6057",
+      "runManifestSha256": "219a23c86265c6aaf6e0ce36ad973a89f12a3134e25de291dfa6dbaf7155c234",
+      "sourceIdentity": "75c68fdb71bb71dcaabe999ffccecfb2d57deb47086e714d2529cc95ad40f7d3",
+      "sourceUnchangedDuringRun": true,
+      "commands": [
+        {
+          "name": "compile-title-anchor",
+          "argv": [
+            "C:\\venvs\\pymmd-20261102\\Scripts\\python.exe",
+            "-m",
+            "compileall",
+            "-q",
+            "src/py_mermaid/layout/elk",
+            "src/py_mermaid/geometry/flowchart.py"
+          ],
+          "exitCode": 0,
+          "stdout": "commands/001-compile-title-anchor/stdout.log",
+          "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr": "commands/001-compile-title-anchor/stderr.log",
+          "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "name": "inspect-title-value-contract",
+          "argv": [
+            "C:\\venvs\\pymmd-20261102\\Scripts\\python.exe",
+            "-c",
+            "from dataclasses import fields; import inspect; from py_mermaid.model.flowchart import MeasuredTitle; from py_mermaid.layout.elk import layout_flowchart; names={f.name for f in fields(MeasuredTitle)}; assert 'text_anchor' in names; assert 'measured_title' in inspect.signature(layout_flowchart).parameters; print('MeasuredTitle.text_anchor and measured_title contracts present; no behavior executed')"
+          ],
+          "exitCode": 0,
+          "stdout": "commands/002-inspect-title-value-contract/stdout.log",
+          "stdoutSha256": "9b10241ed050fbdf3cb0d02a603981c23c5ef93b5f780b4933880981bbc44bdd",
+          "stderr": "commands/002-inspect-title-value-contract/stderr.log",
+          "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "scope": "Title anchor source compilation and shared value-field/signature presence only; no measurement/layout/drawing executed"
+    }
+  ],
+  "behaviorRun": false,
+  "testFilesWritten": false,
+  "installationRun": false,
+  "commitPushPublish": false,
+  "remainingWork": [
+    "Canvas title measurement supplies resolved CSS text_anchor; actual title/ink drawing and export viewport remain Canvas owner responsibilities",
+    "Independent source-derived S3 cases cover title anchor, rich styles, inheritance and native paint before runtime verification",
+    "S3 source-derived title/no-title/negative metrics/content-union and empty-rich-label tests",
+    "S4 real layout/Canvas title viewport and theme font-size/geometry verification",
+    "No F01.4/Dagre/extra edge types, marker or curve behavior claimed"
+  ],
+  "nextAction": "Coordinator complete S2 freeze then S3 independently verify source title anchors/styles/label geometry",
+  "staticIndependentReview": [
+    {
+      "id": "STYLE-01",
+      "finding": "font shorthand must participate in longhand cascade by order/importance and reset omitted style/weight/line-height",
+      "example": ".nodeLabel { font-size:10px; font:20px Arial }",
+      "disposition": "Root owner reports correction; independently verify in S3/S4"
+    },
+    {
+      "id": "STYLE-02",
+      "finding": "Inline important declaration cannot lose to a later non-important duplicate",
+      "example": "color:red!important;color:blue",
+      "disposition": "Root owner reports correction; independently verify"
+    },
+    {
+      "id": "STYLE-03",
+      "finding": "Relative font and inherit must use actual parent inherited_base rather than a pre-scaled small/h1 UA style",
+      "example": "small { font-size:2em } / font-size:inherit",
+      "disposition": "Root owner reports inherited_base correction; independently verify"
+    },
+    {
+      "id": "STYLE-04",
+      "finding": "Custom CSS properties must inherit into nested tag rules using var()",
+      "example": ".nodeLabel { --ink:red } em { color:var(--ink) }",
+      "disposition": "Root owner reports frozen custom_properties propagation; independently verify"
+    },
+    {
+      "id": "STYLE-05",
+      "finding": "Absolute keyword font sizes use medium baseline; only smaller/larger use parent font",
+      "example": "Parent32px with child font-size:large",
+      "disposition": "Root owner reports correction; independently verify"
+    },
+    {
+      "id": "STYLE-06",
+      "finding": "CSS text-anchor overrides the source title middle presentation attribute; text-align is distinct",
+      "example": ".flowchartTitleText { text-anchor:start }",
+      "disposition": "MeasuredTitle.text_anchor appended by root; this owner implements validated native title placement; unverified"
+    },
+    {
+      "id": "STYLE-07",
+      "finding": "currentColor resolves against final computed color independent of declaration order",
+      "example": "stroke:currentColor;color:red",
+      "disposition": "Root owner reports correction; independently verify"
+    },
+    {
+      "id": "STYLE-08",
+      "finding": "Absolute line-height retains px across descendant font-size changes instead of becoming inherited unitless ratio",
+      "example": "Parent14px/20px; child font-size28px should retain20px line-height",
+      "disposition": "Root owner reports line_height_px preservation; independently verify"
+    },
+    {
+      "id": "STYLE-09",
+      "finding": "Per-group palette gated by categorical theme name and actual nonempty border palette; nodes do not cycle",
+      "example": "borderColorArray=[] with bkgColorArray nonempty must not activate category palette",
+      "disposition": "Root owner reports dual gate correction; independently verify"
+    }
+  ]
+}

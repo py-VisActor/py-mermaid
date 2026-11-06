@@ -43,7 +43,17 @@ def write_json(path: Path, value: dict, *, exclusive: bool = False) -> None:
     temporary = path.with_name(path.name + "." + uuid.uuid4().hex + ".tmp")
     try:
         temporary.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-        temporary.replace(path)
+        for attempt in range(6):
+            try:
+                temporary.replace(path)
+                break
+            except PermissionError as error:
+                # Windows readers/antivirus can briefly deny replacement of
+                # an open manifest. Keep the old complete file until one
+                # atomic swap succeeds; persistent failures still propagate.
+                if getattr(error, 'winerror', None) not in {5, 32, 33} or attempt == 5:
+                    raise
+                time.sleep(.01 * 2**attempt)
     finally:
         temporary.unlink(missing_ok=True)
 
@@ -59,7 +69,10 @@ def source_identity(root: Path = ROOT) -> dict:
     paths = [p for p in (root / "src/py_mermaid").rglob("*")
              if p.is_file() and "__pycache__" not in p.parts and p.suffix != ".pyc"]
     paths += [root / name for name in ("pyproject.toml", "README.md", "LICENSE", "THIRD_PARTY_NOTICES.md",
-                                       "references/licenses/mermaid-LICENSE") if (root / name).is_file()]
+                                       "references/licenses/mermaid-LICENSE", "references/licenses/khroma-LICENSE",
+                                       "references/licenses/roughjs-LICENSE") if (root / name).is_file()]
+    known=set(paths)
+    paths += [p for p in (root/'references/licenses').rglob('*') if p.is_file() and p not in known]
     files = {p.relative_to(root).as_posix(): file_identity(p)["sha256"] for p in sorted(paths)}
     return {"sourceTreeSha256": hashlib.sha256(json.dumps(files, sort_keys=True).encode()).hexdigest(),
             "files": files}
@@ -67,7 +80,7 @@ def source_identity(root: Path = ROOT) -> dict:
 
 def environment_identity(root: Path = ROOT) -> dict:
     packages = {}
-    for name in ("py-skia-canvas", "py-visactor-elk", "Pillow"):
+    for name in ("py-skia-canvas", "py-visactor-elk", "py-visactor-katex", "Pillow"):
         try:
             packages[name] = importlib.metadata.version(name)
         except importlib.metadata.PackageNotFoundError:

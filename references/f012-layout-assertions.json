@@ -1,0 +1,412 @@
+{
+  "schema": "py-mermaid-f012-assertions/v1",
+  "taskId": "F01.2-S3/layout",
+  "phase": "S3",
+  "status": "targeted_verified_not_final_full",
+  "candidateSourceIdentity": "3d846b5df224e167a528a73c52d359388fda5e508b561fa876e4bd1b20785c2e",
+  "frozenCandidateEvidence": "test-runs/F01.2-s2-freeze-20261104T144018Z-77e0606b",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "sources": [
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/layout-algorithms/elk/render.ts",
+      "symbols": [
+        "buildSubgraphLayoutOptions",
+        "configureCrossHierarchyEdges",
+        "evenGroupFrames",
+        "applyElkEdgeLayout",
+        "calcOffset",
+        "createRootElkGraph"
+      ],
+      "sha256": "6258890b3f311e86e4cd4dc99d480f704fde7473e150dc62b88838c5015c5011"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/layout-algorithms/elk/subgraphFeedbackEdges.ts",
+      "symbols": [
+        "findSubgraphFeedbackEdges"
+      ],
+      "sha256": "b2924ce5c1c619ff902e0eeed1a79fa7e725c5e800c707d23cda22ad6a2304cc"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/clusters.js",
+      "symbols": [
+        "rect title placement and frame bounds"
+      ],
+      "sha256": "65363a1bb619eb0d0e0635f3c3bd4410c2ade873053ea864506a3323496f940b"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/hexagon.ts",
+      "symbols": [
+        "hexagon polygon with neo f=3.5"
+      ],
+      "sha256": "2c5d559cf52495aee42b250c6ca556be1f5f0c244ee2993d53d22d405d52dcf3"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/leanRight.ts",
+      "symbols": [
+        "lean_right polygon"
+      ],
+      "sha256": "92c03498df78448186f2114231439338c73e7a8d6a2ad47ad1d7dea1b336f56c"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/leanLeft.ts",
+      "symbols": [
+        "lean_left polygon"
+      ],
+      "sha256": "7a156d3830ee833484e381351bd2f298b79c11081595e8bfaae224c7288608aa"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/trapezoid.ts",
+      "symbols": [
+        "trapezoid polygon"
+      ],
+      "sha256": "7347c2439b54e296ff6e426bc5aefcd00236b78d4c0f859258feae83c1183cfe"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/invertedTrapezoid.ts",
+      "symbols": [
+        "inverted trapezoid polygon"
+      ],
+      "sha256": "811f49eeba78032b5a64f2266d57d7c220ea1841c45f35b854d6381a68a93e1a"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/question.ts",
+      "symbols": [
+        "diamond polygon"
+      ],
+      "sha256": "c662ad9199b6de3b38580bc59adc15c8e0d05162cae777dcc3c605fbaaa96b06"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/stadium.ts",
+      "symbols": [
+        "stadium 50-point semicircle"
+      ],
+      "sha256": "cb15be21132dbb2eb118815b37f3b9cdc08e4f6d4ffe63c408a04796ee6b5b6a"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/circle.ts",
+      "symbols": [
+        "circle diagonal label radius"
+      ],
+      "sha256": "0583cce7bef770d20cd108c620ef546ae2cd423da2ebd913a93e6546ff28a167"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/doubleCircle.ts",
+      "symbols": [
+        "double circle outer circumference"
+      ],
+      "sha256": "e13030a09455da35a76545c9f27d7c07c3ba450fa065a65d367d40a824bfbc3e"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/cylinder.ts",
+      "symbols": [
+        "cylinder outer ellipse/side"
+      ],
+      "sha256": "66cf21a2d0777a3a2188ac616d68bbd62e4569615e570c150a45e3c08477a9a0"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/subroutine.ts",
+      "symbols": [
+        "outer rectangular boundary"
+      ],
+      "sha256": "bbf3ec95a0518b5796bdf23e17375323b000a02051a9b1119cf91adeab69b4a4"
+    },
+    {
+      "upstreamPath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/rectLeftInvArrow.ts",
+      "symbols": [
+        "classical outline handler"
+      ],
+      "sha256": "62472fe5c9d63775db12dfc6914f9995681cdbfe193b945b13bb6216f687f06e"
+    }
+  ],
+  "publicElkContract": {
+    "distribution": "py-visactor-elk==0.1.0",
+    "path": "../py-elk/src/pyelk/execution/json_transfer.py",
+    "symbols": [
+      "JSON export parent-local node / container-local section and edge-label coordinates"
+    ],
+    "sha256": "4d15ec866a33b00469e07b4bcd507e3d94dc402a202e6586190e1168e2dc67fd"
+  },
+  "testFile": "tests/f012/test_layout.py",
+  "testFileSha256": "a9120f837f423c40fb3d077bcabbe390324fcfd412c8468e8bf93fb144d1f140",
+  "testMethods": [
+    {
+      "id": "F012-LAYOUT-L01",
+      "test": "RealCompoundTests.test_l01_real_unicode_multiline_edge_label",
+      "group": "real-canvas-measured-elk",
+      "status": "passed_at_targeted_candidate"
+    },
+    {
+      "id": "F012-LAYOUT-L02",
+      "test": "RealCompoundTests.test_l02_real_all_classic_shape_endpoints",
+      "group": "real-canvas-measured-elk",
+      "status": "passed_at_targeted_candidate"
+    },
+    {
+      "id": "F012-LAYOUT-L03",
+      "test": "RealCompoundTests.test_l03_real_empty_group_and_only_groups",
+      "group": "real-canvas-measured-elk",
+      "status": "passed_at_targeted_candidate"
+    },
+    {
+      "id": "F012-LAYOUT-L04",
+      "test": "RealCompoundTests.test_l04_real_nested_parent_local_coordinates",
+      "group": "real-canvas-measured-elk",
+      "status": "passed_at_targeted_candidate"
+    },
+    {
+      "id": "F012-LAYOUT-L05",
+      "test": "RealCompoundTests.test_l05_real_group_local_directions",
+      "group": "real-canvas-measured-elk",
+      "status": "passed_at_targeted_candidate"
+    },
+    {
+      "id": "F012-LAYOUT-L06",
+      "test": "RealCompoundTests.test_l06_real_sibling_cross_group_labels",
+      "group": "real-canvas-measured-elk",
+      "status": "passed_at_targeted_candidate"
+    },
+    {
+      "id": "F012-LAYOUT-L07",
+      "test": "RealCompoundTests.test_l07_real_group_inside_outside_connections",
+      "group": "real-canvas-measured-elk",
+      "status": "passed_at_targeted_candidate"
+    },
+    {
+      "id": "F012-LAYOUT-L08",
+      "test": "RealCompoundTests.test_l08_real_group_node_and_group_group_endpoints",
+      "group": "real-canvas-measured-elk",
+      "status": "passed_at_targeted_candidate"
+    },
+    {
+      "id": "F012-LAYOUT-L09",
+      "test": "RealCompoundTests.test_l09_real_ancestor_group_endpoints",
+      "group": "real-canvas-measured-elk",
+      "status": "passed_at_targeted_candidate"
+    },
+    {
+      "id": "F012-LAYOUT-L10",
+      "test": "RealCompoundTests.test_l10_real_collapsed_subgraph_feedback_restores_semantics",
+      "group": "real-canvas-measured-elk",
+      "status": "passed_at_targeted_candidate"
+    },
+    {
+      "id": "F012-LAYOUT-L11",
+      "test": "RealCompoundTests.test_l11_real_labeled_multiedges_self_loop_and_repeat_isolation",
+      "group": "real-canvas-measured-elk",
+      "status": "passed_at_targeted_candidate"
+    },
+    {
+      "id": "F012-LAYOUT-L12",
+      "test": "RealCompoundTests.test_l12_real_empty_group_edges_and_group_self_loop",
+      "group": "real-canvas-measured-elk",
+      "status": "passed_at_targeted_candidate"
+    },
+    {
+      "id": "F012-LAYOUT-L13",
+      "test": "RealCompoundTests.test_l13_real_title_width_floor_and_internal_long_label",
+      "group": "real-canvas-measured-elk",
+      "status": "passed_at_targeted_candidate"
+    },
+    {
+      "id": "F012-LAYOUT-C01",
+      "test": "CompoundBoundaryTests.test_c01_container_translation_keeps_engine_origin_after_frame_shrink",
+      "group": "synthetic-json-boundary-negative-control",
+      "status": "passed_at_targeted_candidate"
+    },
+    {
+      "id": "F012-LAYOUT-C02",
+      "test": "CompoundBoundaryTests.test_c02_measurement_parent_and_endpoint_faults_before_engine",
+      "group": "synthetic-json-boundary-negative-control",
+      "status": "passed_at_targeted_candidate"
+    },
+    {
+      "id": "F012-LAYOUT-C03",
+      "test": "CompoundBoundaryTests.test_c03_bad_container_parent_and_label_outputs_fail",
+      "group": "synthetic-json-boundary-negative-control",
+      "status": "passed_at_targeted_candidate"
+    },
+    {
+      "id": "F012-LAYOUT-L14",
+      "test": "RealCompoundTests.test_l14_long_title_floor_five_separate_group_directions",
+      "group": "real-canvas-measured-elk",
+      "status": "passed_at_targeted_candidate"
+    },
+    {
+      "id": "F012-LAYOUT-L15",
+      "test": "RealCompoundTests.test_l15_long_title_floor_five_cross_boundary_group_directions",
+      "group": "real-canvas-measured-elk",
+      "status": "passed_at_targeted_candidate"
+    },
+    {
+      "id": "F012-LAYOUT-L16",
+      "test": "RealCompoundTests.test_l16_nested_long_title_with_inherited_and_separate_directions",
+      "group": "real-canvas-measured-elk",
+      "status": "passed_at_targeted_candidate"
+    }
+  ],
+  "realEngineSubcases": {
+    "L01": [
+      "TD",
+      "LR Unicode/multiline center labels"
+    ],
+    "L02": {
+      "shapes": [
+        "square",
+        "round",
+        "stadium",
+        "subroutine",
+        "cylinder",
+        "circle",
+        "doublecircle",
+        "diamond",
+        "hexagon",
+        "odd",
+        "trapezoid",
+        "inv_trapezoid",
+        "lean_right",
+        "lean_left"
+      ],
+      "directions": [
+        "TD",
+        "LR"
+      ],
+      "graph": "two incoming/two outgoing edges produce noncentral terminal axes"
+    },
+    "L03": [
+      "empty group",
+      "groups-only nesting"
+    ],
+    "L04": [
+      "nested inner edge with label",
+      "cross nesting labeled edge"
+    ],
+    "L05": [
+      "group TD",
+      "TB",
+      "LR",
+      "RL",
+      "BT without crossing edges"
+    ],
+    "L06": [
+      "sibling groups with local directions and cross-group center label"
+    ],
+    "L07": [
+      "group-internal/outside edges form collapsed graph feedback cycle"
+    ],
+    "L08": [
+      "node->group",
+      "group->group",
+      "group->node"
+    ],
+    "L09": [
+      "ancestor->leaf",
+      "leaf->ancestor",
+      "outer->inner",
+      "inner->outer"
+    ],
+    "L10": [
+      "source collapsed-subgraph feedback edge orientation restored"
+    ],
+    "L11": [
+      "labeled parallel edges",
+      "labeled self-loop",
+      "fresh subsequent group-only diagram"
+    ],
+    "L12": [
+      "empty-group->empty-group",
+      "empty group self-loop"
+    ],
+    "L13": [
+      "long measured title floor",
+      "internal long Unicode center label wrapping"
+    ],
+    "L14": [
+      "Long title: standalone group TD/TB/LR/RL/BT"
+    ],
+    "L15": [
+      "Long title: TD/TB/LR/RL/BT group metadata forced into compound hierarchy by cross-boundary edges"
+    ],
+    "L16": [
+      "Nested long title under root TD/LR and outer inherited/TD/LR/RL/BT"
+    ]
+  },
+  "sharedRelationalAssertions": [
+    "All node/group/edge/label ids in semantic order; immutable semantic and measured inputs",
+    "Measured leaf width/height retained; group parent preserved; finite positive graph and group boxes",
+    "Parent contains direct node/group children; sibling groups and all leaves do not overlap",
+    "Group titles contained in painted frames and do not cover direct child nodes; edge labels do not cover leaf nodes/group titles/each other",
+    "Every route section preserved, finite in root viewport, positive route length and orthogonal segments",
+    "Each route endpoint on independent source-derived actual shape outline or rectangular group frame",
+    "Graph bounds include all nodes/groups/titles/labels; label sizes equal real injected measurements",
+    "Explicit isolated group direction constrains source/target topological order without absolute coordinate goldens"
+  ],
+  "independentOutlineExpectations": {
+    "polygons": "Analytical vertices transcribed from fixed source handlers in normalized top-left space; point-to-segment distance",
+    "circle/doublecircle": "Analytical outer circumference",
+    "round": "Rounded rectangle radius12 analytical signed distance",
+    "cylinder": "Analytical ellipse residual plus vertical walls from source rx/ry",
+    "stadium": "Ideal capsule approximation with0.25logical px tolerance for fixed source 50-point semicircle polygon; never pixel similarity"
+  },
+  "negativeControls": {
+    "C01": "Known synthetic group origin(20,30) differs from tightened frame; leaf positions/sections/label must add origin exactly once",
+    "C02": "13 invalid group/label/parent/member/endpoint/namespace measurement cases rejected before native worker",
+    "C03": "10 malformed output variants, including positive group width smaller than measured title floor; worker closes"
+  },
+  "mechanicalChecks": [
+    {
+      "command": "C:/venvs/pymmd-20261102/Scripts/python.exe -m compileall -q tests/f012/test_layout.py",
+      "exitCode": 0
+    },
+    {
+      "command": "PYTHONPATH=src C:/venvs/pymmd-20261102/Scripts/python.exe -c <unittest.TestLoader discover test_layout.py and count only>",
+      "exitCode": 0,
+      "stdout": "Collected F01.2 layout methods:16; No behavior tests executed",
+      "behaviorExecuted": false
+    }
+  ],
+  "scopeLimits": [
+    "No runtime/semantic passes claimed from compilation or test collection",
+    "No product private helpers imported to calculate expected coordinates",
+    "Synthetic raw JSON used only for explicit boundary controls; primary13test methods invoke actual installed pyelk after real public Canvas measurement",
+    "No installation validation; static collection only in S3",
+    "Cross-version routes may differ; assertions use functional/geometry relations, not old elkjs coordinate equality"
+  ],
+  "staticQuestions": [
+    "Ancestor/group/self-loop source contracts exercised by actual engine rather than assumed provider success",
+    "Source inward-only frame pass may need diagnosis if long internal labels escape a painted frame; tests retain independent content/containment assertions",
+    "Nominal classical ellipse handled by separate parser/Canvas source probes, not claimed as a supported layout shape"
+  ],
+  "targetedResults": {
+    "suite": {
+      "run": "test-runs/F01.2-title-floor-targeted-20261104T145132Z-7503f1fe",
+      "runManifestSha256": "58a4cc302fa688c9bfc7c0c93cdd70516793915ced41ed75a05bda09525f3983",
+      "sourceTreeSha256": "630f80f74c69f43054d718a1f045af5440266531b911aa168efa62581e92af01",
+      "sourceUnchangedDuringRun": true,
+      "commands": [
+        {
+          "name": "compound-layout-regression",
+          "exitCode": 0,
+          "stdout": "commands/001-compound-layout-regression/stdout.log",
+          "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr": "commands/001-compound-layout-regression/stderr.log",
+          "stderrSha256": "400535dbe038a5d72a2b4c10c18795574c42c4b6ebfd8a0630068a23c687609e"
+        }
+      ]
+    },
+    "methods": 19,
+    "result": "PASS",
+    "supplementalNewTitleFloorNegativeControl": {
+      "name": "title-floor-negative-control",
+      "exitCode": 0,
+      "stdout": "commands/002-title-floor-negative-control/stdout.log",
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "commands/002-title-floor-negative-control/stderr.log",
+      "stderrSha256": "ca5d1e9d6fe7abc69bae24b614a3735c4f2d83837e8a6428ef3d2848ed684ba2"
+    },
+    "fullCandidateStatus": "Pending coordinator S5; source changed in Canvas session after suite, so suite is not relabelled final-candidate full pass"
+  },
+  "staticQuestionsResolved": [
+    "Actual nested/empty/group/ancestor/self-loop/cross-shape real provider cases passed",
+    "Long-title group floor failed initially and was fixed through measured input-axis conversion; no assertion weakened"
+  ]
+}

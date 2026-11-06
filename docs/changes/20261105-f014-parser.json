@@ -1,0 +1,416 @@
+{
+  "schema": "py-mermaid-change/v1",
+  "taskId": "20261105-f014-parser",
+  "ownerAgent": "/root/parser_config",
+  "phase": "F01.4-S4",
+  "status": "repairs_complete_unverified",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "baseSourceSha256": "f75ee6fa7fc7d0f3a04df190a125c8553599705c547258ae52c5f73a5b6ba76f",
+  "startEvidence": "test-runs/F01.4-execution-start-20261105T082500Z-149317c2/run.json",
+  "scope": "All retained static F01 grammar/config/metadata/styles/collapse; ELK seven registered names/public options and handDrawn declaration support. Math separate, Dagre/interactive behavior excluded by user.",
+  "preservedUserWork": true,
+  "changedFiles": [
+    {
+      "path": "src/py_mermaid/config/elk.py",
+      "sha256": "cf9d99b7c7b334f26dc36b95ac1b0d34af089e193097e6e0d6f219bdadb06e02",
+      "beforeSha256": null
+    },
+    {
+      "path": "src/py_mermaid/config/flowchart.py",
+      "sha256": "d7d16ff3a4663fa593769807828cbb2341b88eb44c0c07826eed525b91186adb",
+      "beforeSha256": "3316f3ed3ba4323a0728f9d843821a2dfb4331ccfb1bf092e45ed6c3fee7dd92"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/flowchart/lexical.py",
+      "sha256": "c2478953d3d3f7e33c27cf6ca91db78d245a6dd83d44fafe2f4eb46b1492bb80",
+      "beforeSha256": null
+    },
+    {
+      "path": "src/py_mermaid/diagrams/flowchart/parser.py",
+      "sha256": "159a49daa2ae4d3dbb752d06bbeec9bab083dd73735f76460bb2631102915d4c",
+      "beforeSha256": "043d35f35d7a7857d7c9bd0a07404a924f0279cff05283ec08cb639e8bb4f633"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/flowchart/syntax.py",
+      "sha256": "47fe17165ba7dae86f628ebebd3038da7177c2592c7c00af006ff7075cc94d19",
+      "beforeSha256": null
+    }
+  ],
+  "sourceMap": "references/f014-parser-sources.json",
+  "sourceMapSha256": "f01b1e85079eb790f9df372b5ef75bb4466f3d546f99ee1efd8c48b6ab1aa95b",
+  "mechanicalEvidence": "test-runs/F01.4-record-20261105T092539Z-5eb7cdf6/run.json",
+  "mechanicalCommandExitCodes": [
+    0
+  ],
+  "behaviorExecuted": false,
+  "testsWritten": false,
+  "imagesGenerated": false,
+  "installationValidation": "deferred_by_user",
+  "commitPush": "not_executed",
+  "limitations": [
+    {
+      "id": "math",
+      "status": "deferred_by_user_to_separate_module",
+      "detail": "Mathematical label $$ syntax fails explicitly; no KaTeX/math implementation or dependency added."
+    },
+    {
+      "id": "dagre",
+      "status": "excluded_by_user",
+      "detail": "Not a registered target layout, plugin or fallback. Explicit unsupported layout fails before Canvas."
+    },
+    {
+      "id": "interactive-behavior",
+      "status": "excluded_by_static_scope",
+      "detail": "No callback execution, links, tooltips, events, animation playback or interactive export host."
+    },
+    {
+      "id": "classic-ellipse",
+      "status": "upstream_render_defect_preserved",
+      "detail": "Classic ellipse syntax parses, source renderer has no ellipse shape; native renderer must report UPSTREAM_SHAPE_MISSING rather than invent an ellipse."
+    },
+    {
+      "id": "BR-direction",
+      "status": "source_anomaly_separate",
+      "detail": "Source lex accepts BR but FlowDB leaves BR unnormalized and source ELK has no diagonal direction. Contract explicitly excludes invented diagonal layout; parser reports UNSUPPORTED_DIRECTION."
+    },
+    {
+      "id": "constructor-shape",
+      "status": "upstream_prototype_bug_not_implemented",
+      "detail": "Source isValidShape uses in on an ordinary object, allowing constructor through lookup. Target explicit147-alias registry safely rejects it, rather than invoking a Python class as painter."
+    },
+    {
+      "id": "invalid-edge-combination",
+      "status": "source_anomaly_preserved",
+      "detail": "Mismatched split markers/strokes retain edge_type/stroke INVALID, min_length None and source-derived default none/point markers; static painter may use its source default branch. No grammar rejection invented."
+    },
+    {
+      "id": "verification",
+      "status": "unverified",
+      "detail": "Only compile/import/signature checks ran for this candidate. All functional semantics, resources, Canvas, layout and export require independent S3/S4 verification; no coverage inferred from the grammar inventory."
+    }
+  ],
+  "next": "All owners close batch, root freezes same candidate and executes unified related regression; no worker full-suite run.",
+  "s4RepairBatch": {
+    "status": "repairs_complete_unverified",
+    "originalSourceFreeze": "5b0262fdf79a609517ff6080ddd1da50d1649528abea2373f74c3666ee7d14ed",
+    "originalSourceZip": "test-runs/F01.4-s2-source-freeze-20261105T084954Z-d01bc958/artifacts/source-candidate.zip",
+    "initialFailureRun": "test-runs/F01.4-batch-20261105T090906Z-11b555ce",
+    "preRepairTestFixtureEvidence": "test-runs/F01.4-parser-repair-inputs-20261105T092030Z-ec6870c3",
+    "repairs": [
+      {
+        "id": "cold-import",
+        "classification": "product import topology",
+        "evidence": "test-runs/F01.4-batch-20261105T090906Z-11b555ce/commands/013-f014-language/stderr.log",
+        "source": "Pure module entry contract; parser package must not eagerly require parsing package that reimports half-initialized parser.",
+        "fix": "Move preprocess/YAML helpers into parse_flowchart/metadata call boundaries, retain syntax-first cold test imports; no aggregator edits."
+      },
+      {
+        "id": "flow-yaml-continuation",
+        "classification": "product source port",
+        "evidence": "test-runs/F01.4-batch-20261105T090906Z-11b555ce/commands/016-f014-styles/stderr.log",
+        "source": "js-yaml4.3 loader readFlowCollection/skipSeparationSpace warns on deficient flow indentation; source FlowDB wraps inline metadata as a root flow map with zero-indent fields.",
+        "fix": "Flow/quoted continuations bypass block-indentation guard, strict block collection indentation remains."
+      },
+      {
+        "id": "compiled-jison-word-boundary",
+        "classification": "product and independent test-design source interpretation",
+        "evidence": "test-runs/F01.4-batch-20261105T090906Z-11b555ce/commands/005-f012-language/stderr.log",
+        "source": "Pinned compiled Jison lexer adds literal word boundaries: v\\b/default\\b/style\\b; first-match options{}. Raw grammar word literals alone were insufficient to infer this build transform.",
+        "fix": "Use ASCII-word boundary checks for literal tokens; key:value and styleNode/classify are genuine source positives. Preserve exact keyword negatives. Do not loosen old-props positive into an unsupported source form."
+      },
+      {
+        "id": "BR-down",
+        "classification": "product source semantics",
+        "source": "elk/render.ts dir2ElkDirection default DOWN; confirmed source BR positive.",
+        "fix": "Target canonical TB, original source text retains BR; no diagonal or algorithm fallback."
+      },
+      {
+        "id": "TD-group-inheritance",
+        "classification": "product source semantics",
+        "source": "FlowDB setDirection TD->TB precedes addSubGraph inheritance.",
+        "fix": "Preserve old public root TD spelling, inherited group effective TB."
+      },
+      {
+        "id": "raw-seed-number",
+        "classification": "product source semantics shared with C",
+        "source": "roughjs Random checks original number truthiness before Math.imul. Truthy0.5/2**32 produces first next0; subsequent seed0 uses random branch, not a permanently deterministic zero stream.",
+        "fix": "Config preserves original finite seed number; C owns generator truthiness-before-imul. Model int|float was updated by root."
+      },
+      {
+        "id": "header-space-semicolon",
+        "classification": "fixture mistake plus permissive product parser",
+        "evidence": "test-runs/F01.4-batch-20261105T090906Z-11b555ce/artifacts/oracle/whitespace-separators.error.json",
+        "source": "FirstStmtSeparator := SEMI | NEWLINE | spaceList NEWLINE, so SPACE+SEMI is invalid.",
+        "fix": "Header-specific check rejects it; node trailing SPACE+SEMI stays valid. Exact bad original input retained as new negative header-semicolon-invalid; positive keeps node semicolons with a legal header newline."
+      },
+      {
+        "id": "metadata-db-serialization",
+        "classification": "product DB body and missing independent visible fixture",
+        "evidence": "test-runs/F01.4-batch-20261105T090906Z-11b555ce/artifacts/oracle/metadata-multiline-yaml.json",
+        "source": "FlowDB metadata doc.label bypasses classic sanitizeText, preserves br/> DB spelling. Source visibleLabel confirms First newline second.",
+        "fix": "Keep metadata body and canonical Mermaid entity transport in model.label; raw_label unchanged. Native provider still always sanitizes before measurement/draw. Add explicit visibleLabels, retain classic sanitizer path."
+      },
+      {
+        "id": "selected-group-layout-family",
+        "classification": "explicit user layout-removal policy",
+        "sourceScope": "Only actual group metadata algorithm selects a group layout; ordinary node algorithm is opaque and an earlier node metadata map is not forwarded to a later group by FlowDB.",
+        "rule": "For an actual group, algorithm must be a string equal to elk or starting elk.; otherwise UNSUPPORTED_CONFIG before any Canvas entry. Unknown elk.* stays raw for the source resolver to ignore; no optional algorithm list expansion.",
+        "negativeFixtures": [
+          "removed-group-layout",
+          "removed-placeholder-group-layout"
+        ],
+        "tests": [
+          "MetadataCollapseSourceTests.test_removed_group_layout_family_fails_before_any_canvas_entry",
+          "MetadataCollapseSourceTests.test_node_algorithm_is_opaque_unless_it_is_an_actual_group_selection"
+        ],
+        "mechanicalEvidence": "test-runs/F01.4-record-20261105T093222Z-4cbb243e/run.json",
+        "behaviorExecuted": false,
+        "note": "No removed-engine identifier, dependency, implementation or fallback string was added to production code."
+      }
+    ],
+    "changedProductFiles": [
+      {
+        "path": "src/py_mermaid/config/flowchart.py",
+        "sha256": "bcc7d8f8e2599d8bbd9433cc37e9665670a7d4feb58f469e23d46ff0090290ab",
+        "beforeSha256": "d7d16ff3a4663fa593769807828cbb2341b88eb44c0c07826eed525b91186adb"
+      },
+      {
+        "path": "src/py_mermaid/diagrams/flowchart/lexical.py",
+        "sha256": "91fd1b80a853d01e1bbced1a7aafcdcc8e0c18a7009ba8617591e3fbeb1da42d",
+        "beforeSha256": "c2478953d3d3f7e33c27cf6ca91db78d245a6dd83d44fafe2f4eb46b1492bb80"
+      },
+      {
+        "path": "src/py_mermaid/diagrams/flowchart/parser.py",
+        "sha256": "7d1f8f4e289a5c95979510ad2a161cb7d50eaa5f48abaf9aa6d226b8daad0151",
+        "beforeSha256": "159a49daa2ae4d3dbb752d06bbeec9bab083dd73735f76460bb2631102915d4c"
+      },
+      {
+        "path": "src/py_mermaid/parsing/yaml_json.py",
+        "sha256": "568345c47a13bfb65651dafa9b4fcec9a65b2ebd646fa470c8d9717dbecea465",
+        "beforeSha256": "d443e7b317a0a46f97ad53906efa5852fbfb3a4140aca9c8cea53e2854a0ca50"
+      }
+    ],
+    "mechanicalEvidence": "test-runs/F01.4-record-20261105T092539Z-5eb7cdf6/run.json",
+    "behaviorExecutedAfterRepair": false,
+    "functionalStatus": "NOT_EVALUATED",
+    "generatedLexerProvenance": {
+      "path": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js",
+      "sha256": "ffd1a76f0553952a344c68a9b1502dd5cfb6faab72541307b74679c5abc9cec8",
+      "section": "flowchart generated lexer options through rules (before conditions)",
+      "sectionSha256": "20564a2b194a3ebf96fb4a32bb029f08410d4498c7b32d986c001020f04a14de",
+      "observedLiterals": [
+        "style\\b",
+        "default\\b",
+        "v\\b",
+        "_self\\b"
+      ],
+      "options": "{} (first-match unless flex enabled)",
+      "productionDependency": false
+    },
+    "finalPolicyMechanicalEvidence": "test-runs/F01.4-record-20261105T093222Z-4cbb243e/run.json"
+  },
+  "behaviorExecutedAfterRepair": false,
+  "finalPolicyMechanicalEvidence": "test-runs/F01.4-record-20261105T093222Z-4cbb243e/run.json",
+  "testMethodCounts": {
+    "tests/f014/test_language.py": 54,
+    "tests/f011/test_language.py": 40,
+    "tests/f012/test_language.py": 29,
+    "tests/f013/test_language.py": 63
+  },
+  "sharedShapeThemeClosure": {
+    "reason": "F01.4 makes note/state shared shape paint reachable; prior F01.3 flowchart theme closure omitted these fields. No root per-theme fallback is substituted.",
+    "originalFailureEvidence": "test-runs/F01.4-batch-20261105T093450Z-117d64de",
+    "sourcePaintEvidence": "test-runs/F01.4-s4-source-paint-diagnostic-20261105T092448Z-a6b4e487",
+    "sourceCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+    "sources": [
+      {
+        "path": "packages/mermaid/src/themes/theme-base.js",
+        "sha256": "c13caf87f1a547eb65596ebaabf94ad80055546dff5458f3b6475799bb5ec52c",
+        "symbols": [
+          "Theme.constructor",
+          "Theme.updateColors",
+          "Theme.calculate"
+        ],
+        "fields": [
+          "noteBkgColor",
+          "noteBorderColor",
+          "noteTextColor",
+          "stateBorder"
+        ],
+        "theme": "base"
+      },
+      {
+        "path": "packages/mermaid/src/themes/theme-dark.js",
+        "sha256": "79e5faeb17f0ad47c2e97cbbab7491bf12ab93115546eaebda741e00fad75d37",
+        "symbols": [
+          "Theme.constructor",
+          "Theme.updateColors",
+          "Theme.calculate"
+        ],
+        "fields": [
+          "noteBkgColor",
+          "noteBorderColor",
+          "noteTextColor",
+          "stateBorder"
+        ],
+        "theme": "dark"
+      },
+      {
+        "path": "packages/mermaid/src/themes/theme-default.js",
+        "sha256": "c7676f84269d433c83f089bd978439a0d5e783ba48f1dfd87a294efb674e3b66",
+        "symbols": [
+          "Theme.constructor",
+          "Theme.updateColors",
+          "Theme.calculate"
+        ],
+        "fields": [
+          "noteBkgColor",
+          "noteBorderColor",
+          "noteTextColor",
+          "stateBorder"
+        ],
+        "theme": "default"
+      },
+      {
+        "path": "packages/mermaid/src/themes/theme-forest.js",
+        "sha256": "473eed6464c38764c59c15768cdedb44766f40aa736bb96ef1fa94cea2315cc5",
+        "symbols": [
+          "Theme.constructor",
+          "Theme.updateColors",
+          "Theme.calculate"
+        ],
+        "fields": [
+          "noteBkgColor",
+          "noteBorderColor",
+          "noteTextColor",
+          "stateBorder"
+        ],
+        "theme": "forest"
+      },
+      {
+        "path": "packages/mermaid/src/themes/theme-neutral.js",
+        "sha256": "a09bdc75fabfaddb19626f8c8af8e5d9df0dcee31ed09522dcbccd6418ca1a43",
+        "symbols": [
+          "Theme.constructor",
+          "Theme.updateColors",
+          "Theme.calculate"
+        ],
+        "fields": [
+          "noteBkgColor",
+          "noteBorderColor",
+          "noteTextColor",
+          "stateBorder"
+        ],
+        "theme": "neutral"
+      },
+      {
+        "path": "packages/mermaid/src/themes/theme-neo.js",
+        "sha256": "0ef8cf2a93e4629984c6c57382ce69f37d5bffb6a6fe5b949a972ee8d268bf9f",
+        "symbols": [
+          "Theme.constructor",
+          "Theme.updateColors",
+          "Theme.calculate"
+        ],
+        "fields": [
+          "noteBkgColor",
+          "noteBorderColor",
+          "noteTextColor",
+          "stateBorder"
+        ],
+        "theme": "neo"
+      },
+      {
+        "path": "packages/mermaid/src/themes/theme-neo-dark.js",
+        "sha256": "f2d3469f8fe6aae719654bba2fe776802617a72449db8a6a299bc070e07673c3",
+        "symbols": [
+          "Theme.constructor",
+          "Theme.updateColors",
+          "Theme.calculate"
+        ],
+        "fields": [
+          "noteBkgColor",
+          "noteBorderColor",
+          "noteTextColor",
+          "stateBorder"
+        ],
+        "theme": "neo-dark"
+      },
+      {
+        "path": "packages/mermaid/src/themes/theme-redux.js",
+        "sha256": "a2eeb8fc623614c4853e39e90abd1ebf6b8e6f9f4028cf40962d6d6414d6443f",
+        "symbols": [
+          "Theme.constructor",
+          "Theme.updateColors",
+          "Theme.calculate"
+        ],
+        "fields": [
+          "noteBkgColor",
+          "noteBorderColor",
+          "noteTextColor",
+          "stateBorder"
+        ],
+        "theme": "redux"
+      },
+      {
+        "path": "packages/mermaid/src/themes/theme-redux-color.js",
+        "sha256": "5e4278fb33825a501ffae1c6ac13a869763c4e611de9ad6077b58513e4e1b6d0",
+        "symbols": [
+          "Theme.constructor",
+          "Theme.updateColors",
+          "Theme.calculate"
+        ],
+        "fields": [
+          "noteBkgColor",
+          "noteBorderColor",
+          "noteTextColor",
+          "stateBorder"
+        ],
+        "theme": "redux-color"
+      },
+      {
+        "path": "packages/mermaid/src/themes/theme-redux-dark.js",
+        "sha256": "aa769f4fa5992f04bce44af4f1e568d98140477f53406a29a66248b4e6f5d1bc",
+        "symbols": [
+          "Theme.constructor",
+          "Theme.updateColors",
+          "Theme.calculate"
+        ],
+        "fields": [
+          "noteBkgColor",
+          "noteBorderColor",
+          "noteTextColor",
+          "stateBorder"
+        ],
+        "theme": "redux-dark"
+      },
+      {
+        "path": "packages/mermaid/src/themes/theme-redux-dark-color.js",
+        "sha256": "0c1899419d5a06afe61bd183d6fc2b59bf5b1be12528e2bf1c7f3fc36788b535",
+        "symbols": [
+          "Theme.constructor",
+          "Theme.updateColors",
+          "Theme.calculate"
+        ],
+        "fields": [
+          "noteBkgColor",
+          "noteBorderColor",
+          "noteTextColor",
+          "stateBorder"
+        ],
+        "theme": "redux-dark-color"
+      }
+    ],
+    "beforeThemeRulesSha256": "d7f7550c53385af0ce43e00bfc7a6a23f8986998af57186addee39c422b36d69",
+    "themeRulesSha256": "fd2aa045a0ea00a2898fd7da25fa2ef50fee2dac447f980e4ddea9e7b3fb8c85",
+    "portedStatementCount": 68,
+    "assignmentOrder": "Source constructor/updateColors order retained. Existing theme provider: construct, remove calculated sentinels, apply overrides, update, reapply explicit overrides. Dark secondaryTextColor derives in constructor, before overrides. StateBorder source absence is retained; neo-dark commented assignment is not executed.",
+    "scope": "Eleven source themes; null-theme native paint behavior unchanged. No production JS interpreter or upstream runtime dependency.",
+    "testClass": "SharedShapeThemeClosureTests",
+    "addedMethods": 6,
+    "testMethodCount": 54,
+    "behaviorExecuted": false,
+    "status": "code_complete_unverified",
+    "mechanicalEvidence": "test-runs/F01.4-record-20261105T094249Z-46187d2e/run.json",
+    "functionalStatus": "NOT_EVALUATED"
+  }
+}

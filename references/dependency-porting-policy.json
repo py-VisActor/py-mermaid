@@ -63,7 +63,7 @@
       "state": "planned"
     },
     "D07": {
-      "title": "Dagre/COSE/fCoSE/tidy/Sankey/Venn/ELK 适配",
+      "title": "COSE/fCoSE/tidy/Sankey/Venn/ELK 适配",
       "dependsOn": [
         "D01",
         "D03",
@@ -219,11 +219,11 @@
       "reason": "ZenUML locks JS runtime 4.11.0. Python target requires matching generator/runtime and original grammar/actions; latest metadata is not a selected version."
     },
     "dagre-d3-es": {
-      "action": "retain-layout-and-graph-meaning-only",
+      "action": "excluded-by-user",
       "workPackage": "D07",
       "candidates": [],
-      "reason": "Discard D3/SVG renderer and API-shaped graphlib plumbing. Use the minimal ordered/compound graph model needed by features; port actual Dagre ranking/order/position/routing only for Dagre functionality.",
-      "runtimeDisposition": "python-layout-and-model"
+      "reason": "Dagre engine, wrapper and optional/fallback functionality removed from all target modules by explicit user decision. Retain only upstream provenance; graph/geometry requirements use own model and pure helpers.",
+      "runtimeDisposition": "excluded-from-target-runtime"
     },
     "layout-base": {
       "action": "rewrite-used-surface",
@@ -2226,6 +2226,27 @@
       "candidates": [],
       "reason": "Retain required iteration/callback semantics with explicit Python control flow; no browser animation timer or D3 event framework clone.",
       "runtimeDisposition": "python-control-flow"
+    },
+    "@dagrejs/dagre": {
+      "action": "excluded-by-user",
+      "workPackage": "D07",
+      "candidates": [],
+      "reason": "Dagre engine, wrapper and optional/fallback functionality removed from all target modules by explicit user decision. Retain only upstream provenance; graph/geometry requirements use own model and pure helpers.",
+      "runtimeDisposition": "excluded-from-target-runtime"
+    },
+    "dagre": {
+      "action": "excluded-by-user",
+      "workPackage": "D07",
+      "candidates": [],
+      "reason": "Dagre engine, wrapper and optional/fallback functionality removed from all target modules by explicit user decision. Retain only upstream provenance; graph/geometry requirements use own model and pure helpers.",
+      "runtimeDisposition": "excluded-from-target-runtime"
+    },
+    "dagre-d3": {
+      "action": "excluded-by-user",
+      "workPackage": "D07",
+      "candidates": [],
+      "reason": "Dagre engine, wrapper and optional/fallback functionality removed from all target modules by explicit user decision. Retain only upstream provenance; graph/geometry requirements use own model and pure helpers.",
+      "runtimeDisposition": "excluded-from-target-runtime"
     }
   },
   "prefixes": [
@@ -2358,6 +2379,10 @@
       "applicable metadata"
     ],
     "sourceTreePurpose": "Immutable upstream provenance, not a Python runtime dependency list.",
-    "functionalExclusion": "Removing host mechanisms is authorized; required feature loss is not inferred from that removal."
-  }
+    "functionalExclusion": "Removing host mechanisms is authorized; required feature loss is not inferred from that removal.",
+    "excludedAlgorithms": [
+      "dagre"
+    ]
+  },
+  "layoutPolicy": "references/layout-policy.json"
 }

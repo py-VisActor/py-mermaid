@@ -1,0 +1,56 @@
+{
+  "schema": "py-mermaid-command-plan/v1",
+  "scope": "F01.4",
+  "description": "Immutable same-candidate final evidence join and HTML report, after all source and manual QA fixes; no rendering or installation",
+  "inputs": [
+    "{repo}/test-runs/F01.4-batch-20261105T111527Z-8d3c0855/run.json",
+    "{repo}/test-runs/F01.4-batch-20261105T111527Z-f645b0b6/run.json",
+    "{repo}/test-runs/F01.4-batch-20261105T111527Z-b69f15af/run.json"
+  ],
+  "steps": [
+    {
+      "name": "immutable-matrix-copy-and-verification-archive",
+      "argv": [
+        "{python}",
+        "-c",
+        "import sys,shutil,zipfile,json;from pathlib import Path;target=Path(sys.argv[1])/'artifacts';source=Path(sys.argv[2])/'artifacts';shutil.copytree(source,target,dirs_exist_ok=True,ignore=shutil.ignore_patterns('verification-sources.zip'));archive=zipfile.ZipFile(target/'verification-sources.zip','w',zipfile.ZIP_DEFLATED);[archive.write(p,p.as_posix()) for base in ['tests','tools'] for p in Path(base).rglob('*') if p.is_file() and '__pycache__' not in p.parts and p.suffix!='.pyc'];archive.close();old=json.loads((target/'cases.json').read_text('utf-8'));current=json.loads(Path('tests/f014/cases.json').read_text('utf-8'));titles={c['id']:c.get('title') for c in current['cases']};[(c.update(title=titles[c['id']])) for c in old['cases']];assert old==current,'Only presentation titles may change after the matrix';(target/'cases.json').write_text(json.dumps(current,ensure_ascii=False,indent=2)+'\\n',encoding='utf-8');print('Verified presentation-title-only corrections; execution inputs and all assertions unchanged')",
+        "{run}",
+        "{repo}/test-runs/F01.4-batch-20261105T111527Z-8d3c0855"
+      ],
+      "timeoutSeconds": 180
+    },
+    {
+      "name": "same-candidate-summary",
+      "argv": [
+        "{python}",
+        "{repo}/tools/finalize_static_evidence.py",
+        "--artifacts",
+        "{run}/artifacts",
+        "--profiles",
+        "cpu",
+        "auto",
+        "gpu",
+        "--unit-runs",
+        "{repo}/test-runs/F01.4-batch-20261105T111527Z-f645b0b6",
+        "--regression-run",
+        "{repo}/test-runs/F01.4-batch-20261105T111527Z-b69f15af",
+        "--out-spec",
+        "{run}/artifacts/generated-report-spec.json"
+      ],
+      "timeoutSeconds": 90
+    },
+    {
+      "name": "static-html-report",
+      "argv": [
+        "{python}",
+        "{repo}/tools/workflow.py",
+        "report",
+        "--scope",
+        "F01.4",
+        "--spec",
+        "{run}/artifacts/generated-report-spec.json"
+      ],
+      "timeoutSeconds": 240
+    }
+  ]
+}

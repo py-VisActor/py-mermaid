@@ -27,7 +27,7 @@ def load_spec(path: Path) -> dict:
         if name not in spec:
             raise ValueError(f"Report spec is missing {name}")
     safe_id(spec["scope"])
-    for name in ("final", "oracle", "fixtures", "template"):
+    for name in ("final", "oracle", "fixtures", "template", "exportSamples"):
         if name in spec:
             spec[name] = (ROOT / spec[name]).resolve()
     return spec
@@ -40,7 +40,7 @@ def digest(data: bytes) -> str:
 def generate(final: Path, oracle: Path, output: Path, *, fixtures: Path | None = None,
              profiles: list[str] | None = None, scope: str = "F01.1", title: str = "渲染效果对比",
              case_titles: dict | None = None, default_case: str | None = None,
-             template: Path | None = None) -> dict:
+             template: Path | None = None, export_samples: Path | None = None) -> dict:
     """Read and verify evidence, embed original bytes, then create a new file."""
     sources: dict[str, dict] = {}
     if output.exists() or output.with_suffix(".manifest.json").exists():
@@ -79,7 +79,7 @@ def generate(final: Path, oracle: Path, output: Path, *, fixtures: Path | None =
     identity = doc(oracle / "identity.json")
     official_manifest = doc(oracle / "manifest.json")
     fixture = doc(fixtures or ROOT / "tests/f011/cases.json")
-    identifiers = [case["id"] for case in fixture["cases"] + fixture.get("negativeCases", [])]
+    identifiers = [case["id"] for case in fixture["cases"] + fixture.get("negativeCases", []) + fixture.get("renderErrorCases", []) + fixture.get('unsupportedCases',[])]
     if not fixture["cases"] or len(identifiers) != len(set(identifiers)):
         raise ValueError("Cases must be nonempty with unique positive/negative IDs")
     for identifier in identifiers:
@@ -92,7 +92,7 @@ def generate(final: Path, oracle: Path, output: Path, *, fixtures: Path | None =
         raise ValueError("Default case is not in the positive case list")
     reports = {profile: doc(final / f"compare-{profile}/report.json") for profile in profiles}
     for profile, report in reports.items():
-        for key, expected in (("cases", fixture["cases"]), ("negativeCases", fixture.get("negativeCases", []))):
+        for key, expected in (("cases", fixture["cases"]), ("negativeCases", fixture.get("negativeCases", [])), ("renderErrorCases",fixture.get("renderErrorCases",[])), ('unsupportedCases',fixture.get('unsupportedCases',[]))):
             actual_ids = [row["id"] for row in report.get(key, [])]
             if len(actual_ids) != len(set(actual_ids)) or set(actual_ids) != {row["id"] for row in expected}:
                 raise ValueError(f"Case denominator mismatch: {profile}/{key}")
@@ -139,6 +139,25 @@ def generate(final: Path, oracle: Path, output: Path, *, fixtures: Path | None =
                                   "official": doc(oracle / f"{identifier}.negative.json"),
                                   "profiles": {profile: next(row for row in reports[profile]["negativeCases"]
                                                               if row["id"] == identifier) for profile in profiles}})
+    for case in fixture.get("renderErrorCases", []):
+        identifier=case['id']
+        data['negatives'].append({**case,'renderError':True,'title':case.get('title','上游渲染缺陷 · '+identifier),
+                                 'official':doc(oracle/f'{identifier}.render-error.json'),
+                                 'profiles':{profile:next(row for row in reports[profile]['renderErrorCases'] if row['id']==identifier) for profile in profiles}})
+    for case in fixture.get('unsupportedCases',[]):
+        identifier=case['id']
+        label='已排除功能' if case.get('scopeDisposition')=='excluded_by_user' else '后续范围'
+        data['negatives'].append({**case,'outsideScope':True,'title':case.get('title',label+' · '+identifier),
+                                 'official':doc(oracle/f'{identifier}.unsupported.json'),
+                                 'profiles':{profile:next(row for row in reports[profile]['unsupportedCases'] if row['id']==identifier) for profile in profiles}})
+    data['exports']=[]
+    if export_samples is not None:
+        for sample in doc(export_samples/'manifest.json')['samples']:
+            name=sample['file']
+            if Path(name).name!=name:raise ValueError('Unsafe static export filename')
+            raw=read(export_samples/name)
+            if digest(raw)!=sample['sha256'] or len(raw)!=sample['bytes']:raise ValueError('Static export fingerprint mismatch')
+            data['exports'].append({**sample,'url':'data:'+sample['mime']+';base64,'+base64.b64encode(raw).decode('ascii')})
     data["inputFilesVerified"] = len(sources)
     template_path = template or ROOT / "tools/templates/f011_comparison.html"
     template = template_path.read_text(encoding="utf-8")
@@ -151,7 +170,9 @@ def generate(final: Path, oracle: Path, output: Path, *, fixtures: Path | None =
         stream.write(html)
     manifest = {"schema": "py-mermaid-render-report/v1", "generatedAt": data["generatedAt"],
                 "report": output.as_posix(), "sha256": digest(output.read_bytes()),
-                "positiveCases": len(data["cases"]), "negativeCases": len(data["negatives"]),
+                "positiveCases": len(data["cases"]), "negativeCases": len(fixture.get('negativeCases',[])),
+                "renderErrorCases":len(fixture.get('renderErrorCases',[])),
+                "unsupportedCases":len(fixture.get('unsupportedCases',[])),
                 "scope": scope, "title": title, "profiles": list(profiles), "sourceCandidateSha256": summary["sourceTreeSha256"],
                 "wheelSha256": summary.get("wheelSha256"), "inputs": sources,
                 "generatorSha256": digest(Path(__file__).read_bytes()),
@@ -176,7 +197,8 @@ def main() -> None:
     print(json.dumps(generate(args.final or spec["final"], args.oracle or spec["oracle"], args.out,
                               fixtures=args.fixtures or spec["fixtures"], profiles=args.profiles or spec["profiles"],
                               scope=spec["scope"], title=spec["title"], case_titles=spec.get("caseTitles"),
-                              default_case=spec.get("defaultCase"), template=spec.get("template")),
+                              default_case=spec.get("defaultCase"), template=spec.get("template"),
+                              export_samples=spec.get('exportSamples')),
                      ensure_ascii=False, indent=2))
 
 

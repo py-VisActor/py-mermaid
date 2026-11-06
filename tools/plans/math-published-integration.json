@@ -1,0 +1,38 @@
+{
+  "schema": "py-mermaid-command-plan/v1",
+  "scope": "MATH-PYPI",
+  "description": "Official py-visactor-katex integration: fresh external wheel/sdist installs, exact PyPI archive identity, installed-module regression and CPU/auto/GPU/five-format mathematics.",
+  "inputs": [
+    "{repo}/pyproject.toml",
+    "{repo}/tests/math/published-cases.json",
+    "{repo}/references/math-release-lock.json"
+  ],
+  "steps": [
+    {
+      "name": "build-mermaid-with-published-math",
+      "argv": [
+        "{python}",
+        "-m",
+        "build",
+        "--no-isolation",
+        "--outdir",
+        "{run}/artifacts/dist"
+      ],
+      "timeoutSeconds": 180
+    },
+    {
+      "name": "verify-real-pypi-math-installation",
+      "argv": [
+        "{python}",
+        "{repo}/tools/verify_published_math.py",
+        "--wheel",
+        "{run}/artifacts/dist/py_mermaid-0.0.1a0-py3-none-any.whl",
+        "--sdist",
+        "{run}/artifacts/dist/py_mermaid-0.0.1a0.tar.gz",
+        "--out",
+        "{run}/artifacts/installed"
+      ],
+      "timeoutSeconds": 1200
+    }
+  ]
+}

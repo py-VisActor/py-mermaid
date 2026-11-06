@@ -69,6 +69,9 @@ def render_plan(args) -> list[dict]:
                       "--fixtures", "{run}/artifacts/cases.json", "--oracle", "{run}/artifacts/oracle",
                       "--out", f"{{run}}/artifacts/compare-{profile}", "--backend", profile],
                       "env": {"PYTHONPATH": "{repo}/src"}})
+    if args.scope=='F01.4':
+        steps.append({'name':'static-format-samples','argv':['{python}','{repo}/tools/export_static_samples.py',
+            '--out','{run}/artifacts/static-exports','--backend','cpu'],'env':{'PYTHONPATH':'{repo}/src'}})
     return steps
 
 
@@ -106,7 +109,9 @@ def render_command(run: Run, args) -> int:
     for profile in args.profiles:
         path = run.path / f"artifacts/compare-{profile}/report.json"
         result = json.loads(path.read_text(encoding="utf-8"))
-        profiles[profile] = {"positiveCases": len(result["cases"]), "negativeCases": len(result["negativeCases"])}
+        profiles[profile] = {"positiveCases": len(result["cases"]), "negativeCases": len(result["negativeCases"]),
+                             "renderErrorCases":len(result.get("renderErrorCases",[])),
+                             "unsupportedCases":len(result.get("unsupportedCases",[]))}
         if result["functionalStatus"] != "PASS":
             functional = "FAIL"
     summary = {"scope": args.scope, "sourceTreeSha256": run.data["source"]["sourceTreeSha256"],
@@ -117,6 +122,9 @@ def render_command(run: Run, args) -> int:
     spec = {"schema": "py-mermaid-render-report-spec/v1", "scope": args.scope, "title": args.title,
             "final": str(run.path / "artifacts"), "oracle": str(run.path / "artifacts/oracle"),
             "fixtures": str(run.path / "artifacts/cases.json"), "profiles": args.profiles}
+    if args.default_case is not None:
+        spec['defaultCase']=args.default_case
+    if args.scope=='F01.4':spec['exportSamples']=str(run.path/'artifacts/static-exports')
     spec_path = run.path / "artifacts/generated-report-spec.json"
     write_json(spec_path, spec, exclusive=True)
     run.data["functionalStatus"] = functional
@@ -154,6 +162,7 @@ def parser() -> argparse.ArgumentParser:
     render.add_argument("--profiles", nargs="+", default=["cpu", "auto", "gpu"])
     render.add_argument("--node", default="node")
     render.add_argument("--title", default="基础流程图 · 渲染效果对比")
+    render.add_argument("--default-case", help="Initially selected positive fixture ID in the generated report")
     render.add_argument("--publish-dir", type=Path, default=ROOT / "reports")
     render.add_argument("--dry-run", action="store_true")
     verify = commands.add_parser("verify", help="Verify stored run artifact hashes; does not rerun commands")

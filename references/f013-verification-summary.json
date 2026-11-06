@@ -1,0 +1,329 @@
+{
+  "schema": "py-mermaid-f013-verification-summary/v1",
+  "scope": "F01.3",
+  "status": "PASS_LOCAL",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "sourceTreeSha256": "5cb792fadbd7685a0d65a4a4d0e397ff59566eae340f4aaa87d0a7041d18b08f",
+  "sourceFiles": {
+    "LICENSE": "d925ca50a75467a0a8d28c4f7236922346b52c782cd80840d0aec258eaf4f870",
+    "pyproject.toml": "79105da25f86af59c611d051d35384aee5bdf63febbcf77a6f41db7e03050ed6",
+    "README.md": "64b24bb749c6884aff6f66086b3923f3d31a6e23db421b9e1a05b8521627d4f0",
+    "references/licenses/khroma-LICENSE": "66b333b0f66759a0b710459e03f7029abe17f4358114a128d2c972e642961b49",
+    "references/licenses/mermaid-LICENSE": "ec9fb67dcb25eccc416ed56e1aab819222c805a2a4bfe4cb19e7556bf2ffde80",
+    "src/py_mermaid/__init__.py": "24d44ca3e79f9fd539fe3d3a8a1a031fdac7be2ebf05c9f5480474d16117a55a",
+    "src/py_mermaid/api.py": "425a27f9683aef15b6382af1f7b14c4c14c4f87c2c2e371c75fb10ef9e587b60",
+    "src/py_mermaid/config/__init__.py": "0a1a35bc6930e3ec4b021e68d66da16df4f0a576472bc4ec2410598579e6ab4f",
+    "src/py_mermaid/config/color_names.py": "53d1453fb57e005c66543e099172dd159a650522f6428c2bca32907ed20c6ca4",
+    "src/py_mermaid/config/colors.py": "37aa0d65e01bb10a253a90c2a66bfe5c003121b9726de4955b53c68e5be5bf3a",
+    "src/py_mermaid/config/flowchart.py": "48b0be5ef088e85fcb4a3615eb9a011f6cf1fe9de3149a5ffc7727a2b103a7ad",
+    "src/py_mermaid/config/source_keys.py": "0ae56a02cb58872c0f11a2bf49b26de413616807f1f832db56f0fbbd19b86141",
+    "src/py_mermaid/config/theme_rules.py": "129b24929010c992513506c22145e9937017971309858fe6716572b6118b62c9",
+    "src/py_mermaid/config/themes.py": "96883a186702040397632e5726f6bb8a004dd57ea4ae3bd6c232531f4d046d61",
+    "src/py_mermaid/config/values.py": "a637721f11866e18a1f6de2595358eb80a427501094420ef914006376b114789",
+    "src/py_mermaid/diagrams/__init__.py": "9154145bccf3c978abe2ae3b6934ba969a756e9a6e77bdf2dbf3dbfd373cb619",
+    "src/py_mermaid/diagrams/flowchart/__init__.py": "648b1a3ca353ad86c12facbcb0d900aa2595a274b64b0d2c2a931c131c3c8a96",
+    "src/py_mermaid/diagrams/flowchart/parser.py": "043d35f35d7a7857d7c9bd0a07404a924f0279cff05283ec08cb639e8bb4f633",
+    "src/py_mermaid/geometry/__init__.py": "107fecdf0bc750e9300aae4cd28b545a61b180ef3065996c82d1faed6ae77b82",
+    "src/py_mermaid/geometry/flowchart.py": "f1fb56f114f03b2a377441307bfcfb510066f816fb1f2822cb8c0d48c6971759",
+    "src/py_mermaid/geometry/shapes.py": "90e38a7bb923ec55fa3477e471f4cde9fdc4a2a40438b1a5a3520ebbe7dd76d7",
+    "src/py_mermaid/layout/__init__.py": "6d1ecc869efa4cd9a7edd97fbd986cb719aa5509366da8775096b1fbd3074add",
+    "src/py_mermaid/layout/elk/__init__.py": "9baa94a4f1ce971d55a2f5008bd33c126764842ed68909c731f88d822c28498b",
+    "src/py_mermaid/layout/elk/compound.py": "89adec63e2fa2b664cfd104cd2bebfe65e7f73b9885e8902b613b25adbb651b3",
+    "src/py_mermaid/layout/elk/flowchart.py": "003805ff62a75c9cc2ff2a0ab1f0bb7da3e4e00f73b6d667e09ff9800a87e129",
+    "src/py_mermaid/model/__init__.py": "dc03b5bae51198aa7a4252ce4f65fb4717b4d1c241f1fed23dd0506f00743b3c",
+    "src/py_mermaid/model/flowchart.py": "6125bd13eaee44bafc04b7c06d1d979e2bab430917e0f2f941c0cc672700bacb",
+    "src/py_mermaid/parsing/__init__.py": "b927e8e23113a95e0258b2c5c085251b941dbb16f7cb78552319ab44b5785974",
+    "src/py_mermaid/parsing/preprocess.py": "9a6ebcfa5629b239e8c9516b25fe15e5d65f5cc11f8d111c9ef5d8c48e3a0d94",
+    "src/py_mermaid/parsing/yaml_json.py": "d443e7b317a0a46f97ad53906efa5852fbfb3a4140aca9c8cea53e2854a0ca50",
+    "src/py_mermaid/py.typed": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/py_mermaid/rendering/__init__.py": "ed89819539fa2b113c92aa2530d8598d7a1ba665a8127ab2c1641e6445415573",
+    "src/py_mermaid/rendering/labels/__init__.py": "5081ad1eea53fb7fde3208c095c5d409a90d144b9758c89f8c3177ef08345a55",
+    "src/py_mermaid/rendering/labels/plain.py": "fa0bd7c05a82a7412f5cce1fea62acc580b6389789510bc0b893d9eb4e88fac5",
+    "src/py_mermaid/rendering/labels/rich.py": "ab7210623f65b3a44776ca3303fa7900d36517d50cfebcfb95e3607c8c2b6b3e",
+    "src/py_mermaid/rendering/labels/sanitize.py": "1b6974fbb5be76fbf3691572d104905c1e9094831bd23b874615682bf710f1eb",
+    "src/py_mermaid/rendering/skia/__init__.py": "60776be795ea6008f72da9be2517dd538cfb7f61f937930944bfa915c706df7a",
+    "src/py_mermaid/rendering/skia/session.py": "c926ea25e87d40bb8a7aba5970d25ec37539284b9f37763a256249c52e2badd3",
+    "src/py_mermaid/rendering/styles/__init__.py": "c8557b72ebd08eda7ac6434da0ed97831808213a18f122ed796e8c1954b5213c",
+    "src/py_mermaid/rendering/styles/flowchart.py": "544409171a3a5304c5a74b30cb870f3937f75cd42be6ab5374f00f94c13c7c00",
+    "THIRD_PARTY_NOTICES.md": "2522cb59be8fcc320c8bc1b362821d520a7161919a6b8c5dba883ea6143caae1"
+  },
+  "testMethods": {
+    "groups": {
+      "f011-language": 39,
+      "f011-layout": 21,
+      "f011-canvas": 23,
+      "f011-api": 5,
+      "f012-language": 29,
+      "f012-layout": 19,
+      "f012-canvas": 18,
+      "f013-language": 62,
+      "f013-layout": 14,
+      "f013-styles": 16,
+      "f013-canvas": 33,
+      "tooling": 25
+    },
+    "product": 279,
+    "tooling": 25,
+    "total": 304
+  },
+  "profiles": {
+    "F01.3": {
+      "cpu": {
+        "status": "PASS",
+        "positiveCases": 50,
+        "negativeCases": 8,
+        "unsupportedCases": 6,
+        "renderErrorCases": 1,
+        "engines": [
+          {
+            "api": "Vulkan",
+            "device": "CPU-based renderer (GPU manually disabled)",
+            "driver": "N/A",
+            "renderer": "CPU",
+            "textContrast": "0.0",
+            "textGamma": "1.4",
+            "threads": "20"
+          }
+        ]
+      },
+      "auto": {
+        "status": "PASS",
+        "positiveCases": 50,
+        "negativeCases": 8,
+        "unsupportedCases": 6,
+        "renderErrorCases": 1,
+        "engines": [
+          {
+            "api": "Vulkan",
+            "device": "Discrete GPU (NVIDIA GeForce RTX 5080)",
+            "driver": "NvidiaProprietary (595.95)",
+            "renderer": "GPU",
+            "textContrast": "0.0",
+            "textGamma": "1.4",
+            "threads": "20"
+          }
+        ]
+      },
+      "gpu": {
+        "status": "PASS",
+        "positiveCases": 50,
+        "negativeCases": 8,
+        "unsupportedCases": 6,
+        "renderErrorCases": 1,
+        "engines": [
+          {
+            "api": "Vulkan",
+            "device": "Discrete GPU (NVIDIA GeForce RTX 5080)",
+            "driver": "NvidiaProprietary (595.95)",
+            "renderer": "GPU",
+            "textContrast": "0.0",
+            "textGamma": "1.4",
+            "threads": "20"
+          }
+        ]
+      }
+    },
+    "F01.2": {
+      "cpu": {
+        "status": "PASS",
+        "positiveCases": 35,
+        "negativeCases": 8,
+        "unsupportedCases": 0,
+        "renderErrorCases": 1,
+        "engines": [
+          {
+            "api": "Vulkan",
+            "device": "CPU-based renderer (GPU manually disabled)",
+            "driver": "N/A",
+            "renderer": "CPU",
+            "textContrast": "0.0",
+            "textGamma": "1.4",
+            "threads": "20"
+          }
+        ]
+      },
+      "auto": {
+        "status": "PASS",
+        "positiveCases": 35,
+        "negativeCases": 8,
+        "unsupportedCases": 0,
+        "renderErrorCases": 1,
+        "engines": [
+          {
+            "api": "Vulkan",
+            "device": "Discrete GPU (NVIDIA GeForce RTX 5080)",
+            "driver": "NvidiaProprietary (595.95)",
+            "renderer": "GPU",
+            "textContrast": "0.0",
+            "textGamma": "1.4",
+            "threads": "20"
+          }
+        ]
+      },
+      "gpu": {
+        "status": "PASS",
+        "positiveCases": 35,
+        "negativeCases": 8,
+        "unsupportedCases": 0,
+        "renderErrorCases": 1,
+        "engines": [
+          {
+            "api": "Vulkan",
+            "device": "Discrete GPU (NVIDIA GeForce RTX 5080)",
+            "driver": "NvidiaProprietary (595.95)",
+            "renderer": "GPU",
+            "textContrast": "0.0",
+            "textGamma": "1.4",
+            "threads": "20"
+          }
+        ]
+      }
+    },
+    "F01.1": {
+      "cpu": {
+        "status": "PASS",
+        "positiveCases": 12,
+        "negativeCases": 3,
+        "unsupportedCases": 0,
+        "renderErrorCases": 0,
+        "engines": [
+          {
+            "api": "Vulkan",
+            "device": "CPU-based renderer (GPU manually disabled)",
+            "driver": "N/A",
+            "renderer": "CPU",
+            "textContrast": "0.0",
+            "textGamma": "1.4",
+            "threads": "20"
+          }
+        ]
+      },
+      "auto": {
+        "status": "PASS",
+        "positiveCases": 12,
+        "negativeCases": 3,
+        "unsupportedCases": 0,
+        "renderErrorCases": 0,
+        "engines": [
+          {
+            "api": "Vulkan",
+            "device": "Discrete GPU (NVIDIA GeForce RTX 5080)",
+            "driver": "NvidiaProprietary (595.95)",
+            "renderer": "GPU",
+            "textContrast": "0.0",
+            "textGamma": "1.4",
+            "threads": "20"
+          }
+        ]
+      },
+      "gpu": {
+        "status": "PASS",
+        "positiveCases": 12,
+        "negativeCases": 3,
+        "unsupportedCases": 0,
+        "renderErrorCases": 0,
+        "engines": [
+          {
+            "api": "Vulkan",
+            "device": "Discrete GPU (NVIDIA GeForce RTX 5080)",
+            "driver": "NvidiaProprietary (595.95)",
+            "renderer": "GPU",
+            "textContrast": "0.0",
+            "textGamma": "1.4",
+            "threads": "20"
+          }
+        ]
+      }
+    }
+  },
+  "evidence": {
+    "unit": "test-runs/F01.3-batch-20261105T022709Z-dcd8b609/run.json",
+    "renderRuns": {
+      "F01.3": "test-runs/F01.3-render-20261105T022709Z-575768e1/run.json",
+      "F01.2": "test-runs/F01.2-render-20261105T022709Z-f9ad5a6b/run.json",
+      "F01.1": "test-runs/F01.1-render-20261105T022709Z-7fdedf49/run.json"
+    },
+    "initialUnit": "test-runs/F01.3-batch-20261105T020257Z-00d97cd6/run.json",
+    "initialSnapshot": "test-runs/F01.3-initial-evidence-snapshot-20261105T021024Z-38c90a72/run.json",
+    "italicProbe": "test-runs/F01.3-italic-public-api-probe-corrected-20261105T022414Z-291f4813/run.json",
+    "example": "test-runs/F01.3-record-20261105T022744Z-956e75c7/run.json"
+  },
+  "report": {
+    "path": "reports/F01.3-render-20261105T022709Z-575768e1/index.html",
+    "url": "http://127.0.0.1:8765/F01.3-render-20261105T022709Z-575768e1/index.html",
+    "sha256": "7f5ec806cfc5465cb8bf4c6f1aeb7024d975e0a1e72382b9a32afa245c199a71",
+    "bytes": 4778165
+  },
+  "htmlQa": {
+    "F01.3": {
+      "status": "PASS",
+      "report": "test-runs/f013-html-qa-final-002/report.json",
+      "positiveSelections": 150,
+      "errorCases": 15,
+      "desktop": "test-runs/f013-html-qa-final-002/desktop.png",
+      "mobile": "test-runs/f013-html-qa-final-002/mobile.png"
+    },
+    "F01.2": {
+      "status": "PASS",
+      "report": "test-runs/f013-f012-html-qa-final-002/report.json",
+      "positiveSelections": 105,
+      "errorCases": 9,
+      "desktop": "test-runs/f013-f012-html-qa-final-002/desktop.png",
+      "mobile": "test-runs/f013-f012-html-qa-final-002/mobile.png"
+    },
+    "F01.1": {
+      "status": "PASS",
+      "report": "test-runs/f013-f011-html-qa-final-002/report.json",
+      "positiveSelections": 36,
+      "errorCases": 3,
+      "desktop": "test-runs/f013-f011-html-qa-final-002/desktop.png",
+      "mobile": "test-runs/f013-f011-html-qa-final-002/mobile.png"
+    }
+  },
+  "installationValidation": "deferred; not executed",
+  "externalActions": {
+    "commit": false,
+    "push": false,
+    "publish": false
+  },
+  "boundaries": [
+    "F01.3 local slice only; full flowchart and other diagrams not claimed",
+    "F01.4/Dagre paused pending reassessment",
+    "Real ELK; 14 existing classic shapes, TD/LR root, PNG only",
+    "Browser controls/resources/math/retained stylesheet/browser-only sanitizer options explicit diagnostics",
+    "Source SVG Markdown omitted tokens retained as diagnostics; not full CommonMark",
+    "Windows existing environment only; Linux/no-loader/package validation not executed",
+    "Cross-engine pixels diagnostic; no image postprocessing or coordinate matching"
+  ],
+  "manualReview": {
+    "test-runs/F01.3-render-20261105T022709Z-575768e1/artifacts/compare-cpu/rich-overview.png": {
+      "sha256": "e6478f6bfb4f934dffd2f26a7e4a966b0f50105a99813a7d813ef6b4d1db520d",
+      "bytes": 12505
+    },
+    "test-runs/F01.3-render-20261105T022709Z-575768e1/artifacts/oracle/rich-overview.png": {
+      "sha256": "a44370fdcb428f7e5f877cc84b52116b978e6fa79e5d42b7c4c7eb2d0cb06fd0",
+      "bytes": 9451
+    },
+    "test-runs/F01.3-render-20261105T022709Z-575768e1/artifacts/compare-gpu/title-unicode-crlf.png": {
+      "sha256": "d731b7f905f8aa6203d4cadbbedf44cf0e2cf2b959a817f12856b82a521fdf44",
+      "bytes": 5345
+    },
+    "test-runs/F01.3-render-20261105T022709Z-575768e1/artifacts/compare-gpu/theme-neo-dark.png": {
+      "sha256": "c65e2a3fda3b2bf72c7fafb7f85ee996c4d9e680df3c11d225745713fd46e2b9",
+      "bytes": 3153
+    },
+    "test-runs/f013-example-final-003.png": {
+      "sha256": "b19d97929b400f6cda46a112414984076b74cbf443ff41782c862f591d43ed8c",
+      "bytes": 16669
+    },
+    "test-runs/f013-html-qa-final-002/desktop.png": {
+      "sha256": "4dd2266306d3dd383c71b6fd80ffb4138d0393f7910866b03c0a70fee7540989",
+      "bytes": 382567
+    },
+    "test-runs/f013-html-qa-final-002/mobile.png": {
+      "sha256": "4cc0fa0ba46593b5d26290e15e4786645c4defaadb2286734e5e216491f41d6e",
+      "bytes": 277130
+    }
+  },
+  "finalAcceptanceRun": "test-runs/F01.3-final-acceptance-20261105T023245Z-26a7d5ed/run.json"
+}

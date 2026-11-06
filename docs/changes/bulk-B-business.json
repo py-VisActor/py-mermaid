@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "scope": "BULK_STATIC_31_ENTRIES",
+  "owner": "B",
+  "family": "business",
+  "status": "code_complete_unverified",
+  "phase": "P1_SOURCE",
+  "detectors": [
+    "swimlane",
+    "agentflow",
+    "eventmodeling",
+    "ishikawa",
+    "wardley",
+    "cynefin"
+  ],
+  "sourceMap": "references/bulk-B-business-sources.json",
+  "nativeAggregateSHA256": "3eed7efa4af5551db613c2eb22c75b8f16e308fff2a272e3b00143200702448c",
+  "nativeFileCount": 14,
+  "sourceCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "mechanicalRun": "test-runs/BULK-record-20261106T035721Z-e7318f02",
+  "mechanicalStatus": "SUCCESS",
+  "behaviorTestsRun": false,
+  "oracleRun": false,
+  "imagesGenerated": false,
+  "formalTestsWritten": false,
+  "productionJavaScript": false,
+  "productionLocalSourceDependency": false,
+  "dagreExcluded": true,
+  "fallbackLayouts": false,
+  "retainedPriorFailures": [
+    "test-runs/adhoc-record-20261106T023417Z-81526086",
+    "test-runs/BULK-record-20261106T033421Z-db9e391a"
+  ],
+  "knownHostAdaptations": [
+    "Cynefin source render(id) is represented by Painter.render_id/config.renderId; absent native id defaults deterministically to diagram.kind. A nonzero configured boundary seed still takes precedence.",
+    "Swimlane lane title center rotation is converted to native text top-left rotation coordinates; no geometry scaling or bitmap postprocessing."
+  ],
+  "acceptance": "P1 source handoff only. No claim of functional, geometric, visual, resource, export or backend acceptance before P2/P3/P4.",
+  "remainingWork": [
+    "Root unified source freeze and independently sourced P2 assertions.",
+    "Unified first behavior run across all groups, preserving failures before any source repair.",
+    "Real CPU/auto/GPU images and source-oracle human QA with same-candidate identity.",
+    "Installation validation remains deferred by user."
+  ],
+  "leaseStop": "B source files frozen after this receipt; root/C shared provider files have their own receipts.",
+  "freezeHistory": [
+    {
+      "nativeAggregateSHA256": "b951f830342080d59d2e790ababa6b197a4904a201e4d51738c84b82c9fcf9fd",
+      "mechanicalRun": "test-runs/BULK-record-20261106T035213Z-d232d9fe",
+      "reasonReopened": "Root-authorized two-file P1 fix: preserve generic source lane paint data and route AgentFlow explicit swimlane through its real dedicated scene."
+    },
+    {
+      "nativeAggregateSHA256": "818576055d5b57383f02d73ce99abc083d2f729d0ca27b763251ff84265778b9",
+      "mechanicalRun": "test-runs/BULK-record-20261106T035505Z-26e365bc",
+      "reasonReopened": "Root-authorized provider identity gate: registered replacement under elk/swimlane key must use its actual provider."
+    }
+  ],
+  "extraP1Repair": "GroupLayout.group_data retains all actual source groups; AgentFlow explicit swimlane delegates presentation graph to swimlane.build; no source input conversion or fallback.",
+  "providerIdentityGate": "uses_builtin_elk/uses_builtin_swimlane inspect actual registry entry identity; custom replacement under a builtin key goes through registered provider."
+}

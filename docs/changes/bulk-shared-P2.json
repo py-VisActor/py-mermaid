@@ -1,0 +1,71 @@
+{
+  "schema": "py-mermaid-change-receipt/v1",
+  "phase": "P2",
+  "status": "designed_unexecuted",
+  "sourceTreeSha256": "97b353ebf7e176a750a736a714c85638e0a497b722e451dc77570579a2d36cbb",
+  "groupMethodCounts": {
+    "shared": 45,
+    "a": 577,
+    "b": 139,
+    "c": 331
+  },
+  "methodCount": 1092,
+  "fixtureCount": 656,
+  "fixtureExpectations": {
+    "render": 617,
+    "syntax_error": 26,
+    "error": 11,
+    "upstream_defect": 1,
+    "excluded_by_static_scope": 1
+  },
+  "fixtureGroups": {
+    "A": 188,
+    "B": 110,
+    "C": 302,
+    "shared": 56
+  },
+  "sourceOracleIdentity": {
+    "run": "BULK-P2-oracle-identity-20261106T042629Z-c39bdb13",
+    "mermaidCanonicalEntries": 480,
+    "jisonTransformations": 19,
+    "separatelyIdentifiedSchemaTransform": 1,
+    "zenCanonicalScriptEntries": 171,
+    "zenDecodedRawSvgEntries": 508,
+    "zenExcludedReactHostTransforms": 20
+  },
+  "mechanicalRun": "BULK-P2-whole-freeze-20261106T042905Z-abe1ecc4",
+  "rootMechanicalRuns": [
+    "BULK-P2-mechanical-20261106T041747Z-bd0160b2",
+    "BULK-P2-root-design-20261106T042417Z-df61c458"
+  ],
+  "preservedToolFailure": "BULK-P2-oracle-identity-20261106T041931Z-d00692bd (raw YAML compared to generated defaults; fixed tooling representation, not product)",
+  "productParseBuildLayoutRenderCalls": 0,
+  "testMethodsExecuted": 0,
+  "imagesGenerated": false,
+  "sourceUnchanged": true,
+  "installationVerification": false,
+  "files": {
+    "tests/bulk/shared/test_cli.py": "970aad2b86176d22d658f83210d33745ac00cbb0322c8fbb57c30f11ea5605d9",
+    "tests/bulk/shared/test_configuration.py": "daaacda5793ca6b363e7265eb749663a84ad695938c260e29ea201c28e931df2",
+    "tests/bulk/shared/test_layout_plugins.py": "916a4c2bcfdf8250ad55528fc65db2ac3b32ef2b7188f297ec551da3f1deb2a7",
+    "tests/bulk/shared/test_native.py": "e7a3bfd60393d30ccfd5e394493609d37fa9acc211ea9bd27b29b0bc91662440",
+    "tests/bulk/shared/__init__.py": "3c1a5b4917e3bea30a65db4dae346492db9209dec69f6b84086e7a41fd26b524",
+    "tests/bulk/cases-shared.json": "5945d1e7ae89a6606c734622f8f11e177c7fe1676963195bb84b25edc076f1da",
+    "references/bulk-shared-assertions.json": "3f70cfe77eb33f40ec7071b97fee538513c7032ca277ea6236c061155c245ec3",
+    "tools/bulk_support.py": "778cfd2d454aac4d948a88213643a97939be6799d28c548fd55a77b0618b8e17",
+    "tools/bulk_validate.py": "53c62bf4519b614c1f846dfa7e582076ef0a6a4caf20362304c1cf5e7c8d5b91",
+    "tools/bulk_compare.py": "1dd4de9b882a2e153d0ef75bedb598a2830f941550a25f8b1e8097ab3e4d3e61",
+    "tools/bulk_export.py": "9fd2a6a42286728b7ce114f0b08691216da920dc1f11dca184c030deac32da90",
+    "tools/collect_bulk_cases.py": "d239b009e015b2e084363c42e45a94a8c8da21b2763e7f93402e9688a042de7b",
+    "tools/build_bulk_report.py": "2b84f0484d0c4dc12d6f43b47dfdf43ec1e1009ecf617b87f4a6b2e86f171e88",
+    "tools/check_bulk_tests.py": "e3451ce90ee9feca15266f7039a05b89daaae5d01379dca1c535d924d3a54d31",
+    "tools/run_bulk.py": "770a70775fa77ef7bb30b7a9d57294b0c209b117d6f5828f8c20078ddbcb1ea6",
+    "tools/oracle/bulk_capture.cjs": "b9d512ef38e7129249a7ced8faf640a2fe0bf643c6d93bfe6256a78f14262986"
+  },
+  "workerReceipts": [
+    "docs/changes/bulk-A-P2.json",
+    "docs/changes/bulk-B-P2.json",
+    "docs/changes/bulk-C-P2.json"
+  ],
+  "next": "P3 first whole sweep; source stays read-only until run closes, preserve all failures then batch fixes"
+}

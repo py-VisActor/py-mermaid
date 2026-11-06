@@ -1,3 +1,7 @@
+> 2026-11-05 用户已决定 **完全剥离 Dagre 功能、配置选项、目标依赖和算法回退**，不再暂停待评估，也不作为可选兼容任务。默认 ELK 与其他保留的专用静态算法继续推进。见 [布局策略](LAYOUT_POLICY.md)；下文旧 Dagre 计划/来源说明以此覆盖。
+
+> 2026-11-05 用户范围决策：**全部图种和共享模块只做静态渲染，忽略交互逻辑。** 点击/回调/悬停/导航/命中测试、动画播放、交互元数据与 DOM 无障碍行为不作为交付或验收项；静态画面、资源与输入安全保留。以 [静态范围规则](STATIC_RENDERING_SCOPE.md) 为准，覆盖本文旧交互要求。
+
 # 完整迁移实施方案
 
 > **执行顺序已由用户更新：先完成全部功能源码，再设计测试/单元测试、统一排查修复，最后全量。当前执行权威为 [FULL_MIGRATION_PLAN](FULL_MIGRATION_PLAN.md)、[任务图](../references/migration-execution.json)和 [接管指令](EXECUTION_HANDOFF.md)。下文保留历史 M0…M8 的范围与来源发现，不能按其中旧的“先完成每图测试再推进”时序执行。**
@@ -31,7 +35,7 @@
 
 | 事实与上游位置 | 对迁移顺序的影响 |
 | --- | --- |
-| `packages/mermaid/src/schemas/config.schema.yaml`：根 `layout` 默认 `elk`；完整构建包含 ELK，tiny 缺失时回退 Dagre | M3 默认 flowchart 必须纳入最小 ELK 路径；显式 `layout: dagre` 可以先做限定原型，不能冒称默认行为通过 |
+| `packages/mermaid/src/schemas/config.schema.yaml`：根 `layout` 默认 `elk`；完整构建包含 ELK，tiny 缺失时回退 Dagre | M3 默认 flowchart 必须纳入最小 ELK 路径；目标已排除 Dagre/原型/回退，不作为默认行为或可选兼容项 |
 | `diagram-api/diagram-orchestration.ts`：实际优先级由 `addDiagrams` 中注册调用决定，且受构建开关影响 | 现有 import 提取器只提供 detector 分母；M1 另提取运行时顺序、别名、配置副作用与 full/tiny 差异 |
 | `diagrams/git/gitGraphParser.ts` 含 `import.meta.vitest` 内联测试 | `.spec/.test` 文件索引不是全部测试入口；M1 扫描内联测试、动态用例及生成物并补独立断言清单 |
 | `rendering-util/render.ts` 注册 Dagre、swimlane、cose-bilkent 和 ELK；architecture 使用 Cytoscape/fCoSE | M4 分别迁移专用泳道管线、复合图/力导向算法及其随机性、停止条件和路由 |
@@ -74,7 +78,7 @@ same fixtures -> official JS + pinned browser -> model / SVG / geometry / RGBA
 | `model` | 各图种类型、关系/嵌套、语义验证、diagnostics/source spans | 不持有 Canvas/GPU；未知或未支持字段不能静默丢弃 |
 | `config` | schema、默认值/非 JSON 值、合并、theme/look/CSS、安全和资源策略 | 缺省/null/false/0/空串明确区分；不隐式联网或执行 script |
 | `diagrams` | detector/别名、parser→model→layout→style 接线、能力查询 | 未完成项明确失败，不注册成功 stub；每个 detector 独立记状态 |
-| `layout` | 图种专用算法、Dagre/ELK/tidy/力导向、节点/组、路由/交点/label box | 端口、单位、排序、tie-break、seed 和浮点行为可追踪；不随意换布局库 |
+| `layout` | 图种专用算法、ELK/tidy/力导向、节点/组、路由/交点/label box | 端口、单位、排序、tie-break、seed 和浮点行为可追踪；不随意换布局库 |
 | `rendering` | shape/path/marker/clip、计算后 style、受控文本排版、viewport、metadata | 不重新决定图语义；display list 为内部强类型数据，不做通用调用解释器 |
 | `rendering/skia` | 公开 Canvas/Path2D API、测量、绘制、各格式导出与 owner 生命周期 | 不复制 Rust/Skia/shaping/编码/Vulkan；Canvas 缺口在其仓库独立处理 |
 | 产品入口与 CLI（待建） | 生命周期编排、参数验证、bytes/显式文件、退出码 | 公共 API 由 M1 定稿；parse 不分配 Canvas，跨线程只传 bytes 或不可变语义数据 |
@@ -123,7 +127,7 @@ M2 完成门禁：官方产物身份与源码关系可核查、重复采集稳�
 
 实现顺序为：预处理/配置 → 实际 detect → grammar/语义 → 字体/style/label 测量 → 默认 ELK 的最小真实算法路径 → shape/route/marker → Canvas PNG → 候选包隔离运行。ELK 最小路径的支持范围由这些 case 的源码行为确定，剩余算法/选项全部保留。
 
-可以先用显式 `layout: dagre` 验证数据链路；这只是范围更小的原型。不得把它设成产品默认，或利用“ELK 未实现”触发 Dagre 后声称默认路径通过。默认布局尚未完成时，应明确不支持并记录 M3 未达标。
+目标已删除 Dagre 布局和回退原型。数据链路以真实 ELK 验证；未支持的布局请求必须明确失败。
 
 M3 交付：真实 Python 源码、六组 assertion/官方 A/Python B、几何与完整像素差异、GPU/CPU 分组结果、可运行 Mermaid 示例和原始图片 provenance；错误语法和不支持项明确失败。至少检查尺寸非零、真实内容、标签/端点/分组、字体/owner 和无跨图污染。
 
@@ -136,7 +140,7 @@ M3 只实现所需的最小公共能力；M4 扩展为所有图种可复用的�
 | 几何与图形 | shape catalogue、Path2D、transform、intersections、marker、clip、group、viewport | 锚点、闭合、线宽/dash、叠放、边界/单位；不复制样例坐标 |
 | 文本与宿主 | SVG text、多行、HTML foreignObject、Markdown、CSS 继承/box model、math | 受控 Python 排版，真实 Canvas 测量；不能剥标签后称等价；CJK/RTL/emoji/组合字符分别验 |
 | 配置/主题/look | 所有 schema/defaultConfig、11 个主题键、themeVariables、classDef/style/CSS 级联、RoughJS | 默认值、优先级、颜色推导、handdrawn 路径与 seed；不只比最终填充色 |
-| Dagre/graphlib | 分层、环、多边、自环、rank/order/坐标、复合图、路由 | 精确选项、顺序/tie-break、父子图方向和标签影响 |
+| 原 Dagre/graphlib 来源 | 仅保留原始来源；目标布局算法与兼容 API 已排除 | 保留的图/求交需求由自有模型与纯几何处理 |
 | ELK | `elk`/layered、选项目录/preset、端口/层级/反馈边/line hops、其他 `elk.*` 和外部插件 | 每个算法/选项独立断言；M3 的最小路径逐步扩全，不以替代库冒称完成 |
 | 专用 swimlane | 层级/泳道顺序、尺寸、分层、坐标、正交路由与后处理 | 移植锁定专用管线；DDLT/fixture size 数据只作研发断言，不作生产尺寸来源 |
 | 树与力导向 | tidy-tree、Cytoscape cose-bilkent、architecture/fCoSE | 算法、约束、seed、终止条件、分组/端口；不能用普通树布局替代复合图 |

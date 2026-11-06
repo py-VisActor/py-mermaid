@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "owner": "B",
+  "case": "B-gantt-cyclic",
+  "classification": "SOURCE_DEGENERATE_RENDER_NATIVE_EXPLICIT_DIAGNOSTIC",
+  "officialRun": "test-runs/BULK-P3-official-refresh-20261106T050328Z-0274d04e",
+  "sourceVersion": "mermaid@12.2.0",
+  "sourceCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "source": {
+    "path": "packages/mermaid/src/diagrams/gantt/ganttDb.js",
+    "sha256": "d783881e9e5966aabc87f6dc170aa0a88ece551c48c49ba0693aa5271e3accec",
+    "symbols": [
+      "getTasks lines169-180: compile once plus at most10 retries, then return rawTasks even if not processed",
+      "getStartDate lines320-344: existing after dependency chosen although endTime not available",
+      "compileTasks/compileTask lines658-710: absent startTime never assigns finite endTime or processed=true"
+    ]
+  },
+  "officialRenderedSvg": true,
+  "officialRenderRejected": false,
+  "viewBox": "0 0 1600 148",
+  "taskState": [
+    {
+      "id": "a",
+      "processed": false,
+      "hasStartTime": false,
+      "hasEndTime": false
+    },
+    {
+      "id": "b",
+      "processed": false,
+      "hasStartTime": false,
+      "hasEndTime": false
+    }
+  ],
+  "invalidPaintElements": [
+    {
+      "tag": "rect",
+      "attributes": {
+        "id": "bulk_B_gantt_cyclic-a",
+        "rx": "3",
+        "ry": "3",
+        "x": "NaN",
+        "y": "50",
+        "width": "NaN",
+        "height": "20",
+        "transform-origin": "NaNpx 60px",
+        "class": "task task0"
+      }
+    },
+    {
+      "tag": "rect",
+      "attributes": {
+        "id": "bulk_B_gantt_cyclic-b",
+        "rx": "3",
+        "ry": "3",
+        "x": "NaN",
+        "y": "74",
+        "width": "NaN",
+        "height": "20",
+        "transform-origin": "NaNpx 84px",
+        "class": "task task0"
+      }
+    },
+    {
+      "tag": "text",
+      "attributes": {
+        "id": "bulk_B_gantt_cyclic-a-text",
+        "font-size": "11",
+        "x": "NaN",
+        "y": "63.5",
+        "class": "taskText taskText0  width-9"
+      }
+    },
+    {
+      "tag": "text",
+      "attributes": {
+        "id": "bulk_B_gantt_cyclic-b-text",
+        "font-size": "11",
+        "x": "NaN",
+        "y": "87.5",
+        "class": "taskText taskText0  width-7"
+      }
+    },
+    {
+      "tag": "line",
+      "attributes": {
+        "x1": "NaN",
+        "x2": "NaN",
+        "y1": "25",
+        "y2": "123",
+        "class": "today"
+      }
+    }
+  ],
+  "actualViewImage": {
+    "path": "test-runs/BULK-P3-official-refresh-20261106T050328Z-0274d04e/artifacts/oracle/B-gantt-cyclic.png",
+    "reviewed": true,
+    "conclusion": "1600x148 image shows pale section background bands and an empty axis; both task bars and labels are absent because their source x/width are NaN. No meaningful finite cyclic schedule exists."
+  },
+  "artifacts": {
+    "test-runs/BULK-P3-official-refresh-20261106T050328Z-0274d04e/artifacts/oracle/B-gantt-cyclic.json": "782dff36ce042e75be8574042e85f3cc29caa4ddbbb3ddd7617583e1f4ced36d",
+    "test-runs/BULK-P3-official-refresh-20261106T050328Z-0274d04e/artifacts/oracle/B-gantt-cyclic.svg": "45af093abbe2dc9c5cb58244870c9f262ea95c651f5f86b2683d762971ac6142",
+    "test-runs/BULK-P3-official-refresh-20261106T050328Z-0274d04e/artifacts/oracle/B-gantt-cyclic.png": "11872cc3eeb4491b5d242d5fdb2f5d59220a4fff4979117bfc3ba6cf17d56bd7"
+  },
+  "nativePolicy": {
+    "expectedErrorCode": "CYCLIC_GANTT_DEPENDENCY",
+    "expectedSuccessfulEmptyImage": false,
+    "reason": "Unresolvable dependency cycle cannot provide source-defined finite schedule. Preserve exact explicit error instead of returning an apparently successful task-less scene."
+  },
+  "originalInputRetained": true,
+  "negativeControlRetained": "CalendarAlgorithms.test_d10_dependency_cycle_is_not_successful_stub",
+  "newProductBehaviorExecuted": false,
+  "productModified": false,
+  "warning": "Official SVG return is not successful task scheduling and must not be described as source render rejection."
+}

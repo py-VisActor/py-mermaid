@@ -1,0 +1,258 @@
+{
+  "schema": "py-mermaid-command-plan/v1",
+  "scope": "F01.4",
+  "description": "Same candidate F01.1/F01.2/F01.3 visual regressions on cpu/auto/gpu; no install/build; preserve all profiles and failures",
+  "inputs": [
+    "{repo}/tests/f011/cases.json",
+    "{repo}/tests/f012/cases.json",
+    "{repo}/tests/f013/cases.json"
+  ],
+  "steps": [
+    {
+      "name": "fixture-candidate-snapshots",
+      "argv": [
+        "{python}",
+        "-c",
+        "import sys,shutil;from pathlib import Path;sys.path.insert(0,'tools');from run_support import source_identity,write_json;root=Path(sys.argv[1]);[( (root/'artifacts'/name).mkdir(),shutil.copyfile('tests/'+name+'/cases.json',root/'artifacts'/name/'cases.json'),write_json(root/'artifacts'/name/'source-candidate.json',source_identity())) for name in ['f011','f012','f013']]",
+        "{run}"
+      ]
+    },
+    {
+      "name": "f011-official",
+      "argv": [
+        "{python}",
+        "{repo}/tools/reuse_oracle.py",
+        "--source",
+        "{repo}/test-runs/F01.4-batch-20261105T095958Z-c0e4671b/artifacts/f011/oracle",
+        "--source-fixtures",
+        "{repo}/test-runs/F01.4-batch-20261105T095958Z-c0e4671b/artifacts/f011/cases.json",
+        "--fixtures",
+        "{run}/artifacts/f011/cases.json",
+        "--out",
+        "{run}/artifacts/f011/oracle"
+      ],
+      "timeoutSeconds": 1200
+    },
+    {
+      "name": "f011-cpu",
+      "argv": [
+        "{python}",
+        "{repo}/tools/f011_validate.py",
+        "--fixtures",
+        "{run}/artifacts/f011/cases.json",
+        "--oracle",
+        "{run}/artifacts/f011/oracle",
+        "--out",
+        "{run}/artifacts/f011/compare-cpu",
+        "--backend",
+        "cpu"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src",
+        "PYTHONIOENCODING": "utf-8",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 1800
+    },
+    {
+      "name": "f011-auto",
+      "argv": [
+        "{python}",
+        "{repo}/tools/f011_validate.py",
+        "--fixtures",
+        "{run}/artifacts/f011/cases.json",
+        "--oracle",
+        "{run}/artifacts/f011/oracle",
+        "--out",
+        "{run}/artifacts/f011/compare-auto",
+        "--backend",
+        "auto"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src",
+        "PYTHONIOENCODING": "utf-8",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 1800
+    },
+    {
+      "name": "f011-gpu",
+      "argv": [
+        "{python}",
+        "{repo}/tools/f011_validate.py",
+        "--fixtures",
+        "{run}/artifacts/f011/cases.json",
+        "--oracle",
+        "{run}/artifacts/f011/oracle",
+        "--out",
+        "{run}/artifacts/f011/compare-gpu",
+        "--backend",
+        "gpu"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src",
+        "PYTHONIOENCODING": "utf-8",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 1800
+    },
+    {
+      "name": "f012-official",
+      "argv": [
+        "{python}",
+        "{repo}/tools/reuse_oracle.py",
+        "--source",
+        "{repo}/test-runs/F01.4-batch-20261105T095958Z-c0e4671b/artifacts/f012/oracle",
+        "--source-fixtures",
+        "{repo}/test-runs/F01.4-batch-20261105T095958Z-c0e4671b/artifacts/f012/cases.json",
+        "--fixtures",
+        "{run}/artifacts/f012/cases.json",
+        "--out",
+        "{run}/artifacts/f012/oracle"
+      ],
+      "timeoutSeconds": 1200
+    },
+    {
+      "name": "f012-cpu",
+      "argv": [
+        "{python}",
+        "{repo}/tools/f011_validate.py",
+        "--fixtures",
+        "{run}/artifacts/f012/cases.json",
+        "--oracle",
+        "{run}/artifacts/f012/oracle",
+        "--out",
+        "{run}/artifacts/f012/compare-cpu",
+        "--backend",
+        "cpu"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src",
+        "PYTHONIOENCODING": "utf-8",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 1800
+    },
+    {
+      "name": "f012-auto",
+      "argv": [
+        "{python}",
+        "{repo}/tools/f011_validate.py",
+        "--fixtures",
+        "{run}/artifacts/f012/cases.json",
+        "--oracle",
+        "{run}/artifacts/f012/oracle",
+        "--out",
+        "{run}/artifacts/f012/compare-auto",
+        "--backend",
+        "auto"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src",
+        "PYTHONIOENCODING": "utf-8",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 1800
+    },
+    {
+      "name": "f012-gpu",
+      "argv": [
+        "{python}",
+        "{repo}/tools/f011_validate.py",
+        "--fixtures",
+        "{run}/artifacts/f012/cases.json",
+        "--oracle",
+        "{run}/artifacts/f012/oracle",
+        "--out",
+        "{run}/artifacts/f012/compare-gpu",
+        "--backend",
+        "gpu"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src",
+        "PYTHONIOENCODING": "utf-8",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 1800
+    },
+    {
+      "name": "f013-official",
+      "argv": [
+        "{python}",
+        "{repo}/tools/reuse_oracle.py",
+        "--source",
+        "{repo}/test-runs/F01.4-batch-20261105T095958Z-c0e4671b/artifacts/f013/oracle",
+        "--source-fixtures",
+        "{repo}/test-runs/F01.4-batch-20261105T095958Z-c0e4671b/artifacts/f013/cases.json",
+        "--fixtures",
+        "{run}/artifacts/f013/cases.json",
+        "--out",
+        "{run}/artifacts/f013/oracle"
+      ],
+      "timeoutSeconds": 1200
+    },
+    {
+      "name": "f013-cpu",
+      "argv": [
+        "{python}",
+        "{repo}/tools/f011_validate.py",
+        "--fixtures",
+        "{run}/artifacts/f013/cases.json",
+        "--oracle",
+        "{run}/artifacts/f013/oracle",
+        "--out",
+        "{run}/artifacts/f013/compare-cpu",
+        "--backend",
+        "cpu"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src",
+        "PYTHONIOENCODING": "utf-8",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 1800
+    },
+    {
+      "name": "f013-auto",
+      "argv": [
+        "{python}",
+        "{repo}/tools/f011_validate.py",
+        "--fixtures",
+        "{run}/artifacts/f013/cases.json",
+        "--oracle",
+        "{run}/artifacts/f013/oracle",
+        "--out",
+        "{run}/artifacts/f013/compare-auto",
+        "--backend",
+        "auto"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src",
+        "PYTHONIOENCODING": "utf-8",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 1800
+    },
+    {
+      "name": "f013-gpu",
+      "argv": [
+        "{python}",
+        "{repo}/tools/f011_validate.py",
+        "--fixtures",
+        "{run}/artifacts/f013/cases.json",
+        "--oracle",
+        "{run}/artifacts/f013/oracle",
+        "--out",
+        "{run}/artifacts/f013/compare-gpu",
+        "--backend",
+        "gpu"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src",
+        "PYTHONIOENCODING": "utf-8",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 1800
+    }
+  ]
+}

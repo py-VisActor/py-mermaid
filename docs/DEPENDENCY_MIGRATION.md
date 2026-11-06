@@ -1,3 +1,7 @@
+> 2026-11-05 用户已决定 **完全剥离 Dagre 功能、配置选项、目标依赖和算法回退**，不再暂停待评估，也不作为可选兼容任务。默认 ELK 与其他保留的专用静态算法继续推进。见 [布局策略](LAYOUT_POLICY.md)；下文旧 Dagre 计划/来源说明以此覆盖。
+
+> 2026-11-05 用户范围决策：**全部图种和共享模块只做静态渲染，忽略交互逻辑。** 点击/回调/悬停/导航/命中测试、动画播放、交互元数据与 DOM 无障碍行为不作为交付或验收项；静态画面、资源与输入安全保留。以 [静态范围规则](STATIC_RENDERING_SCOPE.md) 为准，覆盖本文旧交互要求。
+
 # 完整依赖树与自底向上的 Python 迁移方案
 
 执行时序已由用户更新，权威见 [FULL_MIGRATION_PLAN](FULL_MIGRATION_PLAN.md)：P1 一次写完全部功能源码，P2 原实现驱动测试/单测，P3 统一排查批修，P4 最终全量。本文 D00…D10 是依赖与职责参考，不是每个图种先完成测试闭环再继续的门禁。
@@ -81,7 +85,7 @@ Mermaid / 同仓库插件
 | Khroma | 候选 `coloraide` 8.14，必要时小型 Python 重写 | [ColorAide](https://facelessuser.github.io/coloraide/)提供颜色转换/运算；仍需验证 Khroma 的 darken/lighten/adjust/isDark、clamp、舍入和字符串输出 |
 | RoughJS 及其几何子依赖 | 优先评估 `rough` 1.6；必要时移植算法；路径候选 `svg.path` 7.1 | [rough](https://pypi.org/project/rough/)声明为 Python RoughJS 移植且无必需第三方依赖；[svg.path](https://pypi.org/project/svg.path/)提供路径段与解析。未证明 RoughJS 4.6.6 的 seed、随机流、填充、控制点和输出操作等价 |
 | graphlib / 通用图结构 | 自有轻量有序图，不复刻 graphlib API；`networkx` 3.7 仅作算法候选 | [NetworkX](https://networkx.org/documentation/stable/install.html)基础包为纯 Python、无硬依赖；首批直接表达节点/边/顺序并对接 py-elk，图模型可复用不表示其布局等价 Dagre |
-| Dagre、D3 数值、COSE/fCoSE、tidy、Sankey、Venn | 按锁定源码所用接口重写 Python | 本轮未确认可以直接替换并保持全部原算法输出的 Python 组件。Grandalf 有同类布局，但这不足以证明 Dagre/COSE 等价，不纳入直接替换方案 |
+| D3 数值、COSE/fCoSE、tidy、Sankey、Venn | 按锁定源码所用接口重写 Python | 本轮未确认可以直接替换并保持全部原算法输出的 Python 组件。Grandalf 有同类布局，但这不足以证明 Dagre/COSE 等价，不纳入直接替换方案 |
 | KaTeX | 候选 `latex2mathml` 3.81.1 处理语法；数学布局自行实现 | [项目页](https://pypi.org/project/latex2mathml/)定义的是纯 Python LaTeX→MathML 转换；不能替代 KaTeX 的宏、公式 box、字体度量、伸缩操作符与最终绘制 |
 | ZenUML ANTLR | 候选 `antlr4-python3-runtime`，或转换 grammar 后 Python 重写 | [ANTLR](https://www.antlr.org/download)提供 Python target；必须找到原 grammar/语义动作并匹配生成器/runtime。当前 JS 锁到 4.11.0，调查到最新 Python 4.13.2 不表示可直接混用 |
 | React/DOM/事件/fastdom/资源辅助 | 淘汰浏览器实现层，重写为 Python 数据和 Canvas 绘制流程 | 不移植 React/DOM/调度库；保留需要的图形布局、样式、链接/交互元数据、错误和资源策略 |
@@ -107,7 +111,7 @@ Lark 的 Nearley extra 声明 js2py，不能引入；NetworkX 的 default extra 
 | D04 | grammar、lexer、AST、引用、错误/恢复及 parser 服务 | D00/D02 | Jison 与 Langium 各一真实入口先验证，再扩全 grammar；不把全部框架 API 逐一机械翻译 |
 | D05 | Markdown/HTML/CSS 输入与安全策略、数学语法 | D00/D01/D02 | 标签/转义/选择器/安全模式/恶意 URL 等实际调用面可追踪 |
 | D06 | D3 scales/ticks/format/interpolate/shape/hierarchy/force 等所用数值能力 | D01/D02/D03 | 稳定排序、曲线、时区、迭代、数值边界符合对应分包版本 |
-| D07 | Dagre、两套 COSE/layout-base、fCoSE、tidy、Sankey、Venn 与 py-elk 适配 | D01/D03/D06 的实际所用子集 | 原算法的参数/顺序/seed/停止条件/标签与路由验证；各布局可按自身子依赖分别推进 |
+| D07 | 两套 COSE/layout-base、fCoSE、tidy、Sankey、Venn 与 py-elk 适配 | D01/D03/D06 的实际所用子集 | 原算法的参数/顺序/seed/停止条件/标签与路由验证；各布局可按自身子依赖分别推进 |
 | D08 | CSS/HTML box、文字和数学布局、图标/SVG 几何、测量/绘制阶段、Canvas primitives | D01/D02/D05/D06 的实际所用子集 | 真实字体测量/标签 box，未实现内容明确失败，owner 线程正确 |
 | D09 | Mermaid 图种模型、配置/主题、注册器、默认 ELK、导出组装 | D04/D07/D08 的对应切片 | 首个真实 flowchart，再按原 M4/M5/M6 扩全；不以局部通过替代完整图种 |
 | D10 | ZenUML grammar/语义/布局/style 与 Canvas 绘制链 | 对应 D04/D05/D07/D08 | 以 renderToSvg 为参考入口保留功能；淘汰 React/DOM/浏览器 UI 层，所需语法/算法按调用契约迁移 |

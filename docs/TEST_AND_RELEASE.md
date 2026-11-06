@@ -1,3 +1,5 @@
+> 2026-11-05 用户范围决策：**全部图种和共享模块只做静态渲染，忽略交互逻辑。** 点击/回调/悬停/导航/命中测试、动画播放、交互元数据与 DOM 无障碍行为不作为交付或验收项；静态画面、资源与输入安全保留。以 [静态范围规则](STATIC_RENDERING_SCOPE.md) 为准，覆盖本文旧交互要求。
+
 # 测试与发布方案
 
 最新执行时序见 [FULL_MIGRATION_PLAN](FULL_MIGRATION_PLAN.md)和 [SOURCE_BASED_VERIFICATION](SOURCE_BASED_VERIFICATION.md)：**全部功能源码 P1 写完后，P2 才正式设计用例/单测/oracle，P3 分组首次运行、统一排查修复，P4 最终全量。** P1 仅运行编译/import/引用/签名/注册等机械检查，不以逐图单测或图片通过作为继续写码前置。下列现有资料检查不属于 Mermaid 功能验收。
@@ -43,7 +45,7 @@ python -m build --wheel
 | parser/config | 全部 grammar 与预处理、正负例、JS 值/UTF16/时区、schema/default/theme/security |
 | layout/render | 每个图种几何/路由/marker/style/labels、复杂文本、HTML/Markdown/math、布局插件/seed |
 | resources/security | 离线图标/图片/字体、缺资源、非法 URL/HTML、大小/深度/并发资源上限 |
-| exports | 所有声明格式、透明/背景、density/viewport、PDF 页/字体、SVG 元数据/链接；不同栅格器不混用 |
+| exports | 所有声明格式、透明/背景、density/viewport、PDF 页/字体、SVG 静态文字/路径/资源结构；不验交互链接或事件，不同栅格器不混用 |
 | owner/lifecycle | 跨线程错误、worker 自建对象、GC、错误恢复、连续渲染无状态污染、取消/退出 |
 | deployment | Windows/Linux、CPU/GPU 分组、无 Vulkan/no-loader、无 Node/浏览器/参考源码、实际安装路径 |
 

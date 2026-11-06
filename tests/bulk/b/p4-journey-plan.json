@@ -1,0 +1,9 @@
+{
+  "schema":"py-mermaid-command-plan/v1",
+  "scope":"BULK",
+  "inputs":["{repo}/tests/bulk/cases-B.json","{repo}/tests/bulk/b/test_journey_visual_regressions.py"],
+  "steps":[
+    {"name":"B-Journey-repair-native-cpu","argv":["{python}","{repo}/tools/bulk_validate.py","--fixtures","{repo}/tests/bulk/cases-B.json","--group","B","--backend","cpu","--out","{run}/artifacts/native-cpu-B"],"env":{"PYTHONPATH":"{repo}/src"},"timeout":900},
+    {"name":"B-Journey-nonfinite-probe-native","argv":["{python}","{repo}/tools/bulk_validate.py","--fixtures","{repo}/tests/bulk/b/journey-nonfinite-probe.json","--group","B","--backend","cpu","--out","{run}/artifacts/nonfinite-probe-native"],"env":{"PYTHONPATH":"{repo}/src"},"timeout":120}
+  ]
+}

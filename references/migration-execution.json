@@ -418,35 +418,6 @@
       "exitRule": "全部真实实现和源码接线，机械检查有实录；仅标 code_complete_unverified"
     },
     {
-      "id": "P1-10",
-      "phase": "P1",
-      "title": "Dagre 计算和复合图/路由",
-      "ownerRole": "DAGRE",
-      "status": "planned",
-      "kind": "work",
-      "writePaths": [
-        "src/py_mermaid/layout/dagre/**",
-        "references/port-map/P1-10.json"
-      ],
-      "dependsOn": [
-        "P1-01"
-      ],
-      "integrationNeeds": [
-        "P1-04",
-        "P1-11"
-      ],
-      "outputs": [
-        "rank/order/position/route；不复刻 D3 DOM 或 graphlib API"
-      ],
-      "featureIds": [],
-      "sharedModules": [
-        "C05"
-      ],
-      "recommendedWave": "W3",
-      "sourceMapFragment": "references/port-map/P1-10.json",
-      "exitRule": "全部真实实现和源码接线，机械检查有实录；仅标 code_complete_unverified"
-    },
-    {
       "id": "P1-11",
       "phase": "P1",
       "title": "D3 所用数值/日期/颜色/尺度/树/空间算法",
@@ -727,7 +698,6 @@
         "P1-07",
         "P1-08",
         "P1-09",
-        "P1-10",
         "P1-14",
         "P1-15",
         "P1-16",
@@ -780,7 +750,6 @@
         "P1-07",
         "P1-08",
         "P1-09",
-        "P1-10",
         "P1-14",
         "P1-15",
         "P1-17"
@@ -1300,7 +1269,6 @@
         "P1-07",
         "P1-08",
         "P1-09",
-        "P1-10",
         "P1-11",
         "P1-12",
         "P1-13",
@@ -2071,7 +2039,7 @@
     "diagnostics-errors-utf16": "C01",
     "themes-css-cascade": "C04",
     "text-html-markdown-math": "C04",
-    "layout-engines-dagre-elk-tidy": "C05",
+    "layout-engines": "C05",
     "handdrawn-random-seed": "C06",
     "exports-scale-background": "C07",
     "threading-lifecycle": "C07",
@@ -2094,7 +2062,8 @@
     "docs/MODULE_BOUNDARIES.md",
     "docs/PARALLEL_EXECUTION.md",
     "docs/SOURCE_BASED_VERIFICATION.md",
-    "docs/RENDER_CONSISTENCY.md"
+    "docs/RENDER_CONSISTENCY.md",
+    "docs/LAYOUT_POLICY.md"
   ],
   "renderValidationPolicy": "references/render-validation-policy.json",
   "preparedTools": [
@@ -2108,5 +2077,40 @@
       ],
       "mermaidFunctionalValidation": false
     }
-  ]
+  ],
+  "layoutPolicy": "references/layout-policy.json",
+  "sourceCrossCuttingIdMap": {
+    "layout-engines-dagre-elk-tidy": "layout-engines"
+  },
+  "removedTasks": [
+    {
+      "id": "P1-10",
+      "disposition": "excluded_by_user",
+      "decision": "docs/LAYOUT_POLICY.md"
+    }
+  ],
+  "activeBatchScope": {
+    "date": "2026-11-06",
+    "decision": "defer selected diagrams for current batch; keep execution paused",
+    "deferredDetectors": [
+      "pie",
+      "quadrantChart",
+      "xychart",
+      "radar",
+      "treemap",
+      "sankey",
+      "venn"
+    ],
+    "deferredStatus": "deferred_by_user",
+    "upstreamInventoryDetectors": 38,
+    "batchDetectors": 31,
+    "batchNewDetectors": 29,
+    "flowchartRegressionDetectors": [
+      "flowchart-v2",
+      "flowchart-elk"
+    ],
+    "preserveExistingCodeAndEvidence": true,
+    "resumeAuthorized": true,
+    "document": "docs/BULK_STATIC_EXECUTION.md"
+  }
 }

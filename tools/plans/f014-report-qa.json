@@ -1,0 +1,74 @@
+{
+  "schema": "py-mermaid-command-plan/v1",
+  "scope": "F01.4",
+  "description": "Final HTML desktop/mobile, all 600 profile-case views, downloads and integrity checks; no install",
+  "steps": [
+    {
+      "name": "html-desktop-mobile-download-qa",
+      "argv": [
+        "node",
+        "{repo}/tools/qa_html_report.cjs",
+        "--url",
+        "http://127.0.0.1:8765/F01.4-report-20261105T112346Z-b7014c54/index.html",
+        "--out",
+        "{run}/artifacts/html-qa"
+      ],
+      "timeoutSeconds": 240
+    },
+    {
+      "name": "integrity-F01.4-batch-20261105T111527Z-f645b0b6",
+      "argv": [
+        "{python}",
+        "{repo}/tools/workflow.py",
+        "verify",
+        "--run",
+        "{repo}/test-runs/F01.4-batch-20261105T111527Z-f645b0b6"
+      ],
+      "timeoutSeconds": 120
+    },
+    {
+      "name": "integrity-F01.4-batch-20261105T111527Z-b69f15af",
+      "argv": [
+        "{python}",
+        "{repo}/tools/workflow.py",
+        "verify",
+        "--run",
+        "{repo}/test-runs/F01.4-batch-20261105T111527Z-b69f15af"
+      ],
+      "timeoutSeconds": 120
+    },
+    {
+      "name": "integrity-F01.4-batch-20261105T111527Z-8d3c0855",
+      "argv": [
+        "{python}",
+        "{repo}/tools/workflow.py",
+        "verify",
+        "--run",
+        "{repo}/test-runs/F01.4-batch-20261105T111527Z-8d3c0855"
+      ],
+      "timeoutSeconds": 120
+    },
+    {
+      "name": "integrity-F01.4-batch-20261105T112340Z-561d6761",
+      "argv": [
+        "{python}",
+        "{repo}/tools/workflow.py",
+        "verify",
+        "--run",
+        "{repo}/test-runs/F01.4-batch-20261105T112340Z-561d6761"
+      ],
+      "timeoutSeconds": 120
+    },
+    {
+      "name": "integrity-F01.4-report-20261105T112346Z-b7014c54",
+      "argv": [
+        "{python}",
+        "{repo}/tools/workflow.py",
+        "verify",
+        "--run",
+        "{repo}/test-runs/F01.4-report-20261105T112346Z-b7014c54"
+      ],
+      "timeoutSeconds": 120
+    }
+  ]
+}

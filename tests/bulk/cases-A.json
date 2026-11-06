@@ -1,0 +1,4633 @@
+{
+  "schema": "py-mermaid-bulk-cases/v1",
+  "group": "A",
+  "frozenSource": "97b353ebf7e176a750a736a714c85638e0a497b722e451dc77570579a2d36cbb",
+  "cases": [
+    {
+      "id": "A-class-direction-TB",
+      "kind": "classDiagram",
+      "source": "classDiagram\ndirection TB\nclass A",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+        "sha256": "3c99e4613bd8235f4d3485d8444a8b119e8af9ede50f88505c24d5a6cc93280f",
+        "symbol": "direction and classIdentifier",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "class-direction-TB"
+      ],
+      "expectedText": [
+        "A"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-class-direction-BT",
+      "kind": "classDiagram",
+      "source": "classDiagram\ndirection BT\nclass A",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+        "sha256": "3c99e4613bd8235f4d3485d8444a8b119e8af9ede50f88505c24d5a6cc93280f",
+        "symbol": "direction and classIdentifier",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "class-direction-BT"
+      ],
+      "expectedText": [
+        "A"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-class-direction-LR",
+      "kind": "classDiagram",
+      "source": "classDiagram\ndirection LR\nclass A",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+        "sha256": "3c99e4613bd8235f4d3485d8444a8b119e8af9ede50f88505c24d5a6cc93280f",
+        "symbol": "direction and classIdentifier",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "class-direction-LR"
+      ],
+      "expectedText": [
+        "A"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-class-direction-RL",
+      "kind": "classDiagram",
+      "source": "classDiagram\ndirection RL\nclass A",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+        "sha256": "3c99e4613bd8235f4d3485d8444a8b119e8af9ede50f88505c24d5a6cc93280f",
+        "symbol": "direction and classIdentifier",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "class-direction-RL"
+      ],
+      "expectedText": [
+        "A"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-class-relation-4",
+      "kind": "classDiagram",
+      "source": "classDiagram\nA \"1\" <|-- \"many\" B : relates",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+        "sha256": "3c99e4613bd8235f4d3485d8444a8b119e8af9ede50f88505c24d5a6cc93280f",
+        "symbol": "relationStatement/relationType; classDb.getArrowMarker",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "class-relation-4"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "relates"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-class-relation-5",
+      "kind": "classDiagram",
+      "source": "classDiagram\nA \"1\" --|> \"many\" B : relates",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+        "sha256": "3c99e4613bd8235f4d3485d8444a8b119e8af9ede50f88505c24d5a6cc93280f",
+        "symbol": "relationStatement/relationType; classDb.getArrowMarker",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "class-relation-5"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "relates"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-class-relation-6",
+      "kind": "classDiagram",
+      "source": "classDiagram\nA \"1\" *-- \"many\" B : relates",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+        "sha256": "3c99e4613bd8235f4d3485d8444a8b119e8af9ede50f88505c24d5a6cc93280f",
+        "symbol": "relationStatement/relationType; classDb.getArrowMarker",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "class-relation-6"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "relates"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-class-relation-7",
+      "kind": "classDiagram",
+      "source": "classDiagram\nA \"1\" --* \"many\" B : relates",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+        "sha256": "3c99e4613bd8235f4d3485d8444a8b119e8af9ede50f88505c24d5a6cc93280f",
+        "symbol": "relationStatement/relationType; classDb.getArrowMarker",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "class-relation-7"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "relates"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-class-relation-8",
+      "kind": "classDiagram",
+      "source": "classDiagram\nA \"1\" o-- \"many\" B : relates",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+        "sha256": "3c99e4613bd8235f4d3485d8444a8b119e8af9ede50f88505c24d5a6cc93280f",
+        "symbol": "relationStatement/relationType; classDb.getArrowMarker",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "class-relation-8"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "relates"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-class-relation-9",
+      "kind": "classDiagram",
+      "source": "classDiagram\nA \"1\" --o \"many\" B : relates",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+        "sha256": "3c99e4613bd8235f4d3485d8444a8b119e8af9ede50f88505c24d5a6cc93280f",
+        "symbol": "relationStatement/relationType; classDb.getArrowMarker",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "class-relation-9"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "relates"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-class-relation-10",
+      "kind": "classDiagram",
+      "source": "classDiagram\nA \"1\" --> \"many\" B : relates",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+        "sha256": "3c99e4613bd8235f4d3485d8444a8b119e8af9ede50f88505c24d5a6cc93280f",
+        "symbol": "relationStatement/relationType; classDb.getArrowMarker",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "class-relation-10"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "relates"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-class-relation-11",
+      "kind": "classDiagram",
+      "source": "classDiagram\nA \"1\" <-- \"many\" B : relates",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+        "sha256": "3c99e4613bd8235f4d3485d8444a8b119e8af9ede50f88505c24d5a6cc93280f",
+        "symbol": "relationStatement/relationType; classDb.getArrowMarker",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "class-relation-11"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "relates"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-class-relation-12",
+      "kind": "classDiagram",
+      "source": "classDiagram\nA \"1\" ..> \"many\" B : relates",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+        "sha256": "3c99e4613bd8235f4d3485d8444a8b119e8af9ede50f88505c24d5a6cc93280f",
+        "symbol": "relationStatement/relationType; classDb.getArrowMarker",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "class-relation-12"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "relates"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-class-relation-13",
+      "kind": "classDiagram",
+      "source": "classDiagram\nA \"1\" <.. \"many\" B : relates",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+        "sha256": "3c99e4613bd8235f4d3485d8444a8b119e8af9ede50f88505c24d5a6cc93280f",
+        "symbol": "relationStatement/relationType; classDb.getArrowMarker",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "class-relation-13"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "relates"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-class-relation-14",
+      "kind": "classDiagram",
+      "source": "classDiagram\nA \"1\" .. \"many\" B : relates",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+        "sha256": "3c99e4613bd8235f4d3485d8444a8b119e8af9ede50f88505c24d5a6cc93280f",
+        "symbol": "relationStatement/relationType; classDb.getArrowMarker",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "class-relation-14"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "relates"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-class-relation-15",
+      "kind": "classDiagram",
+      "source": "classDiagram\nA \"1\" -- \"many\" B : relates",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+        "sha256": "3c99e4613bd8235f4d3485d8444a8b119e8af9ede50f88505c24d5a6cc93280f",
+        "symbol": "relationStatement/relationType; classDb.getArrowMarker",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "class-relation-15"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "relates"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-class-compartments",
+      "kind": "classDiagram",
+      "source": "classDiagram\nclass Account {\n+String owner\n-int balance\n+deposit(int amount) bool\n#calculate()*\n+count$\n}",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+        "sha256": "3c99e4613bd8235f4d3485d8444a8b119e8af9ede50f88505c24d5a6cc93280f",
+        "symbol": "members right recursion, ClassMember.parseMember/parseClassifier",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "class-compartments"
+      ],
+      "expectedText": [
+        "Account",
+        "deposit",
+        "calculate"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-class-generic-label",
+      "kind": "classDiagram",
+      "source": "classDiagram\nclass Box~T~[\"Box label\"]\nBox~T~ : +get() T",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+        "sha256": "3c99e4613bd8235f4d3485d8444a8b119e8af9ede50f88505c24d5a6cc93280f",
+        "symbol": "className GENERICTYPE/setClassLabel/parseGenericTypes",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "class-generic-label"
+      ],
+      "expectedText": [
+        "Box label"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-class-namespaces",
+      "kind": "classDiagram",
+      "source": "classDiagram\nnamespace Company {\n class User\n namespace Model {\n class Record\n }\n}\nclass Outside",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+        "sha256": "3c99e4613bd8235f4d3485d8444a8b119e8af9ede50f88505c24d5a6cc93280f",
+        "symbol": "namespace stack and addClassesToNamespace",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "class-namespaces"
+      ],
+      "expectedText": [
+        "User",
+        "Record",
+        "Outside"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-class-multiple-annotation",
+      "kind": "classDiagram",
+      "source": "classDiagram\nclass A\n<<interface>> A\n<<service>> A",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+        "sha256": "3c99e4613bd8235f4d3485d8444a8b119e8af9ede50f88505c24d5a6cc93280f",
+        "symbol": "annotationStatement/addAnnotation; only first annotation drawn",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "class-multiple-annotation"
+      ],
+      "expectedText": [
+        "A"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-class-bare-noop",
+      "kind": "classDiagram",
+      "source": "classDiagram\nBareClass\nclass Present",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+        "sha256": "3c99e4613bd8235f4d3485d8444a8b119e8af9ede50f88505c24d5a6cc93280f",
+        "symbol": "memberStatement className production has no DB action",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "class-bare-noop"
+      ],
+      "expectedText": [
+        "Present"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-class-notes-styles",
+      "kind": "classDiagram",
+      "source": "classDiagram\nclass A:::highlight\nnote for A \"A note\"\nclassDef highlight fill:#fee,color:#900\nstyle A stroke:#123",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+        "sha256": "3c99e4613bd8235f4d3485d8444a8b119e8af9ede50f88505c24d5a6cc93280f",
+        "symbol": "classIdentifier STYLE_SEPARATOR/noteStatement/style/classDef",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "class-notes-styles"
+      ],
+      "expectedText": [
+        "A note"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-state-direction-TB",
+      "kind": "stateDiagram",
+      "source": "stateDiagram-v2\ndirection TB\n[*] --> Active\nActive --> [*]",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/state/parser/stateDiagram.jison",
+        "sha256": "72568f98201c5ba59dca96842d1805d5a9908c5965d0609ab27f192929285d4d",
+        "symbol": "direction/idStatement start/end in StateDB.extract",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "state-direction-TB"
+      ],
+      "expectedText": [
+        "Active"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-state-direction-BT",
+      "kind": "stateDiagram",
+      "source": "stateDiagram-v2\ndirection BT\n[*] --> Active\nActive --> [*]",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/state/parser/stateDiagram.jison",
+        "sha256": "72568f98201c5ba59dca96842d1805d5a9908c5965d0609ab27f192929285d4d",
+        "symbol": "direction/idStatement start/end in StateDB.extract",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "state-direction-BT"
+      ],
+      "expectedText": [
+        "Active"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-state-direction-LR",
+      "kind": "stateDiagram",
+      "source": "stateDiagram-v2\ndirection LR\n[*] --> Active\nActive --> [*]",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/state/parser/stateDiagram.jison",
+        "sha256": "72568f98201c5ba59dca96842d1805d5a9908c5965d0609ab27f192929285d4d",
+        "symbol": "direction/idStatement start/end in StateDB.extract",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "state-direction-LR"
+      ],
+      "expectedText": [
+        "Active"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-state-direction-RL",
+      "kind": "stateDiagram",
+      "source": "stateDiagram-v2\ndirection RL\n[*] --> Active\nActive --> [*]",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/state/parser/stateDiagram.jison",
+        "sha256": "72568f98201c5ba59dca96842d1805d5a9908c5965d0609ab27f192929285d4d",
+        "symbol": "direction/idStatement start/end in StateDB.extract",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "state-direction-RL"
+      ],
+      "expectedText": [
+        "Active"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-state-special-choice",
+      "kind": "stateDiagram",
+      "source": "stateDiagram-v2\nstate decision <<choice>>\nA --> decision",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/state/parser/stateDiagram.jison",
+        "sha256": "72568f98201c5ba59dca96842d1805d5a9908c5965d0609ab27f192929285d4d",
+        "symbol": "idStatement SPECIAL_STYPE production",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "state-special-choice"
+      ],
+      "expectedText": [
+        "A"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-state-special-fork",
+      "kind": "stateDiagram",
+      "source": "stateDiagram-v2\nstate decision <<fork>>\nA --> decision",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/state/parser/stateDiagram.jison",
+        "sha256": "72568f98201c5ba59dca96842d1805d5a9908c5965d0609ab27f192929285d4d",
+        "symbol": "idStatement SPECIAL_STYPE production",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "state-special-fork"
+      ],
+      "expectedText": [
+        "A"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-state-special-join",
+      "kind": "stateDiagram",
+      "source": "stateDiagram-v2\nstate decision <<join>>\nA --> decision",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/state/parser/stateDiagram.jison",
+        "sha256": "72568f98201c5ba59dca96842d1805d5a9908c5965d0609ab27f192929285d4d",
+        "symbol": "idStatement SPECIAL_STYPE production",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "state-special-join"
+      ],
+      "expectedText": [
+        "A"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-state-nested-local-direction",
+      "kind": "stateDiagram",
+      "source": "stateDiagram-v2\nstate Outer {\n direction LR\n state Inner {\n A --> B : inside\n }\n}\nC --> Outer",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/state/parser/stateDiagram.jison",
+        "sha256": "72568f98201c5ba59dca96842d1805d5a9908c5965d0609ab27f192929285d4d",
+        "symbol": "COMPOSIT_STATE STRUCT_START document STRUCT_STOP; local direction",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "state-nested-local-direction"
+      ],
+      "expectedText": [
+        "inside",
+        "A",
+        "B",
+        "C"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-state-descriptions-notes",
+      "kind": "stateDiagram",
+      "source": "stateDiagram-v2\nstate \"Order open\" as Open\nOpen : First detail\nnote right of Open : Review carefully",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/state/parser/stateDiagram.jison",
+        "sha256": "72568f98201c5ba59dca96842d1805d5a9908c5965d0609ab27f192929285d4d",
+        "symbol": "STATE_DESCR AS ID; note statement/trimColon",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "state-descriptions-notes"
+      ],
+      "expectedText": [
+        "Order open",
+        "First detail",
+        "Review carefully"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-state-concurrent",
+      "kind": "stateDiagram",
+      "source": "stateDiagram-v2\nstate Parallel {\n A --> B\n --\n C --> D\n}",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/state/parser/stateDiagram.jison",
+        "sha256": "72568f98201c5ba59dca96842d1805d5a9908c5965d0609ab27f192929285d4d",
+        "symbol": "DIVIDER concurrent regions, two region containers plus source states",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "state-concurrent"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-state-empty-description-metadata",
+      "kind": "stateDiagram",
+      "source": "stateDiagram-v2\nhide empty description\nscale 2 width\nA --> B",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/state/parser/stateDiagram.jison",
+        "sha256": "72568f98201c5ba59dca96842d1805d5a9908c5965d0609ab27f192929285d4d",
+        "symbol": "HIDE_EMPTY/scale WIDTH are retained source metadata",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "state-empty-description-metadata"
+      ],
+      "expectedText": [
+        "A"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-er-cardinality-left-only_one",
+      "kind": "er",
+      "source": "erDiagram\nA ||--o{ B : owns",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/er/parser/erDiagram.jison",
+        "sha256": "6aa3496c3d7fc2319ce303b4e95e1061f5a9002667ea29300a86ab9f198da6ef",
+        "symbol": "cardinality relSpec; native public symbolic cardinality values",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "er-cardinality-left-only_one"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "owns"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-er-cardinality-left-zero_or_one",
+      "kind": "er",
+      "source": "erDiagram\nA |o--o{ B : owns",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/er/parser/erDiagram.jison",
+        "sha256": "6aa3496c3d7fc2319ce303b4e95e1061f5a9002667ea29300a86ab9f198da6ef",
+        "symbol": "cardinality relSpec; native public symbolic cardinality values",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "er-cardinality-left-zero_or_one"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "owns"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-er-cardinality-left-one_or_more",
+      "kind": "er",
+      "source": "erDiagram\nA }|--o{ B : owns",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/er/parser/erDiagram.jison",
+        "sha256": "6aa3496c3d7fc2319ce303b4e95e1061f5a9002667ea29300a86ab9f198da6ef",
+        "symbol": "cardinality relSpec; native public symbolic cardinality values",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "er-cardinality-left-one_or_more"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "owns"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-er-cardinality-left-zero_or_more",
+      "kind": "er",
+      "source": "erDiagram\nA }o--o{ B : owns",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/er/parser/erDiagram.jison",
+        "sha256": "6aa3496c3d7fc2319ce303b4e95e1061f5a9002667ea29300a86ab9f198da6ef",
+        "symbol": "cardinality relSpec; native public symbolic cardinality values",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "er-cardinality-left-zero_or_more"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "owns"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-er-attributes",
+      "kind": "er",
+      "source": "erDiagram\nCUSTOMER [Client] {\n int id PK \"Primary identifier\"\n string name\n string email UK, FK \"Contact\"\n}\nCUSTOMER ||..o{ ORDER : places",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/er/parser/erDiagram.jison",
+        "sha256": "6aa3496c3d7fc2319ce303b4e95e1061f5a9002667ea29300a86ab9f198da6ef",
+        "symbol": "entityName alias; attributes/key/comment; addAttributes reverse list order",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "er-attributes"
+      ],
+      "expectedText": [
+        "Client",
+        "id",
+        "Primary identifier",
+        "Contact",
+        "places"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-er-group-direction",
+      "kind": "er",
+      "source": "erDiagram\nsubgraph sales [Sales]\ndirection LR\nCUSTOMER\nORDER\nend\nCUSTOMER ||--o{ ORDER : places",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/er/parser/erDiagram.jison",
+        "sha256": "6aa3496c3d7fc2319ce303b4e95e1061f5a9002667ea29300a86ab9f198da6ef",
+        "symbol": "subgraphHeader/addSubGraph/setDirection group semantics",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "er-group-direction"
+      ],
+      "expectedText": [
+        "Sales",
+        "CUSTOMER",
+        "ORDER",
+        "places"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-c4-header-C4Context",
+      "kind": "c4",
+      "source": "C4Context\nPerson(a,\"Alice\",\"User\")\nSystem(b,\"Billing\",\"System\")\nRel(a,b,\"Uses\")",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "five C4 headers, person/system/rel DB parameter assignment",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "c4-header-C4Context"
+      ],
+      "expectedText": [
+        "Alice",
+        "Billing",
+        "Uses"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-c4-header-C4Container",
+      "kind": "c4",
+      "source": "C4Container\nPerson(a,\"Alice\",\"User\")\nSystem(b,\"Billing\",\"System\")\nRel(a,b,\"Uses\")",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "five C4 headers, person/system/rel DB parameter assignment",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "c4-header-C4Container"
+      ],
+      "expectedText": [
+        "Alice",
+        "Billing",
+        "Uses"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-c4-header-C4Component",
+      "kind": "c4",
+      "source": "C4Component\nPerson(a,\"Alice\",\"User\")\nSystem(b,\"Billing\",\"System\")\nRel(a,b,\"Uses\")",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "five C4 headers, person/system/rel DB parameter assignment",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "c4-header-C4Component"
+      ],
+      "expectedText": [
+        "Alice",
+        "Billing",
+        "Uses"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-c4-header-C4Dynamic",
+      "kind": "c4",
+      "source": "C4Dynamic\nPerson(a,\"Alice\",\"User\")\nSystem(b,\"Billing\",\"System\")\nRel(a,b,\"Uses\")",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "five C4 headers, person/system/rel DB parameter assignment",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "c4-header-C4Dynamic"
+      ],
+      "expectedText": [
+        "Alice",
+        "Billing",
+        "Uses"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-c4-header-C4Deployment",
+      "kind": "c4",
+      "source": "C4Deployment\nPerson(a,\"Alice\",\"User\")\nSystem(b,\"Billing\",\"System\")\nRel(a,b,\"Uses\")",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "five C4 headers, person/system/rel DB parameter assignment",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "c4-header-C4Deployment"
+      ],
+      "expectedText": [
+        "Alice",
+        "Billing",
+        "Uses"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-c4-boundary-Enterprise_Boundary",
+      "kind": "c4",
+      "source": "C4Deployment\nEnterprise_Boundary(g,\"Group\") {\nPerson(a,\"Actor\")\n}",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "all C4 boundary/deployment productions and parentBoundary stack",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "c4-boundary-Enterprise_Boundary"
+      ],
+      "expectedText": [
+        "Group",
+        "Actor"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-c4-boundary-System_Boundary",
+      "kind": "c4",
+      "source": "C4Deployment\nSystem_Boundary(g,\"Group\") {\nPerson(a,\"Actor\")\n}",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "all C4 boundary/deployment productions and parentBoundary stack",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "c4-boundary-System_Boundary"
+      ],
+      "expectedText": [
+        "Group",
+        "Actor"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-c4-boundary-Container_Boundary",
+      "kind": "c4",
+      "source": "C4Deployment\nContainer_Boundary(g,\"Group\") {\nPerson(a,\"Actor\")\n}",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "all C4 boundary/deployment productions and parentBoundary stack",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "c4-boundary-Container_Boundary"
+      ],
+      "expectedText": [
+        "Group",
+        "Actor"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-c4-boundary-Boundary",
+      "kind": "c4",
+      "source": "C4Deployment\nBoundary(g,\"Group\") {\nPerson(a,\"Actor\")\n}",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "all C4 boundary/deployment productions and parentBoundary stack",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "c4-boundary-Boundary"
+      ],
+      "expectedText": [
+        "Group",
+        "Actor"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-c4-boundary-Deployment_Node",
+      "kind": "c4",
+      "source": "C4Deployment\nDeployment_Node(g,\"Group\") {\nPerson(a,\"Actor\")\n}",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "all C4 boundary/deployment productions and parentBoundary stack",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "c4-boundary-Deployment_Node"
+      ],
+      "expectedText": [
+        "Group",
+        "Actor"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-c4-boundary-Node",
+      "kind": "c4",
+      "source": "C4Deployment\nNode(g,\"Group\") {\nPerson(a,\"Actor\")\n}",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "all C4 boundary/deployment productions and parentBoundary stack",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "c4-boundary-Node"
+      ],
+      "expectedText": [
+        "Group",
+        "Actor"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-c4-boundary-Node_L",
+      "kind": "c4",
+      "source": "C4Deployment\nNode_L(g,\"Group\") {\nPerson(a,\"Actor\")\n}",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "all C4 boundary/deployment productions and parentBoundary stack",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "c4-boundary-Node_L"
+      ],
+      "expectedText": [
+        "Group",
+        "Actor"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-c4-boundary-Node_R",
+      "kind": "c4",
+      "source": "C4Deployment\nNode_R(g,\"Group\") {\nPerson(a,\"Actor\")\n}",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "all C4 boundary/deployment productions and parentBoundary stack",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "c4-boundary-Node_R"
+      ],
+      "expectedText": [
+        "Group",
+        "Actor"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-c4-updates",
+      "kind": "c4",
+      "source": "C4Context\nPerson(a,\"A\")\nSystem(b,\"B\")\nRel(a,b,\"Uses\")\nUpdateElementStyle(a,$bgColor=\"#fee\",$fontColor=\"#123\")\nUpdateRelStyle(a,b,$lineColor=\"#456\",$offsetX=\"12\")\nUpdateLayoutConfig($c4ShapeInRow=\"2\",$c4BoundaryInRow=\"1\")",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "UpdateElementStyle/UpdateRelStyle/UpdateLayoutConfig named slot overrides",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "c4-updates"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "Uses"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-usecase-actor-references",
+      "kind": "usecase",
+      "source": "usecase-beta\nactor User, Admin\nUser --> Login\nAdmin --> Logout",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/usecase/usecase.spec.ts",
+        "sha256": "e4909e78d291c258164485dd70bddb3b708c31250c3b79845c527dbec55e3f9b",
+        "symbol": "actor multiple declaration, forward implicit use cases and association relationships",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "usecase-actor-references"
+      ],
+      "expectedText": [
+        "User",
+        "Admin",
+        "Login",
+        "Logout"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-usecase-actor-normal",
+      "kind": "usecase",
+      "source": "usecase-beta\nactor User@{type: normal, business: true}\nUser --> Login",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/usecase/usecase.spec.ts",
+        "sha256": "e4909e78d291c258164485dd70bddb3b708c31250c3b79845c527dbec55e3f9b",
+        "symbol": "actor metadata type/business and four-variant actor renderer",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "usecase-actor-normal"
+      ],
+      "expectedText": [
+        "User",
+        "Login"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-usecase-actor-hollow",
+      "kind": "usecase",
+      "source": "usecase-beta\nactor User@{type: hollow, business: true}\nUser --> Login",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/usecase/usecase.spec.ts",
+        "sha256": "e4909e78d291c258164485dd70bddb3b708c31250c3b79845c527dbec55e3f9b",
+        "symbol": "actor metadata type/business and four-variant actor renderer",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "usecase-actor-hollow"
+      ],
+      "expectedText": [
+        "User",
+        "Login"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-usecase-actor-awesome",
+      "kind": "usecase",
+      "source": "usecase-beta\nactor User@{type: awesome, business: false}\nUser --> Login",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/usecase/usecase.spec.ts",
+        "sha256": "e4909e78d291c258164485dd70bddb3b708c31250c3b79845c527dbec55e3f9b",
+        "symbol": "actor metadata type/business and four-variant actor renderer",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "usecase-actor-awesome"
+      ],
+      "expectedText": [
+        "User",
+        "Login"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-usecase-package-boundary",
+      "kind": "usecase",
+      "source": "usecase-beta\nsystemBoundary sb[\"Payments\"]@{type: package}\n actor Clerk(\"Payment clerk\")\n Authorize(\"Authorize payment\")\nend\nClerk --> Authorize",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/usecase/usecase.spec.ts",
+        "sha256": "e4909e78d291c258164485dd70bddb3b708c31250c3b79845c527dbec55e3f9b",
+        "symbol": "systemBoundary id label metadata/type package and declaration membership",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "usecase-package-boundary"
+      ],
+      "expectedText": [
+        "Payments",
+        "Payment clerk",
+        "Authorize payment"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-usecase-include",
+      "kind": "usecase",
+      "source": "usecase-beta\nLogin ..> : include Validate",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/usecase/usecase.spec.ts",
+        "sha256": "e4909e78d291c258164485dd70bddb3b708c31250c3b79845c527dbec55e3f9b",
+        "symbol": "semantic include/extend relationship between use cases",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "usecase-include"
+      ],
+      "expectedText": [
+        "Login",
+        "Validate",
+        "include"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-usecase-extend",
+      "kind": "usecase",
+      "source": "usecase-beta\nLogin ..> : extend Validate",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/usecase/usecase.spec.ts",
+        "sha256": "e4909e78d291c258164485dd70bddb3b708c31250c3b79845c527dbec55e3f9b",
+        "symbol": "semantic include/extend relationship between use cases",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "usecase-extend"
+      ],
+      "expectedText": [
+        "Login",
+        "Validate",
+        "extend"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-usecase-explicit-edge",
+      "kind": "usecase",
+      "source": "usecase-beta\nactor User\nUser e1@--> Login",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/usecase/usecase.spec.ts",
+        "sha256": "e4909e78d291c258164485dd70bddb3b708c31250c3b79845c527dbec55e3f9b",
+        "symbol": "explicit edge ID association production",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "usecase-explicit-edge"
+      ],
+      "expectedText": [
+        "User",
+        "Login"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-usecase-markdown",
+      "kind": "usecase",
+      "source": "usecase-beta\nactor User(\"`**Staff**`\")\nUser --> Login(\"`*Sign in*`\")",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/usecase/usecase.spec.ts",
+        "sha256": "e4909e78d291c258164485dd70bddb3b708c31250c3b79845c527dbec55e3f9b",
+        "symbol": "MarkdownString lexical token preserves body markup",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "usecase-markdown"
+      ],
+      "expectedText": [
+        "Staff",
+        "Sign in"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-usecase-json-note",
+      "kind": "usecase",
+      "source": "usecase-beta\njson Data@{\"name\":\"Alice\",\"roles\":[\"Reader\",\"Writer\"]}\nactor User\nnote for User \"Reference\"",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/usecase/usecase.spec.ts",
+        "sha256": "e4909e78d291c258164485dd70bddb3b708c31250c3b79845c527dbec55e3f9b",
+        "symbol": "ordered JSON nodes and note target resolution",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "usecase-json-note"
+      ],
+      "expectedText": [
+        "Alice",
+        "Reader",
+        "Writer",
+        "Reference",
+        "User"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-mindmap-shape-rect-119",
+      "kind": "mindmap",
+      "source": "mindmap\nroot[Title]",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/mindmap/parser/mindmap.jison",
+        "sha256": "85a4b2840ab529bc82c41ea64d9556a7fe4a0552900d1cbdf9484245ba61c8e4",
+        "symbol": "MindmapDB.getType complete switch plus default unmatched lexical opener cases",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "mindmap-shape-rect-119"
+      ],
+      "expectedText": [
+        "Title"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-mindmap-shape-rounded-120",
+      "kind": "mindmap",
+      "source": "mindmap\nroot(Title)",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/mindmap/parser/mindmap.jison",
+        "sha256": "85a4b2840ab529bc82c41ea64d9556a7fe4a0552900d1cbdf9484245ba61c8e4",
+        "symbol": "MindmapDB.getType complete switch plus default unmatched lexical opener cases",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "mindmap-shape-rounded-120"
+      ],
+      "expectedText": [
+        "Title"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-mindmap-shape-circle-121",
+      "kind": "mindmap",
+      "source": "mindmap\nroot((Title))",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/mindmap/parser/mindmap.jison",
+        "sha256": "85a4b2840ab529bc82c41ea64d9556a7fe4a0552900d1cbdf9484245ba61c8e4",
+        "symbol": "MindmapDB.getType complete switch plus default unmatched lexical opener cases",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "mindmap-shape-circle-121"
+      ],
+      "expectedText": [
+        "Title"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-mindmap-shape-cloud-122",
+      "kind": "mindmap",
+      "source": "mindmap\nroot)Title(",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/mindmap/parser/mindmap.jison",
+        "sha256": "85a4b2840ab529bc82c41ea64d9556a7fe4a0552900d1cbdf9484245ba61c8e4",
+        "symbol": "MindmapDB.getType complete switch plus default unmatched lexical opener cases",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "mindmap-shape-cloud-122"
+      ],
+      "expectedText": [
+        "Title"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-mindmap-shape-bang-123",
+      "kind": "mindmap",
+      "source": "mindmap\nroot))Title((",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/mindmap/parser/mindmap.jison",
+        "sha256": "85a4b2840ab529bc82c41ea64d9556a7fe4a0552900d1cbdf9484245ba61c8e4",
+        "symbol": "MindmapDB.getType complete switch plus default unmatched lexical opener cases",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "mindmap-shape-bang-123"
+      ],
+      "expectedText": [
+        "Title"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-mindmap-shape-hexagon-124",
+      "kind": "mindmap",
+      "source": "mindmap\nroot{{Title}}",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/mindmap/parser/mindmap.jison",
+        "sha256": "85a4b2840ab529bc82c41ea64d9556a7fe4a0552900d1cbdf9484245ba61c8e4",
+        "symbol": "MindmapDB.getType complete switch plus default unmatched lexical opener cases",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "mindmap-shape-hexagon-124"
+      ],
+      "expectedText": [
+        "Title"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-mindmap-shape-default-125",
+      "kind": "mindmap",
+      "source": "mindmap\nroot(-Title-)",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/mindmap/parser/mindmap.jison",
+        "sha256": "85a4b2840ab529bc82c41ea64d9556a7fe4a0552900d1cbdf9484245ba61c8e4",
+        "symbol": "MindmapDB.getType complete switch plus default unmatched lexical opener cases",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "mindmap-shape-default-125"
+      ],
+      "expectedText": [
+        "Title"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-mindmap-shape-default-126",
+      "kind": "mindmap",
+      "source": "mindmap\nroot-)Title(-",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/mindmap/parser/mindmap.jison",
+        "sha256": "85a4b2840ab529bc82c41ea64d9556a7fe4a0552900d1cbdf9484245ba61c8e4",
+        "symbol": "MindmapDB.getType complete switch plus default unmatched lexical opener cases",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "mindmap-shape-default-126"
+      ],
+      "expectedText": [
+        "Title"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-mindmap-hierarchy",
+      "kind": "mindmap",
+      "source": "mindmap\n    root\n      Child\n        Leaf\n      Other",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/mindmap/parser/mindmap.jison",
+        "sha256": "85a4b2840ab529bc82c41ea64d9556a7fe4a0552900d1cbdf9484245ba61c8e4",
+        "symbol": "MMP-2/MMP-4 nearest lower indentation and assignSections branch colors",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "mindmap-hierarchy"
+      ],
+      "expectedText": [
+        "root",
+        "Child",
+        "Leaf",
+        "Other"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-mindmap-depth-colors",
+      "kind": "mindmap",
+      "source": "mindmap\nroot\n  Child\n    Leaf\n  Other",
+      "config": {
+        "mindmap": {
+          "colorBy": "depth"
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/mindmap/parser/mindmap.jison",
+        "sha256": "85a4b2840ab529bc82c41ea64d9556a7fe4a0552900d1cbdf9484245ba61c8e4",
+        "symbol": "assignSections config.colorBy depth uses structural depth, not indentation width",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "mindmap-depth-colors"
+      ],
+      "expectedText": [
+        "root",
+        "Child",
+        "Leaf",
+        "Other"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-mindmap-decorators",
+      "kind": "mindmap",
+      "source": "mindmap\nroot\n  child\n  ::icon(fa:book)\n  :::highlight",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/mindmap/parser/mindmap.jison",
+        "sha256": "85a4b2840ab529bc82c41ea64d9556a7fe4a0552900d1cbdf9484245ba61c8e4",
+        "symbol": "decorateNode on last inserted node; active render icon unconsumed anomaly",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "mindmap-decorators"
+      ],
+      "expectedText": [
+        "root",
+        "child"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-tree-basic",
+      "kind": "treeView",
+      "source": "treeView-beta\nsrc/\n  index.py\n  readme.md ## Description",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/treeView/treeView.langium",
+        "sha256": "9075614655c1977c030884b9613a2ea923653aa73b55218a68d85c46f90f757e",
+        "symbol": "TreeViewDB virtual root/indent stack/directory trailing slash/description",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "tree-basic"
+      ],
+      "expectedText": [
+        "src",
+        "index.py",
+        "readme.md",
+        "Description"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-tree-box-drawing",
+      "kind": "treeView",
+      "source": "treeView-beta\nproject/\n\u251c\u2500\u2500 main.py\n\u2514\u2500\u2500 docs/\n    \u2514\u2500\u2500 readme.md",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/treeView/treeView.langium",
+        "sha256": "9075614655c1977c030884b9613a2ea923653aa73b55218a68d85c46f90f757e",
+        "symbol": "boxDrawingPreprocessor standard glyphs, depth mapping and parent stack",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "tree-box-drawing"
+      ],
+      "expectedText": [
+        "project",
+        "main.py",
+        "docs",
+        "readme.md"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-tree-annotations",
+      "kind": "treeView",
+      "source": "treeView-beta\n\"Folder name/\" :::highlight icon(folder) ## Documentation\n  \"a b.txt\" icon()",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/treeView/treeView.langium",
+        "sha256": "9075614655c1977c030884b9613a2ea923653aa73b55218a68d85c46f90f757e",
+        "symbol": "NAME/CLASS/ICON/DESC value-converter annotation productions",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "tree-annotations"
+      ],
+      "expectedText": [
+        "Folder name",
+        "a b.txt",
+        "Documentation"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-tree-heavy-box",
+      "kind": "treeView",
+      "source": "treeView-beta\nroot/\n\u2523\u2501\u2501 main\n\u2517\u2501\u2501 other",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/treeView/treeView.langium",
+        "sha256": "9075614655c1977c030884b9613a2ea923653aa73b55218a68d85c46f90f757e",
+        "symbol": "boxDrawingPreprocessor heavy branch glyphs",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "tree-heavy-box"
+      ],
+      "expectedText": [
+        "root",
+        "main",
+        "other"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-block-shape-square",
+      "kind": "block",
+      "source": "block\nA[\"Alpha\"]",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "nodeShapeNLabel STR; BlockDB.typeStr2Type full classic table",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "block-shape-square"
+      ],
+      "expectedText": [
+        "Alpha"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-block-shape-round",
+      "kind": "block",
+      "source": "block\nA(\"Alpha\")",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "nodeShapeNLabel STR; BlockDB.typeStr2Type full classic table",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "block-shape-round"
+      ],
+      "expectedText": [
+        "Alpha"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-block-shape-circle",
+      "kind": "block",
+      "source": "block\nA((\"Alpha\"))",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "nodeShapeNLabel STR; BlockDB.typeStr2Type full classic table",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "block-shape-circle"
+      ],
+      "expectedText": [
+        "Alpha"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-block-shape-odd",
+      "kind": "block",
+      "source": "block\nA>\"Alpha\"]",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "nodeShapeNLabel STR; BlockDB.typeStr2Type full classic table",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "block-shape-odd"
+      ],
+      "expectedText": [
+        "Alpha"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-block-shape-diamond",
+      "kind": "block",
+      "source": "block\nA{\"Alpha\"}",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "nodeShapeNLabel STR; BlockDB.typeStr2Type full classic table",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "block-shape-diamond"
+      ],
+      "expectedText": [
+        "Alpha"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-block-shape-hexagon",
+      "kind": "block",
+      "source": "block\nA{{\"Alpha\"}}",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "nodeShapeNLabel STR; BlockDB.typeStr2Type full classic table",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "block-shape-hexagon"
+      ],
+      "expectedText": [
+        "Alpha"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-block-shape-stadium",
+      "kind": "block",
+      "source": "block\nA([\"Alpha\"])",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "nodeShapeNLabel STR; BlockDB.typeStr2Type full classic table",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "block-shape-stadium"
+      ],
+      "expectedText": [
+        "Alpha"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-block-shape-subroutine",
+      "kind": "block",
+      "source": "block\nA[[\"Alpha\"]]",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "nodeShapeNLabel STR; BlockDB.typeStr2Type full classic table",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "block-shape-subroutine"
+      ],
+      "expectedText": [
+        "Alpha"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-block-shape-cylinder",
+      "kind": "block",
+      "source": "block\nA[(\"Alpha\")]",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "nodeShapeNLabel STR; BlockDB.typeStr2Type full classic table",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "block-shape-cylinder"
+      ],
+      "expectedText": [
+        "Alpha"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-block-shape-doublecircle",
+      "kind": "block",
+      "source": "block\nA(((\"Alpha\")))",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "nodeShapeNLabel STR; BlockDB.typeStr2Type full classic table",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "block-shape-doublecircle"
+      ],
+      "expectedText": [
+        "Alpha"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-block-shape-lean_right",
+      "kind": "block",
+      "source": "block\nA[/\"Alpha\"/]",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "nodeShapeNLabel STR; BlockDB.typeStr2Type full classic table",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "block-shape-lean_right"
+      ],
+      "expectedText": [
+        "Alpha"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-block-shape-lean_left",
+      "kind": "block",
+      "source": "block\nA[\\\"Alpha\"\\]",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "nodeShapeNLabel STR; BlockDB.typeStr2Type full classic table",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "block-shape-lean_left"
+      ],
+      "expectedText": [
+        "Alpha"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-block-shape-trapezoid",
+      "kind": "block",
+      "source": "block\nA[/\"Alpha\"\\]",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "nodeShapeNLabel STR; BlockDB.typeStr2Type full classic table",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "block-shape-trapezoid"
+      ],
+      "expectedText": [
+        "Alpha"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-block-shape-inv_trapezoid",
+      "kind": "block",
+      "source": "block\nA[\\\"Alpha\"/]",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "nodeShapeNLabel STR; BlockDB.typeStr2Type full classic table",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "block-shape-inv_trapezoid"
+      ],
+      "expectedText": [
+        "Alpha"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-block-arrow-right",
+      "kind": "block",
+      "source": "block-beta\nA<[\"Arrow\"]>(right)",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "BLOCK_ARROW/ARROW_DIR directions and expandAndDeduplicateDirections",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "block-arrow-right"
+      ],
+      "expectedText": [
+        "Arrow"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-block-arrow-left",
+      "kind": "block",
+      "source": "block-beta\nA<[\"Arrow\"]>(left)",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "BLOCK_ARROW/ARROW_DIR directions and expandAndDeduplicateDirections",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "block-arrow-left"
+      ],
+      "expectedText": [
+        "Arrow"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-block-arrow-up",
+      "kind": "block",
+      "source": "block-beta\nA<[\"Arrow\"]>(up)",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "BLOCK_ARROW/ARROW_DIR directions and expandAndDeduplicateDirections",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "block-arrow-up"
+      ],
+      "expectedText": [
+        "Arrow"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-block-arrow-down",
+      "kind": "block",
+      "source": "block-beta\nA<[\"Arrow\"]>(down)",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "BLOCK_ARROW/ARROW_DIR directions and expandAndDeduplicateDirections",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "block-arrow-down"
+      ],
+      "expectedText": [
+        "Arrow"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-block-arrow-x",
+      "kind": "block",
+      "source": "block-beta\nA<[\"Arrow\"]>(x)",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "BLOCK_ARROW/ARROW_DIR directions and expandAndDeduplicateDirections",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "block-arrow-x"
+      ],
+      "expectedText": [
+        "Arrow"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-block-arrow-y",
+      "kind": "block",
+      "source": "block-beta\nA<[\"Arrow\"]>(y)",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "BLOCK_ARROW/ARROW_DIR directions and expandAndDeduplicateDirections",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "block-arrow-y"
+      ],
+      "expectedText": [
+        "Arrow"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-block-arrow-right-left-up-down",
+      "kind": "block",
+      "source": "block-beta\nA<[\"Arrow\"]>(right,left,up,down)",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "BLOCK_ARROW/ARROW_DIR directions and expandAndDeduplicateDirections",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "block-arrow-right-left-up-down"
+      ],
+      "expectedText": [
+        "Arrow"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-block-nested-spans",
+      "kind": "block",
+      "source": "block\ncolumns 3\nA:2\nspace\nblock:Group\n columns 2\n B C\nend\nD",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "columns/SPACE_BLOCK/id-block nested hierarchy and widthInColumns",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "block-nested-spans"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-block-repeat-update",
+      "kind": "block",
+      "source": "block\nA\nA[\"Updated\"]\nB\nA --> B",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "BlockDB.populateBlockDatabase first occurrence placement, later label/type aggregation",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "block-repeat-update"
+      ],
+      "expectedText": [
+        "Updated",
+        "B"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-block-link-157",
+      "kind": "block",
+      "source": "block\nA --> B",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "LINK edgeStrToStartData/EdgeData/Thickness/Pattern; source tilde retained solid pattern",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "block-link-157"
+      ],
+      "expectedText": [
+        "A",
+        "B"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-block-link-158",
+      "kind": "block",
+      "source": "block\nA <--> B",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "LINK edgeStrToStartData/EdgeData/Thickness/Pattern; source tilde retained solid pattern",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "block-link-158"
+      ],
+      "expectedText": [
+        "A",
+        "B"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-block-link-159",
+      "kind": "block",
+      "source": "block\nA o--x B",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "LINK edgeStrToStartData/EdgeData/Thickness/Pattern; source tilde retained solid pattern",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "block-link-159"
+      ],
+      "expectedText": [
+        "A",
+        "B"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-block-link-160",
+      "kind": "block",
+      "source": "block\nA ==> B",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "LINK edgeStrToStartData/EdgeData/Thickness/Pattern; source tilde retained solid pattern",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "block-link-160"
+      ],
+      "expectedText": [
+        "A",
+        "B"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-block-link-161",
+      "kind": "block",
+      "source": "block\nA -.-> B",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "LINK edgeStrToStartData/EdgeData/Thickness/Pattern; source tilde retained solid pattern",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "block-link-161"
+      ],
+      "expectedText": [
+        "A",
+        "B"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-block-link-162",
+      "kind": "block",
+      "source": "block\nA ~~~ B",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "LINK edgeStrToStartData/EdgeData/Thickness/Pattern; source tilde retained solid pattern",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "block-link-162"
+      ],
+      "expectedText": [
+        "A",
+        "B"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-packet-split-source-snapshot",
+      "kind": "packet",
+      "source": "packet\n0-10: \"test\"\n11-90: \"multiple\"",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/packet/packet.langium",
+        "sha256": "bf479a00c688630d713efcb850076f16c4758f7cb426b49c973b67b40ea001f0",
+        "symbol": "packet.spec.ts should split into multiple rows (inline snapshot)",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "packet-split-source-snapshot"
+      ],
+      "expectedText": [
+        "test",
+        "multiple"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-packet-exact-boundary",
+      "kind": "packet",
+      "source": "packet\n0-16: \"test\"\n17-63: \"multiple\"",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/packet/packet.langium",
+        "sha256": "bf479a00c688630d713efcb850076f16c4758f7cb426b49c973b67b40ea001f0",
+        "symbol": "packet.spec.ts exact row boundary inline snapshot",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "packet-exact-boundary"
+      ],
+      "expectedText": [
+        "test",
+        "multiple"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-packet-relative-counts",
+      "kind": "packet",
+      "source": "packet-beta\n+8: \"first\"\n+24: \"second\"\n+1: \"last\"",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/packet/packet.langium",
+        "sha256": "bf479a00c688630d713efcb850076f16c4758f7cb426b49c973b67b40ea001f0",
+        "symbol": "PacketBlock +bits, lastBit contiguity and default one-bit field",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "packet-relative-counts"
+      ],
+      "expectedText": [
+        "first",
+        "second",
+        "last"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-packet-config-eight",
+      "kind": "packet",
+      "source": "packet\n0-17: \"field\"",
+      "config": {
+        "packet": {
+          "bitsPerRow": 8
+        }
+      },
+      "origin": {
+        "path": "packages/parser/src/language/packet/packet.langium",
+        "sha256": "bf479a00c688630d713efcb850076f16c4758f7cb426b49c973b67b40ea001f0",
+        "symbol": "getNextFittingBlock with explicit bitsPerRow",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "packet-config-eight"
+      ],
+      "expectedText": [
+        "field"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-packet-metadata",
+      "kind": "packet",
+      "source": "packet title Register\naccTitle: Bits\naccDescr: Visible register\n0: \"On\"",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/packet/packet.langium",
+        "sha256": "bf479a00c688630d713efcb850076f16c4758f7cb426b49c973b67b40ea001f0",
+        "symbol": "TitleAndAccessibilities and PacketBlock single start",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "packet-metadata"
+      ],
+      "expectedText": [
+        "Register",
+        "On"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-kanban-flat-deep",
+      "kind": "kanban",
+      "source": "kanban\nTodo\n  Child\n    Leaf\n  Other\nDone\n  Finished",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/kanban/parser/kanban.jison",
+        "sha256": "b59eba92f4caf14b99343d4058880d958d4326b01dc1d1b4feba710ff94ed0af",
+        "symbol": "KNBN-4 deep levels stay flat within current section; multiple sections",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "kanban-flat-deep"
+      ],
+      "expectedText": [
+        "Todo",
+        "Child",
+        "Leaf",
+        "Other",
+        "Done",
+        "Finished"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-kanban-fields",
+      "kind": "kanban",
+      "source": "kanban\nTodo\n  issue[Work]@{ticket: T-1, assigned: Alice, priority: High, icon: fa:book}",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/kanban/parser/kanban.jison",
+        "sha256": "b59eba92f4caf14b99343d4058880d958d4326b01dc1d1b4feba710ff94ed0af",
+        "symbol": "KanbanDB.addNode YAML JSON_SCHEMA metadata truthy field coercion",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "kanban-fields"
+      ],
+      "expectedText": [
+        "Todo",
+        "Work",
+        "T-1",
+        "Alice"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-kanban-label-update",
+      "kind": "kanban",
+      "source": "kanban\nTodo\n  task[Old]@{label: New}\n  ::icon(fa:check)\n  :::highlight",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/kanban/parser/kanban.jison",
+        "sha256": "b59eba92f4caf14b99343d4058880d958d4326b01dc1d1b4feba710ff94ed0af",
+        "symbol": "addNode metadata label; decorateNode last inserted node",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "kanban-label-update"
+      ],
+      "expectedText": [
+        "Todo",
+        "New"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-architecture-populate-order",
+      "kind": "architecture",
+      "source": "architecture-beta\nservice app(server)[Application] in cloud\ngroup cloud(cloud)[Cloud]\njunction hub in cloud\napp:R -- L:hub",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "Architecture parser populateDb groups before services/junctions, edges after declarations",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "architecture-populate-order"
+      ],
+      "expectedText": [
+        "Cloud",
+        "Application"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-architecture-arrow-label",
+      "kind": "architecture",
+      "source": "architecture-beta\nservice a(server)[API]\nservice b(database)[Storage]\na:R <-[HTTPS]-> L:b",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "Arrow optional ARROW_INTO on both ends and ARCH_TITLE conversion",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "architecture-arrow-label"
+      ],
+      "expectedText": [
+        "API",
+        "Storage",
+        "HTTPS"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-architecture-group-boundary",
+      "kind": "architecture",
+      "source": "architecture-beta\ngroup g1\ngroup g2\nservice a in g1\nservice b in g2\na{group}:R -- L:b{group}",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "ARROW_GROUP traversal between distinct parent groups",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "architecture-group-boundary"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-architecture-align",
+      "kind": "architecture",
+      "source": "architecture-beta\nservice a\nservice b\njunction c\nalign row a b\nalign column b c",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "Alignment directional members >=2, addLayoutHint unique/reference checks",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "architecture-align"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-architecture-icontext-title",
+      "kind": "architecture",
+      "source": "architecture-beta\nservice api \"<b>API</b>\"[\"Public [endpoint]\"]",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "Service STRING iconText and quoted ARCH_TITLE with brackets",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "architecture-icontext-title"
+      ],
+      "expectedText": [
+        "Public [endpoint]",
+        "API"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-c4-all-element-kinds",
+      "kind": "c4",
+      "source": "C4Component\nPerson(n0,\"Person\",\"Technology\",\"Description\")\nPerson_Ext(n1,\"Person_Ext\",\"Technology\",\"Description\")\nSystem(n2,\"System\",\"Technology\",\"Description\")\nSystemDb(n3,\"SystemDb\",\"Technology\",\"Description\")\nSystemQueue(n4,\"SystemQueue\",\"Technology\",\"Description\")\nSystem_Ext(n5,\"System_Ext\",\"Technology\",\"Description\")\nSystemDb_Ext(n6,\"SystemDb_Ext\",\"Technology\",\"Description\")\nSystemQueue_Ext(n7,\"SystemQueue_Ext\",\"Technology\",\"Description\")\nContainer(n8,\"Container\",\"Technology\",\"Description\")\nContainerDb(n9,\"ContainerDb\",\"Technology\",\"Description\")\nContainerQueue(n10,\"ContainerQueue\",\"Technology\",\"Description\")\nContainer_Ext(n11,\"Container_Ext\",\"Technology\",\"Description\")\nContainerDb_Ext(n12,\"ContainerDb_Ext\",\"Technology\",\"Description\")\nContainerQueue_Ext(n13,\"ContainerQueue_Ext\",\"Technology\",\"Description\")\nComponent(n14,\"Component\",\"Technology\",\"Description\")\nComponentDb(n15,\"ComponentDb\",\"Technology\",\"Description\")\nComponentQueue(n16,\"ComponentQueue\",\"Technology\",\"Description\")\nComponent_Ext(n17,\"Component_Ext\",\"Technology\",\"Description\")\nComponentDb_Ext(n18,\"ComponentDb_Ext\",\"Technology\",\"Description\")\nComponentQueue_Ext(n19,\"ComponentQueue_Ext\",\"Technology\",\"Description\")",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "c4Diagram.jison complete element-name parameter family; Bounds grid",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "c4.element.Person",
+        "c4.element.Person_Ext",
+        "c4.element.System",
+        "c4.element.SystemDb",
+        "c4.element.SystemQueue",
+        "c4.element.System_Ext",
+        "c4.element.SystemDb_Ext",
+        "c4.element.SystemQueue_Ext",
+        "c4.element.Container",
+        "c4.element.ContainerDb",
+        "c4.element.ContainerQueue",
+        "c4.element.Container_Ext",
+        "c4.element.ContainerDb_Ext",
+        "c4.element.ContainerQueue_Ext",
+        "c4.element.Component",
+        "c4.element.ComponentDb",
+        "c4.element.ComponentQueue",
+        "c4.element.Component_Ext",
+        "c4.element.ComponentDb_Ext",
+        "c4.element.ComponentQueue_Ext"
+      ],
+      "expectedText": [
+        "Person",
+        "Person_Ext",
+        "System",
+        "SystemDb",
+        "SystemQueue",
+        "System_Ext",
+        "SystemDb_Ext",
+        "SystemQueue_Ext",
+        "Container",
+        "ContainerDb",
+        "ContainerQueue",
+        "Container_Ext",
+        "ContainerDb_Ext",
+        "ContainerQueue_Ext",
+        "Component",
+        "ComponentDb",
+        "ComponentQueue",
+        "Component_Ext",
+        "ComponentDb_Ext",
+        "ComponentQueue_Ext"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-c4-all-relations",
+      "kind": "c4",
+      "source": "C4Context\nSystem(s0,\"S0\")\nSystem(s1,\"S1\")\nSystem(s2,\"S2\")\nSystem(s3,\"S3\")\nSystem(s4,\"S4\")\nSystem(s5,\"S5\")\nSystem(s6,\"S6\")\nSystem(s7,\"S7\")\nSystem(s8,\"S8\")\nSystem(s9,\"S9\")\nSystem(s10,\"S10\")\nSystem(s11,\"S11\")\nRel(s0,s1,\"Rel\")\nBiRel(s1,s2,\"BiRel\")\nRel_U(s2,s3,\"Rel_U\")\nRel_Up(s3,s4,\"Rel_Up\")\nRel_D(s4,s5,\"Rel_D\")\nRel_Down(s5,s6,\"Rel_Down\")\nRel_L(s6,s7,\"Rel_L\")\nRel_Left(s7,s8,\"Rel_Left\")\nRel_R(s8,s9,\"Rel_R\")\nRel_Right(s9,s10,\"Rel_Right\")\nRel_Back(s10,s11,\"Rel_Back\")",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "sha256": "64b4d7d29b5cebb759a19c1339f98850330070c234861b448e58e7c99f646766",
+        "symbol": "all relation aliases; first straight/later quadratic renderer branches",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "c4.relation.Rel",
+        "c4.relation.BiRel",
+        "c4.relation.Rel_U",
+        "c4.relation.Rel_Up",
+        "c4.relation.Rel_D",
+        "c4.relation.Rel_Down",
+        "c4.relation.Rel_L",
+        "c4.relation.Rel_Left",
+        "c4.relation.Rel_R",
+        "c4.relation.Rel_Right",
+        "c4.relation.Rel_Back"
+      ],
+      "expectedText": [
+        "Rel",
+        "BiRel",
+        "Rel_U",
+        "Rel_Up",
+        "Rel_D",
+        "Rel_Down",
+        "Rel_L",
+        "Rel_Left",
+        "Rel_R",
+        "Rel_Right",
+        "Rel_Back"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-requirement-all-types-relations",
+      "kind": "requirement",
+      "source": "requirementDiagram\nrequirement R0 {\nid: 0\ntext: \"requirement behavior\"\nrisk: low\nverifymethod: analysis\n}\nfunctionalRequirement R1 {\nid: 1\ntext: \"functionalRequirement behavior\"\nrisk: medium\nverifymethod: demonstration\n}\ninterfaceRequirement R2 {\nid: 2\ntext: \"interfaceRequirement behavior\"\nrisk: high\nverifymethod: inspection\n}\nperformanceRequirement R3 {\nid: 3\ntext: \"performanceRequirement behavior\"\nrisk: low\nverifymethod: test\n}\nphysicalRequirement R4 {\nid: 4\ntext: \"physicalRequirement behavior\"\nrisk: medium\nverifymethod: analysis\n}\ndesignConstraint R5 {\nid: 5\ntext: \"designConstraint behavior\"\nrisk: high\nverifymethod: demonstration\n}\nelement E {\ntype: Artifact\ndocref: source.md\n}\nR0 - contains -> R1\nR1 - copies -> R2\nR2 - derives -> R3\nR3 - satisfies -> R4\nR4 - verifies -> R5\nR5 - refines -> R0\nR0 - traces -> E",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/requirement/parser/requirementDiagram.jison",
+        "sha256": "44692497660e25f6fe5d51fb3ea7ed17159bbf27bd901632127342e135bff635",
+        "symbol": "requirementType/riskLevel/verifyType/relationshipType complete enums and renderer compartments",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "requirement.all-types",
+        "requirement.all-relations",
+        "requirement.risk-verification"
+      ],
+      "expectedText": [
+        "requirement behavior",
+        "functionalRequirement behavior",
+        "interfaceRequirement behavior",
+        "performanceRequirement behavior",
+        "physicalRequirement behavior",
+        "designConstraint behavior",
+        "Artifact",
+        "source.md"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-requirement-verification-low",
+      "kind": "requirement",
+      "source": "requirementDiagram\nrequirement req_analysis {\nrisk: low\nverifymethod: analysis\n}\nrequirement req_demonstration {\nrisk: low\nverifymethod: demonstration\n}\nrequirement req_inspection {\nrisk: low\nverifymethod: inspection\n}\nrequirement req_test {\nrisk: low\nverifymethod: test\n}",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/requirement/parser/requirementDiagram.jison",
+        "sha256": "44692497660e25f6fe5d51fb3ea7ed17159bbf27bd901632127342e135bff635",
+        "symbol": "synthesized source branch regression",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "requirement.risk.low",
+        "requirement.verify.all"
+      ],
+      "expectedText": [
+        "Low",
+        "Analysis",
+        "Demonstration",
+        "Inspection",
+        "Test"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-requirement-verification-medium",
+      "kind": "requirement",
+      "source": "requirementDiagram\nrequirement req_analysis {\nrisk: medium\nverifymethod: analysis\n}\nrequirement req_demonstration {\nrisk: medium\nverifymethod: demonstration\n}\nrequirement req_inspection {\nrisk: medium\nverifymethod: inspection\n}\nrequirement req_test {\nrisk: medium\nverifymethod: test\n}",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/requirement/parser/requirementDiagram.jison",
+        "sha256": "44692497660e25f6fe5d51fb3ea7ed17159bbf27bd901632127342e135bff635",
+        "symbol": "synthesized source branch regression",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "requirement.risk.medium",
+        "requirement.verify.all"
+      ],
+      "expectedText": [
+        "Medium",
+        "Analysis",
+        "Demonstration",
+        "Inspection",
+        "Test"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-requirement-verification-high",
+      "kind": "requirement",
+      "source": "requirementDiagram\nrequirement req_analysis {\nrisk: high\nverifymethod: analysis\n}\nrequirement req_demonstration {\nrisk: high\nverifymethod: demonstration\n}\nrequirement req_inspection {\nrisk: high\nverifymethod: inspection\n}\nrequirement req_test {\nrisk: high\nverifymethod: test\n}",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/requirement/parser/requirementDiagram.jison",
+        "sha256": "44692497660e25f6fe5d51fb3ea7ed17159bbf27bd901632127342e135bff635",
+        "symbol": "synthesized source branch regression",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "requirement.risk.high",
+        "requirement.verify.all"
+      ],
+      "expectedText": [
+        "High",
+        "Analysis",
+        "Demonstration",
+        "Inspection",
+        "Test"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-packet-ascending-bits-true",
+      "kind": "packet",
+      "source": "packet\n0-3: \"DATA\"\n4-6: \"TYPE\"\n7: \"EN\"\n8-15: \"RESERVED\"",
+      "config": {
+        "packet": {
+          "bitsPerRow": 16,
+          "bitOrder": "ascending",
+          "showBits": true
+        }
+      },
+      "origin": {
+        "path": "packages/parser/src/language/packet/packet.langium",
+        "sha256": "bf479a00c688630d713efcb850076f16c4758f7cb426b49c973b67b40ea001f0",
+        "symbol": "packet/renderer.spec.ts ascending/descending x showBits parameter family",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "packet.bitOrder.ascending",
+        "packet.showBits.True"
+      ],
+      "expectedText": [
+        "DATA",
+        "TYPE",
+        "EN",
+        "RESERVED"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-packet-ascending-bits-false",
+      "kind": "packet",
+      "source": "packet\n0-3: \"DATA\"\n4-6: \"TYPE\"\n7: \"EN\"\n8-15: \"RESERVED\"",
+      "config": {
+        "packet": {
+          "bitsPerRow": 16,
+          "bitOrder": "ascending",
+          "showBits": false
+        }
+      },
+      "origin": {
+        "path": "packages/parser/src/language/packet/packet.langium",
+        "sha256": "bf479a00c688630d713efcb850076f16c4758f7cb426b49c973b67b40ea001f0",
+        "symbol": "packet/renderer.spec.ts ascending/descending x showBits parameter family",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "packet.bitOrder.ascending",
+        "packet.showBits.False"
+      ],
+      "expectedText": [
+        "DATA",
+        "TYPE",
+        "EN",
+        "RESERVED"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-packet-descending-bits-true",
+      "kind": "packet",
+      "source": "packet\n0-3: \"DATA\"\n4-6: \"TYPE\"\n7: \"EN\"\n8-15: \"RESERVED\"",
+      "config": {
+        "packet": {
+          "bitsPerRow": 16,
+          "bitOrder": "descending",
+          "showBits": true
+        }
+      },
+      "origin": {
+        "path": "packages/parser/src/language/packet/packet.langium",
+        "sha256": "bf479a00c688630d713efcb850076f16c4758f7cb426b49c973b67b40ea001f0",
+        "symbol": "packet/renderer.spec.ts ascending/descending x showBits parameter family",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "packet.bitOrder.descending",
+        "packet.showBits.True"
+      ],
+      "expectedText": [
+        "DATA",
+        "TYPE",
+        "EN",
+        "RESERVED"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-packet-descending-bits-false",
+      "kind": "packet",
+      "source": "packet\n0-3: \"DATA\"\n4-6: \"TYPE\"\n7: \"EN\"\n8-15: \"RESERVED\"",
+      "config": {
+        "packet": {
+          "bitsPerRow": 16,
+          "bitOrder": "descending",
+          "showBits": false
+        }
+      },
+      "origin": {
+        "path": "packages/parser/src/language/packet/packet.langium",
+        "sha256": "bf479a00c688630d713efcb850076f16c4758f7cb426b49c973b67b40ea001f0",
+        "symbol": "packet/renderer.spec.ts ascending/descending x showBits parameter family",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "packet.bitOrder.descending",
+        "packet.showBits.False"
+      ],
+      "expectedText": [
+        "DATA",
+        "TYPE",
+        "EN",
+        "RESERVED"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-packet-theme-styles",
+      "kind": "packet",
+      "source": "packet\ntitle Register\n0-7: \"DATA\"",
+      "config": {
+        "themeVariables": {
+          "packet": {
+            "blockFillColor": "#deefff",
+            "blockStrokeColor": "#005588",
+            "blockStrokeWidth": "3",
+            "labelColor": "#225500",
+            "labelFontSize": "16px",
+            "titleColor": "#880044",
+            "titleFontSize": "20px",
+            "byteFontSize": "11px"
+          }
+        }
+      },
+      "origin": {
+        "path": "packages/parser/src/language/packet/packet.langium",
+        "sha256": "bf479a00c688630d713efcb850076f16c4758f7cb426b49c973b67b40ea001f0",
+        "symbol": "synthesized source branch regression",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "packet.themeVariables.styles"
+      ],
+      "expectedText": [
+        "Register",
+        "DATA"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-kanban-priority-enum",
+      "kind": "kanban",
+      "source": "kanban\nBacklog\n  item0[\"Very High\"]@{priority: \"Very High\", ticket: T-0, assigned: Alice}\n  item1[\"High\"]@{priority: \"High\", ticket: T-1, assigned: Alice}\n  item2[\"Medium\"]@{priority: \"Medium\", ticket: T-2, assigned: Alice}\n  item3[\"Low\"]@{priority: \"Low\", ticket: T-3, assigned: Alice}\n  item4[\"Very Low\"]@{priority: \"Very Low\", ticket: T-4, assigned: Alice}",
+      "config": {
+        "kanban": {
+          "sectionWidth": 260,
+          "ticketBaseUrl": "https://example.invalid/#TICKET#"
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/kanban/parser/kanban.jison",
+        "sha256": "b59eba92f4caf14b99343d4058880d958d4326b01dc1d1b4feba710ff94ed0af",
+        "symbol": "synthesized source branch regression",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "kanban.priority.all",
+        "kanban.ticket",
+        "kanban.assigned"
+      ],
+      "expectedText": [
+        "Backlog",
+        "Very High",
+        "High",
+        "Medium",
+        "Low",
+        "Very Low",
+        "Alice"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-kanban-handdrawn",
+      "kind": "kanban",
+      "source": "kanban\nTodo\n  a[\"**Bold** task\"]@{priority: High}\nDone\n  b[Completed]",
+      "config": {
+        "look": "handDrawn"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/kanban/parser/kanban.jison",
+        "sha256": "b59eba92f4caf14b99343d4058880d958d4326b01dc1d1b4feba710ff94ed0af",
+        "symbol": "synthesized source branch regression",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "kanban.handDrawn",
+        "kanban.priority.unconsumed-in-rough"
+      ],
+      "expectedText": [
+        "Todo",
+        "Bold",
+        "task",
+        "Done",
+        "Completed"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-kanban-multiline-yaml",
+      "kind": "kanban",
+      "source": "kanban\nTodo\n  task@{\nlabel: \"A multiline\n task\"\nticket: T-7\nassigned: Alice\npriority: Medium\n}",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/kanban/parser/kanban.jison",
+        "sha256": "b59eba92f4caf14b99343d4058880d958d4326b01dc1d1b4feba710ff94ed0af",
+        "symbol": "synthesized source branch regression",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "kanban.metadata.JSON_SCHEMA.multiline"
+      ],
+      "expectedText": [
+        "Todo",
+        "A multiline",
+        "task",
+        "T-7",
+        "Alice"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-architecture-direction-RL",
+      "kind": "architecture",
+      "source": "architecture-beta\nservice a(server)[Source]\nservice b(database)[Target]\na:R -- L:b",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "synthesized source branch regression",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "architecture.port.RL",
+        "architecture.direction-constraint"
+      ],
+      "expectedText": [
+        "Source",
+        "Target"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-architecture-direction-BT",
+      "kind": "architecture",
+      "source": "architecture-beta\nservice a(server)[Source]\nservice b(database)[Target]\na:B -- T:b",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "synthesized source branch regression",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "architecture.port.BT",
+        "architecture.direction-constraint"
+      ],
+      "expectedText": [
+        "Source",
+        "Target"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-architecture-direction-RT",
+      "kind": "architecture",
+      "source": "architecture-beta\nservice a(server)[Source]\nservice b(database)[Target]\na:R -- T:b",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "synthesized source branch regression",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "architecture.port.RT",
+        "architecture.direction-constraint"
+      ],
+      "expectedText": [
+        "Source",
+        "Target"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-architecture-direction-TR",
+      "kind": "architecture",
+      "source": "architecture-beta\nservice a(server)[Source]\nservice b(database)[Target]\na:T -- R:b",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "synthesized source branch regression",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "architecture.port.TR",
+        "architecture.direction-constraint"
+      ],
+      "expectedText": [
+        "Source",
+        "Target"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-architecture-direction-LB",
+      "kind": "architecture",
+      "source": "architecture-beta\nservice a(server)[Source]\nservice b(database)[Target]\na:L -- B:b",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "synthesized source branch regression",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "architecture.port.LB",
+        "architecture.direction-constraint"
+      ],
+      "expectedText": [
+        "Source",
+        "Target"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-architecture-direction-BL",
+      "kind": "architecture",
+      "source": "architecture-beta\nservice a(server)[Source]\nservice b(database)[Target]\na:B -- L:b",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "synthesized source branch regression",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "architecture.port.BL",
+        "architecture.direction-constraint"
+      ],
+      "expectedText": [
+        "Source",
+        "Target"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-architecture-direction-LL",
+      "kind": "architecture",
+      "source": "architecture-beta\nservice a(server)[Source]\nservice b(database)[Target]\na:L -- L:b",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "synthesized source branch regression",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "architecture.port.LL",
+        "architecture.source_anomaly.same-direction"
+      ],
+      "expectedText": [
+        "Source",
+        "Target"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-architecture-direction-RR",
+      "kind": "architecture",
+      "source": "architecture-beta\nservice a(server)[Source]\nservice b(database)[Target]\na:R -- R:b",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "synthesized source branch regression",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "architecture.port.RR",
+        "architecture.source_anomaly.same-direction"
+      ],
+      "expectedText": [
+        "Source",
+        "Target"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-architecture-direction-TT",
+      "kind": "architecture",
+      "source": "architecture-beta\nservice a(server)[Source]\nservice b(database)[Target]\na:T -- T:b",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "synthesized source branch regression",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "architecture.port.TT",
+        "architecture.source_anomaly.same-direction"
+      ],
+      "expectedText": [
+        "Source",
+        "Target"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-architecture-direction-BB",
+      "kind": "architecture",
+      "source": "architecture-beta\nservice a(server)[Source]\nservice b(database)[Target]\na:B -- B:b",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "synthesized source branch regression",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "architecture.port.BB",
+        "architecture.source_anomaly.same-direction"
+      ],
+      "expectedText": [
+        "Source",
+        "Target"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-architecture-nested-align",
+      "kind": "architecture",
+      "source": "architecture-beta\ngroup cloud(cloud)[Cloud]\ngroup network(internet)[Network] in cloud\nservice api(server)[API] in network\nservice worker(server)[Worker] in network\nservice db(database)[Database] in cloud\napi:R -- L:worker\nworker:B -- T:db\nalign row api worker",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "synthesized source branch regression",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "architecture.nested",
+        "architecture.explicit-align",
+        "architecture.cross-group"
+      ],
+      "expectedText": [
+        "Cloud",
+        "Network",
+        "API",
+        "Worker",
+        "Database"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-architecture-config-145",
+      "kind": "architecture",
+      "source": "architecture-beta\nservice a(server)[A]\nservice b(database)[B]\nservice c(cloud)[C]\na:R -- L:b\nb:B -- T:c",
+      "config": {
+        "architecture": {
+          "randomize": true,
+          "seed": 7
+        }
+      },
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "synthesized source branch regression",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "architecture.config.randomize",
+        "architecture.config.seed"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "C"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-architecture-config-146",
+      "kind": "architecture",
+      "source": "architecture-beta\nservice a(server)[A]\nservice b(database)[B]\nservice c(cloud)[C]\na:R -- L:b\nb:B -- T:c",
+      "config": {
+        "architecture": {
+          "randomize": false,
+          "seed": 13
+        }
+      },
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "synthesized source branch regression",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "architecture.config.randomize",
+        "architecture.config.seed"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "C"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-architecture-config-147",
+      "kind": "architecture",
+      "source": "architecture-beta\nservice a(server)[A]\nservice b(database)[B]\nservice c(cloud)[C]\na:R -- L:b\nb:B -- T:c",
+      "config": {
+        "architecture": {
+          "nodeSeparation": 120,
+          "idealEdgeLengthMultiplier": 2,
+          "edgeElasticity": 0.7,
+          "numIter": 1500
+        }
+      },
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "synthesized source branch regression",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "architecture.config.nodeSeparation",
+        "architecture.config.idealEdgeLengthMultiplier",
+        "architecture.config.edgeElasticity",
+        "architecture.config.numIter"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "C"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-architecture-config-148",
+      "kind": "architecture",
+      "source": "architecture-beta\nservice a(server)[A]\nservice b(database)[B]\nservice c(cloud)[C]\na:R -- L:b\nb:B -- T:c",
+      "config": {
+        "architecture": {
+          "iconSize": 64,
+          "fontSize": 18,
+          "padding": 50
+        }
+      },
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "synthesized source branch regression",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "architecture.config.iconSize",
+        "architecture.config.fontSize",
+        "architecture.config.padding"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "C"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-usecase-icon-visible",
+      "kind": "usecase",
+      "source": "usecase-beta\nactor User@{icon: \"test:user\"}\nUser --> Login",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/usecase/usecase.spec.ts",
+        "sha256": "e4909e78d291c258164485dd70bddb3b708c31250c3b79845c527dbec55e3f9b",
+        "symbol": "synthesized source branch regression",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "usecase.asset.icon-visible",
+        "usecase.caption-sibling"
+      ],
+      "expectedText": [
+        "User",
+        "Login"
+      ],
+      "expectedErrorCodes": [],
+      "resources": {
+        "icons": {
+          "test:user": {
+            "path": "tests/bulk/a/resources/user.svg",
+            "sha256": "1215b3f5e58bf2df23760e857c653f4bcff715490695a22dd22c9638ff3f8600"
+          }
+        }
+      }
+    },
+    {
+      "id": "A-usecase-glyph-display",
+      "kind": "usecase",
+      "source": "usecase-beta\nclassDef hidden display:none\nactor User@{icon: \"test:user\"}:::hidden\nUser --> Login",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/usecase/usecase.spec.ts",
+        "sha256": "e4909e78d291c258164485dd70bddb3b708c31250c3b79845c527dbec55e3f9b",
+        "symbol": "synthesized source branch regression",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "usecase.asset.glyph-display",
+        "usecase.caption-sibling"
+      ],
+      "expectedText": [
+        "User",
+        "Login"
+      ],
+      "expectedErrorCodes": [],
+      "resources": {
+        "icons": {
+          "test:user": {
+            "path": "tests/bulk/a/resources/user.svg",
+            "sha256": "1215b3f5e58bf2df23760e857c653f4bcff715490695a22dd22c9638ff3f8600"
+          }
+        }
+      }
+    },
+    {
+      "id": "A-usecase-glyph-opacity",
+      "kind": "usecase",
+      "source": "usecase-beta\nclassDef hidden opacity:0\nactor User@{icon: \"test:user\"}:::hidden\nUser --> Login",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/usecase/usecase.spec.ts",
+        "sha256": "e4909e78d291c258164485dd70bddb3b708c31250c3b79845c527dbec55e3f9b",
+        "symbol": "synthesized source branch regression",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "usecase.asset.glyph-opacity",
+        "usecase.caption-sibling"
+      ],
+      "expectedText": [
+        "User",
+        "Login"
+      ],
+      "expectedErrorCodes": [],
+      "resources": {
+        "icons": {
+          "test:user": {
+            "path": "tests/bulk/a/resources/user.svg",
+            "sha256": "1215b3f5e58bf2df23760e857c653f4bcff715490695a22dd22c9638ff3f8600"
+          }
+        }
+      }
+    },
+    {
+      "id": "A-usecase-outer-display",
+      "kind": "usecase",
+      "source": "usecase-beta\nactor User@{icon: \"test:user\"}\nUser --> Login",
+      "config": {
+        "themeCSS": ".usecase-actor {display:none !important;}"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/usecase/usecase.spec.ts",
+        "sha256": "e4909e78d291c258164485dd70bddb3b708c31250c3b79845c527dbec55e3f9b",
+        "symbol": "synthesized source branch regression",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "usecase.asset.outer-display",
+        "usecase.caption-sibling"
+      ],
+      "expectedText": [
+        "Login"
+      ],
+      "expectedErrorCodes": [],
+      "resources": {
+        "icons": {
+          "test:user": {
+            "path": "tests/bulk/a/resources/user.svg",
+            "sha256": "1215b3f5e58bf2df23760e857c653f4bcff715490695a22dd22c9638ff3f8600"
+          }
+        }
+      }
+    },
+    {
+      "id": "A-architecture-external-resource",
+      "kind": "architecture",
+      "source": "architecture-beta\nservice api(test:user)[API]",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "synthesized source branch regression",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "architecture.asset.registered"
+      ],
+      "expectedText": [
+        "API"
+      ],
+      "expectedErrorCodes": [],
+      "resources": {
+        "icons": {
+          "test:user": {
+            "path": "tests/bulk/a/resources/user.svg",
+            "sha256": "1215b3f5e58bf2df23760e857c653f4bcff715490695a22dd22c9638ff3f8600"
+          }
+        }
+      }
+    },
+    {
+      "id": "A-architecture-hidden-service",
+      "kind": "architecture",
+      "source": "architecture-beta\nservice api(test:user)[API]",
+      "config": {
+        "themeCSS": ".architecture-service {opacity:0;}"
+      },
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "synthesized source branch regression",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "architecture.asset.container-opacity"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "resources": {
+        "icons": {
+          "test:user": {
+            "path": "tests/bulk/a/resources/user.svg",
+            "sha256": "1215b3f5e58bf2df23760e857c653f4bcff715490695a22dd22c9638ff3f8600"
+          }
+        }
+      },
+      "hiddenText": [
+        "API"
+      ],
+      "expectedEmpty": {
+        "reason": "Fixed source service container opacity:0 hides both user asset and sibling caption; initial official PNG is entirely white. Geometry is measured independently, not forced to native-derived dimensions.",
+        "background": "white",
+        "sourceEvidence": "test-runs/BULK-P3-first-20261106T042952Z-978737eb/artifacts/oracle/A-architecture-hidden-service.png"
+      }
+    },
+    {
+      "id": "A-architecture-group-frame-hidden",
+      "kind": "architecture",
+      "source": "architecture-beta\ngroup g(cloud)[Cloud]\nservice api(server)[API] in g",
+      "config": {
+        "themeCSS": ".node-bkg {display:none;}"
+      },
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "synthesized source branch regression",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "architecture.group.frame-sibling-hidden"
+      ],
+      "expectedText": [
+        "Cloud",
+        "API"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-architecture-icontext-clamp",
+      "kind": "architecture",
+      "source": "architecture-beta\nservice api \"One two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen\"[API]",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "synthesized source branch regression",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "architecture.iconText.HTML",
+        "architecture.iconText.line-clamp",
+        "architecture.iconText.ellipsis"
+      ],
+      "expectedText": [
+        "API"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-explicit-swimlane-classDiagram-TB",
+      "kind": "classDiagram",
+      "source": "classDiagram\ndirection TB\nnamespace Lane {\nclass A\nnamespace Nested {\nclass B\n}\n}\nclass Loose\nA --> Loose",
+      "config": {
+        "layout": "swimlane",
+        "class": {
+          "hierarchicalNamespaces": true
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+        "sha256": "3c99e4613bd8235f4d3485d8444a8b119e8af9ede50f88505c24d5a6cc93280f",
+        "symbol": "synthesized source branch regression",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "explicit-layout.swimlane",
+        "swimlane.TB",
+        "swimlane.syntheticDefaultLane",
+        "swimlane.nested-preserve"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-explicit-swimlane-classDiagram-LR",
+      "kind": "classDiagram",
+      "source": "classDiagram\ndirection LR\nnamespace Lane {\nclass A\nnamespace Nested {\nclass B\n}\n}\nclass Loose\nA --> Loose",
+      "config": {
+        "layout": "swimlane",
+        "class": {
+          "hierarchicalNamespaces": true
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+        "sha256": "3c99e4613bd8235f4d3485d8444a8b119e8af9ede50f88505c24d5a6cc93280f",
+        "symbol": "synthesized source branch regression",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "explicit-layout.swimlane",
+        "swimlane.LR",
+        "swimlane.syntheticDefaultLane",
+        "swimlane.nested-preserve"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-explicit-swimlane-stateDiagram-TB",
+      "kind": "stateDiagram",
+      "source": "stateDiagram-v2\ndirection TB\nstate Lane {\nA --> B\n}\nB --> Outside",
+      "config": {
+        "layout": "swimlane",
+        "class": {
+          "hierarchicalNamespaces": true
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/state/parser/stateDiagram.jison",
+        "sha256": "72568f98201c5ba59dca96842d1805d5a9908c5965d0609ab27f192929285d4d",
+        "symbol": "synthesized source branch regression",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "explicit-layout.swimlane",
+        "swimlane.TB",
+        "swimlane.syntheticDefaultLane",
+        "swimlane.nested-preserve"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-explicit-swimlane-stateDiagram-LR",
+      "kind": "stateDiagram",
+      "source": "stateDiagram-v2\ndirection LR\nstate Lane {\nA --> B\n}\nB --> Outside",
+      "config": {
+        "layout": "swimlane",
+        "class": {
+          "hierarchicalNamespaces": true
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/state/parser/stateDiagram.jison",
+        "sha256": "72568f98201c5ba59dca96842d1805d5a9908c5965d0609ab27f192929285d4d",
+        "symbol": "synthesized source branch regression",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "explicit-layout.swimlane",
+        "swimlane.LR",
+        "swimlane.syntheticDefaultLane",
+        "swimlane.nested-preserve"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-explicit-swimlane-er-TB",
+      "kind": "er",
+      "source": "erDiagram\ndirection TB\nsubgraph Lane\nA\nB\nend\nA ||--o{ Outside : relation",
+      "config": {
+        "layout": "swimlane",
+        "class": {
+          "hierarchicalNamespaces": true
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/er/parser/erDiagram.jison",
+        "sha256": "6aa3496c3d7fc2319ce303b4e95e1061f5a9002667ea29300a86ab9f198da6ef",
+        "symbol": "synthesized source branch regression",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "explicit-layout.swimlane",
+        "swimlane.TB",
+        "swimlane.syntheticDefaultLane",
+        "swimlane.nested-preserve"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-explicit-swimlane-er-LR",
+      "kind": "er",
+      "source": "erDiagram\ndirection LR\nsubgraph Lane\nA\nB\nend\nA ||--o{ Outside : relation",
+      "config": {
+        "layout": "swimlane",
+        "class": {
+          "hierarchicalNamespaces": true
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/er/parser/erDiagram.jison",
+        "sha256": "6aa3496c3d7fc2319ce303b4e95e1061f5a9002667ea29300a86ab9f198da6ef",
+        "symbol": "synthesized source branch regression",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "explicit-layout.swimlane",
+        "swimlane.LR",
+        "swimlane.syntheticDefaultLane",
+        "swimlane.nested-preserve"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-explicit-swimlane-usecase-TB",
+      "kind": "usecase",
+      "source": "usecase-beta\ndirection TB\nsystemBoundary Lane\nactor User\nLogin\nend\nUser --> Outside",
+      "config": {
+        "layout": "swimlane",
+        "class": {
+          "hierarchicalNamespaces": true
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/usecase/usecase.spec.ts",
+        "sha256": "e4909e78d291c258164485dd70bddb3b708c31250c3b79845c527dbec55e3f9b",
+        "symbol": "synthesized source branch regression",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "explicit-layout.swimlane",
+        "swimlane.TB",
+        "swimlane.syntheticDefaultLane",
+        "swimlane.nested-preserve"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-explicit-swimlane-usecase-LR",
+      "kind": "usecase",
+      "source": "usecase-beta\ndirection LR\nsystemBoundary Lane\nactor User\nLogin\nend\nUser --> Outside",
+      "config": {
+        "layout": "swimlane",
+        "class": {
+          "hierarchicalNamespaces": true
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/usecase/usecase.spec.ts",
+        "sha256": "e4909e78d291c258164485dd70bddb3b708c31250c3b79845c527dbec55e3f9b",
+        "symbol": "synthesized source branch regression",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "explicit-layout.swimlane",
+        "swimlane.LR",
+        "swimlane.syntheticDefaultLane",
+        "swimlane.nested-preserve"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-class-unclosed",
+      "kind": "classDiagram",
+      "source": "classDiagram\nclass A {\n+x",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+        "sha256": "3c99e4613bd8235f4d3485d8444a8b119e8af9ede50f88505c24d5a6cc93280f",
+        "symbol": "classStatement requires STRUCT_STOP",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "syntax_error",
+      "features": [
+        "negative.class-unclosed"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "SYNTAX_ERROR"
+      ]
+    },
+    {
+      "id": "A-state-unclosed",
+      "kind": "stateDiagram",
+      "source": "stateDiagram-v2\nstate Outer {\nA --> B",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/state/parser/stateDiagram.jison",
+        "sha256": "72568f98201c5ba59dca96842d1805d5a9908c5965d0609ab27f192929285d4d",
+        "symbol": "COMPOSIT_STATE requires STRUCT_STOP",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "syntax_error",
+      "features": [
+        "negative.state-unclosed"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "SYNTAX_ERROR"
+      ]
+    },
+    {
+      "id": "A-er-unclosed",
+      "kind": "er",
+      "source": "erDiagram\nA {\nint id",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/er/parser/erDiagram.jison",
+        "sha256": "6aa3496c3d7fc2319ce303b4e95e1061f5a9002667ea29300a86ab9f198da6ef",
+        "symbol": "attributes block requires BLOCK_STOP",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "syntax_error",
+      "features": [
+        "negative.er-unclosed"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "SYNTAX_ERROR"
+      ]
+    },
+    {
+      "id": "A-requirement-risk-invalid",
+      "kind": "requirement",
+      "source": "requirementDiagram\nrequirement R {\nrisk: severe\n}",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/requirement/parser/requirementDiagram.jison",
+        "sha256": "44692497660e25f6fe5d51fb3ea7ed17159bbf27bd901632127342e135bff635",
+        "symbol": "riskLevel closed enum",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "syntax_error",
+      "features": [
+        "negative.requirement-risk-invalid"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "SYNTAX_ERROR"
+      ]
+    },
+    {
+      "id": "A-mindmap-unclosed",
+      "kind": "mindmap",
+      "source": "mindmap\nA[\"Missing\"",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/mindmap/parser/mindmap.jison",
+        "sha256": "85a4b2840ab529bc82c41ea64d9556a7fe4a0552900d1cbdf9484245ba61c8e4",
+        "symbol": "NODE requires NODE_DEND",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "syntax_error",
+      "features": [
+        "negative.mindmap-unclosed"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "SYNTAX_ERROR"
+      ]
+    },
+    {
+      "id": "A-packet-gap",
+      "kind": "packet",
+      "source": "packet\n0-16: \"First\"\n18-20: \"Gap\"",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/packet/packet.langium",
+        "sha256": "bf479a00c688630d713efcb850076f16c4758f7cb426b49c973b67b40ea001f0",
+        "symbol": "packet.spec contiguity rejects skipped bit",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "error",
+      "features": [
+        "negative.packet-gap"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "INVALID_PACKET_RANGE"
+      ]
+    },
+    {
+      "id": "A-packet-zero",
+      "kind": "packet",
+      "source": "packet\n+0: \"Zero\"",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/packet/packet.langium",
+        "sha256": "bf479a00c688630d713efcb850076f16c4758f7cb426b49c973b67b40ea001f0",
+        "symbol": "packet.spec zero-bit field rejects",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "error",
+      "features": [
+        "negative.packet-zero"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "INVALID_PACKET_RANGE"
+      ]
+    },
+    {
+      "id": "A-packet-unquoted",
+      "kind": "packet",
+      "source": "packet\n0-7: Field",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/packet/packet.langium",
+        "sha256": "bf479a00c688630d713efcb850076f16c4758f7cb426b49c973b67b40ea001f0",
+        "symbol": "PacketBlock label requires STRING",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "syntax_error",
+      "features": [
+        "negative.packet-unquoted"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "SYNTAX_ERROR"
+      ]
+    },
+    {
+      "id": "A-kanban-less-indent",
+      "kind": "kanban",
+      "source": "kanban\n    Todo\n  Bad",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/kanban/parser/kanban.jison",
+        "sha256": "b59eba92f4caf14b99343d4058880d958d4326b01dc1d1b4feba710ff94ed0af",
+        "symbol": "kanbanDb.getSection checks previous nodes, official refresh proves second lower-level item accepted",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "kanban.level.prior-node-validation",
+        "kanban.less-indent-retained"
+      ],
+      "expectedText": [
+        "Todo",
+        "Bad"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-block-unclosed",
+      "kind": "block",
+      "source": "block\nblock:Group\nA",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "blockStatement requires end",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "syntax_error",
+      "features": [
+        "negative.block-unclosed"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "SYNTAX_ERROR"
+      ]
+    },
+    {
+      "id": "A-block-unquoted",
+      "kind": "block",
+      "source": "block\nA[Alpha]",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "symbol": "nodeShapeNLabel consumes STR, unquoted NODE_DESCR unreachable",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "syntax_error",
+      "features": [
+        "negative.block-unquoted"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "SYNTAX_ERROR"
+      ]
+    },
+    {
+      "id": "A-architecture-duplicate",
+      "kind": "architecture",
+      "source": "architecture-beta\nservice a\nservice a",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "registeredIds duplicate rejects",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "error",
+      "features": [
+        "negative.architecture-duplicate"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "DUPLICATE_ID"
+      ]
+    },
+    {
+      "id": "A-architecture-parent-missing",
+      "kind": "architecture",
+      "source": "architecture-beta\nservice a in missing",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "addService parent must already be registered group",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "error",
+      "features": [
+        "negative.architecture-parent-missing"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "UNKNOWN_PARENT"
+      ]
+    },
+    {
+      "id": "A-architecture-align-duplicate",
+      "kind": "architecture",
+      "source": "architecture-beta\nservice a\nalign row a a",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "addLayoutHint rejects duplicate member",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "error",
+      "features": [
+        "negative.architecture-align-duplicate"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "DUPLICATE_ID"
+      ]
+    },
+    {
+      "id": "A-usecase-actor-include",
+      "kind": "usecase",
+      "source": "usecase-beta\nactor User\nUser ..> : include Login",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/usecase/usecase.spec.ts",
+        "sha256": "e4909e78d291c258164485dd70bddb3b708c31250c3b79845c527dbec55e3f9b",
+        "symbol": "include requires two use cases",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "error",
+      "features": [
+        "negative.usecase-actor-include"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "SYNTAX_ERROR",
+        "INVALID_RELATION"
+      ]
+    },
+    {
+      "id": "A-architecture-upstream-direct-group-endpoint",
+      "kind": "architecture",
+      "source": "architecture-beta\ngroup g\nservice a\ng:R -- L:a",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "architectureDb.addEdge preliminary ID registered but nodes.get(group).in dereference fails",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "upstream_defect",
+      "features": [
+        "upstream_defect.architecture.direct-group-id"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "UPSTREAM_ARCHITECTURE_ENDPOINT"
+      ]
+    },
+    {
+      "id": "A-interaction-excluded",
+      "kind": "classDiagram",
+      "source": "classDiagram\nclass A\nclick A call callback()",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+        "sha256": "3c99e4613bd8235f4d3485d8444a8b119e8af9ede50f88505c24d5a6cc93280f",
+        "symbol": "clickStatement static initial clickable class remains, callback execution globally excluded",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "excluded_by_static_scope",
+      "features": [
+        "excluded.interactive-callback"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-usecase-business-awesome-rejected",
+      "kind": "usecase",
+      "source": "usecase-beta\nactor User@{type: awesome, business: true}",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/usecase/parser/usecaseModelBuilder.ts",
+        "sha256": "45ac8b19f30f247cd0ccb15fac0e2ffe483d2b1ced5171578a11d88099b8ff5d",
+        "symbol": "Business actor must use normal/hollow geometry",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "error",
+      "features": [
+        "negative.usecase.metadata.business-awesome"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "SYNTAX_ERROR"
+      ]
+    },
+    {
+      "id": "A-mindmap-explicit-tidy",
+      "kind": "mindmap",
+      "source": "mindmap\nroot((Root))\n  first[First]\n    leaf[Leaf]\n  second[Second]\n  third[Third]\n  fourth[Fourth]",
+      "config": {
+        "layout": "tidy-tree"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/mindmap/parser/mindmap.jison",
+        "sha256": "85a4b2840ab529bc82c41ea64d9556a7fe4a0552900d1cbdf9484245ba61c8e4",
+        "symbol": "MindmapDB.getData root-layout presence vs scoped layout, explicit native provider path",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "mindmap.layout.mindmap-explicit-tidy"
+      ],
+      "expectedText": [
+        "Root",
+        "First",
+        "Leaf",
+        "Second",
+        "Third",
+        "Fourth"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-mindmap-explicit-elk",
+      "kind": "mindmap",
+      "source": "mindmap\nroot((Root))\n  first[First]\n    leaf[Leaf]\n  second[Second]\n  third[Third]\n  fourth[Fourth]",
+      "config": {
+        "layout": "elk"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/mindmap/parser/mindmap.jison",
+        "sha256": "85a4b2840ab529bc82c41ea64d9556a7fe4a0552900d1cbdf9484245ba61c8e4",
+        "symbol": "MindmapDB.getData root-layout presence vs scoped layout, explicit native provider path",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "upstream_defect",
+      "features": [
+        "mindmap.layout.mindmap-explicit-elk",
+        "upstream_defect.elkjs-0.9.3.null-re"
+      ],
+      "expectedText": [
+        "Root",
+        "First",
+        "Leaf",
+        "Second",
+        "Third",
+        "Fourth"
+      ],
+      "expectedErrorCodes": [],
+      "nativeMustRender": true,
+      "upstreamDefect": {
+        "component": "elkjs",
+        "version": "0.9.3",
+        "error": "TypeError null.re inside bundled ELK worker",
+        "originalEvidence": [
+          "test-runs/BULK-P3-first-20261106T042952Z-978737eb/artifacts/oracle/A-mindmap-explicit-elk.error.json",
+          "test-runs/BULK-P3-official-refresh-20261106T050328Z-0274d04e/artifacts/oracle/A-mindmap-explicit-elk.error.json"
+        ],
+        "nativeRequirement": "Actual selected ELK layout, rendered pixels and all declared text must pass; no accepted native error code or fallback."
+      }
+    },
+    {
+      "id": "A-mindmap-scoped-layout-no-root",
+      "kind": "mindmap",
+      "source": "mindmap\nroot((Root))\n  first[First]\n    leaf[Leaf]\n  second[Second]\n  third[Third]\n  fourth[Fourth]",
+      "config": {
+        "mindmap": {
+          "layout": "elk"
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/mindmap/parser/mindmap.jison",
+        "sha256": "85a4b2840ab529bc82c41ea64d9556a7fe4a0552900d1cbdf9484245ba61c8e4",
+        "symbol": "MindmapDB.getData root-layout presence vs scoped layout, explicit native provider path",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "mindmap.layout.mindmap-scoped-layout-no-root"
+      ],
+      "expectedText": [
+        "Root",
+        "First",
+        "Leaf",
+        "Second",
+        "Third",
+        "Fourth"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-architecture-seed-zero",
+      "kind": "architecture",
+      "source": "architecture-beta\nservice a(server)[A]\nservice b(database)[B]\na:R -- L:b",
+      "config": {
+        "architecture": {
+          "seed": 0
+        }
+      },
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "symbol": "architectureSeed.ts seed=0 opts out of deterministic replacement; native remains local",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "architecture.seed.zero"
+      ],
+      "expectedText": [
+        "A",
+        "B"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-block-all-arrow-factories",
+      "kind": "block",
+      "source": "block-beta\ncolumns 4\na0<[\"Right\"]>(right)\na1<[\"Left\"]>(left)\na2<[\"Up\"]>(up)\na3<[\"Down\"]>(down)\na4<[\"Horizontal\"]>(right,left)\na5<[\"Vertical\"]>(up,down)\na6<[\"RightUp\"]>(right,up)\na7<[\"RightDown\"]>(right,down)\na8<[\"LeftUp\"]>(left,up)\na9<[\"LeftDown\"]>(left,down)\na10<[\"ThreeUp\"]>(right,left,up)\na11<[\"ThreeDown\"]>(right,left,down)\na12<[\"ThreeRight\"]>(right,up,down)\na13<[\"ThreeLeft\"]>(left,up,down)\na14<[\"FourWay\"]>(right,left,up,down)",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/blockArrow.ts",
+        "sha256": "1a64d1cf137f5737dadf0970d36e9a4d0092d839af9f14f54cd853e9c6e84be8",
+        "line": 53,
+        "symbol": "arrowPointFactories all15nonempty canonical direction subsets; x/y aliases separately covered",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "block.arrow.factory.right",
+        "block.arrow.factory.left",
+        "block.arrow.factory.up",
+        "block.arrow.factory.down",
+        "block.arrow.factory.right-left",
+        "block.arrow.factory.up-down",
+        "block.arrow.factory.right-up",
+        "block.arrow.factory.right-down",
+        "block.arrow.factory.left-up",
+        "block.arrow.factory.left-down",
+        "block.arrow.factory.right-left-up",
+        "block.arrow.factory.right-left-down",
+        "block.arrow.factory.right-up-down",
+        "block.arrow.factory.left-up-down",
+        "block.arrow.factory.right-left-up-down"
+      ],
+      "expectedText": [
+        "Right",
+        "Left",
+        "Up",
+        "Down",
+        "Horizontal",
+        "Vertical",
+        "RightUp",
+        "RightDown",
+        "LeftUp",
+        "LeftDown",
+        "ThreeUp",
+        "ThreeDown",
+        "ThreeRight",
+        "ThreeLeft",
+        "FourWay"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "A-state-empty-description-metadata-missing-width",
+      "kind": "stateDiagram",
+      "source": "stateDiagram-v2\nhide empty description\nscale 2\nA --> B",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/state/parser/stateDiagram.jison",
+        "sha256": "72568f98201c5ba59dca96842d1805d5a9908c5965d0609ab27f192929285d4d",
+        "symbol": "HIDE_EMPTY/scale WIDTH are retained source metadata",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "syntax_error",
+      "features": [
+        "state-empty-description-metadata"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "SYNTAX_ERROR"
+      ]
+    },
+    {
+      "id": "A-usecase-json-note-json-target-invalid",
+      "kind": "usecase",
+      "source": "usecase-beta\njson Data@{\"name\":\"Alice\",\"roles\":[\"Reader\",\"Writer\"]}\nnote for Data \"Reference\"",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/usecase/usecase.spec.ts",
+        "sha256": "e4909e78d291c258164485dd70bddb3b708c31250c3b79845c527dbec55e3f9b",
+        "symbol": "ordered JSON nodes and note target resolution",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "error",
+      "features": [
+        "usecase-json-note"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "SYNTAX_ERROR"
+      ]
+    },
+    {
+      "id": "A-requirement-verification-low-reserved-id",
+      "kind": "requirement",
+      "source": "requirementDiagram\nrequirement analysis {\nrisk: low\nverifymethod: analysis\n}\nrequirement demonstration {\nrisk: low\nverifymethod: demonstration\n}\nrequirement inspection {\nrisk: low\nverifymethod: inspection\n}\nrequirement test {\nrisk: low\nverifymethod: test\n}",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/requirement/parser/requirementDiagram.jison",
+        "sha256": "44692497660e25f6fe5d51fb3ea7ed17159bbf27bd901632127342e135bff635",
+        "symbol": "synthesized source branch regression",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "syntax_error",
+      "features": [
+        "requirement.risk.low",
+        "requirement.verify.all"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "SYNTAX_ERROR"
+      ]
+    },
+    {
+      "id": "A-requirement-verification-medium-reserved-id",
+      "kind": "requirement",
+      "source": "requirementDiagram\nrequirement analysis {\nrisk: medium\nverifymethod: analysis\n}\nrequirement demonstration {\nrisk: medium\nverifymethod: demonstration\n}\nrequirement inspection {\nrisk: medium\nverifymethod: inspection\n}\nrequirement test {\nrisk: medium\nverifymethod: test\n}",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/requirement/parser/requirementDiagram.jison",
+        "sha256": "44692497660e25f6fe5d51fb3ea7ed17159bbf27bd901632127342e135bff635",
+        "symbol": "synthesized source branch regression",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "syntax_error",
+      "features": [
+        "requirement.risk.medium",
+        "requirement.verify.all"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "SYNTAX_ERROR"
+      ]
+    },
+    {
+      "id": "A-requirement-verification-high-reserved-id",
+      "kind": "requirement",
+      "source": "requirementDiagram\nrequirement analysis {\nrisk: high\nverifymethod: analysis\n}\nrequirement demonstration {\nrisk: high\nverifymethod: demonstration\n}\nrequirement inspection {\nrisk: high\nverifymethod: inspection\n}\nrequirement test {\nrisk: high\nverifymethod: test\n}",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/requirement/parser/requirementDiagram.jison",
+        "sha256": "44692497660e25f6fe5d51fb3ea7ed17159bbf27bd901632127342e135bff635",
+        "symbol": "synthesized source branch regression",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "syntax_error",
+      "features": [
+        "requirement.risk.high",
+        "requirement.verify.all"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "SYNTAX_ERROR"
+      ]
+    },
+    {
+      "id": "A-kanban-less-indent-third-node-error",
+      "kind": "kanban",
+      "source": "kanban\n    Todo\n  Bad\nOther",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/kanban/parser/kanban.jison",
+        "sha256": "b59eba92f4caf14b99343d4058880d958d4326b01dc1d1b4feba710ff94ed0af",
+        "symbol": "kanban.spec.ts KNBN-6 three-node lower-level rejection",
+        "line": 1,
+        "synthesized": true
+      },
+      "expect": "error",
+      "features": [
+        "negative.kanban.KNBN-6"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "INVALID_SECTION"
+      ]
+    }
+  ]
+}

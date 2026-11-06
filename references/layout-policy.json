@@ -1,0 +1,42 @@
+{
+  "schema": "py-mermaid-layout-policy/v1",
+  "date": "2026-11-05",
+  "authority": "User explicitly removed Dagre functionality and requested complete separation",
+  "documentation": "docs/LAYOUT_POLICY.md",
+  "appliesTo": "all diagrams, API/config, dependencies, task graphs and acceptance",
+  "defaultLayout": "elk",
+  "implementedFlowchartLayouts": [
+    "elk"
+  ],
+  "excludedAlgorithms": [
+    "dagre",
+    "dagre-wrapper",
+    "dagre-d3"
+  ],
+  "excludedDependencies": [
+    "dagre-d3-es",
+    "@dagrejs/dagre",
+    "dagre",
+    "dagre-d3"
+  ],
+  "unsupportedSelection": "raise UNSUPPORTED_CONFIG before allocating Canvas or running layout; no fallback",
+  "optionalDagreFeatureAllowed": false,
+  "sourceProvenance": "Preserve pinned upstream checkout/locks/edges and immutable historical evidence; do not treat them as target runtime dependencies",
+  "helperPolicy": "Use own ordered/compound model and pure geometry; no Dagre/graphlib compatibility package",
+  "retainedDedicatedAlgorithms": [
+    "ELK",
+    "COSE/fCoSE",
+    "tidy",
+    "Sankey",
+    "Venn",
+    "swimlane",
+    "other diagram-specific retained static algorithms"
+  ],
+  "excludedDisposition": "excluded_by_user",
+  "removedTask": "P1-10",
+  "tests": [
+    "tests/f013/test_language.py::RemovedLayoutPolicyTests.test_removed_layout_requests_fail_before_canvas_without_fallback"
+  ],
+  "installationValidation": "deferred; not executed",
+  "targetRuntimeDagreCodeAllowed": false
+}

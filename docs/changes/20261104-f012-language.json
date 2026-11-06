@@ -1,0 +1,46 @@
+{
+  "schema": "py-mermaid-change/v1",
+  "taskId": "20261104-f012-language",
+  "phase": "F01.2-S3",
+  "ownerAgent": "/root/parser_config",
+  "status": "test_design_complete",
+  "baseline": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "frozenSource": "3d846b5df224e167a528a73c52d359388fda5e508b561fa876e4bd1b20785c2e",
+  "changedFiles": [
+    {
+      "path": "tests/f012/test_language.py",
+      "sha256": "24433284fff86a8275cb9bffce2b406ff9b52dd26ccaffa6a2cb0e144f05810a"
+    },
+    {
+      "path": "tests/f012/cases.json",
+      "sha256": "253decd290d86606c5b7d071b758da807d6fe698af2a1dd0e47d74cb85146d52"
+    },
+    {
+      "path": "tests/f011/test_language.py",
+      "sha256": "76e04a7070762d74dd4fe1ba0f3053548491da17c22c8611381c17d144ac2f95"
+    }
+  ],
+  "sourceMap": "references/f012-language-assertions.json",
+  "mechanicalEvidence": "test-runs/f012-s3-language-collect-20261104T144454Z/manifest.json",
+  "counts": {
+    "testMethods": 27,
+    "positiveFixtures": 33,
+    "officialGrammarNegativeFixtures": 8,
+    "knownUpstreamRenderErrorFixtures": 1
+  },
+  "limitations": [
+    "33 render-positive fixtures exclude known-broken unnamed empty subgraph source path; explicit-ID empty subgraph and group-only semantics are covered.",
+    "Ellipse is a parse-positive/render-error fixture, not an official parse-invalid negative.",
+    "Members are direct DB members, groups are close order, colors independently use containment preorder.",
+    "Root directions remain TD/LR; all five group direction spellings represented in tests.",
+    "Other arrow/marker/styles/rich label/new shape metadata exclusions are tested separately from official-invalid fixtures.",
+    "Installation validation remains deferred by user instruction.",
+    "No behavioral test body or rendering was run in S3."
+  ],
+  "nextAction": "S4 coordinator first grouped execution; retain failed original candidate and oracle captures before root-cause fixes",
+  "commitPushPublish": false,
+  "collectionProbeCorrection": {
+    "previousRun": "test-runs/f012-s3-language-20261104T144433Z/manifest.json",
+    "reason": "Collecting two same-named test_language modules in one interpreter triggered unittest module import collision. Separate interpreter collection fixes the probe; test modules and product unchanged. No test body executed in either run."
+  }
+}

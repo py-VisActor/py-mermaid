@@ -1,0 +1,156 @@
+{
+  "schema": "py-mermaid-command-plan/v1",
+  "scope": "F01.2",
+  "inputs": [
+    "{repo}/references/f012-language-assertions.json",
+    "{repo}/references/f012-layout-assertions.json",
+    "{repo}/references/f012-canvas-assertions.json"
+  ],
+  "description": "F01.1 regressions + independent F01.2 source-derived tests + reusable evidence tools; no installation",
+  "steps": [
+    {
+      "name": "f011-language",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests/f011",
+        "-p",
+        "test_language.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src"
+      },
+      "timeoutSeconds": 600
+    },
+    {
+      "name": "f011-layout",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests/f011",
+        "-p",
+        "test_layout.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src"
+      },
+      "timeoutSeconds": 600
+    },
+    {
+      "name": "f011-canvas",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests/f011",
+        "-p",
+        "test_canvas.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src"
+      },
+      "timeoutSeconds": 600
+    },
+    {
+      "name": "f011-api",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests/f011",
+        "-p",
+        "test_api.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src"
+      },
+      "timeoutSeconds": 600
+    },
+    {
+      "name": "f012-language",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests/f012",
+        "-p",
+        "test_language.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src"
+      },
+      "timeoutSeconds": 600
+    },
+    {
+      "name": "f012-layout",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests/f012",
+        "-p",
+        "test_layout.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src"
+      },
+      "timeoutSeconds": 600
+    },
+    {
+      "name": "f012-canvas",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests/f012",
+        "-p",
+        "test_canvas.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src"
+      },
+      "timeoutSeconds": 600
+    },
+    {
+      "name": "tooling-workflow",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests/tooling",
+        "-p",
+        "test_workflow.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src"
+      },
+      "timeoutSeconds": 600
+    }
+  ]
+}

@@ -261,7 +261,9 @@ class AdapterControlTests(unittest.IsolatedAsyncioTestCase):
 
     async def test_c03_wrong_direction_or_engine_is_explicit(self):
         chart, measured = specimen()
-        for invalid in (replace(chart, direction="RL"), replace(chart, config=replace(chart.config, layout="dagre"))):
+        # F014 source directions now include RL; preserve the negative layout
+        # contract with an actually unsupported direction, not the old scope.
+        for invalid in (replace(chart, direction="DIAGONAL"), replace(chart, config=replace(chart.config, layout="dagre"))):
             with self.subTest(invalid=invalid), self.assertRaises(MermaidError) as raised:
                 await layout_flowchart(invalid, measured)
             self.assertEqual(raised.exception.code, "UNSUPPORTED_LAYOUT")

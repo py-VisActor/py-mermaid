@@ -1,0 +1,81 @@
+{
+  "schema": "py-mermaid-static-theme-source/v1",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "files": [
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/themes/theme-base.js",
+      "sha256": "c13caf87f1a547eb65596ebaabf94ad80055546dff5458f3b6475799bb5ec52c"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/themes/theme-dark.js",
+      "sha256": "79e5faeb17f0ad47c2e97cbbab7491bf12ab93115546eaebda741e00fad75d37"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/themes/theme-default.js",
+      "sha256": "c7676f84269d433c83f089bd978439a0d5e783ba48f1dfd87a294efb674e3b66"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/themes/theme-forest.js",
+      "sha256": "473eed6464c38764c59c15768cdedb44766f40aa736bb96ef1fa94cea2315cc5"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/themes/theme-neutral.js",
+      "sha256": "a09bdc75fabfaddb19626f8c8af8e5d9df0dcee31ed09522dcbccd6418ca1a43"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/themes/theme-neo.js",
+      "sha256": "0ef8cf2a93e4629984c6c57382ce69f37d5bffb6a6fe5b949a972ee8d268bf9f"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/themes/theme-neo-dark.js",
+      "sha256": "f2d3469f8fe6aae719654bba2fe776802617a72449db8a6a299bc070e07673c3"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/themes/theme-redux.js",
+      "sha256": "a2eeb8fc623614c4853e39e90abd1ebf6b8e6f9f4028cf40962d6d6414d6443f"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/themes/theme-redux-dark.js",
+      "sha256": "aa769f4fa5992f04bce44af4f1e568d98140477f53406a29a66248b4e6f5d1bc"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/themes/theme-redux-color.js",
+      "sha256": "5e4278fb33825a501ffae1c6ac13a869763c4e611de9ad6077b58513e4e1b6d0"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/themes/theme-redux-dark-color.js",
+      "sha256": "0c1899419d5a06afe61bd183d6fc2b59bf5b1be12528e2bf1c7f3fc36788b535"
+    }
+  ],
+  "symbols": [
+    "adjust",
+    "darken",
+    "invert",
+    "isDark",
+    "lighten",
+    "mkBorder",
+    "optional",
+    "rgba"
+  ],
+  "astNodeCounts": {
+    "BlockStatement": 134,
+    "ExpressionStatement": 2829,
+    "ThisExpression": 7188,
+    "Literal": 2659,
+    "LogicalExpression": 2158,
+    "MemberExpression": 4366,
+    "ConditionalExpression": 57,
+    "CallExpression": 1236,
+    "Identifier": 1612,
+    "ObjectExpression": 397,
+    "UnaryExpression": 336,
+    "IfStatement": 24,
+    "ForStatement": 64,
+    "BinaryExpression": 291,
+    "VariableDeclaration": 17,
+    "ArrayExpression": 5
+  },
+  "status": "retained_static_local_verified",
+  "phase": "P5",
+  "verification": "references/bulk-verification-summary.json"
+}

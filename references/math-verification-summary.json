@@ -1,0 +1,116 @@
+{
+  "schema": "py-mermaid-math-verification-summary/v1",
+  "status": "PASS_NATIVE_STATIC_ALPHA_LOCAL",
+  "primarySummary": "../../py-katex/references/verification-summary.json",
+  "acceptance": "docs/MATH_ACCEPTANCE.md",
+  "jointSourceSHA256": {
+    "math": "6e11f0a8f9f88c78fb387faf4429cfea72781a4e961328bf53299625bea2cb80",
+    "mermaid": "6e37306deb59a5eb21a2bcceedd66c128a2367f392b094854e2e9bdb3e0e4088"
+  },
+  "unit": {
+    "status": "PASS",
+    "methods": 712,
+    "product": 676,
+    "tooling": 36,
+    "groups": {
+      "math-parser": 67,
+      "math-macros": 53,
+      "math-layout": 65,
+      "math-canvas": 16,
+      "math-api": 6,
+      "math-evidence": 2,
+      "mermaid-math-integration": 17,
+      "f011-language": 40,
+      "f011-layout": 21,
+      "f011-canvas": 23,
+      "f011-api": 5,
+      "f012-language": 29,
+      "f012-layout": 19,
+      "f012-canvas": 18,
+      "f013-language": 63,
+      "f013-layout": 14,
+      "f013-styles": 16,
+      "f013-canvas": 33,
+      "tooling": 34,
+      "f014-language": 54,
+      "f014-layout": 39,
+      "f014-shapes": 18,
+      "f014-styles": 19,
+      "f014-canvas": 41
+    }
+  },
+  "visual": {
+    "status": "PASS",
+    "standaloneCases": 61,
+    "integrationCases": 8,
+    "profiles": [
+      "cpu",
+      "auto",
+      "gpu"
+    ],
+    "views": 207,
+    "negativePerStandaloneProfile": 7
+  },
+  "legacy": {
+    "status": "PASS",
+    "positiveCases": 297,
+    "positiveBySlice": {
+      "F01.1": 12,
+      "F01.2": 35,
+      "F01.3": 50,
+      "F01.4": 200
+    },
+    "profiles": 3,
+    "views": 891,
+    "denominatorsRetained": true,
+    "historicalMathPromotions": [
+      "F01.3 math",
+      "F01.4 math-separate"
+    ],
+    "negativeSourceErrorAndScopeExclusionCategoriesRetained": true
+  },
+  "report": {
+    "url": "http://127.0.0.1:8765/MATH-batch-20261105T122804Z-878bf5d4/index.html",
+    "path": "py-mermaid/reports/MATH-batch-20261105T122804Z-878bf5d4",
+    "html": {
+      "sha256": "9f7ef845b1a8f495d66824f48208da6206f6b3235d3b9e3f5b7a20bf493e88ee",
+      "bytes": 849853
+    },
+    "qaStatus": "PASS",
+    "qaViews": 207,
+    "desktopAndMobile": true,
+    "externalRequests": 0
+  },
+  "runsInSiblingPyKatex": {
+    "unit": "test-runs/MATH-batch-20261105T121812Z-f140829a",
+    "visual": "test-runs/MATH-batch-20261105T121812Z-73861ed7",
+    "legacy": "test-runs/MATH-batch-20261105T121812Z-85def7ba",
+    "exports": "test-runs/MATH-batch-20261105T122453Z-26698b8b",
+    "report": "test-runs/MATH-batch-20261105T122804Z-878bf5d4",
+    "htmlQa": "test-runs/MATH-batch-20261105T122948Z-8bf16e51"
+  },
+  "knownSourceDifferences": [
+    {
+      "case": "math-flow-metadata",
+      "classification": "source_exception",
+      "description": "官方 Mermaid 元数据预处理将反斜杠 n 破坏为换行，A 图显示残缺的字面公式；本实现保留 TeX 并绘制 ν<y，属于明确修正源异常，不能声称与该异常图相同。"
+    },
+    {
+      "case": "math-flow-group",
+      "classification": "host_font_difference",
+      "description": "官方 MathML 宿主显示斜体 Unicode Group；原生 TeX 使用 Main-Bold 正体粗体。"
+    },
+    {
+      "case": "math-flow-mixed",
+      "classification": "host_whitespace_difference",
+      "description": "官方 flex/MathML 合并公式边界空格；原生保留 Area πr² units 的边界空格。"
+    }
+  ],
+  "fullKaTeXCompatibility": false,
+  "installationValidation": "deferred_by_user_not_executed",
+  "externalActions": {
+    "commit": false,
+    "push": false,
+    "publish": false
+  }
+}

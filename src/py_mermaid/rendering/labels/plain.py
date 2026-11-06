@@ -4,10 +4,12 @@ from __future__ import annotations
 import math
 import re
 import unicodedata
+from dataclasses import replace
 from collections.abc import Callable
 from typing import Any
 
 from ...model.flowchart import FlowConfig, FlowNode, MeasuredLine, MeasuredNode, MermaidError
+from ...geometry.shapes import shape_geometry
 
 
 def _metric(metrics: Any, name: str, default: float = 0.0) -> float:
@@ -59,17 +61,16 @@ def _wrapped_lines(text: str, config: FlowConfig, measure_text: Callable[[str], 
     return output
 
 
-def measure_node(node: FlowNode, config: FlowConfig, measure_text: Callable[[str], Any]) -> MeasuredNode:
-    """Measure already-normalized plain lines in logical px, retaining every line.
-
-    line_height is a font-size multiplier; padding is the effective squareRect
-    look-dependent padding, not the unconsumed site configuration value.
-    """
-    if re.search(r"<[^>]*>|`|\$\$", node.label):
-        raise MermaidError("Rich labels are outside F01.1", code="UNSUPPORTED_SYNTAX", span=node.span)
+def measure_plain_label(text: str, config: FlowConfig, measure_text: Callable[[str], Any], *,
+                        wrapping_width: float | None = None, min_width: float = 0) -> tuple[float, float, tuple[MeasuredLine, ...]]:
+    """Measure plain node/edge/group content with explicit width policy."""
+    if re.search(r"<[^>]*>|`|\$\$", text):
+        raise MermaidError("Rich labels are outside F01.2", code="UNSUPPORTED_SYNTAX")
+    if wrapping_width is not None:
+        config = replace(config, wrapping_width=wrapping_width)
     lines = []
-    for text in _wrapped_lines(node.label, config, measure_text):
-        metrics = measure_text(text)
+    for line_text in _wrapped_lines(text, config, measure_text):
+        metrics = measure_text(line_text)
         advance = _metric(metrics, "width")
         ink = _metric(metrics, "actualBoundingBoxLeft") + _metric(metrics, "actualBoundingBoxRight")
         ascent = max(0.0, _metric(metrics, "actualBoundingBoxAscent"))
@@ -77,10 +78,22 @@ def measure_node(node: FlowNode, config: FlowConfig, measure_text: Callable[[str
         if ascent + descent == 0:
             ascent = max(0.0, _metric(metrics, "fontBoundingBoxAscent"))
             descent = max(0.0, _metric(metrics, "fontBoundingBoxDescent"))
-        lines.append(MeasuredLine(text, max(0.0, advance, ink), ascent, descent))
-    label_width = max(max(line.width for line in lines), config.min_node_width if node.label else 0)
+        lines.append(MeasuredLine(line_text, max(0.0, advance, ink), ascent, descent))
+    label_width = max(max(line.width for line in lines), min_width if text else 0)
     row_height = max(config.font_size * config.line_height, *(line.ascent + line.descent for line in lines))
     label_height = row_height * len(lines)
-    return MeasuredNode(node.id, label_width + 2 * config.padding_x,
-                        label_height + 2 * config.padding_y,
-                        label_width, label_height, tuple(lines))
+    return label_width, label_height, tuple(lines)
+
+
+def measure_node(node: FlowNode, config: FlowConfig, measure_text: Callable[[str], Any]) -> MeasuredNode:
+    """Retain source shape-specific sizing; circles do not get minNodeWidth."""
+    try:
+        lw, lh, lines = measure_plain_label(node.label, config, measure_text,
+                                           min_width=0 if node.shape in {"circle", "doublecircle"} else config.min_node_width)
+        geometry = shape_geometry(node.shape, lw, lh, config)
+    except MermaidError as error:
+        if error.span is None:
+            error.span = node.span
+        raise
+    return MeasuredNode(node.id, geometry.width, geometry.height, lw, lh, lines,
+                        geometry.label_box, geometry.outline, geometry.details)

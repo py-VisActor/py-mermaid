@@ -1,0 +1,41 @@
+{
+  "schema": "py-mermaid-change-receipt/v1",
+  "status": "RETAINED_STATIC_LOCAL_ACCEPTED_DELIVERED",
+  "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
+  "p4": {
+    "path": "test-runs\\BULK-P4-final-20261106T065144Z-03962368\\run.json",
+    "sha256": "76be35ef465e15d3b4444374d8fa76ed1f59659c33c65c68a8812a65f22341f0",
+    "bytes": 6072261
+  },
+  "visualReview": {
+    "path": "test-runs\\BULK-P4-parent-visual-review-20261106T065841Z-a1801db7\\artifacts\\visual-review.json",
+    "sha256": "5186047dfb18eb8c7e35bbbe0e3af954ad14dfaed56a6985db21f889ed44e66c",
+    "bytes": 48474
+  },
+  "delivery": {
+    "path": "test-runs\\BULK-P5-delivery-20261106T071012Z-ec4937fd\\run.json",
+    "sha256": "0f1575cc2e85c5e89d4905cb50431fb88295c999e448bd2b647451c1d0ca20c5",
+    "bytes": 44419
+  },
+  "reportUrl": "http://127.0.0.1:8765/BULK-P5-delivery-20261106T071012Z-ec4937fd/index.html",
+  "exportsUrl": "http://127.0.0.1:8765/BULK-P5-delivery-20261106T071012Z-ec4937fd/exports.zip",
+  "logsUrl": "http://127.0.0.1:8765/BULK-P5-delivery-20261106T071012Z-ec4937fd/logs.zip",
+  "acceptedDiagramCount": 31,
+  "deferredDiagramCount": 7,
+  "unitMethods": 1702,
+  "reportRawPNG": 2502,
+  "reportRawSVG": 624,
+  "browserSamples": 38,
+  "acceptanceNegativeControls": 5,
+  "installationVerification": false,
+  "commit": false,
+  "push": false,
+  "publication": false,
+  "metadataValidation": {
+    "status": "PASS",
+    "path": "test-runs\\BULK-P5-metadata-integrity-20261106T071832Z-b132f053\\run.json",
+    "sha256": "25b0a80bfd7da603c7b3aada80be942b4fd13d3059de2f6ff96c4e5df27c471d",
+    "bytes": 31156
+  },
+  "preserveAllFailedAttempts": true
+}

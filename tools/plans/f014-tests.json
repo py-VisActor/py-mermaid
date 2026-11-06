@@ -1,0 +1,394 @@
+{
+  "schema": "py-mermaid-command-plan/v1",
+  "scope": "F01.4",
+  "description": "S4 grouped first execution: legacy regressions, source-based F014 contracts, all official visual cases and CPU native paint; preserve failures before batch repair. No install/build/publish.",
+  "inputs": [
+    "{repo}/tests/f014/cases.json",
+    "{repo}/references/f014-language-assertions.json",
+    "{repo}/references/f014-layout-assertions.json",
+    "{repo}/references/f014-canvas-assertions.json",
+    "{repo}/references/f014-style-assertions.json"
+  ],
+  "steps": [
+    {
+      "name": "f011-language",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests/f011",
+        "-p",
+        "test_language.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src",
+        "PYTHONIOENCODING": "utf-8",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 600
+    },
+    {
+      "name": "f011-layout",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests/f011",
+        "-p",
+        "test_layout.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src",
+        "PYTHONIOENCODING": "utf-8",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 600
+    },
+    {
+      "name": "f011-canvas",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests/f011",
+        "-p",
+        "test_canvas.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src",
+        "PYTHONIOENCODING": "utf-8",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 600
+    },
+    {
+      "name": "f011-api",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests/f011",
+        "-p",
+        "test_api.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src",
+        "PYTHONIOENCODING": "utf-8",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 600
+    },
+    {
+      "name": "f012-language",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests/f012",
+        "-p",
+        "test_language.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src",
+        "PYTHONIOENCODING": "utf-8",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 600
+    },
+    {
+      "name": "f012-layout",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests/f012",
+        "-p",
+        "test_layout.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src",
+        "PYTHONIOENCODING": "utf-8",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 600
+    },
+    {
+      "name": "f012-canvas",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests/f012",
+        "-p",
+        "test_canvas.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src",
+        "PYTHONIOENCODING": "utf-8",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 600
+    },
+    {
+      "name": "f013-language",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests/f013",
+        "-p",
+        "test_language.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src",
+        "PYTHONIOENCODING": "utf-8",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 600
+    },
+    {
+      "name": "f013-layout",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests/f013",
+        "-p",
+        "test_layout.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src",
+        "PYTHONIOENCODING": "utf-8",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 600
+    },
+    {
+      "name": "f013-styles",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests/f013",
+        "-p",
+        "test_styles.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src",
+        "PYTHONIOENCODING": "utf-8",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 600
+    },
+    {
+      "name": "f013-canvas",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests/f013",
+        "-p",
+        "test_canvas.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src",
+        "PYTHONIOENCODING": "utf-8",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 600
+    },
+    {
+      "name": "tooling",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests/tooling",
+        "-v"
+      ],
+      "timeoutSeconds": 600,
+      "env": {
+        "PYTHONIOENCODING": "utf-8",
+        "PYTHONUTF8": "1"
+      }
+    },
+    {
+      "name": "f014-language",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests/f014",
+        "-p",
+        "test_language.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src",
+        "PYTHONIOENCODING": "utf-8",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 1200
+    },
+    {
+      "name": "f014-layout",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests/f014",
+        "-p",
+        "test_layout.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src",
+        "PYTHONIOENCODING": "utf-8",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 1200
+    },
+    {
+      "name": "f014-shapes",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests/f014",
+        "-p",
+        "test_shapes.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src",
+        "PYTHONIOENCODING": "utf-8",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 1200
+    },
+    {
+      "name": "f014-styles",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests/f014",
+        "-p",
+        "test_styles.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src",
+        "PYTHONIOENCODING": "utf-8",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 1200
+    },
+    {
+      "name": "f014-canvas",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests/f014",
+        "-p",
+        "test_canvas.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src",
+        "PYTHONIOENCODING": "utf-8",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 1200
+    },
+    {
+      "name": "candidate-fixture-snapshot",
+      "argv": [
+        "{python}",
+        "-c",
+        "import sys,shutil;from pathlib import Path;sys.path.insert(0,'tools');from run_support import source_identity,write_json;shutil.copyfile('tests/f014/cases.json',Path(sys.argv[1])/'artifacts/cases.json');write_json(Path(sys.argv[1])/'artifacts/source-candidate.json',source_identity())",
+        "{run}"
+      ],
+      "timeoutSeconds": 60
+    },
+    {
+      "name": "f014-source-oracle",
+      "argv": [
+        "node",
+        "{repo}/tools/oracle/f011_capture.cjs",
+        "--fixtures",
+        "{run}/artifacts/cases.json",
+        "--out",
+        "{run}/artifacts/oracle"
+      ],
+      "timeoutSeconds": 1800
+    },
+    {
+      "name": "f014-native-cpu",
+      "argv": [
+        "{python}",
+        "{repo}/tools/f011_validate.py",
+        "--fixtures",
+        "{run}/artifacts/cases.json",
+        "--oracle",
+        "{run}/artifacts/oracle",
+        "--out",
+        "{run}/artifacts/compare-cpu",
+        "--backend",
+        "cpu"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src",
+        "PYTHONIOENCODING": "utf-8",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 2400
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "schema": "py-mermaid-change-receipt/v1",
+  "phase": "P4_initial",
+  "status": "FAILED_PRESERVED_REPAIR_REQUIRED",
+  "runId": "BULK-P4-final-20261106T053339Z-476daa06",
+  "sourceTreeSha256": "51c9c8f75ec4518680450e985ac24e1e576850ae4522fe697d8725b1e23cf248",
+  "sourceUnchanged": true,
+  "evidence": {
+    "path": "test-runs\\BULK-P4-final-20261106T053339Z-476daa06\\run.json",
+    "sha256": "968d3a55bc300c0feb11567b622329fc8b7160a0cabb7ba145cc04d085f46748",
+    "bytes": 5329928
+  },
+  "failedCommands": [
+    {
+      "name": "regression-f014",
+      "exitCode": 1,
+      "stderr": "commands/011-regression-f014/stderr.log"
+    },
+    {
+      "name": "legacy-f013-cpu",
+      "exitCode": 1,
+      "stderr": "commands/039-legacy-f013-cpu/stderr.log"
+    },
+    {
+      "name": "legacy-f013-auto",
+      "exitCode": 1,
+      "stderr": "commands/040-legacy-f013-auto/stderr.log"
+    },
+    {
+      "name": "legacy-f013-gpu",
+      "exitCode": 1,
+      "stderr": "commands/041-legacy-f013-gpu/stderr.log"
+    },
+    {
+      "name": "legacy-f014-cpu",
+      "exitCode": 1,
+      "stderr": "commands/043-legacy-f014-cpu/stderr.log"
+    },
+    {
+      "name": "legacy-f014-auto",
+      "exitCode": 1,
+      "stderr": "commands/044-legacy-f014-auto/stderr.log"
+    },
+    {
+      "name": "legacy-f014-gpu",
+      "exitCode": 1,
+      "stderr": "commands/045-legacy-f014-gpu/stderr.log"
+    }
+  ],
+  "visualBlockersRun": "BULK-P4-visual-blockers-20261106T054514Z-dcb05a05",
+  "installationVerification": false,
+  "noFinalAcceptance": true
+}

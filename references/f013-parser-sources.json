@@ -1,0 +1,519 @@
+{
+  "schema": "py-mermaid-f013-parser-sources/v1",
+  "taskId": "F01.3-S2/parser-config",
+  "status": "verified_local_f013_slice",
+  "interfaceVersion": "F01.3-v3",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "sourceHashConvention": "sha256 is exact local bytes; gitBlobSha256 is locked git show bytes (CRLF checkout differences preserved).",
+  "sources": [
+    {
+      "path": "packages/mermaid/src/preprocess.ts",
+      "symbols": [
+        "preprocessDiagram",
+        "cleanupText",
+        "processDirectives",
+        "cleanAndMerge"
+      ],
+      "sha256": "db337ae9cc0f7ff189cc50d06d6fb28452dfbc37294f56a966dc3f48b2a628e0",
+      "gitBlobSha256": "8a58dda4b0f5481c743704c2c16512d9326e9153a637abdd1b943df1c4410052"
+    },
+    {
+      "path": "packages/mermaid/src/diagram-api/frontmatter.ts",
+      "symbols": [
+        "extractFrontMatter",
+        "yaml.JSON_SCHEMA"
+      ],
+      "sha256": "32064e56308192d63355b5719a54172ce9269b9d30ccfddcfbdd11b71ddf5e0a",
+      "gitBlobSha256": "5fe9872a75c7f89bc3edb7876948b9dbbe9a844cabb8dfe57d254d3b0eba9ed1"
+    },
+    {
+      "path": "packages/mermaid/src/diagram-api/regexes.ts",
+      "symbols": [
+        "matchFrontMatter",
+        "directive"
+      ],
+      "sha256": "fdb09d839e27f7b71fc2193282649a4d2e1169531c8a62ee3a4c4e0bd1883e7d",
+      "gitBlobSha256": "2bda6a34c0762faab8abb7c3f09ebee2a5919d6bea874e2eae0b3fa7d15065e8"
+    },
+    {
+      "path": "packages/mermaid/src/diagram-api/comments.ts",
+      "symbols": [
+        "cleanupComments"
+      ],
+      "sha256": "aa637df212ecc22cbcb12387af31a4d0f8c266ece03cc6134d46dd9427acd120",
+      "gitBlobSha256": "3592fb8d68ad83644816b7cb08bc8da4faff47e43332ba446b5d45666520ed60"
+    },
+    {
+      "path": "packages/mermaid/src/assignWithDepth.ts",
+      "symbols": [
+        "assignWithDepth"
+      ],
+      "sha256": "84216a585174308d91550e69fdf0081801cce41c040738190a47ed764d77674f",
+      "gitBlobSha256": "c95205611a00561119c34a8eaa23969c0f3b7f80c82275c226077dd07b5a75f8"
+    },
+    {
+      "path": "packages/mermaid/src/config.ts",
+      "symbols": [
+        "initialize",
+        "updateCurrentConfig",
+        "resolveAppearance",
+        "sanitize",
+        "setDiagramConfigScope",
+        "evaluate"
+      ],
+      "sha256": "91dd68a9e7d57c4635a04fab0ccd78ec230b4417a02f4f4b3cd9a6bb445f09ef",
+      "gitBlobSha256": "a2dcc81b3764fec09626dc5a13f97c2bdd860378d6c06e9894357b4af2e87d9e"
+    },
+    {
+      "path": "packages/mermaid/src/utils/sanitizeDirective.ts",
+      "symbols": [
+        "sanitizeDirective",
+        "sanitizeCss",
+        "configKeys"
+      ],
+      "sha256": "b4b3a906c608be0dc3b72136680c8d29bd87978857da6ba8234adede06b0ffa1",
+      "gitBlobSha256": "582df24b6ef1cf21ec48df458508042a4aac48bec23342b4f12dc20c952e8973"
+    },
+    {
+      "path": "packages/mermaid/src/defaultConfig.ts",
+      "symbols": [
+        "defaultConfig"
+      ],
+      "sha256": "6f2ec3c231ee970fb0368d158975090d488c93c9801a618b06cb18d58488b068",
+      "gitBlobSha256": "f5bb393e7f39ca7ab9bb152be3002ff802487d77db33721ad11c7d03709dc782"
+    },
+    {
+      "path": "packages/mermaid/src/schemas/config.schema.yaml",
+      "symbols": [
+        "MermaidConfig",
+        "FlowchartDiagramConfig",
+        "SecureKey"
+      ],
+      "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8",
+      "gitBlobSha256": "855e6fbb5d278f190f15a7660b44dca6a4699ca8077ab8b35579a4e8a64be019"
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/flowchart/parser/flow.jison",
+      "symbols": [
+        "text",
+        "string",
+        "md_string",
+        "edgeText",
+        "arrowText",
+        "acc_title",
+        "acc_descr"
+      ],
+      "sha256": "9597faffe2a133b104c6dd4f38a162f6980bff4e0a841a83ff94af3900ea7ba8",
+      "gitBlobSha256": "e9891eb4f646140e5110e72ef5f79b099677a265ba1a84884b39a573b56d1c68"
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/flowchart/flowDb.ts",
+      "symbols": [
+        "addVertex",
+        "addSingleLink",
+        "addSubGraph",
+        "setAccTitle",
+        "setAccDescription"
+      ],
+      "sha256": "33577b9ade8c65be6049c3093089dbf81abf44214f49c2b2ea46434183889288",
+      "gitBlobSha256": "f8b1e686399b850dda39741ef10b763c9611658e50a0416603826a17ef810ec3"
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/common/common.ts",
+      "symbols": [
+        "sanitizeText",
+        "sanitizeMore",
+        "decodeEntities"
+      ],
+      "sha256": "b14851667f7d45d101d4e028204babb1628faefe4812a88ae2d8acac72f8e144",
+      "gitBlobSha256": "bf6a0cc85de418bb8171735a7317fd7e84f8ad79f4e975e378130f11728efb67"
+    },
+    {
+      "path": "packages/mermaid/src/mermaidAPI.ts",
+      "symbols": [
+        "initialize",
+        "processAndSetConfigs",
+        "getDiagramFromText",
+        "createUserStyles"
+      ],
+      "sha256": "c38ef136d815a638993d271f253d2ca825046fb97292d30a7a4de8ea57fc0318",
+      "gitBlobSha256": "8a2c16049850db1fa83395adf9fb379f4c35b194c93bd0005cf6cb7c056e2e97"
+    },
+    {
+      "path": "packages/mermaid/src/themes/index.js",
+      "symbols": [
+        "themes"
+      ],
+      "sha256": "6277f68da19a2b75f2e6b60c02d590c71a1da926b50969f2523f66e372a40861",
+      "gitBlobSha256": "a4f303a2a18a1fcdef028827cc2aa8c2a0b5b27ea438295ed3c4dec3ce71fc09"
+    },
+    {
+      "path": "packages/mermaid/src/themes/theme-helpers.js",
+      "symbols": [
+        "mkBorder"
+      ],
+      "sha256": "8bcfaf8426fcff2d033843ca2c38d3bdc23f8443c5721c686951b56e9c612289",
+      "gitBlobSha256": "b90c76526681923e1efb82ae925105a49a2a6d6e5a0cb9363ab8e8778505d06c"
+    },
+    {
+      "path": "packages/mermaid/src/diagram-api/frontmatter.spec.ts",
+      "symbols": [
+        "frontmatter scalar/config/title tests"
+      ],
+      "sha256": "06d924fda15fbdcc44125c959312b977c6f4cb42361b54a1372c069f6e587bf5",
+      "gitBlobSha256": "78f1267615f2716bb4312a6d240f15259ae629f6db87dc9fd5cd5a70869e8c1b"
+    },
+    {
+      "path": "packages/mermaid/src/diagram-api/regexes.spec.ts",
+      "symbols": [
+        "frontmatter closing delimiter tests"
+      ],
+      "sha256": "ed8c0cf2bfcc3857a7e3622a0cf9844ba507bbed124708b2d0b68d6145c7cad1",
+      "gitBlobSha256": "f8d937a8cf10f739f168a367d53d6461626dd550fe00c5f17692b7d664c18028"
+    },
+    {
+      "path": "packages/mermaid/src/utils/sanitizeDirective.spec.ts",
+      "symbols": [
+        "directive filtering tests"
+      ],
+      "sha256": "5ee7d39c6ed2ca7254ce7f40a57d0ea8b2a25f54dcc9b7dcd77dc5b1672b898d",
+      "gitBlobSha256": "ee597058ff003a9085900e38ba2245ba2af867725b636db00eab0738badcdee5"
+    },
+    {
+      "path": "packages/mermaid/src/themes/theme-base.js",
+      "symbols": [
+        "Theme.constructor",
+        "Theme.updateColors",
+        "Theme.calculate",
+        "getThemeVariables"
+      ],
+      "sha256": "c13caf87f1a547eb65596ebaabf94ad80055546dff5458f3b6475799bb5ec52c",
+      "gitBlobSha256": "c680265d95221e1639d8eb9e3c345a945b432aea3843f48b12ea1adcd3aeacf4"
+    },
+    {
+      "path": "packages/mermaid/src/themes/theme-dark.js",
+      "symbols": [
+        "Theme.constructor",
+        "Theme.updateColors",
+        "Theme.calculate",
+        "getThemeVariables"
+      ],
+      "sha256": "79e5faeb17f0ad47c2e97cbbab7491bf12ab93115546eaebda741e00fad75d37",
+      "gitBlobSha256": "d22b8ab46292bd1406d8b8b28d42ea7b5dcebd0a7aba1dc10c392b9843d4a2bb"
+    },
+    {
+      "path": "packages/mermaid/src/themes/theme-default.js",
+      "symbols": [
+        "Theme.constructor",
+        "Theme.updateColors",
+        "Theme.calculate",
+        "getThemeVariables"
+      ],
+      "sha256": "c7676f84269d433c83f089bd978439a0d5e783ba48f1dfd87a294efb674e3b66",
+      "gitBlobSha256": "322992e004caf49cf8c21e5e8a01371af8bec116aeb24a7eadd872bcd3359d28"
+    },
+    {
+      "path": "packages/mermaid/src/themes/theme-forest.js",
+      "symbols": [
+        "Theme.constructor",
+        "Theme.updateColors",
+        "Theme.calculate",
+        "getThemeVariables"
+      ],
+      "sha256": "473eed6464c38764c59c15768cdedb44766f40aa736bb96ef1fa94cea2315cc5",
+      "gitBlobSha256": "3db01e30413f02613f19a125bc49e5efe06e9190cbe2af028fc3729200a641c1"
+    },
+    {
+      "path": "packages/mermaid/src/themes/theme-neutral.js",
+      "symbols": [
+        "Theme.constructor",
+        "Theme.updateColors",
+        "Theme.calculate",
+        "getThemeVariables"
+      ],
+      "sha256": "a09bdc75fabfaddb19626f8c8af8e5d9df0dcee31ed09522dcbccd6418ca1a43",
+      "gitBlobSha256": "7a4d9eae887870469c3338c73564767bffa75b2cbc7af0f67b84a3c63539a092"
+    },
+    {
+      "path": "packages/mermaid/src/themes/theme-neo.js",
+      "symbols": [
+        "Theme.constructor",
+        "Theme.updateColors",
+        "Theme.calculate",
+        "getThemeVariables"
+      ],
+      "sha256": "0ef8cf2a93e4629984c6c57382ce69f37d5bffb6a6fe5b949a972ee8d268bf9f",
+      "gitBlobSha256": "217eb2eee43f7bfe8eeaca07f8b766d145d58c87dbe683fadf102f26f4abae81"
+    },
+    {
+      "path": "packages/mermaid/src/themes/theme-neo-dark.js",
+      "symbols": [
+        "Theme.constructor",
+        "Theme.updateColors",
+        "Theme.calculate",
+        "getThemeVariables"
+      ],
+      "sha256": "f2d3469f8fe6aae719654bba2fe776802617a72449db8a6a299bc070e07673c3",
+      "gitBlobSha256": "a1944074ec1f1b74bdf4078061a610cd12921fb158a2d66a96511c593d4fa2f4"
+    },
+    {
+      "path": "packages/mermaid/src/themes/theme-redux.js",
+      "symbols": [
+        "Theme.constructor",
+        "Theme.updateColors",
+        "Theme.calculate",
+        "getThemeVariables"
+      ],
+      "sha256": "a2eeb8fc623614c4853e39e90abd1ebf6b8e6f9f4028cf40962d6d6414d6443f",
+      "gitBlobSha256": "8f22d1e3a0d27c142663eb4a96efbca8010ea8b556b130bc14c8467d94587fbc"
+    },
+    {
+      "path": "packages/mermaid/src/themes/theme-redux-dark.js",
+      "symbols": [
+        "Theme.constructor",
+        "Theme.updateColors",
+        "Theme.calculate",
+        "getThemeVariables"
+      ],
+      "sha256": "aa769f4fa5992f04bce44af4f1e568d98140477f53406a29a66248b4e6f5d1bc",
+      "gitBlobSha256": "4c8b914442bcc899bc35c9bd31ae15881782cb9734288d6fdd96c15f0736477a"
+    },
+    {
+      "path": "packages/mermaid/src/themes/theme-redux-color.js",
+      "symbols": [
+        "Theme.constructor",
+        "Theme.updateColors",
+        "Theme.calculate",
+        "getThemeVariables"
+      ],
+      "sha256": "5e4278fb33825a501ffae1c6ac13a869763c4e611de9ad6077b58513e4e1b6d0",
+      "gitBlobSha256": "8979bb59dfbdf14b3290dfe1bfe96a755b2d637427939ff2396c9b76f3b86574"
+    },
+    {
+      "path": "packages/mermaid/src/themes/theme-redux-dark-color.js",
+      "symbols": [
+        "Theme.constructor",
+        "Theme.updateColors",
+        "Theme.calculate",
+        "getThemeVariables"
+      ],
+      "sha256": "0c1899419d5a06afe61bd183d6fc2b59bf5b1be12528e2bf1c7f3fc36788b535",
+      "gitBlobSha256": "9895ec00395ec584c98aaef3b3aead4258f592a1b8fd777b090a55085c28a5ed"
+    }
+  ],
+  "dependencySources": {
+    "khroma": {
+      "version": "2.1.0",
+      "localPath": ".local/f011-oracle/node_modules/khroma",
+      "integrity": "sha512-Ls993zuzfayK269Svk9hzpeGUKob/sIgZzyHYdjQoAdQetRKpOLj+k/QQQ/6Qi0Yz65mlROrfd+Ev+1+7dz9Kw==",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "package.json",
+          "sha256": "0d2145738d3cab828da4c5724b45e0dd2577c0ce84503c956d76897e93fa7de2"
+        },
+        {
+          "path": "license",
+          "sha256": "66b333b0f66759a0b710459e03f7029abe17f4358114a128d2c972e642961b49"
+        },
+        {
+          "path": "src/color/keyword.ts",
+          "sha256": "2c291a653c7bfa775f812818618de9b6fc353f9cdcb02325c952d2fc323636da"
+        },
+        {
+          "path": "src/utils/channel.ts",
+          "sha256": "a6cc6f0ab35f36f2693317d5d02302775a0082e66bdc02e49a73f11de5d6ed34"
+        },
+        {
+          "path": "src/methods/adjust.ts",
+          "sha256": "d0a899c3a92b49a12b02574632f7d11b549896449ef0df6adae02bd1965b691e"
+        },
+        {
+          "path": "src/methods/invert.ts",
+          "sha256": "d1e68ced59ae6c43cc20760a77b6047d5174d99f67a6334dac5b4dfc1bd21123"
+        },
+        {
+          "path": "src/methods/rgba.ts",
+          "sha256": "959ec3327cb12d790dd7fe8657d1a81b2d9c2ae96e1ad153ca07472fa5bfe94d"
+        },
+        {
+          "path": "src/methods/luminance.ts",
+          "sha256": "9528865f48c81278330ee3026f8485f742cd8f34b9d9f3f86129e4faaaad1227"
+        }
+      ]
+    },
+    "yaml": {
+      "dependency": "Mermaid imports js-yaml with JSON_SCHEMA",
+      "implementation": "independent standard-library parser; no runtime or installed YAML dependency",
+      "sourceContract": "frontmatter.ts plus frontmatter/regexes specs"
+    }
+  },
+  "productFiles": [
+    {
+      "path": "src/py_mermaid/config/__init__.py",
+      "sha256": "0a1a35bc6930e3ec4b021e68d66da16df4f0a576472bc4ec2410598579e6ab4f"
+    },
+    {
+      "path": "src/py_mermaid/config/color_names.py",
+      "sha256": "53d1453fb57e005c66543e099172dd159a650522f6428c2bca32907ed20c6ca4"
+    },
+    {
+      "path": "src/py_mermaid/config/colors.py",
+      "sha256": "37aa0d65e01bb10a253a90c2a66bfe5c003121b9726de4955b53c68e5be5bf3a"
+    },
+    {
+      "path": "src/py_mermaid/config/flowchart.py",
+      "sha256": "48b0be5ef088e85fcb4a3615eb9a011f6cf1fe9de3149a5ffc7727a2b103a7ad"
+    },
+    {
+      "path": "src/py_mermaid/config/source_keys.py",
+      "sha256": "0ae56a02cb58872c0f11a2bf49b26de413616807f1f832db56f0fbbd19b86141"
+    },
+    {
+      "path": "src/py_mermaid/config/theme_rules.py",
+      "sha256": "129b24929010c992513506c22145e9937017971309858fe6716572b6118b62c9"
+    },
+    {
+      "path": "src/py_mermaid/config/themes.py",
+      "sha256": "96883a186702040397632e5726f6bb8a004dd57ea4ae3bd6c232531f4d046d61"
+    },
+    {
+      "path": "src/py_mermaid/config/values.py",
+      "sha256": "a637721f11866e18a1f6de2595358eb80a427501094420ef914006376b114789"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/flowchart/__init__.py",
+      "sha256": "648b1a3ca353ad86c12facbcb0d900aa2595a274b64b0d2c2a931c131c3c8a96"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/flowchart/parser.py",
+      "sha256": "043d35f35d7a7857d7c9bd0a07404a924f0279cff05283ec08cb639e8bb4f633"
+    },
+    {
+      "path": "src/py_mermaid/parsing/__init__.py",
+      "sha256": "b927e8e23113a95e0258b2c5c085251b941dbb16f7cb78552319ab44b5785974"
+    },
+    {
+      "path": "src/py_mermaid/parsing/preprocess.py",
+      "sha256": "9a6ebcfa5629b239e8c9516b25fe15e5d65f5cc11f8d111c9ef5d8c48e3a0d94"
+    },
+    {
+      "path": "src/py_mermaid/parsing/yaml_json.py",
+      "sha256": "d443e7b317a0a46f97ad53906efa5852fbfb3a4140aca9c8cea53e2854a0ca50"
+    }
+  ],
+  "contracts": {
+    "purity": "No DOM/browser/JS interpreter/Canvas/native values and no runtime .local dependency. FrozenMap/FrozenArray are immutable tuple subclasses distinguishing empty object and array. thaw_value is the supported recursive decoder.",
+    "preprocessing": "raw -> CRLF normalization -> HTML attribute quote normalization -> YAML frontmatter -> directive detection/config merge -> directive removal -> whole-line comments -> leading trim. cleaned boundaries map back to raw Python boundaries, then raw UTF16/line/column.",
+    "layers": "default/site/frontmatter/directive preserved as frozen pure tuples. Frontmatter+directive lodash merge differs from assignWithDepth source bounded object merge/array union. Site secure keys protect in-document overrides recursively.",
+    "labels": "raw_label keeps inner source markup/custom # entities; label_kind differentiates stripped outer Markdown quotes/backticks; label uses shared pure sanitize_markup and old plain whitespace normalization. C labels owns final single entity decode/markup measurement.",
+    "defaults": "Diagram default redux-color/neo beats global default/classic. Effective Recursive14 theme font differs from site Trebuchet16; explicit root fontFamily bridges, root fontSize does not. RootTD/LR and existing F012 grammar remain.",
+    "dompurify": "effective site option mapping frozen; dompurify_provided distinguishes explicit empty {} from missing/null. In-document dompurifyConfig is dropped by pinned default config-key sanitizer."
+  },
+  "mechanicalEvidence": "test-runs/F01.3-parser-source-final-20261105T014503Z-ee62f2c7/run.json",
+  "behaviorExecuted": false,
+  "risksAndDeferred": [
+    {
+      "id": "yaml-schema-conformance",
+      "status": "requires_independent_source_tests",
+      "detail": "Pinned js-yaml4.3 numeric cases/finite bounds/JS-number rounding and block keep sentinel repaired with independent regression tests. Reader implements safe JSON-schema flow/block collections, aliases, tags and folded/quoted multiline. No claim of universal js-yaml conformance; complex object-key and cyclic alias semantic gaps remain explicit rather than importing a runtime dependency."
+    },
+    {
+      "id": "theme-closure",
+      "status": "scope_boundary",
+      "detail": "All 11 registered themes implement constructor/update statements reachable by flowchart fields; non-flowchart theme calculations and loops belong to deferred diagram families."
+    },
+    {
+      "id": "null-theme",
+      "status": "source_semantics_preserved",
+      "detail": "String null is not a registry theme: initialize uses fallback default variables, while scoped null keeps inherited variables rather than deleting CSS styles."
+    },
+    {
+      "id": "neo-shadow-source",
+      "status": "corrected_analysis_and_targeted_regression_passed",
+      "detail": "The original string is valid: balanced two function parentheses with trailing CSS declaration semicolon. Original literal is preserved. Scalar parser ignores that terminator, while styles owner interprets the complete source filter. Earlier malformed interpretation was wrong."
+    },
+    {
+      "id": "empty-comment",
+      "status": "source_question",
+      "detail": "cleanupComments source requires content after %% but previous slice accepts an empty whole-line marker. Source-negative empty-comment EOF coverage remains to establish exact combined cleanup/grammar effect."
+    },
+    {
+      "id": "color-format",
+      "status": "requires_independent_source_tests",
+      "detail": "CSS colors and Khroma channel/luminance operations are ported as pure values. Canonical CSS HSL formatting may differ while channels match; test colors semantically as well as source string where observable."
+    },
+    {
+      "id": "f014-dagre",
+      "status": "deferred_by_user",
+      "detail": "Full grammar style/class/click/link variants/new @{shape} metadata, math/icons/images/resources, handDrawn and Dagre are not implemented in F01.3. Unsupported branches fail explicitly."
+    }
+  ],
+  "directiveKeyExtraction": {
+    "sourceMap": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+    "sourceMapSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679",
+    "sourcesContentName": "../src/schemas/config.schema.yaml",
+    "sourcesContentSha256": "28397700e0dabe7e5aee183f94237b08056a3a2cc8402c429f9c8b06ee9c79dd",
+    "algorithm": "Parse generated export-default JSON and keyify recursively excluding array properties; union defaultConfig.ts literal property names (including explicit undefined/function entries); union default theme own-property assignment names and nested object keys; expand source bounded cScale[0..11], cScalePeer/Inv/Label and surface/Peer[0..4] loops. No schema metadata/types/enum values.",
+    "count": 720
+  },
+  "s4RepairBatch": {
+    "preservedInitialEvidence": "test-runs/F01.3-initial-evidence-snapshot-20261105T021024Z-38c90a72",
+    "preservedInitialSourceSha256": "5a7264af3a00dc705df6824d83311e3e3b67d80b39457ecfeba5aec19293d771",
+    "fixes": [
+      {
+        "id": "config-section-merge",
+        "source": "assignWithDepth.ts null skip/array sources; config.ts resolveAppearance",
+        "change": "Validate effective flowchart section after source merge; raw null/empty list retain defaults, array mapping sources merge in order.",
+        "regression": "ConfigurationLayerSourceTests.test_null_and_array_flowchart_sections_follow_merge_before_validation"
+      },
+      {
+        "id": "markdown-body-span",
+        "source": "flow.jison MD_STR excludes delimiter tokens; F01.3 raw-label body contract",
+        "change": "Use body start+1/end-1 only for Markdown; retain original raw map and UTF16 conversion.",
+        "regression": "PreprocessPositionTests.test_markdown_node_span_excludes_quote_and_tick_delimiters"
+      },
+      {
+        "id": "unclosed-markdown",
+        "source": "flow.jison md_string only closes backtick+doublequote; official initial negative rejects",
+        "change": "Quoted label beginning Markdown tick must have closing tick; node/edge/group share check.",
+        "regression": "RichFixtureLanguageTests.test_unclosed_markdown_in_node_edge_and_group_is_parse_error"
+      },
+      {
+        "id": "yaml-numeric-4.3",
+        "source": "Pinned embedded js-yaml@4.3.0 type/int.js and type/float.js",
+        "change": "No underscore cleanup, lowercase base prefixes, exact special-value cases, finite numeric resolution, JS Number integer rounding and precise leading-dot float sign grammar.",
+        "regression": "YamlJsonSchemaTests.test_pinned_numeric_case_and_float_grammar_boundaries;test_yaml_integers_use_js_number_rounding"
+      },
+      {
+        "id": "yaml-block-keep",
+        "source": "js-yaml loader readBlockScalar/CHOMPING_KEEP",
+        "change": "Discard split terminal sentinel rather than counting it as an extra physical blank line; preserve meaningful trailing blank lines.",
+        "regression": "YamlJsonSchemaTests.test_keep_chomp_counts_real_trailing_linebreaks"
+      },
+      {
+        "id": "neo-shadow-correction",
+        "source": "theme-neo.js:40 and styles.ts filter interpolation",
+        "change": "Default literal remains byte-for-byte unchanged. It has balanced parentheses and a legal trailing CSS declaration semicolon. Scalar shadow parser now strips only declaration terminator for recognition, producing dx0/dy1/alpha.25. Earlier malformed-string analysis was incorrect.",
+        "regression": "ConfigurationLayerSourceTests.test_neo_shadow_keeps_source_string_and_parses_declaration_semicolon"
+      },
+      {
+        "id": "html-svg-fixture-correction",
+        "source": "Official initial A html-svg-mode visible text capture; HTML disabled SVG text token semantics",
+        "change": "Fixture DB body remains <b>Bold</b>; independent visible expectation corrected from Bold to literal <b> Bold </b>. C owns corresponding text rendering."
+      }
+    ],
+    "targetedEvidence": [
+      "test-runs/F01.3-record-20261105T021506Z-233f8f28/run.json",
+      "test-runs/F01.3-record-20261105T021513Z-b93aefe4/run.json"
+    ],
+    "installationValidation": "deferred_by_user"
+  },
+  "priorVerificationStatus": "targeted_checks_passed_full_acceptance_pending",
+  "finalVerification": {
+    "sourceTreeSha256": "5cb792fadbd7685a0d65a4a4d0e397ff59566eae340f4aaa87d0a7041d18b08f",
+    "unitRun": "test-runs/F01.3-batch-20261105T022709Z-dcd8b609/run.json",
+    "summary": "references/f013-verification-summary.json",
+    "installationValidation": false
+  }
+}

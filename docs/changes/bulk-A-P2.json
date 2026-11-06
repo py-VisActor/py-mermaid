@@ -1,0 +1,204 @@
+{
+  "scope": "BULK-A-P2",
+  "status": "test_design_complete_unexecuted",
+  "frozenProductSourceSha256": "97b353ebf7e176a750a736a714c85638e0a497b722e451dc77570579a2d36cbb",
+  "scopeEntries": [
+    "classDiagram",
+    "stateDiagram",
+    "er",
+    "requirement",
+    "usecase",
+    "c4",
+    "mindmap",
+    "treeView",
+    "block",
+    "packet",
+    "kanban",
+    "architecture"
+  ],
+  "counts": {
+    "languageRows": 280,
+    "languageLogicalAssertions": 1491,
+    "configRows": 218,
+    "configLogicalAssertions": 654,
+    "handCodedMethods": 79,
+    "handCodedStaticAssertCallSites": 199,
+    "discoveredMethods": 577,
+    "renderFixtures": 188,
+    "renderByExpectation": {
+      "render": 170,
+      "syntax_error": 8,
+      "error": 8,
+      "upstream_defect": 1,
+      "excluded_by_static_scope": 1
+    },
+    "renderByKind": {
+      "classDiagram": 26,
+      "stateDiagram": 14,
+      "er": 9,
+      "c4": 16,
+      "usecase": 18,
+      "mindmap": 15,
+      "treeView": 4,
+      "block": 32,
+      "packet": 13,
+      "kanban": 7,
+      "architecture": 29,
+      "requirement": 5
+    },
+    "note": "Logical table assertions count each field equality/reference/error. Static assert sites are not runtime loop/subtest counts. No behavior was executed and no compatibility PASS is asserted."
+  },
+  "methodCountsByModule": {
+    "test_algorithms": 20,
+    "test_block_arrow_geometry": 18,
+    "test_config_source": 218,
+    "test_hierarchy": 18,
+    "test_modeling": 187,
+    "test_paint_contracts": 30,
+    "test_state_errors": 11,
+    "test_structures": 75
+  },
+  "mechanicalEvidence": [
+    {
+      "run": "BULK-record-20261106T042640Z-ad1496d3",
+      "status": "SUCCESS",
+      "purpose": "compile-only"
+    },
+    {
+      "run": "BULK-record-20261106T042654Z-19084dd8",
+      "status": "SUCCESS",
+      "purpose": "unittest discovery only and fixture static schema/ASCII IDs/12-kind checks"
+    }
+  ],
+  "historicalMechanicalEvidence": [
+    "BULK-record-20261106T042056Z-74a14555",
+    "BULK-record-20261106T042105Z-466c47b9"
+  ],
+  "P3Execution": {
+    "argv": [
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests/bulk/a",
+      "-t",
+      "tests",
+      "-p",
+      "test_*.py"
+    ],
+    "environment": {
+      "PYTHONPATH": "src"
+    },
+    "fixtures": "tests/bulk/cases-A.json",
+    "executionOwner": "root uniform first run; keep all first failures before batch repair"
+  },
+  "sourceCoverageNotes": [
+    "Handwritten grammar/DB semantic parameter rows and independent source-default rows; no candidate-generated expected values.",
+    "Dedicated CoSE/tidy/fCoSE numerical/containment/order/constraint tests plus actual CPU paint content, geometry, CSS inheritance and swimlane overlay checks.",
+    "Source spec inventories preserve source parameter/helper sites, but do not claim wholesale Jest migration or all source assertions passed.",
+    "An upstream invalid architecture group endpoint, explicit static-scope interaction exclusion, and currently unconsumed icon metadata remain separately identified."
+  ],
+  "P3Questions": [
+    {
+      "id": "requirement-enum-case",
+      "source": "RequirementDB RiskLevel/VerifyType stores capitalized Low/Medium/High and Analysis/Demonstration/Inspection/Test; native frozen fields may retain input spelling. Source expectations remain capitalized.",
+      "action": "Preserve first failures then compare official DB/paint; do not change expectation merely to pass."
+    },
+    {
+      "id": "mindmap-default-lexical-minus",
+      "source": "NODE_DESC greedy class includes minus before a ) closer for unquoted (-Title-); table expects Title- while getType default.",
+      "action": "Official first parse capture must confirm lexical behavior."
+    },
+    {
+      "id": "active-icon-consumer",
+      "source": "Current unified mindmap/kanban metadata icon has no standalone glyph consumer; metadata is retained, render fixture classified source_unconsumed by feature.",
+      "action": "Confirm official captures before concluding no glyph native parity."
+    },
+    {
+      "id": "fCoSE-port-differences",
+      "source": "Native numerical adaptation is not proven equivalent by implementation completion. Tests require actual alignment/gap/compound containment/nonoverlap/randomize determinism and readable captures.",
+      "action": "Any force overlap, dropped constraint/child or label clipping fails; omission of pruning/regrowth optimization does not count as functionality PASS."
+    },
+    {
+      "id": "same-direction-architecture",
+      "source": "Source stores LL/RR/TT/BB edge but excludes it from adjacency; retained fixture render expectation needs first official result.",
+      "action": "Keep first source errors if any and classify upstream defect only with evidence."
+    },
+    {
+      "id": "trace-role-binding",
+      "source": "Tests inspect documented native trace/scene geometry roles to bind independent source content and actual shapes; role vocabulary is not itself the compatibility goal.",
+      "action": "If a purely renamed role causes failure, confirm source actual content/geometry and retain original failure before source-backed test adjustment."
+    }
+  ],
+  "limitations": [
+    "All behavior, official parsing/rendering, pixel comparisons and hardware/export integration remain unexecuted in P2.",
+    "A successful discovery/compile proves mechanical validity only, not source parity or readability.",
+    "Dedicated force algorithm numerical adaptation and source anomalies require actual P3 evidence; pruning/regrowth omission is not a compatibility PASS."
+  ],
+  "behaviorExecuted": false,
+  "oracleExecuted": false,
+  "productModified": false,
+  "files": [
+    {
+      "path": "tests/bulk/a/__init__.py",
+      "sha256": "a5b785f07d55794f5cb56145fd6ddafca725693886a934a0676df36a826d34fe"
+    },
+    {
+      "path": "tests/bulk/a/support.py",
+      "sha256": "1657495acb512abbf17827a968d6a323696b835bfcafb5c9f4e05cb004cad0be"
+    },
+    {
+      "path": "tests/bulk/a/test_algorithms.py",
+      "sha256": "b7ca2c4d5fd5b7d8f512fcdd32a228a364a8687bd64ad1475eedb9469edcd16a"
+    },
+    {
+      "path": "tests/bulk/a/test_block_arrow_geometry.py",
+      "sha256": "92d38dd1b5bbdfff5567d3f12d13996b89a7672dd95b332f926f05cb63e4e640"
+    },
+    {
+      "path": "tests/bulk/a/test_config_source.py",
+      "sha256": "1f81773b617b3db6d8e66492192c1a07483b5755e11180f6db330e31ba1a389a"
+    },
+    {
+      "path": "tests/bulk/a/test_hierarchy.py",
+      "sha256": "2ccb1392961442798e2a67884f3a808c83975e222b8fb79d24414915d7dbb9fb"
+    },
+    {
+      "path": "tests/bulk/a/test_modeling.py",
+      "sha256": "afd786c4367cbcfd528eb4d5d24b57dd914b0c906ed48bdcc61d53bcea681204"
+    },
+    {
+      "path": "tests/bulk/a/test_paint_contracts.py",
+      "sha256": "b408e9d1cbe0a69db1110841556fa773140dbe6bf3439d1d005109bdba3dea5c"
+    },
+    {
+      "path": "tests/bulk/a/test_state_errors.py",
+      "sha256": "fa1d409ca7bf0a28596c03bc4c37913412de425ed752fcd883cb288a99cfe5cf"
+    },
+    {
+      "path": "tests/bulk/a/test_structures.py",
+      "sha256": "bad7067d706d3f52257ba7b05d4b41179d973c18bd75299f00e45d8217073dcf"
+    },
+    {
+      "path": "tests/bulk/a/config_cases.json",
+      "sha256": "5a75c5492400c91d575daa114fa5fb5ab4008febdfd7e2c4954b5aa0f87de401"
+    },
+    {
+      "path": "tests/bulk/a/language_cases.json",
+      "sha256": "6f775c1b37ffe4b589f0dff3f5a78969f7f8c870f95f6af0322c01b31bfdf4d0"
+    },
+    {
+      "path": "tests/bulk/cases-A.json",
+      "sha256": "31125bbbffba842e22b6bb5cd9f0a24e8595b509393720939ab25966bd566740"
+    },
+    {
+      "path": "tests/bulk/a/resources/user.svg",
+      "sha256": "b992785fe9376b4e3a34034cf3460eba59fc530b2095a93480345750ca47229a"
+    },
+    {
+      "path": "references/bulk-A-assertions.json",
+      "sha256": "0b2ff3d0488409a74199d11f950697ef107bd727b1e55960ce6a69f7a6e8b5e8"
+    }
+  ]
+}

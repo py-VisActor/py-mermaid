@@ -1,0 +1,249 @@
+{
+  "schema": "py-mermaid-f013-assertions/v1",
+  "taskId": "F01.3-S3/layout-styles",
+  "status": "verified_local_f013_slice",
+  "frozenCandidate": "5a7264af3a00dc705df6824d83311e3e3b67d80b39457ecfeba5aec19293d771",
+  "frozenRun": "F01.3-s2-freeze-20261105T014555Z-a70cda3f",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "sources": [
+    {
+      "path": "packages/mermaid/src/utils.ts",
+      "sha256": "5968be88bf78df0ccb211f2ddba50e505099607a2770435577deed94551e4c05"
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/flowchart/flowRenderer-v3-unified.ts",
+      "sha256": "9eba228f1d94dce7cbd6cda7c8baf00eba9f6571d9de26f41c9ebadee62e7d31"
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/setupViewPortForSVG.ts",
+      "sha256": "8242d3e2112f371b8551c2aeb09680cdc608b8452c6eb82cbd5a2e6d3f465fd4"
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/flowchart/styles.ts",
+      "sha256": "697ffb86fef2787307ddc42cd5d3d1544042f08c2452e170691d28ab3d252a50"
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/createText.ts",
+      "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865"
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/elk/render.ts",
+      "sha256": "6258890b3f311e86e4cd4dc99d480f704fde7473e150dc62b88838c5015c5011"
+    },
+    {
+      "path": "packages/mermaid/src/styles.ts",
+      "sha256": "dd53a582b0c2411e16beeb37f51664968f278b08b97f63fc8808cbc8381f73fb"
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/common/colorThemeGate.ts",
+      "sha256": "91b33051aa0751e7c6a43b13804ba8a52e339b51638cc2233fa4b16ea431cac3"
+    },
+    {
+      "path": "packages/mermaid/src/themes/index.js",
+      "sha256": "6277f68da19a2b75f2e6b60c02d590c71a1da926b50969f2523f66e372a40861"
+    },
+    {
+      "path": "packages/mermaid/src/themes/theme-neo.js",
+      "sha256": "0ef8cf2a93e4629984c6c57382ce69f37d5bffb6a6fe5b949a972ee8d268bf9f"
+    },
+    {
+      "path": "packages/mermaid/src/themes/theme-redux-color.js",
+      "sha256": "5e4278fb33825a501ffae1c6ac13a869763c4e611de9ad6077b58513e4e1b6d0"
+    }
+  ],
+  "expectationPolicy": "Pinned source style declarations plus CSS cascade/computed-value semantics independently evaluated as constants/arithmetic. No candidate private helper, generated coordinates, screenshot golden or relaxed expected output. Real Canvas/pyelk primary; synthetic JSON only checks title content-vs-engine boundary.",
+  "tests": [
+    {
+      "test": "tests/f013/test_layout.py::test_l01_title_font18_ascent_and_plain_text",
+      "independentExpectation": "Actual plain-text title uses source 18px independently of theme font32; measured ascent determines top at -25-ascent.",
+      "behaviorStatus": "PASS_FINAL_CANDIDATE"
+    },
+    {
+      "test": "tests/f013/test_layout.py::test_l02_all_title_anchors_and_explicit_margin",
+      "independentExpectation": "CSS text-anchor start/middle/end preserves same content center anchor and explicit title margin37; font26 actual measurement.",
+      "behaviorStatus": "PASS_FINAL_CANDIDATE"
+    },
+    {
+      "test": "tests/f013/test_layout.py::test_l03_title_does_not_enter_or_compress_elk",
+      "independentExpectation": "Observed real ELK input JSON identical with/without long diagram title; engine extent unchanged.",
+      "behaviorStatus": "PASS_FINAL_CANDIDATE"
+    },
+    {
+      "test": "tests/f013/test_layout.py::test_l04_rich_groups_crossing_labels_keep_measured_boxes_and_edges",
+      "independentExpectation": "Rich markdown node/group and HTML cross-group edge retain measured sizes, all semantic IDs and routes.",
+      "behaviorStatus": "PASS_FINAL_CANDIDATE"
+    },
+    {
+      "test": "tests/f013/test_layout.py::test_l05_sanitized_empty_and_break_only_edge_labels_are_legal_zero_width",
+      "independentExpectation": "Strict sanitized empty/span/br edge labels width0 height>0 remain labeled and routed; source semantic extension, no relaxed negative-width acceptance.",
+      "behaviorStatus": "PASS_FINAL_CANDIDATE"
+    },
+    {
+      "test": "tests/f013/test_layout.py::test_l06_font_size_changes_actual_dimensions_not_semantic_ids",
+      "independentExpectation": "Theme font12 to32 changes actual label/node dimensions while IDs remain unchanged.",
+      "behaviorStatus": "PASS_FINAL_CANDIDATE"
+    },
+    {
+      "test": "tests/f013/test_layout.py::test_l07_all_source_themes_keep_label_and_title_geometry",
+      "independentExpectation": "All 11 source themes plus null retain measured label/group/title geometry.",
+      "behaviorStatus": "PASS_FINAL_CANDIDATE"
+    },
+    {
+      "test": "tests/f013/test_layout.py::test_l08_actual_png_title_ink_inside_viewport",
+      "independentExpectation": "Wide italic/CJK title ink is actually painted into PNG and event boxes lie inside viewport for all anchors.",
+      "behaviorStatus": "PASS_FINAL_CANDIDATE"
+    },
+    {
+      "test": "tests/f013/test_layout.py::test_l09_measurements_pure_immutable_and_canvas_owner_thread",
+      "independentExpectation": "Canvas rejects foreign-owner measurement; pure layout is JSON serializable and inputs remain immutable.",
+      "behaviorStatus": "PASS_FINAL_CANDIDATE"
+    },
+    {
+      "test": "tests/f013/test_layout.py::test_l10_display_none_title_has_no_layout_or_ink",
+      "independentExpectation": "CSS display:none title contributes no annotation, geometry, or paint.",
+      "behaviorStatus": "PASS_FINAL_CANDIDATE"
+    },
+    {
+      "test": "tests/f013/test_layout.py::test_l11_empty_rich_group_title_keeps_container_and_crossing_edge",
+      "independentExpectation": "Empty rich group title width0 keeps positive container and cross-group route.",
+      "behaviorStatus": "PASS_FINAL_CANDIDATE"
+    },
+    {
+      "test": "tests/f013/test_layout.py::test_c01_content_center_ignores_engine_padding_all_anchors",
+      "independentExpectation": "Independent synthetic engine padding proves title anchors to actual content: center70, left40/70/10; baseline-25, ascent10 => top-35.",
+      "behaviorStatus": "PASS_FINAL_CANDIDATE"
+    },
+    {
+      "test": "tests/f013/test_layout.py::test_c02_invalid_title_metrics_missing_and_unexpected_are_early_errors",
+      "independentExpectation": "Missing/unexpected title, negative/nonfinite/bool/inconsistent metrics, invalid anchor and negative margin reject before engine allocation.",
+      "behaviorStatus": "PASS_FINAL_CANDIDATE"
+    },
+    {
+      "test": "tests/f013/test_styles.py::test_s01_font_shorthand_order_priority_and_resets",
+      "independentExpectation": "Font shorthand follows cascade/order/important and resets omitted style/weight/lineheight.",
+      "behaviorStatus": "PASS_FINAL_CANDIDATE"
+    },
+    {
+      "test": "tests/f013/test_styles.py::test_s02_inline_important_and_equal_priority_last_wins",
+      "independentExpectation": "Inline important beats normal; equal importance later wins.",
+      "behaviorStatus": "PASS_FINAL_CANDIDATE"
+    },
+    {
+      "test": "tests/f013/test_styles.py::test_s03_relative_font_uses_true_parent_not_ua_scaled_tag",
+      "independentExpectation": "Relative2em/150%/inherit use true inherited parent20, not UA small/h1/sup size.",
+      "behaviorStatus": "PASS_FINAL_CANDIDATE"
+    },
+    {
+      "test": "tests/f013/test_styles.py::test_s04_custom_variables_inherit_and_nested_fallback_resolves",
+      "independentExpectation": "Custom properties inherit; nested fallback resolves; cyclic used variable fails explicitly.",
+      "behaviorStatus": "PASS_FINAL_CANDIDATE"
+    },
+    {
+      "test": "tests/f013/test_styles.py::test_s05_absolute_font_keywords_and_relative_units",
+      "independentExpectation": "Independent browser ordinary medium16 profile: small13/medium16/large18/xlarge24; em/% relative, rem16, pt96/72.",
+      "behaviorStatus": "PASS_FINAL_CANDIDATE"
+    },
+    {
+      "test": "tests/f013/test_styles.py::test_s06_title_default18_and_anchor_is_not_text_align",
+      "independentExpectation": "Title default18; CSS font24 and anchorstart independent of textalignright.",
+      "behaviorStatus": "PASS_FINAL_CANDIDATE"
+    },
+    {
+      "test": "tests/f013/test_styles.py::test_s07_current_color_independent_of_declaration_order",
+      "independentExpectation": "currentColor uses final computed color independent of declaration order.",
+      "behaviorStatus": "PASS_FINAL_CANDIDATE"
+    },
+    {
+      "test": "tests/f013/test_styles.py::test_s08_absolute_and_unitless_line_height_inheritance",
+      "independentExpectation": "Absolute lineheight20px survives child font28; unitless2 scales to56.",
+      "behaviorStatus": "PASS_FINAL_CANDIDATE"
+    },
+    {
+      "test": "tests/f013/test_styles.py::test_s09_palette_theme_border_gate_and_nodes_do_not_cycle",
+      "independentExpectation": "Palette requires categorical theme and nonempty border array; ordinary nodes never cycle.",
+      "behaviorStatus": "PASS_FINAL_CANDIDATE"
+    },
+    {
+      "test": "tests/f013/test_styles.py::test_s10_specificity_source_order_and_important",
+      "independentExpectation": "Specificity ID wins class, important wins specificity, equal last rule wins.",
+      "behaviorStatus": "PASS_FINAL_CANDIDATE"
+    },
+    {
+      "test": "tests/f013/test_styles.py::test_s11_parent_important_is_not_inherited_as_child_priority",
+      "independentExpectation": "Inherited important does not block own child normal font declaration.",
+      "behaviorStatus": "PASS_FINAL_CANDIDATE"
+    },
+    {
+      "test": "tests/f013/test_styles.py::test_s12_gradient_native_stops_and_explicit_stroke_override",
+      "independentExpectation": "Native neo gradient preserves source stop colors; explicit stroke clears gradient; classic no gradient.",
+      "behaviorStatus": "PASS_FINAL_CANDIDATE"
+    },
+    {
+      "test": "tests/f013/test_styles.py::test_s13_source_shadow_neo_and_custom_native_filter",
+      "independentExpectation": "Official computed neo filter is drop-shadow(rgba(0,0,0,.25) 0px 1px 2px); native shadow opacity1 multiplies alpha.25, dx0/dy1/blur2. Explicit custom filter and none retain geometry.",
+      "behaviorStatus": "PASS_FINAL_CANDIDATE"
+    },
+    {
+      "test": "tests/f013/test_styles.py::test_s14_global_keywords_distinguish_inherited_and_unset",
+      "independentExpectation": "CSS inherit/unset distinguished for inherited font vs noninherited opacity/display/background.",
+      "behaviorStatus": "PASS_FINAL_CANDIDATE"
+    },
+    {
+      "test": "tests/f013/test_styles.py::test_s15_supported_layout_css_is_executable_or_explicitly_rejected",
+      "independentExpectation": "Supported whitespace/display/textalign/anchor are executable fields; unsupported central dominantbaseline rejects.",
+      "behaviorStatus": "PASS_FINAL_CANDIDATE"
+    },
+    {
+      "test": "tests/f013/test_styles.py::test_s16_config_and_base_style_are_not_mutated_or_leaked",
+      "independentExpectation": "Input config and base style immutable; independently resolved next request does not leak font.",
+      "behaviorStatus": "PASS_FINAL_CANDIDATE"
+    },
+    {
+      "test": "tests/f013/test_layout.py::test_c03_suppressed_title_rejects_measured_ink_and_invalid_flag",
+      "independentExpectation": "Explicit suppression is boolean; suppressed title cannot supply measured ink. Ordinary missing measurement continues to reject in unchanged C02.",
+      "behaviorStatus": "PASS_FINAL_CANDIDATE"
+    }
+  ],
+  "scopeMigration": {
+    "path": "tests/f012/test_layout.py",
+    "test": "C02",
+    "change": "Invalid measured edge label width0 replaced by width-1. F013 source rich cleaning permits width0/positive height; L05 adds real positive acceptance rather than dropping validation. Prior F012 failure evidence retained."
+  },
+  "staticQuestionsForUnifiedFirstRun": [
+    "compound output _box requires positive label width although rich empty measured edge width0 is legal",
+    "CSS display:none title produces annotation None but layout title presence validation may reject",
+    "CSS unset currently appears grouped with inherit for noninherited properties; S14 retains CSS initial-value expectation"
+  ],
+  "stageRule": "Compile/import/collection only. No suite execution or behavior claim before unified S3 gate.",
+  "counts": {
+    "layout": 14,
+    "styles": 16
+  },
+  "s4Corrections": {
+    "failureRun": "F01.3-batch-20261105T020257Z-00d97cd6",
+    "originalEvidenceSnapshot": "test-runs/F01.3-initial-evidence-snapshot-20261105T021024Z-38c90a72/artifacts/failing-candidate-and-tests.zip",
+    "officialShadowArtifact": {
+      "path": "test-runs/f013-s4-oracle-initial-002/theme-neo.json",
+      "sha256": "68748a5676ba16b9cf3df8e2881073ab8a63df39f3c1cf4f7fdf32453d620f9b",
+      "provenanceRun": "F01.3-record-20261105T020413Z-847b4c7c",
+      "fields": [
+        "config.themeVariables.dropShadow",
+        "drawnNodes[].filter"
+      ]
+    },
+    "shadowTestCorrection": "Old malformed-filter expectation was an independent test error; official computed style proves valid visible neo shadow. Original failing candidate/test retained in immutable snapshot.",
+    "titleContract": "MeasuredAnnotations.title_suppressed=False and matching layout kw distinguish CSS suppression from missing measurement without importing rendering into layout.",
+    "targetedVerificationRuns": [
+      "F01.3-record-20261105T021456Z-5ae7e3cd",
+      "F01.3-record-20261105T021503Z-6361c0cb",
+      "F01.3-record-20261105T021510Z-da1608a0"
+    ]
+  },
+  "priorVerificationStatus": "s4_targeted_pass_full_candidate_verification_pending",
+  "finalVerification": {
+    "sourceTreeSha256": "5cb792fadbd7685a0d65a4a4d0e397ff59566eae340f4aaa87d0a7041d18b08f",
+    "unitRun": "test-runs/F01.3-batch-20261105T022709Z-dcd8b609/run.json",
+    "summary": "references/f013-verification-summary.json",
+    "installationValidation": false
+  }
+}

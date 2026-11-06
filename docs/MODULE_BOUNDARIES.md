@@ -1,3 +1,7 @@
+> 2026-11-05 用户已决定 **完全剥离 Dagre 功能、配置选项、目标依赖和算法回退**，不再暂停待评估，也不作为可选兼容任务。默认 ELK 与其他保留的专用静态算法继续推进。见 [布局策略](LAYOUT_POLICY.md)；下文旧 Dagre 计划/来源说明以此覆盖。
+
+> 2026-11-05 用户范围决策：**全部图种和共享模块只做静态渲染，忽略交互逻辑。** 点击/回调/悬停/导航/命中测试、动画播放、交互元数据与 DOM 无障碍行为不作为交付或验收项；静态画面、资源与输入安全保留。以 [静态范围规则](STATIC_RENDERING_SCOPE.md) 为准，覆盖本文旧交互要求。
+
 # 公共模块边界、数据契约与功能扩建规则
 
 2026-11-04。本文是完整迁移执行方案的模块设计，目录、类型与接口名称均为拟建职责，不表示已有对应产品 API。执行阶段以 [主方案](FULL_MIGRATION_PLAN.md) 为准：**P1 集中完成全部功能源码；P2 再依据固定上游设计测试用例与单元测试；随后排查、统一修复和最终全量验证。** P1 阅读 grammar/算法/defaults、记录来源与设计接口，不等于提前编写测试套件。
@@ -26,7 +30,7 @@
 | `diagrams/<family>/` | 本图种的 grammar/lexer/AST/语义校验/专用排布；将图种数据转成共享模型与绘制意图 | 上述公共契约与计算；按需要调用布局接口 | 直接操作 Canvas/DOM；复制公共颜色/标签/路径实现；图种间相互 import 私有 helper |
 | `api.py`、`cli.py`、`__main__.py` | 参数/公开返回值/异常和显式文件输出、CLI 退出码；选择图种并调用 runtime | `runtime/`、注册表与公开模型 | 再实现解析/布局/绘制；把未实现入口包装成成功结果 |
 
-`layout/` 内可按 `elk/`、`dagre/`、`cose/`、`tidy/`、`sankey/`、`venn/`、`swimlane/` 拆分。共享的几何/数值实现放在纯模块；专用算法留在其引擎/图种目录。若一种图按固定源码有自有排布，它不必绕经 ELK，也不能为复用接口强行改算法。
+`layout/` 内可按 `elk/`、`cose/`、`tidy/`、`sankey/`、`venn/`、`swimlane/` 拆分。共享的几何/数值实现放在纯模块；专用算法留在其引擎/图种目录。若一种图按固定源码有自有排布，它不必绕经 ELK，也不能为复用接口强行改算法。
 
 `rendering/` 的顶层 `__init__` 保持轻量，不能因为 import 中性模型或 labels/styles 就加载 native Canvas。共享数据契约位于 `model/`，避免 `layout → rendering → layout` 循环。数学公式的语法和 box 计算归 labels，字形测量/shaping/绘制仍由 Canvas 承担。
 
@@ -101,8 +105,8 @@ F01.1 是先编写的接线顺序和源码骨架；按照最新阶段规则，�
 | configuration/schema/defaults | config | runtime、全部图种 |
 | themes/CSS cascade | rendering/styles | config、labels、图种样式意图 |
 | text/HTML/Markdown/math | rendering/labels | styles、resources/security、skia 测量协议 |
-| accessibility metadata | model 元数据、display/runtime | 图种语义、各格式导出 |
-| links/interaction/security | security 与 model 元数据 | 图种、resources、display/API |
+| accessibility metadata | 既有纯值可保留；不扩展 DOM/ARIA 或交互无障碍协议 | excluded_by_static_scope 的行为断言保留来源 |
+| links/interaction/security | 仅保留静态输入/资源安全；事件、导航与交互元数据排除 | 图种、resources、display/API |
 | icons/images/resource policy | resources/security | geometry、labels、skia |
 | layout engines | layout | model、纯计算、图种适配 |
 | handdrawn/random seed | geometry/numerics | config、display、图种选择 |
@@ -111,7 +115,7 @@ F01.1 是先编写的接线顺序和源码骨架；按照最新阶段规则，�
 | threading/lifecycle | runtime、rendering/skia | 缓存、资源和 API |
 | offline deployment | resources/security/runtime、打包 | 所有 import/依赖/资源入口 |
 
-这些归属不改变 [compatibility.json](compatibility.json) 的验证状态。无障碍/交互采用适用的元数据表示，不能宣称静态 PNG 有 DOM accessibility tree 或可执行浏览器回调；具体不可对应能力和输出差异保留在最终核查范围。
+这些归属不改变 [compatibility.json](compatibility.json) 的验证状态。纯交互和 DOM 无障碍行为由用户明确排除，不要求元数据替身或宿主协议；混合条目中的静态内容与安全断言仍属于最终核查范围。
 
 ## 6. 公共模块的增量扩建原则
 

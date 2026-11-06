@@ -1,0 +1,288 @@
+{
+  "schema": "py-mermaid-retained-static-acceptance/v1",
+  "functionalStatus": "RETAINED_STATIC_LOCAL_ACCEPTED",
+  "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
+  "p4Manifest": {
+    "path": "test-runs\\BULK-P4-final-20261106T065144Z-03962368\\run.json",
+    "sha256": "76be35ef465e15d3b4444374d8fa76ed1f59659c33c65c68a8812a65f22341f0",
+    "bytes": 6072261
+  },
+  "visualReview": {
+    "path": "test-runs\\BULK-P4-parent-visual-review-20261106T065841Z-a1801db7\\artifacts\\visual-review.json",
+    "sha256": "5186047dfb18eb8c7e35bbbe0e3af954ad14dfaed56a6985db21f889ed44e66c",
+    "bytes": 48474
+  },
+  "fixtureCount": 670,
+  "fixtureExpectations": {
+    "render": 621,
+    "syntax_error": 30,
+    "error": 11,
+    "upstream_defect": 7,
+    "excluded_by_static_scope": 1
+  },
+  "retainedDetectors": [
+    "flowchart-elk",
+    "mindmap",
+    "architecture",
+    "agentflow",
+    "c4",
+    "kanban",
+    "classDiagram",
+    "er",
+    "gantt",
+    "info",
+    "requirement",
+    "sequence",
+    "swimlane",
+    "flowchart-v2",
+    "timeline",
+    "gitGraph",
+    "stateDiagram",
+    "journey",
+    "packet",
+    "block",
+    "eventmodeling",
+    "treeView",
+    "ishikawa",
+    "railroad",
+    "railroadEbnf",
+    "railroadAbnf",
+    "railroadPeg",
+    "wardley",
+    "cynefin",
+    "usecase",
+    "zenuml"
+  ],
+  "deferredDetectors": [
+    "pie",
+    "quadrantChart",
+    "xychart",
+    "radar",
+    "treemap",
+    "sankey",
+    "venn"
+  ],
+  "unitMethods": 1702,
+  "unitGroups": {
+    "unit-a": 599,
+    "unit-b": 152,
+    "unit-c": 351,
+    "unit-shared": 64,
+    "regression-f011": 89,
+    "regression-f012": 66,
+    "regression-f013": 126,
+    "regression-f014": 171,
+    "regression-math": 17,
+    "verification-tools-bootstrap": 12,
+    "verification-tools-tooling": 38,
+    "verification-tools-pixel_compare": 17
+  },
+  "nativeProfiles": {
+    "cpu": {
+      "CHECKS_PASSED": 626,
+      "EXPECTED_ERROR": 43,
+      "EXCLUDED": 1
+    },
+    "auto": {
+      "CHECKS_PASSED": 626,
+      "EXPECTED_ERROR": 43,
+      "EXCLUDED": 1
+    },
+    "gpu": {
+      "CHECKS_PASSED": 626,
+      "EXPECTED_ERROR": 43,
+      "EXCLUDED": 1
+    }
+  },
+  "zenumlStrict": {
+    "cpu": {
+      "cases": 148,
+      "statuses": {
+        "PASS": 148
+      },
+      "mutations": 1597,
+      "mutationsAllRejected": true
+    },
+    "auto": {
+      "cases": 148,
+      "statuses": {
+        "PASS": 148
+      },
+      "mutations": 1597,
+      "mutationsAllRejected": true
+    },
+    "gpu": {
+      "cases": 148,
+      "statuses": {
+        "PASS": 148
+      },
+      "mutations": 1597,
+      "mutationsAllRejected": true
+    }
+  },
+  "exports": {
+    "cases": 465,
+    "detectors": 31,
+    "formats": [
+      "png",
+      "jpg",
+      "webp",
+      "svg",
+      "pdf"
+    ],
+    "profiles": [
+      "cpu",
+      "auto",
+      "gpu"
+    ],
+    "evidence": {
+      "path": "test-runs\\BULK-P4-final-20261106T065144Z-03962368\\artifacts\\exports\\exports.json",
+      "sha256": "b6d600b8ca66902ed8acf5cc93f7edae03a57400a46e3431883685ffbb746446",
+      "bytes": 304575
+    }
+  },
+  "legacy": {
+    "cpu": {
+      "f011": {
+        "positiveCases": 12,
+        "functionalStatus": "PASS",
+        "promotedMathCases": 0
+      },
+      "f012": {
+        "positiveCases": 35,
+        "functionalStatus": "PASS",
+        "promotedMathCases": 0
+      },
+      "f013": {
+        "positiveCases": 50,
+        "functionalStatus": "PASS",
+        "promotedMathCases": 1
+      },
+      "f014": {
+        "positiveCases": 200,
+        "functionalStatus": "PASS",
+        "promotedMathCases": 1
+      }
+    },
+    "auto": {
+      "f011": {
+        "positiveCases": 12,
+        "functionalStatus": "PASS",
+        "promotedMathCases": 0
+      },
+      "f012": {
+        "positiveCases": 35,
+        "functionalStatus": "PASS",
+        "promotedMathCases": 0
+      },
+      "f013": {
+        "positiveCases": 50,
+        "functionalStatus": "PASS",
+        "promotedMathCases": 1
+      },
+      "f014": {
+        "positiveCases": 200,
+        "functionalStatus": "PASS",
+        "promotedMathCases": 1
+      }
+    },
+    "gpu": {
+      "f011": {
+        "positiveCases": 12,
+        "functionalStatus": "PASS",
+        "promotedMathCases": 0
+      },
+      "f012": {
+        "positiveCases": 35,
+        "functionalStatus": "PASS",
+        "promotedMathCases": 0
+      },
+      "f013": {
+        "positiveCases": 50,
+        "functionalStatus": "PASS",
+        "promotedMathCases": 1
+      },
+      "f014": {
+        "positiveCases": 200,
+        "functionalStatus": "PASS",
+        "promotedMathCases": 1
+      }
+    }
+  },
+  "automaticReportCounts": {
+    "CHECKS_PASSED_REVIEW_REQUIRED": 662,
+    "UPSTREAM_CONFIRMED": 7,
+    "EXCLUDED": 1
+  },
+  "upstreamDefects": [
+    {
+      "id": "A-architecture-upstream-direct-group-endpoint",
+      "nativeMustRender": false,
+      "officialExpect": "runtime_error",
+      "expectedErrorCodes": [
+        "UPSTREAM_ARCHITECTURE_ENDPOINT"
+      ]
+    },
+    {
+      "id": "A-mindmap-explicit-elk",
+      "nativeMustRender": true,
+      "officialExpect": "runtime_error",
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-gantt-excludes-includes",
+      "nativeMustRender": false,
+      "officialExpect": "runtime_error",
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "B-gantt-cyclic",
+      "nativeMustRender": false,
+      "officialExpect": "degenerate_render",
+      "expectedErrorCodes": [
+        "CYCLIC_GANTT_DEPENDENCY"
+      ]
+    },
+    {
+      "id": "B-eventmodeling-all-types",
+      "nativeMustRender": false,
+      "officialExpect": "runtime_error",
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "C-zenuml-source-emoji-colon-override",
+      "nativeMustRender": true,
+      "officialExpect": "content_loss",
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "C-zenuml-source-emoji-in-conditions",
+      "nativeMustRender": true,
+      "officialExpect": "content_loss",
+      "expectedErrorCodes": []
+    }
+  ],
+  "originalSourceOnlyRun": {
+    "path": "test-runs\\BULK-P3-fixed-original-refresh-20261106T062015Z-fe05c71f\\run.json",
+    "sha256": "4a3021a719cde308a20745c2d15e57705911553bdf0849be618490e0ac09d588",
+    "bytes": 537682
+  },
+  "originalFingerprintMatchedByFinalP4": true,
+  "candidateUnchanged": true,
+  "visualReviewScope": "47 representative/complex pairs cover all31 kinds; worker observations are bound by exact raw PNG equality, with parent final raw views. Not human inspection of every670 case and not pixel equality.",
+  "intentionalScope": {
+    "interaction": "excluded_all_modules",
+    "dagre": "removed_no_option_no_fallback",
+    "statisticsTreemapSankeyVenn": "7detectors_deferred_by_user",
+    "installationVerification": false,
+    "commitPushPublication": false
+  },
+  "dependencies": {
+    "py-skia-canvas": "0.1.0a18",
+    "py-visactor-elk": "0.1.0",
+    "py-visactor-katex": "0.1.0"
+  },
+  "preservedRejectedInitialP4": "BULK-P4-final-20261106T053339Z-476daa06",
+  "portableCaseIds": "references/bulk-case-id-aliases.json",
+  "deliveryEvidence": "Final report/browser QA is recorded separately in P5 delivery Run; this record accepts local retained static functionality only."
+}

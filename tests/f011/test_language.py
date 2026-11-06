@@ -132,7 +132,7 @@ class LanguageTests(unittest.TestCase):
         self.assertEqual((span.start.line, span.start.column), (2, 10))
 
     def test_invalid_sources_explicitly_fail_with_location(self):
-        sources = ["", "graph TD", "flowchart", "flowchart TD A", "graph TD;A-->",
+        sources = ["", "flowchart TD A", "graph TD;A-->",
                    "graph TD;A[unfinished", 'graph TD;A["unfinished]', "graph TD;A[]",
                    'graph TD;A["text" extra]', "graph TD;A B", "sequenceDiagram\nA-->B"]
         for source in sources:
@@ -144,22 +144,50 @@ class LanguageTests(unittest.TestCase):
                 self.assertGreaterEqual(caught.exception.span.start.index, 0)
                 self.assertLessEqual(caught.exception.span.end.index, len(source))
 
-    def test_valid_mermaid_outside_slice_rejected(self):
-        sources = ["graph TB;A", "graph RL;A", "graph BT;A", "flowchart-elk TD;A",
-                   "graph TD;A(Round)", "graph TD;A{Decision}", "graph TD;A((Circle))",
-                   "graph TD;A-->|text|B", "graph TD;A---B", "graph TD;A-.->B", "graph TD;A==>B",
-                   "graph TD;A & B-->C", "graph TD;subgraph Group\nA\nend", "graph TD;A:::red",
-                   "graph TD;A;style A fill:red", "graph TD;A;click A callback",
-                   "graph TD;accTitle: Title\nA", 'graph TD;A["<b>Bold</b>"]',
-                   'graph TD;A["`Markdown`"]', 'graph TD;A["$$x^2$$"]', 'graph TD;A["#quot;"]',
-                   'graph TD;A["&amp;"]', 'graph TD;A["fa:fa-home"]',
-                   '%%{init: {"theme":"dark"}}%%\ngraph TD;A',
-                   "---\ntitle: Title\n---\ngraph TD;A"]
-        for source in sources:
+    def test_f014_promoted_static_syntax_and_remaining_math_boundary(self):
+        for direction in ('TB', 'RL', 'BT'):
+            with self.subTest(direction=direction): self.assertEqual(parse_flowchart('graph '+direction+';A').direction,direction)
+        self.assertEqual(parse_flowchart('flowchart-elk TD;A').nodes[0].id,'A')
+        for token, stroke, marker in [('---','normal','none'),('-.->','dotted','point'),('==>','thick','point')]:
+            with self.subTest(token=token):
+                edge=parse_flowchart('graph TD;A'+token+'B').edges[0]
+                self.assertEqual((edge.stroke,edge.marker_end),(stroke,marker))
+        self.assertEqual([(e.source,e.target) for e in parse_flowchart('graph TD;A & B-->C').edges],[('A','C'),('B','C')])
+        self.assertEqual(parse_flowchart('graph TD;A:::red').nodes[0].classes,('red',))
+        self.assertEqual(parse_flowchart('graph TD;A;style A fill:red').nodes[0].styles,('fill:red',))
+        self.assertEqual(parse_flowchart('graph TD;A;click A callback').nodes[0].classes,('clickable',))
+        self.assertEqual(parse_flowchart('graph TD;A["fa:fa-home"]').nodes[0].label,'fa:fa-home')
+        for source in ('graph TD','flowchart'):
+            with self.subTest(source=source): self.assertEqual(parse_flowchart(source).nodes,())
+        self.assertEqual(parse_flowchart('graph TD;A["$$x^2$$"]').nodes[0].label,'$$x^2$$')
+
+    def test_f013_promoted_labels_frontmatter_directives_and_accessibility(self):
+        # Explicit source-backed migration of former F01.1 scope rejections.
+        for text, label, kind in [('graph TD;A["<b>Bold</b>"]', '<b>Bold</b>', 'text'),
+                                  ('graph TD;A["`Markdown`"]', 'Markdown', 'markdown'),
+                                  ('graph TD;A["#quot;"]', '&quot;', 'text'),
+                                  ('graph TD;A["&amp;"]', '&amp;', 'text')]:
+            with self.subTest(text=text):
+                node = parse_flowchart(text).nodes[0]
+                self.assertEqual((node.label, node.label_kind), (label, kind))
+        self.assertEqual(parse_flowchart('graph TD;accTitle: Title\nA').acc_title, 'Title')
+        self.assertEqual(parse_flowchart('%%{init: {"theme":"dark"}}%%\ngraph TD;A').config.theme, 'dark')
+        self.assertEqual(parse_flowchart('---\ntitle: Title\n---\ngraph TD;A').title, 'Title')
+
+    def test_f012_promoted_features_have_positive_semantics(self):
+        # Explicit scope migration of the five former F01.1 exclusions above;
+        # each gains a concrete assertion rather than a skip or silent removal.
+        for source, shape, label in [("graph TD;A(Round)", "round", "Round"),
+                                     ("graph TD;A{Decision}", "diamond", "Decision"),
+                                     ("graph TD;A((Circle))", "circle", "Circle")]:
             with self.subTest(source=source):
-                with self.assertRaises(MermaidError) as caught:
-                    parse_flowchart(source)
-                self.assertIsNotNone(caught.exception.span)
+                node = parse_flowchart(source).nodes[0]
+                self.assertEqual((node.id, node.shape, node.label), ("A", shape, label))
+        edge = parse_flowchart("graph TD;A-->|text|B").edges[0]
+        self.assertEqual((edge.source, edge.target, edge.label), ("A", "B", "text"))
+        diagram = parse_flowchart("graph TD;subgraph Group\nA\nend")
+        self.assertEqual((diagram.groups[0].id, diagram.groups[0].members), ("Group", ("A",)))
+        self.assertEqual(diagram.nodes[0].parent_id, "Group")
 
     def test_text_budget_counts_utf16_and_does_not_truncate(self):
         source = 'graph TD;A["😀"]'
@@ -257,21 +285,34 @@ class ConfigurationTests(unittest.TestCase):
         self.assertEqual((config.padding_x, config.padding_y), (16, 12))
 
     def test_unknown_and_unsupported_options_rejected(self):
-        cases = [{"layout": "dagre"}, {"theme": "dark"}, {"theme": "default"}, {"look": "classic"},
-                 {"look": "handDrawn"}, {"unknown": 1},
-                 {"flowchart": {"curve": "step"}}, {"themeVariables": {"primaryColor": "red"}},
-                 {"securityLevel": "loose"}, {"flowchart": {"layout": "dagre"}}]
+        cases = [{"layout": "dagre"}, {"unknown": 1}, {"flowchart": {"layout": "dagre"}}]
         for supplied in cases:
             with self.subTest(supplied=supplied):
                 with self.assertRaises(MermaidError) as caught:
                     resolve_config(supplied)
                 self.assertEqual(caught.exception.code, "UNSUPPORTED_CONFIG")
 
+    def test_f013_promoted_configuration_has_positive_semantics(self):
+        for theme in ('dark', 'default'):
+            with self.subTest(theme=theme): self.assertEqual(resolve_config({'theme': theme}).theme, theme)
+        self.assertEqual(resolve_config({'look': 'classic'}).look, 'classic')
+        self.assertEqual(resolve_config({'securityLevel': 'loose'}).security_level, 'loose')
+        self.assertEqual(resolve_config({'theme': 'base', 'themeVariables': {'primaryColor': 'red'}}).fill, 'red')
+        self.assertIs(resolve_config({'htmlLabels': 'false'}).html_labels, False)
+        # assignWithDepth ignores null rather than erasing a default number.
+        self.assertEqual(resolve_config({'flowchart': {'padding': None}}).node_padding, 15)
+        for value in (None, []):
+            with self.subTest(flowchart=value): self.assertEqual(resolve_config({'flowchart': value}).wrapping_width, 120)
+
+    def test_f014_promoted_static_configuration(self):
+        cfg=resolve_config({'look':'handDrawn','handDrawnSeed':19,'flowchart':{'curve':'step'}})
+        self.assertEqual((cfg.look,cfg.hand_drawn_seed,cfg.curve),('handDrawn',19,'step'))
+
     def test_invalid_numeric_values_rejected(self):
         cases = [{"fontSize": 0}, {"fontSize": -1}, {"fontSize": True}, {"fontSize": "20"},
                  {"fontSize": math.nan}, {"fontSize": math.inf}, {"maxTextSize": -1}, {"maxEdges": 1.5},
                  {"flowchart": {"nodeSpacing": -1}}, {"flowchart": {"rankSpacing": 1.5}},
-                 {"flowchart": {"padding": None}}, {"flowchart": {"diagramPadding": math.inf}},
+                 {"flowchart": {"diagramPadding": math.inf}},
                  {"flowchart": {"minNodeWidth": -1}}, {"flowchart": {"wrappingWidth": math.nan}}]
         for supplied in cases:
             with self.subTest(supplied=supplied):
@@ -286,7 +327,7 @@ class ConfigurationTests(unittest.TestCase):
                          (0, 0, 0, 0))
 
     def test_wrong_configuration_shapes_rejected(self):
-        cases = [[], "elk", 1, {"flowchart": None}, {"flowchart": []}, {"htmlLabels": "false"},
+        cases = [[], "elk", 1,
                  {"fontFamily": ""}, {"fontFamily": "Arial\nInjected"}]
         for supplied in cases:
             with self.subTest(supplied=supplied):

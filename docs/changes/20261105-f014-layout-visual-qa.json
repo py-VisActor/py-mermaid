@@ -1,0 +1,397 @@
+{
+  "schema": "py-mermaid-visual-qa/v1",
+  "taskId": "F01.4/layout-visual-qa",
+  "reviewedSourceTreeSha256": "1f17a467bfd7f8f7e7f53710c88a1280bda03f3ba412968c5d3d9a1575812a80",
+  "matrixRun": "F01.4-batch-20261105T105135Z-494f82f8",
+  "status": "followup_required_for_two_visual_findings",
+  "readOnlyReview": true,
+  "productSourceTestsChanged": false,
+  "originalPNGsModified": false,
+  "viewedPNGs": [
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/oracle/collapsed-boundary.png",
+      "sha256": "82d70a93a4e2f8d08b8f983060d3bbe5dcc119fe7d3d65fe1e7f50012879499b",
+      "dimensions": [
+        168,
+        166
+      ],
+      "viewedVia": "collapsed-contact.png"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/compare-cpu/collapsed-boundary.png",
+      "sha256": "5096e7574521d678c48bc2dfff27f232e1fd69c8689d0da5b07bcf0782c399f3",
+      "dimensions": [
+        176,
+        188
+      ],
+      "viewedVia": "collapsed-contact.png"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/oracle/collapsed-nested-outermost.png",
+      "sha256": "86b2a15c2807b82ad9eb5b6aea2b6134edf562c22e0544f21c2225886b551437",
+      "dimensions": [
+        168,
+        166
+      ],
+      "viewedVia": "collapsed-contact.png"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/compare-cpu/collapsed-nested-outermost.png",
+      "sha256": "c3a2980f662017be95e7ec47655ce19c8b19f130e3ca25585b45afa4e671d8ee",
+      "dimensions": [
+        176,
+        188
+      ],
+      "viewedVia": "collapsed-contact.png"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/oracle/collapsed-preserve-own-loop.png",
+      "sha256": "0a8bc4a6924a21c05d2e8ce95326caf24e429b364cd9f2db0280536bf60c5739",
+      "dimensions": [
+        116,
+        81
+      ],
+      "viewedVia": "collapsed-contact.png"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/compare-cpu/collapsed-preserve-own-loop.png",
+      "sha256": "d48ebe7d260bab4a56459182ee8ee25b0893e5d69db8992d4756bf9d444e91fc",
+      "dimensions": [
+        194,
+        103
+      ],
+      "viewedVia": "collapsed-contact.png"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/oracle/collapsed-slot-sibling.png",
+      "sha256": "cf0399cc704ffc62a27b9e37d0a422b283f30003a490318e063c9a09ee0c80aa",
+      "dimensions": [
+        336,
+        133
+      ],
+      "viewedVia": "collapsed-contact.png"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/compare-cpu/collapsed-slot-sibling.png",
+      "sha256": "5d418d6356a6ca2c15cddce869f19539a7815679c42f59188fd00c88075fbb4d",
+      "dimensions": [
+        414,
+        142
+      ],
+      "viewedVia": "collapsed-contact.png"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/oracle/layout-labelless-alignment-gallery.png",
+      "sha256": "d4ed6b685a797ae57b5402a6f3fde08562e4a08a83b659e78680c49e44ab1772",
+      "dimensions": [
+        88,
+        594
+      ],
+      "viewedVia": "view_image original"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/compare-cpu/layout-labelless-alignment-gallery.png",
+      "sha256": "cd2b01cd5aa4277c178b91cf4dd0ab5ef2c62189067b8897511ba2bc4c4d7e0d",
+      "dimensions": [
+        93,
+        586
+      ],
+      "viewedVia": "view_image original"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/oracle/layout-packing-cache-ink.png",
+      "sha256": "d4089316f74cc33e19a292f74eab8675d88bb8efcf32f3ef8ad43788e1e4247c",
+      "dimensions": [
+        340,
+        279
+      ],
+      "viewedVia": "view_image original"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/compare-cpu/layout-packing-cache-ink.png",
+      "sha256": "403403b2dfac04612c339c251e51eee11527fa11733ab633aa70f057b472605f",
+      "dimensions": [
+        342,
+        285
+      ],
+      "viewedVia": "view_image original"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/oracle/layout-marker-types.png",
+      "sha256": "7f0357074556d84b97a20a73051a521906a844f31ecc28f4e96bbab99cb16716",
+      "dimensions": [
+        936,
+        61
+      ],
+      "viewedVia": "view_image original"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/compare-cpu/layout-marker-types.png",
+      "sha256": "40f41336ebf6a9a9de0ec8b7e11a0002ce454294abcb9ebb21de6bf7c59b2ac7",
+      "dimensions": [
+        944,
+        69
+      ],
+      "viewedVia": "view_image original"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/oracle/layout-group-elk-radial.png",
+      "sha256": "6ae3fd08bb44633b7fa82a354f7226042baa9c24b429175d9f16cd1091a5973b",
+      "dimensions": [
+        342,
+        95
+      ],
+      "viewedVia": "view_image original"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/compare-cpu/layout-group-elk-radial.png",
+      "sha256": "ba9b17fda8d65a8c897c73dd4307db08da34ebff00a48f9193f4466100d33ff6",
+      "dimensions": [
+        350,
+        105
+      ],
+      "viewedVia": "view_image original"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/oracle/layout-hops-true.png",
+      "sha256": "8b12a3dd77c9f6fa3857bb22294d6132873844a05d3d7efeed7ec82714e1644a",
+      "dimensions": [
+        400,
+        146
+      ],
+      "viewedVia": "view_image original"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/compare-cpu/layout-hops-true.png",
+      "sha256": "b762b71d3ae9d0d2f6bc1e726ba915a02b9b385273e3e69ea566680e22945919",
+      "dimensions": [
+        408,
+        154
+      ],
+      "viewedVia": "view_image original"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/oracle/layout-hops-gap.png",
+      "sha256": "b49c45bf2c6dcc84db4e402c320a1305662f2d6749f53a2db5c965399efa45a7",
+      "dimensions": [
+        400,
+        146
+      ],
+      "viewedVia": "view_image original"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/compare-cpu/layout-hops-gap.png",
+      "sha256": "d1f6f4af1c0fa6a7a3c6b9610e1e62d6cc28f84bae0c6a10c59568a2f327dfec",
+      "dimensions": [
+        408,
+        154
+      ],
+      "viewedVia": "view_image original"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/oracle/layout-hops-false.png",
+      "sha256": "711c162a2c9dd54f097ebdbb434eaf51bbac161da4de4fa5efd1b4b83cf605ba",
+      "dimensions": [
+        400,
+        146
+      ],
+      "viewedVia": "view_image original"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/compare-cpu/layout-hops-false.png",
+      "sha256": "e19938e919a13e6df45c28b61f7a20dd650b1822878f2876f8a1e85e38662195",
+      "dimensions": [
+        408,
+        154
+      ],
+      "viewedVia": "view_image original"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/oracle/layout-custom-group-cross-clears.png",
+      "sha256": "7d9eb50f0888f6c67212e7bb83ac2f0a8b1c2b4680bfea8d1dc8886e0767a082",
+      "dimensions": [
+        192,
+        273
+      ],
+      "viewedVia": "view_image original"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/compare-cpu/layout-custom-group-cross-clears.png",
+      "sha256": "0801072309500d9c4179b4b86a2472a806d1beaed4fc94c07614774ecfce7568",
+      "dimensions": [
+        223,
+        307
+      ],
+      "viewedVia": "view_image original"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/oracle/layout-group-elk-rectpacking.png",
+      "sha256": "d33afd36f63379902f91fc92736a69ef9b6df889ba44a60eaa42ca69cc690e22",
+      "dimensions": [
+        380,
+        160
+      ],
+      "viewedVia": "view_image original"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/compare-cpu/layout-group-elk-rectpacking.png",
+      "sha256": "fe99c9723bc159311da6abf2c7cf215d61788984349fd0bf43baeaa178c9a96f",
+      "dimensions": [
+        388,
+        169
+      ],
+      "viewedVia": "view_image original"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/oracle/layout-root-elk-rectpacking.png",
+      "sha256": "f2a71f1eedb8cbfc3f52ffb9958419ecbf71a78e3904088fc740df6b47d3b5a2",
+      "dimensions": [
+        168,
+        181
+      ],
+      "viewedVia": "view_image original"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/compare-cpu/layout-root-elk-rectpacking.png",
+      "sha256": "243b16002989f97d279321d60ed88c0ffa36b24d73ebc1c879bcb90378706689",
+      "dimensions": [
+        176,
+        189
+      ],
+      "viewedVia": "view_image original"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/oracle/handdrawn-shapes-3.png",
+      "sha256": "14144148bea04b1fef5a7be1de22d66ccac4bc153a1a597c0b16167f9ea4337a",
+      "dimensions": [
+        1600,
+        105
+      ],
+      "viewedVia": "view_image original"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/compare-cpu/handdrawn-shapes-3.png",
+      "sha256": "3ea0926339e95d68cbdfbb85e7a677e34f6bf777ee7a128bf1ddf142fc0dfe31",
+      "dimensions": [
+        1714,
+        123
+      ],
+      "viewedVia": "view_image original"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/compare-auto/layout-labelless-alignment-gallery.png",
+      "sha256": "7b90d59b3dabb33b8e0f087be4692ee27f09cab6f5781f37450b033aa1e77e11",
+      "dimensions": [
+        93,
+        586
+      ],
+      "viewedVia": "view_image original and gallery-all-profiles-contact.png (RGB composite verified)"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T105135Z-494f82f8/artifacts/compare-gpu/layout-labelless-alignment-gallery.png",
+      "sha256": "7b90d59b3dabb33b8e0f087be4692ee27f09cab6f5781f37450b033aa1e77e11",
+      "dimensions": [
+        93,
+        586
+      ],
+      "viewedVia": "view_image original and gallery-all-profiles-contact.png (RGB composite verified)"
+    }
+  ],
+  "viewedContactSheets": [
+    {
+      "path": "test-runs/f014-layout-visual-qa-001/collapsed-contact.png",
+      "sha256": "87cb7ca5f772f7bf560b6485e599449cf5dec8ed617f4a85f4f217113148301c",
+      "operation": "Independent labeled contact sheet; originals untouched; actual view_image inspection performed"
+    },
+    {
+      "path": "test-runs/f014-layout-visual-qa-001/gallery-all-profiles-contact.png",
+      "sha256": "349de1372df8119f7c9ac6917b991876046cc383669d9f353ca2c409aec1162f",
+      "operation": "Independent labeled contact sheet; originals untouched; actual view_image inspection performed"
+    }
+  ],
+  "contactSheetRecordRuns": [
+    "F01.4-record-20261105T105321Z-fac9600e",
+    "F01.4-record-20261105T105805Z-0848cdf7"
+  ],
+  "findings": [
+    {
+      "id": "QA-LAYOUT-01",
+      "severity": "material_style_difference",
+      "caseIds": [
+        "layout-labelless-alignment-gallery",
+        "handdrawn-shapes-3"
+      ],
+      "observation": "Source sm-circ first small circle is hollow white inside; CPU/auto/GPU all show dark handdrawn hatch fill. The visual distinction from f-circ is weakened.",
+      "evidence": [
+        "oracle/layout-labelless-alignment-gallery.png",
+        "compare-cpu/layout-labelless-alignment-gallery.png",
+        "compare-auto/layout-labelless-alignment-gallery.png",
+        "compare-gpu/layout-labelless-alignment-gallery.png",
+        "oracle/handdrawn-shapes-3.png",
+        "compare-cpu/handdrawn-shapes-3.png"
+      ],
+      "disposition": "Reported to coordinator. Coordinator confirmed source PNG white-centre probes and assigned Canvas owner overlay-fill correction. Original matrix preserved; this review does not certify subsequent source/image repair."
+    },
+    {
+      "id": "QA-LAYOUT-02",
+      "severity": "source_shape_orientation_difference",
+      "caseIds": [
+        "handdrawn-shapes-3"
+      ],
+      "observation": "Source h-cyl complete ellipse cap is on right; native complete cap is on left. Outer size and label remain readable, but internal cap orientation is reversed.",
+      "source": "packages/mermaid/src/rendering-util/rendering-elements/shapes/tiltedCylinder.ts createCylinderPathD appends inner arc at x=width; handDrawn createInnerCylinderPathD uses x+width/2 with only outer translation. Native current geometry detail arc is at rx on left.",
+      "evidence": [
+        "oracle/handdrawn-shapes-3.png",
+        "compare-cpu/handdrawn-shapes-3.png"
+      ],
+      "disposition": "Confirmed by coordinator; root corrected right-cap arc. Independent geometry and real API PNG positive/negative targeted tests pass for3looks; new actual single-node images manually viewed. Final refreshed multi-shape/all-profile matrix review remains pending."
+    },
+    {
+      "id": "QA-LAYOUT-03",
+      "severity": "known_fixed_upstream_defect",
+      "caseIds": [
+        "layout-group-elk-radial"
+      ],
+      "observation": "Both source and native render isolated group frame too small; Alpha/Beta visibly extend outside frame. All leaves and route remain visible; no image clipping observed.",
+      "disposition": "Matches explicit knownSourceDefect elk-radial-container-frame for exact group G. Do not enlarge frame or silently generalize containment exemption."
+    },
+    {
+      "id": "QA-LAYOUT-04",
+      "severity": "cosmetic_decoration_difference",
+      "caseIds": [
+        "collapsed-boundary",
+        "collapsed-nested-outermost",
+        "collapsed-preserve-own-loop",
+        "collapsed-slot-sibling"
+      ],
+      "observation": "Native collapse three-dot glyph is solid palette colour; source dots have a darker outline. Native collapsed frame aspect ratio and dash span differ, but text, hidden contents, three-dot meaning, external edge and genuine selfloop remain clear.",
+      "disposition": "No substantive layout/content loss found; reported as cosmetic difference, not a missing-element finding."
+    }
+  ],
+  "checksObserved": {
+    "alignmentGallery": "All nine labelless shapes and eight edges visible, no Ignored text, no off-axis detached anchor or clipping, across CPU/auto/GPU.",
+    "collapsedFourCases": "Boundary edge redirected to collapsed frame, nested outermost remains sole collapsed representative, original selfloop visible, sibling group/palette slot retained. No hidden descendant leakage or crop observed.",
+    "packing": "Diagram title visible within viewport, cached node text/outline readable and centred; small-to-long-label connector reaches boundaries, no label or group-title overlap.",
+    "markers": "Double point, circle and cross endpoints visibly distinct; invisible edge has no visible line/marker while final End node remains.",
+    "lineHops": "Arc, gap and disabled crossings differ visibly exactly as intended and match official crossing topology; rounded corners/end arrows remain intact.",
+    "compound": "Custom group cross-boundary route, inherited algorithm frame and rectpacking groups have visible titles and clear inside/outside edge connections.",
+    "radial": "Known same-source group frame limitation remains visible; all image ink still fits output viewport."
+  },
+  "limitations": [
+    "Only listed32 PNGs inspected, not the entire200-case matrix. CPU is primary; auto/GPU gallery also inspected.",
+    "Native Path2D/engine unit results and profile assertions are owned by coordinator and do not substitute for this visual sample.",
+    "Subsequent Canvas fill/cap changes require viewing fresh images and recording their new source identity before final visual PASS.",
+    "Raw narrow GPU PNG direct tool preview appeared truncated; independent Pillow white-composite contact sheet plus full-image dark-pixel extent verified actual file contains full nine-node image. No original or production image transformed."
+  ],
+  "capTargetedFollowup": {
+    "run": "F01.4-record-20261105T110836Z-14293d6c",
+    "sourceTreeSha256": "0d5ab374782239caca46fd5505112f6d8d57a3fe276ea87c98d8155a05421ede",
+    "result": "3geometry/API pixel methods passed, all3looks; deliberate wrong-left-cap images detected by same PNG probes. Original1f17matrix QA remains historical and does not certify final full-profile output.",
+    "actuallyViewed": [
+      "test-runs\\f014-cylinder-cap-targeted-001\\right-cap-classic.png",
+      "test-runs\\f014-cylinder-cap-targeted-001\\right-cap-neo.png",
+      "test-runs\\f014-cylinder-cap-targeted-001\\right-cap-handDrawn.png",
+      "test-runs\\f014-cylinder-cap-targeted-001\\injected-left-cap-handDrawn.png"
+    ]
+  }
+}

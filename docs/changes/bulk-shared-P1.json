@@ -1,0 +1,39 @@
+{
+  "schema": "py-mermaid-change-receipt/v1",
+  "phase": "P1",
+  "status": "code_complete_unverified",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "scope": "references/bulk-scope.json",
+  "sourceIdentity": "97b353ebf7e176a750a736a714c85638e0a497b722e451dc77570579a2d36cbb",
+  "wholeAssemblyRun": "BULK-P1-assembly-20261106T040205Z-6d6594fb",
+  "freezeRun": "BULK-P1-freeze-20261106T040338Z-8ecb17c2",
+  "providers": 31,
+  "newProviders": 29,
+  "boundDirectPainterCalls": 301,
+  "presentationForwardedCalls": 115,
+  "nativeObjectsCreated": false,
+  "behavioralTestsRun": false,
+  "oracleRun": false,
+  "imagesGenerated": false,
+  "rootPostFreezeCorrections": [
+    "helper effective htmlLabels uses shared resolved policy rather than null/falsy shortcut",
+    "helper synthetic group uses already validated source font units",
+    "tree_view raw-regex spelling removes SyntaxWarning without changing pattern",
+    "source flow layout registration overrides honored",
+    "generic nonrouting ELK center rays preserve source paint behavior",
+    "explicit generic Swimlane preserves source group decorations"
+  ],
+  "sharedSourceMap": "references/bulk-shared-sources.json",
+  "receipts": [
+    "bulk-A-F02",
+    "bulk-A-F06",
+    "bulk-A-F08",
+    "bulk-A-swimlane-groups",
+    "bulk-B-temporal",
+    "bulk-B-business",
+    "bulk-C-P1",
+    "bulk-C-swimlane-routing",
+    "bulk-shared-brightness"
+  ],
+  "nextPhase": "P2 source-independent test design; do not mutate product until P3 grouped failures"
+}

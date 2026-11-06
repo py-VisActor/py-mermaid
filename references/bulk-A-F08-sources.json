@@ -1,0 +1,564 @@
+{
+  "phase": "P1",
+  "status": "code_complete_unverified",
+  "upstreamVersion": "mermaid@12.2.0",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "protocol": "docs/BULK_STATIC_INTERFACES.md v1",
+  "behaviorExecuted": false,
+  "testsDesigned": false,
+  "threadOwnership": "All models frozen/pure; mutable parser/layout state request local; Painter/native session stays on caller owner thread",
+  "sourcePositions": "Family parser offsets are cleaned Python indices; runtime.common.error maps processed_to_raw then original UTF-16 offset and UTF-16 column",
+  "units": "Input grammar indentation counts source characters; all renderer/layout lengths are logical CSS px unless explicitly source bit or column counts",
+  "mechanicalEvidence": [
+    "test-runs/BULK-record-20261106T033019Z-3bf3e44f/run.json",
+    "test-runs/BULK-record-20261106T033206Z-ade40f8b/run.json",
+    "test-runs/BULK-record-20261106T033427Z-44c90684/run.json",
+    "test-runs/BULK-record-20261106T033826Z-f56b2f03/run.json",
+    "test-runs/BULK-record-20261106T034102Z-66d38803/run.json",
+    "test-runs/BULK-record-20261106T035042Z-f770b411/run.json",
+    "test-runs/BULK-record-20261106T035123Z-c9c44f18/run.json"
+  ],
+  "excludedByUser": [
+    "Dagre implementations/dependencies/fallbacks",
+    "click/navigation/callback/hover/animation/interactive DOM behavior"
+  ],
+  "deferred": [
+    "treemap (and six other batch-deferred entries, no new code or verification)"
+  ],
+  "verificationLimit": "Compilation/import/signature binding do not assert parse semantics, configuration compatibility or rendering correctness; independent source tests and official captures start only in P2/P3",
+  "scope": "BULK-A-F08",
+  "entries": [
+    "structures.block",
+    "structures.packet",
+    "structures.kanban",
+    "structures.architecture"
+  ],
+  "sourceFiles": [
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/block/blockDB.ts",
+      "sha256": "acdc14153c4d701f94322a8119b63250bef8966b2e4c50ad7be1279e5f923057"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/block/blockDetector.ts",
+      "sha256": "3440d13a9369230133d6e4af466cf7625159a7972a7efcbe50e7c9c6045bbb46"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/block/blockDiagram.ts",
+      "sha256": "ced388dc492ef93ef9c1ad6437383bd04f3cfd72f5bc5f209f249142ec3a6f9c"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/block/blockRenderer.ts",
+      "sha256": "b8b43d5777f538f9b68b9e2a645842be3fce2d59d610529f570fd2c4534d37eb"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/block/blockTypes.ts",
+      "sha256": "f1ca6f50e42fa673ebd9b773ea4046eb3573d680fdfea1fd33904ad181751433"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/block/blockUtils.ts",
+      "sha256": "32b5805bcf25a6a669992d011db167fddad79ab14cd8bf6c62dddb8a6214b418"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/block/layout.ts",
+      "sha256": "e7c72be45a06acd2aa63a26408de0c48a007e7426cf0b15e3b7af4cec7f00685"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/block/parser/block.jison",
+      "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/block/renderHelpers.ts",
+      "sha256": "09c3ed7bf23b8a73cf3836798dd9b4b51e0494f33d0d926bad5ed364414b4428"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/block/styles.ts",
+      "sha256": "cbb253c1516fc8d8d2bb72045524c7a172d500cfec24eee9a7397c2b4b6c7670"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/packet/db.ts",
+      "sha256": "1d030ad2348cc3e342b3725f1770fb760b273880acc9dd393f7111708fe9d6d4"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/packet/detector.ts",
+      "sha256": "82460c3383b72a89987872b4f31f177c59423fc2da0443ffe672d875c7f8e2e0"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/packet/diagram.ts",
+      "sha256": "b182f617bea05dde8edb1f9157aca895df258296986b5f98c3411988a4f96e7a"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/packet/parser.ts",
+      "sha256": "88d806b73fab2eae9148a9a6bfaad5579ee273f0ded8e8c7715a1be07542e3ed"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/packet/renderer.ts",
+      "sha256": "ac2ab5d360fd715deac0d69fc98ab0abbaa3dc8cbc46e20b47723ab4a161b511"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/packet/styles.ts",
+      "sha256": "79714446f3f325d06e940f2c7918a4c6b2e4bd672262a68f4f7cb36768e3285a"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/packet/types.ts",
+      "sha256": "5b2c564ad8d95f3d5dc62bb79fd33e05a10c46d1fc0e3c5325ccde5e152a6d84"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/kanban/detector.ts",
+      "sha256": "20e5cbc746f12f9f812caf52839972748a52d15a7aed76b00c8143b30e27fe84"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/kanban/kanban-definition.ts",
+      "sha256": "cba521da57871239e2652208155086f35775cab97f7dba473ad8efb9c5a403aa"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/kanban/kanbanDb.ts",
+      "sha256": "5e96a2a5d8df7ce08c79c0da7fe4edc4decceb8dfe7b27434f799dcdfc2ad38a"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/kanban/kanbanRenderer.ts",
+      "sha256": "29c2ce818767cb4d4d16144081ea49273bd4a504ae733678228777e8a4c1ceee"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/kanban/kanbanTypes.ts",
+      "sha256": "cab8b18f556cf71dff4e107c8eed6349ff7856dff5dc86d907239092e41b9103"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/kanban/parser/kanban.jison",
+      "sha256": "b59eba92f4caf14b99343d4058880d958d4326b01dc1d1b4feba710ff94ed0af"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/kanban/styles.ts",
+      "sha256": "ba154bb13d665273fac6e0c1365c63415bb5b31a985362e6d2ffcb71d3c4b9a3"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/architecture/architectureDb.ts",
+      "sha256": "4b1d310ff84a5d0ac10b47f341e858fab486f501f524129a2cebd9c1afa4b5ff"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/architecture/architectureDetector.ts",
+      "sha256": "b44940658b16f5854f293f51272ed6eefba1b2b5fb3e2e2ab24503ccb031e0c1"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/architecture/architectureDiagram.ts",
+      "sha256": "c499ff5154e988fb23d5824f0526b9307fd22c4289778eb76f5126f95fadf8bc"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/architecture/architectureIcons.ts",
+      "sha256": "fcb43156986bf14e97db38d4c6e0c6a3ea60feb3aa11e752370c8b25bc4eea04"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/architecture/architectureParser.ts",
+      "sha256": "4b26c0a352d9c61a16bb48d61132436ae1cd45b0f77b99719c8a4ec16f7e8a96"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/architecture/architectureRenderer.ts",
+      "sha256": "a033c3e3d0b7e1106ec47631145da06ec075967b5b9e0f7937d619b4714eacdc"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/architecture/architectureSeed.ts",
+      "sha256": "740db8b2e05d74f5b63b6399e85000633e2e9afe0996165454b2ffc95f66585c"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/architecture/architectureStyles.ts",
+      "sha256": "9c7e00969b448298b01f33cb82738fd971d22f4f861eef55b4bbc110299d316d"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/architecture/architectureTypes.ts",
+      "sha256": "b65769995c9527779a6adacc5ea33fe30819198f142fd472e9014851188981ab"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/architecture/svgDraw.ts",
+      "sha256": "3fb31910400f96127eabf2b8c4106c3a45c0b3a6bc8c03840ecca24e1d6518cd"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/parser/src/language/packet/index.ts",
+      "sha256": "de1f717c6624665e3c88b3eb86c564e0fbe73a510300acb60503f1ecad53636f"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/parser/src/language/packet/module.ts",
+      "sha256": "904ab7e961738d95d054da0ca4efc621eda698a66c61f33c480de0507ba77e01"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/parser/src/language/packet/packet.langium",
+      "sha256": "bf479a00c688630d713efcb850076f16c4758f7cb426b49c973b67b40ea001f0"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/parser/src/language/packet/tokenBuilder.ts",
+      "sha256": "a7ba1217ee738307924e126c1fcc864659369eda7d8f778fc63bdd1c0155398f"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/parser/src/language/architecture/arch.langium",
+      "sha256": "c0e08f5e1c82f97e75cbeb4a2573984012bcec378a67b5b949468acd5311ec5c"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/parser/src/language/architecture/architecture.langium",
+      "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/parser/src/language/architecture/index.ts",
+      "sha256": "de1f717c6624665e3c88b3eb86c564e0fbe73a510300acb60503f1ecad53636f"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/parser/src/language/architecture/module.ts",
+      "sha256": "dc2607308905ac1338ff9ba9cdb62d6d5f3c82036e2a375c462060c4533366b7"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/parser/src/language/architecture/tokenBuilder.ts",
+      "sha256": "231e5f065b7488fb315fc4a101f7ef78a13109b9befe0a334fbfd6595063e099"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/parser/src/language/architecture/valueConverter.ts",
+      "sha256": "345955a2b4eca67143af5ec1feccb97ea79b93913f84ab2a0fe7e7791e9624aa"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/parser/src/language/common/common.langium",
+      "sha256": "d8b0c0056f6339ca6a0d3b966c02b1f4d53ad768069e2889450dc29312f1f65b"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/parser/src/language/common/index.ts",
+      "sha256": "59caeacace65e590af92eaf8f0f03553df91107daaecd1d2d3f7c63d45888978"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/parser/src/language/common/matcher.ts",
+      "sha256": "9ab232a7fff6052767001b43b3796553431ee80a10a197abf6437cbfa8e0d807"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/parser/src/language/common/tokenBuilder.ts",
+      "sha256": "e20bdad7aa651779e986cb69dd389670453224dc83fdcae872cff756f0733c82"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/parser/src/language/common/valueConverter.ts",
+      "sha256": "d93aa5dd1f7fed8aa903f55eb3e463c6b69b455af22004a6405a61c7560f58e5"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/rendering-util/rendering-elements/shapes/blockArrow.ts",
+      "sha256": "1a64d1cf137f5737dadf0970d36e9a4d0092d839af9f14f54cd853e9c6e84be8"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/rendering-util/rendering-elements/shapes/composite.ts",
+      "sha256": "11b1b96bef6540baf469dddd8bb1641c7f253cef84675b9b4714fafa349b4907"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/rendering-util/rendering-elements/shapes/kanbanItem.ts",
+      "sha256": "46876506f1e2387287cd17708defc9d8a49088fa6c3e7358adb5b353c7a8e34d"
+    }
+  ],
+  "productFiles": [
+    {
+      "path": "src/py_mermaid/diagrams/structures/__init__.py",
+      "sha256": "4bfc1c26791ccc0b2dbfd4690855b5f5268488fca0cca59bc41936dcb6ce5682"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/structures/_architecture_icons.py",
+      "sha256": "448e43f40ccfd6b16d0e648a2a59a685c27f71de737dfff2c264ede12b075c57"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/structures/_block_arrows.py",
+      "sha256": "2b86262b35094544859e770f8490eda65432807687b513f60f4b8da4a0d3a4e8"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/structures/_fcose.py",
+      "sha256": "76119ebba4097d4a209d840324a74ab9acc3ebfbf9a47bbe6fbee7ee37775082"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/structures/architecture.py",
+      "sha256": "dd959cb4c08ead8413698ab1eb342f82fc48bcd252792c523842cc6b3a4e8ddb"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/structures/block.py",
+      "sha256": "d4bf9e6da393192a6727bbc927f821e10bb77034475f4efa0dfcaab81c8f24d6"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/structures/kanban.py",
+      "sha256": "6fbc6c85cab128ba008a0f15363c5cfd9a794640374616227ac8c053a1a72140"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/structures/packet.py",
+      "sha256": "d953e14649daf9d09c773910332478f768c57cc1059c2c9208528ac4f2c5f4ea"
+    }
+  ],
+  "sourceImplemented": {
+    "block": [
+      "Actual Jison whitespace token grammar, quotes, shape delimiter combinations, edges/text links, composite named/auto IDs, spaces and width spans",
+      "DB first-placement identity aggregation, later shape/label updates, style/classDef/class, columns and preorder composite palette",
+      "Recursive equal-cell getMaxChildSize/setBlockSizes and row-height layoutBlocks with clamp of filled columns",
+      "All classic node shape rendering; 15 nonempty direction combinations and point fallback from source blockArrow.ts factories",
+      "Source straight midpoint relationship path, source marker/thickness/pattern semantics, unknown endpoint rendering guard"
+    ],
+    "packet": [
+      "Langium ranges/+bits/STRING and title/accessibilities",
+      "Contiguity/reversed/zero-size validation, max10000 rows and true row splitting",
+      "Bits per row, bit width, gaps, showBits extra10 paddingY, ascending/descending mirror and endpoint numbers",
+      "Source packet-only style defaults and themeVariables.packet overrides, bottom-centered title"
+    ],
+    "kanban": [
+      "Jison same node shape/string lexical categories, indentation-defined flat sections and all items assigned last section",
+      "Multiline/single-line YAML JSON_SCHEMA metadata label/ticket/assigned/priority/icon, decorator metadata and lowercase shape gate",
+      "Measured fixed-width columns, max header height and dynamic section heights",
+      "Actual ticket/assigned rows and priority colors; handDrawn priority branch follows source exclusion; metadata icon has no kanbanItem icon glyph consumer"
+    ],
+    "architecture": [
+      "Full Langium group/service/junction/edge/align grammar, quoted icon text and title conversion",
+      "Source populateDb order groups then services then junctions, duplicate-ID/parent/edge/group-boundary/align validation",
+      "DB directional adjacency overwrite/BFS spatial maps, group alignment split/merge and explicit hint precedence",
+      "Renderer relative placements/hint chains and contradiction diagnostics",
+      "Private fCoSE proof pipeline: optional graph-distance Nystr\u00f6m spectral initialization, seeded mulberry32, symmetric numeric eigendecomposition, compound rectangles/springs/repulsion/gravity, constraints and cooling/convergence",
+      "Source built-in architecture SVGs, explicit icon resources, service iconText native HTML rich runs/line clamp/ellipsis/clip, labels/groups, junction invisible footprint, orthogonal bend routes and direction-specific arrows"
+    ]
+  },
+  "sourceAnomalies": [
+    "Block generated random IDs are replaced with request-local stable private IDs; identity/topology/placement preserved, no global mutable counter",
+    "Block grammar declares several lexer tokens without reachable productions (linkStyle/interpolate and MD_STR node labels); no fake support claimed",
+    "Architecture same-direction (LL/RR/TT/BB) edges omitted from DB adjacency/BFS but are still source edge records, not newly rejected",
+    "Architecture group endpoint IDs pass preliminary registration test but fixed DB then dereferences nodes.get(id).in and fails; explicit native upstream endpoint diagnosis",
+    "Architecture no independent layout selection dispatcher exists: active source always fCoSE; root layout flag is not silently substituted for ELK",
+    "Architecture source runs its proof solver twice around bend adjustment; native computes identical final orthogonal route geometry directly after its local proof simulation",
+    "Current active kanban does not draw stored metadata icon glyph; classes stored by decorateNode are not copied into getData classes and are not invented as new styling behavior"
+  ],
+  "numericPortDifferences": [
+    "Spectral PHI is symmetric: native Jacobi eigendecomposition replaces source host SVD while retaining signed singular regularization/Nystr\u00f6m/power iteration formulas; coordinates are not asserted identical",
+    "Constraint owner uses pure union-find alignment + DAG longest-path/centroid projection, retaining alignment and relative inequalities rather than source Cytoscape dummy-node object bookkeeping",
+    "Compound proof simulation keeps all real leaves rather than reproducing host pruning/regrowth data-structure optimizations; static hierarchy/forces/constraint functionality requires independent P2/P3 verification",
+    "Disconnected childless tiling uses actual measured rectangular cells and source10px gaps; exact source row-minimization heuristic and final host translation are not claimed pixel-identical"
+  ],
+  "remainingVerification": [
+    "All grammar accepted/rejected source cases, original UTF16 positions and state isolation",
+    "Full fCoSE compound/randomize/seed/constraint functional validation and residual-overlap/readability against official captures",
+    "Block all spans/columns/shape combinations and source aggregate-ID/style edge cases",
+    "Packet range and empty diagrams, kanban YAML and field geometry/priority/handDrawn branches",
+    "All Canvas clip/rotation/resource and SVG/PDF output paths remain unexecuted in P1"
+  ],
+  "algorithmDependencies": [
+    {
+      "name": "cytoscape-fcose",
+      "version": "2.2.0",
+      "license": {
+        "path": ".local/f011-oracle/node_modules/cytoscape-fcose/LICENSE",
+        "sha256": "2837634f403949215760fcdd2fa1ed0c64875d02099ecc8318c704b852f1421d"
+      },
+      "sourceFiles": [
+        {
+          "path": ".local/f011-oracle/node_modules/cytoscape-fcose/src/assign.js",
+          "sha256": "37b579f99e7e000419e8e7d18d8b8f8c6785ddd9b81cbcf633f353b91afa593e"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/cytoscape-fcose/src/fcose/auxiliary.js",
+          "sha256": "c6470c57e258b379545aefa24a4369c8cec926c31864bfed010515c9311f7578"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/cytoscape-fcose/src/fcose/cose.js",
+          "sha256": "297f674e0b55a0c2dbc0a9c665414772dc8179fa5eb9d60431ef11089613cee7"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/cytoscape-fcose/src/fcose/index.js",
+          "sha256": "40c0f0c51959a9ccc7f1b39b3a9d25e46b6865f3cd281026821521baae66e2d6"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/cytoscape-fcose/src/fcose/spectral.js",
+          "sha256": "e76efa8c7e8d1dccc4baaec4eeaf509b8a517208a5f20bb0d6302b6d00897215"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/cytoscape-fcose/src/index.js",
+          "sha256": "eab1353550734ab50316df9dee5ccffe24f983c7726a811687b515e2789ddf0c"
+        }
+      ],
+      "runtimeDependency": false
+    },
+    {
+      "name": "cose-base",
+      "version": "2.2.0",
+      "license": {
+        "path": ".local/f011-oracle/node_modules/cytoscape-fcose/node_modules/cose-base/LICENSE",
+        "sha256": "5fb3cf4a14c3c5af6e473a192df8bca10c77754e3a0c6492c79fb92a76a5478a"
+      },
+      "sourceFiles": [
+        {
+          "path": ".local/f011-oracle/node_modules/cytoscape-fcose/node_modules/cose-base/src/ConstraintHandler.js",
+          "sha256": "1cbb203d1e4079a52968bce322027a62cd0239801e650fbbd439639fe438999a"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/cytoscape-fcose/node_modules/cose-base/src/CoSEConstants.js",
+          "sha256": "47fe48b69db84d49d80664f638632ec20e0b751ec3324fa2ece96fdebe5645e5"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/cytoscape-fcose/node_modules/cose-base/src/CoSEEdge.js",
+          "sha256": "32ab9e074f92e35d80658244d9d7ab3fab91ee421b08a6e213f86641c2fac37e"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/cytoscape-fcose/node_modules/cose-base/src/CoSEGraph.js",
+          "sha256": "5dfc363115df512d93fd2e0ea9cf0e1c4fc9deae11d8b9ac2b9f58207f67e49b"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/cytoscape-fcose/node_modules/cose-base/src/CoSEGraphManager.js",
+          "sha256": "8a3a1d6e05abdb8d4b8867b89e431919373624448411ba7ee60656e37d08b2d5"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/cytoscape-fcose/node_modules/cose-base/src/CoSELayout.js",
+          "sha256": "5b4b3ff585665a50a2bc81682b046dbd1f9a2949c3f2390ce5e446d1896494fe"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/cytoscape-fcose/node_modules/cose-base/src/CoSENode.js",
+          "sha256": "b11c95643eefe241d3d3c51fd6baaefa30304ce470ea9f843d51ecaf1b680820"
+        }
+      ],
+      "runtimeDependency": false
+    },
+    {
+      "name": "layout-base",
+      "version": "2.0.1",
+      "license": {
+        "path": ".local/f011-oracle/node_modules/cytoscape-fcose/node_modules/layout-base/LICENSE",
+        "sha256": "eabb762d8a95109a39c9be3247325529a5239a7aca327d909c3ccdc41f3a06bf"
+      },
+      "sourceFiles": [
+        {
+          "path": ".local/f011-oracle/node_modules/cytoscape-fcose/node_modules/layout-base/src/fd/FDLayout.js",
+          "sha256": "00bb7c36dfc279a457ebfd35f5dfb7b04123419f5457e65cc85344361946ca45"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/cytoscape-fcose/node_modules/layout-base/src/fd/FDLayoutConstants.js",
+          "sha256": "365a2e54dc82be15703440a954f8d5dff6d0414e426acb444ae5f18b49e2510b"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/cytoscape-fcose/node_modules/layout-base/src/fd/FDLayoutEdge.js",
+          "sha256": "5aabdaaac5768e2980937cdc54fe45d3cac495f3bffdb71bd1f639f28984a543"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/cytoscape-fcose/node_modules/layout-base/src/fd/FDLayoutNode.js",
+          "sha256": "68cfd2ec4062eed71422c0f109627e29986ede13a4b5da1f34d7074608d57bb7"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/cytoscape-fcose/node_modules/layout-base/src/Layout.js",
+          "sha256": "60b52960899d8ff9bebaa42ef1566bab8e1d020653c9e69a76d8ab83e3e6e6b4"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/cytoscape-fcose/node_modules/layout-base/src/LayoutConstants.js",
+          "sha256": "d3edb1480609dd9617107cae290a43cb80edd395fdb488be9cd4b929a3d38651"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/cytoscape-fcose/node_modules/layout-base/src/LEdge.js",
+          "sha256": "04a69989b17776ab9e50d2694c7a0b164a602850a3f17893c6956c77a91756e0"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/cytoscape-fcose/node_modules/layout-base/src/LGraph.js",
+          "sha256": "e65aa685abafcbe3fea72d72ebe8f1e9c22e8c1588bcfd913f8df154ad765346"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/cytoscape-fcose/node_modules/layout-base/src/LGraphManager.js",
+          "sha256": "09436c5452073f5a9a3b462e5e7ce72565d7273f3b122d6287150465ea8dfd49"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/cytoscape-fcose/node_modules/layout-base/src/LGraphObject.js",
+          "sha256": "12dd3054bf21e646066d17ad2419de156f9d5914fdc8379da06b0fea646229f1"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/cytoscape-fcose/node_modules/layout-base/src/LNode.js",
+          "sha256": "fd9a420ea4f92719c25f4bebb68a51255a369ed1afb1ed0a4157db7a4856857b"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/cytoscape-fcose/node_modules/layout-base/src/util/alignment/NeedlemanWunsch.js",
+          "sha256": "dfb10527798a8facc13ac446dfa8d4624e364e5524f57338c5236274e5b96d25"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/cytoscape-fcose/node_modules/layout-base/src/util/DimensionD.js",
+          "sha256": "4e3365f294a6bc592a977c5886a63320911058d0caa5a070820494aee0b70e01"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/cytoscape-fcose/node_modules/layout-base/src/util/Emitter.js",
+          "sha256": "198e359ae3638122c1c15987da4e3d62b408a9ca331fed3939e51d16a9d8686a"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/cytoscape-fcose/node_modules/layout-base/src/util/HashMap.js",
+          "sha256": "3a101dcc890183d330bbacd774f407b3f303fa5e0e0a703e69ca446d95fe7230"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/cytoscape-fcose/node_modules/layout-base/src/util/HashSet.js",
+          "sha256": "d3acfe69252dc176f4fff2193e62cd5882fc97a4547410dd9bbb1d3e4604e4db"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/cytoscape-fcose/node_modules/layout-base/src/util/IGeometry.js",
+          "sha256": "3fb8a7ddd916641755ef826412d26491647d2a7e94b7ab0775545ed692b99e02"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/cytoscape-fcose/node_modules/layout-base/src/util/IMath.js",
+          "sha256": "33f4f491ee9b483f0c7860276ab5c83b690bf4749698090a1658e3a6dfeef40d"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/cytoscape-fcose/node_modules/layout-base/src/util/Integer.js",
+          "sha256": "cd3e6ac417aafb85bb157c1c126530763c9c3e918dd32b7ca16bb91dadbc50db"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/cytoscape-fcose/node_modules/layout-base/src/util/LinkedList.js",
+          "sha256": "f35df80e755d850efdaac9b924ff57d33c8026b3a93957427b717d61bb947048"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/cytoscape-fcose/node_modules/layout-base/src/util/Matrix.js",
+          "sha256": "bec3df45809a9fb7bc42cb53307588e780296a1c7b56902d1994acb8bf57166a"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/cytoscape-fcose/node_modules/layout-base/src/util/Point.js",
+          "sha256": "70670e31d8cda1b2ad7d54fb649dcb02f16f73525a954f3f3f685006581c6ae2"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/cytoscape-fcose/node_modules/layout-base/src/util/PointD.js",
+          "sha256": "024202d658514fff01f18ec40d3a2d927664937df2c07cb2d6e8d75387a74aa4"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/cytoscape-fcose/node_modules/layout-base/src/util/Quicksort.js",
+          "sha256": "1307ad19345937cfc0eac69a3e3dc6083fc2943b51cf513ff5f99c197af9813e"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/cytoscape-fcose/node_modules/layout-base/src/util/RandomSeed.js",
+          "sha256": "34c8cf22738c62ec56a5da3e983d8c142ce5a451ff70cd1848c6e401c0726ef2"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/cytoscape-fcose/node_modules/layout-base/src/util/RectangleD.js",
+          "sha256": "d175bf35848ca186321c146c80699d8fc6f6dc88ffd8a0c7c010cd7bfadb9d7f"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/cytoscape-fcose/node_modules/layout-base/src/util/SVD.js",
+          "sha256": "d06c9621bb69efd84181590ab0f5a83dd8fa4ce3885f31a4ff5e6663b368577e"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/cytoscape-fcose/node_modules/layout-base/src/util/Transform.js",
+          "sha256": "441a66aeae1257be23f02e44ba2a9b87f5d3bc52f5454a730362e4c2114da7e4"
+        },
+        {
+          "path": ".local/f011-oracle/node_modules/cytoscape-fcose/node_modules/layout-base/src/util/UniqueIDGeneretor.js",
+          "sha256": "dc3e0ac98db6012d7a71f423d4934cc76b0b157a8c89015568bc07b409e693dc"
+        }
+      ],
+      "runtimeDependency": false
+    }
+  ],
+  "freezeHistory": [
+    {
+      "sourceSha256": "c31540f5231f803abcef9c0e8205e8cd3ef397f97387f86e3746100317c434b3",
+      "mapSha256": "1818a3c4e363a9e263de36fd7c7daa0d02804d5b68e6211b14f530dc7722432d",
+      "receiptSha256": "80a2b40ad49c431f2d9c330d265c5460e3d583b0cacb5fce22eab4f8ba68ac3d",
+      "mapSnapshot": "references/bulk-A-F08-sources-freeze-034102Z.json",
+      "receiptSnapshot": "docs/changes/bulk-A-F08-freeze-034102Z.json"
+    }
+  ],
+  "sourceVisibilityCorrection": {
+    "lease": "Only modeling/usecase.py, modeling/_usecase_glyphs.py, structures/architecture.py reopened by root",
+    "status": "code_complete_unverified",
+    "sourceSymbols": [
+      "usecaseDb.ts:getCompiledStyles(default then explicit)",
+      "handDrawnShapeStyles.ts:isLabelStyle/styles2String",
+      "usecaseActor.ts:renderUsecaseActor label/stereotype siblings vs actorGroup nodeStyles",
+      "usecaseActorIcon.ts:drawIconActor frame/iconGroup under glyph",
+      "architecture/svgDraw.ts:drawServices serviceElem/bkgElem/label",
+      "architecture/svgDraw.ts:drawGroups node-bkg rect vs separate groupLabelContainer",
+      "architecture/architectureRenderer.ts:architecture-edges/services/groups source containers"
+    ],
+    "change": "Public asset/svg(style=) now consumes the actual source parent state; descendants reset local opacity before cascading then multiply ancestor opacity once; ancestor display:none cannot be undone by child inline. Actor classDef/inline node-only display/opacity affects glyph subtree, caption/stereotype stay sibling labels; outer-container themeCSS applies to all its descendants. Architecture node-bkg remains a sibling of group icon/title, not an invented common container.",
+    "requiredP2P3": [
+      "Independent source classDef display/opacity versus themeCSS outer actor selectors",
+      "External icon resources and bundled SVG hidden/transparent before resource commands",
+      "Architecture service container vs node-bkg/group-label sibling selectors",
+      "Caption visible when only glyph hidden; all children invisible when real outer container hidden"
+    ],
+    "behaviorExecuted": false
+  }
+}

@@ -1,0 +1,365 @@
+{
+  "schema": "py-mermaid-visual-qa/v1",
+  "taskId": "20261105-f014-fixed-canvas-visual-qa",
+  "reviewedAtUtc": "2026-11-05T11:20:33.614638+00:00",
+  "candidateSha256": "99a2342681469836c3b7be8be6815b9a82193146331aff51d260823b72b17a2e",
+  "matrix": "test-runs/F01.4-batch-20261105T111527Z-8d3c0855",
+  "status": "PASS_REVIEWED_FIXES",
+  "scope": "Human visual review of the four previously observed concrete defects, CPU/source paired6cases plus auto/GPU3corecases each. Not an assertion that every pixel/all cases were manually inspected.",
+  "actualViewCount": 18,
+  "actualViews": [
+    {
+      "path": "test-runs/F01.4-batch-20261105T111527Z-8d3c0855/artifacts/oracle/handdrawn-shapes-3.png",
+      "sha256": "14144148bea04b1fef5a7be1de22d66ccac4bc153a1a597c0b16167f9ea4337a",
+      "size": [
+        1600,
+        105
+      ],
+      "viewedWith": "functions.view_image",
+      "profile": "oracle",
+      "case": "handdrawn-shapes-3"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T111527Z-8d3c0855/artifacts/compare-cpu/handdrawn-shapes-3.png",
+      "sha256": "3e395d5f53f18e2cf0a94474f85a6d296d9ead47dcfb679d77d17ff594cd6d7c",
+      "size": [
+        1714,
+        123
+      ],
+      "viewedWith": "functions.view_image",
+      "profile": "compare-cpu",
+      "case": "handdrawn-shapes-3"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T111527Z-8d3c0855/artifacts/oracle/layout-labelless-alignment-gallery.png",
+      "sha256": "d4ed6b685a797ae57b5402a6f3fde08562e4a08a83b659e78680c49e44ab1772",
+      "size": [
+        88,
+        594
+      ],
+      "viewedWith": "functions.view_image",
+      "profile": "oracle",
+      "case": "layout-labelless-alignment-gallery"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T111527Z-8d3c0855/artifacts/compare-cpu/layout-labelless-alignment-gallery.png",
+      "sha256": "0ed8664d4bb938b719a29e53a5c2d233b5525127b4c52c80bc04a2b00303a7a5",
+      "size": [
+        93,
+        586
+      ],
+      "viewedWith": "functions.view_image",
+      "profile": "compare-cpu",
+      "case": "layout-labelless-alignment-gallery"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T111527Z-8d3c0855/artifacts/oracle/static-spacing-shadow.png",
+      "sha256": "249bc55192cee83ef6a10d0bad60f273c83a078a03562404895ac1573b65c796",
+      "size": [
+        168,
+        61
+      ],
+      "viewedWith": "functions.view_image",
+      "profile": "oracle",
+      "case": "static-spacing-shadow"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T111527Z-8d3c0855/artifacts/compare-cpu/static-spacing-shadow.png",
+      "sha256": "ef14b298301058b457810e45cb955ad8a07523ed35ba0e0e6f3b18190575eab1",
+      "size": [
+        176,
+        69
+      ],
+      "viewedWith": "functions.view_image",
+      "profile": "compare-cpu",
+      "case": "static-spacing-shadow"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T111527Z-8d3c0855/artifacts/oracle/inline-svg-quad.png",
+      "sha256": "c165b75e1f8df7ab920c70a6b6b18c125443c62cc7fbee729f62bf5f5487a9dc",
+      "size": [
+        168,
+        151
+      ],
+      "viewedWith": "functions.view_image",
+      "profile": "oracle",
+      "case": "inline-svg-quad"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T111527Z-8d3c0855/artifacts/compare-cpu/inline-svg-quad.png",
+      "sha256": "1dcc352b4a55bacde7463c8d2fc18a557587dd1e454d7d30bb5ebe3d6143be50",
+      "size": [
+        176,
+        154
+      ],
+      "viewedWith": "functions.view_image",
+      "profile": "compare-cpu",
+      "case": "inline-svg-quad"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T111527Z-8d3c0855/artifacts/oracle/inline-data-quad.png",
+      "sha256": "ee5381181a7453ef6ab62fd8c2d71d0ac1a38e38f28ad305e934673b65936eed",
+      "size": [
+        168,
+        165
+      ],
+      "viewedWith": "functions.view_image",
+      "profile": "oracle",
+      "case": "inline-data-quad"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T111527Z-8d3c0855/artifacts/compare-cpu/inline-data-quad.png",
+      "sha256": "d2122ee8d15bb0fc13082cffb85180851eb63376d7472f33d771319728233827",
+      "size": [
+        176,
+        173
+      ],
+      "viewedWith": "functions.view_image",
+      "profile": "compare-cpu",
+      "case": "inline-data-quad"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T111527Z-8d3c0855/artifacts/oracle/shape-h-cyl.png",
+      "sha256": "981c8f21aed4f8c766966c0ffd84bbae92ffcbdc2c23d1a24b1d007104be5fdd",
+      "size": [
+        164,
+        49
+      ],
+      "viewedWith": "functions.view_image",
+      "profile": "oracle",
+      "case": "shape-h-cyl"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T111527Z-8d3c0855/artifacts/compare-cpu/shape-h-cyl.png",
+      "sha256": "a5e9be1d23e24c18ea3c15478b92e4ef54d68898f5f2fcdaba6fdbd514b9b6e7",
+      "size": [
+        172,
+        57
+      ],
+      "viewedWith": "functions.view_image",
+      "profile": "compare-cpu",
+      "case": "shape-h-cyl"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T111527Z-8d3c0855/artifacts/compare-auto/handdrawn-shapes-3.png",
+      "sha256": "7b91fc1533f380339db709973179518a8a72ef0b8ec1e9ad828f8d30cd92a70e",
+      "size": [
+        1714,
+        123
+      ],
+      "viewedWith": "functions.view_image",
+      "profile": "compare-auto",
+      "case": "handdrawn-shapes-3"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T111527Z-8d3c0855/artifacts/compare-auto/static-spacing-shadow.png",
+      "sha256": "d7a5fbdfe93392b8859edce92c0e334fac8ab91d54c6b08758e78565bd444a4a",
+      "size": [
+        176,
+        69
+      ],
+      "viewedWith": "functions.view_image",
+      "profile": "compare-auto",
+      "case": "static-spacing-shadow"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T111527Z-8d3c0855/artifacts/compare-auto/inline-svg-quad.png",
+      "sha256": "69a2a5b4b6fadbac2698c23dcc86c577cc7a91cdd2a0280328d20adf149a867f",
+      "size": [
+        176,
+        154
+      ],
+      "viewedWith": "functions.view_image",
+      "profile": "compare-auto",
+      "case": "inline-svg-quad"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T111527Z-8d3c0855/artifacts/compare-gpu/handdrawn-shapes-3.png",
+      "sha256": "7b91fc1533f380339db709973179518a8a72ef0b8ec1e9ad828f8d30cd92a70e",
+      "size": [
+        1714,
+        123
+      ],
+      "viewedWith": "functions.view_image",
+      "profile": "compare-gpu",
+      "case": "handdrawn-shapes-3"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T111527Z-8d3c0855/artifacts/compare-gpu/static-spacing-shadow.png",
+      "sha256": "d7a5fbdfe93392b8859edce92c0e334fac8ab91d54c6b08758e78565bd444a4a",
+      "size": [
+        176,
+        69
+      ],
+      "viewedWith": "functions.view_image",
+      "profile": "compare-gpu",
+      "case": "static-spacing-shadow"
+    },
+    {
+      "path": "test-runs/F01.4-batch-20261105T111527Z-8d3c0855/artifacts/compare-gpu/inline-svg-quad.png",
+      "sha256": "69a2a5b4b6fadbac2698c23dcc86c577cc7a91cdd2a0280328d20adf149a867f",
+      "size": [
+        176,
+        154
+      ],
+      "viewedWith": "functions.view_image",
+      "profile": "compare-gpu",
+      "case": "inline-svg-quad"
+    }
+  ],
+  "nativeBackendReceipts": {
+    "compare-cpu": {
+      "receipt": "test-runs/F01.4-batch-20261105T111527Z-8d3c0855/artifacts/compare-cpu/handdrawn-shapes-3.json",
+      "sha256": "fc13586463d108c9983acddda4c1a56672c21ad576edd37540d1ec4a17bf192c",
+      "backend": [
+        [
+          "api",
+          "Vulkan"
+        ],
+        [
+          "device",
+          "CPU-based renderer (GPU manually disabled)"
+        ],
+        [
+          "driver",
+          "N/A"
+        ],
+        [
+          "renderer",
+          "CPU"
+        ],
+        [
+          "textContrast",
+          "0.0"
+        ],
+        [
+          "textGamma",
+          "1.4"
+        ],
+        [
+          "threads",
+          "20"
+        ]
+      ]
+    },
+    "compare-auto": {
+      "receipt": "test-runs/F01.4-batch-20261105T111527Z-8d3c0855/artifacts/compare-auto/handdrawn-shapes-3.json",
+      "sha256": "17b4fe4f0bb7961496db81bc418ea967dfc47334a5dd0ea4c90325d2945f37a0",
+      "backend": [
+        [
+          "api",
+          "Vulkan"
+        ],
+        [
+          "device",
+          "Discrete GPU (NVIDIA GeForce RTX 5080)"
+        ],
+        [
+          "driver",
+          "NvidiaProprietary (595.95)"
+        ],
+        [
+          "renderer",
+          "GPU"
+        ],
+        [
+          "textContrast",
+          "0.0"
+        ],
+        [
+          "textGamma",
+          "1.4"
+        ],
+        [
+          "threads",
+          "20"
+        ]
+      ]
+    },
+    "compare-gpu": {
+      "receipt": "test-runs/F01.4-batch-20261105T111527Z-8d3c0855/artifacts/compare-gpu/handdrawn-shapes-3.json",
+      "sha256": "17b4fe4f0bb7961496db81bc418ea967dfc47334a5dd0ea4c90325d2945f37a0",
+      "backend": [
+        [
+          "api",
+          "Vulkan"
+        ],
+        [
+          "device",
+          "Discrete GPU (NVIDIA GeForce RTX 5080)"
+        ],
+        [
+          "driver",
+          "NvidiaProprietary (595.95)"
+        ],
+        [
+          "renderer",
+          "GPU"
+        ],
+        [
+          "textContrast",
+          "0.0"
+        ],
+        [
+          "textGamma",
+          "1.4"
+        ],
+        [
+          "threads",
+          "20"
+        ]
+      ]
+    }
+  },
+  "findings": [
+    {
+      "id": "F014-STATE-HOLLOW-LAYER",
+      "status": "fixed",
+      "cases": [
+        "handdrawn-shapes-3",
+        "layout-labelless-alignment-gallery"
+      ],
+      "observed": "stateStart now visibly white-center outline; stateEnd shows a small inner ring with light center; filledCircle stays a distinct dark disk. CPU and sampled auto/GPU retain this distinction. The9-shape connection chain remains visible with no phantom text or disconnected endpoints.",
+      "sourceComparison": "Source and Python show the same content distinction; remaining jitter/stroke antialias variations do not remove the hollow/ring/disk state information."
+    },
+    {
+      "id": "F014-TEXT-SHADOW-MASK",
+      "status": "fixed",
+      "cases": [
+        "static-spacing-shadow"
+      ],
+      "observed": "Red shadow now follows the AB CD glyph contours, with whitespace and holes preserved; the prior solid red rectangular slab is absent. Black uppercase letters and spacing remain readable. CPU,auto,GPU inspected."
+    },
+    {
+      "id": "F014-INLINE-SVG-HOST-CSS",
+      "status": "fixed",
+      "cases": [
+        "inline-svg-quad",
+        "inline-data-quad"
+      ],
+      "observed": "Direct inlineSVG is now four white-filled deep-border small cells, matching source hostCSS; explicit dataURI image remains red/lime/blue/yellow quadrants. Both content types remain inside their nodes and Done connections visible. CPU source pairs inspected, directSVG auto/GPU inspected."
+    },
+    {
+      "id": "F014-HCYL-CAP-SIDE",
+      "status": "fixed",
+      "cases": [
+        "shape-h-cyl",
+        "handdrawn-shapes-3"
+      ],
+      "observed": "Horizontal cylinder now has its complete ellipse endcap on the right, matching source. Label remains centered/readable and the case is not mirrored left anymore."
+    }
+  ],
+  "newMaterialDefectsFound": [],
+  "acceptedRenderingDifferences": [
+    "Native/browser text antialias and handDrawn outline jitter/thickness differ, while labels and shape families remain readable.",
+    "Explicit dataURI image horizontal placement is centered in native label box and more left-aligned in source HTML container; all four colors/extent and graph relationships remain intact. This existing layout variance is not a claim of pixel identity."
+  ],
+  "sourceChangesDuringReview": false,
+  "preservedPriorFailure": {
+    "path": "docs/changes/20261105-f014-canvas-visual-qa.json",
+    "candidateSha256": "1f17a467bfd7f8f7e7f53710c88a1280bda03f3ba412968c5d3d9a1575812a80",
+    "status": "FAIL_MANUAL_QA",
+    "unchanged": true
+  },
+  "acceptanceBoundary": "These reviewed fixes pass human visual QA. Full unit/matrix/export/log integrity acceptance remains coordinator-owned and independently recorded."
+}

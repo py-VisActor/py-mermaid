@@ -1,0 +1,160 @@
+{
+  "scope": "BULK-A-P3",
+  "status": "A_related_unit_and_CPU_pass_pending_global_P4",
+  "initialEvidenceUnmodified": "test-runs/BULK-P3-first-20261106T042952Z-978737eb",
+  "sourceMap": "references/bulk-A-P3-repairs.json",
+  "finalRelatedUnit": {
+    "run": "BULK-record-20261106T051803Z-9b49b798",
+    "exitCode": 0,
+    "tests": 581,
+    "sourceUnchanged": true
+  },
+  "diagnosticRuns": [
+    "BULK-record-20261106T044344Z-53c7fb83",
+    "BULK-record-20261106T044357Z-0164d08f",
+    "BULK-record-20261106T044616Z-dcc9b7fe",
+    "BULK-record-20261106T044720Z-e054e72e",
+    "BULK-record-20261106T044733Z-91ba026a",
+    "BULK-record-20261106T044758Z-da669a88"
+  ],
+  "commandSetupFailures": [
+    "044344 omitted PYTHONPATH; 044720 PowerShell quote truncation; neither classified as product failure or pass"
+  ],
+  "fixtureCount": 194,
+  "fixtureExpectations": {
+    "render": 170,
+    "syntax_error": 12,
+    "error": 9,
+    "upstream_defect": 2,
+    "excluded_by_static_scope": 1
+  },
+  "testsAndFixtures": [
+    {
+      "path": "tests/bulk/a/__init__.py",
+      "sha256": "a5b785f07d55794f5cb56145fd6ddafca725693886a934a0676df36a826d34fe"
+    },
+    {
+      "path": "tests/bulk/a/support.py",
+      "sha256": "1657495acb512abbf17827a968d6a323696b835bfcafb5c9f4e05cb004cad0be"
+    },
+    {
+      "path": "tests/bulk/a/test_algorithms.py",
+      "sha256": "b7ca2c4d5fd5b7d8f512fcdd32a228a364a8687bd64ad1475eedb9469edcd16a"
+    },
+    {
+      "path": "tests/bulk/a/test_block_arrow_geometry.py",
+      "sha256": "92d38dd1b5bbdfff5567d3f12d13996b89a7672dd95b332f926f05cb63e4e640"
+    },
+    {
+      "path": "tests/bulk/a/test_config_source.py",
+      "sha256": "3a831379ed7e9872ff89db62133d82161f919919cfa55351a94954077228a796"
+    },
+    {
+      "path": "tests/bulk/a/test_hierarchy.py",
+      "sha256": "2ccb1392961442798e2a67884f3a808c83975e222b8fb79d24414915d7dbb9fb"
+    },
+    {
+      "path": "tests/bulk/a/test_modeling.py",
+      "sha256": "afd786c4367cbcfd528eb4d5d24b57dd914b0c906ed48bdcc61d53bcea681204"
+    },
+    {
+      "path": "tests/bulk/a/test_paint_contracts.py",
+      "sha256": "c99226ef1aba8ce52fc28ea883b04d5f14fb2342f40c7a4341312813356b8081"
+    },
+    {
+      "path": "tests/bulk/a/test_state_errors.py",
+      "sha256": "fa1d409ca7bf0a28596c03bc4c37913412de425ed752fcd883cb288a99cfe5cf"
+    },
+    {
+      "path": "tests/bulk/a/test_structures.py",
+      "sha256": "bad7067d706d3f52257ba7b05d4b41179d973c18bd75299f00e45d8217073dcf"
+    },
+    {
+      "path": "tests/bulk/a/config_cases.json",
+      "sha256": "fe98ee43239f353d383c5581dc520bca8518374407a1090c6dd310bdf550b3f4"
+    },
+    {
+      "path": "tests/bulk/a/language_cases.json",
+      "sha256": "a2d9776cb73ecbae5576c9a308a3e536094809394aae1fa47f1459767f20125a"
+    },
+    {
+      "path": "tests/bulk/a/p3-cpu-plan.json",
+      "sha256": "68bc8bb3d9322f666bb61e6e3d0878b02365dd363baabbd310bc1d3b0550ff15"
+    },
+    {
+      "path": "tests/bulk/cases-A.json",
+      "sha256": "521d73a753dbac974a3d5d9e8de7009a82ecf86023145c6379bc9af12ed1ed8d"
+    },
+    {
+      "path": "tests/bulk/a/resources/user.svg",
+      "sha256": "1215b3f5e58bf2df23760e857c653f4bcff715490695a22dd22c9638ff3f8600"
+    }
+  ],
+  "limitations": [
+    "A related unit/CPU functional gates passed on unchanged source during each run; full global P4 candidate not yet frozen.",
+    "Full official source visual comparison, all profiles/formats and joint regressions remain root P4/P5 gates.",
+    "All initial failing inputs/results and older concurrent-source-change exit1 remain preserved.",
+    "Installation validation remains paused."
+  ],
+  "remaining": [
+    {
+      "id": "global-P4",
+      "detail": "Root final uniform all-groups/profile/export candidate and full visual/source comparisons remain required."
+    }
+  ],
+  "addedSourceRegression": {
+    "run": "BULK-record-20261106T045211Z-118cf324",
+    "tests": 1,
+    "subtests": [
+      "TB",
+      "LR"
+    ],
+    "exitCode": 0,
+    "assertions": "real relation/Outside paint plus edge and four cardinality primitives"
+  },
+  "relatedMethodCount": 581,
+  "CPUPreFinal": [
+    {
+      "run": "BULK-batch-20261106T045002Z-f394cf6c",
+      "counts": {
+        "CHECKS_PASSED": 162,
+        "EXPECTED_ERROR": 21,
+        "EXCLUDED": 1,
+        "FAILED": 9
+      }
+    },
+    {
+      "run": "BULK-batch-20261106T045239Z-a15b8615",
+      "counts": {
+        "CHECKS_PASSED": 169,
+        "EXPECTED_ERROR": 21,
+        "EXCLUDED": 1,
+        "FAILED": 2
+      },
+      "remainingFailures": "validator upstream-defect classification and source-transparent all-white control; no pending A product exception",
+      "sourceUnchanged": false
+    }
+  ],
+  "manualPNGReview": [
+    "class compartments actual distinct title/member/method regions, underline and italic; labels readable",
+    "mindmap hierarchy matches source Root/Child/Leaf/Other topology and source section colors; source/native original images viewed",
+    "usecase JSON now real rows name/Alice roles/Reader/Writer plus source note attached to actor",
+    "architecture align bare iconless source nodes display their actual dashed frame"
+  ],
+  "finalRelatedCPU": {
+    "run": "BULK-batch-20261106T051813Z-69e5eb31",
+    "actualExitCode": 0,
+    "actualRunStatus": "SUCCESS",
+    "sourceUnchanged": true,
+    "cases": 194,
+    "counts": {
+      "CHECKS_PASSED": 171,
+      "EXPECTED_ERROR": 22,
+      "EXCLUDED": 1
+    }
+  },
+  "sourceDefects": [
+    "A-architecture-upstream-direct-group-endpoint native explicit error boundary, exact expected code",
+    "A-mindmap-explicit-elk original ELK0.9.3 null.re source failure, nativeMustRender=true with actual PyELK rendering retained"
+  ]
+}

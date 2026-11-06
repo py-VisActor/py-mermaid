@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "scope": "BULK_STATIC_31_ENTRIES",
+  "owner": "B",
+  "family": "temporal",
+  "status": "code_complete_unverified",
+  "phase": "P1_SOURCE",
+  "detectors": [
+    "gantt",
+    "journey",
+    "timeline",
+    "gitGraph"
+  ],
+  "sourceMap": "references/bulk-B-temporal-sources.json",
+  "nativeAggregateSHA256": "43c035e3b45a6ee569f02613b40de31d4d7dee3b4cef26c2e1ed9f57b79de940",
+  "nativeFileCount": 11,
+  "sourceCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "mechanicalRun": "test-runs/BULK-record-20261106T035213Z-d232d9fe",
+  "mechanicalStatus": "SUCCESS",
+  "behaviorTestsRun": false,
+  "oracleRun": false,
+  "imagesGenerated": false,
+  "formalTestsWritten": false,
+  "productionJavaScript": false,
+  "productionLocalSourceDependency": false,
+  "dagreExcluded": true,
+  "fallbackLayouts": false,
+  "retainedPriorFailures": [
+    "test-runs/adhoc-record-20261106T023417Z-81526086",
+    "test-runs/BULK-record-20261106T033421Z-db9e391a"
+  ],
+  "knownHostAdaptations": [
+    "Gantt viewport width is explicit Painter.viewport_width when source parentElement.offsetWidth is unavailable.",
+    "Gantt dates outside Python datetime year range use proleptic Gregorian scalar dates; extended-year timestamp timezone conversion uses native host UTC offset, while ordinary dates retain host datetime and DST.",
+    "Generated Git commit IDs retain source nondeterministic seven-hex random identity; authored IDs remain exact.",
+    "Canvas antialiasing replaces the SVG crispEdges sampling hint; source milestone rotate45 scale.8 is represented by transformed pure polygon vertices.",
+    "Read-only chart lexical/scales helpers are retained shared numeric code; deferred chart detectors are not counted as completed."
+  ],
+  "acceptance": "P1 source handoff only. No claim of functional, geometric, visual, resource, export or backend acceptance before P2/P3/P4.",
+  "remainingWork": [
+    "Root unified source freeze and independently sourced P2 assertions.",
+    "Unified first behavior run across all groups, preserving failures before any source repair.",
+    "Real CPU/auto/GPU images and source-oracle human QA with same-candidate identity.",
+    "Installation validation remains deferred by user."
+  ],
+  "leaseStop": "B source files frozen after this receipt; root/C shared provider files have their own receipts."
+}

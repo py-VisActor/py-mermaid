@@ -1,0 +1,78 @@
+{
+  "schema": "py-mermaid-change/v1",
+  "taskId": "F01.4-S4/elk-layout-tests",
+  "status": "repairs_code_complete_unverified",
+  "initialFailureRun": "F01.4-batch-20261105T090906Z-11b555ce",
+  "changedFiles": {
+    "src/py_mermaid/layout/elk/flowchart.py": "1ac9d847fc7b4d473daccc92c153e77a8c31a5e15de2777d1c980083ef940c52",
+    "src/py_mermaid/layout/elk/compound.py": "6fdf97598bd9fc4d98160bf1037c6889512e4e919a9f360c2c3abe59bffc4666",
+    "tests/f011/test_layout.py": "8958c71c3a8dc354e93f240d8bc6471cc3409a6d49b354a1bbff57789d9522d0",
+    "tests/f014/test_layout.py": "32081d2f22c9e38c914773bfa6ba4ab3c74d59831aba6a245447068aad586056",
+    "tests/f014/test_shapes.py": "ff87c914003e46eeb3dbf5d5429aa9a07b993fa020a8fbb4174d18259e94a605",
+    "tests/f014/layout-cases.json": "d44f8960fcfe1d6140bb62e059d898c11b831e6a143c692a181e60959b6a76cc",
+    "references/f014-elk-sources.json": "b9064c512a3cd9d1ccd3f1f32e37521cc2ef856de674933f07fc939be4e88183",
+    "references/f014-layout-assertions.json": "ca4bdddb8e231de032cb19aa7d9ea73b7d8917eaff6f80a087421796cc000dfe"
+  },
+  "repairs": [
+    "Empty graph validates real engine output includingzero and still performs real native call; no fake node/frame.",
+    "No radial product adjustment: preserve original real frame and document source-specific visible defect for exact fixture G.",
+    "Correct invisible helper and oldRL scope negative; retain direct negative assertions.",
+    "Source50-point sine/phase/bbox/docs outer staircase independent assertions replace erroneous curve-command assumption; canonical idempotency added."
+  ],
+  "verification": [
+    {
+      "run": "F01.4-record-20261105T091736Z-1ab4d885",
+      "purpose": "radial evidence diagnostic",
+      "sourceTreeSha256": "5eabe710774178aac6d67c6c0aab025eadabd209e418bfdb518d33ab506f4a4d",
+      "status": "SUCCESS",
+      "manifestSha256": "d98d276ce170d39e4d409f25655927a743a17b378273a21fdac7a20e98ca3487",
+      "commands": [
+        {
+          "argv": [
+            "C:/venvs/pymmd-20261102/Scripts/python.exe",
+            "-c",
+            "import sys,asyncio,json,copy\nfrom pathlib import Path\nfrom dataclasses import asdict\nsys.path.insert(0,str(Path('tests/f014').resolve()))\nfrom test_layout import diagram\nfrom py_mermaid.rendering.skia import CanvasSession\nfrom py_mermaid.layout.elk import layout_flowchart\nfrom pyelk import ELK\nout=Path('test-runs/f014-radial-raw-initial-001');out.mkdir(exist_ok=False)\noriginal=ELK.layout\nasync def observe(engine,graph,args=None):\n (out/'input.json').write_text(json.dumps(graph,ensure_ascii=False,indent=2),encoding='utf-8')\n result=await original(engine,graph,args)\n (out/'output.json').write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8')\n return result\nasync def main():\n chart=diagram(group_algorithm='elk.radial');session=CanvasSession('cpu');measured=session.measure(chart);ann=session.measure_annotations(chart)\n ELK.layout=observe\n try:result=await layout_flowchart(chart,measured,measured_groups=ann.groups,measured_edge_labels=ann.edge_labels)\n finally:ELK.layout=original\n (out/'layout.json').write_text(json.dumps(asdict(result),ensure_ascii=False,indent=2),encoding='utf-8')\n (out/'measured.json').write_text(json.dumps([asdict(n) for n in measured],ensure_ascii=False,indent=2),encoding='utf-8')\n print(json.dumps({'groups':[asdict(g) for g in result.groups],'nodes':[asdict(n) for n in result.nodes]},ensure_ascii=False,indent=2))\n print('DIAGNOSTIC_ONLY, not final candidate PASS;',out)\nasyncio.run(main())"
+          ],
+          "exitCode": 0,
+          "stdout": "commands/001-radial-initial-diagnostic/stdout.log",
+          "stderr": "commands/001-radial-initial-diagnostic/stderr.log"
+        }
+      ]
+    },
+    {
+      "run": "F01.4-record-20261105T092418Z-4727b73c",
+      "purpose": "compile/collect only",
+      "sourceTreeSha256": "d05358e861f224e0a5ac09dbddf06f8d781bd37a62fc9a427be936ad4a4965f8",
+      "status": "SUCCESS",
+      "manifestSha256": "a6bd2d3945ed50606a46e5698ebcb07010aa3106d3376694d4631a0c5cd414d6",
+      "commands": [
+        {
+          "argv": [
+            "C:/venvs/pymmd-20261102/Scripts/python.exe",
+            "-c",
+            "import py_compile,unittest,json; from pathlib import Path; files=('src/py_mermaid/layout/elk/flowchart.py','src/py_mermaid/layout/elk/compound.py','tests/f011/test_layout.py','tests/f014/test_layout.py','tests/f014/test_shapes.py'); [py_compile.compile(p,doraise=True) for p in files]; loader=unittest.TestLoader(); counts=[loader.discover('tests/f014',pattern=p).countTestCases() for p in ('test_layout.py','test_shapes.py')]; assert counts==[35,15],counts; assert not loader.errors,loader.errors; cases=json.loads(Path('tests/f014/layout-cases.json').read_text(encoding='utf-8'))['cases']; marked=[c for c in cases if c.get('knownSourceDefect')]; assert len(marked)==1 and marked[0]['id']=='layout-group-elk-radial' and marked[0]['knownSourceDefect']['groups']==['G']; print({'collectOnly':counts,'singleSourceDefectFixture':marked[0]['id'],'behavior':'NOT_RUN'})"
+          ],
+          "exitCode": 0,
+          "stdout": "commands/001-elk-layout-s4-repair-mechanical/stdout.log",
+          "stderr": "commands/001-elk-layout-s4-repair-mechanical/stderr.log"
+        }
+      ]
+    }
+  ],
+  "sourceStopped": true,
+  "relatedTestsRerun": false,
+  "fullTestsRerun": false,
+  "diagnosticEngineExecuted": true,
+  "knownSourceDefect": {
+    "id": "elk-radial-container-frame",
+    "fixture": "layout-group-elk-radial",
+    "groups": [
+      "G"
+    ]
+  },
+  "limitations": [
+    "Root owns canonical/wave implementation; its final source is not behavior-verified by this worker.",
+    "All owners must stop source edits before coordinator unified related regression.",
+    "No change to native pyelk0.1.0 baseline/lock; no success algorithm fallback; no post-layout group growth."
+  ]
+}

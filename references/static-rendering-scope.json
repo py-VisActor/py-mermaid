@@ -1,0 +1,36 @@
+{
+  "schema": "py-mermaid-static-rendering-scope/v1",
+  "decidedAt": "2026-11-05",
+  "authority": "User explicitly requested all modules ignore interaction logic and consider static rendering only",
+  "appliesTo": "all diagrams, shared modules, APIs, dependencies, exports and acceptance",
+  "documentation": "docs/STATIC_RENDERING_SCOPE.md",
+  "included": [
+    "static-grammar-and-visual-semantics",
+    "layout-routing-shapes-markers",
+    "text-rich-text-math-static-style",
+    "explicit-offline-font-icon-image-resources",
+    "static-exports-and-format-structure",
+    "input-and-resource-security"
+  ],
+  "excluded": [
+    "event-registration-dispatch-and-bindFunctions",
+    "click-callback-hover-focus-tooltip-behavior",
+    "navigation-and-link-activation",
+    "drag-zoom-select-edit-and-hit-testing",
+    "animation-playback-timeline-and-frame-sequences",
+    "interactive-metadata-and-link-annotations",
+    "dom-aria-accessibility-behavior-and-new-host-protocols"
+  ],
+  "sourceInventory": "Retain original indexes and dependency facts; classify excluded assertions as excluded_by_static_scope, neither pending nor passed",
+  "mixedEntries": "Keep static visible effects and security assertions; exclude interaction subassertions only",
+  "animationStaticReference": "Initial time t=0; preserve and record initial visible styles; no playback or image postprocessing",
+  "syntax": "Future grammar expansion may safely recognize and ignore interaction directives; no claim that existing parsers already accept them",
+  "existingPureValueCompatibility": "Retain existing fields without requiring interaction exports or runtime",
+  "reportViewer": "Development viewer controls are outside Mermaid interaction parity; keep existing report tooling",
+  "installationValidation": "deferred; not executed",
+  "productCodeChanged": false,
+  "layoutPolicy": "references/layout-policy.json",
+  "excludedAlgorithms": [
+    "dagre"
+  ]
+}

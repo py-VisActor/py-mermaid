@@ -1,0 +1,170 @@
+{
+  "schema": "py-mermaid-change/v1",
+  "taskId": "20261105-f013-parser",
+  "ownerAgent": "/root/parser_config",
+  "phase": "F01.3-S2",
+  "status": "targeted_checks_passed_full_acceptance_pending",
+  "baseline": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "startEvidence": "test-runs/F01.34-start-20261105T010728Z-1de7376b",
+  "scope": "Source-mapped preprocessing, safe YAML JSON-schema values, protected config layers, eleven themes plus null, existing classic flowchart rich labels and accessibility metadata",
+  "preservedUserWork": true,
+  "changedFiles": [
+    {
+      "path": "src/py_mermaid/config/__init__.py",
+      "sha256": "0a1a35bc6930e3ec4b021e68d66da16df4f0a576472bc4ec2410598579e6ab4f"
+    },
+    {
+      "path": "src/py_mermaid/config/color_names.py",
+      "sha256": "53d1453fb57e005c66543e099172dd159a650522f6428c2bca32907ed20c6ca4"
+    },
+    {
+      "path": "src/py_mermaid/config/colors.py",
+      "sha256": "37aa0d65e01bb10a253a90c2a66bfe5c003121b9726de4955b53c68e5be5bf3a"
+    },
+    {
+      "path": "src/py_mermaid/config/flowchart.py",
+      "sha256": "48b0be5ef088e85fcb4a3615eb9a011f6cf1fe9de3149a5ffc7727a2b103a7ad"
+    },
+    {
+      "path": "src/py_mermaid/config/source_keys.py",
+      "sha256": "0ae56a02cb58872c0f11a2bf49b26de413616807f1f832db56f0fbbd19b86141"
+    },
+    {
+      "path": "src/py_mermaid/config/theme_rules.py",
+      "sha256": "129b24929010c992513506c22145e9937017971309858fe6716572b6118b62c9"
+    },
+    {
+      "path": "src/py_mermaid/config/themes.py",
+      "sha256": "96883a186702040397632e5726f6bb8a004dd57ea4ae3bd6c232531f4d046d61"
+    },
+    {
+      "path": "src/py_mermaid/config/values.py",
+      "sha256": "a637721f11866e18a1f6de2595358eb80a427501094420ef914006376b114789"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/flowchart/__init__.py",
+      "sha256": "648b1a3ca353ad86c12facbcb0d900aa2595a274b64b0d2c2a931c131c3c8a96"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/flowchart/parser.py",
+      "sha256": "043d35f35d7a7857d7c9bd0a07404a924f0279cff05283ec08cb639e8bb4f633"
+    },
+    {
+      "path": "src/py_mermaid/parsing/__init__.py",
+      "sha256": "b927e8e23113a95e0258b2c5c085251b941dbb16f7cb78552319ab44b5785974"
+    },
+    {
+      "path": "src/py_mermaid/parsing/preprocess.py",
+      "sha256": "9a6ebcfa5629b239e8c9516b25fe15e5d65f5cc11f8d111c9ef5d8c48e3a0d94"
+    },
+    {
+      "path": "src/py_mermaid/parsing/yaml_json.py",
+      "sha256": "d443e7b317a0a46f97ad53906efa5852fbfb3a4140aca9c8cea53e2854a0ca50"
+    }
+  ],
+  "sourceMap": "references/f013-parser-sources.json",
+  "sourceMapSha256": "dd73ce559d9040102651d3ce9ac900332018c6a97c6368b8709dc2391b70841d",
+  "mechanicalEvidence": "test-runs/F01.3-parser-source-final-20261105T014503Z-ee62f2c7/run.json",
+  "checks": [
+    {
+      "name": "compileall owned modules",
+      "exitCode": 0
+    },
+    {
+      "name": "imports and signatures only",
+      "exitCode": 0
+    }
+  ],
+  "behaviorExecuted": true,
+  "installationValidation": "deferred_by_user",
+  "remaining": [
+    {
+      "id": "yaml-schema-conformance",
+      "status": "requires_independent_source_tests",
+      "detail": "Pinned js-yaml4.3 numeric cases/finite bounds/JS-number rounding and block keep sentinel repaired with independent regression tests. Reader implements safe JSON-schema flow/block collections, aliases, tags and folded/quoted multiline. No claim of universal js-yaml conformance; complex object-key and cyclic alias semantic gaps remain explicit rather than importing a runtime dependency."
+    },
+    {
+      "id": "theme-closure",
+      "status": "scope_boundary",
+      "detail": "All 11 registered themes implement constructor/update statements reachable by flowchart fields; non-flowchart theme calculations and loops belong to deferred diagram families."
+    },
+    {
+      "id": "null-theme",
+      "status": "source_semantics_preserved",
+      "detail": "String null is not a registry theme: initialize uses fallback default variables, while scoped null keeps inherited variables rather than deleting CSS styles."
+    },
+    {
+      "id": "neo-shadow-source",
+      "status": "corrected_analysis_and_targeted_regression_passed",
+      "detail": "The original string is valid: balanced two function parentheses with trailing CSS declaration semicolon. Original literal is preserved. Scalar parser ignores that terminator, while styles owner interprets the complete source filter. Earlier malformed interpretation was wrong."
+    },
+    {
+      "id": "empty-comment",
+      "status": "source_question",
+      "detail": "cleanupComments source requires content after %% but previous slice accepts an empty whole-line marker. Source-negative empty-comment EOF coverage remains to establish exact combined cleanup/grammar effect."
+    },
+    {
+      "id": "color-format",
+      "status": "requires_independent_source_tests",
+      "detail": "CSS colors and Khroma channel/luminance operations are ported as pure values. Canonical CSS HSL formatting may differ while channels match; test colors semantically as well as source string where observable."
+    },
+    {
+      "id": "f014-dagre",
+      "status": "deferred_by_user",
+      "detail": "Full grammar style/class/click/link variants/new @{shape} metadata, math/icons/images/resources, handDrawn and Dagre are not implemented in F01.3. Unsupported branches fail explicitly."
+    }
+  ],
+  "next": "Root coordinated styles/labels repair and final freeze; only targeted language checks run here.",
+  "s4RepairBatch": {
+    "preservedInitialEvidence": "test-runs/F01.3-initial-evidence-snapshot-20261105T021024Z-38c90a72",
+    "preservedInitialSourceSha256": "5a7264af3a00dc705df6824d83311e3e3b67d80b39457ecfeba5aec19293d771",
+    "fixes": [
+      {
+        "id": "config-section-merge",
+        "source": "assignWithDepth.ts null skip/array sources; config.ts resolveAppearance",
+        "change": "Validate effective flowchart section after source merge; raw null/empty list retain defaults, array mapping sources merge in order.",
+        "regression": "ConfigurationLayerSourceTests.test_null_and_array_flowchart_sections_follow_merge_before_validation"
+      },
+      {
+        "id": "markdown-body-span",
+        "source": "flow.jison MD_STR excludes delimiter tokens; F01.3 raw-label body contract",
+        "change": "Use body start+1/end-1 only for Markdown; retain original raw map and UTF16 conversion.",
+        "regression": "PreprocessPositionTests.test_markdown_node_span_excludes_quote_and_tick_delimiters"
+      },
+      {
+        "id": "unclosed-markdown",
+        "source": "flow.jison md_string only closes backtick+doublequote; official initial negative rejects",
+        "change": "Quoted label beginning Markdown tick must have closing tick; node/edge/group share check.",
+        "regression": "RichFixtureLanguageTests.test_unclosed_markdown_in_node_edge_and_group_is_parse_error"
+      },
+      {
+        "id": "yaml-numeric-4.3",
+        "source": "Pinned embedded js-yaml@4.3.0 type/int.js and type/float.js",
+        "change": "No underscore cleanup, lowercase base prefixes, exact special-value cases, finite numeric resolution, JS Number integer rounding and precise leading-dot float sign grammar.",
+        "regression": "YamlJsonSchemaTests.test_pinned_numeric_case_and_float_grammar_boundaries;test_yaml_integers_use_js_number_rounding"
+      },
+      {
+        "id": "yaml-block-keep",
+        "source": "js-yaml loader readBlockScalar/CHOMPING_KEEP",
+        "change": "Discard split terminal sentinel rather than counting it as an extra physical blank line; preserve meaningful trailing blank lines.",
+        "regression": "YamlJsonSchemaTests.test_keep_chomp_counts_real_trailing_linebreaks"
+      },
+      {
+        "id": "neo-shadow-correction",
+        "source": "theme-neo.js:40 and styles.ts filter interpolation",
+        "change": "Default literal remains byte-for-byte unchanged. It has balanced parentheses and a legal trailing CSS declaration semicolon. Scalar shadow parser now strips only declaration terminator for recognition, producing dx0/dy1/alpha.25. Earlier malformed-string analysis was incorrect.",
+        "regression": "ConfigurationLayerSourceTests.test_neo_shadow_keeps_source_string_and_parses_declaration_semicolon"
+      },
+      {
+        "id": "html-svg-fixture-correction",
+        "source": "Official initial A html-svg-mode visible text capture; HTML disabled SVG text token semantics",
+        "change": "Fixture DB body remains <b>Bold</b>; independent visible expectation corrected from Bold to literal <b> Bold </b>. C owns corresponding text rendering."
+      }
+    ],
+    "targetedEvidence": [
+      "test-runs/F01.3-record-20261105T021506Z-233f8f28/run.json",
+      "test-runs/F01.3-record-20261105T021513Z-b93aefe4/run.json"
+    ],
+    "installationValidation": "deferred_by_user"
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "schemaVersion": 1,
+  "owner": "B",
+  "phase": "P4_MANUAL_REPAIR",
+  "status": "TARGETED_PASS_PENDING_FINAL_P4",
+  "rejectedCandidateRun": "test-runs/BULK-P4-final-20261106T053339Z-476daa06",
+  "sourceFiles": {
+    "src/py_mermaid/diagrams/temporal/gantt.py": "5bf9076c592982424140f685f70989f6d081b4fe894512fc0c3ecf419b1c3148",
+    "src/py_mermaid/diagrams/temporal/gitgraph.py": "1a4f5af2020d6b41efce16c00a09b119d909181bdbddcf430910cb755a03b43a",
+    "src/py_mermaid/diagrams/temporal/journey.py": "3f6667afbeb608cda4ade772ac6018e16c8a90ea7bb62781994b9c7b170e18a6",
+    "src/py_mermaid/diagrams/temporal/timeline.py": "63471b526ab2d7ed53b149f96dd6752d577810d254d676d9b6978b9351788b7a",
+    "src/py_mermaid/diagrams/temporal/_civil.py": "6eadb3bd77584d9bca970219398c5f908119f2ccef72916f007d536b12c0fad4",
+    "src/py_mermaid/diagrams/temporal/_dates.py": "d41b4b90b00786a1c622285a367a4cb38cc5e65454ce94d9a18ce6d5608349d9",
+    "src/py_mermaid/diagrams/temporal/_git_layout.py": "017ffa6e6cffa8e3d268d23ea00e6970fa527dbba740901867ecd74d5b316d01",
+    "src/py_mermaid/diagrams/temporal/_paint.py": "03e0351abba8ba60ef75d85cef21e9374bb50c47aedfb5d4a35dff40f3f4926a",
+    "src/py_mermaid/diagrams/temporal/_source_styles.py": "7948dc4e98a0501183df0eca4f268784c347c23bf98a228873fb0cf4a0cacc35",
+    "src/py_mermaid/diagrams/temporal/_syntax.py": "e691a0c333a91dfac049be7beaf36b72c9328e8c0c41e76a41fa81a9469e5f72",
+    "src/py_mermaid/diagrams/temporal/__init__.py": "1985c5a8a929517d99683cee489f4ae00cdd901fc23606504e03e56ffa0b2cc5"
+  },
+  "nativeTemporalAggregateSHA256": "1dd1dfa1bb8694fb54989ae927dc4761ab9d10a6e9c42228a2c88e24eefcb24f",
+  "fixedSource": {
+    "packages/mermaid/src/diagrams/user-journey/journeyRenderer.ts": "bd96cb487f8121f21fa02524f32d2d880afd09934a2db71e51c51fbc4898d6a6",
+    "packages/mermaid/src/diagrams/user-journey/svgDraw.js": "b3b41ecbddaa7b484a158c753932b4ec04fdcaee88bd2711f44dd401e6b89a7d",
+    "packages/mermaid/src/diagrams/common/svgDrawCommon.ts": "da5e706bf4c78ff55172c4eb1eec2725c87ab290ff4e76905b8f85ce12fdc6ba"
+  },
+  "sharedDependency": "NativePainter.font_size CSS px resolver, root owner; no B shared modifications",
+  "sourceRepairDetails": {
+    "journey.py": [
+      "NativePainter.font_size retains CSS units against actual parent size/family/weight",
+      "FO plain DOM text in a normal-line-height table cell, fixed viewport clip and actual width wrapping",
+      "old single SVG baseline y+h/2+5 with inherited root font",
+      "tspan only <br> split, source task font and symmetric dy",
+      "source bounds.stopx uses task.x+diagramMarginX+taskMargin; activity endpoint stopx+2mx-4",
+      "actor legend source maxWidth threshold and20px line slots",
+      "source nonfinite cy attributes default independently0; NaN neutral line; +/-Infinity ignored translate leaves origin mouth clipped at root x0",
+      "getNoteRect default #666 border retained"
+    ],
+    "supersedesEarlierIncorrectInterpretation": "P3 said NaN/Infinity face invisible; original source A SVG/PNG proves default0 face and invalid transform identity. Original P3 receipts and approvals are preserved unchanged.",
+    "sourceOracleProbe": "test-runs/BULK-batch-20261106T061304Z-7b9bba54/artifacts/oracle/B-journey-nonfinite-source-probe.svg"
+  },
+  "newMethods": 12,
+  "totalBMethods": 152,
+  "unitRun": {
+    "run": "test-runs/BULK-record-20261106T061635Z-5b17cfb5",
+    "methods": 152,
+    "skipped": 0,
+    "exitCode": 0
+  },
+  "nativeRun": {
+    "run": "test-runs/BULK-batch-20261106T061834Z-2f1a6fd4",
+    "cases": 115,
+    "failures": 0,
+    "sourceUnchanged": true
+  },
+  "existing115FixtureSourceConfigUnchangedByB": true,
+  "currentFixtureSHA256": "c58fe49432176963c9307478fcc96844df521dfcf101baab6ad99aa35336a100",
+  "independentProbe": "One diagnostic-only source NaN/+Inf/-Inf probe under tests/bulk/b, not added to canonical115",
+  "portableIdRepairNativeReview": [
+    {
+      "id": "B-gantt-format-unix-ms",
+      "native": "test-runs/BULK-batch-20261106T061834Z-2f1a6fd4/artifacts/native-cpu-B/B-gantt-format-unix-ms.png",
+      "nativeSHA256": "ea5b9c2dbb6a093c6f27b63bf65608af6823f69d155edf8c2cbea5e890cd8e0a",
+      "actualViewImage": true,
+      "originalCollisionEvidenceReused": false,
+      "freshOfficialComparison": "Root new complete oracle capture pending; old case-fold-colliding images rejected."
+    },
+    {
+      "id": "B-gantt-format-unix-seconds",
+      "native": "test-runs/BULK-batch-20261106T061834Z-2f1a6fd4/artifacts/native-cpu-B/B-gantt-format-unix-seconds.png",
+      "nativeSHA256": "ea5b9c2dbb6a093c6f27b63bf65608af6823f69d155edf8c2cbea5e890cd8e0a",
+      "actualViewImage": true,
+      "originalCollisionEvidenceReused": false,
+      "freshOfficialComparison": "Root new complete oracle capture pending; old case-fold-colliding images rejected."
+    },
+    {
+      "id": "B-gantt-duration-months",
+      "native": "test-runs/BULK-batch-20261106T061834Z-2f1a6fd4/artifacts/native-cpu-B/B-gantt-duration-months.png",
+      "nativeSHA256": "2cee4e41bc6813c211e8f8be05d54449f286da2bd67a3251945bcaec26dc6a83",
+      "actualViewImage": true,
+      "originalCollisionEvidenceReused": false,
+      "freshOfficialComparison": "Root new complete oracle capture pending; old case-fold-colliding images rejected."
+    },
+    {
+      "id": "B-gantt-duration-minutes",
+      "native": "test-runs/BULK-batch-20261106T061834Z-2f1a6fd4/artifacts/native-cpu-B/B-gantt-duration-minutes.png",
+      "nativeSHA256": "623a425113199355627540f815c71c4e7749a6c976563e6172c1698e8397de3a",
+      "actualViewImage": true,
+      "originalCollisionEvidenceReused": false,
+      "freshOfficialComparison": "Root new complete oracle capture pending; old case-fold-colliding images rejected."
+    }
+  ],
+  "negativeControls": [
+    "external public Canvas x metric rejects4px unit stripping",
+    "pixel clip removal changes real ink",
+    "zero-length activity drops >170px ink footprint",
+    "missing-face mutation rejected against public Canvas circle pixel reference"
+  ],
+  "visualReview": {
+    "status": "PASS_FOR_REPAIRED_JOURNEY",
+    "pairs": [
+      {
+        "id": "B-journey-actors-emotions",
+        "official": "test-runs/BULK-P3-official-refresh-20261106T050328Z-0274d04e/artifacts/oracle/B-journey-actors-emotions.png",
+        "officialSHA256": "a032cc6da3a17f0940814085a5b66b66a51f6a804efe25f740d7b4c84a40c0da",
+        "native": "test-runs/BULK-batch-20261106T061834Z-2f1a6fd4/artifacts/native-cpu-B/B-journey-actors-emotions.png",
+        "nativeSHA256": "7d6ac94390adc7e04c63083b0615b4702df7e30b11fa7166c91b598ad2b3b969",
+        "actualViewImage": true
+      },
+      {
+        "id": "B-journey-wrapped",
+        "official": "test-runs/BULK-P3-official-refresh-20261106T050328Z-0274d04e/artifacts/oracle/B-journey-wrapped.png",
+        "officialSHA256": "d812914b0f14471d8fbd1a23fb827c88adc42af3b00ceae306830b59f20d774e",
+        "native": "test-runs/BULK-batch-20261106T061834Z-2f1a6fd4/artifacts/native-cpu-B/B-journey-wrapped.png",
+        "nativeSHA256": "16c0f9ef101f18e2d0781de8a85350457412d46dd284301e1d44f38b057f2dbe",
+        "actualViewImage": true
+      },
+      {
+        "id": "B-journey-bad-score",
+        "official": "test-runs/BULK-P3-official-refresh-20261106T050328Z-0274d04e/artifacts/oracle/B-journey-bad-score.png",
+        "officialSHA256": "2ae3ad57ae7dde2ce041cd3db902e0e42acb279cdbc006ed18d3dbf18efc9803",
+        "native": "test-runs/BULK-batch-20261106T061834Z-2f1a6fd4/artifacts/native-cpu-B/B-journey-bad-score.png",
+        "nativeSHA256": "44c03bb84150c4590d33d802476563866148be31bf5916a303192f158614c4e0",
+        "actualViewImage": true
+      },
+      {
+        "id": "B-journey-fractional-space-valid",
+        "official": "test-runs/BULK-P3-official-refresh-20261106T050328Z-0274d04e/artifacts/oracle/B-journey-fractional-space-valid.png",
+        "officialSHA256": "372c2ff7002c123057649ba8d4aa8ba0d7e34d8bf3dbd088b101234d8dea72ef",
+        "native": "test-runs/BULK-batch-20261106T061834Z-2f1a6fd4/artifacts/native-cpu-B/B-journey-fractional-space-valid.png",
+        "nativeSHA256": "12a5c7cec06d8be2c8459edbbad464701f31d21eaed47b811cbc8eebb7f2232a",
+        "actualViewImage": true
+      },
+      {
+        "id": "B-journey-nonfinite-source-probe",
+        "official": "test-runs/BULK-batch-20261106T061304Z-7b9bba54/artifacts/oracle/B-journey-nonfinite-source-probe.png",
+        "officialSHA256": "69728dad60251a1add024cf0d33616a107b4a6927e9b27cefac61836cba74edd",
+        "native": "test-runs/BULK-batch-20261106T061834Z-2f1a6fd4/artifacts/nonfinite-probe-native/B-journey-nonfinite-source-probe.png",
+        "nativeSHA256": "6ad7b4b0b994e2292b0a55ec7c33085f8c29adf2ee830ef6a39f54e4f69f512c",
+        "actualViewImage": true
+      }
+    ],
+    "conclusions": [
+      "Title is readable at parent-derived4ex size; no4px regression",
+      "FO labels wrap inside card; last line bottom clip matches original explicit fixed-height foreignObject, source inherited not accidental canvas crop",
+      "Single task activity shows complete176px source line and arrow",
+      "NaN face/eyes/neutral mouth visible at0; +/-Infinity origin-mouth right halves retained as in sourceSVG",
+      "Finite scores preserve actor circles/card/emotion and full timeline; export viewport may include more source-clipped out-of-range face ink"
+    ]
+  },
+  "preservedAttempts": [
+    "BULK-record-20261106T060812Z-ee85a064: direct reference negative-descent interpretation corrected using baseline-relative x-height",
+    "BULK-record-20261106T060854Z-5a1caced: public parent font probe",
+    "BULK-record-20261106T060919Z-d261b790:149unitPASS",
+    "BULK-batch-20261106T060943Z-032c69e9: FO inherited wrong1.5 lineheight caused last line missing; corrected to CSSnormal before usercascade",
+    "BULK-record-20261106T061048Z-9a3ea354:149unitPASS",
+    "BULK-batch-20261106T061052Z-5145c39d:115CPU PASS before sourceNaN face correction",
+    "BULK-record-20261106T061457Z-5f2a7022:151unitPASS",
+    "BULK-batch-20261106T061527Z-ad9b4db3:115CPU+probePASS",
+    "BULK-batch-20261106T061640Z-b3d2c7b3:115CPU+probePASS before root evidence-id collision repair"
+  ],
+  "evidenceCollisionWarning": "Old x/X and M/m fixture evidence filename collisions were discovered by root strict raw-byte QA; old four PNGs cannot be accepted as independent evidence. Root alone renames IDs and requires fresh source/native capture, keeping original source/config/expect.",
+  "limitations": [
+    "These are targeted B checks, not final same-candidate P4 acceptance. Root owns complete new matrix and manual gate.",
+    "Source CSS normal line-height uses established native convention1.2; font engine ink metrics may differ from original browser, not a pixel-equivalence claim.",
+    "All initial manual rejection/earlier mistaken NaN interpretation and failed tool/source runs remain preserved."
+  ],
+  "productTestsStoppedWriting": true
+}

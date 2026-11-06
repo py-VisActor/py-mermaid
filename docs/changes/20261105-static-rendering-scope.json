@@ -1,0 +1,194 @@
+{
+  "schema": "py-mermaid-change/v1",
+  "taskId": "20261105-static-rendering-scope",
+  "status": "documented_verified",
+  "authority": "User explicitly requested all modules ignore interaction logic and consider static rendering only",
+  "productCodeChanged": false,
+  "startingSourceTreeSha256": "5cb792fadbd7685a0d65a4a4d0e397ff59566eae340f4aaa87d0a7041d18b08f",
+  "documentationRun": "test-runs/scope-static-rendering-decision-20261105T071131Z-7902db74/run.json",
+  "before": {
+    "AGENTS.md": {
+      "sha256": "55998489a0d452a653ad8c4d3628c384a34ba98f07bd90529e33729e348cfd5a",
+      "bytes": 7235
+    },
+    "docs/FULL_MIGRATION_PLAN.md": {
+      "sha256": "d344c6e8115682b053a0f0dc01eb65734ecd83d895aceea62bc35c145427ef5e",
+      "bytes": 14375
+    },
+    "docs/MODULE_BOUNDARIES.md": {
+      "sha256": "9f551ef34b2a957d996d718a1d3a60aaea3bfc573421d4474d90603ee2620400",
+      "bytes": 19305
+    },
+    "docs/API_COMPATIBILITY.md": {
+      "sha256": "a3e40f2d043a0afcc9e4da2d2b36c541a7b88c063d31e2a8fecd1e34f461d676",
+      "bytes": 7191
+    },
+    "docs/CANVAS_NATIVE_ARCHITECTURE.md": {
+      "sha256": "7b2fc2430f8e455e5eb8125c3591deea5fbf59fc5752d8b0a7948db0ef7c940d",
+      "bytes": 8282
+    },
+    "docs/RENDER_CONSISTENCY.md": {
+      "sha256": "83a0429775c11fbb484e892ca19feaeaefc0b9fd9c7717a026e58db8acc4c0a6",
+      "bytes": 11094
+    },
+    "docs/SOURCE_BASED_VERIFICATION.md": {
+      "sha256": "f9c5286a9a1828552c815b488bd6e6cdd010fcb3ab981de1c6ce040102d01958",
+      "bytes": 21405
+    },
+    "docs/TEST_AND_RELEASE.md": {
+      "sha256": "cf4eb8df5c666db10cdf4b0ac050c8997a958a803153a18d4bab739971a7f68c",
+      "bytes": 5803
+    },
+    "docs/FEATURE_MIGRATION.md": {
+      "sha256": "12522f3dd69fb37e49ce617c61dca7181be60f8114971b45cd4150c07ae75189",
+      "bytes": 12344
+    },
+    "docs/DEPENDENCY_MIGRATION.md": {
+      "sha256": "7a51235f6fc70370c269b7b9376946e5a0ae6c8de5af2de164edfa88be8d7469",
+      "bytes": 16480
+    },
+    "docs/EXECUTION_HANDOFF.md": {
+      "sha256": "1f6203ba461dd918abeeacf2cd1ed8c5ccb8597bd43d76a6eee60edb92169a96",
+      "bytes": 10919
+    },
+    "docs/NEW_SESSION.md": {
+      "sha256": "b1235551d562dab18dcb326fdf5abde098e00c2737437bd5074faebb1cd7a619",
+      "bytes": 8412
+    },
+    "docs/IMPLEMENTATION_PLAN.md": {
+      "sha256": "3f8d5d56c0cf60d9e668d61ef800863750563bb4d467b0a2ba8126b77c653eee",
+      "bytes": 26434
+    },
+    "docs/TASKS.md": {
+      "sha256": "da0d0e1dcbb5ec79868173ca58891c8152c12f33be1a30de1cdf00b29a2962d0",
+      "bytes": 8737
+    },
+    "docs/RELEASE_STATUS.md": {
+      "sha256": "90c142989a7473b4ed280038b57ce3d1e9b01ade76682092270b6aff71edef91",
+      "bytes": 8197
+    },
+    "references/render-validation-policy.json": {
+      "sha256": "e6682204f71f149667175ad43ee8267fd360835ca7ed9b562199206f3dc34b34",
+      "bytes": 3970
+    },
+    "references/feature-modules.json": {
+      "sha256": "8858d905ea101fb0b13ef864e9257c74ad08a242a56448abae27b064894989c2",
+      "bytes": 12237
+    },
+    "docs/compatibility.json": {
+      "sha256": "281adbaa1353a9f38634c5ec1908006966823497a60a6c805f69381275165a3d",
+      "bytes": 13245
+    },
+    "docs/execution-state.json": {
+      "sha256": "82d9cb9ccdb3ca155fc8b84e653ca6a05b25b8317fd923b1a71c95137339f0e4",
+      "bytes": 35398
+    }
+  },
+  "after": {
+    "AGENTS.md": {
+      "sha256": "2b7e33088b4889b04253652b2cf0a516b62c75c92c27e53317519c2f031250b3",
+      "bytes": 7759
+    },
+    "docs/FULL_MIGRATION_PLAN.md": {
+      "sha256": "894241d614988f50d2ba1a1866769ee7b2625bdebaa16bcee9b9e25819487cd8",
+      "bytes": 14888
+    },
+    "docs/MODULE_BOUNDARIES.md": {
+      "sha256": "37fd86d9dfca3e16020f490594972599958442aae16e7c636c7e07f9847443ce",
+      "bytes": 19900
+    },
+    "docs/API_COMPATIBILITY.md": {
+      "sha256": "3592081752fa9971922bcfafd1352975f474cdb3a599e99387ccadf51dd4c983",
+      "bytes": 7780
+    },
+    "docs/CANVAS_NATIVE_ARCHITECTURE.md": {
+      "sha256": "f09b432f0bb12a8fbfd4699fba7f23b77dce6d0f5c44c15dd375fb819858de6d",
+      "bytes": 8765
+    },
+    "docs/RENDER_CONSISTENCY.md": {
+      "sha256": "3ac31710fde63effb3d54208c8c1257fb5757c8b582d74b446194ecd63dc0ffd",
+      "bytes": 11571
+    },
+    "docs/SOURCE_BASED_VERIFICATION.md": {
+      "sha256": "0836e3970a8b3bfade46fb84d9764f10af8b85599a7937a341729cdd363912d1",
+      "bytes": 21995
+    },
+    "docs/TEST_AND_RELEASE.md": {
+      "sha256": "0fc970f4adc9bd063d7dc543f47be2a0c715aea255fc5374ad05196858e27af7",
+      "bytes": 6289
+    },
+    "docs/FEATURE_MIGRATION.md": {
+      "sha256": "09562345e7971eb20628c8739065ebe12437fbd60735899c1c129f860aff33c9",
+      "bytes": 12816
+    },
+    "docs/DEPENDENCY_MIGRATION.md": {
+      "sha256": "104a5bf5572e0748fc1b70316dbdb51bef8dad738a518be7eddd72168e1d90c4",
+      "bytes": 16996
+    },
+    "docs/EXECUTION_HANDOFF.md": {
+      "sha256": "02306f97d7e428c94c3432e7f44b40b38d0d07789974fc3f82c8155ce9759e2f",
+      "bytes": 11293
+    },
+    "docs/NEW_SESSION.md": {
+      "sha256": "69a23707edeaa518396e6f31f36df04902cfb7d183b2c6c18691045c7487761c",
+      "bytes": 8786
+    },
+    "docs/IMPLEMENTATION_PLAN.md": {
+      "sha256": "e8a5711ab32ea49a3d3162d10c1bfe98c4062d56e9a04f2642fb11a8ab26a470",
+      "bytes": 27042
+    },
+    "docs/TASKS.md": {
+      "sha256": "dcb7a4ccfedc6f0eaa5ac58ffa3c76de639ad786188e4126af54d43bf2301d0b",
+      "bytes": 9111
+    },
+    "docs/RELEASE_STATUS.md": {
+      "sha256": "29b45096c6d438bf47f537704f93c5b89cf950b3d04bb751ef771bd842c5e662",
+      "bytes": 8571
+    },
+    "references/render-validation-policy.json": {
+      "sha256": "03b15371fd1bf7ca9baf43d99f1fa80b6c5eccea7d36c9089cee140e369c4da4",
+      "bytes": 4408
+    },
+    "references/feature-modules.json": {
+      "sha256": "c3d7d6d4a11b907551290f57c7ca99c651648b33198e0d7a9431680cb6a0b46a",
+      "bytes": 13168
+    },
+    "docs/compatibility.json": {
+      "sha256": "66c6ddd70bd4b0b67e167c977ff572c8c062ba99b04cccfc9f64a3d31f00cc84",
+      "bytes": 13348
+    },
+    "docs/execution-state.json": {
+      "sha256": "340fa5198dcb52bb74a202e61844d6981b6daf546f20d7f62040382370ba3653",
+      "bytes": 35692
+    },
+    "docs/STATIC_RENDERING_SCOPE.md": {
+      "sha256": "273a9a8d74f5b8b55fbd0c96c09dca1729922fcd800f43506fc17cc417677a31",
+      "bytes": 4022
+    },
+    "docs/F01_4_ASSESSMENT.md": {
+      "sha256": "63909eb5525d5ae93df423ce96f7b91df74eaceb62ef029ea7ef30e9edb471e7",
+      "bytes": 5982
+    },
+    "references/static-rendering-scope.json": {
+      "sha256": "43dbadb214bcbfe8722ae2b725e60130ae7e146a722cbc6bd680939509227def",
+      "bytes": 1877
+    },
+    "references/f014-dagre-assessment.json": {
+      "sha256": "f116c8f5aee1af43602e266905c303cabe1ec72778bba5fe2ffa75a15a43b1b2",
+      "bytes": 2682
+    }
+  },
+  "dagre": "Source usage documented; implementation remains deferred",
+  "installationValidation": "not executed",
+  "externalActions": {
+    "commit": false,
+    "push": false
+  },
+  "checks": [
+    "test-runs/scope-record-20261105T071210Z-a05fb40c",
+    "test-runs/scope-record-20261105T071210Z-f6b6956e",
+    "test-runs/scope-static-rendering-decision-20261105T071131Z-7902db74"
+  ],
+  "finalDocumentationRun": "C:/code/py-visactor/py-mermaid/test-runs/scope-document-acceptance-20261105T071246Z-c507e408/run.json",
+  "productTestsRerun": false
+}

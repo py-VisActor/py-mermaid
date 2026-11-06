@@ -1,0 +1,27 @@
+{
+  "task": "BULK-A-swimlane-groups",
+  "phase": "P1",
+  "status": "code_complete_unverified",
+  "sourceFrozen": true,
+  "sourceMap": "references/bulk-A-swimlane-groups.json",
+  "sourceMapSha256": "bd9eb239cb1b2aace74a8c450b53d03f82fc8568c7ecbc506a06afa2c3378251",
+  "files": [
+    {
+      "path": "src/py_mermaid/rendering/skia/graph_groups.py",
+      "sha256": "54fd3b7cedd442be90ab7e8c671077f2b706ebce507da4edcfeadebce4431946",
+      "symbols": [
+        "overlay_swimlane_groups",
+        "_frame/_title identity+role predicates",
+        "_child_style ancestor compositing"
+      ]
+    }
+  ],
+  "mechanicalEvidence": [
+    "test-runs/BULK-record-20261106T035716Z-3221937c/run.json",
+    "test-runs/BULK-record-20261106T035736Z-a7f2530a/run.json"
+  ],
+  "behaviorExecuted": false,
+  "testsDesigned": false,
+  "ownerLease": "Only rendering/skia/graph_groups.py and its bulk-A source map/receipt; A12 products stay frozen",
+  "remaining": "P2/P3 source semantic and actual layout/paint verification outstanding"
+}

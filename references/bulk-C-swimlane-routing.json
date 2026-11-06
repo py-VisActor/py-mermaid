@@ -1,0 +1,287 @@
+{
+  "schema": "py-mermaid-source-map/v1",
+  "owner": "C",
+  "status": "code_complete_unverified",
+  "scope": "pure swimlane orthogonal router, ordered postprocessing and four directions",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "files": [
+    {
+      "source": ".local/upstream-mermaid/packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/orthogonalRouter/router.ts",
+      "sourceSha256": "1afd2595a6a538e34fa87b6fe3cd93b183272f513c45d6c2e5c31800a4eada51",
+      "sourceBytes": 90349,
+      "target": "src/py_mermaid/diagrams/business/_swimlane_routing/router.py",
+      "symbols": [
+        "routeEdgesOrthogonal:Router/route_edges_orthogonal",
+        "chooseOrthogonalSide:choose_side",
+        "sharedLineEndpointCoord:Router.rebuild/shared",
+        "pointOnLine:Router.rebuild/on_line"
+      ],
+      "sourceExports": [
+        "routeEdgesOrthogonal"
+      ],
+      "status": "implemented_unverified"
+    },
+    {
+      "source": ".local/upstream-mermaid/packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/postProcessing.ts",
+      "sourceSha256": "6fe06709cc55490e0b7a35b4ebb68c8df582d4c73b0870712e85089b904dab08",
+      "sourceBytes": 7533,
+      "target": "src/py_mermaid/diagrams/business/_swimlane_routing/__init__.py",
+      "symbols": [
+        "postProcessSwimlaneLayout:post_process",
+        "route_and_postprocess:public ordered adapter"
+      ],
+      "sourceExports": [
+        "postProcessSwimlaneLayout"
+      ],
+      "status": "implemented_unverified"
+    },
+    {
+      "source": ".local/upstream-mermaid/packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/direction/geometry.ts",
+      "sourceSha256": "89129032b91b612e927b1c9794c60833ee4501d17c41cb1d715e88472552af0a",
+      "sourceBytes": 18860,
+      "target": "src/py_mermaid/diagrams/business/_swimlane_routing/geometry.py",
+      "symbols": [
+        "samePoint:same_point",
+        "sameX:same_x",
+        "sameY:same_y",
+        "isHorizontalSegment:horizontal",
+        "isVerticalSegment:vertical",
+        "overlapLength:overlap_length",
+        "sameAxisSegmentOverlapLength:same_axis_overlap",
+        "orthogonalSegmentsForPoints:segments",
+        "countOrthogonalBends:count_bends",
+        "dedupeConsecutivePoints:dedupe",
+        "classifyThreeSegmentRoute:classify_three_segment_route",
+        "segmentBoundsOverlapRect:segment_bounds_overlap_rect",
+        "pointInsideRect:point_inside_rect",
+        "rectContainsRect:rect_contains_rect",
+        "rectsOverlap:rects_overlap",
+        "inflateRect:inflate_rect",
+        "rectFromCenterSize:rect_from_center_size",
+        "rectOfNodeBounds:rect_of_node",
+        "portForRectSide:port_for_side",
+        "buildOrthogonalPortPath:build_port_path",
+        "buildSameSideTrackPath:build_same_side_track_path",
+        "collectRealNodeBounds:collect_real_node_bounds",
+        "collectNodeRectEntries:collect_node_rect_entries",
+        "collectLayoutNodeRects:collect_layout_node_rects",
+        "getNodePairGeometry:node_pair_geometry",
+        "segmentHitsAnyRect:segment_hits_any_rect",
+        "orthogonalSegmentsCross:orthogonal_segments_cross",
+        "sameAxisSegmentsOverlap:same_axis_segments_overlap",
+        "segmentConflictsWithAnyEdge:segment_conflicts_with_any_edge",
+        "orthogonalSegmentsStrictlyCross:strictly_cross",
+        "orthogonalizePolyline:orthogonalize",
+        "simplifyPolyline:simplify"
+      ],
+      "sourceExports": [
+        "samePoint",
+        "sameX",
+        "sameY",
+        "isHorizontalSegment",
+        "isVerticalSegment",
+        "overlapLength",
+        "sameAxisSegmentOverlapLength",
+        "orthogonalSegmentsForPoints",
+        "countOrthogonalBends",
+        "dedupeConsecutivePoints",
+        "classifyThreeSegmentRoute",
+        "segmentBoundsOverlapRect",
+        "pointInsideRect",
+        "rectContainsRect",
+        "rectsOverlap",
+        "inflateRect",
+        "rectFromCenterSize",
+        "rectOfNodeBounds",
+        "portForRectSide",
+        "buildOrthogonalPortPath",
+        "buildSameSideTrackPath",
+        "collectRealNodeBounds",
+        "collectNodeRectEntries",
+        "collectLayoutNodeRects",
+        "getNodePairGeometry",
+        "segmentHitsAnyRect",
+        "orthogonalSegmentsCross",
+        "sameAxisSegmentsOverlap",
+        "segmentConflictsWithAnyEdge",
+        "orthogonalSegmentsStrictlyCross",
+        "orthogonalizePolyline",
+        "simplifyPolyline"
+      ],
+      "status": "implemented_unverified"
+    },
+    {
+      "source": ".local/upstream-mermaid/packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/direction/lrTransform.ts",
+      "sourceSha256": "28a4c385dba1e3005e3b93995c73a7e89db9d74e8112f33e83195a3ca9d4b9e5",
+      "sourceBytes": 8999,
+      "target": "src/py_mermaid/diagrams/business/_swimlane_routing/direction.py",
+      "symbols": [
+        "applyBtDirectionTransform:apply_bt",
+        "applyLrDirectionTransform:apply_lr",
+        "mirrorAxis:mirror_axis",
+        "recomputeNestedGroupBounds:_recompute_nested"
+      ],
+      "sourceExports": [
+        "applyBtDirectionTransform",
+        "applyLrDirectionTransform"
+      ],
+      "status": "implemented_unverified"
+    },
+    {
+      "source": ".local/upstream-mermaid/packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/direction/endpointClip.ts",
+      "sourceSha256": "9b65fc0e24eb75a436cf7151c148cc3a04b6b75353977d5f5dafb5d53dbdd1a9",
+      "sourceBytes": 14107,
+      "target": "src/py_mermaid/diagrams/business/_swimlane_routing/endpoint_clip.py",
+      "symbols": [
+        "clipEdgeEndpointsToNodeBoundaries:clip_endpoints",
+        "prepareEdgeEndpointsForRenderer:prepare_endpoints",
+        "corner-clearance/snap/collapse helpers:source ordered helpers"
+      ],
+      "sourceExports": [
+        "clipEdgeEndpointsToNodeBoundaries",
+        "prepareEdgeEndpointsForRenderer"
+      ],
+      "status": "implemented_unverified"
+    },
+    {
+      "source": ".local/upstream-mermaid/packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/direction/labelAnchoring.ts",
+      "sourceSha256": "7346fd6e0c5ebfe240ee3114dc23cb844f4c7235610b71352f3896d1a5026a52",
+      "sourceBytes": 16555,
+      "target": "src/py_mermaid/diagrams/business/_swimlane_routing/label_anchoring.py",
+      "symbols": [
+        "anchorLabelsToPolyline:anchor_labels",
+        "marker-clearance and candidate-ranking:source ordered helpers"
+      ],
+      "sourceExports": [
+        "anchorLabelsToPolyline"
+      ],
+      "status": "implemented_unverified"
+    },
+    {
+      "source": ".local/upstream-mermaid/packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/direction/sharedTrackNudging.ts",
+      "sourceSha256": "a472def1c7be7a326e37361713830a2b49e218f6a79a489286fe9f4d8c8bec73",
+      "sourceBytes": 9700,
+      "target": "src/py_mermaid/diagrams/business/_swimlane_routing/shared_tracks.py",
+      "symbols": [
+        "nudgeSharedInteriorSubpaths:nudge_shared_interiors"
+      ],
+      "sourceExports": [
+        "nudgeSharedInteriorSubpaths"
+      ],
+      "status": "implemented_unverified"
+    },
+    {
+      "source": ".local/upstream-mermaid/packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/direction/siblingSharedFaceRouting.ts",
+      "sourceSha256": "731e0352b9d9f32e7658a3e740c7480306cc980c38f21a1ad9cdf2fb12a22dd9",
+      "sourceBytes": 6754,
+      "target": "src/py_mermaid/diagrams/business/_swimlane_routing/shared_tracks.py",
+      "symbols": [
+        "straightenCollinearSiblingDetours:straighten_siblings"
+      ],
+      "sourceExports": [
+        "straightenCollinearSiblingDetours"
+      ],
+      "status": "implemented_unverified"
+    },
+    {
+      "source": ".local/upstream-mermaid/packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/direction/portSwap.ts",
+      "sourceSha256": "8f81faa96d83731a2a5b7582ee0b53f3fb4cb218ae3d9217b1a4ea48a7855b5e",
+      "sourceBytes": 10265,
+      "target": "src/py_mermaid/diagrams/business/_swimlane_routing/terminal_routes.py",
+      "symbols": [
+        "portSwapToLShape:port_swap"
+      ],
+      "sourceExports": [
+        "portSwapToLShape"
+      ],
+      "status": "implemented_unverified"
+    },
+    {
+      "source": ".local/upstream-mermaid/packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/direction/terminalStub.ts",
+      "sourceSha256": "9a0ff8b4159f73862b31edf8aa3cf3b189cc1bd1799b2f6ba9cefc6c3c79753e",
+      "sourceBytes": 10111,
+      "target": "src/py_mermaid/diagrams/business/_swimlane_routing/terminal_routes.py",
+      "symbols": [
+        "collapseShortTerminalStub:collapse_short_stub"
+      ],
+      "sourceExports": [
+        "collapseShortTerminalStub"
+      ],
+      "status": "implemented_unverified"
+    },
+    {
+      "source": ".local/upstream-mermaid/packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/direction/detourSimplification.ts",
+      "sourceSha256": "f75e125f296e3423d42d4533d6591bb7071ef2e949d352c22119473e2494af53",
+      "sourceBytes": 10913,
+      "target": "src/py_mermaid/diagrams/business/_swimlane_routing/detours.py",
+      "symbols": [
+        "simplifyDetouredEdges:simplify_detours"
+      ],
+      "sourceExports": [
+        "simplifyDetouredEdges"
+      ],
+      "status": "implemented_unverified"
+    },
+    {
+      "source": ".local/upstream-mermaid/packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/direction/materializedGeometry.ts",
+      "sourceSha256": "47d26dc46f6bb9764501e02e8a859a2659b6f8c7e068641a61145f1b2db89f89",
+      "sourceBytes": 91573,
+      "target": "src/py_mermaid/diagrams/business/_swimlane_routing/materialized.py",
+      "symbols": [
+        "separateSharedRenderedTerminalLanes:separate_terminal_lanes",
+        "collapseRedundantRectangularDoglegs:collapse_doglegs",
+        "liftObstacleHuggingSameSideRails:lift_hugging_rails",
+        "liftTopLaneTitleBandsAboveRails:lift_top_titles",
+        "shiftLeftLaneTitleBandsLeftOfRails:shift_left_titles",
+        "swapDestinationTerminalTailsToReduceCrossings:swap_destination_tails",
+        "reassignCrossingExternalRailChannels:reassign_external_channels",
+        "shortcutRedundantOrthogonalJogs:shortcut_jogs",
+        "resolveRenderedOrthogonalCrossings:resolve_crossings"
+      ],
+      "sourceExports": [
+        "separateSharedRenderedTerminalLanes",
+        "collapseRedundantRectangularDoglegs",
+        "liftObstacleHuggingSameSideRails",
+        "liftTopLaneTitleBandsAboveRails",
+        "shiftLeftLaneTitleBandsLeftOfRails",
+        "swapDestinationTerminalTailsToReduceCrossings",
+        "reassignCrossingExternalRailChannels",
+        "shortcutRedundantOrthogonalJogs",
+        "resolveRenderedOrthogonalCrossings"
+      ],
+      "status": "implemented_unverified"
+    },
+    {
+      "source": ".local/upstream-mermaid/packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/direction/validation.ts",
+      "sourceSha256": "faabe0945804d829c56fb5be8c23bdb0bda289a82ed276e94ee7571cc9e26724",
+      "sourceBytes": 4957,
+      "target": "src/py_mermaid/diagrams/business/_swimlane_routing/validation.py",
+      "symbols": [
+        "validateSwimlanesLayout:validate",
+        "segmentsIntersect:_intersects"
+      ],
+      "sourceExports": [
+        "validateSwimlanesLayout"
+      ],
+      "status": "implemented_unverified"
+    }
+  ],
+  "sourceDenominator": {
+    "productionFiles": 13,
+    "sourceBytes": 300676,
+    "publicSourceFunctions": 54
+  },
+  "publicProvider": "route_and_postprocess(layout:dict,direction:str)->None",
+  "productionDependencies": "Python standard library only; no Canvas/native/JS/DOM",
+  "excluded": [
+    "upstream test implementations are evidence inputs for later P2, not production modules"
+  ],
+  "omittedProductionBranches": [],
+  "P3": {
+    "receipt": "docs/changes/bulk-C-P3.json",
+    "targetedUnitRun": "BULK-record-20261106T045020Z-ea2286dc",
+    "targetedCpuRun": "BULK-batch-20261106T045023Z-16c153f1",
+    "ownedProductSha256": "687b02793f788b1520afea3d5994688af1e80963bb3aa966baf147f34a9fb26f",
+    "jointAcceptance": false
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "schema": "py-mermaid-change/v1",
+  "taskId": "F01.4-S4/degenerate-node-alignment",
+  "status": "targeted_pass_final_candidate_verification_pending",
+  "failureSource": "6e8c94fea35242ce71557eebd3ca109ea3926db127658c8e7563d3579af497a4",
+  "finding": {
+    "failureRun": "F01.4-batch-20261105T102819Z-d7782f21",
+    "failureSource": "6e8c94fea35242ce71557eebd3ca109ea3926db127658c8e7563d3579af497a4",
+    "source": "packages/mermaid/src/rendering-util/layout-algorithms/elk/render.ts",
+    "symbols": [
+      "applyElkEdgeLayout alignment prepass",
+      "alignDegenerateNodeToAnchor"
+    ],
+    "sourceLines": [
+      1960,
+      2401
+    ],
+    "rootCause": "Original real ELK node N7 box x37,width2 has incoming/outgoing port line x47 outside its ink span. Missing source small-side node alignment, not a defective native algorithm or a provider fallback case.",
+    "policy": "Before constructing paint points, iterate native graph.edges first section anchors; exclude only rect33, no group exclusion. Top/bottom anchor if abs(y-top/bottom)<=.5 spreads along width, otherwise along height. Only side<24, first qualifying anchor wins includingabs(delta)<.01 noop. Translate node paint frame along side axis so its centre reaches the actual routed anchor. Do not move route or children or raw engine frame.",
+    "model": "PlacedNode.paint_box and PlacedGroup.paint_box optional source post-layout translations. Node.box,group.box/engine_origin and all raw sections remain unchanged. Group.title_box follows group source paint translation. Intersections, cached measured ink centre, marker safeguards, geometry bounds and title union use paint_box or box.",
+    "beforeAfterRawIdentity": {
+      "elk-input.json": true,
+      "elk-output.json": true
+    },
+    "artifactSha256": {
+      "test-runs/f014-labelless-gallery-intersection-diagnostic-001/elk-input.json": "5918d8d4953e2d3b5510c811ee10d914b0ed5c0a0d79f2869c1aef5bf645e91d",
+      "test-runs/f014-labelless-gallery-intersection-diagnostic-001/elk-output.json": "6dfdfdb042e5f6a0afbc84d778e4161948d2c2c7a04f56996bf7ace1a63a29e2",
+      "test-runs/f014-labelless-gallery-intersection-diagnostic-001/exception.txt": "82225b27e26dd8c7acd47634d1b710545cacaa862eba00d5b530bd29b22e9d5b",
+      "test-runs/f014-labelless-gallery-intersection-diagnostic-001/intersection-calls.json": "cc133269771b7e3f2f27e2f8c89eb5991b5eaad65ac12df1305f792c8870bf86",
+      "test-runs/f014-labelless-gallery-intersection-diagnostic-001/measured.json": "6c037f6c471aa184b4dcb510858cf9eec9c0ec23f519b80ccc294b8c16f1edc5",
+      "test-runs/f014-labelless-gallery-intersection-diagnostic-001/source.mmd": "d312cfa73c7d3b4dfa1bb021a3b04b6c0e1f47a1d4fd54f58b090880ecf13e2f",
+      "test-runs/f014-degenerate-alignment-targeted-diagnostic-001/elk-input.json": "5918d8d4953e2d3b5510c811ee10d914b0ed5c0a0d79f2869c1aef5bf645e91d",
+      "test-runs/f014-degenerate-alignment-targeted-diagnostic-001/elk-output.json": "6dfdfdb042e5f6a0afbc84d778e4161948d2c2c7a04f56996bf7ace1a63a29e2",
+      "test-runs/f014-degenerate-alignment-targeted-diagnostic-001/layout-raw-and-paint.json": "a5108a0015dad938e4ec51642dce5ae8836f07b3c293012ac0ed724847a81ce2"
+    },
+    "numericRelationship": {
+      "node": "N7",
+      "rawBox": {
+        "x": 37,
+        "y": 502,
+        "width": 2,
+        "height": 2
+      },
+      "firstAnchorLineX": 47,
+      "sourceDeltaX": 9,
+      "paintBox": {
+        "x": 46,
+        "y": 502,
+        "width": 2,
+        "height": 2
+      }
+    },
+    "tests": [
+      "L22 real9-node/8-edge labelless gallery validates raw frames and independent source alignment arithmetic",
+      "P13 source37?46 numeric regression, exact24 threshold, correct side axis",
+      "P14 firstanchor includes noop, group has no implicit skip, rect33 exclusion",
+      "P15 geometry_bounds selects actual source paint position"
+    ],
+    "targetedVerificationRun": "F01.4-record-20261105T104235Z-596a86e2",
+    "targetedMethods": 4,
+    "finalFullVerification": "PENDING coordinator freeze and unified run",
+    "newReportFixture": {
+      "path": "tests/f014/layout-cases.json",
+      "id": "layout-labelless-alignment-gallery",
+      "visibleLabels": {
+        "N0": "",
+        "N1": "",
+        "N2": "",
+        "N3": "",
+        "N4": "",
+        "N5": "",
+        "N6": "",
+        "N7": "",
+        "N8": ""
+      },
+      "DBlabels": "Ignored0..8 retained",
+      "profiles": "coordinator will refresh official and all native profiles"
+    }
+  },
+  "changedFiles": {
+    "src/py_mermaid/layout/elk/flowchart.py": "607e68f3a040c7fb75aaaf130a81e7d4a16442654b95b3fba55020f201940ef5",
+    "src/py_mermaid/layout/elk/compound.py": "379ef3b9a47d3ebf91583973be3365b5d24a65977d47463131a45aa41d65b446",
+    "src/py_mermaid/geometry/edges/alignment.py": "ccbf30ce7b3749bf708bbd9078940bebed658113ec73cd6b4f353b82ce6b1c49",
+    "src/py_mermaid/geometry/edges/__init__.py": "26cbc445bdcf626c9e8e054330804c277fe6718ecc0bc86969a516b4048100d2",
+    "src/py_mermaid/geometry/edges/pipeline.py": "368dca37a3f65dc5d71d7e32432452d3fd224e959022c15c909ac511f9154a74",
+    "src/py_mermaid/geometry/flowchart.py": "ea8ec1510211813e3829ea468dadb9a3ca91bd6f91a4462bf25696a47aa26a5e",
+    "tests/f014/test_layout.py": "9a410b6e6305aed54cb11903a73498458910626ed33214ad9746a48b97f123dc",
+    "tests/f014/layout-cases.json": "b3c2d633813f646b51e2188b0e96535b0cae505a819df435499a1f091bd1b9a3",
+    "references/f014-elk-sources.json": "97b3220ee52832e5ca3716d1f03bc63cecc9faa85c738167e301cc7b01a6c716",
+    "references/f014-layout-assertions.json": "74f3316296681b3b86f3a211b2de8947fe021dacc4b52359779f4929e3e79c1b"
+  },
+  "verification": [
+    {
+      "run": "F01.4-record-20261105T103320Z-f98c2eb0",
+      "status": "SUCCESS",
+      "sourceTreeSha256": "6e8c94fea35242ce71557eebd3ca109ea3926db127658c8e7563d3579af497a4",
+      "manifestSha256": "fcba12d58a1c8ba0fc6874ba1b0908f0679a52e5aa8237b9283114c7afb49b6c",
+      "commands": [
+        {
+          "argv": [
+            "C:/venvs/pymmd-20261102/Scripts/python.exe",
+            "-c",
+            "import json,traceback,copy\nfrom pathlib import Path\nfrom dataclasses import asdict\nfrom unittest.mock import patch\nfrom py_mermaid import render\nfrom py_mermaid.geometry import shapes\nfrom py_mermaid.rendering.skia import CanvasSession\nfrom pyelk import ELK\nout=Path('test-runs/f014-labelless-gallery-intersection-diagnostic-001');out.mkdir(exist_ok=False)\nnames=('sm-circ','fr-circ','f-circ','cross-circ','choice','fork','bolt','anchor','hourglass')\ntext='flowchart TD\\n'+'\\n'.join([f'N{i}@{{shape: {name}, label: Ignored{i}}}' for i,name in enumerate(names)]+[f'N{i} --> N{i+1}' for i in range(8)])\n(out/'source.mmd').write_text(text,encoding='utf-8')\ncalls=[];original=shapes.shape_outline_intersection;native=ELK.layout;measure=CanvasSession.measure\nasync def raw(engine,graph,args=None):\n (out/'elk-input.json').write_text(json.dumps(graph,ensure_ascii=False,indent=2),encoding='utf-8')\n result=await native(engine,graph,args)\n (out/'elk-output.json').write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8');return result\ndef measured(session,diagram):\n result=measure(session,diagram)\n (out/'measured.json').write_text(json.dumps([asdict(n) for n in result],ensure_ascii=False,indent=2),encoding='utf-8');return result\ndef observe(kind,box,port,toward,**kwargs):\n row={'kind':kind,'box':asdict(box),'port':asdict(port),'toward':asdict(toward),'outline':kwargs.get('outline'),'metadata':kwargs.get('metadata'),'look':kwargs['config'].look}\n calls.append(row)\n try:\n  result=original(kind,box,port,toward,**kwargs);row['result']=asdict(result);return result\n except Exception as error:\n  row['error']={'type':type(error).__name__,'message':str(error),'code':getattr(error,'code',None)};raise\n finally:(out/'intersection-calls.json').write_text(json.dumps(calls,ensure_ascii=False,indent=2),encoding='utf-8')\nwith patch.object(ELK,'layout',raw),patch.object(CanvasSession,'measure',measured),patch.object(shapes,'shape_outline_intersection',observe):\n try:\n  result=render(text,backend='cpu',config={'look':'handDrawn','handDrawnSeed':123})\n  (out/'unexpected-success.json').write_text(json.dumps(asdict(result.layout),ensure_ascii=False,indent=2),encoding='utf-8')\n  print('Unexpected diagnostic success')\n except Exception:\n  (out/'exception.txt').write_text(traceback.format_exc(),encoding='utf-8')\n  print(traceback.format_exc())\nprint(json.dumps(calls[-3:],ensure_ascii=False,indent=2));print('DIAGNOSTIC_ONLY, not final PASS;',out)"
+          ],
+          "exitCode": 0,
+          "stdout": "commands/001-labelless-gallery-raw-diagnostic/stdout.log",
+          "stderr": "commands/001-labelless-gallery-raw-diagnostic/stderr.log"
+        }
+      ]
+    },
+    {
+      "run": "F01.4-record-20261105T104159Z-567fb445",
+      "status": "SUCCESS",
+      "sourceTreeSha256": "1f17a467bfd7f8f7e7f53710c88a1280bda03f3ba412968c5d3d9a1575812a80",
+      "manifestSha256": "c4e7cfdc5f1f0eeb28e0fb94ecb34656f8a8d23c5daf21f6103be41e3aa2e994",
+      "commands": [
+        {
+          "argv": [
+            "C:/venvs/pymmd-20261102/Scripts/python.exe",
+            "-m",
+            "py_compile",
+            "src/py_mermaid/geometry/edges/alignment.py",
+            "src/py_mermaid/geometry/edges/__init__.py",
+            "src/py_mermaid/geometry/edges/pipeline.py",
+            "src/py_mermaid/layout/elk/compound.py",
+            "src/py_mermaid/layout/elk/flowchart.py",
+            "src/py_mermaid/geometry/flowchart.py",
+            "tests/f014/test_layout.py"
+          ],
+          "exitCode": 0,
+          "stdout": "commands/001-source-alignment-compile/stdout.log",
+          "stderr": "commands/001-source-alignment-compile/stderr.log"
+        }
+      ]
+    },
+    {
+      "run": "F01.4-record-20261105T104235Z-596a86e2",
+      "status": "SUCCESS",
+      "sourceTreeSha256": "1f17a467bfd7f8f7e7f53710c88a1280bda03f3ba412968c5d3d9a1575812a80",
+      "manifestSha256": "e535bdc71e3bf4ba62a4654d92aa08b7c1e55ab5dffbd160f975fa31cb9ea1b2",
+      "commands": [
+        {
+          "argv": [
+            "C:/venvs/pymmd-20261102/Scripts/python.exe",
+            "-c",
+            "import sys,json,copy,unittest\nfrom pathlib import Path\nfrom dataclasses import asdict\nfrom unittest.mock import patch\nsys.path.insert(0,str(Path('tests/f014').resolve()))\nimport test_layout\nfrom pyelk import ELK\nout=Path('test-runs/f014-degenerate-alignment-targeted-diagnostic-001');out.mkdir(exist_ok=False)\nnative=ELK.layout;public=test_layout.layout_flowchart\nasync def raw(engine,graph,args=None):\n (out/'elk-input.json').write_text(json.dumps(graph,ensure_ascii=False,indent=2),encoding='utf-8')\n result=await native(engine,graph,args)\n (out/'elk-output.json').write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8');return result\nasync def layout(*args,**kwargs):\n result=await public(*args,**kwargs)\n (out/'layout-raw-and-paint.json').write_text(json.dumps(asdict(result),ensure_ascii=False,indent=2),encoding='utf-8')\n print('Node raw/paint:',json.dumps([{'id':n.id,'raw':asdict(n.box),'paint':asdict(n.paint_box) if n.paint_box else None} for n in result.nodes]))\n return result\nsuite=unittest.TestSuite([test_layout.ActualELKTests('test_l22_real_labelless_gallery_aligns_paint_boxes_without_mutating_raw_frames'),test_layout.PaintGeometryTests('test_p13_degenerate_alignment_source_numbers_and_exact_twentyfour_threshold'),test_layout.PaintGeometryTests('test_p14_first_qualifying_anchor_wins_including_noop_and_group_has_no_skip'),test_layout.PaintGeometryTests('test_p15_geometry_bounds_uses_source_paint_box_not_unpainted_raw_position')])\nwith patch.object(ELK,'layout',raw),patch.object(test_layout,'layout_flowchart',layout):result=unittest.TextTestRunner(verbosity=2).run(suite)\nprint('TARGETED_DIAGNOSTIC_ONLY; full candidate verification remains coordinator-owned;',out)\nsys.exit(0 if result.wasSuccessful() else 1)"
+          ],
+          "exitCode": 0,
+          "stdout": "commands/001-source-alignment-targeted-diagnostic/stdout.log",
+          "stderr": "commands/001-source-alignment-targeted-diagnostic/stderr.log"
+        }
+      ]
+    }
+  ],
+  "sourceStopped": true,
+  "targetedTestsPassed": 4,
+  "fullTestsRerun": false,
+  "noFallback": true,
+  "limits": [
+    "No graph algorithm/engine pin/source lock changes. No provider centre-ray fallback to conceal degenerate native anchor.",
+    "Root owns paint_box model additions and C owns actual native paint; coordinator owns final full-unit and all-profile verification.",
+    "Raw diagnostic engine input/output equality establishes only unchanged native geometry for this exact gallery, not global equivalence."
+  ]
+}

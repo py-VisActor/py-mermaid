@@ -1,0 +1,97 @@
+{
+  "schema": "py-mermaid-change/v1",
+  "taskId": "20261105-f014-root",
+  "status": "verified_local_static_scope",
+  "startingEvidence": "test-runs/F01.4-execution-start-20261105T082500Z-149317c2/run.json",
+  "sourceMap": "references/f014-root-sources.json",
+  "files": {
+    "src/py_mermaid/model/flowchart.py": {
+      "sha256": "0f073ecdc89a4fb9fd364af17431016e815f131e79d777d3fc56c3cf02dc2772",
+      "bytes": 13097
+    },
+    "src/py_mermaid/api.py": {
+      "sha256": "8d9439400a45368d857ff97d01d2061489f2e9bf0611afd2c0a947a719eb9667",
+      "bytes": 2920
+    },
+    "src/py_mermaid/__init__.py": {
+      "sha256": "8bfa0a155132d32d5716046ff71d353836148b94901c7a206e75145d0f402e68",
+      "bytes": 557
+    },
+    "src/py_mermaid/geometry/shapes.py": {
+      "sha256": "94fc76f11db69ddd8e5a67ae60deac9c7d8a840d90bfe38459a466c97c580f01",
+      "bytes": 27850
+    },
+    "src/py_mermaid/geometry/path_geometry.py": {
+      "sha256": "d5d95b42c6f56b240a9918c9e34b29d5d6b1852a21fb8f9cc76c702ae8e1c7b4",
+      "bytes": 7620
+    },
+    "src/py_mermaid/geometry/shape_registry.py": {
+      "sha256": "6b9cb66f463d2e2fed5aa4ba418c497c498870d6855825d7b71effdeffd1b27a",
+      "bytes": 9441
+    },
+    "src/py_mermaid/rendering/styles/flowchart.py": {
+      "sha256": "1be113a5c9853a98250b8fc1f6d9ede84915104b3b74c08593f07b06d2289e31",
+      "bytes": 42179
+    },
+    "src/py_mermaid/rendering/styles/__init__.py": {
+      "sha256": "1294d44dcafa9f89a808eae202d6cdcb20a0ffccfec7855ad84ace98f82b7c37",
+      "bytes": 316
+    },
+    "tools/qa_html_report.cjs": {
+      "sha256": "f959a47fb5a51d14be26f98b0b0e45a2bc958c69875ace7bdffaf5820e580477",
+      "bytes": 5950
+    },
+    "tools/reuse_oracle.py": {
+      "sha256": "e0928f43d923be92dde1b743a01cd4338705ff3bd4ce98f1dd1956c69c4bdfe0",
+      "bytes": 4888
+    },
+    "tools/finalize_static_evidence.py": {
+      "sha256": "45ef3917edb1ae718e427a3ebe10757df08ddd3ce9d6650a5e24d0aa7e112db1",
+      "bytes": 4691
+    },
+    "tests/tooling/test_static_flowchart_checks.py": {
+      "sha256": "8d47d03018500d80e46cb082080313908d9e24687ee61f46cfb38b317a90b980",
+      "bytes": 2704
+    }
+  },
+  "mechanicalEvidence": [
+    "test-runs/F01.4-record-20261105T084528Z-c136b865/run.json"
+  ],
+  "functionalStatus": "PASS_LOCAL",
+  "installationValidation": "not executed",
+  "externalActions": {
+    "commit": false,
+    "push": false
+  },
+  "next": "本轮完成；数学模块独立后续，安装验证暂缓",
+  "visualQaRepairs": {
+    "initialAutomatedCandidate": "1f17a467bfd7f8f7e7f53710c88a1280bda03f3ba412968c5d3d9a1575812a80",
+    "initialAutomatedMatrix": "test-runs/F01.4-batch-20261105T105135Z-494f82f8",
+    "manualStatus": "followup_required",
+    "rootCauses": [
+      "Final rough outline CSS opaque fill was omitted, leaving state circles dark",
+      "Offscreen source-in picture replay tinted the destination bounding rectangle",
+      "Direct SVG was incorrectly isolated from host CSS like an img resource",
+      "Horizontal cylinder inner cap was on the left instead of source right"
+    ],
+    "failureEvidence": [
+      "docs/changes/20261105-f014-canvas-visual-qa.json",
+      "docs/changes/20261105-f014-layout-visual-qa.json",
+      "test-runs/F01.4-batch-20261105T105736Z-f58b9be2/run.json"
+    ],
+    "nativePolicy": "No PNG postprocessing of deliverables; source geometry and native paint operations corrected; all old images retained"
+  },
+  "initialStatus": "code_complete_unverified",
+  "sourceCandidate": "99a2342681469836c3b7be8be6815b9a82193146331aff51d260823b72b17a2e",
+  "sameCandidateUnitEvidence": "test-runs/F01.4-batch-20261105T111527Z-f645b0b6/run.json",
+  "sameCandidateUnitMethods": 486,
+  "verificationSummary": "references/f014-verification-summary.json",
+  "finalProofRuns": {
+    "unit": "test-runs/F01.4-batch-20261105T111527Z-f645b0b6",
+    "legacy": "test-runs/F01.4-batch-20261105T111527Z-b69f15af",
+    "matrix": "test-runs/F01.4-batch-20261105T111527Z-8d3c0855",
+    "delivery": "test-runs/F01.4-batch-20261105T112340Z-561d6761",
+    "report": "test-runs/F01.4-report-20261105T112346Z-b7014c54",
+    "htmlQa": "test-runs/F01.4-batch-20261105T112429Z-4de4e10e"
+  }
+}

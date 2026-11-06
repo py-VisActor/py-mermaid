@@ -1,0 +1,1825 @@
+[
+  {
+    "id": "railroad-spec-000",
+    "kind": "railroad",
+    "name": "should parse terminal",
+    "source": "\n        railroad-beta\n        rule = terminal(\"hello\") ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/railroadDiagram.spec.ts",
+    "line": 11,
+    "checks": [
+      {
+        "path": [
+          "rules"
+        ],
+        "op": "length",
+        "value": 1
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "name"
+        ],
+        "op": "equal",
+        "value": "rule"
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "kind"
+        ],
+        "op": "equal",
+        "value": "terminal"
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "text"
+        ],
+        "op": "equal",
+        "value": "hello"
+      }
+    ]
+  },
+  {
+    "id": "railroad-spec-001",
+    "kind": "railroad",
+    "name": "should parse nonterminal",
+    "source": "\n        railroad-beta\n        rule = nonterminal(\"expression\") ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/railroadDiagram.spec.ts",
+    "line": 27,
+    "checks": [
+      {
+        "path": [
+          "rules"
+        ],
+        "op": "length",
+        "value": 1
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "kind"
+        ],
+        "op": "equal",
+        "value": "nonterminal"
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "text"
+        ],
+        "op": "equal",
+        "value": "expression"
+      }
+    ]
+  },
+  {
+    "id": "railroad-spec-002",
+    "kind": "railroad",
+    "name": "should parse sequence",
+    "source": "\n        railroad-beta\n        rule = sequence(terminal(\"a\"), terminal(\"b\"), terminal(\"c\")) ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/railroadDiagram.spec.ts",
+    "line": 42,
+    "checks": [
+      {
+        "path": [
+          "rules"
+        ],
+        "op": "length",
+        "value": 1
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "kind"
+        ],
+        "op": "equal",
+        "value": "sequence"
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "children"
+        ],
+        "op": "length",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "railroad-spec-003",
+    "kind": "railroad",
+    "name": "should collapse single-element sequence",
+    "source": "\n        railroad-beta\n        rule = sequence(terminal(\"a\")) ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/railroadDiagram.spec.ts",
+    "line": 57,
+    "checks": [
+      {
+        "path": [
+          "rules"
+        ],
+        "op": "length",
+        "value": 1
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "kind"
+        ],
+        "op": "equal",
+        "value": "terminal"
+      }
+    ]
+  },
+  {
+    "id": "railroad-spec-004",
+    "kind": "railroad",
+    "name": "should parse choice",
+    "source": "\n        railroad-beta\n        rule = choice(terminal(\"a\"), terminal(\"b\"), terminal(\"c\")) ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/railroadDiagram.spec.ts",
+    "line": 69,
+    "checks": [
+      {
+        "path": [
+          "rules"
+        ],
+        "op": "length",
+        "value": 1
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "kind"
+        ],
+        "op": "equal",
+        "value": "choice"
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "children"
+        ],
+        "op": "length",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "railroad-spec-005",
+    "kind": "railroad",
+    "name": "should collapse single-element choice",
+    "source": "\n        railroad-beta\n        rule = choice(terminal(\"a\")) ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/railroadDiagram.spec.ts",
+    "line": 84,
+    "checks": [
+      {
+        "path": [
+          "rules"
+        ],
+        "op": "length",
+        "value": 1
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "kind"
+        ],
+        "op": "equal",
+        "value": "terminal"
+      }
+    ]
+  },
+  {
+    "id": "railroad-spec-006",
+    "kind": "railroad",
+    "name": "should parse optional",
+    "source": "\n        railroad-beta\n        rule = optional(terminal(\"a\")) ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/railroadDiagram.spec.ts",
+    "line": 96,
+    "checks": [
+      {
+        "path": [
+          "rules"
+        ],
+        "op": "length",
+        "value": 1
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "kind"
+        ],
+        "op": "equal",
+        "value": "optional"
+      }
+    ]
+  },
+  {
+    "id": "railroad-spec-007",
+    "kind": "railroad",
+    "name": "should parse zeroOrMore",
+    "source": "\n        railroad-beta\n        rule = zeroOrMore(terminal(\"a\")) ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/railroadDiagram.spec.ts",
+    "line": 108,
+    "checks": [
+      {
+        "path": [
+          "rules"
+        ],
+        "op": "length",
+        "value": 1
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "kind"
+        ],
+        "op": "equal",
+        "value": "repetition"
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "minimum"
+        ],
+        "op": "equal",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "railroad-spec-008",
+    "kind": "railroad",
+    "name": "should parse oneOrMore",
+    "source": "\n        railroad-beta\n        rule = oneOrMore(terminal(\"a\")) ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/railroadDiagram.spec.ts",
+    "line": 123,
+    "checks": [
+      {
+        "path": [
+          "rules"
+        ],
+        "op": "length",
+        "value": 1
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "kind"
+        ],
+        "op": "equal",
+        "value": "repetition"
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "minimum"
+        ],
+        "op": "equal",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "railroad-spec-009",
+    "kind": "railroad",
+    "name": "should parse special",
+    "source": "\n        railroad-beta\n        rule = special(\"any character\") ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/railroadDiagram.spec.ts",
+    "line": 138,
+    "checks": [
+      {
+        "path": [
+          "rules"
+        ],
+        "op": "length",
+        "value": 1
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "kind"
+        ],
+        "op": "equal",
+        "value": "special"
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "text"
+        ],
+        "op": "equal",
+        "value": "any character"
+      }
+    ]
+  },
+  {
+    "id": "railroad-spec-010",
+    "kind": "railroad",
+    "name": "should parse title",
+    "source": "\n        railroad-beta\n        title \"Test Grammar\"\n        rule = terminal(\"a\") ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/railroadDiagram.spec.ts",
+    "line": 153,
+    "checks": [
+      {
+        "path": [
+          "title"
+        ],
+        "op": "equal",
+        "value": "Test Grammar"
+      }
+    ]
+  },
+  {
+    "id": "railroad-spec-011",
+    "kind": "railroad",
+    "name": "should parse multiple rules",
+    "source": "\n        railroad-beta\n        rule1 = terminal(\"a\") ;\n        rule2 = terminal(\"b\") ;\n        rule3 = terminal(\"c\") ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/railroadDiagram.spec.ts",
+    "line": 166,
+    "checks": [
+      {
+        "path": [
+          "rules"
+        ],
+        "op": "length",
+        "value": 3
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "name"
+        ],
+        "op": "equal",
+        "value": "rule1"
+      },
+      {
+        "path": [
+          "rules",
+          1,
+          "name"
+        ],
+        "op": "equal",
+        "value": "rule2"
+      },
+      {
+        "path": [
+          "rules",
+          2,
+          "name"
+        ],
+        "op": "equal",
+        "value": "rule3"
+      }
+    ]
+  },
+  {
+    "id": "railroad-spec-012",
+    "kind": "railroad",
+    "name": "should handle nested structures",
+    "source": "\n        railroad-beta\n        rule = sequence(\n            choice(terminal(\"a\"), terminal(\"b\")),\n            oneOrMore(choice(terminal(\"c\"), terminal(\"d\")))\n        ) ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/railroadDiagram.spec.ts",
+    "line": 182,
+    "checks": [
+      {
+        "path": [
+          "rules"
+        ],
+        "op": "length",
+        "value": 1
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "kind"
+        ],
+        "op": "equal",
+        "value": "sequence"
+      }
+    ]
+  },
+  {
+    "id": "railroad-spec-013",
+    "kind": "railroad",
+    "name": "should parse complex expression grammar",
+    "source": "\n        railroad-beta\n        digit = choice(\n            terminal(\"0\"), terminal(\"1\"), terminal(\"2\"),\n            terminal(\"3\"), terminal(\"4\"), terminal(\"5\"),\n            terminal(\"6\"), terminal(\"7\"), terminal(\"8\"), terminal(\"9\")\n        ) ;\n        number = oneOrMore(nonterminal(\"digit\")) ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/railroadDiagram.spec.ts",
+    "line": 197,
+    "checks": [
+      {
+        "path": [
+          "rules"
+        ],
+        "op": "length",
+        "value": 2
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "name"
+        ],
+        "op": "equal",
+        "value": "digit"
+      },
+      {
+        "path": [
+          "rules",
+          1,
+          "name"
+        ],
+        "op": "equal",
+        "value": "number"
+      }
+    ]
+  },
+  {
+    "id": "railroad-spec-014",
+    "kind": "railroad",
+    "name": "should throw on missing railroad-beta keyword",
+    "source": "\n        rule = terminal(\"a\") ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/railroadDiagram.spec.ts",
+    "line": 217,
+    "checks": []
+  },
+  {
+    "id": "railroad-spec-015",
+    "kind": "railroad",
+    "name": "should throw on missing semicolon",
+    "source": "\n        railroad-beta\n        rule = terminal(\"a\")\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/railroadDiagram.spec.ts",
+    "line": 225,
+    "checks": []
+  },
+  {
+    "id": "railroad-spec-016",
+    "kind": "railroad",
+    "name": "should throw on unterminated string",
+    "source": "\n        railroad-beta\n        rule = terminal(\"unclosed) ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/railroadDiagram.spec.ts",
+    "line": 234,
+    "checks": []
+  },
+  {
+    "id": "railroad-spec-017",
+    "kind": "railroad",
+    "name": "should handle empty rules list",
+    "source": "\n        railroad-beta\n        title \"Empty Grammar\"\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/railroadDiagram.spec.ts",
+    "line": 245,
+    "checks": [
+      {
+        "path": [
+          "rules"
+        ],
+        "op": "length",
+        "value": 0
+      },
+      {
+        "path": [
+          "title"
+        ],
+        "op": "equal",
+        "value": "Empty Grammar"
+      }
+    ]
+  },
+  {
+    "id": "railroad-spec-018",
+    "kind": "railroad",
+    "name": "should handle whitespace in strings",
+    "source": "\n        railroad-beta\n        rule = terminal(\"hello world\") ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/railroadDiagram.spec.ts",
+    "line": 257,
+    "checks": [
+      {
+        "path": [
+          "rules"
+        ],
+        "op": "length",
+        "value": 1
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "text"
+        ],
+        "op": "equal",
+        "value": "hello world"
+      }
+    ]
+  },
+  {
+    "id": "railroad-spec-019",
+    "kind": "railroad",
+    "name": "should handle underscore in rule names",
+    "source": "\n        railroad-beta\n        my_rule = terminal(\"test\") ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/railroadDiagram.spec.ts",
+    "line": 271,
+    "checks": [
+      {
+        "path": [
+          "rules"
+        ],
+        "op": "length",
+        "value": 1
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "name"
+        ],
+        "op": "equal",
+        "value": "my_rule"
+      }
+    ]
+  },
+  {
+    "id": "railroad-spec-020",
+    "kind": "railroad",
+    "name": "should handle numbers in rule names",
+    "source": "\n        railroad-beta\n        rule123 = terminal(\"test\") ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/railroadDiagram.spec.ts",
+    "line": 283,
+    "checks": [
+      {
+        "path": [
+          "rules"
+        ],
+        "op": "length",
+        "value": 1
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "name"
+        ],
+        "op": "equal",
+        "value": "rule123"
+      }
+    ]
+  },
+  {
+    "id": "railroad-spec-021",
+    "kind": "railroad",
+    "name": "should parse deeply nested IR",
+    "source": "\n        railroad-beta\n        rule = sequence(\n            choice(terminal(\"a\"), terminal(\"b\")),\n            choice(terminal(\"c\"), terminal(\"d\"))\n        ) ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/railroadDiagram.spec.ts",
+    "line": 295,
+    "checks": [
+      {
+        "path": [
+          "rules"
+        ],
+        "op": "length",
+        "value": 1
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "kind"
+        ],
+        "op": "equal",
+        "value": "sequence"
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "children"
+        ],
+        "op": "length",
+        "value": 2
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "children",
+          0,
+          "kind"
+        ],
+        "op": "equal",
+        "value": "choice"
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "children",
+          1,
+          "kind"
+        ],
+        "op": "equal",
+        "value": "choice"
+      }
+    ]
+  },
+  {
+    "id": "railroad-spec-022",
+    "kind": "railroad",
+    "name": "should parse zeroOrMore with choice",
+    "source": "\n        railroad-beta\n        rule = zeroOrMore(choice(terminal(\"a\"), terminal(\"b\"))) ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/railroadDiagram.spec.ts",
+    "line": 315,
+    "checks": [
+      {
+        "path": [
+          "rules"
+        ],
+        "op": "length",
+        "value": 1
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "kind"
+        ],
+        "op": "equal",
+        "value": "repetition"
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "children",
+          0,
+          "kind"
+        ],
+        "op": "equal",
+        "value": "choice"
+      }
+    ]
+  },
+  {
+    "id": "railroad-spec-023",
+    "kind": "railroad",
+    "name": "should parse block comments",
+    "source": "\n        railroad-beta\n        /* this is a comment */\n        rule = terminal(\"a\") ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/railroadDiagram.spec.ts",
+    "line": 330,
+    "checks": [
+      {
+        "path": [
+          "rules"
+        ],
+        "op": "length",
+        "value": 1
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "kind"
+        ],
+        "op": "equal",
+        "value": "terminal"
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "text"
+        ],
+        "op": "equal",
+        "value": "a"
+      }
+    ]
+  },
+  {
+    "id": "railroad-spec-024",
+    "kind": "railroad",
+    "name": "should parse an expression grammar",
+    "source": "\n        railroad-beta\n        title \"Simple Expression\"\n        expression = sequence(\n            nonterminal(\"term\"),\n            zeroOrMore(sequence(\n                choice(terminal(\"+\"), terminal(\"-\")),\n                nonterminal(\"term\")\n            ))\n        ) ;\n        term = sequence(\n            nonterminal(\"factor\"),\n            zeroOrMore(sequence(\n                choice(terminal(\"*\"), terminal(\"/\")),\n                nonterminal(\"factor\")\n            ))\n        ) ;\n        factor = choice(\n            nonterminal(\"number\"),\n            sequence(terminal(\"(\"), nonterminal(\"expression\"), terminal(\")\"))\n        ) ;\n        number = oneOrMore(nonterminal(\"digit\")) ;\n        digit = choice(\n            terminal(\"0\"), terminal(\"1\"), terminal(\"2\"),\n            terminal(\"3\"), terminal(\"4\"), terminal(\"5\"),\n            terminal(\"6\"), terminal(\"7\"), terminal(\"8\"), terminal(\"9\")\n        ) ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/railroadDiagram.spec.ts",
+    "line": 348,
+    "checks": [
+      {
+        "path": [
+          "rules"
+        ],
+        "op": "length",
+        "value": 5
+      },
+      {
+        "path": [
+          "title"
+        ],
+        "op": "equal",
+        "value": "Simple Expression"
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "name"
+        ],
+        "op": "equal",
+        "value": "expression"
+      },
+      {
+        "path": [
+          "rules",
+          1,
+          "name"
+        ],
+        "op": "equal",
+        "value": "term"
+      },
+      {
+        "path": [
+          "rules",
+          2,
+          "name"
+        ],
+        "op": "equal",
+        "value": "factor"
+      },
+      {
+        "path": [
+          "rules",
+          3,
+          "name"
+        ],
+        "op": "equal",
+        "value": "number"
+      },
+      {
+        "path": [
+          "rules",
+          4,
+          "name"
+        ],
+        "op": "equal",
+        "value": "digit"
+      }
+    ]
+  },
+  {
+    "id": "railroad-spec-025",
+    "kind": "railroad",
+    "name": "should parse JSON grammar excerpt",
+    "source": "\n        railroad-beta\n        title \"JSON Subset\"\n        value = choice(\n            nonterminal(\"string\"),\n            nonterminal(\"number\"),\n            terminal(\"true\"),\n            terminal(\"false\"),\n            terminal(\"null\")\n        ) ;\n        string = sequence(\n            terminal(\"\\\"\"),\n            zeroOrMore(nonterminal(\"character\")),\n            terminal(\"\\\"\")\n        ) ;\n        number = oneOrMore(nonterminal(\"digit\")) ;\n        character = choice(nonterminal(\"letter\"), nonterminal(\"digit\")) ;\n        letter = choice(terminal(\"a\"), terminal(\"b\"), terminal(\"c\")) ;\n        digit = choice(terminal(\"0\"), terminal(\"1\"), terminal(\"2\")) ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/railroadDiagram.spec.ts",
+    "line": 389,
+    "checks": [
+      {
+        "path": [
+          "rules"
+        ],
+        "op": "length",
+        "value": 6
+      },
+      {
+        "path": [
+          "title"
+        ],
+        "op": "equal",
+        "value": "JSON Subset"
+      }
+    ]
+  },
+  {
+    "id": "railroadEbnf-spec-000",
+    "kind": "railroadEbnf",
+    "name": "should parse simple terminal",
+    "source": "\n        railroad-ebnf-beta\n        rule = \"terminal\" ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/ebnfDiagram.spec.ts",
+    "line": 11,
+    "checks": [
+      {
+        "path": [
+          "rules"
+        ],
+        "op": "length",
+        "value": 1
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "name"
+        ],
+        "op": "equal",
+        "value": "rule"
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "kind"
+        ],
+        "op": "equal",
+        "value": "terminal"
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "text"
+        ],
+        "op": "equal",
+        "value": "terminal"
+      }
+    ]
+  },
+  {
+    "id": "railroadEbnf-spec-001",
+    "kind": "railroadEbnf",
+    "name": "should parse non-terminal reference",
+    "source": "\n        railroad-ebnf-beta\n        rule = other_rule ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/ebnfDiagram.spec.ts",
+    "line": 27,
+    "checks": [
+      {
+        "path": [
+          "rules"
+        ],
+        "op": "length",
+        "value": 1
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "kind"
+        ],
+        "op": "equal",
+        "value": "nonterminal"
+      }
+    ]
+  },
+  {
+    "id": "railroadEbnf-spec-002",
+    "kind": "railroadEbnf",
+    "name": "should parse sequence",
+    "source": "\n        railroad-ebnf-beta\n        rule = \"a\" \"b\" \"c\" ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/ebnfDiagram.spec.ts",
+    "line": 39,
+    "checks": [
+      {
+        "path": [
+          "rules"
+        ],
+        "op": "length",
+        "value": 1
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "kind"
+        ],
+        "op": "equal",
+        "value": "sequence"
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "children"
+        ],
+        "op": "length",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "railroadEbnf-spec-003",
+    "kind": "railroadEbnf",
+    "name": "should parse choice",
+    "source": "\n        railroad-ebnf-beta\n        rule = \"a\" | \"b\" | \"c\" ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/ebnfDiagram.spec.ts",
+    "line": 54,
+    "checks": [
+      {
+        "path": [
+          "rules"
+        ],
+        "op": "length",
+        "value": 1
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "kind"
+        ],
+        "op": "equal",
+        "value": "choice"
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "children"
+        ],
+        "op": "length",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "railroadEbnf-spec-004",
+    "kind": "railroadEbnf",
+    "name": "should parse optional (W3C)",
+    "source": "\n        railroad-ebnf-beta\n        rule = \"a\"? ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/ebnfDiagram.spec.ts",
+    "line": 69,
+    "checks": [
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "kind"
+        ],
+        "op": "equal",
+        "value": "optional"
+      }
+    ]
+  },
+  {
+    "id": "railroadEbnf-spec-005",
+    "kind": "railroadEbnf",
+    "name": "should parse optional (ISO)",
+    "source": "\n        railroad-ebnf-beta\n        rule = [ \"a\" ] ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/ebnfDiagram.spec.ts",
+    "line": 78,
+    "checks": [
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "kind"
+        ],
+        "op": "equal",
+        "value": "optional"
+      }
+    ]
+  },
+  {
+    "id": "railroadEbnf-spec-006",
+    "kind": "railroadEbnf",
+    "name": "should parse repetition zero-or-more",
+    "source": "\n        railroad-ebnf-beta\n        rule = \"a\"* ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/ebnfDiagram.spec.ts",
+    "line": 87,
+    "checks": [
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "kind"
+        ],
+        "op": "equal",
+        "value": "repetition"
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "minimum"
+        ],
+        "op": "equal",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "railroadEbnf-spec-007",
+    "kind": "railroadEbnf",
+    "name": "should parse repetition one-or-more",
+    "source": "\n        railroad-ebnf-beta\n        rule = \"a\"+ ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/ebnfDiagram.spec.ts",
+    "line": 100,
+    "checks": [
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "kind"
+        ],
+        "op": "equal",
+        "value": "repetition"
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "minimum"
+        ],
+        "op": "equal",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "railroadEbnf-spec-008",
+    "kind": "railroadEbnf",
+    "name": "should parse ISO repetition",
+    "source": "\n        railroad-ebnf-beta\n        rule = { \"a\" } ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/ebnfDiagram.spec.ts",
+    "line": 113,
+    "checks": [
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "kind"
+        ],
+        "op": "equal",
+        "value": "repetition"
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "minimum"
+        ],
+        "op": "equal",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "railroadEbnf-spec-009",
+    "kind": "railroadEbnf",
+    "name": "should parse title",
+    "source": "\n        railroad-ebnf-beta\n        title \"Test Grammar\"\n        rule = \"a\" ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/ebnfDiagram.spec.ts",
+    "line": 126,
+    "checks": [
+      {
+        "path": [
+          "title"
+        ],
+        "op": "equal",
+        "value": "Test Grammar"
+      }
+    ]
+  },
+  {
+    "id": "railroadEbnf-spec-010",
+    "kind": "railroadEbnf",
+    "name": "should parse special sequence",
+    "source": "\n        railroad-ebnf-beta\n        rule = ? special ? ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/ebnfDiagram.spec.ts",
+    "line": 136,
+    "checks": [
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "kind"
+        ],
+        "op": "equal",
+        "value": "special"
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "text"
+        ],
+        "op": "equal",
+        "value": "special"
+      }
+    ]
+  },
+  {
+    "id": "railroadEbnf-spec-011",
+    "kind": "railroadEbnf",
+    "name": "should parse expression grammar",
+    "source": "\n        railroad-ebnf-beta\n        title \"Simple Expression\"\n        expression = term ( \"+\" term | \"-\" term )* ;\n        term = factor ( \"*\" factor | \"/\" factor )* ;\n        factor = number | \"(\" expression \")\" ;\n        number = digit+ ;\n        digit = \"0\" | \"1\" | \"2\" | \"3\" | \"4\" | \"5\" | \"6\" | \"7\" | \"8\" | \"9\" ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/ebnfDiagram.spec.ts",
+    "line": 151,
+    "checks": [
+      {
+        "path": [
+          "rules"
+        ],
+        "op": "length",
+        "value": 5
+      },
+      {
+        "path": [
+          "title"
+        ],
+        "op": "equal",
+        "value": "Simple Expression"
+      }
+    ]
+  },
+  {
+    "id": "railroadAbnf-spec-000",
+    "kind": "railroadAbnf",
+    "name": "should parse string literal",
+    "source": "\n        railroad-abnf-beta\n        rule = \"hello\" ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/abnfDiagram.spec.ts",
+    "line": 11,
+    "checks": [
+      {
+        "path": [
+          "rules"
+        ],
+        "op": "length",
+        "value": 1
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "name"
+        ],
+        "op": "equal",
+        "value": "rule"
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "kind"
+        ],
+        "op": "equal",
+        "value": "terminal"
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "text"
+        ],
+        "op": "equal",
+        "value": "hello"
+      }
+    ]
+  },
+  {
+    "id": "railroadAbnf-spec-001",
+    "kind": "railroadAbnf",
+    "name": "should parse numeric value",
+    "source": "\n        railroad-abnf-beta\n        rule = %x41 ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/abnfDiagram.spec.ts",
+    "line": 27,
+    "checks": [
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "kind"
+        ],
+        "op": "equal",
+        "value": "terminal"
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "text"
+        ],
+        "op": "equal",
+        "value": "%x41"
+      }
+    ]
+  },
+  {
+    "id": "railroadAbnf-spec-002",
+    "kind": "railroadAbnf",
+    "name": "should parse rule name reference",
+    "source": "\n        railroad-abnf-beta\n        rule = other-rule ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/abnfDiagram.spec.ts",
+    "line": 40,
+    "checks": [
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "kind"
+        ],
+        "op": "equal",
+        "value": "nonterminal"
+      }
+    ]
+  },
+  {
+    "id": "railroadAbnf-spec-003",
+    "kind": "railroadAbnf",
+    "name": "should parse concatenation",
+    "source": "\n        railroad-abnf-beta\n        rule = \"a\" \"b\" \"c\" ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/abnfDiagram.spec.ts",
+    "line": 49,
+    "checks": [
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "kind"
+        ],
+        "op": "equal",
+        "value": "sequence"
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "children"
+        ],
+        "op": "length",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "railroadAbnf-spec-004",
+    "kind": "railroadAbnf",
+    "name": "should parse alternation",
+    "source": "\n        railroad-abnf-beta\n        rule = \"a\" / \"b\" / \"c\" ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/abnfDiagram.spec.ts",
+    "line": 62,
+    "checks": [
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "kind"
+        ],
+        "op": "equal",
+        "value": "choice"
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "children"
+        ],
+        "op": "length",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "railroadAbnf-spec-005",
+    "kind": "railroadAbnf",
+    "name": "should parse optional group",
+    "source": "\n        railroad-abnf-beta\n        rule = [ \"a\" ] ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/abnfDiagram.spec.ts",
+    "line": 75,
+    "checks": [
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "kind"
+        ],
+        "op": "equal",
+        "value": "optional"
+      }
+    ]
+  },
+  {
+    "id": "railroadAbnf-spec-006",
+    "kind": "railroadAbnf",
+    "name": "should parse zero-or-more repetition",
+    "source": "\n        railroad-abnf-beta\n        rule = *\"a\" ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/abnfDiagram.spec.ts",
+    "line": 84,
+    "checks": [
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "kind"
+        ],
+        "op": "equal",
+        "value": "repetition"
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "minimum"
+        ],
+        "op": "equal",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "railroadAbnf-spec-007",
+    "kind": "railroadAbnf",
+    "name": "should parse one-or-more repetition",
+    "source": "\n        railroad-abnf-beta\n        rule = 1*\"a\" ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/abnfDiagram.spec.ts",
+    "line": 97,
+    "checks": [
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "kind"
+        ],
+        "op": "equal",
+        "value": "repetition"
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "minimum"
+        ],
+        "op": "equal",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "railroadAbnf-spec-008",
+    "kind": "railroadAbnf",
+    "name": "should parse title",
+    "source": "\n        railroad-abnf-beta\n        title \"Test Grammar\"\n        rule = \"a\" ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/abnfDiagram.spec.ts",
+    "line": 110,
+    "checks": [
+      {
+        "path": [
+          "title"
+        ],
+        "op": "equal",
+        "value": "Test Grammar"
+      }
+    ]
+  },
+  {
+    "id": "railroadAbnf-spec-009",
+    "kind": "railroadAbnf",
+    "name": "should parse URI-like grammar",
+    "source": "\n        railroad-abnf-beta\n        title \"URI\"\n        URI = scheme \":\" hier-part ;\n        scheme = ALPHA *( ALPHA / DIGIT / \"+\" / \"-\" / \".\" ) ;\n        hier-part = \"//\" authority path-abempty ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/abnfDiagram.spec.ts",
+    "line": 122,
+    "checks": [
+      {
+        "path": [
+          "rules"
+        ],
+        "op": "length",
+        "value": 3
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "name"
+        ],
+        "op": "equal",
+        "value": "URI"
+      },
+      {
+        "path": [
+          "rules",
+          1,
+          "name"
+        ],
+        "op": "equal",
+        "value": "scheme"
+      },
+      {
+        "path": [
+          "rules",
+          2,
+          "name"
+        ],
+        "op": "equal",
+        "value": "hier-part"
+      }
+    ]
+  },
+  {
+    "id": "railroadPeg-spec-000",
+    "kind": "railroadPeg",
+    "name": "should parse literal",
+    "source": "\n        railroad-peg-beta\n        rule <- \"hello\" ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/pegDiagram.spec.ts",
+    "line": 11,
+    "checks": [
+      {
+        "path": [
+          "rules"
+        ],
+        "op": "length",
+        "value": 1
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "name"
+        ],
+        "op": "equal",
+        "value": "rule"
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "kind"
+        ],
+        "op": "equal",
+        "value": "terminal"
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "text"
+        ],
+        "op": "equal",
+        "value": "hello"
+      }
+    ]
+  },
+  {
+    "id": "railroadPeg-spec-001",
+    "kind": "railroadPeg",
+    "name": "should parse identifier reference",
+    "source": "\n        railroad-peg-beta\n        rule <- other_rule ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/pegDiagram.spec.ts",
+    "line": 27,
+    "checks": [
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "kind"
+        ],
+        "op": "equal",
+        "value": "nonterminal"
+      }
+    ]
+  },
+  {
+    "id": "railroadPeg-spec-002",
+    "kind": "railroadPeg",
+    "name": "should parse sequence",
+    "source": "\n        railroad-peg-beta\n        rule <- \"a\" \"b\" \"c\" ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/pegDiagram.spec.ts",
+    "line": 36,
+    "checks": [
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "kind"
+        ],
+        "op": "equal",
+        "value": "sequence"
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "children"
+        ],
+        "op": "length",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "railroadPeg-spec-003",
+    "kind": "railroadPeg",
+    "name": "should parse ordered choice",
+    "source": "\n        railroad-peg-beta\n        rule <- \"a\" / \"b\" / \"c\" ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/pegDiagram.spec.ts",
+    "line": 49,
+    "checks": [
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "kind"
+        ],
+        "op": "equal",
+        "value": "choice"
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "children"
+        ],
+        "op": "length",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "railroadPeg-spec-004",
+    "kind": "railroadPeg",
+    "name": "should parse optional suffix",
+    "source": "\n        railroad-peg-beta\n        rule <- \"a\"? ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/pegDiagram.spec.ts",
+    "line": 62,
+    "checks": [
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "kind"
+        ],
+        "op": "equal",
+        "value": "optional"
+      }
+    ]
+  },
+  {
+    "id": "railroadPeg-spec-005",
+    "kind": "railroadPeg",
+    "name": "should parse zero-or-more suffix",
+    "source": "\n        railroad-peg-beta\n        rule <- \"a\"* ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/pegDiagram.spec.ts",
+    "line": 71,
+    "checks": [
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "kind"
+        ],
+        "op": "equal",
+        "value": "repetition"
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "minimum"
+        ],
+        "op": "equal",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "railroadPeg-spec-006",
+    "kind": "railroadPeg",
+    "name": "should parse one-or-more suffix",
+    "source": "\n        railroad-peg-beta\n        rule <- \"a\"+ ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/pegDiagram.spec.ts",
+    "line": 84,
+    "checks": [
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "kind"
+        ],
+        "op": "equal",
+        "value": "repetition"
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "minimum"
+        ],
+        "op": "equal",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "railroadPeg-spec-007",
+    "kind": "railroadPeg",
+    "name": "should parse any character",
+    "source": "\n        railroad-peg-beta\n        rule <- . ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/pegDiagram.spec.ts",
+    "line": 97,
+    "checks": [
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "kind"
+        ],
+        "op": "equal",
+        "value": "special"
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "text"
+        ],
+        "op": "equal",
+        "value": "."
+      }
+    ]
+  },
+  {
+    "id": "railroadPeg-spec-008",
+    "kind": "railroadPeg",
+    "name": "should parse lookahead prefix",
+    "source": "\n        railroad-peg-beta\n        rule <- &\"a\" ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/pegDiagram.spec.ts",
+    "line": 110,
+    "checks": [
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "kind"
+        ],
+        "op": "equal",
+        "value": "special"
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "text"
+        ],
+        "op": "equal",
+        "value": "&\"a\""
+      }
+    ]
+  },
+  {
+    "id": "railroadPeg-spec-009",
+    "kind": "railroadPeg",
+    "name": "should parse not-predicate prefix",
+    "source": "\n        railroad-peg-beta\n        rule <- !\"a\" ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/pegDiagram.spec.ts",
+    "line": 123,
+    "checks": [
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "kind"
+        ],
+        "op": "equal",
+        "value": "special"
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "definition",
+          "text"
+        ],
+        "op": "equal",
+        "value": "!\"a\""
+      }
+    ]
+  },
+  {
+    "id": "railroadPeg-spec-010",
+    "kind": "railroadPeg",
+    "name": "should parse title",
+    "source": "\n        railroad-peg-beta\n        title \"Test Grammar\"\n        rule <- \"a\" ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/pegDiagram.spec.ts",
+    "line": 136,
+    "checks": [
+      {
+        "path": [
+          "title"
+        ],
+        "op": "equal",
+        "value": "Test Grammar"
+      }
+    ]
+  },
+  {
+    "id": "railroadPeg-spec-011",
+    "kind": "railroadPeg",
+    "name": "should parse expression grammar",
+    "source": "\n        railroad-peg-beta\n        title \"Calculator\"\n        Expression <- Term ((\"+\" / \"-\") Term)* ;\n        Term <- Factor ((\"*\" / \"/\") Factor)* ;\n        Factor <- Number / \"(\" Expression \")\" ;\n        Number <- Digit+ ;\n        Digit <- \"0\" / \"1\" / \"2\" / \"3\" / \"4\" / \"5\" / \"6\" / \"7\" / \"8\" / \"9\" ;\n      ",
+    "sourceFile": "packages/mermaid/src/diagrams/railroad/parser/pegDiagram.spec.ts",
+    "line": 148,
+    "checks": [
+      {
+        "path": [
+          "rules"
+        ],
+        "op": "length",
+        "value": 5
+      },
+      {
+        "path": [
+          "title"
+        ],
+        "op": "equal",
+        "value": "Calculator"
+      },
+      {
+        "path": [
+          "rules",
+          0,
+          "name"
+        ],
+        "op": "equal",
+        "value": "Expression"
+      }
+    ]
+  }
+]

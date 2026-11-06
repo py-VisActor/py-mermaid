@@ -1,0 +1,96 @@
+{
+  "phase": "P1",
+  "status": "code_complete_unverified",
+  "upstreamVersion": "mermaid@12.2.0",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "protocol": "docs/BULK_STATIC_INTERFACES.md v1",
+  "behaviorExecuted": false,
+  "testsDesigned": false,
+  "threadOwnership": "All models frozen/pure; mutable parser/layout state request local; Painter/native session stays on caller owner thread",
+  "sourcePositions": "Family parser offsets are cleaned Python indices; runtime.common.error maps processed_to_raw then original UTF-16 offset and UTF-16 column",
+  "units": "Input grammar indentation counts source characters; all renderer/layout lengths are logical CSS px unless explicitly source bit or column counts",
+  "mechanicalEvidence": [
+    "test-runs/BULK-record-20261106T033019Z-3bf3e44f/run.json",
+    "test-runs/BULK-record-20261106T033206Z-ade40f8b/run.json",
+    "test-runs/BULK-record-20261106T033427Z-44c90684/run.json",
+    "test-runs/BULK-record-20261106T033826Z-f56b2f03/run.json",
+    "test-runs/BULK-record-20261106T034102Z-66d38803/run.json",
+    "test-runs/BULK-record-20261106T035042Z-f770b411/run.json",
+    "test-runs/BULK-record-20261106T035123Z-c9c44f18/run.json"
+  ],
+  "excludedByUser": [
+    "Dagre implementations/dependencies/fallbacks",
+    "click/navigation/callback/hover/animation/interactive DOM behavior"
+  ],
+  "deferred": [
+    "treemap (and six other batch-deferred entries, no new code or verification)"
+  ],
+  "verificationLimit": "Compilation/import/signature binding do not assert parse semantics, configuration compatibility or rendering correctness; independent source tests and official captures start only in P2/P3",
+  "task": "BULK-A-F02",
+  "sourceMap": "references/bulk-A-F02-sources.json",
+  "files": [
+    {
+      "path": "src/py_mermaid/diagrams/modeling/__init__.py",
+      "sha256": "9d858e7d83430dfa88fe5ce02c9ea7f9954706766f5d9c99c8e75714b0a220ab"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/modeling/_support.py",
+      "sha256": "49b89cce465ed22210e16ba7c984616a465addb4c2ed6fd8fc4e51d7f2572733"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/modeling/_usecase_glyphs.py",
+      "sha256": "a32d8b6c730648410414e03497693768d2d1ba08b1afba4feb3e9c2318401832"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/modeling/c4.py",
+      "sha256": "2189ae9f785091b7e916a523d909b8d4e89f5e9116fc060b97631fa0cfd95640"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/modeling/class_diagram.py",
+      "sha256": "0204f35df4796c3a095b8a83a7b633e19d175d2000ed48e1398da975f75a12a5"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/modeling/er.py",
+      "sha256": "2132794a454154194d5b2f35c820b48a5ab99e0c9dab4fd7bb1acc9a558dd7f9"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/modeling/requirement.py",
+      "sha256": "0a0a02ba4c815b9ef8319e456aebf42a6d5a949cc60a4475a6aec4b644fe6016"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/modeling/state_diagram.py",
+      "sha256": "5f8c8a7c6b5c495a2004e8c45a7a9492b71cc47761e3183a565dfd62fb8452b9"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/modeling/usecase.py",
+      "sha256": "cb480e8faf9148efb843b5b82cfe61b4190ed59a5d6be81180e150db1543ba3b"
+    }
+  ],
+  "completedEntries": [
+    "modeling.class_diagram",
+    "modeling.state_diagram",
+    "modeling.er",
+    "modeling.requirement",
+    "modeling.usecase",
+    "modeling.c4"
+  ],
+  "implementationStatus": "code_complete_unverified; P1 source dispatch and static behavior implemented, P2 independent source coverage and P3 first executions outstanding",
+  "actualRemaining": "No deferred treemap work; all listed remainingVerification remain unexecuted; architecture numericPortDifferences explicitly retained",
+  "failedMechanicalEvidenceRetained": [
+    "BULK-record-20261106T023915Z-67970785 (PowerShell argv quote issue)",
+    "BULK-record-20261106T033146Z-6d96e14f (mechanical import lacked PYTHONPATH)"
+  ],
+  "sourceMapSha256": "8d956fa1d9f19ac978d7d1650831de87c80f5ae8a85313cb8b62b4e0e45955c3",
+  "ACombinedSourceSha256": "3c3367de0a7f8e7fe57a145fadcf2be254c20aa6c5743b6b2630a56a4dd29ffe",
+  "sourceFrozen": true,
+  "freezeHistory": [
+    {
+      "sourceSha256": "c31540f5231f803abcef9c0e8205e8cd3ef397f97387f86e3746100317c434b3",
+      "mapSha256": "4e084e82bd9176c3bd7a42339d4ef990758318e47edc8c772b357f558ebc563c",
+      "receiptSha256": "382bd6a9f776eddccfc59c25f55c24ff7e305b8c34f76dd491c645e2a8b4c60a",
+      "mapSnapshot": "references/bulk-A-F02-sources-freeze-034102Z.json",
+      "receiptSnapshot": "docs/changes/bulk-A-F02-freeze-034102Z.json"
+    }
+  ],
+  "reopenedVisibilityFix": "3 files only; no behavioral/P2 execution; original freeze preserved in snapshots"
+}

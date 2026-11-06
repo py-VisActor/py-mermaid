@@ -279,7 +279,8 @@ def build():
         for key in component['members']:
             plan = nodes[key]['plan']
             label = key.replace('|', '&#124;')
-            md.append(f"| {component['layer']} | {component['id']}{' ↻' if component['cyclic'] else ''} | `{label}` | {plan['action']} | {', '.join(plan.get('candidates', [])) or 'Python 重写/追踪调用面'} | {plan['workPackage']} |")
+            implementation = '不进入目标运行时（用户排除）' if plan['action'] == 'excluded-by-user' else ', '.join(plan.get('candidates', [])) or 'Python 重写/追踪调用面'
+            md.append(f"| {component['layer']} | {component['id']}{' ↻' if component['cyclic'] else ''} | `{label}` | {plan['action']} | {implementation} | {plan['workPackage']} |")
     return data, product_text, full_text, '\n'.join(md) + '\n'
 
 

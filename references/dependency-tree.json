@@ -2,8 +2,8 @@
   "schema": "py-mermaid-complete-dependency-graph/v1",
   "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
   "pnpmLockSha256": "d75b263b5a0ace23797e375423a7d24e6e208c440c7eb75d4cc4a422de5973ca",
-  "inventorySha256": "90f61bec3dbd3e3cfe7246e77b230ce7eef3433c34089ade0c4c1a269199ba31",
-  "policySha256": "545b9df5e92e728622af17f743da5ad6a7bbd04f535f632e02ab9d8a74f8944f",
+  "inventorySha256": "b16fd80467862b982795e50d85d7f1f31926275dd70dbff78f7e1217d2aa7757",
+  "policySha256": "8e5c8e1415a90ed857b9269b34d9a4a3374efeef1c6cb17e931a7f2ad453547b",
   "pythonMigrationArchitecture": {
     "id": "canvas-native-no-dom",
     "decision": "user-authorized",
@@ -32,7 +32,10 @@
       "applicable metadata"
     ],
     "sourceTreePurpose": "Immutable upstream provenance, not a Python runtime dependency list.",
-    "functionalExclusion": "Removing host mechanisms is authorized; required feature loss is not inferred from that removal."
+    "functionalExclusion": "Removing host mechanisms is authorized; required feature loss is not inferred from that removal.",
+    "excludedAlgorithms": [
+      "dagre"
+    ]
   },
   "scope": "All pinned lock snapshots and all 13 workspace importers; declared edges, not bundle reachability.",
   "counts": {
@@ -42383,11 +42386,11 @@
       ],
       "plan": {
         "state": "proposal-not-implemented",
-        "action": "retain-layout-and-graph-meaning-only",
+        "action": "excluded-by-user",
         "workPackage": "D07",
         "candidates": [],
-        "reason": "Discard D3/SVG renderer and API-shaped graphlib plumbing. Use the minimal ordered/compound graph model needed by features; port actual Dagre ranking/order/position/routing only for Dagre functionality.",
-        "runtimeDisposition": "python-layout-and-model"
+        "reason": "Dagre engine, wrapper and optional/fallback functionality removed from all target modules by explicit user decision. Retain only upstream provenance; graph/geometry requirements use own model and pure helpers.",
+        "runtimeDisposition": "excluded-from-target-runtime"
       },
       "bottomUpLayer": 6,
       "featureOwners": [

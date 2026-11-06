@@ -1,0 +1,1370 @@
+{
+  "schema": "py-mermaid-f014-assertions/v1",
+  "taskId": "F01.4-S3/layout-shapes",
+  "status": "cap_geometry_and_api_pixels_targeted_pass_final_candidate_pending",
+  "frozenCandidate": "5b0262fdf79a609517ff6080ddd1da50d1649528abea2373f74c3666ee7d14ed",
+  "frozenRun": "F01.4-s2-source-freeze-20261105T084954Z-d01bc958",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "sources": [
+    {
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/elk/render.ts",
+      "symbols": [
+        "ELK_PRESETS",
+        "resolveElkPreset",
+        "createRootElkGraph",
+        "buildSubgraphLayoutOptions",
+        "CONTAINER_ALGORITHMS",
+        "clearContainerAlgorithmOptions",
+        "findCyclicEntryNodes",
+        "applyElkEdgeLayout",
+        "straightenEdgeTerminals",
+        "projectLabelOntoStraightenedRun",
+        "ensureStartMarkerSegmentLength",
+        "ensureEndMarkerSegmentLength",
+        "buildEdgeData"
+      ],
+      "sha256": "6258890b3f311e86e4cd4dc99d480f704fde7473e150dc62b88838c5015c5011"
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/elk/algorithms.ts",
+      "symbols": [
+        "ELK_ALGORITHMS"
+      ],
+      "sha256": "c728ed061bb5d86ce45857884125d2195a1b876fd6a577ac12a7d622acdef84b"
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/elk/plugin.ts",
+      "symbols": [
+        "layouts"
+      ],
+      "sha256": "9a11de30df691cc5819425ee7cc79f698ca1f440c77665dd272d98b26bfeaac2"
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/elk/geometry.ts",
+      "symbols": [
+        "outlineAttachPoint",
+        "computeNodeIntersection"
+      ],
+      "sha256": "80264414c9e8526d7a2561cfbaa5475d6ba90ed45b2bca8b590a665fb88c938a"
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/elk/lineHops.ts",
+      "symbols": [
+        "applyElkLineJumps",
+        "JUMP_RADIUS"
+      ],
+      "sha256": "b3294a60d0ae340319ba854d83753714fcf96ea2b8b1ed59c9628efa08b4303e"
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/lineJump.ts",
+      "symbols": [
+        "findEdgeIntersections",
+        "rewriteEdgePath",
+        "computeRoundedCorner",
+        "applyMarkerOffsets",
+        "curveSupportsLineHops"
+      ],
+      "sha256": "73b1dee186b6552ddf7eb1f46ddf57c0e97c04813c1bbe8a27df93ab21d67df7"
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/edges.js",
+      "symbols": [
+        "generateRoundedPath",
+        "applyMarkerOffsetsToPoints",
+        "neo markerOffsets2 dash array"
+      ],
+      "sha256": "8fee7300ea0bffd008f5d2c12a05e85f5ea8bc22a9855d4d2e2b6c0e6c92a33a"
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/markers.js",
+      "symbols": [
+        "point",
+        "circle",
+        "cross"
+      ],
+      "sha256": "10af49778781a739f213b2f7f4387df2c70597c00bee23d92f705c4a41909ddc"
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/edgeMarker.ts",
+      "symbols": [
+        "arrowTypesMap",
+        "addEdgeMarkers"
+      ],
+      "sha256": "5e710734cf33c37c95c77f40df5b675880711da18bb54a6374139290d1c37395"
+    },
+    {
+      "path": "packages/mermaid/src/utils/lineWithOffset.ts",
+      "symbols": [
+        "markerOffsets",
+        "markerOffsets2"
+      ],
+      "sha256": "e09a06c66e1e35e29390fb68d08a0df459cf1dcecfe5d5b6466e89b30a9935d5"
+    },
+    {
+      "path": "packages/mermaid/src/defaultConfig.ts",
+      "symbols": [
+        "elk"
+      ],
+      "sha256": "6f2ec3c231ee970fb0368d158975090d488c93c9801a618b06cb18d58488b068"
+    },
+    {
+      "path": "packages/mermaid/src/config.type.ts",
+      "symbols": [
+        "MermaidConfig.elk"
+      ],
+      "sha256": "5fa96f7e80f42732716da5bb4ba8f6331b23028c76172f8bb2a4a329b60ac734"
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/common/index.ts",
+      "symbols": [
+        "createCommonLayoutRenderer",
+        "paintLayoutNode"
+      ],
+      "sha256": "d8321ba51ba42bc860f7e8fc3ef3026e8eadbbeccc6014df86a249546c62c964"
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/nodes.ts",
+      "symbols": [
+        "insertNode",
+        "nodeElems",
+        "positionNode"
+      ],
+      "sha256": "3f36796e264f4e08a3e4a9d1a4030ac9e6fe712320d934b2101587b24814828f"
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/createGraph.ts",
+      "symbols": [
+        "insertMeasuredNode"
+      ],
+      "sha256": "ec7fef8159d654cfe0dce23ec6c9c7470b200ba2595ac9c45a4be622ccf9fab5"
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/elk/elkOptionCatalogue.ts",
+      "symbols": [
+        "ROOT_EXPERIMENT_OVERRIDES",
+        "SUBGRAPH_EXPERIMENT_OVERRIDES"
+      ],
+      "sha256": "d5013522fc97ac00b5f6ce7e6016eb76b802294fd22f1f9a7cc496fba10436c1"
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes.ts",
+      "sha256": "68fceb790c2a9b65397d96edaf85a50b4ae059a68cf52c83553c4887019f1699",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/flowchart/flowDb.ts",
+      "sha256": "33577b9ade8c65be6049c3093089dbf81abf44214f49c2b2ea46434183889288",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/anchor.ts",
+      "sha256": "38a5f0e6776808bb05530a8aabb759f2eee0538f462683fc58e8749478eecda1",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/bang.ts",
+      "sha256": "916f0e2b74b80fbbf525f2efbbc2aea2fe87ab0011d30c750f0934c2d197c2e6",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/blockArrow.ts",
+      "sha256": "1a64d1cf137f5737dadf0970d36e9a4d0092d839af9f14f54cd853e9c6e84be8",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/bowTieRect.ts",
+      "sha256": "9c5112a2d59d4b6d01a77c60b3ba3b4e62bf37ac1a223905294a863a157e32b8",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/browser.ts",
+      "sha256": "fb8eb3fe2afab8103e4ce68dbceec951e4a4536d00085c2a5c68cc270be9dbc8",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/bucket.ts",
+      "sha256": "0191b27069c6c24e94f2ddfbc0b5b7efe4034772eb48977158044a598bda8966",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/c4LabelHelper.ts",
+      "sha256": "a26c5e1621e6a3e1c6a4d79b06c51b6c6af0dde24a176d260469acb070179ff5",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/card.ts",
+      "sha256": "317a71daa342b874a80340ce9f6ab483c6af931a10a605f4bdbcb3c8b65edde7",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/choice.ts",
+      "sha256": "9ef0b9719308f150162ec95fc34a676e1f2cc984ad55d767bf503efe684d2b09",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/circle.ts",
+      "sha256": "0583cce7bef770d20cd108c620ef546ae2cd423da2ebd913a93e6546ff28a167",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/classBox.ts",
+      "sha256": "7523a7e1bc504d4b56050e3f3f7dfd3aeb3156124e11856218ad6edf8101b541",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/cloud.ts",
+      "sha256": "e00d654039e86ddee967629c830ca0c85bc2de1350a7c5ee777a619a85d60839",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/collapsedGroup.ts",
+      "sha256": "7241a9e4c26783bdb1e8c31398e1572751d42836a5ce7f1b2726e07b179cc2f3",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/composite.ts",
+      "sha256": "11b1b96bef6540baf469dddd8bb1641c7f253cef84675b9b4714fafa349b4907",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/console.ts",
+      "sha256": "d6a808c2f59ee2c84aff09c2548ed3747e931917652d55d8b8bd25e06a1bff78",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/crossedCircle.ts",
+      "sha256": "3a16ed8e5476a347251dbe9882cc8a2abd32c6ad577b7785dcf3ed6235068a14",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/curlyBraceLeft.ts",
+      "sha256": "15474b80ba0a458d368b9d11ca73e83469f9cd326228dfdf186ccfd8938bd4b9",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/curlyBraceRight.ts",
+      "sha256": "8624f15cef09e91f40b6886645f43f1d85253f2fbc76b03f138da9b72a24d684",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/curlyBraces.ts",
+      "sha256": "5fc286eac7c5fae29acb602e0cc8dafda2bff8985b32b621a4974a5a2e45bc2c",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/curvedTrapezoid.ts",
+      "sha256": "e862aea5b76ccf498de0ea7cf5632ff139b348c5c6b8248fff1d7308202faa31",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/cylinder.ts",
+      "sha256": "66cf21a2d0777a3a2188ac616d68bbd62e4569615e570c150a45e3c08477a9a0",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/datastore.ts",
+      "sha256": "9e72da4a720c6166d642ee81a2d3cf2a813cb466ab8a4e547048b702fc8889d1",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/defaultMindmapNode.ts",
+      "sha256": "bbb2414d9843030b1681033fa846594fc2a86155d754f08ddf43b0f370be4ba6",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/dividedRect.ts",
+      "sha256": "69feb6ef1045fe448f652ae4b278c83ef2dcca6299862b18adcb039f1a0b38f4",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/document.ts",
+      "sha256": "2e5bb5812a6c0795bf623d9d305cf1ab5d8919f366f7f5835006d8ac485365b6",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/doubleCircle.ts",
+      "sha256": "e13030a09455da35a76545c9f27d7c07c3ba450fa065a65d367d40a824bfbc3e",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/drawRect.ts",
+      "sha256": "1d03397624d31f5a244f32260fd8d109dd41751f1970858feb453f09a95d849e",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/erBox.ts",
+      "sha256": "0d997770c4333f168a5fdb9e95a557b712ec1d4ffd3776e2a3ec5d809e449cd4",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/filledCircle.ts",
+      "sha256": "f739ab95cdfb5dc60cf2cc94291aea68286284d0e59c942b23196e9fd8428922",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/flippedTriangle.ts",
+      "sha256": "01e5cda4bddcba59148c84ea19cf54a48ddb8aed95a81c51fc4249a2911913c0",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/folder.ts",
+      "sha256": "0a085a1ae59e5c5e1baf89a8f7bdac460b0aec12dc8b79139a612ac6473aca9c",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/forkJoin.ts",
+      "sha256": "7404023ae8027f3ab6ef55835265693f9bc1320f344b99692e7502523947b24c",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/halfRoundedRectangle.ts",
+      "sha256": "3bf05dece425a5dd6fc0068270799821cb053abdd5381cfefc22f55267e28b97",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/handDrawnShapeStyles.ts",
+      "sha256": "baf8572491842caa518e8ba35a313253ede78ba2fef9b4c43ac9a4b910630402",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/hexagon.ts",
+      "sha256": "2c5d559cf52495aee42b250c6ca556be1f5f0c244ee2993d53d22d405d52dcf3",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/hourglass.ts",
+      "sha256": "e8068645013010879c257d9915863ddb6c0903e08920f4010b780651ba2bbc05",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/icon.ts",
+      "sha256": "a028ca7caedf32fdfa446580f5be98920470291265287411faac4ee7d9c60ab3",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/iconCircle.ts",
+      "sha256": "d15247aa1307553bc43cdfe3868e51bc9cb753ea8838a63330ee4c27c5923180",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/iconRounded.ts",
+      "sha256": "e9b824c82ae44cf320f32ce4e442d90e4a62fc210bcbb5ff0ec687e47a0461a8",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/iconSquare.ts",
+      "sha256": "f71a625ceb9fff9923f55f3a6ccc0f87adde548543a193c8e210dc7df085eace",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/imageSquare.ts",
+      "sha256": "22a78817d3bd27eb0df0be111c5abf74395c3e1963043dd3e8f168c824a0db9d",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/insertPolygonShape.ts",
+      "sha256": "56279058530c0e398a835d3932e672be2a44111da30b92920435d3584e306c86",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/invertedTrapezoid.ts",
+      "sha256": "811f49eeba78032b5a64f2266d57d7c220ea1841c45f35b854d6381a68a93e1a",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/kanbanItem.ts",
+      "sha256": "46876506f1e2387287cd17708defc9d8a49088fa6c3e7358adb5b353c7a8e34d",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/labelImageUtils.ts",
+      "sha256": "f80fc624d2e80a07b9f48bae108f6253488f347a6cfe58d4d6d78f71edb1d2f8",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/labelRect.ts",
+      "sha256": "41da654e959fe0bb5d9d25a4dae9f7f717fa1d50d8dde6a2f8d0003c2c91dea9",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/leanLeft.ts",
+      "sha256": "7a156d3830ee833484e381351bd2f298b79c11081595e8bfaae224c7288608aa",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/leanRight.ts",
+      "sha256": "92c03498df78448186f2114231439338c73e7a8d6a2ad47ad1d7dea1b336f56c",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/lightningBolt.ts",
+      "sha256": "476602e2399b30d993164b169789cce8889710b980f18796cb91ff9173ffa812",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/linedCylinder.ts",
+      "sha256": "4119a7da7bfab12258249838ab623e90b78cb3dafe1d0763aaf7ec14144fa152",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/linedWaveEdgedRect.ts",
+      "sha256": "4a8e3b1dbc07a03a8092aeda3d90eabd398a46373cc1b8aa5b938fbee8ce1c64",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/mindmapCircle.ts",
+      "sha256": "c31f318bb1a3e03c332915041e9becc63f8ad268a5181195a5daa5ae265c9905",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/multiRect.ts",
+      "sha256": "f68940be4c4d4a3195c1f9866e35b290033c45492d65608d9fcdc6caa2a3defe",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/multiWaveEdgedRectangle.ts",
+      "sha256": "00e8977d7d816b058514f49c4462693ba94f0136a6bdb8956d30bb0cc0e15f25",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/note.ts",
+      "sha256": "f358bb583f624930c1118e91a6cf07db949c1ad6ac722f9d0ae4207118c1d552",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/person.ts",
+      "sha256": "05ee5fb12d01178388b3d3a76b98be1f349328bdaeacbc4565adf2bb63fca918",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/question.ts",
+      "sha256": "c662ad9199b6de3b38580bc59adc15c8e0d05162cae777dcc3c605fbaaa96b06",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/rectLeftInvArrow.ts",
+      "sha256": "62472fe5c9d63775db12dfc6914f9995681cdbfe193b945b13bb6216f687f06e",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/rectWithTitle.ts",
+      "sha256": "5474f2e5ab691f52ad1ee0a4f423823c617d2b0ec13534188365d5f8794217da",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/requirementBox.ts",
+      "sha256": "cdf4643c518101a3dbd9058621a98b4a7214b5c0e97d483f407ec10471e3d656",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/roundedRect.ts",
+      "sha256": "ec467557e20d023100fe6be03f3d478b619d5c5b9b0f283f632d90a14593dc10",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/roundedRectPath.ts",
+      "sha256": "9b1d3ab51537998de31cd7c3121b68c4e022aa3b690329cfe81afeb17f7ff314",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/shadedProcess.ts",
+      "sha256": "f02ccae800648954ca8191b547feef6d4c3a9dbc3e465baabb79fa46e05fd52d",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/slopedRect.ts",
+      "sha256": "b653163277a4c6378f976a1d672831ce59ea1ef11509814b567268135e5c9072",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/squareRect.ts",
+      "sha256": "2456ebbc205f1c73fcaf34e63d055a18b17ae71fbce2b1f4ff08e910d8cc2dfd",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/stadium.ts",
+      "sha256": "cb15be21132dbb2eb118815b37f3b9cdc08e4f6d4ffe63c408a04796ee6b5b6a",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/state.ts",
+      "sha256": "c017fe054d1a4c5ebb6721c2fcc0e8ae8300c6293836c53ab6972c52a3bc9dc1",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/stateEnd.ts",
+      "sha256": "f2b812d2e8502f02cf9bbce8bb5f50b0cd6243f1a1bb913bf624d9cce6bab60b",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/stateStart.ts",
+      "sha256": "f21e7f8fd0f198a2f4eba6230c6deb754c00460741b522dffe36b87911561890",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/subroutine.ts",
+      "sha256": "bbf3ec95a0518b5796bdf23e17375323b000a02051a9b1119cf91adeab69b4a4",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/taggedRect.ts",
+      "sha256": "a1b1f3b2f94b396c0de673b4b2c36419187fe6f9ffa0ebd5ba72dae30a48a2f5",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/taggedWaveEdgedRectangle.ts",
+      "sha256": "a353ea047525965d80c1a88ace34202220330a8d86d43f3104cdb81845866c1e",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/text.ts",
+      "sha256": "3cf54477f3b313c908764d42ef6388f7990b87326e533080a91a9b8140fa0475",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/tiltedCylinder.ts",
+      "sha256": "f1db4931703ad635574d6e74f791f0e53afe0057db5191041290331ea3b73a1a",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/trapezoid.ts",
+      "sha256": "7347c2439b54e296ff6e426bc5aefcd00236b78d4c0f859258feae83c1183cfe",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/trapezoidalPentagon.ts",
+      "sha256": "05ff40df81f00b7ab1b58e956f403111234744f17bfb711792ded16f95430659",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/triangle.ts",
+      "sha256": "f84b7a9a0ea9b3a40a5e84dff0a22c3916ab1fc3524472538386adae741a5e59",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/usecaseActor.ts",
+      "sha256": "efb852bb8e69fd0bceace380d38a001ed6bdf87c114803a61c643ded8fe543ec",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/usecaseActorAwesome.ts",
+      "sha256": "b4d0c6920ff6c09289eb983e80ae4e629eb04abe09a8465106d38e3bdd79889c",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/usecaseActorHollow.ts",
+      "sha256": "7a0fc3cdff1999455bd7ae775df80d523a259abe1d8e96eaebcf27618c734aec",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/usecaseActorIcon.ts",
+      "sha256": "d94b6372e11d652830d4827870d2a3d7c3ea53c83dc086188e64240e7deac617",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/usecaseBusiness.ts",
+      "sha256": "1b073a934d0a00fe6f707367cd83a516e0a871d9bbf93ab09546fb50dce43770",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/usecaseEllipse.ts",
+      "sha256": "409e01f96b043df54419fc7274e1695d81f04a0ead5663c177716c00b6228b31",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/usecaseJsonTable.ts",
+      "sha256": "f71575dc3715ac30c21e274ebd4f263de1d5350bf3cb0f5205bd199ddad62a69",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/util.ts",
+      "sha256": "bc63b16d067e4dd1c429e9cf249f4d73260819696de122dff0ce16b12db321c1",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/waveEdgedRectangle.ts",
+      "sha256": "a066fcfd862375723fe98133162d819cea4e0aac0973a4e604328a9554e2ee18",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/waveRectangle.ts",
+      "sha256": "1c8b359205a52e0e40a93bdddc9157aa52443a53184b0c3553c43b0462f7ef31",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/windowPane.ts",
+      "sha256": "0437321115389a46f2a97de77be390bfd54b6e07fe72dad333aabff634b55bea",
+      "symbols": [
+        "shape registration/geometry/metadata source"
+      ]
+    }
+  ],
+  "expectationPolicy": "Literal pinned TS option tables/shape definitions and analytic source geometry. Native public Path2D independently checks actual silhouette/path geometry; never candidate private flatten/intersection helper or candidate-generated coordinate golden. Actual Canvas measurement + real pyelk primary layout path; synthetic coordinates test documented pure transforms/negative controls only. No execution during S3.",
+  "denominators": {
+    "rootLayouts": 7,
+    "containerAlgorithms": 8,
+    "publicElkKeys": 13,
+    "presets": 4,
+    "directions": 5,
+    "publicEnumValues": 26,
+    "sourceShapeDefinitions": 53,
+    "additionalMetadataHandlers": 6,
+    "layoutMethods": 39,
+    "shapeMethods": 18,
+    "reportFixtures": 33
+  },
+  "tests": [
+    {
+      "test": "tests/f014/test_layout.py::ActualELKTests.test_l01_all_seven_root_algorithms_use_actual_native_provider",
+      "independentExpectation": "Seven root registry entries invoke real pyelk; actual requested algorithm and semantic IDs preserved; box/rectpacking empty raw sections and source linear paint.",
+      "behaviorStatus": "NOT_RUN",
+      "initialBehaviorRun": "F01.4-batch-20261105T090906Z-11b555ce",
+      "currentBehaviorStatus": "REPAIR_NOT_RERUN"
+    },
+    {
+      "test": "tests/f014/test_layout.py::ActualELKTests.test_l02_all_eight_group_algorithms_run_in_separate_container",
+      "independentExpectation": "All8 group algorithms use actual native pipeline;7 require physical containment. The exact isolated radial G fixture is a separately evidenced fixed upstream defect: original engine frame must remain unchanged, at least one child must actually exceed it, all IDs/routes retained.",
+      "behaviorStatus": "NOT_RUN",
+      "priorExpectation": "Eight container whitelist algorithms, actual native layout, SEPARATE_CHILDREN, physical containment.",
+      "initialBehaviorRun": "F01.4-batch-20261105T090906Z-11b555ce",
+      "currentBehaviorStatus": "REPAIR_NOT_RERUN"
+    },
+    {
+      "test": "tests/f014/test_layout.py::ActualELKTests.test_l03_all_five_root_directions_and_nonoverlap",
+      "independentExpectation": "Five source root directions, signed chain ordering and no overlap.",
+      "behaviorStatus": "NOT_RUN",
+      "initialBehaviorRun": "F01.4-batch-20261105T090906Z-11b555ce",
+      "currentBehaviorStatus": "REPAIR_NOT_RERUN"
+    },
+    {
+      "test": "tests/f014/test_layout.py::ActualELKTests.test_l04_four_presets_preserve_root_and_container_distinction",
+      "independentExpectation": "Four literal preset tuples distinguish root placement from container placement and preserve cycle/alignment values.",
+      "behaviorStatus": "NOT_RUN",
+      "initialBehaviorRun": "F01.4-batch-20261105T090906Z-11b555ce",
+      "currentBehaviorStatus": "REPAIR_NOT_RERUN"
+    },
+    {
+      "test": "tests/f014/test_layout.py::ActualELKTests.test_l05_explicit_public_option_mapping_and_preset_override",
+      "independentExpectation": "Eight direct public option mappings reach actual engine input and override legacy preset; fixed baseValue40.",
+      "behaviorStatus": "NOT_RUN",
+      "initialBehaviorRun": "F01.4-batch-20261105T090906Z-11b555ce",
+      "currentBehaviorStatus": "REPAIR_NOT_RERUN"
+    },
+    {
+      "test": "tests/f014/test_layout.py::ActualELKTests.test_l06_keep_entry_uses_greedy_edge_order_not_first_declared_node",
+      "independentExpectation": "Source-less cycle entry follows greedy edge declaration order, not first node declaration.",
+      "behaviorStatus": "NOT_RUN",
+      "initialBehaviorRun": "F01.4-batch-20261105T090906Z-11b555ce",
+      "currentBehaviorStatus": "REPAIR_NOT_RERUN"
+    },
+    {
+      "test": "tests/f014/test_layout.py::ActualELKTests.test_l07_feedback_option_changes_only_source_preorientation",
+      "independentExpectation": "orientFeedbackEdges toggle changes input orientation while all semantic edges survive actual engine output.",
+      "behaviorStatus": "NOT_RUN",
+      "initialBehaviorRun": "F01.4-batch-20261105T090906Z-11b555ce",
+      "currentBehaviorStatus": "REPAIR_NOT_RERUN"
+    },
+    {
+      "test": "tests/f014/test_layout.py::ActualELKTests.test_l08_cross_boundary_clears_only_custom_algorithm_scope",
+      "independentExpectation": "Crossing boundary clears metadata algorithm-specific scope including rectpacking settings, restores spacing24/node50 and INCLUDE_CHILDREN.",
+      "behaviorStatus": "NOT_RUN",
+      "initialBehaviorRun": "F01.4-batch-20261105T090906Z-11b555ce",
+      "currentBehaviorStatus": "REPAIR_NOT_RERUN"
+    },
+    {
+      "test": "tests/f014/test_layout.py::ActualELKTests.test_l09_min_length_and_declared_curve_do_not_invent_elk_options",
+      "independentExpectation": "Source adapter does not consume minlen into ELK options and overrides declared curve to rounded on routed edges; raw engine input identical.",
+      "behaviorStatus": "NOT_RUN",
+      "initialBehaviorRun": "F01.4-batch-20261105T090906Z-11b555ce",
+      "currentBehaviorStatus": "REPAIR_NOT_RERUN"
+    },
+    {
+      "test": "tests/f014/test_layout.py::ActualELKTests.test_l10_box_and_rectpacking_physical_frame_and_cached_ink",
+      "independentExpectation": "Packing source expandNodes may enlarge physical box; original measured ink retains size and centers in that box.",
+      "behaviorStatus": "NOT_RUN",
+      "initialBehaviorRun": "F01.4-batch-20261105T090906Z-11b555ce",
+      "currentBehaviorStatus": "REPAIR_NOT_RERUN"
+    },
+    {
+      "test": "tests/f014/test_layout.py::ActualELKTests.test_l11_raw_sections_preserved_before_shape_and_marker_paint",
+      "independentExpectation": "Every actual root-local raw engine section is preserved independently of shape/marker paint points.",
+      "behaviorStatus": "NOT_RUN",
+      "initialBehaviorRun": "F01.4-batch-20261105T090906Z-11b555ce",
+      "currentBehaviorStatus": "REPAIR_NOT_RERUN"
+    },
+    {
+      "test": "tests/f014/test_layout.py::ActualELKTests.test_l12_nonrouting_nonaxis_endpoint_stays_on_real_diamond",
+      "independentExpectation": "Nonrouting actual diamond endpoint obeys independent L1 diamond boundary equation with physical-vs-ink centered frame.",
+      "behaviorStatus": "NOT_RUN",
+      "initialBehaviorRun": "F01.4-batch-20261105T090906Z-11b555ce",
+      "currentBehaviorStatus": "REPAIR_NOT_RERUN"
+    },
+    {
+      "test": "tests/f014/test_layout.py::ActualELKTests.test_l13_nonrouting_selfloop_keeps_id_without_fabricated_loop",
+      "independentExpectation": "Source coincident-centre nonrouting selfloop retains semantic edge and one actual point, with no invented visible loop.",
+      "behaviorStatus": "NOT_RUN",
+      "initialBehaviorRun": "F01.4-batch-20261105T090906Z-11b555ce",
+      "currentBehaviorStatus": "REPAIR_NOT_RERUN"
+    },
+    {
+      "test": "tests/f014/test_layout.py::ActualELKTests.test_l14_invisible_and_source_invalid_keep_layout_semantic_edges",
+      "independentExpectation": "Invisible keeps layout IDs/routes but no paint path; source INVALID split-link still paints default geometry with absent minlen constraint.",
+      "behaviorStatus": "NOT_RUN",
+      "initialBehaviorRun": "F01.4-batch-20261105T090906Z-11b555ce",
+      "currentBehaviorStatus": "REPAIR_NOT_RERUN"
+    },
+    {
+      "test": "tests/f014/test_layout.py::ActualELKTests.test_l15_engine_failure_is_single_call_and_never_success_fallback",
+      "independentExpectation": "Injected actual public engine call failure propagates ELK_LAYOUT_FAILED after one call; no success fallback.",
+      "behaviorStatus": "NOT_RUN",
+      "initialBehaviorRun": "F01.4-batch-20261105T090906Z-11b555ce",
+      "currentBehaviorStatus": "REPAIR_NOT_RERUN"
+    },
+    {
+      "test": "tests/f014/test_layout.py::ActualELKTests.test_l16_wrong_engine_version_and_unavailable_are_explicit",
+      "independentExpectation": "Wrong version/unavailable engine errors before forbidden engine initialization; fixed dependency pin retained.",
+      "behaviorStatus": "NOT_RUN",
+      "initialBehaviorRun": "F01.4-batch-20261105T090906Z-11b555ce",
+      "currentBehaviorStatus": "REPAIR_NOT_RERUN"
+    },
+    {
+      "test": "tests/f014/test_layout.py::ActualELKTests.test_l17_all_public_enum_values_reach_native_options",
+      "independentExpectation": "All 26 source public enum values (4 placement,6 alignment,7 layering,5 cycle,4 model order) reach real engine input.",
+      "behaviorStatus": "NOT_RUN",
+      "initialBehaviorRun": "F01.4-batch-20261105T090906Z-11b555ce",
+      "currentBehaviorStatus": "REPAIR_NOT_RERUN"
+    },
+    {
+      "test": "tests/f014/test_layout.py::ActualELKTests.test_l18_keep_entry_does_not_pin_acyclic_natural_source",
+      "independentExpectation": "Acyclic natural sources do not acquire cyclic-entry layer constraint.",
+      "behaviorStatus": "NOT_RUN",
+      "initialBehaviorRun": "F01.4-batch-20261105T090906Z-11b555ce",
+      "currentBehaviorStatus": "REPAIR_NOT_RERUN"
+    },
+    {
+      "test": "tests/f014/test_layout.py::ActualELKTests.test_l19_group_direction_branch_and_cross_boundary_retention",
+      "independentExpectation": "Directional-group branch preserves five explicit directions and layered algorithm through source INCLUDE_CHILDREN crossing policy.",
+      "behaviorStatus": "NOT_RUN",
+      "initialBehaviorRun": "F01.4-batch-20261105T090906Z-11b555ce",
+      "currentBehaviorStatus": "REPAIR_NOT_RERUN"
+    },
+    {
+      "test": "tests/f014/test_layout.py::ActualELKTests.test_l20_nested_group_and_ancestor_endpoints_no_lost_route",
+      "independentExpectation": "Real nested group, cross-layer and ancestor-group endpoints retain routes and nested physical containment.",
+      "behaviorStatus": "NOT_RUN",
+      "initialBehaviorRun": "F01.4-batch-20261105T090906Z-11b555ce",
+      "currentBehaviorStatus": "REPAIR_NOT_RERUN"
+    },
+    {
+      "test": "tests/f014/test_layout.py::CorruptResultTests.test_c01_layered_result_corruption_never_becomes_nonrouting_success",
+      "independentExpectation": "Independent synthetic public result faults (missing layered route, resized fixed node, unknown ID/container, NaN point) reject, close engine, never become successful nonrouting.",
+      "behaviorStatus": "NOT_RUN",
+      "initialBehaviorRun": "F01.4-batch-20261105T090906Z-11b555ce",
+      "currentBehaviorStatus": "REPAIR_NOT_RERUN"
+    },
+    {
+      "test": "tests/f014/test_layout.py::CorruptResultTests.test_c02_bad_edge_contracts_reject_before_engine",
+      "independentExpectation": "Invalid edge marker/stroke/min-length/bool/nonfinite input rejects before engine call.",
+      "behaviorStatus": "NOT_RUN",
+      "initialBehaviorRun": "F01.4-batch-20261105T090906Z-11b555ce",
+      "currentBehaviorStatus": "REPAIR_NOT_RERUN"
+    },
+    {
+      "test": "tests/f014/test_layout.py::PaintGeometryTests.test_p01_point_marker_offsets_viewbox_and_independent_coordinates",
+      "independentExpectation": "Source point viewBox10 width8 refX4.5/5 plus offset4 gives explicit independent marker bounds and .8 stroke.",
+      "behaviorStatus": "NOT_RUN",
+      "initialBehaviorRun": "F01.4-batch-20261105T090906Z-11b555ce",
+      "currentBehaviorStatus": "REPAIR_NOT_RERUN"
+    },
+    {
+      "test": "tests/f014/test_layout.py::PaintGeometryTests.test_p02_circle_cross_use_no_path_pullback_and_native_marker_extents",
+      "independentExpectation": "Circle/cross use zero actual path pullback; independent source ref/scale yields circle center93.4/r5.5 and cross bounds88,-5.2,11,11.",
+      "behaviorStatus": "NOT_RUN",
+      "initialBehaviorRun": "F01.4-batch-20261105T090906Z-11b555ce",
+      "currentBehaviorStatus": "REPAIR_NOT_RERUN"
+    },
+    {
+      "test": "tests/f014/test_layout.py::PaintGeometryTests.test_p03_markers_all_terminal_directions_rotation_and_none",
+      "independentExpectation": "Both markers rotate with all terminal directions, contain finite geometry; none means no marker.",
+      "behaviorStatus": "NOT_RUN",
+      "initialBehaviorRun": "F01.4-batch-20261105T090906Z-11b555ce",
+      "currentBehaviorStatus": "REPAIR_NOT_RERUN"
+    },
+    {
+      "test": "tests/f014/test_layout.py::PaintGeometryTests.test_p04_rounded_corner_uses_radius5_angle_cut_and_no_input_mutation",
+      "independentExpectation": "Source radius5 right-angle cut is5/sin(pi/4); explicit Q control values and collinear no-Q relation; no input mutation.",
+      "behaviorStatus": "NOT_RUN",
+      "initialBehaviorRun": "F01.4-batch-20261105T090906Z-11b555ce",
+      "currentBehaviorStatus": "REPAIR_NOT_RERUN"
+    },
+    {
+      "test": "tests/f014/test_layout.py::PaintGeometryTests.test_p05_terminal_straightening_preserves_ports_and_moves_label_with_run",
+      "independentExpectation": "Source terminal channel straightens while ports/raw sections remain unchanged; main label follows exactly the displaced run.",
+      "behaviorStatus": "NOT_RUN",
+      "initialBehaviorRun": "F01.4-batch-20261105T090906Z-11b555ce",
+      "currentBehaviorStatus": "REPAIR_NOT_RERUN"
+    },
+    {
+      "test": "tests/f014/test_layout.py::PaintGeometryTests.test_p06_straightening_rejects_new_crossing_and_far_port_drag",
+      "independentExpectation": "No straightening that adds a strict crossing or drags the far terminal.",
+      "behaviorStatus": "NOT_RUN",
+      "initialBehaviorRun": "F01.4-batch-20261105T090906Z-11b555ce",
+      "currentBehaviorStatus": "REPAIR_NOT_RERUN"
+    },
+    {
+      "test": "tests/f014/test_layout.py::PaintGeometryTests.test_p07_hop_orientation_radius6_gap_and_disabled",
+      "independentExpectation": "Horizontal gives way at crossing, fixed arc radius6 or gap, disabled mode no jumps.",
+      "behaviorStatus": "NOT_RUN",
+      "initialBehaviorRun": "F01.4-batch-20261105T090906Z-11b555ce",
+      "currentBehaviorStatus": "REPAIR_NOT_RERUN"
+    },
+    {
+      "test": "tests/f014/test_layout.py::PaintGeometryTests.test_p08_hops_exclude_shared_endpoints_corners_and_unreadable_close_pair",
+      "independentExpectation": "No hop at shared endpoint or removed rounded corner; adjacent radius2.5 drops both against3.6 useful floor.",
+      "behaviorStatus": "NOT_RUN",
+      "initialBehaviorRun": "F01.4-batch-20261105T090906Z-11b555ce",
+      "currentBehaviorStatus": "REPAIR_NOT_RERUN"
+    },
+    {
+      "test": "tests/f014/test_layout.py::PaintGeometryTests.test_p09_short_marker_stubs_removed_without_overwriting_raw_sections",
+      "independentExpectation": "Source short on-border marker stub removed from paint geometry while every raw section stays unchanged.",
+      "behaviorStatus": "NOT_RUN",
+      "initialBehaviorRun": "F01.4-batch-20261105T090906Z-11b555ce",
+      "currentBehaviorStatus": "REPAIR_NOT_RERUN"
+    },
+    {
+      "test": "tests/f014/test_layout.py::PaintGeometryTests.test_p10_paint_bounds_cover_true_native_arc_and_marker_ink",
+      "independentExpectation": "Reported paint bounds contain independent native Path2D arc bounds and public marker ink; arc has true y=-6 extent.",
+      "behaviorStatus": "NOT_RUN",
+      "initialBehaviorRun": "F01.4-batch-20261105T090906Z-11b555ce",
+      "currentBehaviorStatus": "REPAIR_NOT_RERUN"
+    },
+    {
+      "test": "tests/f014/test_layout.py::PaintGeometryTests.test_p11_source_curve_override_and_nonrouting_linear_are_explicit",
+      "independentExpectation": "Declared D3 curve does not override actual ELK rounded paint; actual nonrouting remains linear.",
+      "behaviorStatus": "NOT_RUN",
+      "initialBehaviorRun": "F01.4-batch-20261105T090906Z-11b555ce",
+      "currentBehaviorStatus": "REPAIR_NOT_RERUN"
+    },
+    {
+      "test": "tests/f014/test_layout.py::PaintGeometryTests.test_p12_public_line_hops_config_gap_false_and_default",
+      "independentExpectation": "FlowConfig lineHops true/gap/false reaches the pure source postprocessing branch.",
+      "behaviorStatus": "NOT_RUN",
+      "initialBehaviorRun": "F01.4-batch-20261105T090906Z-11b555ce",
+      "currentBehaviorStatus": "REPAIR_NOT_RERUN"
+    },
+    {
+      "test": "tests/f014/test_shapes.py::SourceShapeTests.test_s01_exact_53_definitions_and_alias_equivalence",
+      "independentExpectation": "Exact fixed53 shapesDefs canonical-handler and every alias equivalence, literal source tuples.",
+      "behaviorStatus": "NOT_RUN",
+      "initialBehaviorRun": "F01.4-batch-20261105T090906Z-11b555ce",
+      "currentBehaviorStatus": "REPAIR_NOT_RERUN"
+    },
+    {
+      "test": "tests/f014/test_shapes.py::SourceShapeTests.test_s02_metadata_reachable_denominator_and_internal_case_barrier",
+      "independentExpectation": "Metadata denominator equals every lowercase/no-underscore registry alias plus six internal handlers; internal asset/collapsed entries are separate. Canonical names must be idempotent internal inputs without expanding metadata user-name reachability.",
+      "behaviorStatus": "NOT_RUN",
+      "initialBehaviorRun": "F01.4-batch-20261105T090906Z-11b555ce",
+      "currentBehaviorStatus": "REPAIR_NOT_RERUN"
+    },
+    {
+      "test": "tests/f014/test_shapes.py::SourceShapeTests.test_s03_ellipse_upstream_missing_and_unknown_shape_explicit",
+      "independentExpectation": "Missing upstream ellipse and unknown shape explicit errors; nonfinite/negative measurements rejected.",
+      "behaviorStatus": "NOT_RUN",
+      "initialBehaviorRun": "F01.4-batch-20261105T090906Z-11b555ce",
+      "currentBehaviorStatus": "REPAIR_NOT_RERUN"
+    },
+    {
+      "test": "tests/f014/test_shapes.py::SourceShapeTests.test_s04_all_reachable_handlers_finite_pure_and_nonempty_silhouette",
+      "independentExpectation": "All reachable59 source handlers plus internal asset/collapsed forms return finite pure geometry and label boxes inside physical frame; independent native consumes every path.",
+      "behaviorStatus": "NOT_RUN",
+      "initialBehaviorRun": "F01.4-batch-20261105T090906Z-11b555ce",
+      "currentBehaviorStatus": "REPAIR_NOT_RERUN"
+    },
+    {
+      "test": "tests/f014/test_shapes.py::SourceShapeTests.test_s05_source_fixed_label_suppression_sizes_and_fork_direction",
+      "independentExpectation": "Label suppression and literal source dimensions: choice28, state14, anchor2, crosscircle60, hourglass30, bolt35x70, fork70x10 or10x70 by direction.",
+      "behaviorStatus": "NOT_RUN",
+      "initialBehaviorRun": "F01.4-batch-20261105T090906Z-11b555ce",
+      "currentBehaviorStatus": "REPAIR_NOT_RERUN"
+    },
+    {
+      "test": "tests/f014/test_shapes.py::SourceShapeTests.test_s06_circle_diagonal_and_double_ring_padding",
+      "independentExpectation": "Source circle diagonal formula and classic half-padding vs neo16; double circle padding+source gap5/12 and actual inner ring.",
+      "behaviorStatus": "NOT_RUN",
+      "initialBehaviorRun": "F01.4-batch-20261105T090906Z-11b555ce",
+      "currentBehaviorStatus": "REPAIR_NOT_RERUN"
+    },
+    {
+      "test": "tests/f014/test_shapes.py::SourceShapeTests.test_s07_card_text_and_note_numeric_padding_from_handlers",
+      "independentExpectation": "Independent card notch12, classic8/neo28/24 paddings; classic text48x28 and note56x36 for label40x20.",
+      "behaviorStatus": "NOT_RUN",
+      "initialBehaviorRun": "F01.4-batch-20261105T090906Z-11b555ce",
+      "currentBehaviorStatus": "REPAIR_NOT_RERUN"
+    },
+    {
+      "test": "tests/f014/test_shapes.py::SourceShapeTests.test_s08_triangles_and_pentagon_have_source_silhouette",
+      "independentExpectation": "Triangle/flipped triangle silhouette orientation and pentagon size/central fill, not rectangular substitution.",
+      "behaviorStatus": "NOT_RUN",
+      "initialBehaviorRun": "F01.4-batch-20261105T090906Z-11b555ce",
+      "currentBehaviorStatus": "REPAIR_NOT_RERUN"
+    },
+    {
+      "test": "tests/f014/test_shapes.py::SourceShapeTests.test_s09_odd_and_hourglass_are_not_rectangle_substitutes",
+      "independentExpectation": "Odd shape left notch and hourglass self-crossed silhouette are source concavities, confirmed native fill.",
+      "behaviorStatus": "NOT_RUN",
+      "initialBehaviorRun": "F01.4-batch-20261105T090906Z-11b555ce",
+      "currentBehaviorStatus": "REPAIR_NOT_RERUN"
+    },
+    {
+      "test": "tests/f014/test_shapes.py::SourceShapeTests.test_s10_curved_shapes_and_lined_shapes_have_distinct_components",
+      "independentExpectation": "Cloud/bang/delay/cylinder/display families retain true curves; line/stack/tag families preserve source components. Wave source sampled L geometry is fully validated by S15 rather than a false C/Q/A spelling requirement.",
+      "behaviorStatus": "NOT_RUN",
+      "priorExpectation": "Curved source families need actual curve commands, multi-part source families keep seams/stripes/stack/controls.",
+      "initialBehaviorRun": "F01.4-batch-20261105T090906Z-11b555ce",
+      "currentBehaviorStatus": "REPAIR_NOT_RERUN"
+    },
+    {
+      "test": "tests/f014/test_shapes.py::SourceShapeTests.test_s11_label_corners_fit_painted_source_container",
+      "independentExpectation": "Painted source label-bearing containers contain independently tested actual label corners; explicit source virtual/labelless/resource exemptions.",
+      "behaviorStatus": "NOT_RUN",
+      "initialBehaviorRun": "F01.4-batch-20261105T090906Z-11b555ce",
+      "currentBehaviorStatus": "REPAIR_NOT_RERUN"
+    },
+    {
+      "test": "tests/f014/test_shapes.py::SourceShapeTests.test_s12_all_outline_approaches_axis_and_nonaxis_match_native_ink",
+      "independentExpectation": "Each visible source outline approached from four axes/four diagonals intersects actual native contour; fixed axes or center-ray equation preserved.",
+      "behaviorStatus": "NOT_RUN",
+      "initialBehaviorRun": "F01.4-batch-20261105T090906Z-11b555ce",
+      "currentBehaviorStatus": "REPAIR_NOT_RERUN"
+    },
+    {
+      "test": "tests/f014/test_shapes.py::SourceShapeTests.test_s13_analytical_diamond_circle_and_round_intersections",
+      "independentExpectation": "Independent analytical diamond/circle equations verify all diagonal source approaches, and rounded rectangle stays in actual box.",
+      "behaviorStatus": "NOT_RUN",
+      "initialBehaviorRun": "F01.4-batch-20261105T090906Z-11b555ce",
+      "currentBehaviorStatus": "REPAIR_NOT_RERUN"
+    },
+    {
+      "test": "tests/f014/test_shapes.py::SourceShapeTests.test_s14_resources_and_decorations_keep_pure_label_ownership",
+      "independentExpectation": "Explicit resource size and metadata remain pure; all icon/image forms retain actual label dimensions and physical asset minima.",
+      "behaviorStatus": "NOT_RUN",
+      "initialBehaviorRun": "F01.4-batch-20261105T090906Z-11b555ce",
+      "currentBehaviorStatus": "REPAIR_NOT_RERUN"
+    },
+    {
+      "test": "tests/f014/test_layout.py::ActualELKTests.test_l21_empty_graph_calls_real_elk_and_preserves_its_empty_box",
+      "independentExpectation": "Actual pyelk invoked once with empty children/edges; immutable empty result preserves real engine width/height, possiblyzero, not a fabricated nonempty stub.",
+      "currentBehaviorStatus": "NOT_RUN"
+    },
+    {
+      "test": "tests/f014/test_shapes.py::SourceShapeTests.test_s15_source_fifty_step_wave_phase_height_and_stacked_outer_boundary",
+      "independentExpectation": "Fixed source steps50 t=i/50, sine cycles.8/1/-1. Independently assemble source points and bbox normalization for doc/lin-doc/tag-doc/flag/docs; verify every sampled point, source phase, exact dimensions, label origin and docs upper-frontcard staircase. No candidate-generated expected coordinates.",
+      "currentBehaviorStatus": "NOT_RUN"
+    },
+    {
+      "test": "tests/f014/test_layout.py::ActualELKTests.test_l22_real_labelless_gallery_aligns_paint_boxes_without_mutating_raw_frames",
+      "independentExpectation": "Real9-node/8-edge source gallery raw physical frames remain exact native values; independently derive expected first qualifying anchor axis and compare optional paint frame centre; labels stay absent and all routes paint.",
+      "currentBehaviorStatus": "TARGETED_PASS",
+      "verificationRun": "F01.4-record-20261105T104235Z-596a86e2"
+    },
+    {
+      "test": "tests/f014/test_layout.py::PaintGeometryTests.test_p13_degenerate_alignment_source_numbers_and_exact_twentyfour_threshold",
+      "independentExpectation": "Fixed source formula delta47-(37+2/2)=9 yields paint x46 while raw x37 remains. Exactly24 excluded; left/right side uses height.",
+      "currentBehaviorStatus": "TARGETED_PASS",
+      "verificationRun": "F01.4-record-20261105T104235Z-596a86e2"
+    },
+    {
+      "test": "tests/f014/test_layout.py::PaintGeometryTests.test_p14_first_qualifying_anchor_wins_including_noop_and_group_has_no_skip",
+      "independentExpectation": "First qualifying anchor controls even a <.01 no-op. Reversing native edge order changes chosen translation; groups not skipped, rect33 excluded, child frame not moved.",
+      "currentBehaviorStatus": "TARGETED_PASS",
+      "verificationRun": "F01.4-record-20261105T104235Z-596a86e2"
+    },
+    {
+      "test": "tests/f014/test_layout.py::PaintGeometryTests.test_p15_geometry_bounds_uses_source_paint_box_not_unpainted_raw_position",
+      "independentExpectation": "Actual paint box x9..11 determines content union rather than unpainted raw x0..2.",
+      "currentBehaviorStatus": "TARGETED_PASS",
+      "verificationRun": "F01.4-record-20261105T104235Z-596a86e2"
+    },
+    {
+      "test": "tests/f014/test_shapes.py::SourceShapeTests.test_s16_horizontal_cylinder_right_chord_from_source_factory_all_looks",
+      "independentExpectation": "Literal source factory coordinate transforms give right inner cap [W-2rx,W-rx], never left; classic/neo/handDrawn independently checked through native path bounds.",
+      "currentBehaviorStatus": "TARGETED_PASS",
+      "verificationRun": "F01.4-record-20261105T110836Z-14293d6c"
+    },
+    {
+      "test": "tests/f014/test_shapes.py::SourceShapeTests.test_s17_horizontal_cylinder_actual_api_right_ink_left_blank_all_looks",
+      "independentExpectation": "All3looks actual API PNG must paint source right inner tangent and leave symmetric left counterprobe blank; real ELK used and raw PNG pixels decide.",
+      "currentBehaviorStatus": "TARGETED_PASS",
+      "verificationRun": "F01.4-record-20261105T110836Z-14293d6c"
+    },
+    {
+      "test": "tests/f014/test_shapes.py::SourceShapeTests.test_s18_cap_png_guard_detects_explicit_left_cap_fault_through_real_api",
+      "independentExpectation": "Fault-injected measured pure geometry with wrong left cap must actually render wrong left ink and no right inner ink through public API; same pixel gate detects fault for all3looks.",
+      "currentBehaviorStatus": "TARGETED_PASS",
+      "verificationRun": "F01.4-record-20261105T110836Z-14293d6c"
+    }
+  ],
+  "fixtures": {
+    "path": "tests/f014/layout-cases.json",
+    "sha256": "3de5fcb79df67e00260d1813a206753be531d124578be40c7fdc0d1eb24a020f",
+    "productionCoordinatesInFixture": false
+  },
+  "authorizedMigrations": [
+    {
+      "path": "tests/f012/test_layout.py",
+      "reason": "F014 preserves raw sections; independent visible outline endpoint assertion now checks paint_points. Original engine sections still must be present, finite, orthogonal, inside engine graph, positive-length. No boundary tolerance or required semantic relation relaxed."
+    },
+    {
+      "path": "tests/f013/test_layout.py",
+      "reason": "Title content getBBox now includes final paint path. Independent native Path2D path bounds replace raw-engine-route bounds; nodes/groups/labels union unchanged; point markers in these fixtures are covered by node union. Retains content-center/baseline/anchor assertions."
+    },
+    {
+      "path": "tests/f011/test_layout.py",
+      "reason": "F014 adds source RL support; keep unsupported-layout negative with DIAGONAL and retain Dagre rejection. Existing empty-nodes-with-dangling-edge negative remains invalid and unchanged."
+    }
+  ],
+  "stage": "S3 compile and collect only; coordinator owns unified S4 first behavioral run.",
+  "behaviorExecuted": false,
+  "sourceModified": false,
+  "outOfScope": [
+    "Dagre",
+    "math",
+    "other diagram kinds",
+    "installation validation"
+  ],
+  "testFilesSha256": {
+    "tests/f014/test_layout.py": "9a410b6e6305aed54cb11903a73498458910626ed33214ad9746a48b97f123dc",
+    "tests/f014/test_shapes.py": "4cd9360fbeda3011e929284b1f31af1d0b1d51b28026826e292ed24015da5407",
+    "tests/f012/test_layout.py": "d18b49ff667c57b52d4737909325230861a9a0bba4ecbedcbdf19f3a9b7990c5",
+    "tests/f013/test_layout.py": "16029c0b626805915819d7b8489f0fe6af6cded3d9ed52d0accce9b2b5f03cad",
+    "tests/f011/test_layout.py": "8958c71c3a8dc354e93f240d8bc6471cc3409a6d49b354a1bbff57789d9522d0"
+  },
+  "s4Findings": {
+    "initialRun": "F01.4-batch-20261105T090906Z-11b555ce",
+    "radial": {
+      "classification": "Known fixed upstream/native radial container frame defect, not post-layout trimming. Preserve raw engine frame; never grow it to hide misplaced children.",
+      "fixtureId": "layout-group-elk-radial",
+      "semanticGroupIds": [
+        "G"
+      ],
+      "diagnosticRun": "F01.4-record-20261105T091736Z-1ab4d885",
+      "diagnosticSourceTreeSha256": "5eabe710774178aac6d67c6c0aab025eadabd209e418bfdb518d33ab506f4a4d",
+      "rawEvidence": {
+        "test-runs/f014-radial-raw-initial-001/input.json": "88212c21f967aa0909df85379a979b67269f946fa7a4e7530daee9b7961ab561",
+        "test-runs/f014-radial-raw-initial-001/layout.json": "63c051eec80770e5eed197ad472e51c7669e758f720f59a409c61f38d5ec6dbe",
+        "test-runs/f014-radial-raw-initial-001/measured.json": "7b0cf2de6f365581b4a451c26d5e4ab070790b46dbdcf50407bb7e94719450e1",
+        "test-runs/f014-radial-raw-initial-001/output.json": "d84803dad535013cb02729d519749b4fe5e951ebd0f6cdacf078593747ff0b06"
+      },
+      "officialEvidence": {
+        "path": "test-runs/F01.4-batch-20261105T090906Z-11b555ce/artifacts/oracle/layout-group-elk-radial.json",
+        "sha256": "11333eba43dcd3fe2dc348c6d099b0bd098fd1be89716227843927675c506838"
+      },
+      "rawRelationship": "Native g0 width59.2799987793/height58 while A localx171.812684206 width100.220001221 and B localx15 width130.809997559; final frame equals original. Official initial case likewise has group width104.717 vs A.x181.516/width151.975."
+    },
+    "emptyGraph": {
+      "contract": "Empty semantic node/group/edge collections still call real ELK; preserve actual width/height including zero. Nonfinite/negative dimensions, extra returned IDs and dangling semantic edges still reject. Canvas adds ordinary padding8 for official16x16 empty output.",
+      "officialPNGs": {
+        "test-runs/F01.4-batch-20261105T090906Z-11b555ce/artifacts/oracle/empty-document.png": "105f8e3b938821ba31292f629a130d0a05ba3c2e6412d5a39ef703954a3f1d39",
+        "test-runs/F01.4-batch-20261105T090906Z-11b555ce/artifacts/oracle/empty-default-direction.png": "105f8e3b938821ba31292f629a130d0a05ba3c2e6412d5a39ef703954a3f1d39"
+      }
+    },
+    "testCorrections": [
+      "L14 common visible-path helper excludes invisible while L14 explicitly requires empty invisible path.",
+      "F011 old RL scope negative replaced with genuinely unsupported DIAGONAL; Dagre remains rejected.",
+      "Wave C/Q/A requirement was wrong: fixed source emits50-step sampled sine polyline. Added exact source50-point phase, bbox and label formulas including docs outer staircase.",
+      "Canonical idempotency is a real product registry defect owned/fixed by root; S02 now explicitly tests it."
+    ],
+    "relatedOrFullRegressionRerun": false,
+    "mechanicalRun": "F01.4-record-20261105T092418Z-4727b73c"
+  },
+  "s4Alignment": {
+    "failureRun": "F01.4-batch-20261105T102819Z-d7782f21",
+    "failureSource": "6e8c94fea35242ce71557eebd3ca109ea3926db127658c8e7563d3579af497a4",
+    "source": "packages/mermaid/src/rendering-util/layout-algorithms/elk/render.ts",
+    "symbols": [
+      "applyElkEdgeLayout alignment prepass",
+      "alignDegenerateNodeToAnchor"
+    ],
+    "sourceLines": [
+      1960,
+      2401
+    ],
+    "rootCause": "Original real ELK node N7 box x37,width2 has incoming/outgoing port line x47 outside its ink span. Missing source small-side node alignment, not a defective native algorithm or a provider fallback case.",
+    "policy": "Before constructing paint points, iterate native graph.edges first section anchors; exclude only rect33, no group exclusion. Top/bottom anchor if abs(y-top/bottom)<=.5 spreads along width, otherwise along height. Only side<24, first qualifying anchor wins includingabs(delta)<.01 noop. Translate node paint frame along side axis so its centre reaches the actual routed anchor. Do not move route or children or raw engine frame.",
+    "model": "PlacedNode.paint_box and PlacedGroup.paint_box optional source post-layout translations. Node.box,group.box/engine_origin and all raw sections remain unchanged. Group.title_box follows group source paint translation. Intersections, cached measured ink centre, marker safeguards, geometry bounds and title union use paint_box or box.",
+    "beforeAfterRawIdentity": {
+      "elk-input.json": true,
+      "elk-output.json": true
+    },
+    "artifactSha256": {
+      "test-runs/f014-labelless-gallery-intersection-diagnostic-001/elk-input.json": "5918d8d4953e2d3b5510c811ee10d914b0ed5c0a0d79f2869c1aef5bf645e91d",
+      "test-runs/f014-labelless-gallery-intersection-diagnostic-001/elk-output.json": "6dfdfdb042e5f6a0afbc84d778e4161948d2c2c7a04f56996bf7ace1a63a29e2",
+      "test-runs/f014-labelless-gallery-intersection-diagnostic-001/exception.txt": "82225b27e26dd8c7acd47634d1b710545cacaa862eba00d5b530bd29b22e9d5b",
+      "test-runs/f014-labelless-gallery-intersection-diagnostic-001/intersection-calls.json": "cc133269771b7e3f2f27e2f8c89eb5991b5eaad65ac12df1305f792c8870bf86",
+      "test-runs/f014-labelless-gallery-intersection-diagnostic-001/measured.json": "6c037f6c471aa184b4dcb510858cf9eec9c0ec23f519b80ccc294b8c16f1edc5",
+      "test-runs/f014-labelless-gallery-intersection-diagnostic-001/source.mmd": "d312cfa73c7d3b4dfa1bb021a3b04b6c0e1f47a1d4fd54f58b090880ecf13e2f",
+      "test-runs/f014-degenerate-alignment-targeted-diagnostic-001/elk-input.json": "5918d8d4953e2d3b5510c811ee10d914b0ed5c0a0d79f2869c1aef5bf645e91d",
+      "test-runs/f014-degenerate-alignment-targeted-diagnostic-001/elk-output.json": "6dfdfdb042e5f6a0afbc84d778e4161948d2c2c7a04f56996bf7ace1a63a29e2",
+      "test-runs/f014-degenerate-alignment-targeted-diagnostic-001/layout-raw-and-paint.json": "a5108a0015dad938e4ec51642dce5ae8836f07b3c293012ac0ed724847a81ce2"
+    },
+    "numericRelationship": {
+      "node": "N7",
+      "rawBox": {
+        "x": 37,
+        "y": 502,
+        "width": 2,
+        "height": 2
+      },
+      "firstAnchorLineX": 47,
+      "sourceDeltaX": 9,
+      "paintBox": {
+        "x": 46,
+        "y": 502,
+        "width": 2,
+        "height": 2
+      }
+    },
+    "tests": [
+      "L22 real9-node/8-edge labelless gallery validates raw frames and independent source alignment arithmetic",
+      "P13 source37?46 numeric regression, exact24 threshold, correct side axis",
+      "P14 firstanchor includes noop, group has no implicit skip, rect33 exclusion",
+      "P15 geometry_bounds selects actual source paint position"
+    ],
+    "targetedVerificationRun": "F01.4-record-20261105T104235Z-596a86e2",
+    "targetedMethods": 4,
+    "finalFullVerification": "PENDING coordinator freeze and unified run",
+    "newReportFixture": {
+      "path": "tests/f014/layout-cases.json",
+      "id": "layout-labelless-alignment-gallery",
+      "visibleLabels": {
+        "N0": "",
+        "N1": "",
+        "N2": "",
+        "N3": "",
+        "N4": "",
+        "N5": "",
+        "N6": "",
+        "N7": "",
+        "N8": ""
+      },
+      "DBlabels": "Ignored0..8 retained",
+      "profiles": "coordinator will refresh official and all native profiles"
+    }
+  },
+  "s4CylinderCap": {
+    "sourcePath": "packages/mermaid/src/rendering-util/rendering-elements/shapes/tiltedCylinder.ts",
+    "sourceSha256": "f1db4931703ad635574d6e74f791f0e53afe0057db5191041290331ea3b73a1a",
+    "symbols": [
+      "createCylinderPathD",
+      "createOuterCylinderPathD",
+      "createInnerCylinderPathD",
+      "tiltedCylinder"
+    ],
+    "derivation": "Source inner arc is appended on right x=width, or x=width/2 before only outer translation in handDrawn. With bbox normalization outerW=bodyWidth+2rx, inner arc spans [bodyWidth,bodyWidth+rx]=[outerW-2rx,outerW-rx]. Left body has no mirrored inner arc. h=labelHeight+(neo12 ornodePadding/2), rx=(h/2)/(2.5+h/50).",
+    "positiveGeometry": "Classic,neo,handDrawn source factory dimensions and right-component bounds compared with independent public native Path2D bounds; all inner components must lie on right half.",
+    "positivePNG": "Real render API + real ELK + native Canvas. Source analytic inner tangent outerW-2rx must contain dark PNG pixels, counterfactual2rx on left must stay white. minNodeWidth160 with shortCap text isolates probes from glyphs.",
+    "negativeControl": "Only in-memory session measurement shape factory patched to return deliberate left inner arc. Actual public API still layouts/renders it; same pixel probe must see erroneous left ink and no right inner ink. This catches the original fault instead of trusting trace/path declarations. No production file changed.",
+    "looks": [
+      "classic",
+      "neo",
+      "handDrawn"
+    ],
+    "targetedRun": "F01.4-record-20261105T110836Z-14293d6c",
+    "sourceTreeSha256": "0d5ab374782239caca46fd5505112f6d8d57a3fe276ea87c98d8155a05421ede",
+    "methods": 3,
+    "subcases": 9,
+    "artifactSha256": {
+      "test-runs/f014-cylinder-cap-targeted-001/injected-left-cap-classic.png": "43fe0d721b97dae0b89827cb699658f9fe0380689db1cf1a1263cb251f985d1d",
+      "test-runs/f014-cylinder-cap-targeted-001/injected-left-cap-handDrawn.png": "1620358bc9d53d6e8ee77d6e0c15c3c8f5e9140e71563f195af098052fb89a8f",
+      "test-runs/f014-cylinder-cap-targeted-001/injected-left-cap-neo.png": "2a91a3bd2284a0c93cc3e9a87bab9c303042fa0688794a267fe396dcfd59d691",
+      "test-runs/f014-cylinder-cap-targeted-001/right-cap-classic.png": "b40af0dbca1bc1be18589042ac98f46fbbc5f4e651fa25122b37501ef1dadac8",
+      "test-runs/f014-cylinder-cap-targeted-001/right-cap-handDrawn.png": "f03c5697c1bf058b667a4c33f85baa7d7713174133eb7b7b9d969b24cfa0c001",
+      "test-runs/f014-cylinder-cap-targeted-001/right-cap-neo.png": "11aea17de81300b45074794f0fa17baeb24f464a28bcdff06e3ca104de012c27"
+    },
+    "status": "targeted_pass_global_candidate_recheck_pending"
+  },
+  "finalVerification": {
+    "status": "PASS_LOCAL",
+    "sourceTreeSha256": "99a2342681469836c3b7be8be6815b9a82193146331aff51d260823b72b17a2e",
+    "evidence": "references/f014-verification-summary.json"
+  }
+}

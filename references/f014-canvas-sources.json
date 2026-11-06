@@ -1,0 +1,365 @@
+{
+  "schema": "py-mermaid-source-map/v1",
+  "taskId": "F01.4-S2/canvas",
+  "interfaceVersion": "F01.4-v1",
+  "status": "code_complete_unverified",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "sources": [
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/createText.ts",
+      "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+      "symbols": [
+        "createText",
+        "addHtmlSpan",
+        "createFormattedText",
+        "replaceIconSubstring"
+      ]
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/labelImageUtils.ts",
+      "sha256": "f80fc624d2e80a07b9f48bae108f6253488f347a6cfe58d4d6d78f71edb1d2f8",
+      "symbols": [
+        "configureLabelImages"
+      ]
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/imageSquare.ts",
+      "sha256": "22a78817d3bd27eb0df0be111c5abf74395c3e1963043dd3e8f168c824a0db9d",
+      "symbols": [
+        "imageSquare"
+      ]
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/icon.ts",
+      "sha256": "a028ca7caedf32fdfa446580f5be98920470291265287411faac4ee7d9c60ab3",
+      "symbols": [
+        "icon"
+      ]
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/iconSquare.ts",
+      "sha256": "f71a625ceb9fff9923f55f3a6ccc0f87adde548543a193c8e210dc7df085eace",
+      "symbols": [
+        "iconSquare"
+      ]
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/iconRounded.ts",
+      "sha256": "e9b824c82ae44cf320f32ce4e442d90e4a62fc210bcbb5ff0ec687e47a0461a8",
+      "symbols": [
+        "iconRounded"
+      ]
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/iconCircle.ts",
+      "sha256": "d15247aa1307553bc43cdfe3868e51bc9cb753ea8838a63330ee4c27c5923180",
+      "symbols": [
+        "iconCircle"
+      ]
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/handDrawnShapeStyles.ts",
+      "sha256": "baf8572491842caa518e8ba35a313253ede78ba2fef9b4c43ac9a4b910630402",
+      "symbols": [
+        "userNodeOverrides",
+        "solidStateFill"
+      ]
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/util.ts",
+      "sha256": "bc63b16d067e4dd1c429e9cf249f4d73260819696de122dff0ce16b12db321c1",
+      "symbols": [
+        "labelHelper"
+      ]
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/icons.ts",
+      "sha256": "ba6000d0afa94cac26619077456b8011ae613e6db47de54ad9be06523d1da93b",
+      "symbols": [
+        "getIconSVG",
+        "unknownIcon"
+      ]
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/edges.js",
+      "sha256": "8fee7300ea0bffd008f5d2c12a05e85f5ea8bc22a9855d4d2e2b6c0e6c92a33a",
+      "symbols": [
+        "insertEdge",
+        "generateDashArray"
+      ]
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/flowchart/styles.ts",
+      "sha256": "697ffb86fef2787307ddc42cd5d3d1544042f08c2452e170691d28ab3d252a50",
+      "symbols": [
+        "getStyles"
+      ]
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/common/common.ts",
+      "sha256": "b14851667f7d45d101d4e028204babb1628faefe4812a88ae2d8acac72f8e144",
+      "symbols": [
+        "sanitizeText",
+        "katexRegex"
+      ]
+    },
+    {
+      "repository": "roughjs4.6.6",
+      "path": "bin/math.js",
+      "sha256": "edc4fa1aeddfe0bbc8841853373727722d290a7e5f09cfbcd8d2b81e9949c0ec"
+    },
+    {
+      "repository": "roughjs4.6.6",
+      "path": "bin/renderer.js",
+      "sha256": "51966b08ec58bea880cc6895ae17f4d7d72006b4d65a87aefb31867ce31ca8fe"
+    },
+    {
+      "repository": "roughjs4.6.6",
+      "path": "bin/generator.js",
+      "sha256": "1de29118bfee391c75c3bbf1601fde1d734d506202495b0309782ce1c65720f5"
+    },
+    {
+      "repository": "roughjs4.6.6",
+      "path": "bin/fillers/scan-line-hachure.js",
+      "sha256": "fb81b8eeccea1f677148887cfa7ddf47c720d783b8433d2eb4a1fe7d5cac37bc"
+    },
+    {
+      "repository": "py-skia-canvas0.1.0a18",
+      "path": "python/py_skia_canvas/_exports.py",
+      "sha256": "26f4ab49f822541f5274cba6b8f743e3fe486eb598623f06dac9a0402530c966",
+      "usage": "Public API facts only; no private imports/core copy"
+    },
+    {
+      "repository": "py-skia-canvas0.1.0a18",
+      "path": "python/py_skia_canvas/_imagery.py",
+      "sha256": "b642a0ac0d51221b7cfcd5990927c19e1388fd27b1ca1f1db456cd62d6ed9ff6",
+      "usage": "Public API facts only; no private imports/core copy"
+    },
+    {
+      "repository": "py-skia-canvas0.1.0a18",
+      "path": "python/py_skia_canvas/_fonts.py",
+      "sha256": "7798aea40a771af21c4dc798d9c19482f2d402beb69a53a0187becfb353bd0b1",
+      "usage": "Public API facts only; no private imports/core copy"
+    },
+    {
+      "repository": "py-skia-canvas0.1.0a18",
+      "path": "python/py_skia_canvas/_path.py",
+      "sha256": "d19380202891064b0f2a5ce1b9c1eb21077e7c1ccd7faa67ca172e29b632661b",
+      "usage": "Public API facts only; no private imports/core copy"
+    },
+    {
+      "repository": "py-skia-canvas0.1.0a18",
+      "path": "docs/ai/usage/API_REFERENCE.en.md",
+      "sha256": "db61936ac68f07029fa05725620d8794c070b0a6f76db3f69a3619b0373148d5",
+      "usage": "Public API facts only; no private imports/core copy"
+    },
+    {
+      "repository": "locked Mermaid DOMPurify dependency",
+      "path": "dist/purify.es.mjs",
+      "sha256": "60c5d5ccbb466de3de3ba863461a92bf134f8c156cef7992da43e0f659bc5cbd",
+      "usage": "Static safe SVG tag/attribute literal allowlists; no runtimeJS"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/datastore.ts",
+      "sha256": "9e72da4a720c6166d642ee81a2d3cf2a813cb466ab8a4e547048b702fc8889d1",
+      "symbols": [
+        "datastore",
+        "drawRect"
+      ]
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/stateStart.ts",
+      "sha256": "f21e7f8fd0f198a2f4eba6230c6deb754c00460741b522dffe36b87911561890",
+      "symbols": [
+        "stateStart"
+      ]
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/stateEnd.ts",
+      "sha256": "f2b812d2e8502f02cf9bbce8bb5f50b0cd6243f1a1bb913bf624d9cce6bab60b",
+      "symbols": [
+        "stateEnd"
+      ]
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/filledCircle.ts",
+      "sha256": "f739ab95cdfb5dc60cf2cc94291aea68286284d0e59c942b23196e9fd8428922",
+      "symbols": [
+        "filledCircle"
+      ]
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/crossedCircle.ts",
+      "sha256": "3a16ed8e5476a347251dbe9882cc8a2abd32c6ad577b7785dcf3ed6235068a14",
+      "symbols": [
+        "crossedCircle"
+      ]
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/choice.ts",
+      "sha256": "9ef0b9719308f150162ec95fc34a676e1f2cc984ad55d767bf503efe684d2b09",
+      "symbols": [
+        "choice"
+      ]
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/forkJoin.ts",
+      "sha256": "7404023ae8027f3ab6ef55835265693f9bc1320f344b99692e7502523947b24c",
+      "symbols": [
+        "forkJoin"
+      ]
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/lightningBolt.ts",
+      "sha256": "476602e2399b30d993164b169789cce8889710b980f18796cb91ff9173ffa812",
+      "symbols": [
+        "lightningBolt"
+      ]
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/anchor.ts",
+      "sha256": "38a5f0e6776808bb05530a8aabb759f2eee0538f462683fc58e8749478eecda1",
+      "symbols": [
+        "anchor"
+      ]
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/hourglass.ts",
+      "sha256": "e8068645013010879c257d9915863ddb6c0903e08920f4010b780651ba2bbc05",
+      "symbols": [
+        "hourglass"
+      ]
+    }
+  ],
+  "contracts": {
+    "resources": "Explicit ResourceBundle immutable model values, sha receipts, image bytes32MiB/bundle128MiB/decode64Mpx. Native Image+FontLibrary register/cache only owner session; no native references leave session. URL names only lookup keys; data:image;base64 and sanitized inlineSVG are explicit offline bytes. Missing image error, source missing Iconify fallback question80x80. No automatic URL/path lookup from labels.",
+    "SVG": "Safe static SVG native Image decode; complete fixed safe SVG tag/attr allowlists and XML case restoration. Script/events/foreignObject/animatedresource/externalhref/nonlocalurl references explicitly rejected. Root-body SVG in HTML labels serialized as offline image bytes; no DOM runtime.",
+    "fonts": "Caller explicitly names alias/file. Validate file SHA then register on caller owner; never reset other user registrations. a18 italic numeric400/700 workaround retained. Real font/spacing state shared for measure/draw; expected face availability is S3/S4 matter.",
+    "export": "Public toBufferSync png/jpg/jpeg-alias/webp/svg/pdf with quality,density,matte,outline,downsample. Raster results actual scaled pixels; vector logical page dimensions. Formats/MIME/errors explicit; no alternative renderer, SVGDOM host or productionJS.",
+    "resourceGeometry": "Pure resources.geometry.asset_layout/resource_geometry shared by node measurement and asset placement. Source image naturalratio/constraint/w/h/pos and icon48/framepad/circle?2+40/labelgap8. Resource label2px padding and edgeLabelBackground real paint (HTML p opaque; SVG rectalpha.5). Virtual outer resource bbox is not painted. icon frame stroke semantic fill; icon SVGcurrentColor uses independent nodeBorder paint.",
+    "inlineAssets": "HTML img and inlineSVG block image source geometry (image-only sitefontsize?5, mixed wrappingwidth). Iconify/FontAwesome class names resolve explicit IconResource IDs. Color/opacity/tagstyle honored, asset metrics/runs pure values; ownerImage decoded before actual measure. Direct SVG is a distinct intrinsic-size kind; host CSS applies via pure XML paint projection. Image/dataURI remains document-isolated.",
+    "handDrawn": "Pure seeded Random math.imul-equivalent modulo32, seed0 source random, double-stroke cubic and source offset formulas, cubic jitter, endpoint arc conversion and scanline hachure at fixed source defaults. Generated pure paths reused for bounds and paint, including parts/details/frame/group/edge; doublecircle special .2roughness/2.5outer/1.5inner. Filled hachure strokes1.5. No raster image distortion. Source solidFillPolygon override now explicit, with native filled closed paths. Scanline stepping matches fixed hachure-fill source.",
+    "edgePaint": "B-owned final path/paint_points/paint_bounds consumed directly; marker provider point/circle/cross/none and source userSpaceOnUse stroke widths. Circle fill theme lineColor retains custom edge stroke independently. Neo start/end dash gap markerOffsets2 distinct from provider path offset; explicit userdash and animated-source branches respected. No unconditional triangle/repeated pullback. Singlepoint nonrouted selfloop keeps identity without invented drawing.",
+    "shapes": "Root-owned full registry/parts consumed; label-less set suppresses text; engine expanded leaf boxes paint original measured geometry centered without stretch. Node/group/edge display none skip nativepaint while preserving layout.",
+    "textCSS": "Native letterSpacing/wordSpacing on both measure/draw; pure text-transform/wrap/break/keep-all/manual soft-hyphen. Multi text-shadow via owner-only glyph-alpha native snapshots, recolor+public blur filter, actual union bounds. Source model text remains original; actual run text transformed.",
+    "math": "Explicit UNSUPPORTED_SYNTAX, separate user-authorized later module; no false math rendering claims.",
+    "styles": "Source host SVG paint provider applies fill/stroke/width cascade before authored inline declarations; safe native paint-server definitions preserved. Text and shape shadow blending is isolated as documented in s4 correction."
+  },
+  "explicitBoundaries": [
+    "No networking or implicit files from markup; caller resource bundle/fonts paths are explicit.",
+    "HTML audio/video interactive controls and SVG foreignObject/animations are outside static native host; missing mapping explicitly diagnosed.",
+    "Legacy FontAwesome external CSS/name-to-font-glyph host is replaced by explicit same-ID offline IconResource, not fetched CSS.",
+    "hyphens:auto needs language dictionary and explicitly raises UNSUPPORTED_CSS; no unimplemented effect silently accepted.",
+    "Rough arbitrary SVG curves use pure endpoint conversion/cubic jitter and scanline flattening; exact RoughJS ellipse sampling is not claimed pixel-identical. Actual ink/readability/seed stability require S3/S4.",
+    "Icon SVG natural viewBox dimensions drive native Image assets; browser SVG getBBox ink differences remain subject to official geometry QA."
+  ],
+  "verification": "S2 compile/import/signature only; no behavior/images/tests/install, no functional PASS.",
+  "s4Corrections": {
+    "status": "code_complete_unverified",
+    "initialFailureRun": "test-runs/F01.4-batch-20261105T090906Z-11b555ce",
+    "fixes": [
+      "Empty image/icon node label produces no phantom line (0x0 label), leaving source resource dimensions exact.",
+      "Random preserves raw numeric value; truthiness precedes Math.imul ToInt32; fractional/highbit-zero seed first sample0 then random as source.",
+      "hachure-fill exact ymin scan with1unit iteration/everygap emission and Math.round intersections; independent RoughJS op/nativePNG diagnostic retained.",
+      "RoughGeometry.fill_style and ShapePart.fill_style preserve source solidFillPolygon/nativefill vs hachure; main filledCircle/anchor/collapsedGroup solid, stateStart source120degree hachure.",
+      "Manual multi-section fallback native calls again each have a corresponding legacy edge trace; real final B path remains one path. Point marker trace restores actual triangle vertices tip-first from its real pure path (no invented triangle).",
+      "Empty source graph exports only diagramPadding8 each side16x16, no placeholder.",
+      "Typed config metadata still sanitized from raw_label at actual label interpretation boundary."
+    ],
+    "sourceDiagnostic": "test-runs/F01.4-s4-hachure-source-diagnostic-20261105T091850Z-e5d30277",
+    "mechanicalRun": "test-runs/F01.4-s4-canvas-fix-mechanical-20261105T092430Z-c7dbebc4",
+    "functionalStatus": "NOT_EVALUATED",
+    "sourcePaintProbe": {
+      "evidence": "test-runs/F01.4-s4-source-paint-diagnostic-20261105T092448Z-a6b4e487",
+      "rule": "stateStart/stateEnd keep class=node default under handDrawn, so source.node path stroke replaces hachure stroke with nodeBorder while fill remains white. ResolvedStyle.hachure_color projects actual stroke; solid fill remains style.fill; node main-hatch trace records actual hachure paint.",
+      "mechanicalRun": "test-runs/F01.4-source-hachure-paint-mechanical-20261105T092751Z-0cb4822c"
+    },
+    "emptyGateFollowup": {
+      "failureRun": "test-runs/F01.4-batch-20261105T093450Z-117d64de",
+      "fix": "Remove obsolete node-or-group gate; source empty graph reaches existing16x16 encoding. Actual node/edge/group measurement/layout identity checks remain intact.",
+      "mechanicalRun": "test-runs/F01.4-empty-session-gate-fix-mechanical-20261105T093706Z-ef5782c8"
+    },
+    "datastoreClosedFill": {
+      "sourceEvidence": "test-runs/F01.4-render-20261105T094826Z-6a1e89f5",
+      "sourceRule": "drawRect retains closed fill but vertical border disappears. MeasuredNode.paint_outline passes provider flag, virtual main outline is not painted/roughened; fill rectangle and horizontal borders paint via real parts; shadow may retain closed fill. Braces unchanged and remain unfilled.",
+      "mechanicalRun": "test-runs/F01.4-datastore-paint-outline-mechanical-20261105T095258Z-05bf8e63"
+    },
+    "labellessAndPartDash": {
+      "failureRun": "test-runs/F01.4-batch-20261105T101147Z-4bebc8c5",
+      "fixes": [
+        "Canonical shape lookup before LABELLESS_SHAPES; stateStart/stateEnd/filledCircle/crossedCircle/choice/forkJoin/lightningBolt/anchor/hourglass label_width/height=0,lines/runs=(), no phantom text fallback or ELK inconsistent label dimension.",
+        "Parts ordinary and rough consume explicit dash or inherit resolved node style on None; per-part native save/restore prevents state leaking to other components/assets."
+      ],
+      "mechanicalRun": "test-runs/F01.4-labelless-parts-dash-mechanical-20261105T102704Z-c90b88c2",
+      "functionalStatus": "NOT_EVALUATED"
+    },
+    "placedNodePaintBox": {
+      "rule": "Use B source alignDegenerateNodeToAnchor paint_box when present, then center measured-size geometry; preserve raw engine box for validation/provenance. All shape/text/shadow/parts/assets share this origin.",
+      "mechanicalRun": "test-runs/F01.4-placed-node-paint-box-mechanical-20261105T103643Z-3cef63d0",
+      "noFallback": true
+    },
+    "placedGroupPaintBox": {
+      "rule": "Group frame/bounds/rough/shadow/draw use paint_box or raw box. B supplies already-shifted title_box; engine_origin/raw box/children are preserved, no parent delta propagated.",
+      "mechanicalRun": "test-runs/F01.4-placed-group-paint-box-mechanical-20261105T103748Z-60e69542"
+    },
+    "stateHollowLayer": {
+      "beforeFix": "test-runs/F01.4-state-hollow-before-fix-evidence-20261105T105859Z-73322a0d",
+      "sourceRule": "RoughSVG fillSketch then path; node CSS fills final continuous ellipse. Only stateStart/stateEnd native closed shape outline fill applied after hatch and before roughstroke, preserving hachure_color lower layer and parts. Actual visible main fill in trace is style.fill. No font/core copy; generic arc segment topology remains unchanged.",
+      "targetedRun": "test-runs/F01.4-state-hollow-targeted-20261105T105946Z-89983f9e",
+      "result": "1 realAPI test passed; source-like hollow/ring/disk over nonwhite background and dark-disk negative controls; final matrix not run."
+    },
+    "shadowAndInlineSvg": {
+      "status": "targeted_verified_full_candidate_pending",
+      "beforeFix": "test-runs/F01.4-shadow-inline-svg-before-fix-evidence-20261105T110755Z-94c32093",
+      "diagnostic": "test-runs/F01.4-source-in-picture-isolation-diagnostic-20261105T110544Z-3fd7cfd8",
+      "fixes": [
+        "Text shadow renders native colored glyphs directly on transparent owner canvas; source-in rectangle removed. No glyph outline/font shaping copy.",
+        "Nonrect shape shadow resolves original fill+stroke alpha union/source-in snapshot to owner Image via public PNG before drawImage. Public drawCanvas would replay source-in against destination and fill a rectangle; diagnostic outside-circle pixel red before versus white after.",
+        "Direct inline SVG retains provenance kind=svg/intrinsic dimensions, projects presentation attrs?root resolve_inline_svg_style(hostCSS)?own inline paint preserving important. Isolated dataURI/img SVG never receives hostCSS. Source gradients become native SVG defs, own inline paint servers remain valid.",
+        "XML encoded standard UTF-8 without incompatible utf8 declaration; intermediate targeted decode failures retained.",
+        "Resource inlineSVG fixture colors corrected only from pinned official visible whitefill/deepborder; isolated dataURI quad colors retained."
+      ],
+      "targetedRuns": [
+        "test-runs/F01.4-shadow-inline-svg-targeted-20261105T111351Z-de863c78",
+        "test-runs/F01.4-inline-svg-xml-encoding-targeted-20261105T111420Z-1c96ee02"
+      ],
+      "targetedPassed": [
+        "text-shadow glyph positive+rectangle negative",
+        "directSVG versus isolateddataURI realAPI whitegrid/color4quad negative",
+        "inline dataURI+directSVG size/content",
+        "own inline SVG gradient paint server",
+        "previous state hollow/ring/disk control",
+        "F012 circle+doublecircle actualouter+inner shadows"
+      ],
+      "fullCandidateNotRun": true
+    }
+  },
+  "finalVerification": {
+    "status": "PASS_LOCAL",
+    "sourceTreeSha256": "99a2342681469836c3b7be8be6815b9a82193146331aff51d260823b72b17a2e",
+    "evidence": "references/f014-verification-summary.json"
+  }
+}

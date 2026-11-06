@@ -1,0 +1,177 @@
+{
+  "schema": "py-mermaid-f012-parser-sources/v1",
+  "taskId": "F01.2-S2/parser-config",
+  "status": "code_complete_unverified",
+  "interfaceVersion": "F01.2-v2",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "baseCommit": "b5af1879bf64034fae922d3713854ef67c34312f",
+  "sources": [
+    {
+      "path": "packages/mermaid/src/diagrams/flowchart/parser/flow.jison",
+      "symbols": [
+        "vertex",
+        "link",
+        "edgeText",
+        "arrowText",
+        "vertexStatement",
+        "node",
+        "statement/subgraph",
+        "direction"
+      ],
+      "sha256": "9597faffe2a133b104c6dd4f38a162f6980bff4e0a841a83ff94af3900ea7ba8"
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/flowchart/flowDb.ts",
+      "symbols": [
+        "addVertex",
+        "addSingleLink",
+        "addSubGraph",
+        "makeUniq",
+        "getTypeFromVertex",
+        "getData"
+      ],
+      "sha256": "33577b9ade8c65be6049c3093089dbf81abf44214f49c2b2ea46434183889288"
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/flowchart/parser/subgraph.spec.js",
+      "symbols": [
+        "subgraph explicit/automatic IDs",
+        "nested subgraphs",
+        "direction TD"
+      ],
+      "sha256": "c634dc9065a53b6e45408a6ef48626ab7420a367fc3889b86b80f9883361776d"
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/flowchart/parser/flow-singlenode.spec.js",
+      "symbols": [
+        "classic shape syntax"
+      ],
+      "sha256": "04bd8c3cb02cbb3f5afdd9ccb1c97de0667226e7b344fc95762c225725bfb595"
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/flowchart/parser/flow-text.spec.js",
+      "symbols": [
+        "ordinary quoted vertex/edge labels"
+      ],
+      "sha256": "2d65566bc468a06cdeb3d53093a2f7a46694edc8209116f0073481059dd3f1e3"
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/flowchart/parser/flow-vertice-chaining.spec.js",
+      "symbols": [
+        "vertex chains"
+      ],
+      "sha256": "70b2eda87930b2bc2558425a721b74261176305d8b6db9e0cf1c3ad79cc0b698"
+    },
+    {
+      "path": "packages/mermaid/src/config.ts",
+      "symbols": [
+        "resolveAppearance",
+        "getEffectiveHtmlLabels"
+      ],
+      "sha256": "91dd68a9e7d57c4635a04fab0ccd78ec230b4417a02f4f4b3cd9a6bb445f09ef"
+    },
+    {
+      "path": "packages/mermaid/src/schemas/config.schema.yaml",
+      "symbols": [
+        "FlowchartDiagramConfig.inheritDir",
+        "FlowchartDiagramConfig.subGraphTitleMargin"
+      ],
+      "sha256": "537073372efeaba5675e331b813220ee87b4403118952eccaa3362d8b78ca5e8"
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/elk/render.ts",
+      "symbols": [
+        "buildSubgraphLayoutOptions",
+        "configureCrossHierarchyEdges",
+        "setIncludeChildrenPolicy"
+      ],
+      "sha256": "6258890b3f311e86e4cd4dc99d480f704fde7473e150dc62b88838c5015c5011"
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes.ts",
+      "symbols": [
+        "classic shape handler registry; ellipse absent"
+      ],
+      "sha256": "68fceb790c2a9b65397d96edaf85a50b4ae059a68cf52c83553c4887019f1699"
+    },
+    {
+      "path": "packages/mermaid/src/diagram-api/comments.ts",
+      "symbols": [
+        "cleanupComments"
+      ],
+      "sha256": "aa637df212ecc22cbcb12387af31a4d0f8c266ece03cc6134d46dd9427acd120"
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/handle-markdown-text.ts",
+      "symbols": [
+        "nonMarkdownToHTML",
+        "nonMarkdownToLines"
+      ],
+      "sha256": "6f99a7b3f5b11f87f5509a370663f14650f8f8c3cbb9a34ea496a1aa183cd0ca"
+    }
+  ],
+  "targets": [
+    {
+      "path": "src/py_mermaid/config/flowchart.py",
+      "sha256": "fa0040b7c12aa05b6743f551906f0e4fe7bebd150a5e45996dd477cd8e4d47e7"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/flowchart/parser.py",
+      "sha256": "1a6dd122957c0af9f2a6b7db824ac05cee541a7c705ec854c93ad8fc86643452"
+    }
+  ],
+  "classicShapes": [
+    "square",
+    "round",
+    "stadium",
+    "subroutine",
+    "cylinder",
+    "circle",
+    "doublecircle",
+    "ellipse",
+    "diamond",
+    "hexagon",
+    "odd",
+    "trapezoid",
+    "inv_trapezoid",
+    "lean_right",
+    "lean_left"
+  ],
+  "contracts": [
+    "All source spans retain original Python indices/UTF-16 offsets, line1/column0, half-open.",
+    "Edge label_span covers original text inside delimiters; excludes quotation marks when quoted.",
+    "Node IDs and groups share a reference namespace. Forward group placeholders are removed from ordinary nodes after complete parsing.",
+    "Groups retain closure/reduction order; chain group members follow source FlowDB reversed vertex-statement order and makeUniq ownership.",
+    "Repeated group IDs merge members; first retained declaration owns title/direction/source span. Groups exclude themselves.",
+    "Final node/group parent_id maps agree with direct members; semantic membership cycles are explicitly rejected.",
+    "Group color_index follows retained declaration start order independently from closure order.",
+    "Explicit group direction strings TD/TB/LR/RL/BT remain intact; root direction continues TD/LR.",
+    "inheritDir false leaves absent group direction None; true inherits global root direction, not direct parent direction.",
+    "Empty groups and group-only graphs are retained; group endpoint edges are not redirected to arbitrary descendants.",
+    "Plain labels normalize source line breaks/literal backslash+n and horizontal whitespace; rich labels remain explicit errors.",
+    "Parsing/config have per-request Python state only; native objects never allocated."
+  ],
+  "newConfig": {
+    "flowchart.inheritDir": false,
+    "flowchart.subGraphTitleMargin": {
+      "top": 0,
+      "bottom": 0
+    }
+  },
+  "exclusions": [
+    "frontmatter/directives",
+    "HTML/Markdown/math/icons/entities",
+    "legacy properties rect [|field:value|text]",
+    "@{shape metadata/new shapes/collapsed groups",
+    "other arrow line/marker styles",
+    "style/class/click/a11y statements",
+    "root directions outside TD/LR"
+  ],
+  "risks": [
+    "ellipse parses to its source shape kind but fixed upstream handler registry lacks ellipse; rendering is an explicit upstream-gap error by separately owned Canvas code.",
+    "Unnamed empty subgraph source path calls addSubGraph with undefined ID in grammar while implementation dereferences _id.text; explicit local contract retains generated ID/empty label pending independent official probe.",
+    "Group direction handling differs across independent pyelk baseline; parser preserves declared semantics without compensation.",
+    "No behavior tests run in S2. Original F01.1 scope-rejection tests need explicit S3 migration for newly supported syntax."
+  ],
+  "mechanicalEvidence": "test-runs/f012-s2-parser-20261104T143900Z/manifest.json"
+}

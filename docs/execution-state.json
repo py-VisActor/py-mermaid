@@ -3,14 +3,14 @@
   "template": false,
   "plan": "references/migration-execution.json",
   "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
-  "phase": "F01.1-local-delivery",
+  "phase": "P5",
   "startedAtUtc": "20261104T132038Z",
   "currentSourceIdentity": {
-    "treeSha256": "916d506280bdeb7e1444b44d0ecad0ee5085c93a9dec7db90c9cd5483f8902b1",
-    "evidence": "test-runs/f011-s5-final-001/source-candidate.json",
-    "wheelSha256": "b5fee226f8eba18b659bcdf38c978320b494a8ed4f8652475a4167433d7a25e4"
+    "treeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
+    "kind": "P4_joint_refrozen_candidate",
+    "frozenAtUtc": "2026-11-06T06:51:42.111+00:00"
   },
-  "interfaceVersion": "f011-v1.1",
+  "interfaceVersion": "bulk-static-v1",
   "activeLeases": [],
   "commonRequests": [],
   "blockers": [],
@@ -119,14 +119,6 @@
       "remainingWork": []
     },
     "P1-09": {
-      "status": "planned",
-      "ownerAgent": null,
-      "leasedWritePaths": [],
-      "sourceIdentity": null,
-      "evidence": [],
-      "remainingWork": []
-    },
-    "P1-10": {
       "status": "planned",
       "ownerAgent": null,
       "leasedWritePaths": [],
@@ -523,10 +515,19 @@
     "flowchart-v2": {
       "featureId": "F01",
       "sourceTask": "P1-F01",
-      "sourceStatus": "planned",
-      "sourceMap": [],
-      "integrationStatus": "not-started",
-      "verificationStatus": "not-started"
+      "sourceStatus": "implemented",
+      "sourceMap": [
+        "references/f014-root-sources.json",
+        "references/f014-parser-sources.json",
+        "references/f014-elk-sources.json",
+        "references/f014-canvas-sources.json"
+      ],
+      "integrationStatus": "integrated",
+      "verificationStatus": "canvas_verified",
+      "verifiedScope": "retained static flowchart; math deferred; Dagre/interaction excluded",
+      "evidence": [
+        "references/f014-verification-summary.json"
+      ]
     },
     "agentflow": {
       "featureId": "F09",
@@ -582,7 +583,8 @@
       "sourceStatus": "planned",
       "sourceMap": [],
       "integrationStatus": "not-started",
-      "verificationStatus": "not-started"
+      "verificationStatus": "not-started",
+      "batchStatus": "deferred_by_user"
     },
     "quadrantChart": {
       "featureId": "F05",
@@ -590,7 +592,8 @@
       "sourceStatus": "planned",
       "sourceMap": [],
       "integrationStatus": "not-started",
-      "verificationStatus": "not-started"
+      "verificationStatus": "not-started",
+      "batchStatus": "deferred_by_user"
     },
     "xychart": {
       "featureId": "F05",
@@ -598,7 +601,8 @@
       "sourceStatus": "planned",
       "sourceMap": [],
       "integrationStatus": "not-started",
-      "verificationStatus": "not-started"
+      "verificationStatus": "not-started",
+      "batchStatus": "deferred_by_user"
     },
     "requirement": {
       "featureId": "F02",
@@ -643,10 +647,19 @@
     "flowchart-elk": {
       "featureId": "F01",
       "sourceTask": "P1-F01",
-      "sourceStatus": "planned",
-      "sourceMap": [],
-      "integrationStatus": "not-started",
-      "verificationStatus": "not-started"
+      "sourceStatus": "implemented",
+      "sourceMap": [
+        "references/f014-root-sources.json",
+        "references/f014-parser-sources.json",
+        "references/f014-elk-sources.json",
+        "references/f014-canvas-sources.json"
+      ],
+      "integrationStatus": "integrated",
+      "verificationStatus": "canvas_verified",
+      "verifiedScope": "retained static flowchart; math deferred; Dagre/interaction excluded",
+      "evidence": [
+        "references/f014-verification-summary.json"
+      ]
     },
     "timeline": {
       "featureId": "F04",
@@ -678,7 +691,8 @@
       "sourceStatus": "planned",
       "sourceMap": [],
       "integrationStatus": "not-started",
-      "verificationStatus": "not-started"
+      "verificationStatus": "not-started",
+      "batchStatus": "deferred_by_user"
     },
     "packet": {
       "featureId": "F08",
@@ -694,7 +708,8 @@
       "sourceStatus": "planned",
       "sourceMap": [],
       "integrationStatus": "not-started",
-      "verificationStatus": "not-started"
+      "verificationStatus": "not-started",
+      "batchStatus": "deferred_by_user"
     },
     "block": {
       "featureId": "F08",
@@ -742,7 +757,8 @@
       "sourceStatus": "planned",
       "sourceMap": [],
       "integrationStatus": "not-started",
-      "verificationStatus": "not-started"
+      "verificationStatus": "not-started",
+      "batchStatus": "deferred_by_user"
     },
     "treemap": {
       "featureId": "F06",
@@ -750,7 +766,8 @@
       "sourceStatus": "planned",
       "sourceMap": [],
       "integrationStatus": "not-started",
-      "verificationStatus": "not-started"
+      "verificationStatus": "not-started",
+      "batchStatus": "deferred_by_user"
     },
     "usecase": {
       "featureId": "F02",
@@ -860,7 +877,7 @@
       "sourceMap": [],
       "verificationStatus": "not-started"
     },
-    "layout-engines-dagre-elk-tidy": {
+    "layout-engines": {
       "moduleOwner": "C05",
       "sourceStatus": "planned",
       "sourceMap": [],
@@ -984,7 +1001,6 @@
       "interfaceVersion": null,
       "sourceTasks": [
         "P1-09",
-        "P1-10",
         "P1-11",
         "P1-12",
         "P1-13",
@@ -1062,29 +1078,46 @@
       ]
     }
   },
-  "retrospectives": [],
+  "retrospectives": [
+    {
+      "scope": "F01.2",
+      "record": "docs/F01_2_ACCEPTANCE.md",
+      "rootCauses": [
+        "compound minimum coordinate frame",
+        "circle shadow source-rule misread",
+        "comparator tuple/container-style assumptions"
+      ],
+      "failuresPreserved": true
+    }
+  ],
   "renderValidationPolicy": "references/render-validation-policy.json",
   "workers": {
+    "root": {
+      "status": "closed_verified_local_scope"
+    },
     "parser_config": {
-      "status": "idle_completed_f011",
-      "activeWritePaths": []
+      "status": "closed_verified_local_scope"
     },
     "geometry_elk": {
-      "status": "idle_completed_f011",
-      "activeWritePaths": []
+      "status": "closed_verified_local_scope"
     },
     "canvas_labels": {
-      "status": "idle_completed_f011",
-      "activeWritePaths": []
+      "status": "closed_verified_local_scope"
     }
   },
-  "activePlan": "docs/F01_1_EXECUTION_PLAN.md",
-  "activeScope": "F01.1",
+  "activePlan": "docs/BULK_STATIC_EXECUTION.md",
+  "activeScope": "31 static diagram entries: 29 new migrations and 2 flowchart regressions; 7 deferred by user",
   "scopeOverride": {
-    "date": "2026-11-04",
-    "authorization": "用户明确只完成基础流程图，并要求落文档、创建目标、按计划执行",
-    "supersedesFullMigrationScheduling": true,
-    "deferred": "F01.2…F01.4/F02…F12以及完整跨图扩全，不属于本轮验收"
+    "date": "2026-11-05",
+    "authorization": "继续完成流程图收口；数学模块独立后续实现，本轮先完成其余静态流程图能力",
+    "deferred": [
+      "shared mathematics module",
+      "installation validation"
+    ],
+    "excluded": [
+      "Dagre",
+      "interactive logic and interactive metadata"
+    ]
   },
   "sliceTasks": {
     "F01.1-S0": {
@@ -1140,42 +1173,872 @@
         "test-runs/f011-s5-final-001/summary.json",
         "docs/F01_1_ACCEPTANCE.md"
       ]
+    },
+    "F01.2-S0": {
+      "status": "complete",
+      "ownerAgent": "/root",
+      "evidence": [
+        "docs/F01_2_EXECUTION_PLAN.md"
+      ],
+      "remainingWork": []
+    },
+    "F01.2-S1": {
+      "status": "complete",
+      "ownerAgent": "/root",
+      "evidence": [
+        "docs/F01_2_EXECUTION_PLAN.md"
+      ],
+      "remainingWork": []
+    },
+    "F01.2-S2": {
+      "status": "code_complete_unverified",
+      "ownerAgent": "/root",
+      "evidence": [
+        "C:\\code\\py-visactor\\py-mermaid\\test-runs\\F01.2-s2-freeze-20261104T144018Z-77e0606b\\run.json"
+      ],
+      "remainingWork": []
+    },
+    "F01.2-S3": {
+      "status": "test_design_complete",
+      "ownerAgent": "/root",
+      "evidence": [
+        "references/f012-language-assertions.json",
+        "references/f012-layout-assertions.json",
+        "references/f012-canvas-assertions.json"
+      ],
+      "remainingWork": []
+    },
+    "F01.2-S4": {
+      "status": "targeted_verified",
+      "ownerAgent": "/root",
+      "evidence": [
+        "test-runs/F01.2-batch-20261104T144510Z-1fc0bf60/run.json",
+        "docs/changes/20261104-f012-title-floor-fix.json",
+        "docs/changes/20261104-f012-canvas.json"
+      ],
+      "remainingWork": []
+    },
+    "F01.2-S5": {
+      "status": "complete_local_delivery",
+      "ownerAgent": "/root",
+      "evidence": [
+        "docs/F01_2_ACCEPTANCE.md",
+        "references/f012-verification-summary.json",
+        "test-runs\\F01.2-final-acceptance-20261104T150043Z-d8a81913\\run.json"
+      ],
+      "remainingWork": []
+    },
+    "F01.3-S0": {
+      "status": "complete",
+      "ownerAgent": "/root",
+      "evidence": [
+        "docs/F01_3_EXECUTION_PLAN.md"
+      ],
+      "remainingWork": []
+    },
+    "F01.3-S1": {
+      "status": "complete",
+      "ownerAgent": "/root",
+      "evidence": [
+        "docs/F01_3_INTERFACES.md"
+      ],
+      "remainingWork": []
+    },
+    "F01.3-S2": {
+      "status": "code_complete_unverified",
+      "ownerAgent": "/root",
+      "evidence": [
+        "C:\\code\\py-visactor\\py-mermaid\\test-runs\\F01.3-s2-freeze-20261105T014555Z-a70cda3f\\run.json"
+      ],
+      "remainingWork": []
+    },
+    "F01.3-S3": {
+      "status": "test_design_complete",
+      "ownerAgent": "/root",
+      "evidence": [
+        "references/f013-language-assertions.json",
+        "references/f013-layout-assertions.json",
+        "references/f013-canvas-assertions.json",
+        "C:\\code\\py-visactor\\py-mermaid\\test-runs\\F01.3-s3-test-design-20261105T020255Z-4a7696ff\\run.json"
+      ],
+      "remainingWork": []
+    },
+    "F01.3-S4": {
+      "status": "targeted_verified",
+      "ownerAgent": "/root",
+      "evidence": [
+        "test-runs/F01.3-batch-20261105T020257Z-00d97cd6/run.json",
+        "test-runs/F01.3-initial-evidence-snapshot-20261105T021024Z-38c90a72/run.json",
+        "docs/changes/20261105-f013-execution.json",
+        "docs/changes/20261105-f013-canvas.json"
+      ],
+      "remainingWork": []
+    },
+    "F01.3-S5": {
+      "status": "complete_local_delivery",
+      "ownerAgent": "/root",
+      "evidence": [
+        "docs/F01_3_ACCEPTANCE.md",
+        "references/f013-verification-summary.json",
+        "test-runs/F01.3-final-acceptance-20261105T023245Z-26a7d5ed/run.json"
+      ],
+      "remainingWork": []
+    },
+    "F01.4-S0": {
+      "status": "complete",
+      "ownerAgent": "/root",
+      "evidence": [
+        "docs/F01_4_EXECUTION_PLAN.md"
+      ],
+      "remainingWork": []
+    },
+    "F01.4-S1": {
+      "status": "complete",
+      "ownerAgent": "/root",
+      "evidence": [
+        "docs/F01_4_EXECUTION_PLAN.md"
+      ],
+      "remainingWork": []
+    },
+    "F01.4-S2": {
+      "status": "code_complete_unverified",
+      "ownerAgent": "/root",
+      "evidence": [
+        "test-runs/F01.4-s2-source-freeze-20261105T084954Z-d01bc958/run.json",
+        "references/f014-root-sources.json",
+        "references/f014-parser-sources.json",
+        "references/f014-elk-sources.json",
+        "references/f014-canvas-sources.json"
+      ],
+      "remainingWork": []
+    },
+    "F01.4-S3": {
+      "status": "test_design_complete",
+      "ownerAgent": "/root",
+      "evidence": [
+        "references/f014-language-assertions.json",
+        "references/f014-layout-assertions.json",
+        "references/f014-canvas-assertions.json",
+        "references/f014-style-assertions.json",
+        "tools/plans/f014-tests.json"
+      ],
+      "remainingWork": []
+    },
+    "F01.4-S4": {
+      "status": "targeted_verified",
+      "ownerAgent": "/root",
+      "evidence": [
+        "test-runs/F01.4-batch-20261105T090906Z-11b555ce/run.json",
+        "test-runs/F01.4-batch-20261105T104828Z-73e9f235/run.json",
+        "references/f014-verification-summary.json",
+        "docs/F01_4_ACCEPTANCE.md"
+      ],
+      "remainingWork": []
+    },
+    "F01.4-S5": {
+      "status": "complete_local_delivery",
+      "ownerAgent": "/root",
+      "evidence": [
+        "references/f014-verification-summary.json",
+        "docs/F01_4_ACCEPTANCE.md"
+      ],
+      "remainingWork": []
+    },
+    "MATH-P5": {
+      "status": "complete_local_delivery",
+      "ownerAgent": "/root",
+      "evidence": [
+        "docs/MATH_ACCEPTANCE.md",
+        "references/math-verification-summary.json"
+      ],
+      "remainingWork": []
     }
   },
-  "installationValidation": {
-    "currentInstruction": "deferred_by_user_do_not_continue_or_rerun",
-    "historicalRecord": "An isolated install/check completed before the latest user instruction; retained without further work",
-    "evidence": "test-runs/f011-s5-final-001/package-audit.json"
-  },
-  "currentScopeStatus": "complete_local_delivery_install_validation_deferred",
+  "installationValidation": "Affected Windows wheel/sdist + published math dependency verified; other installation/platform scope retains prior limitations",
+  "currentScopeStatus": "in_progress",
   "remainingEnvironmentItems": [
-    "Linux not verified",
-    "no-loader not verified",
-    "System fallback fonts not bundled",
-    "F01.2+ and all other diagram families deferred",
-    "No commit/push/publish"
+    "不是完整 KaTeX 兼容实现；注册项与功能族映射不等于逐分支覆盖率。",
+    "自动公式编号/tag、CD、部分宏展开边界尚未实现；明确拒绝未支持语法。",
+    "Parser 不暴露 displayMode/strict/leqno/fleqn 全部源选项；Options.display_mode 用于视觉样式。",
+    "HTML class/id/style/data、includegraphics 拒绝；href/url 仅保留静态文本，无交互。",
+    "部分 Unicode 缺少源字体度量时明确报错，不用系统字体伪造数学度量。",
+    "pmb 保留偏移副本，未复刻原实现 0.04px 模糊。",
+    "本轮验证 Windows 本地环境；安装、构建、Linux/no-loader 验证未执行。",
+    "版本 0.1.0a0 未发布；Mermaid 声明依赖版本，开发验证使用两个源码目录 PYTHONPATH，安装解析需后续发布或本地安装阶段验证。"
   ],
   "visualReport": {
-    "path": "reports/f011-render-comparison.html",
-    "manifest": "reports/f011-render-comparison.manifest.json",
-    "sha256": "17183c7173f90af7630c67ada7a98a2a9dc867751cb007e4422c00c7078676cb",
-    "qa": "test-runs/f011-html-report-qa-002/report.json",
-    "usesExistingEvidence": true,
-    "productRerun": false,
-    "installationVerification": false
+    "path": "reports/MATH-batch-20261105T122804Z-878bf5d4/index.html",
+    "url": "http://127.0.0.1:8765/MATH-batch-20261105T122804Z-878bf5d4/index.html",
+    "sha256": "9f7ef845b1a8f495d66824f48208da6206f6b3235d3b9e3f5b7a20bf493e88ee",
+    "bytes": 849853,
+    "sourceTreeSha256": "6e37306deb59a5eb21a2bcceedd66c128a2367f392b094854e2e9bdb3e0e4088",
+    "mathSourceTreeSha256": "6e11f0a8f9f88c78fb387faf4429cfea72781a4e961328bf53299625bea2cb80",
+    "qa": "../py-katex/test-runs/MATH-batch-20261105T122948Z-8bf16e51/artifacts/html-qa/report.json",
+    "functionalStatus": "PASS",
+    "historicalCandidate": true,
+    "currentSourceMatches": false
   },
   "tooling": {
     "status": "standardized_v1",
     "entry": "tools/workflow.py",
     "documentation": "tools/RUNS_AND_REPORTS.md",
-    "reportSpec": "tools/report_specs/f011-baseline.json",
-    "latestReport": "reports/F01.1-report-20261104T142137Z-f5ec6727/index.html",
-    "latestReportRun": "test-runs/F01.1-report-20261104T142137Z-f5ec6727/run.json",
-    "latestRenderRun": "test-runs/F01.1-render-20261104T141622Z-f2bb78ca/run.json",
-    "tests": "test-runs/tooling-record-20261104T142105Z-5c081a64/run.json",
-    "testMethodsPassed": 16,
-    "reportServerUrl": "http://127.0.0.1:8765/F01.1-report-20261104T142137Z-f5ec6727/index.html",
+    "reportSpec": "tools/report_specs/f013-final.json",
+    "latestReport": "reports/MATH-batch-20261105T122804Z-878bf5d4/index.html",
+    "latestReportRun": "test-runs/F01.3-render-20261105T022709Z-575768e1/run.json",
+    "latestRenderRun": "test-runs/F01.3-render-20261105T022709Z-575768e1/run.json",
+    "tests": "test-runs/no-dagre-batch-20261105T081650Z-c2bc9fd2/run.json",
+    "testMethodsPassed": 26,
+    "reportServerUrl": "http://127.0.0.1:8765/MATH-batch-20261105T122804Z-878bf5d4/index.html",
     "originalServerUrl": "http://127.0.0.1:8765/f011-render-comparison.html",
-    "installationValidation": "deferred; not executed"
+    "installationValidation": "deferred; not executed",
+    "productTestMethodsPassed": 280,
+    "mathEntry": "../py-katex/tools/workflow.py",
+    "mathDocumentation": "../py-katex/docs/RUNS_AND_REPORTS.md"
+  },
+  "functionalStatus": "NOT_EVALUATED_FOR_CURRENT_CANDIDATE",
+  "nextPlannedScope": "Explicit remaining KaTeX compatibility inventory and deferred package/install validation; other diagrams require subsequent scope",
+  "previousVisualReport": {
+    "path": "reports/F01.3-render-20261105T022709Z-575768e1/index.html",
+    "url": "http://127.0.0.1:8765/F01.3-render-20261105T022709Z-575768e1/index.html",
+    "sourceTreeSha256": "5cb792fadbd7685a0d65a4a4d0e397ff59566eae340f4aaa87d0a7041d18b08f",
+    "qa": "test-runs/f013-html-qa-final-002/report.json",
+    "functionalStatus": "PASS",
+    "sha256": "7f5ec806cfc5465cb8bf4c6f1aeb7024d975e0a1e72382b9a32afa245c199a71",
+    "historicalCandidate": true,
+    "currentSourceMatches": false
+  },
+  "targetScope": "static-rendering-only",
+  "scopePolicy": "references/static-rendering-scope.json",
+  "latestScopeDecision": {
+    "date": "2026-11-05",
+    "scope": "all modules static-rendering-only",
+    "productCodeChanged": false,
+    "doc": "docs/STATIC_RENDERING_SCOPE.md"
+  },
+  "layoutPolicy": "references/layout-policy.json",
+  "latestLayoutDecision": {
+    "date": "2026-11-05",
+    "dagre": "excluded_by_user",
+    "activeTaskRemoved": "P1-10",
+    "status": "complete_verified",
+    "evidence": "references/dagre-removal-verification.json"
+  },
+  "previousSourceIdentity": {
+    "treeSha256": "d2d0f36c2e2b8eb2818e1377cf1e25b81d81b846b3c0807ddc916639af917737",
+    "evidence": "test-runs/MATH-PYPI-batch-20261106T010610Z-054fd721/run.json",
+    "wheelSha256": "6b420c6383c31c88c48d5fccb3f3808ba9dfa0e1e48d306a8890cb472d8ab399"
+  },
+  "f014WorkerStatus": {
+    "root": "verified_local_static_scope",
+    "parser_config": "verified_local_static_scope",
+    "geometry_elk": "verified_local_static_scope",
+    "canvas_labels": "verified_local_static_scope"
+  },
+  "firstF014Execution": {
+    "run": "test-runs/F01.4-batch-20261105T090906Z-11b555ce",
+    "sourceTreeSha256": "5b0262fdf79a609517ff6080ddd1da50d1649528abea2373f74c3666ee7d14ed",
+    "sourceUnchanged": true,
+    "positiveNativeCpu": 195,
+    "passedNativeCpu": 99,
+    "officialImages": 192,
+    "officialCaptureErrors": 3,
+    "classification": "84 metadata YAML continuation blockers, import topology, internal canonical names, source geometry/paint and trace defects, test representation and oracle selector issues; full first failure retained"
+  },
+  "visualQaFailures": {
+    "candidate": "1f17a467bfd7f8f7e7f53710c88a1280bda03f3ba412968c5d3d9a1575812a80",
+    "matrix": "test-runs/F01.4-batch-20261105T105135Z-494f82f8",
+    "automatedProfiles": "PASS",
+    "manualStatus": "followup_required",
+    "receipts": [
+      "docs/changes/20261105-f014-layout-visual-qa.json",
+      "docs/changes/20261105-f014-canvas-visual-qa.json"
+    ]
+  },
+  "finalCandidateRuns": {
+    "unit": "../py-katex/test-runs/MATH-FULL-batch-20261105T171602Z-0d9b6942",
+    "visual": "../py-katex/test-runs/MATH-FULL-batch-20261105T171857Z-5071cad7",
+    "legacy": "../py-katex/test-runs/MATH-FULL-batch-20261105T171629Z-8b5ef28e",
+    "report": "../py-katex/test-runs/MATH-FULL-batch-20261105T172308Z-e0e12af6",
+    "htmlQa": "../py-katex/test-runs/MATH-FULL-batch-20261105T172348Z-4daa587b",
+    "manual1": "../py-katex/test-runs/MATH-FULL-batch-20261105T171936Z-a5ca8881",
+    "manual2": "../py-katex/test-runs/MATH-FULL-batch-20261105T172008Z-7055e775"
+  },
+  "finalVerificationSummary": "references/math-full-verification-summary.json",
+  "completedGoal": {
+    "objective": "完成除独立数学模块外的保留静态流程图能力；Dagre和交互完全排除，安装验证暂缓",
+    "status": "complete_local_delivery",
+    "evidence": "docs/F01_4_ACCEPTANCE.md"
+  },
+  "postDocumentationAudit": "../py-katex/test-runs/MATH-FULL-batch-20261105T172451Z-dcedc8c2/run.json",
+  "mathModule": {
+    "repository": "https://github.com/py-VisActor/py-katex",
+    "localPath": "../py-katex",
+    "version": "0.1.0",
+    "sourceKaTeX": "0.18.11",
+    "status": "published_dependency_integrated",
+    "acceptance": "docs/MATH_RELEASE_INTEGRATION.md",
+    "coreStaticScopeComplete": true,
+    "distribution": "py-visactor-katex",
+    "pypiURL": "https://pypi.org/project/py-visactor-katex/0.1.0/",
+    "importName": "py_katex",
+    "runtimeSource": "installed distribution; sibling checkout not required"
+  },
+  "previousF014Delivery": {
+    "source": {
+      "treeSha256": "99a2342681469836c3b7be8be6815b9a82193146331aff51d260823b72b17a2e",
+      "evidence": "test-runs/F01.4-batch-20261105T112340Z-561d6761/artifacts/source-candidate.json",
+      "wheelSha256": null
+    },
+    "report": {
+      "path": "reports/F01.4-report-20261105T112346Z-b7014c54/index.html",
+      "url": "http://127.0.0.1:8765/F01.4-report-20261105T112346Z-b7014c54/index.html",
+      "sha256": "271ca3c79dc4b429c569cf91ca5021a23928a105affac1645f37eb77c979261b",
+      "bytes": 22284537,
+      "sourceTreeSha256": "99a2342681469836c3b7be8be6815b9a82193146331aff51d260823b72b17a2e",
+      "qa": "test-runs/F01.4-batch-20261105T112429Z-4de4e10e/artifacts/html-qa/report.json",
+      "functionalStatus": "PASS",
+      "historicalCandidate": true,
+      "currentSourceMatches": false
+    },
+    "finalCandidateRuns": {
+      "unit": "F01.4-batch-20261105T111527Z-f645b0b6",
+      "legacy": "F01.4-batch-20261105T111527Z-b69f15af",
+      "matrix": "F01.4-batch-20261105T111527Z-8d3c0855"
+    },
+    "summary": "references/f014-verification-summary.json",
+    "postDocumentationAudit": "test-runs/F01.4-batch-20261105T112742Z-ea0270ea/run.json"
+  },
+  "mathSourceIdentity": "334c412c34ef675dbc223405622c8d4e19eb56b1ff3700c251cb663d4afdd445",
+  "fullStaticStartingRun": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-start-20261105T143333Z-c2e58342",
+  "workerStatus": {
+    "root": "verified_stopped_source",
+    "parser_config": "verified_stopped_source",
+    "geometry_elk": "verified_stopped_source",
+    "canvas_labels": "verified_stopped_source"
+  },
+  "fullStaticScope": "../py-katex/references/full-core-inventory.json",
+  "fullStaticP1Freeze": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-p1-freeze-20261105T151929Z-e4650f5e",
+  "fullFirstPlan": "tools/plans/full-first.json",
+  "fullFirstExecution": "../py-katex/test-runs/MATH-batch-20261105T155834Z-e542e4f2",
+  "manualRejectedCandidate": "../py-katex/references/full-manual-rejected-candidate.json",
+  "status": "in_progress",
+  "scope": "MATH-PYPI",
+  "remainingCoreStaticWork": [],
+  "coreStaticScopeComplete": false,
+  "fullKaTeXCompatibility": false,
+  "fullKaTeXCompatibilityMeaning": "Entire browser output/contrib ecosystem is not claimed; retained core static scope is complete.",
+  "externalActions": {
+    "commit": false,
+    "push": false,
+    "publish": false
+  },
+  "jointSourceSHA256": {
+    "math": "334c412c34ef675dbc223405622c8d4e19eb56b1ff3700c251cb663d4afdd445",
+    "mermaid": "6094d419ff3c50d2c64fdd00051af2be087b25a7a239cb1dae0e9e09209fdff1"
+  },
+  "historicalExecutionState": "docs/changes/math-full-prior-execution-state.json",
+  "report": {
+    "url": "http://127.0.0.1:8765/MATH-FULL-batch-20261105T172308Z-e0e12af6/index.html",
+    "path": "py-mermaid/reports/MATH-FULL-batch-20261105T172308Z-e0e12af6",
+    "html": {
+      "sha256": "8a197796328ef10e5c3244bd613ce1957d44e8254a7b5c99dab142e5db6118ae",
+      "bytes": 5705477
+    },
+    "qaStatus": "PASS",
+    "qaViews": 825,
+    "desktopAndMobile": true,
+    "externalRequests": 0,
+    "currentSourceMatches": false,
+    "historicalCandidate": true
+  },
+  "legacyTaskTablesHistorical": true,
+  "remainingScope": [
+    "py-mermaid Linux/no-loader installation remains unverified.",
+    "Other diagram types and browser/independent contrib scope unchanged."
+  ],
+  "publishedMathIntegration": {
+    "summary": "references/math-published-integration.json",
+    "validationRun": "test-runs/MATH-PYPI-batch-20261106T010610Z-054fd721",
+    "deliveryRun": "test-runs/MATH-PYPI-delivery-20261106T010903Z-4dd7a953",
+    "developmentInterpreterSetupRun": "test-runs/MATH-PYPI-batch-20261106T011025Z-597cb94c",
+    "finalAuditRun": "test-runs/MATH-PYPI-final-audit-20261106T011056Z-5cf4c16a"
+  },
+  "bulkStaticMigration": {
+    "phase": "P5",
+    "status": "retained_static_local_accepted_delivered",
+    "goalStatus": "resume_requested_by_user",
+    "detectors": 31,
+    "remainingDetectors": 29,
+    "crossCutting": 13,
+    "baselineSourceSHA256": "d2d0f36c2e2b8eb2818e1377cf1e25b81d81b846b3c0807ddc916639af917737",
+    "startRun": "BULK-start-20261106T021725Z-6f4d326b",
+    "sourceFirst": true,
+    "behavioralVerification": "not_started",
+    "report": "not_generated_for_current_candidate",
+    "owners": [
+      {
+        "owner": "/root",
+        "writePaths": [
+          "src/py_mermaid/runtime/**",
+          "src/py_mermaid/model/scene.py",
+          "src/py_mermaid/rendering/skia/scene.py",
+          "src/py_mermaid/config/**",
+          "src/py_mermaid/api.py",
+          "src/py_mermaid/__init__.py",
+          "pyproject.toml",
+          "docs/BULK_STATIC*",
+          "docs/execution-state.json",
+          "tools/**",
+          "references/bulk-shared*"
+        ],
+        "status": "in_progress"
+      },
+      {
+        "owner": "/root/parser_config",
+        "writePaths": [
+          "src/py_mermaid/diagrams/modeling/**",
+          "src/py_mermaid/diagrams/hierarchy/**",
+          "src/py_mermaid/diagrams/structures/**",
+          "references/bulk-A-*.json",
+          "docs/changes/bulk-A-*.json"
+        ],
+        "status": "in_progress",
+        "deferredWritePaths": [
+          "src/py_mermaid/diagrams/hierarchy/treemap.py"
+        ]
+      },
+      {
+        "owner": "/root/geometry_elk",
+        "writePaths": [
+          "src/py_mermaid/diagrams/charts/**",
+          "src/py_mermaid/diagrams/temporal/**",
+          "src/py_mermaid/diagrams/flows/**",
+          "src/py_mermaid/diagrams/business/**",
+          "references/bulk-B-*.json",
+          "docs/changes/bulk-B-*.json"
+        ],
+        "status": "in_progress",
+        "deferredWritePaths": [
+          "src/py_mermaid/diagrams/charts/**",
+          "src/py_mermaid/diagrams/flows/**"
+        ],
+        "excludedWritePaths": [
+          "src/py_mermaid/diagrams/business/_swimlane_routing/**"
+        ]
+      },
+      {
+        "owner": "/root/canvas_labels",
+        "writePaths": [
+          "src/py_mermaid/diagrams/business/_swimlane_routing/**",
+          "references/bulk-C-swimlane-routing.json",
+          "docs/changes/bulk-C-swimlane-routing.json"
+        ],
+        "status": "in_progress",
+        "frozenWritePaths": [
+          "src/py_mermaid/diagrams/sequence/**",
+          "src/py_mermaid/diagrams/railroad/**",
+          "src/py_mermaid/diagrams/zenuml/**",
+          "src/py_mermaid/diagrams/info/**",
+          "references/bulk-C-*.json",
+          "docs/changes/bulk-C-*.json"
+        ]
+      }
+    ],
+    "sharedImplementation": [
+      "pure-scene-model",
+      "fixed-config-defaults",
+      "full-eleven-theme-rules",
+      "true-pyelk-adapter",
+      "native-scene-painter",
+      "ordered-38-detector-registry",
+      "API-dispatch",
+      "legacy-init-config-family-scope",
+      "package-data-wiring"
+    ],
+    "mechanicalEvidence": [
+      "BULK-record-20261106T023529Z-8a46cd09",
+      "BULK-record-20261106T023954Z-a75ddfc7",
+      "BULK-record-20261106T023908Z-90dcb59c",
+      "BULK-record-20261106T031734Z-f60d9ade",
+      "BULK-record-20261106T032743Z-25ad2b86",
+      "BULK-record-20261106T033148Z-8cad997d",
+      "BULK-record-20261106T033755Z-6f4aca41"
+    ],
+    "next": [
+      "P3 all grouped first runs with preserved failures",
+      "P3 source-root-cause batch repair",
+      "P4 same-candidate full matrices",
+      "P5 raw A/B HTML/log delivery"
+    ],
+    "externalActions": "No commit/push/publication performed",
+    "upstreamInventoryDetectors": 38,
+    "deferredDetectors": [
+      "pie",
+      "quadrantChart",
+      "xychart",
+      "radar",
+      "treemap",
+      "sankey",
+      "venn"
+    ],
+    "scopeDecision": {
+      "date": "2026-11-06",
+      "decision": "defer selected diagrams for current batch; keep execution paused",
+      "deferredDetectors": [
+        "pie",
+        "quadrantChart",
+        "xychart",
+        "radar",
+        "treemap",
+        "sankey",
+        "venn"
+      ],
+      "deferredStatus": "deferred_by_user",
+      "upstreamInventoryDetectors": 38,
+      "batchDetectors": 31,
+      "batchNewDetectors": 29,
+      "flowchartRegressionDetectors": [
+        "flowchart-v2",
+        "flowchart-elk"
+      ],
+      "preserveExistingCodeAndEvidence": true,
+      "resumeAuthorized": true,
+      "document": "docs/BULK_STATIC_EXECUTION.md"
+    },
+    "scopeManifest": "references/bulk-scope.json",
+    "resumedAtUtc": "2026-11-06T03:10:57.917302+00:00",
+    "workerStatus": {
+      "A": "P3 fixes and related unit/CPU passed; all writes stopped pending joint P4",
+      "B": "P3 fixes and related unit/CPU passed; all writes stopped pending joint P4",
+      "C": "P3 fixes and related unit/CPU passed; all writes stopped pending joint P4"
+    },
+    "p1Complete": true,
+    "currentSourceBranchWork": [],
+    "rootSharedSourceMap": "references/bulk-shared-sources.json",
+    "sharedTemporaryLease": null,
+    "lastSourceAuditFindings": {
+      "sequenceParentTextStyle": "P1 source corrected and frozen; behavior unverified",
+      "sourceCSSBrightness": "P1 source corrected and frozen; behavior unverified",
+      "glyphAssetDisplayOpacity": "P1 source corrected and frozen; behavior unverified",
+      "flowVariantPathEndpoints": "P1 source corrected and frozen; behavior unverified",
+      "swimlaneTitlePivot": "P1 source corrected and frozen; behavior unverified"
+    },
+    "reopenedAFiles": [],
+    "p1Freeze": {
+      "schema": "py-mermaid-change-receipt/v1",
+      "phase": "P1",
+      "status": "code_complete_unverified",
+      "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+      "scope": "references/bulk-scope.json",
+      "sourceIdentity": "97b353ebf7e176a750a736a714c85638e0a497b722e451dc77570579a2d36cbb",
+      "wholeAssemblyRun": "BULK-P1-assembly-20261106T040205Z-6d6594fb",
+      "freezeRun": "BULK-P1-freeze-20261106T040338Z-8ecb17c2",
+      "providers": 31,
+      "newProviders": 29,
+      "boundDirectPainterCalls": 301,
+      "presentationForwardedCalls": 115,
+      "nativeObjectsCreated": false,
+      "behavioralTestsRun": false,
+      "oracleRun": false,
+      "imagesGenerated": false,
+      "rootPostFreezeCorrections": [
+        "helper effective htmlLabels uses shared resolved policy rather than null/falsy shortcut",
+        "helper synthetic group uses already validated source font units",
+        "tree_view raw-regex spelling removes SyntaxWarning without changing pattern",
+        "source flow layout registration overrides honored",
+        "generic nonrouting ELK center rays preserve source paint behavior",
+        "explicit generic Swimlane preserves source group decorations"
+      ],
+      "sharedSourceMap": "references/bulk-shared-sources.json",
+      "receipts": [
+        "bulk-A-F02",
+        "bulk-A-F06",
+        "bulk-A-F08",
+        "bulk-A-swimlane-groups",
+        "bulk-B-temporal",
+        "bulk-B-business",
+        "bulk-C-P1",
+        "bulk-C-swimlane-routing",
+        "bulk-shared-brightness"
+      ],
+      "nextPhase": "P2 source-independent test design; do not mutate product until P3 grouped failures"
+    },
+    "leases": [],
+    "p2Complete": true,
+    "p2Freeze": {
+      "schema": "py-mermaid-change-receipt/v1",
+      "phase": "P2",
+      "status": "designed_unexecuted",
+      "sourceTreeSha256": "97b353ebf7e176a750a736a714c85638e0a497b722e451dc77570579a2d36cbb",
+      "groupMethodCounts": {
+        "shared": 45,
+        "a": 577,
+        "b": 139,
+        "c": 331
+      },
+      "methodCount": 1092,
+      "fixtureCount": 656,
+      "fixtureExpectations": {
+        "render": 617,
+        "syntax_error": 26,
+        "error": 11,
+        "upstream_defect": 1,
+        "excluded_by_static_scope": 1
+      },
+      "fixtureGroups": {
+        "A": 188,
+        "B": 110,
+        "C": 302,
+        "shared": 56
+      },
+      "sourceOracleIdentity": {
+        "run": "BULK-P2-oracle-identity-20261106T042629Z-c39bdb13",
+        "mermaidCanonicalEntries": 480,
+        "jisonTransformations": 19,
+        "separatelyIdentifiedSchemaTransform": 1,
+        "zenCanonicalScriptEntries": 171,
+        "zenDecodedRawSvgEntries": 508,
+        "zenExcludedReactHostTransforms": 20
+      },
+      "mechanicalRun": "BULK-P2-whole-freeze-20261106T042905Z-abe1ecc4",
+      "rootMechanicalRuns": [
+        "BULK-P2-mechanical-20261106T041747Z-bd0160b2",
+        "BULK-P2-root-design-20261106T042417Z-df61c458"
+      ],
+      "preservedToolFailure": "BULK-P2-oracle-identity-20261106T041931Z-d00692bd (raw YAML compared to generated defaults; fixed tooling representation, not product)",
+      "productParseBuildLayoutRenderCalls": 0,
+      "testMethodsExecuted": 0,
+      "imagesGenerated": false,
+      "sourceUnchanged": true,
+      "installationVerification": false,
+      "files": {
+        "tests/bulk/shared/test_cli.py": "970aad2b86176d22d658f83210d33745ac00cbb0322c8fbb57c30f11ea5605d9",
+        "tests/bulk/shared/test_configuration.py": "daaacda5793ca6b363e7265eb749663a84ad695938c260e29ea201c28e931df2",
+        "tests/bulk/shared/test_layout_plugins.py": "916a4c2bcfdf8250ad55528fc65db2ac3b32ef2b7188f297ec551da3f1deb2a7",
+        "tests/bulk/shared/test_native.py": "e7a3bfd60393d30ccfd5e394493609d37fa9acc211ea9bd27b29b0bc91662440",
+        "tests/bulk/shared/__init__.py": "3c1a5b4917e3bea30a65db4dae346492db9209dec69f6b84086e7a41fd26b524",
+        "tests/bulk/cases-shared.json": "5945d1e7ae89a6606c734622f8f11e177c7fe1676963195bb84b25edc076f1da",
+        "references/bulk-shared-assertions.json": "3f70cfe77eb33f40ec7071b97fee538513c7032ca277ea6236c061155c245ec3",
+        "tools/bulk_support.py": "778cfd2d454aac4d948a88213643a97939be6799d28c548fd55a77b0618b8e17",
+        "tools/bulk_validate.py": "53c62bf4519b614c1f846dfa7e582076ef0a6a4caf20362304c1cf5e7c8d5b91",
+        "tools/bulk_compare.py": "1dd4de9b882a2e153d0ef75bedb598a2830f941550a25f8b1e8097ab3e4d3e61",
+        "tools/bulk_export.py": "9fd2a6a42286728b7ce114f0b08691216da920dc1f11dca184c030deac32da90",
+        "tools/collect_bulk_cases.py": "d239b009e015b2e084363c42e45a94a8c8da21b2763e7f93402e9688a042de7b",
+        "tools/build_bulk_report.py": "2b84f0484d0c4dc12d6f43b47dfdf43ec1e1009ecf617b87f4a6b2e86f171e88",
+        "tools/check_bulk_tests.py": "e3451ce90ee9feca15266f7039a05b89daaae5d01379dca1c535d924d3a54d31",
+        "tools/run_bulk.py": "770a70775fa77ef7bb30b7a9d57294b0c209b117d6f5828f8c20078ddbcb1ea6",
+        "tools/oracle/bulk_capture.cjs": "b9d512ef38e7129249a7ced8faf640a2fe0bf643c6d93bfe6256a78f14262986"
+      },
+      "workerReceipts": [
+        "docs/changes/bulk-A-P2.json",
+        "docs/changes/bulk-B-P2.json",
+        "docs/changes/bulk-C-P2.json"
+      ],
+      "next": "P3 first whole sweep; source stays read-only until run closes, preserve all failures then batch fixes"
+    },
+    "productWritesAllowed": false,
+    "p3FirstSweep": {
+      "runId": "BULK-P3-first-20261106T042952Z-978737eb",
+      "sessionId": 20098,
+      "status": "FAILED_PRESERVED",
+      "allProductAndTestsReadOnly": true,
+      "initialUnitObservations": {
+        "A": "577 methods; 542 errors all masked by shared omitted darken amount;35 passed",
+        "B": "139 methods;222 expanded error blocks masked by theme; one Windows epoch timestamp test issue; DST environment skip",
+        "C": "331 methods;30 pure routing and2 numeric positioning passed; shared theme error masks most; independent [red] CSS-vs-emoji failure",
+        "root": "Shared/legacy/math masked by common theme initialization; no full behavior conclusion"
+      },
+      "pendingRootFixQuestions": [
+        "Khroma omitted amount yields HSL NaN string in original JS; preserve source-derived config instead of Python required-argument TypeError",
+        "Normalize CSS alpha correctly in comparison (rgba alpha1 is full opacity, unlike Pillow tuple alpha1)",
+        "Expected render with missing official/native evidence must fail comparison rather than NOT_COMPARED success"
+      ],
+      "workersStoppedWriting": true
+    },
+    "p3Complete": true,
+    "p4Candidate": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
+    "p4Matrix": {
+      "retainedDetectors": 31,
+      "deferredDetectors": 7,
+      "fixtures": 670,
+      "regularRender": 621,
+      "sourceDefects": 7,
+      "profiles": [
+        "cpu",
+        "auto",
+        "gpu"
+      ],
+      "exports": 465,
+      "legacyVisualPositive": 297,
+      "installVerification": false,
+      "unitMethodsNew": 1166,
+      "unitGroups": {
+        "A": 599,
+        "B": 152,
+        "C": 351,
+        "shared": 64
+      },
+      "zenumlSourceCases": 148,
+      "zenumlMutationControlsPerProfile": 1597
+    },
+    "p3LatestReceipts": [
+      "docs/changes/bulk-A-P3.json",
+      "docs/changes/bulk-B-P3.json",
+      "docs/changes/bulk-C-P3.json",
+      "docs/changes/bulk-shared-khroma-P3.json"
+    ],
+    "p4Initial": {
+      "schema": "py-mermaid-change-receipt/v1",
+      "phase": "P4_initial",
+      "status": "FAILED_PRESERVED_REPAIR_REQUIRED",
+      "runId": "BULK-P4-final-20261106T053339Z-476daa06",
+      "sourceTreeSha256": "51c9c8f75ec4518680450e985ac24e1e576850ae4522fe697d8725b1e23cf248",
+      "sourceUnchanged": true,
+      "evidence": {
+        "path": "test-runs\\BULK-P4-final-20261106T053339Z-476daa06\\run.json",
+        "sha256": "968d3a55bc300c0feb11567b622329fc8b7160a0cabb7ba145cc04d085f46748",
+        "bytes": 5329928
+      },
+      "failedCommands": [
+        {
+          "name": "regression-f014",
+          "exitCode": 1,
+          "stderr": "commands/011-regression-f014/stderr.log"
+        },
+        {
+          "name": "legacy-f013-cpu",
+          "exitCode": 1,
+          "stderr": "commands/039-legacy-f013-cpu/stderr.log"
+        },
+        {
+          "name": "legacy-f013-auto",
+          "exitCode": 1,
+          "stderr": "commands/040-legacy-f013-auto/stderr.log"
+        },
+        {
+          "name": "legacy-f013-gpu",
+          "exitCode": 1,
+          "stderr": "commands/041-legacy-f013-gpu/stderr.log"
+        },
+        {
+          "name": "legacy-f014-cpu",
+          "exitCode": 1,
+          "stderr": "commands/043-legacy-f014-cpu/stderr.log"
+        },
+        {
+          "name": "legacy-f014-auto",
+          "exitCode": 1,
+          "stderr": "commands/044-legacy-f014-auto/stderr.log"
+        },
+        {
+          "name": "legacy-f014-gpu",
+          "exitCode": 1,
+          "stderr": "commands/045-legacy-f014-gpu/stderr.log"
+        }
+      ],
+      "visualBlockersRun": "BULK-P4-visual-blockers-20261106T054514Z-dcb05a05",
+      "installationVerification": false,
+      "noFinalAcceptance": true
+    },
+    "p4RepairReceipts": [
+      "docs/changes/bulk-A-P4-repair.json",
+      "docs/changes/bulk-B-P4-repair.json",
+      "docs/changes/bulk-shared-P4-repair.json"
+    ],
+    "independentOriginalRefresh": "BULK-P3-fixed-original-refresh-20261106T062015Z-fe05c71f",
+    "p4FreezeRun": "test-runs\\BULK-P3-joint-repair-freeze-20261106T065048Z-c13d6d0d",
+    "p4OriginalReuse": {
+      "runId": "BULK-P3-fixed-original-refresh-20261106T062015Z-fe05c71f",
+      "sourceOnly": true,
+      "integrityStatus": "PASS",
+      "sameFrozenFixtureBytes": true,
+      "oracle": "test-runs\\BULK-P3-fixed-original-refresh-20261106T062015Z-fe05c71f\\artifacts\\oracle",
+      "legacyOracleRoot": "test-runs\\BULK-P3-fixed-original-refresh-20261106T062015Z-fe05c71f\\artifacts\\legacy-oracles"
+    },
+    "p4Complete": true,
+    "p5Complete": true,
+    "completedAtUtc": "2026-11-06T07:17:27.633+00:00",
+    "p4FinalRun": "BULK-P4-final-20261106T065144Z-03962368",
+    "p5DeliveryRun": "BULK-P5-delivery-20261106T071012Z-ec4937fd",
+    "acceptanceDocument": "docs/BULK_STATIC_ACCEPTANCE.md",
+    "verificationSummary": "references/bulk-verification-summary.json",
+    "reportUrl": "http://127.0.0.1:8765/BULK-P5-delivery-20261106T071012Z-ec4937fd/index.html"
+  },
+  "bulkStaticScopeDecision": {
+    "date": "2026-11-06",
+    "decision": "defer selected diagrams for current batch; keep execution paused",
+    "deferredDetectors": [
+      "pie",
+      "quadrantChart",
+      "xychart",
+      "radar",
+      "treemap",
+      "sankey",
+      "venn"
+    ],
+    "deferredStatus": "deferred_by_user",
+    "upstreamInventoryDetectors": 38,
+    "batchDetectors": 31,
+    "batchNewDetectors": 29,
+    "flowchartRegressionDetectors": [
+      "flowchart-v2",
+      "flowchart-elk"
+    ],
+    "preserveExistingCodeAndEvidence": true,
+    "resumeAuthorized": true,
+    "document": "docs/BULK_STATIC_EXECUTION.md",
+    "currentExecutionStatus": "complete_for_31_retained_scope_7_deferred"
+  },
+  "returnedLeases": [
+    {
+      "ownerAgent": "/root/parser_config",
+      "paths": [
+        "src/py_mermaid/diagrams/modeling",
+        "src/py_mermaid/diagrams/hierarchical",
+        "src/py_mermaid/diagrams/structural",
+        "tests/bulk/a",
+        "references/bulk-A-*.json",
+        "docs/changes/bulk-A-P4-repair.json"
+      ],
+      "status": "returned",
+      "reason": "Related full owner unit/CPU and source visual repair complete; final joint P4 still required"
+    },
+    {
+      "ownerAgent": "/root/geometry_elk",
+      "paths": [
+        "src/py_mermaid/diagrams/temporal",
+        "tests/bulk/b",
+        "references/bulk-B-*.json",
+        "docs/changes/bulk-B-P4-repair.json"
+      ],
+      "status": "returned",
+      "reason": "Related full owner unit/CPU and source visual repair complete; final joint P4 still required"
+    }
+  ],
+  "bulkBatchStages": {
+    "P0": {
+      "status": "complete",
+      "scope": "31 retained static entrypoints; 7deferred"
+    },
+    "P1": {
+      "status": "complete",
+      "scope": "31 retained static entrypoints; 7deferred"
+    },
+    "P2": {
+      "status": "complete",
+      "scope": "31 retained static entrypoints; 7deferred"
+    },
+    "P3": {
+      "status": "complete",
+      "scope": "31 retained static entrypoints; 7deferred"
+    },
+    "P4": {
+      "status": "complete",
+      "scope": "31 retained static entrypoints; 7deferred"
+    },
+    "P5": {
+      "status": "complete",
+      "scope": "31 retained static entrypoints; 7deferred"
+    }
   }
 }

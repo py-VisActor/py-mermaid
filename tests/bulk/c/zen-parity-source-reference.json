@@ -1,0 +1,197 @@
+{
+  "case": {
+    "id": "C-zenuml-source-async-1",
+    "kind": "zenuml",
+    "source": "zenuml\nA->A: async\nA->B: async\nA->C: async\nB->B: async\nB->C: async\nB->A: async\nC->C: async\nC->B: async\nC->A: async",
+    "config": {},
+    "origin": {
+      "repository": "zenuml-core",
+      "version": "3.49.2",
+      "commit": "213c239587ffa1f3dbb54d8b64468c3038ced55d",
+      "path": "e2e/data/compare-cases.js",
+      "sha256": "afba0305f53310d41262466597aad2799fd6efaa199b32b9e1b6265e69ed973c",
+      "symbol": "CASES.async-1",
+      "line": 81
+    },
+    "expect": "render",
+    "features": [
+      "zenuml.source-visual-corpus",
+      "zenuml.source-case.async-1"
+    ],
+    "expectedText": [],
+    "expectedErrorCodes": []
+  },
+  "official": {
+    "snapshot": {
+      "zenumlCore": {
+        "geometry": {
+          "width": 300,
+          "height": 472,
+          "frameBorderLeft": 0,
+          "frameBorderRight": 0,
+          "participants": [
+            {
+              "name": "A",
+              "label": "A",
+              "x": 50,
+              "y": 28,
+              "width": 80,
+              "height": 40,
+              "isStarter": false,
+              "showBottom": true,
+              "labelWidth": 10.671875
+            },
+            {
+              "name": "B",
+              "label": "B",
+              "x": 150,
+              "y": 28,
+              "width": 80,
+              "height": 40,
+              "isStarter": false,
+              "showBottom": true,
+              "labelWidth": 10.671875
+            },
+            {
+              "name": "C",
+              "label": "C",
+              "x": 250,
+              "y": 28,
+              "width": 80,
+              "height": 40,
+              "isStarter": false,
+              "showBottom": true,
+              "labelWidth": 11.5546875
+            }
+          ],
+          "lifelines": [
+            {
+              "participantName": "A",
+              "x": 50,
+              "topY": 68,
+              "bottomY": 484,
+              "dashed": true
+            },
+            {
+              "participantName": "B",
+              "x": 150,
+              "topY": 68,
+              "bottomY": 484,
+              "dashed": true
+            },
+            {
+              "participantName": "C",
+              "x": 250,
+              "topY": 68,
+              "bottomY": 484,
+              "dashed": true
+            }
+          ],
+          "messages": [
+            {
+              "fromX": 50,
+              "toX": 150,
+              "y": 147.5,
+              "label": "async",
+              "arrowStyle": "open",
+              "isSelf": false,
+              "isReverse": false,
+              "number": "2"
+            },
+            {
+              "fromX": 50,
+              "toX": 250,
+              "y": 179.5,
+              "label": "async",
+              "arrowStyle": "open",
+              "isSelf": false,
+              "isReverse": false,
+              "number": "3"
+            },
+            {
+              "fromX": 150,
+              "toX": 250,
+              "y": 271.5,
+              "label": "async",
+              "arrowStyle": "open",
+              "isSelf": false,
+              "isReverse": false,
+              "number": "5"
+            },
+            {
+              "fromX": 150,
+              "toX": 50,
+              "y": 303.5,
+              "label": "async",
+              "arrowStyle": "open",
+              "isSelf": false,
+              "isReverse": true,
+              "number": "6"
+            },
+            {
+              "fromX": 250,
+              "toX": 150,
+              "y": 395.5,
+              "label": "async",
+              "arrowStyle": "open",
+              "isSelf": false,
+              "isReverse": true,
+              "number": "8"
+            },
+            {
+              "fromX": 250,
+              "toX": 50,
+              "y": 427.5,
+              "label": "async",
+              "arrowStyle": "open",
+              "isSelf": false,
+              "isReverse": true,
+              "number": "9"
+            }
+          ],
+          "selfCalls": [
+            {
+              "x": 50,
+              "y": 72,
+              "width": 28,
+              "height": 44,
+              "label": "async",
+              "arrowStyle": "open",
+              "number": "1"
+            },
+            {
+              "x": 150,
+              "y": 196,
+              "width": 28,
+              "height": 44,
+              "label": "async",
+              "arrowStyle": "open",
+              "number": "4"
+            },
+            {
+              "x": 250,
+              "y": 320,
+              "width": 28,
+              "height": 44,
+              "label": "async",
+              "arrowStyle": "open",
+              "number": "7"
+            }
+          ],
+          "occurrences": [],
+          "creations": [],
+          "fragments": [],
+          "dividers": [],
+          "returns": [],
+          "comments": [],
+          "groups": []
+        }
+      }
+    }
+  },
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"322\" height=\"519\" viewBox=\"0 0 322 519\"><defs>\n  <style>\n  .frame-border-outer { fill: #666; }\n  .frame-border-inner { fill: #ffffff; }\n  .frame-header-bg { fill: #ffffff; }\n  .frame-header-line { stroke: #666; stroke-width: 1; shape-rendering: crispEdges; }\n  .frame-title { font-family: Helvetica, Verdana, serif; font-size: 16px; font-weight: 600; fill: #222; }\n  .participant-box { fill: #ffffff; stroke: #666; stroke-width: 2; }\n  .participant-label { font-family: Helvetica, Verdana, serif; font-size: 16px; fill: #222; }\n  .participant-icon { color: #222; }\n  .participant-icon [fill=\"currentColor\"]:not([stroke]) { stroke: #666; stroke-width: 1; }\n  .lifeline { stroke: #666; stroke-width: 1; }\n  .message-line { stroke: #000; stroke-width: 2; shape-rendering: crispEdges; }\n  .message-label { font-family: Helvetica, Verdana, serif; font-size: 14px; fill: #222; }\n  .arrow-head { fill: #000; stroke: #000; stroke-width: 2; }\n  .arrow-open { fill: none; }\n  .occurrence { fill: #dedede; stroke: #666; stroke-width: 2; shape-rendering: crispEdges; }\n  .fragment-border { fill: none; stroke: #666; stroke-width: 1; shape-rendering: crispEdges; }\n  .fragment-header { fill: #dedede; fill-opacity: 0.498; stroke: none; shape-rendering: crispEdges; }\n  .fragment-label { font-family: Helvetica, Verdana, serif; font-size: 14px; font-weight: 600; fill: #000; }\n  .fragment-condition { font-family: Helvetica, Verdana, serif; font-size: 14px; fill: #000; }\n  .fragment-separator { stroke: #e5e7eb; stroke-width: 1; shape-rendering: crispEdges; }\n  .fragment-section-label { font-family: Helvetica, Verdana, serif; font-size: 14px; fill: #000; }\n  .return-line { stroke: #000; stroke-width: 2; stroke-dasharray: 6,4; shape-rendering: crispEdges; }\n  .return-arrow { stroke: #000; stroke-width: 2; fill: none; }\n  .return-label { font-family: Helvetica, Verdana, serif; font-size: 14px; fill: #222; }\n  .return-icon { fill: #222; }\n  .divider-line { stroke: #aaaa33; stroke-width: 1; }\n  .divider-bg { fill: #fff5ad; stroke: #aaaa33; stroke-width: 1; }\n  .divider-label { font-family: Helvetica, Verdana, serif; font-size: 14px; fill: #333; }\n  .comment-text { font-family: Helvetica, Verdana, serif; font-size: 14px; fill: #333; opacity: 0.5; }\n  .seq-number { font-family: Helvetica, Verdana, serif; font-size: 12px; font-weight: 100; fill: #6b7280; }\n  .group-outline { fill: none; stroke: #666; }\n  .group-title-bg { fill: #ffffff; stroke: none; }\n  .group-title-text { font-family: Helvetica, Verdana, serif; font-size: 13px; font-weight: 400; fill: #222; }\n</style>\n</defs>\n<rect class=\"frame-border-outer\" x=\"0\" y=\"0\" width=\"322\" height=\"519\" rx=\"4\" fill=\"#666\"></rect>\n<rect class=\"frame-border-inner\" x=\"1\" y=\"1\" width=\"320\" height=\"517\" rx=\"3\" fill=\"#fff\"></rect>\n<line class=\"frame-header-line\" x1=\"1\" y1=\"33.5\" x2=\"321\" y2=\"33.5\"></line>\n\n<g transform=\"translate(11, 34)\">\n<line x1=\"50.5\" y1=\"68\" x2=\"50.5\" y2=\"484\" class=\"lifeline\" stroke-dasharray=\"5,5\" stroke-dashoffset=\"5\" shape-rendering=\"crispEdges\"></line>\n<line x1=\"150.5\" y1=\"68\" x2=\"150.5\" y2=\"484\" class=\"lifeline\" stroke-dasharray=\"5,5\" stroke-dashoffset=\"5\" shape-rendering=\"crispEdges\"></line>\n<line x1=\"250.5\" y1=\"68\" x2=\"250.5\" y2=\"484\" class=\"lifeline\" stroke-dasharray=\"5,5\" stroke-dashoffset=\"5\" shape-rendering=\"crispEdges\"></line>\n<g class=\"participant\" data-participant=\"A\">\n  <rect x=\"11\" y=\"29\" width=\"78\" height=\"38\" rx=\"3\" class=\"participant-box\"></rect>\n  \n  \n  \n  <text x=\"50\" y=\"47.75\" text-anchor=\"middle\" dominant-baseline=\"central\" class=\"participant-label\">A</text>\n</g>\n<g class=\"participant\" data-participant=\"B\">\n  <rect x=\"111\" y=\"29\" width=\"78\" height=\"38\" rx=\"3\" class=\"participant-box\"></rect>\n  \n  \n  \n  <text x=\"150\" y=\"47.75\" text-anchor=\"middle\" dominant-baseline=\"central\" class=\"participant-label\">B</text>\n</g>\n<g class=\"participant\" data-participant=\"C\">\n  <rect x=\"211\" y=\"29\" width=\"78\" height=\"38\" rx=\"3\" class=\"participant-box\"></rect>\n  \n  \n  \n  <text x=\"250\" y=\"47.75\" text-anchor=\"middle\" dominant-baseline=\"central\" class=\"participant-label\">C</text>\n</g>\n<g class=\"message\">\n  <line x1=\"51\" y1=\"147\" x2=\"150\" y2=\"147\" class=\"message-line\"></line>\n  <svg x=\"143\" y=\"142\" width=\"7\" height=\"10\" viewBox=\"0 0 7 9\" overflow=\"visible\" class=\"arrow-head arrow-open\">\n    <g>\n      <path d=\"M1 1.25 L6.15 4.5 L1 7.75\" stroke=\"#000\" stroke-linecap=\"round\" stroke-width=\"2\" fill=\"none\"></path>\n    </g>\n  </svg>\n  <text x=\"97\" y=\"144\" text-anchor=\"middle\" class=\"message-label\">async</text>\n  <text x=\"47\" y=\"144\" text-anchor=\"end\" class=\"seq-number\">2</text>\n</g>\n<g class=\"message\">\n  <line x1=\"51\" y1=\"179\" x2=\"250\" y2=\"179\" class=\"message-line\"></line>\n  <svg x=\"243\" y=\"174\" width=\"7\" height=\"10\" viewBox=\"0 0 7 9\" overflow=\"visible\" class=\"arrow-head arrow-open\">\n    <g>\n      <path d=\"M1 1.25 L6.15 4.5 L1 7.75\" stroke=\"#000\" stroke-linecap=\"round\" stroke-width=\"2\" fill=\"none\"></path>\n    </g>\n  </svg>\n  <text x=\"147\" y=\"176\" text-anchor=\"middle\" class=\"message-label\">async</text>\n  <text x=\"47\" y=\"176\" text-anchor=\"end\" class=\"seq-number\">3</text>\n</g>\n<g class=\"message\">\n  <line x1=\"151\" y1=\"271\" x2=\"250\" y2=\"271\" class=\"message-line\"></line>\n  <svg x=\"243\" y=\"266\" width=\"7\" height=\"10\" viewBox=\"0 0 7 9\" overflow=\"visible\" class=\"arrow-head arrow-open\">\n    <g>\n      <path d=\"M1 1.25 L6.15 4.5 L1 7.75\" stroke=\"#000\" stroke-linecap=\"round\" stroke-width=\"2\" fill=\"none\"></path>\n    </g>\n  </svg>\n  <text x=\"197\" y=\"268\" text-anchor=\"middle\" class=\"message-label\">async</text>\n  <text x=\"147\" y=\"268\" text-anchor=\"end\" class=\"seq-number\">5</text>\n</g>\n<g class=\"message\">\n  <line x1=\"150\" y1=\"303\" x2=\"51\" y2=\"303\" class=\"message-line\"></line>\n  <svg x=\"51\" y=\"298\" width=\"7\" height=\"10\" viewBox=\"0 0 7 9\" overflow=\"visible\" class=\"arrow-head arrow-open\">\n    <g transform=\"scale(-1, 1) translate(-7, 0)\">\n      <path d=\"M1 1.25 L6.15 4.5 L1 7.75\" stroke=\"#000\" stroke-linecap=\"round\" stroke-width=\"2\" fill=\"none\"></path>\n    </g>\n  </svg>\n  <text x=\"104\" y=\"300\" text-anchor=\"middle\" class=\"message-label\">async</text>\n  <text x=\"47\" y=\"300\" text-anchor=\"end\" class=\"seq-number\">6</text>\n</g>\n<g class=\"message\">\n  <line x1=\"250\" y1=\"395\" x2=\"151\" y2=\"395\" class=\"message-line\"></line>\n  <svg x=\"151\" y=\"390\" width=\"7\" height=\"10\" viewBox=\"0 0 7 9\" overflow=\"visible\" class=\"arrow-head arrow-open\">\n    <g transform=\"scale(-1, 1) translate(-7, 0)\">\n      <path d=\"M1 1.25 L6.15 4.5 L1 7.75\" stroke=\"#000\" stroke-linecap=\"round\" stroke-width=\"2\" fill=\"none\"></path>\n    </g>\n  </svg>\n  <text x=\"204\" y=\"392\" text-anchor=\"middle\" class=\"message-label\">async</text>\n  <text x=\"147\" y=\"392\" text-anchor=\"end\" class=\"seq-number\">8</text>\n</g>\n<g class=\"message\">\n  <line x1=\"250\" y1=\"427\" x2=\"51\" y2=\"427\" class=\"message-line\"></line>\n  <svg x=\"51\" y=\"422\" width=\"7\" height=\"10\" viewBox=\"0 0 7 9\" overflow=\"visible\" class=\"arrow-head arrow-open\">\n    <g transform=\"scale(-1, 1) translate(-7, 0)\">\n      <path d=\"M1 1.25 L6.15 4.5 L1 7.75\" stroke=\"#000\" stroke-linecap=\"round\" stroke-width=\"2\" fill=\"none\"></path>\n    </g>\n  </svg>\n  <text x=\"154\" y=\"424\" text-anchor=\"middle\" class=\"message-label\">async</text>\n  <text x=\"47\" y=\"424\" text-anchor=\"end\" class=\"seq-number\">9</text>\n</g>\n<g class=\"message self-call\">\n  <svg x=\"51\" y=\"92\" width=\"30\" height=\"24\">\n    <path d=\"M0,2 L26,2 Q28,2 28,4 L28,13 Q28,15 26,15 L1,15\" fill=\"none\" stroke=\"#000\" stroke-width=\"2\"></path>\n    <g transform=\"translate(0, 10)\">\n      <svg height=\"10\" width=\"7\" viewBox=\"0 0 7 9\">\n        <g transform=\"scale(-1, 1) translate(-7, 0)\">\n          <path d=\"M1 1.25 L6.15 4.5 L1 7.75\" stroke=\"#000\" stroke-linecap=\"round\" fill=\"none\" stroke-width=\"2\"></path>\n        </g>\n      </svg>\n    </g>\n  </svg>\n  <text x=\"56\" y=\"87\" text-anchor=\"start\" class=\"message-label\">async</text>\n  <text x=\"47\" y=\"84\" text-anchor=\"end\" class=\"seq-number\">1</text>\n</g>\n<g class=\"message self-call\">\n  <svg x=\"151\" y=\"216\" width=\"30\" height=\"24\">\n    <path d=\"M0,2 L26,2 Q28,2 28,4 L28,13 Q28,15 26,15 L1,15\" fill=\"none\" stroke=\"#000\" stroke-width=\"2\"></path>\n    <g transform=\"translate(0, 10)\">\n      <svg height=\"10\" width=\"7\" viewBox=\"0 0 7 9\">\n        <g transform=\"scale(-1, 1) translate(-7, 0)\">\n          <path d=\"M1 1.25 L6.15 4.5 L1 7.75\" stroke=\"#000\" stroke-linecap=\"round\" fill=\"none\" stroke-width=\"2\"></path>\n        </g>\n      </svg>\n    </g>\n  </svg>\n  <text x=\"156\" y=\"211\" text-anchor=\"start\" class=\"message-label\">async</text>\n  <text x=\"147\" y=\"208\" text-anchor=\"end\" class=\"seq-number\">4</text>\n</g>\n<g class=\"message self-call\">\n  <svg x=\"251\" y=\"340\" width=\"30\" height=\"24\">\n    <path d=\"M0,2 L26,2 Q28,2 28,4 L28,13 Q28,15 26,15 L1,15\" fill=\"none\" stroke=\"#000\" stroke-width=\"2\"></path>\n    <g transform=\"translate(0, 10)\">\n      <svg height=\"10\" width=\"7\" viewBox=\"0 0 7 9\">\n        <g transform=\"scale(-1, 1) translate(-7, 0)\">\n          <path d=\"M1 1.25 L6.15 4.5 L1 7.75\" stroke=\"#000\" stroke-linecap=\"round\" fill=\"none\" stroke-width=\"2\"></path>\n        </g>\n      </svg>\n    </g>\n  </svg>\n  <text x=\"256\" y=\"335\" text-anchor=\"start\" class=\"message-label\">async</text>\n  <text x=\"247\" y=\"332\" text-anchor=\"end\" class=\"seq-number\">7</text>\n</g>\n</g></svg>",
+  "sourceEvidence": {
+    "test-runs\\BULK-P3-official-refresh-20261106T050328Z-0274d04e\\artifacts\\oracle\\C-zenuml-source-async-1.json": "c00db4e240f17c9e44912deb7d0fc57af034152a9f139a2d19a57a2e20e3593e",
+    "test-runs\\BULK-P3-official-refresh-20261106T050328Z-0274d04e\\artifacts\\oracle\\C-zenuml-source-async-1.svg": "8b586aed6e981d635694e26ebe4681001872060381a7418230a35b856257eb9a"
+  }
+}

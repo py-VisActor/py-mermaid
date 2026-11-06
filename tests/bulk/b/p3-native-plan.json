@@ -1,0 +1,8 @@
+{
+  "schema":"py-mermaid-command-plan/v1",
+  "scope":"BULK",
+  "steps":[
+    {"name":"B-final-source-fixture-metadata","argv":["{python}","{repo}/tests/bulk/b/fixture_design.py"]},
+    {"name":"B-native-cpu-source-fixtures","argv":["{python}","{repo}/tools/bulk_validate.py","--fixtures","{repo}/tests/bulk/cases-B.json","--group","B","--backend","cpu","--out","{run}/artifacts/native-cpu-B"],"env":{"PYTHONPATH":"{repo}/src"},"timeout":900}
+  ]
+}
