@@ -29,8 +29,9 @@ def main():
                     files[file.relative_to(ROOT).as_posix()] = file
         for file in (ROOT / 'references').glob('closure*.json'):
             files[file.relative_to(ROOT).as_posix()] = file
-        for file in (ROOT / 'references/closure-source-B').rglob('*.json'):
-            files[file.relative_to(ROOT).as_posix()] = file
+        for name in ('closure-source-B', 'closure-source-B-dst'):
+            for file in (ROOT / 'references' / name).rglob('*.json'):
+                files[file.relative_to(ROOT).as_posix()] = file
         with zipfile.ZipFile(run.path / 'artifacts/candidate.zip', 'w', zipfile.ZIP_DEFLATED) as archive:
             for name, file in sorted(files.items()):
                 archive.writestr(name, file.read_bytes())

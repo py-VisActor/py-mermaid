@@ -155,8 +155,16 @@ class GitClosure(unittest.IsolatedAsyncioTestCase):
         previous=os.environ.get('TZ')
         try:
             os.environ['TZ']='America/New_York';time.tzset()
-            for season,larger in [('SPRING','b'),('FALL','a')]:
+            # Original controls finish at midnight BEFORE the 02:00 transition;
+            # fixed-source task endpoints and SVG bars prove equal duration.
+            for season in ('SPRING','FALL'):
                 _,scene=await graph_scene(case('CL-B-DST-PUBLIC-'+season))
+                widths={row[0]:row[3] for row in scene.layout['tasks']}
+                self.assertEqual(widths['a'],widths['b'])
+            # Keep the original inputs. New IDs begin on the transition date,
+            # so calendar +1d actually spans23/25 elapsed hours against24h.
+            for season,larger in [('SPRING','b'),('FALL','a')]:
+                _,scene=await graph_scene(case('CL-B-DST-CROSS-'+season))
                 widths={row[0]:row[3] for row in scene.layout['tasks']}
                 self.assertGreater(widths[larger],widths['a' if larger=='b' else 'b'])
         finally:

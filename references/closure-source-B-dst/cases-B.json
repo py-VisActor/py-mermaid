@@ -1,0 +1,4920 @@
+{
+  "schema": "py-mermaid-bulk-cases/v1",
+  "group": "B",
+  "cases": [
+    {
+      "id": "CL-B-DATE-LOCALIZED",
+      "kind": "gantt",
+      "source": "gantt\ndateFormat L\naxisFormat %Y-%m-%d\ntodayMarker off\nLocalized :a, 01/02/2024, 2d\n",
+      "config": {
+        "gantt": {
+          "width": 1200
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/gantt/ganttRenderer.js",
+        "symbol": "function makeGrid",
+        "line": 649,
+        "sha256": "bf1c7231c8666070124eed4f6078b1d62ab4dea0973c44cc5d6264469961e488",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "date-format",
+        "time-axis"
+      ],
+      "expectedText": [
+        "Localized"
+      ],
+      "expectedErrorCodes": [],
+      "previousEvidenceId": "BV-B-DATE-LOCALIZED",
+      "group": "B"
+    },
+    {
+      "id": "CL-B-DATE-WEEKDAY",
+      "kind": "gantt",
+      "source": "gantt\ndateFormat YYYY-MM-DD dddd\naxisFormat %Y-%m-%d\ntodayMarker off\nWeekday :a, 2024-01-01 Monday, 2d\n",
+      "config": {
+        "gantt": {
+          "width": 1200
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/gantt/ganttRenderer.js",
+        "symbol": "function makeGrid",
+        "line": 649,
+        "sha256": "bf1c7231c8666070124eed4f6078b1d62ab4dea0973c44cc5d6264469961e488",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "date-format",
+        "time-axis"
+      ],
+      "expectedText": [
+        "Weekday"
+      ],
+      "expectedErrorCodes": [],
+      "previousEvidenceId": "BV-B-DATE-WEEKDAY",
+      "group": "B"
+    },
+    {
+      "id": "CL-B-DATE-ISOWEEK",
+      "kind": "gantt",
+      "source": "gantt\ndateFormat YYYY-MM-DD [W]WW\naxisFormat %G-W%V\ntodayMarker off\nISOWeek :a, 2021-01-01 W53, 2d\n",
+      "config": {
+        "gantt": {
+          "width": 1200
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/gantt/ganttRenderer.js",
+        "symbol": "function makeGrid",
+        "line": 649,
+        "sha256": "bf1c7231c8666070124eed4f6078b1d62ab4dea0973c44cc5d6264469961e488",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "date-format",
+        "time-axis"
+      ],
+      "expectedText": [
+        "ISOWeek"
+      ],
+      "expectedErrorCodes": [],
+      "previousEvidenceId": "BV-B-DATE-ISOWEEK",
+      "group": "B"
+    },
+    {
+      "id": "CL-B-AXIS-LOCALE",
+      "kind": "gantt",
+      "source": "gantt\ndateFormat YYYY-MM-DD\naxisFormat %c | %x | %X\ntodayMarker off\nLocaleAxis :a, 2021-01-01, 2d\n",
+      "config": {
+        "gantt": {
+          "width": 1200
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/gantt/ganttRenderer.js",
+        "symbol": "function makeGrid",
+        "line": 649,
+        "sha256": "bf1c7231c8666070124eed4f6078b1d62ab4dea0973c44cc5d6264469961e488",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "date-format",
+        "time-axis"
+      ],
+      "expectedText": [
+        "LocaleAxis"
+      ],
+      "expectedErrorCodes": [],
+      "previousEvidenceId": "BV-B-AXIS-LOCALE",
+      "group": "B"
+    },
+    {
+      "id": "CL-B-AXIS-ESCAPE",
+      "kind": "gantt",
+      "source": "gantt\ndateFormat YYYY-MM-DD\naxisFormat %%Q %%L %%s\ntodayMarker off\nLiteralPercent :a, 2024-01-01, 2d\n",
+      "config": {
+        "gantt": {
+          "width": 1200
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/gantt/ganttRenderer.js",
+        "symbol": "function makeGrid",
+        "line": 649,
+        "sha256": "bf1c7231c8666070124eed4f6078b1d62ab4dea0973c44cc5d6264469961e488",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "date-format",
+        "time-axis"
+      ],
+      "expectedText": [
+        "LiteralPercent"
+      ],
+      "expectedErrorCodes": [],
+      "previousEvidenceId": "BV-B-AXIS-ESCAPE",
+      "group": "B"
+    },
+    {
+      "id": "CL-B-TICKS-MONDAY",
+      "kind": "gantt",
+      "source": "gantt\ndateFormat YYYY-MM-DD\naxisFormat %Y-%m-%d\ntickInterval 2week\nweekday monday\ntodayMarker off\nMondayPhase :a, 2024-01-01, 31d\n",
+      "config": {
+        "gantt": {
+          "width": 1200
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/gantt/ganttRenderer.js",
+        "symbol": "function makeGrid",
+        "line": 649,
+        "sha256": "bf1c7231c8666070124eed4f6078b1d62ab4dea0973c44cc5d6264469961e488",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "date-format",
+        "time-axis"
+      ],
+      "expectedText": [
+        "MondayPhase"
+      ],
+      "expectedErrorCodes": [],
+      "previousEvidenceId": "BV-B-TICKS-MONDAY",
+      "group": "B"
+    },
+    {
+      "id": "CL-B-TICKS-CAP",
+      "kind": "gantt",
+      "source": "gantt\ndateFormat YYYY-MM-DD\naxisFormat %Y-%m-%d\ntickInterval 1millisecond\ntodayMarker off\nBoundedTicks :a, 2024-01-01, 2d\n",
+      "config": {
+        "gantt": {
+          "width": 1200
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/gantt/ganttRenderer.js",
+        "symbol": "function makeGrid",
+        "line": 649,
+        "sha256": "bf1c7231c8666070124eed4f6078b1d62ab4dea0973c44cc5d6264469961e488",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "date-format",
+        "time-axis"
+      ],
+      "expectedText": [
+        "BoundedTicks"
+      ],
+      "expectedErrorCodes": [],
+      "previousEvidenceId": "BV-B-TICKS-CAP",
+      "group": "B"
+    },
+    {
+      "id": "CL-B-AXIS-FAR",
+      "kind": "gantt",
+      "source": "gantt\ndateFormat YYYY-MM-DD\naxisFormat %Y | %G-W%V\ntodayMarker off\nFarYear :a, +010000-01-01, 2d\n",
+      "config": {
+        "gantt": {
+          "width": 1200
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/gantt/ganttRenderer.js",
+        "symbol": "function makeGrid",
+        "line": 649,
+        "sha256": "bf1c7231c8666070124eed4f6078b1d62ab4dea0973c44cc5d6264469961e488",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "date-format",
+        "time-axis"
+      ],
+      "expectedText": [
+        "FarYear"
+      ],
+      "expectedErrorCodes": [],
+      "previousEvidenceId": "BV-B-AXIS-FAR",
+      "group": "B"
+    },
+    {
+      "id": "CL-B-GIT-LR-FLAT",
+      "kind": "gitGraph",
+      "source": "gitGraph LR:\ncommit id:\"A\" tag:\"first\" tag:\"long-release\" tag:\"last\"\nbranch dev\ncommit id:\"B\"\ncommit id:\"C\"\ncheckout main\ncommit id:\"D\"\ncherry-pick id:\"B\"\ncheckout dev\ncherry-pick id:\"A\"\ncheckout main\nmerge dev id:\"M\"\n",
+      "config": {
+        "gitGraph": {
+          "rotateCommitLabel": false,
+          "parallelCommits": false
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/git/gitGraphRenderer.ts",
+        "symbol": "const drawArrow",
+        "line": 653,
+        "sha256": "d90f6685b76b2f33bebd6e5b47912c076e77f3180c3e27d821ae06261f1aac81",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "dense-routing",
+        "cherry-pick",
+        "tag-stack",
+        "rotation",
+        "direction"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "M",
+        "main",
+        "dev",
+        "first",
+        "long-release",
+        "last"
+      ],
+      "expectedErrorCodes": [],
+      "previousEvidenceId": "BV-B-GIT-LR-FLAT",
+      "group": "B"
+    },
+    {
+      "id": "CL-B-GIT-LR-ROTATE",
+      "kind": "gitGraph",
+      "source": "gitGraph LR:\ncommit id:\"A\" tag:\"first\" tag:\"long-release\" tag:\"last\"\nbranch dev\ncommit id:\"B\"\ncommit id:\"C\"\ncheckout main\ncommit id:\"D\"\ncherry-pick id:\"B\"\ncheckout dev\ncherry-pick id:\"A\"\ncheckout main\nmerge dev id:\"M\"\n",
+      "config": {
+        "gitGraph": {
+          "rotateCommitLabel": true,
+          "parallelCommits": false
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/git/gitGraphRenderer.ts",
+        "symbol": "const drawArrow",
+        "line": 653,
+        "sha256": "d90f6685b76b2f33bebd6e5b47912c076e77f3180c3e27d821ae06261f1aac81",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "dense-routing",
+        "cherry-pick",
+        "tag-stack",
+        "rotation",
+        "direction"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "M",
+        "main",
+        "dev",
+        "first",
+        "long-release",
+        "last"
+      ],
+      "expectedErrorCodes": [],
+      "previousEvidenceId": "BV-B-GIT-LR-ROTATE",
+      "group": "B"
+    },
+    {
+      "id": "CL-B-GIT-TB-FLAT",
+      "kind": "gitGraph",
+      "source": "gitGraph TB:\ncommit id:\"A\" tag:\"first\" tag:\"long-release\" tag:\"last\"\nbranch dev\ncommit id:\"B\"\ncommit id:\"C\"\ncheckout main\ncommit id:\"D\"\ncherry-pick id:\"B\"\ncheckout dev\ncherry-pick id:\"A\"\ncheckout main\nmerge dev id:\"M\"\n",
+      "config": {
+        "gitGraph": {
+          "rotateCommitLabel": false,
+          "parallelCommits": false
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/git/gitGraphRenderer.ts",
+        "symbol": "const drawArrow",
+        "line": 653,
+        "sha256": "d90f6685b76b2f33bebd6e5b47912c076e77f3180c3e27d821ae06261f1aac81",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "dense-routing",
+        "cherry-pick",
+        "tag-stack",
+        "rotation",
+        "direction"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "M",
+        "main",
+        "dev",
+        "first",
+        "long-release",
+        "last"
+      ],
+      "expectedErrorCodes": [],
+      "previousEvidenceId": "BV-B-GIT-TB-FLAT",
+      "group": "B"
+    },
+    {
+      "id": "CL-B-GIT-TB-ROTATE",
+      "kind": "gitGraph",
+      "source": "gitGraph TB:\ncommit id:\"A\" tag:\"first\" tag:\"long-release\" tag:\"last\"\nbranch dev\ncommit id:\"B\"\ncommit id:\"C\"\ncheckout main\ncommit id:\"D\"\ncherry-pick id:\"B\"\ncheckout dev\ncherry-pick id:\"A\"\ncheckout main\nmerge dev id:\"M\"\n",
+      "config": {
+        "gitGraph": {
+          "rotateCommitLabel": true,
+          "parallelCommits": false
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/git/gitGraphRenderer.ts",
+        "symbol": "const drawArrow",
+        "line": 653,
+        "sha256": "d90f6685b76b2f33bebd6e5b47912c076e77f3180c3e27d821ae06261f1aac81",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "dense-routing",
+        "cherry-pick",
+        "tag-stack",
+        "rotation",
+        "direction"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "M",
+        "main",
+        "dev",
+        "first",
+        "long-release",
+        "last"
+      ],
+      "expectedErrorCodes": [],
+      "previousEvidenceId": "BV-B-GIT-TB-ROTATE",
+      "group": "B"
+    },
+    {
+      "id": "CL-B-GIT-BT-FLAT",
+      "kind": "gitGraph",
+      "source": "gitGraph BT:\ncommit id:\"A\" tag:\"first\" tag:\"long-release\" tag:\"last\"\nbranch dev\ncommit id:\"B\"\ncommit id:\"C\"\ncheckout main\ncommit id:\"D\"\ncherry-pick id:\"B\"\ncheckout dev\ncherry-pick id:\"A\"\ncheckout main\nmerge dev id:\"M\"\n",
+      "config": {
+        "gitGraph": {
+          "rotateCommitLabel": false,
+          "parallelCommits": true
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/git/gitGraphRenderer.ts",
+        "symbol": "const drawArrow",
+        "line": 653,
+        "sha256": "d90f6685b76b2f33bebd6e5b47912c076e77f3180c3e27d821ae06261f1aac81",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "dense-routing",
+        "cherry-pick",
+        "tag-stack",
+        "rotation",
+        "direction"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "M",
+        "main",
+        "dev",
+        "first",
+        "long-release",
+        "last"
+      ],
+      "expectedErrorCodes": [],
+      "previousEvidenceId": "BV-B-GIT-BT-FLAT",
+      "group": "B"
+    },
+    {
+      "id": "CL-B-GIT-BT-ROTATE",
+      "kind": "gitGraph",
+      "source": "gitGraph BT:\ncommit id:\"A\" tag:\"first\" tag:\"long-release\" tag:\"last\"\nbranch dev\ncommit id:\"B\"\ncommit id:\"C\"\ncheckout main\ncommit id:\"D\"\ncherry-pick id:\"B\"\ncheckout dev\ncherry-pick id:\"A\"\ncheckout main\nmerge dev id:\"M\"\n",
+      "config": {
+        "gitGraph": {
+          "rotateCommitLabel": true,
+          "parallelCommits": true
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/git/gitGraphRenderer.ts",
+        "symbol": "const drawArrow",
+        "line": 653,
+        "sha256": "d90f6685b76b2f33bebd6e5b47912c076e77f3180c3e27d821ae06261f1aac81",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "dense-routing",
+        "cherry-pick",
+        "tag-stack",
+        "rotation",
+        "direction"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "M",
+        "main",
+        "dev",
+        "first",
+        "long-release",
+        "last"
+      ],
+      "expectedErrorCodes": [],
+      "previousEvidenceId": "BV-B-GIT-BT-ROTATE",
+      "group": "B"
+    },
+    {
+      "id": "CL-B-AGENT-GENUINE-SOURCE-VALID",
+      "kind": "agentflow",
+      "source": "agentflow-beta TB\nflow Outer[\"Outer\"]\n A --> A\nend\nOuter@{view: \"collapsed\"}\n",
+      "config": {
+        "layout": "elk"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/agentflow/agentflowDb.ts",
+        "symbol": "public getData()",
+        "line": 1696,
+        "sha256": "aa74eb6cb3eb0821c1e3960eefbbc83afe167bc5dcf9380dc4acfa8fce82b1b6",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "compound-routing",
+        "collapsed-identity"
+      ],
+      "expectedText": [
+        "Outer"
+      ],
+      "expectedErrorCodes": [],
+      "previousEvidenceId": "BV-B-AGENT-GENUINE-SOURCE-VALID",
+      "branchVerification": {
+        "originalCaseId": "BV-B-AGENT-GENUINE",
+        "reason": "Original compact YAML parsed by source as key view:collapsed/algorithm:elk.box with null value, leaving intended branch inactive. This independent follow-up uses valid spaced YAML and explicit visible group labels; original inputs/evidence remain untouched.",
+        "sourceReference": {
+          "path": "packages/mermaid/src/diagrams/agentflow/agentflow-semantic-model.spec.ts",
+          "symbol": "collapsed-vs-expanded equivalence",
+          "line": 62
+        }
+      },
+      "group": "B"
+    },
+    {
+      "id": "CL-B-AGENT-INTERNAL-SOURCE-VALID",
+      "kind": "agentflow",
+      "source": "agentflow-beta TB\nflow Outer[\"Outer\"]\n A --> B\nend\nOuter@{view: \"collapsed\"}\n",
+      "config": {
+        "layout": "elk"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/agentflow/agentflowDb.ts",
+        "symbol": "public getData()",
+        "line": 1696,
+        "sha256": "aa74eb6cb3eb0821c1e3960eefbbc83afe167bc5dcf9380dc4acfa8fce82b1b6",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "compound-routing",
+        "collapsed-identity"
+      ],
+      "expectedText": [
+        "Outer"
+      ],
+      "expectedErrorCodes": [],
+      "previousEvidenceId": "BV-B-AGENT-INTERNAL-SOURCE-VALID",
+      "branchVerification": {
+        "originalCaseId": "BV-B-AGENT-INTERNAL",
+        "reason": "Original compact YAML parsed by source as key view:collapsed/algorithm:elk.box with null value, leaving intended branch inactive. This independent follow-up uses valid spaced YAML and explicit visible group labels; original inputs/evidence remain untouched.",
+        "sourceReference": {
+          "path": "packages/mermaid/src/diagrams/agentflow/agentflow-semantic-model.spec.ts",
+          "symbol": "collapsed-vs-expanded equivalence",
+          "line": 62
+        }
+      },
+      "group": "B"
+    },
+    {
+      "id": "CL-B-AGENT-NESTED-SOURCE-VALID",
+      "kind": "agentflow",
+      "source": "agentflow-beta LR\nflow Outer[\"Outer\"]\n flow Inner[\"Inner\"]\n  A --> B\n end\nend\nOuter@{view: \"collapsed\"}\nInner@{view: \"collapsed\"}\nX --> A\nB --> Y\n",
+      "config": {
+        "layout": "elk"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/agentflow/agentflowDb.ts",
+        "symbol": "public getData()",
+        "line": 1696,
+        "sha256": "aa74eb6cb3eb0821c1e3960eefbbc83afe167bc5dcf9380dc4acfa8fce82b1b6",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "compound-routing",
+        "collapsed-identity"
+      ],
+      "expectedText": [
+        "Outer",
+        "X",
+        "Y"
+      ],
+      "expectedErrorCodes": [],
+      "previousEvidenceId": "BV-B-AGENT-NESTED-SOURCE-VALID",
+      "branchVerification": {
+        "originalCaseId": "BV-B-AGENT-NESTED",
+        "reason": "Original compact YAML parsed by source as key view:collapsed/algorithm:elk.box with null value, leaving intended branch inactive. This independent follow-up uses valid spaced YAML and explicit visible group labels; original inputs/evidence remain untouched.",
+        "sourceReference": {
+          "path": "packages/mermaid/src/diagrams/agentflow/agentflow-semantic-model.spec.ts",
+          "symbol": "collapsed-vs-expanded equivalence",
+          "line": 62
+        }
+      },
+      "group": "B"
+    },
+    {
+      "id": "CL-B-AGENT-ANCESTOR-SOURCE-VALID",
+      "kind": "agentflow",
+      "source": "agentflow-beta TB\nflow Outer[\"Outer\"]\n flow Inner[\"Inner\"]\n  A --> B\n end\nend\nOuter --> A\nB --> Inner\n",
+      "config": {
+        "layout": "elk"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/agentflow/agentflowDb.ts",
+        "symbol": "public getData()",
+        "line": 1696,
+        "sha256": "aa74eb6cb3eb0821c1e3960eefbbc83afe167bc5dcf9380dc4acfa8fce82b1b6",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "compound-routing",
+        "collapsed-identity"
+      ],
+      "expectedText": [
+        "Outer",
+        "Inner",
+        "A",
+        "B"
+      ],
+      "expectedErrorCodes": [],
+      "previousEvidenceId": "BV-B-AGENT-ANCESTOR-SOURCE-VALID",
+      "branchVerification": {
+        "originalCaseId": "BV-B-AGENT-ANCESTOR",
+        "reason": "Original compact YAML parsed by source as key view:collapsed/algorithm:elk.box with null value, leaving intended branch inactive. This independent follow-up uses valid spaced YAML and explicit visible group labels; original inputs/evidence remain untouched.",
+        "sourceReference": {
+          "path": "packages/mermaid/src/diagrams/agentflow/agentflow-semantic-model.spec.ts",
+          "symbol": "collapsed-vs-expanded equivalence",
+          "line": 62
+        }
+      },
+      "group": "B"
+    },
+    {
+      "id": "CL-B-AGENT-GROUP-ALGO-SOURCE-VALID",
+      "kind": "agentflow",
+      "source": "agentflow-beta TB\nflow Outer[\"Outer\"]@{algorithm: \"elk.box\"}\n A --> B\nend\n",
+      "config": {
+        "layout": "elk"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/agentflow/agentflowDb.ts",
+        "symbol": "public getData()",
+        "line": 1696,
+        "sha256": "aa74eb6cb3eb0821c1e3960eefbbc83afe167bc5dcf9380dc4acfa8fce82b1b6",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "compound-routing",
+        "collapsed-identity"
+      ],
+      "expectedText": [
+        "Outer",
+        "A",
+        "B"
+      ],
+      "expectedErrorCodes": [],
+      "previousEvidenceId": "BV-B-AGENT-GROUP-ALGO-SOURCE-VALID",
+      "branchVerification": {
+        "originalCaseId": "BV-B-AGENT-GROUP-ALGO",
+        "reason": "Original compact YAML parsed by source as key view:collapsed/algorithm:elk.box with null value, leaving intended branch inactive. This independent follow-up uses valid spaced YAML and explicit visible group labels; original inputs/evidence remain untouched.",
+        "sourceReference": {
+          "path": "packages/mermaid/src/diagrams/agentflow/agentflow-semantic-model.spec.ts",
+          "symbol": "collapsed-vs-expanded equivalence",
+          "line": 62
+        }
+      },
+      "group": "B"
+    },
+    {
+      "id": "CL-B-AGENT-CROSS-ALGO-SOURCE-VALID",
+      "kind": "agentflow",
+      "source": "agentflow-beta LR\nflow Outer[\"Outer\"]@{algorithm: \"elk.box\"}\n A --> B\nend\nX --> A\nB --> Y\n",
+      "config": {
+        "layout": "elk"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/agentflow/agentflowDb.ts",
+        "symbol": "public getData()",
+        "line": 1696,
+        "sha256": "aa74eb6cb3eb0821c1e3960eefbbc83afe167bc5dcf9380dc4acfa8fce82b1b6",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "compound-routing",
+        "collapsed-identity"
+      ],
+      "expectedText": [
+        "Outer",
+        "A",
+        "B",
+        "X",
+        "Y"
+      ],
+      "expectedErrorCodes": [],
+      "previousEvidenceId": "BV-B-AGENT-CROSS-ALGO-SOURCE-VALID",
+      "branchVerification": {
+        "originalCaseId": "BV-B-AGENT-CROSS-ALGO",
+        "reason": "Original compact YAML parsed by source as key view:collapsed/algorithm:elk.box with null value, leaving intended branch inactive. This independent follow-up uses valid spaced YAML and explicit visible group labels; original inputs/evidence remain untouched.",
+        "sourceReference": {
+          "path": "packages/mermaid/src/diagrams/agentflow/agentflow-semantic-model.spec.ts",
+          "symbol": "collapsed-vs-expanded equivalence",
+          "line": 62
+        }
+      },
+      "group": "B"
+    },
+    {
+      "id": "CL-B-AGENT-NESTED-GENUINE",
+      "kind": "agentflow",
+      "source": "agentflow-beta LR\nflow Outer[\"Outer\"]\n flow Inner[\"Inner\"]\n  A --> A\n end\nend\nInner@{view: \"collapsed\"}\nOuter@{view: \"collapsed\"}\n",
+      "config": {
+        "layout": "elk"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/agentflow/agentflowDb.ts",
+        "symbol": "public getData()",
+        "line": 1696,
+        "sha256": "aa74eb6cb3eb0821c1e3960eefbbc83afe167bc5dcf9380dc4acfa8fce82b1b6",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "compound-routing",
+        "collapsed-identity"
+      ],
+      "expectedText": [
+        "Outer"
+      ],
+      "expectedErrorCodes": [],
+      "previousEvidenceId": "BV-B-AGENT-GENUINE",
+      "branchVerification": {
+        "originalCaseId": "BV-B-AGENT-GENUINE",
+        "reason": "Original compact YAML parsed by source as key view:collapsed/algorithm:elk.box with null value, leaving intended branch inactive. This independent follow-up uses valid spaced YAML and explicit visible group labels; original inputs/evidence remain untouched.",
+        "sourceReference": {
+          "path": "packages/mermaid/src/diagrams/agentflow/agentflow-semantic-model.spec.ts",
+          "symbol": "collapsed-vs-expanded equivalence",
+          "line": 62
+        }
+      },
+      "group": "B"
+    },
+    {
+      "id": "CL-B-AGENT-VISIBLE-GROUP-SELF",
+      "kind": "agentflow",
+      "source": "agentflow-beta TB\nflow Outer[\"Outer\"]\n A-->B\nend\nOuter@{view: \"collapsed\"}\nOuter-->Outer\n",
+      "config": {
+        "layout": "elk"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/agentflow/agentflowDb.ts",
+        "symbol": "public getData()",
+        "line": 1696,
+        "sha256": "aa74eb6cb3eb0821c1e3960eefbbc83afe167bc5dcf9380dc4acfa8fce82b1b6",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "compound-routing",
+        "collapsed-identity"
+      ],
+      "expectedText": [
+        "Outer"
+      ],
+      "expectedErrorCodes": [],
+      "previousEvidenceId": "BV-B-AGENT-GENUINE",
+      "branchVerification": {
+        "originalCaseId": "BV-B-AGENT-GENUINE",
+        "reason": "Original compact YAML parsed by source as key view:collapsed/algorithm:elk.box with null value, leaving intended branch inactive. This independent follow-up uses valid spaced YAML and explicit visible group labels; original inputs/evidence remain untouched.",
+        "sourceReference": {
+          "path": "packages/mermaid/src/diagrams/agentflow/agentflow-semantic-model.spec.ts",
+          "symbol": "collapsed-vs-expanded equivalence",
+          "line": 62
+        }
+      },
+      "group": "B"
+    },
+    {
+      "id": "CL-B-GROUP-LAYERED-ISOLATED",
+      "kind": "agentflow",
+      "source": "agentflow-beta LR\nflow Outer[\"Outer\"]@{algorithm: \"elk.layered\"}\n A --> B\nend\n",
+      "config": {
+        "layout": "elk"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/agentflow/agentflowDb.ts",
+        "symbol": "public getData()",
+        "line": 1696,
+        "sha256": "aa74eb6cb3eb0821c1e3960eefbbc83afe167bc5dcf9380dc4acfa8fce82b1b6",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "compound-routing",
+        "collapsed-identity"
+      ],
+      "expectedText": [
+        "Outer",
+        "A",
+        "B"
+      ],
+      "expectedErrorCodes": [],
+      "previousEvidenceId": "BV-B-AGENT-GROUP-ALGO",
+      "branchVerification": {
+        "originalCaseId": "BV-B-AGENT-GROUP-ALGO",
+        "reason": "Original compact YAML parsed by source as key view:collapsed/algorithm:elk.box with null value, leaving intended branch inactive. This independent follow-up uses valid spaced YAML and explicit visible group labels; original inputs/evidence remain untouched.",
+        "sourceReference": {
+          "path": "packages/mermaid/src/diagrams/agentflow/agentflow-semantic-model.spec.ts",
+          "symbol": "collapsed-vs-expanded equivalence",
+          "line": 62
+        }
+      },
+      "group": "B",
+      "closure": {
+        "groupAlgorithm": "elk.layered",
+        "cross": false
+      }
+    },
+    {
+      "id": "CL-B-GROUP-LAYERED-CROSS",
+      "kind": "agentflow",
+      "source": "agentflow-beta LR\nflow Outer[\"Outer\"]@{algorithm: \"elk.layered\"}\n A --> B\nend\nX-->A\nB-->Y\n",
+      "config": {
+        "layout": "elk"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/agentflow/agentflowDb.ts",
+        "symbol": "public getData()",
+        "line": 1696,
+        "sha256": "aa74eb6cb3eb0821c1e3960eefbbc83afe167bc5dcf9380dc4acfa8fce82b1b6",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "compound-routing",
+        "collapsed-identity"
+      ],
+      "expectedText": [
+        "Outer",
+        "A",
+        "B",
+        "X",
+        "Y"
+      ],
+      "expectedErrorCodes": [],
+      "previousEvidenceId": "BV-B-AGENT-GROUP-ALGO",
+      "branchVerification": {
+        "originalCaseId": "BV-B-AGENT-GROUP-ALGO",
+        "reason": "Original compact YAML parsed by source as key view:collapsed/algorithm:elk.box with null value, leaving intended branch inactive. This independent follow-up uses valid spaced YAML and explicit visible group labels; original inputs/evidence remain untouched.",
+        "sourceReference": {
+          "path": "packages/mermaid/src/diagrams/agentflow/agentflow-semantic-model.spec.ts",
+          "symbol": "collapsed-vs-expanded equivalence",
+          "line": 62
+        }
+      },
+      "group": "B",
+      "closure": {
+        "groupAlgorithm": "elk.layered",
+        "cross": true
+      }
+    },
+    {
+      "id": "CL-B-GROUP-STRESS-ISOLATED",
+      "kind": "agentflow",
+      "source": "agentflow-beta LR\nflow Outer[\"Outer\"]@{algorithm: \"elk.stress\"}\n A --> B\nend\n",
+      "config": {
+        "layout": "elk"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/agentflow/agentflowDb.ts",
+        "symbol": "public getData()",
+        "line": 1696,
+        "sha256": "aa74eb6cb3eb0821c1e3960eefbbc83afe167bc5dcf9380dc4acfa8fce82b1b6",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "compound-routing",
+        "collapsed-identity"
+      ],
+      "expectedText": [
+        "Outer",
+        "A",
+        "B"
+      ],
+      "expectedErrorCodes": [],
+      "previousEvidenceId": "BV-B-AGENT-GROUP-ALGO",
+      "branchVerification": {
+        "originalCaseId": "BV-B-AGENT-GROUP-ALGO",
+        "reason": "Original compact YAML parsed by source as key view:collapsed/algorithm:elk.box with null value, leaving intended branch inactive. This independent follow-up uses valid spaced YAML and explicit visible group labels; original inputs/evidence remain untouched.",
+        "sourceReference": {
+          "path": "packages/mermaid/src/diagrams/agentflow/agentflow-semantic-model.spec.ts",
+          "symbol": "collapsed-vs-expanded equivalence",
+          "line": 62
+        }
+      },
+      "group": "B",
+      "closure": {
+        "groupAlgorithm": "elk.stress",
+        "cross": false
+      }
+    },
+    {
+      "id": "CL-B-GROUP-STRESS-CROSS",
+      "kind": "agentflow",
+      "source": "agentflow-beta LR\nflow Outer[\"Outer\"]@{algorithm: \"elk.stress\"}\n A --> B\nend\nX-->A\nB-->Y\n",
+      "config": {
+        "layout": "elk"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/agentflow/agentflowDb.ts",
+        "symbol": "public getData()",
+        "line": 1696,
+        "sha256": "aa74eb6cb3eb0821c1e3960eefbbc83afe167bc5dcf9380dc4acfa8fce82b1b6",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "compound-routing",
+        "collapsed-identity"
+      ],
+      "expectedText": [
+        "Outer",
+        "A",
+        "B",
+        "X",
+        "Y"
+      ],
+      "expectedErrorCodes": [],
+      "previousEvidenceId": "BV-B-AGENT-GROUP-ALGO",
+      "branchVerification": {
+        "originalCaseId": "BV-B-AGENT-GROUP-ALGO",
+        "reason": "Original compact YAML parsed by source as key view:collapsed/algorithm:elk.box with null value, leaving intended branch inactive. This independent follow-up uses valid spaced YAML and explicit visible group labels; original inputs/evidence remain untouched.",
+        "sourceReference": {
+          "path": "packages/mermaid/src/diagrams/agentflow/agentflow-semantic-model.spec.ts",
+          "symbol": "collapsed-vs-expanded equivalence",
+          "line": 62
+        }
+      },
+      "group": "B",
+      "closure": {
+        "groupAlgorithm": "elk.stress",
+        "cross": true
+      }
+    },
+    {
+      "id": "CL-B-GROUP-FORCE-ISOLATED",
+      "kind": "agentflow",
+      "source": "agentflow-beta LR\nflow Outer[\"Outer\"]@{algorithm: \"elk.force\"}\n A --> B\nend\n",
+      "config": {
+        "layout": "elk"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/agentflow/agentflowDb.ts",
+        "symbol": "public getData()",
+        "line": 1696,
+        "sha256": "aa74eb6cb3eb0821c1e3960eefbbc83afe167bc5dcf9380dc4acfa8fce82b1b6",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "compound-routing",
+        "collapsed-identity"
+      ],
+      "expectedText": [
+        "Outer",
+        "A",
+        "B"
+      ],
+      "expectedErrorCodes": [],
+      "previousEvidenceId": "BV-B-AGENT-GROUP-ALGO",
+      "branchVerification": {
+        "originalCaseId": "BV-B-AGENT-GROUP-ALGO",
+        "reason": "Original compact YAML parsed by source as key view:collapsed/algorithm:elk.box with null value, leaving intended branch inactive. This independent follow-up uses valid spaced YAML and explicit visible group labels; original inputs/evidence remain untouched.",
+        "sourceReference": {
+          "path": "packages/mermaid/src/diagrams/agentflow/agentflow-semantic-model.spec.ts",
+          "symbol": "collapsed-vs-expanded equivalence",
+          "line": 62
+        }
+      },
+      "group": "B",
+      "closure": {
+        "groupAlgorithm": "elk.force",
+        "cross": false
+      }
+    },
+    {
+      "id": "CL-B-GROUP-FORCE-CROSS",
+      "kind": "agentflow",
+      "source": "agentflow-beta LR\nflow Outer[\"Outer\"]@{algorithm: \"elk.force\"}\n A --> B\nend\nX-->A\nB-->Y\n",
+      "config": {
+        "layout": "elk"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/agentflow/agentflowDb.ts",
+        "symbol": "public getData()",
+        "line": 1696,
+        "sha256": "aa74eb6cb3eb0821c1e3960eefbbc83afe167bc5dcf9380dc4acfa8fce82b1b6",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "compound-routing",
+        "collapsed-identity"
+      ],
+      "expectedText": [
+        "Outer",
+        "A",
+        "B",
+        "X",
+        "Y"
+      ],
+      "expectedErrorCodes": [],
+      "previousEvidenceId": "BV-B-AGENT-GROUP-ALGO",
+      "branchVerification": {
+        "originalCaseId": "BV-B-AGENT-GROUP-ALGO",
+        "reason": "Original compact YAML parsed by source as key view:collapsed/algorithm:elk.box with null value, leaving intended branch inactive. This independent follow-up uses valid spaced YAML and explicit visible group labels; original inputs/evidence remain untouched.",
+        "sourceReference": {
+          "path": "packages/mermaid/src/diagrams/agentflow/agentflow-semantic-model.spec.ts",
+          "symbol": "collapsed-vs-expanded equivalence",
+          "line": 62
+        }
+      },
+      "group": "B",
+      "closure": {
+        "groupAlgorithm": "elk.force",
+        "cross": true
+      }
+    },
+    {
+      "id": "CL-B-GROUP-MRTREE-ISOLATED",
+      "kind": "agentflow",
+      "source": "agentflow-beta LR\nflow Outer[\"Outer\"]@{algorithm: \"elk.mrtree\"}\n A --> B\nend\n",
+      "config": {
+        "layout": "elk"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/agentflow/agentflowDb.ts",
+        "symbol": "public getData()",
+        "line": 1696,
+        "sha256": "aa74eb6cb3eb0821c1e3960eefbbc83afe167bc5dcf9380dc4acfa8fce82b1b6",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "compound-routing",
+        "collapsed-identity"
+      ],
+      "expectedText": [
+        "Outer",
+        "A",
+        "B"
+      ],
+      "expectedErrorCodes": [],
+      "previousEvidenceId": "BV-B-AGENT-GROUP-ALGO",
+      "branchVerification": {
+        "originalCaseId": "BV-B-AGENT-GROUP-ALGO",
+        "reason": "Original compact YAML parsed by source as key view:collapsed/algorithm:elk.box with null value, leaving intended branch inactive. This independent follow-up uses valid spaced YAML and explicit visible group labels; original inputs/evidence remain untouched.",
+        "sourceReference": {
+          "path": "packages/mermaid/src/diagrams/agentflow/agentflow-semantic-model.spec.ts",
+          "symbol": "collapsed-vs-expanded equivalence",
+          "line": 62
+        }
+      },
+      "group": "B",
+      "closure": {
+        "groupAlgorithm": "elk.mrtree",
+        "cross": false
+      }
+    },
+    {
+      "id": "CL-B-GROUP-MRTREE-CROSS",
+      "kind": "agentflow",
+      "source": "agentflow-beta LR\nflow Outer[\"Outer\"]@{algorithm: \"elk.mrtree\"}\n A --> B\nend\nX-->A\nB-->Y\n",
+      "config": {
+        "layout": "elk"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/agentflow/agentflowDb.ts",
+        "symbol": "public getData()",
+        "line": 1696,
+        "sha256": "aa74eb6cb3eb0821c1e3960eefbbc83afe167bc5dcf9380dc4acfa8fce82b1b6",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "compound-routing",
+        "collapsed-identity"
+      ],
+      "expectedText": [
+        "Outer",
+        "A",
+        "B",
+        "X",
+        "Y"
+      ],
+      "expectedErrorCodes": [],
+      "previousEvidenceId": "BV-B-AGENT-GROUP-ALGO",
+      "branchVerification": {
+        "originalCaseId": "BV-B-AGENT-GROUP-ALGO",
+        "reason": "Original compact YAML parsed by source as key view:collapsed/algorithm:elk.box with null value, leaving intended branch inactive. This independent follow-up uses valid spaced YAML and explicit visible group labels; original inputs/evidence remain untouched.",
+        "sourceReference": {
+          "path": "packages/mermaid/src/diagrams/agentflow/agentflow-semantic-model.spec.ts",
+          "symbol": "collapsed-vs-expanded equivalence",
+          "line": 62
+        }
+      },
+      "group": "B",
+      "closure": {
+        "groupAlgorithm": "elk.mrtree",
+        "cross": true
+      }
+    },
+    {
+      "id": "CL-B-GROUP-SPOREOVERLAP-ISOLATED",
+      "kind": "agentflow",
+      "source": "agentflow-beta LR\nflow Outer[\"Outer\"]@{algorithm: \"elk.sporeOverlap\"}\n A --> B\nend\n",
+      "config": {
+        "layout": "elk"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/agentflow/agentflowDb.ts",
+        "symbol": "public getData()",
+        "line": 1696,
+        "sha256": "aa74eb6cb3eb0821c1e3960eefbbc83afe167bc5dcf9380dc4acfa8fce82b1b6",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "compound-routing",
+        "collapsed-identity"
+      ],
+      "expectedText": [
+        "Outer",
+        "A",
+        "B"
+      ],
+      "expectedErrorCodes": [],
+      "previousEvidenceId": "BV-B-AGENT-GROUP-ALGO",
+      "branchVerification": {
+        "originalCaseId": "BV-B-AGENT-GROUP-ALGO",
+        "reason": "Original compact YAML parsed by source as key view:collapsed/algorithm:elk.box with null value, leaving intended branch inactive. This independent follow-up uses valid spaced YAML and explicit visible group labels; original inputs/evidence remain untouched.",
+        "sourceReference": {
+          "path": "packages/mermaid/src/diagrams/agentflow/agentflow-semantic-model.spec.ts",
+          "symbol": "collapsed-vs-expanded equivalence",
+          "line": 62
+        }
+      },
+      "group": "B",
+      "closure": {
+        "groupAlgorithm": "elk.sporeOverlap",
+        "cross": false
+      }
+    },
+    {
+      "id": "CL-B-GROUP-SPOREOVERLAP-CROSS",
+      "kind": "agentflow",
+      "source": "agentflow-beta LR\nflow Outer[\"Outer\"]@{algorithm: \"elk.sporeOverlap\"}\n A --> B\nend\nX-->A\nB-->Y\n",
+      "config": {
+        "layout": "elk"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/agentflow/agentflowDb.ts",
+        "symbol": "public getData()",
+        "line": 1696,
+        "sha256": "aa74eb6cb3eb0821c1e3960eefbbc83afe167bc5dcf9380dc4acfa8fce82b1b6",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "compound-routing",
+        "collapsed-identity"
+      ],
+      "expectedText": [
+        "Outer",
+        "A",
+        "B",
+        "X",
+        "Y"
+      ],
+      "expectedErrorCodes": [],
+      "previousEvidenceId": "BV-B-AGENT-GROUP-ALGO",
+      "branchVerification": {
+        "originalCaseId": "BV-B-AGENT-GROUP-ALGO",
+        "reason": "Original compact YAML parsed by source as key view:collapsed/algorithm:elk.box with null value, leaving intended branch inactive. This independent follow-up uses valid spaced YAML and explicit visible group labels; original inputs/evidence remain untouched.",
+        "sourceReference": {
+          "path": "packages/mermaid/src/diagrams/agentflow/agentflow-semantic-model.spec.ts",
+          "symbol": "collapsed-vs-expanded equivalence",
+          "line": 62
+        }
+      },
+      "group": "B",
+      "closure": {
+        "groupAlgorithm": "elk.sporeOverlap",
+        "cross": true
+      }
+    },
+    {
+      "id": "CL-B-GROUP-BOX-ISOLATED",
+      "kind": "agentflow",
+      "source": "agentflow-beta LR\nflow Outer[\"Outer\"]@{algorithm: \"elk.box\"}\n A --> B\nend\n",
+      "config": {
+        "layout": "elk"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/agentflow/agentflowDb.ts",
+        "symbol": "public getData()",
+        "line": 1696,
+        "sha256": "aa74eb6cb3eb0821c1e3960eefbbc83afe167bc5dcf9380dc4acfa8fce82b1b6",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "compound-routing",
+        "collapsed-identity"
+      ],
+      "expectedText": [
+        "Outer",
+        "A",
+        "B"
+      ],
+      "expectedErrorCodes": [],
+      "previousEvidenceId": "BV-B-AGENT-GROUP-ALGO",
+      "branchVerification": {
+        "originalCaseId": "BV-B-AGENT-GROUP-ALGO",
+        "reason": "Original compact YAML parsed by source as key view:collapsed/algorithm:elk.box with null value, leaving intended branch inactive. This independent follow-up uses valid spaced YAML and explicit visible group labels; original inputs/evidence remain untouched.",
+        "sourceReference": {
+          "path": "packages/mermaid/src/diagrams/agentflow/agentflow-semantic-model.spec.ts",
+          "symbol": "collapsed-vs-expanded equivalence",
+          "line": 62
+        }
+      },
+      "group": "B",
+      "closure": {
+        "groupAlgorithm": "elk.box",
+        "cross": false
+      }
+    },
+    {
+      "id": "CL-B-GROUP-BOX-CROSS",
+      "kind": "agentflow",
+      "source": "agentflow-beta LR\nflow Outer[\"Outer\"]@{algorithm: \"elk.box\"}\n A --> B\nend\nX-->A\nB-->Y\n",
+      "config": {
+        "layout": "elk"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/agentflow/agentflowDb.ts",
+        "symbol": "public getData()",
+        "line": 1696,
+        "sha256": "aa74eb6cb3eb0821c1e3960eefbbc83afe167bc5dcf9380dc4acfa8fce82b1b6",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "compound-routing",
+        "collapsed-identity"
+      ],
+      "expectedText": [
+        "Outer",
+        "A",
+        "B",
+        "X",
+        "Y"
+      ],
+      "expectedErrorCodes": [],
+      "previousEvidenceId": "BV-B-AGENT-GROUP-ALGO",
+      "branchVerification": {
+        "originalCaseId": "BV-B-AGENT-GROUP-ALGO",
+        "reason": "Original compact YAML parsed by source as key view:collapsed/algorithm:elk.box with null value, leaving intended branch inactive. This independent follow-up uses valid spaced YAML and explicit visible group labels; original inputs/evidence remain untouched.",
+        "sourceReference": {
+          "path": "packages/mermaid/src/diagrams/agentflow/agentflow-semantic-model.spec.ts",
+          "symbol": "collapsed-vs-expanded equivalence",
+          "line": 62
+        }
+      },
+      "group": "B",
+      "closure": {
+        "groupAlgorithm": "elk.box",
+        "cross": true
+      }
+    },
+    {
+      "id": "CL-B-GROUP-RECTPACKING-ISOLATED",
+      "kind": "agentflow",
+      "source": "agentflow-beta LR\nflow Outer[\"Outer\"]@{algorithm: \"elk.rectpacking\"}\n A --> B\nend\n",
+      "config": {
+        "layout": "elk"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/agentflow/agentflowDb.ts",
+        "symbol": "public getData()",
+        "line": 1696,
+        "sha256": "aa74eb6cb3eb0821c1e3960eefbbc83afe167bc5dcf9380dc4acfa8fce82b1b6",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "compound-routing",
+        "collapsed-identity"
+      ],
+      "expectedText": [
+        "Outer",
+        "A",
+        "B"
+      ],
+      "expectedErrorCodes": [],
+      "previousEvidenceId": "BV-B-AGENT-GROUP-ALGO",
+      "branchVerification": {
+        "originalCaseId": "BV-B-AGENT-GROUP-ALGO",
+        "reason": "Original compact YAML parsed by source as key view:collapsed/algorithm:elk.box with null value, leaving intended branch inactive. This independent follow-up uses valid spaced YAML and explicit visible group labels; original inputs/evidence remain untouched.",
+        "sourceReference": {
+          "path": "packages/mermaid/src/diagrams/agentflow/agentflow-semantic-model.spec.ts",
+          "symbol": "collapsed-vs-expanded equivalence",
+          "line": 62
+        }
+      },
+      "group": "B",
+      "closure": {
+        "groupAlgorithm": "elk.rectpacking",
+        "cross": false
+      }
+    },
+    {
+      "id": "CL-B-GROUP-RECTPACKING-CROSS",
+      "kind": "agentflow",
+      "source": "agentflow-beta LR\nflow Outer[\"Outer\"]@{algorithm: \"elk.rectpacking\"}\n A --> B\nend\nX-->A\nB-->Y\n",
+      "config": {
+        "layout": "elk"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/agentflow/agentflowDb.ts",
+        "symbol": "public getData()",
+        "line": 1696,
+        "sha256": "aa74eb6cb3eb0821c1e3960eefbbc83afe167bc5dcf9380dc4acfa8fce82b1b6",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "compound-routing",
+        "collapsed-identity"
+      ],
+      "expectedText": [
+        "Outer",
+        "A",
+        "B",
+        "X",
+        "Y"
+      ],
+      "expectedErrorCodes": [],
+      "previousEvidenceId": "BV-B-AGENT-GROUP-ALGO",
+      "branchVerification": {
+        "originalCaseId": "BV-B-AGENT-GROUP-ALGO",
+        "reason": "Original compact YAML parsed by source as key view:collapsed/algorithm:elk.box with null value, leaving intended branch inactive. This independent follow-up uses valid spaced YAML and explicit visible group labels; original inputs/evidence remain untouched.",
+        "sourceReference": {
+          "path": "packages/mermaid/src/diagrams/agentflow/agentflow-semantic-model.spec.ts",
+          "symbol": "collapsed-vs-expanded equivalence",
+          "line": 62
+        }
+      },
+      "group": "B",
+      "closure": {
+        "groupAlgorithm": "elk.rectpacking",
+        "cross": true
+      }
+    },
+    {
+      "id": "CL-B-GROUP-RADIAL-ISOLATED",
+      "kind": "agentflow",
+      "source": "agentflow-beta LR\nflow Outer[\"Outer\"]@{algorithm: \"elk.radial\"}\n A --> B\nend\n",
+      "config": {
+        "layout": "elk"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/agentflow/agentflowDb.ts",
+        "symbol": "public getData()",
+        "line": 1696,
+        "sha256": "aa74eb6cb3eb0821c1e3960eefbbc83afe167bc5dcf9380dc4acfa8fce82b1b6",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "compound-routing",
+        "collapsed-identity"
+      ],
+      "expectedText": [
+        "Outer",
+        "A",
+        "B"
+      ],
+      "expectedErrorCodes": [],
+      "previousEvidenceId": "BV-B-AGENT-GROUP-ALGO",
+      "branchVerification": {
+        "originalCaseId": "BV-B-AGENT-GROUP-ALGO",
+        "reason": "Original compact YAML parsed by source as key view:collapsed/algorithm:elk.box with null value, leaving intended branch inactive. This independent follow-up uses valid spaced YAML and explicit visible group labels; original inputs/evidence remain untouched.",
+        "sourceReference": {
+          "path": "packages/mermaid/src/diagrams/agentflow/agentflow-semantic-model.spec.ts",
+          "symbol": "collapsed-vs-expanded equivalence",
+          "line": 62
+        }
+      },
+      "group": "B",
+      "closure": {
+        "groupAlgorithm": "elk.radial",
+        "cross": false
+      }
+    },
+    {
+      "id": "CL-B-GROUP-RADIAL-CROSS",
+      "kind": "agentflow",
+      "source": "agentflow-beta LR\nflow Outer[\"Outer\"]@{algorithm: \"elk.radial\"}\n A --> B\nend\nX-->A\nB-->Y\n",
+      "config": {
+        "layout": "elk"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/agentflow/agentflowDb.ts",
+        "symbol": "public getData()",
+        "line": 1696,
+        "sha256": "aa74eb6cb3eb0821c1e3960eefbbc83afe167bc5dcf9380dc4acfa8fce82b1b6",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "compound-routing",
+        "collapsed-identity"
+      ],
+      "expectedText": [
+        "Outer",
+        "A",
+        "B",
+        "X",
+        "Y"
+      ],
+      "expectedErrorCodes": [],
+      "previousEvidenceId": "BV-B-AGENT-GROUP-ALGO",
+      "branchVerification": {
+        "originalCaseId": "BV-B-AGENT-GROUP-ALGO",
+        "reason": "Original compact YAML parsed by source as key view:collapsed/algorithm:elk.box with null value, leaving intended branch inactive. This independent follow-up uses valid spaced YAML and explicit visible group labels; original inputs/evidence remain untouched.",
+        "sourceReference": {
+          "path": "packages/mermaid/src/diagrams/agentflow/agentflow-semantic-model.spec.ts",
+          "symbol": "collapsed-vs-expanded equivalence",
+          "line": 62
+        }
+      },
+      "group": "B",
+      "closure": {
+        "groupAlgorithm": "elk.radial",
+        "cross": true
+      }
+    },
+    {
+      "id": "CL-B-DST-PUBLIC-SPRING",
+      "kind": "gantt",
+      "group": "B",
+      "source": "gantt\ndateFormat YYYY-MM-DD\ntodayMarker off\nCalendar :a, 2024-03-09, 1d\nElapsed :b, 2024-03-09, 24h\n",
+      "config": {
+        "gantt": {
+          "width": 1000
+        }
+      },
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/gantt/ganttDb.js",
+        "symbol": "getStartDate",
+        "line": 305,
+        "sha256": "d783881e9e5966aabc87f6dc170aa0a88ece551c48c49ba0693aa5271e3accec",
+        "synthesized": true
+      },
+      "expectedText": [
+        "Calendar",
+        "Elapsed"
+      ],
+      "features": [
+        "calendar-day",
+        "elapsed-hours",
+        "real-linux-TZ"
+      ],
+      "expectedErrorCodes": [],
+      "closure": {
+        "timezone": "America/New_York",
+        "nativeRequiresRealTZ": true
+      }
+    },
+    {
+      "id": "CL-B-DST-PUBLIC-FALL",
+      "kind": "gantt",
+      "group": "B",
+      "source": "gantt\ndateFormat YYYY-MM-DD\ntodayMarker off\nCalendar :a, 2024-11-02, 1d\nElapsed :b, 2024-11-02, 24h\n",
+      "config": {
+        "gantt": {
+          "width": 1000
+        }
+      },
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/gantt/ganttDb.js",
+        "symbol": "getStartDate",
+        "line": 305,
+        "sha256": "d783881e9e5966aabc87f6dc170aa0a88ece551c48c49ba0693aa5271e3accec",
+        "synthesized": true
+      },
+      "expectedText": [
+        "Calendar",
+        "Elapsed"
+      ],
+      "features": [
+        "calendar-day",
+        "elapsed-hours",
+        "real-linux-TZ"
+      ],
+      "expectedErrorCodes": [],
+      "closure": {
+        "timezone": "America/New_York",
+        "nativeRequiresRealTZ": true
+      }
+    },
+    {
+      "id": "CL-B-DST-CROSS-SPRING",
+      "kind": "gantt",
+      "group": "B",
+      "source": "gantt\ndateFormat YYYY-MM-DD\ntodayMarker off\nCalendar :a, 2024-03-10, 1d\nElapsed :b, 2024-03-10, 24h\n",
+      "config": {
+        "gantt": {
+          "width": 1000
+        }
+      },
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/gantt/ganttDb.js",
+        "symbol": "getStartDate",
+        "line": 305,
+        "sha256": "d783881e9e5966aabc87f6dc170aa0a88ece551c48c49ba0693aa5271e3accec",
+        "synthesized": true
+      },
+      "expectedText": [
+        "Calendar",
+        "Elapsed"
+      ],
+      "features": [
+        "calendar-day",
+        "elapsed-hours",
+        "real-linux-TZ",
+        "actual-transition-day-midnight-start"
+      ],
+      "expectedErrorCodes": [],
+      "closure": {
+        "timezone": "America/New_York",
+        "nativeRequiresRealTZ": true
+      },
+      "notes": "New distinct actual-crossing source control; previous pre-transition-midnight case stays unchanged as equal-width control.",
+      "sourceDerivedExpectation": {
+        "aElapsedHours": 23,
+        "bElapsedHours": 24,
+        "largerTask": "b",
+        "reason": "Calendar midnight +1d crosses actual02:00 IANA transition. This is source-derived expectation pending fresh source browser capture, not observed native golden."
+      }
+    },
+    {
+      "id": "CL-B-DST-CROSS-FALL",
+      "kind": "gantt",
+      "group": "B",
+      "source": "gantt\ndateFormat YYYY-MM-DD\ntodayMarker off\nCalendar :a, 2024-11-03, 1d\nElapsed :b, 2024-11-03, 24h\n",
+      "config": {
+        "gantt": {
+          "width": 1000
+        }
+      },
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/gantt/ganttDb.js",
+        "symbol": "getStartDate",
+        "line": 305,
+        "sha256": "d783881e9e5966aabc87f6dc170aa0a88ece551c48c49ba0693aa5271e3accec",
+        "synthesized": true
+      },
+      "expectedText": [
+        "Calendar",
+        "Elapsed"
+      ],
+      "features": [
+        "calendar-day",
+        "elapsed-hours",
+        "real-linux-TZ",
+        "actual-transition-day-midnight-start"
+      ],
+      "expectedErrorCodes": [],
+      "closure": {
+        "timezone": "America/New_York",
+        "nativeRequiresRealTZ": true
+      },
+      "notes": "New distinct actual-crossing source control; previous pre-transition-midnight case stays unchanged as equal-width control.",
+      "sourceDerivedExpectation": {
+        "aElapsedHours": 25,
+        "bElapsedHours": 24,
+        "largerTask": "a",
+        "reason": "Calendar midnight +1d crosses actual02:00 IANA transition. This is source-derived expectation pending fresh source browser capture, not observed native golden."
+      }
+    }
+  ],
+  "pureProbes": [
+    {
+      "id": "BV-B-P-PARSE-ISO",
+      "kind": "parse",
+      "branch": "DATE-PARSE",
+      "input": {
+        "value": "2024-02-29",
+        "format": "YYYY-MM-DD"
+      }
+    },
+    {
+      "id": "BV-B-P-PARSE-QUARTER",
+      "kind": "parse",
+      "branch": "DATE-PARSE",
+      "input": {
+        "value": "2024-Q2-01",
+        "format": "YYYY-[Q]Q-DD"
+      }
+    },
+    {
+      "id": "BV-B-P-PARSE-LOCAL-L",
+      "kind": "parse",
+      "branch": "DATE-PARSE",
+      "input": {
+        "value": "01/02/2024",
+        "format": "L"
+      }
+    },
+    {
+      "id": "BV-B-P-PARSE-LOCAL-LL",
+      "kind": "parse",
+      "branch": "DATE-PARSE",
+      "input": {
+        "value": "January 2, 2024",
+        "format": "LL"
+      }
+    },
+    {
+      "id": "BV-B-P-PARSE-LOCAL-LLL",
+      "kind": "parse",
+      "branch": "DATE-PARSE",
+      "input": {
+        "value": "January 2, 2024 1:04 PM",
+        "format": "LLL"
+      }
+    },
+    {
+      "id": "BV-B-P-PARSE-WEEKDAY",
+      "kind": "parse",
+      "branch": "DATE-PARSE",
+      "input": {
+        "value": "2024-01-01 Monday",
+        "format": "YYYY-MM-DD dddd"
+      }
+    },
+    {
+      "id": "BV-B-P-PARSE-ORDINAL",
+      "kind": "parse",
+      "branch": "DATE-PARSE",
+      "input": {
+        "value": "January 2nd 2024",
+        "format": "MMMM Do YYYY"
+      }
+    },
+    {
+      "id": "BV-B-P-PARSE-INVALID",
+      "kind": "parse",
+      "branch": "DATE-PARSE",
+      "input": {
+        "value": "2023-02-29",
+        "format": "YYYY-MM-DD"
+      }
+    },
+    {
+      "id": "BV-B-P-PARSE-MERIDIEM",
+      "kind": "parse",
+      "branch": "DATE-PARSE",
+      "input": {
+        "value": "2024-01-01 12:01 AM",
+        "format": "YYYY-MM-DD hh:mm A"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-LOWER-a",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%a"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-UPPER-A",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%A"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-LOWER-b",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%b"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-UPPER-B",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%B"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-LOWER-c",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%c"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-LOWER-d",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%d"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-LOWER-e",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%e"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-LOWER-f",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%f"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-LOWER-g",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%g"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-UPPER-G",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%G"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-UPPER-H",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%H"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-UPPER-I",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%I"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-LOWER-j",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%j"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-UPPER-L",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%L"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-LOWER-m",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%m"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-UPPER-M",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%M"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-LOWER-p",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%p"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-LOWER-q",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%q"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-UPPER-Q",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%Q"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-LOWER-s",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%s"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-UPPER-S",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%S"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-LOWER-u",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%u"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-UPPER-U",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%U"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-UPPER-V",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%V"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-LOWER-w",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%w"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-UPPER-W",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%W"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-LOWER-x",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%x"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-UPPER-X",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%X"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-LOWER-y",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%y"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-UPPER-Y",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%Y"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-UPPER-Z",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%Z"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-PERCENT",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%%"
+      }
+    },
+    {
+      "id": "BV-B-P-PAD-0",
+      "kind": "axis",
+      "branch": "AXIS-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%-d"
+      }
+    },
+    {
+      "id": "BV-B-P-PAD-1",
+      "kind": "axis",
+      "branch": "AXIS-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%_d"
+      }
+    },
+    {
+      "id": "BV-B-P-PAD-2",
+      "kind": "axis",
+      "branch": "AXIS-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%0d"
+      }
+    },
+    {
+      "id": "BV-B-P-PAD-3",
+      "kind": "axis",
+      "branch": "AXIS-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%-I"
+      }
+    },
+    {
+      "id": "BV-B-P-PAD-4",
+      "kind": "axis",
+      "branch": "AXIS-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%%Q"
+      }
+    },
+    {
+      "id": "BV-B-P-PAD-5",
+      "kind": "axis",
+      "branch": "AXIS-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%%L"
+      }
+    },
+    {
+      "id": "BV-B-P-PAD-6",
+      "kind": "axis",
+      "branch": "AXIS-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%%s"
+      }
+    },
+    {
+      "id": "BV-B-P-PAD-7",
+      "kind": "axis",
+      "branch": "AXIS-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%n"
+      }
+    },
+    {
+      "id": "BV-B-P-FAR-NEG1-49",
+      "kind": "axis",
+      "branch": "AXIS-FAR",
+      "input": {
+        "date": [
+          -1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "format": "%Y"
+      }
+    },
+    {
+      "id": "BV-B-P-FAR-NEG1-50",
+      "kind": "axis",
+      "branch": "AXIS-FAR",
+      "input": {
+        "date": [
+          -1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "format": "%G-W%V"
+      }
+    },
+    {
+      "id": "BV-B-P-FAR-NEG1-51",
+      "kind": "axis",
+      "branch": "AXIS-FAR",
+      "input": {
+        "date": [
+          -1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "format": "%U/%W"
+      }
+    },
+    {
+      "id": "BV-B-P-FAR-0-52",
+      "kind": "axis",
+      "branch": "AXIS-FAR",
+      "input": {
+        "date": [
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "format": "%Y"
+      }
+    },
+    {
+      "id": "BV-B-P-FAR-0-53",
+      "kind": "axis",
+      "branch": "AXIS-FAR",
+      "input": {
+        "date": [
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "format": "%G-W%V"
+      }
+    },
+    {
+      "id": "BV-B-P-FAR-0-54",
+      "kind": "axis",
+      "branch": "AXIS-FAR",
+      "input": {
+        "date": [
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "format": "%U/%W"
+      }
+    },
+    {
+      "id": "BV-B-P-FAR-10000-55",
+      "kind": "axis",
+      "branch": "AXIS-FAR",
+      "input": {
+        "date": [
+          10000,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "format": "%Y"
+      }
+    },
+    {
+      "id": "BV-B-P-FAR-10000-56",
+      "kind": "axis",
+      "branch": "AXIS-FAR",
+      "input": {
+        "date": [
+          10000,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "format": "%G-W%V"
+      }
+    },
+    {
+      "id": "BV-B-P-FAR-10000-57",
+      "kind": "axis",
+      "branch": "AXIS-FAR",
+      "input": {
+        "date": [
+          10000,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "format": "%U/%W"
+      }
+    },
+    {
+      "id": "BV-B-P-DAYFORMAT-58",
+      "kind": "dayFormat",
+      "branch": "DAYJS-ADVANCED",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          0,
+          4,
+          5,
+          123
+        ],
+        "format": "Q",
+        "sourceMayThrow": false
+      }
+    },
+    {
+      "id": "BV-B-P-DAYFORMAT-59",
+      "kind": "dayFormat",
+      "branch": "DAYJS-ADVANCED",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          0,
+          4,
+          5,
+          123
+        ],
+        "format": "Do",
+        "sourceMayThrow": false
+      }
+    },
+    {
+      "id": "BV-B-P-DAYFORMAT-60",
+      "kind": "dayFormat",
+      "branch": "DAYJS-ADVANCED",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          0,
+          4,
+          5,
+          123
+        ],
+        "format": "dddd",
+        "sourceMayThrow": false
+      }
+    },
+    {
+      "id": "BV-B-P-DAYFORMAT-61",
+      "kind": "dayFormat",
+      "branch": "DAYJS-ADVANCED",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          0,
+          4,
+          5,
+          123
+        ],
+        "format": "ddd",
+        "sourceMayThrow": false
+      }
+    },
+    {
+      "id": "BV-B-P-DAYFORMAT-62",
+      "kind": "dayFormat",
+      "branch": "DAYJS-ADVANCED",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          0,
+          4,
+          5,
+          123
+        ],
+        "format": "W WW GGGG",
+        "sourceMayThrow": false
+      }
+    },
+    {
+      "id": "BV-B-P-DAYFORMAT-63",
+      "kind": "dayFormat",
+      "branch": "DAYJS-ADVANCED",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          0,
+          4,
+          5,
+          123
+        ],
+        "format": "k kk",
+        "sourceMayThrow": false
+      }
+    },
+    {
+      "id": "BV-B-P-DAYFORMAT-64",
+      "kind": "dayFormat",
+      "branch": "DAYJS-ADVANCED",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          0,
+          4,
+          5,
+          123
+        ],
+        "format": "w ww gggg z",
+        "sourceMayThrow": true
+      }
+    },
+    {
+      "id": "BV-B-P-WEEK-MONDAY",
+      "kind": "ticks",
+      "branch": "TICK-WEEKDAY",
+      "input": {
+        "start": [
+          2024,
+          1,
+          1
+        ],
+        "end": [
+          2024,
+          2,
+          1
+        ],
+        "interval": "2week",
+        "weekday": "monday",
+        "count": 10
+      }
+    },
+    {
+      "id": "BV-B-P-WEEK-TUESDAY",
+      "kind": "ticks",
+      "branch": "TICK-WEEKDAY",
+      "input": {
+        "start": [
+          2024,
+          1,
+          1
+        ],
+        "end": [
+          2024,
+          2,
+          1
+        ],
+        "interval": "2week",
+        "weekday": "tuesday",
+        "count": 10
+      }
+    },
+    {
+      "id": "BV-B-P-WEEK-WEDNESDAY",
+      "kind": "ticks",
+      "branch": "TICK-WEEKDAY",
+      "input": {
+        "start": [
+          2024,
+          1,
+          1
+        ],
+        "end": [
+          2024,
+          2,
+          1
+        ],
+        "interval": "2week",
+        "weekday": "wednesday",
+        "count": 10
+      }
+    },
+    {
+      "id": "BV-B-P-WEEK-THURSDAY",
+      "kind": "ticks",
+      "branch": "TICK-WEEKDAY",
+      "input": {
+        "start": [
+          2024,
+          1,
+          1
+        ],
+        "end": [
+          2024,
+          2,
+          1
+        ],
+        "interval": "2week",
+        "weekday": "thursday",
+        "count": 10
+      }
+    },
+    {
+      "id": "BV-B-P-WEEK-FRIDAY",
+      "kind": "ticks",
+      "branch": "TICK-WEEKDAY",
+      "input": {
+        "start": [
+          2024,
+          1,
+          1
+        ],
+        "end": [
+          2024,
+          2,
+          1
+        ],
+        "interval": "2week",
+        "weekday": "friday",
+        "count": 10
+      }
+    },
+    {
+      "id": "BV-B-P-WEEK-SATURDAY",
+      "kind": "ticks",
+      "branch": "TICK-WEEKDAY",
+      "input": {
+        "start": [
+          2024,
+          1,
+          1
+        ],
+        "end": [
+          2024,
+          2,
+          1
+        ],
+        "interval": "2week",
+        "weekday": "saturday",
+        "count": 10
+      }
+    },
+    {
+      "id": "BV-B-P-WEEK-SUNDAY",
+      "kind": "ticks",
+      "branch": "TICK-WEEKDAY",
+      "input": {
+        "start": [
+          2024,
+          1,
+          1
+        ],
+        "end": [
+          2024,
+          2,
+          1
+        ],
+        "interval": "2week",
+        "weekday": "sunday",
+        "count": 10
+      }
+    },
+    {
+      "id": "BV-B-P-UNIT-MILLISECOND",
+      "kind": "ticks",
+      "branch": "TICK-EXPLICIT",
+      "input": {
+        "start": [
+          2024,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "end": [
+          2024,
+          1,
+          1,
+          0,
+          0,
+          0,
+          20
+        ],
+        "interval": "5millisecond",
+        "weekday": "sunday",
+        "count": 10
+      }
+    },
+    {
+      "id": "BV-B-P-UNIT-SECOND",
+      "kind": "ticks",
+      "branch": "TICK-EXPLICIT",
+      "input": {
+        "start": [
+          2024,
+          1,
+          1
+        ],
+        "end": [
+          2024,
+          1,
+          1,
+          0,
+          0,
+          20
+        ],
+        "interval": "5second",
+        "weekday": "sunday",
+        "count": 10
+      }
+    },
+    {
+      "id": "BV-B-P-UNIT-MINUTE",
+      "kind": "ticks",
+      "branch": "TICK-EXPLICIT",
+      "input": {
+        "start": [
+          2024,
+          1,
+          1
+        ],
+        "end": [
+          2024,
+          1,
+          1,
+          0,
+          20
+        ],
+        "interval": "5minute",
+        "weekday": "sunday",
+        "count": 10
+      }
+    },
+    {
+      "id": "BV-B-P-UNIT-HOUR",
+      "kind": "ticks",
+      "branch": "TICK-EXPLICIT",
+      "input": {
+        "start": [
+          2024,
+          1,
+          1
+        ],
+        "end": [
+          2024,
+          1,
+          2
+        ],
+        "interval": "3hour",
+        "weekday": "sunday",
+        "count": 10
+      }
+    },
+    {
+      "id": "BV-B-P-UNIT-DAY",
+      "kind": "ticks",
+      "branch": "TICK-EXPLICIT",
+      "input": {
+        "start": [
+          2024,
+          1,
+          30
+        ],
+        "end": [
+          2024,
+          2,
+          5
+        ],
+        "interval": "2day",
+        "weekday": "sunday",
+        "count": 10
+      }
+    },
+    {
+      "id": "BV-B-P-UNIT-MONTH",
+      "kind": "ticks",
+      "branch": "TICK-EXPLICIT",
+      "input": {
+        "start": [
+          2023,
+          12,
+          1
+        ],
+        "end": [
+          2025,
+          1,
+          1
+        ],
+        "interval": "3month",
+        "weekday": "sunday",
+        "count": 10
+      }
+    },
+    {
+      "id": "BV-B-P-AUTO-SHORT",
+      "kind": "ticks",
+      "branch": "TICK-AUTO",
+      "input": {
+        "start": [
+          2024,
+          1,
+          1
+        ],
+        "end": [
+          2024,
+          1,
+          1,
+          0,
+          0,
+          0,
+          40
+        ],
+        "interval": null,
+        "weekday": "sunday",
+        "count": 10
+      }
+    },
+    {
+      "id": "BV-B-P-AUTO-YEARS",
+      "kind": "ticks",
+      "branch": "TICK-AUTO",
+      "input": {
+        "start": [
+          1800,
+          1,
+          1
+        ],
+        "end": [
+          2200,
+          1,
+          1
+        ],
+        "interval": null,
+        "weekday": "sunday",
+        "count": 10
+      }
+    },
+    {
+      "id": "BV-B-P-AUTO-CAP",
+      "kind": "ticks",
+      "branch": "TICK-AUTO",
+      "input": {
+        "start": [
+          2024,
+          1,
+          1
+        ],
+        "end": [
+          2024,
+          1,
+          3
+        ],
+        "interval": "1millisecond",
+        "weekday": "sunday",
+        "count": 10
+      }
+    },
+    {
+      "id": "BV-B-P-AUTO-REVERSE",
+      "kind": "ticks",
+      "branch": "TICK-AUTO",
+      "input": {
+        "start": [
+          2024,
+          1,
+          3
+        ],
+        "end": [
+          2024,
+          1,
+          1
+        ],
+        "interval": "1day",
+        "weekday": "sunday",
+        "count": 10
+      }
+    },
+    {
+      "id": "BV-B-P-AUTO-ZERO",
+      "kind": "ticks",
+      "branch": "TICK-AUTO",
+      "input": {
+        "start": [
+          2024,
+          1,
+          1
+        ],
+        "end": [
+          2024,
+          1,
+          1
+        ],
+        "interval": null,
+        "weekday": "sunday",
+        "count": 10
+      }
+    },
+    {
+      "id": "BV-B-P-LANE-EMPTY",
+      "kind": "gitLane",
+      "branch": "GIT-LANES",
+      "input": {
+        "a": 0,
+        "b": 100,
+        "lanes": []
+      }
+    },
+    {
+      "id": "BV-B-P-LANE-ONE",
+      "kind": "gitLane",
+      "branch": "GIT-LANES",
+      "input": {
+        "a": 0,
+        "b": 100,
+        "lanes": [
+          50
+        ]
+      }
+    },
+    {
+      "id": "BV-B-P-LANE-DEPTH",
+      "kind": "gitLane",
+      "branch": "GIT-LANES",
+      "input": {
+        "a": 0,
+        "b": 100,
+        "lanes": [
+          50,
+          40,
+          32,
+          25.6,
+          20.48,
+          16.384
+        ]
+      }
+    },
+    {
+      "id": "BV-B-P-RANDOM-86",
+      "kind": "random",
+      "branch": "NUMERIC-PRNG",
+      "input": {
+        "seed": 0
+      }
+    },
+    {
+      "id": "BV-B-P-RANDOM-87",
+      "kind": "random",
+      "branch": "NUMERIC-PRNG",
+      "input": {
+        "seed": -1
+      }
+    },
+    {
+      "id": "BV-B-P-RANDOM-88",
+      "kind": "random",
+      "branch": "NUMERIC-PRNG",
+      "input": {
+        "seed": 4294967295
+      }
+    },
+    {
+      "id": "BV-B-P-RANDOM-89",
+      "kind": "random",
+      "branch": "NUMERIC-PRNG",
+      "input": {
+        "seed": 1.25
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-90",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%-a"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-91",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%_a"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-92",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%0a"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-93",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%-A"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-94",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%_A"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-95",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%0A"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-96",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%-b"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-97",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%_b"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-98",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%0b"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-99",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%-B"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-100",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%_B"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-101",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%0B"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-102",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%-c"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-103",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%_c"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-104",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%0c"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-105",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%-d"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-106",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%_d"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-107",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%0d"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-108",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%-e"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-109",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%_e"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-110",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%0e"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-111",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%-f"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-112",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%_f"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-113",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%0f"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-114",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%-g"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-115",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%_g"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-116",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%0g"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-117",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%-G"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-118",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%_G"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-119",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%0G"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-120",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%-H"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-121",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%_H"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-122",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%0H"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-123",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%-I"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-124",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%_I"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-125",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%0I"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-126",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%-j"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-127",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%_j"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-128",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%0j"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-129",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%-L"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-130",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%_L"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-131",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%0L"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-132",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%-m"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-133",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%_m"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-134",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%0m"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-135",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%-M"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-136",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%_M"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-137",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%0M"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-138",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%-p"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-139",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%_p"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-140",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%0p"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-141",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%-q"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-142",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%_q"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-143",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%0q"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-144",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%-Q"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-145",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%_Q"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-146",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%0Q"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-147",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%-s"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-148",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%_s"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-149",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%0s"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-150",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%-S"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-151",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%_S"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-152",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%0S"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-153",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%-u"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-154",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%_u"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-155",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%0u"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-156",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%-U"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-157",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%_U"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-158",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%0U"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-159",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%-V"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-160",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%_V"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-161",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%0V"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-162",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%-w"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-163",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%_w"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-164",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%0w"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-165",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%-W"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-166",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%_W"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-167",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%0W"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-168",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%-x"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-169",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%_x"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-170",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%0x"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-171",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%-X"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-172",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%_X"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-173",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%0X"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-174",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%-y"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-175",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%_y"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-176",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%0y"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-177",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%-Y"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-178",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%_Y"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-179",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%0Y"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-180",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%-Z"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-181",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%_Z"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-182",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%0Z"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-183",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%-%"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-184",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%_%"
+      }
+    },
+    {
+      "id": "CL-B-P-PAD-185",
+      "kind": "axis",
+      "branch": "AXIS-ALL-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%0%"
+      }
+    },
+    {
+      "id": "CL-B-P-AUTO2MS",
+      "kind": "ticks",
+      "branch": "TICK-BOUNDARY",
+      "input": {
+        "start": [
+          2024,
+          1,
+          1
+        ],
+        "end": [
+          2024,
+          1,
+          1,
+          0,
+          0,
+          0,
+          20
+        ],
+        "interval": null,
+        "count": 10,
+        "weekday": "sunday"
+      }
+    },
+    {
+      "id": "CL-B-P-AUTO20MS",
+      "kind": "ticks",
+      "branch": "TICK-BOUNDARY",
+      "input": {
+        "start": [
+          2024,
+          1,
+          1
+        ],
+        "end": [
+          2024,
+          1,
+          1,
+          0,
+          0,
+          0,
+          200
+        ],
+        "interval": null,
+        "count": 10,
+        "weekday": "sunday"
+      }
+    },
+    {
+      "id": "CL-B-P-AUTOYEAR",
+      "kind": "ticks",
+      "branch": "TICK-BOUNDARY",
+      "input": {
+        "start": [
+          1999,
+          7,
+          1
+        ],
+        "end": [
+          2049,
+          7,
+          1
+        ],
+        "interval": null,
+        "count": 10,
+        "weekday": "sunday"
+      }
+    },
+    {
+      "id": "CL-B-P-INCLUSIVE-CAP",
+      "kind": "ticks",
+      "branch": "TICK-BOUNDARY",
+      "input": {
+        "start": [
+          2024,
+          1,
+          1
+        ],
+        "end": [
+          2024,
+          1,
+          1,
+          0,
+          0,
+          10
+        ],
+        "interval": "1millisecond",
+        "count": 10,
+        "weekday": "sunday"
+      }
+    },
+    {
+      "id": "CL-B-P-PARSE-LLLL",
+      "kind": "parse",
+      "branch": "STRICT-LOCALIZED",
+      "input": {
+        "value": "Tuesday, January 2, 2024 1:04 PM",
+        "format": "LLLL"
+      }
+    }
+  ],
+  "sourceProbes": [
+    {
+      "id": "CL-B-X-FALLBACK-0",
+      "kind": "browserFallback",
+      "timezone": "UTC",
+      "input": {
+        "value": "01/02/2024"
+      }
+    },
+    {
+      "id": "CL-B-X-FALLBACK-1",
+      "kind": "browserFallback",
+      "timezone": "UTC",
+      "input": {
+        "value": "January 2, 2024"
+      }
+    },
+    {
+      "id": "CL-B-X-FALLBACK-2",
+      "kind": "browserFallback",
+      "timezone": "UTC",
+      "input": {
+        "value": "January 2, 2024 1:04 PM"
+      }
+    },
+    {
+      "id": "CL-B-X-FALLBACK-3",
+      "kind": "browserFallback",
+      "timezone": "UTC",
+      "input": {
+        "value": "2024-01"
+      }
+    },
+    {
+      "id": "CL-B-X-FALLBACK-4",
+      "kind": "browserFallback",
+      "timezone": "UTC",
+      "input": {
+        "value": "2024"
+      }
+    },
+    {
+      "id": "CL-B-X-FALLBACK-5",
+      "kind": "browserFallback",
+      "timezone": "UTC",
+      "input": {
+        "value": "2024-02-30"
+      }
+    },
+    {
+      "id": "CL-B-X-FALLBACK-6",
+      "kind": "browserFallback",
+      "timezone": "UTC",
+      "input": {
+        "value": "2024-01-01T00:00:00Z"
+      }
+    },
+    {
+      "id": "CL-B-X-FALLBACK-7",
+      "kind": "browserFallback",
+      "timezone": "UTC",
+      "input": {
+        "value": "+010000-01-01"
+      }
+    },
+    {
+      "id": "CL-B-X-FALLBACK-8",
+      "kind": "browserFallback",
+      "timezone": "UTC",
+      "input": {
+        "value": "+010001-01-01"
+      }
+    },
+    {
+      "id": "CL-B-X-DST-SPRING",
+      "kind": "dayAdd",
+      "timezone": "America/New_York",
+      "input": {
+        "date": [
+          2024,
+          3,
+          9,
+          12
+        ]
+      },
+      "expected": {
+        "calendarHours": 23,
+        "calendarLocalHour": 12,
+        "elapsedLocalHour": 13
+      }
+    },
+    {
+      "id": "CL-B-X-DST-FALL",
+      "kind": "dayAdd",
+      "timezone": "America/New_York",
+      "input": {
+        "date": [
+          2024,
+          11,
+          2,
+          12
+        ]
+      },
+      "expected": {
+        "calendarHours": 25,
+        "calendarLocalHour": 12,
+        "elapsedLocalHour": 11
+      }
+    }
+  ],
+  "note": "Pure rows are separate source helper observations, never counted as diagrams; browser source probes observe exact fixed source/Date host boundaries."
+}

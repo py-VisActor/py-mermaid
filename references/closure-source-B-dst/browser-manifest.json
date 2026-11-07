@@ -1,0 +1,182 @@
+{
+  "schema": "py-mermaid-closure-B-browser/v1",
+  "fixtureSha256": "3258926f6a74c73a609a3c19a1c25b5d61de3fd49164bd07e35ed2af2191ba0a",
+  "identity": {
+    "bundleSha256": "ffd1a76f0553952a344c68a9b1502dd5cfb6faab72541307b74679c5abc9cec8",
+    "mapSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679",
+    "instrumentedSha256": "1b0adf0c029db614b8a92013cc1738b6d0fa20bf7b7362b4929b6ae46d18e2c6",
+    "needle": "graph = await elk.layout(elkGraph);",
+    "inserted": "globalThis.__closureElkInputs.push(JSON.parse(JSON.stringify(elkGraph))); graph = await elk.layout(elkGraph); globalThis.__closureElkOutputs.push(JSON.parse(JSON.stringify(graph)));",
+    "change": "Only JSON snapshots immediately before/after actual elk.layout; no algorithm replacement"
+  },
+  "results": [
+    {
+      "id": "CL-B-DATE-LOCALIZED",
+      "status": "CAPTURED"
+    },
+    {
+      "id": "CL-B-DATE-WEEKDAY",
+      "status": "CAPTURED"
+    },
+    {
+      "id": "CL-B-DATE-ISOWEEK",
+      "status": "CAPTURED"
+    },
+    {
+      "id": "CL-B-AXIS-LOCALE",
+      "status": "CAPTURED"
+    },
+    {
+      "id": "CL-B-AXIS-ESCAPE",
+      "status": "CAPTURED"
+    },
+    {
+      "id": "CL-B-TICKS-MONDAY",
+      "status": "CAPTURED"
+    },
+    {
+      "id": "CL-B-TICKS-CAP",
+      "status": "CAPTURED"
+    },
+    {
+      "id": "CL-B-AXIS-FAR",
+      "status": "CAPTURED"
+    },
+    {
+      "id": "CL-B-GIT-LR-FLAT",
+      "status": "CAPTURED"
+    },
+    {
+      "id": "CL-B-GIT-LR-ROTATE",
+      "status": "CAPTURED"
+    },
+    {
+      "id": "CL-B-GIT-TB-FLAT",
+      "status": "CAPTURED"
+    },
+    {
+      "id": "CL-B-GIT-TB-ROTATE",
+      "status": "CAPTURED"
+    },
+    {
+      "id": "CL-B-GIT-BT-FLAT",
+      "status": "CAPTURED"
+    },
+    {
+      "id": "CL-B-GIT-BT-ROTATE",
+      "status": "CAPTURED"
+    },
+    {
+      "id": "CL-B-AGENT-GENUINE-SOURCE-VALID",
+      "status": "CAPTURED"
+    },
+    {
+      "id": "CL-B-AGENT-INTERNAL-SOURCE-VALID",
+      "status": "CAPTURED"
+    },
+    {
+      "id": "CL-B-AGENT-NESTED-SOURCE-VALID",
+      "status": "CAPTURED"
+    },
+    {
+      "id": "CL-B-AGENT-ANCESTOR-SOURCE-VALID",
+      "status": "CAPTURED"
+    },
+    {
+      "id": "CL-B-AGENT-GROUP-ALGO-SOURCE-VALID",
+      "status": "CAPTURED"
+    },
+    {
+      "id": "CL-B-AGENT-CROSS-ALGO-SOURCE-VALID",
+      "status": "CAPTURED"
+    },
+    {
+      "id": "CL-B-AGENT-NESTED-GENUINE",
+      "status": "CAPTURED"
+    },
+    {
+      "id": "CL-B-AGENT-VISIBLE-GROUP-SELF",
+      "status": "CAPTURED"
+    },
+    {
+      "id": "CL-B-GROUP-LAYERED-ISOLATED",
+      "status": "CAPTURED"
+    },
+    {
+      "id": "CL-B-GROUP-LAYERED-CROSS",
+      "status": "CAPTURED"
+    },
+    {
+      "id": "CL-B-GROUP-STRESS-ISOLATED",
+      "status": "CAPTURED"
+    },
+    {
+      "id": "CL-B-GROUP-STRESS-CROSS",
+      "status": "CAPTURED"
+    },
+    {
+      "id": "CL-B-GROUP-FORCE-ISOLATED",
+      "status": "CAPTURED"
+    },
+    {
+      "id": "CL-B-GROUP-FORCE-CROSS",
+      "status": "CAPTURED"
+    },
+    {
+      "id": "CL-B-GROUP-MRTREE-ISOLATED",
+      "status": "CAPTURED"
+    },
+    {
+      "id": "CL-B-GROUP-MRTREE-CROSS",
+      "status": "CAPTURED"
+    },
+    {
+      "id": "CL-B-GROUP-SPOREOVERLAP-ISOLATED",
+      "status": "CAPTURED"
+    },
+    {
+      "id": "CL-B-GROUP-SPOREOVERLAP-CROSS",
+      "status": "CAPTURED"
+    },
+    {
+      "id": "CL-B-GROUP-BOX-ISOLATED",
+      "status": "CAPTURED"
+    },
+    {
+      "id": "CL-B-GROUP-BOX-CROSS",
+      "status": "CAPTURED"
+    },
+    {
+      "id": "CL-B-GROUP-RECTPACKING-ISOLATED",
+      "status": "CAPTURED"
+    },
+    {
+      "id": "CL-B-GROUP-RECTPACKING-CROSS",
+      "status": "CAPTURED"
+    },
+    {
+      "id": "CL-B-GROUP-RADIAL-ISOLATED",
+      "status": "CAPTURED"
+    },
+    {
+      "id": "CL-B-GROUP-RADIAL-CROSS",
+      "status": "CAPTURED"
+    },
+    {
+      "id": "CL-B-DST-PUBLIC-SPRING",
+      "status": "CAPTURED"
+    },
+    {
+      "id": "CL-B-DST-PUBLIC-FALL",
+      "status": "CAPTURED"
+    },
+    {
+      "id": "CL-B-DST-CROSS-SPRING",
+      "status": "CAPTURED"
+    },
+    {
+      "id": "CL-B-DST-CROSS-FALL",
+      "status": "CAPTURED"
+    }
+  ]
+}

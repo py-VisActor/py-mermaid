@@ -198,7 +198,10 @@ def exports(run,source,rendered):
             'actualSavedFiles':len(rows),'result':proof(directory/'exports.json')}
 
 def original_b_freeze(raw_b):
-    directory=ROOT/'references/closure-source-B';provenance=read(directory/'provenance.json')
+    matches=[ROOT/name for name in ('references/closure-source-B','references/closure-source-B-dst')
+             if (ROOT/name/'cases-B.json').is_file() and read(ROOT/name/'cases-B.json')==raw_b]
+    require(len(matches)==1,'Need exactly one matching frozen original B input revision')
+    directory=matches[0];provenance=read(directory/'provenance.json')
     require(provenance['role']=='FIXED_ORIGINAL_ONLY_NOT_NATIVE_GOLDENS' and provenance['fixedCommit']==COMMIT,'Frozen B source role/identity differs')
     for entry in provenance['entries']:
         require(file_identity(child(directory,entry['path']))=={k:entry[k] for k in ('sha256','bytes')},'Frozen original B bytes changed')

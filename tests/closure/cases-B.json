@@ -1500,6 +1500,88 @@
         "timezone": "America/New_York",
         "nativeRequiresRealTZ": true
       }
+    },
+    {
+      "id": "CL-B-DST-CROSS-SPRING",
+      "kind": "gantt",
+      "group": "B",
+      "source": "gantt\ndateFormat YYYY-MM-DD\ntodayMarker off\nCalendar :a, 2024-03-10, 1d\nElapsed :b, 2024-03-10, 24h\n",
+      "config": {
+        "gantt": {
+          "width": 1000
+        }
+      },
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/gantt/ganttDb.js",
+        "symbol": "getStartDate",
+        "line": 305,
+        "sha256": "d783881e9e5966aabc87f6dc170aa0a88ece551c48c49ba0693aa5271e3accec",
+        "synthesized": true
+      },
+      "expectedText": [
+        "Calendar",
+        "Elapsed"
+      ],
+      "features": [
+        "calendar-day",
+        "elapsed-hours",
+        "real-linux-TZ",
+        "actual-transition-day-midnight-start"
+      ],
+      "expectedErrorCodes": [],
+      "closure": {
+        "timezone": "America/New_York",
+        "nativeRequiresRealTZ": true
+      },
+      "notes": "New distinct actual-crossing source control; previous pre-transition-midnight case stays unchanged as equal-width control.",
+      "sourceDerivedExpectation": {
+        "aElapsedHours": 23,
+        "bElapsedHours": 24,
+        "largerTask": "b",
+        "reason": "Calendar midnight +1d crosses actual02:00 IANA transition. This is source-derived expectation pending fresh source browser capture, not observed native golden."
+      }
+    },
+    {
+      "id": "CL-B-DST-CROSS-FALL",
+      "kind": "gantt",
+      "group": "B",
+      "source": "gantt\ndateFormat YYYY-MM-DD\ntodayMarker off\nCalendar :a, 2024-11-03, 1d\nElapsed :b, 2024-11-03, 24h\n",
+      "config": {
+        "gantt": {
+          "width": 1000
+        }
+      },
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/gantt/ganttDb.js",
+        "symbol": "getStartDate",
+        "line": 305,
+        "sha256": "d783881e9e5966aabc87f6dc170aa0a88ece551c48c49ba0693aa5271e3accec",
+        "synthesized": true
+      },
+      "expectedText": [
+        "Calendar",
+        "Elapsed"
+      ],
+      "features": [
+        "calendar-day",
+        "elapsed-hours",
+        "real-linux-TZ",
+        "actual-transition-day-midnight-start"
+      ],
+      "expectedErrorCodes": [],
+      "closure": {
+        "timezone": "America/New_York",
+        "nativeRequiresRealTZ": true
+      },
+      "notes": "New distinct actual-crossing source control; previous pre-transition-midnight case stays unchanged as equal-width control.",
+      "sourceDerivedExpectation": {
+        "aElapsedHours": 25,
+        "bElapsedHours": 24,
+        "largerTask": "a",
+        "reason": "Calendar midnight +1d crosses actual02:00 IANA transition. This is source-derived expectation pending fresh source browser capture, not observed native golden."
+      }
     }
   ],
   "pureProbes": [

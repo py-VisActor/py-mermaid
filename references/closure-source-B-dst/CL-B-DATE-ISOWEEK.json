@@ -1,0 +1,354 @@
+{
+  "id": "CL-B-DATE-ISOWEEK",
+  "source": "gantt\ndateFormat YYYY-MM-DD [W]WW\naxisFormat %G-W%V\ntodayMarker off\nISOWeek :a, 2021-01-01 W53, 2d\n",
+  "config": {
+    "gantt": {
+      "width": 1200
+    }
+  },
+  "timezone": "UTC",
+  "status": "CAPTURED",
+  "snapshot": {
+    "tasks": [
+      {
+        "id": "a",
+        "start": {
+          "local": [
+            2021,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "epochMs": 1609459200000
+        },
+        "end": {
+          "local": [
+            2021,
+            1,
+            3,
+            0,
+            0,
+            0,
+            0
+          ],
+          "epochMs": 1609632000000
+        }
+      }
+    ]
+  },
+  "elkInputs": [],
+  "elkOutputs": [],
+  "labels": [],
+  "texts": [
+    {
+      "text": "2020-W53",
+      "box": {
+        "x": -21.8359375,
+        "y": 4,
+        "width": 43.671875,
+        "height": 11
+      },
+      "classes": null
+    },
+    {
+      "text": "2020-W53",
+      "box": {
+        "x": -21.8359375,
+        "y": 4,
+        "width": 43.671875,
+        "height": 11
+      },
+      "classes": null
+    },
+    {
+      "text": "2020-W53",
+      "box": {
+        "x": -21.8359375,
+        "y": 4,
+        "width": 43.671875,
+        "height": 11
+      },
+      "classes": null
+    },
+    {
+      "text": "2020-W53",
+      "box": {
+        "x": -21.8359375,
+        "y": 4,
+        "width": 43.671875,
+        "height": 11
+      },
+      "classes": null
+    },
+    {
+      "text": "2020-W53",
+      "box": {
+        "x": -21.8359375,
+        "y": 4,
+        "width": 43.671875,
+        "height": 11
+      },
+      "classes": null
+    },
+    {
+      "text": "2020-W53",
+      "box": {
+        "x": -21.8359375,
+        "y": 4,
+        "width": 43.671875,
+        "height": 11
+      },
+      "classes": null
+    },
+    {
+      "text": "2020-W53",
+      "box": {
+        "x": -21.8359375,
+        "y": 4,
+        "width": 43.671875,
+        "height": 11
+      },
+      "classes": null
+    },
+    {
+      "text": "2020-W53",
+      "box": {
+        "x": -21.8359375,
+        "y": 4,
+        "width": 43.671875,
+        "height": 11
+      },
+      "classes": null
+    },
+    {
+      "text": "2020-W53",
+      "box": {
+        "x": -21.8359375,
+        "y": 4,
+        "width": 43.671875,
+        "height": 11
+      },
+      "classes": null
+    },
+    {
+      "text": "ISOWeek ",
+      "box": {
+        "x": 770.90625,
+        "y": 53.5,
+        "width": 42.630859375,
+        "height": 12
+      },
+      "classes": "taskText taskText0  width-42.630859375"
+    },
+    {
+      "text": "",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "classes": "sectionTitle sectionTitle0"
+    },
+    {
+      "text": "",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "classes": "titleText"
+    }
+  ],
+  "publicPaint": {
+    "ticks": [
+      {
+        "tag": "text",
+        "classes": "",
+        "text": "2020-W53",
+        "fill": "rgb(51, 51, 51)",
+        "stroke": "none",
+        "strokeWidth": "1px",
+        "opacity": "1",
+        "fillOpacity": "1",
+        "strokeOpacity": "1",
+        "numeric": {
+          "y": "3"
+        },
+        "screenBox": {
+          "x": 53.6640625,
+          "y": 78,
+          "width": 43.671875,
+          "height": 11
+        }
+      },
+      {
+        "tag": "text",
+        "classes": "",
+        "text": "2020-W53",
+        "fill": "rgb(51, 51, 51)",
+        "stroke": "none",
+        "strokeWidth": "1px",
+        "opacity": "1",
+        "fillOpacity": "1",
+        "strokeOpacity": "1",
+        "numeric": {
+          "y": "3"
+        },
+        "screenBox": {
+          "x": 232.6640625,
+          "y": 78,
+          "width": 43.671875,
+          "height": 11
+        }
+      },
+      {
+        "tag": "text",
+        "classes": "",
+        "text": "2020-W53",
+        "fill": "rgb(51, 51, 51)",
+        "stroke": "none",
+        "strokeWidth": "1px",
+        "opacity": "1",
+        "fillOpacity": "1",
+        "strokeOpacity": "1",
+        "numeric": {
+          "y": "3"
+        },
+        "screenBox": {
+          "x": 412.6640625,
+          "y": 78,
+          "width": 43.671875,
+          "height": 11
+        }
+      },
+      {
+        "tag": "text",
+        "classes": "",
+        "text": "2020-W53",
+        "fill": "rgb(51, 51, 51)",
+        "stroke": "none",
+        "strokeWidth": "1px",
+        "opacity": "1",
+        "fillOpacity": "1",
+        "strokeOpacity": "1",
+        "numeric": {
+          "y": "3"
+        },
+        "screenBox": {
+          "x": 591.6640625,
+          "y": 78,
+          "width": 43.671875,
+          "height": 11
+        }
+      },
+      {
+        "tag": "text",
+        "classes": "",
+        "text": "2020-W53",
+        "fill": "rgb(51, 51, 51)",
+        "stroke": "none",
+        "strokeWidth": "1px",
+        "opacity": "1",
+        "fillOpacity": "1",
+        "strokeOpacity": "1",
+        "numeric": {
+          "y": "3"
+        },
+        "screenBox": {
+          "x": 770.6640625,
+          "y": 78,
+          "width": 43.671875,
+          "height": 11
+        }
+      },
+      {
+        "tag": "text",
+        "classes": "",
+        "text": "2020-W53",
+        "fill": "rgb(51, 51, 51)",
+        "stroke": "none",
+        "strokeWidth": "1px",
+        "opacity": "1",
+        "fillOpacity": "1",
+        "strokeOpacity": "1",
+        "numeric": {
+          "y": "3"
+        },
+        "screenBox": {
+          "x": 949.6640625,
+          "y": 78,
+          "width": 43.671875,
+          "height": 11
+        }
+      },
+      {
+        "tag": "text",
+        "classes": "",
+        "text": "2020-W53",
+        "fill": "rgb(51, 51, 51)",
+        "stroke": "none",
+        "strokeWidth": "1px",
+        "opacity": "1",
+        "fillOpacity": "1",
+        "strokeOpacity": "1",
+        "numeric": {
+          "y": "3"
+        },
+        "screenBox": {
+          "x": 1129.6640625,
+          "y": 78,
+          "width": 43.671875,
+          "height": 11
+        }
+      },
+      {
+        "tag": "text",
+        "classes": "",
+        "text": "2020-W53",
+        "fill": "rgb(51, 51, 51)",
+        "stroke": "none",
+        "strokeWidth": "1px",
+        "opacity": "1",
+        "fillOpacity": "1",
+        "strokeOpacity": "1",
+        "numeric": {
+          "y": "3"
+        },
+        "screenBox": {
+          "x": 1308.6640625,
+          "y": 78,
+          "width": 43.671875,
+          "height": 11
+        }
+      },
+      {
+        "tag": "text",
+        "classes": "",
+        "text": "2020-W53",
+        "fill": "rgb(51, 51, 51)",
+        "stroke": "none",
+        "strokeWidth": "1px",
+        "opacity": "1",
+        "fillOpacity": "1",
+        "strokeOpacity": "1",
+        "numeric": {
+          "y": "3"
+        },
+        "screenBox": {
+          "x": 1487.6640625,
+          "y": 78,
+          "width": 43.671875,
+          "height": 11
+        }
+      }
+    ],
+    "cherries": [],
+    "collapsed": []
+  },
+  "blockedRequests": []
+}

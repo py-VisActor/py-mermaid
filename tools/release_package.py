@@ -27,6 +27,29 @@ def read(path):
     return json.loads(Path(path).read_text('utf-8'))
 
 
+def validate_original_b(name):
+    directory = (ROOT / name).resolve(strict=True)
+    if not directory.is_relative_to((ROOT / 'references').resolve()) or not directory.is_dir():
+        raise ValueError('Original source reference must stay inside references/')
+    if read(directory / 'provenance.json')['role'] != 'FIXED_ORIGINAL_ONLY_NOT_NATIVE_GOLDENS':
+        raise ValueError('Only fixed original source observations are eligible')
+    if file_identity(directory / 'cases-B.json') != file_identity(ROOT / 'tests/closure/cases-B.json'):
+        raise ValueError('Original B source reference does not match the reviewed fixture bytes')
+    return directory
+
+
+def original_b_reference(*, required=True):
+    fixture = file_identity(ROOT / 'tests/closure/cases-B.json')
+    matches = [name for name in ('references/closure-source-B', 'references/closure-source-B-dst')
+               if (ROOT / name / 'cases-B.json').is_file()
+               and file_identity(ROOT / name / 'cases-B.json') == fixture]
+    if len(matches) == 1:
+        return validate_original_b(matches[0])
+    if required or matches:
+        raise ValueError('Need exactly one byte-matching frozen original B source reference')
+    return None
+
+
 def checked_distributions(manifest, packages):
     if manifest['project'] != project()['name'] or manifest['version'] != project()['version']:
         raise ValueError('Release manifest project/version differs from candidate')
@@ -77,6 +100,7 @@ def build(args):
     dirty = bool(subprocess.check_output(['git', 'status', '--porcelain', '--untracked-files=normal'], cwd=ROOT))
     if dirty and not args.allow_dirty:
         raise ValueError('Commit the complete reviewed candidate first; --allow-dirty is development-only')
+    reference_b = original_b_reference(required=not args.allow_dirty)
     source = source_identity()
     with Run('CLOSURE-RELEASE', 'build', runs_dir=args.out / 'logs') as run:
         print(run.path, flush=True)
@@ -97,10 +121,7 @@ def build(args):
         for file in sorted((ROOT / 'tests/closure').rglob('*')):
             if file.is_file() and '__pycache__' not in file.parts and file.suffix != '.pyc':
                 inputs[file.relative_to(ROOT).as_posix()] = file_identity(file)
-        reference_b = ROOT / 'references/closure-source-B'
-        if not reference_b.is_dir() and not args.allow_dirty:
-            raise ValueError('Formal build requires frozen independent B source observations')
-        if reference_b.is_dir():
+        if reference_b is not None:
             for file in reference_b.rglob('*.json'):
                 inputs[file.relative_to(ROOT).as_posix()] = file_identity(file)
         manifest = {'schema': 'py-mermaid-release-manifest/v1', 'project': project()['name'], 'version': project()['version'],
@@ -108,6 +129,7 @@ def build(args):
             'sourceCommit': subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip(),
             'sourceTreeSha256': source['sourceTreeSha256'], 'sourceFiles': source['files'],
             'verificationInputs': inputs, 'verificationFixture': file_identity(fixture),
+            'verificationOriginalB': reference_b.relative_to(ROOT).as_posix() if reference_b else None,
             'distributions': {file.name: file_identity(file) for file in files}}
         checked_distributions(manifest, packages)
         # Check actual contents rather than assuming package-data/license globs worked.
@@ -146,6 +168,10 @@ def install(args):
         path = (ROOT / name).resolve(strict=True)
         if not path.is_relative_to(ROOT) or file_identity(path) != identity:
             raise ValueError('Verification input differs from reviewed candidate: ' + name)
+    original_name = manifest.get('verificationOriginalB', 'references/closure-source-B')
+    reference_b = validate_original_b(original_name) if original_name else None
+    if reference_b is None and not args.allow_dirty:
+        raise ValueError('Formal installation requires independent original B source observations')
     fixture = verification_fixture()
     raw = (json.dumps(fixture, ensure_ascii=False, indent=2) + '\n').encode('utf-8')
     if {'bytes': len(raw), 'sha256': hashlib.sha256(raw).hexdigest()} != manifest['verificationFixture']:
@@ -213,8 +239,7 @@ def install(args):
                 command('isolated-installed-closure-unit-contracts', [python, '-I', probe, '--fixtures', copied,
                     '--workspace', ROOT.parent, '--expected-version', manifest['version'], '--expected-project', manifest['project'], '--suite', suite,
                     '--out', run.path / 'artifacts/unit-contracts'])
-                reference_b = ROOT / 'references/closure-source-B'
-                if reference_b.is_dir():
+                if reference_b is not None:
                     # Only verifier/data are copied, never production code.
                     shutil.copytree(reference_b, external / 'source-B')
                     (external / 'tools').mkdir()
