@@ -12,7 +12,7 @@ from .model.scene import Diagram, DiagramRenderResult, Scene
 from .runtime.registry import detect_type, register_diagram, registered_diagrams
 from .runtime.layouts import register_layout, registered_layouts
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 __all__ = ["__version__", "parse", "render", "arender", "Flowchart", "RenderResult", "MermaidError",
            "render_vchart", "arender_vchart", "compile_vchart", "supported_vchart_types", "VChartModel", "VChartScene", "VChartCompilation",
            "ResourceBundle", "ImageResource", "IconResource", "FontResource", "ExportOptions",

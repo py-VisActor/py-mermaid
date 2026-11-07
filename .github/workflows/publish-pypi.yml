@@ -5,7 +5,7 @@ on:
       release_tag:
         description: Immutable reviewed candidate tag
         type: string
-        default: py-visactor-mermaid-v0.1.0
+        default: py-visactor-mermaid-v0.1.1
         required: true
       manifest_sha256:
         description: SHA256 of reviewed release-manifest.json
@@ -57,7 +57,7 @@ jobs:
     runs-on: ubuntu-24.04
     environment:
       name: pypi
-      url: https://pypi.org/project/py-visactor-mermaid/0.1.0/
+      url: https://pypi.org/project/py-visactor-mermaid/
     permissions:
       contents: read
       id-token: write

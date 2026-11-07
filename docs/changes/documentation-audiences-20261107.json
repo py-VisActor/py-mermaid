@@ -1,0 +1,101 @@
+{
+  "schema": "py-mermaid-change/v1",
+  "task": "documentation-audiences-20261107",
+  "status": "LOCAL_DOCUMENTATION_VERIFIED_NOT_PUBLISHED",
+  "scope": [
+    {
+      "project": "py-skia-canvas",
+      "baseCommit": "99627012b915e661543c2690755cf3f28e010079",
+      "version": "0.1.0a19",
+      "agentSections": 6,
+      "agentLines": 75,
+      "inventory": {
+        "sha256": "3542e5d228de2f05657b9058f93d1b7617fc7872f5f2d7d17a047647a4827cbf",
+        "bytes": 11169
+      },
+      "runtimeChanged": false,
+      "publishedFilesChanged": false
+    },
+    {
+      "project": "py-elk",
+      "baseCommit": "b8d20ad00ebe55f0ca31b91f826d11e1dfcb76ed",
+      "version": "0.1.0",
+      "agentSections": 6,
+      "agentLines": 75,
+      "inventory": {
+        "sha256": "08efc9e77d6ff05616a9f08c18da92326367dca499ebc4a5a4d3cefe045f5ec4",
+        "bytes": 20903
+      },
+      "runtimeChanged": false,
+      "publishedFilesChanged": false
+    },
+    {
+      "project": "py-katex",
+      "baseCommit": "9c290deef815953133eb077fe908d8476174686c",
+      "version": "0.1.0",
+      "agentSections": 6,
+      "agentLines": 69,
+      "inventory": {
+        "sha256": "a0d53c056a1f39a450511ecde48f2e05174634f96bfd02d9f4b0ed2b59e427bf",
+        "bytes": 2408
+      },
+      "runtimeChanged": false,
+      "publishedFilesChanged": false
+    },
+    {
+      "project": "py-vchart",
+      "baseCommit": "da8a2abfd4e0789892711a8b05a855cdd00b817c",
+      "version": "0.1.1",
+      "agentSections": 6,
+      "agentLines": 71,
+      "inventory": {
+        "sha256": "1873c20ab15e077fb0cc813489a870af01000d13943e977126b1cc6a79797ef6",
+        "bytes": 2785
+      },
+      "runtimeChanged": false,
+      "publishedFilesChanged": false
+    },
+    {
+      "project": "py-mermaid",
+      "baseCommit": "05142352ade04a9d4caff140a0f8bef436619da8",
+      "version": "0.1.0",
+      "agentSections": 6,
+      "agentLines": 57,
+      "inventory": {
+        "sha256": "bb8dd255ba875378d021eebf80d9c69b2619e8af391478b046f6d49e589a3789",
+        "bytes": 8335
+      },
+      "runtimeChanged": false,
+      "publishedFilesChanged": false
+    }
+  ],
+  "userRequest": "Review user-facing versus maintainer/AI documentation across all workspace projects; standardize AGENTS.md",
+  "runtimeSourceUnchanged": true,
+  "versionsAndDependenciesUnchanged": true,
+  "metadataChanges": "project.urls only; no package build or release",
+  "firstUnifiedReview": "test-runs/DOCS-AUDIENCE-workspace-first-review-20261107T132231Z-1478cff6",
+  "unifiedVerification": "test-runs\\DOCS-AUDIENCE-final-related-review-20261107T132930Z-d0c00d51",
+  "priorBootstrapUnitVerification": "test-runs/DOCS-AUDIENCE-workspace-unified-verification-20261107T132430Z-620a8084",
+  "publishedMetadataReadOnly": "test-runs/DOCS-AUDIENCE-published-metadata-readonly-review-20261107T132642Z-90a7a146",
+  "historyManifest": {
+    "path": "docs/development/history/documentation-before-20261107/manifest.json",
+    "sha256": "f94502d533cd14b36745347ea95cccf2f2e258b62a9d818b9f2cd2a4d337b374",
+    "bytes": 3566
+  },
+  "limitations": [
+    "No remote pushes, package builds or new releases",
+    "Existing PyPI release descriptions and metadata remain unchanged",
+    "Canvas legacy path-level workflow gate treats URL-only pyproject edits as production; its INCOMPLETE record is preserved separately",
+    "Document syntax/links and complete input parsing do not certify rendering behavior"
+  ],
+  "workspaceReport": "../DOCUMENTATION_REVIEW.md",
+  "finalVerification": "test-runs\\DOCS-AUDIENCE-delivery-final-check-20261107T133104Z-35f12941",
+  "finalAuditSha256": "0528d8743ecfac9b8c273db5ecd80166a042494cd693475226a746682b9eb333",
+  "verifiedTotals": {
+    "documentsClassified": 456,
+    "activeLinksChecked": 1686,
+    "pythonBlocksParsed": 42,
+    "completeInputsParsedOrCompiled": 10,
+    "mermaidOriginalArchivesVerified": 13
+  }
+}

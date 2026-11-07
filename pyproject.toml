@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "py-visactor-mermaid"
-version = "0.1.0"
+version = "0.1.1"
 description = "Static Mermaid and VChart diagrams in Python using py-skia-canvas, pyelk and py-katex"
 readme = "README.md"
 requires-python = ">=3.13,<3.14"
@@ -25,8 +25,9 @@ py-mermaid = "py_mermaid.cli:main"
 
 [project.urls]
 Repository = "https://github.com/py-VisActor/py-mermaid"
-Documentation = "https://github.com/py-VisActor/py-mermaid/blob/main/docs/NEW_SESSION.md"
+Documentation = "https://github.com/py-VisActor/py-mermaid/blob/main/docs/README.md"
 Issues = "https://github.com/py-VisActor/py-mermaid/issues"
+Changelog = "https://github.com/py-VisActor/py-mermaid/releases"
 
 [tool.setuptools.packages.find]
 where = ["src"]

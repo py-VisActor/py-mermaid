@@ -1,0 +1,387 @@
+{
+  "schema": "py-visactor-documentation-inventory/v1",
+  "project": "py-mermaid",
+  "userEntry": "docs/README.md",
+  "developerEntry": "docs/development/README.md",
+  "agentEntry": "AGENTS.md",
+  "roles": {
+    "user": "Installation, API, examples and supported behavior",
+    "developer": "Repository maintenance, tools, architecture and agent rules",
+    "archive": "Historical plans or original archived text; not current instructions",
+    "evidence": "Frozen verification and source records; not current user guidance",
+    "legal": "License and attribution notices"
+  },
+  "counts": {
+    "developer": 45,
+    "user": 14,
+    "legal": 2,
+    "evidence": 15,
+    "archive": 15
+  },
+  "documents": [
+    {
+      "path": "AGENTS.md",
+      "audience": "developer"
+    },
+    {
+      "path": "README.en.md",
+      "audience": "user"
+    },
+    {
+      "path": "README.md",
+      "audience": "user"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "audience": "legal"
+    },
+    {
+      "path": "docs/API_COMPATIBILITY.md",
+      "audience": "developer"
+    },
+    {
+      "path": "docs/BRANCH_COVERAGE_VERIFICATION.md",
+      "audience": "developer"
+    },
+    {
+      "path": "docs/BRANCH_VERIFICATION_RESULTS.md",
+      "audience": "developer"
+    },
+    {
+      "path": "docs/BULK_STATIC_ACCEPTANCE.md",
+      "audience": "evidence"
+    },
+    {
+      "path": "docs/BULK_STATIC_EXECUTION.md",
+      "audience": "archive"
+    },
+    {
+      "path": "docs/BULK_STATIC_INTERFACES.md",
+      "audience": "developer"
+    },
+    {
+      "path": "docs/BULK_USAGE.md",
+      "audience": "archive"
+    },
+    {
+      "path": "docs/CANVAS_NATIVE_ARCHITECTURE.md",
+      "audience": "developer"
+    },
+    {
+      "path": "docs/CLOSURE_BATCH_ACCEPTANCE.md",
+      "audience": "evidence"
+    },
+    {
+      "path": "docs/CLOSURE_BATCH_PLAN.md",
+      "audience": "developer"
+    },
+    {
+      "path": "docs/DEPENDENCY_MIGRATION.md",
+      "audience": "developer"
+    },
+    {
+      "path": "docs/EXECUTION_HANDOFF.md",
+      "audience": "developer"
+    },
+    {
+      "path": "docs/F01_1_ACCEPTANCE.md",
+      "audience": "evidence"
+    },
+    {
+      "path": "docs/F01_1_EXECUTION_PLAN.md",
+      "audience": "archive"
+    },
+    {
+      "path": "docs/F01_1_INTERFACES.md",
+      "audience": "developer"
+    },
+    {
+      "path": "docs/F01_1_USAGE.md",
+      "audience": "archive"
+    },
+    {
+      "path": "docs/F01_2_ACCEPTANCE.md",
+      "audience": "evidence"
+    },
+    {
+      "path": "docs/F01_2_EXECUTION_PLAN.md",
+      "audience": "archive"
+    },
+    {
+      "path": "docs/F01_2_INTERFACES.md",
+      "audience": "developer"
+    },
+    {
+      "path": "docs/F01_2_USAGE.md",
+      "audience": "archive"
+    },
+    {
+      "path": "docs/F01_3_ACCEPTANCE.md",
+      "audience": "evidence"
+    },
+    {
+      "path": "docs/F01_3_EXECUTION_PLAN.md",
+      "audience": "archive"
+    },
+    {
+      "path": "docs/F01_3_INTERFACES.md",
+      "audience": "developer"
+    },
+    {
+      "path": "docs/F01_3_USAGE.md",
+      "audience": "archive"
+    },
+    {
+      "path": "docs/F01_4_ACCEPTANCE.md",
+      "audience": "evidence"
+    },
+    {
+      "path": "docs/F01_4_ASSESSMENT.md",
+      "audience": "developer"
+    },
+    {
+      "path": "docs/F01_4_EXECUTION_PLAN.md",
+      "audience": "archive"
+    },
+    {
+      "path": "docs/F01_4_INTERFACES.md",
+      "audience": "developer"
+    },
+    {
+      "path": "docs/F01_4_USAGE.md",
+      "audience": "archive"
+    },
+    {
+      "path": "docs/FEATURE_MIGRATION.md",
+      "audience": "developer"
+    },
+    {
+      "path": "docs/FINAL_CAPABILITY_REVIEW.md",
+      "audience": "developer"
+    },
+    {
+      "path": "docs/FULL_MIGRATION_PLAN.md",
+      "audience": "archive"
+    },
+    {
+      "path": "docs/GAP_AUDIT_ACCEPTANCE.md",
+      "audience": "evidence"
+    },
+    {
+      "path": "docs/HTML_HOST_ACCEPTANCE.md",
+      "audience": "evidence"
+    },
+    {
+      "path": "docs/HTML_HOST_EXECUTION.md",
+      "audience": "developer"
+    },
+    {
+      "path": "docs/IMPLEMENTATION_PLAN.md",
+      "audience": "archive"
+    },
+    {
+      "path": "docs/LAYOUT_POLICY.md",
+      "audience": "developer"
+    },
+    {
+      "path": "docs/MATH_ACCEPTANCE.md",
+      "audience": "evidence"
+    },
+    {
+      "path": "docs/MATH_FULL_ACCEPTANCE.md",
+      "audience": "evidence"
+    },
+    {
+      "path": "docs/MATH_RELEASE_INTEGRATION.md",
+      "audience": "developer"
+    },
+    {
+      "path": "docs/MERMAID_PYPI_PUBLICATION.md",
+      "audience": "developer"
+    },
+    {
+      "path": "docs/MODULE_BOUNDARIES.md",
+      "audience": "developer"
+    },
+    {
+      "path": "docs/NEW_SESSION.md",
+      "audience": "developer"
+    },
+    {
+      "path": "docs/NEXT_ITERATION.md",
+      "audience": "archive"
+    },
+    {
+      "path": "docs/P2_BULK_VERIFICATION.md",
+      "audience": "developer"
+    },
+    {
+      "path": "docs/P3_BULK_FIRST_SWEEP.md",
+      "audience": "developer"
+    },
+    {
+      "path": "docs/PARALLEL_EXECUTION.md",
+      "audience": "developer"
+    },
+    {
+      "path": "docs/README.en.md",
+      "audience": "user"
+    },
+    {
+      "path": "docs/README.md",
+      "audience": "user"
+    },
+    {
+      "path": "docs/RELEASE_STATUS.md",
+      "audience": "developer"
+    },
+    {
+      "path": "docs/RENDER_CONSISTENCY.md",
+      "audience": "developer"
+    },
+    {
+      "path": "docs/SOURCE_BASED_VERIFICATION.md",
+      "audience": "developer"
+    },
+    {
+      "path": "docs/STATIC_HTML_HOST_PLAN.md",
+      "audience": "developer"
+    },
+    {
+      "path": "docs/STATIC_RENDERING_SCOPE.md",
+      "audience": "developer"
+    },
+    {
+      "path": "docs/TASKS.md",
+      "audience": "archive"
+    },
+    {
+      "path": "docs/TEST_AND_RELEASE.md",
+      "audience": "developer"
+    },
+    {
+      "path": "docs/THIRD_PARTY_DEPENDENCIES.md",
+      "audience": "developer"
+    },
+    {
+      "path": "docs/VCHART_ACCEPTANCE.md",
+      "audience": "evidence"
+    },
+    {
+      "path": "docs/VCHART_DSL_ACCEPTANCE.md",
+      "audience": "evidence"
+    },
+    {
+      "path": "docs/VCHART_DSL_DESIGN.md",
+      "audience": "developer"
+    },
+    {
+      "path": "docs/VCHART_DSL_EXECUTION_PLAN.md",
+      "audience": "archive"
+    },
+    {
+      "path": "docs/VCHART_DSL_INTERFACES.md",
+      "audience": "developer"
+    },
+    {
+      "path": "docs/VCHART_INTEGRATION.md",
+      "audience": "developer"
+    },
+    {
+      "path": "docs/VCHART_PYPI_PUBLICATION.md",
+      "audience": "developer"
+    },
+    {
+      "path": "docs/development/DOCUMENTATION.md",
+      "audience": "developer"
+    },
+    {
+      "path": "docs/development/README.md",
+      "audience": "developer"
+    },
+    {
+      "path": "docs/proposals/vchart-v1/examples/README.md",
+      "audience": "developer"
+    },
+    {
+      "path": "docs/releases/0.1.0.md",
+      "audience": "user"
+    },
+    {
+      "path": "docs/releases/0.1.1.md",
+      "audience": "user"
+    },
+    {
+      "path": "docs/user/API.md",
+      "audience": "user"
+    },
+    {
+      "path": "docs/user/DIAGRAMS.md",
+      "audience": "user"
+    },
+    {
+      "path": "docs/user/QUICKSTART.en.md",
+      "audience": "user"
+    },
+    {
+      "path": "docs/user/QUICKSTART.md",
+      "audience": "user"
+    },
+    {
+      "path": "docs/user/RESOURCES.md",
+      "audience": "user"
+    },
+    {
+      "path": "docs/user/VCHART.md",
+      "audience": "user"
+    },
+    {
+      "path": "docs/user/VCHART_DSL.md",
+      "audience": "user"
+    },
+    {
+      "path": "examples/README.md",
+      "audience": "user"
+    },
+    {
+      "path": "references/README.md",
+      "audience": "developer"
+    },
+    {
+      "path": "references/dependency-bottom-up.md",
+      "audience": "developer"
+    },
+    {
+      "path": "references/licenses/csswg-drafts-LICENSE.md",
+      "audience": "legal"
+    },
+    {
+      "path": "reports/README.md",
+      "audience": "developer"
+    },
+    {
+      "path": "tests/README.md",
+      "audience": "developer"
+    },
+    {
+      "path": "tests/fixtures/README.md",
+      "audience": "evidence"
+    },
+    {
+      "path": "tools/BULK_REPORTS.md",
+      "audience": "evidence"
+    },
+    {
+      "path": "tools/PIXEL_COMPARE.md",
+      "audience": "developer"
+    },
+    {
+      "path": "tools/RUNS_AND_REPORTS.md",
+      "audience": "evidence"
+    },
+    {
+      "path": "tools/oracle/README.md",
+      "audience": "developer"
+    }
+  ]
+}
