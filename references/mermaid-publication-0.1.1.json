@@ -1,0 +1,207 @@
+{
+  "schema": "py-mermaid-publication/v1",
+  "status": "PUBLISHED_AND_READBACK_VERIFIED",
+  "project": "py-visactor-mermaid",
+  "version": "0.1.1",
+  "pypiUrl": "https://pypi.org/project/py-visactor-mermaid/0.1.1/",
+  "releaseUrl": "https://github.com/py-VisActor/py-mermaid/releases/tag/py-visactor-mermaid-v0.1.1",
+  "tag": "py-visactor-mermaid-v0.1.1",
+  "buildSourceCommit": "3f14022c24f9089e1138c015ca7734a01943a0a4",
+  "sourceTreeSha256": "edd2e771b13553a882f83d6f7c98f042031e7775da7e3c2770a198bb2f2dc959",
+  "runtimeDelta": "Package version literal only; rendering implementation and dependency constraints unchanged",
+  "manifest": {
+    "url": "https://github.com/py-VisActor/py-mermaid/releases/download/py-visactor-mermaid-v0.1.1/release-manifest.json",
+    "sha256": "6b494bd50b4002f2be007ac850fcaa1bcf47919df04a4d3145bfc8ee34669832",
+    "bytes": 38994
+  },
+  "distributions": {
+    "py_visactor_mermaid-0.1.1-py3-none-any.whl": {
+      "sha256": "e4b0d4a3e74c393656ae00e8426eb93082ed4a74a2568a40ed3a22c8a0ef798a",
+      "bytes": 648477
+    },
+    "py_visactor_mermaid-0.1.1.tar.gz": {
+      "sha256": "944f3e81e0f72ee14e53b5d501cbeaf0303606e809e3cacd5da5daf74c096374",
+      "bytes": 557203
+    }
+  },
+  "workflow": {
+    "id": 42377962940,
+    "html_url": "https://github.com/py-VisActor/py-mermaid/actions/runs/42377962940",
+    "status": "completed",
+    "conclusion": "success",
+    "head_sha": "3f14022c24f9089e1138c015ca7734a01943a0a4",
+    "created_at": "2026-11-07T13:39:32Z",
+    "updated_at": "2026-11-07T13:46:25Z"
+  },
+  "jobs": [
+    {
+      "id": 128419376025,
+      "name": "validate (windows-2025)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 128419376169,
+      "name": "validate (ubuntu-24.04)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 128420189298,
+      "name": "publish",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 128420279731,
+      "name": "verify",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "projectUrls": {
+    "Changelog": "https://github.com/py-VisActor/py-mermaid/releases",
+    "Documentation": "https://github.com/py-VisActor/py-mermaid/blob/main/docs/README.md",
+    "Issues": "https://github.com/py-VisActor/py-mermaid/issues",
+    "Repository": "https://github.com/py-VisActor/py-mermaid"
+  },
+  "publicDescription": "User README; no NEW_SESSION or execution-plan entry",
+  "dualPlatformInstalled": [
+    {
+      "platform": "windows",
+      "kind": "wheel",
+      "staticStatus": "PASS",
+      "unit": {
+        "status": "PASS",
+        "methodInvocations": 132,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 2,
+        "isolated": true
+      },
+      "originalParity": {
+        "NOT_VERIFIED": 4,
+        "PASS": 239,
+        "SOURCE_EXCEPTION": 1
+      }
+    },
+    {
+      "platform": "windows",
+      "kind": "sdist",
+      "staticStatus": "PASS",
+      "unit": {
+        "status": "PASS",
+        "methodInvocations": 132,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 2,
+        "isolated": true
+      },
+      "originalParity": {
+        "NOT_VERIFIED": 4,
+        "PASS": 239,
+        "SOURCE_EXCEPTION": 1
+      }
+    },
+    {
+      "platform": "linux",
+      "kind": "wheel",
+      "staticStatus": "PASS",
+      "unit": {
+        "status": "PASS",
+        "methodInvocations": 132,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "isolated": true
+      },
+      "originalParity": {
+        "PASS": 243,
+        "SOURCE_EXCEPTION": 1
+      }
+    },
+    {
+      "platform": "linux",
+      "kind": "sdist",
+      "staticStatus": "PASS",
+      "unit": {
+        "status": "PASS",
+        "methodInvocations": 132,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "isolated": true
+      },
+      "originalParity": {
+        "PASS": 243,
+        "SOURCE_EXCEPTION": 1
+      }
+    }
+  ],
+  "publishedInstalled": [
+    {
+      "kind": "wheel",
+      "staticStatus": "PASS",
+      "unit": {
+        "status": "PASS",
+        "methodInvocations": 132,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "isolated": true
+      },
+      "originalParity": {
+        "PASS": 243,
+        "SOURCE_EXCEPTION": 1
+      }
+    },
+    {
+      "kind": "sdist",
+      "staticStatus": "PASS",
+      "unit": {
+        "status": "PASS",
+        "methodInvocations": 132,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "isolated": true
+      },
+      "originalParity": {
+        "PASS": 243,
+        "SOURCE_EXCEPTION": 1
+      }
+    }
+  ],
+  "rawCIArtifacts": [
+    {
+      "artifactId": 13576666970,
+      "platform": "windows",
+      "sha256": "a766ac6b66ac933797e3d40cdd7dae858f96116c60365123e5deda8220e03120",
+      "bytes": 8756972
+    },
+    {
+      "artifactId": 13576382694,
+      "platform": "linux",
+      "sha256": "f51f3e8f270ee855a69dbd668d649a7b9d6a70cce22a776f5f51ca38e3c8e672",
+      "bytes": 9194218
+    },
+    {
+      "artifactId": 13576696287,
+      "name": "pypi-verification",
+      "sha256": "f55a35d0194d59bc2e2821c8c583af277a108bc9313b46ee6009e3059c79a488",
+      "bytes": 10405402
+    }
+  ],
+  "receipts": {
+    "test-runs\\DOCS-RELEASE-0.1.1-dual-platform-CI-receipts-20261107T134626Z-161f8000\\artifacts\\dual-platform.json": {
+      "sha256": "5e89c96b12107874d57ba327fae1efe1fc0c83ec563e9d3b45e94365c0cf5f50",
+      "bytes": 1931
+    },
+    "test-runs\\DOCS-RELEASE-0.1.1-actual-PyPI-readback-20261107T134355Z-67191ad3\\artifacts\\pypi\\pypi.json": {
+      "sha256": "4689834f7e0b765c6d7ec9aca8e2731022b291a9c39ae836a2c52e02e8f92f5f",
+      "bytes": 7089
+    }
+  },
+  "previousRelease": "references/mermaid-publication-0.1.0.json",
+  "releaseNotes": "docs/releases/0.1.1.md"
+}

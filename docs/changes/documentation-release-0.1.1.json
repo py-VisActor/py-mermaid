@@ -1,7 +1,7 @@
 {
   "schema": "py-mermaid-change/v1",
   "task": "documentation-release-0.1.1",
-  "status": "PREPARED_NOT_PUBLISHED",
+  "status": "PUBLISHED_AND_READBACK_VERIFIED",
   "authorization": "User explicitly requested pushing and publishing the five-project documentation batch",
   "version": "0.1.1",
   "previousVersion": "0.1.0",
@@ -11,5 +11,7 @@
   "historicalEvidencePreserved": true,
   "releasePlan": "Build once from a clean commit, validate the exact wheel and sdist on Windows/Linux, upload through OIDC, then verify actual PyPI metadata, file bytes and both published installations",
   "previousDocumentationVerification": "test-runs/DOCS-AUDIENCE-delivery-final-check-20261107T133104Z-35f12941",
-  "precommitVerification": "test-runs/DOCS-RELEASE-0.1.1-precommit-20261107T133632Z-5995d3a0"
+  "precommitVerification": "test-runs/DOCS-RELEASE-0.1.1-precommit-20261107T133632Z-5995d3a0",
+  "publication": "references/mermaid-publication-0.1.1.json",
+  "finalVerification": "test-runs/DOCS-RELEASE-0.1.1-final-publication-evidence-20261107T134732Z-56f2092f"
 }

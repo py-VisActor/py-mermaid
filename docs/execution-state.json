@@ -6,11 +6,11 @@
   "phase": "P5_RELEASED",
   "startedAtUtc": "20261104T132038Z",
   "currentSourceIdentity": {
-    "sourceTreeSha256": "fca211bbfc3b75db6a2553b0c01f24d37753dbb87eab3f21c4f3ff8f289db14a",
+    "sourceTreeSha256": "edd2e771b13553a882f83d6f7c98f042031e7775da7e3c2770a198bb2f2dc959",
     "files": {
       "LICENSE": "d925ca50a75467a0a8d28c4f7236922346b52c782cd80840d0aec258eaf4f870",
-      "pyproject.toml": "a94f6d0adcae4b434ba47bc92d7917d1f756933e9e382d8859262b8b6050c8a2",
-      "README.md": "6045c0db3ae561c16e29308467ba45e08cffc43db77fbac53d34817dd107443a",
+      "pyproject.toml": "1c60bcde48fea82170be319f89dcade869cd430f2726d80737a25a9b569dfa3c",
+      "README.md": "60e2df31703e7e2c34390552a71af24174a7ae2e3465ff1aa2818d9c5082bcdd",
       "references/licenses/chromium-LICENSE": "368cca1106be99d39ecd32a38d8305585d802a475effb66380b91ffc9bcf709b",
       "references/licenses/cose-base-1.0.3-LICENSE": "5fb3cf4a14c3c5af6e473a192df8bca10c77754e3a0c6492c79fb92a76a5478a",
       "references/licenses/cose-base-2.2.0-LICENSE": "5fb3cf4a14c3c5af6e473a192df8bca10c77754e3a0c6492c79fb92a76a5478a",
@@ -35,7 +35,7 @@
       "references/licenses/w3c-software-document-license-2023.html": "9234807e23edbf8f1058fd85e4d9bd19f2beebebcd8f74433cc59e8a54059771",
       "references/licenses/w3c-software-document-short-notice-2023.html": "fdce0a54ed4870977bbbb5f637d0ed8c6116736d167825a87d56fcfee94b71a0",
       "references/licenses/zenuml-core-LICENSE": "d4a77cbf1dc0975cd4be7266972dc6d3a6c6d68d43235384d6e4b6f12934e978",
-      "src/py_mermaid/__init__.py": "e80fa655f830d6763456bf1387047bc52ddfca1cf1eefa47f8ce451324c27da9",
+      "src/py_mermaid/__init__.py": "faf808148942768864a7a028bcbe1ddfbaf7e0c96d2584bbf21a9c67a50f021f",
       "src/py_mermaid/__main__.py": "4b917090ff60caeb0a715808c08f84753afb9fcb9a5dc9aae45544e4df48d26a",
       "src/py_mermaid/api.py": "14c040a59bca81ce2652fe394ca1054ddf3c5e62e5e5538ca550edf8f8b129c1",
       "src/py_mermaid/cli.py": "159c21be055aabb79fec8e3af35ed7a0fef3a5d2387f35789c2965616998fa07",
@@ -2887,5 +2887,13 @@
       "windowsLinuxOnlySkipped": 2
     }
   },
-  "publication": "references/mermaid-publication-0.1.0.json"
+  "publication": "references/mermaid-publication-0.1.1.json",
+  "latestPublication": "references/mermaid-publication-0.1.1.json",
+  "documentationRelease": {
+    "version": "0.1.1",
+    "status": "PUBLISHED_AND_READBACK_VERIFIED",
+    "runtimeDelta": "Version literal only",
+    "originalClosurePublication": "references/mermaid-publication-0.1.0.json",
+    "workflow": 42377962940
+  }
 }
