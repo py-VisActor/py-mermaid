@@ -1,0 +1,331 @@
+{
+  "schema": "py-mermaid-publication/v1",
+  "status": "PUBLISHED_AND_READBACK_VERIFIED",
+  "project": "py-visactor-mermaid",
+  "version": "0.1.0",
+  "pypiUrl": "https://pypi.org/project/py-visactor-mermaid/0.1.0/",
+  "releaseUrl": "https://github.com/py-VisActor/py-mermaid/releases/tag/v0.1.0%2Bverification.1",
+  "tag": "v0.1.0+verification.1",
+  "reviewedSourceCommit": "e7cf107a73e15dd924b31c4c916aabd43598bcff",
+  "buildSourceCommit": "fd96813db5cb5c5df753eea1b3f76edf29d0eeb8",
+  "sourceTreeSha256": "fca211bbfc3b75db6a2553b0c01f24d37753dbb87eab3f21c4f3ff8f289db14a",
+  "manifest": {
+    "url": "https://github.com/py-VisActor/py-mermaid/releases/download/v0.1.0%2Bverification.1/release-manifest.json",
+    "sha256": "623e511c1832181081771ef49a421da8325f6667dc10455ef98765ec36fd2a2e",
+    "bytes": 44232
+  },
+  "distributions": {
+    "py_visactor_mermaid-0.1.0-py3-none-any.whl": {
+      "sha256": "25b888a4fe9c7e6a3ab0d55cfcbd0edabc2a405aab1d4cd2be46288aef72a5cf",
+      "bytes": 652648
+    },
+    "py_visactor_mermaid-0.1.0.tar.gz": {
+      "sha256": "c9b67cf4895cdd851d85483361cca5cf8607ccc6f92c2564488e30b76cdbb5d6",
+      "bytes": 565531
+    }
+  },
+  "sameBuildBytes": true,
+  "rebuiltOrRepacked": false,
+  "workflow": {
+    "id": 42371152814,
+    "html_url": "https://github.com/py-VisActor/py-mermaid/actions/runs/42371152814",
+    "status": "completed",
+    "conclusion": "success",
+    "head_sha": "e7cf107a73e15dd924b31c4c916aabd43598bcff",
+    "created_at": "2026-11-07T12:08:29Z",
+    "updated_at": "2026-11-07T12:15:01Z"
+  },
+  "jobs": [
+    {
+      "id": 128399376507,
+      "name": "validate (ubuntu-24.04)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 128399376699,
+      "name": "validate (windows-2025)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 128400232703,
+      "name": "publish",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 128400320153,
+      "name": "verify",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "dualPlatformInstalled": {
+    "workflow": 42371152814,
+    "installations": [
+      {
+        "platform": "linux",
+        "kind": "wheel",
+        "unit": {
+          "status": "PASS",
+          "methodInvocations": 132,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "isolated": true
+        },
+        "skippedMethods": [],
+        "staticStatus": "PASS",
+        "parityCounts": {
+          "PASS": 243,
+          "SOURCE_EXCEPTION": 1
+        },
+        "realTimezoneCases": [
+          {
+            "id": "CL-B-DST-PUBLIC-SPRING",
+            "status": "PASS"
+          },
+          {
+            "id": "CL-B-DST-PUBLIC-FALL",
+            "status": "PASS"
+          },
+          {
+            "id": "CL-B-DST-CROSS-SPRING",
+            "status": "PASS"
+          },
+          {
+            "id": "CL-B-DST-CROSS-FALL",
+            "status": "PASS"
+          }
+        ]
+      },
+      {
+        "platform": "linux",
+        "kind": "sdist",
+        "unit": {
+          "status": "PASS",
+          "methodInvocations": 132,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "isolated": true
+        },
+        "skippedMethods": [],
+        "staticStatus": "PASS",
+        "parityCounts": {
+          "PASS": 243,
+          "SOURCE_EXCEPTION": 1
+        },
+        "realTimezoneCases": [
+          {
+            "id": "CL-B-DST-PUBLIC-SPRING",
+            "status": "PASS"
+          },
+          {
+            "id": "CL-B-DST-PUBLIC-FALL",
+            "status": "PASS"
+          },
+          {
+            "id": "CL-B-DST-CROSS-SPRING",
+            "status": "PASS"
+          },
+          {
+            "id": "CL-B-DST-CROSS-FALL",
+            "status": "PASS"
+          }
+        ]
+      },
+      {
+        "platform": "windows",
+        "kind": "wheel",
+        "unit": {
+          "status": "PASS",
+          "methodInvocations": 132,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 2,
+          "isolated": true
+        },
+        "skippedMethods": [
+          "test_d20_linux_real_TZ_add_and_zone_formats (closure.test_dates.DateClosure.test_d20_linux_real_TZ_add_and_zone_formats) ... skipped 'Real IANA system TZ needs Linux tzset; aware control is a separate test'",
+          "test_l16_linux_public_gantt_calendar_vs_elapsed_bar_width (closure.test_layout.GitClosure.test_l16_linux_public_gantt_calendar_vs_elapsed_bar_width) ... skipped 'Public Gantt DST geometry needs Linux actual IANA TZ'"
+        ],
+        "staticStatus": "PASS",
+        "parityCounts": {
+          "NOT_VERIFIED": 4,
+          "PASS": 239,
+          "SOURCE_EXCEPTION": 1
+        },
+        "realTimezoneCases": [
+          {
+            "id": "CL-B-DST-PUBLIC-SPRING",
+            "status": "NOT_VERIFIED"
+          },
+          {
+            "id": "CL-B-DST-PUBLIC-FALL",
+            "status": "NOT_VERIFIED"
+          },
+          {
+            "id": "CL-B-DST-CROSS-SPRING",
+            "status": "NOT_VERIFIED"
+          },
+          {
+            "id": "CL-B-DST-CROSS-FALL",
+            "status": "NOT_VERIFIED"
+          }
+        ]
+      },
+      {
+        "platform": "windows",
+        "kind": "sdist",
+        "unit": {
+          "status": "PASS",
+          "methodInvocations": 132,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 2,
+          "isolated": true
+        },
+        "skippedMethods": [
+          "test_d20_linux_real_TZ_add_and_zone_formats (closure.test_dates.DateClosure.test_d20_linux_real_TZ_add_and_zone_formats) ... skipped 'Real IANA system TZ needs Linux tzset; aware control is a separate test'",
+          "test_l16_linux_public_gantt_calendar_vs_elapsed_bar_width (closure.test_layout.GitClosure.test_l16_linux_public_gantt_calendar_vs_elapsed_bar_width) ... skipped 'Public Gantt DST geometry needs Linux actual IANA TZ'"
+        ],
+        "staticStatus": "PASS",
+        "parityCounts": {
+          "NOT_VERIFIED": 4,
+          "PASS": 239,
+          "SOURCE_EXCEPTION": 1
+        },
+        "realTimezoneCases": [
+          {
+            "id": "CL-B-DST-PUBLIC-SPRING",
+            "status": "NOT_VERIFIED"
+          },
+          {
+            "id": "CL-B-DST-PUBLIC-FALL",
+            "status": "NOT_VERIFIED"
+          },
+          {
+            "id": "CL-B-DST-CROSS-SPRING",
+            "status": "NOT_VERIFIED"
+          },
+          {
+            "id": "CL-B-DST-CROSS-FALL",
+            "status": "NOT_VERIFIED"
+          }
+        ]
+      }
+    ],
+    "previousInspectionError": "Root summary incorrectly expected zero Windows skips; original CI logs explicitly skip two Linux tzset-only methods. No test or product changed."
+  },
+  "publishedInstalled": {
+    "workflow": 42371152814,
+    "artifactId": 13574115585,
+    "archive": {
+      "sha256": "702b45070a2869a1070319c2f595fa31b7bc1cf64b0b4b2551ce393c2638bcf5",
+      "bytes": 10444345
+    },
+    "installations": [
+      {
+        "kind": "wheel",
+        "unit": {
+          "status": "PASS",
+          "methodInvocations": 132,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "isolated": true
+        },
+        "staticStatus": "PASS",
+        "originalParityCounts": {
+          "PASS": 243,
+          "SOURCE_EXCEPTION": 1
+        },
+        "realTimezoneCases": [
+          {
+            "id": "CL-B-DST-PUBLIC-SPRING",
+            "status": "PASS"
+          },
+          {
+            "id": "CL-B-DST-PUBLIC-FALL",
+            "status": "PASS"
+          },
+          {
+            "id": "CL-B-DST-CROSS-SPRING",
+            "status": "PASS"
+          },
+          {
+            "id": "CL-B-DST-CROSS-FALL",
+            "status": "PASS"
+          }
+        ]
+      },
+      {
+        "kind": "sdist",
+        "unit": {
+          "status": "PASS",
+          "methodInvocations": 132,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "isolated": true
+        },
+        "staticStatus": "PASS",
+        "originalParityCounts": {
+          "PASS": 243,
+          "SOURCE_EXCEPTION": 1
+        },
+        "realTimezoneCases": [
+          {
+            "id": "CL-B-DST-PUBLIC-SPRING",
+            "status": "PASS"
+          },
+          {
+            "id": "CL-B-DST-PUBLIC-FALL",
+            "status": "PASS"
+          },
+          {
+            "id": "CL-B-DST-CROSS-SPRING",
+            "status": "PASS"
+          },
+          {
+            "id": "CL-B-DST-CROSS-FALL",
+            "status": "PASS"
+          }
+        ]
+      }
+    ],
+    "releaseUrl": "https://github.com/py-VisActor/py-mermaid/releases/tag/v0.1.0%2Bverification.1",
+    "stable": true
+  },
+  "receipts": {
+    "test-runs\\CLOSURE-RELEASE-inspect-installed-CI-contracts-correct-platform-skips-20261107T121449Z-3880eccd\\artifacts\\installed-contracts-summary.json": {
+      "sha256": "d864e88fcd0bf81b98554295797af5de3de3ea197dcc6df2461483b7f7145032",
+      "bytes": 4340
+    },
+    "test-runs\\CLOSURE-RELEASE-published-PyPI-CI-acquisition-20261107T121533Z-49aa7790\\artifacts\\published-installations-summary.json": {
+      "sha256": "8b9c5f9fa10fe72c171e312e4860e08e013d7674db108d0332511529d19e8938",
+      "bytes": 1772
+    }
+  },
+  "rawCIArtifacts": [
+    {
+      "id": 13573742924,
+      "name": "release-validation-ubuntu-24.04",
+      "sha256": "071138d01180c5c67f6cbb514453e86fc00771dc885bf8988471199543b02749"
+    },
+    {
+      "id": 13574405184,
+      "name": "release-validation-windows-2025",
+      "sha256": "ab27802ebf9073806c5c055a24ad969814c236ca0602a889a61c8ce42afea1a1"
+    },
+    {
+      "id": 13574115585,
+      "name": "pypi-verification",
+      "sha256": "702b45070a2869a1070319c2f595fa31b7bc1cf64b0b4b2551ce393c2638bcf5"
+    }
+  ],
+  "localAcceptance": "references/closure-verification-summary.json",
+  "publicationDocument": "docs/MERMAID_PYPI_PUBLICATION.md"
+}

@@ -3,7 +3,7 @@
   "template": false,
   "plan": "references/migration-execution.json",
   "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
-  "phase": "P5_RELEASE",
+  "phase": "P5_RELEASED",
   "startedAtUtc": "20261104T132038Z",
   "currentSourceIdentity": {
     "sourceTreeSha256": "fca211bbfc3b75db6a2553b0c01f24d37753dbb87eab3f21c4f3ff8f289db14a",
@@ -2838,7 +2838,7 @@
       "sourceTreeSha256": "619a71d5a65f0907785528cf5cf5df48c0fc34d1e657c9afb99c64f344e32d57"
     },
     "eventRelatedStatus": "SUCCESS/sourceUnchanged: all132 portable methods; retained HTML/F01.3/math/B; five fixed-original diagrams with fresh CPU/auto/GPU draws and source actual-paint/containment/alignment/negative controls all exit0.",
-    "formalArtifactValidation": "PENDING; local P4 will not repeat development artifacts, formal exact reviewed files require both OS and both distributions.",
+    "formalArtifactValidation": "PASS: both distributions on Windows and Linux; published distributions installed again on Linux",
     "rawHTMLSourceApplication": "test-runs/CLOSURE-EVENT-HTML-P3-source-application-20261107T110245Z-f721c8b2",
     "rawHTMLVerificationApplication": "test-runs/CLOSURE-EVENT-HTML-P3-verification-application-20261107T110259Z-ce4df31b",
     "finalP4": "test-runs/CLOSURE-P4-batch-20261107T110557Z-684a5d28",
@@ -2865,14 +2865,27 @@
       ]
     },
     "knownScopedFunctionalGaps": [],
-    "externalReleaseGates": [
-      "Formal clean reviewed wheel/sdist installation on Windows and Linux",
-      "Linux actual-TZ installed artifact evidence"
-    ],
-    "formalTag": "v0.1.0",
+    "externalReleaseGates": [],
+    "formalTag": "v0.1.0+verification.1",
     "preservedCandidateTag": "py-visactor-mermaid-v0.1.0",
     "documentationFreshCheckout": "test-runs/CLOSURE-RELEASE-isolated-documentation-validation-20261107T114334Z-250a43fe",
     "buildSourceCommit": "fd96813db5cb5c5df753eea1b3f76edf29d0eeb8",
-    "sameDistributionBytesAfterDocumentationRepair": true
-  }
+    "sameDistributionBytesAfterDocumentationRepair": true,
+    "formalReleaseStatus": "PUBLISHED_AND_READBACK_VERIFIED",
+    "formalPublication": "references/mermaid-publication-0.1.0.json",
+    "preservedValidationTags": [
+      "py-visactor-mermaid-v0.1.0",
+      "v0.1.0"
+    ],
+    "releaseVerificationInputs": {
+      "all": 134,
+      "drawingInputs": 121,
+      "parserOnly": 13,
+      "methodsCollected": 132,
+      "linuxPass": 132,
+      "windowsPass": 130,
+      "windowsLinuxOnlySkipped": 2
+    }
+  },
+  "publication": "references/mermaid-publication-0.1.0.json"
 }
