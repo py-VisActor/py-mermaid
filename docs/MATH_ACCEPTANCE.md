@@ -4,7 +4,7 @@
 
 # 原生数学模块接入验收（2026-11-05）
 
-独立仓库 [py-katex](https://github.com/py-VisActor/py-katex) 已克隆到相邻 `../py-katex` 并完成本地 `0.1.0a0` 原生静态 alpha；[完整验收与边界](../../py-katex/docs/ACCEPTANCE.md)、[可复用日志与报告流程](../../py-katex/docs/RUNS_AND_REPORTS.md)。不是完整 KaTeX 命令/宏/环境兼容验收，也不扩大到其它图种。
+独立仓库 [py-katex](https://github.com/py-VisActor/py-katex) 已克隆到相邻 `../py-katex` 并完成本地 `0.1.0a0` 原生静态 alpha；[完整验收与边界](https://github.com/py-VisActor/py-katex/blob/main/docs/ACCEPTANCE.md)、[可复用日志与报告流程](https://github.com/py-VisActor/py-katex/blob/main/docs/RUNS_AND_REPORTS.md)。不是完整 KaTeX 命令/宏/环境兼容验收，也不扩大到其它图种。
 
 ## 接入行为
 

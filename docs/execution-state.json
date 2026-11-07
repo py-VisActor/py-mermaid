@@ -2868,6 +2868,11 @@
     "externalReleaseGates": [
       "Formal clean reviewed wheel/sdist installation on Windows and Linux",
       "Linux actual-TZ installed artifact evidence"
-    ]
+    ],
+    "formalTag": "v0.1.0",
+    "preservedCandidateTag": "py-visactor-mermaid-v0.1.0",
+    "documentationFreshCheckout": "test-runs/CLOSURE-RELEASE-isolated-documentation-validation-20261107T114334Z-250a43fe",
+    "buildSourceCommit": "fd96813db5cb5c5df753eea1b3f76edf29d0eeb8",
+    "sameDistributionBytesAfterDocumentationRepair": true
   }
 }

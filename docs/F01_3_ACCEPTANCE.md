@@ -2,7 +2,7 @@
 
 2026-11-05，本切片完成，状态 **PASS_LOCAL**。已实现前处理、frontmatter/directive、配置层级、11 个主题及字符串 `"null"` sentinel、HTML/Markdown 节点/边/子图标签、图标题和适用原生样式。固定 Mermaid 12.2.0 / `1fb7869866dd619168d840291c9c54b4f129758b`；未提升完整 flowchart 或其他图种兼容状态。
 
-[打开 HTML 对比报告](http://127.0.0.1:8765/F01.3-render-20261105T022709Z-575768e1/index.html) · [本地报告](../reports/F01.3-render-20261105T022709Z-575768e1/index.html) · [机器汇总](../references/f013-verification-summary.json) · [使用说明](F01_3_USAGE.md)
+[打开 HTML 对比报告](http://127.0.0.1:8765/F01.3-render-20261105T022709Z-575768e1/index.html) · 本地报告?`reports/F01.3-render-20261105T022709Z-575768e1/index.html`????????????????? · [机器汇总](../references/f013-verification-summary.json) · [使用说明](F01_3_USAGE.md)
 
 ## 最终同一候选
 

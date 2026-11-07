@@ -2,7 +2,7 @@
 
 # 完整数学核心静态能力接入验收
 
-2026-11-06：独立 py-katex 已完成固定 KaTeX 0.18.11 核心静态迁移并接入 Mermaid。详见 [完整验收](../../py-katex/docs/FULL_STATIC_ACCEPTANCE.md) 和 [机器摘要](../references/math-full-verification-summary.json)。
+2026-11-06：独立 py-katex 已完成固定 KaTeX 0.18.11 核心静态迁移并接入 Mermaid。详见 [完整验收](https://github.com/py-VisActor/py-katex/blob/main/docs/FULL_STATIC_ACCEPTANCE.md) 和 [机器摘要](../references/math-full-verification-summary.json)。
 
 973 个测试方法、684 个注册/宏上下文、1909 个上游功能输入及 217 组等价关系通过；267 个公式和 8 个集成图三后端共 825 视图通过，297 个历史流程图三后端回归通过。五格式导出、人工看图与 HTML QA 已完成。
 

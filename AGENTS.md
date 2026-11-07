@@ -65,7 +65,7 @@
 
 > 2026-11-06 **固定 KaTeX 0.18.11 核心静态迁移已完成本地验收**：973 方法、684 上下文、1909 功能输入/217 等价关系、275 案例三后端与 297 历史流程图三后端通过。当前入口为 [完整验收](docs/MATH_FULL_ACCEPTANCE.md)。安装验证暂缓，未提交推送发布；下方旧 alpha/未实现状态仅作历史。
 
-> 2026-11-05 当前任务：一次完成剩余 KaTeX 核心静态迁移，见 [完整收口计划](../py-katex/docs/FULL_STATIC_MIGRATION.md)。旧数学 alpha 报告是历史起点，安装验证仍暂缓。
+> 2026-11-05 当前任务：一次完成剩余 KaTeX 核心静态迁移，见 [完整收口计划](https://github.com/py-VisActor/py-katex/blob/main/docs/FULL_STATIC_MIGRATION.md)。旧数学 alpha 报告是历史起点，安装验证仍暂缓。
 
 > 2026-11-05 **独立 py-katex 原生静态 alpha 与 Mermaid 数学标签接入已完成本地验收**：712 个方法、69 个数学/集成案例 × 3 后端、297 个历史案例 × 3 后端通过。当前入口为 [数学验收](docs/MATH_ACCEPTANCE.md)；完整 KaTeX 兼容仍有明确未支持项。Dagre/交互排除，安装验证暂缓，当前修改未提交推送发布；下文旧“数学延后”及旧候选说明保留为历史。
 

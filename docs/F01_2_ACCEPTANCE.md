@@ -2,7 +2,7 @@
 
 2026-11-04，本切片完成，状态 **PASS_LOCAL**。实现普通边标签、14 种经典形状、子图/嵌套/组方向、跨组与组端点连线，保持 F01.1 基础流程图行为。固定 Mermaid 12.2.0 / `1fb7869866dd619168d840291c9c54b4f129758b`；未提升完整 flowchart-v2 或其他图种兼容状态。
 
-[打开 HTML 对比报告](http://127.0.0.1:8765/F01.2-render-20261104T145729Z-0ece5e77/index.html) · [本地报告](../reports/F01.2-render-20261104T145729Z-0ece5e77/index.html) · [机器汇总](../references/f012-verification-summary.json) · [使用说明](F01_2_USAGE.md)
+[打开 HTML 对比报告](http://127.0.0.1:8765/F01.2-render-20261104T145729Z-0ece5e77/index.html) · 本地报告?`reports/F01.2-render-20261104T145729Z-0ece5e77/index.html`????????????????? · [机器汇总](../references/f012-verification-summary.json) · [使用说明](F01_2_USAGE.md)
 
 ## 最终同一候选
 
