@@ -1,0 +1,213 @@
+{
+  "schema": "py-visactor-workspace-publication/v1",
+  "status": "PUBLISHED_AND_PLATFORM_READBACK_VERIFIED",
+  "scope": "Five projects published; actual PyPI metadata and user descriptions verified against release tags; Windows/Linux installed-artifact evidence preserved per project",
+  "projects": [
+    {
+      "repository": "py-skia-canvas",
+      "project": "py-skia-canvas",
+      "version": "0.1.0a20",
+      "tag": "v0.1.0a20",
+      "tagCommit": "06116962a5a84f45e26919922f39881cbdd41535",
+      "pypiUrl": "https://pypi.org/project/py-skia-canvas/0.1.0a20/",
+      "githubRelease": "https://github.com/py-VisActor/py-skia-canvas/releases/tag/v0.1.0a20",
+      "documentation": "https://github.com/py-VisActor/py-skia-canvas/blob/main/docs/README.md",
+      "descriptionMatchesTaggedUserReadme": true,
+      "runtimeRequirements": [],
+      "files": [
+        {
+          "filename": "py_skia_canvas-0.1.0a20-cp313-cp313-manylinux_2_28_x86_64.whl",
+          "bytes": 14705948,
+          "sha256": "e59dfdffe755bc673d3004ed65bfd531777601b3b3b54603e35ea4f319d1a24c",
+          "url": "https://files.pythonhosted.org/packages/0c/ad/88f9ef8ec47a7f1406aa693d55fc86fe3ccaa1887874cd0175062e806d31/py_skia_canvas-0.1.0a20-cp313-cp313-manylinux_2_28_x86_64.whl"
+        },
+        {
+          "filename": "py_skia_canvas-0.1.0a20-cp313-cp313-win_amd64.whl",
+          "bytes": 12432773,
+          "sha256": "a3cd595eb3f0c2518a1c5f1d366b49692bca0f48a0717186c92333ea4795c7e6",
+          "url": "https://files.pythonhosted.org/packages/7e/2a/1ccaf55ac9f0df222b81978563a842f0ab2040e17b90654c29f77762876d/py_skia_canvas-0.1.0a20-cp313-cp313-win_amd64.whl"
+        }
+      ],
+      "rawMetadataSha256": "fd1dbd3dd2a1975d4d7b81b6d76b664be1315d851e149615247fcde540656df4"
+    },
+    {
+      "repository": "py-elk",
+      "project": "py-visactor-elk",
+      "version": "0.1.1",
+      "tag": "v0.1.1-docs.1",
+      "tagCommit": "1d9f91cfd39db3317ba9f278dce44a589ba4da29",
+      "pypiUrl": "https://pypi.org/project/py-visactor-elk/0.1.1/",
+      "githubRelease": "https://github.com/py-VisActor/py-elk/releases/tag/v0.1.1-docs.1",
+      "documentation": "https://github.com/py-VisActor/py-elk/blob/main/docs/README.md",
+      "descriptionMatchesTaggedUserReadme": true,
+      "runtimeRequirements": [],
+      "files": [
+        {
+          "filename": "py_visactor_elk-0.1.1-py3-none-any.whl",
+          "bytes": 644541,
+          "sha256": "595d8d0beef68db2a01e95af5f72a42a37ce991c129a2a265f77fc61a9bfd4a6",
+          "url": "https://files.pythonhosted.org/packages/11/6e/a43c7e09d82f581cd9f66121dfbb5385cb12e7deeabd7ce7ccb315af4534/py_visactor_elk-0.1.1-py3-none-any.whl"
+        },
+        {
+          "filename": "py_visactor_elk-0.1.1.tar.gz",
+          "bytes": 502005,
+          "sha256": "b8b49bc3c2786a1be1cb0f78291fc6b39108a3d253ef6d8a160bb3fd781ee818",
+          "url": "https://files.pythonhosted.org/packages/51/63/de3df37fc43204adf55e601f3f42520ec72d489eee53126c018e8b3a0145/py_visactor_elk-0.1.1.tar.gz"
+        }
+      ],
+      "rawMetadataSha256": "93f270297219b188b602b84e84ce52a71e5cf3f8995a585221ff22797a591634"
+    },
+    {
+      "repository": "py-katex",
+      "project": "py-visactor-katex",
+      "version": "0.1.1",
+      "tag": "py-visactor-katex-v0.1.1",
+      "tagCommit": "c208c55cd8a055cad91c82e8d8547ddb67e6a13f",
+      "pypiUrl": "https://pypi.org/project/py-visactor-katex/0.1.1/",
+      "githubRelease": "https://github.com/py-VisActor/py-katex/releases/tag/py-visactor-katex-v0.1.1",
+      "documentation": "https://github.com/py-VisActor/py-katex/blob/main/docs/README.md",
+      "descriptionMatchesTaggedUserReadme": true,
+      "runtimeRequirements": [
+        "py-skia-canvas==0.1.0a18"
+      ],
+      "files": [
+        {
+          "filename": "py_visactor_katex-0.1.1-py3-none-any.whl",
+          "bytes": 443531,
+          "sha256": "6e0350843c315b87cfbfe1541c6639ffe1d7d449847c66111e911ef9538c69aa",
+          "url": "https://files.pythonhosted.org/packages/27/4e/dc175ccfdd6fc54afa8fa71510c38535a28eb708a4cc98172d6d007296cb/py_visactor_katex-0.1.1-py3-none-any.whl"
+        },
+        {
+          "filename": "py_visactor_katex-0.1.1.tar.gz",
+          "bytes": 754628,
+          "sha256": "7df84fbcf44f8b2a8335a776e19e18f5d2b3935e094435ad1927a8df4fd33738",
+          "url": "https://files.pythonhosted.org/packages/7d/b5/9639b9b81dae4cccdf9ca0360502c80d3825261f047d009279663e07687e/py_visactor_katex-0.1.1.tar.gz"
+        }
+      ],
+      "rawMetadataSha256": "43792bf1de2f7d607b4ad868abc76211f55516226044253fe604e6d14573db36"
+    },
+    {
+      "repository": "py-vchart",
+      "project": "py-visactor-vchart",
+      "version": "0.1.2",
+      "tag": "py-visactor-vchart-v0.1.2",
+      "tagCommit": "526496617d333ac9e4f0fb4699ef07f6569b69a0",
+      "pypiUrl": "https://pypi.org/project/py-visactor-vchart/0.1.2/",
+      "githubRelease": "https://github.com/py-VisActor/py-vchart/releases/tag/py-visactor-vchart-v0.1.2",
+      "documentation": "https://github.com/py-VisActor/py-vchart/blob/main/docs/README.md",
+      "descriptionMatchesTaggedUserReadme": true,
+      "runtimeRequirements": [
+        "numpy>=1.26",
+        "py-skia-canvas<=0.1.0a19,>=0.1.0a18"
+      ],
+      "files": [
+        {
+          "filename": "py_visactor_vchart-0.1.2-py3-none-any.whl",
+          "bytes": 122757,
+          "sha256": "a32ed8f4fb2533c7548953ead25d56cc61830b8dd3ad1247200c04f4f562c0f6",
+          "url": "https://files.pythonhosted.org/packages/6b/ea/04d2c94689244c99a58cec17a691386bd27a591adaa12439d78b80ee352a/py_visactor_vchart-0.1.2-py3-none-any.whl"
+        },
+        {
+          "filename": "py_visactor_vchart-0.1.2.tar.gz",
+          "bytes": 111732,
+          "sha256": "89126d7dfc3f969fb05ab5194a2332bf89f951a2f8e3bcbba46c048b894b6282",
+          "url": "https://files.pythonhosted.org/packages/7d/be/2a85d089ac1a1fb63a879d9a2f391595440a50f2ba3049f87be3cd1f8de4/py_visactor_vchart-0.1.2.tar.gz"
+        }
+      ],
+      "rawMetadataSha256": "c98a48a827ebc4b343fdcb5c37ff92cb5a874ddef040d06b61363e1e14311c95"
+    },
+    {
+      "repository": "py-mermaid",
+      "project": "py-visactor-mermaid",
+      "version": "0.1.1",
+      "tag": "py-visactor-mermaid-v0.1.1",
+      "tagCommit": "3f14022c24f9089e1138c015ca7734a01943a0a4",
+      "pypiUrl": "https://pypi.org/project/py-visactor-mermaid/0.1.1/",
+      "githubRelease": "https://github.com/py-VisActor/py-mermaid/releases/tag/py-visactor-mermaid-v0.1.1",
+      "documentation": "https://github.com/py-VisActor/py-mermaid/blob/main/docs/README.md",
+      "descriptionMatchesTaggedUserReadme": true,
+      "runtimeRequirements": [
+        "py-skia-canvas==0.1.0a18",
+        "py-visactor-elk==0.1.0",
+        "py-visactor-katex==0.1.0",
+        "py-visactor-vchart==0.1.1"
+      ],
+      "files": [
+        {
+          "filename": "py_visactor_mermaid-0.1.1-py3-none-any.whl",
+          "bytes": 648477,
+          "sha256": "e4b0d4a3e74c393656ae00e8426eb93082ed4a74a2568a40ed3a22c8a0ef798a",
+          "url": "https://files.pythonhosted.org/packages/7d/29/b2307c899730015905f6dc02acaf0da8d7d67c68e0bbbaf06c15d82f7f46/py_visactor_mermaid-0.1.1-py3-none-any.whl"
+        },
+        {
+          "filename": "py_visactor_mermaid-0.1.1.tar.gz",
+          "bytes": 557203,
+          "sha256": "944f3e81e0f72ee14e53b5d501cbeaf0303606e809e3cacd5da5daf74c096374",
+          "url": "https://files.pythonhosted.org/packages/d3/60/b93df2221a06aedfdcf583e9f88837aa002b984f396f5c124d239f72ccae/py_visactor_mermaid-0.1.1.tar.gz"
+        }
+      ],
+      "rawMetadataSha256": "4689834f7e0b765c6d7ec9aca8e2731022b291a9c39ae836a2c52e02e8f92f5f"
+    }
+  ],
+  "metadataReviewRun": "test-runs/WORKSPACE-RELEASE-all-published-metadata-review-20261107T135236Z-dacde052",
+  "pushedDocumentationAudit": "test-runs/WORKSPACE-RELEASE-pushed-documentation-audit-20261107T135401Z-4a867214",
+  "authorization": "User explicitly requested pushing and publishing the documentation batch across the five workspace projects",
+  "previousVersionsPreserved": true,
+  "individualEvidence": [
+    {
+      "repository": "py-skia-canvas",
+      "headAtReview": "0706e72204b395b5013ab65c1ae5cff77dd61c09",
+      "evidenceUrl": "https://github.com/py-VisActor/py-skia-canvas/releases/download/v0.1.0a20/publication-verification-a20.json",
+      "localEvidencePath": "py-skia-canvas/test-runs/20261107-a20-published-verification/publication-verification-a20.json",
+      "evidenceIdentity": {
+        "sha256": "a2e1b666a0ca94e72ae8db15a71936f997c0b68c613db8a176ba2b8bea9d9a25",
+        "bytes": 6250
+      },
+      "recordedStatus": "RELEASE_PUBLISHED_VERIFIED"
+    },
+    {
+      "repository": "py-elk",
+      "headAtReview": "1c1faca20651e108a3bf6d9a6296603d12916273",
+      "evidenceUrl": "https://github.com/py-VisActor/py-elk/blob/1c1faca20651e108a3bf6d9a6296603d12916273/docs/releases/0.1.1-publication.json",
+      "localEvidencePath": "py-elk/docs/releases/0.1.1-publication.json",
+      "evidenceIdentity": {
+        "sha256": "57633b61acce2f68e17749bcad65bcf92dc5c8d6fbdf4949b78a919d8f3a5654",
+        "bytes": 4164
+      },
+      "recordedStatus": "PUBLISHED_VERIFIED"
+    },
+    {
+      "repository": "py-katex",
+      "headAtReview": "c67135766d452d7d5a30511f01d0c141305379a4",
+      "evidenceUrl": "https://github.com/py-VisActor/py-katex/blob/c67135766d452d7d5a30511f01d0c141305379a4/references/release-publication-0.1.1.json",
+      "localEvidencePath": "py-katex/references/release-publication-0.1.1.json",
+      "evidenceIdentity": {
+        "sha256": "d9fa37a06c8a1e1f94c6b1babc28734f28ec4ea5574e71e9fb246f5625f86193",
+        "bytes": 5097
+      },
+      "recordedStatus": "PASS_PUBLISHED_DOWNLOAD_INSTALL_VERIFIED"
+    },
+    {
+      "repository": "py-vchart",
+      "headAtReview": "8e46db2f9c0e57144dc085324192a8e011ca4907",
+      "evidenceUrl": "https://github.com/py-VisActor/py-vchart/blob/8e46db2f9c0e57144dc085324192a8e011ca4907/references/release-publication-0.1.2.json",
+      "localEvidencePath": "py-vchart/references/release-publication-0.1.2.json",
+      "evidenceIdentity": {
+        "sha256": "d7ea60a67885301156e03e2b146f4ec21e07436502bc9b4bcfdfb7478efbafa6",
+        "bytes": 6152
+      },
+      "recordedStatus": "PASS_PUBLISHED_DOWNLOAD_INSTALL_VERIFIED"
+    },
+    {
+      "repository": "py-mermaid",
+      "headAtReview": "53eb7aeb0a0cfa28d3bf4d25ad6bf46b0d86de87",
+      "evidenceUrl": "https://github.com/py-VisActor/py-mermaid/blob/53eb7aeb0a0cfa28d3bf4d25ad6bf46b0d86de87/references/mermaid-publication-0.1.1.json",
+      "localEvidencePath": "py-mermaid/references/mermaid-publication-0.1.1.json",
+      "evidenceIdentity": {
+        "sha256": "2f081392f1360ce865f5fefdef81aeb65706b177cae61945d2afe108a5799539",
+        "bytes": 5833
+      },
+      "recordedStatus": "PUBLISHED_AND_READBACK_VERIFIED"
+    }
+  ]
+}

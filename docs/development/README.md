@@ -31,6 +31,7 @@ python -m unittest discover -s tests/bootstrap -v
 ## 状态、历史和证据
 
 - 当前发行：[简明状态](../RELEASE_STATUS.md)、[机器发行记录](../../references/mermaid-publication-0.1.1.json)。旧 [0.1.0 发行记录](../../references/mermaid-publication-0.1.0.json)保留原始提交和文件身份。
+- 跨项目文档修订：[五项目新版本汇总](WORKSPACE_RELEASE_20261107.md)。
 - 本轮文档重整前的 README、AGENTS、会话入口和语法设计：[原字节快照与 SHA](history/documentation-before-20261107/manifest.json)。快照只作历史，不是可执行指令。
 - 历史迁移：[总计划](../FULL_MIGRATION_PLAN.md)、[统一收口计划](../CLOSURE_BATCH_PLAN.md)、[任务账本](../execution-state.json)。这些文件保留原始任务顺序，不自动授予当前操作权限。
 - 历史验收：[收口验收](../CLOSURE_BATCH_ACCEPTANCE.md)、[VChart DSL](../VCHART_DSL_ACCEPTANCE.md)、[基础流程图](../F01_1_ACCEPTANCE.md)、[数学接入](../MATH_RELEASE_INTEGRATION.md)。旧图、旧失败和旧计数不改写。
