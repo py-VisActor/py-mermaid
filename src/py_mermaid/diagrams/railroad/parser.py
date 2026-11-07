@@ -33,6 +33,13 @@ class Grammar:
             if text[i].isspace():i+=1;continue
             if text.startswith('%%',i) or self.kind=='railroadPeg' and text[i]=='#':
                 end=text.find('\n',i);i=n if end<0 else end+1;continue
+            if self.kind=='railroadAbnf' and text[i]==';':
+                end=i+1
+                while end<n and text[end] not in '\r\n':end+=1
+                # Langium keyword ';' wins equal-length matches; its longer
+                # ABNF_COMMENT alternative wins when there is line content.
+                # Thus a trailing comment can consume a required terminator.
+                if end>i+1:i=end;continue
             if text.startswith('/*',i) or self.kind=='railroadEbnf' and text.startswith('(*',i):
                 closing='*/' if text.startswith('/*',i) else '*)';end=text.find(closing,i+2)
                 if end<0:self.fail('Unclosed grammar comment',Token('','',i))

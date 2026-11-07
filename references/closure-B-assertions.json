@@ -1,0 +1,616 @@
+{
+  "schema": "py-mermaid-closure-B-assertions/v1",
+  "phase": "P3_RELATED_VERIFICATION",
+  "status": "RELATED_B_PASS_NOT_FINAL_CANDIDATE_ACCEPTANCE",
+  "baselineSourceTreeSha256": "dab675b768488413fd60bb07b656d28ef8e2e6c4f34af45056eec9763c98f0f4",
+  "fixedUpstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "methods": {
+    "tests/closure/test_dates.py": [
+      "test_d01_strict_localized_formats_remain_none",
+      "test_d02_public_browser_fallback_is_separate",
+      "test_d03_weekday_parsing_uses_actual_calendar",
+      "test_d04_dayjs_iso_year_week_and_midnight",
+      "test_d05_dayjs_capitalized_days_and_literals",
+      "test_d06_d3_every_directive_literal_values",
+      "test_d07_padding_and_fraction_are_directive_specific",
+      "test_d08_percent_escapes_unknown_and_trailing_dispatch",
+      "test_d09_gregorian_zero_negative_and_extended_years",
+      "test_d10_iso_week_and_sunday_monday_boundaries",
+      "test_d11_weekday_specific_epoch_every_two",
+      "test_d12_automatic_millisecond_tickstep_two_and_twenty",
+      "test_d13_inclusive_safety_boundary_has_10001_ticks",
+      "test_d14_calendar_filters_restart_at_month_and_year",
+      "test_d15_strict_leap_quarter_meridiem_regression",
+      "test_d16_extended_epoch_roundtrip_avoids_os_mktime",
+      "test_d17_aware_controlled_DST_not_system_TZ",
+      "test_d18_source_missing_plugins_do_not_fabricate_output",
+      "test_d19_tracked_pure_denominator_and_initial_90_retained",
+      "test_d20_linux_real_TZ_add_and_zone_formats",
+      "test_d21_weekday_and_weekend_task_labels_are_not_directives",
+      "test_d22_case_insensitive_whitespace_day_directives",
+      "test_d23_escape_survives_public_parse_and_paint",
+      "test_d24_axis_ink_control_rejects_suppressed_public_draw"
+    ],
+    "tests/closure/test_layout.py": [
+      "test_l01_authored_hidden_selfloop_survives",
+      "test_l02_nested_outermost_collapse_keeps_genuine_loop",
+      "test_l03_synthetic_collapse_loop_still_removed",
+      "test_l04_real_engine_routes_authored_loop",
+      "test_l05_visible_collapsed_group_own_selfloop",
+      "test_l06_ancestor_route_ids_are_not_dropped",
+      "test_l07_all_eight_isolated_group_algorithms_reach_real_engine",
+      "test_l08_cross_hierarchy_clears_all_algorithm_overrides",
+      "test_l09_engine_exception_never_falls_back",
+      "test_l10_nonfinite_and_boolean_engine_dimensions_rejected",
+      "test_l11_bad_route_point_rejected_not_zeroed",
+      "test_l12_duplicate_engine_identity_rejected",
+      "test_l13_all_directions_rotations_preserve_dense_edges",
+      "test_l14_branch_labels_use_source_lane_spacing",
+      "test_l15_reverse_tag_stack_and_source_rotation",
+      "test_l16_linux_public_gantt_calendar_vs_elapsed_bar_width",
+      "test_l17_cherry_source_primitives_and_real_ink",
+      "test_l18_cherry_class_css_is_consumed_not_just_recorded",
+      "test_l19_cherry_fruit_paint_control_is_pixel_detectable",
+      "test_l20_collapsed_container_metadata_and_slot7_paint",
+      "test_l21_agent_effective_appearance_and_palette_survive_flow_bridge"
+    ]
+  },
+  "methodCount": 45,
+  "diagramCases": 40,
+  "pureProbes": 191,
+  "additionalSourceProbes": 11,
+  "oldPureInputsRetained": 90,
+  "files": [
+    {
+      "path": "tests/closure/test_dates.py",
+      "sha256": "d7662ae63ae6c3a7a6d5354c22ebf3ca47c193a29ec498063f0a75ba2d49fe51",
+      "bytes": 11266
+    },
+    {
+      "path": "tests/closure/test_layout.py",
+      "sha256": "ec22a0d116e5fc55ceaae07c5fa7e20aa3477bc52cced5c5794ec7e037ce0304",
+      "bytes": 17159
+    },
+    {
+      "path": "tests/closure/cases-B.json",
+      "sha256": "5fc058bbc4ae5d54d9792eef0844dd7408249dc224638a76aa25f2f55f422649",
+      "bytes": 110934
+    },
+    {
+      "path": "tests/closure/support_B.py",
+      "sha256": "8b7fab32ec45aa72960cd29fe79d15763d47ac191e2f0fb684fea34e495d37f8",
+      "bytes": 6547
+    },
+    {
+      "path": "tools/oracle/closure_b.cjs",
+      "sha256": "6ab631b024b649ffbd00dffbd7ba37a71df82450cd3c71472f0239d57174eb87",
+      "bytes": 9780
+    },
+    {
+      "path": "tools/check_closure_b.py",
+      "sha256": "ed522eb07475eca6785fd260cf10ef677d611ee62f099ddefb9808bb9a66fc7a",
+      "bytes": 20348
+    },
+    {
+      "path": "tests/bulk/b/test_branch_tables.py",
+      "sha256": "f9379b6e2babea0675a241312a90a713d6ccabfaa28c957849802c1734c13039",
+      "bytes": 9554
+    },
+    {
+      "path": "tools/freeze_closure_b_source.py",
+      "sha256": "6ad16037e3774fb4660dc12977e50d15b5387ae9a2fea840cccebc3ef761378b",
+      "bytes": 8631
+    }
+  ],
+  "legacyBranchSource": [
+    {
+      "id": "BV-B-DATE-LOCALIZED",
+      "sourceExpected": "Do not invent localizedFormat plugin; Gantt fallback accepts01/02/2024 as Jan2.",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/gantt/ganttDb.js",
+          "symbol": "const getStartDate",
+          "line": 305,
+          "sha256": "d783881e9e5966aabc87f6dc170aa0a88ece551c48c49ba0693aa5271e3accec"
+        },
+        {
+          "repository": "mermaid-bundle-sourcesContent",
+          "path": "../../../node_modules/.pnpm/dayjs@1.11.21/node_modules/dayjs/plugin/customParseFormat.js",
+          "symbol": "customParseFormat",
+          "line": 1,
+          "sha256": "b199a58d0fbbdc519a072eb9b140a2ca3d4775ea1b054a0c0e5aeed86603c941",
+          "bundleMapPath": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+          "bundleMapSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679"
+        }
+      ],
+      "closure": "Corresponding date/topology tests plus independently rerun fixed-source numeric/browser observations; no candidate-generated golden."
+    },
+    {
+      "id": "BV-B-DATE-WEEKDAY",
+      "sourceExpected": "Token consumption and strict validation determine actual date;2024-Jan1 Monday.",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/gantt/ganttDb.js",
+          "symbol": "const getStartDate",
+          "line": 305,
+          "sha256": "d783881e9e5966aabc87f6dc170aa0a88ece551c48c49ba0693aa5271e3accec"
+        },
+        {
+          "repository": "mermaid-bundle-sourcesContent",
+          "path": "../../../node_modules/.pnpm/dayjs@1.11.21/node_modules/dayjs/plugin/customParseFormat.js",
+          "symbol": "customParseFormat",
+          "line": 1,
+          "sha256": "b199a58d0fbbdc519a072eb9b140a2ca3d4775ea1b054a0c0e5aeed86603c941",
+          "bundleMapPath": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+          "bundleMapSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679"
+        }
+      ],
+      "closure": "Corresponding date/topology tests plus independently rerun fixed-source numeric/browser observations; no candidate-generated golden."
+    },
+    {
+      "id": "BV-B-DAYJS-ISO",
+      "sourceExpected": "Jan1 2021=2020-W53;midnight k=24.",
+      "source": [
+        {
+          "repository": "mermaid-bundle-sourcesContent",
+          "path": "../../../node_modules/.pnpm/dayjs@1.11.21/node_modules/dayjs/plugin/advancedFormat.js",
+          "symbol": "advancedFormat",
+          "line": 1,
+          "sha256": "6f9ca609c4af60f2a03033e72dec5714f4f8e7b240381934040f547a0282463f",
+          "bundleMapPath": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+          "bundleMapSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679"
+        },
+        {
+          "repository": "mermaid-bundle-sourcesContent",
+          "path": "../../../node_modules/.pnpm/dayjs@1.11.21/node_modules/dayjs/plugin/isoWeek.js",
+          "symbol": "isoWeek",
+          "line": 1,
+          "sha256": "9937b6f6e7f852fd180a75d02f223298a4541a8cec415d0cadad5dfde7d40929",
+          "bundleMapPath": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+          "bundleMapSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679"
+        }
+      ],
+      "closure": "Corresponding date/topology tests plus independently rerun fixed-source numeric/browser observations; no candidate-generated golden."
+    },
+    {
+      "id": "BV-B-AXIS-ALL",
+      "sourceExpected": "Fixed D3 locale dispatch instead of OS strftime.",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/gantt/ganttRenderer.js",
+          "symbol": "function makeGrid",
+          "line": 649,
+          "sha256": "bf1c7231c8666070124eed4f6078b1d62ab4dea0973c44cc5d6264469961e488"
+        },
+        {
+          "repository": "mermaid-bundle-sourcesContent",
+          "path": "../../../node_modules/.pnpm/d3-time-format@4.1.0/node_modules/d3-time-format/src/locale.js",
+          "symbol": "function formatLocale",
+          "line": 36,
+          "sha256": "47df570989eca703c1d1a720aed8e8010d5992c2235348f135654ea930fbf4d8",
+          "bundleMapPath": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+          "bundleMapSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679"
+        }
+      ],
+      "closure": "Corresponding date/topology tests plus independently rerun fixed-source numeric/browser observations; no candidate-generated golden."
+    },
+    {
+      "id": "BV-B-AXIS-LOCALE",
+      "sourceExpected": "Jan1 2021 13:04:05 -> %c=1/1/2021, 1:04:05 PM; %x=1/1/2021; %X=1:04:05 PM.",
+      "source": [
+        {
+          "repository": "mermaid-bundle-sourcesContent",
+          "path": "../../../node_modules/.pnpm/d3-time-format@4.1.0/node_modules/d3-time-format/src/locale.js",
+          "symbol": "function formatLocale",
+          "line": 36,
+          "sha256": "47df570989eca703c1d1a720aed8e8010d5992c2235348f135654ea930fbf4d8",
+          "bundleMapPath": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+          "bundleMapSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679"
+        }
+      ],
+      "closure": "Corresponding date/topology tests plus independently rerun fixed-source numeric/browser observations; no candidate-generated golden."
+    },
+    {
+      "id": "BV-B-AXIS-ESCAPE",
+      "sourceExpected": "Literal %Q/%L/%s must not be globally replaced.",
+      "source": [
+        {
+          "repository": "mermaid-bundle-sourcesContent",
+          "path": "../../../node_modules/.pnpm/d3-time-format@4.1.0/node_modules/d3-time-format/src/locale.js",
+          "symbol": "function formatLocale",
+          "line": 36,
+          "sha256": "47df570989eca703c1d1a720aed8e8010d5992c2235348f135654ea930fbf4d8",
+          "bundleMapPath": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+          "bundleMapSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679"
+        }
+      ],
+      "closure": "Corresponding date/topology tests plus independently rerun fixed-source numeric/browser observations; no candidate-generated golden."
+    },
+    {
+      "id": "BV-B-AXIS-PADDING",
+      "sourceExpected": "Jan1=1/space1/01;ISO2020-W53.",
+      "source": [
+        {
+          "repository": "mermaid-bundle-sourcesContent",
+          "path": "../../../node_modules/.pnpm/d3-time-format@4.1.0/node_modules/d3-time-format/src/locale.js",
+          "symbol": "function formatLocale",
+          "line": 36,
+          "sha256": "47df570989eca703c1d1a720aed8e8010d5992c2235348f135654ea930fbf4d8",
+          "bundleMapPath": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+          "bundleMapSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679"
+        }
+      ],
+      "closure": "Corresponding date/topology tests plus independently rerun fixed-source numeric/browser observations; no candidate-generated golden."
+    },
+    {
+      "id": "BV-B-AXIS-FAR",
+      "sourceExpected": "D3 year10000 %Y uses modulo10000->0000; ISO/week computations remain actual values.",
+      "source": [
+        {
+          "repository": "mermaid-bundle-sourcesContent",
+          "path": "../../../node_modules/.pnpm/d3-time-format@4.1.0/node_modules/d3-time-format/src/locale.js",
+          "symbol": "function formatLocale",
+          "line": 36,
+          "sha256": "47df570989eca703c1d1a720aed8e8010d5992c2235348f135654ea930fbf4d8",
+          "bundleMapPath": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+          "bundleMapSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679"
+        }
+      ],
+      "closure": "Corresponding date/topology tests plus independently rerun fixed-source numeric/browser observations; no candidate-generated golden."
+    },
+    {
+      "id": "BV-B-TICK-WEEKDAY",
+      "sourceExpected": "Monday Jan2024=Jan1/15/29;epoch floor1969-Dec29.",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/gantt/ganttRenderer.js",
+          "symbol": "function makeGrid",
+          "line": 649,
+          "sha256": "bf1c7231c8666070124eed4f6078b1d62ab4dea0973c44cc5d6264469961e488"
+        },
+        {
+          "repository": "mermaid-bundle-sourcesContent",
+          "path": "../../../node_modules/.pnpm/d3-time@3.1.0/node_modules/d3-time/src/week.js",
+          "symbol": "function weekday",
+          "line": 1,
+          "sha256": "f20da27d58580d1db19f2f7d899854394db4e17876ce1529c2b42bb4a9798086",
+          "bundleMapPath": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+          "bundleMapSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679"
+        }
+      ],
+      "closure": "Corresponding date/topology tests plus independently rerun fixed-source numeric/browser observations; no candidate-generated golden."
+    },
+    {
+      "id": "BV-B-AGENT-GENUINE",
+      "sourceExpected": "Authored hidden A->A redirects to Outer->Outer and survives.",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/agentflow/agentflowDb.ts",
+          "symbol": "const startId = collapsedAncestorMap",
+          "line": 1852,
+          "sha256": "aa74eb6cb3eb0821c1e3960eefbbc83afe167bc5dcf9380dc4acfa8fce82b1b6"
+        },
+        {
+          "path": "packages/mermaid/src/diagrams/agentflow/agentflowDb.ts",
+          "symbol": "const collapsedAncestorMap",
+          "line": 1714,
+          "sha256": "aa74eb6cb3eb0821c1e3960eefbbc83afe167bc5dcf9380dc4acfa8fce82b1b6"
+        },
+        {
+          "path": "packages/mermaid/src/rendering-util/layout-algorithms/elk/render.ts",
+          "symbol": "async function runElkLayout",
+          "line": 689,
+          "sha256": "6258890b3f311e86e4cd4dc99d480f704fde7473e150dc62b88838c5015c5011",
+          "synthesized": true
+        }
+      ],
+      "closure": "Corresponding date/topology tests plus independently rerun fixed-source numeric/browser observations; no candidate-generated golden."
+    }
+  ],
+  "additionalSource": [
+    {
+      "path": "packages/mermaid/src/diagrams/git/gitGraphRenderer.ts",
+      "symbol": "const drawBranches",
+      "line": 867,
+      "sha256": "d90f6685b76b2f33bebd6e5b47912c076e77f3180c3e27d821ae06261f1aac81"
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/git/gitGraphRenderer.ts",
+      "symbol": "const setBranchPosition",
+      "line": 986,
+      "sha256": "d90f6685b76b2f33bebd6e5b47912c076e77f3180c3e27d821ae06261f1aac81"
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/elk/render.ts",
+      "symbol": "const CONTAINER_ALGORITHM_OVERRIDES",
+      "line": 253,
+      "sha256": "6258890b3f311e86e4cd4dc99d480f704fde7473e150dc62b88838c5015c5011"
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/layout-algorithms/elk/render.ts",
+      "symbol": "export function clearContainerAlgorithmOptions",
+      "line": 268,
+      "sha256": "6258890b3f311e86e4cd4dc99d480f704fde7473e150dc62b88838c5015c5011"
+    }
+  ],
+  "provenance": {
+    "bundlePath": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js",
+    "bundleSha256": "ffd1a76f0553952a344c68a9b1502dd5cfb6faab72541307b74679c5abc9cec8",
+    "mapSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679",
+    "legacyHelper": "tests/branch_verification/oracle_b.cjs",
+    "legacyHelperSha256": "2dd4ccfa46018e019ebc4b767206bddb198e9ec695b4e2e9d9d4e5a41d2a47a2",
+    "sourceBinding": "Pinned sourcesContent + original UMD/ESM evaluation. Browser instrument adds JSON snapshots only around unique actual elk.layout invocation, logs transformed bundle hash and exact inserted bytes."
+  },
+  "coverage": [
+    {
+      "id": "date-pure",
+      "tests": [
+        "test_d01_strict_localized_formats_remain_none",
+        "test_d02_public_browser_fallback_is_separate",
+        "test_d03_weekday_parsing_uses_actual_calendar",
+        "test_d04_dayjs_iso_year_week_and_midnight",
+        "test_d05_dayjs_capitalized_days_and_literals",
+        "test_d06_d3_every_directive_literal_values",
+        "test_d07_padding_and_fraction_are_directive_specific",
+        "test_d08_percent_escapes_unknown_and_trailing_dispatch",
+        "test_d09_gregorian_zero_negative_and_extended_years",
+        "test_d10_iso_week_and_sunday_monday_boundaries",
+        "test_d11_weekday_specific_epoch_every_two",
+        "test_d12_automatic_millisecond_tickstep_two_and_twenty",
+        "test_d13_inclusive_safety_boundary_has_10001_ticks",
+        "test_d14_calendar_filters_restart_at_month_and_year",
+        "test_d15_strict_leap_quarter_meridiem_regression",
+        "test_d16_extended_epoch_roundtrip_avoids_os_mktime"
+      ],
+      "expectation": "Handwritten D3 English defaultLocale, explicit directive/padding/escape outputs, Gregorian ISO literal year boundaries, strict Dayjs localizedNone separate from browser Date fallback; original values are collected separately."
+    },
+    {
+      "id": "DST",
+      "tests": [
+        "test_d17_aware_controlled_DST_not_system_TZ",
+        "test_d20_linux_real_TZ_add_and_zone_formats",
+        "test_l16_linux_public_gantt_calendar_vs_elapsed_bar_width"
+      ],
+      "sourceExpected": "Mar2024 NewYork calendar day23 elapsed hours, Nov25; elapsed24h moves local hour13/11; public scaleTime uses epoch widths.",
+      "windows": "Aware input + explicit inverse host conversion seam only. Real-system-TZ test skips and is NOT claimed verified on Windows.",
+      "linux": "Actual tzset America/New_York must report winter-5/summer-4. Public twoGantt scenarios require this real TZ; missing system rules fail, no install/fallback."
+    },
+    {
+      "id": "Git",
+      "tests": [
+        "test_l13_all_directions_rotations_preserve_dense_edges",
+        "test_l14_branch_labels_use_source_lane_spacing",
+        "test_l15_reverse_tag_stack_and_source_rotation"
+      ],
+      "expectation": "LR/TB/BT, rotateCommitLabel false/true,9 authored DAG edges, actual branch label transforms+measured bbox in source; independent50+40+width/2 lane rule, reverse3tag stack and vertical45deg tags. Natural text widths not equated across backends."
+    },
+    {
+      "id": "group-algorithms",
+      "tests": [
+        "test_l07_all_eight_isolated_group_algorithms_reach_real_engine",
+        "test_l08_cross_hierarchy_clears_all_algorithm_overrides"
+      ],
+      "expectation": "All8 actual source metadata algorithm IDs isolated and crossing. Both original and native must invoke real ELK once. Cross clear removes scoped overrides and restores24/50 spacing + INCLUDE_CHILDREN; no dropped edge identity."
+    },
+    {
+      "id": "numerical-failure",
+      "tests": [
+        "test_l09_engine_exception_never_falls_back",
+        "test_l10_nonfinite_and_boolean_engine_dimensions_rejected",
+        "test_l11_bad_route_point_rejected_not_zeroed",
+        "test_l12_duplicate_engine_identity_rejected"
+      ],
+      "expectation": "Mutate real engine output only to test host adapter safety; nonfinite/bool/duplicate/route rejection codes and single requested call. Explicit engine error stays ELK_LAYOUT_FAILED; no alternative algorithm or success stub."
+    },
+    {
+      "id": "public-axis-consumer-and-pixels",
+      "tests": [
+        "test_d23_escape_survives_public_parse_and_paint",
+        "test_d24_axis_ink_control_rejects_suppressed_public_draw"
+      ],
+      "expectation": "Gantt lexer preserves inline %% literal format through public rendering; source tick text and actual native glyph ROI both required."
+    },
+    {
+      "id": "public-cherry-marker-and-agent-appearance",
+      "tests": [
+        "test_l17_cherry_source_primitives_and_real_ink",
+        "test_l18_cherry_class_css_is_consumed_not_just_recorded",
+        "test_l19_cherry_fruit_paint_control_is_pixel_detectable",
+        "test_l20_collapsed_container_metadata_and_slot7_paint",
+        "test_l21_agent_effective_appearance_and_palette_survive_flow_bridge"
+      ],
+      "expectation": "Source role-specific paint/ancestor inheritance and actual marker ink, negative class/fruit paint controls; collapsed metadata/palette and complete effective theme/look projection."
+    }
+  ],
+  "cli": {
+    "source": "node --experimental-vm-modules tools/oracle/closure_b.cjs --fixtures tests/closure/cases-B.json --out NEW_ORACLE --timezone UTC --browser",
+    "native": "python tools/check_closure_b.py --fixtures tests/closure/cases-B.json --collect-native NEW_NATIVE --timezone UTC --cases",
+    "comparison": "python tools/check_closure_b.py --fixtures tests/closure/cases-B.json --oracle ORACLE --native NATIVE --out NEW_COMPARISON.json --cases",
+    "linuxRequired": "Same commands on Linux; use --require-real-tz in comparison to reject any unverified public DST case.",
+    "unit": "python -m unittest discover -s tests/closure -p test_dates.py -v; python -m unittest discover -s tests/closure -p test_layout.py -v"
+  },
+  "notClaimed": [
+    "All tests/observations remain unexecuted in P2.",
+    "40 diagrams +191pure +11host operations are separate denominators, not242 rendered diagrams.",
+    "Nonstandard browser Date parser strings outside explicit ISO/US/English/RFC families are not silently treated as a universal browser implementation.",
+    "Source missingweek/timezone plugin exceptions remain actual exceptions, not invented outputs.",
+    "Retained known source radial group-frame defect is not repaired by expanding physical engine boxes."
+  ],
+  "oldTestsModified": false,
+  "productModified": false,
+  "P3Updates": {
+    "ganttParse": "Fixed taskTxt vs weekday/weekend known-day lexer branch; added d21/d22; unchanged CL-B-DATE-WEEKDAY input now checked against actual source task dates.",
+    "legacyMethod": "test_bt14_accessibility_is_preserved_as_pure_metadata",
+    "legacyOriginalInput": "eventmodeling\naccTitle: Accessible\naccDescr {Description\ncontinued}\ntf 1 ui Page\n",
+    "legacyOriginalExpectation": "Event raw accTitle/accDescr accepted and retained, same as6otherheaders.",
+    "legacyCorrectedExpectation": "Exact fixed original rejects; native SYNTAX_ERROR expected only for Event subcase. Other6headers and methodID retained.",
+    "sourceException": "Parsing failed: Lexer error on line 2, column 9: unexpected character: ->:<- at offset: 22, skipped 1 characters.\nLexer error on line 3, column 10: unexpected character: ->{<- at offset: 44, skipped 1 characters.\nLexer error on line 4, column 10: unexpected character: ->}<- at offset: 66, skipped 1 characters. Parse error on line 2, column 1: Expecting token of type 'EOF' but found `accTitle`.",
+    "sourceEvidence": {
+      "path": "test-runs/CLOSURE-P3-B-EXPECTATION-source-20261107T083759Z-f31238d5/artifacts/oracle/CL-B-LEGACY-EVENT-METADATA.json",
+      "sha256": "ab930bb7fe7d15aeee8080457959ce2306aaaae42ff2650884eb04d4669a8451",
+      "bytes": 1331
+    },
+    "transportFailurePreserved": "test-runs/CLOSURE-P3-B-EXPECTATION-source-20261107T083717Z-1c1eb00e; Playwright serialization failure was not treated as source reject proof.",
+    "oldFirstRepairRun": "test-runs/CLOSURE-P3-B-REPAIR-batch-20261107T083609Z-f7c805c1; parity239PASS and allB38+old25 passed, bulk164 retained6Eventerrors before old expectation/A import fix.",
+    "publicPaintRepair": {
+      "gantt": "Whole-line comments still removed; inline %% in Gantt directives reaches real D3 axis formatter. Public trace exact labels and actual tick ROIs plus missing-draw negative control.",
+      "git": "Classic commit-bullets inherits SVG textColor; generated theme supplies nodeBorder. Real source computed shell/fruit/stems compared with public trace and actual dark-shell/white-fruit ROI; missing class and missing fruit controls. L17 source #333 expectation retained.",
+      "agent": "Preserve containerType=flow, exclude collapsed node from task-kind palette override; project effective Agent theme/look before FlowConfig palette calculation. Public parse/render covers base custom palette/classic/neo/handDrawn. Match collapsed source IDs rather than all node traces.",
+      "sourceObserver": "Fresh original publicPaint computed roles, geometry and screen boxes frozen separately; old source snapshot archived byte-for-byte.",
+      "priorRejectedCandidates": [
+        "test-runs/CLOSURE-P4-batch-20261107T085101Z-2d330c0d",
+        "test-runs/CLOSURE-P3-batch-20261107T093917Z-9401a4b2"
+      ],
+      "priorHumanReview": "test-runs/CLOSURE-P4-B-VISUAL-review-20261107T085242Z-4b22f63b/artifacts/review.json"
+    }
+  },
+  "currentValidation": {
+    "run": "test-runs/CLOSURE-P3-batch-20261107T095511Z-86ae62a0",
+    "runStatus": "FAILED",
+    "sourceUnchanged": true,
+    "testToolsUnchanged": true,
+    "status": "B_RELATED_PASS_NOT_FINAL_ACCEPTANCE",
+    "commands": [
+      {
+        "name": "source-B-calendar-and-actual-ELK",
+        "exitCode": 0,
+        "stdout": {
+          "path": "test-runs/CLOSURE-P3-batch-20261107T095511Z-86ae62a0/commands/003-source-B-calendar-and-actual-ELK/stdout.log",
+          "sha256": "1909e53978838823ced799b4484aaa54549ad6df11bc3d11b68b3c46dc410251",
+          "bytes": 139
+        },
+        "stderr": {
+          "path": "test-runs/CLOSURE-P3-batch-20261107T095511Z-86ae62a0/commands/003-source-B-calendar-and-actual-ELK/stderr.log",
+          "sha256": "573340052a71a41f0d5d70c8337ec0833ef21760a7d559f1afd4055e0c30d449",
+          "bytes": 173
+        }
+      },
+      {
+        "name": "closure-unit-dates",
+        "exitCode": 0,
+        "stdout": {
+          "path": "test-runs/CLOSURE-P3-batch-20261107T095511Z-86ae62a0/commands/007-closure-unit-dates/stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        "stderr": {
+          "path": "test-runs/CLOSURE-P3-batch-20261107T095511Z-86ae62a0/commands/007-closure-unit-dates/stderr.log",
+          "sha256": "8b03e0e811af6977777314050595b23b0160af7f62bfcc68b8ebd6b59545bd34",
+          "bytes": 3905
+        },
+        "methods": 24
+      },
+      {
+        "name": "closure-unit-layout",
+        "exitCode": 0,
+        "stdout": {
+          "path": "test-runs/CLOSURE-P3-batch-20261107T095511Z-86ae62a0/commands/008-closure-unit-layout/stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        "stderr": {
+          "path": "test-runs/CLOSURE-P3-batch-20261107T095511Z-86ae62a0/commands/008-closure-unit-layout/stderr.log",
+          "sha256": "69cc0d4cf41525324dd7cf93fa1a9811febf7edbd7ca0135abdbcb57a610eab3",
+          "bytes": 4614
+        },
+        "methods": 21
+      },
+      {
+        "name": "source-B-parity",
+        "exitCode": 0,
+        "stdout": {
+          "path": "test-runs/CLOSURE-P3-batch-20261107T095511Z-86ae62a0/commands/013-source-B-parity/stdout.log",
+          "sha256": "ac5803d135c37614b07ce4cad98af3f150830d3fc92c73198592fa276b07b6bb",
+          "bytes": 57
+        },
+        "stderr": {
+          "path": "test-runs/CLOSURE-P3-batch-20261107T095511Z-86ae62a0/commands/013-source-B-parity/stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      }
+    ],
+    "counts": {
+      "NOT_VERIFIED": 2,
+      "PASS": 239,
+      "SOURCE_EXCEPTION": 1
+    },
+    "methods": {
+      "closureDates": 24,
+      "closureLayout": 21
+    },
+    "comparison": {
+      "path": "test-runs/CLOSURE-P3-batch-20261107T095511Z-86ae62a0/artifacts/comparison-B.json",
+      "sha256": "839baae1222a6d19dfc8a79bdf92eae28fc53e30cbe7606cc7be29baf5f3ac68",
+      "bytes": 5047639
+    },
+    "sourceFreeze": {
+      "path": "references/closure-source-B/provenance.json",
+      "sha256": "d73cf8f315e4f715fc7de32cf641cbf3866ca6e0b02ca1fa168cf8a40797a78b",
+      "bytes": 14778
+    },
+    "sourceFreezeRun": "test-runs/CLOSURE-SOURCE-B-public-paint-freeze-20261107T100647Z-dda98841",
+    "LinuxRealTZRequired": true,
+    "WindowsUnverifiedPublicDSTCases": 2,
+    "enclosingDonorFailureNotPromoted": true
+  },
+  "designPhasePreserved": {
+    "phase": "P2",
+    "status": "DESIGNED_NOT_EXECUTED",
+    "baselineSourceTreeSha256": "dab675b768488413fd60bb07b656d28ef8e2e6c4f34af45056eec9763c98f0f4",
+    "archive": "test-runs/CLOSURE-B-public-paint-references-20261107T100734Z-ac88a73a/artifacts/previous-closure-B-assertions.json"
+  },
+  "priorValidationPreserved": {
+    "scope": "RELATED_B_ONLY_NOT_FINAL_GLOBAL_RELEASE",
+    "run": "test-runs/CLOSURE-P3-B-FINAL-batch-20261107T083855Z-75778f31",
+    "runManifestSha256": "63943b81928213337bce97b11f0880834fed532fc507ad2e37e890bb91e3d220",
+    "status": "SUCCESS",
+    "sourceUnchanged": true,
+    "sourceTreeSha256": "7cd756eade2def7849fd4fe76e3119c2bc0ea86daed38f615ddd589db46d52a5",
+    "commands": [
+      {
+        "name": "native-B-all40-191-11",
+        "exitCode": 0
+      },
+      {
+        "name": "source-B-independent-parity",
+        "exitCode": 0
+      },
+      {
+        "name": "closure-dates",
+        "exitCode": 0
+      },
+      {
+        "name": "closure-layout",
+        "exitCode": 0
+      },
+      {
+        "name": "existing-B25-independent",
+        "exitCode": 0
+      },
+      {
+        "name": "bulk-B-full-regression",
+        "exitCode": 0
+      }
+    ],
+    "counts": {
+      "NOT_VERIFIED": 2,
+      "PASS": 239,
+      "SOURCE_EXCEPTION": 1
+    },
+    "methods": {
+      "closureDates": 22,
+      "closureLayout": 16,
+      "oldBBranch": 25,
+      "bulkB": 164
+    },
+    "LinuxRealTZRequired": true,
+    "WindowsUnverifiedPublicDSTCases": 2,
+    "oldFailuresPreserved": [
+      "test-runs/CLOSURE-P3-batch-20261107T082546Z-6350b9b0",
+      "test-runs/CLOSURE-P3-B-REPAIR-batch-20261107T083609Z-f7c805c1",
+      "test-runs/CLOSURE-P3-B-EXPECTATION-source-20261107T083717Z-1c1eb00e",
+      "test-runs/CLOSURE-P3-B-EXPECTATION-source-20261107T083759Z-f31238d5"
+    ]
+  }
+}

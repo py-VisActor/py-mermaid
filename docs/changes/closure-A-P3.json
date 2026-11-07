@@ -1,0 +1,113 @@
+{
+  "schema": "py-mermaid-closure-A-P3/v1",
+  "status": "RELATED_VERIFICATION_PASS_PENDING_JOINT_P4",
+  "productWritesStopped": true,
+  "assertions": {
+    "path": "references/closure-A-assertions.json",
+    "bytes": 12937,
+    "sha256": "9d394e5155db637febd84ea7d9dd0329d669d1f5e67fc9c1d094907bee2f8a03"
+  },
+  "baseline": "dab675b768488413fd60bb07b656d28ef8e2e6c4f34af45056eec9763c98f0f4",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "initialRun": "test-runs/CLOSURE-P3-batch-20261107T082546Z-6350b9b0",
+  "originalFailuresPreserved": true,
+  "productFixes": [
+    {
+      "path": "src/py_mermaid/diagrams/business/eventmodeling.py",
+      "reason": "Restore wrapped import for real renderer; lex prefixed metadata before hidden inline whitespace but after EM_ID so native accepts only actual source terminals.",
+      "source": "packages/parser/src/language/eventmodeling/event-modeling.langium:54-64; common/valueConverter.ts; event-modelingDb metadata handlers"
+    }
+  ],
+  "expectationMigrations": [
+    {
+      "id": "CLOSURE-A-architecture-description-raw-quotes",
+      "actual": "\"Unpaired quote",
+      "reason": "preprocessDiagram calls cleanupComments before parsing; whole %% literal line is not ACC_DESCR payload. Native already correct; previous fixture values preserved in sourceExpectationMigration."
+    },
+    {
+      "id": "CLOSURE-A-event-legal-title-id",
+      "actual": "source parser rejects EM_TITLE where EM_ID required",
+      "reason": "Leading space + title token shadows hidden EM_WS; retained ID/raw input now true negative, previous fixture retained."
+    }
+  ],
+  "newControls": [
+    "CLOSURE-A-event-normal-entity-id",
+    "CLOSURE-A-event-inline-metadata"
+  ],
+  "oracleRepair": "Use fixed Zen package direct source renderer (not unregistered Mermaid detector); isolated nonopaque HTTP origin/base resolves original assets. Select body > svg so nested arrowhead SVG does not cause screenshot strict-mode errors. No Zen product change in P3.",
+  "relatedEvidence": [
+    {
+      "run": "test-runs/CLOSURE-P3-A-related-20261107T083745Z-c7828325",
+      "command": "002-closure-and-old-A",
+      "methods": 71,
+      "exitCode": 0
+    },
+    {
+      "run": "test-runs/CLOSURE-P3-A-related-20261107T083745Z-c7828325",
+      "command": "003-related-bulk-A",
+      "methods": 612,
+      "exitCode": 0
+    },
+    {
+      "run": "test-runs/CLOSURE-P3-A-event-render-final-20261107T084429Z-9eb41d64",
+      "command": "001-existing-event-render-controls",
+      "methods": 3,
+      "exitCode": 0
+    }
+  ],
+  "sourceEvidence": {
+    "run": "test-runs/CLOSURE-P3-A-source-final-20261107T084111Z-3bcde7e4",
+    "cases": 45,
+    "exitCode": 0,
+    "status": "PASS",
+    "result": {
+      "path": "test-runs/CLOSURE-P3-A-source-final-20261107T084111Z-3bcde7e4/artifacts/source-A/results.json",
+      "bytes": 504466,
+      "sha256": "9df390410b4b5c6b1080ecb05f9cd139b070680b590bcd16214adb1057b549dc"
+    },
+    "c4": {
+      "baselineLabelRelativeTop": -0.5,
+      "spriteLabelRelativeTop": 47.5,
+      "delta": 48,
+      "frameWidth": 316,
+      "frameHeight": 226,
+      "imageCount": 0
+    }
+  },
+  "retainedLocalFailures": [
+    {
+      "run": "test-runs/CLOSURE-P3-A-related-20261107T083745Z-c7828325",
+      "reason": "Source Zen asset base omitted; timed out; native groups still passed."
+    },
+    {
+      "run": "test-runs/CLOSURE-P3-A-source-repair-20261107T083933Z-25fcf32e",
+      "reason": "45 semantic expectations matched; 4 Zen screenshots failed nested-svg strict selector."
+    },
+    {
+      "run": "test-runs/CLOSURE-P3-A-event-render-related-20261107T084409Z-4c8fccb7",
+      "reason": "One diagnostic unittest target used wrong class TemporalGeometry; two real renderer controls passed. Repeated with correct BusinessGeometry in new Run, all3 passed."
+    }
+  ],
+  "files": [
+    {
+      "path": "src/py_mermaid/diagrams/business/eventmodeling.py",
+      "bytes": 11282,
+      "sha256": "414dc7f12eb724069e8e50bc1996269bba12a28fca26cf04652f2432f7716d09"
+    },
+    {
+      "path": "tests/closure/test_parser.py",
+      "bytes": 3905,
+      "sha256": "af2fe47d6ee712ae5693fd910d8d96d96127512446ba0a24a3ef8cc00a61c761"
+    },
+    {
+      "path": "tests/closure/cases-A.json",
+      "bytes": 47256,
+      "sha256": "61980a79b519568bd2847d9819b0822f3879293f1e82f787e2751c016ca96cbd"
+    },
+    {
+      "path": "tools/oracle/closure_a.cjs",
+      "bytes": 8750,
+      "sha256": "d2967fdd7539fe56d5a28ed27a6d256ba5c1dcabfa83bf5356ac3295fbbf99dd"
+    }
+  ]
+}

@@ -1,0 +1,313 @@
+{
+  "schema": "py-mermaid-vchart-dsl-compiler-cases/v1",
+  "cases": [
+    {
+      "id": "DSL-B-minimal",
+      "text": "vchart bar\n",
+      "spec": {
+        "type": "bar"
+      },
+      "origin": {
+        "kind": "handwritten-normative-contract",
+        "path": "docs/VCHART_DSL_DESIGN.md",
+        "sections": [
+          "2",
+          "3",
+          "6"
+        ],
+        "expectation": "independent JSON value, no provider execution or candidate-generated golden"
+      }
+    },
+    {
+      "id": "DSL-B-scalar-types",
+      "text": "vchart bar\ndata=[false,0,true,1,null,-2,0.25,\"0\"]",
+      "spec": {
+        "type": "bar",
+        "data": [
+          false,
+          0,
+          true,
+          1,
+          null,
+          -2,
+          0.25,
+          "0"
+        ]
+      },
+      "origin": {
+        "kind": "handwritten-normative-contract",
+        "path": "docs/VCHART_DSL_DESIGN.md",
+        "sections": [
+          "2",
+          "3",
+          "6"
+        ],
+        "expectation": "independent JSON value, no provider execution or candidate-generated golden"
+      }
+    },
+    {
+      "id": "DSL-B-containers",
+      "text": "vchart bar\nx={}; y=[]; z={empty:[],nested:{}}",
+      "spec": {
+        "type": "bar",
+        "x": {},
+        "y": [],
+        "z": {
+          "empty": [],
+          "nested": {}
+        }
+      },
+      "origin": {
+        "kind": "handwritten-normative-contract",
+        "path": "docs/VCHART_DSL_DESIGN.md",
+        "sections": [
+          "2",
+          "3",
+          "6"
+        ],
+        "expectation": "independent JSON value, no provider execution or candidate-generated golden"
+      }
+    },
+    {
+      "id": "DSL-B-indexed",
+      "text": "vchart bar\naxes[0]={orient:\"bottom\"}; axes[1]={orient:\"left\"}",
+      "spec": {
+        "type": "bar",
+        "axes": [
+          {
+            "orient": "bottom"
+          },
+          {
+            "orient": "left"
+          }
+        ]
+      },
+      "origin": {
+        "kind": "handwritten-normative-contract",
+        "path": "docs/VCHART_DSL_DESIGN.md",
+        "sections": [
+          "2",
+          "3",
+          "6"
+        ],
+        "expectation": "independent JSON value, no provider execution or candidate-generated golden"
+      }
+    },
+    {
+      "id": "DSL-B-reopen",
+      "text": "vchart bar\na {first=1}; a {second=2}",
+      "spec": {
+        "type": "bar",
+        "a": {
+          "first": 1,
+          "second": 2
+        }
+      },
+      "origin": {
+        "kind": "handwritten-normative-contract",
+        "path": "docs/VCHART_DSL_DESIGN.md",
+        "sections": [
+          "2",
+          "3",
+          "6"
+        ],
+        "expectation": "independent JSON value, no provider execution or candidate-generated golden"
+      }
+    },
+    {
+      "id": "DSL-B-sugar",
+      "text": "vchart common\nsize 640 480\nseries bar {xField=\"x\";yField=\"y\"}\naxis bottom {type=\"band\"}",
+      "spec": {
+        "type": "common",
+        "width": 640,
+        "height": 480,
+        "series": [
+          {
+            "type": "bar",
+            "xField": "x",
+            "yField": "y"
+          }
+        ],
+        "axes": [
+          {
+            "orient": "bottom",
+            "type": "band"
+          }
+        ]
+      },
+      "origin": {
+        "kind": "handwritten-normative-contract",
+        "path": "docs/VCHART_DSL_DESIGN.md",
+        "sections": [
+          "2",
+          "3",
+          "6"
+        ],
+        "expectation": "independent JSON value, no provider execution or candidate-generated golden"
+      }
+    },
+    {
+      "id": "DSL-B-table",
+      "text": "vchart scatter\ndata=table(x,y,label){[1,2,\"A\"];[3,4,\"B\"]}",
+      "spec": {
+        "type": "scatter",
+        "data": [
+          {
+            "x": 1,
+            "y": 2,
+            "label": "A"
+          },
+          {
+            "x": 3,
+            "y": 4,
+            "label": "B"
+          }
+        ]
+      },
+      "origin": {
+        "kind": "handwritten-normative-contract",
+        "path": "docs/VCHART_DSL_DESIGN.md",
+        "sections": [
+          "2",
+          "3",
+          "6"
+        ],
+        "expectation": "independent JSON value, no provider execution or candidate-generated golden"
+      }
+    },
+    {
+      "id": "DSL-B-let-table",
+      "text": "vchart bar\nlet values=table(k,v){[\"A\",2];[\"B\",3]}; data={values:$values}",
+      "spec": {
+        "type": "bar",
+        "data": {
+          "values": [
+            {
+              "k": "A",
+              "v": 2
+            },
+            {
+              "k": "B",
+              "v": 3
+            }
+          ]
+        }
+      },
+      "origin": {
+        "kind": "handwritten-normative-contract",
+        "path": "docs/VCHART_DSL_DESIGN.md",
+        "sections": [
+          "2",
+          "3",
+          "6"
+        ],
+        "expectation": "independent JSON value, no provider execution or candidate-generated golden"
+      }
+    },
+    {
+      "id": "DSL-B-ordered-frames",
+      "text": "vchart sequenceScatterLink\nlet frames={z:[{x:0,y:1}],a:[{x:2,y:3}]}; data=$frames",
+      "spec": {
+        "type": "sequenceScatterLink",
+        "data": {
+          "z": [
+            {
+              "x": 0,
+              "y": 1
+            }
+          ],
+          "a": [
+            {
+              "x": 2,
+              "y": 3
+            }
+          ]
+        }
+      },
+      "origin": {
+        "kind": "handwritten-normative-contract",
+        "path": "docs/VCHART_DSL_DESIGN.md",
+        "sections": [
+          "2",
+          "3",
+          "6"
+        ],
+        "expectation": "independent JSON value, no provider execution or candidate-generated golden"
+      }
+    },
+    {
+      "id": "DSL-B-quoted",
+      "text": "vchart bar\n\"a.b\"[\"[0]\"][\"\"]=null",
+      "spec": {
+        "type": "bar",
+        "a.b": {
+          "[0]": {
+            "": null
+          }
+        }
+      },
+      "origin": {
+        "kind": "handwritten-normative-contract",
+        "path": "docs/VCHART_DSL_DESIGN.md",
+        "sections": [
+          "2",
+          "3",
+          "6"
+        ],
+        "expectation": "independent JSON value, no provider execution or candidate-generated golden"
+      }
+    },
+    {
+      "id": "DSL-B-resources",
+      "text": "vchart map\nresource map \"local\"={type:\"FeatureCollection\",features:[]}; resource svg \"local\"=\"<svg/>\"; map=\"local\"",
+      "spec": {
+        "type": "map",
+        "map": "local"
+      },
+      "origin": {
+        "kind": "handwritten-normative-contract",
+        "path": "docs/VCHART_DSL_DESIGN.md",
+        "sections": [
+          "2",
+          "3",
+          "6"
+        ],
+        "expectation": "independent JSON value, no provider execution or candidate-generated golden"
+      },
+      "maps": {
+        "local": {
+          "type": "FeatureCollection",
+          "features": []
+        }
+      },
+      "svgs": {
+        "local": "<svg/>"
+      }
+    },
+    {
+      "id": "DSL-B-pass-through",
+      "text": "vchart futureType\nunknown={a:[{},false,0],anything:\"unchanged\"}",
+      "spec": {
+        "type": "futureType",
+        "unknown": {
+          "a": [
+            {},
+            false,
+            0
+          ],
+          "anything": "unchanged"
+        }
+      },
+      "origin": {
+        "kind": "handwritten-normative-contract",
+        "path": "docs/VCHART_DSL_DESIGN.md",
+        "sections": [
+          "2",
+          "3",
+          "6"
+        ],
+        "expectation": "independent JSON value, no provider execution or candidate-generated golden"
+      }
+    }
+  ]
+}

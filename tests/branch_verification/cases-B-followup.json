@@ -1,0 +1,210 @@
+{
+  "schema": "py-mermaid-bulk-cases/v1",
+  "group": "B",
+  "cases": [
+    {
+      "id": "BV-B-AGENT-GENUINE-SOURCE-VALID",
+      "kind": "agentflow",
+      "source": "agentflow-beta TB\nflow Outer[\"Outer\"]\n A --> A\nend\nOuter@{view: \"collapsed\"}\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/agentflow/agentflowDb.ts",
+        "symbol": "public getData()",
+        "line": 1696,
+        "sha256": "aa74eb6cb3eb0821c1e3960eefbbc83afe167bc5dcf9380dc4acfa8fce82b1b6",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "compound-routing",
+        "collapsed-identity"
+      ],
+      "expectedText": [
+        "Outer"
+      ],
+      "expectedErrorCodes": [],
+      "previousEvidenceId": "BV-B-AGENT-GENUINE",
+      "branchVerification": {
+        "originalCaseId": "BV-B-AGENT-GENUINE",
+        "reason": "Original compact YAML parsed by source as key view:collapsed/algorithm:elk.box with null value, leaving intended branch inactive. This independent follow-up uses valid spaced YAML and explicit visible group labels; original inputs/evidence remain untouched.",
+        "sourceReference": {
+          "path": "packages/mermaid/src/diagrams/agentflow/agentflow-semantic-model.spec.ts",
+          "symbol": "collapsed-vs-expanded equivalence",
+          "line": 62
+        }
+      }
+    },
+    {
+      "id": "BV-B-AGENT-INTERNAL-SOURCE-VALID",
+      "kind": "agentflow",
+      "source": "agentflow-beta TB\nflow Outer[\"Outer\"]\n A --> B\nend\nOuter@{view: \"collapsed\"}\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/agentflow/agentflowDb.ts",
+        "symbol": "public getData()",
+        "line": 1696,
+        "sha256": "aa74eb6cb3eb0821c1e3960eefbbc83afe167bc5dcf9380dc4acfa8fce82b1b6",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "compound-routing",
+        "collapsed-identity"
+      ],
+      "expectedText": [
+        "Outer"
+      ],
+      "expectedErrorCodes": [],
+      "previousEvidenceId": "BV-B-AGENT-INTERNAL",
+      "branchVerification": {
+        "originalCaseId": "BV-B-AGENT-INTERNAL",
+        "reason": "Original compact YAML parsed by source as key view:collapsed/algorithm:elk.box with null value, leaving intended branch inactive. This independent follow-up uses valid spaced YAML and explicit visible group labels; original inputs/evidence remain untouched.",
+        "sourceReference": {
+          "path": "packages/mermaid/src/diagrams/agentflow/agentflow-semantic-model.spec.ts",
+          "symbol": "collapsed-vs-expanded equivalence",
+          "line": 62
+        }
+      }
+    },
+    {
+      "id": "BV-B-AGENT-NESTED-SOURCE-VALID",
+      "kind": "agentflow",
+      "source": "agentflow-beta LR\nflow Outer[\"Outer\"]\n flow Inner[\"Inner\"]\n  A --> B\n end\nend\nOuter@{view: \"collapsed\"}\nInner@{view: \"collapsed\"}\nX --> A\nB --> Y\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/agentflow/agentflowDb.ts",
+        "symbol": "public getData()",
+        "line": 1696,
+        "sha256": "aa74eb6cb3eb0821c1e3960eefbbc83afe167bc5dcf9380dc4acfa8fce82b1b6",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "compound-routing",
+        "collapsed-identity"
+      ],
+      "expectedText": [
+        "Outer",
+        "X",
+        "Y"
+      ],
+      "expectedErrorCodes": [],
+      "previousEvidenceId": "BV-B-AGENT-NESTED",
+      "branchVerification": {
+        "originalCaseId": "BV-B-AGENT-NESTED",
+        "reason": "Original compact YAML parsed by source as key view:collapsed/algorithm:elk.box with null value, leaving intended branch inactive. This independent follow-up uses valid spaced YAML and explicit visible group labels; original inputs/evidence remain untouched.",
+        "sourceReference": {
+          "path": "packages/mermaid/src/diagrams/agentflow/agentflow-semantic-model.spec.ts",
+          "symbol": "collapsed-vs-expanded equivalence",
+          "line": 62
+        }
+      }
+    },
+    {
+      "id": "BV-B-AGENT-ANCESTOR-SOURCE-VALID",
+      "kind": "agentflow",
+      "source": "agentflow-beta TB\nflow Outer[\"Outer\"]\n flow Inner[\"Inner\"]\n  A --> B\n end\nend\nOuter --> A\nB --> Inner\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/agentflow/agentflowDb.ts",
+        "symbol": "public getData()",
+        "line": 1696,
+        "sha256": "aa74eb6cb3eb0821c1e3960eefbbc83afe167bc5dcf9380dc4acfa8fce82b1b6",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "compound-routing",
+        "collapsed-identity"
+      ],
+      "expectedText": [
+        "Outer",
+        "Inner",
+        "A",
+        "B"
+      ],
+      "expectedErrorCodes": [],
+      "previousEvidenceId": "BV-B-AGENT-ANCESTOR",
+      "branchVerification": {
+        "originalCaseId": "BV-B-AGENT-ANCESTOR",
+        "reason": "Original compact YAML parsed by source as key view:collapsed/algorithm:elk.box with null value, leaving intended branch inactive. This independent follow-up uses valid spaced YAML and explicit visible group labels; original inputs/evidence remain untouched.",
+        "sourceReference": {
+          "path": "packages/mermaid/src/diagrams/agentflow/agentflow-semantic-model.spec.ts",
+          "symbol": "collapsed-vs-expanded equivalence",
+          "line": 62
+        }
+      }
+    },
+    {
+      "id": "BV-B-AGENT-GROUP-ALGO-SOURCE-VALID",
+      "kind": "agentflow",
+      "source": "agentflow-beta TB\nflow Outer[\"Outer\"]@{algorithm: \"elk.box\"}\n A --> B\nend\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/agentflow/agentflowDb.ts",
+        "symbol": "public getData()",
+        "line": 1696,
+        "sha256": "aa74eb6cb3eb0821c1e3960eefbbc83afe167bc5dcf9380dc4acfa8fce82b1b6",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "compound-routing",
+        "collapsed-identity"
+      ],
+      "expectedText": [
+        "Outer",
+        "A",
+        "B"
+      ],
+      "expectedErrorCodes": [],
+      "previousEvidenceId": "BV-B-AGENT-GROUP-ALGO",
+      "branchVerification": {
+        "originalCaseId": "BV-B-AGENT-GROUP-ALGO",
+        "reason": "Original compact YAML parsed by source as key view:collapsed/algorithm:elk.box with null value, leaving intended branch inactive. This independent follow-up uses valid spaced YAML and explicit visible group labels; original inputs/evidence remain untouched.",
+        "sourceReference": {
+          "path": "packages/mermaid/src/diagrams/agentflow/agentflow-semantic-model.spec.ts",
+          "symbol": "collapsed-vs-expanded equivalence",
+          "line": 62
+        }
+      }
+    },
+    {
+      "id": "BV-B-AGENT-CROSS-ALGO-SOURCE-VALID",
+      "kind": "agentflow",
+      "source": "agentflow-beta LR\nflow Outer[\"Outer\"]@{algorithm: \"elk.box\"}\n A --> B\nend\nX --> A\nB --> Y\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/agentflow/agentflowDb.ts",
+        "symbol": "public getData()",
+        "line": 1696,
+        "sha256": "aa74eb6cb3eb0821c1e3960eefbbc83afe167bc5dcf9380dc4acfa8fce82b1b6",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "compound-routing",
+        "collapsed-identity"
+      ],
+      "expectedText": [
+        "Outer",
+        "A",
+        "B",
+        "X",
+        "Y"
+      ],
+      "expectedErrorCodes": [],
+      "previousEvidenceId": "BV-B-AGENT-CROSS-ALGO",
+      "branchVerification": {
+        "originalCaseId": "BV-B-AGENT-CROSS-ALGO",
+        "reason": "Original compact YAML parsed by source as key view:collapsed/algorithm:elk.box with null value, leaving intended branch inactive. This independent follow-up uses valid spaced YAML and explicit visible group labels; original inputs/evidence remain untouched.",
+        "sourceReference": {
+          "path": "packages/mermaid/src/diagrams/agentflow/agentflow-semantic-model.spec.ts",
+          "symbol": "collapsed-vs-expanded equivalence",
+          "line": 62
+        }
+      }
+    }
+  ],
+  "provenance": "Additional branch-trigger corrections only; original cases-B.json and P3 closed artifacts preserved."
+}

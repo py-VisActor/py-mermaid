@@ -59,9 +59,46 @@ def _title(raw):
     return text.strip()
 
 
+def _common_value(value,multiline=False):
+    # Fixed CommonValueConverter.runCommonConverter, pure values only.
+    if not multiline:return re.sub(r'[\t ]{2,}',' ',value.split('%%',1)[0].strip())
+    value=re.sub(r'^\s*','',value,flags=re.M)
+    value=re.sub(r'\s+$','',value,flags=re.M)
+    return re.sub(r'[\n\r]{2,}','\n',re.sub(r'[\t ]{2,}',' ',value))
+
+
+def _architecture_rows(document):
+    # ACC_DESCR is one terminal even with raw newlines/unmatched quotes in
+    # its payload. Mask it before the ordinary quoted/YAML row collector so
+    # those payload characters cannot swallow a later service declaration.
+    text=document.cleaned;masked=list(text);blocks=[];i=0
+    while i<len(text):
+        if text.startswith('%%',i):
+            end=text.find('\n',i);i=len(text) if end<0 else end+1;continue
+        title=re.match(_TITLE,text[i:]) if text[i]=='[' else None
+        if title:i+=title.end();continue
+        if text[i] in ('"',"'"):
+            quote=text[i];i+=1
+            while i<len(text):
+                if text[i]=='\\':i+=2;continue
+                if text[i]==quote:i+=1;break
+                i+=1
+            continue
+        opening=re.match(r'accDescr\s*\{',text[i:]) if (i==0 or text[i-1].isspace()) else None
+        if opening:
+            end=text.find('}',i+opening.end())
+            if end<0:raise error(document,i,'Unterminated accessibility description')
+            end+=1;blocks.append((i,text[i:end]))
+            for j in range(i,end):
+                if masked[j] not in '\r\n':masked[j]=' '
+            i=end;continue
+        i+=1
+    return sorted([*_rows(''.join(masked)),*blocks],key=lambda row:row[0])
+
+
 def parse(document,config):
     declarations=[];edges=[];hints=[];header=False;title=document.title or '';acc_title='';acc_description=''
-    for offset,line in _rows(document.cleaned):
+    for offset,line in _architecture_rows(document):
         text=line.strip()
         if not text or text.startswith('%%'):continue
         if not header:
@@ -71,9 +108,9 @@ def parse(document,config):
             if not text:continue
         m=re.fullmatch(r'title(?:[\t ]+(.*))?|accTitle\s*:\s*(.*)|accDescr\s*:\s*(.*)|accDescr\s*\{([^}]*)\}',text,re.S)
         if m:
-            if text.startswith('title'):title=(m[1] or '').strip()
-            elif m[2] is not None:acc_title=m[2].strip()
-            else:acc_description=(m[3] if m[3] is not None else m[4] or '').strip()
+            if text.startswith('title'):title=_common_value(m[1] or '')
+            elif m[2] is not None:acc_title=_common_value(m[2])
+            else:acc_description=_common_value(m[3] if m[3] is not None else m[4] or '',m[4] is not None)
             continue
         m=re.fullmatch(r'(group|service|junction)\s+('+_ID+r')(?:\s*(\([\w:-]+\)|'+_STRING+r'))?(?:\s*('+_TITLE+r'))?(?:\s+in\s+('+_ID+r'))?\s*',text,re.ASCII|re.S)
         if m:

@@ -173,6 +173,10 @@ def parse(document,config):
             match=re.fullmatch(r'cssClass\s+"([^"]*)"\s+(\w+)',text)
             if not match:raise error(document,token.offset,'Invalid cssClass')
             for id in match[1].split(','):
+                # ClassDB.setCssClass routes each quoted target through
+                # splitClassNameAndType before the identity lookup.
+                id=sanitize_text(id,config)
+                if id.find('~')>0:id=id.split('~',1)[0]
                 if id in classes:classes[id]=replace(classes[id],classes=(*classes[id].classes,match[2]))
             continue
         if text.startswith(('click ','link ','callback ')):

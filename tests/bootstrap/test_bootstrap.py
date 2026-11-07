@@ -48,6 +48,18 @@ class BootstrapTests(unittest.TestCase):
         with altered_document("references/upstream.lock.json", lambda doc: doc["canvas"].update(version="0.0.0")) as root:
             self.assertIn("Canvas dependency differs from lock", check(root)["errors"])
 
+    def test_pypi_vchart_must_be_published(self):
+        with altered_document('references/vchart-release-lock.json',
+                              lambda doc: doc['pypi'].update(published=False)) as root:
+            self.assertIn('VChart delivery requirement/version/asset SHA differs from release lock',
+                          check(root)['errors'])
+
+    def test_pypi_vchart_rejects_untrusted_file_host(self):
+        with altered_document('references/vchart-release-lock.json',
+                              lambda doc: doc['asset'].update(url='https://example.com/replaced.whl')) as root:
+            self.assertIn('VChart delivery requirement/version/asset SHA differs from release lock',
+                          check(root)['errors'])
+
     def test_cannot_claim_rendering_without_evidence(self):
         with altered_document("docs/compatibility.json", lambda doc: doc["diagrams"][0].update(canvas="canvas_verified",evidence=[])) as root:
             self.assertTrue(any("Verified stage requires real evidence" in e for e in check(root)["errors"]))

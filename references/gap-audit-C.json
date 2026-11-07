@@ -1,0 +1,2923 @@
+{
+  "schema": "py-mermaid-feature-gap-audit/v1",
+  "group": "C",
+  "phase": "G01-readonly",
+  "baselineSourceSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "upstreamVersion": "12.2.0",
+  "zenumlVersion": "3.49.2",
+  "zenumlCommit": "213c239587ffa1f3dbb54d8b64468c3038ced55d",
+  "sourceRootConventions": {
+    "mermaid": ".local/upstream-mermaid",
+    "zenuml": ".local/bulk-sources/zenuml/source",
+    "pythonAndTests": "repository root"
+  },
+  "entries": [
+    {
+      "id": "sequence",
+      "features": [
+        {
+          "id": "sequence.grammar",
+          "title": "Aliases,metadata,26 arrows and8actor types",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/sequence/parser/sequenceDiagram.jison",
+              "symbol": "signaltype",
+              "line": 332
+            },
+            {
+              "path": "packages/mermaid/src/diagrams/sequence/sequenceDb.ts",
+              "symbol": "public addActor(",
+              "line": 155
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/sequence/parser.py",
+              "symbol": "def statements",
+              "line": 22
+            },
+            {
+              "path": "src/py_mermaid/diagrams/sequence/parser.py",
+              "symbol": "    def actor(",
+              "line": 61
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_sequence.py",
+              "symbol": "def _arrow_method",
+              "line": 109
+            },
+            {
+              "path": "tests/bulk/c/test_sequence.py",
+              "symbol": "def _actor_method",
+              "line": 118
+            },
+            {
+              "path": "tests/bulk/c/test_sequence.py",
+              "symbol": "def test_implicit_actor_order_then_alias_redeclaration",
+              "line": 30
+            }
+          ],
+          "reason": "Literal source tables and semantic assertions exist; not every invalid token sequence."
+        },
+        {
+          "id": "sequence.activation",
+          "title": "Nested activation,+/-shorthand and inactive errors",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/sequence/sequenceDb.ts",
+              "symbol": "private activationCount(",
+              "line": 233
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/sequence/parser.py",
+              "symbol": "    def activation(",
+              "line": 73
+            },
+            {
+              "path": "src/py_mermaid/diagrams/sequence/layout.py",
+              "symbol": "async def build",
+              "line": 38
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_sequence.py",
+              "symbol": "def test_nested_activation_stack_and_shorthand_order",
+              "line": 36
+            },
+            {
+              "path": "tests/bulk/c/test_sequence.py",
+              "symbol": "def test_messages_activations_notes_and_fragment_have_ink_and_order",
+              "line": 144
+            }
+          ],
+          "reason": "Model counters and actual representative activation ink covered; depth/direction cross-product not enumerated."
+        },
+        {
+          "id": "sequence.lifecycle",
+          "title": "Create/destroy associations and duplicate errors",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/sequence/sequenceDb.ts",
+              "symbol": "case 'createParticipant':",
+              "line": 581
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/sequence/parser.py",
+              "symbol": "def parse(",
+              "line": 51
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_sequence.py",
+              "symbol": "def test_create_destroy_attach_to_matching_messages",
+              "line": 69
+            },
+            {
+              "path": "tests/bulk/c/test_sequence.py",
+              "symbol": "def test_exact_lifecycle_and_fragment_errors_have_raw_spans",
+              "line": 93
+            }
+          ],
+          "reason": "Semantic lifecycle exists; independent endpoint gap below."
+        },
+        {
+          "id": "sequence.destroy-attachment",
+          "title": "Destroying message boundary attachment",
+          "status": "confirmed_gap",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+              "symbol": "function adjustCreatedDestroyedData(",
+              "line": 946
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/sequence/layout.py",
+              "symbol": "        if e.target in birth",
+              "line": 248
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_sequence.py",
+              "symbol": "def test_create_destroy_attach_to_matching_messages",
+              "line": 69
+            },
+            {
+              "path": "tests/bulk/c/test_gap_audit.py",
+              "symbol": "test_destroy_receiver_arrow_stops_before_visible_footer",
+              "line": 178,
+              "executionStatus": "BASELINE_FIRST_FAILURE_PRESERVED_PENDING_UNIFIED_DIAGNOSIS"
+            }
+          ],
+          "reason": "Source mirrorActors sender/receiver destruction adjusts sx/tx to footer boundary. Native paints death footer but only adjusts birth tx. Static control-flow proof, not newly executed.",
+          "rootCauseId": "C-GAP-SEQ-LIFECYCLE-ENDPOINT",
+          "reproducer": {
+            "source": "sequenceDiagram\nparticipant A\nparticipant B\ndestroy B\nA->>B: bye",
+            "config": {
+              "sequence": {
+                "mirrorActors": true
+              }
+            }
+          },
+          "expected": "Source receiver stopx shifts toward sender by width/2+3; native remains centre inside footer.",
+          "testMappingQuality": "Existing lifecycle test is semantic only.",
+          "pendingNewAssertions": {
+            "path": "tests/bulk/c/test_gap_audit.py",
+            "status": "BASELINE_FIRST_RUN_RECORDED",
+            "run": "G03-first-batch-20261106T080449Z-54f22284",
+            "command": "003-gap-unit-C",
+            "scope": "This is suite-level first-run failure evidence; per-method root-cause analysis pending. No new run performed by audit update."
+          }
+        },
+        {
+          "id": "sequence.boxes-notes",
+          "title": "Actor boxes and notes placements",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/sequence/sequenceDb.ts",
+              "symbol": "public parseBoxData(",
+              "line": 394
+            },
+            {
+              "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+              "symbol": "const drawNote =",
+              "line": 243
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/sequence/parser.py",
+              "symbol": "if command=='box':",
+              "line": 137
+            },
+            {
+              "path": "src/py_mermaid/diagrams/sequence/layout.py",
+              "symbol": "        if e.kind=='note':",
+              "line": 127
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_sequence.py",
+              "symbol": "def test_actor_boxes_members_color_and_declaration_order",
+              "line": 63
+            },
+            {
+              "path": "tests/bulk/c/test_sequence.py",
+              "symbol": "def test_note_placements_and_two_actor_over",
+              "line": 41
+            }
+          ],
+          "reason": "Colors,title,membership,placement map to actual native primitives; all wrapping extrema not proved."
+        },
+        {
+          "id": "sequence.fragments",
+          "title": "loop/opt/alt/par/par_over/critical/break/rect and section structure",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/sequence/parser/sequenceDiagram.jison",
+              "symbol": "| 'loop' restOfLine document end",
+              "line": 191
+            },
+            {
+              "path": "packages/mermaid/src/diagrams/sequence/svgDraw.js",
+              "symbol": "export const drawLoop",
+              "line": 1519
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/sequence/parser.py",
+              "symbol": "BLOCKS=",
+              "line": 19
+            },
+            {
+              "path": "src/py_mermaid/diagrams/sequence/layout.py",
+              "symbol": "    y=row_top",
+              "line": 89
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_sequence.py",
+              "symbol": "def test_fragment_actions_and_section_order",
+              "line": 74
+            },
+            {
+              "path": "tests/bulk/c/test_sequence.py",
+              "symbol": "def test_every_simple_fragment_emits_balanced_actions",
+              "line": 79
+            },
+            {
+              "path": "tests/bulk/c/test_sequence_p4.py",
+              "symbol": "def test_control_brackets_center_and_inline_section_dash",
+              "line": 6
+            }
+          ],
+          "reason": "Actions,brackets,centre,inline dash have independent source assertions; no exhaustive temporal-solver equivalence claim."
+        },
+        {
+          "id": "sequence.messages",
+          "title": "Self-call/rightAngles/markers/central connections",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+              "symbol": "const drawMessage",
+              "line": 461
+            },
+            {
+              "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+              "symbol": "const drawCentralConnection",
+              "line": 288
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/sequence/layout.py",
+              "symbol": "            if c['rightAngles']:",
+              "line": 251
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_sequence.py",
+              "symbol": "def test_central_connections_cover_source_target_and_dual",
+              "line": 87
+            },
+            {
+              "path": "tests/bulk/c/test_sequence.py",
+              "symbol": "def test_messages_activations_notes_and_fragment_have_ink_and_order",
+              "line": 144
+            }
+          ],
+          "reason": "All spellings semantic,representative physical ink; not all26 physical offsets."
+        },
+        {
+          "id": "sequence.counter",
+          "title": "Autonumber decimal start/step/off/resume",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/sequence/parser/sequenceDiagram.jison",
+              "symbol": "autonumber NUM NUM",
+              "line": 175
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/sequence/parser.py",
+              "symbol": "if command=='autonumber':",
+              "line": 108
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_sequence.py",
+              "symbol": "def test_autonumber_start_step_off_keeps_internal_counter",
+              "line": 46
+            },
+            {
+              "path": "tests/bulk/c/test_sequence.py",
+              "symbol": "def test_zero_start_and_zero_step_follow_source_or_default",
+              "line": 50
+            },
+            {
+              "path": "tests/bulk/c/test_sequence.py",
+              "symbol": "def test_autonumber_thousandths_source_negative_boundary",
+              "line": 22
+            }
+          ],
+          "reason": "Literal source precision/zero-default behavior asserted."
+        },
+        {
+          "id": "sequence.counter-fit",
+          "title": "Adaptive number font by string length",
+          "status": "confirmed_gap",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+              "symbol": "    const sequenceIndexLength",
+              "line": 714
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/sequence/layout.py",
+              "symbol": "            nt=p.measure(f'{e.number:g}',size=10",
+              "line": 278
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_gap_audit.py",
+              "symbol": "test_sequence_number_font_length_source_branches",
+              "line": 167,
+              "executionStatus": "BASELINE_FIRST_FAILURE_PRESERVED_PENDING_UNIFIED_DIAGNOSIS"
+            }
+          ],
+          "reason": "Source12px<=3chars,9px4-5,7px>5; native always10px. Missing static conditional.",
+          "rootCauseId": "C-GAP-SEQ-NUMBER-FIT",
+          "reproducer": {
+            "source": "sequenceDiagram\nautonumber 100000\nA->>B: x"
+          },
+          "expected": "Number font7px rather than10px.",
+          "pendingNewAssertions": {
+            "path": "tests/bulk/c/test_gap_audit.py",
+            "status": "BASELINE_FIRST_RUN_RECORDED",
+            "run": "G03-first-batch-20261106T080449Z-54f22284",
+            "command": "003-gap-unit-C",
+            "scope": "This is suite-level first-run failure evidence; per-method root-cause analysis pending. No new run performed by audit update."
+          }
+        },
+        {
+          "id": "sequence.labels",
+          "title": "Literal SVG text/br/KaTeX/wrap and inherited tspan CSS",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/sequence/svgDraw.js",
+              "symbol": "export const drawText",
+              "line": 192
+            },
+            {
+              "path": "packages/mermaid/src/diagrams/sequence/svgDraw.js",
+              "symbol": "export const drawKatex",
+              "line": 150
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/sequence/presentation.py",
+              "symbol": "def _label_text",
+              "line": 7
+            },
+            {
+              "path": "src/py_mermaid/diagrams/sequence/presentation.py",
+              "symbol": "    def measure_role",
+              "line": 27
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_sequence.py",
+              "symbol": "def test_wrap_overrides_default_and_message_semicolon",
+              "line": 58
+            },
+            {
+              "path": "tests/bulk/c/test_sequence.py",
+              "symbol": "def test_parent_text_class_css_applies_real_red_italic_pixels",
+              "line": 156
+            }
+          ],
+          "reason": "Real shared math and literal nonmath content preserved. Existing final math legacy evidence reused,not rerun."
+        },
+        {
+          "id": "sequence.root-fonts",
+          "title": "Generic root font aliases to all3role fonts",
+          "status": "confirmed_gap",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+              "symbol": "    setConf(getConfig());",
+              "line": 97
+            },
+            {
+              "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+              "symbol": "export const setConf",
+              "line": 876
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/sequence/layout.py",
+              "symbol": "    model=diagram.model",
+              "line": 39
+            },
+            {
+              "path": "src/py_mermaid/diagrams/sequence/layout.py",
+              "symbol": "    def measure(text,role",
+              "line": 55
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_gap_audit.py",
+              "symbol": "test_root_generic_sequence_font_size_and_weight_reach_all_roles",
+              "line": 153,
+              "executionStatus": "BASELINE_FIRST_FAILURE_PRESERVED_PENDING_UNIFIED_DIAGNOSIS"
+            }
+          ],
+          "reason": "Source draw conf=sequence?bounds.init?setConf(root) overwrites role fontSize/fontWeight. Native c uses role keys and does not copy generic aliases; explicit role base overrides generic Painter base. Static dataflow finding pending targeted source/native execution.",
+          "rootCauseId": "C-GAP-SEQ-GENERIC-FONT-ALIAS",
+          "reproducer": {
+            "source": "sequenceDiagram\nparticipant A\nNote over A: note\nA->>B: msg",
+            "config": {
+              "fontSize": 32,
+              "fontWeight": 700
+            }
+          },
+          "expected": "Source all3role sizes32 and weights700,not native role defaults.",
+          "pendingNewAssertions": {
+            "path": "tests/bulk/c/test_gap_audit.py",
+            "status": "BASELINE_FIRST_RUN_RECORDED",
+            "run": "G03-first-batch-20261106T080449Z-54f22284",
+            "command": "003-gap-unit-C",
+            "scope": "This is suite-level first-run failure evidence; per-method root-cause analysis pending. No new run performed by audit update."
+          }
+        },
+        {
+          "id": "sequence.actor-style",
+          "title": "Eight classic/neo actors,palettes,2px lifeline and shadow/dash CSS",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/sequence/svgDraw.js",
+              "symbol": "drawActor",
+              "line": 391
+            },
+            {
+              "path": "packages/mermaid/src/diagrams/sequence/styles.js",
+              "symbol": "  .actor-man circle, line",
+              "line": 144
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/sequence/layout.py",
+              "symbol": "    def actor_paint",
+              "line": 192
+            },
+            {
+              "path": "src/py_mermaid/diagrams/sequence/presentation.py",
+              "symbol": "    def _shape",
+              "line": 44
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_sequence.py",
+              "symbol": "def test_classic_and_neo_actor_database_label_baseline_and_glyph_bands",
+              "line": 130
+            },
+            {
+              "path": "tests/bulk/c/test_sequence_p4.py",
+              "symbol": "def test_source_dangling_css_shadow_not_invented_for_note",
+              "line": 18
+            }
+          ],
+          "reason": "2px global line CSS wins .5px presentation attr; old suspended width issue resolved. Per-theme full derived palettes have shared final evidence,not exhaustive type/look/font proof."
+        },
+        {
+          "id": "sequence.host",
+          "title": "Popup/navigation,DOMaccessibility,address and sizing mechanisms",
+          "status": "excluded",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/sequence/svgDraw.js",
+              "symbol": "export const drawPopup",
+              "line": 79
+            },
+            {
+              "path": "packages/mermaid/src/diagrams/sequence/sequenceDb.ts",
+              "symbol": "public addDetails(",
+              "line": 526
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/sequence/parser.py",
+              "symbol": "        if command in {'link'",
+              "line": 122
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_sequence.py",
+              "symbol": "def test_properties_remain_static_metadata_and_accessibility_not_messages",
+              "line": 103
+            }
+          ],
+          "reason": "User excludes interactions/DOMhost. Static class/icon properties remain applicable."
+        },
+        {
+          "id": "sequence.offset-crossproduct",
+          "title": "All physical endpoint/activation/central/self/autonumber numerical combinations",
+          "status": "unresolved",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+              "symbol": "const buildMessageModel",
+              "line": 1867
+            },
+            {
+              "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+              "symbol": "const calculateCentralConnectionOffset",
+              "line": 1798
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/sequence/layout.py",
+              "symbol": "async def build",
+              "line": 38
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_sequence.py",
+              "symbol": "def test_central_connections_cover_source_target_and_dual",
+              "line": 87
+            }
+          ],
+          "reason": "Source formulas read but branch-product not atomized; positive spellings+samples cannot prove every fixed offset. No further confirmed gap inferred."
+        }
+      ]
+    },
+    {
+      "id": "zenuml",
+      "features": [
+        {
+          "id": "zenuml.participants",
+          "title": "Names/aliases/types/stereotypes/colors/groups/starter/first-truthy merge",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "src/g4/sequenceParser.g4",
+              "symbol": "participant",
+              "line": 19,
+              "upstream": "zenuml"
+            },
+            {
+              "path": "src/parser/Participants.ts",
+              "symbol": "public mergeOptions(",
+              "line": 57,
+              "upstream": "zenuml"
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/zenuml/parser.py",
+              "symbol": "    def declarations(",
+              "line": 138
+            },
+            {
+              "path": "src/py_mermaid/diagrams/zenuml/parser.py",
+              "symbol": "    def participant(",
+              "line": 103
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_zenuml.py",
+              "symbol": "def test_explicit_participant_width_alias_stereotype_and_type",
+              "line": 14
+            },
+            {
+              "path": "tests/bulk/c/test_zenuml.py",
+              "symbol": "def test_group_members_and_order",
+              "line": 25
+            },
+            {
+              "path": "tests/bulk/c/test_zenuml.py",
+              "symbol": "def test_origin_and_starter_are_not_invented_message_nodes",
+              "line": 30
+            }
+          ],
+          "reason": "Width retained semantically; source Coordinates ignores declared width for sizing,so native unused width not a gap."
+        },
+        {
+          "id": "zenuml.line-modes",
+          "title": "Unicode TITLE/EVENT payload,loop/section aliases and return annotation variants",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "src/g4/sequenceLexer.g4",
+              "symbol": "mode TITLE_MODE;",
+              "line": 247,
+              "upstream": "zenuml"
+            },
+            {
+              "path": "src/g4/sequenceLexer.g4",
+              "symbol": "mode EVENT;",
+              "line": 238,
+              "upstream": "zenuml"
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/zenuml/parser.py",
+              "symbol": "    def lex(",
+              "line": 56
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_zenuml_p4.py",
+              "symbol": "def test_event_and_title_lexer_modes_preserve_arbitrary_unicode_line",
+              "line": 12
+            },
+            {
+              "path": "tests/bulk/c/test_zenuml_p4.py",
+              "symbol": "def test_source_return_annotations_are_all_accepted",
+              "line": 16
+            },
+            {
+              "path": "tests/bulk/c/test_zenuml_p4.py",
+              "symbol": "def test_source_lexer_loop_and_section_aliases",
+              "line": 7
+            }
+          ],
+          "reason": "P4 line-mode corrections verified; default-mode Unicode identifier subcase separately missing."
+        },
+        {
+          "id": "zenuml.modifiers",
+          "title": "Hidden modifier tokens must not become participants",
+          "status": "confirmed_gap",
+          "source": [
+            {
+              "path": "src/g4/sequenceLexer.g4",
+              "symbol": "CONSTANT:   'const'",
+              "line": 42,
+              "upstream": "zenuml"
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/zenuml/parser.py",
+              "symbol": "_TOKEN=",
+              "line": 19
+            },
+            {
+              "path": "src/py_mermaid/diagrams/zenuml/parser.py",
+              "symbol": "    def declarations(",
+              "line": 138
+            },
+            {
+              "path": "src/py_mermaid/diagrams/zenuml/parser.py",
+              "symbol": "elif value in {'const','readonly','static','await'}:",
+              "line": 229
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_zenuml.py",
+              "symbol": "def _signature_method",
+              "line": 90
+            },
+            {
+              "path": "tests/bulk/c/test_gap_audit.py",
+              "symbol": "test_await_never_becomes_a_participant",
+              "line": 20,
+              "executionStatus": "BASELINE_FIRST_FAILURE_PRESERVED_PENDING_UNIFIED_DIAGNOSIS"
+            },
+            {
+              "path": "tests/bulk/c/test_gap_audit.py",
+              "symbol": "test_assignment_modifiers_are_hidden_before_participant_collection",
+              "line": 27,
+              "executionStatus": "BASELINE_FIRST_FAILURE_PRESERVED_PENDING_UNIFIED_DIAGNOSIS"
+            }
+          ],
+          "reason": "Native skips modifiers in statement only,after declarations has consumed head modifiers as participant words. Existing signature rows assert statement kind/label/assignment but never participant identity.",
+          "rootCauseId": "C-GAP-ZEN-MODIFIERS",
+          "reproducer": {
+            "source": "zenuml\nawait A.m()",
+            "also": [
+              "zenuml\nconst ret = A.m()",
+              "zenuml\nreadonly ret = A.m()",
+              "zenuml\nstatic ret = A.m()"
+            ]
+          },
+          "expected": "Source MODIFIER_CHANNEL hides these tokens; participant set only_STARTER_,A. Native control flow additionally declares modifier.",
+          "testMappingQuality": "Existing signature tests adjacent but miss participant-set assertion.",
+          "pendingNewAssertions": {
+            "path": "tests/bulk/c/test_gap_audit.py",
+            "status": "BASELINE_FIRST_RUN_RECORDED",
+            "run": "G03-first-batch-20261106T080449Z-54f22284",
+            "command": "003-gap-unit-C",
+            "scope": "This is suite-level first-run failure evidence; per-method root-cause analysis pending. No new run performed by audit update."
+          }
+        },
+        {
+          "id": "zenuml.multi-assignee",
+          "title": "Unbounded comma-list assignment and return label",
+          "status": "confirmed_gap",
+          "source": [
+            {
+              "path": "src/g4/sequenceParser.g4",
+              "symbol": "assignee",
+              "line": 229,
+              "upstream": "zenuml"
+            },
+            {
+              "path": "src/parser/Messages/Assignment.ts",
+              "symbol": "function extractAssignmentFromContext",
+              "line": 44,
+              "upstream": "zenuml"
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/zenuml/parser.py",
+              "symbol": "        for k in range(self.i,min(self.i+4,len(self.tokens))):",
+              "line": 247
+            },
+            {
+              "path": "src/py_mermaid/diagrams/zenuml/layout.py",
+              "symbol": "node.assignee",
+              "line": 338
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_gap_audit.py",
+              "symbol": "test_entire_arbitrary_length_assignee_list_is_preserved",
+              "line": 37,
+              "executionStatus": "BASELINE_FIRST_FAILURE_PRESERVED_PENDING_UNIFIED_DIAGNOSIS"
+            },
+            {
+              "path": "tests/bulk/c/test_gap_audit.py",
+              "symbol": "test_typed_assignee_list_preserves_type_separately",
+              "line": 50,
+              "executionStatus": "BASELINE_FIRST_FAILURE_PRESERVED_PENDING_UNIFIED_DIAGNOSIS"
+            },
+            {
+              "path": "tests/bulk/c/test_gap_audit.py",
+              "symbol": "test_multi_assignee_actual_return_text_and_glyph_ink",
+              "line": 77,
+              "executionStatus": "BASELINE_FIRST_FAILURE_PRESERVED_PENDING_UNIFIED_DIAGNOSIS"
+            }
+          ],
+          "reason": "Source assignee().getFormattedText is entire list. Native takes lhs[-1] and scans only4tokens;2name return loses prefix,3+name assignment cannot be recognized.",
+          "rootCauseId": "C-GAP-ZEN-MULTI-ASSIGNEE",
+          "reproducer": {
+            "source": "zenuml\na,b = A.m()",
+            "also": [
+              "zenuml\na,b,c = A.m()"
+            ]
+          },
+          "expected": "Full assignment and return labels a,b / a,b,c preserved.",
+          "pendingNewAssertions": {
+            "path": "tests/bulk/c/test_gap_audit.py",
+            "status": "BASELINE_FIRST_RUN_RECORDED",
+            "run": "G03-first-batch-20261106T080449Z-54f22284",
+            "command": "003-gap-unit-C",
+            "scope": "This is suite-level first-run failure evidence; per-method root-cause analysis pending. No new run performed by audit update."
+          }
+        },
+        {
+          "id": "zenuml.digit-unicode",
+          "title": "Digit-leading Unicode participant names",
+          "status": "confirmed_gap",
+          "source": [
+            {
+              "path": "src/g4/sequenceLexer.g4",
+              "symbol": "DIGIT_LEADING_NAME",
+              "line": 169,
+              "upstream": "zenuml"
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/zenuml/parser.py",
+              "symbol": "_TOKEN=",
+              "line": 19
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_gap_audit.py",
+              "symbol": "test_digit_leading_unicode_names_are_one_source_token",
+              "line": 59,
+              "executionStatus": "BASELINE_FIRST_FAILURE_PRESERVED_PENDING_UNIFIED_DIAGNOSIS"
+            }
+          ],
+          "reason": "Source DIGIT_LEADING_NAME accepts Unicode letter/digit suffixes. Native numeric suffix only matches ASCII letters; a digit plus Chinese-name suffix becomes two tokens.",
+          "rootCauseId": "C-GAP-ZEN-DIGIT-UNICODE",
+          "reproducer": {
+            "source": "zenuml\n1服务 -> B: work"
+          },
+          "expected": "One participant1服务 and one async message,not split names.",
+          "pendingNewAssertions": {
+            "path": "tests/bulk/c/test_gap_audit.py",
+            "status": "BASELINE_FIRST_RUN_RECORDED",
+            "run": "G03-first-batch-20261106T080449Z-54f22284",
+            "command": "003-gap-unit-C",
+            "scope": "This is suite-level first-run failure evidence; per-method root-cause analysis pending. No new run performed by audit update."
+          }
+        },
+        {
+          "id": "zenuml.hidden-cr",
+          "title": "Whitespace newline after qualified-call dot",
+          "status": "confirmed_gap",
+          "source": [
+            {
+              "path": "src/g4/sequenceLexer.g4",
+              "symbol": "CR -> channel(HIDDEN)",
+              "line": 221,
+              "upstream": "zenuml"
+            },
+            {
+              "path": "src/g4/sequenceParser.g4",
+              "symbol": "fromTo",
+              "line": 171,
+              "upstream": "zenuml"
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/zenuml/parser.py",
+              "symbol": "    def function(",
+              "line": 295
+            },
+            {
+              "path": "src/py_mermaid/diagrams/zenuml/parser.py",
+              "symbol": "    def name(",
+              "line": 85
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_gap_audit.py",
+              "symbol": "test_hidden_cr_between_qualified_call_tokens_is_whitespace",
+              "line": 67,
+              "executionStatus": "BASELINE_FIRST_FAILURE_PRESERVED_PENDING_UNIFIED_DIAGNOSIS"
+            }
+          ],
+          "reason": "Source CR is HIDDEN. Native newline is retained and function immediately name() consumes newline,causing error on complete valid call.",
+          "rootCauseId": "C-GAP-ZEN-HIDDEN-NEWLINE",
+          "reproducer": {
+            "source": "zenuml\nA.\nm()"
+          },
+          "expected": "One sync call A.m(),signature m().",
+          "pendingNewAssertions": {
+            "path": "tests/bulk/c/test_gap_audit.py",
+            "status": "BASELINE_FIRST_RUN_RECORDED",
+            "run": "G03-first-batch-20261106T080449Z-54f22284",
+            "command": "003-gap-unit-C",
+            "scope": "This is suite-level first-run failure evidence; per-method root-cause analysis pending. No new run performed by audit update."
+          }
+        },
+        {
+          "id": "zenuml.calls",
+          "title": "Sync/async/self/implied scopes/chains and arguments",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "src/g4/sequenceParser.g4",
+              "symbol": "messageBody",
+              "line": 166,
+              "upstream": "zenuml"
+            },
+            {
+              "path": "src/parser/SignatureText.ts",
+              "symbol": "MessageContext.prototype.SignatureText",
+              "line": 57,
+              "upstream": "zenuml"
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/zenuml/parser.py",
+              "symbol": "    def statement(",
+              "line": 195
+            },
+            {
+              "path": "src/py_mermaid/diagrams/zenuml/parser.py",
+              "symbol": "    def function(",
+              "line": 295
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_zenuml.py",
+              "symbol": "def test_nested_sync_scope_and_self_call",
+              "line": 35
+            },
+            {
+              "path": "tests/bulk/c/test_zenuml.py",
+              "symbol": "def test_quoted_async_endpoints",
+              "line": 20
+            },
+            {
+              "path": "tests/bulk/c/test_zenuml.py",
+              "symbol": "def _signature_method",
+              "line": 90
+            }
+          ],
+          "reason": "Representative owner/signature tests and148strict source cases; gaps above not excused by corpus pass."
+        },
+        {
+          "id": "zenuml.creation-return",
+          "title": "Creation/typed assignments/keyword and explicit returns",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "src/parser/SignatureText.ts",
+              "symbol": "CreationContext.prototype.SignatureText",
+              "line": 84,
+              "upstream": "zenuml"
+            },
+            {
+              "path": "src/svg/components/creation.ts",
+              "symbol": "export function renderCreation",
+              "line": 4,
+              "upstream": "zenuml"
+            },
+            {
+              "path": "src/svg/components/return.ts",
+              "symbol": "export function renderReturn",
+              "line": 5,
+              "upstream": "zenuml"
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/zenuml/parser.py",
+              "symbol": "        if self.accept('new'):",
+              "line": 255
+            },
+            {
+              "path": "src/py_mermaid/diagrams/zenuml/layout.py",
+              "symbol": "    def return_draw",
+              "line": 270
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_zenuml.py",
+              "symbol": "def test_creation_assignment_and_constructor_participant",
+              "line": 59
+            },
+            {
+              "path": "tests/bulk/c/test_zenuml_p4.py",
+              "symbol": "def test_creation_uses_two_pixel_open_tip_and_dashed_line",
+              "line": 58
+            },
+            {
+              "path": "tests/bulk/c/test_zenuml_p4.py",
+              "symbol": "def test_source_return_near_wall_offsets_are_seven_and_eight_pixels",
+              "line": 75
+            }
+          ],
+          "reason": "Actual2px open tips/dashedlines and7/8px occurrence wall relations independently bound; list assignment remains gap."
+        },
+        {
+          "id": "zenuml.controls",
+          "title": "Alt/loop/par/opt/critical/section/ref/TCF complete branches",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "src/g4/sequenceParser.g4",
+              "symbol": "stat",
+              "line": 73,
+              "upstream": "zenuml"
+            },
+            {
+              "path": "src/svg/components/fragment.ts",
+              "symbol": "export function renderFragment",
+              "line": 19,
+              "upstream": "zenuml"
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/zenuml/parser.py",
+              "symbol": "        if value in {'if'",
+              "line": 199
+            },
+            {
+              "path": "src/py_mermaid/diagrams/zenuml/layout.py",
+              "symbol": "    def section_text",
+              "line": 257
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_zenuml.py",
+              "symbol": "def test_if_else_if_else_branch_order",
+              "line": 42
+            },
+            {
+              "path": "tests/bulk/c/test_zenuml.py",
+              "symbol": "def test_try_catch_finally_keeps_section_return_values",
+              "line": 48
+            },
+            {
+              "path": "tests/bulk/c/test_zenuml_p4.py",
+              "symbol": "def test_ref_consumes_source_full_signature_and_bracket_opacity",
+              "line": 67
+            },
+            {
+              "path": "tests/bulk/c/test_zenuml_p4.py",
+              "symbol": "def test_par_separators_and_source_visible_kind_labels",
+              "line": 99
+            }
+          ],
+          "reason": "Complete static control kinds,actual headers/sections/separators and bracket opacity mapped; incomplete editor recovery not equal-wording promise."
+        },
+        {
+          "id": "zenuml.layout-number",
+          "title": "Dual-number horizontal solver,temporal bands,cumulative section numbering",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "src/svg/buildGeometry.ts",
+              "symbol": "export function buildGeometry",
+              "line": 34,
+              "upstream": "zenuml"
+            },
+            {
+              "path": "src/positioning/Coordinates.ts",
+              "symbol": "export class Coordinates",
+              "line": 19,
+              "upstream": "zenuml"
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/zenuml/geometry.py",
+              "symbol": "def optimal_positions",
+              "line": 6
+            },
+            {
+              "path": "src/py_mermaid/diagrams/zenuml/geometry.py",
+              "symbol": "def vertical_layout",
+              "line": 53
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_zenuml.py",
+              "symbol": "def test_two_participant_constraint_has_exact_minimal_span",
+              "line": 161
+            },
+            {
+              "path": "tests/bulk/c/test_zenuml.py",
+              "symbol": "def test_chain_and_spanning_constraints_minimum_total_width",
+              "line": 165
+            },
+            {
+              "path": "tests/bulk/c/test_zenuml_p4.py",
+              "symbol": "def test_original_spec_cumulative_alt_tcf_numbers",
+              "line": 36
+            }
+          ],
+          "reason": "Literal source numeric expectations plus148strict geometry/SVG/nativepaint comparisons; no counts-as-coverage claim."
+        },
+        {
+          "id": "zenuml.paint",
+          "title": "Participants/groups/occurrences/markers/self-return icon/no footer",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "src/svg/renderToSvg.ts",
+              "symbol": "function composeSvg(",
+              "line": 112,
+              "upstream": "zenuml"
+            },
+            {
+              "path": "src/svg/components/message.ts",
+              "symbol": "export function renderMessage",
+              "line": 5,
+              "upstream": "zenuml"
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/zenuml/layout.py",
+              "symbol": "async def build",
+              "line": 95
+            },
+            {
+              "path": "src/py_mermaid/diagrams/zenuml/layout.py",
+              "symbol": "    def participant(",
+              "line": 174
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_zenuml_p4.py",
+              "symbol": "def test_self_number_is_left_of_label_and_has_actual_ink",
+              "line": 50
+            },
+            {
+              "path": "tests/bulk/c/test_zenuml_p4.py",
+              "symbol": "def test_source_svg_has_one_header_no_footer_and_keeps_long_label",
+              "line": 90
+            }
+          ],
+          "reason": "Actual entry never calls bottom participant helper; footer absent intentionally. Fixed250px label overflow source behavior preserved."
+        },
+        {
+          "id": "zenuml.assets",
+          "title": "93emoji,11participant icons,8fragment SVGs and vendor licensing",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "src/svg/icons.ts",
+              "symbol": "export function getIcon",
+              "line": 86,
+              "upstream": "zenuml"
+            },
+            {
+              "path": "src/emoji/resolveEmoji.ts",
+              "symbol": "export function resolveEmojiInText",
+              "line": 63,
+              "upstream": "zenuml"
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/zenuml/emoji.py",
+              "symbol": "def resolve",
+              "line": 8
+            },
+            {
+              "path": "src/py_mermaid/diagrams/zenuml/layout.py",
+              "symbol": "    def asset(",
+              "line": 163
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_zenuml.py",
+              "symbol": "def test_all_source_builtin_shortcodes_and_css_first_collision",
+              "line": 150
+            },
+            {
+              "path": "tests/bulk/c/test_zenuml.py",
+              "symbol": "def test_vendor_icons_keep_original_bytes_colors_and_square_ratio",
+              "line": 207
+            }
+          ],
+          "reason": "Offline explicit native SVG resources; original vendor bytes/colors/aspect retained. No automatic paths/network."
+        },
+        {
+          "id": "zenuml.comments",
+          "title": "Style-prefix scope and consumed Markdown comment branches",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "src/svg/components/comment.ts",
+              "symbol": "function collectLines(",
+              "line": 16,
+              "upstream": "zenuml"
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/zenuml/layout.py",
+              "symbol": "def _style_comment",
+              "line": 24
+            },
+            {
+              "path": "src/py_mermaid/diagrams/zenuml/layout.py",
+              "symbol": "def _comment_markup",
+              "line": 50
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_zenuml.py",
+              "symbol": "def test_comment_css_first_and_common_only_emoji_source_priority",
+              "line": 140
+            },
+            {
+              "path": "tests/bulk/c/test_zenuml_p4.py",
+              "symbol": "def test_comment_source_unconsumed_tokens_keep_authored_punctuation",
+              "line": 24
+            }
+          ],
+          "reason": "Codespan/strong/em/code block vs source-unconsumed raw heading/link/list mapped. General Marked grammar not claimed complete."
+        },
+        {
+          "id": "zenuml.comment-residual",
+          "title": "All Marked delimiter/escape/paragraph and effective line-height combinations",
+          "status": "unresolved",
+          "source": [
+            {
+              "path": "src/svg/components/comment.ts",
+              "symbol": "function markdownToSvgLines(",
+              "line": 11,
+              "upstream": "zenuml"
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/zenuml/layout.py",
+              "symbol": "def _comment_markup",
+              "line": 50
+            },
+            {
+              "path": "src/py_mermaid/diagrams/zenuml/layout.py",
+              "symbol": "    def comment_height(",
+              "line": 143
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_zenuml_p4.py",
+              "symbol": "def test_comment_source_unconsumed_tokens_keep_authored_punctuation",
+              "line": 24
+            }
+          ],
+          "reason": "Native limited source-targeted projection and raw-line height need focused source cases for remaining token boundaries. No new confirmed issue from style keywords alone."
+        },
+        {
+          "id": "zenuml.content-loss",
+          "title": "Exactly2source parser-recovery content losses",
+          "status": "upstream_defect",
+          "source": [
+            {
+              "path": "src/g4/sequenceLexer.g4",
+              "symbol": "COL",
+              "line": 53,
+              "upstream": "zenuml"
+            },
+            {
+              "path": "src/svg/renderToSvg.ts",
+              "symbol": "export function renderToSvg",
+              "line": 80,
+              "upstream": "zenuml"
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/zenuml/parser.py",
+              "symbol": "    def lex(",
+              "line": 56
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_zenuml.py",
+              "symbol": "def test_source_recovery_content_loss_is_explicit_and_native_content_not_reduced",
+              "line": 123
+            }
+          ],
+          "reason": "Only emoji-colon-override notify() and emoji-in-conditions wait()/deny(). Final checker pins original absent/present and native complete author intent; no familywide bypass."
+        },
+        {
+          "id": "zenuml.host",
+          "title": "React/editor/nav/callback/DOM theme controls",
+          "status": "excluded",
+          "source": [
+            {
+              "path": "src/core.tsx",
+              "symbol": "import",
+              "line": 1,
+              "upstream": "zenuml"
+            },
+            {
+              "path": "src/svg/renderToSvg.ts",
+              "symbol": "  void options;",
+              "line": 113,
+              "upstream": "zenuml"
+            }
+          ],
+          "python": [],
+          "tests": [],
+          "reason": "Static entry is locked renderToSvg. It ignores RenderOptions theme; React editor controls not a native static branch. Source footer helper not called by entry."
+        }
+      ]
+    },
+    {
+      "id": "railroad",
+      "features": [
+        {
+          "id": "railroad.grammar",
+          "title": "Dialect constructors,primary forms and precedence/operators",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/parser/src/language/railroad/railroad.langium",
+              "symbol": "RailroadExpression returns",
+              "line": 72
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/railroad/parser.py",
+              "symbol": "    def expression(",
+              "line": 79
+            },
+            {
+              "path": "src/py_mermaid/diagrams/railroad/parser.py",
+              "symbol": "    def term(",
+              "line": 96
+            },
+            {
+              "path": "src/py_mermaid/diagrams/railroad/parser.py",
+              "symbol": "    def primary(",
+              "line": 116
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_railroad.py",
+              "symbol": "def _source_method",
+              "line": 44
+            }
+          ],
+          "reason": "All dialect-specific source grammar/AST transform families read; independent normalized tree assertions exist. Not one test per grammar alternative."
+        },
+        {
+          "id": "railroad.tokens",
+          "title": "Escapes,comments,title/accessibility and required semicolon",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/parser/src/language/railroad/railroad.langium",
+              "symbol": "terminal TITLE:",
+              "line": 3
+            },
+            {
+              "path": "packages/parser/src/language/railroad/valueConverter.ts",
+              "symbol": "export class",
+              "line": 36
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/railroad/parser.py",
+              "symbol": "    def scan(",
+              "line": 28
+            },
+            {
+              "path": "src/py_mermaid/diagrams/railroad/parser.py",
+              "symbol": "def _unquote",
+              "line": 18
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_railroad.py",
+              "symbol": "def test_missing_semicolon_in_every_dialect",
+              "line": 11
+            }
+          ],
+          "reason": "Source n/r/t/default escape converter mapped (ABNF unescaped literals); EBNF ISO/C,PEG# branches. ABNF comment-priority separately unresolved."
+        },
+        {
+          "id": "railroad.db",
+          "title": "Ordered duplicates and recursive safe text",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/railroad/railroadDb.ts",
+              "symbol": "const addRule =",
+              "line": 71
+            },
+            {
+              "path": "packages/mermaid/src/diagrams/railroad/railroadDb.ts",
+              "symbol": "const sanitizeAstNode =",
+              "line": 17
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/railroad/parser.py",
+              "symbol": "    def parse(",
+              "line": 141
+            },
+            {
+              "path": "src/py_mermaid/diagrams/railroad/model.py",
+              "symbol": "class Railroad:",
+              "line": 21
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_railroad.py",
+              "symbol": "def test_db_rule_order_retains_duplicates_while_lookup_updates",
+              "line": 19
+            }
+          ],
+          "reason": "Ordered rules preserved; source mutable lookup is not public Python DB API. Common sanitizer used recursively."
+        },
+        {
+          "id": "railroad.geometry",
+          "title": "Leaf/sequence/choice/optional/repetition/special/rule markers",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/railroad/railroadRenderer.ts",
+              "symbol": "  renderExpression(",
+              "line": 504
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/railroad/layout.py",
+              "symbol": "    def measure(",
+              "line": 54
+            },
+            {
+              "path": "src/py_mermaid/diagrams/railroad/layout.py",
+              "symbol": "    def draw(",
+              "line": 77
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_railroad.py",
+              "symbol": "def test_source_leaf_padding_and_recursive_optional_dimensions",
+              "line": 66
+            },
+            {
+              "path": "tests/bulk/c/test_railroad.py",
+              "symbol": "def test_recursive_routes_and_visible_leaf_text_in_all_dialects",
+              "line": 88
+            }
+          ],
+          "reason": "Source dimensions,arc/bypass/loop paths are actual native drawings; representative formulas and pixels asserted."
+        },
+        {
+          "id": "railroad.style",
+          "title": "Valid theme-derived styles,override font/color/spacing and CSS",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/railroad/styles.ts",
+              "symbol": "export const buildRailroadStyleOptions",
+              "line": 189
+            },
+            {
+              "path": "packages/mermaid/src/diagrams/railroad/styles.ts",
+              "symbol": "export const getStyles",
+              "line": 259
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/railroad/layout.py",
+              "symbol": "def _style",
+              "line": 25
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_railroad.py",
+              "symbol": "def test_recursive_routes_and_visible_leaf_text_in_all_dialects",
+              "line": 88
+            }
+          ],
+          "reason": "Source-style branches exist for valid values; invalid override fallback separately genuine gap. Arbitrary CSS property/value matrix not independently proved."
+        },
+        {
+          "id": "railroad.theme-fallback",
+          "title": "Invalid override must retain theme-derived fallback",
+          "status": "confirmed_gap",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/railroad/styles.ts",
+              "symbol": "const buildThemeDefaults",
+              "line": 125
+            },
+            {
+              "path": "packages/mermaid/src/diagrams/railroad/styles.ts",
+              "symbol": "terminalFill: sanitizeColorValue(railroadOptions.terminalFill",
+              "line": 218
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/railroad/layout.py",
+              "symbol": "result[key]=DEFAULTS[key]",
+              "line": 40
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_gap_audit.py",
+              "symbol": "test_invalid_terminal_fill_uses_theme_derived_color_in_all_dialects",
+              "line": 104,
+              "executionStatus": "BASELINE_FIRST_FAILURE_PRESERVED_PENDING_UNIFIED_DIAGNOSIS"
+            },
+            {
+              "path": "tests/bulk/c/test_gap_audit.py",
+              "symbol": "test_invalid_font_size_uses_derived_size_not_literal_default",
+              "line": 125,
+              "executionStatus": "BASELINE_FIRST_FAILURE_PRESERVED_PENDING_UNIFIED_DIAGNOSIS"
+            },
+            {
+              "path": "tests/bulk/c/test_gap_audit.py",
+              "symbol": "test_invalid_font_family_uses_theme_family",
+              "line": 144,
+              "executionStatus": "BASELINE_FIRST_FAILURE_PRESERVED_PENDING_UNIFIED_DIAGNOSIS"
+            },
+            {
+              "path": "tests/bulk/c/test_gap_audit.py",
+              "symbol": "test_valid_override_wins_theme_in_all_dialects",
+              "line": 115,
+              "executionStatus": "BASELINE_FIRST_FAILURE_PRESERVED_PENDING_UNIFIED_DIAGNOSIS"
+            },
+            {
+              "path": "tests/bulk/c/test_gap_audit.py",
+              "symbol": "test_zero_numeric_override_is_valid_source_boundary",
+              "line": 135,
+              "executionStatus": "BASELINE_FIRST_FAILURE_PRESERVED_PENDING_UNIFIED_DIAGNOSIS"
+            }
+          ],
+          "reason": "Source invalid value sanitizer uses themeDefaults[key]. Native overwrites theme value then falls back hardcoded DEFAULTS. Colors/fonts/numbers can lose valid derived theme values. Same root cause4entries,not4distinctbugs.",
+          "rootCauseId": "C-GAP-RR-THEME-FALLBACK",
+          "reproducer": {
+            "source": "railroad-beta\nr = terminal(\"x\");",
+            "config": {
+              "themeVariables": {
+                "secondBkg": "#112233"
+              },
+              "railroad": {
+                "terminalFill": false
+              }
+            }
+          },
+          "expected": "Source themeDefaults.terminalFill=#112233; native control-flow yields literal#FFFFC0.",
+          "pendingNewAssertions": {
+            "path": "tests/bulk/c/test_gap_audit.py",
+            "status": "BASELINE_FIRST_RUN_RECORDED",
+            "run": "G03-first-batch-20261106T080449Z-54f22284",
+            "command": "003-gap-unit-C",
+            "scope": "This is suite-level first-run failure evidence; per-method root-cause analysis pending. No new run performed by audit update."
+          }
+        },
+        {
+          "id": "railroad.source-inert",
+          "title": "Empty200x100 and source-unconsumed marker toggle/title/compact/max/separator",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/railroad/railroadRenderer.ts",
+              "symbol": "const draw: DrawDefinition",
+              "line": 638
+            },
+            {
+              "path": "packages/mermaid/src/diagrams/railroad/railroadRenderer.ts",
+              "symbol": "  renderRule(",
+              "line": 535
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/railroad/layout.py",
+              "symbol": "    if not diagram.model.rules:",
+              "line": 104
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_railroad.py",
+              "symbol": "def test_source_unconsumed_marker_toggle_does_not_invent_a_branch",
+              "line": 80
+            }
+          ],
+          "reason": "Source no title paint,unconditional markers,no compactMode/max/separator consumption. Native mirrors actual source. Emptyrules expectedEmpty+actualblank PNG/mutation contract prevents arbitrary no-op pass."
+        }
+      ]
+    },
+    {
+      "id": "railroadEbnf",
+      "features": [
+        {
+          "id": "railroadEbnf.grammar",
+          "title": "Dialect constructors,primary forms and precedence/operators",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/parser/src/language/railroad-ebnf/railroad-ebnf.langium",
+              "symbol": "EbnfTerm returns",
+              "line": 108
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/railroad/parser.py",
+              "symbol": "    def expression(",
+              "line": 79
+            },
+            {
+              "path": "src/py_mermaid/diagrams/railroad/parser.py",
+              "symbol": "    def term(",
+              "line": 96
+            },
+            {
+              "path": "src/py_mermaid/diagrams/railroad/parser.py",
+              "symbol": "    def primary(",
+              "line": 116
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_railroad.py",
+              "symbol": "def test_ebnf_precedence_and_grouping",
+              "line": 37
+            }
+          ],
+          "reason": "All dialect-specific source grammar/AST transform families read; independent normalized tree assertions exist. Not one test per grammar alternative."
+        },
+        {
+          "id": "railroadEbnf.tokens",
+          "title": "Escapes,comments,title/accessibility and required semicolon",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/parser/src/language/railroad-ebnf/railroad-ebnf.langium",
+              "symbol": "terminal TITLE:",
+              "line": 3
+            },
+            {
+              "path": "packages/parser/src/language/railroad-ebnf/valueConverter.ts",
+              "symbol": "export class",
+              "line": 36
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/railroad/parser.py",
+              "symbol": "    def scan(",
+              "line": 28
+            },
+            {
+              "path": "src/py_mermaid/diagrams/railroad/parser.py",
+              "symbol": "def _unquote",
+              "line": 18
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_railroad.py",
+              "symbol": "def test_missing_semicolon_in_every_dialect",
+              "line": 11
+            }
+          ],
+          "reason": "Source n/r/t/default escape converter mapped (ABNF unescaped literals); EBNF ISO/C,PEG# branches. ABNF comment-priority separately unresolved."
+        },
+        {
+          "id": "railroadEbnf.db",
+          "title": "Ordered duplicates and recursive safe text",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/railroad/railroadDb.ts",
+              "symbol": "const addRule =",
+              "line": 71
+            },
+            {
+              "path": "packages/mermaid/src/diagrams/railroad/railroadDb.ts",
+              "symbol": "const sanitizeAstNode =",
+              "line": 17
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/railroad/parser.py",
+              "symbol": "    def parse(",
+              "line": 141
+            },
+            {
+              "path": "src/py_mermaid/diagrams/railroad/model.py",
+              "symbol": "class Railroad:",
+              "line": 21
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_railroad.py",
+              "symbol": "def test_db_rule_order_retains_duplicates_while_lookup_updates",
+              "line": 19
+            }
+          ],
+          "reason": "Ordered rules preserved; source mutable lookup is not public Python DB API. Common sanitizer used recursively."
+        },
+        {
+          "id": "railroadEbnf.geometry",
+          "title": "Leaf/sequence/choice/optional/repetition/special/rule markers",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/railroad/railroadRenderer.ts",
+              "symbol": "  renderExpression(",
+              "line": 504
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/railroad/layout.py",
+              "symbol": "    def measure(",
+              "line": 54
+            },
+            {
+              "path": "src/py_mermaid/diagrams/railroad/layout.py",
+              "symbol": "    def draw(",
+              "line": 77
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_railroad.py",
+              "symbol": "def test_source_leaf_padding_and_recursive_optional_dimensions",
+              "line": 66
+            },
+            {
+              "path": "tests/bulk/c/test_railroad.py",
+              "symbol": "def test_recursive_routes_and_visible_leaf_text_in_all_dialects",
+              "line": 88
+            }
+          ],
+          "reason": "Source dimensions,arc/bypass/loop paths are actual native drawings; representative formulas and pixels asserted."
+        },
+        {
+          "id": "railroadEbnf.style",
+          "title": "Valid theme-derived styles,override font/color/spacing and CSS",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/railroad/styles.ts",
+              "symbol": "export const buildRailroadStyleOptions",
+              "line": 189
+            },
+            {
+              "path": "packages/mermaid/src/diagrams/railroad/styles.ts",
+              "symbol": "export const getStyles",
+              "line": 259
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/railroad/layout.py",
+              "symbol": "def _style",
+              "line": 25
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_railroad.py",
+              "symbol": "def test_recursive_routes_and_visible_leaf_text_in_all_dialects",
+              "line": 88
+            }
+          ],
+          "reason": "Source-style branches exist for valid values; invalid override fallback separately genuine gap. Arbitrary CSS property/value matrix not independently proved."
+        },
+        {
+          "id": "railroadEbnf.theme-fallback",
+          "title": "Invalid override must retain theme-derived fallback",
+          "status": "confirmed_gap",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/railroad/styles.ts",
+              "symbol": "const buildThemeDefaults",
+              "line": 125
+            },
+            {
+              "path": "packages/mermaid/src/diagrams/railroad/styles.ts",
+              "symbol": "terminalFill: sanitizeColorValue(railroadOptions.terminalFill",
+              "line": 218
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/railroad/layout.py",
+              "symbol": "result[key]=DEFAULTS[key]",
+              "line": 40
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_gap_audit.py",
+              "symbol": "test_invalid_terminal_fill_uses_theme_derived_color_in_all_dialects",
+              "line": 104,
+              "executionStatus": "BASELINE_FIRST_FAILURE_PRESERVED_PENDING_UNIFIED_DIAGNOSIS"
+            },
+            {
+              "path": "tests/bulk/c/test_gap_audit.py",
+              "symbol": "test_invalid_font_size_uses_derived_size_not_literal_default",
+              "line": 125,
+              "executionStatus": "BASELINE_FIRST_FAILURE_PRESERVED_PENDING_UNIFIED_DIAGNOSIS"
+            },
+            {
+              "path": "tests/bulk/c/test_gap_audit.py",
+              "symbol": "test_invalid_font_family_uses_theme_family",
+              "line": 144,
+              "executionStatus": "BASELINE_FIRST_FAILURE_PRESERVED_PENDING_UNIFIED_DIAGNOSIS"
+            },
+            {
+              "path": "tests/bulk/c/test_gap_audit.py",
+              "symbol": "test_valid_override_wins_theme_in_all_dialects",
+              "line": 115,
+              "executionStatus": "BASELINE_FIRST_FAILURE_PRESERVED_PENDING_UNIFIED_DIAGNOSIS"
+            },
+            {
+              "path": "tests/bulk/c/test_gap_audit.py",
+              "symbol": "test_zero_numeric_override_is_valid_source_boundary",
+              "line": 135,
+              "executionStatus": "BASELINE_FIRST_FAILURE_PRESERVED_PENDING_UNIFIED_DIAGNOSIS"
+            }
+          ],
+          "reason": "Source invalid value sanitizer uses themeDefaults[key]. Native overwrites theme value then falls back hardcoded DEFAULTS. Colors/fonts/numbers can lose valid derived theme values. Same root cause4entries,not4distinctbugs.",
+          "rootCauseId": "C-GAP-RR-THEME-FALLBACK",
+          "reproducer": {
+            "source": "railroad-ebnf-beta\nr = \"x\";",
+            "config": {
+              "themeVariables": {
+                "secondBkg": "#112233"
+              },
+              "railroad": {
+                "terminalFill": false
+              }
+            }
+          },
+          "expected": "Source themeDefaults.terminalFill=#112233; native control-flow yields literal#FFFFC0.",
+          "pendingNewAssertions": {
+            "path": "tests/bulk/c/test_gap_audit.py",
+            "status": "BASELINE_FIRST_RUN_RECORDED",
+            "run": "G03-first-batch-20261106T080449Z-54f22284",
+            "command": "003-gap-unit-C",
+            "scope": "This is suite-level first-run failure evidence; per-method root-cause analysis pending. No new run performed by audit update."
+          }
+        },
+        {
+          "id": "railroadEbnf.source-inert",
+          "title": "Empty200x100 and source-unconsumed marker toggle/title/compact/max/separator",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/railroad/railroadRenderer.ts",
+              "symbol": "const draw: DrawDefinition",
+              "line": 638
+            },
+            {
+              "path": "packages/mermaid/src/diagrams/railroad/railroadRenderer.ts",
+              "symbol": "  renderRule(",
+              "line": 535
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/railroad/layout.py",
+              "symbol": "    if not diagram.model.rules:",
+              "line": 104
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_railroad.py",
+              "symbol": "def test_source_unconsumed_marker_toggle_does_not_invent_a_branch",
+              "line": 80
+            }
+          ],
+          "reason": "Source no title paint,unconditional markers,no compactMode/max/separator consumption. Native mirrors actual source. Emptyrules expectedEmpty+actualblank PNG/mutation contract prevents arbitrary no-op pass."
+        }
+      ]
+    },
+    {
+      "id": "railroadAbnf",
+      "features": [
+        {
+          "id": "railroadAbnf.grammar",
+          "title": "Dialect constructors,primary forms and precedence/operators",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/parser/src/language/railroad-abnf/railroad-abnf.langium",
+              "symbol": "AbnfElement returns",
+              "line": 84
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/railroad/parser.py",
+              "symbol": "    def expression(",
+              "line": 79
+            },
+            {
+              "path": "src/py_mermaid/diagrams/railroad/parser.py",
+              "symbol": "    def term(",
+              "line": 96
+            },
+            {
+              "path": "src/py_mermaid/diagrams/railroad/parser.py",
+              "symbol": "    def primary(",
+              "line": 116
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_railroad.py",
+              "symbol": "def test_abnf_numeric_terminal_retains_source_not_decoded_char",
+              "line": 25
+            }
+          ],
+          "reason": "All dialect-specific source grammar/AST transform families read; independent normalized tree assertions exist. Not one test per grammar alternative."
+        },
+        {
+          "id": "railroadAbnf.tokens",
+          "title": "Escapes,comments,title/accessibility and required semicolon",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/parser/src/language/railroad-abnf/railroad-abnf.langium",
+              "symbol": "terminal TITLE:",
+              "line": 3
+            },
+            {
+              "path": "packages/parser/src/language/railroad-abnf/valueConverter.ts",
+              "symbol": "export class",
+              "line": 5
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/railroad/parser.py",
+              "symbol": "    def scan(",
+              "line": 28
+            },
+            {
+              "path": "src/py_mermaid/diagrams/railroad/parser.py",
+              "symbol": "def _unquote",
+              "line": 18
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_railroad.py",
+              "symbol": "def test_missing_semicolon_in_every_dialect",
+              "line": 11
+            }
+          ],
+          "reason": "Source n/r/t/default escape converter mapped (ABNF unescaped literals); EBNF ISO/C,PEG# branches. ABNF comment-priority separately unresolved."
+        },
+        {
+          "id": "railroadAbnf.db",
+          "title": "Ordered duplicates and recursive safe text",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/railroad/railroadDb.ts",
+              "symbol": "const addRule =",
+              "line": 71
+            },
+            {
+              "path": "packages/mermaid/src/diagrams/railroad/railroadDb.ts",
+              "symbol": "const sanitizeAstNode =",
+              "line": 17
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/railroad/parser.py",
+              "symbol": "    def parse(",
+              "line": 141
+            },
+            {
+              "path": "src/py_mermaid/diagrams/railroad/model.py",
+              "symbol": "class Railroad:",
+              "line": 21
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_railroad.py",
+              "symbol": "def test_db_rule_order_retains_duplicates_while_lookup_updates",
+              "line": 19
+            }
+          ],
+          "reason": "Ordered rules preserved; source mutable lookup is not public Python DB API. Common sanitizer used recursively."
+        },
+        {
+          "id": "railroadAbnf.geometry",
+          "title": "Leaf/sequence/choice/optional/repetition/special/rule markers",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/railroad/railroadRenderer.ts",
+              "symbol": "  renderExpression(",
+              "line": 504
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/railroad/layout.py",
+              "symbol": "    def measure(",
+              "line": 54
+            },
+            {
+              "path": "src/py_mermaid/diagrams/railroad/layout.py",
+              "symbol": "    def draw(",
+              "line": 77
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_railroad.py",
+              "symbol": "def test_source_leaf_padding_and_recursive_optional_dimensions",
+              "line": 66
+            },
+            {
+              "path": "tests/bulk/c/test_railroad.py",
+              "symbol": "def test_recursive_routes_and_visible_leaf_text_in_all_dialects",
+              "line": 88
+            }
+          ],
+          "reason": "Source dimensions,arc/bypass/loop paths are actual native drawings; representative formulas and pixels asserted."
+        },
+        {
+          "id": "railroadAbnf.style",
+          "title": "Valid theme-derived styles,override font/color/spacing and CSS",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/railroad/styles.ts",
+              "symbol": "export const buildRailroadStyleOptions",
+              "line": 189
+            },
+            {
+              "path": "packages/mermaid/src/diagrams/railroad/styles.ts",
+              "symbol": "export const getStyles",
+              "line": 259
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/railroad/layout.py",
+              "symbol": "def _style",
+              "line": 25
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_railroad.py",
+              "symbol": "def test_recursive_routes_and_visible_leaf_text_in_all_dialects",
+              "line": 88
+            }
+          ],
+          "reason": "Source-style branches exist for valid values; invalid override fallback separately genuine gap. Arbitrary CSS property/value matrix not independently proved."
+        },
+        {
+          "id": "railroadAbnf.theme-fallback",
+          "title": "Invalid override must retain theme-derived fallback",
+          "status": "confirmed_gap",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/railroad/styles.ts",
+              "symbol": "const buildThemeDefaults",
+              "line": 125
+            },
+            {
+              "path": "packages/mermaid/src/diagrams/railroad/styles.ts",
+              "symbol": "terminalFill: sanitizeColorValue(railroadOptions.terminalFill",
+              "line": 218
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/railroad/layout.py",
+              "symbol": "result[key]=DEFAULTS[key]",
+              "line": 40
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_gap_audit.py",
+              "symbol": "test_invalid_terminal_fill_uses_theme_derived_color_in_all_dialects",
+              "line": 104,
+              "executionStatus": "BASELINE_FIRST_FAILURE_PRESERVED_PENDING_UNIFIED_DIAGNOSIS"
+            },
+            {
+              "path": "tests/bulk/c/test_gap_audit.py",
+              "symbol": "test_invalid_font_size_uses_derived_size_not_literal_default",
+              "line": 125,
+              "executionStatus": "BASELINE_FIRST_FAILURE_PRESERVED_PENDING_UNIFIED_DIAGNOSIS"
+            },
+            {
+              "path": "tests/bulk/c/test_gap_audit.py",
+              "symbol": "test_invalid_font_family_uses_theme_family",
+              "line": 144,
+              "executionStatus": "BASELINE_FIRST_FAILURE_PRESERVED_PENDING_UNIFIED_DIAGNOSIS"
+            },
+            {
+              "path": "tests/bulk/c/test_gap_audit.py",
+              "symbol": "test_valid_override_wins_theme_in_all_dialects",
+              "line": 115,
+              "executionStatus": "BASELINE_FIRST_FAILURE_PRESERVED_PENDING_UNIFIED_DIAGNOSIS"
+            },
+            {
+              "path": "tests/bulk/c/test_gap_audit.py",
+              "symbol": "test_zero_numeric_override_is_valid_source_boundary",
+              "line": 135,
+              "executionStatus": "BASELINE_FIRST_FAILURE_PRESERVED_PENDING_UNIFIED_DIAGNOSIS"
+            }
+          ],
+          "reason": "Source invalid value sanitizer uses themeDefaults[key]. Native overwrites theme value then falls back hardcoded DEFAULTS. Colors/fonts/numbers can lose valid derived theme values. Same root cause4entries,not4distinctbugs.",
+          "rootCauseId": "C-GAP-RR-THEME-FALLBACK",
+          "reproducer": {
+            "source": "railroad-abnf-beta\nr = \"x\";",
+            "config": {
+              "themeVariables": {
+                "secondBkg": "#112233"
+              },
+              "railroad": {
+                "terminalFill": false
+              }
+            }
+          },
+          "expected": "Source themeDefaults.terminalFill=#112233; native control-flow yields literal#FFFFC0.",
+          "pendingNewAssertions": {
+            "path": "tests/bulk/c/test_gap_audit.py",
+            "status": "BASELINE_FIRST_RUN_RECORDED",
+            "run": "G03-first-batch-20261106T080449Z-54f22284",
+            "command": "003-gap-unit-C",
+            "scope": "This is suite-level first-run failure evidence; per-method root-cause analysis pending. No new run performed by audit update."
+          }
+        },
+        {
+          "id": "railroadAbnf.source-inert",
+          "title": "Empty200x100 and source-unconsumed marker toggle/title/compact/max/separator",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/railroad/railroadRenderer.ts",
+              "symbol": "const draw: DrawDefinition",
+              "line": 638
+            },
+            {
+              "path": "packages/mermaid/src/diagrams/railroad/railroadRenderer.ts",
+              "symbol": "  renderRule(",
+              "line": 535
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/railroad/layout.py",
+              "symbol": "    if not diagram.model.rules:",
+              "line": 104
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_railroad.py",
+              "symbol": "def test_source_unconsumed_marker_toggle_does_not_invent_a_branch",
+              "line": 80
+            }
+          ],
+          "reason": "Source no title paint,unconditional markers,no compactMode/max/separator consumption. Native mirrors actual source. Emptyrules expectedEmpty+actualblank PNG/mutation contract prevents arbitrary no-op pass."
+        },
+        {
+          "id": "railroadAbnf.comment-priority",
+          "title": "ABNF hidden semicolon-comment vs terminator token priority",
+          "status": "unresolved",
+          "source": [
+            {
+              "path": "packages/parser/src/language/railroad-abnf/railroad-abnf.langium",
+              "symbol": "hidden terminal ABNF_COMMENT:",
+              "line": 17
+            },
+            {
+              "path": "packages/parser/src/language/railroad-abnf/railroad-abnf.langium",
+              "symbol": "AbnfRule returns",
+              "line": 72
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/railroad/parser.py",
+              "symbol": "    def scan(",
+              "line": 28
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_railroad.py",
+              "symbol": "def test_missing_semicolon_in_every_dialect",
+              "line": 11
+            }
+          ],
+          "reason": "Grammar defines both semicolon terminator and hidden ;line comment. Native always emits semicolon. Need exact source tokenization branch case before asserting gap; standard rule cases do not establish comments."
+        }
+      ]
+    },
+    {
+      "id": "railroadPeg",
+      "features": [
+        {
+          "id": "railroadPeg.grammar",
+          "title": "Dialect constructors,primary forms and precedence/operators",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/parser/src/language/railroad-peg/railroad-peg.langium",
+              "symbol": "PegPrefix returns",
+              "line": 82
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/railroad/parser.py",
+              "symbol": "    def expression(",
+              "line": 79
+            },
+            {
+              "path": "src/py_mermaid/diagrams/railroad/parser.py",
+              "symbol": "    def term(",
+              "line": 96
+            },
+            {
+              "path": "src/py_mermaid/diagrams/railroad/parser.py",
+              "symbol": "    def primary(",
+              "line": 116
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_railroad.py",
+              "symbol": "def test_peg_predicates_are_source_special_literals",
+              "line": 31
+            }
+          ],
+          "reason": "All dialect-specific source grammar/AST transform families read; independent normalized tree assertions exist. Not one test per grammar alternative."
+        },
+        {
+          "id": "railroadPeg.tokens",
+          "title": "Escapes,comments,title/accessibility and required semicolon",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/parser/src/language/railroad-peg/railroad-peg.langium",
+              "symbol": "terminal TITLE:",
+              "line": 3
+            },
+            {
+              "path": "packages/parser/src/language/railroad-peg/valueConverter.ts",
+              "symbol": "export class",
+              "line": 36
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/railroad/parser.py",
+              "symbol": "    def scan(",
+              "line": 28
+            },
+            {
+              "path": "src/py_mermaid/diagrams/railroad/parser.py",
+              "symbol": "def _unquote",
+              "line": 18
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_railroad.py",
+              "symbol": "def test_missing_semicolon_in_every_dialect",
+              "line": 11
+            }
+          ],
+          "reason": "Source n/r/t/default escape converter mapped (ABNF unescaped literals); EBNF ISO/C,PEG# branches. ABNF comment-priority separately unresolved."
+        },
+        {
+          "id": "railroadPeg.db",
+          "title": "Ordered duplicates and recursive safe text",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/railroad/railroadDb.ts",
+              "symbol": "const addRule =",
+              "line": 71
+            },
+            {
+              "path": "packages/mermaid/src/diagrams/railroad/railroadDb.ts",
+              "symbol": "const sanitizeAstNode =",
+              "line": 17
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/railroad/parser.py",
+              "symbol": "    def parse(",
+              "line": 141
+            },
+            {
+              "path": "src/py_mermaid/diagrams/railroad/model.py",
+              "symbol": "class Railroad:",
+              "line": 21
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_railroad.py",
+              "symbol": "def test_db_rule_order_retains_duplicates_while_lookup_updates",
+              "line": 19
+            }
+          ],
+          "reason": "Ordered rules preserved; source mutable lookup is not public Python DB API. Common sanitizer used recursively."
+        },
+        {
+          "id": "railroadPeg.geometry",
+          "title": "Leaf/sequence/choice/optional/repetition/special/rule markers",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/railroad/railroadRenderer.ts",
+              "symbol": "  renderExpression(",
+              "line": 504
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/railroad/layout.py",
+              "symbol": "    def measure(",
+              "line": 54
+            },
+            {
+              "path": "src/py_mermaid/diagrams/railroad/layout.py",
+              "symbol": "    def draw(",
+              "line": 77
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_railroad.py",
+              "symbol": "def test_source_leaf_padding_and_recursive_optional_dimensions",
+              "line": 66
+            },
+            {
+              "path": "tests/bulk/c/test_railroad.py",
+              "symbol": "def test_recursive_routes_and_visible_leaf_text_in_all_dialects",
+              "line": 88
+            }
+          ],
+          "reason": "Source dimensions,arc/bypass/loop paths are actual native drawings; representative formulas and pixels asserted."
+        },
+        {
+          "id": "railroadPeg.style",
+          "title": "Valid theme-derived styles,override font/color/spacing and CSS",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/railroad/styles.ts",
+              "symbol": "export const buildRailroadStyleOptions",
+              "line": 189
+            },
+            {
+              "path": "packages/mermaid/src/diagrams/railroad/styles.ts",
+              "symbol": "export const getStyles",
+              "line": 259
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/railroad/layout.py",
+              "symbol": "def _style",
+              "line": 25
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_railroad.py",
+              "symbol": "def test_recursive_routes_and_visible_leaf_text_in_all_dialects",
+              "line": 88
+            }
+          ],
+          "reason": "Source-style branches exist for valid values; invalid override fallback separately genuine gap. Arbitrary CSS property/value matrix not independently proved."
+        },
+        {
+          "id": "railroadPeg.theme-fallback",
+          "title": "Invalid override must retain theme-derived fallback",
+          "status": "confirmed_gap",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/railroad/styles.ts",
+              "symbol": "const buildThemeDefaults",
+              "line": 125
+            },
+            {
+              "path": "packages/mermaid/src/diagrams/railroad/styles.ts",
+              "symbol": "terminalFill: sanitizeColorValue(railroadOptions.terminalFill",
+              "line": 218
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/railroad/layout.py",
+              "symbol": "result[key]=DEFAULTS[key]",
+              "line": 40
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_gap_audit.py",
+              "symbol": "test_invalid_terminal_fill_uses_theme_derived_color_in_all_dialects",
+              "line": 104,
+              "executionStatus": "BASELINE_FIRST_FAILURE_PRESERVED_PENDING_UNIFIED_DIAGNOSIS"
+            },
+            {
+              "path": "tests/bulk/c/test_gap_audit.py",
+              "symbol": "test_invalid_font_size_uses_derived_size_not_literal_default",
+              "line": 125,
+              "executionStatus": "BASELINE_FIRST_FAILURE_PRESERVED_PENDING_UNIFIED_DIAGNOSIS"
+            },
+            {
+              "path": "tests/bulk/c/test_gap_audit.py",
+              "symbol": "test_invalid_font_family_uses_theme_family",
+              "line": 144,
+              "executionStatus": "BASELINE_FIRST_FAILURE_PRESERVED_PENDING_UNIFIED_DIAGNOSIS"
+            },
+            {
+              "path": "tests/bulk/c/test_gap_audit.py",
+              "symbol": "test_valid_override_wins_theme_in_all_dialects",
+              "line": 115,
+              "executionStatus": "BASELINE_FIRST_FAILURE_PRESERVED_PENDING_UNIFIED_DIAGNOSIS"
+            },
+            {
+              "path": "tests/bulk/c/test_gap_audit.py",
+              "symbol": "test_zero_numeric_override_is_valid_source_boundary",
+              "line": 135,
+              "executionStatus": "BASELINE_FIRST_FAILURE_PRESERVED_PENDING_UNIFIED_DIAGNOSIS"
+            }
+          ],
+          "reason": "Source invalid value sanitizer uses themeDefaults[key]. Native overwrites theme value then falls back hardcoded DEFAULTS. Colors/fonts/numbers can lose valid derived theme values. Same root cause4entries,not4distinctbugs.",
+          "rootCauseId": "C-GAP-RR-THEME-FALLBACK",
+          "reproducer": {
+            "source": "railroad-peg-beta\nr <- \"x\";",
+            "config": {
+              "themeVariables": {
+                "secondBkg": "#112233"
+              },
+              "railroad": {
+                "terminalFill": false
+              }
+            }
+          },
+          "expected": "Source themeDefaults.terminalFill=#112233; native control-flow yields literal#FFFFC0.",
+          "pendingNewAssertions": {
+            "path": "tests/bulk/c/test_gap_audit.py",
+            "status": "BASELINE_FIRST_RUN_RECORDED",
+            "run": "G03-first-batch-20261106T080449Z-54f22284",
+            "command": "003-gap-unit-C",
+            "scope": "This is suite-level first-run failure evidence; per-method root-cause analysis pending. No new run performed by audit update."
+          }
+        },
+        {
+          "id": "railroadPeg.source-inert",
+          "title": "Empty200x100 and source-unconsumed marker toggle/title/compact/max/separator",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/railroad/railroadRenderer.ts",
+              "symbol": "const draw: DrawDefinition",
+              "line": 638
+            },
+            {
+              "path": "packages/mermaid/src/diagrams/railroad/railroadRenderer.ts",
+              "symbol": "  renderRule(",
+              "line": 535
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/railroad/layout.py",
+              "symbol": "    if not diagram.model.rules:",
+              "line": 104
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_railroad.py",
+              "symbol": "def test_source_unconsumed_marker_toggle_does_not_invent_a_branch",
+              "line": 80
+            }
+          ],
+          "reason": "Source no title paint,unconditional markers,no compactMode/max/separator consumption. Native mirrors actual source. Emptyrules expectedEmpty+actualblank PNG/mutation contract prevents arbitrary no-op pass."
+        }
+      ]
+    },
+    {
+      "id": "info",
+      "features": [
+        {
+          "id": "info.grammar",
+          "title": "info/showInfo and common title/accessibility",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/parser/src/language/info/info.langium",
+              "symbol": "entry Info:",
+              "line": 4
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/info/__init__.py",
+              "symbol": "def parse(",
+              "line": 13
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_info.py",
+              "symbol": "def test_show_info_flag_and_source_title",
+              "line": 6
+            },
+            {
+              "path": "tests/bulk/c/test_info.py",
+              "symbol": "def test_unknown_body_rejected_with_exact_family_error",
+              "line": 11
+            }
+          ],
+          "reason": "Source flag and invalid body mapped; stored title/accessibility intentionally not painted by fixed renderer."
+        },
+        {
+          "id": "info.paint",
+          "title": "Fixedv12.2.0 at(100,40),32px,400x100",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/info/infoRenderer.ts",
+              "symbol": "const draw: DrawDefinition",
+              "line": 13
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/info/__init__.py",
+              "symbol": "async def build(",
+              "line": 21
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_info.py",
+              "symbol": "def test_source_version_at_source_viewport_and_real_ink",
+              "line": 18
+            }
+          ],
+          "reason": "ActualPNG exactviewport,font metadata,ink and centre independently asserted; showInfo does not gate source version paint."
+        },
+        {
+          "id": "info.css",
+          "title": "Non-default version CSS measurement/paint and anchor cascade",
+          "status": "implemented_unverified",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/info/infoRenderer.ts",
+              "symbol": ".attr('class', 'version')",
+              "line": 24
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/info/__init__.py",
+              "symbol": "    st=painter.style('version'",
+              "line": 24
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/c/test_info.py",
+              "symbol": "def test_source_version_at_source_viewport_and_real_ink",
+              "line": 18
+            }
+          ],
+          "reason": "Typed style consumed by native measure/paint. Existing tests default only; dedicated non-default fill/font/anchor/inline priority source assertions absent. Do not claim unsupported solely from missing tests."
+        }
+      ]
+    }
+  ],
+  "reviewedFileSha256": {
+    ".local/upstream-mermaid/packages/mermaid/src/diagrams/sequence/parser/sequenceDiagram.jison": "45c71ea8dfd62594c9b315f7285efa497ed8f88219ec016625c37d4bd5823ebf",
+    ".local/upstream-mermaid/packages/mermaid/src/diagrams/sequence/sequenceDb.ts": "e2a967402784168ec358794dd78db18e28ca94d7d4ca771724c9840374f4e134",
+    "src/py_mermaid/diagrams/sequence/parser.py": "dcc0731aca75c83464c45e01daef92a255cfc56f538ca500e92b372a92f9738f",
+    "tests/bulk/c/test_sequence.py": "270f8085f1e4ccd6ca0c069493dc614c1fc22c3b21de7b46b899e5fbab67671d",
+    "src/py_mermaid/diagrams/sequence/layout.py": "fc89a1bbfaa66c7fdf41f87521f6f344e92ea3e0e324ba9217555697b470be75",
+    ".local/upstream-mermaid/packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+    ".local/upstream-mermaid/packages/mermaid/src/diagrams/sequence/svgDraw.js": "54dfd9f1a67bf7e935a4800150a086818fe639ada82f06c3b1c7cb04874023db",
+    "tests/bulk/c/test_sequence_p4.py": "8197e405e7966b81a6736d9e29d6721ae9a6d4e6c27801957311ba692432cf08",
+    "src/py_mermaid/diagrams/sequence/presentation.py": "8de72776aa193b53327765352a5dfd923f72041a6d0a0211c1ae5a32b2485f19",
+    ".local/upstream-mermaid/packages/mermaid/src/diagrams/sequence/styles.js": "f80f572951cb6367a52b9ceeb443ce2872a020d8356ce14685237ff0b9bbcfa4",
+    ".local/bulk-sources/zenuml/source/src/g4/sequenceParser.g4": "9e7624e377f5e08ace461a099e91d90e92ac795f59fd716552c7a5a630cc6c54",
+    ".local/bulk-sources/zenuml/source/src/parser/Participants.ts": "782a7fdbf7e1c38a951204c8222624e4270b253f7e128f2c7c626b19af452665",
+    "src/py_mermaid/diagrams/zenuml/parser.py": "d8ef79becf9cbef6e50f21f6fbe2baa8c2acac0f506cab07c256f334d12bb6a6",
+    "tests/bulk/c/test_zenuml.py": "a93fb16242546c47292b6d7aafcfb02013c3777de9dcd1305a97f821fa3a8b34",
+    ".local/bulk-sources/zenuml/source/src/g4/sequenceLexer.g4": "9bf0cc267143cce32641831d0a6ca8ee5dbb5de995e2e713f9521f7a06ee2ece",
+    "tests/bulk/c/test_zenuml_p4.py": "393824e47d5542a05168e652d62531f21d679a5e880ba4740b745171abdd5510",
+    ".local/bulk-sources/zenuml/source/src/parser/Messages/Assignment.ts": "5b8afef04bb60037f1f5756cd49309d6129eb2c55e687e2733ef16eb7128361e",
+    "src/py_mermaid/diagrams/zenuml/layout.py": "824799bc0a898b266d8d00e5d67b97521731dfede3cc07183a98205fd6b6ff7b",
+    ".local/bulk-sources/zenuml/source/src/parser/SignatureText.ts": "e0eb453e0073c911584831bc679c80fa1293fc38bafb42839f742317c29af16c",
+    ".local/bulk-sources/zenuml/source/src/svg/components/creation.ts": "a1c688b5ee4337547bd58cf4f52ee203ec9d76188a9aaf3ae7f088498782ab07",
+    ".local/bulk-sources/zenuml/source/src/svg/components/return.ts": "05f5a2406579a60250c11baf96b228a4049808698ae79ab771bc540d5b3b346a",
+    ".local/bulk-sources/zenuml/source/src/svg/components/fragment.ts": "73c805092b4107fb966b2c7eed66b30d86f35ba1a188f62c5ecc957138859508",
+    ".local/bulk-sources/zenuml/source/src/svg/buildGeometry.ts": "f73a916895b5972c3a97b5be22fe281f94d9d8bce6ba78a8c0b3f48f994dd127",
+    ".local/bulk-sources/zenuml/source/src/positioning/Coordinates.ts": "c41c425ff4297c1fcac1a3ee70c03f5678ce71ac4bc5d95b1cc5234564b67884",
+    "src/py_mermaid/diagrams/zenuml/geometry.py": "d9dc47378a9d0d5d08ac3d9572d1a37e00fc5948ad81afa4ad187a271bc6528b",
+    ".local/bulk-sources/zenuml/source/src/svg/renderToSvg.ts": "5563a02c96212f97a5d0446aa54bec2f947afb092ea25a62d404737606eee156",
+    ".local/bulk-sources/zenuml/source/src/svg/components/message.ts": "1de2823789560677c5b81017e1c2adfa68ba34897f2bdabdc852265279827c85",
+    ".local/bulk-sources/zenuml/source/src/svg/icons.ts": "67004203b0c73d2c2ab4d183fca32e7d160979423b70e09dcb00ff198442fcc9",
+    ".local/bulk-sources/zenuml/source/src/emoji/resolveEmoji.ts": "3b46b78f46b33bc9bdae7760ebece90638c24528052b9b4e5bb168e1304032ba",
+    "src/py_mermaid/diagrams/zenuml/emoji.py": "840bdacc296cfe42d0eee5d6877e5771cb7603a65890c94c44266f61033822ad",
+    ".local/bulk-sources/zenuml/source/src/svg/components/comment.ts": "de16149e5f49bce9c09e0093836425e28b3810df1e53c607db8aaf968ef5efc1",
+    ".local/bulk-sources/zenuml/source/src/core.tsx": "a0be1b21ac9247c26cdefb092a0ccb085d797d1d8bd3f83ada2f36d51821961e",
+    ".local/upstream-mermaid/packages/parser/src/language/railroad/railroad.langium": "f8ea8e7422b881e5ffd7504e09042ae0b33419083efe7426a660d91a8f01dfd7",
+    "src/py_mermaid/diagrams/railroad/parser.py": "e523ecdd94b19508be0f06d956b10f4d1330a7a4faabb00caff3839f8f5238a0",
+    "tests/bulk/c/test_railroad.py": "f5aebc8e3e14d90864c5eb5f625b4573b159eb56e52061a8ee84b5814d3cb4d3",
+    ".local/upstream-mermaid/packages/parser/src/language/railroad/valueConverter.ts": "b859387231c331767546250d90573093ab029356539f22a7fd615a9f834fddad",
+    ".local/upstream-mermaid/packages/mermaid/src/diagrams/railroad/railroadDb.ts": "9b2e20b2ab632f02dc1d0050d10fd75a3b49208a754ef5fd2998fe1199cd5b25",
+    "src/py_mermaid/diagrams/railroad/model.py": "f49afe67da2fb4187d280b16aaed7449b517f192b34e49982080b9f5fb1e98c2",
+    ".local/upstream-mermaid/packages/mermaid/src/diagrams/railroad/railroadRenderer.ts": "0c1c644cec140ba51f9acf31a47ad7015b4c9d85741a723f1f216e5753bad03a",
+    "src/py_mermaid/diagrams/railroad/layout.py": "016cc2b31b08c8305df0681cd3b6c368c4479b20243d61039f6c0c107577562e",
+    ".local/upstream-mermaid/packages/mermaid/src/diagrams/railroad/styles.ts": "595aadfbfd8ad925e6cc63e05180f1b9b6f5247e99beb94eb62aca72be083bed",
+    ".local/upstream-mermaid/packages/parser/src/language/railroad-ebnf/railroad-ebnf.langium": "0c59cd62d20bb8117c310c8597d97889cf7baba7a0f80cc5d73657b3419cfc3b",
+    ".local/upstream-mermaid/packages/parser/src/language/railroad-ebnf/valueConverter.ts": "729241721eb38c5984b113e5205dc021229ce89e59f77155b7f66d3a5271fbed",
+    ".local/upstream-mermaid/packages/parser/src/language/railroad-abnf/railroad-abnf.langium": "d156141dab0c649a6a063c59a5d277aec56eda295f955d5c65c28cffe077ad84",
+    ".local/upstream-mermaid/packages/parser/src/language/railroad-abnf/valueConverter.ts": "efc4e44899d3a3dddf0c7743ff5f1821d3253a8fad9a4cb51b1d72b453b58732",
+    ".local/upstream-mermaid/packages/parser/src/language/railroad-peg/railroad-peg.langium": "61696990f899dbbe531dd79dde0dda434a92c3169aaa0c1e3b27564b7c980dd9",
+    ".local/upstream-mermaid/packages/parser/src/language/railroad-peg/valueConverter.ts": "0e467fd095c3c3b046248c190186626ef9a475946b3a4b201b15595abce3ea78",
+    ".local/upstream-mermaid/packages/parser/src/language/info/info.langium": "5175bc256e9a9321413ad26a474f3b487cff5e291549b8da8c78e759cd7bae4f",
+    "src/py_mermaid/diagrams/info/__init__.py": "3789d7fa8f1d383647b3a42de54d586b40756273e4b1dbf8f04ab2c1bfa4284c",
+    "tests/bulk/c/test_info.py": "0b2cb54d0fd9cee7d8059c3050782af2eac7deeb2dfca59e0e43a9ee2c7ae74d",
+    ".local/upstream-mermaid/packages/mermaid/src/diagrams/info/infoRenderer.ts": "100b9e0f2afe51cd725b5818d1423d871deeaa950c8bcb31c04c403c4f7454a9"
+  },
+  "summary": {
+    "entries": 7,
+    "featureGroups": 62,
+    "statusCounts": {
+      "implemented_with_evidence": 44,
+      "confirmed_gap": 11,
+      "excluded": 2,
+      "unresolved": 3,
+      "upstream_defect": 1,
+      "implemented_unverified": 1
+    },
+    "confirmedGapFeatureRecords": 11,
+    "confirmedGapDistinctRootCauses": 8,
+    "newBehaviorExecuted": false,
+    "newProductTestsWrittenAtAudit": false,
+    "productModified": false
+  },
+  "actualReviewDepth": {
+    "granularity": "Function groups,not one record per grammar production/alternative/config value/exception branch. Read actual grammar/DB/config/layout/renderer and existing assertion bodies. Confirmed gaps are deterministic source/native control-flow findings awaiting root unified execution.",
+    "railroadGrammarRulesRead": {
+      "railroad": [
+        "Railroad",
+        "RailroadRule",
+        "RailroadExpression",
+        "RailroadSequenceExpr",
+        "RailroadChoiceExpr",
+        "RailroadOptionalExpr",
+        "RailroadOneOrMoreExpr",
+        "RailroadZeroOrMoreExpr",
+        "RailroadTerminalExpr",
+        "RailroadNonTerminalExpr",
+        "RailroadSpecialExpr"
+      ],
+      "railroad-ebnf": [
+        "RailroadEbnf",
+        "EbnfRule",
+        "EbnfChoice",
+        "EbnfSequence",
+        "EbnfTerm",
+        "EbnfPrimary",
+        "EbnfTerminal",
+        "EbnfNonTerminal",
+        "EbnfSpecial",
+        "EbnfGroup",
+        "EbnfOptional",
+        "EbnfRepetition",
+        "EbnfPostfix",
+        "EbnfOptionalPostfix",
+        "EbnfZeroOrMorePostfix",
+        "EbnfOneOrMorePostfix",
+        "EbnfExceptionPostfix"
+      ],
+      "railroad-abnf": [
+        "RailroadAbnf",
+        "AbnfRule",
+        "AbnfAlternation",
+        "AbnfConcatenation",
+        "AbnfElement",
+        "AbnfPrimary",
+        "AbnfStringLiteral",
+        "AbnfNumVal",
+        "AbnfRuleName",
+        "AbnfGroup",
+        "AbnfOptionalGroup"
+      ],
+      "railroad-peg": [
+        "RailroadPeg",
+        "PegRule",
+        "PegOrderedChoice",
+        "PegSequence",
+        "PegPrefix",
+        "PegSuffix",
+        "PegPrimary",
+        "PegLiteral",
+        "PegIdentifier",
+        "PegGroup",
+        "PegAny"
+      ]
+    },
+    "zenGrammarRulesRead": [
+      "prog",
+      "title",
+      "head",
+      "group",
+      "starterExp",
+      "starter",
+      "participant",
+      "stereotype",
+      "label",
+      "participantType",
+      "name",
+      "width",
+      "emoji",
+      "block",
+      "ret",
+      "returnAsyncMessage",
+      "divider",
+      "dividerNote",
+      "stat",
+      "par",
+      "opt",
+      "critical",
+      "section",
+      "creation",
+      "ref",
+      "creationBody",
+      "message",
+      "messageBody",
+      "fromTo",
+      "func",
+      "from",
+      "to",
+      "signature",
+      "invocation",
+      "assignment",
+      "asyncMessage",
+      "content",
+      "construct",
+      "type",
+      "assignee",
+      "methodName",
+      "parameters",
+      "parameter",
+      "namedParameter",
+      "declaration",
+      "tcf",
+      "tryBlock",
+      "catchBlock",
+      "finallyBlock",
+      "alt",
+      "ifBlock",
+      "elseIfBlock",
+      "elseBlock",
+      "braceBlock",
+      "loop",
+      "expr",
+      "atom",
+      "parExpr",
+      "condition",
+      "inExpr",
+      "textExpr"
+    ],
+    "existingEvidence": [
+      "BULK-P4-final-20261106T065144Z-03962368",
+      "BULK-P3-fixed-original-refresh-20261106T062015Z-fe05c71f",
+      "docs/BULK_STATIC_ACCEPTANCE.md",
+      "docs/changes/bulk-C-P4-repair.json"
+    ],
+    "coveragePolicy": "351methods/302Cfixtures/148strictZen are verified corpus sizes,never percentage complete. Historical P1planned/unverified/footer map not treated as fresh gap or complete coverage."
+  },
+  "unresolvedScope": [
+    "All lexer/invalid token/recovery/case/whitespace combinations not atomized; malformed editor recovery wording excluded from exact equality.",
+    "Sequence26arrows?direction?activation?self?central?number numerical endpoint cross-product and every temporal frame constraint not fully independently pinned.",
+    "Zen arbitrary Marked delimiter/escape/paragraph/commentheight behavior beyond source corpus requires focused source cases.",
+    "ABNF semicolon hidden-comment lex priority requires exact fixedsource tokenization case.",
+    "Nondefault info.version CSS and all11themes?everyrole not independently asserted here.",
+    "Shared math/resource/filter/security/export internals are G02; only family calls and existing family evidence traced.",
+    "No new product or oracle execution performed; reproducers await unified G03."
+  ],
+  "excluded": [
+    "Interactive/editor/navigation/DOMaccessibility",
+    "Dagre",
+    "7futurepy-vchart diagrams",
+    "Installation/publishing/dependencyupgrade"
+  ],
+  "auditedProductSha256": {
+    "src/py_mermaid/diagrams/info/__init__.py": "3789d7fa8f1d383647b3a42de54d586b40756273e4b1dbf8f04ab2c1bfa4284c",
+    "src/py_mermaid/diagrams/railroad/__init__.py": "78d18a55ddb85967cd8cdb420e52670002890d748472be91d86d4c44525d3a4b",
+    "src/py_mermaid/diagrams/railroad/layout.py": "016cc2b31b08c8305df0681cd3b6c368c4479b20243d61039f6c0c107577562e",
+    "src/py_mermaid/diagrams/railroad/model.py": "f49afe67da2fb4187d280b16aaed7449b517f192b34e49982080b9f5fb1e98c2",
+    "src/py_mermaid/diagrams/railroad/parser.py": "e523ecdd94b19508be0f06d956b10f4d1330a7a4faabb00caff3839f8f5238a0",
+    "src/py_mermaid/diagrams/sequence/__init__.py": "6e726c93d670e2f3fb9bbaf48ad2c5a36de032552669e819c4f976cb99507326",
+    "src/py_mermaid/diagrams/sequence/layout.py": "fc89a1bbfaa66c7fdf41f87521f6f344e92ea3e0e324ba9217555697b470be75",
+    "src/py_mermaid/diagrams/sequence/model.py": "e08b36a53ae3e1070b0359413e142bf29b1a7d4bdc52d54c2253ae5a92a4c677",
+    "src/py_mermaid/diagrams/sequence/parser.py": "dcc0731aca75c83464c45e01daef92a255cfc56f538ca500e92b372a92f9738f",
+    "src/py_mermaid/diagrams/sequence/presentation.py": "8de72776aa193b53327765352a5dfd923f72041a6d0a0211c1ae5a32b2485f19",
+    "src/py_mermaid/diagrams/zenuml/__init__.py": "0cc8def7994025c755e3ee3ec81ecb49fccfe89697ca845981fba3c46f81ebdf",
+    "src/py_mermaid/diagrams/zenuml/assets/actor.svg": "502a5b8566f9d7f3621c9459c3d35cd25a8628fbca4c123d0b023f88a2a333cd",
+    "src/py_mermaid/diagrams/zenuml/assets/alt-fragment.svg": "661310f14d8779bcf6a8171a28905dcc6db69ec8919703bc6c55c5d074815440",
+    "src/py_mermaid/diagrams/zenuml/assets/azurefunction.svg": "1a6c9c108d5f63f7b78bc6fbc464059acd2eaa8c1d111e9bcd28a8b2cdf470b9",
+    "src/py_mermaid/diagrams/zenuml/assets/boundary.svg": "4c3f60734af2fbd2191f880b2d2ec55225ff339b59f0bdcd4fe77d3b54dbd2f5",
+    "src/py_mermaid/diagrams/zenuml/assets/control.svg": "64d9aa04d905c62762ab7bf19e7f42ba78b4843d026e7d3823db6addb613cae8",
+    "src/py_mermaid/diagrams/zenuml/assets/critical-fragment.svg": "2b2634f268f04784d5b9afd5e00cf4eeedd89e78bb52aa7e90228efc68922431",
+    "src/py_mermaid/diagrams/zenuml/assets/database.svg": "c400ec7b8da9a1c8e4324e02feb4b4743c528ad45ea0d5d443feb15315b7e400",
+    "src/py_mermaid/diagrams/zenuml/assets/ec2.svg": "155b13065f4420c794f71fcc3c5d3f78be4e1e53d65f3b5388ec7742f8875ddb",
+    "src/py_mermaid/diagrams/zenuml/assets/entity.svg": "0ebeda02e1922d323d7118b7f6025ef28043ceb940b64ba87576cabf009d257d",
+    "src/py_mermaid/diagrams/zenuml/assets/iam.svg": "2bdcac04a28e4b5bdfc3cd35d7ca496ad1f6fa0bc70e5f9200599b443af71624",
+    "src/py_mermaid/diagrams/zenuml/assets/lambda.svg": "6f29b9801170221431fbc78f67b689a9580c62f64e453f8d18a5cefd807636bf",
+    "src/py_mermaid/diagrams/zenuml/assets/LICENSE-core": "d4a77cbf1dc0975cd4be7266972dc6d3a6c6d68d43235384d6e4b6f12934e978",
+    "src/py_mermaid/diagrams/zenuml/assets/loop-fragment.svg": "24d3b7bf2b3c53d7463201af017ca46b47cfe8d8ab67c48f2e064d9430a8876e",
+    "src/py_mermaid/diagrams/zenuml/assets/Microsoft_Terms_of_Use.pdf": "983e83cef1a8f85164760b076a96df54cb50af345861cb1d8344040037d0531c",
+    "src/py_mermaid/diagrams/zenuml/assets/opt-fragment.svg": "f06ceede25ac9ab4c669cf9f158b44cfdec7ab6aedf9f49613ba085f592d0dbf",
+    "src/py_mermaid/diagrams/zenuml/assets/par-fragment.svg": "82abd7f9b1386281ebaceabf3fbbbab1123cb7e851857e84550f38c39bc5f3be",
+    "src/py_mermaid/diagrams/zenuml/assets/ref-fragment.svg": "60d4a29de41e8a6738b5776d4409c55cc72a35fb02a2ccc1d19e00c92d3f6587",
+    "src/py_mermaid/diagrams/zenuml/assets/section-fragment.svg": "81fb298a6460f96bc68a79613673b35d1d232ed23f68bfa13ef92cedd0a3c9d2",
+    "src/py_mermaid/diagrams/zenuml/assets/sns.svg": "1e3d19286abcc04364d5a2e8f83faa1dddf1657d68a1d9e9c6bfe351f0c5e242",
+    "src/py_mermaid/diagrams/zenuml/assets/sqs.svg": "39915b6e2eb2d77286a905bb0ca94912bca36605d518433db3b3f0d113e5d07d",
+    "src/py_mermaid/diagrams/zenuml/assets/try-catch-fragment.svg": "b48b67f7f6d53fc424611cec28f424020434dbd5f46105782e2eb883e398df50",
+    "src/py_mermaid/diagrams/zenuml/emoji.py": "840bdacc296cfe42d0eee5d6877e5771cb7603a65890c94c44266f61033822ad",
+    "src/py_mermaid/diagrams/zenuml/geometry.py": "d9dc47378a9d0d5d08ac3d9572d1a37e00fc5948ad81afa4ad187a271bc6528b",
+    "src/py_mermaid/diagrams/zenuml/layout.py": "824799bc0a898b266d8d00e5d67b97521731dfede3cc07183a98205fd6b6ff7b",
+    "src/py_mermaid/diagrams/zenuml/model.py": "05ecfe619c92e6704f2e08a080425349cc28af64ef9e02d916d8d4da4b0a8a61",
+    "src/py_mermaid/diagrams/zenuml/parser.py": "d8ef79becf9cbef6e50f21f6fbe2baa8c2acac0f506cab07c256f334d12bb6a6"
+  },
+  "newRegressionDesign": {
+    "tests": "tests/bulk/c/test_gap_audit.py",
+    "methods": [
+      "test_await_never_becomes_a_participant",
+      "test_assignment_modifiers_are_hidden_before_participant_collection",
+      "test_entire_arbitrary_length_assignee_list_is_preserved",
+      "test_typed_assignee_list_preserves_type_separately",
+      "test_digit_leading_unicode_names_are_one_source_token",
+      "test_hidden_cr_between_qualified_call_tokens_is_whitespace",
+      "test_multi_assignee_actual_return_text_and_glyph_ink",
+      "test_invalid_terminal_fill_uses_theme_derived_color_in_all_dialects",
+      "test_valid_override_wins_theme_in_all_dialects",
+      "test_invalid_font_size_uses_derived_size_not_literal_default",
+      "test_zero_numeric_override_is_valid_source_boundary",
+      "test_invalid_font_family_uses_theme_family",
+      "test_root_generic_sequence_font_size_and_weight_reach_all_roles",
+      "test_sequence_number_font_length_source_branches",
+      "test_destroy_receiver_arrow_stops_before_visible_footer"
+    ],
+    "methodCount": 15,
+    "fixtures": "tests/bulk/cases-gap-C.json",
+    "fixtureCount": 33,
+    "behaviorExecuted": false,
+    "mechanical": "AST parse + compile() only; no unittest invocation/import/product call/oracle"
+  }
+}

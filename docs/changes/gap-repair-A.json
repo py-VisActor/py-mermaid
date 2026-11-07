@@ -1,0 +1,118 @@
+{
+  "schema": "py-mermaid-gap-repair-A/v1",
+  "status": "related_regressions_pass_ready_for_joint_freeze",
+  "baselineSourceSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
+  "initialFailureRun": "test-runs/G03-first-batch-20261106T080449Z-54f22284",
+  "initialResult": "13 methods, 10 failures; original official capture confirms three source-invalid cases and seven render inputs",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "sources": [
+    {
+      "id": "packet-title",
+      "path": "packages/parser/src/language/common/common.langium",
+      "line": 16,
+      "symbol": "TITLE excludes inline comment",
+      "sha256": "d8b0c0056f6339ca6a0d3b966c02b1f4d53ad768069e2889450dc29312f1f65b"
+    },
+    {
+      "id": "packet-title-converter",
+      "path": "packages/parser/src/language/common/valueConverter.ts",
+      "line": 59,
+      "symbol": "trim then repeated horizontal-whitespace normalization",
+      "sha256": "d93aa5dd1f7fed8aa903f55eb3e463c6b69b455af22004a6405a61c7560f58e5"
+    },
+    {
+      "id": "class-generic-cssclass",
+      "path": "packages/mermaid/src/diagrams/class/classDb.ts",
+      "line": 331,
+      "symbol": "setCssClass uses splitClassNameAndType per target",
+      "sha256": "694ae4bb58801b72cb703cb481e662d4e1a6208b91ab84b574786467ea0054c5"
+    },
+    {
+      "id": "block-empty-label",
+      "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+      "line": 54,
+      "symbol": "closing quote before empty STR; nodeShapeNLabel requires STR at263",
+      "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7"
+    },
+    {
+      "id": "block-empty-composite",
+      "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+      "line": 198,
+      "symbol": "nonempty document and required composite body at244",
+      "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7"
+    },
+    {
+      "id": "kanban-empty-label",
+      "path": "packages/mermaid/src/diagrams/kanban/parser/kanban.jison",
+      "line": 76,
+      "symbol": "NSTR requires one or more chars; nodeWithId at153 requires NODE_DESCR",
+      "sha256": "b59eba92f4caf14b99343d4058880d958d4326b01dc1d1b4feba710ff94ed0af"
+    }
+  ],
+  "changes": [
+    {
+      "rootCause": "packet-title",
+      "implementation": "Trim title at first inline %% then apply source horizontal-whitespace conversion; quoted field contents unchanged."
+    },
+    {
+      "rootCause": "class-generic-cssclass",
+      "implementation": "Sanitize each comma-separated cssClass target, then strip generic suffix before lookup, matching source DB."
+    },
+    {
+      "rootCause": "block-empty-label",
+      "implementation": "Reject immediately closing quote without required STR token."
+    },
+    {
+      "rootCause": "block-empty-composite",
+      "implementation": "Require at least one document statement; count column/style statements as well as nodes, so valid non-node documents remain accepted. Same nonempty rule applies at root."
+    },
+    {
+      "rootCause": "kanban-empty-label",
+      "implementation": "Reject empty quoted and markdown shape descriptions missing required NODE_DESCR; whitespace-only text is not classified empty."
+    }
+  ],
+  "productFiles": [
+    {
+      "path": "src/py_mermaid/diagrams/structures/packet.py",
+      "sha256": "ba88fd2180348c0433a29f42f5b213695cd17568246bfdf44aa5b53a3c21686f"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/structures/block.py",
+      "sha256": "8db2ff5fa5ce2df30913cfc7b6b7673cd8d15af88b3af9fbeae59dff5365fe9d"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/structures/kanban.py",
+      "sha256": "ba523879f2c8dcea40a6c05575a8fe06f033b33f8c7e929e8ad25fd1f62c2f31"
+    },
+    {
+      "path": "src/py_mermaid/diagrams/modeling/class_diagram.py",
+      "sha256": "1de7368306e61b294f5410c2906e82ed45a3d042a325262febd5aeaf542dbfd8"
+    }
+  ],
+  "testsChanged": false,
+  "fixturesChanged": false,
+  "auditBaselinePreserved": true,
+  "runs": [
+    {
+      "id": "G03-record-20261106T080818Z-a0b1a9d8",
+      "status": "SUCCESS",
+      "sourceTreeSha256": "c58732c8ff8e9d241df31ecd01f4fa8ffb89965e7a9ad32d245be150d7b59896",
+      "sourceUnchanged": true,
+      "methods": 13,
+      "actualExitCode": 0
+    },
+    {
+      "id": "G03-record-20261106T080825Z-67e583ea",
+      "status": "SUCCESS",
+      "sourceTreeSha256": "c58732c8ff8e9d241df31ecd01f4fa8ffb89965e7a9ad32d245be150d7b59896",
+      "sourceUnchanged": false,
+      "methods": 612,
+      "actualExitCode": 0
+    }
+  ],
+  "limitations": [
+    "These are targeted A regressions during parallel owner repair, not the final frozen joint candidate acceptance.",
+    "No installation, commit, push, or full project/export/backend matrix was performed by A.",
+    "Full A unit count is 599 existing plus13 gap methods; no expectations were changed to fit candidate."
+  ]
+}

@@ -1,0 +1,221 @@
+{
+  "schema": "py-mermaid-closure-batch-scope/v1",
+  "status": "AGREED_STATIC_SCOPE_LOCAL_VERIFIED_FORMAL_RELEASE_PENDING",
+  "sourceTreeSha256": "fe2c293f8ed4ea76e04d34669c8739c27a32063447026e144928bfd6b4ac0bb2",
+  "review": {
+    "path": "references/final-capability-review.json",
+    "sha256": "bb57f8bccceca6ba8e1ca72794773789ad908c8ead8ba9e8101998a049c76749",
+    "bytes": 75807
+  },
+  "originalUnrepairedBranchRecords": 22,
+  "additionalChartGaps": 0,
+  "knownRecordCount": 22,
+  "functionalFamilies": [
+    {
+      "id": "cynefin-string",
+      "title": "Cynefin 字符串转义与字面换行",
+      "branches": [
+        "cynefin-double-unknown",
+        "cynefin-double-unicode",
+        "cynefin-single-newline",
+        "cynefin-literal-newline",
+        "cynefin-single-tab",
+        "cynefin-transition-escape"
+      ],
+      "status": "FINITE_SOURCE_NATIVE_FINAL_VERIFIED",
+      "currentEvidence": "references/closure-verification-summary.json",
+      "baselineEvidence": "references/final-capability-review.json"
+    },
+    {
+      "id": "architecture-multiline-metadata",
+      "title": "Architecture 多行元数据输入拒绝",
+      "branches": [
+        "architecture-accessibility"
+      ],
+      "status": "FINITE_SOURCE_NATIVE_FINAL_VERIFIED",
+      "currentEvidence": "references/closure-verification-summary.json",
+      "baselineEvidence": "references/final-capability-review.json"
+    },
+    {
+      "id": "gantt-date",
+      "title": "Gantt 日期解析/星期与 ISO week 格式",
+      "branches": [
+        "BV-B-DATE-LOCALIZED",
+        "BV-B-DATE-WEEKDAY",
+        "BV-B-DAYJS-ISO"
+      ],
+      "status": "FINITE_SOURCE_NATIVE_FINAL_VERIFIED",
+      "currentEvidence": "references/closure-verification-summary.json",
+      "baselineEvidence": "references/final-capability-review.json"
+    },
+    {
+      "id": "gantt-axis-format",
+      "title": "D3 轴格式：locale、百分号、padding、远年 ISO",
+      "branches": [
+        "BV-B-AXIS-ALL",
+        "BV-B-AXIS-LOCALE",
+        "BV-B-AXIS-ESCAPE",
+        "BV-B-AXIS-PADDING",
+        "BV-B-AXIS-FAR"
+      ],
+      "status": "FINITE_SOURCE_NATIVE_FINAL_VERIFIED",
+      "currentEvidence": "references/closure-verification-summary.json",
+      "baselineEvidence": "references/final-capability-review.json"
+    },
+    {
+      "id": "gantt-week-phase",
+      "title": "多周刻度 weekday epoch 相位",
+      "branches": [
+        "BV-B-TICK-WEEKDAY"
+      ],
+      "status": "FINITE_SOURCE_NATIVE_FINAL_VERIFIED",
+      "currentEvidence": "references/closure-verification-summary.json",
+      "baselineEvidence": "references/final-capability-review.json"
+    },
+    {
+      "id": "agentflow-collapsed-selfloop",
+      "title": "AgentFlow 折叠组丢失真实自环",
+      "branches": [
+        "BV-B-AGENT-GENUINE"
+      ],
+      "status": "FINITE_SOURCE_NATIVE_FINAL_VERIFIED",
+      "currentEvidence": "references/closure-verification-summary.json",
+      "baselineEvidence": "references/final-capability-review.json"
+    },
+    {
+      "id": "sequence-static-paint",
+      "title": "Sequence 中央连接点、反向编号与 self path 填色",
+      "branches": [
+        "C-sequence-central",
+        "C-sequence-number",
+        "C-sequence-self"
+      ],
+      "status": "FINITE_SOURCE_NATIVE_FINAL_VERIFIED",
+      "currentEvidence": "references/closure-verification-summary.json",
+      "baselineEvidence": "references/final-capability-review.json"
+    },
+    {
+      "id": "zenuml-comment-escape",
+      "title": "Zen 注释转义文字误读",
+      "branches": [
+        "C-zen-comment-escape"
+      ],
+      "status": "FINITE_SOURCE_NATIVE_FINAL_VERIFIED",
+      "currentEvidence": "references/closure-verification-summary.json",
+      "baselineEvidence": "references/final-capability-review.json"
+    },
+    {
+      "id": "abnf-comment",
+      "title": "ABNF comment-only 行拒绝",
+      "branches": [
+        "C-abnf-priority"
+      ],
+      "status": "FINITE_SOURCE_NATIVE_FINAL_VERIFIED",
+      "currentEvidence": "references/closure-verification-summary.json",
+      "baselineEvidence": "references/final-capability-review.json"
+    }
+  ],
+  "compatibilityObservations": {
+    "semanticValueDifferenceRecords": 4,
+    "eventModelingOriginalRejectedNativeAcceptedInputs": 3,
+    "sourceExpectationCorrection": "Event title positive expectation was not reached in original; do not repair native by satisfying a false source golden.",
+    "notAddedTo22FunctionalGapCount": true
+  },
+  "unverifiedItems": [
+    {
+      "id": "unverified-c4-boundary-sprite",
+      "title": "c4 boundary sprite",
+      "status": "SCOPED_SOURCE_AND_NATIVE_VERIFIED",
+      "originalStatus": "NOT_VERIFIED_ORIGINAL_PARITY",
+      "currentEvidence": "references/closure-verification-summary.json"
+    },
+    {
+      "id": "unverified-BV-B-TICK-DST",
+      "title": "Tick Dst",
+      "status": "LOCAL_SOURCE_AND_NATIVE_VERIFIED_LINUX_REAL_TZ_PENDING",
+      "originalStatus": "NOT_VERIFIED_ORIGINAL_PARITY",
+      "currentEvidence": "references/closure-verification-summary.json"
+    },
+    {
+      "id": "unverified-BV-B-GIT-BRANCH-LABEL",
+      "title": "Git Branch Label",
+      "status": "SCOPED_SOURCE_AND_NATIVE_VERIFIED",
+      "originalStatus": "NOT_VERIFIED_ORIGINAL_PARITY",
+      "currentEvidence": "references/closure-verification-summary.json"
+    },
+    {
+      "id": "unverified-BV-B-AGENT-GROUP-ALGO",
+      "title": "Agent Group Algo",
+      "status": "SCOPED_SOURCE_AND_NATIVE_VERIFIED",
+      "originalStatus": "NOT_VERIFIED_ORIGINAL_PARITY",
+      "currentEvidence": "references/closure-verification-summary.json"
+    },
+    {
+      "id": "unverified-BV-B-AGENT-CROSS-ALGO",
+      "title": "Agent Cross Algo",
+      "status": "SCOPED_SOURCE_AND_NATIVE_VERIFIED",
+      "originalStatus": "NOT_VERIFIED_ORIGINAL_PARITY",
+      "currentEvidence": "references/closure-verification-summary.json"
+    },
+    {
+      "id": "unverified-BV-B-NUMERIC-FAILURE",
+      "title": "Numeric Failure",
+      "status": "SCOPED_SOURCE_AND_NATIVE_VERIFIED",
+      "originalStatus": "NOT_VERIFIED_ORIGINAL_PARITY",
+      "currentEvidence": "references/closure-verification-summary.json"
+    }
+  ],
+  "requiredOrder": [
+    "P0 contracts and current-source snapshot already available",
+    "P1 complete all retained gap source changes before tests; unique file owners including supplier",
+    "P2 independent source assertions and corrected invalid expectations",
+    "P3 full first grouped execution, preserve failures then batch repair",
+    "P4 frozen same-candidate full/static/backend/visual/export/Windows/Linux install acceptance",
+    "P5 formal metadata and same-artifact publication/download validation only after no-gap condition met"
+  ],
+  "newScopeExclusions": false,
+  "repaired": true,
+  "baselineSourceTreeSha256": "fe2c293f8ed4ea76e04d34669c8739c27a32063447026e144928bfd6b4ac0bb2",
+  "baselineRun": "test-runs/CLOSURE-P0-acquisition-20261107T075501Z-2f1df0de",
+  "userDelegatedToVChart": {
+    "items": [
+      "venn-four-sets",
+      "treemap-d3-si-format",
+      "supplier complete-field/branch audit"
+    ],
+    "reason": "User explicitly assigns these chart capabilities to py-vchart; preserve known supplier limits, do not manage or repair them in this batch.",
+    "oldEvidenceUnchanged": true
+  },
+  "conditionalPublicationAuthorized": true,
+  "plan": "docs/CLOSURE_BATCH_PLAN.md",
+  "candidateSourceTreeSha256": "fca211bbfc3b75db6a2553b0c01f24d37753dbb87eab3f21c4f3ff8f289db14a",
+  "additionalRetainedRepair": {
+    "id": "info-dark-theme-text-role",
+    "reason": "Complete old79 regression exposed a known source STYLE_ROLE_DIFFERENCE; fixed source textColor with CSS override preserved. Original expectations unchanged.",
+    "additionalOld22Count": false
+  },
+  "relatedProductSourceTreeSha256": "be468e0fce7ce54d5b2fb6dc4a57561974637a177491f98838070cc2c6857100",
+  "metadataDelta": "After619a frozen machine-success candidate, Event SVG ASCII whitespace/transport and opt-in direct HTML provider were repaired from actual source consumer observations; default label consumer preserved.",
+  "additionalPublicPaintRepairs": [
+    "Cynefin literal SVG whitespace and literal markup",
+    "Gantt inline percent directive",
+    "Git classic/generated cherry-pick inherited paint",
+    "Agent collapsed metadata/theme/look/child primitives",
+    "Event Modeling literal-markup measurement and local wrapping; source-observed same-lane nonocclusion",
+    "Event direct HTML whitespace/containing block/normal final line/NBSP/literal data and source entity transport before substring"
+  ],
+  "finalInputCounts": {
+    "all": 132,
+    "renderOrError": 119,
+    "parserOnly": 13
+  },
+  "previousCandidateSourceTreeSha256": "cbef7716bb31c3187587f54bd34eac607c8c6823d84a2ace6ce85a19365ee683",
+  "newUnitMethods": 132,
+  "actualClosureExportFiles": 255,
+  "eventVerification": "references/closure-event-assertions.json",
+  "relatedEventDirectHTML": "test-runs/CLOSURE-EVENT-HTML-P3-related-20261107T110330Z-53265a55",
+  "repairedScope": "Non-VChart agreed static scope only; chart supplier items remain user-delegated",
+  "finalP4": "test-runs/CLOSURE-P4-batch-20261107T110557Z-684a5d28",
+  "localAcceptance": "references/closure-verification-summary.json",
+  "reportUrl": "http://127.0.0.1:8765/CLOSURE-P5-delivery-20261107T113304Z-8513c1b4/index.html"
+}

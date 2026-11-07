@@ -1,0 +1,31 @@
+{
+  "schema": "py-mermaid-scope-exclusion/v1",
+  "id": "html-video-audio",
+  "date": "2026-11-06",
+  "status": "excluded_by_user",
+  "authority": "User explicitly requested: video / audio 功能 整体删除掉",
+  "appliesTo": "all diagrams, HTML labels, shared resources, dependencies, exports, migration plans and acceptance",
+  "tags": [
+    "video",
+    "audio"
+  ],
+  "excludedFeatures": [
+    "media parsing and semantic models",
+    "decoding and playback",
+    "initial static appearance",
+    "poster/placeholder",
+    "controls/track appearance",
+    "media loading and decoding dependencies",
+    "media-specific export or acceptance"
+  ],
+  "runtimeBoundary": "Existing UNSUPPORTED_LABEL_RESOURCE rejection stays; no media renderer, decoder or player exists or is added. Sanitizer tag/URI filtering is an inert input-safety boundary, not media support.",
+  "literalLabels": "Existing htmlLabels=false literal text behavior is unchanged.",
+  "stillIncluded": [
+    "ordinary static image/icon resources",
+    "HTML form controls initial static appearance"
+  ],
+  "historicalEvidence": "Original source inventories and closed runs/reports remain immutable historical facts; prior media gap observations are no longer pending migration or a passing implementation.",
+  "plan": "docs/STATIC_HTML_HOST_PLAN.md",
+  "installationVerification": "deferred_by_user",
+  "baselineSourceTreeSha256": "fae1001df0d2c07ada1b8474eb03901429af0a5f81c9b7dfbf5e65b89e962062"
+}

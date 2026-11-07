@@ -1,0 +1,31 @@
+{
+  "schema": "py-mermaid-change-receipt/v1",
+  "phase": "G04_initial",
+  "status": "FAILED_PRESERVED_REPAIR_REQUIRED",
+  "sourceTreeSha256": "5c48038b58c474437e47ab14a0925cf7697a4aad63afe8749f8e5e68003fd5e3",
+  "sourceUnchanged": true,
+  "run": {
+    "path": "test-runs/BULK-P4-final-20261106T081944Z-7b6f0d7a/run.json",
+    "sha256": "026312a68e596e445c27de9c6fc16f1866c418f6f7834fc67305426eaef739de",
+    "bytes": 6246093
+  },
+  "commandCount": 61,
+  "failedCommands": [
+    {
+      "name": "zenuml-source-structure-cpu",
+      "exitCode": 1
+    },
+    {
+      "name": "zenuml-source-structure-auto",
+      "exitCode": 1
+    },
+    {
+      "name": "zenuml-source-structure-gpu",
+      "exitCode": 1
+    }
+  ],
+  "reason": "Zen head-declaration precedence regression changed C-zenuml-source-creation-rtl participant order/endpoints in all profiles. New typed-head test expectation also misread original precedence. Fix and expand strict source denominator from base148 to all186 positive Zen cases; do not weaken existing assertions.",
+  "otherChecks": "All functional unit groups, three-profile native case validators,465 exports, legacy297x3 and comparisons completed; this failed whole run is NOT final acceptance.",
+  "installationVerification": false,
+  "sourceEvidencePreserved": true
+}

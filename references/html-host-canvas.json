@@ -1,0 +1,181 @@
+{
+  "schema": "py-mermaid-html-host-canvas-sources/v1",
+  "status": "code_complete_unverified",
+  "phase": "P1",
+  "scope": "Only initial-state static HTML controls publicCanvas executor; no semantic parser/layout copied here.",
+  "canvasVersion": "0.1.0a18",
+  "sources": [
+    {
+      "path": "C:/venvs/pymmd-20261102/Lib/site-packages/py_skia_canvas/__init__.py",
+      "sha256": "c110f8dc2ab2ef8c532f05191a4dd6b43d6139c8fbafea1273dd2f33a307da52",
+      "symbols": [
+        {
+          "symbol": "def save(",
+          "line": 358
+        },
+        {
+          "symbol": "def restore(",
+          "line": 362
+        },
+        {
+          "symbol": "def font(self",
+          "line": 477
+        },
+        {
+          "symbol": "def measureText(",
+          "line": 514
+        },
+        {
+          "symbol": "def fillText(",
+          "line": 502
+        },
+        {
+          "symbol": "def clip(",
+          "line": 643
+        },
+        {
+          "symbol": "def fill(",
+          "line": 631
+        },
+        {
+          "symbol": "def stroke(",
+          "line": 637
+        },
+        {
+          "symbol": "def lineJoin(",
+          "line": 818
+        }
+      ]
+    },
+    {
+      "path": "C:/venvs/pymmd-20261102/Lib/site-packages/py_skia_canvas/_path.py",
+      "sha256": "d19380202891064b0f2a5ce1b9c1eb21077e7c1ccd7faa67ca172e29b632661b",
+      "symbols": [
+        {
+          "symbol": "def rect(",
+          "line": 154
+        },
+        {
+          "symbol": "def roundRect(",
+          "line": 161
+        },
+        {
+          "symbol": "def ellipse(",
+          "line": 140
+        },
+        {
+          "symbol": "def transform(",
+          "line": 263
+        },
+        {
+          "symbol": "def bounds(",
+          "line": 68
+        }
+      ]
+    },
+    {
+      "path": "C:/venvs/pymmd-20261102/Lib/site-packages/py_skia_canvas/_metrics.py",
+      "sha256": "602b29736b42bea604b03d90cafb42116ad9eb57f3b3e0730d1d084324f4400e",
+      "symbols": [
+        {
+          "symbol": "class TextMetrics:",
+          "line": 7
+        }
+      ]
+    },
+    {
+      "path": "C:/venvs/pymmd-20261102/Lib/site-packages/py_skia_canvas/_text_css.py",
+      "sha256": "c710ba078c617814ef30d68ebac948ecd5ffd7c5b6a339754e5c617a32fa921f",
+      "symbols": [
+        {
+          "symbol": "def decoration(",
+          "line": 98
+        }
+      ]
+    }
+  ],
+  "projectContracts": [
+    {
+      "path": "docs/STATIC_HTML_HOST_PLAN.md",
+      "sha256": "b763eb91f04fdcc56639f7bbb2036c299e2d4210aa86f915d866fec5e9b82514"
+    },
+    {
+      "path": "src/py_mermaid/model/controls.py",
+      "sha256": "89109267874f9ca00866c57dd37d1b63e070025d7c3daa61387133e75d163c50"
+    },
+    {
+      "path": "src/py_mermaid/model/flowchart.py",
+      "sha256": "024abc27b090f788d39a68b33959255ac96e0bcbad95d036513e3223474621ab"
+    }
+  ],
+  "implementation": {
+    "path": "src/py_mermaid/rendering/skia/controls.py",
+    "sha256": "e71580e4be102ed19164bbc436b8473067d49fde3e4bb102ae911b310758a053",
+    "symbol": "paint_control(context,layout,x,y,*,paint_runs,paint_image=None)",
+    "return": "tuple[DrawEvent,...],purevaluesonly; semantic_id empty forSessionbinding",
+    "coordinateContract": {
+      "origin": "x/y are callercontext coordinates inCSSpx",
+      "text": "paint.x/y is left-anchored alphabeticbaseline",
+      "circle": "paint.x/y top-leftbbox; width/heightdiameters",
+      "line": "paint.x/y start; width/height signedendpointincrements",
+      "path": "localSVGd translated byorigin+paint.x/y",
+      "clip": "layout-localrect applied onlytext/image/content_runs; caption_runs exempt",
+      "callbacks": "paint_runs receivesabsolutecontextcoords once,returnsactualDrawEvents; paint_image draws explicitresourceonexistingcontext"
+    }
+  },
+  "coverage": [
+    "rect/roundrect/circle/path/line via explicitpublicPath2D,fill/stroke andrealpathtrace",
+    "text via publicfont setter,normal/bold numericweight normalization,measureText actualinkmetrics,alphabeticbaseline/fillText",
+    "direction andmultiple decoration lines usingpublictextDecoration explicitcolor,transparentglyphpassesforadditionaldecorations",
+    "samecontextimagecallback;missingcallback/resourceidexplicitRESOURCE_NOT_FOUND",
+    "bodycontentruns callback/clipping vsfieldsetcaption unclipped,allpuretrace",
+    "save/restore finallyaroundwholecontrol/eachprimitive/callback;clipPath2D preservescallercurrentpath",
+    "externalalpha/filter/blend unchanged;ownprimitiveeventsrecordactualctxglobalAlpha",
+    "finitecoordinate/pathbudget validation beforepaint;unknowncommands explicitreject"
+  ],
+  "budgets": {
+    "paints": 4096,
+    "allRunsIncludingCaption": 16384,
+    "totalTextChars": 1000000,
+    "totalPathChars": 1000000,
+    "maxAbsoluteCoordinate": 10000000
+  },
+  "excluded": [
+    "video/audio includingposter/controlbar/decoder",
+    "interactivefocus/edit/submit/dropdown/animation",
+    "DOM/browser/JS/screenshotfallback",
+    "newCanvas/offscreen surfaces/fontlibrarycreation/dependencyinstallation"
+  ],
+  "nativeBoundary": "Path2D/context calls retainnativeownerthreadchecks; errors propagate;no cross-thread cache/nativeobject returned",
+  "verification": "Mechanicalcompile/importonly; no control layout/paint execution or images/tests inP1",
+  "remainingVerification": [
+    "P2independentactualpixels forcheckbox/radio/tracks/text/image/caption andclip",
+    "nativeowner/fault/saveRestore/currentpath behavior",
+    "publicfontmatching/decorations/opacity/filter withnestedcontrols",
+    "samecontrolpaint throughCPU/auto/GPU andexistingexports;nodrawingbehaviorclaimnow"
+  ],
+  "p3Repair": {
+    "status": "code_complete_unverified",
+    "firstRun": "HTML-HOST-P3-batch-20261106T113133Z-293a5335",
+    "changes": [
+      "ControlPaint.text measures actual metrics with letterSpacing and wordSpacing, then delegates glyph/decoration/shadow/stroke/filter to existing paint_runs callback",
+      "MeasuredTextRun local opacity remains 1: Session callback composes parent opacity once; actual baseline points and clipped glyph bounds retained",
+      "New effect fields validated before native state mutation; callbacks remain on supplied owner context"
+    ],
+    "mechanicalRun": "HTML-HOST-record-20261106T114218Z-874f419c",
+    "behaviorExecutedDuringRepair": false,
+    "sourceReferences": [
+      {
+        "path": "src/py_mermaid/rendering/skia/session.py",
+        "symbol": "CanvasSession._draw_runs",
+        "line": 528
+      },
+      {
+        "path": "src/py_mermaid/model/controls.py",
+        "symbol": "ControlPaint",
+        "line": 45
+      }
+    ],
+    "productSha256": "9ce647b445f493fa355473433446bd81a54b27620fc0cec3f08db4d9b39e9d1c"
+  }
+}

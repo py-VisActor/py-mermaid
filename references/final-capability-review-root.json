@@ -1,0 +1,106 @@
+{
+  "schema": "py-mermaid-final-capability-review-root/v1",
+  "status": "REVIEW_COMPLETE_RELEASE_BLOCKED",
+  "sourceTreeSha256": "fe2c293f8ed4ea76e04d34669c8739c27a32063447026e144928bfd6b4ac0bb2",
+  "productModified": false,
+  "testsModified": false,
+  "currentRun": {
+    "path": "test-runs/FINAL-CAPABILITY-root-review-20261107T074045Z-d616752a/run.json",
+    "sha256": "3476d14fcd7c1a3b754eea814ecd5a405d06b6e9050912f886766902a9362a1e",
+    "bytes": 41045
+  },
+  "inventory": {
+    "path": "test-runs/FINAL-CAPABILITY-root-review-20261107T074045Z-d616752a/artifacts/inventory/inventory.json",
+    "sha256": "190b4cc1c93f1f214e64855a0836f5ec5338fffb0efe089eed84c617b45b25ba",
+    "bytes": 66876
+  },
+  "checked": {
+    "registeredMermaidEntries": 38,
+    "additionalVChartEntry": 1,
+    "formalVChartTypes": 68,
+    "pythonSourceFiles": 168,
+    "emptyFunctions": 0,
+    "notImplementedRaises": 0,
+    "explicitRaiseGuardCandidates": 118,
+    "productionExternalImports": [
+      "py_skia_canvas",
+      "pyelk",
+      "py_katex",
+      "py_vchart"
+    ]
+  },
+  "sourceReadingDispositions": [
+    {
+      "candidate": "layout/elk/flowchart.py _build_graph TD/LR guard",
+      "classification": "INTERNAL_BASIC_HELPER_NOT_PUBLIC_DIRECTION_GAP",
+      "reason": "layout_flowchart enhanced predicate routes RL/BT/options/groups to compound.prepare_compound. Do not count old F01.1 helper restriction as current unsupported directions."
+    },
+    {
+      "candidate": "rendering/labels/plain.py rich markup guard",
+      "classification": "INTERNAL_PLAIN_LABEL_CONTRACT",
+      "reason": "Rich/math routes have distinct full implementations and existing same-candidate runtime tests; plain helper guard alone is not missing rich labels."
+    },
+    {
+      "candidate": "resource explicit mapping / unknown registration / invalid formats / invalid config",
+      "classification": "EXPECTED_VALIDATION_OR_SECURITY",
+      "reason": "Explicit offline resources and registered providers are current contracts; invalid/unregistered input rejection is not a missing capability."
+    },
+    {
+      "candidate": "arbitrary HTML/CSS, interaction, animation, Dagre, video/audio,3D",
+      "classification": "EXCLUDED_BY_PRIOR_USER_SCOPE",
+      "reason": "No restored requirements or new scope exclusions introduced."
+    },
+    {
+      "candidate": "venn.py >3 singleton / treemap.py bounded valueFormat",
+      "classification": "PUBLIC_VALID_INPUT_LIMIT_REQUIRES_SOURCE_CHECK",
+      "reason": "C independently checks source-valid positive inputs. Do not hide a retained static capability behind an existing restriction label."
+    }
+  ],
+  "coverageLimits": [
+    "AST import/raise/empty-body inventory is not arbitrary execution reachability or exhaustive source branch verification. Self.error calls and silent data/style behavior require independent probes.",
+    "No formal all-option/all-field supplier completeness claim; observed finite dispatch/source evidence only.",
+    "Known failures are not resolved by absence of TODO/stubs or by same-source prior successful matrices."
+  ],
+  "sameSourcePriorEvidence": {
+    "functionalRun": "test-runs/VCHART-DSL-P4-batch-20261107T072312Z-7cdc1791",
+    "methods": 2364,
+    "matrixCases": 903,
+    "extraExports": 816,
+    "windowsWheelInstall": "test-runs/VCHART-INSTALL-wheel-20261107T071751Z-d6268c2c",
+    "windowsSdistInstall": "test-runs/VCHART-INSTALL-sdist-20261107T071829Z-d552a24f",
+    "meaning": "Manifest/artifact integrity freshly checked and source fingerprint exact. Not rerun and not whole-release/no-gap acceptance."
+  },
+  "releaseGates": [
+    {
+      "id": "retained-functional-gaps",
+      "status": "BLOCKED",
+      "detail": "A/B/C fresh source-derived failures must be closed before conditional no-gap publication."
+    },
+    {
+      "id": "same-candidate-complete-release-tests",
+      "status": "NOT_MET",
+      "detail": "Latest2364-method bounded DSL run does not include the intentionally failing branch verification suite. Correct false source expectations separately, then make real gap assertions part of release gating."
+    },
+    {
+      "id": "consumer-platform-validation",
+      "status": "NOT_MET",
+      "detail": "Windows fresh wheel/sdist consumer proof exists. Same-candidate Linux consumer install/render proof is absent; supplier CI is not consumer proof."
+    },
+    {
+      "id": "stable-release-packaging-and-publishing",
+      "status": "NOT_READY",
+      "detail": "Version0.0.1a0 / Alpha; only local validate.yml bootstrap/source CI. No consumer release workflow or Trusted Publisher/normal release/download validation established. PyPI404 does not establish availability or publishing ownership."
+    }
+  ],
+  "pypiReadback": {
+    "url": "https://pypi.org/pypi/py-mermaid/json",
+    "status": 404,
+    "response": {
+      "path": "test-runs/FINAL-CAPABILITY-root-review-20261107T074045Z-d616752a/artifacts/inventory/pypi-response.txt",
+      "sha256": "b82014934f66beeb9e05a37f65357c4b50db0349d25d68d818ed0319dd4feb40",
+      "bytes": 24
+    },
+    "meaning": "Read-only preflight; no upload/registration attempted."
+  },
+  "publicationPerformed": false
+}

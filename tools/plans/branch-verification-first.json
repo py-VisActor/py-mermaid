@@ -1,0 +1,526 @@
+{
+  "schema": "py-mermaid-command-plan/v1",
+  "scope": "BRANCH-VERIFY-P3",
+  "description": "Focused branch diagnostic plan with preserved original reproducers. Current tools use controlled UTC and corrected module entry; original first execution is archived. Some original expected triggers were disproved; use followup plan and current verification summary to interpret results, not command exits as feature acceptance.",
+  "inputs": [
+    "{repo}/tests/branch_verification/cases-A.json",
+    "{repo}/tests/branch_verification/cases-B.json",
+    "{repo}/tests/branch_verification/cases-C.json",
+    "{repo}/references/branch-verification-A.json",
+    "{repo}/references/branch-verification-B.json",
+    "{repo}/references/branch-verification-C.json",
+    "{repo}/references/branch-verification-root.json",
+    "{repo}/docs/BRANCH_COVERAGE_VERIFICATION.md",
+    "{repo}/references/html-css-extension-exclusion.json",
+    "{repo}/tests/branch_verification/oracle_a.cjs",
+    "{repo}/tests/branch_verification/oracle_b.cjs",
+    "{repo}/tests/branch_verification/oracle_c.cjs",
+    "{repo}/tests/branch_verification/probe_a.py",
+    "{repo}/tests/branch_verification/probe_b.py",
+    "{repo}/tests/branch_verification/probe_c.py",
+    "{repo}/tests/branch_verification/support_a.py",
+    "{repo}/tests/branch_verification/support_b.py",
+    "{repo}/tests/branch_verification/support_c.py"
+  ],
+  "steps": [
+    {
+      "name": "freeze-candidate-inputs",
+      "argv": [
+        "{python}",
+        "{repo}/tools/freeze_branch_inputs.py",
+        "--fixtures",
+        "{repo}/tests/branch_verification/cases-A.json",
+        "{repo}/tests/branch_verification/cases-B.json",
+        "{repo}/tests/branch_verification/cases-C.json",
+        "--ledgers",
+        "{repo}/references/branch-verification-A.json",
+        "{repo}/references/branch-verification-B.json",
+        "{repo}/references/branch-verification-C.json",
+        "{repo}/references/branch-verification-root.json",
+        "--out",
+        "{run}/artifacts/frozen"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/tests;{repo}/tests/branch_verification",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 180
+    },
+    {
+      "name": "catalogue-provenance",
+      "argv": [
+        "{python}",
+        "{repo}/tools/check_branch_catalogue.py",
+        "--ledgers",
+        "{run}/artifacts/frozen/branch-verification-A.json",
+        "{run}/artifacts/frozen/branch-verification-B.json",
+        "{run}/artifacts/frozen/branch-verification-C.json",
+        "{run}/artifacts/frozen/branch-verification-root.json",
+        "--fixtures",
+        "{run}/artifacts/frozen/raw-inputs/fixtures/cases-A.json",
+        "{run}/artifacts/frozen/raw-inputs/fixtures/cases-B.json",
+        "{run}/artifacts/frozen/raw-inputs/fixtures/cases-C.json",
+        "--out",
+        "{run}/artifacts/catalogue.json"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/tests;{repo}/tests/branch_verification",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 180
+    },
+    {
+      "name": "original-branch-images",
+      "argv": [
+        "node",
+        "{repo}/tools/oracle/bulk_capture.cjs",
+        "--fixtures",
+        "{run}/artifacts/frozen/browser-cases.json",
+        "--out",
+        "{run}/artifacts/oracle"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/tests;{repo}/tests/branch_verification",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 3600
+    },
+    {
+      "name": "original-A-getters",
+      "argv": [
+        "node",
+        "{repo}/tests/branch_verification/oracle_a.cjs",
+        "--fixtures",
+        "{run}/artifacts/frozen/raw-inputs/fixtures/cases-A.json",
+        "--out",
+        "{run}/artifacts/oracle-A-getters"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/tests;{repo}/tests/branch_verification",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 1200
+    },
+    {
+      "name": "original-B-numerics",
+      "argv": [
+        "node",
+        "--experimental-vm-modules",
+        "{repo}/tests/branch_verification/oracle_b.cjs",
+        "--fixtures",
+        "{run}/artifacts/frozen/raw-inputs/fixtures/cases-B.json",
+        "--out",
+        "{run}/artifacts/oracle-B-values"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/tests;{repo}/tests/branch_verification",
+        "PYTHONUTF8": "1",
+        "TZ": "UTC"
+      },
+      "timeoutSeconds": 300
+    },
+    {
+      "name": "original-C-abnf",
+      "argv": [
+        "node",
+        "{repo}/tests/branch_verification/oracle_c.cjs",
+        "--out",
+        "{run}/artifacts/oracle-C-abnf"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/tests;{repo}/tests/branch_verification",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 180
+    },
+    {
+      "name": "native-B-numerics",
+      "argv": [
+        "{python}",
+        "{repo}/tests/branch_verification/probe_b.py",
+        "--fixtures",
+        "{run}/artifacts/frozen/raw-inputs/fixtures/cases-B.json",
+        "--collect-native",
+        "{run}/artifacts/native-B-values"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/tests;{repo}/tests/branch_verification",
+        "PYTHONUTF8": "1",
+        "TZ": "UTC"
+      },
+      "timeoutSeconds": 180
+    },
+    {
+      "name": "compare-B-numerics",
+      "argv": [
+        "{python}",
+        "{repo}/tests/branch_verification/probe_b.py",
+        "--fixtures",
+        "{run}/artifacts/frozen/raw-inputs/fixtures/cases-B.json",
+        "--oracle",
+        "{run}/artifacts/oracle-B-values",
+        "--native",
+        "{run}/artifacts/native-B-values",
+        "--out",
+        "{run}/artifacts/comparison-B-values.json"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/tests;{repo}/tests/branch_verification",
+        "PYTHONUTF8": "1",
+        "TZ": "UTC"
+      },
+      "timeoutSeconds": 180
+    },
+    {
+      "name": "native-cpu-A",
+      "argv": [
+        "{python}",
+        "{repo}/tools/bulk_validate.py",
+        "--fixtures",
+        "{run}/artifacts/frozen/cases.json",
+        "--group",
+        "A",
+        "--backend",
+        "cpu",
+        "--out",
+        "{run}/artifacts/native-cpu-A"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/tests;{repo}/tests/branch_verification",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 1800
+    },
+    {
+      "name": "native-cpu-B",
+      "argv": [
+        "{python}",
+        "{repo}/tools/bulk_validate.py",
+        "--fixtures",
+        "{run}/artifacts/frozen/cases.json",
+        "--group",
+        "B",
+        "--backend",
+        "cpu",
+        "--out",
+        "{run}/artifacts/native-cpu-B"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/tests;{repo}/tests/branch_verification",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 1800
+    },
+    {
+      "name": "native-cpu-C",
+      "argv": [
+        "{python}",
+        "{repo}/tools/bulk_validate.py",
+        "--fixtures",
+        "{run}/artifacts/frozen/cases.json",
+        "--group",
+        "C",
+        "--backend",
+        "cpu",
+        "--out",
+        "{run}/artifacts/native-cpu-C"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/tests;{repo}/tests/branch_verification",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 1800
+    },
+    {
+      "name": "native-auto-A",
+      "argv": [
+        "{python}",
+        "{repo}/tools/bulk_validate.py",
+        "--fixtures",
+        "{run}/artifacts/frozen/cases.json",
+        "--group",
+        "A",
+        "--backend",
+        "auto",
+        "--out",
+        "{run}/artifacts/native-auto-A"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/tests;{repo}/tests/branch_verification",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 1800
+    },
+    {
+      "name": "native-auto-B",
+      "argv": [
+        "{python}",
+        "{repo}/tools/bulk_validate.py",
+        "--fixtures",
+        "{run}/artifacts/frozen/cases.json",
+        "--group",
+        "B",
+        "--backend",
+        "auto",
+        "--out",
+        "{run}/artifacts/native-auto-B"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/tests;{repo}/tests/branch_verification",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 1800
+    },
+    {
+      "name": "native-auto-C",
+      "argv": [
+        "{python}",
+        "{repo}/tools/bulk_validate.py",
+        "--fixtures",
+        "{run}/artifacts/frozen/cases.json",
+        "--group",
+        "C",
+        "--backend",
+        "auto",
+        "--out",
+        "{run}/artifacts/native-auto-C"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/tests;{repo}/tests/branch_verification",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 1800
+    },
+    {
+      "name": "native-gpu-A",
+      "argv": [
+        "{python}",
+        "{repo}/tools/bulk_validate.py",
+        "--fixtures",
+        "{run}/artifacts/frozen/cases.json",
+        "--group",
+        "A",
+        "--backend",
+        "gpu",
+        "--out",
+        "{run}/artifacts/native-gpu-A"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/tests;{repo}/tests/branch_verification",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 1800
+    },
+    {
+      "name": "native-gpu-B",
+      "argv": [
+        "{python}",
+        "{repo}/tools/bulk_validate.py",
+        "--fixtures",
+        "{run}/artifacts/frozen/cases.json",
+        "--group",
+        "B",
+        "--backend",
+        "gpu",
+        "--out",
+        "{run}/artifacts/native-gpu-B"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/tests;{repo}/tests/branch_verification",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 1800
+    },
+    {
+      "name": "native-gpu-C",
+      "argv": [
+        "{python}",
+        "{repo}/tools/bulk_validate.py",
+        "--fixtures",
+        "{run}/artifacts/frozen/cases.json",
+        "--group",
+        "C",
+        "--backend",
+        "gpu",
+        "--out",
+        "{run}/artifacts/native-gpu-C"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/tests;{repo}/tests/branch_verification",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 1800
+    },
+    {
+      "name": "unit-a",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "branch_verification.test_a_semantics",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/tests;{repo}/tests/branch_verification",
+        "PYTHONUTF8": "1",
+        "BRANCH_C_ORACLE": "{run}/artifacts/oracle-C-abnf"
+      },
+      "timeoutSeconds": 1800
+    },
+    {
+      "name": "unit-b",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests/branch_verification",
+        "-p",
+        "test_b*.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/tests;{repo}/tests/branch_verification",
+        "PYTHONUTF8": "1",
+        "BRANCH_C_ORACLE": "{run}/artifacts/oracle-C-abnf",
+        "TZ": "UTC"
+      },
+      "timeoutSeconds": 1800
+    },
+    {
+      "name": "unit-c",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests/branch_verification",
+        "-p",
+        "test_c*.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/tests;{repo}/tests/branch_verification",
+        "PYTHONUTF8": "1",
+        "BRANCH_C_ORACLE": "{run}/artifacts/oracle-C-abnf"
+      },
+      "timeoutSeconds": 1800
+    },
+    {
+      "name": "compare-A-cpu",
+      "argv": [
+        "{python}",
+        "{repo}/tests/branch_verification/probe_a.py",
+        "--oracle",
+        "{run}/artifacts/oracle",
+        "--native",
+        "{run}/artifacts/native-cpu-A",
+        "--getters",
+        "{run}/artifacts/oracle-A-getters",
+        "--out",
+        "{run}/artifacts/comparison-A-cpu.json"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/tests;{repo}/tests/branch_verification",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 180
+    },
+    {
+      "name": "compare-C-cpu",
+      "argv": [
+        "{python}",
+        "{repo}/tests/branch_verification/probe_c.py",
+        "--oracle",
+        "{run}/artifacts/oracle",
+        "--native",
+        "{run}/artifacts/native-cpu-C",
+        "--out",
+        "{run}/artifacts/comparison-C-cpu.json"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/tests;{repo}/tests/branch_verification",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 180
+    },
+    {
+      "name": "compare-A-auto",
+      "argv": [
+        "{python}",
+        "{repo}/tests/branch_verification/probe_a.py",
+        "--oracle",
+        "{run}/artifacts/oracle",
+        "--native",
+        "{run}/artifacts/native-auto-A",
+        "--getters",
+        "{run}/artifacts/oracle-A-getters",
+        "--out",
+        "{run}/artifacts/comparison-A-auto.json"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/tests;{repo}/tests/branch_verification",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 180
+    },
+    {
+      "name": "compare-C-auto",
+      "argv": [
+        "{python}",
+        "{repo}/tests/branch_verification/probe_c.py",
+        "--oracle",
+        "{run}/artifacts/oracle",
+        "--native",
+        "{run}/artifacts/native-auto-C",
+        "--out",
+        "{run}/artifacts/comparison-C-auto.json"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/tests;{repo}/tests/branch_verification",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 180
+    },
+    {
+      "name": "compare-A-gpu",
+      "argv": [
+        "{python}",
+        "{repo}/tests/branch_verification/probe_a.py",
+        "--oracle",
+        "{run}/artifacts/oracle",
+        "--native",
+        "{run}/artifacts/native-gpu-A",
+        "--getters",
+        "{run}/artifacts/oracle-A-getters",
+        "--out",
+        "{run}/artifacts/comparison-A-gpu.json"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/tests;{repo}/tests/branch_verification",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 180
+    },
+    {
+      "name": "compare-C-gpu",
+      "argv": [
+        "{python}",
+        "{repo}/tests/branch_verification/probe_c.py",
+        "--oracle",
+        "{run}/artifacts/oracle",
+        "--native",
+        "{run}/artifacts/native-gpu-C",
+        "--out",
+        "{run}/artifacts/comparison-C-gpu.json"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/tests;{repo}/tests/branch_verification",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 180
+    }
+  ]
+}

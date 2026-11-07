@@ -213,6 +213,9 @@ async def build(diagram,painter):
     def inside(parent_id,parent_bounds):
         children=[g for g in all_boundaries if g.parent==parent_id];limit=parent_bounds.width_limit/max(1,min(model.boundary_in_row,len(children)));current=None
         for index,boundary in enumerate(children):
+            # c4Renderer.drawInsideBoundary sets a 48px image reservation for
+            # any truthy sprite. The fixed svgDraw has no sprite/image paint
+            # consumer: an unknown name still reserves space, not an asset.
             rows=boundary_labels.get(boundary.id,());header=sum(b.height for b in rows)+8+5*max(0,len(rows)-1);header+=48 if dict(boundary.attributes).get('sprite') else 0
             if index==0 or index%model.boundary_in_row==0:x=parent_bounds.x+mx;y=parent_bounds.stopy+my+header
             else:x=(current.stopx+mx if current.stopx!=current.x else current.x);y=current.y

@@ -1,0 +1,323 @@
+{
+  "schema": "py-mermaid-closure-B-source/v1",
+  "fixtureSha256": "5fc058bbc4ae5d54d9792eef0844dd7408249dc224638a76aa25f2f55f422649",
+  "identity": {
+    "commit": "1fb7869866dd619168d840291c9c54b4f129758b",
+    "bundleSha256": "ffd1a76f0553952a344c68a9b1502dd5cfb6faab72541307b74679c5abc9cec8",
+    "mapSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679",
+    "modules": [
+      {
+        "path": "../../../node_modules/.pnpm/dayjs@1.11.21/node_modules/dayjs/dayjs.min.js",
+        "sha256": "0198dd0b1f760cded169c7e7ff7eaf56bc36c4c22c7c9b7c683e59437ed8700e"
+      },
+      {
+        "path": "../../../node_modules/.pnpm/dayjs@1.11.21/node_modules/dayjs/plugin/isoWeek.js",
+        "sha256": "9937b6f6e7f852fd180a75d02f223298a4541a8cec415d0cadad5dfde7d40929"
+      },
+      {
+        "path": "../../../node_modules/.pnpm/dayjs@1.11.21/node_modules/dayjs/plugin/customParseFormat.js",
+        "sha256": "b199a58d0fbbdc519a072eb9b140a2ca3d4775ea1b054a0c0e5aeed86603c941"
+      },
+      {
+        "path": "../../../node_modules/.pnpm/dayjs@1.11.21/node_modules/dayjs/plugin/advancedFormat.js",
+        "sha256": "6f9ca609c4af60f2a03033e72dec5714f4f8e7b240381934040f547a0282463f"
+      },
+      {
+        "path": "../../../node_modules/.pnpm/dayjs@1.11.21/node_modules/dayjs/plugin/duration.js",
+        "sha256": "7dac282a770e1d475181d428babda30129a0a56907c57defaec9a361b9a8189d"
+      }
+    ],
+    "legacyOracleSha256": "2dd4ccfa46018e019ebc4b767206bddb198e9ec695b4e2e9d9d4e5a41d2a47a2"
+  },
+  "timezone": "UTC",
+  "rows": [
+    {
+      "id": "CL-B-X-FALLBACK-0",
+      "kind": "browserFallback",
+      "input": {
+        "value": "01/02/2024"
+      },
+      "timezone": "UTC",
+      "value": {
+        "local": [
+          2024,
+          1,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "epochMs": 1704153600000
+      },
+      "error": null
+    },
+    {
+      "id": "CL-B-X-FALLBACK-1",
+      "kind": "browserFallback",
+      "input": {
+        "value": "January 2, 2024"
+      },
+      "timezone": "UTC",
+      "value": {
+        "local": [
+          2024,
+          1,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "epochMs": 1704153600000
+      },
+      "error": null
+    },
+    {
+      "id": "CL-B-X-FALLBACK-2",
+      "kind": "browserFallback",
+      "input": {
+        "value": "January 2, 2024 1:04 PM"
+      },
+      "timezone": "UTC",
+      "value": {
+        "local": [
+          2024,
+          1,
+          2,
+          13,
+          4,
+          0,
+          0
+        ],
+        "epochMs": 1704200640000
+      },
+      "error": null
+    },
+    {
+      "id": "CL-B-X-FALLBACK-3",
+      "kind": "browserFallback",
+      "input": {
+        "value": "2024-01"
+      },
+      "timezone": "UTC",
+      "value": {
+        "local": [
+          2024,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "epochMs": 1704067200000
+      },
+      "error": null
+    },
+    {
+      "id": "CL-B-X-FALLBACK-4",
+      "kind": "browserFallback",
+      "input": {
+        "value": "2024"
+      },
+      "timezone": "UTC",
+      "value": {
+        "local": [
+          2024,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "epochMs": 1704067200000
+      },
+      "error": null
+    },
+    {
+      "id": "CL-B-X-FALLBACK-5",
+      "kind": "browserFallback",
+      "input": {
+        "value": "2024-02-30"
+      },
+      "timezone": "UTC",
+      "value": {
+        "local": [
+          2024,
+          3,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "epochMs": 1709251200000
+      },
+      "error": null
+    },
+    {
+      "id": "CL-B-X-FALLBACK-6",
+      "kind": "browserFallback",
+      "input": {
+        "value": "2024-01-01T00:00:00Z"
+      },
+      "timezone": "UTC",
+      "value": {
+        "local": [
+          2024,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "epochMs": 1704067200000
+      },
+      "error": null
+    },
+    {
+      "id": "CL-B-X-FALLBACK-7",
+      "kind": "browserFallback",
+      "input": {
+        "value": "+010000-01-01"
+      },
+      "timezone": "UTC",
+      "value": {
+        "local": [
+          10000,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "epochMs": 253402300800000
+      },
+      "error": null
+    },
+    {
+      "id": "CL-B-X-FALLBACK-8",
+      "kind": "browserFallback",
+      "input": {
+        "value": "+010001-01-01"
+      },
+      "timezone": "UTC",
+      "value": null,
+      "error": null
+    },
+    {
+      "id": "CL-B-X-DST-SPRING",
+      "kind": "dayAdd",
+      "input": {
+        "date": [
+          2024,
+          3,
+          9,
+          12
+        ]
+      },
+      "timezone": "America/New_York",
+      "value": {
+        "base": {
+          "local": [
+            2024,
+            3,
+            9,
+            12,
+            0,
+            0,
+            0
+          ],
+          "epochMs": 1710003600000
+        },
+        "calendar": {
+          "local": [
+            2024,
+            3,
+            10,
+            12,
+            0,
+            0,
+            0
+          ],
+          "epochMs": 1710086400000
+        },
+        "elapsed": {
+          "local": [
+            2024,
+            3,
+            10,
+            13,
+            0,
+            0,
+            0
+          ],
+          "epochMs": 1710090000000
+        },
+        "calendarHours": 23,
+        "calendarLocalHour": 12,
+        "elapsedLocalHour": 13
+      },
+      "error": null
+    },
+    {
+      "id": "CL-B-X-DST-FALL",
+      "kind": "dayAdd",
+      "input": {
+        "date": [
+          2024,
+          11,
+          2,
+          12
+        ]
+      },
+      "timezone": "America/New_York",
+      "value": {
+        "base": {
+          "local": [
+            2024,
+            11,
+            2,
+            12,
+            0,
+            0,
+            0
+          ],
+          "epochMs": 1730563200000
+        },
+        "calendar": {
+          "local": [
+            2024,
+            11,
+            3,
+            12,
+            0,
+            0,
+            0
+          ],
+          "epochMs": 1730653200000
+        },
+        "elapsed": {
+          "local": [
+            2024,
+            11,
+            3,
+            11,
+            0,
+            0,
+            0
+          ],
+          "epochMs": 1730649600000
+        },
+        "calendarHours": 25,
+        "calendarLocalHour": 12,
+        "elapsedLocalHour": 11
+      },
+      "error": null
+    }
+  ]
+}

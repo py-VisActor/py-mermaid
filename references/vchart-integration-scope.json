@@ -1,0 +1,48 @@
+{
+  "schema": "py-mermaid-vchart-integration-scope/v1",
+  "date": "2026-11-07",
+  "task": "Publish py-vchart then integrate its full static chart registry",
+  "originalMermaidDetectorCount": 38,
+  "additionalNamespacedDetector": "vchart",
+  "providerDistribution": "py-visactor-vchart",
+  "providerVersion": "0.1.1",
+  "providerRegisteredTypeCount": 68,
+  "providerStaticReferenceCases": 225,
+  "reactivatedMermaidEntries": [
+    "pie",
+    "quadrantChart",
+    "xychart",
+    "radar",
+    "treemap",
+    "sankey",
+    "venn"
+  ],
+  "legacyBatchScopePreserved": "references/bulk-scope.json",
+  "newFixtures": [
+    "tests/vchart_integration/cases-vchart.json",
+    "tests/vchart_integration/cases-mermaid-charts.json"
+  ],
+  "staticOnly": true,
+  "excluded": [
+    "3D types not present in py-vchart",
+    "interaction",
+    "animation",
+    "Dagre",
+    "video",
+    "audio",
+    "arbitrary HTML/CSS host extension"
+  ],
+  "notClaimed": [
+    "All VChart JS advanced options",
+    "Exact Canvas/reference font pixels",
+    "Repair of prior 22 confirmed Mermaid branch records",
+    "Mermaid package publication"
+  ],
+  "knownAdapterLimits": [
+    "Venn native provider accepts up to three singleton sets",
+    "Treemap uses VChart binary layout, not the original D3 squarify coordinates",
+    "Treemap format strings are explicitly bounded; unsupported format operators fail"
+  ],
+  "phase": "P5_delivered_pypi_blocked",
+  "acceptance": "docs/VCHART_ACCEPTANCE.md"
+}

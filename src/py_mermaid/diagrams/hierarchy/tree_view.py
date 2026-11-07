@@ -30,6 +30,15 @@ _FILE='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="c
 _BOX=re.compile('[─━│┃└┗├┣]');_BRANCH=re.compile('[└┗├┣]');_META=re.compile(r'^\s*(title(?:[\t ]|$)|accTitle[\t ]*:|accDescr[\t ]*[:{])')
 
 
+def _common_value(value,multiline=False):
+    if not multiline:return re.sub(r'[\t ]{2,}',' ',value.split('%%',1)[0].strip())
+    # common/valueConverter.ts: trim every source line, horizontal runs, then
+    # repeated newline sequences. No ARIA/host behavior is introduced.
+    value=re.sub(r'^\s*','',value,flags=re.M)
+    value=re.sub(r'\s+$','',value,flags=re.M)
+    return re.sub(r'[\n\r]{2,}','\n',re.sub(r'[\t ]{2,}',' ',value))
+
+
 def _records(document):
     from ...runtime.common import error
     records=[];offset=0
@@ -66,15 +75,15 @@ def parse(document,config):
         if _META.match(line):
             if started:raise error(document,offset,'Tree metadata must precede the nodes')
             stripped=line.strip()
-            if stripped.startswith('title'):title=stripped[5:].strip().split('%%',1)[0].rstrip()
-            elif stripped.startswith('accTitle'):acc_title=stripped.split(':',1)[1].split('%%',1)[0].strip()
+            if stripped.startswith('title'):title=_common_value(stripped[5:])
+            elif stripped.startswith('accTitle'):acc_title=_common_value(stripped.split(':',1)[1])
             elif '{' in stripped:
                 parts=[stripped.split('{',1)[1]]
                 while '}' not in parts[-1]:
                     if i==len(records):raise error(document,offset,'Unterminated accessibility description')
                     parts.append(records[i][0]);i+=1
-                acc_description='\n'.join(parts).split('}',1)[0].strip()
-            else:acc_description=stripped.split(':',1)[1].split('%%',1)[0].strip()
+                acc_description=_common_value('\n'.join(parts).split('}',1)[0],True)
+            else:acc_description=_common_value(stripped.split(':',1)[1])
             continue
         started=True;level=len(line)-len(line.lstrip(' \t'));text=line[level:];name='';rest=''
         if text.startswith(('"',"'")):

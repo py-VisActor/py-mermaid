@@ -5,6 +5,7 @@ import re
 from ...runtime.common import make_diagram,config_dict,error
 from ._syntax import statements,common_statement,scalar,theme,number,palette
 from ._scales import arc
+from ._vchart_bridge import geometry
 
 @dataclass(frozen=True)
 class Pie:
@@ -42,16 +43,18 @@ async def build(diagram,p):
     elif position not in ('center',):width+=longest+22
     cx=center+dx;cy=center+dy
     p.ellipse(cx,cy,r+outer/2,r+outer/2,fill='none',stroke=theme(config,'pieOuterStrokeColor','#333'),line_width=outer,id='pie-outer')
-    angle=0.
+    vchart_arcs=geometry('pie',diagram.source,[v for _,v in sections],r,hole)
     section_order={k:i for i,(k,v) in enumerate(model.sections)}
-    for k,v in sections:
-        end=angle+v/kept*math.tau;idx=section_order[k];highlight=cfg.get('highlightSlice')==k;radius=r*1.05 if highlight else r
+    for (k,v),(vstart,vend,_,_) in zip(sections,vchart_arcs):
+        angle=vstart+math.pi/2;end=vend+math.pi/2;idx=section_order[k];highlight=cfg.get('highlightSlice')==k;radius=r*1.05 if highlight else r
         p.path(arc(cx,cy,radius,angle,end,hole*radius),fill=colors[idx%len(colors)],stroke=theme(config,'pieStrokeColor','#fff'),line_width=number(theme(config,'pieStrokeWidth',2),2),opacity=1 if highlight else float(theme(config,'pieOpacity',.7)),id='slice-'+str(idx),role='pie-slice')
         mid=(angle+end)/2;distance=r*cfg.get('textPosition',.75)
         label=p.measure(str(math.floor(v/total*100+.5))+'%',size=labelsize)
         p.text(label,cx+math.sin(mid)*distance,cy-math.cos(mid)*distance-label.height/2,align='center',color=theme(config,'pieSectionTextColor','#333'),id='slice-label-'+str(idx))
-        angle=end
-    if model.title:p.text(model.title,center,25,size=number(theme(config,'pieTitleTextSize',25),25),align='center',color=theme(config,'pieTitleTextColor','#333'),role='title')
+    if model.title:
+        # pieRenderer's y=25 is an SVG alphabetic baseline, not a top edge.
+        title=p.measure(model.title,size=number(theme(config,'pieTitleTextSize',25),25))
+        p.text(title,center,25-title.ascent,align='center',color=theme(config,'pieTitleTextColor','#333'),role='title')
     for i,((label,value),text) in enumerate(zip(model.sections,legends)):
         if position=='center':x=center-longest/2-22;y=center+i*22-legendh/2
         elif position=='top':x=center-longest/2-22;y=center+i*22-r

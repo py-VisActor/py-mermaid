@@ -1,0 +1,1755 @@
+{
+  "schema": "py-mermaid-bulk-cases/v1",
+  "group": "A",
+  "scope": "closure",
+  "cases": [
+    {
+      "id": "CLOSURE-A-cynefin-double-unknown",
+      "group": "A",
+      "kind": "cynefin",
+      "source": "cynefin-beta\nclear\n \"A\\qB\"\n",
+      "config": {
+        "theme": "default"
+      },
+      "origin": {
+        "path": "packages/parser/src/language/cynefin/cynefin.langium",
+        "symbol": "DomainItem/Transition + Langium convertString",
+        "line": 18,
+        "sha256": "94276271b3dfe6dd78ced62249cd1d69bdd785e1498b90e678f101a23e1d26e0",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "parserOnly": false,
+      "nativeChecks": [
+        {
+          "path": [
+            "domains",
+            0,
+            1,
+            0
+          ],
+          "equals": "AqB"
+        }
+      ],
+      "sourceChecks": [
+        {
+          "path": [
+            "getDomains",
+            "clear",
+            "items",
+            0,
+            "label"
+          ],
+          "equals": "AqB"
+        }
+      ]
+    },
+    {
+      "id": "CLOSURE-A-cynefin-double-unicode-literal",
+      "group": "A",
+      "kind": "cynefin",
+      "source": "cynefin-beta\nclear\n \"A\\u0041B\"\n",
+      "config": {
+        "theme": "default"
+      },
+      "origin": {
+        "path": "packages/parser/src/language/cynefin/cynefin.langium",
+        "symbol": "DomainItem/Transition + Langium convertString",
+        "line": 18,
+        "sha256": "94276271b3dfe6dd78ced62249cd1d69bdd785e1498b90e678f101a23e1d26e0",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "parserOnly": false,
+      "nativeChecks": [
+        {
+          "path": [
+            "domains",
+            0,
+            1,
+            0
+          ],
+          "equals": "Au0041B"
+        }
+      ],
+      "sourceChecks": [
+        {
+          "path": [
+            "getDomains",
+            "clear",
+            "items",
+            0,
+            "label"
+          ],
+          "equals": "Au0041B"
+        }
+      ]
+    },
+    {
+      "id": "CLOSURE-A-cynefin-double-b",
+      "group": "A",
+      "kind": "cynefin",
+      "source": "cynefin-beta\nclear\n \"A\\bB\"\n",
+      "config": {
+        "theme": "default"
+      },
+      "origin": {
+        "path": "packages/parser/src/language/cynefin/cynefin.langium",
+        "symbol": "DomainItem/Transition + Langium convertString",
+        "line": 18,
+        "sha256": "94276271b3dfe6dd78ced62249cd1d69bdd785e1498b90e678f101a23e1d26e0",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "parserOnly": true,
+      "nativeChecks": [
+        {
+          "path": [
+            "domains",
+            0,
+            1,
+            0
+          ],
+          "equals": "A\bB"
+        }
+      ],
+      "sourceChecks": [
+        {
+          "path": [
+            "getDomains",
+            "clear",
+            "items",
+            0,
+            "label"
+          ],
+          "equals": "A\bB"
+        }
+      ]
+    },
+    {
+      "id": "CLOSURE-A-cynefin-double-f",
+      "group": "A",
+      "kind": "cynefin",
+      "source": "cynefin-beta\nclear\n \"A\\fB\"\n",
+      "config": {
+        "theme": "default"
+      },
+      "origin": {
+        "path": "packages/parser/src/language/cynefin/cynefin.langium",
+        "symbol": "DomainItem/Transition + Langium convertString",
+        "line": 18,
+        "sha256": "94276271b3dfe6dd78ced62249cd1d69bdd785e1498b90e678f101a23e1d26e0",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "parserOnly": true,
+      "nativeChecks": [
+        {
+          "path": [
+            "domains",
+            0,
+            1,
+            0
+          ],
+          "equals": "A\fB"
+        }
+      ],
+      "sourceChecks": [
+        {
+          "path": [
+            "getDomains",
+            "clear",
+            "items",
+            0,
+            "label"
+          ],
+          "equals": "A\fB"
+        }
+      ]
+    },
+    {
+      "id": "CLOSURE-A-cynefin-double-n",
+      "group": "A",
+      "kind": "cynefin",
+      "source": "cynefin-beta\nclear\n \"A\\nB\"\n",
+      "config": {
+        "theme": "default"
+      },
+      "origin": {
+        "path": "packages/parser/src/language/cynefin/cynefin.langium",
+        "symbol": "DomainItem/Transition + Langium convertString",
+        "line": 18,
+        "sha256": "94276271b3dfe6dd78ced62249cd1d69bdd785e1498b90e678f101a23e1d26e0",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "parserOnly": false,
+      "nativeChecks": [
+        {
+          "path": [
+            "domains",
+            0,
+            1,
+            0
+          ],
+          "equals": "A\nB"
+        }
+      ],
+      "sourceChecks": [
+        {
+          "path": [
+            "getDomains",
+            "clear",
+            "items",
+            0,
+            "label"
+          ],
+          "equals": "A\nB"
+        }
+      ]
+    },
+    {
+      "id": "CLOSURE-A-cynefin-double-r",
+      "group": "A",
+      "kind": "cynefin",
+      "source": "cynefin-beta\nclear\n \"A\\rB\"\n",
+      "config": {
+        "theme": "default"
+      },
+      "origin": {
+        "path": "packages/parser/src/language/cynefin/cynefin.langium",
+        "symbol": "DomainItem/Transition + Langium convertString",
+        "line": 18,
+        "sha256": "94276271b3dfe6dd78ced62249cd1d69bdd785e1498b90e678f101a23e1d26e0",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "parserOnly": false,
+      "nativeChecks": [
+        {
+          "path": [
+            "domains",
+            0,
+            1,
+            0
+          ],
+          "equals": "A\rB"
+        }
+      ],
+      "sourceChecks": [
+        {
+          "path": [
+            "getDomains",
+            "clear",
+            "items",
+            0,
+            "label"
+          ],
+          "equals": "A\rB"
+        }
+      ],
+      "parserOnlyBoundaryMigration": {
+        "previousParserOnly": true,
+        "reason": "CR/TAB are legal XML whitespace, unlike NUL/BS/FF/VT. Fixed original4 captures render one collapsed A B row. Raw model/getter checks unchanged.",
+        "sourceEvidence": "test-runs/CLOSURE-P4-A-XML-WHITESPACE-SOURCE-20261107T085919Z-17726157",
+        "reviewEvidence": "test-runs/CLOSURE-P4-A-XML-WHITESPACE-REVIEW-20261107T090026Z-8ed944f3/artifacts/review.json"
+      }
+    },
+    {
+      "id": "CLOSURE-A-cynefin-double-t",
+      "group": "A",
+      "kind": "cynefin",
+      "source": "cynefin-beta\nclear\n \"A\\tB\"\n",
+      "config": {
+        "theme": "default"
+      },
+      "origin": {
+        "path": "packages/parser/src/language/cynefin/cynefin.langium",
+        "symbol": "DomainItem/Transition + Langium convertString",
+        "line": 18,
+        "sha256": "94276271b3dfe6dd78ced62249cd1d69bdd785e1498b90e678f101a23e1d26e0",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "parserOnly": false,
+      "nativeChecks": [
+        {
+          "path": [
+            "domains",
+            0,
+            1,
+            0
+          ],
+          "equals": "A\tB"
+        }
+      ],
+      "sourceChecks": [
+        {
+          "path": [
+            "getDomains",
+            "clear",
+            "items",
+            0,
+            "label"
+          ],
+          "equals": "A\tB"
+        }
+      ],
+      "parserOnlyBoundaryMigration": {
+        "previousParserOnly": true,
+        "reason": "CR/TAB are legal XML whitespace, unlike NUL/BS/FF/VT. Fixed original4 captures render one collapsed A B row. Raw model/getter checks unchanged.",
+        "sourceEvidence": "test-runs/CLOSURE-P4-A-XML-WHITESPACE-SOURCE-20261107T085919Z-17726157",
+        "reviewEvidence": "test-runs/CLOSURE-P4-A-XML-WHITESPACE-REVIEW-20261107T090026Z-8ed944f3/artifacts/review.json"
+      }
+    },
+    {
+      "id": "CLOSURE-A-cynefin-double-v",
+      "group": "A",
+      "kind": "cynefin",
+      "source": "cynefin-beta\nclear\n \"A\\vB\"\n",
+      "config": {
+        "theme": "default"
+      },
+      "origin": {
+        "path": "packages/parser/src/language/cynefin/cynefin.langium",
+        "symbol": "DomainItem/Transition + Langium convertString",
+        "line": 18,
+        "sha256": "94276271b3dfe6dd78ced62249cd1d69bdd785e1498b90e678f101a23e1d26e0",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "parserOnly": true,
+      "nativeChecks": [
+        {
+          "path": [
+            "domains",
+            0,
+            1,
+            0
+          ],
+          "equals": "A\u000bB"
+        }
+      ],
+      "sourceChecks": [
+        {
+          "path": [
+            "getDomains",
+            "clear",
+            "items",
+            0,
+            "label"
+          ],
+          "equals": "A\u000bB"
+        }
+      ]
+    },
+    {
+      "id": "CLOSURE-A-cynefin-double-zero",
+      "group": "A",
+      "kind": "cynefin",
+      "source": "cynefin-beta\nclear\n \"A\\0B\"\n",
+      "config": {
+        "theme": "default"
+      },
+      "origin": {
+        "path": "packages/parser/src/language/cynefin/cynefin.langium",
+        "symbol": "DomainItem/Transition + Langium convertString",
+        "line": 18,
+        "sha256": "94276271b3dfe6dd78ced62249cd1d69bdd785e1498b90e678f101a23e1d26e0",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "parserOnly": true,
+      "nativeChecks": [
+        {
+          "path": [
+            "domains",
+            0,
+            1,
+            0
+          ],
+          "equals": "A\u0000B"
+        }
+      ],
+      "sourceChecks": [
+        {
+          "path": [
+            "getDomains",
+            "clear",
+            "items",
+            0,
+            "label"
+          ],
+          "equals": "A\u0000B"
+        }
+      ]
+    },
+    {
+      "id": "CLOSURE-A-cynefin-double-quote",
+      "group": "A",
+      "kind": "cynefin",
+      "source": "cynefin-beta\nclear\n \"A\\\"B\"\n",
+      "config": {
+        "theme": "default"
+      },
+      "origin": {
+        "path": "packages/parser/src/language/cynefin/cynefin.langium",
+        "symbol": "DomainItem/Transition + Langium convertString",
+        "line": 18,
+        "sha256": "94276271b3dfe6dd78ced62249cd1d69bdd785e1498b90e678f101a23e1d26e0",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "parserOnly": false,
+      "nativeChecks": [
+        {
+          "path": [
+            "domains",
+            0,
+            1,
+            0
+          ],
+          "equals": "A\"B"
+        }
+      ],
+      "sourceChecks": [
+        {
+          "path": [
+            "getDomains",
+            "clear",
+            "items",
+            0,
+            "label"
+          ],
+          "equals": "A\"B"
+        }
+      ]
+    },
+    {
+      "id": "CLOSURE-A-cynefin-double-backslash",
+      "group": "A",
+      "kind": "cynefin",
+      "source": "cynefin-beta\nclear\n \"A\\\\B\"\n",
+      "config": {
+        "theme": "default"
+      },
+      "origin": {
+        "path": "packages/parser/src/language/cynefin/cynefin.langium",
+        "symbol": "DomainItem/Transition + Langium convertString",
+        "line": 18,
+        "sha256": "94276271b3dfe6dd78ced62249cd1d69bdd785e1498b90e678f101a23e1d26e0",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "parserOnly": false,
+      "nativeChecks": [
+        {
+          "path": [
+            "domains",
+            0,
+            1,
+            0
+          ],
+          "equals": "A\\B"
+        }
+      ],
+      "sourceChecks": [
+        {
+          "path": [
+            "getDomains",
+            "clear",
+            "items",
+            0,
+            "label"
+          ],
+          "equals": "A\\B"
+        }
+      ]
+    },
+    {
+      "id": "CLOSURE-A-cynefin-single-newline",
+      "group": "A",
+      "kind": "cynefin",
+      "source": "cynefin-beta\nclear\n 'A\\nB'\n",
+      "config": {
+        "theme": "default"
+      },
+      "origin": {
+        "path": "packages/parser/src/language/cynefin/cynefin.langium",
+        "symbol": "DomainItem/Transition + Langium convertString",
+        "line": 18,
+        "sha256": "94276271b3dfe6dd78ced62249cd1d69bdd785e1498b90e678f101a23e1d26e0",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "parserOnly": false,
+      "nativeChecks": [
+        {
+          "path": [
+            "domains",
+            0,
+            1,
+            0
+          ],
+          "equals": "A\nB"
+        }
+      ],
+      "sourceChecks": [
+        {
+          "path": [
+            "getDomains",
+            "clear",
+            "items",
+            0,
+            "label"
+          ],
+          "equals": "A\nB"
+        }
+      ]
+    },
+    {
+      "id": "CLOSURE-A-cynefin-single-tab",
+      "group": "A",
+      "kind": "cynefin",
+      "source": "cynefin-beta\nclear\n 'A\\tB'\n",
+      "config": {
+        "theme": "default"
+      },
+      "origin": {
+        "path": "packages/parser/src/language/cynefin/cynefin.langium",
+        "symbol": "DomainItem/Transition + Langium convertString",
+        "line": 18,
+        "sha256": "94276271b3dfe6dd78ced62249cd1d69bdd785e1498b90e678f101a23e1d26e0",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "parserOnly": false,
+      "nativeChecks": [
+        {
+          "path": [
+            "domains",
+            0,
+            1,
+            0
+          ],
+          "equals": "A\tB"
+        }
+      ],
+      "sourceChecks": [
+        {
+          "path": [
+            "getDomains",
+            "clear",
+            "items",
+            0,
+            "label"
+          ],
+          "equals": "A\tB"
+        }
+      ],
+      "parserOnlyBoundaryMigration": {
+        "previousParserOnly": true,
+        "reason": "CR/TAB are legal XML whitespace, unlike NUL/BS/FF/VT. Fixed original4 captures render one collapsed A B row. Raw model/getter checks unchanged.",
+        "sourceEvidence": "test-runs/CLOSURE-P4-A-XML-WHITESPACE-SOURCE-20261107T085919Z-17726157",
+        "reviewEvidence": "test-runs/CLOSURE-P4-A-XML-WHITESPACE-REVIEW-20261107T090026Z-8ed944f3/artifacts/review.json"
+      }
+    },
+    {
+      "id": "CLOSURE-A-cynefin-single-unknown",
+      "group": "A",
+      "kind": "cynefin",
+      "source": "cynefin-beta\nclear\n 'A\\qB'\n",
+      "config": {
+        "theme": "default"
+      },
+      "origin": {
+        "path": "packages/parser/src/language/cynefin/cynefin.langium",
+        "symbol": "DomainItem/Transition + Langium convertString",
+        "line": 18,
+        "sha256": "94276271b3dfe6dd78ced62249cd1d69bdd785e1498b90e678f101a23e1d26e0",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "parserOnly": false,
+      "nativeChecks": [
+        {
+          "path": [
+            "domains",
+            0,
+            1,
+            0
+          ],
+          "equals": "AqB"
+        }
+      ],
+      "sourceChecks": [
+        {
+          "path": [
+            "getDomains",
+            "clear",
+            "items",
+            0,
+            "label"
+          ],
+          "equals": "AqB"
+        }
+      ]
+    },
+    {
+      "id": "CLOSURE-A-cynefin-single-quote",
+      "group": "A",
+      "kind": "cynefin",
+      "source": "cynefin-beta\nclear\n 'A\\'B'\n",
+      "config": {
+        "theme": "default"
+      },
+      "origin": {
+        "path": "packages/parser/src/language/cynefin/cynefin.langium",
+        "symbol": "DomainItem/Transition + Langium convertString",
+        "line": 18,
+        "sha256": "94276271b3dfe6dd78ced62249cd1d69bdd785e1498b90e678f101a23e1d26e0",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "parserOnly": false,
+      "nativeChecks": [
+        {
+          "path": [
+            "domains",
+            0,
+            1,
+            0
+          ],
+          "equals": "A'B"
+        }
+      ],
+      "sourceChecks": [
+        {
+          "path": [
+            "getDomains",
+            "clear",
+            "items",
+            0,
+            "label"
+          ],
+          "equals": "A'B"
+        }
+      ]
+    },
+    {
+      "id": "CLOSURE-A-cynefin-quoted-newline",
+      "group": "A",
+      "kind": "cynefin",
+      "source": "cynefin-beta\nclear\n \"A\nB\"\n",
+      "config": {
+        "theme": "default"
+      },
+      "origin": {
+        "path": "packages/parser/src/language/cynefin/cynefin.langium",
+        "symbol": "DomainItem/Transition + Langium convertString",
+        "line": 18,
+        "sha256": "94276271b3dfe6dd78ced62249cd1d69bdd785e1498b90e678f101a23e1d26e0",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "parserOnly": false,
+      "nativeChecks": [
+        {
+          "path": [
+            "domains",
+            0,
+            1,
+            0
+          ],
+          "equals": "A\nB"
+        }
+      ],
+      "sourceChecks": [
+        {
+          "path": [
+            "getDomains",
+            "clear",
+            "items",
+            0,
+            "label"
+          ],
+          "equals": "A\nB"
+        }
+      ]
+    },
+    {
+      "id": "CLOSURE-A-cynefin-transition-unknown",
+      "group": "A",
+      "kind": "cynefin",
+      "source": "cynefin-beta\nclear --> complex : \"A\\qB\"\n",
+      "config": {
+        "theme": "default"
+      },
+      "origin": {
+        "path": "packages/parser/src/language/cynefin/cynefin.langium",
+        "symbol": "DomainItem/Transition + Langium convertString",
+        "line": 18,
+        "sha256": "94276271b3dfe6dd78ced62249cd1d69bdd785e1498b90e678f101a23e1d26e0",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "parserOnly": false,
+      "nativeChecks": [
+        {
+          "path": [
+            "transitions",
+            0,
+            2
+          ],
+          "equals": "AqB"
+        }
+      ],
+      "sourceChecks": [
+        {
+          "path": [
+            "getTransitions",
+            0,
+            "label"
+          ],
+          "equals": "AqB"
+        }
+      ]
+    },
+    {
+      "id": "CLOSURE-A-cynefin-unclosed",
+      "group": "A",
+      "kind": "cynefin",
+      "source": "cynefin-beta\nclear\n \"A\n",
+      "config": {
+        "theme": "default"
+      },
+      "origin": {
+        "path": "packages/parser/src/language/cynefin/cynefin.langium",
+        "symbol": "DomainItem/Transition + Langium convertString",
+        "line": 18,
+        "sha256": "94276271b3dfe6dd78ced62249cd1d69bdd785e1498b90e678f101a23e1d26e0",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "expect": "syntax_error",
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "SYNTAX_ERROR"
+      ],
+      "parserOnly": true,
+      "nativeChecks": [],
+      "sourceChecks": []
+    },
+    {
+      "id": "CLOSURE-A-cynefin-dangling-escape",
+      "group": "A",
+      "kind": "cynefin",
+      "source": "cynefin-beta\nclear\n \"A\\",
+      "config": {
+        "theme": "default"
+      },
+      "origin": {
+        "path": "packages/parser/src/language/cynefin/cynefin.langium",
+        "symbol": "DomainItem/Transition + Langium convertString",
+        "line": 18,
+        "sha256": "94276271b3dfe6dd78ced62249cd1d69bdd785e1498b90e678f101a23e1d26e0",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "expect": "syntax_error",
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "SYNTAX_ERROR"
+      ],
+      "parserOnly": true,
+      "nativeChecks": [],
+      "sourceChecks": []
+    },
+    {
+      "id": "CLOSURE-A-tree-title-normalized",
+      "group": "A",
+      "kind": "treeView",
+      "source": "treeView-beta\ntitle   A\t  B %% hidden\nRoot/\n    child.txt",
+      "config": {
+        "theme": "default"
+      },
+      "origin": {
+        "path": "packages/parser/src/language/common/valueConverter.ts",
+        "symbol": "runCommonConverter",
+        "line": 44,
+        "sha256": "d93aa5dd1f7fed8aa903f55eb3e463c6b69b455af22004a6405a61c7560f58e5",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "parserOnly": false,
+      "nativeChecks": [
+        {
+          "path": [
+            "title"
+          ],
+          "equals": "A B"
+        }
+      ],
+      "sourceChecks": [
+        {
+          "path": [
+            "getDiagramTitle"
+          ],
+          "equals": "A B"
+        }
+      ]
+    },
+    {
+      "id": "CLOSURE-A-architecture-title-normalized",
+      "group": "A",
+      "kind": "architecture",
+      "source": "architecture-beta\ntitle   A\t  B %% hidden\nservice api[API]",
+      "config": {
+        "theme": "default"
+      },
+      "origin": {
+        "path": "packages/parser/src/language/common/valueConverter.ts",
+        "symbol": "runCommonConverter",
+        "line": 44,
+        "sha256": "d93aa5dd1f7fed8aa903f55eb3e463c6b69b455af22004a6405a61c7560f58e5",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "parserOnly": false,
+      "nativeChecks": [
+        {
+          "path": [
+            "title"
+          ],
+          "equals": "A B"
+        }
+      ],
+      "sourceChecks": [
+        {
+          "path": [
+            "getDiagramTitle"
+          ],
+          "equals": "A B"
+        }
+      ]
+    },
+    {
+      "id": "CLOSURE-A-cynefin-title-normalized",
+      "group": "A",
+      "kind": "cynefin",
+      "source": "cynefin-beta\ntitle   A\t  B %% hidden\nclear\n \"Item\"",
+      "config": {
+        "theme": "default"
+      },
+      "origin": {
+        "path": "packages/parser/src/language/common/valueConverter.ts",
+        "symbol": "runCommonConverter",
+        "line": 44,
+        "sha256": "d93aa5dd1f7fed8aa903f55eb3e463c6b69b455af22004a6405a61c7560f58e5",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "parserOnly": false,
+      "nativeChecks": [
+        {
+          "path": [
+            "title"
+          ],
+          "equals": "A B"
+        }
+      ],
+      "sourceChecks": [
+        {
+          "path": [
+            "getDiagramTitle"
+          ],
+          "equals": "A B"
+        }
+      ]
+    },
+    {
+      "id": "CLOSURE-A-architecture-multiline-services",
+      "group": "A",
+      "kind": "architecture",
+      "source": "architecture-beta\r\naccTitle: A   B %% hidden\r\naccDescr {\r\n One   two\r\n\r\n Three\r\n}\r\nservice api[API]\r\nservice db[DB]\r\napi:R -- L:db",
+      "config": {
+        "theme": "default"
+      },
+      "origin": {
+        "path": "packages/parser/src/language/common/valueConverter.ts",
+        "symbol": "runCommonConverter",
+        "line": 44,
+        "sha256": "d93aa5dd1f7fed8aa903f55eb3e463c6b69b455af22004a6405a61c7560f58e5",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "parserOnly": false,
+      "nativeChecks": [
+        {
+          "path": [
+            "acc_title"
+          ],
+          "equals": "A B"
+        },
+        {
+          "path": [
+            "acc_description"
+          ],
+          "equals": "One two\nThree"
+        },
+        {
+          "path": [
+            "nodes",
+            0,
+            "id"
+          ],
+          "equals": "api"
+        },
+        {
+          "path": [
+            "nodes",
+            1,
+            "id"
+          ],
+          "equals": "db"
+        },
+        {
+          "path": [
+            "edges",
+            0,
+            "source"
+          ],
+          "equals": "api"
+        },
+        {
+          "path": [
+            "edges",
+            0,
+            "target"
+          ],
+          "equals": "db"
+        }
+      ],
+      "sourceChecks": [
+        {
+          "path": [
+            "getAccTitle"
+          ],
+          "equals": "A B"
+        },
+        {
+          "path": [
+            "getAccDescription"
+          ],
+          "equals": "One two\nThree"
+        }
+      ]
+    },
+    {
+      "id": "CLOSURE-A-architecture-description-raw-quotes",
+      "group": "A",
+      "kind": "architecture",
+      "source": "architecture-beta\naccDescr {\n \"Unpaired quote\n %% literal\n}\nservice api[API]",
+      "config": {
+        "theme": "default"
+      },
+      "origin": {
+        "path": "packages/parser/src/language/common/valueConverter.ts",
+        "symbol": "runCommonConverter",
+        "line": 44,
+        "sha256": "d93aa5dd1f7fed8aa903f55eb3e463c6b69b455af22004a6405a61c7560f58e5",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "parserOnly": false,
+      "nativeChecks": [
+        {
+          "path": [
+            "acc_description"
+          ],
+          "equals": "\"Unpaired quote"
+        },
+        {
+          "path": [
+            "nodes",
+            0,
+            "id"
+          ],
+          "equals": "api"
+        }
+      ],
+      "sourceChecks": [
+        {
+          "path": [
+            "getAccDescription"
+          ],
+          "equals": "\"Unpaired quote"
+        }
+      ],
+      "sourceExpectationMigration": {
+        "previousNativeChecks": [
+          {
+            "path": [
+              "acc_description"
+            ],
+            "equals": "\"Unpaired quote\n%% literal"
+          },
+          {
+            "path": [
+              "nodes",
+              0,
+              "id"
+            ],
+            "equals": "api"
+          }
+        ],
+        "previousSourceChecks": [
+          {
+            "path": [
+              "getAccDescription"
+            ],
+            "equals": "\"Unpaired quote\n%% literal"
+          }
+        ],
+        "evidence": "test-runs/CLOSURE-P3-batch-20261107T082546Z-6350b9b0/artifacts/source-A/CLOSURE-A-architecture-description-raw-quotes.json",
+        "reason": "Real Mermaid preprocessing removes whole %% comment line before ACC_DESCR value conversion; current native and original both retain only the quoted text."
+      }
+    },
+    {
+      "id": "CLOSURE-A-tree-multiline-normalized",
+      "group": "A",
+      "kind": "treeView",
+      "source": "treeView-beta\naccDescr {\n One   two\n\n Three\n}\nRoot/\n    child.txt",
+      "config": {
+        "theme": "default"
+      },
+      "origin": {
+        "path": "packages/parser/src/language/common/valueConverter.ts",
+        "symbol": "runCommonConverter",
+        "line": 44,
+        "sha256": "d93aa5dd1f7fed8aa903f55eb3e463c6b69b455af22004a6405a61c7560f58e5",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "parserOnly": false,
+      "nativeChecks": [
+        {
+          "path": [
+            "acc_description"
+          ],
+          "equals": "One two\nThree"
+        }
+      ],
+      "sourceChecks": [
+        {
+          "path": [
+            "getAccDescription"
+          ],
+          "equals": "One two\nThree"
+        }
+      ]
+    },
+    {
+      "id": "CLOSURE-A-architecture-utf16-error",
+      "group": "A",
+      "kind": "architecture",
+      "source": "architecture-beta\naccDescr {\n Astral 😀\n}\nservice ok[OK]\n???",
+      "config": {
+        "theme": "default"
+      },
+      "origin": {
+        "path": "packages/parser/src/language/common/valueConverter.ts",
+        "symbol": "runCommonConverter",
+        "line": 44,
+        "sha256": "d93aa5dd1f7fed8aa903f55eb3e463c6b69b455af22004a6405a61c7560f58e5",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "expect": "syntax_error",
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "SYNTAX_ERROR"
+      ],
+      "parserOnly": true,
+      "nativeChecks": [],
+      "sourceChecks": [],
+      "errorPosition": {
+        "token": "???",
+        "line": 6,
+        "column": 0
+      }
+    },
+    {
+      "id": "CLOSURE-A-event-title-plain",
+      "group": "A",
+      "kind": "eventmodeling",
+      "source": "eventmodeling\ntitle   A   B %% hidden\ntf 1 ui Page",
+      "config": {
+        "theme": "default"
+      },
+      "origin": {
+        "path": "packages/parser/src/language/eventmodeling/event-modeling.langium",
+        "symbol": "EM_ID/EM_TITLE/EM_WS terminal priority",
+        "line": 54,
+        "sha256": "be3da489f5114237acbd7ec50494e8bb48f8e6753b6e2f7f2137dae170000611",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "expect": "syntax_error",
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "SYNTAX_ERROR"
+      ],
+      "parserOnly": true,
+      "nativeChecks": [],
+      "sourceChecks": []
+    },
+    {
+      "id": "CLOSURE-A-event-title-space",
+      "group": "A",
+      "kind": "eventmodeling",
+      "source": "eventmodeling\n title   A   B %% hidden\ntf 1 ui Page",
+      "config": {
+        "theme": "default"
+      },
+      "origin": {
+        "path": "packages/parser/src/language/eventmodeling/event-modeling.langium",
+        "symbol": "EM_ID/EM_TITLE/EM_WS terminal priority",
+        "line": 54,
+        "sha256": "be3da489f5114237acbd7ec50494e8bb48f8e6753b6e2f7f2137dae170000611",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "expect": "syntax_error",
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "SYNTAX_ERROR"
+      ],
+      "parserOnly": true,
+      "nativeChecks": [],
+      "sourceChecks": []
+    },
+    {
+      "id": "CLOSURE-A-event-title-tab",
+      "group": "A",
+      "kind": "eventmodeling",
+      "source": "eventmodeling\n\ttitle   A   B %% hidden\ntf 1 ui Page",
+      "config": {
+        "theme": "default"
+      },
+      "origin": {
+        "path": "packages/parser/src/language/eventmodeling/event-modeling.langium",
+        "symbol": "EM_ID/EM_TITLE/EM_WS terminal priority",
+        "line": 54,
+        "sha256": "be3da489f5114237acbd7ec50494e8bb48f8e6753b6e2f7f2137dae170000611",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "expect": "syntax_error",
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "SYNTAX_ERROR"
+      ],
+      "parserOnly": true,
+      "nativeChecks": [],
+      "sourceChecks": []
+    },
+    {
+      "id": "CLOSURE-A-event-legal-title-id",
+      "group": "A",
+      "kind": "eventmodeling",
+      "source": "eventmodeling\nentity title\ntf 1 ui title",
+      "config": {
+        "theme": "default"
+      },
+      "origin": {
+        "path": "packages/parser/src/language/eventmodeling/event-modeling.langium",
+        "symbol": "EM_ID/EM_TITLE/EM_WS terminal priority",
+        "line": 54,
+        "sha256": "be3da489f5114237acbd7ec50494e8bb48f8e6753b6e2f7f2137dae170000611",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "expect": "syntax_error",
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "SYNTAX_ERROR"
+      ],
+      "parserOnly": true,
+      "nativeChecks": [],
+      "sourceChecks": [],
+      "sourceExpectationMigration": {
+        "previousFixture": {
+          "id": "CLOSURE-A-event-legal-title-id",
+          "group": "A",
+          "kind": "eventmodeling",
+          "source": "eventmodeling\nentity title\ntf 1 ui title",
+          "config": {
+            "theme": "default"
+          },
+          "origin": {
+            "path": "packages/parser/src/language/eventmodeling/event-modeling.langium",
+            "symbol": "EM_ID/EM_TITLE/EM_WS terminal priority",
+            "line": 54,
+            "sha256": "be3da489f5114237acbd7ec50494e8bb48f8e6753b6e2f7f2137dae170000611",
+            "repository": "mermaid",
+            "synthesized": true
+          },
+          "expect": "render",
+          "expectedText": [],
+          "expectedErrorCodes": [],
+          "parserOnly": false,
+          "nativeChecks": [
+            {
+              "path": [
+                "entities",
+                0
+              ],
+              "equals": "title"
+            },
+            {
+              "path": [
+                "frames",
+                0,
+                "entity"
+              ],
+              "equals": "title"
+            }
+          ],
+          "sourceChecks": []
+        },
+        "evidence": "test-runs/CLOSURE-P3-batch-20261107T082546Z-6350b9b0/artifacts/source-A/CLOSURE-A-event-legal-title-id.json",
+        "reason": "At inline leading whitespace EM_TITLE terminal wins before EM_WS and is not a valid EM_ID. The source actually rejects both entity title and ui title."
+      }
+    },
+    {
+      "id": "CLOSURE-A-event-legal-metadata-ids",
+      "group": "A",
+      "kind": "eventmodeling",
+      "source": "eventmodeling\nentity accTitle\nentity accDescr\ntf 1 ui accTitle\ntf 2 ui accDescr",
+      "config": {
+        "theme": "default"
+      },
+      "origin": {
+        "path": "packages/parser/src/language/eventmodeling/event-modeling.langium",
+        "symbol": "EM_ID/EM_TITLE/EM_WS terminal priority",
+        "line": 54,
+        "sha256": "be3da489f5114237acbd7ec50494e8bb48f8e6753b6e2f7f2137dae170000611",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "parserOnly": false,
+      "nativeChecks": [
+        {
+          "path": [
+            "entities",
+            0
+          ],
+          "equals": "accTitle"
+        },
+        {
+          "path": [
+            "entities",
+            1
+          ],
+          "equals": "accDescr"
+        }
+      ],
+      "sourceChecks": []
+    },
+    {
+      "id": "CLOSURE-A-abnf-bare",
+      "group": "A",
+      "kind": "railroadAbnf",
+      "source": "railroad-abnf-beta\nword = \"a\";",
+      "config": {
+        "theme": "default"
+      },
+      "origin": {
+        "path": "packages/parser/src/language/railroad-abnf/railroad-abnf.langium",
+        "symbol": "ABNF_COMMENT/AbnfRule keyword longer alternative",
+        "line": 17,
+        "sha256": "d156141dab0c649a6a063c59a5d277aec56eda295f955d5c65c28cffe077ad84",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "parserOnly": false,
+      "nativeChecks": [
+        {
+          "path": [
+            "rules",
+            0,
+            "name"
+          ],
+          "equals": "word"
+        }
+      ],
+      "sourceChecks": []
+    },
+    {
+      "id": "CLOSURE-A-abnf-comment-line",
+      "group": "A",
+      "kind": "railroadAbnf",
+      "source": "railroad-abnf-beta\n; comment only\nword = \"a\";",
+      "config": {
+        "theme": "default"
+      },
+      "origin": {
+        "path": "packages/parser/src/language/railroad-abnf/railroad-abnf.langium",
+        "symbol": "ABNF_COMMENT/AbnfRule keyword longer alternative",
+        "line": 17,
+        "sha256": "d156141dab0c649a6a063c59a5d277aec56eda295f955d5c65c28cffe077ad84",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "parserOnly": false,
+      "nativeChecks": [
+        {
+          "path": [
+            "rules",
+            0,
+            "name"
+          ],
+          "equals": "word"
+        }
+      ],
+      "sourceChecks": []
+    },
+    {
+      "id": "CLOSURE-A-abnf-trailing-comment",
+      "group": "A",
+      "kind": "railroadAbnf",
+      "source": "railroad-abnf-beta\nword = \"a\"; trailing comment\n",
+      "config": {
+        "theme": "default"
+      },
+      "origin": {
+        "path": "packages/parser/src/language/railroad-abnf/railroad-abnf.langium",
+        "symbol": "ABNF_COMMENT/AbnfRule keyword longer alternative",
+        "line": 17,
+        "sha256": "d156141dab0c649a6a063c59a5d277aec56eda295f955d5c65c28cffe077ad84",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "expect": "syntax_error",
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "SYNTAX_ERROR"
+      ],
+      "parserOnly": true,
+      "nativeChecks": [],
+      "sourceChecks": []
+    },
+    {
+      "id": "CLOSURE-A-abnf-quoted-semicolon",
+      "group": "A",
+      "kind": "railroadAbnf",
+      "source": "railroad-abnf-beta\nword = \"a;b\";",
+      "config": {
+        "theme": "default"
+      },
+      "origin": {
+        "path": "packages/parser/src/language/railroad-abnf/railroad-abnf.langium",
+        "symbol": "ABNF_COMMENT/AbnfRule keyword longer alternative",
+        "line": 17,
+        "sha256": "d156141dab0c649a6a063c59a5d277aec56eda295f955d5c65c28cffe077ad84",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "parserOnly": false,
+      "nativeChecks": [
+        {
+          "path": [
+            "rules",
+            0,
+            "name"
+          ],
+          "equals": "word"
+        }
+      ],
+      "sourceChecks": []
+    },
+    {
+      "id": "CLOSURE-A-abnf-two-rules",
+      "group": "A",
+      "kind": "railroadAbnf",
+      "source": "railroad-abnf-beta\nfirst = \"a\";\nsecond = \"b\";",
+      "config": {
+        "theme": "default"
+      },
+      "origin": {
+        "path": "packages/parser/src/language/railroad-abnf/railroad-abnf.langium",
+        "symbol": "ABNF_COMMENT/AbnfRule keyword longer alternative",
+        "line": 17,
+        "sha256": "d156141dab0c649a6a063c59a5d277aec56eda295f955d5c65c28cffe077ad84",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "parserOnly": false,
+      "nativeChecks": [
+        {
+          "path": [
+            "rules",
+            0,
+            "name"
+          ],
+          "equals": "first"
+        }
+      ],
+      "sourceChecks": []
+    },
+    {
+      "id": "CLOSURE-A-abnf-bare-comment",
+      "group": "A",
+      "kind": "railroadAbnf",
+      "source": "railroad-abnf-beta\n;\nword = \"a\";",
+      "config": {
+        "theme": "default"
+      },
+      "origin": {
+        "path": "packages/parser/src/language/railroad-abnf/railroad-abnf.langium",
+        "symbol": "ABNF_COMMENT/AbnfRule keyword longer alternative",
+        "line": 17,
+        "sha256": "d156141dab0c649a6a063c59a5d277aec56eda295f955d5c65c28cffe077ad84",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "expect": "syntax_error",
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "SYNTAX_ERROR"
+      ],
+      "parserOnly": true,
+      "nativeChecks": [],
+      "sourceChecks": []
+    },
+    {
+      "id": "CLOSURE-A-zen-escaped",
+      "group": "A",
+      "kind": "zenuml",
+      "source": "zenuml\nA B\n// \\*literal\\*\nA->B.call()",
+      "config": {
+        "theme": "default"
+      },
+      "origin": {
+        "path": "src/svg/components/comment.ts",
+        "symbol": "collectLines walkToken default/strong/em",
+        "line": 49,
+        "sha256": "de16149e5f49bce9c09e0093836425e28b3810df1e53c607db8aaf968ef5efc1",
+        "repository": "zenuml-core",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "parserOnly": false,
+      "nativeChecks": [],
+      "sourceChecks": [],
+      "commentExpected": {
+        "source": "\\*literal\\*",
+        "visible": "\\*literal\\*",
+        "italic": false
+      }
+    },
+    {
+      "id": "CLOSURE-A-zen-italic",
+      "group": "A",
+      "kind": "zenuml",
+      "source": "zenuml\nA B\n// *literal*\nA->B.call()",
+      "config": {
+        "theme": "default"
+      },
+      "origin": {
+        "path": "src/svg/components/comment.ts",
+        "symbol": "collectLines walkToken default/strong/em",
+        "line": 49,
+        "sha256": "de16149e5f49bce9c09e0093836425e28b3810df1e53c607db8aaf968ef5efc1",
+        "repository": "zenuml-core",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "parserOnly": false,
+      "nativeChecks": [],
+      "sourceChecks": [],
+      "commentExpected": {
+        "source": "*literal*",
+        "visible": "literal",
+        "italic": true
+      }
+    },
+    {
+      "id": "CLOSURE-A-zen-escaped-backtick",
+      "group": "A",
+      "kind": "zenuml",
+      "source": "zenuml\nA B\n// \\`code\\`\nA->B.call()",
+      "config": {
+        "theme": "default"
+      },
+      "origin": {
+        "path": "src/svg/components/comment.ts",
+        "symbol": "collectLines walkToken default/strong/em",
+        "line": 49,
+        "sha256": "de16149e5f49bce9c09e0093836425e28b3810df1e53c607db8aaf968ef5efc1",
+        "repository": "zenuml-core",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "parserOnly": false,
+      "nativeChecks": [],
+      "sourceChecks": [],
+      "commentExpected": {
+        "source": "\\`code\\`",
+        "visible": "\\`code\\`",
+        "italic": false
+      }
+    },
+    {
+      "id": "CLOSURE-A-zen-unknown-escape",
+      "group": "A",
+      "kind": "zenuml",
+      "source": "zenuml\nA B\n// \\q\nA->B.call()",
+      "config": {
+        "theme": "default"
+      },
+      "origin": {
+        "path": "src/svg/components/comment.ts",
+        "symbol": "collectLines walkToken default/strong/em",
+        "line": 49,
+        "sha256": "de16149e5f49bce9c09e0093836425e28b3810df1e53c607db8aaf968ef5efc1",
+        "repository": "zenuml-core",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "parserOnly": false,
+      "nativeChecks": [],
+      "sourceChecks": [],
+      "commentExpected": {
+        "source": "\\q",
+        "visible": "\\q",
+        "italic": false
+      }
+    },
+    {
+      "id": "CLOSURE-A-c4-boundary-base",
+      "group": "A",
+      "kind": "c4",
+      "source": "C4Deployment\nDeployment_Node(boundary,\"Shell\") {\nContainer(api,\"API\",\"Python\")\n}\n",
+      "config": {
+        "theme": "default"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/c4Renderer.ts",
+        "symbol": "drawInsideBoundary sprite48 / drawBoundary",
+        "line": 454,
+        "sha256": "d58ffb63def9c7117a332a0a94ec3b30fd7d34ba93ccb590d3e148a69460c909",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "parserOnly": false,
+      "nativeChecks": [],
+      "sourceChecks": [],
+      "geometryControl": {
+        "pair": "boundary-sprite48",
+        "sprite": false
+      }
+    },
+    {
+      "id": "CLOSURE-A-c4-boundary-unknown-sprite",
+      "group": "A",
+      "kind": "c4",
+      "source": "C4Deployment\nDeployment_Node(boundary,\"Shell\") {\nContainer(api,\"API\",\"Python\")\n}\nUpdateElementStyle(boundary,$sprite=\"unknown-sprite\")\n",
+      "config": {
+        "theme": "default"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/c4Renderer.ts",
+        "symbol": "drawInsideBoundary sprite48 / drawBoundary",
+        "line": 454,
+        "sha256": "d58ffb63def9c7117a332a0a94ec3b30fd7d34ba93ccb590d3e148a69460c909",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "parserOnly": false,
+      "nativeChecks": [],
+      "sourceChecks": [],
+      "geometryControl": {
+        "pair": "boundary-sprite48",
+        "sprite": true,
+        "expectedRelativeLabelShift": 48,
+        "expectedImages": 0
+      }
+    },
+    {
+      "id": "CLOSURE-A-event-normal-entity-id",
+      "group": "A",
+      "kind": "eventmodeling",
+      "source": "eventmodeling\nentity Page\ntf 1 ui Page",
+      "config": {
+        "theme": "default"
+      },
+      "origin": {
+        "path": "packages/parser/src/language/eventmodeling/event-modeling.langium",
+        "symbol": "EM_ID/EM_TITLE/EM_WS terminal priority",
+        "line": 54,
+        "sha256": "be3da489f5114237acbd7ec50494e8bb48f8e6753b6e2f7f2137dae170000611",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "parserOnly": false,
+      "nativeChecks": [
+        {
+          "path": [
+            "entities",
+            0
+          ],
+          "equals": "Page"
+        },
+        {
+          "path": [
+            "frames",
+            0,
+            "entity"
+          ],
+          "equals": "Page"
+        }
+      ],
+      "sourceChecks": []
+    },
+    {
+      "id": "CLOSURE-A-event-inline-metadata",
+      "group": "A",
+      "kind": "eventmodeling",
+      "source": "eventmodeling title Inline\ntf 1 ui Page",
+      "config": {
+        "theme": "default"
+      },
+      "origin": {
+        "path": "packages/parser/src/language/eventmodeling/event-modeling.langium",
+        "symbol": "EM_ID/EM_TITLE/EM_WS terminal priority",
+        "line": 54,
+        "sha256": "be3da489f5114237acbd7ec50494e8bb48f8e6753b6e2f7f2137dae170000611",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "parserOnly": false,
+      "nativeChecks": [
+        {
+          "path": [
+            "title"
+          ],
+          "equals": " title Inline"
+        }
+      ],
+      "sourceChecks": [
+        {
+          "path": [
+            "getDiagramTitle"
+          ],
+          "equals": " title Inline"
+        }
+      ]
+    }
+  ]
+}

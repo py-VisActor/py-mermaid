@@ -1,0 +1,111 @@
+{
+  "schema": "py-mermaid-confirmed-branch-gap-queue/v1",
+  "sourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+  "verificationOnly": true,
+  "productRepairPerformed": false,
+  "functionalBranchRecords": 22,
+  "functionalFamilies": [
+    {
+      "id": "cynefin-string",
+      "title": "Cynefin 字符串转义与字面换行",
+      "branches": [
+        "cynefin-double-unknown",
+        "cynefin-double-unicode",
+        "cynefin-single-newline",
+        "cynefin-literal-newline",
+        "cynefin-single-tab",
+        "cynefin-transition-escape"
+      ],
+      "status": "confirmed_not_repaired"
+    },
+    {
+      "id": "architecture-multiline-metadata",
+      "title": "Architecture 多行元数据输入拒绝",
+      "branches": [
+        "architecture-accessibility"
+      ],
+      "status": "confirmed_not_repaired"
+    },
+    {
+      "id": "gantt-date",
+      "title": "Gantt 日期解析/星期与 ISO week 格式",
+      "branches": [
+        "BV-B-DATE-LOCALIZED",
+        "BV-B-DATE-WEEKDAY",
+        "BV-B-DAYJS-ISO"
+      ],
+      "status": "confirmed_not_repaired"
+    },
+    {
+      "id": "gantt-axis-format",
+      "title": "D3 轴格式：locale、百分号、padding、远年 ISO",
+      "branches": [
+        "BV-B-AXIS-ALL",
+        "BV-B-AXIS-LOCALE",
+        "BV-B-AXIS-ESCAPE",
+        "BV-B-AXIS-PADDING",
+        "BV-B-AXIS-FAR"
+      ],
+      "status": "confirmed_not_repaired"
+    },
+    {
+      "id": "gantt-week-phase",
+      "title": "多周刻度 weekday epoch 相位",
+      "branches": [
+        "BV-B-TICK-WEEKDAY"
+      ],
+      "status": "confirmed_not_repaired"
+    },
+    {
+      "id": "agentflow-collapsed-selfloop",
+      "title": "AgentFlow 折叠组丢失真实自环",
+      "branches": [
+        "BV-B-AGENT-GENUINE"
+      ],
+      "status": "confirmed_not_repaired"
+    },
+    {
+      "id": "sequence-static-paint",
+      "title": "Sequence 中央连接点、反向编号与 self path 填色",
+      "branches": [
+        "C-sequence-central",
+        "C-sequence-number",
+        "C-sequence-self"
+      ],
+      "status": "confirmed_not_repaired"
+    },
+    {
+      "id": "zenuml-comment-escape",
+      "title": "Zen 注释转义文字误读",
+      "branches": [
+        "C-zen-comment-escape"
+      ],
+      "status": "confirmed_not_repaired"
+    },
+    {
+      "id": "abnf-comment",
+      "title": "ABNF comment-only 行拒绝",
+      "branches": [
+        "C-abnf-priority"
+      ],
+      "status": "confirmed_not_repaired"
+    }
+  ],
+  "semanticValueDifferences": [
+    "tree-title",
+    "architecture-title",
+    "cynefin-title",
+    "tree-multiline-accessibility"
+  ],
+  "additionalCompatibilityObservations": [
+    "Three attempted Event title inputs rejected by original but accepted natively; original positive-title expectation not reached.",
+    "Compact YAML metadata view:collapsed / algorithm:elk.box has different source/native meaning; those original inputs do not prove source collapse/custom-algorithm activation. Corrected spaced/quoted inputs were separately captured.",
+    "Three dark info themes use different text-color roles; default colors remain readable. This and small endpoint constants are kept separate from lost-content/relationship gaps."
+  ],
+  "scopeDecision": "references/html-css-extension-exclusion.json",
+  "evidence": {
+    "path": "references/branch-verification-summary.json",
+    "sha256": "cdf4226c982290875052614751fdf774d3bcb36609e4bc8f0c908205ce61613d",
+    "bytes": 1723432
+  }
+}

@@ -24,7 +24,7 @@
 - shape_geometry 追加 direction='TD'，forkJoin 在 LR/RL 为 10×70，其余为 70×10。shape_outline_intersection 接收测量 outline；正交路由沿端口轴，非正交路由按中心射线与真实轮廓相交；text/store/brace 按源虚拟矩形交点。
 - PlacedNode.box 是 ELK 真实物理框；box/rectpacking 可按源规则扩张，MeasuredNode 的原轮廓/文字不缩放，绘制起点为物理框中心减测量尺寸之半。
 - ResolvedStyle 追加 line_cap/line_join/dash_offset、letter_spacing/word_spacing（px 字符串）、text_transform/overflow_wrap/word_break/hyphens、text_shadows（dx,dy,blur,color 元组）。MeasuredTextRun 追加同名 spacing/shadows，保证 measure/draw/bounds 一致。全语言 hyphens:auto 无字典时明确诊断，不默默忽略。
-- inline SVG 与 data:image;base64 属显式离线资源，校验后通过公开 Canvas Image 解码。audio/video 交互播放器排除；数学独立后续。
+- inline SVG 与 data:image;base64 属显式离线资源，校验后通过公开 Canvas Image 解码。audio/video 整体排除（含初始静态外观、封面/占位和控制条），无迁移或验收要求；数学独立后续。
 
 ## S4 来源边界与 paint 合同补充
 
@@ -37,3 +37,19 @@
 `rendering.styles.resolve_inline_svg_style(diagram, kind, semantic_id, *, tag, base, css_classes=())` 为直接内嵌 SVG 子图元计算宿主默认 CSS 与 themeCSS。kind 使用 node-label/group-title/edge-label；base 包含继承和 presentation attributes，SVG 元素自己的 inline style 在返回后应用并保留 important 优先级。它不把外层节点的本地 inline 绘制样式当作祖先样式，不对 img/data URI 内的 SVG 调用。生产端仍只传不可变样式值和资源字节。
 
 来源 SVG 的 rough outline 也可能被 CSS 填色；状态圆按真实绘制顺序覆盖较早的 hatch。离屏 Canvas 含 source-in 的记录不能直接重放到不透明主画布，需先快照为 owner 线程的 Image 后绘制，或直接绘制有色 glyph，保留正确 alpha。
+
+
+## Static collapsed child and literal text contracts
+
+ShapePart adds trailing css_classes, tag and optional stroke_width fields. Empty classes and None width preserve the prior generic-part defaults. Collapsed separator and circles resolve their own source classes and primitive paint, independently of outer inline fill; geometry stays immutable path data. DrawEvent records actual resolved fill/stroke/width/opacity/dash, physical box and source child classes. Source line/circle primitives remain ordinary shapes inside a hand-drawn outer container. No DOM, event handling or Canvas private API is introduced.
+
+Painter.measure accepts literal=False; literal=True is a text-only, non-HTML measurement path. It bypasses br, entity, slash-n, math and whitespace rewriting and preserves one unwrapped literal fragment. Cynefin first applies its source SVG ASCII whitespace rule, then measures literally; raw model/getter values are unchanged. Other text/markdown consumers retain their prior default behavior.
+
+
+## Event ?? HTML ?????2026-11-07?
+
+?? `Painter.measure(..., raw_html=False)` ?????????????? HTML/CSS ?????`raw_html=True` ???????? `.html()` ?????????? `html=True`?`label_kind="text"`?? `literal=True` ???????????Event ??????????????????? literal SVG ???????
+
+?? HTML ?????? sanitizer??? HTML reader ??? Canvas ??????????????CSS normal ASCII ???NBSP??? br ??? containing block ??????????????????????Mermaid hash ??? KaTeX ????normal ?? br/block ?????????????? transport ? Event ???????? Diagram.encodeEntities ? ? substring/wrap/dimensions ? ?? decodeEntities ??????parser/model ???????
+
+????????? `CLOSURE-EVENT-SVG-whitespace-source-probe-20261107T104410Z-281b126b`?`CLOSURE-EVENT-HTML-linebox-source-probe-20261107T105708Z-a25cc0ce` ? `CLOSURE-EVENT-C-ENTITY-source-batch-20261107T105251Z-6b8d6c97`???? source-only ??????????????????????????

@@ -1,0 +1,18 @@
+W3C CSS Color 4 sample conversion equations and matrices
+Source: https://drafts.csswg.org/css-color-4/conversions.js
+Copyright (c) World Wide Web Consortium. All Rights Reserved.
+
+This reference work is distributed under the W3C Software and Document License
+in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the
+implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+https://www.w3.org/copyright/software-license-2023/
+
+The Python implementation in rendering/labels/controls/color_values.py reformulates
+the conversion equations and matrices for native static color input initial-state
+normalization. No JavaScript engine or browser is used at runtime. Existing pure
+Mermaid color names and channels are reused. Source snapshots, original repository
+license applicability and download SHA records are in references/html-host-semantics.json.
+
+Complete official license and disclaimer: w3c-software-document-license-2023.html
+Original official notice template: w3c-software-document-short-notice-2023.html
+Original repository applicability statement: csswg-drafts-LICENSE.md

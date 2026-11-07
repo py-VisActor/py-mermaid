@@ -1,0 +1,139 @@
+{
+  "schema": "py-mermaid-change/v1",
+  "phase": "P4-manual-visual-repair",
+  "previousAssertionReceiptSha256": "475f89ae1c95bc707ec79ca020eb11185aad97530b163509489797b51cdcac94",
+  "reviewReceipt": "test-runs/vchart-visual-review-20261107T043500Z.json",
+  "source": [
+    {
+      "path": "packages/mermaid/src/diagrams/pie/pieRenderer.ts",
+      "symbol": "draw titleText",
+      "line": 143,
+      "sha256": "12cbb88cead5b79b5a3aa4946d78da32e711feb8687bfd54ca119f98b2dd7df4"
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/quadrant-chart/quadrantRenderer.ts",
+      "symbol": "draw data points",
+      "line": 104,
+      "sha256": "ec3355a031c5b66c3df218ad44432581866cc1cbe2b502f01019dfbafc7f0639"
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/xychart/chartBuilder/components/plot/barPlot.ts",
+      "symbol": "BarPlot.getDrawableElement",
+      "line": 15,
+      "sha256": "17569f3371c3629c92e498351f041921699a6f32562a7805da280503853b0526"
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/treemap/renderer.ts",
+      "symbol": "draw ordinal scales/sections/leaves",
+      "line": 80,
+      "sha256": "f70a67c00490c1f9b34b721f37503f21e41c9ad6151a9459e04dbe0a5f8a432b"
+    }
+  ],
+  "changes": [
+    "Pie source title baseline converted to Painter top using actual ascent.",
+    "Quadrant invalid NaN CSS fill inherits root textColor, matching actual original SVG computed appearance; original theme string unchanged.",
+    "XY bars use source min(2*axis.outer,tickDistance)*.95 width around actual VChart positions; no supplier algorithm/file change.",
+    "Treemap source ordinal section palette, immediate-parent leaf color, .3 leaf fill alpha/.4 section stroke alpha, centered leaf label and independent smaller value. Root-level transparent parent branch intentionally retained, including original white invisible default text anomaly."
+  ],
+  "regressions": [
+    "test_pie_svg_title_baseline_keeps_glyphs_above_outer_arc",
+    "test_quadrant_invalid_source_color_inherits_visible_svg_fill",
+    "test_xy_numeric_bars_remain_inside_axis_plot",
+    "test_treemap_leaf_source_opacity_has_real_translucent_ink"
+  ],
+  "testMethods": 98,
+  "mechanicalEvidence": "test-runs/VCHART-VISUAL-REPAIR-record-20261107T043605Z-24342c42/run.json",
+  "artifacts": [
+    {
+      "path": "src/py_mermaid/diagrams/charts/pie.py",
+      "sha256": "f94f8c04d1b501408ce2c547a13699f23374d79c677558cf410a373d192b5305",
+      "bytes": 4769
+    },
+    {
+      "path": "src/py_mermaid/diagrams/charts/quadrant.py",
+      "sha256": "b3d3a071ea2a17353ad7ee4bb7dfebc848d8bcade9e4295a9862d9f8f1ec5a0a",
+      "bytes": 10147
+    },
+    {
+      "path": "src/py_mermaid/diagrams/charts/xychart.py",
+      "sha256": "7274d6d3a52eceac409982ddcd1709afef3e72e9a477f569a946f816726c1974",
+      "bytes": 12316
+    },
+    {
+      "path": "src/py_mermaid/diagrams/hierarchy/treemap.py",
+      "sha256": "193cc747d2bb1bb3e320b9f224f4cfce4368bcc281addbb07fea71a45e642f8f",
+      "bytes": 11817
+    },
+    {
+      "path": "tests/vchart_integration/test_mermaid_charts.py",
+      "sha256": "b761b737a515f68cc535bd96d107dc37905495a1dac352bc1944b684d7fb5734",
+      "bytes": 16279
+    }
+  ],
+  "status": "code_complete_unverified",
+  "remaining": [
+    "Sankey stroke bounds inflation is shared Painter._record_path owner root; A has notified exact 5*stroke margin root cause.",
+    "Root will run joint related/final P4; no behavior executed by A during this repair."
+  ],
+  "followupRepairs": [
+    {
+      "initialFailedRun": "test-runs/VCHART-VISUAL-REPAIR-record-20261107T043919Z-8882b2ed",
+      "rootCause": "A new premeasurement call omitted label style, freezing default #333 runs before p.text; passing the style while measuring preserves source class color.",
+      "product": "src/py_mermaid/diagrams/hierarchy/treemap.py",
+      "sha256": "74928e7eb4c172234d1c16fc44801bf45f77f405d49a63fee89d94aeb1fd4921",
+      "unchangedExpectation": "test_treemap_class_style_reaches_actual_leaf asserts #00ff00 plus actual green PNG ink.",
+      "evidence": "test-runs/VCHART-VISUAL-REPAIR-record-20261107T044026Z-e60a4eab/run.json",
+      "actualExit": 0,
+      "remaining": "XY total width 710 requires shared real stroke bounds; bar-inside-background assertions already passed. Test not relaxed."
+    }
+  ],
+  "readableHostRepairs": [
+    {
+      "authorization": "Root after closed FAILED P4 permits readable default text only for missing parent fill; explicit styles preserve precedence.",
+      "baselineFailedRun": "test-runs/VCHART-P4-batch-20261107T044508Z-506fd409",
+      "sourceDefects": [
+        {
+          "case": "VC-M-treemap-basic",
+          "invisibleSourceText": [
+            "Alpha",
+            "1"
+          ]
+        },
+        {
+          "case": "VC-M-treemap-class",
+          "invisibleSourceText": [
+            "Beta",
+            "20"
+          ]
+        },
+        {
+          "case": "VC-M-treemap-numbers",
+          "invisibleSourceText": [
+            "Revenue"
+          ]
+        }
+      ],
+      "sourceFacts": "Root palette slot is transparent; source leaf default label white on white, display:block opacity1. Original raw PNG genuinely has no glyph ink. Preserve source transparent fill and .3 opacity; native host substitutes theme.textColor only for absent-parent-fill default; explicit class/inline color remains authoritative.",
+      "visualBaselineReceipt": "test-runs/vchart-visual-review-20261107T045200Z.json",
+      "product": "src/py_mermaid/diagrams/hierarchy/treemap.py",
+      "sha256": "401ee72e2ac515822d058ccf5d93e3221422de3fdabbc7e39e235017083422be",
+      "test": "MermaidVChartRendering.test_treemap_missing_parent_fill_uses_readable_default_label_ink",
+      "testSha256": "322e55a27e8e48298ed7e0e0cc651219a39b36d03c087abce1bbceea73a76f40",
+      "evidence": [
+        {
+          "run": "test-runs/VCHART-VISUAL-REPAIR-record-20261107T044954Z-280461b0/run.json",
+          "methods": 99,
+          "exit": 0
+        },
+        {
+          "run": "test-runs/VCHART-VISUAL-REPAIR-record-20261107T045008Z-922c61b5/run.json",
+          "methods": 1,
+          "exit": 0
+        }
+      ],
+      "status": "related_regression_passed_waiting_joint_P4",
+      "fixturesChanged": false,
+      "sharedFilesChanged": false
+    }
+  ]
+}

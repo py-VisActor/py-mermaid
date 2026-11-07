@@ -1,0 +1,5967 @@
+{
+  "schema": "py-mermaid-final-capability-review/v1",
+  "group": "B",
+  "status": "BLOCKED_CONFIRMED_RETAINED_GAPS",
+  "productModified": false,
+  "testsModified": false,
+  "scopeChanged": false,
+  "candidateSourceTreeSha256": "fe2c293f8ed4ea76e04d34669c8739c27a32063447026e144928bfd6b4ac0bb2",
+  "fixedUpstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "run": {
+    "path": "test-runs/FINAL-CAPABILITY-B-review-20261107T073915Z-a5a59886/run.json",
+    "sha256": "3571d00423ef99e7bfe7fcda59276b45035cec5f4576254d5c52427312a4ec0d",
+    "bytes": 40866
+  },
+  "runStatus": "FAILED",
+  "sourceUnchanged": true,
+  "integrity": {
+    "schema": "py-mermaid-run-integrity/v1",
+    "runId": "FINAL-CAPABILITY-B-review-20261107T073915Z-a5a59886",
+    "integrityStatus": "PASS",
+    "executionStatus": "FAILED",
+    "functionalStatus": "NOT_EVALUATED",
+    "errors": []
+  },
+  "execution": {
+    "commands": [
+      {
+        "name": "fixed-original-90-values",
+        "exitCode": 0,
+        "stdout": {
+          "path": "test-runs/FINAL-CAPABILITY-B-review-20261107T073915Z-a5a59886/commands/001-fixed-original-90-values/stdout.log",
+          "sha256": "52f19800ed18c91ffbc6fc211048d1c49e85a95b322537a8f6a32a3a6e0feea6",
+          "bytes": 146
+        },
+        "stderr": {
+          "path": "test-runs/FINAL-CAPABILITY-B-review-20261107T073915Z-a5a59886/commands/001-fixed-original-90-values/stderr.log",
+          "sha256": "59631067e333b3a6818ddaaad1e892378c10a26acd06e043670c22957df08b51",
+          "bytes": 173
+        }
+      },
+      {
+        "name": "current-native-90-values",
+        "exitCode": 0,
+        "stdout": {
+          "path": "test-runs/FINAL-CAPABILITY-B-review-20261107T073915Z-a5a59886/commands/002-current-native-90-values/stdout.log",
+          "sha256": "21d65604c3b7d8de07d212bb4ba5f5fac37d823e23713668ad550caec6cef8fb",
+          "bytes": 31
+        },
+        "stderr": {
+          "path": "test-runs/FINAL-CAPABILITY-B-review-20261107T073915Z-a5a59886/commands/002-current-native-90-values/stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      },
+      {
+        "name": "independent-90-value-comparison",
+        "exitCode": 1,
+        "stdout": {
+          "path": "test-runs/FINAL-CAPABILITY-B-review-20261107T073915Z-a5a59886/commands/003-independent-90-value-comparison/stdout.log",
+          "sha256": "9ea752646c435fc2a1dcf7214ae703b3f85eedb0b9c28ccb3559d5b0ba4601c1",
+          "bytes": 171
+        },
+        "stderr": {
+          "path": "test-runs/FINAL-CAPABILITY-B-review-20261107T073915Z-a5a59886/commands/003-independent-90-value-comparison/stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      },
+      {
+        "name": "existing-independent-B25-tests",
+        "exitCode": 1,
+        "stdout": {
+          "path": "test-runs/FINAL-CAPABILITY-B-review-20261107T073915Z-a5a59886/commands/004-existing-independent-B25-tests/stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        "stderr": {
+          "path": "test-runs/FINAL-CAPABILITY-B-review-20261107T073915Z-a5a59886/commands/004-existing-independent-B25-tests/stderr.log",
+          "sha256": "1a50c38b5ff488bddb21320723fe5a35056f49548c8609eff83071ae5ce5f2be",
+          "bytes": 14400
+        }
+      },
+      {
+        "name": "source-valid-six-agent-real-ELK",
+        "exitCode": 0,
+        "stdout": {
+          "path": "test-runs/FINAL-CAPABILITY-B-review-20261107T073915Z-a5a59886/commands/005-source-valid-six-agent-real-ELK/stdout.log",
+          "sha256": "18886a96d69bb37646256601e6e82393cc676feced4da97a54b6118ad279122d",
+          "bytes": 27
+        },
+        "stderr": {
+          "path": "test-runs/FINAL-CAPABILITY-B-review-20261107T073915Z-a5a59886/commands/005-source-valid-six-agent-real-ELK/stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      }
+    ],
+    "pureRows": 90,
+    "pureCounts": {
+      "CONFIRMED_NUMERICAL_GAP": 6,
+      "OBSERVED_DIFFERENCE_REQUIRES_REVIEW": 22,
+      "SOURCE_INTERNAL_DOMAIN_DIFFERENCE": 1,
+      "UPSTREAM_EXCEPTION": 1,
+      "VERIFIED_OBSERVED_EQUAL": 60
+    },
+    "unittestMethods": 25,
+    "unittestCompletion": "Ran 25 tests in 1.579s\n\nFAILED (failures=8, errors=4)",
+    "note": "Unittest failures/error totals include subtests; green existing regression methods are not interpreted as repaired gaps. Comparison returns nonzero for retained observed differences.",
+    "initialInfrastructureFailure": {
+      "run": {
+        "path": "test-runs/FINAL-CAPABILITY-B-review-20261107T073856Z-c7ef4f2c/run.json",
+        "sha256": "39dad138afa90cbff4f386ea7fe31f848bed6051dc88f58dc65fabfe670fcee2",
+        "bytes": 29838
+      },
+      "reason": "Run.command rejected Path argv objects before any product/source command; corrected wrapper passed string argv. Failed first Run remains closed and unmodified."
+    }
+  },
+  "queueReview": {
+    "BBranchRecords": 10,
+    "distinctFunctionalFamilies": 4,
+    "recordsOverlap": "AXIS-ALL includes the locale sub-branch. Ten ledger records are not ten independent algorithms.",
+    "decision": "No-missing-capabilities publication precondition is not satisfied. No repair was authorized or performed."
+  },
+  "entries": [
+    {
+      "id": "BV-B-DATE-LOCALIZED",
+      "classification": "CONFIRMED_GAP_STILL_PRESENT",
+      "publicationBlockingUnderUserNoMissingCondition": true,
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/gantt/ganttDb.js",
+          "symbol": "const getStartDate",
+          "line": 305,
+          "sha256": "d783881e9e5966aabc87f6dc170aa0a88ece551c48c49ba0693aa5271e3accec"
+        },
+        {
+          "repository": "mermaid-bundle-sourcesContent",
+          "path": "../../../node_modules/.pnpm/dayjs@1.11.21/node_modules/dayjs/plugin/customParseFormat.js",
+          "symbol": "customParseFormat",
+          "line": 1,
+          "sha256": "b199a58d0fbbdc519a072eb9b140a2ca3d4775ea1b054a0c0e5aeed86603c941",
+          "bundleMapPath": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+          "bundleMapSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679"
+        }
+      ],
+      "sourceExpected": "Do not invent localizedFormat plugin; Gantt fallback accepts01/02/2024 as Jan2.",
+      "sourceInputs": [
+        "BV-B-DATE-LOCALIZED"
+      ],
+      "pureProbeIds": [
+        "BV-B-P-PARSE-LOCAL-L",
+        "BV-B-P-PARSE-LOCAL-LL",
+        "BV-B-P-PARSE-LOCAL-LLL"
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_b_numeric.py",
+          "sha256": "e0b685f492ce129c1143c581a866a7f7486ff4fbe85e15b2d1ff2574614631d1",
+          "bytes": 5540,
+          "symbol": "test_b02_source_browser_date_fallback_after_localized_format",
+          "line": 18
+        }
+      ],
+      "currentObservations": [
+        {
+          "id": "BV-B-P-PARSE-LOCAL-L",
+          "branch": "DATE-PARSE",
+          "sourceExpected": {
+            "operation": "parse",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "value": "01/02/2024",
+              "format": "L"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-PARSE-LOCAL-L",
+            "kind": "parse",
+            "input": {
+              "value": "01/02/2024",
+              "format": "L"
+            },
+            "value": null,
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-PARSE-LOCAL-L",
+            "kind": "parse",
+            "input": {
+              "value": "01/02/2024",
+              "format": "L"
+            },
+            "value": null,
+            "error": null
+          },
+          "classification": "VERIFIED_OBSERVED_EQUAL"
+        },
+        {
+          "id": "BV-B-P-PARSE-LOCAL-LL",
+          "branch": "DATE-PARSE",
+          "sourceExpected": {
+            "operation": "parse",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "value": "January 2, 2024",
+              "format": "LL"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-PARSE-LOCAL-LL",
+            "kind": "parse",
+            "input": {
+              "value": "January 2, 2024",
+              "format": "LL"
+            },
+            "value": null,
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-PARSE-LOCAL-LL",
+            "kind": "parse",
+            "input": {
+              "value": "January 2, 2024",
+              "format": "LL"
+            },
+            "value": null,
+            "error": null
+          },
+          "classification": "VERIFIED_OBSERVED_EQUAL"
+        },
+        {
+          "id": "BV-B-P-PARSE-LOCAL-LLL",
+          "branch": "DATE-PARSE",
+          "sourceExpected": {
+            "operation": "parse",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "value": "January 2, 2024 1:04 PM",
+              "format": "LLL"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-PARSE-LOCAL-LLL",
+            "kind": "parse",
+            "input": {
+              "value": "January 2, 2024 1:04 PM",
+              "format": "LLL"
+            },
+            "value": null,
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-PARSE-LOCAL-LLL",
+            "kind": "parse",
+            "input": {
+              "value": "January 2, 2024 1:04 PM",
+              "format": "LLL"
+            },
+            "value": null,
+            "error": null
+          },
+          "classification": "VERIFIED_OBSERVED_EQUAL"
+        }
+      ],
+      "currentPython": [
+        {
+          "path": "src/py_mermaid/diagrams/temporal/_dates.py",
+          "sha256": "91aaadfebf8b5202d83796732e2e2bee435c19f4dea35a327329c00196e4a202",
+          "bytes": 11017,
+          "symbol": "def parse_date",
+          "line": 10
+        }
+      ],
+      "runEvidence": {
+        "path": "test-runs/FINAL-CAPABILITY-B-review-20261107T073915Z-a5a59886/artifacts/comparison-B-values.json",
+        "sha256": "21a9cb689e78be1d3770dd912fa911011df4fb40fc8a78433c469c830150cc29",
+        "bytes": 165751
+      },
+      "currentActual": {
+        "error": "MermaidError INVALID_DATE: Invalid date:01/02/2024",
+        "layer": "public parse+compile_tasks getStartDate fallback"
+      },
+      "originalPublicObserved": {
+        "snapshot": {
+          "section": "",
+          "type": "",
+          "processed": true,
+          "manualEndTime": false,
+          "renderEndTime": null,
+          "raw": {
+            "data": ":a, 01/02/2024, 2d",
+            "startTime": {
+              "type": "getStartDate",
+              "startData": "01/02/2024"
+            },
+            "endTime": {
+              "data": "2d"
+            }
+          },
+          "task": "Localized ",
+          "classes": [],
+          "id": "a",
+          "order": 0,
+          "startTime": {
+            "$date": "2024-01-01T16:00:00.000Z"
+          },
+          "endTime": {
+            "$date": "2024-01-03T16:00:00.000Z"
+          }
+        },
+        "evidence": {
+          "path": "test-runs/BRANCH-VERIFY-P3-FOLLOWUP-batch-20261106T145346Z-9a049125/artifacts/oracle/BV-B-DATE-LOCALIZED.json",
+          "sha256": "dcf678b14dcd593304ad84fc58a222f9ce4181a86d071c184196789e0db1f08c",
+          "bytes": 43790
+        },
+        "note": "Original browser local Asia/Shanghai: startTime 2024-01-01T16Z is local Jan2. Strict Dayjs L probes matching None do not prove the public browser Date fallback works."
+      }
+    },
+    {
+      "id": "BV-B-DATE-WEEKDAY",
+      "classification": "CONFIRMED_GAP_STILL_PRESENT",
+      "publicationBlockingUnderUserNoMissingCondition": true,
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/gantt/ganttDb.js",
+          "symbol": "const getStartDate",
+          "line": 305,
+          "sha256": "d783881e9e5966aabc87f6dc170aa0a88ece551c48c49ba0693aa5271e3accec"
+        },
+        {
+          "repository": "mermaid-bundle-sourcesContent",
+          "path": "../../../node_modules/.pnpm/dayjs@1.11.21/node_modules/dayjs/plugin/customParseFormat.js",
+          "symbol": "customParseFormat",
+          "line": 1,
+          "sha256": "b199a58d0fbbdc519a072eb9b140a2ca3d4775ea1b054a0c0e5aeed86603c941",
+          "bundleMapPath": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+          "bundleMapSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679"
+        }
+      ],
+      "sourceExpected": "Token consumption and strict validation determine actual date;2024-Jan1 Monday.",
+      "sourceInputs": [
+        "BV-B-DATE-WEEKDAY"
+      ],
+      "pureProbeIds": [
+        "BV-B-P-PARSE-WEEKDAY",
+        "BV-B-P-PARSE-ORDINAL"
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_b_numeric.py",
+          "sha256": "e0b685f492ce129c1143c581a866a7f7486ff4fbe85e15b2d1ff2574614631d1",
+          "bytes": 5540,
+          "symbol": "test_b03_source_weekday_name_custom_format",
+          "line": 29
+        }
+      ],
+      "currentObservations": [
+        {
+          "id": "BV-B-P-PARSE-WEEKDAY",
+          "branch": "DATE-PARSE",
+          "sourceExpected": {
+            "operation": "parse",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "value": "2024-01-01 Monday",
+              "format": "YYYY-MM-DD dddd"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-PARSE-WEEKDAY",
+            "kind": "parse",
+            "input": {
+              "value": "2024-01-01 Monday",
+              "format": "YYYY-MM-DD dddd"
+            },
+            "value": {
+              "local": [
+                2024,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "epochMs": 1704067200000
+            },
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-PARSE-WEEKDAY",
+            "kind": "parse",
+            "input": {
+              "value": "2024-01-01 Monday",
+              "format": "YYYY-MM-DD dddd"
+            },
+            "value": null,
+            "error": null
+          },
+          "classification": "OBSERVED_DIFFERENCE_REQUIRES_REVIEW"
+        },
+        {
+          "id": "BV-B-P-PARSE-ORDINAL",
+          "branch": "DATE-PARSE",
+          "sourceExpected": {
+            "operation": "parse",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "value": "January 2nd 2024",
+              "format": "MMMM Do YYYY"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-PARSE-ORDINAL",
+            "kind": "parse",
+            "input": {
+              "value": "January 2nd 2024",
+              "format": "MMMM Do YYYY"
+            },
+            "value": {
+              "local": [
+                2024,
+                1,
+                2,
+                0,
+                0,
+                0,
+                0
+              ],
+              "epochMs": 1704153600000
+            },
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-PARSE-ORDINAL",
+            "kind": "parse",
+            "input": {
+              "value": "January 2nd 2024",
+              "format": "MMMM Do YYYY"
+            },
+            "value": {
+              "local": [
+                2024,
+                1,
+                2,
+                0,
+                0,
+                0,
+                0
+              ],
+              "epochMs": 1704153600000
+            },
+            "error": null
+          },
+          "classification": "VERIFIED_OBSERVED_EQUAL"
+        }
+      ],
+      "currentPython": [
+        {
+          "path": "src/py_mermaid/diagrams/temporal/_dates.py",
+          "sha256": "91aaadfebf8b5202d83796732e2e2bee435c19f4dea35a327329c00196e4a202",
+          "bytes": 11017,
+          "symbol": "def parse_date",
+          "line": 10
+        }
+      ],
+      "runEvidence": {
+        "path": "test-runs/FINAL-CAPABILITY-B-review-20261107T073915Z-a5a59886/artifacts/comparison-B-values.json",
+        "sha256": "21a9cb689e78be1d3770dd912fa911011df4fb40fc8a78433c469c830150cc29",
+        "bytes": 165751
+      }
+    },
+    {
+      "id": "BV-B-DAYJS-ISO",
+      "classification": "CONFIRMED_GAP_STILL_PRESENT",
+      "publicationBlockingUnderUserNoMissingCondition": true,
+      "source": [
+        {
+          "repository": "mermaid-bundle-sourcesContent",
+          "path": "../../../node_modules/.pnpm/dayjs@1.11.21/node_modules/dayjs/plugin/advancedFormat.js",
+          "symbol": "advancedFormat",
+          "line": 1,
+          "sha256": "6f9ca609c4af60f2a03033e72dec5714f4f8e7b240381934040f547a0282463f",
+          "bundleMapPath": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+          "bundleMapSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679"
+        },
+        {
+          "repository": "mermaid-bundle-sourcesContent",
+          "path": "../../../node_modules/.pnpm/dayjs@1.11.21/node_modules/dayjs/plugin/isoWeek.js",
+          "symbol": "isoWeek",
+          "line": 1,
+          "sha256": "9937b6f6e7f852fd180a75d02f223298a4541a8cec415d0cadad5dfde7d40929",
+          "bundleMapPath": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+          "bundleMapSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679"
+        }
+      ],
+      "sourceExpected": "Jan1 2021=2020-W53;midnight k=24.",
+      "sourceInputs": [
+        "BV-B-DATE-ISOWEEK"
+      ],
+      "pureProbeIds": [
+        "BV-B-P-DAYFORMAT-58",
+        "BV-B-P-DAYFORMAT-59",
+        "BV-B-P-DAYFORMAT-60",
+        "BV-B-P-DAYFORMAT-61",
+        "BV-B-P-DAYFORMAT-62",
+        "BV-B-P-DAYFORMAT-63",
+        "BV-B-P-DAYFORMAT-64"
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_b_numeric.py",
+          "sha256": "e0b685f492ce129c1143c581a866a7f7486ff4fbe85e15b2d1ff2574614631d1",
+          "bytes": 5540,
+          "symbol": "test_b04_source_iso_week_and_midnight_format",
+          "line": 32
+        }
+      ],
+      "currentObservations": [
+        {
+          "id": "BV-B-P-DAYFORMAT-58",
+          "branch": "DAYJS-ADVANCED",
+          "sourceExpected": {
+            "operation": "dayFormat",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                0,
+                4,
+                5,
+                123
+              ],
+              "format": "Q",
+              "sourceMayThrow": false
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-DAYFORMAT-58",
+            "kind": "dayFormat",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                0,
+                4,
+                5,
+                123
+              ],
+              "format": "Q",
+              "sourceMayThrow": false
+            },
+            "value": "1",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-DAYFORMAT-58",
+            "kind": "dayFormat",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                0,
+                4,
+                5,
+                123
+              ],
+              "format": "Q",
+              "sourceMayThrow": false
+            },
+            "value": "1",
+            "error": null
+          },
+          "classification": "VERIFIED_OBSERVED_EQUAL"
+        },
+        {
+          "id": "BV-B-P-DAYFORMAT-59",
+          "branch": "DAYJS-ADVANCED",
+          "sourceExpected": {
+            "operation": "dayFormat",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                0,
+                4,
+                5,
+                123
+              ],
+              "format": "Do",
+              "sourceMayThrow": false
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-DAYFORMAT-59",
+            "kind": "dayFormat",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                0,
+                4,
+                5,
+                123
+              ],
+              "format": "Do",
+              "sourceMayThrow": false
+            },
+            "value": "1st",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-DAYFORMAT-59",
+            "kind": "dayFormat",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                0,
+                4,
+                5,
+                123
+              ],
+              "format": "Do",
+              "sourceMayThrow": false
+            },
+            "value": "1st",
+            "error": null
+          },
+          "classification": "VERIFIED_OBSERVED_EQUAL"
+        },
+        {
+          "id": "BV-B-P-DAYFORMAT-60",
+          "branch": "DAYJS-ADVANCED",
+          "sourceExpected": {
+            "operation": "dayFormat",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                0,
+                4,
+                5,
+                123
+              ],
+              "format": "dddd",
+              "sourceMayThrow": false
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-DAYFORMAT-60",
+            "kind": "dayFormat",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                0,
+                4,
+                5,
+                123
+              ],
+              "format": "dddd",
+              "sourceMayThrow": false
+            },
+            "value": "Friday",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-DAYFORMAT-60",
+            "kind": "dayFormat",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                0,
+                4,
+                5,
+                123
+              ],
+              "format": "dddd",
+              "sourceMayThrow": false
+            },
+            "value": "friday",
+            "error": null
+          },
+          "classification": "OBSERVED_DIFFERENCE_REQUIRES_REVIEW"
+        },
+        {
+          "id": "BV-B-P-DAYFORMAT-61",
+          "branch": "DAYJS-ADVANCED",
+          "sourceExpected": {
+            "operation": "dayFormat",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                0,
+                4,
+                5,
+                123
+              ],
+              "format": "ddd",
+              "sourceMayThrow": false
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-DAYFORMAT-61",
+            "kind": "dayFormat",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                0,
+                4,
+                5,
+                123
+              ],
+              "format": "ddd",
+              "sourceMayThrow": false
+            },
+            "value": "Fri",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-DAYFORMAT-61",
+            "kind": "dayFormat",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                0,
+                4,
+                5,
+                123
+              ],
+              "format": "ddd",
+              "sourceMayThrow": false
+            },
+            "value": "fri",
+            "error": null
+          },
+          "classification": "OBSERVED_DIFFERENCE_REQUIRES_REVIEW"
+        },
+        {
+          "id": "BV-B-P-DAYFORMAT-62",
+          "branch": "DAYJS-ADVANCED",
+          "sourceExpected": {
+            "operation": "dayFormat",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                0,
+                4,
+                5,
+                123
+              ],
+              "format": "W WW GGGG",
+              "sourceMayThrow": false
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-DAYFORMAT-62",
+            "kind": "dayFormat",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                0,
+                4,
+                5,
+                123
+              ],
+              "format": "W WW GGGG",
+              "sourceMayThrow": false
+            },
+            "value": "53 53 2020",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-DAYFORMAT-62",
+            "kind": "dayFormat",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                0,
+                4,
+                5,
+                123
+              ],
+              "format": "W WW GGGG",
+              "sourceMayThrow": false
+            },
+            "value": "W WW GGGG",
+            "error": null
+          },
+          "classification": "OBSERVED_DIFFERENCE_REQUIRES_REVIEW"
+        },
+        {
+          "id": "BV-B-P-DAYFORMAT-63",
+          "branch": "DAYJS-ADVANCED",
+          "sourceExpected": {
+            "operation": "dayFormat",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                0,
+                4,
+                5,
+                123
+              ],
+              "format": "k kk",
+              "sourceMayThrow": false
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-DAYFORMAT-63",
+            "kind": "dayFormat",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                0,
+                4,
+                5,
+                123
+              ],
+              "format": "k kk",
+              "sourceMayThrow": false
+            },
+            "value": "24 24",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-DAYFORMAT-63",
+            "kind": "dayFormat",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                0,
+                4,
+                5,
+                123
+              ],
+              "format": "k kk",
+              "sourceMayThrow": false
+            },
+            "value": "k kk",
+            "error": null
+          },
+          "classification": "OBSERVED_DIFFERENCE_REQUIRES_REVIEW"
+        },
+        {
+          "id": "BV-B-P-DAYFORMAT-64",
+          "branch": "DAYJS-ADVANCED",
+          "sourceExpected": {
+            "operation": "dayFormat",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                0,
+                4,
+                5,
+                123
+              ],
+              "format": "w ww gggg z",
+              "sourceMayThrow": true
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-DAYFORMAT-64",
+            "kind": "dayFormat",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                0,
+                4,
+                5,
+                123
+              ],
+              "format": "w ww gggg z",
+              "sourceMayThrow": true
+            },
+            "value": null,
+            "error": {
+              "name": "TypeError",
+              "message": "t.week is not a function",
+              "stack": "TypeError: t.week is not a function\n    at ../../../node_modules/.pnpm/dayjs@1.11.21/node_modules/dayjs/plugin/advancedFormat.js:1:741\n    at String.replace (<anonymous>)\n    at r.format (../../../node_modules/.pnpm/dayjs@1.11.21/node_modules/dayjs/plugin/advancedFormat.js:1:444)\n    at main (C:\\code\\py-visactor\\py-mermaid\\tests\\branch_verification\\oracle_b.cjs:94:64)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)"
+            }
+          },
+          "nativeActual": {
+            "id": "BV-B-P-DAYFORMAT-64",
+            "kind": "dayFormat",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                0,
+                4,
+                5,
+                123
+              ],
+              "format": "w ww gggg z",
+              "sourceMayThrow": true
+            },
+            "value": "w ww gggg z",
+            "error": null
+          },
+          "classification": "UPSTREAM_EXCEPTION"
+        }
+      ],
+      "currentPython": [
+        {
+          "path": "src/py_mermaid/diagrams/temporal/_dates.py",
+          "sha256": "91aaadfebf8b5202d83796732e2e2bee435c19f4dea35a327329c00196e4a202",
+          "bytes": 11017,
+          "symbol": "def format_day",
+          "line": 99
+        }
+      ],
+      "runEvidence": {
+        "path": "test-runs/FINAL-CAPABILITY-B-review-20261107T073915Z-a5a59886/artifacts/comparison-B-values.json",
+        "sha256": "21a9cb689e78be1d3770dd912fa911011df4fb40fc8a78433c469c830150cc29",
+        "bytes": 165751
+      },
+      "reason": "Friday/Fri capitalization, ISO week/year and midnight k missing. w/ww/gggg/z source plugin TypeError is retained as upstream exception, not counted as a native-only missing feature."
+    },
+    {
+      "id": "BV-B-AXIS-ALL",
+      "classification": "CONFIRMED_GAP_STILL_PRESENT",
+      "publicationBlockingUnderUserNoMissingCondition": true,
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/gantt/ganttRenderer.js",
+          "symbol": "function makeGrid",
+          "line": 649,
+          "sha256": "bf1c7231c8666070124eed4f6078b1d62ab4dea0973c44cc5d6264469961e488"
+        },
+        {
+          "repository": "mermaid-bundle-sourcesContent",
+          "path": "../../../node_modules/.pnpm/d3-time-format@4.1.0/node_modules/d3-time-format/src/locale.js",
+          "symbol": "function formatLocale",
+          "line": 36,
+          "sha256": "47df570989eca703c1d1a720aed8e8010d5992c2235348f135654ea930fbf4d8",
+          "bundleMapPath": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+          "bundleMapSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679"
+        }
+      ],
+      "sourceExpected": "Fixed D3 locale dispatch instead of OS strftime.",
+      "sourceInputs": [
+        "BV-B-AXIS-LOCALE"
+      ],
+      "pureProbeIds": [
+        "BV-B-P-AXIS-LOWER-a",
+        "BV-B-P-AXIS-UPPER-A",
+        "BV-B-P-AXIS-LOWER-b",
+        "BV-B-P-AXIS-UPPER-B",
+        "BV-B-P-AXIS-LOWER-c",
+        "BV-B-P-AXIS-LOWER-d",
+        "BV-B-P-AXIS-LOWER-e",
+        "BV-B-P-AXIS-LOWER-f",
+        "BV-B-P-AXIS-LOWER-g",
+        "BV-B-P-AXIS-UPPER-G",
+        "BV-B-P-AXIS-UPPER-H",
+        "BV-B-P-AXIS-UPPER-I",
+        "BV-B-P-AXIS-LOWER-j",
+        "BV-B-P-AXIS-UPPER-L",
+        "BV-B-P-AXIS-LOWER-m",
+        "BV-B-P-AXIS-UPPER-M",
+        "BV-B-P-AXIS-LOWER-p",
+        "BV-B-P-AXIS-LOWER-q",
+        "BV-B-P-AXIS-UPPER-Q",
+        "BV-B-P-AXIS-LOWER-s",
+        "BV-B-P-AXIS-UPPER-S",
+        "BV-B-P-AXIS-LOWER-u",
+        "BV-B-P-AXIS-UPPER-U",
+        "BV-B-P-AXIS-UPPER-V",
+        "BV-B-P-AXIS-LOWER-w",
+        "BV-B-P-AXIS-UPPER-W",
+        "BV-B-P-AXIS-LOWER-x",
+        "BV-B-P-AXIS-UPPER-X",
+        "BV-B-P-AXIS-LOWER-y",
+        "BV-B-P-AXIS-UPPER-Y",
+        "BV-B-P-AXIS-UPPER-Z",
+        "BV-B-P-AXIS-PERCENT"
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_b_numeric.py",
+          "sha256": "e0b685f492ce129c1143c581a866a7f7486ff4fbe85e15b2d1ff2574614631d1",
+          "bytes": 5540,
+          "symbol": "test_b05_d3_fixed_locale_composites",
+          "line": 38
+        }
+      ],
+      "currentObservations": [
+        {
+          "id": "BV-B-P-AXIS-LOWER-a",
+          "branch": "AXIS-FORMAT",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%a"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-AXIS-LOWER-a",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%a"
+            },
+            "value": "Fri",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-AXIS-LOWER-a",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%a"
+            },
+            "value": "Fri",
+            "error": null
+          },
+          "classification": "VERIFIED_OBSERVED_EQUAL"
+        },
+        {
+          "id": "BV-B-P-AXIS-UPPER-A",
+          "branch": "AXIS-FORMAT",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%A"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-AXIS-UPPER-A",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%A"
+            },
+            "value": "Friday",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-AXIS-UPPER-A",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%A"
+            },
+            "value": "Friday",
+            "error": null
+          },
+          "classification": "VERIFIED_OBSERVED_EQUAL"
+        },
+        {
+          "id": "BV-B-P-AXIS-LOWER-b",
+          "branch": "AXIS-FORMAT",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%b"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-AXIS-LOWER-b",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%b"
+            },
+            "value": "Jan",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-AXIS-LOWER-b",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%b"
+            },
+            "value": "Jan",
+            "error": null
+          },
+          "classification": "VERIFIED_OBSERVED_EQUAL"
+        },
+        {
+          "id": "BV-B-P-AXIS-UPPER-B",
+          "branch": "AXIS-FORMAT",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%B"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-AXIS-UPPER-B",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%B"
+            },
+            "value": "January",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-AXIS-UPPER-B",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%B"
+            },
+            "value": "January",
+            "error": null
+          },
+          "classification": "VERIFIED_OBSERVED_EQUAL"
+        },
+        {
+          "id": "BV-B-P-AXIS-LOWER-c",
+          "branch": "AXIS-FORMAT",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%c"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-AXIS-LOWER-c",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%c"
+            },
+            "value": "1/1/2021, 1:04:05 PM",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-AXIS-LOWER-c",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%c"
+            },
+            "value": "Fri Jan  1 13:04:05 2021",
+            "error": null
+          },
+          "classification": "OBSERVED_DIFFERENCE_REQUIRES_REVIEW"
+        },
+        {
+          "id": "BV-B-P-AXIS-LOWER-d",
+          "branch": "AXIS-FORMAT",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%d"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-AXIS-LOWER-d",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%d"
+            },
+            "value": "01",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-AXIS-LOWER-d",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%d"
+            },
+            "value": "01",
+            "error": null
+          },
+          "classification": "VERIFIED_OBSERVED_EQUAL"
+        },
+        {
+          "id": "BV-B-P-AXIS-LOWER-e",
+          "branch": "AXIS-FORMAT",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%e"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-AXIS-LOWER-e",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%e"
+            },
+            "value": " 1",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-AXIS-LOWER-e",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%e"
+            },
+            "value": " 1",
+            "error": null
+          },
+          "classification": "VERIFIED_OBSERVED_EQUAL"
+        },
+        {
+          "id": "BV-B-P-AXIS-LOWER-f",
+          "branch": "AXIS-FORMAT",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%f"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-AXIS-LOWER-f",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%f"
+            },
+            "value": "123000",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-AXIS-LOWER-f",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%f"
+            },
+            "value": "123000",
+            "error": null
+          },
+          "classification": "VERIFIED_OBSERVED_EQUAL"
+        },
+        {
+          "id": "BV-B-P-AXIS-LOWER-g",
+          "branch": "AXIS-FORMAT",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%g"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-AXIS-LOWER-g",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%g"
+            },
+            "value": "20",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-AXIS-LOWER-g",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%g"
+            },
+            "value": "20",
+            "error": null
+          },
+          "classification": "VERIFIED_OBSERVED_EQUAL"
+        },
+        {
+          "id": "BV-B-P-AXIS-UPPER-G",
+          "branch": "AXIS-FORMAT",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%G"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-AXIS-UPPER-G",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%G"
+            },
+            "value": "2020",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-AXIS-UPPER-G",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%G"
+            },
+            "value": "2020",
+            "error": null
+          },
+          "classification": "VERIFIED_OBSERVED_EQUAL"
+        },
+        {
+          "id": "BV-B-P-AXIS-UPPER-H",
+          "branch": "AXIS-FORMAT",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%H"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-AXIS-UPPER-H",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%H"
+            },
+            "value": "13",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-AXIS-UPPER-H",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%H"
+            },
+            "value": "13",
+            "error": null
+          },
+          "classification": "VERIFIED_OBSERVED_EQUAL"
+        },
+        {
+          "id": "BV-B-P-AXIS-UPPER-I",
+          "branch": "AXIS-FORMAT",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%I"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-AXIS-UPPER-I",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%I"
+            },
+            "value": "01",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-AXIS-UPPER-I",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%I"
+            },
+            "value": "01",
+            "error": null
+          },
+          "classification": "VERIFIED_OBSERVED_EQUAL"
+        },
+        {
+          "id": "BV-B-P-AXIS-LOWER-j",
+          "branch": "AXIS-FORMAT",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%j"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-AXIS-LOWER-j",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%j"
+            },
+            "value": "001",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-AXIS-LOWER-j",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%j"
+            },
+            "value": "001",
+            "error": null
+          },
+          "classification": "VERIFIED_OBSERVED_EQUAL"
+        },
+        {
+          "id": "BV-B-P-AXIS-UPPER-L",
+          "branch": "AXIS-FORMAT",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%L"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-AXIS-UPPER-L",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%L"
+            },
+            "value": "123",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-AXIS-UPPER-L",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%L"
+            },
+            "value": "123",
+            "error": null
+          },
+          "classification": "VERIFIED_OBSERVED_EQUAL"
+        },
+        {
+          "id": "BV-B-P-AXIS-LOWER-m",
+          "branch": "AXIS-FORMAT",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%m"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-AXIS-LOWER-m",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%m"
+            },
+            "value": "01",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-AXIS-LOWER-m",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%m"
+            },
+            "value": "01",
+            "error": null
+          },
+          "classification": "VERIFIED_OBSERVED_EQUAL"
+        },
+        {
+          "id": "BV-B-P-AXIS-UPPER-M",
+          "branch": "AXIS-FORMAT",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%M"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-AXIS-UPPER-M",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%M"
+            },
+            "value": "04",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-AXIS-UPPER-M",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%M"
+            },
+            "value": "04",
+            "error": null
+          },
+          "classification": "VERIFIED_OBSERVED_EQUAL"
+        },
+        {
+          "id": "BV-B-P-AXIS-LOWER-p",
+          "branch": "AXIS-FORMAT",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%p"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-AXIS-LOWER-p",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%p"
+            },
+            "value": "PM",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-AXIS-LOWER-p",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%p"
+            },
+            "value": "PM",
+            "error": null
+          },
+          "classification": "VERIFIED_OBSERVED_EQUAL"
+        },
+        {
+          "id": "BV-B-P-AXIS-LOWER-q",
+          "branch": "AXIS-FORMAT",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%q"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-AXIS-LOWER-q",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%q"
+            },
+            "value": "1",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-AXIS-LOWER-q",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%q"
+            },
+            "value": "1",
+            "error": null
+          },
+          "classification": "VERIFIED_OBSERVED_EQUAL"
+        },
+        {
+          "id": "BV-B-P-AXIS-UPPER-Q",
+          "branch": "AXIS-FORMAT",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%Q"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-AXIS-UPPER-Q",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%Q"
+            },
+            "value": "1609506245123",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-AXIS-UPPER-Q",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%Q"
+            },
+            "value": "1609506245123",
+            "error": null
+          },
+          "classification": "VERIFIED_OBSERVED_EQUAL"
+        },
+        {
+          "id": "BV-B-P-AXIS-LOWER-s",
+          "branch": "AXIS-FORMAT",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%s"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-AXIS-LOWER-s",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%s"
+            },
+            "value": "1609506245",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-AXIS-LOWER-s",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%s"
+            },
+            "value": "1609506245",
+            "error": null
+          },
+          "classification": "VERIFIED_OBSERVED_EQUAL"
+        },
+        {
+          "id": "BV-B-P-AXIS-UPPER-S",
+          "branch": "AXIS-FORMAT",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%S"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-AXIS-UPPER-S",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%S"
+            },
+            "value": "05",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-AXIS-UPPER-S",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%S"
+            },
+            "value": "05",
+            "error": null
+          },
+          "classification": "VERIFIED_OBSERVED_EQUAL"
+        },
+        {
+          "id": "BV-B-P-AXIS-LOWER-u",
+          "branch": "AXIS-FORMAT",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%u"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-AXIS-LOWER-u",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%u"
+            },
+            "value": "5",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-AXIS-LOWER-u",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%u"
+            },
+            "value": "5",
+            "error": null
+          },
+          "classification": "VERIFIED_OBSERVED_EQUAL"
+        },
+        {
+          "id": "BV-B-P-AXIS-UPPER-U",
+          "branch": "AXIS-FORMAT",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%U"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-AXIS-UPPER-U",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%U"
+            },
+            "value": "00",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-AXIS-UPPER-U",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%U"
+            },
+            "value": "00",
+            "error": null
+          },
+          "classification": "VERIFIED_OBSERVED_EQUAL"
+        },
+        {
+          "id": "BV-B-P-AXIS-UPPER-V",
+          "branch": "AXIS-FORMAT",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%V"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-AXIS-UPPER-V",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%V"
+            },
+            "value": "53",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-AXIS-UPPER-V",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%V"
+            },
+            "value": "53",
+            "error": null
+          },
+          "classification": "VERIFIED_OBSERVED_EQUAL"
+        },
+        {
+          "id": "BV-B-P-AXIS-LOWER-w",
+          "branch": "AXIS-FORMAT",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%w"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-AXIS-LOWER-w",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%w"
+            },
+            "value": "5",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-AXIS-LOWER-w",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%w"
+            },
+            "value": "5",
+            "error": null
+          },
+          "classification": "VERIFIED_OBSERVED_EQUAL"
+        },
+        {
+          "id": "BV-B-P-AXIS-UPPER-W",
+          "branch": "AXIS-FORMAT",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%W"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-AXIS-UPPER-W",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%W"
+            },
+            "value": "00",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-AXIS-UPPER-W",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%W"
+            },
+            "value": "00",
+            "error": null
+          },
+          "classification": "VERIFIED_OBSERVED_EQUAL"
+        },
+        {
+          "id": "BV-B-P-AXIS-LOWER-x",
+          "branch": "AXIS-FORMAT",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%x"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-AXIS-LOWER-x",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%x"
+            },
+            "value": "1/1/2021",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-AXIS-LOWER-x",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%x"
+            },
+            "value": "01/01/21",
+            "error": null
+          },
+          "classification": "OBSERVED_DIFFERENCE_REQUIRES_REVIEW"
+        },
+        {
+          "id": "BV-B-P-AXIS-UPPER-X",
+          "branch": "AXIS-FORMAT",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%X"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-AXIS-UPPER-X",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%X"
+            },
+            "value": "1:04:05 PM",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-AXIS-UPPER-X",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%X"
+            },
+            "value": "13:04:05",
+            "error": null
+          },
+          "classification": "OBSERVED_DIFFERENCE_REQUIRES_REVIEW"
+        },
+        {
+          "id": "BV-B-P-AXIS-LOWER-y",
+          "branch": "AXIS-FORMAT",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%y"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-AXIS-LOWER-y",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%y"
+            },
+            "value": "21",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-AXIS-LOWER-y",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%y"
+            },
+            "value": "21",
+            "error": null
+          },
+          "classification": "VERIFIED_OBSERVED_EQUAL"
+        },
+        {
+          "id": "BV-B-P-AXIS-UPPER-Y",
+          "branch": "AXIS-FORMAT",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%Y"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-AXIS-UPPER-Y",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%Y"
+            },
+            "value": "2021",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-AXIS-UPPER-Y",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%Y"
+            },
+            "value": "2021",
+            "error": null
+          },
+          "classification": "VERIFIED_OBSERVED_EQUAL"
+        },
+        {
+          "id": "BV-B-P-AXIS-UPPER-Z",
+          "branch": "AXIS-FORMAT",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%Z"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-AXIS-UPPER-Z",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%Z"
+            },
+            "value": "+0000",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-AXIS-UPPER-Z",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%Z"
+            },
+            "value": "",
+            "error": null
+          },
+          "classification": "OBSERVED_DIFFERENCE_REQUIRES_REVIEW"
+        },
+        {
+          "id": "BV-B-P-AXIS-PERCENT",
+          "branch": "AXIS-FORMAT",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%%"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-AXIS-PERCENT",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%%"
+            },
+            "value": "%",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-AXIS-PERCENT",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%%"
+            },
+            "value": "%",
+            "error": null
+          },
+          "classification": "VERIFIED_OBSERVED_EQUAL"
+        }
+      ],
+      "currentPython": [
+        {
+          "path": "src/py_mermaid/diagrams/temporal/_dates.py",
+          "sha256": "91aaadfebf8b5202d83796732e2e2bee435c19f4dea35a327329c00196e4a202",
+          "bytes": 11017,
+          "symbol": "def axis_format",
+          "line": 156
+        }
+      ],
+      "runEvidence": {
+        "path": "test-runs/FINAL-CAPABILITY-B-review-20261107T073915Z-a5a59886/artifacts/comparison-B-values.json",
+        "sha256": "21a9cb689e78be1d3770dd912fa911011df4fb40fc8a78433c469c830150cc29",
+        "bytes": 165751
+      }
+    },
+    {
+      "id": "BV-B-AXIS-LOCALE",
+      "classification": "CONFIRMED_GAP_STILL_PRESENT",
+      "publicationBlockingUnderUserNoMissingCondition": true,
+      "source": [
+        {
+          "repository": "mermaid-bundle-sourcesContent",
+          "path": "../../../node_modules/.pnpm/d3-time-format@4.1.0/node_modules/d3-time-format/src/locale.js",
+          "symbol": "function formatLocale",
+          "line": 36,
+          "sha256": "47df570989eca703c1d1a720aed8e8010d5992c2235348f135654ea930fbf4d8",
+          "bundleMapPath": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+          "bundleMapSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679"
+        }
+      ],
+      "sourceExpected": "Jan1 2021 13:04:05 -> %c=1/1/2021, 1:04:05 PM; %x=1/1/2021; %X=1:04:05 PM.",
+      "sourceInputs": [
+        "BV-B-AXIS-LOCALE"
+      ],
+      "pureProbeIds": [
+        "BV-B-P-AXIS-LOWER-c",
+        "BV-B-P-AXIS-LOWER-x",
+        "BV-B-P-AXIS-UPPER-X"
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_b_numeric.py",
+          "sha256": "e0b685f492ce129c1143c581a866a7f7486ff4fbe85e15b2d1ff2574614631d1",
+          "bytes": 5540,
+          "symbol": "test_b05_d3_fixed_locale_composites",
+          "line": 38
+        }
+      ],
+      "currentObservations": [
+        {
+          "id": "BV-B-P-AXIS-LOWER-c",
+          "branch": "AXIS-FORMAT",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%c"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-AXIS-LOWER-c",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%c"
+            },
+            "value": "1/1/2021, 1:04:05 PM",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-AXIS-LOWER-c",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%c"
+            },
+            "value": "Fri Jan  1 13:04:05 2021",
+            "error": null
+          },
+          "classification": "OBSERVED_DIFFERENCE_REQUIRES_REVIEW"
+        },
+        {
+          "id": "BV-B-P-AXIS-LOWER-x",
+          "branch": "AXIS-FORMAT",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%x"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-AXIS-LOWER-x",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%x"
+            },
+            "value": "1/1/2021",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-AXIS-LOWER-x",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%x"
+            },
+            "value": "01/01/21",
+            "error": null
+          },
+          "classification": "OBSERVED_DIFFERENCE_REQUIRES_REVIEW"
+        },
+        {
+          "id": "BV-B-P-AXIS-UPPER-X",
+          "branch": "AXIS-FORMAT",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%X"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-AXIS-UPPER-X",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%X"
+            },
+            "value": "1:04:05 PM",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-AXIS-UPPER-X",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%X"
+            },
+            "value": "13:04:05",
+            "error": null
+          },
+          "classification": "OBSERVED_DIFFERENCE_REQUIRES_REVIEW"
+        }
+      ],
+      "currentPython": [
+        {
+          "path": "src/py_mermaid/diagrams/temporal/_dates.py",
+          "sha256": "91aaadfebf8b5202d83796732e2e2bee435c19f4dea35a327329c00196e4a202",
+          "bytes": 11017,
+          "symbol": "def axis_format",
+          "line": 156
+        }
+      ],
+      "runEvidence": {
+        "path": "test-runs/FINAL-CAPABILITY-B-review-20261107T073915Z-a5a59886/artifacts/comparison-B-values.json",
+        "sha256": "21a9cb689e78be1d3770dd912fa911011df4fb40fc8a78433c469c830150cc29",
+        "bytes": 165751
+      }
+    },
+    {
+      "id": "BV-B-AXIS-ESCAPE",
+      "classification": "CONFIRMED_GAP_STILL_PRESENT",
+      "publicationBlockingUnderUserNoMissingCondition": true,
+      "source": [
+        {
+          "repository": "mermaid-bundle-sourcesContent",
+          "path": "../../../node_modules/.pnpm/d3-time-format@4.1.0/node_modules/d3-time-format/src/locale.js",
+          "symbol": "function formatLocale",
+          "line": 36,
+          "sha256": "47df570989eca703c1d1a720aed8e8010d5992c2235348f135654ea930fbf4d8",
+          "bundleMapPath": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+          "bundleMapSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679"
+        }
+      ],
+      "sourceExpected": "Literal %Q/%L/%s must not be globally replaced.",
+      "sourceInputs": [
+        "BV-B-AXIS-ESCAPE"
+      ],
+      "pureProbeIds": [
+        "BV-B-P-AXIS-PERCENT",
+        "BV-B-P-PAD-4",
+        "BV-B-P-PAD-5",
+        "BV-B-P-PAD-6"
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_b_numeric.py",
+          "sha256": "e0b685f492ce129c1143c581a866a7f7486ff4fbe85e15b2d1ff2574614631d1",
+          "bytes": 5540,
+          "symbol": "test_b06_d3_literal_percent_escapes",
+          "line": 43
+        }
+      ],
+      "currentObservations": [
+        {
+          "id": "BV-B-P-AXIS-PERCENT",
+          "branch": "AXIS-FORMAT",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%%"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-AXIS-PERCENT",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%%"
+            },
+            "value": "%",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-AXIS-PERCENT",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%%"
+            },
+            "value": "%",
+            "error": null
+          },
+          "classification": "VERIFIED_OBSERVED_EQUAL"
+        },
+        {
+          "id": "BV-B-P-PAD-4",
+          "branch": "AXIS-PADDING",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%%Q"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-PAD-4",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%%Q"
+            },
+            "value": "%Q",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-PAD-4",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%%Q"
+            },
+            "value": null,
+            "error": {
+              "name": "ValueError",
+              "message": "Invalid format string"
+            }
+          },
+          "classification": "CONFIRMED_NUMERICAL_GAP"
+        },
+        {
+          "id": "BV-B-P-PAD-5",
+          "branch": "AXIS-PADDING",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%%L"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-PAD-5",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%%L"
+            },
+            "value": "%L",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-PAD-5",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%%L"
+            },
+            "value": null,
+            "error": {
+              "name": "ValueError",
+              "message": "Invalid format string"
+            }
+          },
+          "classification": "CONFIRMED_NUMERICAL_GAP"
+        },
+        {
+          "id": "BV-B-P-PAD-6",
+          "branch": "AXIS-PADDING",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%%s"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-PAD-6",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%%s"
+            },
+            "value": "%s",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-PAD-6",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%%s"
+            },
+            "value": null,
+            "error": {
+              "name": "ValueError",
+              "message": "Invalid format string"
+            }
+          },
+          "classification": "CONFIRMED_NUMERICAL_GAP"
+        }
+      ],
+      "currentPython": [
+        {
+          "path": "src/py_mermaid/diagrams/temporal/_dates.py",
+          "sha256": "91aaadfebf8b5202d83796732e2e2bee435c19f4dea35a327329c00196e4a202",
+          "bytes": 11017,
+          "symbol": "def axis_format",
+          "line": 156
+        }
+      ],
+      "runEvidence": {
+        "path": "test-runs/FINAL-CAPABILITY-B-review-20261107T073915Z-a5a59886/artifacts/comparison-B-values.json",
+        "sha256": "21a9cb689e78be1d3770dd912fa911011df4fb40fc8a78433c469c830150cc29",
+        "bytes": 165751
+      }
+    },
+    {
+      "id": "BV-B-AXIS-PADDING",
+      "classification": "CONFIRMED_GAP_STILL_PRESENT",
+      "publicationBlockingUnderUserNoMissingCondition": true,
+      "source": [
+        {
+          "repository": "mermaid-bundle-sourcesContent",
+          "path": "../../../node_modules/.pnpm/d3-time-format@4.1.0/node_modules/d3-time-format/src/locale.js",
+          "symbol": "function formatLocale",
+          "line": 36,
+          "sha256": "47df570989eca703c1d1a720aed8e8010d5992c2235348f135654ea930fbf4d8",
+          "bundleMapPath": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+          "bundleMapSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679"
+        }
+      ],
+      "sourceExpected": "Jan1=1/space1/01;ISO2020-W53.",
+      "sourceInputs": [],
+      "pureProbeIds": [
+        "BV-B-P-PAD-0",
+        "BV-B-P-PAD-1",
+        "BV-B-P-PAD-2",
+        "BV-B-P-PAD-3",
+        "BV-B-P-PAD-4",
+        "BV-B-P-PAD-5",
+        "BV-B-P-PAD-6",
+        "BV-B-P-PAD-7"
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_b_numeric.py",
+          "sha256": "e0b685f492ce129c1143c581a866a7f7486ff4fbe85e15b2d1ff2574614631d1",
+          "bytes": 5540,
+          "symbol": "test_b07_d3_iso_week_and_padding_literals",
+          "line": 46
+        }
+      ],
+      "currentObservations": [
+        {
+          "id": "BV-B-P-PAD-0",
+          "branch": "AXIS-PADDING",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%-d"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-PAD-0",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%-d"
+            },
+            "value": "1",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-PAD-0",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%-d"
+            },
+            "value": "1",
+            "error": null
+          },
+          "classification": "VERIFIED_OBSERVED_EQUAL"
+        },
+        {
+          "id": "BV-B-P-PAD-1",
+          "branch": "AXIS-PADDING",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%_d"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-PAD-1",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%_d"
+            },
+            "value": " 1",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-PAD-1",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%_d"
+            },
+            "value": null,
+            "error": {
+              "name": "ValueError",
+              "message": "Invalid format string"
+            }
+          },
+          "classification": "CONFIRMED_NUMERICAL_GAP"
+        },
+        {
+          "id": "BV-B-P-PAD-2",
+          "branch": "AXIS-PADDING",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%0d"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-PAD-2",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%0d"
+            },
+            "value": "01",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-PAD-2",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%0d"
+            },
+            "value": null,
+            "error": {
+              "name": "ValueError",
+              "message": "Invalid format string"
+            }
+          },
+          "classification": "CONFIRMED_NUMERICAL_GAP"
+        },
+        {
+          "id": "BV-B-P-PAD-3",
+          "branch": "AXIS-PADDING",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%-I"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-PAD-3",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%-I"
+            },
+            "value": "1",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-PAD-3",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%-I"
+            },
+            "value": null,
+            "error": {
+              "name": "ValueError",
+              "message": "Invalid format string"
+            }
+          },
+          "classification": "CONFIRMED_NUMERICAL_GAP"
+        },
+        {
+          "id": "BV-B-P-PAD-4",
+          "branch": "AXIS-PADDING",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%%Q"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-PAD-4",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%%Q"
+            },
+            "value": "%Q",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-PAD-4",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%%Q"
+            },
+            "value": null,
+            "error": {
+              "name": "ValueError",
+              "message": "Invalid format string"
+            }
+          },
+          "classification": "CONFIRMED_NUMERICAL_GAP"
+        },
+        {
+          "id": "BV-B-P-PAD-5",
+          "branch": "AXIS-PADDING",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%%L"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-PAD-5",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%%L"
+            },
+            "value": "%L",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-PAD-5",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%%L"
+            },
+            "value": null,
+            "error": {
+              "name": "ValueError",
+              "message": "Invalid format string"
+            }
+          },
+          "classification": "CONFIRMED_NUMERICAL_GAP"
+        },
+        {
+          "id": "BV-B-P-PAD-6",
+          "branch": "AXIS-PADDING",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%%s"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-PAD-6",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%%s"
+            },
+            "value": "%s",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-PAD-6",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%%s"
+            },
+            "value": null,
+            "error": {
+              "name": "ValueError",
+              "message": "Invalid format string"
+            }
+          },
+          "classification": "CONFIRMED_NUMERICAL_GAP"
+        },
+        {
+          "id": "BV-B-P-PAD-7",
+          "branch": "AXIS-PADDING",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%n"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-PAD-7",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%n"
+            },
+            "value": "n",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-PAD-7",
+            "kind": "axis",
+            "input": {
+              "date": [
+                2021,
+                1,
+                1,
+                13,
+                4,
+                5,
+                123
+              ],
+              "format": "%n"
+            },
+            "value": "\n",
+            "error": null
+          },
+          "classification": "OBSERVED_DIFFERENCE_REQUIRES_REVIEW"
+        }
+      ],
+      "currentPython": [
+        {
+          "path": "src/py_mermaid/diagrams/temporal/_dates.py",
+          "sha256": "91aaadfebf8b5202d83796732e2e2bee435c19f4dea35a327329c00196e4a202",
+          "bytes": 11017,
+          "symbol": "def axis_format",
+          "line": 156
+        }
+      ],
+      "runEvidence": {
+        "path": "test-runs/FINAL-CAPABILITY-B-review-20261107T073915Z-a5a59886/artifacts/comparison-B-values.json",
+        "sha256": "21a9cb689e78be1d3770dd912fa911011df4fb40fc8a78433c469c830150cc29",
+        "bytes": 165751
+      }
+    },
+    {
+      "id": "BV-B-AXIS-FAR",
+      "classification": "CONFIRMED_GAP_STILL_PRESENT",
+      "publicationBlockingUnderUserNoMissingCondition": true,
+      "source": [
+        {
+          "repository": "mermaid-bundle-sourcesContent",
+          "path": "../../../node_modules/.pnpm/d3-time-format@4.1.0/node_modules/d3-time-format/src/locale.js",
+          "symbol": "function formatLocale",
+          "line": 36,
+          "sha256": "47df570989eca703c1d1a720aed8e8010d5992c2235348f135654ea930fbf4d8",
+          "bundleMapPath": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+          "bundleMapSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679"
+        }
+      ],
+      "sourceExpected": "D3 year10000 %Y uses modulo10000->0000; ISO/week computations remain actual values.",
+      "sourceInputs": [
+        "BV-B-AXIS-FAR"
+      ],
+      "pureProbeIds": [
+        "BV-B-P-FAR-NEG1-49",
+        "BV-B-P-FAR-NEG1-50",
+        "BV-B-P-FAR-NEG1-51",
+        "BV-B-P-FAR-0-52",
+        "BV-B-P-FAR-0-53",
+        "BV-B-P-FAR-0-54",
+        "BV-B-P-FAR-10000-55",
+        "BV-B-P-FAR-10000-56",
+        "BV-B-P-FAR-10000-57"
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_b_numeric.py",
+          "sha256": "e0b685f492ce129c1143c581a866a7f7486ff4fbe85e15b2d1ff2574614631d1",
+          "bytes": 5540,
+          "symbol": "test_b08_d3_far_year_and_iso_week",
+          "line": 51
+        }
+      ],
+      "currentObservations": [
+        {
+          "id": "BV-B-P-FAR-NEG1-49",
+          "branch": "AXIS-FAR",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                -1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "format": "%Y"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-FAR-NEG1-49",
+            "kind": "axis",
+            "input": {
+              "date": [
+                -1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "format": "%Y"
+            },
+            "value": "-0001",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-FAR-NEG1-49",
+            "kind": "axis",
+            "input": {
+              "date": [
+                -1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "format": "%Y"
+            },
+            "value": "-001",
+            "error": null
+          },
+          "classification": "OBSERVED_DIFFERENCE_REQUIRES_REVIEW"
+        },
+        {
+          "id": "BV-B-P-FAR-NEG1-50",
+          "branch": "AXIS-FAR",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                -1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "format": "%G-W%V"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-FAR-NEG1-50",
+            "kind": "axis",
+            "input": {
+              "date": [
+                -1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "format": "%G-W%V"
+            },
+            "value": "-0002-W53",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-FAR-NEG1-50",
+            "kind": "axis",
+            "input": {
+              "date": [
+                -1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "format": "%G-W%V"
+            },
+            "value": "%G-W%V",
+            "error": null
+          },
+          "classification": "OBSERVED_DIFFERENCE_REQUIRES_REVIEW"
+        },
+        {
+          "id": "BV-B-P-FAR-NEG1-51",
+          "branch": "AXIS-FAR",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                -1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "format": "%U/%W"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-FAR-NEG1-51",
+            "kind": "axis",
+            "input": {
+              "date": [
+                -1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "format": "%U/%W"
+            },
+            "value": "00/00",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-FAR-NEG1-51",
+            "kind": "axis",
+            "input": {
+              "date": [
+                -1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "format": "%U/%W"
+            },
+            "value": "%U/%W",
+            "error": null
+          },
+          "classification": "OBSERVED_DIFFERENCE_REQUIRES_REVIEW"
+        },
+        {
+          "id": "BV-B-P-FAR-0-52",
+          "branch": "AXIS-FAR",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                0,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "format": "%Y"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-FAR-0-52",
+            "kind": "axis",
+            "input": {
+              "date": [
+                0,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "format": "%Y"
+            },
+            "value": "0000",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-FAR-0-52",
+            "kind": "axis",
+            "input": {
+              "date": [
+                0,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "format": "%Y"
+            },
+            "value": "0000",
+            "error": null
+          },
+          "classification": "VERIFIED_OBSERVED_EQUAL"
+        },
+        {
+          "id": "BV-B-P-FAR-0-53",
+          "branch": "AXIS-FAR",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                0,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "format": "%G-W%V"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-FAR-0-53",
+            "kind": "axis",
+            "input": {
+              "date": [
+                0,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "format": "%G-W%V"
+            },
+            "value": "-0001-W52",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-FAR-0-53",
+            "kind": "axis",
+            "input": {
+              "date": [
+                0,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "format": "%G-W%V"
+            },
+            "value": "%G-W%V",
+            "error": null
+          },
+          "classification": "OBSERVED_DIFFERENCE_REQUIRES_REVIEW"
+        },
+        {
+          "id": "BV-B-P-FAR-0-54",
+          "branch": "AXIS-FAR",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                0,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "format": "%U/%W"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-FAR-0-54",
+            "kind": "axis",
+            "input": {
+              "date": [
+                0,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "format": "%U/%W"
+            },
+            "value": "00/00",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-FAR-0-54",
+            "kind": "axis",
+            "input": {
+              "date": [
+                0,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "format": "%U/%W"
+            },
+            "value": "%U/%W",
+            "error": null
+          },
+          "classification": "OBSERVED_DIFFERENCE_REQUIRES_REVIEW"
+        },
+        {
+          "id": "BV-B-P-FAR-10000-55",
+          "branch": "AXIS-FAR",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                10000,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "format": "%Y"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-FAR-10000-55",
+            "kind": "axis",
+            "input": {
+              "date": [
+                10000,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "format": "%Y"
+            },
+            "value": "0000",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-FAR-10000-55",
+            "kind": "axis",
+            "input": {
+              "date": [
+                10000,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "format": "%Y"
+            },
+            "value": "10000",
+            "error": null
+          },
+          "classification": "OBSERVED_DIFFERENCE_REQUIRES_REVIEW"
+        },
+        {
+          "id": "BV-B-P-FAR-10000-56",
+          "branch": "AXIS-FAR",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                10000,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "format": "%G-W%V"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-FAR-10000-56",
+            "kind": "axis",
+            "input": {
+              "date": [
+                10000,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "format": "%G-W%V"
+            },
+            "value": "9999-W52",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-FAR-10000-56",
+            "kind": "axis",
+            "input": {
+              "date": [
+                10000,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "format": "%G-W%V"
+            },
+            "value": "%G-W%V",
+            "error": null
+          },
+          "classification": "OBSERVED_DIFFERENCE_REQUIRES_REVIEW"
+        },
+        {
+          "id": "BV-B-P-FAR-10000-57",
+          "branch": "AXIS-FAR",
+          "sourceExpected": {
+            "operation": "axis",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "date": [
+                10000,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "format": "%U/%W"
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-FAR-10000-57",
+            "kind": "axis",
+            "input": {
+              "date": [
+                10000,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "format": "%U/%W"
+            },
+            "value": "00/00",
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-FAR-10000-57",
+            "kind": "axis",
+            "input": {
+              "date": [
+                10000,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "format": "%U/%W"
+            },
+            "value": "%U/%W",
+            "error": null
+          },
+          "classification": "OBSERVED_DIFFERENCE_REQUIRES_REVIEW"
+        }
+      ],
+      "currentPython": [
+        {
+          "path": "src/py_mermaid/diagrams/temporal/_dates.py",
+          "sha256": "91aaadfebf8b5202d83796732e2e2bee435c19f4dea35a327329c00196e4a202",
+          "bytes": 11017,
+          "symbol": "def axis_format",
+          "line": 156
+        }
+      ],
+      "runEvidence": {
+        "path": "test-runs/FINAL-CAPABILITY-B-review-20261107T073915Z-a5a59886/artifacts/comparison-B-values.json",
+        "sha256": "21a9cb689e78be1d3770dd912fa911011df4fb40fc8a78433c469c830150cc29",
+        "bytes": 165751
+      }
+    },
+    {
+      "id": "BV-B-TICK-WEEKDAY",
+      "classification": "CONFIRMED_GAP_STILL_PRESENT",
+      "publicationBlockingUnderUserNoMissingCondition": true,
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/gantt/ganttRenderer.js",
+          "symbol": "function makeGrid",
+          "line": 649,
+          "sha256": "bf1c7231c8666070124eed4f6078b1d62ab4dea0973c44cc5d6264469961e488"
+        },
+        {
+          "repository": "mermaid-bundle-sourcesContent",
+          "path": "../../../node_modules/.pnpm/d3-time@3.1.0/node_modules/d3-time/src/week.js",
+          "symbol": "function weekday",
+          "line": 1,
+          "sha256": "f20da27d58580d1db19f2f7d899854394db4e17876ce1529c2b42bb4a9798086",
+          "bundleMapPath": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+          "bundleMapSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679"
+        }
+      ],
+      "sourceExpected": "Monday Jan2024=Jan1/15/29;epoch floor1969-Dec29.",
+      "sourceInputs": [
+        "BV-B-TICKS-MONDAY"
+      ],
+      "pureProbeIds": [
+        "BV-B-P-WEEK-MONDAY",
+        "BV-B-P-WEEK-TUESDAY",
+        "BV-B-P-WEEK-WEDNESDAY",
+        "BV-B-P-WEEK-THURSDAY",
+        "BV-B-P-WEEK-FRIDAY",
+        "BV-B-P-WEEK-SATURDAY",
+        "BV-B-P-WEEK-SUNDAY"
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_b_numeric.py",
+          "sha256": "e0b685f492ce129c1143c581a866a7f7486ff4fbe85e15b2d1ff2574614631d1",
+          "bytes": 5540,
+          "symbol": "test_b09_two_week_monday_epoch_phase",
+          "line": 55
+        }
+      ],
+      "currentObservations": [
+        {
+          "id": "BV-B-P-WEEK-MONDAY",
+          "branch": "TICK-WEEKDAY",
+          "sourceExpected": {
+            "operation": "ticks",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "start": [
+                2024,
+                1,
+                1
+              ],
+              "end": [
+                2024,
+                2,
+                1
+              ],
+              "interval": "2week",
+              "weekday": "monday",
+              "count": 10
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-WEEK-MONDAY",
+            "kind": "ticks",
+            "input": {
+              "start": [
+                2024,
+                1,
+                1
+              ],
+              "end": [
+                2024,
+                2,
+                1
+              ],
+              "interval": "2week",
+              "weekday": "monday",
+              "count": 10
+            },
+            "value": [
+              {
+                "local": [
+                  2024,
+                  1,
+                  1,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "epochMs": 1704067200000
+              },
+              {
+                "local": [
+                  2024,
+                  1,
+                  15,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "epochMs": 1705276800000
+              },
+              {
+                "local": [
+                  2024,
+                  1,
+                  29,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "epochMs": 1706486400000
+              }
+            ],
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-WEEK-MONDAY",
+            "kind": "ticks",
+            "input": {
+              "start": [
+                2024,
+                1,
+                1
+              ],
+              "end": [
+                2024,
+                2,
+                1
+              ],
+              "interval": "2week",
+              "weekday": "monday",
+              "count": 10
+            },
+            "value": [
+              {
+                "local": [
+                  2024,
+                  1,
+                  8,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "epochMs": 1704672000000
+              },
+              {
+                "local": [
+                  2024,
+                  1,
+                  22,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "epochMs": 1705881600000
+              }
+            ],
+            "error": null
+          },
+          "classification": "OBSERVED_DIFFERENCE_REQUIRES_REVIEW"
+        },
+        {
+          "id": "BV-B-P-WEEK-TUESDAY",
+          "branch": "TICK-WEEKDAY",
+          "sourceExpected": {
+            "operation": "ticks",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "start": [
+                2024,
+                1,
+                1
+              ],
+              "end": [
+                2024,
+                2,
+                1
+              ],
+              "interval": "2week",
+              "weekday": "tuesday",
+              "count": 10
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-WEEK-TUESDAY",
+            "kind": "ticks",
+            "input": {
+              "start": [
+                2024,
+                1,
+                1
+              ],
+              "end": [
+                2024,
+                2,
+                1
+              ],
+              "interval": "2week",
+              "weekday": "tuesday",
+              "count": 10
+            },
+            "value": [
+              {
+                "local": [
+                  2024,
+                  1,
+                  2,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "epochMs": 1704153600000
+              },
+              {
+                "local": [
+                  2024,
+                  1,
+                  16,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "epochMs": 1705363200000
+              },
+              {
+                "local": [
+                  2024,
+                  1,
+                  30,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "epochMs": 1706572800000
+              }
+            ],
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-WEEK-TUESDAY",
+            "kind": "ticks",
+            "input": {
+              "start": [
+                2024,
+                1,
+                1
+              ],
+              "end": [
+                2024,
+                2,
+                1
+              ],
+              "interval": "2week",
+              "weekday": "tuesday",
+              "count": 10
+            },
+            "value": [
+              {
+                "local": [
+                  2024,
+                  1,
+                  9,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "epochMs": 1704758400000
+              },
+              {
+                "local": [
+                  2024,
+                  1,
+                  23,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "epochMs": 1705968000000
+              }
+            ],
+            "error": null
+          },
+          "classification": "OBSERVED_DIFFERENCE_REQUIRES_REVIEW"
+        },
+        {
+          "id": "BV-B-P-WEEK-WEDNESDAY",
+          "branch": "TICK-WEEKDAY",
+          "sourceExpected": {
+            "operation": "ticks",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "start": [
+                2024,
+                1,
+                1
+              ],
+              "end": [
+                2024,
+                2,
+                1
+              ],
+              "interval": "2week",
+              "weekday": "wednesday",
+              "count": 10
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-WEEK-WEDNESDAY",
+            "kind": "ticks",
+            "input": {
+              "start": [
+                2024,
+                1,
+                1
+              ],
+              "end": [
+                2024,
+                2,
+                1
+              ],
+              "interval": "2week",
+              "weekday": "wednesday",
+              "count": 10
+            },
+            "value": [
+              {
+                "local": [
+                  2024,
+                  1,
+                  3,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "epochMs": 1704240000000
+              },
+              {
+                "local": [
+                  2024,
+                  1,
+                  17,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "epochMs": 1705449600000
+              },
+              {
+                "local": [
+                  2024,
+                  1,
+                  31,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "epochMs": 1706659200000
+              }
+            ],
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-WEEK-WEDNESDAY",
+            "kind": "ticks",
+            "input": {
+              "start": [
+                2024,
+                1,
+                1
+              ],
+              "end": [
+                2024,
+                2,
+                1
+              ],
+              "interval": "2week",
+              "weekday": "wednesday",
+              "count": 10
+            },
+            "value": [
+              {
+                "local": [
+                  2024,
+                  1,
+                  10,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "epochMs": 1704844800000
+              },
+              {
+                "local": [
+                  2024,
+                  1,
+                  24,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "epochMs": 1706054400000
+              }
+            ],
+            "error": null
+          },
+          "classification": "OBSERVED_DIFFERENCE_REQUIRES_REVIEW"
+        },
+        {
+          "id": "BV-B-P-WEEK-THURSDAY",
+          "branch": "TICK-WEEKDAY",
+          "sourceExpected": {
+            "operation": "ticks",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "start": [
+                2024,
+                1,
+                1
+              ],
+              "end": [
+                2024,
+                2,
+                1
+              ],
+              "interval": "2week",
+              "weekday": "thursday",
+              "count": 10
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-WEEK-THURSDAY",
+            "kind": "ticks",
+            "input": {
+              "start": [
+                2024,
+                1,
+                1
+              ],
+              "end": [
+                2024,
+                2,
+                1
+              ],
+              "interval": "2week",
+              "weekday": "thursday",
+              "count": 10
+            },
+            "value": [
+              {
+                "local": [
+                  2024,
+                  1,
+                  4,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "epochMs": 1704326400000
+              },
+              {
+                "local": [
+                  2024,
+                  1,
+                  18,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "epochMs": 1705536000000
+              },
+              {
+                "local": [
+                  2024,
+                  2,
+                  1,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "epochMs": 1706745600000
+              }
+            ],
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-WEEK-THURSDAY",
+            "kind": "ticks",
+            "input": {
+              "start": [
+                2024,
+                1,
+                1
+              ],
+              "end": [
+                2024,
+                2,
+                1
+              ],
+              "interval": "2week",
+              "weekday": "thursday",
+              "count": 10
+            },
+            "value": [
+              {
+                "local": [
+                  2024,
+                  1,
+                  11,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "epochMs": 1704931200000
+              },
+              {
+                "local": [
+                  2024,
+                  1,
+                  25,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "epochMs": 1706140800000
+              }
+            ],
+            "error": null
+          },
+          "classification": "OBSERVED_DIFFERENCE_REQUIRES_REVIEW"
+        },
+        {
+          "id": "BV-B-P-WEEK-FRIDAY",
+          "branch": "TICK-WEEKDAY",
+          "sourceExpected": {
+            "operation": "ticks",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "start": [
+                2024,
+                1,
+                1
+              ],
+              "end": [
+                2024,
+                2,
+                1
+              ],
+              "interval": "2week",
+              "weekday": "friday",
+              "count": 10
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-WEEK-FRIDAY",
+            "kind": "ticks",
+            "input": {
+              "start": [
+                2024,
+                1,
+                1
+              ],
+              "end": [
+                2024,
+                2,
+                1
+              ],
+              "interval": "2week",
+              "weekday": "friday",
+              "count": 10
+            },
+            "value": [
+              {
+                "local": [
+                  2024,
+                  1,
+                  12,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "epochMs": 1705017600000
+              },
+              {
+                "local": [
+                  2024,
+                  1,
+                  26,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "epochMs": 1706227200000
+              }
+            ],
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-WEEK-FRIDAY",
+            "kind": "ticks",
+            "input": {
+              "start": [
+                2024,
+                1,
+                1
+              ],
+              "end": [
+                2024,
+                2,
+                1
+              ],
+              "interval": "2week",
+              "weekday": "friday",
+              "count": 10
+            },
+            "value": [
+              {
+                "local": [
+                  2024,
+                  1,
+                  12,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "epochMs": 1705017600000
+              },
+              {
+                "local": [
+                  2024,
+                  1,
+                  26,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "epochMs": 1706227200000
+              }
+            ],
+            "error": null
+          },
+          "classification": "VERIFIED_OBSERVED_EQUAL"
+        },
+        {
+          "id": "BV-B-P-WEEK-SATURDAY",
+          "branch": "TICK-WEEKDAY",
+          "sourceExpected": {
+            "operation": "ticks",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "start": [
+                2024,
+                1,
+                1
+              ],
+              "end": [
+                2024,
+                2,
+                1
+              ],
+              "interval": "2week",
+              "weekday": "saturday",
+              "count": 10
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-WEEK-SATURDAY",
+            "kind": "ticks",
+            "input": {
+              "start": [
+                2024,
+                1,
+                1
+              ],
+              "end": [
+                2024,
+                2,
+                1
+              ],
+              "interval": "2week",
+              "weekday": "saturday",
+              "count": 10
+            },
+            "value": [
+              {
+                "local": [
+                  2024,
+                  1,
+                  13,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "epochMs": 1705104000000
+              },
+              {
+                "local": [
+                  2024,
+                  1,
+                  27,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "epochMs": 1706313600000
+              }
+            ],
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-WEEK-SATURDAY",
+            "kind": "ticks",
+            "input": {
+              "start": [
+                2024,
+                1,
+                1
+              ],
+              "end": [
+                2024,
+                2,
+                1
+              ],
+              "interval": "2week",
+              "weekday": "saturday",
+              "count": 10
+            },
+            "value": [
+              {
+                "local": [
+                  2024,
+                  1,
+                  13,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "epochMs": 1705104000000
+              },
+              {
+                "local": [
+                  2024,
+                  1,
+                  27,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "epochMs": 1706313600000
+              }
+            ],
+            "error": null
+          },
+          "classification": "VERIFIED_OBSERVED_EQUAL"
+        },
+        {
+          "id": "BV-B-P-WEEK-SUNDAY",
+          "branch": "TICK-WEEKDAY",
+          "sourceExpected": {
+            "operation": "ticks",
+            "fixedOriginalModule": "See oracle identity.modules; no native-generated golden",
+            "input": {
+              "start": [
+                2024,
+                1,
+                1
+              ],
+              "end": [
+                2024,
+                2,
+                1
+              ],
+              "interval": "2week",
+              "weekday": "sunday",
+              "count": 10
+            }
+          },
+          "sourceActual": {
+            "id": "BV-B-P-WEEK-SUNDAY",
+            "kind": "ticks",
+            "input": {
+              "start": [
+                2024,
+                1,
+                1
+              ],
+              "end": [
+                2024,
+                2,
+                1
+              ],
+              "interval": "2week",
+              "weekday": "sunday",
+              "count": 10
+            },
+            "value": [
+              {
+                "local": [
+                  2024,
+                  1,
+                  14,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "epochMs": 1705190400000
+              },
+              {
+                "local": [
+                  2024,
+                  1,
+                  28,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "epochMs": 1706400000000
+              }
+            ],
+            "error": null
+          },
+          "nativeActual": {
+            "id": "BV-B-P-WEEK-SUNDAY",
+            "kind": "ticks",
+            "input": {
+              "start": [
+                2024,
+                1,
+                1
+              ],
+              "end": [
+                2024,
+                2,
+                1
+              ],
+              "interval": "2week",
+              "weekday": "sunday",
+              "count": 10
+            },
+            "value": [
+              {
+                "local": [
+                  2024,
+                  1,
+                  14,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "epochMs": 1705190400000
+              },
+              {
+                "local": [
+                  2024,
+                  1,
+                  28,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "epochMs": 1706400000000
+              }
+            ],
+            "error": null
+          },
+          "classification": "VERIFIED_OBSERVED_EQUAL"
+        }
+      ],
+      "currentPython": [
+        {
+          "path": "src/py_mermaid/diagrams/temporal/_dates.py",
+          "sha256": "91aaadfebf8b5202d83796732e2e2bee435c19f4dea35a327329c00196e4a202",
+          "bytes": 11017,
+          "symbol": "def time_ticks",
+          "line": 118
+        }
+      ],
+      "runEvidence": {
+        "path": "test-runs/FINAL-CAPABILITY-B-review-20261107T073915Z-a5a59886/artifacts/comparison-B-values.json",
+        "sha256": "21a9cb689e78be1d3770dd912fa911011df4fb40fc8a78433c469c830150cc29",
+        "bytes": 165751
+      },
+      "reason": "D3 weekday.every(2) counts from its weekday-specific epoch floor; native uses one fixed Monday1970-Jan5 origin. Mon..Thu differ; Fri..Sun match the sampled interval."
+    },
+    {
+      "id": "BV-B-AGENT-GENUINE",
+      "classification": "CONFIRMED_GAP_STILL_PRESENT",
+      "publicationBlockingUnderUserNoMissingCondition": true,
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/agentflow/agentflowDb.ts",
+          "symbol": "const startId = collapsedAncestorMap",
+          "line": 1852,
+          "sha256": "aa74eb6cb3eb0821c1e3960eefbbc83afe167bc5dcf9380dc4acfa8fce82b1b6"
+        },
+        {
+          "path": "packages/mermaid/src/diagrams/agentflow/agentflowDb.ts",
+          "symbol": "const collapsedAncestorMap",
+          "line": 1714,
+          "sha256": "aa74eb6cb3eb0821c1e3960eefbbc83afe167bc5dcf9380dc4acfa8fce82b1b6"
+        },
+        {
+          "path": "packages/mermaid/src/rendering-util/layout-algorithms/elk/render.ts",
+          "symbol": "async function runElkLayout",
+          "line": 689,
+          "sha256": "6258890b3f311e86e4cd4dc99d480f704fde7473e150dc62b88838c5015c5011",
+          "synthesized": true
+        }
+      ],
+      "sourceExpected": "Authored hidden A->A redirects to Outer->Outer and survives.",
+      "sourceInputs": [
+        {
+          "id": "BV-B-AGENT-GENUINE-SOURCE-VALID",
+          "text": "agentflow-beta TB\nflow Outer[\"Outer\"]\n A --> A\nend\nOuter@{view: \"collapsed\"}\n",
+          "config": {}
+        }
+      ],
+      "pureProbeIds": [],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_b_layout.py",
+          "sha256": "c0b7137272a2971455c58738ed5cd8facc1e3436ff5bc4a1362585c1d77c6088",
+          "bytes": 5771,
+          "symbol": "test_b16_hidden_authored_selfloop_survives_agent_collapse",
+          "line": 12
+        }
+      ],
+      "currentObservations": [],
+      "currentPython": [
+        {
+          "path": "src/py_mermaid/diagrams/flowchart/parser.py",
+          "sha256": "d62f2e000eb75f412e0108d97a5b3507cc2cd68d85c6235e18c5fa3e7f278596",
+          "bytes": 43827,
+          "symbol": "if source == target and",
+          "line": 740
+        }
+      ],
+      "runEvidence": {
+        "path": "test-runs/FINAL-CAPABILITY-B-review-20261107T073915Z-a5a59886/artifacts/current-valid-agent.json",
+        "sha256": "e16bb69130a1aa414a22ec76b7fc06b5ca66d9a1a34a4bb3861b81bb704eff91",
+        "bytes": 21540
+      },
+      "originalObserved": {
+        "nodes": [
+          "Outer"
+        ],
+        "edges": [
+          {
+            "id": "L_A_A_0",
+            "source": "Outer",
+            "target": "Outer"
+          }
+        ],
+        "evidence": {
+          "path": "test-runs/BRANCH-VERIFY-P3-FOLLOWUP-batch-20261106T145346Z-9a049125/artifacts/oracle/BV-B-AGENT-GENUINE-SOURCE-VALID.json",
+          "sha256": "ee2de87c9a1748c32e8115b060612e4fa1f07d04467a12b3f26ea709b6519c07",
+          "bytes": 79759
+        }
+      },
+      "currentActual": {
+        "id": "BV-B-AGENT-GENUINE-SOURCE-VALID",
+        "source": "agentflow-beta TB\nflow Outer[\"Outer\"]\n A --> A\nend\nOuter@{view: \"collapsed\"}\n",
+        "config": {},
+        "nodes": [
+          "Outer"
+        ],
+        "groups": [],
+        "edges": [],
+        "rawInputs": [
+          {
+            "id": "root",
+            "layoutOptions": {
+              "elk.algorithm": "elk.layered",
+              "elk.direction": "DOWN",
+              "elk.hierarchyHandling": "INCLUDE_CHILDREN",
+              "spacing.baseValue": 40,
+              "elk.layered.nodePlacement.strategy": "BRANDES_KOEPF",
+              "elk.layered.nodePlacement.bk.fixedAlignment": "BALANCED",
+              "elk.layered.layering.strategy": "NETWORK_SIMPLEX",
+              "elk.layered.layering.coffmanGraham.layerBound": 4,
+              "elk.layered.cycleBreaking.strategy": "DEPTH_FIRST",
+              "elk.layered.mergeEdges": false,
+              "elk.layered.crossingMinimization.forceNodeModelOrder": false,
+              "elk.layered.considerModelOrder.strategy": "NODES_AND_EDGES",
+              "elk.layered.wrapping.multiEdge.improveCuts": true,
+              "elk.layered.wrapping.multiEdge.improveWrappedEdges": true,
+              "elk.layered.unnecessaryBendpoints": true,
+              "elk.layered.edgeRouting.selfLoopDistribution": "EQUALLY",
+              "elk.layered.mergeHierarchyEdges": true,
+              "elk.spacing.portsSurrounding": "[top=12,left=12,bottom=12,right=12]"
+            },
+            "children": [
+              {
+                "id": "n0",
+                "width": 150.0,
+                "height": 79.0
+              }
+            ],
+            "edges": []
+          }
+        ],
+        "engine": "pyelk/elk.layered",
+        "routedEdges": [],
+        "error": null
+      },
+      "reason": "Native drops every redirected selfloop, including authored A->A. Fixed source only drops when rawEdge.start != rawEdge.end. Source-valid spaced/quoted YAML trigger used in current real-ELK observation; old compact metadata tests are not sole evidence."
+    }
+  ],
+  "retainedLayoutCurrentEvidence": [
+    {
+      "id": "BV-B-AGENT-INTERNAL-SOURCE-VALID",
+      "classification": "VERIFIED_SCOPED_CURRENT_REAL_ELK",
+      "source": "agentflow-beta TB\nflow Outer[\"Outer\"]\n A --> B\nend\nOuter@{view: \"collapsed\"}\n",
+      "currentEdges": [],
+      "routedEdges": [],
+      "engine": "pyelk/elk.layered",
+      "rawNodeOptions": [
+        {
+          "id": "root",
+          "options": {
+            "elk.algorithm": "elk.layered",
+            "elk.direction": "DOWN",
+            "elk.hierarchyHandling": "INCLUDE_CHILDREN",
+            "spacing.baseValue": 40,
+            "elk.layered.nodePlacement.strategy": "BRANDES_KOEPF",
+            "elk.layered.nodePlacement.bk.fixedAlignment": "BALANCED",
+            "elk.layered.layering.strategy": "NETWORK_SIMPLEX",
+            "elk.layered.layering.coffmanGraham.layerBound": 4,
+            "elk.layered.cycleBreaking.strategy": "DEPTH_FIRST",
+            "elk.layered.mergeEdges": false,
+            "elk.layered.crossingMinimization.forceNodeModelOrder": false,
+            "elk.layered.considerModelOrder.strategy": "NODES_AND_EDGES",
+            "elk.layered.wrapping.multiEdge.improveCuts": true,
+            "elk.layered.wrapping.multiEdge.improveWrappedEdges": true,
+            "elk.layered.unnecessaryBendpoints": true,
+            "elk.layered.edgeRouting.selfLoopDistribution": "EQUALLY",
+            "elk.layered.mergeHierarchyEdges": true,
+            "elk.spacing.portsSurrounding": "[top=12,left=12,bottom=12,right=12]"
+          }
+        },
+        {
+          "id": "n0",
+          "options": {}
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "BV-B-AGENT-NESTED-SOURCE-VALID",
+      "classification": "VERIFIED_SCOPED_CURRENT_REAL_ELK",
+      "source": "agentflow-beta LR\nflow Outer[\"Outer\"]\n flow Inner[\"Inner\"]\n  A --> B\n end\nend\nOuter@{view: \"collapsed\"}\nInner@{view: \"collapsed\"}\nX --> A\nB --> Y\n",
+      "currentEdges": [
+        {
+          "id": "e1",
+          "source": "X",
+          "target": "Outer"
+        },
+        {
+          "id": "e2",
+          "source": "Outer",
+          "target": "Y"
+        }
+      ],
+      "routedEdges": [
+        "e1",
+        "e2"
+      ],
+      "engine": "pyelk/elk.layered",
+      "rawNodeOptions": [
+        {
+          "id": "root",
+          "options": {
+            "elk.algorithm": "elk.layered",
+            "elk.direction": "RIGHT",
+            "elk.hierarchyHandling": "INCLUDE_CHILDREN",
+            "spacing.baseValue": 40,
+            "elk.layered.nodePlacement.strategy": "BRANDES_KOEPF",
+            "elk.layered.nodePlacement.bk.fixedAlignment": "BALANCED",
+            "elk.layered.layering.strategy": "NETWORK_SIMPLEX",
+            "elk.layered.layering.coffmanGraham.layerBound": 4,
+            "elk.layered.cycleBreaking.strategy": "DEPTH_FIRST",
+            "elk.layered.mergeEdges": false,
+            "elk.layered.crossingMinimization.forceNodeModelOrder": false,
+            "elk.layered.considerModelOrder.strategy": "NODES_AND_EDGES",
+            "elk.layered.wrapping.multiEdge.improveCuts": true,
+            "elk.layered.wrapping.multiEdge.improveWrappedEdges": true,
+            "elk.layered.unnecessaryBendpoints": true,
+            "elk.layered.edgeRouting.selfLoopDistribution": "EQUALLY",
+            "elk.layered.mergeHierarchyEdges": true,
+            "elk.spacing.portsSurrounding": "[top=12,left=12,bottom=12,right=12]"
+          }
+        },
+        {
+          "id": "n0",
+          "options": {}
+        },
+        {
+          "id": "n1",
+          "options": {}
+        },
+        {
+          "id": "n2",
+          "options": {}
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "BV-B-AGENT-ANCESTOR-SOURCE-VALID",
+      "classification": "VERIFIED_SCOPED_CURRENT_REAL_ELK",
+      "source": "agentflow-beta TB\nflow Outer[\"Outer\"]\n flow Inner[\"Inner\"]\n  A --> B\n end\nend\nOuter --> A\nB --> Inner\n",
+      "currentEdges": [
+        {
+          "id": "e0",
+          "source": "A",
+          "target": "B"
+        },
+        {
+          "id": "e1",
+          "source": "Outer",
+          "target": "A"
+        },
+        {
+          "id": "e2",
+          "source": "B",
+          "target": "Inner"
+        }
+      ],
+      "routedEdges": [
+        "e0",
+        "e1",
+        "e2"
+      ],
+      "engine": "pyelk/elk.layered",
+      "rawNodeOptions": [
+        {
+          "id": "root",
+          "options": {
+            "elk.algorithm": "elk.layered",
+            "elk.direction": "DOWN",
+            "elk.hierarchyHandling": "INCLUDE_CHILDREN",
+            "spacing.baseValue": 40,
+            "elk.layered.nodePlacement.strategy": "BRANDES_KOEPF",
+            "elk.layered.nodePlacement.bk.fixedAlignment": "BALANCED",
+            "elk.layered.layering.strategy": "NETWORK_SIMPLEX",
+            "elk.layered.layering.coffmanGraham.layerBound": 4,
+            "elk.layered.cycleBreaking.strategy": "DEPTH_FIRST",
+            "elk.layered.mergeEdges": false,
+            "elk.layered.crossingMinimization.forceNodeModelOrder": false,
+            "elk.layered.considerModelOrder.strategy": "NODES_AND_EDGES",
+            "elk.layered.wrapping.multiEdge.improveCuts": true,
+            "elk.layered.wrapping.multiEdge.improveWrappedEdges": true,
+            "elk.layered.unnecessaryBendpoints": true,
+            "elk.layered.edgeRouting.selfLoopDistribution": "EQUALLY",
+            "elk.layered.mergeHierarchyEdges": true,
+            "elk.spacing.portsSurrounding": "[top=12,left=12,bottom=12,right=12]"
+          }
+        },
+        {
+          "id": "g1",
+          "options": {
+            "nodeSize.constraints": "[MINIMUM_SIZE, NODE_LABELS]",
+            "nodeSize.minimum": "(0, 43.0099983215332)",
+            "spacing.baseValue": 24,
+            "elk.layered.spacing.edgeNodeBetweenLayers": 30,
+            "elk.spacing.edgeEdge": 20,
+            "spacing.nodeNode": 50,
+            "elk.padding": "[top=24,left=24,bottom=24,right=24]",
+            "nodeLabels.placement": "[H_CENTER V_TOP, INSIDE]",
+            "elk.layered.mergeEdges": false,
+            "elk.layered.nodePlacement.bk.fixedAlignment": "BALANCED",
+            "elk.layered.nodePlacement.strategy": "BRANDES_KOEPF",
+            "elk.layered.cycleBreaking.strategy": "DEPTH_FIRST",
+            "elk.layered.nodePlacement.networkSimplex.nodeFlexibility": "PORT_POSITION",
+            "elk.spacing.portsSurrounding": "[top=12,left=12,bottom=12,right=12]",
+            "elk.hierarchyHandling": "INCLUDE_CHILDREN"
+          }
+        },
+        {
+          "id": "g0",
+          "options": {
+            "nodeSize.constraints": "[MINIMUM_SIZE, NODE_LABELS]",
+            "nodeSize.minimum": "(0, 39.90999984741211)",
+            "spacing.baseValue": 24,
+            "elk.layered.spacing.edgeNodeBetweenLayers": 30,
+            "elk.spacing.edgeEdge": 20,
+            "spacing.nodeNode": 50,
+            "elk.padding": "[top=24,left=24,bottom=24,right=24]",
+            "nodeLabels.placement": "[H_CENTER V_TOP, INSIDE]",
+            "elk.layered.mergeEdges": false,
+            "elk.layered.nodePlacement.bk.fixedAlignment": "BALANCED",
+            "elk.layered.nodePlacement.strategy": "BRANDES_KOEPF",
+            "elk.layered.cycleBreaking.strategy": "DEPTH_FIRST",
+            "elk.layered.nodePlacement.networkSimplex.nodeFlexibility": "PORT_POSITION",
+            "elk.spacing.portsSurrounding": "[top=12,left=12,bottom=12,right=12]",
+            "elk.hierarchyHandling": "INCLUDE_CHILDREN"
+          }
+        },
+        {
+          "id": "n0",
+          "options": {
+            "elk.hierarchyHandling": "INCLUDE_CHILDREN"
+          }
+        },
+        {
+          "id": "n1",
+          "options": {
+            "elk.hierarchyHandling": "INCLUDE_CHILDREN"
+          }
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "BV-B-AGENT-GROUP-ALGO-SOURCE-VALID",
+      "classification": "VERIFIED_SCOPED_CURRENT_REAL_ELK",
+      "source": "agentflow-beta TB\nflow Outer[\"Outer\"]@{algorithm: \"elk.box\"}\n A --> B\nend\n",
+      "currentEdges": [
+        {
+          "id": "e0",
+          "source": "A",
+          "target": "B"
+        }
+      ],
+      "routedEdges": [
+        "e0"
+      ],
+      "engine": "pyelk/elk.layered",
+      "rawNodeOptions": [
+        {
+          "id": "root",
+          "options": {
+            "elk.algorithm": "elk.layered",
+            "elk.direction": "DOWN",
+            "elk.hierarchyHandling": "INCLUDE_CHILDREN",
+            "spacing.baseValue": 40,
+            "elk.layered.nodePlacement.strategy": "BRANDES_KOEPF",
+            "elk.layered.nodePlacement.bk.fixedAlignment": "BALANCED",
+            "elk.layered.layering.strategy": "NETWORK_SIMPLEX",
+            "elk.layered.layering.coffmanGraham.layerBound": 4,
+            "elk.layered.cycleBreaking.strategy": "DEPTH_FIRST",
+            "elk.layered.mergeEdges": false,
+            "elk.layered.crossingMinimization.forceNodeModelOrder": false,
+            "elk.layered.considerModelOrder.strategy": "NODES_AND_EDGES",
+            "elk.layered.wrapping.multiEdge.improveCuts": true,
+            "elk.layered.wrapping.multiEdge.improveWrappedEdges": true,
+            "elk.layered.unnecessaryBendpoints": true,
+            "elk.layered.edgeRouting.selfLoopDistribution": "EQUALLY",
+            "elk.layered.mergeHierarchyEdges": true,
+            "elk.spacing.portsSurrounding": "[top=12,left=12,bottom=12,right=12]"
+          }
+        },
+        {
+          "id": "g0",
+          "options": {
+            "nodeSize.constraints": "[MINIMUM_SIZE, NODE_LABELS]",
+            "nodeSize.minimum": "(51.0099983215332, 51.0)",
+            "spacing.baseValue": 24,
+            "elk.layered.spacing.edgeNodeBetweenLayers": 30,
+            "elk.spacing.edgeEdge": 20,
+            "spacing.nodeNode": 50,
+            "elk.padding": "[top=36.0,left=15,bottom=15,right=15]",
+            "nodeLabels.placement": "[H_CENTER V_TOP, INSIDE]",
+            "elk.layered.mergeEdges": false,
+            "elk.layered.nodePlacement.bk.fixedAlignment": "BALANCED",
+            "elk.layered.nodePlacement.strategy": "BRANDES_KOEPF",
+            "elk.layered.cycleBreaking.strategy": "DEPTH_FIRST",
+            "elk.layered.nodePlacement.networkSimplex.nodeFlexibility": "PORT_POSITION",
+            "elk.spacing.portsSurrounding": "[top=12,left=12,bottom=12,right=12]",
+            "elk.algorithm": "elk.box",
+            "elk.hierarchyHandling": "SEPARATE_CHILDREN",
+            "elk.aspectRatio": "2.0",
+            "elk.contentAlignment": "H_CENTER V_TOP",
+            "elk.expandNodes": "true"
+          }
+        },
+        {
+          "id": "n0",
+          "options": {}
+        },
+        {
+          "id": "n1",
+          "options": {}
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "BV-B-AGENT-CROSS-ALGO-SOURCE-VALID",
+      "classification": "VERIFIED_SCOPED_CURRENT_REAL_ELK",
+      "source": "agentflow-beta LR\nflow Outer[\"Outer\"]@{algorithm: \"elk.box\"}\n A --> B\nend\nX --> A\nB --> Y\n",
+      "currentEdges": [
+        {
+          "id": "e0",
+          "source": "A",
+          "target": "B"
+        },
+        {
+          "id": "e1",
+          "source": "X",
+          "target": "A"
+        },
+        {
+          "id": "e2",
+          "source": "B",
+          "target": "Y"
+        }
+      ],
+      "routedEdges": [
+        "e0",
+        "e1",
+        "e2"
+      ],
+      "engine": "pyelk/elk.layered",
+      "rawNodeOptions": [
+        {
+          "id": "root",
+          "options": {
+            "elk.algorithm": "elk.layered",
+            "elk.direction": "RIGHT",
+            "elk.hierarchyHandling": "INCLUDE_CHILDREN",
+            "spacing.baseValue": 40,
+            "elk.layered.nodePlacement.strategy": "BRANDES_KOEPF",
+            "elk.layered.nodePlacement.bk.fixedAlignment": "BALANCED",
+            "elk.layered.layering.strategy": "NETWORK_SIMPLEX",
+            "elk.layered.layering.coffmanGraham.layerBound": 4,
+            "elk.layered.cycleBreaking.strategy": "DEPTH_FIRST",
+            "elk.layered.mergeEdges": false,
+            "elk.layered.crossingMinimization.forceNodeModelOrder": false,
+            "elk.layered.considerModelOrder.strategy": "NODES_AND_EDGES",
+            "elk.layered.wrapping.multiEdge.improveCuts": true,
+            "elk.layered.wrapping.multiEdge.improveWrappedEdges": true,
+            "elk.layered.unnecessaryBendpoints": true,
+            "elk.layered.edgeRouting.selfLoopDistribution": "EQUALLY",
+            "elk.layered.mergeHierarchyEdges": true,
+            "elk.spacing.portsSurrounding": "[top=12,left=12,bottom=12,right=12]"
+          }
+        },
+        {
+          "id": "g0",
+          "options": {
+            "elk.layered.spacing.edgeNodeBetweenLayers": 30,
+            "elk.spacing.edgeEdge": 20,
+            "nodeLabels.placement": "[H_CENTER V_TOP, INSIDE]",
+            "elk.layered.mergeEdges": false,
+            "elk.layered.nodePlacement.bk.fixedAlignment": "BALANCED",
+            "elk.layered.nodePlacement.strategy": "BRANDES_KOEPF",
+            "elk.layered.cycleBreaking.strategy": "DEPTH_FIRST",
+            "elk.layered.nodePlacement.networkSimplex.nodeFlexibility": "PORT_POSITION",
+            "elk.spacing.portsSurrounding": "[top=12,left=12,bottom=12,right=12]",
+            "elk.hierarchyHandling": "INCLUDE_CHILDREN",
+            "spacing.baseValue": 24,
+            "spacing.nodeNode": 50,
+            "elk.padding": "[top=24,left=24,bottom=24,right=24]",
+            "nodeSize.constraints": "[MINIMUM_SIZE, NODE_LABELS]",
+            "nodeSize.minimum": "(43.0099983215332, 0)"
+          }
+        },
+        {
+          "id": "n0",
+          "options": {
+            "elk.hierarchyHandling": "INCLUDE_CHILDREN"
+          }
+        },
+        {
+          "id": "n1",
+          "options": {
+            "elk.hierarchyHandling": "INCLUDE_CHILDREN"
+          }
+        },
+        {
+          "id": "n2",
+          "options": {
+            "elk.hierarchyHandling": "INCLUDE_CHILDREN"
+          }
+        },
+        {
+          "id": "n3",
+          "options": {
+            "elk.hierarchyHandling": "INCLUDE_CHILDREN"
+          }
+        }
+      ],
+      "error": null
+    }
+  ],
+  "retainedLayoutBoundaries": [
+    {
+      "id": "C4-SPRITE-KEYWORDS",
+      "classification": "SOURCE_IMPLEMENTED_SCOPED_STATIC_REVIEW",
+      "source": [
+        {
+          "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/c4/c4ShapeAdapter.ts",
+          "sha256": "84edb89d1e6393b82db03dcefb56bd256014e40399e5eed4708d2daef97ed167",
+          "bytes": 6140,
+          "symbol": "resolveNodeShape",
+          "line": 69
+        },
+        {
+          "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/c4/c4Renderer.ts",
+          "sha256": "d58ffb63def9c7117a332a0a94ec3b30fd7d34ba93ccb590d3e148a69460c909",
+          "bytes": 22702,
+          "symbol": "currentBoundary.sprite",
+          "line": 454
+        }
+      ],
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/modeling/c4.py",
+          "sha256": "43484b86045bc8ae25c8fcf92148d443ca8fc9c74b1b8753cb816abc8e3d1d9c",
+          "bytes": 19167,
+          "symbol": "def _shape",
+          "line": 166
+        },
+        {
+          "path": "src/py_mermaid/diagrams/modeling/c4.py",
+          "sha256": "43484b86045bc8ae25c8fcf92148d443ca8fc9c74b1b8753cb816abc8e3d1d9c",
+          "bytes": 19167,
+          "symbol": "header+=48",
+          "line": 216
+        }
+      ],
+      "reason": "Fixed source sprite selects finite Structurizr shape keywords through adapter; native maps the same keywords. Boundary sprite reserves48px image height, source renderer has no image paint consumption beyond this reservation; native reserves48px too. No arbitrary sprite/icon loader promise or new missing bitmap capability is inferred. This round did not claim exhaustive per-shape visual verification."
+    },
+    {
+      "id": "ELK-GROUP-ALGORITHM-CROSS-CLEAR",
+      "classification": "VERIFIED_SCOPED_CURRENT_REAL_ENGINE_INPUT",
+      "python": [
+        {
+          "path": "src/py_mermaid/layout/elk/compound.py",
+          "sha256": "379ef3b9a47d3ebf91583973be3365b5d24a65977d47463131a45aa41d65b446",
+          "bytes": 32761,
+          "symbol": "if group is not None and container_algorithm",
+          "line": 289
+        }
+      ],
+      "evidence": {
+        "path": "test-runs/FINAL-CAPABILITY-B-review-20261107T073915Z-a5a59886/artifacts/current-valid-agent.json",
+        "sha256": "e16bb69130a1aa414a22ec76b7fc06b5ca66d9a1a34a4bb3861b81bb704eff91",
+        "bytes": 21540
+      },
+      "reason": "Source-valid isolated Outer metadata produces elk.box and SEPARATE_CHILDREN. Cross-group links remove custom algorithm overrides and set INCLUDE_CHILDREN while preserving all three source edge IDs. Ancestor case preserves3 edges and nested2groups. Additional algorithm/direction combinations remain bounded by existingtests, not exhaustively rerun."
+    },
+    {
+      "id": "WARDLEY-DB-API",
+      "classification": "SOURCE_INTERNAL_API_NOT_MAPPED",
+      "reason": "Public immutable parse/render contract does not promise source DB mutators. Multiple annotation coordinates are not syntax-reachable; repeated grammar annotation numbers are independently tested as distinct entries and currenttest_b25 passes. No API added and no user scope exclusion invented."
+    }
+  ],
+  "remainingUnverified": [
+    "No new all59shape/all8groupalgorithm/full direction/style cross-product visual sweep performed in this final focused B review.",
+    "Current UTC pure helper comparison intentionally preserves sourcePluginException and reverse-domain internal helper differences; neither counted as repaired or newly missing public functionality.",
+    "Date parser localized fallback is demonstrated with old fixed original public snapshot plus current independent failure; newly rerun strict Dayjs helper intentionally returnsNone for localizedL, matching source plugin without localizedFormat."
+  ],
+  "noMissingReleaseRecommended": false
+}

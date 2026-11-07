@@ -96,7 +96,16 @@ class SourceParameterTables(SourceCase):
     def test_bt14_accessibility_is_preserved_as_pure_metadata(self):
         for header,body in [('gantt','A:2024-01-01, 1d'),('journey','A:5'),('timeline','A : Event'),('gitGraph','commit id:"A"'),('cynefin-beta','clear\n "Item"'),('wardley-beta','component A [0.5, 0.5]'),('eventmodeling','tf 1 ui Page')]:
             with self.subTest(header=header):
-                m=model(header+'\naccTitle: Accessible\naccDescr {Description\ncontinued}\n'+body+'\n')
+                source=header+'\naccTitle: Accessible\naccDescr {Description\ncontinued}\n'+body+'\n'
+                if header=='eventmodeling':
+                    # Fixed Langium EM_ID precedes EM_ACC_* terminals. This
+                    # exact bare line is rejected (not metadata) by original
+                    #12.2.0; raw exception preserved in source Run
+                    #CLOSURE-P3-B-EXPECTATION-source-20261107T083759Z-f31238d5.
+                    with self.assertRaises(MermaidError) as caught:model(source)
+                    self.assertEqual(caught.exception.code,'SYNTAX_ERROR')
+                    continue
+                m=model(source)
                 values=dict(m.accessibility)
                 self.assertEqual(values['acctitle'],'Accessible')
                 self.assertIn('continued',values['accdescr'])

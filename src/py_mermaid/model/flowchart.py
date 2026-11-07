@@ -3,6 +3,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from typing import Literal
+from .controls import ControlLayout
 
 
 @dataclass(frozen=True)
@@ -263,6 +264,13 @@ class ResolvedStyle:
     brightness: float = 1.0
     filter_chain: tuple[str, ...] = ()  # Ordered explicit static CSS filter winner.
     max_width: float | None = None
+    visibility: str = 'visible'
+
+    @property
+    def paint_opacity(self) -> float:
+        # visibility inherits and can be restored by a descendant; opacity is
+        # ancestor compositing and cannot. Keep both values through the cascade.
+        return self.opacity if self.visibility == 'visible' else 0.0
 
 
 @dataclass(frozen=True)
@@ -298,6 +306,7 @@ class MeasuredTextRun:
     brightness: float = 1.0
     filter_chain: tuple[str, ...] = ()
     filter_shadow: tuple[float, float, float] | None = None  # Bounds footprint dx/dy/blur.
+    control: ControlLayout | None = None  # Immutable measured static HTML control.
 
 
 @dataclass(frozen=True)
@@ -308,6 +317,9 @@ class ShapePart:
     opacity: float = 1.0
     fill_style: str = 'hachure'  # RoughJS handler override; solid keeps a filled tag/disk.
     dash: tuple[float, ...] | None = None  # None inherits node stroke; explicit tuples override.
+    css_classes: tuple[str, ...] = ()  # Actual source child-element classes, not node classes.
+    tag: str = 'path'  # Source primitive for direct-child CSS; geometry remains a pure path.
+    stroke_width: float | None = None  # None inherits legacy part width.
 
 
 @dataclass(frozen=True)
@@ -451,6 +463,7 @@ class DrawEvent:
     filter_chain: tuple[str, ...] = ()
     blend_mode: str = 'source-over'
     dash: tuple[float, ...] = ()
+    control_id: str | None = None  # Static markup identity for real control paints.
 
 
 @dataclass(frozen=True)

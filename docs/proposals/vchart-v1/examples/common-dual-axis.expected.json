@@ -1,0 +1,53 @@
+{
+  "type": "common",
+  "width": 800,
+  "height": 420,
+  "data": {
+    "values": [
+      {
+        "month": "Jan",
+        "revenue": 120,
+        "margin": 18
+      },
+      {
+        "month": "Feb",
+        "revenue": 180,
+        "margin": 24
+      }
+    ]
+  },
+  "series": [
+    {
+      "type": "bar",
+      "xField": "month",
+      "yField": "revenue"
+    },
+    {
+      "type": "line",
+      "xField": "month",
+      "yField": "margin"
+    }
+  ],
+  "axes": [
+    {
+      "orient": "bottom",
+      "type": "band"
+    },
+    {
+      "orient": "left",
+      "type": "linear",
+      "seriesIndex": [
+        0
+      ]
+    },
+    {
+      "orient": "right",
+      "type": "linear",
+      "min": 0,
+      "max": 100,
+      "seriesIndex": [
+        1
+      ]
+    }
+  ]
+}

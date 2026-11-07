@@ -1,0 +1,300 @@
+{
+  "schema": "py-mermaid-html-host-canvas-assertions/v1",
+  "phase": "P2",
+  "candidateSourceSha256": "881656d5439e4ba08b4f3182d215680020653592e2d6ba0f9e265af97faf8fe1",
+  "status": "AUTHORED_NOT_EXECUTED",
+  "upstream": "Mermaid12.2.0/1fb7869866dd619168d840291c9c54b4f129758b,lockedDOMPurify3.4.12,publicCanvas0.1.0a18",
+  "sources": [
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/common/common.ts",
+      "symbol": "sanitizeText",
+      "line": 85,
+      "sha256": "b14851667f7d45d101d4e028204babb1628faefe4812a88ae2d8acac72f8e144"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/rendering-util/createText.ts",
+      "symbol": "foreignObject",
+      "line": 44,
+      "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865"
+    },
+    {
+      "path": "docs/STATIC_HTML_HOST_PLAN.md",
+      "symbol": "video/audio",
+      "line": 3,
+      "sha256": "b763eb91f04fdcc56639f7bbb2036c299e2d4210aa86f915d866fec5e9b82514"
+    },
+    {
+      "path": "C:/venvs/pymmd-20261102/Lib/site-packages/py_skia_canvas/__init__.py",
+      "symbol": "def clip(",
+      "line": 643,
+      "sha256": "c110f8dc2ab2ef8c532f05191a4dd6b43d6139c8fbafea1273dd2f33a307da52"
+    },
+    {
+      "path": "C:/venvs/pymmd-20261102/Lib/site-packages/py_skia_canvas/_text_css.py",
+      "symbol": "def decoration(",
+      "line": 98,
+      "sha256": "c710ba078c617814ef30d68ebac948ecd5ffd7c5b6a339754e5c617a32fa921f"
+    }
+  ],
+  "methods": {
+    "tests/html_host/test_canvas.py": [
+      {
+        "symbol": "test_checkbox_checked_has_real_mark_unchecked_does_not",
+        "line": 108
+      },
+      {
+        "symbol": "test_radio_selected_has_center_dot_and_unselected_not_accented",
+        "line": 118
+      },
+      {
+        "symbol": "test_checkbox_mark_loss_mutation_fails_even_with_outer_chrome",
+        "line": 131
+      },
+      {
+        "symbol": "test_meter_fraction_has_proportional_real_green_fill",
+        "line": 141
+      },
+      {
+        "symbol": "test_progress_determinate_fill_ratios_and_empty_endpoint",
+        "line": 150
+      },
+      {
+        "symbol": "test_progress_indeterminate_has_static_initial_indicator",
+        "line": 158
+      },
+      {
+        "symbol": "test_range_thumb_moves_with_value_and_reverses_in_rtl",
+        "line": 164
+      },
+      {
+        "symbol": "test_button_unicode_bold_italic_and_underline_are_actual_content",
+        "line": 176
+      },
+      {
+        "symbol": "test_button_frame_without_value_or_rich_glyphs_is_rejected",
+        "line": 183
+      },
+      {
+        "symbol": "test_textarea_newlines_and_unicode_remain_separate_visible_rows",
+        "line": 192
+      },
+      {
+        "symbol": "test_collapsed_select_paints_selected_unicode_and_arrow",
+        "line": 198
+      },
+      {
+        "symbol": "test_multiple_select_keeps_group_titles_and_all_visible_rows",
+        "line": 205
+      },
+      {
+        "symbol": "test_author_color_overrides_disabled_ua_text_and_readonly_keeps_value",
+        "line": 211
+      },
+      {
+        "symbol": "test_nested_opacity_composes_once_per_element",
+        "line": 218
+      },
+      {
+        "symbol": "test_visibility_hidden_parent_can_restore_visible_child_text",
+        "line": 225
+      },
+      {
+        "symbol": "test_fieldset_legend_and_nested_checkbox_are_visible",
+        "line": 230
+      },
+      {
+        "symbol": "test_input_image_uses_explicit_offline_pixels_and_source_ratio",
+        "line": 237
+      },
+      {
+        "symbol": "test_input_image_data_uri_is_offline_and_missing_resource_is_explicit",
+        "line": 247
+      },
+      {
+        "symbol": "test_input_image_without_dimensions_keeps_resource_natural_size",
+        "line": 259
+      },
+      {
+        "symbol": "test_input_image_css_width_preserves_natural_aspect_ratio",
+        "line": 267
+      },
+      {
+        "symbol": "test_control_value_author_letter_and_word_spacing_change_actual_glyph_span",
+        "line": 275
+      },
+      {
+        "symbol": "test_control_value_author_text_shadow_has_actual_offset_red_glyphs",
+        "line": 286
+      },
+      {
+        "symbol": "test_control_value_author_text_stroke_is_not_silently_lost",
+        "line": 292
+      },
+      {
+        "symbol": "test_five_exports_contain_static_output_not_live_form_protocol",
+        "line": 297
+      },
+      {
+        "symbol": "test_literal_html_labels_false_has_text_without_control_paint",
+        "line": 314
+      },
+      {
+        "symbol": "test_unknown_input_type_uses_text_fallback_without_losing_value",
+        "line": 319
+      },
+      {
+        "symbol": "test_hidden_input_has_no_visible_control_or_value",
+        "line": 324
+      },
+      {
+        "symbol": "test_video_audio_remain_excluded_even_with_poster_and_controls",
+        "line": 330
+      },
+      {
+        "symbol": "test_cpu_auto_gpu_controls_use_explicit_backend_policy",
+        "line": 337
+      },
+      {
+        "symbol": "test_content_clip_does_not_clip_frame_or_replace_current_path",
+        "line": 364
+      },
+      {
+        "symbol": "test_callback_fault_restores_native_state",
+        "line": 381
+      },
+      {
+        "symbol": "test_owner_thread_rejected_without_native_transfer",
+        "line": 392
+      },
+      {
+        "symbol": "test_invalid_geometry_and_command_budgets_reject_before_ink",
+        "line": 401
+      },
+      {
+        "symbol": "test_multiple_decoration_lines_add_pixels_beyond_plain_glyphs",
+        "line": 414
+      }
+    ],
+    "tests/html_host/test_controls_checker.py": [
+      {
+        "symbol": "test_real_value_pixels_and_initial_state_pass_jointly",
+        "line": 61
+      },
+      {
+        "symbol": "test_wrong_native_state_rejected",
+        "line": 64
+      },
+      {
+        "symbol": "test_source_expected_cannot_be_forged_to_fit_native",
+        "line": 69
+      },
+      {
+        "symbol": "test_missing_original_state_evidence_rejected",
+        "line": 73
+      },
+      {
+        "symbol": "test_missing_measured_control_rejected",
+        "line": 76
+      },
+      {
+        "symbol": "test_missing_actual_control_container_rejected",
+        "line": 80
+      },
+      {
+        "symbol": "test_missing_text_trace_cannot_pass_with_outer_frame_ink",
+        "line": 84
+      },
+      {
+        "symbol": "test_pure_white_image_rejected_with_unchanged_truthful_trace",
+        "line": 90
+      },
+      {
+        "symbol": "test_value_glyphs_erased_frame_preserved_is_rejected",
+        "line": 94
+      },
+      {
+        "symbol": "test_outer_border_cannot_substitute_for_fabricated_value_glyph_box",
+        "line": 102
+      },
+      {
+        "symbol": "test_incorrect_text_content_metadata_rejected",
+        "line": 113
+      },
+      {
+        "symbol": "test_input_password_source_value_must_not_appear_as_plain_glyphs",
+        "line": 119
+      },
+      {
+        "symbol": "test_checked_checkbox_chrome_without_mark_rejected",
+        "line": 128
+      },
+      {
+        "symbol": "test_encoded_size_and_missing_control_contract_rejected",
+        "line": 136
+      }
+    ]
+  },
+  "counts": {
+    "canvas": 34,
+    "checker": 14,
+    "total": 48
+  },
+  "independentExpectations": [
+    {
+      "group": "checkable",
+      "sourceBasis": "HTML checked state + authored rgb(36,104,172), exactly #2468ac; original source radio PNG",
+      "required": "Real accent and white checkbox checkmark; selected radio blue center with white interior ring; unchecked contrast; dropmark mutation fails with frame preserved."
+    },
+    {
+      "group": "tracks",
+      "sourceBasis": "value/min/maxfractions,author120/140pxwidths,RTLdirection",
+      "required": "25/75realpixelspanratio1:3within.08caps/rastertolerance;0nofill;rangethumbmoves>40pxandRTLreverses;initialindeterminateindicatornonempty."
+    },
+    {
+      "group": "content",
+      "sourceBasis": "RawHTMLvalue/selectedoption/textarealines/buttonUnicodeandrichformatting,readonly,authordisabledcolor",
+      "required": "TexttracematchesinputandnonuniformglyphROIhasrealink,framealonefails. Whiteandlosttextmutantsreject."
+    },
+    {
+      "group": "style",
+      "sourceBasis": "CSSopacity.5*.5=.25whitecomposite;visibilitychildrestoration;spacing/shadow/strokedecorations",
+      "required": "Literalalphaformula,actualglyphspanincreases,red6pxshadow/blue2pxstrokeactualpixels;fieldsetlegendnotbodyclipped."
+    },
+    {
+      "group": "image",
+      "sourceBasis": "Handwritten40x20offlineSVGred/bluehalves;inputimageisnotconfigureLabelImagesimg",
+      "required": "Natural40x20,CSSwidth80gives80x40,explicit80x40pixels,dataURIoffline,missingresourceerror. Default strict strips input data URI; positive requires loose and explicit ADD_DATA_URI_TAGS input per fixed source common.ts/DOMPurify."
+    },
+    {
+      "group": "executor",
+      "sourceBasis": "PublicCanvasclip/currentpath/state/owner/encodingcontracts",
+      "required": "Onlycontentclip;frameandcallercurrentpathretained;callbackfaultrestoresstate;foreignthreadreject;finite/unknown/countbudgetbeforeink;multipledecorationlinesaddactualpixels."
+    },
+    {
+      "group": "exports",
+      "sourceBasis": "Existingnative5staticencoders",
+      "required": "Rasterrealdecode/size/variation;SVGXMLnativecontentnoliveform/foreignObject;PDFheader/MediaBox/EOF/sizeandactualpainttrace."
+    },
+    {
+      "group": "checker-faults",
+      "sourceBasis": "HandwrittenoriginalDOMstateandpublicarenderactualPNG",
+      "required": "Badstate/forgedexpected/missingoriginal/missingcontrol/missingtext/blank/erasedglyph/frame-onlyfakeglyphbox/wrongtext/plainpassword/missingmark/badsizeallreject."
+    }
+  ],
+  "knownP3Candidates": [
+    "Inputimageasset_loadermayinherit200/80imgwidthinsteadofresource40x20.",
+    "DirectControlPaint.textmayignoregenericletter/wordspacing,shadow,stroke.",
+    "Checkervariationmayaccepttextboxmovedontoborderandcurrentlylacksvisibletextvaluecomparison."
+  ],
+  "goldenPolicy": "No candidateimagesorownlayouthelperscomputeexpectedresults. Handwrittenstate/authoredsizecolor/ratios/pixelcontrast+faultcontrols;browserUAfont/rasterdifferencesnotzerogated.",
+  "executionPolicy": "P2ASTcompile/import/discoveryonly;allnativecallsinsideunittestmethod/asyncsetupnotexecuted.",
+  "media": "video/audiofullyexcludedincludingposter/controlbar;rejectiontestsnotfeaturePASS.",
+  "p3Repair": {
+    "status": "REPAIRED_NOT_EXECUTED",
+    "firstRun": "HTML-HOST-P3-batch-20261106T113133Z-293a5335",
+    "sourceProbe": "HTML-HOST-P3-source-integration-probes-20261106T114139Z-c5d42512",
+    "firstCanvasTestSha256": "dcac648ebb541e8a04c0cfa76d153700c7854bdf0c3c514b4d400f5b8eda1d4c",
+    "correctedCanvasTestSha256": "9910382ef71f5de371e6e0524afde5246f7c93870d9d42764b154189973615f6",
+    "reason": "Preserve all 48 method IDs and pixel thresholds. Fix non-input resource key assumption; source radio blue center/white ring; explicit loose+ADD_DATA_URI_TAGS input image prerequisite; authored accent rgb equals #2468ac but avoids source encodeEntities middle-hex semicolon transformation. Root retains six source preprocessing fixtures independently."
+  }
+}

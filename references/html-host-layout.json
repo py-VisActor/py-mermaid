@@ -1,0 +1,416 @@
+{
+  "schema": "py-mermaid-html-host-layout-sources/v1",
+  "status": "code_complete_unverified",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "upstreamVersion": "12.2.0",
+  "nativeFile": "src/py_mermaid/rendering/labels/controls/layout.py",
+  "nativeSha256": "41fa957106b91178ff6677b14d86fa0c4150fee33d6ff62e1a0d6148c6ac219f",
+  "functions": {
+    "_error": 31,
+    "parse_control_declarations": 35,
+    "split_control_style": 57,
+    "control_ua_style": 65,
+    "_value": 77,
+    "_integer": 84,
+    "_characters": 89,
+    "_declarations": 99,
+    "layout_control": 149
+  },
+  "source": [
+    {
+      "path": "packages/mermaid/src/diagrams/common/common.ts",
+      "symbol": "export const sanitizeText",
+      "line": 85,
+      "sha256": "b14851667f7d45d101d4e028204babb1628faefe4812a88ae2d8acac72f8e144",
+      "role": "Sanitize then delegate to foreignObject HTML host; does not define native control layout mathematics."
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/createText.ts",
+      "symbol": "async function addHtmlSpan",
+      "line": 34,
+      "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+      "role": "Sanitize then delegate to foreignObject HTML host; does not define native control layout mathematics."
+    }
+  ],
+  "embeddedSanitizer": [
+    {
+      "map": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+      "source": "../../../node_modules/.pnpm/dompurify@3.4.12/node_modules/dompurify/src/tags.ts",
+      "contentSha256": "959dc7f21ddbf2dbe584f3511c0ae41eed313236e217d099856b7c3dc94e66e8",
+      "role": "Fixed source sanitation identity; initial state normalization owned by semantic.py, not this layout module."
+    },
+    {
+      "map": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+      "source": "../../../node_modules/.pnpm/dompurify@3.4.12/node_modules/dompurify/src/attrs.ts",
+      "contentSha256": "a55feea9f64a386729bfbcfec489ab6ef6a96d712b427ffd18fe25b5628b1deb",
+      "role": "Fixed source sanitation identity; initial state normalization owned by semantic.py, not this layout module."
+    },
+    {
+      "map": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+      "source": "../../../node_modules/.pnpm/dompurify@3.4.12/node_modules/dompurify/src/purify.ts",
+      "contentSha256": "cd71d3e2d10ac95ebdc7447e73f74f18bb0b94e1fce9132aa0c18c3e21f6c313",
+      "role": "Fixed source sanitation identity; initial state normalization owned by semantic.py, not this layout module."
+    }
+  ],
+  "historicalSourceEvidence": [
+    {
+      "case": "html-host-input",
+      "path": "test-runs/HTML-HOST-diagnostic-20261106T083303Z-37172072/artifacts/oracle/html-host-input.json",
+      "sha256": "670c6c0b8d97f4ce426c843a8aa5c1b7dd873c7d2492f2dbfbd698ddaa8c9900",
+      "viewport": {
+        "width": 225,
+        "height": 61
+      },
+      "scope": "source_visible_control_sample",
+      "usage": "Read-only historical evidence, not a generated coordinate golden and not new native verification."
+    },
+    {
+      "case": "html-host-checkbox",
+      "path": "test-runs/HTML-HOST-diagnostic-20261106T083303Z-37172072/artifacts/oracle/html-host-checkbox.json",
+      "sha256": "8d6a9e5c5f2d5ab1dd14c9cd34110c78653fcdb2bf52eeeed1a5892ddb5421ac",
+      "viewport": {
+        "width": 168,
+        "height": 62
+      },
+      "scope": "source_visible_control_sample",
+      "usage": "Read-only historical evidence, not a generated coordinate golden and not new native verification."
+    },
+    {
+      "case": "html-host-button",
+      "path": "test-runs/HTML-HOST-diagnostic-20261106T083303Z-37172072/artifacts/oracle/html-host-button.json",
+      "sha256": "7c6ea8dbc337f55038ae19e4a619c1a46037ab7c0e453523c11b19e91341cbc1",
+      "viewport": {
+        "width": 168,
+        "height": 61
+      },
+      "scope": "source_visible_control_sample",
+      "usage": "Read-only historical evidence, not a generated coordinate golden and not new native verification."
+    },
+    {
+      "case": "html-host-select",
+      "path": "test-runs/HTML-HOST-diagnostic-20261106T083303Z-37172072/artifacts/oracle/html-host-select.json",
+      "sha256": "929b7e2ab0cd43b338520d522094fc7205329de1e82448df889500ce06c2ca97",
+      "viewport": {
+        "width": 168,
+        "height": 61
+      },
+      "scope": "source_visible_control_sample",
+      "usage": "Read-only historical evidence, not a generated coordinate golden and not new native verification."
+    },
+    {
+      "case": "html-host-textarea",
+      "path": "test-runs/HTML-HOST-diagnostic-20261106T083303Z-37172072/artifacts/oracle/html-host-textarea.json",
+      "sha256": "4e0df837a5c11b2907079d446796d2a2765c4d5b32142d5071364f0fc0fc2a57",
+      "viewport": {
+        "width": 168,
+        "height": 82
+      },
+      "scope": "source_visible_control_sample",
+      "usage": "Read-only historical evidence, not a generated coordinate golden and not new native verification."
+    },
+    {
+      "case": "html-host-meter",
+      "path": "test-runs/HTML-HOST-diagnostic-20261106T083303Z-37172072/artifacts/oracle/html-host-meter.json",
+      "sha256": "f0055dbdd53c37fcf0a9fd560610e27304c61d94fbb6e9a5e5aeef51c5478e29",
+      "viewport": {
+        "width": 168,
+        "height": 61
+      },
+      "scope": "source_visible_control_sample",
+      "usage": "Read-only historical evidence, not a generated coordinate golden and not new native verification."
+    },
+    {
+      "case": "html-host-progress",
+      "path": "test-runs/HTML-HOST-diagnostic-20261106T083303Z-37172072/artifacts/oracle/html-host-progress.json",
+      "sha256": "0def8a2cd54a333036ef212373612893a3e1520e2146ffc0b6027dc609690f70",
+      "viewport": {
+        "width": 188,
+        "height": 61
+      },
+      "scope": "source_visible_control_sample",
+      "usage": "Read-only historical evidence, not a generated coordinate golden and not new native verification."
+    },
+    {
+      "case": "html-host-video",
+      "path": "test-runs/HTML-HOST-diagnostic-20261106T083303Z-37172072/artifacts/oracle/html-host-video.json",
+      "sha256": "25461e3e635fea11ccfce1e30fabfa0d82467cde75ac704732e414483be15a51",
+      "viewport": {
+        "width": 168,
+        "height": 100
+      },
+      "scope": "excluded_media",
+      "usage": "Read-only historical evidence, not a generated coordinate golden and not new native verification."
+    },
+    {
+      "case": "html-host-audio",
+      "path": "test-runs/HTML-HOST-diagnostic-20261106T083303Z-37172072/artifacts/oracle/html-host-audio.json",
+      "sha256": "11686dd114bfd40891862f3a011928c978b7664049223caaa5e2ea71abeea668",
+      "viewport": {
+        "width": 348,
+        "height": 100
+      },
+      "scope": "excluded_media",
+      "usage": "Read-only historical evidence, not a generated coordinate golden and not new native verification."
+    }
+  ],
+  "featureGroups": [
+    {
+      "id": "input-textual",
+      "tagsOrTypes": [
+        "text",
+        "search",
+        "tel",
+        "url",
+        "email",
+        "password"
+      ],
+      "behavior": "Real value/placeholder measurements, mask, clipped inner content, CSS font/direction and static affordances.",
+      "verification": "P1 source implemented; behavior/first native execution pending unified P3"
+    },
+    {
+      "id": "input-state",
+      "tagsOrTypes": [
+        "hidden",
+        "checkbox",
+        "radio",
+        "range",
+        "color",
+        "number"
+      ],
+      "behavior": "Hidden zero box; checked marks, numeric spinner, fraction thumb/fill, native color well, disabled/readonly distinction.",
+      "verification": "P1 source implemented; behavior/first native execution pending unified P3"
+    },
+    {
+      "id": "input-temporal",
+      "tagsOrTypes": [
+        "date",
+        "month",
+        "week",
+        "time",
+        "datetime-local"
+      ],
+      "behavior": "Normalized initial value or empty format hint and calendar/clock affordance; locale presentation remains a P2 host comparison target.",
+      "verification": "P1 source implemented; behavior/first native execution pending unified P3"
+    },
+    {
+      "id": "input-action-resource",
+      "tagsOrTypes": [
+        "button",
+        "submit",
+        "reset",
+        "file",
+        "image"
+      ],
+      "behavior": "Missing vs explicitly empty captions, file chooser static intent, image resource loader and aspect ratio.",
+      "verification": "P1 source implemented; behavior/first native execution pending unified P3"
+    },
+    {
+      "id": "button",
+      "tagsOrTypes": [
+        "button"
+      ],
+      "behavior": "Recursive rich markup with original text/math/image/control providers, transparent child background and single external opacity/filter composition.",
+      "verification": "P1 source implemented; behavior/first native execution pending unified P3"
+    },
+    {
+      "id": "select",
+      "tagsOrTypes": [
+        "select",
+        "option",
+        "optgroup"
+      ],
+      "behavior": "Single/multiple initial selections, size rows, group headings, disabled options, visible initial list window and value clipping.",
+      "verification": "P1 source implemented; behavior/first native execution pending unified P3"
+    },
+    {
+      "id": "textarea",
+      "tagsOrTypes": [
+        "textarea"
+      ],
+      "behavior": "Measured cols/rows, LF text/placeholder, tab expansion, word/emergency wrapping with combining/ZWJ preservation and clipping.",
+      "verification": "P1 source implemented; behavior/first native execution pending unified P3"
+    },
+    {
+      "id": "meter-progress",
+      "tagsOrTypes": [
+        "meter",
+        "progress"
+      ],
+      "behavior": "Clamped initial fractions supplied by semantic owner, low/high/optimum quality bands, RTL fill and static indeterminate segment.",
+      "verification": "P1 source implemented; behavior/first native execution pending unified P3"
+    },
+    {
+      "id": "fieldset",
+      "tagsOrTypes": [
+        "fieldset",
+        "legend"
+      ],
+      "behavior": "Recursive body and rich caption, real frame gap, margins/padding, separate unclipped caption runs; disabled inheritance remains semantic owner.",
+      "verification": "P1 source implemented; behavior/first native execution pending unified P3"
+    },
+    {
+      "id": "inline-control-css",
+      "tagsOrTypes": [],
+      "behavior": "Typed lengths px/physical/em/rem/ex/ch/percent; measured ex/ch; indefinite percentages auto; border/padding/margin shorthand cascade, important, min/max and box sizing; generic text CSS goes to shared resolver.",
+      "verification": "P1 source implemented; behavior/first native execution pending unified P3"
+    }
+  ],
+  "provider": {
+    "signature": "layout_control(spec,style,measure,*,content_layout=None,asset_loader=None,containing_width=None,containing_height=None)",
+    "measure": "Injected public TextMetrics object/Mapping; no private Canvas/font constructor.",
+    "content_layout": "markup,style,width -> width,height,lines,runs. Parent opacity/filter/background are cleared from child base, child visibility retained.",
+    "asset_loader": "id,image,attributes,style,False -> width,height; explicit original resource_id retained.",
+    "coordinates": "CSS px, control-local, text baseline y, circle bbox, line delta, path local coords. Margins included in dimensions and baseline; all paints offset once.",
+    "clipping": "Text/image/body runs only; fieldset caption runs and outer chrome not clipped.",
+    "uaStyle": "Caller applies low-priority control_ua_style(tag,parent,disabled=...), then author CSS; layout consumes resolved result.",
+    "css": "CONTROL_CSS_PROPERTIES exported; split_control_style returns two CSS strings; parse_control_declarations returns name,value,important tuples."
+  },
+  "nativeHostAdaptation": "Mermaid delegates all control rendering to browser UA. This pure native host expresses initial static control semantics using public metrics. Default colors/shapes/ratios are native UA intent, not a literal Mermaid algorithm or browser pixel-coordinate transplant.",
+  "explicitLimits": [
+    "Complex CSS calc()/min()/max()/clamp() and non-solid control box background resources are explicitly unsupported, not silently ignored.",
+    "Per-corner/elliptical border radii and arbitrary CSS layout systems are outside this control-local box implementation.",
+    "Contextual vertical-align top/bottom/middle/text-top/text-bottom requires shared line-layout placement; numeric/sub/super offsets are represented through baseline.",
+    "Date/time UI locale/picker surface, platform file chooser wording and exact UA pixel appearance are host-dependent; no interaction/picker/scroll action is implemented.",
+    "Emergency text wrapping preserves combining/variation/ZWJ groups, but is not a standalone Unicode bidi/grapheme/shaping engine; actual text shaping remains the injected Canvas provider."
+  ],
+  "p2HostQuestions": [
+    "Default UA font inheritance and dimensions for each type versus source browser, across explicit font/line-height and disabled author-color overrides.",
+    "Initial select list viewport and optgroup sizing with selected items beyond the first window.",
+    "Textarea soft/hard/off wrapping, whitespace, combining text, visible initial overflow and resize mark.",
+    "Date/time empty and valid values, RTL value/hint alignment, image single-axis dimensions/aspect and zero sizes.",
+    "Meter region thresholds/optimum boundary inclusivity, progress indeterminate static visibility.",
+    "CSS box sizing/shorthand important ordering, percentages with finite/indefinite containing widths, visibility descendants and fieldset legend frame."
+  ],
+  "excluded": [
+    "video",
+    "audio",
+    "editing",
+    "focus",
+    "dropdown opening",
+    "submission",
+    "playback",
+    "animation",
+    "installation verification"
+  ],
+  "newBehaviorExecuted": false,
+  "p3Repair": {
+    "status": "source_complete_behavior_not_rerun",
+    "initialFailureRun": "test-runs/HTML-HOST-P3-batch-20261106T113133Z-293a5335",
+    "currentNativeSha256": "747c5fc8a199e59b22aba92090bf4b11015b0967432a7214a1a1b4b803756833",
+    "changes": [
+      "Consume border-top-width/style/color canonical longhand keys after shorthand expansion.",
+      "Source UA default box-sizing differs by control family; date/time inputs use monospace; display does not inherit parent block.",
+      "Radio checked state is a white outer disk with accent center, not an accent disk with white center.",
+      "All direct text paints and plain caption runs retain spacing, text shadows and text-stroke axes.",
+      "input image calls shared control-image natural-size protocol rather than ordinary configurable label-image protocol."
+    ],
+    "sourceEvidence": [
+      "artifacts/oracle/html-host-type-button.json",
+      "artifacts/oracle/html-host-type-search.json",
+      "artifacts/oracle/html-host-type-date.json",
+      "artifacts/oracle/html-host-type-checkbox.json",
+      "artifacts/oracle/html-host-type-radio.png"
+    ],
+    "fixedPixelValuesCopied": false,
+    "accentSourceRepair": {
+      "cause": "Fixed utils.encodeEntities removes the separator after an inline middle hex color; source HTML ignores malformed accent-color and uses auto.",
+      "sourceRun": "test-runs/HTML-HOST-P3-source-integration-probes-20261106T114139Z-c5d42512",
+      "sourceCases": [
+        "html-host-integration-checkbox-hex-middle",
+        "html-host-integration-checkbox-hex-last",
+        "html-host-integration-checkbox-rgb-middle",
+        "html-host-integration-range-hex-middle",
+        "html-host-integration-range-rgb-middle"
+      ],
+      "repair": "Validate absolute CSS Color 4 with public pure is_valid_css_color. Invalid declarations fall back to UA auto; valid rgb/hwb/oklch/color values are retained. Context-dependent system/relative/color-mix expressions explicitly require a resolver rather than being mislabeled invalid.",
+      "provider": "src/py_mermaid/rendering/labels/controls/color_values.py:is_valid_css_color",
+      "testsAdded": "L63 invalid source hex-middle fallback, L64 same valid rgb color, L65 valid modern absolute colors.",
+      "thresholdChanged": false,
+      "sourceFixturesRemoved": false
+    },
+    "zeroDimensionsRepair": {
+      "status": "source_complete_pending_unified_execution",
+      "sourceProbe": "test-runs/HTML-HOST-audit-dimension-default-probe-20261106T124046Z-c3670b63",
+      "sourceJSON": "test-runs\\HTML-HOST-audit-dimension-default-probe-20261106T124046Z-c3670b63\\artifacts\\oracle\\html-host-zero-dimension-source-probe.json",
+      "sourceJSONSha256": "fe8c28231d89e20b57d7b665f528664e40c6dcd33d57c599b5b004632a57a3fb",
+      "sourcePNG": "test-runs\\HTML-HOST-audit-dimension-default-probe-20261106T124046Z-c3670b63\\artifacts\\oracle\\html-host-zero-dimension-source-probe.png",
+      "sourcePNGSha256": "998f58ded35995fbd908cae3a54f0a567ecd17ccae060e34217b50c482b39991",
+      "sourceDimensions": [
+        {
+          "tag": "input",
+          "attributes": {
+            "id": "i0",
+            "size": "0",
+            "value": "Size",
+            "style": "font-family:monospace;font-size:16px;padding:0;border:0"
+          },
+          "width": 189,
+          "height": 19
+        },
+        {
+          "tag": "input",
+          "attributes": {
+            "value": "Size",
+            "style": "font-family:monospace;font-size:16px;padding:0;border:0"
+          },
+          "width": 189,
+          "height": 19
+        },
+        {
+          "tag": "textarea",
+          "attributes": {
+            "id": "t0",
+            "cols": "0",
+            "rows": "0",
+            "style": "font-family:monospace;font-size:16px;padding:0;border:0"
+          },
+          "width": 195,
+          "height": 38
+        },
+        {
+          "tag": "textarea",
+          "attributes": {
+            "id": "td",
+            "style": "font-family:monospace;font-size:16px;padding:0;border:0"
+          },
+          "width": 195,
+          "height": 38
+        },
+        {
+          "tag": "select",
+          "attributes": {
+            "id": "s0",
+            "multiple": "",
+            "size": "0",
+            "style": "font-family:monospace;font-size:16px;padding:0;border:0"
+          },
+          "width": 47.984375,
+          "height": 80.75
+        },
+        {
+          "tag": "select",
+          "attributes": {
+            "id": "sd",
+            "multiple": "",
+            "style": "font-family:monospace;font-size:16px;padding:0;border:0"
+          },
+          "width": 47.984375,
+          "height": 80.75
+        }
+      ],
+      "sourceRelation": "Each size=0/rows=0/cols=0 control equals its same-style omitted-attribute partner. Numeric zero falls back to the attribute default rather than clamping to 1.",
+      "nativeFailure": "Old native input showed only S instead of Size, textarea only T instead of Text, and multiple select only One instead of all four default visible rows. Real visible-content loss, not font/pixel differences.",
+      "minimalProductChanges": [
+        "Integer parser returns per-attribute default if parsed number is below minimum.",
+        "Multiple select initial display rows use default4 for omitted or invalid/zero size; valid size1 remains1."
+      ],
+      "newTests": [
+        "L68 input size0 default-size/clip and complete visible Size",
+        "L69 textarea cols0/rows0 default-size/clip and two complete visible lines",
+        "L70 multiple select size0 default-size/clip and four visible labels"
+      ],
+      "priorCandidateEvidence": "test-runs/BULK-P4-final-20261106T123440Z-e777012f remains SUCCESS/sourceUnchanged=true with 66 commands; root rejects acceptance due this additional source-audit defect. No closed run modified.",
+      "fixtureOwnership": "Root adds comprehensive six-control fixture and dynamic denominator gate; B changes no cases."
+    }
+  }
+}

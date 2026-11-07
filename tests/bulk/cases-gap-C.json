@@ -1,0 +1,911 @@
+{
+  "schema": "py-mermaid-bulk-cases/v1",
+  "group": "C",
+  "candidateSourceSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
+  "casePolicy": "New source-derived corpus; previous670inputs unchanged. Independently exact model/paint/pixel assertions in tests/bulk/c/test_gap_audit.py; general visual fixture still tests source/native output. Authored before baseline first execution.",
+  "cases": [
+    {
+      "id": "gap-c-zen-hidden-await",
+      "group": "C",
+      "kind": "zenuml",
+      "source": "zenuml\nawait A.work()",
+      "config": {},
+      "origin": {
+        "repository": "zenuml-core",
+        "path": "src/g4/sequenceLexer.g4",
+        "symbol": "CONSTANT:   'const'",
+        "line": 42,
+        "sha256": "9bf0cc267143cce32641831d0a6ca8ee5dbb5de995e2e713f9521f7a06ee2ece"
+      },
+      "expect": "render",
+      "features": [
+        "zenuml.hidden-modifier",
+        "no-invented-participant"
+      ],
+      "expectedText": [
+        "A",
+        "work()"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-c-zen-hidden-const",
+      "group": "C",
+      "kind": "zenuml",
+      "source": "zenuml\nconst answer = A.work()",
+      "config": {},
+      "origin": {
+        "repository": "zenuml-core",
+        "path": "src/g4/sequenceLexer.g4",
+        "symbol": "CONSTANT:   'const'",
+        "line": 42,
+        "sha256": "9bf0cc267143cce32641831d0a6ca8ee5dbb5de995e2e713f9521f7a06ee2ece"
+      },
+      "expect": "render",
+      "features": [
+        "zenuml.hidden-modifier",
+        "no-invented-participant"
+      ],
+      "expectedText": [
+        "A",
+        "work()",
+        "answer"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-c-zen-hidden-readonly",
+      "group": "C",
+      "kind": "zenuml",
+      "source": "zenuml\nreadonly answer = A.work()",
+      "config": {},
+      "origin": {
+        "repository": "zenuml-core",
+        "path": "src/g4/sequenceLexer.g4",
+        "symbol": "CONSTANT:   'const'",
+        "line": 42,
+        "sha256": "9bf0cc267143cce32641831d0a6ca8ee5dbb5de995e2e713f9521f7a06ee2ece"
+      },
+      "expect": "render",
+      "features": [
+        "zenuml.hidden-modifier",
+        "no-invented-participant"
+      ],
+      "expectedText": [
+        "A",
+        "work()",
+        "answer"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-c-zen-hidden-static",
+      "group": "C",
+      "kind": "zenuml",
+      "source": "zenuml\nstatic answer = A.work()",
+      "config": {},
+      "origin": {
+        "repository": "zenuml-core",
+        "path": "src/g4/sequenceLexer.g4",
+        "symbol": "CONSTANT:   'const'",
+        "line": 42,
+        "sha256": "9bf0cc267143cce32641831d0a6ca8ee5dbb5de995e2e713f9521f7a06ee2ece"
+      },
+      "expect": "render",
+      "features": [
+        "zenuml.hidden-modifier",
+        "no-invented-participant"
+      ],
+      "expectedText": [
+        "A",
+        "work()",
+        "answer"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-c-zen-assignee-2",
+      "group": "C",
+      "kind": "zenuml",
+      "source": "zenuml\nv0,v1 = A.work()",
+      "config": {},
+      "origin": {
+        "repository": "zenuml-core",
+        "path": "src/g4/sequenceParser.g4",
+        "symbol": "assignee",
+        "line": 209,
+        "sha256": "9e7624e377f5e08ace461a099e91d90e92ac795f59fd716552c7a5a630cc6c54"
+      },
+      "expect": "render",
+      "features": [
+        "zenuml.complete-assignee",
+        "assignment-return"
+      ],
+      "expectedText": [
+        "A",
+        "work()",
+        "v0,v1"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-c-zen-assignee-3",
+      "group": "C",
+      "kind": "zenuml",
+      "source": "zenuml\nv0,v1,v2 = A.work()",
+      "config": {},
+      "origin": {
+        "repository": "zenuml-core",
+        "path": "src/g4/sequenceParser.g4",
+        "symbol": "assignee",
+        "line": 209,
+        "sha256": "9e7624e377f5e08ace461a099e91d90e92ac795f59fd716552c7a5a630cc6c54"
+      },
+      "expect": "render",
+      "features": [
+        "zenuml.complete-assignee",
+        "assignment-return"
+      ],
+      "expectedText": [
+        "A",
+        "work()",
+        "v0,v1,v2"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-c-zen-assignee-8",
+      "group": "C",
+      "kind": "zenuml",
+      "source": "zenuml\nv0,v1,v2,v3,v4,v5,v6,v7 = A.work()",
+      "config": {},
+      "origin": {
+        "repository": "zenuml-core",
+        "path": "src/g4/sequenceParser.g4",
+        "symbol": "assignee",
+        "line": 209,
+        "sha256": "9e7624e377f5e08ace461a099e91d90e92ac795f59fd716552c7a5a630cc6c54"
+      },
+      "expect": "render",
+      "features": [
+        "zenuml.complete-assignee",
+        "assignment-return"
+      ],
+      "expectedText": [
+        "A",
+        "work()",
+        "v0,v1,v2,v3,v4,v5,v6,v7"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-c-zen-typed-assignee",
+      "group": "C",
+      "kind": "zenuml",
+      "source": "zenuml\nResult a,b,c = A.work()",
+      "config": {},
+      "origin": {
+        "repository": "zenuml-core",
+        "path": "src/parser/Messages/Assignment.ts",
+        "symbol": "function extractAssignmentFromContext",
+        "line": 44,
+        "sha256": "5b8afef04bb60037f1f5756cd49309d6129eb2c55e687e2733ef16eb7128361e"
+      },
+      "expect": "render",
+      "features": [
+        "zenuml.complete-assignee",
+        "typed-assignment"
+      ],
+      "expectedText": [
+        "A",
+        "work()",
+        "a,b,c"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-c-zen-unicode-digit",
+      "group": "C",
+      "kind": "zenuml",
+      "source": "zenuml\n1\u670d\u52a1 -> B: work",
+      "config": {},
+      "origin": {
+        "repository": "zenuml-core",
+        "path": "src/g4/sequenceLexer.g4",
+        "symbol": "DIGIT_LEADING_NAME",
+        "line": 169,
+        "sha256": "9bf0cc267143cce32641831d0a6ca8ee5dbb5de995e2e713f9521f7a06ee2ece"
+      },
+      "expect": "render",
+      "features": [
+        "zenuml.unicode-lexer"
+      ],
+      "expectedText": [
+        "1\u670d\u52a1",
+        "B",
+        "work"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-c-zen-hidden-newline",
+      "group": "C",
+      "kind": "zenuml",
+      "source": "zenuml\nA.\nwork()",
+      "config": {},
+      "origin": {
+        "repository": "zenuml-core",
+        "path": "src/g4/sequenceLexer.g4",
+        "symbol": "CR",
+        "line": 124,
+        "sha256": "9bf0cc267143cce32641831d0a6ca8ee5dbb5de995e2e713f9521f7a06ee2ece"
+      },
+      "expect": "render",
+      "features": [
+        "zenuml.hidden-newline"
+      ],
+      "expectedText": [
+        "A",
+        "work()"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-c-railroad-derived-color-0",
+      "group": "C",
+      "kind": "railroad",
+      "source": "railroad-beta\nr=terminal(\"Visible\");",
+      "config": {
+        "themeVariables": {
+          "secondBkg": "#112233"
+        },
+        "railroad": {
+          "terminalFill": false
+        }
+      },
+      "origin": {
+        "repository": "mermaid",
+        "path": "packages/mermaid/src/diagrams/railroad/styles.ts",
+        "symbol": "export const buildRailroadStyleOptions",
+        "line": 189,
+        "sha256": "595aadfbfd8ad925e6cc63e05180f1b9b6f5247e99beb94eb62aca72be083bed"
+      },
+      "expect": "render",
+      "features": [
+        "railroad.theme-derived-fallback"
+      ],
+      "expectedText": [
+        "Visible"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-c-railroad-derived-color-1",
+      "group": "C",
+      "kind": "railroad",
+      "source": "railroad-beta\nr=terminal(\"Visible\");",
+      "config": {
+        "themeVariables": {
+          "secondBkg": "#c02040"
+        },
+        "railroad": {
+          "terminalFill": false
+        }
+      },
+      "origin": {
+        "repository": "mermaid",
+        "path": "packages/mermaid/src/diagrams/railroad/styles.ts",
+        "symbol": "export const buildRailroadStyleOptions",
+        "line": 189,
+        "sha256": "595aadfbfd8ad925e6cc63e05180f1b9b6f5247e99beb94eb62aca72be083bed"
+      },
+      "expect": "render",
+      "features": [
+        "railroad.theme-derived-fallback"
+      ],
+      "expectedText": [
+        "Visible"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-c-railroad-valid-color",
+      "group": "C",
+      "kind": "railroad",
+      "source": "railroad-beta\nr=terminal(\"Visible\");",
+      "config": {
+        "themeVariables": {
+          "secondBkg": "#112233"
+        },
+        "railroad": {
+          "terminalFill": "#aabbcc"
+        }
+      },
+      "origin": {
+        "repository": "mermaid",
+        "path": "packages/mermaid/src/diagrams/railroad/styles.ts",
+        "symbol": "export const buildRailroadStyleOptions",
+        "line": 189,
+        "sha256": "595aadfbfd8ad925e6cc63e05180f1b9b6f5247e99beb94eb62aca72be083bed"
+      },
+      "expect": "render",
+      "features": [
+        "railroad.valid-override"
+      ],
+      "expectedText": [
+        "Visible"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-c-railroad-derived-font",
+      "group": "C",
+      "kind": "railroad",
+      "source": "railroad-beta\nr=terminal(\"Visible\");",
+      "config": {
+        "themeVariables": {
+          "fontSize": "24px"
+        },
+        "railroad": {
+          "fontSize": -1
+        }
+      },
+      "origin": {
+        "repository": "mermaid",
+        "path": "packages/mermaid/src/diagrams/railroad/styles.ts",
+        "symbol": "export const buildRailroadStyleOptions",
+        "line": 189,
+        "sha256": "595aadfbfd8ad925e6cc63e05180f1b9b6f5247e99beb94eb62aca72be083bed"
+      },
+      "expect": "render",
+      "features": [
+        "railroad.theme-derived-font-size"
+      ],
+      "expectedText": [
+        "Visible"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-c-railroad-zero-boundary",
+      "group": "C",
+      "kind": "railroad",
+      "source": "railroad-beta\nr=terminal(\"Visible\");",
+      "config": {
+        "railroad": {
+          "padding": 0,
+          "strokeWidth": 0,
+          "markerRadius": 0
+        }
+      },
+      "origin": {
+        "repository": "mermaid",
+        "path": "packages/mermaid/src/diagrams/railroad/styles.ts",
+        "symbol": "export const buildRailroadStyleOptions",
+        "line": 189,
+        "sha256": "595aadfbfd8ad925e6cc63e05180f1b9b6f5247e99beb94eb62aca72be083bed"
+      },
+      "expect": "render",
+      "features": [
+        "railroad.valid-zero"
+      ],
+      "expectedText": [
+        "Visible"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-c-railroadebnf-derived-color-0",
+      "group": "C",
+      "kind": "railroadEbnf",
+      "source": "railroad-ebnf-beta\nr=\"Visible\";",
+      "config": {
+        "themeVariables": {
+          "secondBkg": "#112233"
+        },
+        "railroad": {
+          "terminalFill": false
+        }
+      },
+      "origin": {
+        "repository": "mermaid",
+        "path": "packages/mermaid/src/diagrams/railroad/styles.ts",
+        "symbol": "export const buildRailroadStyleOptions",
+        "line": 189,
+        "sha256": "595aadfbfd8ad925e6cc63e05180f1b9b6f5247e99beb94eb62aca72be083bed"
+      },
+      "expect": "render",
+      "features": [
+        "railroad.theme-derived-fallback"
+      ],
+      "expectedText": [
+        "Visible"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-c-railroadebnf-derived-color-1",
+      "group": "C",
+      "kind": "railroadEbnf",
+      "source": "railroad-ebnf-beta\nr=\"Visible\";",
+      "config": {
+        "themeVariables": {
+          "secondBkg": "#c02040"
+        },
+        "railroad": {
+          "terminalFill": false
+        }
+      },
+      "origin": {
+        "repository": "mermaid",
+        "path": "packages/mermaid/src/diagrams/railroad/styles.ts",
+        "symbol": "export const buildRailroadStyleOptions",
+        "line": 189,
+        "sha256": "595aadfbfd8ad925e6cc63e05180f1b9b6f5247e99beb94eb62aca72be083bed"
+      },
+      "expect": "render",
+      "features": [
+        "railroad.theme-derived-fallback"
+      ],
+      "expectedText": [
+        "Visible"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-c-railroadebnf-valid-color",
+      "group": "C",
+      "kind": "railroadEbnf",
+      "source": "railroad-ebnf-beta\nr=\"Visible\";",
+      "config": {
+        "themeVariables": {
+          "secondBkg": "#112233"
+        },
+        "railroad": {
+          "terminalFill": "#aabbcc"
+        }
+      },
+      "origin": {
+        "repository": "mermaid",
+        "path": "packages/mermaid/src/diagrams/railroad/styles.ts",
+        "symbol": "export const buildRailroadStyleOptions",
+        "line": 189,
+        "sha256": "595aadfbfd8ad925e6cc63e05180f1b9b6f5247e99beb94eb62aca72be083bed"
+      },
+      "expect": "render",
+      "features": [
+        "railroad.valid-override"
+      ],
+      "expectedText": [
+        "Visible"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-c-railroadebnf-derived-font",
+      "group": "C",
+      "kind": "railroadEbnf",
+      "source": "railroad-ebnf-beta\nr=\"Visible\";",
+      "config": {
+        "themeVariables": {
+          "fontSize": "24px"
+        },
+        "railroad": {
+          "fontSize": -1
+        }
+      },
+      "origin": {
+        "repository": "mermaid",
+        "path": "packages/mermaid/src/diagrams/railroad/styles.ts",
+        "symbol": "export const buildRailroadStyleOptions",
+        "line": 189,
+        "sha256": "595aadfbfd8ad925e6cc63e05180f1b9b6f5247e99beb94eb62aca72be083bed"
+      },
+      "expect": "render",
+      "features": [
+        "railroad.theme-derived-font-size"
+      ],
+      "expectedText": [
+        "Visible"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-c-railroadebnf-zero-boundary",
+      "group": "C",
+      "kind": "railroadEbnf",
+      "source": "railroad-ebnf-beta\nr=\"Visible\";",
+      "config": {
+        "railroad": {
+          "padding": 0,
+          "strokeWidth": 0,
+          "markerRadius": 0
+        }
+      },
+      "origin": {
+        "repository": "mermaid",
+        "path": "packages/mermaid/src/diagrams/railroad/styles.ts",
+        "symbol": "export const buildRailroadStyleOptions",
+        "line": 189,
+        "sha256": "595aadfbfd8ad925e6cc63e05180f1b9b6f5247e99beb94eb62aca72be083bed"
+      },
+      "expect": "render",
+      "features": [
+        "railroad.valid-zero"
+      ],
+      "expectedText": [
+        "Visible"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-c-railroadabnf-derived-color-0",
+      "group": "C",
+      "kind": "railroadAbnf",
+      "source": "railroad-abnf-beta\nr=\"Visible\";",
+      "config": {
+        "themeVariables": {
+          "secondBkg": "#112233"
+        },
+        "railroad": {
+          "terminalFill": false
+        }
+      },
+      "origin": {
+        "repository": "mermaid",
+        "path": "packages/mermaid/src/diagrams/railroad/styles.ts",
+        "symbol": "export const buildRailroadStyleOptions",
+        "line": 189,
+        "sha256": "595aadfbfd8ad925e6cc63e05180f1b9b6f5247e99beb94eb62aca72be083bed"
+      },
+      "expect": "render",
+      "features": [
+        "railroad.theme-derived-fallback"
+      ],
+      "expectedText": [
+        "Visible"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-c-railroadabnf-derived-color-1",
+      "group": "C",
+      "kind": "railroadAbnf",
+      "source": "railroad-abnf-beta\nr=\"Visible\";",
+      "config": {
+        "themeVariables": {
+          "secondBkg": "#c02040"
+        },
+        "railroad": {
+          "terminalFill": false
+        }
+      },
+      "origin": {
+        "repository": "mermaid",
+        "path": "packages/mermaid/src/diagrams/railroad/styles.ts",
+        "symbol": "export const buildRailroadStyleOptions",
+        "line": 189,
+        "sha256": "595aadfbfd8ad925e6cc63e05180f1b9b6f5247e99beb94eb62aca72be083bed"
+      },
+      "expect": "render",
+      "features": [
+        "railroad.theme-derived-fallback"
+      ],
+      "expectedText": [
+        "Visible"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-c-railroadabnf-valid-color",
+      "group": "C",
+      "kind": "railroadAbnf",
+      "source": "railroad-abnf-beta\nr=\"Visible\";",
+      "config": {
+        "themeVariables": {
+          "secondBkg": "#112233"
+        },
+        "railroad": {
+          "terminalFill": "#aabbcc"
+        }
+      },
+      "origin": {
+        "repository": "mermaid",
+        "path": "packages/mermaid/src/diagrams/railroad/styles.ts",
+        "symbol": "export const buildRailroadStyleOptions",
+        "line": 189,
+        "sha256": "595aadfbfd8ad925e6cc63e05180f1b9b6f5247e99beb94eb62aca72be083bed"
+      },
+      "expect": "render",
+      "features": [
+        "railroad.valid-override"
+      ],
+      "expectedText": [
+        "Visible"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-c-railroadabnf-derived-font",
+      "group": "C",
+      "kind": "railroadAbnf",
+      "source": "railroad-abnf-beta\nr=\"Visible\";",
+      "config": {
+        "themeVariables": {
+          "fontSize": "24px"
+        },
+        "railroad": {
+          "fontSize": -1
+        }
+      },
+      "origin": {
+        "repository": "mermaid",
+        "path": "packages/mermaid/src/diagrams/railroad/styles.ts",
+        "symbol": "export const buildRailroadStyleOptions",
+        "line": 189,
+        "sha256": "595aadfbfd8ad925e6cc63e05180f1b9b6f5247e99beb94eb62aca72be083bed"
+      },
+      "expect": "render",
+      "features": [
+        "railroad.theme-derived-font-size"
+      ],
+      "expectedText": [
+        "Visible"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-c-railroadabnf-zero-boundary",
+      "group": "C",
+      "kind": "railroadAbnf",
+      "source": "railroad-abnf-beta\nr=\"Visible\";",
+      "config": {
+        "railroad": {
+          "padding": 0,
+          "strokeWidth": 0,
+          "markerRadius": 0
+        }
+      },
+      "origin": {
+        "repository": "mermaid",
+        "path": "packages/mermaid/src/diagrams/railroad/styles.ts",
+        "symbol": "export const buildRailroadStyleOptions",
+        "line": 189,
+        "sha256": "595aadfbfd8ad925e6cc63e05180f1b9b6f5247e99beb94eb62aca72be083bed"
+      },
+      "expect": "render",
+      "features": [
+        "railroad.valid-zero"
+      ],
+      "expectedText": [
+        "Visible"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-c-railroadpeg-derived-color-0",
+      "group": "C",
+      "kind": "railroadPeg",
+      "source": "railroad-peg-beta\nr<-\"Visible\";",
+      "config": {
+        "themeVariables": {
+          "secondBkg": "#112233"
+        },
+        "railroad": {
+          "terminalFill": false
+        }
+      },
+      "origin": {
+        "repository": "mermaid",
+        "path": "packages/mermaid/src/diagrams/railroad/styles.ts",
+        "symbol": "export const buildRailroadStyleOptions",
+        "line": 189,
+        "sha256": "595aadfbfd8ad925e6cc63e05180f1b9b6f5247e99beb94eb62aca72be083bed"
+      },
+      "expect": "render",
+      "features": [
+        "railroad.theme-derived-fallback"
+      ],
+      "expectedText": [
+        "Visible"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-c-railroadpeg-derived-color-1",
+      "group": "C",
+      "kind": "railroadPeg",
+      "source": "railroad-peg-beta\nr<-\"Visible\";",
+      "config": {
+        "themeVariables": {
+          "secondBkg": "#c02040"
+        },
+        "railroad": {
+          "terminalFill": false
+        }
+      },
+      "origin": {
+        "repository": "mermaid",
+        "path": "packages/mermaid/src/diagrams/railroad/styles.ts",
+        "symbol": "export const buildRailroadStyleOptions",
+        "line": 189,
+        "sha256": "595aadfbfd8ad925e6cc63e05180f1b9b6f5247e99beb94eb62aca72be083bed"
+      },
+      "expect": "render",
+      "features": [
+        "railroad.theme-derived-fallback"
+      ],
+      "expectedText": [
+        "Visible"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-c-railroadpeg-valid-color",
+      "group": "C",
+      "kind": "railroadPeg",
+      "source": "railroad-peg-beta\nr<-\"Visible\";",
+      "config": {
+        "themeVariables": {
+          "secondBkg": "#112233"
+        },
+        "railroad": {
+          "terminalFill": "#aabbcc"
+        }
+      },
+      "origin": {
+        "repository": "mermaid",
+        "path": "packages/mermaid/src/diagrams/railroad/styles.ts",
+        "symbol": "export const buildRailroadStyleOptions",
+        "line": 189,
+        "sha256": "595aadfbfd8ad925e6cc63e05180f1b9b6f5247e99beb94eb62aca72be083bed"
+      },
+      "expect": "render",
+      "features": [
+        "railroad.valid-override"
+      ],
+      "expectedText": [
+        "Visible"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-c-railroadpeg-derived-font",
+      "group": "C",
+      "kind": "railroadPeg",
+      "source": "railroad-peg-beta\nr<-\"Visible\";",
+      "config": {
+        "themeVariables": {
+          "fontSize": "24px"
+        },
+        "railroad": {
+          "fontSize": -1
+        }
+      },
+      "origin": {
+        "repository": "mermaid",
+        "path": "packages/mermaid/src/diagrams/railroad/styles.ts",
+        "symbol": "export const buildRailroadStyleOptions",
+        "line": 189,
+        "sha256": "595aadfbfd8ad925e6cc63e05180f1b9b6f5247e99beb94eb62aca72be083bed"
+      },
+      "expect": "render",
+      "features": [
+        "railroad.theme-derived-font-size"
+      ],
+      "expectedText": [
+        "Visible"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-c-railroadpeg-zero-boundary",
+      "group": "C",
+      "kind": "railroadPeg",
+      "source": "railroad-peg-beta\nr<-\"Visible\";",
+      "config": {
+        "railroad": {
+          "padding": 0,
+          "strokeWidth": 0,
+          "markerRadius": 0
+        }
+      },
+      "origin": {
+        "repository": "mermaid",
+        "path": "packages/mermaid/src/diagrams/railroad/styles.ts",
+        "symbol": "export const buildRailroadStyleOptions",
+        "line": 189,
+        "sha256": "595aadfbfd8ad925e6cc63e05180f1b9b6f5247e99beb94eb62aca72be083bed"
+      },
+      "expect": "render",
+      "features": [
+        "railroad.valid-zero"
+      ],
+      "expectedText": [
+        "Visible"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-c-sequence-root-font",
+      "group": "C",
+      "kind": "sequence",
+      "source": "sequenceDiagram\nparticipant A\nNote over A: NoteInk\nA->>B: MessageInk",
+      "config": {
+        "fontSize": 32,
+        "fontWeight": 700
+      },
+      "origin": {
+        "repository": "mermaid",
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "export const setConf",
+        "line": 876,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c"
+      },
+      "expect": "render",
+      "features": [
+        "sequence.root-font-alias"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "NoteInk",
+        "MessageInk"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-c-sequence-long-number",
+      "group": "C",
+      "kind": "sequence",
+      "source": "sequenceDiagram\nautonumber 100000\nA->>B: Message",
+      "config": {},
+      "origin": {
+        "repository": "mermaid",
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "    const sequenceIndexLength",
+        "line": 714,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c"
+      },
+      "expect": "render",
+      "features": [
+        "sequence.number-font-fit"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "Message",
+        "100000"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-c-sequence-destroy-attachment",
+      "group": "C",
+      "kind": "sequence",
+      "source": "sequenceDiagram\nparticipant A\nparticipant B\ndestroy B\nA->>B: Goodbye",
+      "config": {
+        "sequence": {
+          "mirrorActors": true
+        }
+      },
+      "origin": {
+        "repository": "mermaid",
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "function adjustCreatedDestroyedData(",
+        "line": 946,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c"
+      },
+      "expect": "render",
+      "features": [
+        "sequence.destroy-endpoint"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "Goodbye"
+      ],
+      "expectedErrorCodes": []
+    }
+  ]
+}

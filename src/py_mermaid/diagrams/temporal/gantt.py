@@ -6,6 +6,7 @@ from ...runtime.common import make_diagram,config_dict,error
 from ..charts._syntax import theme,number
 from ._syntax import lines,metadata,plain_label
 from ._dates import parse_date,fallback_date,duration,add,invalid,time_ticks,axis_format,DAYS
+from ._civil import epoch_seconds
 
 @dataclass(frozen=True)
 class Task:
@@ -38,15 +39,21 @@ class Gantt:
     accessibility:tuple=()
 
 def parse(document,config):
-    rows=lines(document,hash_comments=False);meta={'title':document.title};sections=[];section='';tasks=[];previous=None;counter=0;order=0
+    rows=lines(document,hash_comments=False,inline_percent_comments=False);meta={'title':document.title};sections=[];section='';tasks=[];previous=None;counter=0;order=0
     options=dict(dateformat='',axisformat='',tickinterval='',todaymarker='',weekday='sunday',weekend='saturday');excludes=[];includes=[];inclusive=topaxis=False
     if not rows or rows[0][1].lower()!='gantt':raise error(document,0,'Expected gantt')
     for offset,text in rows[1:]:
         if metadata(text,meta):continue
-        command,_,value=text.partition(' ');name=command.lower();value=value.strip()
-        if name in options:
-            if name=='weekday' and value not in DAYS:raise error(document,offset,'Invalid gantt weekday')
-            if name=='weekend' and value not in ('friday','saturday'):raise error(document,offset,'Invalid gantt weekend')
+        parts=text.split(None,1);command=parts[0];name=command.lower();value=parts[1].strip() if len(parts)>1 else ''
+        # Jison recognizes only weekday\s+<known day> and weekend\s+<known
+        # weekend>. A label such as `Weekday :a, ...` is taskTxt, not a broken
+        # directive. The lexer is case-insensitive and \s also accepts tabs.
+        days=DAYS if name=='weekday' else ('friday','saturday')
+        day_directive=name not in ('weekday','weekend') or re.match('(?:'+'|'.join(days)+')',value,re.I)
+        if name in options and day_directive:
+            if name=='weekday' and value.lower() not in DAYS:raise error(document,offset,'Invalid gantt weekday')
+            if name=='weekend' and value.lower() not in ('friday','saturday'):raise error(document,offset,'Invalid gantt weekend')
+            if name in ('weekday','weekend'):value=value.lower()
             options[name]=value;continue
         if name in ('excludes','includes'):
             target=excludes if name=='excludes' else includes
@@ -137,8 +144,10 @@ async def build(diagram,p):
                 else:timeline[lane]=end
                 orders[t.offset]=lane+offset
             categoryheights[section]=len(timeline);offset+=len(timeline)
-    height=2*top+sum(categoryheights.values())*gap;minimum=min(start for t,start,end,render in tasks);maximum=max(end for t,start,end,render in tasks);extent=(maximum-minimum).total_seconds()
-    def scale(value):return math.floor(((value-minimum).total_seconds()/extent if extent else .5)*(width-left-right)+.5)
+    height=2*top+sum(categoryheights.values())*gap;minimum=min(start for t,start,end,render in tasks);maximum=max(end for t,start,end,render in tasks);minimum_epoch=epoch_seconds(minimum);extent=epoch_seconds(maximum)-minimum_epoch
+    # D3 scaleTime interpolates Date epoch milliseconds. Calendar-day addition
+    # preserves wall time, but a bar crossing DST spans23/25 elapsed hours.
+    def scale(value):return math.floor(((epoch_seconds(value)-minimum_epoch)/extent if extent else .5)*(width-left-right)+.5)
     # Section row backgrounds and labels use insertion-order categories, while
     # task bodies retain source task order and are painted by start time.
     seen=set()

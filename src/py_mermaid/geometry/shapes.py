@@ -222,9 +222,15 @@ def _extended_geometry(kind, lw, lh, config, *, metadata=(), asset_size=None, di
             raw='M 0 0 '+' '.join(f'a {r*(.8 if i in {5,12} else 1)} {r*(.8 if i in {5,12} else 1)} 1 0 0 {dx*bw} {dy*bh}' for i,(dx,dy) in enumerate(deltas))+' H 0 V 0 Z'
         bounds=path_bounds(raw);w=bounds.width;h=bounds.height;outline=transform_path(raw,dx=-bounds.x,dy=-bounds.y)
     elif kind=='collapsedGroup':
-        w=max(80,lw+2*p);h=lh+2*p+28;outline=_rect(w,h,8);oy=-14
-        separator=p+lh+8;parts.append(ShapePart(f'M 0 {separator} H {w}',dash=(3,3)))
-        for x in (w/2-9,w/2,w/2+9):parts.append(ShapePart(_ellipse(x,separator+10,2.5,2.5),fill='stroke',stroke='none'))
+        from ..config.values import thaw_value
+        meta=thaw_value(metadata) if metadata else {}
+        # Both DB projections set padding=8. Container identity survives collapse.
+        p=8;radius=10 if meta.get('containerType')=='flow' else 8
+        w=max(80,lw+2*p);h=lh+2*p+28;outline=_rect(w,h,radius);oy=-14
+        separator=p+lh+8
+        parts.append(ShapePart(f'M 8 {separator} H {w-8}',dash=(3,3),css_classes=('collapsed-separator',),tag='line'))
+        for x in (w/2-10,w/2,w/2+10):
+            parts.append(ShapePart(_ellipse(x,separator+10,2.5,2.5),fill='stroke',stroke='none',css_classes=('collapsed-indicator',),tag='circle'))
     else:
         raise MermaidError(f'No geometry for registered shape {kind!r}',code='UNSUPPORTED_SHAPE')
     label=Box((w-lw)/2+ox,(h-lh)/2+oy,lw,lh)

@@ -1,0 +1,1173 @@
+{
+  "schema": "py-mermaid-feature-gap-audit/v1",
+  "group": "root",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "baselineSourceSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
+  "actualReviewDepth": "Functional-group correspondence and selected source branches; existing a6 local evidence reused separately from new branch tests. No claim of exhaustive expression/grammar/HTML/CSS coverage.",
+  "entries": [
+    {
+      "id": "flowchart-v2",
+      "features": [
+        {
+          "id": "flowchart-v2-grammar",
+          "title": "Header, lexer, labels, Cartesian edges and ordering",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/flowchart/parser/flow.jison",
+              "symbol": "statement",
+              "line": 319,
+              "sha256": "9597faffe2a133b104c6dd4f38a162f6980bff4e0a841a83ff94af3900ea7ba8",
+              "lineScope": "symbol_start_or_file_entry"
+            },
+            {
+              "path": "packages/mermaid/src/diagrams/flowchart/flowDb.ts",
+              "symbol": "public addLink",
+              "line": 353,
+              "sha256": "33577b9ade8c65be6049c3093089dbf81abf44214f49c2b2ea46434183889288",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/flowchart/parser.py",
+              "symbol": "parse_flowchart",
+              "line": 842,
+              "sha256": "fd9fac7b923516a398d6496b3f0fbb8f40546d7951e1c68d611bd50eb4a6e72e",
+              "lineScope": "symbol_start_or_file_entry"
+            },
+            {
+              "path": "src/py_mermaid/diagrams/flowchart/parser.py",
+              "symbol": "add_links",
+              "line": 369,
+              "sha256": "fd9fac7b923516a398d6496b3f0fbb8f40546d7951e1c68d611bd50eb4a6e72e",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/f014/test_language.py",
+              "symbol": "test_all_handwritten_static_semantic_cases",
+              "line": 70,
+              "sha256": "e473cbc50e575acece317dc2074247c941a7fe0d3ec76c09226e2ac63cefea02",
+              "lineScope": "symbol_start_or_file_entry"
+            },
+            {
+              "path": "tests/f014/test_language.py",
+              "symbol": "test_each_identifier_token_alternative_has_reachable_input",
+              "line": 136,
+              "sha256": "e473cbc50e575acece317dc2074247c941a7fe0d3ec76c09226e2ac63cefea02",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "reason": "Mapped to fixed source and existing accepted local tests; this is a functional-group audit, not expression/branch coverage proof."
+        },
+        {
+          "id": "flowchart-v2-metadata",
+          "title": "Node/edge metadata, user IDs and source truthy updates",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/flowchart/flowDb.ts",
+              "symbol": "public addVertex",
+              "line": 127,
+              "sha256": "33577b9ade8c65be6049c3093089dbf81abf44214f49c2b2ea46434183889288",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/flowchart/parser.py",
+              "symbol": "metadata",
+              "line": 385,
+              "sha256": "fd9fac7b923516a398d6496b3f0fbb8f40546d7951e1c68d611bd50eb4a6e72e",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/f014/test_language.py",
+              "symbol": "test_metadata_truthy_updates_do_not_clear_prior_assets",
+              "line": 326,
+              "sha256": "e473cbc50e575acece317dc2074247c941a7fe0d3ec76c09226e2ac63cefea02",
+              "lineScope": "symbol_start_or_file_entry"
+            },
+            {
+              "path": "tests/f014/test_language.py",
+              "symbol": "test_metadata_before_and_after_cartesian_members",
+              "line": 210,
+              "sha256": "e473cbc50e575acece317dc2074247c941a7fe0d3ec76c09226e2ac63cefea02",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "reason": "Mapped to fixed source and existing accepted local tests; this is a functional-group audit, not expression/branch coverage proof."
+        },
+        {
+          "id": "flowchart-v2-groups",
+          "title": "Subgraphs, directions, collapsed initial state and redirected relations",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/flowchart/flowDb.ts",
+              "symbol": "public addSubGraph",
+              "line": 674,
+              "sha256": "33577b9ade8c65be6049c3093089dbf81abf44214f49c2b2ea46434183889288",
+              "lineScope": "symbol_start_or_file_entry"
+            },
+            {
+              "path": "packages/mermaid/src/diagrams/flowchart/flowDb.ts",
+              "symbol": "public getData",
+              "line": 1110,
+              "sha256": "33577b9ade8c65be6049c3093089dbf81abf44214f49c2b2ea46434183889288",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/flowchart/parser.py",
+              "symbol": "finish",
+              "line": 687,
+              "sha256": "fd9fac7b923516a398d6496b3f0fbb8f40546d7951e1c68d611bd50eb4a6e72e",
+              "lineScope": "symbol_start_or_file_entry"
+            },
+            {
+              "path": "src/py_mermaid/layout/elk/compound.py",
+              "symbol": "prepare_compound",
+              "line": 189,
+              "sha256": "379ef3b9a47d3ebf91583973be3365b5d24a65977d47463131a45aa41d65b446",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/f014/test_language.py",
+              "symbol": "test_all_group_directions_and_inheritance",
+              "line": 303,
+              "sha256": "e473cbc50e575acece317dc2074247c941a7fe0d3ec76c09226e2ac63cefea02",
+              "lineScope": "symbol_start_or_file_entry"
+            },
+            {
+              "path": "tests/f014/test_styles.py",
+              "symbol": "test_collapsed_group_keeps_palette_slot_and_override",
+              "line": 117,
+              "sha256": "114a9252605310ec8ea1c231c66ca41e57d56e673ba3600d379982270b26443f",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "reason": "Mapped to fixed source and existing accepted local tests; this is a functional-group audit, not expression/branch coverage proof."
+        },
+        {
+          "id": "flowchart-v2-styles",
+          "title": "classDef/default/class/style/linkStyle cascade and static initial animation paint",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/flowchart/parser/flow.jison",
+              "symbol": "classDefStatement",
+              "line": 374,
+              "sha256": "9597faffe2a133b104c6dd4f38a162f6980bff4e0a841a83ff94af3900ea7ba8",
+              "lineScope": "symbol_start_or_file_entry"
+            },
+            {
+              "path": "packages/mermaid/src/diagrams/flowchart/flowDb.ts",
+              "symbol": "public getData",
+              "line": 1110,
+              "sha256": "33577b9ade8c65be6049c3093089dbf81abf44214f49c2b2ea46434183889288",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/flowchart/parser.py",
+              "symbol": "style_statement",
+              "line": 503,
+              "sha256": "fd9fac7b923516a398d6496b3f0fbb8f40546d7951e1c68d611bd50eb4a6e72e",
+              "lineScope": "symbol_start_or_file_entry"
+            },
+            {
+              "path": "src/py_mermaid/rendering/styles/flowchart.py",
+              "symbol": "resolve_style",
+              "line": 599,
+              "sha256": "bf883f15379f39028b9b12b905eb7669ef2b7c13e090b14648515e7512b67b07",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/f014/test_styles.py",
+              "symbol": "test_class_default_node_explicit_and_local_order",
+              "line": 31,
+              "sha256": "114a9252605310ec8ea1c231c66ca41e57d56e673ba3600d379982270b26443f",
+              "lineScope": "symbol_start_or_file_entry"
+            },
+            {
+              "path": "tests/f014/test_styles.py",
+              "symbol": "test_animated_explicit_dash_and_cap_override",
+              "line": 68,
+              "sha256": "114a9252605310ec8ea1c231c66ca41e57d56e673ba3600d379982270b26443f",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "reason": "Mapped to fixed source and existing accepted local tests; this is a functional-group audit, not expression/branch coverage proof."
+        },
+        {
+          "id": "flowchart-v2-shapes",
+          "title": "Classic and metadata shapes, labels, silhouettes and attachment intersections",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes.ts",
+              "symbol": "shapes",
+              "line": 4,
+              "sha256": "68fceb790c2a9b65397d96edaf85a50b4ae059a68cf52c83553c4887019f1699",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/geometry/shape_registry.py",
+              "symbol": "canonical_shape",
+              "line": 11,
+              "sha256": "6b9cb66f463d2e2fed5aa4ba418c497c498870d6855825d7b71effdeffd1b27a",
+              "lineScope": "symbol_start_or_file_entry"
+            },
+            {
+              "path": "src/py_mermaid/geometry/shapes.py",
+              "symbol": "shape_geometry",
+              "line": 262,
+              "sha256": "94fc76f11db69ddd8e5a67ae60deac9c7d8a840d90bfe38459a466c97c580f01",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/f014/test_shapes.py",
+              "symbol": "test_s01_exact_53_definitions_and_alias_equivalence",
+              "line": 137,
+              "sha256": "4cd9360fbeda3011e929284b1f31af1d0b1d51b28026826e292ed24015da5407",
+              "lineScope": "symbol_start_or_file_entry"
+            },
+            {
+              "path": "tests/f014/test_shapes.py",
+              "symbol": "test_s12_all_outline_approaches_axis_and_nonaxis_match_native_ink",
+              "line": 263,
+              "sha256": "4cd9360fbeda3011e929284b1f31af1d0b1d51b28026826e292ed24015da5407",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "reason": "Mapped to fixed source and existing accepted local tests; this is a functional-group audit, not expression/branch coverage proof."
+        },
+        {
+          "id": "flowchart-v2-layout",
+          "title": "Real ELK options/compound layout, curves, rounded paths, straightening and line hops",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/rendering-util/layout-algorithms/elk/render.ts",
+              "symbol": "render",
+              "line": 14,
+              "sha256": "6258890b3f311e86e4cd4dc99d480f704fde7473e150dc62b88838c5015c5011",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/layout/elk/compound.py",
+              "symbol": "read_compound",
+              "line": 409,
+              "sha256": "379ef3b9a47d3ebf91583973be3365b5d24a65977d47463131a45aa41d65b446",
+              "lineScope": "symbol_start_or_file_entry"
+            },
+            {
+              "path": "src/py_mermaid/geometry/edges/pipeline.py",
+              "symbol": "finish_edges",
+              "line": 67,
+              "sha256": "368dca37a3f65dc5d71d7e32432452d3fd224e959022c15c909ac511f9154a74",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/f014/test_layout.py",
+              "symbol": "test_p04_rounded_corner_uses_radius5_angle_cut_and_no_input_mutation",
+              "line": 461,
+              "sha256": "9a410b6e6305aed54cb11903a73498458910626ed33214ad9746a48b97f123dc",
+              "lineScope": "symbol_start_or_file_entry"
+            },
+            {
+              "path": "tests/f014/test_layout.py",
+              "symbol": "test_p07_hop_orientation_radius6_gap_and_disabled",
+              "line": 492,
+              "sha256": "9a410b6e6305aed54cb11903a73498458910626ed33214ad9746a48b97f123dc",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "reason": "Mapped to fixed source and existing accepted local tests; this is a functional-group audit, not expression/branch coverage proof."
+        }
+      ]
+    },
+    {
+      "id": "flowchart-elk",
+      "features": [
+        {
+          "id": "flowchart-elk-grammar",
+          "title": "Header, lexer, labels, Cartesian edges and ordering",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/flowchart/parser/flow.jison",
+              "symbol": "statement",
+              "line": 319,
+              "sha256": "9597faffe2a133b104c6dd4f38a162f6980bff4e0a841a83ff94af3900ea7ba8",
+              "lineScope": "symbol_start_or_file_entry"
+            },
+            {
+              "path": "packages/mermaid/src/diagrams/flowchart/flowDb.ts",
+              "symbol": "public addLink",
+              "line": 353,
+              "sha256": "33577b9ade8c65be6049c3093089dbf81abf44214f49c2b2ea46434183889288",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/flowchart/parser.py",
+              "symbol": "parse_flowchart",
+              "line": 842,
+              "sha256": "fd9fac7b923516a398d6496b3f0fbb8f40546d7951e1c68d611bd50eb4a6e72e",
+              "lineScope": "symbol_start_or_file_entry"
+            },
+            {
+              "path": "src/py_mermaid/diagrams/flowchart/parser.py",
+              "symbol": "add_links",
+              "line": 369,
+              "sha256": "fd9fac7b923516a398d6496b3f0fbb8f40546d7951e1c68d611bd50eb4a6e72e",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/f014/test_language.py",
+              "symbol": "test_all_handwritten_static_semantic_cases",
+              "line": 70,
+              "sha256": "e473cbc50e575acece317dc2074247c941a7fe0d3ec76c09226e2ac63cefea02",
+              "lineScope": "symbol_start_or_file_entry"
+            },
+            {
+              "path": "tests/f014/test_language.py",
+              "symbol": "test_each_identifier_token_alternative_has_reachable_input",
+              "line": 136,
+              "sha256": "e473cbc50e575acece317dc2074247c941a7fe0d3ec76c09226e2ac63cefea02",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "reason": "Mapped to fixed source and existing accepted local tests; this is a functional-group audit, not expression/branch coverage proof."
+        },
+        {
+          "id": "flowchart-elk-metadata",
+          "title": "Node/edge metadata, user IDs and source truthy updates",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/flowchart/flowDb.ts",
+              "symbol": "public addVertex",
+              "line": 127,
+              "sha256": "33577b9ade8c65be6049c3093089dbf81abf44214f49c2b2ea46434183889288",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/flowchart/parser.py",
+              "symbol": "metadata",
+              "line": 385,
+              "sha256": "fd9fac7b923516a398d6496b3f0fbb8f40546d7951e1c68d611bd50eb4a6e72e",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/f014/test_language.py",
+              "symbol": "test_metadata_truthy_updates_do_not_clear_prior_assets",
+              "line": 326,
+              "sha256": "e473cbc50e575acece317dc2074247c941a7fe0d3ec76c09226e2ac63cefea02",
+              "lineScope": "symbol_start_or_file_entry"
+            },
+            {
+              "path": "tests/f014/test_language.py",
+              "symbol": "test_metadata_before_and_after_cartesian_members",
+              "line": 210,
+              "sha256": "e473cbc50e575acece317dc2074247c941a7fe0d3ec76c09226e2ac63cefea02",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "reason": "Mapped to fixed source and existing accepted local tests; this is a functional-group audit, not expression/branch coverage proof."
+        },
+        {
+          "id": "flowchart-elk-groups",
+          "title": "Subgraphs, directions, collapsed initial state and redirected relations",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/flowchart/flowDb.ts",
+              "symbol": "public addSubGraph",
+              "line": 674,
+              "sha256": "33577b9ade8c65be6049c3093089dbf81abf44214f49c2b2ea46434183889288",
+              "lineScope": "symbol_start_or_file_entry"
+            },
+            {
+              "path": "packages/mermaid/src/diagrams/flowchart/flowDb.ts",
+              "symbol": "public getData",
+              "line": 1110,
+              "sha256": "33577b9ade8c65be6049c3093089dbf81abf44214f49c2b2ea46434183889288",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/flowchart/parser.py",
+              "symbol": "finish",
+              "line": 687,
+              "sha256": "fd9fac7b923516a398d6496b3f0fbb8f40546d7951e1c68d611bd50eb4a6e72e",
+              "lineScope": "symbol_start_or_file_entry"
+            },
+            {
+              "path": "src/py_mermaid/layout/elk/compound.py",
+              "symbol": "prepare_compound",
+              "line": 189,
+              "sha256": "379ef3b9a47d3ebf91583973be3365b5d24a65977d47463131a45aa41d65b446",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/f014/test_language.py",
+              "symbol": "test_all_group_directions_and_inheritance",
+              "line": 303,
+              "sha256": "e473cbc50e575acece317dc2074247c941a7fe0d3ec76c09226e2ac63cefea02",
+              "lineScope": "symbol_start_or_file_entry"
+            },
+            {
+              "path": "tests/f014/test_styles.py",
+              "symbol": "test_collapsed_group_keeps_palette_slot_and_override",
+              "line": 117,
+              "sha256": "114a9252605310ec8ea1c231c66ca41e57d56e673ba3600d379982270b26443f",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "reason": "Mapped to fixed source and existing accepted local tests; this is a functional-group audit, not expression/branch coverage proof."
+        },
+        {
+          "id": "flowchart-elk-styles",
+          "title": "classDef/default/class/style/linkStyle cascade and static initial animation paint",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/flowchart/parser/flow.jison",
+              "symbol": "classDefStatement",
+              "line": 374,
+              "sha256": "9597faffe2a133b104c6dd4f38a162f6980bff4e0a841a83ff94af3900ea7ba8",
+              "lineScope": "symbol_start_or_file_entry"
+            },
+            {
+              "path": "packages/mermaid/src/diagrams/flowchart/flowDb.ts",
+              "symbol": "public getData",
+              "line": 1110,
+              "sha256": "33577b9ade8c65be6049c3093089dbf81abf44214f49c2b2ea46434183889288",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/flowchart/parser.py",
+              "symbol": "style_statement",
+              "line": 503,
+              "sha256": "fd9fac7b923516a398d6496b3f0fbb8f40546d7951e1c68d611bd50eb4a6e72e",
+              "lineScope": "symbol_start_or_file_entry"
+            },
+            {
+              "path": "src/py_mermaid/rendering/styles/flowchart.py",
+              "symbol": "resolve_style",
+              "line": 599,
+              "sha256": "bf883f15379f39028b9b12b905eb7669ef2b7c13e090b14648515e7512b67b07",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/f014/test_styles.py",
+              "symbol": "test_class_default_node_explicit_and_local_order",
+              "line": 31,
+              "sha256": "114a9252605310ec8ea1c231c66ca41e57d56e673ba3600d379982270b26443f",
+              "lineScope": "symbol_start_or_file_entry"
+            },
+            {
+              "path": "tests/f014/test_styles.py",
+              "symbol": "test_animated_explicit_dash_and_cap_override",
+              "line": 68,
+              "sha256": "114a9252605310ec8ea1c231c66ca41e57d56e673ba3600d379982270b26443f",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "reason": "Mapped to fixed source and existing accepted local tests; this is a functional-group audit, not expression/branch coverage proof."
+        },
+        {
+          "id": "flowchart-elk-shapes",
+          "title": "Classic and metadata shapes, labels, silhouettes and attachment intersections",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes.ts",
+              "symbol": "shapes",
+              "line": 4,
+              "sha256": "68fceb790c2a9b65397d96edaf85a50b4ae059a68cf52c83553c4887019f1699",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/geometry/shape_registry.py",
+              "symbol": "canonical_shape",
+              "line": 11,
+              "sha256": "6b9cb66f463d2e2fed5aa4ba418c497c498870d6855825d7b71effdeffd1b27a",
+              "lineScope": "symbol_start_or_file_entry"
+            },
+            {
+              "path": "src/py_mermaid/geometry/shapes.py",
+              "symbol": "shape_geometry",
+              "line": 262,
+              "sha256": "94fc76f11db69ddd8e5a67ae60deac9c7d8a840d90bfe38459a466c97c580f01",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/f014/test_shapes.py",
+              "symbol": "test_s01_exact_53_definitions_and_alias_equivalence",
+              "line": 137,
+              "sha256": "4cd9360fbeda3011e929284b1f31af1d0b1d51b28026826e292ed24015da5407",
+              "lineScope": "symbol_start_or_file_entry"
+            },
+            {
+              "path": "tests/f014/test_shapes.py",
+              "symbol": "test_s12_all_outline_approaches_axis_and_nonaxis_match_native_ink",
+              "line": 263,
+              "sha256": "4cd9360fbeda3011e929284b1f31af1d0b1d51b28026826e292ed24015da5407",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "reason": "Mapped to fixed source and existing accepted local tests; this is a functional-group audit, not expression/branch coverage proof."
+        },
+        {
+          "id": "flowchart-elk-layout",
+          "title": "Real ELK options/compound layout, curves, rounded paths, straightening and line hops",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/rendering-util/layout-algorithms/elk/render.ts",
+              "symbol": "render",
+              "line": 14,
+              "sha256": "6258890b3f311e86e4cd4dc99d480f704fde7473e150dc62b88838c5015c5011",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/layout/elk/compound.py",
+              "symbol": "read_compound",
+              "line": 409,
+              "sha256": "379ef3b9a47d3ebf91583973be3365b5d24a65977d47463131a45aa41d65b446",
+              "lineScope": "symbol_start_or_file_entry"
+            },
+            {
+              "path": "src/py_mermaid/geometry/edges/pipeline.py",
+              "symbol": "finish_edges",
+              "line": 67,
+              "sha256": "368dca37a3f65dc5d71d7e32432452d3fd224e959022c15c909ac511f9154a74",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/f014/test_layout.py",
+              "symbol": "test_p04_rounded_corner_uses_radius5_angle_cut_and_no_input_mutation",
+              "line": 461,
+              "sha256": "9a410b6e6305aed54cb11903a73498458910626ed33214ad9746a48b97f123dc",
+              "lineScope": "symbol_start_or_file_entry"
+            },
+            {
+              "path": "tests/f014/test_layout.py",
+              "symbol": "test_p07_hop_orientation_radius6_gap_and_disabled",
+              "line": 492,
+              "sha256": "9a410b6e6305aed54cb11903a73498458910626ed33214ad9746a48b97f123dc",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "reason": "Mapped to fixed source and existing accepted local tests; this is a functional-group audit, not expression/branch coverage proof."
+        },
+        {
+          "id": "flowchart-elk-identity",
+          "title": "Explicit flowchart-elk semantic type is lost after parsing",
+          "status": "confirmed_gap",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/flowchart/elk/detector.ts",
+              "symbol": "const id = 'flowchart-elk'",
+              "line": 7,
+              "sha256": "b4eece883310920a6b190024db93338e942480ea8f423b85705d38a3fe69f150",
+              "lineScope": "symbol_start_or_file_entry"
+            },
+            {
+              "path": "packages/mermaid/src/Diagram.ts",
+              "symbol": "return new Diagram",
+              "line": 84,
+              "sha256": "ea89f69368ddf3c386f3012fd912ae79c012f87e2a91e1bb2d2236e74d23dbec",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/flowchart/parser.py",
+              "symbol": "finish",
+              "line": 687,
+              "sha256": "fd9fac7b923516a398d6496b3f0fbb8f40546d7951e1c68d611bd50eb4a6e72e",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/shared/test_gap_configuration.py",
+              "symbol": "test_explicit_elk_parser_retains_detected_diagram_identity",
+              "line": 19,
+              "sha256": "ccb9c495da095a0fed38e7e1c6e30986764f4ec9d4e0b0a5032611c1f0922c45",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "reason": "Flowchart.diagram_type remains its flowchart-v2 dataclass default for the explicit ELK header. Source Diagram.type preserves detected id.",
+          "reproducer": "flowchart-elk TD\nA --> B",
+          "expected": "diagram_type == flowchart-elk",
+          "issue": "GAP-S07"
+        }
+      ]
+    }
+  ],
+  "sharedCapabilities": [
+    {
+      "id": "preprocessing-frontmatter-directives",
+      "features": [
+        {
+          "id": "preprocessing-frontmatter-directives",
+          "title": "CRLF/frontmatter/YAML/directives/comments and original UTF16 mapping",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/preprocess.ts",
+              "symbol": "preprocessDiagram",
+              "line": 58,
+              "sha256": "db337ae9cc0f7ff189cc50d06d6fb28452dfbc37294f56a966dc3f48b2a628e0",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/parsing/preprocess.py",
+              "symbol": "preprocess_diagram",
+              "line": 104,
+              "sha256": "735e9dca13b4c2f7ee1663dabda784ab19c602ffbafc2c5297f7302d9d4eb5c4",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/f013/test_language.py",
+              "symbol": "test_processed_boundary_map_is_monotonic_and_original",
+              "line": 213,
+              "sha256": "79f30133f7b82a9aea9685eb22d1146ff76e1a14f1ebf3bf510b528ec454cf76",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "reason": "Mapped to fixed source and existing accepted local tests; this is a functional-group audit, not expression/branch coverage proof."
+        }
+      ]
+    },
+    {
+      "id": "configuration-schema-defaults",
+      "features": [
+        {
+          "id": "configuration-schema-defaults",
+          "title": "Appearance fallback, section synchronization and null theme/palette timing",
+          "status": "confirmed_gap",
+          "source": [
+            {
+              "path": "packages/mermaid/src/config.ts",
+              "symbol": "const resolveAppearance",
+              "line": 79,
+              "sha256": "91dd68a9e7d57c4635a04fab0ccd78ec230b4417a02f4f4b3cd9a6bb445f09ef",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/runtime/configuration.py",
+              "symbol": "resolve",
+              "line": 19,
+              "sha256": "3f4f460c2876034af6e2e1fa4ce39217b274b15eb48ef92f0e1bb6a338d222fd",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/shared/test_gap_configuration.py",
+              "symbol": "AppearanceGapContracts",
+              "line": 18,
+              "sha256": "ccb9c495da095a0fed38e7e1c6e30986764f4ec9d4e0b0a5032611c1f0922c45",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "reason": "Native resolver rejects invalid look rather than source fallthrough; leaves scoped appearance stale; always rebuilds palette and loses null-theme site variables; invalid root theme normalization and empty font-family bridge differ.",
+          "issue": "GAP-S01-S03-S05-S06",
+          "reproducer": "classDiagram\nclass Visible",
+          "expected": "Fixed original layer order, existing section keys synchronized and source palette rebuild guard retained"
+        }
+      ]
+    },
+    {
+      "id": "themes-css-cascade",
+      "features": [
+        {
+          "id": "themes-css-cascade",
+          "title": "Full eleven theme constructors/derivation; visibility is independent of opacity",
+          "status": "confirmed_gap",
+          "source": [
+            {
+              "path": "packages/mermaid/src/rendering-util/createText.ts",
+              "symbol": "createText",
+              "line": 306,
+              "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/rendering/styles/flowchart.py",
+              "symbol": "apply_declarations",
+              "line": 229,
+              "sha256": "bf883f15379f39028b9b12b905eb7669ef2b7c13e090b14648515e7512b67b07",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/shared/test_gap_visibility.py",
+              "symbol": "VisibilityGapContracts",
+              "line": 20,
+              "sha256": "182c7bab321598d0487103c3b0da1cf2bc55a57e5e72dd8a781ef1a6698bf973",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "reason": "visibility:hidden currently writes opacity=0, which prevents a child visibility:visible override. Source authored label CSS retains both distinct properties.",
+          "issue": "GAP-S04",
+          "reproducer": "flowchart LR\nA[\"<span style='visibility:hidden'>Hidden<span style='visibility:visible'>Visible</span></span>\"]",
+          "expected": "Only Visible painted; hidden text still reserves width"
+        }
+      ]
+    },
+    {
+      "id": "text-html-markdown-math",
+      "features": [
+        {
+          "id": "text-html-markdown-math",
+          "title": "Plain/Markdown/rich text and formal KaTeX integration",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/rendering-util/createText.ts",
+              "symbol": "createText",
+              "line": 306,
+              "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/rendering/labels/rich.py",
+              "symbol": "measure_label",
+              "line": 375,
+              "sha256": "5880671aee4eec8dd411c6de4f2ddcada48869ebdfdcd0d3a2ae0609ee679788",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/math/test_integration.py",
+              "symbol": "test_node_edge_group_math_via_real_public_api",
+              "line": 54,
+              "sha256": "950de9646fc2a1313eceb0461442335d90d1ccaba2146c2d46857fb9b86a09c1",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "reason": "Mapped to fixed source and existing accepted local tests; this is a functional-group audit, not expression/branch coverage proof."
+        }
+      ]
+    },
+    {
+      "id": "accessibility-metadata",
+      "features": [
+        {
+          "id": "accessibility-metadata",
+          "title": "Static metadata parsing; DOM accessibility behavior excluded",
+          "status": "excluded",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/common/commonDb.ts",
+              "symbol": "setAccTitle",
+              "line": 16,
+              "sha256": "40579cae9a11c8267eea337388892f2d5b508c29b4e77458f2b37bddd45a5f0e",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/flowchart/parser.py",
+              "symbol": "accessibility",
+              "line": 751,
+              "sha256": "fd9fac7b923516a398d6496b3f0fbb8f40546d7951e1c68d611bd50eb4a6e72e",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/f014/test_language.py",
+              "symbol": "test_all_handwritten_static_semantic_cases",
+              "line": 70,
+              "sha256": "e473cbc50e575acece317dc2074247c941a7fe0d3ec76c09226e2ac63cefea02",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "reason": "User excludes DOM accessibility behavior; static accTitle/accDescr values remain mapped and tested, not counted as missing or as interactive support."
+        }
+      ]
+    },
+    {
+      "id": "links-interaction-security",
+      "features": [
+        {
+          "id": "links-interaction-security",
+          "title": "Retain inert captions/sanitation and initial static appearance; exclude event execution",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/common/common.ts",
+              "symbol": "sanitizeText",
+              "line": 85,
+              "sha256": "b14851667f7d45d101d4e028204babb1628faefe4812a88ae2d8acac72f8e144",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/rendering/labels/sanitize.py",
+              "symbol": "sanitize_markup",
+              "line": 138,
+              "sha256": "3246bfd1a322ba481849d1ac9f77602787f8a08490089847f3b4f239ea266726",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/shared/test_native.py",
+              "symbol": "test_generic_static_label_sanitization_preserves_visible_anchor_caption",
+              "line": 219,
+              "sha256": "5ad5f77b028a4e7f24c35d6a954d8bd890d462edfd7360007883afdf37bd982f",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "reason": "Mapped to fixed source and existing accepted local tests; this is a functional-group audit, not expression/branch coverage proof."
+        }
+      ]
+    },
+    {
+      "id": "icons-images-resource-policy",
+      "features": [
+        {
+          "id": "icons-images-resource-policy",
+          "title": "Explicit offline byte/font/icon resources, dimensions and resource safety",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/rendering-util/icons.ts",
+              "symbol": "getIconSVG",
+              "line": 88,
+              "sha256": "ba6000d0afa94cac26619077456b8011ae613e6db47de54ad9be06523d1da93b",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/resources/__init__.py",
+              "symbol": "ResourceStore",
+              "line": 46,
+              "sha256": "900cc92343f24c7b2787454c1bbc6f87b3321eaeafbba0e0d87a41d29be8f4d5",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/f014/test_canvas.py",
+              "symbol": "test_svg_external_event_script_and_entity_resources_rejected",
+              "line": 164,
+              "sha256": "ca65f073b172785e0abec1d707bb4558ac9e1cd1ecff700d4b57ae9b092d2f41",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "reason": "Mapped to fixed source and existing accepted local tests; this is a functional-group audit, not expression/branch coverage proof."
+        }
+      ]
+    },
+    {
+      "id": "layout-engines",
+      "features": [
+        {
+          "id": "layout-engines",
+          "title": "Native layout registration, immutable values and real provider failure/cancellation",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/rendering-util/render.ts",
+              "symbol": "getRegisteredLayoutAlgorithm",
+              "line": 84,
+              "sha256": "775ea33dad8132c996f15a7680a0f3d436012b21cdcca065ed84412ee144ddc0",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/runtime/layouts.py",
+              "symbol": "register_layout",
+              "line": 26,
+              "sha256": "ada6dc2495b4a6e7af00df2061c06af1153aa4193363917c6ffab8a53a17ad07",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/shared/test_layout_plugins.py",
+              "symbol": "test_provider_failure_and_invalid_result_are_not_elk_fallback",
+              "line": 26,
+              "sha256": "916a4c2bcfdf8250ad55528fc65db2ac3b32ef2b7188f297ec551da3f1deb2a7",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "reason": "Mapped to fixed source and existing accepted local tests; this is a functional-group audit, not expression/branch coverage proof."
+        }
+      ]
+    },
+    {
+      "id": "handdrawn-random-seed",
+      "features": [
+        {
+          "id": "handdrawn-random-seed",
+          "title": "Seeded static RoughJS-derived geometry and initial styles",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/handDrawnShapeStyles.ts",
+              "symbol": "handDrawnShapeStyles",
+              "line": 1,
+              "sha256": "baf8572491842caa518e8ba35a313253ede78ba2fef9b4c43ac9a4b910630402",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/geometry/rough.py",
+              "symbol": "rough_path",
+              "line": 79,
+              "sha256": "2b82b47819993fcba9d01a443e7887fd37d067ba76598ed1fe2dedf12f2cc86c",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/f014/test_canvas.py",
+              "symbol": "test_source_truthy_seed_before_imul_fractional_boundary",
+              "line": 220,
+              "sha256": "ca65f073b172785e0abec1d707bb4558ac9e1cd1ecff700d4b57ae9b092d2f41",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "reason": "Mapped to fixed source and existing accepted local tests; this is a functional-group audit, not expression/branch coverage proof."
+        }
+      ]
+    },
+    {
+      "id": "exports-scale-background",
+      "features": [
+        {
+          "id": "exports-scale-background",
+          "title": "Canvas static five-format exports, density/background/vector intent",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/rendering-util/setupViewPortForSVG.ts",
+              "symbol": "setupViewPortForSVG",
+              "line": 5,
+              "sha256": "8242d3e2112f371b8551c2aeb09680cdc608b8452c6eb82cbd5a2e6d3f465fd4",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/rendering/skia/session.py",
+              "symbol": "render",
+              "line": 592,
+              "sha256": "836c70af70afe3895e89e3a77d81f29a8552350a1b22ad90041998130e0a47ec",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/f014/test_canvas.py",
+              "symbol": "test_encoded_raster_formats_density_dimensions_and_real_pixels",
+              "line": 475,
+              "sha256": "ca65f073b172785e0abec1d707bb4558ac9e1cd1ecff700d4b57ae9b092d2f41",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "reason": "User-authorized Canvas-native static export contract; SVG DOM/event/ARIA serialization is not ported. Existing local export evidence is reused; installation/platform readiness remains separate."
+        }
+      ]
+    },
+    {
+      "id": "diagnostics-errors-utf16",
+      "features": [
+        {
+          "id": "diagnostics-errors-utf16",
+          "title": "Explicit errors and source positions through preprocessing and surrogate pairs",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/Diagram.ts",
+              "symbol": "fromText",
+              "line": 19,
+              "sha256": "ea89f69368ddf3c386f3012fd912ae79c012f87e2a91e1bb2d2236e74d23dbec",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/runtime/common.py",
+              "symbol": "error",
+              "line": 68,
+              "sha256": "24e264f20cc7d64621d99d186ea2438ec6549972dc625681f0b696b34ea043cc",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/shared/test_configuration.py",
+              "symbol": "test_raw_source_error_maps_crlf_directive_and_surrogate_columns",
+              "line": 105,
+              "sha256": "daaacda5793ca6b363e7265eb749663a84ad695938c260e29ea201c28e931df2",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "reason": "Mapped to fixed source and existing accepted local tests; this is a functional-group audit, not expression/branch coverage proof."
+        }
+      ]
+    },
+    {
+      "id": "threading-lifecycle",
+      "features": [
+        {
+          "id": "threading-lifecycle",
+          "title": "Owner-thread native objects; immutable/byte crossings and provider cancellation",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/rendering-util/render.ts",
+              "symbol": "render",
+              "line": 17,
+              "sha256": "775ea33dad8132c996f15a7680a0f3d436012b21cdcca065ed84412ee144ddc0",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/rendering/skia/session.py",
+              "symbol": "_check_owner",
+              "line": 161,
+              "sha256": "836c70af70afe3895e89e3a77d81f29a8552350a1b22ad90041998130e0a47ec",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/shared/test_native.py",
+              "symbol": "test_native_owner_thread_rejects_foreign_use_and_bytes_cross_thread",
+              "line": 254,
+              "sha256": "5ad5f77b028a4e7f24c35d6a954d8bd890d462edfd7360007883afdf37bd982f",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "reason": "Native host integration contract replaces browser scheduling; existing owner-thread and cancellation tests reused, not new Linux/installation evidence."
+        }
+      ]
+    },
+    {
+      "id": "offline-deployment",
+      "features": [
+        {
+          "id": "offline-deployment",
+          "title": "No production browser/Node/reference-workspace access",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/mermaidAPI.ts",
+              "symbol": "render",
+              "line": 106,
+              "sha256": "c38ef136d815a638993d271f253d2ca825046fb97292d30a7a4de8ea57fc0318",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/api.py",
+              "symbol": "arender",
+              "line": 19,
+              "sha256": "1a2c03fef9e898971065ade79df0d97ee0991a70713cf1a6b986db9bcfde49a3",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/shared/test_cli.py",
+              "symbol": "CLIContracts",
+              "line": 16,
+              "sha256": "970aad2b86176d22d658f83210d33745ac00cbb0322c8fbb57c30f11ea5605d9",
+              "lineScope": "symbol_start_or_file_entry"
+            }
+          ],
+          "reason": "Existing local offline runtime evidence only. Fresh installation, Linux and no-loader deployment are still unverified/deferred, not marked completed by source audit."
+        }
+      ]
+    }
+  ],
+  "unresolvedScope": [
+    "Exhaustive expansion of every upstream spec assertion and expression-level branch is not established by this functional-group audit.",
+    "Arbitrary browser HTML/CSS controls/media inside labels require separate static-host scope analysis; explicit native unsupported errors are not proof that their initial visible appearance is excluded by the user.",
+    "Linux/no-loader and fresh installed-wheel deployment remain outside this iteration by user decision."
+  ],
+  "discardedHypotheses": [
+    {
+      "id": "raw-max-text-size",
+      "reason": "mermaidAPI.ts:488-502 checks code.cleaned; Diagram.ts caps only actual comment-preserving lexer input, so using cleaned UTF16 budget is not by itself a gap."
+    },
+    {
+      "id": "force-elk-side-effect",
+      "reason": "detector mutates only a getConfig clone in processAndSetConfigs/Diagram.fromText; not treated as a real global-layout force feature."
+    }
+  ],
+  "sourceOnlyOriginalEvidence": "test-runs/G02-record-20261106T075859Z-77994e28/run.json",
+  "newBehaviorExecuted": false
+}

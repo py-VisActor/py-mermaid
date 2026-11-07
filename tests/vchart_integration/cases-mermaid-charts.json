@@ -1,0 +1,1804 @@
+{
+  "schema": "py-mermaid-bulk-cases/v1",
+  "group": "A",
+  "cases": [
+    {
+      "id": "VC-M-pie-basic",
+      "kind": "pie",
+      "source": "pie\ntitle Budget\n\"Alpha\": 1\n\"Beta\": 3\n",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/pie/pie.langium",
+        "symbol": "PieSection / pieDb.addSection",
+        "line": 17,
+        "sha256": "fe9346e70f5d5028fa5aaa0470ba651e445c904e615feaf79a4eb2b5a401118d",
+        "canonicalSha256": "dc326f2fb756e9d2e171a9f26328d4d106164fea21e2e359d46cb62b9d82f45c",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [
+        "Budget",
+        "Alpha",
+        "Beta"
+      ],
+      "expectedErrorCodes": [],
+      "features": [
+        "pie-basic"
+      ],
+      "modelExpected": [
+        {
+          "path": [
+            "sections"
+          ],
+          "equals": [
+            [
+              "Alpha",
+              1.0
+            ],
+            [
+              "Beta",
+              3.0
+            ]
+          ]
+        },
+        {
+          "path": [
+            "title"
+          ],
+          "equals": "Budget"
+        }
+      ]
+    },
+    {
+      "id": "VC-M-pie-showdata",
+      "kind": "pie",
+      "source": "pie showData\n\"Red\": 2\n\"Blue\": 6\n",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/pie/pie.langium",
+        "symbol": "PieSection / pieDb.addSection",
+        "line": 17,
+        "sha256": "fe9346e70f5d5028fa5aaa0470ba651e445c904e615feaf79a4eb2b5a401118d",
+        "canonicalSha256": "dc326f2fb756e9d2e171a9f26328d4d106164fea21e2e359d46cb62b9d82f45c",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [
+        "Red [2]",
+        "Blue [6]"
+      ],
+      "expectedErrorCodes": [],
+      "features": [
+        "pie-showdata"
+      ],
+      "modelExpected": [
+        {
+          "path": [
+            "show_data"
+          ],
+          "equals": true
+        },
+        {
+          "path": [
+            "sections",
+            1
+          ],
+          "equals": [
+            "Blue",
+            6.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VC-M-pie-duplicate",
+      "kind": "pie",
+      "source": "pie\n\"Alpha\": 2\n\"Alpha\": 99\n\"Beta\": 3\n",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/pie/pie.langium",
+        "symbol": "PieSection / pieDb.addSection",
+        "line": 17,
+        "sha256": "fe9346e70f5d5028fa5aaa0470ba651e445c904e615feaf79a4eb2b5a401118d",
+        "canonicalSha256": "dc326f2fb756e9d2e171a9f26328d4d106164fea21e2e359d46cb62b9d82f45c",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [
+        "Alpha",
+        "Beta"
+      ],
+      "expectedErrorCodes": [],
+      "features": [
+        "pie-duplicate"
+      ],
+      "modelExpected": [
+        {
+          "path": [
+            "sections"
+          ],
+          "equals": [
+            [
+              "Alpha",
+              2.0
+            ],
+            [
+              "Beta",
+              3.0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VC-M-pie-donut",
+      "kind": "pie",
+      "source": "pie\n\"Tiny\": 0.5\n\"Main\": 99.5\n",
+      "config": {
+        "pie": {
+          "donutHole": 0.35,
+          "legendPosition": "bottom"
+        }
+      },
+      "origin": {
+        "path": "packages/parser/src/language/pie/pie.langium",
+        "symbol": "PieSection / pieDb.addSection",
+        "line": 17,
+        "sha256": "fe9346e70f5d5028fa5aaa0470ba651e445c904e615feaf79a4eb2b5a401118d",
+        "canonicalSha256": "dc326f2fb756e9d2e171a9f26328d4d106164fea21e2e359d46cb62b9d82f45c",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [
+        "Tiny",
+        "Main"
+      ],
+      "expectedErrorCodes": [],
+      "features": [
+        "pie-donut"
+      ],
+      "modelExpected": [
+        {
+          "path": [
+            "sections"
+          ],
+          "equals": [
+            [
+              "Tiny",
+              0.5
+            ],
+            [
+              "Main",
+              99.5
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VC-M-quadrant-basic",
+      "kind": "quadrantChart",
+      "source": "quadrantChart\ntitle Priority\nx-axis Low --> High\ny-axis Weak --> Strong\nquadrant-1 Act\nquadrant-2 Plan\nquadrant-3 Wait\nquadrant-4 Review\nAlpha: [0.2, 0.8]\nBeta: [0.8,0.2]",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/quadrant-chart/parser/quadrant.jison",
+        "symbol": "axis / point / classDef",
+        "line": 1,
+        "sha256": "b4cf7e71d667e51c2082ef8e6b1c897d2d3124933026bef0ab72c959a8f46b6a",
+        "canonicalSha256": "50ee71fea6f3ee64bbe25e41c1b20a5e93a41b895544f94fca43afe28a7d12bb",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [
+        "Priority",
+        "Low",
+        "High",
+        "Weak",
+        "Strong",
+        "Act",
+        "Plan",
+        "Wait",
+        "Review",
+        "Alpha",
+        "Beta"
+      ],
+      "expectedErrorCodes": [],
+      "features": [
+        "quadrant-basic"
+      ],
+      "modelExpected": [
+        {
+          "path": [
+            "points",
+            0,
+            0
+          ],
+          "equals": "Beta"
+        },
+        {
+          "path": [
+            "points",
+            1,
+            2
+          ],
+          "equals": 0.2
+        },
+        {
+          "path": [
+            "quadrants"
+          ],
+          "equals": [
+            "Act",
+            "Plan",
+            "Wait",
+            "Review"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VC-M-quadrant-style",
+      "kind": "quadrantChart",
+      "source": "quadrantChart\nclassDef red color:#ff0000,radius:8,stroke-color:#000000,stroke-width:2px\nAlpha:::red: [0.4,0.6]",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/quadrant-chart/parser/quadrant.jison",
+        "symbol": "axis / point / classDef",
+        "line": 1,
+        "sha256": "b4cf7e71d667e51c2082ef8e6b1c897d2d3124933026bef0ab72c959a8f46b6a",
+        "canonicalSha256": "50ee71fea6f3ee64bbe25e41c1b20a5e93a41b895544f94fca43afe28a7d12bb",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [
+        "Alpha"
+      ],
+      "expectedErrorCodes": [],
+      "features": [
+        "quadrant-style"
+      ],
+      "modelExpected": [
+        {
+          "path": [
+            "points",
+            0,
+            1
+          ],
+          "equals": "red"
+        },
+        {
+          "path": [
+            "classes",
+            0,
+            0
+          ],
+          "equals": "red"
+        }
+      ]
+    },
+    {
+      "id": "VC-M-quadrant-blank-axis",
+      "kind": "quadrantChart",
+      "source": "quadrantChart\nquadrant-1 Alpha\nquadrant-2 Beta\nquadrant-3 Gamma\nquadrant-4 Delta",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/quadrant-chart/parser/quadrant.jison",
+        "symbol": "axis / point / classDef",
+        "line": 1,
+        "sha256": "b4cf7e71d667e51c2082ef8e6b1c897d2d3124933026bef0ab72c959a8f46b6a",
+        "canonicalSha256": "50ee71fea6f3ee64bbe25e41c1b20a5e93a41b895544f94fca43afe28a7d12bb",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [
+        "Alpha",
+        "Beta",
+        "Gamma",
+        "Delta"
+      ],
+      "expectedErrorCodes": [],
+      "features": [
+        "quadrant-blank-axis"
+      ],
+      "modelExpected": [
+        {
+          "path": [
+            "points"
+          ],
+          "equals": []
+        },
+        {
+          "path": [
+            "quadrants"
+          ],
+          "equals": [
+            "Alpha",
+            "Beta",
+            "Gamma",
+            "Delta"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VC-M-quadrant-repeated-points",
+      "kind": "quadrantChart",
+      "source": "quadrantChart\nPoint: [0,0]\nPoint: [1,1]",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/quadrant-chart/parser/quadrant.jison",
+        "symbol": "axis / point / classDef",
+        "line": 1,
+        "sha256": "b4cf7e71d667e51c2082ef8e6b1c897d2d3124933026bef0ab72c959a8f46b6a",
+        "canonicalSha256": "50ee71fea6f3ee64bbe25e41c1b20a5e93a41b895544f94fca43afe28a7d12bb",
+        "synthesized": true
+      },
+      "expect": "syntax_error",
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "SYNTAX_ERROR"
+      ],
+      "features": [
+        "quadrant-repeated-points"
+      ],
+      "modelExpected": [],
+      "migration": {
+        "previousExpectation": "render",
+        "reason": "Original fixed lexer consumes tight 0,0 as one x token due to unescaped dot; not Point reserved-name or repeated-label restriction. Old input/ID retained as true source negative.",
+        "originalErrorEvidence": "test-runs/VCHART-P3-batch-20261107T034344Z-94957548/artifacts/mermaid-oracle/VC-M-quadrant-repeated-points.error.json",
+        "originalRowSha256": "2c733e25b8d2c6a2992c445b9b7f9c4cd6cd7276628f6296cc51c6edb3dfd79e"
+      }
+    },
+    {
+      "id": "VC-M-xy-line",
+      "kind": "xychart",
+      "source": "xychart-beta\ntitle Trend\nx-axis [Jan,Feb,Mar]\ny-axis Amount 0 --> 10\nline [2,8,4]",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/xychart/parser/xychart.jison",
+        "symbol": "plotData/dataPoint/parseXAxis/parseYAxis",
+        "line": 1,
+        "sha256": "cc1f2f0f8a320bf64c974c132516b7393876188d70bd0fd22c93587e504862f1",
+        "canonicalSha256": "ce1e4904b3c2036ac29cc62b6e6561058b00e4bc9c9bbf661873451bb55bf0fc",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [
+        "Trend",
+        "Jan",
+        "Feb",
+        "Mar",
+        "Amount"
+      ],
+      "expectedErrorCodes": [],
+      "features": [
+        "xy-line"
+      ],
+      "modelExpected": [
+        {
+          "path": [
+            "xkind"
+          ],
+          "equals": "band"
+        },
+        {
+          "path": [
+            "xdomain"
+          ],
+          "equals": [
+            "Jan",
+            "Feb",
+            "Mar"
+          ]
+        },
+        {
+          "path": [
+            "plots",
+            0,
+            "data"
+          ],
+          "equals": [
+            [
+              "Jan",
+              2.0
+            ],
+            [
+              "Feb",
+              8.0
+            ],
+            [
+              "Mar",
+              4.0
+            ]
+          ]
+        },
+        {
+          "path": [
+            "ydomain"
+          ],
+          "equals": [
+            0.0,
+            10.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VC-M-xy-default-bar",
+      "kind": "xychart",
+      "source": "xychart-beta\ntitle Counts\nbar [2,4,6]",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/xychart/parser/xychart.jison",
+        "symbol": "plotData/dataPoint/parseXAxis/parseYAxis",
+        "line": 1,
+        "sha256": "cc1f2f0f8a320bf64c974c132516b7393876188d70bd0fd22c93587e504862f1",
+        "canonicalSha256": "ce1e4904b3c2036ac29cc62b6e6561058b00e4bc9c9bbf661873451bb55bf0fc",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [
+        "Counts"
+      ],
+      "expectedErrorCodes": [],
+      "features": [
+        "xy-default-bar"
+      ],
+      "modelExpected": [
+        {
+          "path": [
+            "xkind"
+          ],
+          "equals": "linear"
+        },
+        {
+          "path": [
+            "xdomain"
+          ],
+          "equals": [
+            1.0,
+            3.0
+          ]
+        },
+        {
+          "path": [
+            "plots",
+            0,
+            "kind"
+          ],
+          "equals": "bar"
+        }
+      ]
+    },
+    {
+      "id": "VC-M-xy-mixed",
+      "kind": "xychart",
+      "source": "xychart-beta\nx-axis [A,B,C]\ny-axis 0 --> 10\nbar Sales [2,4,6]\nline Trend [3,5,7]",
+      "config": {
+        "xyChart": {
+          "showLegend": true
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/xychart/parser/xychart.jison",
+        "symbol": "plotData/dataPoint/parseXAxis/parseYAxis",
+        "line": 1,
+        "sha256": "cc1f2f0f8a320bf64c974c132516b7393876188d70bd0fd22c93587e504862f1",
+        "canonicalSha256": "ce1e4904b3c2036ac29cc62b6e6561058b00e4bc9c9bbf661873451bb55bf0fc",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [
+        "A",
+        "B",
+        "C",
+        "Sales",
+        "Trend"
+      ],
+      "expectedErrorCodes": [],
+      "features": [
+        "xy-mixed"
+      ],
+      "modelExpected": [
+        {
+          "path": [
+            "plots",
+            0,
+            "title"
+          ],
+          "equals": "Sales"
+        },
+        {
+          "path": [
+            "plots",
+            1,
+            "title"
+          ],
+          "equals": "Trend"
+        },
+        {
+          "path": [
+            "plots",
+            1,
+            "kind"
+          ],
+          "equals": "line"
+        }
+      ]
+    },
+    {
+      "id": "VC-M-xy-horizontal-labels",
+      "kind": "xychart",
+      "source": "xychart-beta horizontal\nx-axis [A,B,C]\ny-axis 0 --> 10\nline [2 \"First\",4 \"Second\",6 \"Third\"]",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/xychart/parser/xychart.jison",
+        "symbol": "plotData/dataPoint/parseXAxis/parseYAxis",
+        "line": 1,
+        "sha256": "cc1f2f0f8a320bf64c974c132516b7393876188d70bd0fd22c93587e504862f1",
+        "canonicalSha256": "ce1e4904b3c2036ac29cc62b6e6561058b00e4bc9c9bbf661873451bb55bf0fc",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [
+        "A",
+        "B",
+        "C",
+        "First",
+        "Second",
+        "Third"
+      ],
+      "expectedErrorCodes": [],
+      "features": [
+        "xy-horizontal-labels"
+      ],
+      "modelExpected": [
+        {
+          "path": [
+            "orientation"
+          ],
+          "equals": "horizontal"
+        },
+        {
+          "path": [
+            "plots",
+            0,
+            "labels"
+          ],
+          "equals": [
+            "First",
+            "Second",
+            "Third"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VC-M-xy-numeric-x",
+      "kind": "xychart",
+      "source": "xychart-beta\nx-axis Time 0 --> 100\ny-axis Value -10 --> 10\nline [-5,0,5]",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/xychart/parser/xychart.jison",
+        "symbol": "plotData/dataPoint/parseXAxis/parseYAxis",
+        "line": 1,
+        "sha256": "cc1f2f0f8a320bf64c974c132516b7393876188d70bd0fd22c93587e504862f1",
+        "canonicalSha256": "ce1e4904b3c2036ac29cc62b6e6561058b00e4bc9c9bbf661873451bb55bf0fc",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [
+        "Time",
+        "Value"
+      ],
+      "expectedErrorCodes": [],
+      "features": [
+        "xy-numeric-x"
+      ],
+      "modelExpected": [
+        {
+          "path": [
+            "xdomain"
+          ],
+          "equals": [
+            0.0,
+            100.0
+          ]
+        },
+        {
+          "path": [
+            "ydomain"
+          ],
+          "equals": [
+            -10.0,
+            10.0
+          ]
+        },
+        {
+          "path": [
+            "plots",
+            0,
+            "data"
+          ],
+          "equals": [
+            [
+              0.0,
+              -5.0
+            ],
+            [
+              50.0,
+              0.0
+            ],
+            [
+              100.0,
+              5.0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VC-M-radar-basic",
+      "kind": "radar",
+      "source": "radar-beta\ntitle Scores\naxis speed[\"Speed\"],quality[\"Quality\"],cost[\"Cost\"]\ncurve plan[\"Plan\"] {5,8,6}",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/radar/radar.langium",
+        "symbol": "axes / curves / options",
+        "line": 1,
+        "sha256": "acd5171f3413f29242e8250c5a9c9d67e247a6b87acfbe7543bfc333bbdf3ac5",
+        "canonicalSha256": "e6bab113778803c5b45969fc3197a9c01f7b8162b9dd4b71d421da20625ec535",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [
+        "Scores",
+        "Speed",
+        "Quality",
+        "Cost",
+        "Plan"
+      ],
+      "expectedErrorCodes": [],
+      "features": [
+        "radar-basic"
+      ],
+      "modelExpected": [
+        {
+          "path": [
+            "axes"
+          ],
+          "equals": [
+            [
+              "speed",
+              "Speed"
+            ],
+            [
+              "quality",
+              "Quality"
+            ],
+            [
+              "cost",
+              "Cost"
+            ]
+          ]
+        },
+        {
+          "path": [
+            "curves",
+            0
+          ],
+          "equals": [
+            "plan",
+            "Plan",
+            [
+              5.0,
+              8.0,
+              6.0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VC-M-radar-named",
+      "kind": "radar",
+      "source": "radar-beta\ncurve plan[\"Plan\"] {c:3,a:1,b:2}\naxis a[\"A\"],b[\"B\"],c[\"C\"]",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/radar/radar.langium",
+        "symbol": "axes / curves / options",
+        "line": 1,
+        "sha256": "acd5171f3413f29242e8250c5a9c9d67e247a6b87acfbe7543bfc333bbdf3ac5",
+        "canonicalSha256": "e6bab113778803c5b45969fc3197a9c01f7b8162b9dd4b71d421da20625ec535",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [
+        "A",
+        "B",
+        "C",
+        "Plan"
+      ],
+      "expectedErrorCodes": [],
+      "features": [
+        "radar-named"
+      ],
+      "modelExpected": [
+        {
+          "path": [
+            "curves",
+            0,
+            2
+          ],
+          "equals": [
+            1.0,
+            2.0,
+            3.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VC-M-radar-multiple",
+      "kind": "radar",
+      "source": "radar-beta\naxis a,b,c\ncurve first[\"First\"] {1,2,3},second[\"Second\"] {3,2,1}\nmax 4\nmin 0",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/radar/radar.langium",
+        "symbol": "axes / curves / options",
+        "line": 1,
+        "sha256": "acd5171f3413f29242e8250c5a9c9d67e247a6b87acfbe7543bfc333bbdf3ac5",
+        "canonicalSha256": "e6bab113778803c5b45969fc3197a9c01f7b8162b9dd4b71d421da20625ec535",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [
+        "a",
+        "b",
+        "c",
+        "First",
+        "Second"
+      ],
+      "expectedErrorCodes": [],
+      "features": [
+        "radar-multiple"
+      ],
+      "modelExpected": [
+        {
+          "path": [
+            "curves",
+            1,
+            0
+          ],
+          "equals": "second"
+        },
+        {
+          "path": [
+            "curves",
+            1,
+            2
+          ],
+          "equals": [
+            3.0,
+            2.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VC-M-radar-polygon",
+      "kind": "radar",
+      "source": "radar-beta\naxis a,b,c,d\ncurve sample {1,2,3,4}\ngraticule polygon\nticks 4\nmax 4\nshowLegend false",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/radar/radar.langium",
+        "symbol": "axes / curves / options",
+        "line": 1,
+        "sha256": "acd5171f3413f29242e8250c5a9c9d67e247a6b87acfbe7543bfc333bbdf3ac5",
+        "canonicalSha256": "e6bab113778803c5b45969fc3197a9c01f7b8162b9dd4b71d421da20625ec535",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "expectedErrorCodes": [],
+      "features": [
+        "radar-polygon"
+      ],
+      "modelExpected": [
+        {
+          "path": [
+            "axes",
+            3
+          ],
+          "equals": [
+            "d",
+            "d"
+          ]
+        },
+        {
+          "path": [
+            "curves",
+            0,
+            2
+          ],
+          "equals": [
+            1.0,
+            2.0,
+            3.0,
+            4.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VC-M-treemap-basic",
+      "kind": "treemap",
+      "source": "treemap\ntitle Portfolio\n\"Alpha\": 1\n\"Beta\": 1",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/treemap/treemap.langium",
+        "symbol": "Section / Leaf / ClassDef",
+        "line": 45,
+        "sha256": "7f1be037f66fb9b42379e36023f1c3c3949a3f02149780003b018eb1c4a706d0",
+        "canonicalSha256": "09ae0dfbd0cb7747a6c161ada9a529b657c5181aa5e98dc5501b4b6a33d7f909",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [
+        "Portfolio",
+        "Alpha",
+        "Beta"
+      ],
+      "expectedErrorCodes": [],
+      "features": [
+        "treemap-basic"
+      ],
+      "modelExpected": [
+        {
+          "path": [
+            "nodes",
+            0,
+            "name"
+          ],
+          "equals": "Alpha"
+        },
+        {
+          "path": [
+            "nodes",
+            1,
+            "value"
+          ],
+          "equals": 1.0
+        },
+        {
+          "path": [
+            "title"
+          ],
+          "equals": "Portfolio"
+        }
+      ]
+    },
+    {
+      "id": "VC-M-treemap-nested",
+      "kind": "treemap",
+      "source": "treemap-beta\n\"Business\"\n  \"Products\"\n    \"One\": 30\n    \"Two\": 20\n  \"Services\": 50",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/treemap/treemap.langium",
+        "symbol": "Section / Leaf / ClassDef",
+        "line": 45,
+        "sha256": "7f1be037f66fb9b42379e36023f1c3c3949a3f02149780003b018eb1c4a706d0",
+        "canonicalSha256": "09ae0dfbd0cb7747a6c161ada9a529b657c5181aa5e98dc5501b4b6a33d7f909",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [
+        "Business",
+        "Products",
+        "One",
+        "Two",
+        "Services"
+      ],
+      "expectedErrorCodes": [],
+      "features": [
+        "treemap-nested"
+      ],
+      "modelExpected": [
+        {
+          "path": [
+            "nodes",
+            0,
+            "children"
+          ],
+          "equals": [
+            "treemap-1",
+            "treemap-4"
+          ]
+        },
+        {
+          "path": [
+            "nodes",
+            2,
+            "parent"
+          ],
+          "equals": "treemap-1"
+        },
+        {
+          "path": [
+            "nodes",
+            4,
+            "value"
+          ],
+          "equals": 50.0
+        }
+      ]
+    },
+    {
+      "id": "VC-M-treemap-class",
+      "kind": "treemap",
+      "source": "treemap\nclassDef hot fill:#ff0000,color:#00ff00\n\"Alpha\": 10:::hot\n\"Beta\": 20",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/treemap/treemap.langium",
+        "symbol": "Section / Leaf / ClassDef",
+        "line": 45,
+        "sha256": "7f1be037f66fb9b42379e36023f1c3c3949a3f02149780003b018eb1c4a706d0",
+        "canonicalSha256": "09ae0dfbd0cb7747a6c161ada9a529b657c5181aa5e98dc5501b4b6a33d7f909",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [
+        "Alpha",
+        "Beta"
+      ],
+      "expectedErrorCodes": [],
+      "features": [
+        "treemap-class"
+      ],
+      "modelExpected": [
+        {
+          "path": [
+            "nodes",
+            0,
+            "class_selector"
+          ],
+          "equals": "hot"
+        },
+        {
+          "path": [
+            "nodes",
+            0,
+            "styles"
+          ],
+          "equals": [
+            [
+              "fill",
+              "#ff0000"
+            ],
+            [
+              "color",
+              "#00ff00"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VC-M-treemap-numbers",
+      "kind": "treemap",
+      "source": "treemap\n\"Revenue\": 1,234\n\"Costs\": 500",
+      "config": {
+        "treemap": {
+          "showValues": false
+        }
+      },
+      "origin": {
+        "path": "packages/parser/src/language/treemap/treemap.langium",
+        "symbol": "Section / Leaf / ClassDef",
+        "line": 45,
+        "sha256": "7f1be037f66fb9b42379e36023f1c3c3949a3f02149780003b018eb1c4a706d0",
+        "canonicalSha256": "09ae0dfbd0cb7747a6c161ada9a529b657c5181aa5e98dc5501b4b6a33d7f909",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [
+        "Revenue",
+        "Costs"
+      ],
+      "expectedErrorCodes": [],
+      "features": [
+        "treemap-numbers"
+      ],
+      "modelExpected": [
+        {
+          "path": [
+            "nodes",
+            0,
+            "value"
+          ],
+          "equals": 1234.0
+        },
+        {
+          "path": [
+            "nodes",
+            1,
+            "name"
+          ],
+          "equals": "Costs"
+        }
+      ]
+    },
+    {
+      "id": "VC-M-sankey-basic",
+      "kind": "sankey",
+      "source": "sankey-beta\nAlpha,Beta,10\nBeta,Gamma,10",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sankey/parser/sankey.jison",
+        "symbol": "CSV records and fields",
+        "line": 1,
+        "sha256": "1f966d7e436d0255233522aca236c301f00c18cbd1b2f98c4845956a4a034f27",
+        "canonicalSha256": "1f5b7bf55f5cf1c9149543678aa827f5ab5340998dd33fbdeaaf73921b49cff0",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [
+        "Alpha",
+        "Beta",
+        "Gamma"
+      ],
+      "expectedErrorCodes": [],
+      "features": [
+        "sankey-basic"
+      ],
+      "modelExpected": [
+        {
+          "path": [
+            "nodes"
+          ],
+          "equals": [
+            "Alpha",
+            "Beta",
+            "Gamma"
+          ]
+        },
+        {
+          "path": [
+            "links"
+          ],
+          "equals": [
+            [
+              "Alpha",
+              "Beta",
+              10.0
+            ],
+            [
+              "Beta",
+              "Gamma",
+              10.0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VC-M-sankey-quoted",
+      "kind": "sankey",
+      "source": "sankey-beta\n\"Alpha, team\",\"Beta \"\"quoted\"\"\",2.5\n\"Beta \"\"quoted\"\"\",Gamma,2.5",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sankey/parser/sankey.jison",
+        "symbol": "CSV records and fields",
+        "line": 1,
+        "sha256": "1f966d7e436d0255233522aca236c301f00c18cbd1b2f98c4845956a4a034f27",
+        "canonicalSha256": "1f5b7bf55f5cf1c9149543678aa827f5ab5340998dd33fbdeaaf73921b49cff0",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [
+        "Alpha, team",
+        "Beta \"quoted\"",
+        "Gamma"
+      ],
+      "expectedErrorCodes": [],
+      "features": [
+        "sankey-quoted"
+      ],
+      "modelExpected": [
+        {
+          "path": [
+            "nodes",
+            0
+          ],
+          "equals": "Alpha, team"
+        },
+        {
+          "path": [
+            "nodes",
+            1
+          ],
+          "equals": "Beta \"quoted\""
+        },
+        {
+          "path": [
+            "links",
+            0,
+            2
+          ],
+          "equals": 2.5
+        }
+      ]
+    },
+    {
+      "id": "VC-M-sankey-colors",
+      "kind": "sankey",
+      "source": "sankey-beta\nAlpha,Beta,10\nAlpha,Gamma,5",
+      "config": {
+        "sankey": {
+          "nodeColors": {
+            "Alpha": "#ff0000",
+            "Beta": "#00ff00"
+          },
+          "linkColor": "gradient",
+          "prefix": "$",
+          "suffix": " units"
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sankey/parser/sankey.jison",
+        "symbol": "CSV records and fields",
+        "line": 1,
+        "sha256": "1f966d7e436d0255233522aca236c301f00c18cbd1b2f98c4845956a4a034f27",
+        "canonicalSha256": "1f5b7bf55f5cf1c9149543678aa827f5ab5340998dd33fbdeaaf73921b49cff0",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [
+        "Alpha",
+        "Beta",
+        "Gamma"
+      ],
+      "expectedErrorCodes": [],
+      "features": [
+        "sankey-colors"
+      ],
+      "modelExpected": [
+        {
+          "path": [
+            "links",
+            1
+          ],
+          "equals": [
+            "Alpha",
+            "Gamma",
+            5.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VC-M-sankey-no-values",
+      "kind": "sankey",
+      "source": "sankey-beta\nAlpha,Beta,10",
+      "config": {
+        "sankey": {
+          "showValues": false,
+          "nodeAlignment": "left",
+          "linkColor": "target"
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sankey/parser/sankey.jison",
+        "symbol": "CSV records and fields",
+        "line": 1,
+        "sha256": "1f966d7e436d0255233522aca236c301f00c18cbd1b2f98c4845956a4a034f27",
+        "canonicalSha256": "1f5b7bf55f5cf1c9149543678aa827f5ab5340998dd33fbdeaaf73921b49cff0",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [
+        "Alpha",
+        "Beta"
+      ],
+      "expectedErrorCodes": [],
+      "features": [
+        "sankey-no-values"
+      ],
+      "modelExpected": [
+        {
+          "path": [
+            "nodes"
+          ],
+          "equals": [
+            "Alpha",
+            "Beta"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VC-M-venn-basic",
+      "kind": "venn",
+      "source": "venn-beta\ntitle Teams\nset A[Alpha]: 20\nset B[Beta]: 20\nunion A,B[Shared]: 5",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/venn/parser/venn.jison",
+        "symbol": "set / union / text / style",
+        "line": 70,
+        "sha256": "6fe3a8d928c0de0be6cda1075e437cb5ca759b92242b65ced65f002d50d50007",
+        "canonicalSha256": "63b984882e29432bfcbb99083043d3118c103834a531199a962ef399ebee437f",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [
+        "Teams",
+        "Alpha",
+        "Beta",
+        "Shared"
+      ],
+      "expectedErrorCodes": [],
+      "features": [
+        "venn-basic"
+      ],
+      "modelExpected": [
+        {
+          "path": [
+            "areas",
+            0,
+            "sets"
+          ],
+          "equals": [
+            "A"
+          ]
+        },
+        {
+          "path": [
+            "areas",
+            2,
+            "sets"
+          ],
+          "equals": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "path": [
+            "areas",
+            2,
+            "size"
+          ],
+          "equals": 5.0
+        },
+        {
+          "path": [
+            "areas",
+            2,
+            "label"
+          ],
+          "equals": "Shared"
+        }
+      ]
+    },
+    {
+      "id": "VC-M-venn-default-sizes",
+      "kind": "venn",
+      "source": "venn-beta\nset A\nset B\nunion A,B",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/venn/parser/venn.jison",
+        "symbol": "set / union / text / style",
+        "line": 70,
+        "sha256": "6fe3a8d928c0de0be6cda1075e437cb5ca759b92242b65ced65f002d50d50007",
+        "canonicalSha256": "63b984882e29432bfcbb99083043d3118c103834a531199a962ef399ebee437f",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [
+        "A",
+        "B"
+      ],
+      "expectedErrorCodes": [],
+      "features": [
+        "venn-default-sizes"
+      ],
+      "modelExpected": [
+        {
+          "path": [
+            "areas",
+            0,
+            "size"
+          ],
+          "equals": 10.0
+        },
+        {
+          "path": [
+            "areas",
+            2,
+            "size"
+          ],
+          "equals": 2.5
+        }
+      ]
+    },
+    {
+      "id": "VC-M-venn-triple",
+      "kind": "venn",
+      "source": "venn-beta\nset A: 20\nset B: 20\nset C: 20\nunion A,B,C[Shared]: 2",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/venn/parser/venn.jison",
+        "symbol": "set / union / text / style",
+        "line": 70,
+        "sha256": "6fe3a8d928c0de0be6cda1075e437cb5ca759b92242b65ced65f002d50d50007",
+        "canonicalSha256": "63b984882e29432bfcbb99083043d3118c103834a531199a962ef399ebee437f",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [
+        "A",
+        "B",
+        "C",
+        "Shared"
+      ],
+      "expectedErrorCodes": [],
+      "features": [
+        "venn-triple"
+      ],
+      "modelExpected": [
+        {
+          "path": [
+            "areas",
+            3,
+            "sets"
+          ],
+          "equals": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        {
+          "path": [
+            "areas",
+            3,
+            "label"
+          ],
+          "equals": "Shared"
+        }
+      ]
+    },
+    {
+      "id": "VC-M-venn-text",
+      "kind": "venn",
+      "source": "venn-beta\nset A[Alpha]: 30\n  text first[\"One\"]\n  text second[\"Two\"]\nset B[Beta]: 20\nunion A,B: 4\ntext A,B common[\"Shared note\"]",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/venn/parser/venn.jison",
+        "symbol": "set / union / text / style",
+        "line": 70,
+        "sha256": "6fe3a8d928c0de0be6cda1075e437cb5ca759b92242b65ced65f002d50d50007",
+        "canonicalSha256": "63b984882e29432bfcbb99083043d3118c103834a531199a962ef399ebee437f",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [
+        "Alpha",
+        "Beta",
+        "One",
+        "Two",
+        "Shared note"
+      ],
+      "expectedErrorCodes": [],
+      "features": [
+        "venn-text"
+      ],
+      "modelExpected": [
+        {
+          "path": [
+            "texts",
+            0,
+            "sets"
+          ],
+          "equals": [
+            "A"
+          ]
+        },
+        {
+          "path": [
+            "texts",
+            0,
+            "label"
+          ],
+          "equals": "One"
+        },
+        {
+          "path": [
+            "texts",
+            2,
+            "sets"
+          ],
+          "equals": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "path": [
+            "texts",
+            2,
+            "label"
+          ],
+          "equals": "Shared note"
+        }
+      ]
+    },
+    {
+      "id": "VC-M-venn-style",
+      "kind": "venn",
+      "source": "venn-beta\nset A: 20\nset B: 20\nunion A,B[Overlap]: 4\nstyle A fill:#ff0000,stroke:#000000,stroke-width:2\nstyle A,B fill:#ffff00,color:#000000",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/venn/parser/venn.jison",
+        "symbol": "set / union / text / style",
+        "line": 70,
+        "sha256": "6fe3a8d928c0de0be6cda1075e437cb5ca759b92242b65ced65f002d50d50007",
+        "canonicalSha256": "63b984882e29432bfcbb99083043d3118c103834a531199a962ef399ebee437f",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [
+        "A",
+        "B",
+        "Overlap"
+      ],
+      "expectedErrorCodes": [],
+      "features": [
+        "venn-style"
+      ],
+      "modelExpected": [
+        {
+          "path": [
+            "styles",
+            0,
+            0
+          ],
+          "equals": [
+            "A"
+          ]
+        },
+        {
+          "path": [
+            "styles",
+            1,
+            0
+          ],
+          "equals": [
+            "A",
+            "B"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VC-M-pie-negative",
+      "kind": "pie",
+      "source": "pie\n\"A\": -1",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/pie/pie.langium",
+        "symbol": "PieSection / pieDb.addSection",
+        "line": 17,
+        "sha256": "fe9346e70f5d5028fa5aaa0470ba651e445c904e615feaf79a4eb2b5a401118d",
+        "canonicalSha256": "dc326f2fb756e9d2e171a9f26328d4d106164fea21e2e359d46cb62b9d82f45c",
+        "synthesized": true
+      },
+      "expect": "syntax_error",
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "INVALID_PIE_VALUE"
+      ],
+      "features": [
+        "pie-negative"
+      ],
+      "modelExpected": []
+    },
+    {
+      "id": "VC-M-quadrant-range",
+      "kind": "quadrantChart",
+      "source": "quadrantChart\nA: [1.1,0]",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/quadrant-chart/parser/quadrant.jison",
+        "symbol": "axis / point / classDef",
+        "line": 1,
+        "sha256": "b4cf7e71d667e51c2082ef8e6b1c897d2d3124933026bef0ab72c959a8f46b6a",
+        "canonicalSha256": "50ee71fea6f3ee64bbe25e41c1b20a5e93a41b895544f94fca43afe28a7d12bb",
+        "synthesized": true
+      },
+      "expect": "syntax_error",
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "SYNTAX_ERROR"
+      ],
+      "features": [
+        "quadrant-range"
+      ],
+      "modelExpected": []
+    },
+    {
+      "id": "VC-M-xy-broken-list",
+      "kind": "xychart",
+      "source": "xychart-beta\nline [1,2",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/xychart/parser/xychart.jison",
+        "symbol": "plotData/dataPoint/parseXAxis/parseYAxis",
+        "line": 1,
+        "sha256": "cc1f2f0f8a320bf64c974c132516b7393876188d70bd0fd22c93587e504862f1",
+        "canonicalSha256": "ce1e4904b3c2036ac29cc62b6e6561058b00e4bc9c9bbf661873451bb55bf0fc",
+        "synthesized": true
+      },
+      "expect": "syntax_error",
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "SYNTAX_ERROR"
+      ],
+      "features": [
+        "xy-broken-list"
+      ],
+      "modelExpected": []
+    },
+    {
+      "id": "VC-M-radar-reference",
+      "kind": "radar",
+      "source": "radar-beta\naxis a,b\ncurve c {a:1,missing:2}",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/radar/radar.langium",
+        "symbol": "axes / curves / options",
+        "line": 1,
+        "sha256": "acd5171f3413f29242e8250c5a9c9d67e247a6b87acfbe7543bfc333bbdf3ac5",
+        "canonicalSha256": "e6bab113778803c5b45969fc3197a9c01f7b8162b9dd4b71d421da20625ec535",
+        "synthesized": true
+      },
+      "expect": "syntax_error",
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "SYNTAX_ERROR"
+      ],
+      "features": [
+        "radar-reference"
+      ],
+      "modelExpected": []
+    },
+    {
+      "id": "VC-M-treemap-unquoted",
+      "kind": "treemap",
+      "source": "treemap\nUnquoted: 1",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/treemap/treemap.langium",
+        "symbol": "Section / Leaf / ClassDef",
+        "line": 45,
+        "sha256": "7f1be037f66fb9b42379e36023f1c3c3949a3f02149780003b018eb1c4a706d0",
+        "canonicalSha256": "09ae0dfbd0cb7747a6c161ada9a529b657c5181aa5e98dc5501b4b6a33d7f909",
+        "synthesized": true
+      },
+      "expect": "syntax_error",
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "SYNTAX_ERROR"
+      ],
+      "features": [
+        "treemap-unquoted"
+      ],
+      "modelExpected": []
+    },
+    {
+      "id": "VC-M-sankey-field-count",
+      "kind": "sankey",
+      "source": "sankey-beta\nA,B,1,Extra",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sankey/parser/sankey.jison",
+        "symbol": "CSV records and fields",
+        "line": 1,
+        "sha256": "1f966d7e436d0255233522aca236c301f00c18cbd1b2f98c4845956a4a034f27",
+        "canonicalSha256": "1f5b7bf55f5cf1c9149543678aa827f5ab5340998dd33fbdeaaf73921b49cff0",
+        "synthesized": true
+      },
+      "expect": "syntax_error",
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "SYNTAX_ERROR"
+      ],
+      "features": [
+        "sankey-field-count"
+      ],
+      "modelExpected": []
+    },
+    {
+      "id": "VC-M-venn-forward-union",
+      "kind": "venn",
+      "source": "venn-beta\nunion A,B: 2\nset A\nset B",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/venn/parser/venn.jison",
+        "symbol": "set / union / text / style",
+        "line": 70,
+        "sha256": "6fe3a8d928c0de0be6cda1075e437cb5ca759b92242b65ced65f002d50d50007",
+        "canonicalSha256": "63b984882e29432bfcbb99083043d3118c103834a531199a962ef399ebee437f",
+        "synthesized": true
+      },
+      "expect": "syntax_error",
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "SYNTAX_ERROR"
+      ],
+      "features": [
+        "venn-forward-union"
+      ],
+      "modelExpected": []
+    },
+    {
+      "id": "VC-M-quadrant-repeated-valid",
+      "kind": "quadrantChart",
+      "source": "quadrantChart\nPoint: [0.2, 0.2]\nPoint: [0.8,0.8]",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/quadrant-chart/parser/quadrant.jison",
+        "symbol": "point_start / point_x / point_y exclusive lexer states; QuadrantBuilder.addPoints prepends",
+        "line": 56,
+        "sha256": "b4cf7e71d667e51c2082ef8e6b1c897d2d3124933026bef0ab72c959a8f46b6a",
+        "canonicalSha256": "50ee71fea6f3ee64bbe25e41c1b20a5e93a41b895544f94fca43afe28a7d12bb",
+        "synthesized": true
+      },
+      "expect": "render",
+      "expectedText": [
+        "Point"
+      ],
+      "expectedErrorCodes": [],
+      "features": [
+        "quadrant-repeated-labels-valid"
+      ],
+      "modelExpected": [
+        {
+          "path": [
+            "points",
+            0,
+            0
+          ],
+          "equals": "Point"
+        },
+        {
+          "path": [
+            "points",
+            0,
+            2
+          ],
+          "equals": 0.8
+        },
+        {
+          "path": [
+            "points",
+            1,
+            0
+          ],
+          "equals": "Point"
+        },
+        {
+          "path": [
+            "points",
+            1,
+            2
+          ],
+          "equals": 0.2
+        }
+      ]
+    },
+    {
+      "id": "VC-M-quadrant-tight-zero-lexical",
+      "kind": "quadrantChart",
+      "source": "quadrantChart\nAlpha: [0,0]",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/quadrant-chart/parser/quadrant.jison",
+        "symbol": "point_start / point_x / point_y exclusive lexer states; QuadrantBuilder.addPoints prepends",
+        "line": 56,
+        "sha256": "b4cf7e71d667e51c2082ef8e6b1c897d2d3124933026bef0ab72c959a8f46b6a",
+        "canonicalSha256": "50ee71fea6f3ee64bbe25e41c1b20a5e93a41b895544f94fca43afe28a7d12bb",
+        "synthesized": true
+      },
+      "expect": "syntax_error",
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "SYNTAX_ERROR"
+      ],
+      "features": [
+        "quadrant-source-coordinate-lexer"
+      ],
+      "modelExpected": [],
+      "diagnosticEvidence": "test-runs/VCHART-QUADRANT-diagnostic-20261107T034921Z-6b9834bf/artifacts/oracle/vchart-mermaid-source-summary.json"
+    },
+    {
+      "id": "VC-M-quadrant-one-decimal-lexical",
+      "kind": "quadrantChart",
+      "source": "quadrantChart\nAlpha: [1.0,1]",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/quadrant-chart/parser/quadrant.jison",
+        "symbol": "point_start / point_x / point_y exclusive lexer states; QuadrantBuilder.addPoints prepends",
+        "line": 56,
+        "sha256": "b4cf7e71d667e51c2082ef8e6b1c897d2d3124933026bef0ab72c959a8f46b6a",
+        "canonicalSha256": "50ee71fea6f3ee64bbe25e41c1b20a5e93a41b895544f94fca43afe28a7d12bb",
+        "synthesized": true
+      },
+      "expect": "syntax_error",
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "SYNTAX_ERROR"
+      ],
+      "features": [
+        "quadrant-source-coordinate-lexer"
+      ],
+      "modelExpected": [],
+      "diagnosticEvidence": "test-runs/VCHART-QUADRANT-diagnostic-20261107T034921Z-6b9834bf/artifacts/oracle/vchart-mermaid-source-summary.json"
+    }
+  ],
+  "unsupportedCases": [
+    {
+      "id": "VC-M-venn-four-sets",
+      "kind": "venn",
+      "source": "venn-beta\nset A\nset B\nset C\nset D",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/venn/parser/venn.jison",
+        "symbol": "set / union / text / style",
+        "line": 70,
+        "sha256": "6fe3a8d928c0de0be6cda1075e437cb5ca759b92242b65ced65f002d50d50007",
+        "canonicalSha256": "63b984882e29432bfcbb99083043d3118c103834a531199a962ef399ebee437f",
+        "synthesized": true
+      },
+      "expect": "render",
+      "nativeExpectedErrorCodes": [
+        "UNSUPPORTED_VCHART_OPTION"
+      ],
+      "reason": "Source-valid advanced static option beyond current VChart embedding; not a source parse negative or static exclusion."
+    },
+    {
+      "id": "VC-M-treemap-si-format",
+      "kind": "treemap",
+      "source": "treemap\n\"Alpha\": 1000",
+      "config": {
+        "treemap": {
+          "valueFormat": ".2s"
+        }
+      },
+      "origin": {
+        "path": "packages/parser/src/language/treemap/treemap.langium",
+        "symbol": "Section / Leaf / ClassDef",
+        "line": 45,
+        "sha256": "7f1be037f66fb9b42379e36023f1c3c3949a3f02149780003b018eb1c4a706d0",
+        "canonicalSha256": "09ae0dfbd0cb7747a6c161ada9a529b657c5181aa5e98dc5501b4b6a33d7f909",
+        "synthesized": true
+      },
+      "expect": "render",
+      "nativeExpectedErrorCodes": [
+        "UNSUPPORTED_VCHART_OPTION"
+      ],
+      "reason": "Source-valid advanced static option beyond current VChart embedding; not a source parse negative or static exclusion."
+    }
+  ],
+  "notes": [
+    "Native restrictions are separate from source grammar-invalid cases.",
+    "Treemap uses VChart binary tile geometry; oracle numeric squarify identity is not required.",
+    "This fixture does not substitute for independent all68 direct-spec tests."
+  ]
+}

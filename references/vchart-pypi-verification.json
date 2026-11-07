@@ -1,0 +1,89 @@
+{
+  "schema": "py-mermaid-vchart-pypi-delivery/v1",
+  "status": "PASS",
+  "published": true,
+  "requirement": "py-visactor-vchart==0.1.1",
+  "pypi": {
+    "status": "published",
+    "published": true,
+    "url": "https://pypi.org/project/py-visactor-vchart/0.1.1/",
+    "metadataUrl": "https://pypi.org/pypi/py-visactor-vchart/0.1.1/json",
+    "verificationRun": "test-runs/VCHART-PYPI-published-20261107T061650Z-c417a0e5",
+    "workflowRun": "42337813981",
+    "workflowAttempt": 2,
+    "distributions": [
+      {
+        "filename": "py_visactor_vchart-0.1.1-py3-none-any.whl",
+        "url": "https://files.pythonhosted.org/packages/d9/0c/98542f2305fc91638cebc3c7da3f033ba8421157f8161a17de68a71b5e5b/py_visactor_vchart-0.1.1-py3-none-any.whl",
+        "sha256": "45b66f82d0c74a8d15306b117d93ad2d88c26d2997719306336bcc92b7ce49e2",
+        "bytes": 123546
+      },
+      {
+        "filename": "py_visactor_vchart-0.1.1.tar.gz",
+        "url": "https://files.pythonhosted.org/packages/b7/29/f0efd21072eb524475f813144bf413eb3a3ed0a0ec099bffbe3353f657c6/py_visactor_vchart-0.1.1.tar.gz",
+        "sha256": "fee51a35d75b7f8572e76b0028d63c833f6e01c670c7ea41dc412386b3bcef7f",
+        "bytes": 113467
+      }
+    ]
+  },
+  "renderingSourceUnchanged": true,
+  "previousAcceptedRendering": "test-runs\\VCHART-P4-batch-20261107T045154Z-dd03474c",
+  "packagingOnlyChangedFiles": [
+    "README.md",
+    "pyproject.toml"
+  ],
+  "sourceTreeSha256": "d7a26bdc6aa104ada9aef8b32f8e365c7df3ec1f51853032958b950d2476f136",
+  "freshInstallations": [
+    {
+      "run": "test-runs\\VCHART-INSTALL-wheel-20261107T061840Z-c4a0291f",
+      "kind": "wheel",
+      "consumerArtifactSha256": "4371e46ce4074d7aea8c8e7d7c46a50aa6c73ebb2f1dc5b70ec022d73dd034e5",
+      "resolvedDownload": {
+        "url": "https://files.pythonhosted.org/packages/d9/0c/98542f2305fc91638cebc3c7da3f033ba8421157f8161a17de68a71b5e5b/py_visactor_vchart-0.1.1-py3-none-any.whl",
+        "archive_info": {
+          "hashes": {
+            "sha256": "45b66f82d0c74a8d15306b117d93ad2d88c26d2997719306336bcc92b7ce49e2"
+          },
+          "hash": "sha256=45b66f82d0c74a8d15306b117d93ad2d88c26d2997719306336bcc92b7ce49e2"
+        }
+      }
+    },
+    {
+      "run": "test-runs\\VCHART-INSTALL-sdist-20261107T061940Z-cd8458f2",
+      "kind": "sdist",
+      "consumerArtifactSha256": "6c3f994d657afd56232f50901aa5d05e143d8913856b998debc713848a482bd0",
+      "resolvedDownload": {
+        "url": "https://files.pythonhosted.org/packages/d9/0c/98542f2305fc91638cebc3c7da3f033ba8421157f8161a17de68a71b5e5b/py_visactor_vchart-0.1.1-py3-none-any.whl",
+        "archive_info": {
+          "hashes": {
+            "sha256": "45b66f82d0c74a8d15306b117d93ad2d88c26d2997719306336bcc92b7ce49e2"
+          },
+          "hash": "sha256=45b66f82d0c74a8d15306b117d93ad2d88c26d2997719306336bcc92b7ce49e2"
+        }
+      }
+    }
+  ],
+  "checksRun": "test-runs\\VCHART-PYPI-CHECKS-batch-20261107T062014Z-ed55e3d4",
+  "actualMethods": {
+    "bootstrap-tests": 14,
+    "dependency-tests": 14,
+    "integration-tests": 156
+  },
+  "workflow": {
+    "url": "https://github.com/py-VisActor/py-vchart/actions/runs/42337813981",
+    "attempt": 2,
+    "conclusion": "success",
+    "jobs": 6
+  },
+  "ciArchive": {
+    "path": "..\\py-vchart\\test-runs\\vchart-pypi-ci-42337813981-attempt2\\pypi-verification.zip",
+    "sha256": "17d3174cf896e54893bae789f759fb610d379c08929eb4bddec3737573e49f21",
+    "bytes": 16195477
+  },
+  "ciPyPIInstallations": {
+    "wheel": "225/68/36 PASS",
+    "sdist": "225/68/36 PASS"
+  },
+  "historicalEvidencePreserved": true,
+  "note": "Publication/packaging supplement; retained static scope and earlier limits unchanged."
+}

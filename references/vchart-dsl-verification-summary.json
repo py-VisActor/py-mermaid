@@ -1,0 +1,669 @@
+{
+  "schema": "py-mermaid-vchart-dsl-verification/v1",
+  "status": "PASS",
+  "candidateRun": "test-runs/VCHART-DSL-P4-batch-20261107T072312Z-7cdc1791",
+  "sourceTreeSha256": "fe2c293f8ed4ea76e04d34669c8739c27a32063447026e144928bfd6b4ac0bb2",
+  "candidateManifest": {
+    "path": "test-runs/VCHART-DSL-P4-batch-20261107T072312Z-7cdc1791/run.json",
+    "sha256": "4591f605603f8f3f71764d2c35a8c69c21b0fa71e1258638d1162d9f6d401e53",
+    "bytes": 2807961
+  },
+  "candidateArchive": {
+    "path": "test-runs/VCHART-DSL-P4-batch-20261107T072312Z-7cdc1791/artifacts/candidate.zip",
+    "sha256": "a86ced0cac4ca9631b969e4f7363fd620c2c1dfd7604d52a11a59649f85f6d74",
+    "bytes": 1723827
+  },
+  "counts": {
+    "types": 68,
+    "casesPerProfile": 301,
+    "supplier": 225,
+    "representative": 68,
+    "examples": 8,
+    "profiles": 3,
+    "matrixCases": 903,
+    "actualExportFiles": 816,
+    "unittestMethods": 2364
+  },
+  "unittestMethods": {
+    "dsl-unit-syntax": [
+      47
+    ],
+    "dsl-unit-compiler": [
+      55
+    ],
+    "dsl-unit-api": [
+      20
+    ],
+    "dsl-unit-cli": [
+      10
+    ],
+    "dsl-unit-resources": [
+      14
+    ],
+    "existing-vchart-contracts": [
+      156
+    ],
+    "regression-bootstrap": [
+      14
+    ],
+    "regression-dependencies": [
+      14
+    ],
+    "regression-f011": [
+      89
+    ],
+    "regression-f012": [
+      66
+    ],
+    "regression-f013": [
+      126
+    ],
+    "regression-f014": [
+      171
+    ],
+    "regression-math": [
+      17
+    ],
+    "regression-bulk": [
+      1222
+    ],
+    "regression-html_host": [
+      257
+    ],
+    "regression-pixel_compare": [
+      17
+    ],
+    "regression-tooling": [
+      69
+    ]
+  },
+  "matrices": [
+    {
+      "backend": "cpu",
+      "cases": 301,
+      "groups": {
+        "supplier": 225,
+        "representative": 68,
+        "example": 8
+      },
+      "types": 68,
+      "actualExportFiles": 272,
+      "actualDecodedPixelsEqual": true,
+      "result": {
+        "path": "test-runs/VCHART-DSL-P4-batch-20261107T072312Z-7cdc1791/artifacts/matrix-cpu/result.json",
+        "sha256": "1cc8bf89860286f796a78582d8a048755729d2a16431b9344b52767499b9887b",
+        "bytes": 341432
+      },
+      "wordCloudPolicies": [
+        {
+          "id": "wordCloud/default-filling",
+          "policy": {
+            "schema": "py-vchart-native-wordcloud-policy/v1",
+            "caseId": "wordCloud/default-filling",
+            "specSha256": "56fb5935e1ab6b82091368934451b5d19d0f016e9492149e17ac64377e2530e5",
+            "status": "PASS",
+            "errors": [],
+            "policy": "reviewed-native-font-occupancy-v1",
+            "glyphs": [
+              {
+                "index": 0,
+                "text": "Chart",
+                "corePixels": 386,
+                "blueCoverage": 1.0
+              },
+              {
+                "index": 1,
+                "text": "Data",
+                "corePixels": 184,
+                "blueCoverage": 1.0
+              },
+              {
+                "index": 2,
+                "text": "Plot",
+                "corePixels": 63,
+                "blueCoverage": 1.0
+              }
+            ],
+            "primaryExpected": [
+              [
+                "Chart",
+                32,
+                0
+              ],
+              [
+                "Data",
+                25,
+                0
+              ],
+              [
+                "Plot",
+                18,
+                0
+              ]
+            ],
+            "fillingSizePasses": [
+              3.0,
+              2.3680219731548457,
+              2.0,
+              2.0
+            ],
+            "bluePixels": 3168,
+            "outsideDiamondPixels": 0,
+            "nonPrimaryFillingBluePixels": 1851,
+            "referenceWordCount": 135,
+            "nativeWordCount": 147,
+            "referenceWords": {
+              "Chart": 45,
+              "Data": 44,
+              "Plot": 46
+            },
+            "nativeWords": {
+              "Chart": 48,
+              "Data": 50,
+              "Plot": 49
+            },
+            "exactRepeatedWordMultiset": false
+          },
+          "upstreamTextEqual": false,
+          "upstreamStructureEqual": false
+        },
+        {
+          "id": "wordCloud/filled-mask",
+          "policy": {
+            "schema": "py-vchart-native-wordcloud-policy/v1",
+            "caseId": "wordCloud/filled-mask",
+            "specSha256": "a353efa0f100b564aae19042202ba2dd599e3ecf85959f93145c78315609c480",
+            "status": "PASS",
+            "errors": [],
+            "policy": "reviewed-native-font-occupancy-v1",
+            "glyphs": [
+              {
+                "index": 0,
+                "text": "Chart",
+                "corePixels": 386,
+                "blueCoverage": 1.0
+              },
+              {
+                "index": 1,
+                "text": "Data",
+                "corePixels": 184,
+                "blueCoverage": 1.0
+              },
+              {
+                "index": 2,
+                "text": "Plot",
+                "corePixels": 63,
+                "blueCoverage": 1.0
+              }
+            ],
+            "primaryExpected": [
+              [
+                "Chart",
+                32,
+                0
+              ],
+              [
+                "Data",
+                25,
+                0
+              ],
+              [
+                "Plot",
+                18,
+                0
+              ]
+            ],
+            "fillingSizePasses": [
+              14.0
+            ],
+            "bluePixels": 4621,
+            "outsideDiamondPixels": 0,
+            "nonPrimaryFillingBluePixels": 3304,
+            "referenceWordCount": 21,
+            "nativeWordCount": 26,
+            "referenceWords": {
+              "Chart": 7,
+              "Data": 7,
+              "Plot": 7
+            },
+            "nativeWords": {
+              "Chart": 9,
+              "Data": 9,
+              "Plot": 8
+            },
+            "exactRepeatedWordMultiset": false
+          },
+          "upstreamTextEqual": false,
+          "upstreamStructureEqual": false
+        }
+      ]
+    },
+    {
+      "backend": "auto",
+      "cases": 301,
+      "groups": {
+        "supplier": 225,
+        "representative": 68,
+        "example": 8
+      },
+      "types": 68,
+      "actualExportFiles": 272,
+      "actualDecodedPixelsEqual": true,
+      "result": {
+        "path": "test-runs/VCHART-DSL-P4-batch-20261107T072312Z-7cdc1791/artifacts/matrix-auto/result.json",
+        "sha256": "10c734054ab83c4b43fc8901db9d63e97af9f7bc6f0409cd6654b1589272a897",
+        "bytes": 347153
+      },
+      "wordCloudPolicies": [
+        {
+          "id": "wordCloud/default-filling",
+          "policy": {
+            "schema": "py-vchart-native-wordcloud-policy/v1",
+            "caseId": "wordCloud/default-filling",
+            "specSha256": "56fb5935e1ab6b82091368934451b5d19d0f016e9492149e17ac64377e2530e5",
+            "status": "PASS",
+            "errors": [],
+            "policy": "reviewed-native-font-occupancy-v1",
+            "glyphs": [
+              {
+                "index": 0,
+                "text": "Chart",
+                "corePixels": 386,
+                "blueCoverage": 1.0
+              },
+              {
+                "index": 1,
+                "text": "Data",
+                "corePixels": 184,
+                "blueCoverage": 1.0
+              },
+              {
+                "index": 2,
+                "text": "Plot",
+                "corePixels": 63,
+                "blueCoverage": 1.0
+              }
+            ],
+            "primaryExpected": [
+              [
+                "Chart",
+                32,
+                0
+              ],
+              [
+                "Data",
+                25,
+                0
+              ],
+              [
+                "Plot",
+                18,
+                0
+              ]
+            ],
+            "fillingSizePasses": [
+              3.0,
+              2.3680219731548457,
+              2.0,
+              2.0
+            ],
+            "bluePixels": 3168,
+            "outsideDiamondPixels": 0,
+            "nonPrimaryFillingBluePixels": 1851,
+            "referenceWordCount": 135,
+            "nativeWordCount": 147,
+            "referenceWords": {
+              "Chart": 45,
+              "Data": 44,
+              "Plot": 46
+            },
+            "nativeWords": {
+              "Chart": 48,
+              "Data": 50,
+              "Plot": 49
+            },
+            "exactRepeatedWordMultiset": false
+          },
+          "upstreamTextEqual": false,
+          "upstreamStructureEqual": false
+        },
+        {
+          "id": "wordCloud/filled-mask",
+          "policy": {
+            "schema": "py-vchart-native-wordcloud-policy/v1",
+            "caseId": "wordCloud/filled-mask",
+            "specSha256": "a353efa0f100b564aae19042202ba2dd599e3ecf85959f93145c78315609c480",
+            "status": "PASS",
+            "errors": [],
+            "policy": "reviewed-native-font-occupancy-v1",
+            "glyphs": [
+              {
+                "index": 0,
+                "text": "Chart",
+                "corePixels": 386,
+                "blueCoverage": 1.0
+              },
+              {
+                "index": 1,
+                "text": "Data",
+                "corePixels": 184,
+                "blueCoverage": 1.0
+              },
+              {
+                "index": 2,
+                "text": "Plot",
+                "corePixels": 63,
+                "blueCoverage": 1.0
+              }
+            ],
+            "primaryExpected": [
+              [
+                "Chart",
+                32,
+                0
+              ],
+              [
+                "Data",
+                25,
+                0
+              ],
+              [
+                "Plot",
+                18,
+                0
+              ]
+            ],
+            "fillingSizePasses": [
+              14.0
+            ],
+            "bluePixels": 4621,
+            "outsideDiamondPixels": 0,
+            "nonPrimaryFillingBluePixels": 3304,
+            "referenceWordCount": 21,
+            "nativeWordCount": 26,
+            "referenceWords": {
+              "Chart": 7,
+              "Data": 7,
+              "Plot": 7
+            },
+            "nativeWords": {
+              "Chart": 9,
+              "Data": 9,
+              "Plot": 8
+            },
+            "exactRepeatedWordMultiset": false
+          },
+          "upstreamTextEqual": false,
+          "upstreamStructureEqual": false
+        }
+      ]
+    },
+    {
+      "backend": "gpu",
+      "cases": 301,
+      "groups": {
+        "supplier": 225,
+        "representative": 68,
+        "example": 8
+      },
+      "types": 68,
+      "actualExportFiles": 272,
+      "actualDecodedPixelsEqual": true,
+      "result": {
+        "path": "test-runs/VCHART-DSL-P4-batch-20261107T072312Z-7cdc1791/artifacts/matrix-gpu/result.json",
+        "sha256": "2258ed762bf3340c825d9a2ea6f0b8ca90aeadcf54a8b54e32eddee1a3b1c86a",
+        "bytes": 347152
+      },
+      "wordCloudPolicies": [
+        {
+          "id": "wordCloud/default-filling",
+          "policy": {
+            "schema": "py-vchart-native-wordcloud-policy/v1",
+            "caseId": "wordCloud/default-filling",
+            "specSha256": "56fb5935e1ab6b82091368934451b5d19d0f016e9492149e17ac64377e2530e5",
+            "status": "PASS",
+            "errors": [],
+            "policy": "reviewed-native-font-occupancy-v1",
+            "glyphs": [
+              {
+                "index": 0,
+                "text": "Chart",
+                "corePixels": 386,
+                "blueCoverage": 1.0
+              },
+              {
+                "index": 1,
+                "text": "Data",
+                "corePixels": 184,
+                "blueCoverage": 1.0
+              },
+              {
+                "index": 2,
+                "text": "Plot",
+                "corePixels": 63,
+                "blueCoverage": 1.0
+              }
+            ],
+            "primaryExpected": [
+              [
+                "Chart",
+                32,
+                0
+              ],
+              [
+                "Data",
+                25,
+                0
+              ],
+              [
+                "Plot",
+                18,
+                0
+              ]
+            ],
+            "fillingSizePasses": [
+              3.0,
+              2.3680219731548457,
+              2.0,
+              2.0
+            ],
+            "bluePixels": 3168,
+            "outsideDiamondPixels": 0,
+            "nonPrimaryFillingBluePixels": 1851,
+            "referenceWordCount": 135,
+            "nativeWordCount": 147,
+            "referenceWords": {
+              "Chart": 45,
+              "Data": 44,
+              "Plot": 46
+            },
+            "nativeWords": {
+              "Chart": 48,
+              "Data": 50,
+              "Plot": 49
+            },
+            "exactRepeatedWordMultiset": false
+          },
+          "upstreamTextEqual": false,
+          "upstreamStructureEqual": false
+        },
+        {
+          "id": "wordCloud/filled-mask",
+          "policy": {
+            "schema": "py-vchart-native-wordcloud-policy/v1",
+            "caseId": "wordCloud/filled-mask",
+            "specSha256": "a353efa0f100b564aae19042202ba2dd599e3ecf85959f93145c78315609c480",
+            "status": "PASS",
+            "errors": [],
+            "policy": "reviewed-native-font-occupancy-v1",
+            "glyphs": [
+              {
+                "index": 0,
+                "text": "Chart",
+                "corePixels": 386,
+                "blueCoverage": 1.0
+              },
+              {
+                "index": 1,
+                "text": "Data",
+                "corePixels": 184,
+                "blueCoverage": 1.0
+              },
+              {
+                "index": 2,
+                "text": "Plot",
+                "corePixels": 63,
+                "blueCoverage": 1.0
+              }
+            ],
+            "primaryExpected": [
+              [
+                "Chart",
+                32,
+                0
+              ],
+              [
+                "Data",
+                25,
+                0
+              ],
+              [
+                "Plot",
+                18,
+                0
+              ]
+            ],
+            "fillingSizePasses": [
+              14.0
+            ],
+            "bluePixels": 4621,
+            "outsideDiamondPixels": 0,
+            "nonPrimaryFillingBluePixels": 3304,
+            "referenceWordCount": 21,
+            "nativeWordCount": 26,
+            "referenceWords": {
+              "Chart": 7,
+              "Data": 7,
+              "Plot": 7
+            },
+            "nativeWords": {
+              "Chart": 9,
+              "Data": 9,
+              "Plot": 8
+            },
+            "exactRepeatedWordMultiset": false
+          },
+          "upstreamTextEqual": false,
+          "upstreamStructureEqual": false
+        }
+      ]
+    }
+  ],
+  "installations": [
+    {
+      "run": "test-runs/VCHART-INSTALL-wheel-20261107T071751Z-d6268c2c",
+      "manifest": {
+        "path": "test-runs/VCHART-INSTALL-wheel-20261107T071751Z-d6268c2c/run.json",
+        "sha256": "821a6fba565d623e791e95579c63baec7459b84ceeff6de5e8b74fbeee73eba3",
+        "bytes": 88975
+      },
+      "sourceTreeSha256": "fe2c293f8ed4ea76e04d34669c8739c27a32063447026e144928bfd6b4ac0bb2",
+      "artifact": {
+        "path": "artifacts/dist/py_mermaid-0.0.1a0-py3-none-any.whl",
+        "sha256": "c8eb56f730357e2c9e5a4656eac808f76d676a40e4795a1b9c70884c72c6a76f",
+        "bytes": 635803
+      },
+      "directSpecs": 68,
+      "dslSpecs": 68,
+      "formalPyPI": true,
+      "realMathAndELK": true,
+      "vectorFormats": [
+        "svg",
+        "pdf"
+      ],
+      "result": {
+        "path": "test-runs/VCHART-INSTALL-wheel-20261107T071751Z-d6268c2c/artifacts/installed/result.json",
+        "sha256": "e624529ac9729dd176daac844a3138206b92aa2da12a139b203fa229539aa148",
+        "bytes": 65695
+      }
+    },
+    {
+      "run": "test-runs/VCHART-INSTALL-sdist-20261107T071829Z-d552a24f",
+      "manifest": {
+        "path": "test-runs/VCHART-INSTALL-sdist-20261107T071829Z-d552a24f/run.json",
+        "sha256": "b53f38904aaa3253f5c542eac25e66c8bd34ef6aa638073e4575cd3af192dff4",
+        "bytes": 88961
+      },
+      "sourceTreeSha256": "fe2c293f8ed4ea76e04d34669c8739c27a32063447026e144928bfd6b4ac0bb2",
+      "artifact": {
+        "path": "artifacts/dist/py_mermaid-0.0.1a0.tar.gz",
+        "sha256": "5b56387e86047d920330557b44ac3edad91f847394d1462e565936d30f52f992",
+        "bytes": 551785
+      },
+      "directSpecs": 68,
+      "dslSpecs": 68,
+      "formalPyPI": true,
+      "realMathAndELK": true,
+      "vectorFormats": [
+        "svg",
+        "pdf"
+      ],
+      "result": {
+        "path": "test-runs/VCHART-INSTALL-sdist-20261107T071829Z-d552a24f/artifacts/installed/result.json",
+        "sha256": "7df7b196fe128a93c4a33727a08ca54e658e0d229e26a280f00e9a9eaae881fb",
+        "bytes": 65695
+      }
+    }
+  ],
+  "visualReview": {
+    "path": "test-runs/VCHART-DSL-REVIEW-binding-20261107T072540Z-f3832b39/artifacts/visual-review.json",
+    "sha256": "ecf4a027d641a15d9fb6e35725188528c7cc572fbf3b269bacac07462a55dcd7",
+    "bytes": 804051
+  },
+  "visualReviewStatus": "PASS",
+  "acceptedScope": "Lossless native DSL v1 to the same public 68-type static provider; evidence-specific tests/matrices/isolated installs.",
+  "notClaimed": [
+    "Exhaustive option or source-branch coverage",
+    "Closure of the 22 previously identified Mermaid branch gaps",
+    "Provider unsupported/disabled-only advanced options",
+    "Dagre, interaction, animation, 3D, video/audio, arbitrary browser HTML/CSS"
+  ],
+  "providerRestrictionsRetained": true,
+  "oldMermaidGapCount": 22,
+  "delivery": {
+    "run": "test-runs/VCHART-DSL-P5-delivery-20261107T072726Z-cd08a488",
+    "manifest": {
+      "path": "test-runs/VCHART-DSL-P5-delivery-20261107T072726Z-cd08a488/run.json",
+      "sha256": "172fa2e855803e51fa1112fce4d14221fd9db8d74e2e3fdf5a9f71ea6b473d99",
+      "bytes": 38920
+    },
+    "reportUrl": "http://127.0.0.1:8765/VCHART-DSL-P5-delivery-20261107T072726Z-cd08a488/index.html",
+    "reportManifest": {
+      "path": "reports/VCHART-DSL-P5-delivery-20261107T072726Z-cd08a488/manifest.json",
+      "sha256": "be66e0ab1d55c1be76dc4ec227e9892ee6d375c9af7daafc72f1ac67b49828b9",
+      "bytes": 4609836
+    },
+    "qa": {
+      "path": "test-runs/VCHART-DSL-P5-delivery-20261107T072726Z-cd08a488/artifacts/report-qa/viewer.json",
+      "sha256": "95f38827c9eb0c45ee0b2c2c91e9e7a86d12207aff3380d1f4208e9255305847",
+      "bytes": 288312
+    },
+    "pages": 26,
+    "pageSize": 12,
+    "rawAssets": 4194,
+    "httpRawAssets": 4194,
+    "viewports": [
+      1440,
+      390
+    ],
+    "transportRetries": 0,
+    "failedAttempts": [
+      "test-runs/VCHART-DSL-P5-delivery-20261107T072548Z-d40f369a"
+    ]
+  },
+  "retainedFailures": [
+    "test-runs/VCHART-DSL-P3-batch-20261107T071015Z-cae93e0e",
+    "test-runs/VCHART-DSL-P5-delivery-20261107T072548Z-d40f369a"
+  ],
+  "postprocessingToolChanges": "After closed P4 only: normalize review-binding status while preserving original verdict; report QA transport concurrency4 and at most3 read-only retries, every exception recorded, HTTP status/hash mismatches remain failures. Product and tests unchanged."
+}

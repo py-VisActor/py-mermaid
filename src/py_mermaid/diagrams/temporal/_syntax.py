@@ -2,7 +2,7 @@
 import re
 from ...runtime.common import error
 
-def lines(document,hash_comments=True,semicolons=False):
+def lines(document,hash_comments=True,semicolons=False,inline_percent_comments=True):
     text=document.cleaned;out=[];pos=0
     # accDescr's multiline lexical state consumes everything through its
     # closing brace, including newlines, before normal statement scanning.
@@ -17,7 +17,9 @@ def lines(document,hash_comments=True,semicolons=False):
         value=text[pos:end]
         accessibility=bool(re.match(r'\s*acc(?:Title|Descr)\s*:',value,re.I))
         if hash_comments and not accessibility:value=value.split('#',1)[0]
-        if not accessibility:value=value.split('%%',1)[0]
+        if not accessibility:
+            if inline_percent_comments:value=value.split('%%',1)[0]
+            elif re.match(r'^\s*%%(?!\{)',value):value=''
         if value.strip():
             if not semicolons and ';' in value:raise error(document,pos+value.index(';'),'Unexpected semicolon')
             out.append((pos,value.strip()))

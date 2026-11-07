@@ -1,0 +1,373 @@
+{
+  "schema": "py-mermaid-closure-A-assertions/v1",
+  "phase": "P3_related_literal_repair_verified_pending_joint_P4",
+  "baselineSourceTreeSha256": "dab675b768488413fd60bb07b656d28ef8e2e6c4f34af45056eec9763c98f0f4",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "source": [
+    {
+      "repository": "mermaid",
+      "path": "packages/parser/src/language/cynefin/cynefin.langium",
+      "symbol": "DomainItem/Transition STRING",
+      "line": 18,
+      "sha256": "94276271b3dfe6dd78ced62249cd1d69bdd785e1498b90e678f101a23e1d26e0"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/parser/src/language/common/common.langium",
+      "symbol": "STRING/ACC_DESCR/TITLE terminals",
+      "line": 10,
+      "sha256": "d8b0c0056f6339ca6a0d3b966c02b1f4d53ad768069e2889450dc29312f1f65b"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/parser/src/language/common/valueConverter.ts",
+      "symbol": "runCommonConverter",
+      "line": 44,
+      "sha256": "d93aa5dd1f7fed8aa903f55eb3e463c6b69b455af22004a6405a61c7560f58e5"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/parser/src/language/railroad-abnf/railroad-abnf.langium",
+      "symbol": "ABNF_COMMENT and AbnfRule",
+      "line": 17,
+      "sha256": "d156141dab0c649a6a063c59a5d277aec56eda295f955d5c65c28cffe077ad84"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/parser/src/language/eventmodeling/event-modeling.langium",
+      "symbol": "EM_ID before EM_TITLE + hidden EM_WS",
+      "line": 54,
+      "sha256": "be3da489f5114237acbd7ec50494e8bb48f8e6753b6e2f7f2137dae170000611"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/c4/c4Renderer.ts",
+      "symbol": "drawInsideBoundary image48 reservation",
+      "line": 454,
+      "sha256": "d58ffb63def9c7117a332a0a94ec3b30fd7d34ba93ccb590d3e148a69460c909"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/c4/c4Db.ts",
+      "symbol": "updateElStyle boundary lookup and sprite assignment",
+      "line": 494,
+      "sha256": "461e4c00f8c5dfe0db51cc1b8e12bb7106b7f722752e016cd1e5730369aa7b36"
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/c4/svgDraw.ts",
+      "symbol": "drawBoundary; no sprite/image consumer",
+      "line": 135,
+      "sha256": "c635c9557d676f9e983a55bd0383e9b0eb39207eabaa844767e9da84fe7182c8"
+    },
+    {
+      "repository": "zenuml-core",
+      "path": "src/svg/components/comment.ts",
+      "symbol": "collectLines walkToken raw default and em branch",
+      "line": 49,
+      "sha256": "de16149e5f49bce9c09e0093836425e28b3810df1e53c607db8aaf968ef5efc1"
+    },
+    {
+      "repository": "mermaid-bundle-sourcesContent",
+      "path": "../../../../../node_modules/.pnpm/langium@4.4.0/node_modules/langium/src/parser/value-converter.ts",
+      "symbol": "convertString/convertEscapeCharacter",
+      "line": 60,
+      "sha256": "4f8b6454347b73fc775918037feb598808481e1cc026709e045dfe9f5817e191",
+      "bundleMapPath": ".local/f011-oracle/node_modules/@mermaid-js/parser/dist/chunks/mermaid-parser.core/chunk-NGNAAXSQ.mjs.map",
+      "bundleMapSha256": "7ff2c3967be6db0b0603e2773b6afa80bf8157d144e530bd21fac6f9e61d424d"
+    }
+  ],
+  "fixture": {
+    "path": "tests/closure/cases-A.json",
+    "bytes": 48687,
+    "sha256": "da12594f9aeee11d1f8597246c3615fb96dca8182676f9341ca55e9554ce9c08"
+  },
+  "methods": 46,
+  "legacyMethodsPreserved": 30,
+  "cases": 45,
+  "renderFixtures": 32,
+  "parserOnlyCases": 13,
+  "coverage": {
+    "knownNineGapBranches": [
+      "cynefin-double-unknown",
+      "cynefin-double-unicode",
+      "cynefin-single-newline",
+      "cynefin-literal-newline",
+      "cynefin-single-tab",
+      "cynefin-transition-escape",
+      "architecture-accessibility",
+      "C-abnf-priority",
+      "C-zen-comment-escape"
+    ],
+    "metadataPureValues": [
+      "tree-title",
+      "architecture-title",
+      "cynefin-title",
+      "tree-multiline-accessibility"
+    ],
+    "expandedStrings": "Both quote styles; unknown/u literal/b/f/n/r/t/v/0/quote/backslash/raw quoted newline; unmatched quote/escape negatives. Non-XML control values are parser-only, not fake SVG successes.",
+    "event": "EM_ID priority and leading-space EM_TITLE terminal independently distinguished: all three newline metadata/title inputs and entity title reject; Page entity is legal; header-inline title preserves whole raw terminal including leading space.",
+    "architecture": "CRLF multiline block, two actual nodes and edge, raw quote description, whole-line %% comment removed by Mermaid preprocessing, and astral UTF16 error.",
+    "abnf": "Bare semicolon, comment-only line, trailing comment stealing required terminator, quoted semicolon, two rules, bare standalone semicolon negative.",
+    "zen": "Authored escaped stars/backticks and unknown escape versus true italic source tokens.",
+    "c4": "Same source input pair except unknown sprite; source and native independently assert48px relative label reservation, unchanged frame width/height and no image resource.",
+    "cynefinDisplay": "Source independent raw string and actual draw checks: four ASCII whitespace normalization, unmodified model strings, AB width negative control, NBSP/EM SPACE preservation, title/item/transition consumers, literal markup/entity/backslash+n."
+  },
+  "independentExpectedRule": "All expected literals and geometric differences handwritten from pinned source and archived actual original parser evidence. No candidate used to generate expected data.",
+  "testFiles": [
+    {
+      "path": "tests/closure/test_parser.py",
+      "bytes": 8971,
+      "sha256": "6fd79805cd60da75220901658c092646e121d2bada4101bf42474ddb90ed0d00"
+    },
+    {
+      "path": "tests/closure/helper_A.py",
+      "bytes": 769,
+      "sha256": "1b8076da95dfaef0e0b41ca07db323da77d7a285f2a08cf1c92c5eb7c85fde7e"
+    }
+  ],
+  "oracleTool": {
+    "path": "tools/oracle/closure_a.cjs",
+    "bytes": 8750,
+    "sha256": "d2967fdd7539fe56d5a28ed27a6d256ba5c1dcabfa83bf5356ac3295fbbf99dd"
+  },
+  "legacyMigrations": {
+    "files": [
+      {
+        "path": "tests/branch_verification/cases-A.json",
+        "bytes": 53023,
+        "sha256": "f343b08718e9a164a84c80dbb494f286a584001d44daa04e1483c62799a63df3"
+      },
+      {
+        "path": "tests/branch_verification/cases-A-followup.json",
+        "bytes": 7169,
+        "sha256": "af51ab660ae4a6fbcd83dabffd76e80d984d37d74ea5ef3b3911dfb6f8764ea0"
+      },
+      {
+        "path": "tests/branch_verification/test_a_semantics.py",
+        "bytes": 5523,
+        "sha256": "881849e6d4a28760fc1fa9b86dd9d0724e8c25e339ac9bce0766487f6e2a3e36"
+      }
+    ],
+    "onlyDisprovedPositive": "Three BV-A-event-title* input records changed to syntax_error while retaining sourceExpectationMigration.previousFixture and linked actual original evidence. Other source-backed metadata expectations unchanged. test_event_title_terminal method ID retained as a source-negative assertion.",
+    "evidence": {
+      "path": "test-runs/branch-triage-A-followup.json",
+      "bytes": 15203,
+      "sha256": "6c5d3780c1ef64536fdf451b380f9f581973d2718a116ded6535516cf41d26cd"
+    }
+  },
+  "execution": {
+    "native": "python -m unittest tests.closure.test_parser tests.branch_verification.test_a_semantics -v",
+    "source": "node tools/oracle/closure_a.cjs --fixtures tests/closure/cases-A.json --out NEWDIR",
+    "nativeRequirements": "Installed py_mermaid and its formal Canvas dependencies, stdlib, version-controlled cases-A.json. No source checkout/.local/Node/env oracle needed in unit suite.",
+    "sourceRequirements": "Development-only pinned bundled Mermaid/parser + existing isolated Playwright browser; tool verifies canonical identity before capture.",
+    "sourceFailurePolicy": "Any handwritten source acceptance/value/comment/C4 geometry mismatch yields exit1; tool errors distinct. P3 must retain all first failures."
+  },
+  "mechanicalEvidence": [
+    "test-runs/CLOSURE-P2-record-20261107T080941Z-2a2fbb73",
+    "test-runs/CLOSURE-P2-record-20261107T080942Z-e779b1bf",
+    "test-runs/CLOSURE-P2-record-20261107T081010Z-225b96a7"
+  ],
+  "behaviorExecuted": true,
+  "productChangedInP2": false,
+  "limits": [
+    "Related A evidence is not final joint candidate acceptance; root changed release metadata in parallel.",
+    "No Venn4/Treemap advanced format change; these remain py-vchart scope."
+  ],
+  "p2AssertionIndexBeforeP3": {
+    "path": "references/closure-A-assertions.json",
+    "bytes": 8279,
+    "sha256": "e563cdaa1ca708fb39eacb4e0baf4d01b092e8fbe22a7b75f83ea735f4a867b2"
+  },
+  "p3": {
+    "initialRun": "test-runs/CLOSURE-P3-batch-20261107T082546Z-6350b9b0",
+    "originalFailuresPreserved": true,
+    "productFixes": [
+      {
+        "path": "src/py_mermaid/diagrams/business/eventmodeling.py",
+        "reason": "Restore wrapped import for real renderer; lex prefixed metadata before hidden inline whitespace but after EM_ID so native accepts only actual source terminals.",
+        "source": "packages/parser/src/language/eventmodeling/event-modeling.langium:54-64; common/valueConverter.ts; event-modelingDb metadata handlers"
+      }
+    ],
+    "expectationMigrations": [
+      {
+        "id": "CLOSURE-A-architecture-description-raw-quotes",
+        "actual": "\"Unpaired quote",
+        "reason": "preprocessDiagram calls cleanupComments before parsing; whole %% literal line is not ACC_DESCR payload. Native already correct; previous fixture values preserved in sourceExpectationMigration."
+      },
+      {
+        "id": "CLOSURE-A-event-legal-title-id",
+        "actual": "source parser rejects EM_TITLE where EM_ID required",
+        "reason": "Leading space + title token shadows hidden EM_WS; retained ID/raw input now true negative, previous fixture retained."
+      }
+    ],
+    "newControls": [
+      "CLOSURE-A-event-normal-entity-id",
+      "CLOSURE-A-event-inline-metadata"
+    ],
+    "oracleRepair": "Use fixed Zen package direct source renderer (not unregistered Mermaid detector); isolated nonopaque HTTP origin/base resolves original assets. Select body > svg so nested arrowhead SVG does not cause screenshot strict-mode errors. No Zen product change in P3.",
+    "relatedEvidence": [
+      {
+        "run": "test-runs/CLOSURE-P3-A-related-20261107T083745Z-c7828325",
+        "command": "002-closure-and-old-A",
+        "methods": 71,
+        "exitCode": 0
+      },
+      {
+        "run": "test-runs/CLOSURE-P3-A-related-20261107T083745Z-c7828325",
+        "command": "003-related-bulk-A",
+        "methods": 612,
+        "exitCode": 0
+      },
+      {
+        "run": "test-runs/CLOSURE-P3-A-event-render-final-20261107T084429Z-9eb41d64",
+        "command": "001-existing-event-render-controls",
+        "methods": 3,
+        "exitCode": 0
+      }
+    ],
+    "sourceEvidence": {
+      "run": "test-runs/CLOSURE-P3-A-source-final-20261107T084111Z-3bcde7e4",
+      "cases": 45,
+      "exitCode": 0,
+      "status": "PASS",
+      "result": {
+        "path": "test-runs/CLOSURE-P3-A-source-final-20261107T084111Z-3bcde7e4/artifacts/source-A/results.json",
+        "bytes": 504466,
+        "sha256": "9df390410b4b5c6b1080ecb05f9cd139b070680b590bcd16214adb1057b549dc"
+      },
+      "c4": {
+        "baselineLabelRelativeTop": -0.5,
+        "spriteLabelRelativeTop": 47.5,
+        "delta": 48,
+        "frameWidth": 316,
+        "frameHeight": 226,
+        "imageCount": 0
+      }
+    },
+    "retainedLocalFailures": [
+      {
+        "run": "test-runs/CLOSURE-P3-A-related-20261107T083745Z-c7828325",
+        "reason": "Source Zen asset base omitted; timed out; native groups still passed."
+      },
+      {
+        "run": "test-runs/CLOSURE-P3-A-source-repair-20261107T083933Z-25fcf32e",
+        "reason": "45 semantic expectations matched; 4 Zen screenshots failed nested-svg strict selector."
+      },
+      {
+        "run": "test-runs/CLOSURE-P3-A-event-render-related-20261107T084409Z-4c8fccb7",
+        "reason": "One diagnostic unittest target used wrong class TemporalGeometry; two real renderer controls passed. Repeated with correct BusinessGeometry in new Run, all3 passed."
+      }
+    ],
+    "files": [
+      {
+        "path": "src/py_mermaid/diagrams/business/eventmodeling.py",
+        "bytes": 11282,
+        "sha256": "414dc7f12eb724069e8e50bc1996269bba12a28fca26cf04652f2432f7716d09"
+      },
+      {
+        "path": "tests/closure/test_parser.py",
+        "bytes": 3905,
+        "sha256": "af2fe47d6ee712ae5693fd910d8d96d96127512446ba0a24a3ef8cc00a61c761"
+      },
+      {
+        "path": "tests/closure/cases-A.json",
+        "bytes": 47256,
+        "sha256": "61980a79b519568bd2847d9819b0822f3879293f1e82f787e2751c016ca96cbd"
+      },
+      {
+        "path": "tools/oracle/closure_a.cjs",
+        "bytes": 8750,
+        "sha256": "d2967fdd7539fe56d5a28ed27a6d256ba5c1dcabfa83bf5356ac3295fbbf99dd"
+      }
+    ]
+  },
+  "literalDisplayClosure": {
+    "currentProductSourceTreeSha256": "be468e0fce7ce54d5b2fb6dc4a57561974637a177491f98838070cc2c6857100",
+    "currentMethodCount": 46,
+    "currentFixtureCount": 45,
+    "renderFixtures": 32,
+    "parserOnlyCases": 13,
+    "sourceContract": "Fixed cynefinRenderer plain SVG .text() consumers collapse only ASCII XML whitespace and retain Unicode spaces, literal markup/entity spelling and backslash+n text. Raw model/getter strings unchanged. Native measure literal=True bypasses rich label conversions; default literal=False preserves existing normal/Markdown behavior.",
+    "productFiles": [
+      {
+        "path": "src/py_mermaid/diagrams/business/cynefin.py",
+        "bytes": 9505,
+        "sha256": "c947b69965967081870a5f8b4ce98bfb196a4d3faa9fa737f45970ff3439c65c"
+      },
+      {
+        "path": "src/py_mermaid/rendering/labels/rich.py",
+        "bytes": 42960,
+        "sha256": "d25fa3c278cd98c83657e065072f90427aaeca5859eb8ee31d7ae0e727c7175b"
+      },
+      {
+        "path": "src/py_mermaid/rendering/skia/scene.py",
+        "bytes": 45032,
+        "sha256": "05e26388de0552d0573b922652aa6bf2d6b8836813a446f29aab963b75cfaee4"
+      }
+    ],
+    "sourceEvidence": [
+      {
+        "run": "test-runs/CLOSURE-P4-A-XML-WHITESPACE-SOURCE-20261107T085919Z-17726157",
+        "facts": "Original LF/CR/TAB four cases captured, single visible A B row, sourcebbox18.03125x14."
+      },
+      {
+        "run": "test-runs/CLOSURE-REPAIR-A-unicode-whitespace-source-20261107T094707Z-114fb070",
+        "facts": "Original NBSP U00A0 and EM SPACE U2003 preserve exact characters and distinct widths18.693359375 and26.416015625, same sourceheight14."
+      },
+      {
+        "run": "test-runs/CLOSURE-REPAIR-A-literal-svg-source-20261107T095021Z-652b940c",
+        "facts": "Actual original DOM keeps A<br>B/A&nbsp;B/A plus backslash+n plus B as plain text, no HTML or entity conversion. Last CP65,92,110,66."
+      }
+    ],
+    "fixtureBoundaryMigration": "Three existing XML-safe double-r/double-t/single-tab now real renderer cases. parserOnlyBoundaryMigration preserves old boundary and source evidence. All45 IDs remain, no rawinput changed for this migration; illegal XML controls and parser negatives remain13 parserOnly.",
+    "retainedFailures": [
+      {
+        "run": "test-runs/CLOSURE-P4-batch-20261107T085101Z-2d330c0d",
+        "reason": "Original manual review found native LF produced two rows; original SVG normal whitespace one row. NEEDS_REPAIR receipt retained."
+      },
+      {
+        "run": "test-runs/CLOSURE-P3-batch-20261107T093917Z-9401a4b2",
+        "reason": "New NBSP/EM SPACE negative control failed: downstream rich Unicode whitespace normalization, not source expectation error."
+      },
+      {
+        "run": "test-runs/CLOSURE-P3-batch-20261107T095511Z-86ae62a0",
+        "reason": "Literal actual draw/model text correct. New different-glyph ink-height==A B assertion incorrect: glyph b/p etc have different actualBoundingBoxAscent/Descent. Product path not changed to satisfy test."
+      }
+    ],
+    "testOnlySemanticCorrection": {
+      "method": "CynefinSvgWhitespaceDisplay.test_plain_svg_markup_entities_and_backslashes_remain_literal",
+      "source": "rendering/skia/session.py:_ink_box:493 and DrawEvent emit:626: glyph ink bounds, not CSS linebox. Original browser SVG.getBBoxheight14 and native actual ink height are different observables.",
+      "change": "Only the differing-glyph height equality replaced with equal font_size and exactly1 fillText baseline. Complete raw text event, no separate A/B row, original model preservation, width>A B kept. Same-content ASCII normalized before/after height control remains unchanged.",
+      "productSourcesChangedInThisRepair": false
+    },
+    "passingRelatedRun": {
+      "run": "test-runs/CLOSURE-P3-A-literal-test-semantic-repair-20261107T100503Z-efc95dcd",
+      "runJson": {
+        "path": "test-runs/CLOSURE-P3-A-literal-test-semantic-repair-20261107T100503Z-efc95dcd/run.json",
+        "bytes": 31925,
+        "sha256": "a7b8b0a7b54bb9f2e50f495c558c3c8b20df04e378767099391e931e960b4d56"
+      },
+      "status": "SUCCESS",
+      "sourceUnchanged": true,
+      "methods": 46,
+      "durationSeconds": 1.135,
+      "commands": [
+        {
+          "name": "compile-test-only",
+          "exitCode": 0
+        },
+        {
+          "name": "all-A-closure-parser-46",
+          "exitCode": 0
+        }
+      ],
+      "stderr": {
+        "path": "test-runs/CLOSURE-P3-A-literal-test-semantic-repair-20261107T100503Z-efc95dcd/commands/002-all-A-closure-parser-46/stderr.log",
+        "bytes": 11031,
+        "sha256": "f5e4fbe67d97daf6f997c48087b649d7691b76c06233229036fd3c33249ff064"
+      }
+    },
+    "acceptanceLimit": "Related A46 on sourcebe468e0f; not the final all-owner candidate/P4 or publication acceptance."
+  }
+}

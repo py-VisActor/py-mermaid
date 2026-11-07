@@ -1,0 +1,130 @@
+{
+  "schema": "py-mermaid-gap-P4-repair-receipt/v1",
+  "group": "C",
+  "status": "RELATED_ALL_PASS_STOPPED_PENDING_SECOND_JOINT_P4",
+  "sourceStopped": true,
+  "testsToolsFixturesStopped": true,
+  "baselineRejectedP4": "BULK-P4-final-20261106T081944Z-7b6f0d7a",
+  "baselineP4Result": "FAILED/sourceUnchanged=true;61commands;only3profile strictZen failures;originallogs/PNGs/manifests notmodified",
+  "rootCause": "New assignment_prefix greedily scanned an explicit head declaration plus followingassignment as one typedassignment. It skipped early participant insertion; RTLcreation participant was introduced afterA,flipping all dependent endpoint directions.",
+  "sourceContract": {
+    "type": "sequenceParser.g4 type:name;name includes ID/DIGIT_LEADING_NAME/CSTRING/USTRING,so quotedtypes are valid.",
+    "newline": "sequenceLexer.g4 CR is HIDDEN. Do not use newlinerestriction to resolve head/typeambiguity.",
+    "priority": "prog title?head?block selects leadingname participant before following bareassignment;ToCollector.enterParticipant and OrderedParticipants Map order consume it.",
+    "sources": {
+      ".local/bulk-sources/zenuml/source/src/g4/sequenceParser.g4": "9e7624e377f5e08ace461a099e91d90e92ac795f59fd716552c7a5a630cc6c54",
+      ".local/bulk-sources/zenuml/source/src/g4/sequenceLexer.g4": "9bf0cc267143cce32641831d0a6ca8ee5dbb5de995e2e713f9521f7a06ee2ece",
+      ".local/bulk-sources/zenuml/source/src/parser/ToCollector.js": "16fbe8faddddfa2aca6fbbd2e70b4aba79ba87eb5027b98fb7e0a41506a25a84",
+      ".local/bulk-sources/zenuml/source/src/parser/OrderedParticipants.ts": "89fbf2843ef588ca8176674c2a7dcabef4b817ad057cd471650e1ec760475103"
+    }
+  },
+  "minimalProductFix": "declarations endshead only for bareassignment prefix (assignment==assignee). Typedcandidate athead lets existing participantdeclaration consume its leadingname. statement assignment logic remains fullytyped/list-capable includingquoted+multiline;no whitelist/no newline heuristic.",
+  "changedFiles": {
+    "src/py_mermaid/diagrams/zenuml/parser.py": "75ac670a2f7ae6e5742958d845bc22c634c88517bb4b820ada3eff844fe4197d",
+    "tests/bulk/c/test_gap_audit.py": "a50b855c92537ff73c47cade3b8dd3cc8dfebfaa8bcd7bcd24d3a5037438737c",
+    "tools/check_zenuml_parity.py": "a85917fe11daa763378b0127184da626dfbabec0101ac624229261dc82d8fba1",
+    "tests/tooling/test_zenuml_denominator.py": "1d594e291f31444769d199a0bf3d43e2b18da5abce9ca8e7100dbd6e5c4a95ee"
+  },
+  "typedTestCorrection": {
+    "file": "tests/bulk/c/test_gap_audit.py",
+    "preservedMethodID": "test_typed_assignee_list_preserves_type_separately",
+    "beforeSha256": "65eb874037bbaf6cb48dbaa5657778c5d487853d44b2936b55cea29a6535e46e",
+    "afterSha256": "a50b855c92537ff73c47cade3b8dd3cc8dfebfaa8bcd7bcd24d3a5037438737c",
+    "wrongPriorExpected": "At programhead Result a,b,c=A.work() was expected to carry assignment a,b,c:Result without a Result participant.",
+    "sourceActual": [
+      "SourceoriginalA participants ordered_STARTER_,Result,A",
+      "Returnlabela,b,c;head Result is a real visibleactor"
+    ],
+    "sourceEvidence": "test-runs/G03-first-batch-20261106T080449Z-54f22284/artifacts/oracle/gap-c-zen-typed-assignee.json",
+    "sourceEvidenceSha256": "8de421cf3afed8932e6dc4bf82fd4bc7992019dba069095fb4450aceb4acf8a9",
+    "capturedParticipants": [
+      "_STARTER_",
+      "Result",
+      "A"
+    ],
+    "correctedExpected": "KeepResult actor and bareassignment name list at head;newseparatebodytest pins real typed assignment includingquotedtype+CR.",
+    "addedRegressionMethods": [
+      "test_body_typed_assignment_keeps_quoted_and_multiline_type",
+      "test_explicit_quoted_creation_participant_precedes_later_assignment"
+    ],
+    "noCaseInputChanged": true
+  },
+  "strictDenominatorRepair": {
+    "priorScope": "Old148e2e sourcecases only;28otheroldZen+10newG01Zen were omitted byoriginpathfilter.",
+    "newScope": "All Zen expect=render/upstream_defect;origin never filterseligiblepositivecases.",
+    "baseVisualDenominator": 148,
+    "additionalDenominator": 38,
+    "totalDenominator": 186,
+    "baseIdentityGate": "Exact148ID set andoriginpath must match pinned canonicalfixture;same-countsubstitution/missingID/sourcepathdrift rejected.",
+    "baseIdentityFixture": "tests/bulk/c/zen-visual-source-cases.json",
+    "baseIdentityFixtureSha256": "0b7b430524b8aacd48a0982e4dd9fc8401b9a397308b3f73b24ade70516bdeb1",
+    "unchangedStrictFunctions": {
+      "source_projection": {
+        "unchanged": true,
+        "normalizedSourceSha256": "11822872088a897d1f7a3c5eb1dcffa2a3ee1be03e0e5bb3981c98da5ebf59c7"
+      },
+      "native_projection": {
+        "unchanged": true,
+        "normalizedSourceSha256": "3f9855736d17e1a16de812c628be0d68e88aab21811be73b5891df705000ece2"
+      },
+      "check": {
+        "unchanged": true,
+        "normalizedSourceSha256": "ac26806e47b9c0f95557559188b7621e5d1a9c8468c25f19c9a3049efcbe253d"
+      },
+      "mutations": {
+        "unchanged": true,
+        "normalizedSourceSha256": "4c614cdd78ff66923ea3e976d975f62894b67769904c95c4d90a3600fcc693bc"
+      }
+    },
+    "knownDefects": "Only2exactcontent_loss contracts remain,notbroadened.",
+    "report": "test-runs/G03-batch-20261106T083643Z-f7869963/artifacts/zen-parity/report.json"
+  },
+  "verification": {
+    "run": "G03-batch-20261106T083643Z-f7869963",
+    "status": "SUCCESS",
+    "sourceUnchanged": true,
+    "sourceTreeSha256": "2b9105e2a7279070fb98ac685560b51001d597c9ef059afa23f23bf78c005700",
+    "CunitMethods": 368,
+    "selectorToolMethods": 8,
+    "nativeCPUcases": 335,
+    "strictZenCounts": {
+      "PASS": 186
+    },
+    "mutationControls": 1990,
+    "allAdditional38Checked": true,
+    "noAdditionalFailureAfterHeadFix": true
+  },
+  "manualQA": {
+    "rawPairs": [
+      {
+        "id": "C-zenuml-source-creation-rtl",
+        "official": "test-runs/gap-combined-original-20261106T0818/C-zenuml-source-creation-rtl.png",
+        "officialSha256": "71bff89d4268a9c6a98e826df3d2fc1b54a91c9e4b7d8cec0ee63fc0d378b99a",
+        "native": "test-runs/G03-batch-20261106T083643Z-f7869963/artifacts/native-cpu-C/C-zenuml-source-creation-rtl.png",
+        "nativeSha256": "2bd90c817e5fbb448f03f8dd56b46d8fd26a403350321600bb96e92a9baf2e2f",
+        "actualView": true
+      },
+      {
+        "id": "gap-c-zen-typed-assignee",
+        "official": "test-runs/gap-combined-original-20261106T0818/gap-c-zen-typed-assignee.png",
+        "officialSha256": "28a8625210e3133303d303ec9da0d74a5fe4c9fce681f3095738734a086539fe",
+        "native": "test-runs/G03-batch-20261106T083643Z-f7869963/artifacts/native-cpu-C/gap-c-zen-typed-assignee.png",
+        "nativeSha256": "a7f42a216aea91e9fd61151b0ee3e8fe5101a46ad4f7e305ce2ed4ab4dabb052",
+        "actualView": true
+      }
+    ],
+    "conclusion": "RTLcreationBbox is leftofA,creation tip leftwards,return rightwards;typedhead Result actor is visible. Both match original. Naturalfontmetrics/coordinates preserved as engine differences."
+  },
+  "inputImmutability": {
+    "oldCfixtures": "732db377af6ade9561e74171a812ed8877218a35641b70d44ca76ec2b23c1265",
+    "newG01Cfixtures": "ee3f922a5e31b1788c7ca087ce1526ac27bc589290a987002abc9328c0d213d5",
+    "combinedFixtures": "d60435e5ed3a510ef9a954022ccf5ff76e1922c6dbbf3e5d1a43536b5ef20081",
+    "inputsUnchanged": true
+  },
+  "limits": [
+    "RelatedCPU/allC regression,notsecondjointfullthreebackend/fulllegacy acceptance. Root must freeze/retest candidate.",
+    "Audit retains originallyunexpanded/undeterminedbranchdenominator;all186strict corpus still not universalgrammarproof.",
+    "No install/commit/push/newproductiondependency/JSfallback."
+  ],
+  "next": "RootsecondjointP4;returnallCfileleasesnow."
+}

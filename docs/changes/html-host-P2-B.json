@@ -1,0 +1,35 @@
+{
+  "schema": "py-mermaid-change-receipt/v1",
+  "task": "HTML-HOST-P2-B",
+  "status": "test_design_complete_unexecuted",
+  "testPath": "tests/html_host/test_layout.py",
+  "testSha256": "ed85a6b4313f2ce6bcc41a8a9966647b40d352f065fecc4cadce9a0aba1ce0da",
+  "methodCount": 57,
+  "sourceMap": "references/html-host-layout-assertions.json",
+  "p1SourceSha256": "881656d5439e4ba08b4f3182d215680020653592e2d6ba0f9e265af97faf8fe1",
+  "productModified": false,
+  "testBehaviorExecuted": false,
+  "nativeBehaviorExecuted": false,
+  "featureGroups": {
+    "basics": 8,
+    "css-box": 15,
+    "image-resource": 4,
+    "state-meters": 6,
+    "select-direction": 5,
+    "textarea": 6,
+    "css-visibility-affordances": 6,
+    "rich-fieldset": 7
+  },
+  "next": "Unified first execution by root after all P2 owners freeze; preserve initial failures before any repair.",
+  "installationCommitPush": false,
+  "mechanical": {
+    "run": "test-runs/HTML-HOST-record-20261106T112427Z-6d4e9986",
+    "status": "SUCCESS",
+    "checks": [
+      "compile",
+      "unittest discovery:57"
+    ],
+    "behaviorExecuted": false,
+    "sourceUnchanged": true
+  }
+}

@@ -29,6 +29,7 @@ class Registration:
 _lock=RLock()
 _registrations=OrderedDict()
 _ENTRIES=(
+    ('vchart',r'^\ufeff?\s*vchart\b','charts.vchart'),
     ('flowchart-elk',r'^\s*flowchart-elk',None),
     ('mindmap',r'^\s*mindmap','hierarchy.mindmap'),
     ('architecture',r'^\s*architecture','structures.architecture'),
@@ -100,6 +101,8 @@ def _detect(document):
 
 
 def detect_type(text,*,config=None):
+    from ..vchart_bridge import is_vchart_source, raw_document
+    if is_vchart_source(text):return _detect(raw_document(text,config)).id
     return _detect(preprocess_diagram(text,config)).id
 
 
@@ -114,6 +117,13 @@ def provider_for(kind):
 
 
 def parse_diagram(text,*,config=None):
+    from ..vchart_bridge import is_vchart_source, raw_document
+    if is_vchart_source(text):
+        # Explicit JSON is opaque to Mermaid directives/comments/frontmatter.
+        # In particular %%{...}%% inside a JSON string must remain data.
+        document=raw_document(text,config)
+        entry=_detect(document)
+        return provider_for(entry.id).parse(document,dict(config or {}))
     document=preprocess_diagram(text,config)
     entry=_detect(document)
     if entry.id in ('flowchart-elk','flowchart-v2') and entry.provider is None:

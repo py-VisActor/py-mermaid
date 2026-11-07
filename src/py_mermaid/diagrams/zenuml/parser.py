@@ -16,7 +16,7 @@ class Token:
     kind: str = 'symbol'
 
 
-_TOKEN=re.compile(r'(?P<space>[ \t\r]+)|(?P<newline>\n)|(?P<comment>//[^\n]*|/\*[\s\S]*?\*/)|(?P<string>"(?:[^"\n]|"")*(?:"|(?=\n|$))|\x27[^\x27\n]*\x27)|(?P<annotation>@[\w-]+)|(?P<color>\#[\da-fA-F]{3,8}\b)|(?P<money>[$\u00a3\u00a5\u20ac]\d+(?:\.\d+)?)|(?P<number>\d+(?:\.\d+)?(?:[A-Za-z]+)?)|(?P<word>[^\W\d][\w$]*)|(?P<symbol>-->|->|<<|>>|>=|<=|==|!=|&&|\|\||[{}()\[\].,:;=+*/%^!<>-])',re.U)
+_TOKEN=re.compile(r'(?P<space>[ \t\r]+)|(?P<newline>\n)|(?P<comment>//[^\n]*|/\*[\s\S]*?\*/)|(?P<string>"(?:[^"\n]|"")*(?:"|(?=\n|$))|\x27[^\x27\n]*\x27)|(?P<annotation>@[\w-]+)|(?P<color>\#[\da-fA-F]{3,8}\b)|(?P<money>[$\u00a3\u00a5\u20ac]\d+(?:\.\d+)?)|(?P<number>\d+(?:\.\d+)?(?:[^\W\d_][\w]*)?)|(?P<word>[^\W\d][\w$]*)|(?P<symbol>-->|->|<<|>>|>=|<=|==|!=|&&|\|\||[{}()\[\].,:;=+*/%^!<>-])',re.U)
 
 
 def _name(token):
@@ -78,10 +78,40 @@ class Parser:
             if kind=='annotation' and value.lower() in {'@return','@reply'}:value='@return'
             if kind=='word' and value=='forEach':value='foreach'
             if kind=='word' and value=='frame':value='section'
-            if kind!='space':self.tokens.append(Token(value,i,kind))
+            # The locked lexer sends these exact keywords to MODIFIER_CHANNEL;
+            # they are invisible to both head/participant and statement rules.
+            modifier=kind=='word' and value in {'const','readonly','static','await'}
+            if kind!='space' and not modifier:self.tokens.append(Token(value,i,kind))
             if kind=='newline':line_start=m.end()
             i=m.end()
+        # CR is source-hidden outside EVENT/TITLE modes. Keep statement boundary
+        # hints for return-expression scanning, but never split a qualified call
+        # at its dot (including a newline on either side of that token).
+        self.tokens=[t for j,t in enumerate(self.tokens) if not (
+            t.kind=='newline' and ((j and self.tokens[j-1].value=='.') or
+                                  (j+1<len(self.tokens) and self.tokens[j+1].value=='.')))]
         self.tokens.append(Token('',len(text),'eof'))
+    def assignment_prefix(self):
+        """Source type? assignee '=' lookahead, with an unbounded name list.
+
+        At the program head, a name can instead be a participant declaration;
+        declarations() applies the locked prog/head priority before this rule.
+        """
+        lhs=[];k=self.i
+        while k<len(self.tokens):
+            t=self.tokens[k]
+            if t.value=='=':break
+            if t.kind in {'newline','comment'}:k+=1;continue
+            if t.kind not in {'word','string','number','money'} and t.value!=',':return None
+            lhs.append(t);k+=1
+        if k==len(self.tokens) or not lhs:return None
+        type_token=None;names=lhs
+        if len(lhs)>1 and lhs[1].value!=',':type_token=lhs[0];names=lhs[1:]
+        if not names or any((t.value!=',' if j%2 else t.value==',') for j,t in enumerate(names)) or len(names)%2==0:return None
+        assignee=_formatted(names)
+        if len(assignee)>1 and assignee[0]==assignee[-1]=='"':assignee=assignee[1:-1]
+        typename=_name(type_token) if type_token else ''
+        return k+1,assignee+(':'+typename if typename else ''),assignee
     def name(self):
         t=self.take()
         if t.kind not in {'word','string','number'}:self.fail('Expected ZenUML name',t)
@@ -156,6 +186,12 @@ class Parser:
             # A statement starts at control keywords or a qualified call/arrow;
             # declaration annotations/stereotypes may be spread over lines.
             if t.value in {'if','while','for','foreach','loop','par','opt','critical','section','try','ref','return','new','{'} or t.value.lower()=='@return' or t.kind=='divider':return
+            prefix=self.assignment_prefix()
+            # prog: title? head? block. A leading type/name at the head is
+            # collected as a participant before a subsequent bare assignment.
+            # CR is hidden and quoted names are valid types, so neither newline
+            # nor STRING-token restrictions can resolve this ambiguity.
+            if prefix is not None and prefix[1]==prefix[2]:return
             declaration_start=self.i
             annotation='';stereotype='';emoji=''
             if t.kind=='annotation':annotation=self.take().value[1:];self.skip()
@@ -243,14 +279,8 @@ class Parser:
             return Statement('return',result,origin,caller,offset=start.offset)
         # Assignment is recognized at token level, separately from named
         # parameters, comparisons, return expressions and creation constructors.
-        mark=self.i;assignment='';assignee=''
-        for k in range(self.i,min(self.i+4,len(self.tokens))):
-            if self.tokens[k].value=='=':
-                lhs=self.tokens[self.i:k]
-                assignee=_name(lhs[-1]) if lhs else ''
-                assignment=(assignee+':'+_name(lhs[0])) if len(lhs)==2 and all(t.kind in {'word','string'} for t in lhs) else _formatted(lhs)
-                self.i=k+1;break
-            if self.tokens[k].value in {'.','->','-->','(',':','\n',';','{','}'}:break
+        assignment='';assignee='';prefix=self.assignment_prefix()
+        if prefix is not None:self.i,assignment,assignee=prefix
         while self.peek().value=='await':self.take()
         if self.accept('new'):
             constructor=self.name() if self.peek().kind in {'word','string'} else 'Missing Constructor';parameters=self.parens(mode='parameters') if self.peek().value=='(' else ''

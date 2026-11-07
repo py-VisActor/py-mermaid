@@ -1,0 +1,800 @@
+{
+  "id": "CL-B-GROUP-BOX-CROSS",
+  "source": "agentflow-beta LR\nflow Outer[\"Outer\"]@{algorithm: \"elk.box\"}\n A --> B\nend\nX-->A\nB-->Y\n",
+  "config": {
+    "layout": "elk"
+  },
+  "timezone": "UTC",
+  "status": "CAPTURED",
+  "snapshot": {
+    "nodes": [
+      {
+        "id": "Outer",
+        "label": "Outer",
+        "isGroup": true,
+        "shape": "flowGroup",
+        "metadata": {
+          "algorithm": "elk.box"
+        }
+      },
+      {
+        "id": "A",
+        "label": "A",
+        "parentId": "Outer",
+        "isGroup": false,
+        "shape": "roundedRect"
+      },
+      {
+        "id": "B",
+        "label": "B",
+        "parentId": "Outer",
+        "isGroup": false,
+        "shape": "roundedRect"
+      },
+      {
+        "id": "X",
+        "label": "X",
+        "isGroup": false,
+        "shape": "roundedRect"
+      },
+      {
+        "id": "Y",
+        "label": "Y",
+        "isGroup": false,
+        "shape": "roundedRect"
+      }
+    ],
+    "edges": [
+      {
+        "id": "L_A_B_0",
+        "start": "A",
+        "end": "B"
+      },
+      {
+        "id": "L_X_A_0",
+        "start": "X",
+        "end": "A"
+      },
+      {
+        "id": "L_B_Y_0",
+        "start": "B",
+        "end": "Y"
+      }
+    ]
+  },
+  "elkInputs": [
+    {
+      "id": "root",
+      "layoutOptions": {
+        "elk.hierarchyHandling": "INCLUDE_CHILDREN",
+        "elk.algorithm": "elk.layered",
+        "elk.layered.nodePlacement.strategy": "BRANDES_KOEPF",
+        "elk.layered.nodePlacement.bk.fixedAlignment": "BALANCED",
+        "elk.layered.mergeEdges": false,
+        "elk.direction": "RIGHT",
+        "spacing.baseValue": 40,
+        "elk.layered.crossingMinimization.forceNodeModelOrder": false,
+        "elk.layered.considerModelOrder.strategy": "NODES_AND_EDGES",
+        "elk.layered.unnecessaryBendpoints": true,
+        "elk.layered.cycleBreaking.strategy": "DEPTH_FIRST",
+        "elk.layered.layering.strategy": "NETWORK_SIMPLEX",
+        "elk.layered.layering.coffmanGraham.layerBound": 4,
+        "elk.layered.wrapping.multiEdge.improveCuts": true,
+        "elk.layered.wrapping.multiEdge.improveWrappedEdges": true,
+        "elk.layered.edgeRouting.selfLoopDistribution": "EQUALLY",
+        "elk.layered.mergeHierarchyEdges": true,
+        "elk.spacing.portsSurrounding": "[top=12,left=12,bottom=12,right=12]"
+      },
+      "children": [
+        {
+          "id": "Outer",
+          "label": "Outer",
+          "labelStyle": "",
+          "labelType": "string",
+          "padding": 8,
+          "cssCompiledStyles": [],
+          "cssClasses": "",
+          "shape": "flowGroup",
+          "isGroup": true,
+          "look": "neo",
+          "metadata": {
+            "algorithm": "elk.box"
+          },
+          "colorIndex": 7,
+          "labelBBox": {
+            "width": 35.015625,
+            "height": 21
+          },
+          "children": [
+            {
+              "id": "A",
+              "label": "A",
+              "labelType": "text",
+              "labelStyle": "",
+              "parentId": "Outer",
+              "padding": 15,
+              "cssStyles": [],
+              "cssCompiledStyles": [],
+              "cssClasses": "default af-kind-task",
+              "look": "neo",
+              "isGroup": false,
+              "shape": "roundedRect",
+              "wrappingWidth": 120,
+              "minWidth": 120,
+              "width": 150,
+              "height": 51,
+              "layoutOptions": {
+                "elk.hierarchyHandling": "INCLUDE_CHILDREN"
+              }
+            },
+            {
+              "id": "B",
+              "label": "B",
+              "labelType": "text",
+              "labelStyle": "",
+              "parentId": "Outer",
+              "padding": 15,
+              "cssStyles": [],
+              "cssCompiledStyles": [],
+              "cssClasses": "default af-kind-task",
+              "look": "neo",
+              "isGroup": false,
+              "shape": "roundedRect",
+              "wrappingWidth": 120,
+              "minWidth": 120,
+              "width": 150,
+              "height": 51,
+              "layoutOptions": {
+                "elk.hierarchyHandling": "INCLUDE_CHILDREN"
+              }
+            }
+          ],
+          "labelData": {
+            "width": 35.015625,
+            "height": 19,
+            "wrappingWidth": 120
+          },
+          "labels": [
+            {
+              "text": "Outer",
+              "width": 35.015625,
+              "height": 19
+            }
+          ],
+          "layoutOptions": {
+            "elk.layered.spacing.edgeNodeBetweenLayers": 30,
+            "elk.spacing.edgeEdge": 20,
+            "nodeLabels.placement": "[H_CENTER V_TOP, INSIDE]",
+            "elk.layered.mergeEdges": false,
+            "elk.layered.nodePlacement.bk.fixedAlignment": "BALANCED",
+            "elk.layered.nodePlacement.strategy": "BRANDES_KOEPF",
+            "elk.layered.cycleBreaking.strategy": "DEPTH_FIRST",
+            "elk.layered.nodePlacement.networkSimplex.nodeFlexibility": "PORT_POSITION",
+            "elk.spacing.portsSurrounding": "[top=12,left=12,bottom=12,right=12]",
+            "elk.hierarchyHandling": "INCLUDE_CHILDREN",
+            "spacing.baseValue": 24,
+            "spacing.nodeNode": 50,
+            "nodeSize.constraints": "[MINIMUM_SIZE, NODE_LABELS]",
+            "nodeSize.minimum": "(43.015625, 0)"
+          }
+        },
+        {
+          "id": "X",
+          "label": "X",
+          "labelType": "text",
+          "labelStyle": "",
+          "padding": 15,
+          "cssStyles": [],
+          "cssCompiledStyles": [],
+          "cssClasses": "default af-kind-task",
+          "look": "neo",
+          "isGroup": false,
+          "shape": "roundedRect",
+          "wrappingWidth": 120,
+          "minWidth": 120,
+          "width": 150,
+          "height": 51,
+          "layoutOptions": {
+            "elk.hierarchyHandling": "INCLUDE_CHILDREN"
+          }
+        },
+        {
+          "id": "Y",
+          "label": "Y",
+          "labelType": "text",
+          "labelStyle": "",
+          "padding": 15,
+          "cssStyles": [],
+          "cssCompiledStyles": [],
+          "cssClasses": "default af-kind-task",
+          "look": "neo",
+          "isGroup": false,
+          "shape": "roundedRect",
+          "wrappingWidth": 120,
+          "minWidth": 120,
+          "width": 150,
+          "height": 51,
+          "layoutOptions": {
+            "elk.hierarchyHandling": "INCLUDE_CHILDREN"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "L_A_B_0",
+          "isUserDefinedId": false,
+          "start": "A",
+          "end": "B",
+          "type": "arrow_point",
+          "label": "",
+          "labelType": "text",
+          "labelpos": "c",
+          "thickness": "normal",
+          "minlen": 1,
+          "classes": "edge-thickness-normal edge-pattern-solid flowchart-link",
+          "arrowTypeStart": "none",
+          "arrowTypeEnd": "arrow_point",
+          "arrowheadStyle": "fill: #333",
+          "cssCompiledStyles": [],
+          "labelStyle": [],
+          "style": [],
+          "pattern": "normal",
+          "look": "neo",
+          "text": "",
+          "arrowhead": "normal",
+          "sources": [
+            "A"
+          ],
+          "targets": [
+            "B"
+          ],
+          "sourceId": "A",
+          "targetId": "B",
+          "labels": [
+            {
+              "width": 0,
+              "height": 0,
+              "orgWidth": 0,
+              "orgHeight": 0,
+              "text": "",
+              "layoutOptions": {
+                "edgeLabels.inline": "true",
+                "edgeLabels.placement": "CENTER"
+              }
+            }
+          ]
+        },
+        {
+          "id": "L_X_A_0",
+          "isUserDefinedId": false,
+          "start": "X",
+          "end": "A",
+          "type": "arrow_point",
+          "label": "",
+          "labelType": "text",
+          "labelpos": "c",
+          "thickness": "normal",
+          "minlen": 1,
+          "classes": "edge-thickness-normal edge-pattern-solid flowchart-link",
+          "arrowTypeStart": "none",
+          "arrowTypeEnd": "arrow_point",
+          "arrowheadStyle": "fill: #333",
+          "cssCompiledStyles": [],
+          "labelStyle": [],
+          "style": [],
+          "pattern": "normal",
+          "look": "neo",
+          "text": "",
+          "arrowhead": "normal",
+          "sources": [
+            "X"
+          ],
+          "targets": [
+            "A"
+          ],
+          "sourceId": "X",
+          "targetId": "A",
+          "labels": [
+            {
+              "width": 0,
+              "height": 0,
+              "orgWidth": 0,
+              "orgHeight": 0,
+              "text": "",
+              "layoutOptions": {
+                "edgeLabels.inline": "true",
+                "edgeLabels.placement": "CENTER"
+              }
+            }
+          ]
+        },
+        {
+          "id": "L_B_Y_0",
+          "isUserDefinedId": false,
+          "start": "B",
+          "end": "Y",
+          "type": "arrow_point",
+          "label": "",
+          "labelType": "text",
+          "labelpos": "c",
+          "thickness": "normal",
+          "minlen": 1,
+          "classes": "edge-thickness-normal edge-pattern-solid flowchart-link",
+          "arrowTypeStart": "none",
+          "arrowTypeEnd": "arrow_point",
+          "arrowheadStyle": "fill: #333",
+          "cssCompiledStyles": [],
+          "labelStyle": [],
+          "style": [],
+          "pattern": "normal",
+          "look": "neo",
+          "text": "",
+          "arrowhead": "normal",
+          "sources": [
+            "B"
+          ],
+          "targets": [
+            "Y"
+          ],
+          "sourceId": "B",
+          "targetId": "Y",
+          "labels": [
+            {
+              "width": 0,
+              "height": 0,
+              "orgWidth": 0,
+              "orgHeight": 0,
+              "text": "",
+              "layoutOptions": {
+                "edgeLabels.inline": "true",
+                "edgeLabels.placement": "CENTER"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "elkOutputs": [
+    {
+      "id": "root",
+      "layoutOptions": {
+        "elk.hierarchyHandling": "INCLUDE_CHILDREN",
+        "elk.algorithm": "elk.layered",
+        "elk.layered.nodePlacement.strategy": "BRANDES_KOEPF",
+        "elk.layered.nodePlacement.bk.fixedAlignment": "BALANCED",
+        "elk.layered.mergeEdges": false,
+        "elk.direction": "RIGHT",
+        "spacing.baseValue": 40,
+        "elk.layered.crossingMinimization.forceNodeModelOrder": false,
+        "elk.layered.considerModelOrder.strategy": "NODES_AND_EDGES",
+        "elk.layered.unnecessaryBendpoints": true,
+        "elk.layered.cycleBreaking.strategy": "DEPTH_FIRST",
+        "elk.layered.layering.strategy": "NETWORK_SIMPLEX",
+        "elk.layered.layering.coffmanGraham.layerBound": 4,
+        "elk.layered.wrapping.multiEdge.improveCuts": true,
+        "elk.layered.wrapping.multiEdge.improveWrappedEdges": true,
+        "elk.layered.edgeRouting.selfLoopDistribution": "EQUALLY",
+        "elk.layered.mergeHierarchyEdges": true,
+        "elk.spacing.portsSurrounding": "[top=12,left=12,bottom=12,right=12]"
+      },
+      "children": [
+        {
+          "id": "Outer",
+          "label": "Outer",
+          "labelStyle": "",
+          "labelType": "string",
+          "padding": 8,
+          "cssCompiledStyles": [],
+          "cssClasses": "",
+          "shape": "flowGroup",
+          "isGroup": true,
+          "look": "neo",
+          "metadata": {
+            "algorithm": "elk.box"
+          },
+          "colorIndex": 7,
+          "labelBBox": {
+            "width": 35.015625,
+            "height": 21
+          },
+          "children": [
+            {
+              "id": "A",
+              "label": "A",
+              "labelType": "text",
+              "labelStyle": "",
+              "parentId": "Outer",
+              "padding": 15,
+              "cssStyles": [],
+              "cssCompiledStyles": [],
+              "cssClasses": "default af-kind-task",
+              "look": "neo",
+              "isGroup": false,
+              "shape": "roundedRect",
+              "wrappingWidth": 120,
+              "minWidth": 120,
+              "width": 150,
+              "height": 51,
+              "layoutOptions": {
+                "elk.hierarchyHandling": "INCLUDE_CHILDREN"
+              },
+              "$H": 281,
+              "x": 12,
+              "y": 36
+            },
+            {
+              "id": "B",
+              "label": "B",
+              "labelType": "text",
+              "labelStyle": "",
+              "parentId": "Outer",
+              "padding": 15,
+              "cssStyles": [],
+              "cssCompiledStyles": [],
+              "cssClasses": "default af-kind-task",
+              "look": "neo",
+              "isGroup": false,
+              "shape": "roundedRect",
+              "wrappingWidth": 120,
+              "minWidth": 120,
+              "width": 150,
+              "height": 51,
+              "layoutOptions": {
+                "elk.hierarchyHandling": "INCLUDE_CHILDREN"
+              },
+              "$H": 283,
+              "x": 186,
+              "y": 36
+            }
+          ],
+          "labelData": {
+            "width": 35.015625,
+            "height": 19,
+            "wrappingWidth": 120
+          },
+          "labels": [
+            {
+              "text": "Outer",
+              "width": 35.015625,
+              "height": 19,
+              "x": 156.4921875,
+              "y": 5
+            }
+          ],
+          "layoutOptions": {
+            "elk.layered.spacing.edgeNodeBetweenLayers": 30,
+            "elk.spacing.edgeEdge": 20,
+            "nodeLabels.placement": "[H_CENTER V_TOP, INSIDE]",
+            "elk.layered.mergeEdges": false,
+            "elk.layered.nodePlacement.bk.fixedAlignment": "BALANCED",
+            "elk.layered.nodePlacement.strategy": "BRANDES_KOEPF",
+            "elk.layered.cycleBreaking.strategy": "DEPTH_FIRST",
+            "elk.layered.nodePlacement.networkSimplex.nodeFlexibility": "PORT_POSITION",
+            "elk.spacing.portsSurrounding": "[top=12,left=12,bottom=12,right=12]",
+            "elk.hierarchyHandling": "INCLUDE_CHILDREN",
+            "spacing.baseValue": 24,
+            "spacing.nodeNode": 50,
+            "nodeSize.constraints": "[MINIMUM_SIZE, NODE_LABELS]",
+            "nodeSize.minimum": "(43.015625, 0)"
+          },
+          "$H": 277,
+          "x": 212,
+          "y": 12,
+          "width": 348,
+          "height": 99
+        },
+        {
+          "id": "X",
+          "label": "X",
+          "labelType": "text",
+          "labelStyle": "",
+          "padding": 15,
+          "cssStyles": [],
+          "cssCompiledStyles": [],
+          "cssClasses": "default af-kind-task",
+          "look": "neo",
+          "isGroup": false,
+          "shape": "roundedRect",
+          "wrappingWidth": 120,
+          "minWidth": 120,
+          "width": 150,
+          "height": 51,
+          "layoutOptions": {
+            "elk.hierarchyHandling": "INCLUDE_CHILDREN"
+          },
+          "$H": 285,
+          "x": 12,
+          "y": 48
+        },
+        {
+          "id": "Y",
+          "label": "Y",
+          "labelType": "text",
+          "labelStyle": "",
+          "padding": 15,
+          "cssStyles": [],
+          "cssCompiledStyles": [],
+          "cssClasses": "default af-kind-task",
+          "look": "neo",
+          "isGroup": false,
+          "shape": "roundedRect",
+          "wrappingWidth": 120,
+          "minWidth": 120,
+          "width": 150,
+          "height": 51,
+          "layoutOptions": {
+            "elk.hierarchyHandling": "INCLUDE_CHILDREN"
+          },
+          "$H": 287,
+          "x": 610,
+          "y": 48
+        }
+      ],
+      "edges": [
+        {
+          "id": "L_A_B_0",
+          "isUserDefinedId": false,
+          "start": "A",
+          "end": "B",
+          "type": "arrow_point",
+          "label": "",
+          "labelType": "text",
+          "labelpos": "c",
+          "thickness": "normal",
+          "minlen": 1,
+          "classes": "edge-thickness-normal edge-pattern-solid flowchart-link",
+          "arrowTypeStart": "none",
+          "arrowTypeEnd": "arrow_point",
+          "arrowheadStyle": "fill: #333",
+          "cssCompiledStyles": [],
+          "labelStyle": [],
+          "style": [],
+          "pattern": "normal",
+          "look": "neo",
+          "text": "",
+          "arrowhead": "normal",
+          "sources": [
+            "A"
+          ],
+          "targets": [
+            "B"
+          ],
+          "sourceId": "A",
+          "targetId": "B",
+          "labels": [
+            {
+              "width": 0,
+              "height": 0,
+              "orgWidth": 0,
+              "orgHeight": 0,
+              "text": "",
+              "layoutOptions": {
+                "edgeLabels.inline": "true",
+                "edgeLabels.placement": "CENTER"
+              },
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "sections": [
+            {
+              "id": "L_A_B_0_s0",
+              "startPoint": {
+                "x": 162,
+                "y": 61.5
+              },
+              "endPoint": {
+                "x": 186,
+                "y": 61.5
+              },
+              "incomingShape": "A",
+              "outgoingShape": "B"
+            }
+          ],
+          "container": "Outer"
+        },
+        {
+          "id": "L_X_A_0",
+          "isUserDefinedId": false,
+          "start": "X",
+          "end": "A",
+          "type": "arrow_point",
+          "label": "",
+          "labelType": "text",
+          "labelpos": "c",
+          "thickness": "normal",
+          "minlen": 1,
+          "classes": "edge-thickness-normal edge-pattern-solid flowchart-link",
+          "arrowTypeStart": "none",
+          "arrowTypeEnd": "arrow_point",
+          "arrowheadStyle": "fill: #333",
+          "cssCompiledStyles": [],
+          "labelStyle": [],
+          "style": [],
+          "pattern": "normal",
+          "look": "neo",
+          "text": "",
+          "arrowhead": "normal",
+          "sources": [
+            "X"
+          ],
+          "targets": [
+            "A"
+          ],
+          "sourceId": "X",
+          "targetId": "A",
+          "labels": [
+            {
+              "width": 0,
+              "height": 0,
+              "orgWidth": 0,
+              "orgHeight": 0,
+              "text": "",
+              "layoutOptions": {
+                "edgeLabels.inline": "true",
+                "edgeLabels.placement": "CENTER"
+              },
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "sections": [
+            {
+              "id": "L_X_A_0_s0",
+              "startPoint": {
+                "x": 162,
+                "y": 73.5
+              },
+              "endPoint": {
+                "x": 224,
+                "y": 73.5
+              },
+              "bendPoints": [
+                {
+                  "x": 202,
+                  "y": 73.5
+                }
+              ],
+              "incomingShape": "X",
+              "outgoingShape": "A"
+            }
+          ],
+          "container": "root"
+        },
+        {
+          "id": "L_B_Y_0",
+          "isUserDefinedId": false,
+          "start": "B",
+          "end": "Y",
+          "type": "arrow_point",
+          "label": "",
+          "labelType": "text",
+          "labelpos": "c",
+          "thickness": "normal",
+          "minlen": 1,
+          "classes": "edge-thickness-normal edge-pattern-solid flowchart-link",
+          "arrowTypeStart": "none",
+          "arrowTypeEnd": "arrow_point",
+          "arrowheadStyle": "fill: #333",
+          "cssCompiledStyles": [],
+          "labelStyle": [],
+          "style": [],
+          "pattern": "normal",
+          "look": "neo",
+          "text": "",
+          "arrowhead": "normal",
+          "sources": [
+            "B"
+          ],
+          "targets": [
+            "Y"
+          ],
+          "sourceId": "B",
+          "targetId": "Y",
+          "labels": [
+            {
+              "width": 0,
+              "height": 0,
+              "orgWidth": 0,
+              "orgHeight": 0,
+              "text": "",
+              "layoutOptions": {
+                "edgeLabels.inline": "true",
+                "edgeLabels.placement": "CENTER"
+              },
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "sections": [
+            {
+              "id": "L_B_Y_0_s0",
+              "startPoint": {
+                "x": 548,
+                "y": 73.5
+              },
+              "endPoint": {
+                "x": 610,
+                "y": 73.5
+              },
+              "bendPoints": [
+                {
+                  "x": 570,
+                  "y": 73.5
+                }
+              ],
+              "incomingShape": "B",
+              "outgoingShape": "Y"
+            }
+          ],
+          "container": "root"
+        }
+      ],
+      "$H": 13,
+      "x": 0,
+      "y": 0,
+      "width": 772,
+      "height": 123
+    }
+  ],
+  "labels": [],
+  "texts": [
+    {
+      "text": "Outer",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 35.015625,
+        "height": 21
+      },
+      "classes": null
+    },
+    {
+      "text": "A",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 120,
+        "height": 21
+      },
+      "classes": null
+    },
+    {
+      "text": "B",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 120,
+        "height": 21
+      },
+      "classes": null
+    },
+    {
+      "text": "X",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 120,
+        "height": 21
+      },
+      "classes": null
+    },
+    {
+      "text": "Y",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 120,
+        "height": 21
+      },
+      "classes": null
+    }
+  ],
+  "publicPaint": {
+    "ticks": [],
+    "cherries": [],
+    "collapsed": []
+  },
+  "blockedRequests": []
+}

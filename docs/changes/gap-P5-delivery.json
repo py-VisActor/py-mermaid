@@ -1,0 +1,74 @@
+{
+  "schema": "py-mermaid-change-receipt/v1",
+  "status": "SCOPED_BRANCH_ITERATION_DELIVERED_HTML_HOST_UNIMPLEMENTED",
+  "sourceTreeSha256": "fae1001df0d2c07ada1b8474eb03901429af0a5f81c9b7dfbf5e65b89e962062",
+  "p4": {
+    "path": "test-runs/BULK-P4-final-20261106T084124Z-83cc2c1e/run.json",
+    "sha256": "4baa787bb4ce1794163dceaf418b5bcf3e16b1ad68e3eb0229207209a5bedb42",
+    "bytes": 4145188
+  },
+  "delivery": {
+    "path": "test-runs/GAP-P5-delivery-20261106T090602Z-1b174f02/run.json",
+    "sha256": "dbfd1e95108ce3dba8dfcf38a37339caf79138638f76ad128f149992785e7db3",
+    "bytes": 43385
+  },
+  "reportUrl": "http://127.0.0.1:8765/GAP-P5-delivery-20261106T090602Z-1b174f02/index.html",
+  "unitMethods": 1780,
+  "fixtures": 734,
+  "exports": 465,
+  "nativeProfiles": {
+    "cpu": {
+      "CHECKS_PASSED": 687,
+      "EXPECTED_ERROR": 46,
+      "EXCLUDED": 1
+    },
+    "auto": {
+      "CHECKS_PASSED": 687,
+      "EXPECTED_ERROR": 46,
+      "EXCLUDED": 1
+    },
+    "gpu": {
+      "CHECKS_PASSED": 687,
+      "EXPECTED_ERROR": 46,
+      "EXCLUDED": 1
+    }
+  },
+  "zenStrict": {
+    "cpu": {
+      "baseVisual": 148,
+      "additional": 38,
+      "total": 186,
+      "rejectedMutationControls": 1990
+    },
+    "auto": {
+      "baseVisual": 148,
+      "additional": 38,
+      "total": 186,
+      "rejectedMutationControls": 1990
+    },
+    "gpu": {
+      "baseVisual": 148,
+      "additional": 38,
+      "total": 186,
+      "rejectedMutationControls": 1990
+    }
+  },
+  "knownRemainingStaticModule": "references/static-html-host-gap.json",
+  "installationVerification": false,
+  "commit": false,
+  "push": false,
+  "publication": false,
+  "sourceUnchangedAfterDocumentation": true,
+  "metadataChecks": {
+    "path": "test-runs/GAP-P5-metadata-final-metadata-checks-20261106T091938Z-1d54fa0d/run.json",
+    "sha256": "ec88fbee37f2e8008ff733ac33c7f2fbba0d2461320df436c4c8575ab02037cf",
+    "bytes": 32368,
+    "status": "SUCCESS",
+    "checks": [
+      "bootstrap",
+      "migration-plan",
+      "gap-audit-correspondence-only",
+      "git-diff-whitespace"
+    ]
+  }
+}

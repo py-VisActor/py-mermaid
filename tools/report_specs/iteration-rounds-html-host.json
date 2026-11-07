@@ -1,0 +1,112 @@
+{
+  "schema": "py-mermaid-report-rounds-spec/v1",
+  "title": "Mermaid 迭代对比报告",
+  "scopeNote": "仅静态渲染；第三轮新增131例HTML控件，旧两轮为同候选回归画面。video/audio、交互和Dagre排除；7类图表留待py-vchart。安装验证暂缓，不宣称任意浏览器HTML/CSS完整兼容。",
+  "sourceReport": {
+    "html": {
+      "path": "reports/HTML-HOST-P5-delivery-20261106T131153Z-15f07388/index.html",
+      "sha256": "ae04d5d7c456e3c2e5f9457065da3a11341517f58c93a80db3f59009067fdd6b",
+      "bytes": 87124298
+    },
+    "metadata": {
+      "path": "reports/HTML-HOST-P5-delivery-20261106T131153Z-15f07388/report.json",
+      "sha256": "20045d1050ac523d18ad8c1cd2d06285a7ce8cb4ba02610ce9436d02c9bc0f65",
+      "bytes": 36120632
+    }
+  },
+  "rounds": [
+    {
+      "id": "html-controls",
+      "title": "第三轮 · HTML 静态控件",
+      "description": "131个新增输入：初始状态、排版与Canvas原生静态绘制；每页最多12例。",
+      "caseFiles": [
+        "tests/html_host/cases.json",
+        "tests/html_host/cases-integration.json"
+      ]
+    },
+    {
+      "id": "branch-repairs",
+      "title": "第二轮 · 功能分支补齐",
+      "description": "第二轮64个输入在当前最终候选上的回归画面。",
+      "caseFiles": [
+        "tests/bulk/cases-gap-A.json",
+        "tests/bulk/cases-gap-B.json",
+        "tests/bulk/cases-gap-C.json",
+        "tests/bulk/cases-gap-shared.json"
+      ]
+    },
+    {
+      "id": "retained-diagrams",
+      "title": "第一轮 · 保留图种迁移",
+      "description": "首批 670 个输入在同一最终候选上的回归画面，覆盖 31 个保留入口。",
+      "caseFiles": [
+        "tests/bulk/cases-A.json",
+        "tests/bulk/cases-B.json",
+        "tests/bulk/cases-C.json",
+        "tests/bulk/cases-shared.json"
+      ]
+    }
+  ],
+  "history": [
+    {
+      "title": "F01.1 · 基础流程图",
+      "description": "基础节点与连线",
+      "href": "../F01.1-render-20261104T145729Z-049d66dd/index.html",
+      "html": {
+        "path": "reports/F01.1-render-20261104T145729Z-049d66dd/index.html",
+        "sha256": "d0dcac6bad41f4074f6cd07cee7e671cbe6ce49664658dd50d56343a8757556d",
+        "bytes": 727636
+      }
+    },
+    {
+      "title": "F01.2 · 流程图增强",
+      "description": "样式、形状与分组",
+      "href": "../F01.2-render-20261104T145729Z-0ece5e77/index.html",
+      "html": {
+        "path": "reports/F01.2-render-20261104T145729Z-0ece5e77/index.html",
+        "sha256": "d35dac829b0325e3c89c63560dbcd6b646aff04e679867062373f1d9abd09c64",
+        "bytes": 3022883
+      }
+    },
+    {
+      "title": "F01.3 · 富文本与标签",
+      "description": "富文本与标签扩展",
+      "href": "../F01.3-render-20261105T022709Z-575768e1/index.html",
+      "html": {
+        "path": "reports/F01.3-render-20261105T022709Z-575768e1/index.html",
+        "sha256": "7f5ec806cfc5465cb8bf4c6f1aeb7024d975e0a1e72382b9a32afa245c199a71",
+        "bytes": 4778165
+      }
+    },
+    {
+      "title": "F01.4 · 流程图静态收口",
+      "description": "资源、手绘与静态导出",
+      "href": "../F01.4-report-20261105T112346Z-b7014c54/index.html",
+      "html": {
+        "path": "reports/F01.4-report-20261105T112346Z-b7014c54/index.html",
+        "sha256": "271ca3c79dc4b429c569cf91ca5021a23928a105affac1645f37eb77c979261b",
+        "bytes": 22284537
+      }
+    },
+    {
+      "title": "数学模块 · 首轮",
+      "description": "历史 alpha 阶段",
+      "href": "../MATH-batch-20261105T122804Z-878bf5d4/index.html",
+      "html": {
+        "path": "reports/MATH-batch-20261105T122804Z-878bf5d4/index.html",
+        "sha256": "9f7ef845b1a8f495d66824f48208da6206f6b3235d3b9e3f5b7a20bf493e88ee",
+        "bytes": 849853
+      }
+    },
+    {
+      "title": "数学模块 · 核心迁移",
+      "description": "固定 KaTeX 核心静态迁移",
+      "href": "../MATH-FULL-batch-20261105T172308Z-e0e12af6/index.html",
+      "html": {
+        "path": "reports/MATH-FULL-batch-20261105T172308Z-e0e12af6/index.html",
+        "sha256": "8a197796328ef10e5c3244bd613ce1957d44e8254a7b5c99dab142e5db6118ae",
+        "bytes": 5705477
+      }
+    }
+  ]
+}

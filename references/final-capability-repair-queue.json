@@ -1,0 +1,180 @@
+{
+  "schema": "py-mermaid-final-capability-repair-queue/v1",
+  "status": "READY_FOR_SOURCE_REPAIR_NOT_IMPLEMENTED",
+  "sourceTreeSha256": "fe2c293f8ed4ea76e04d34669c8739c27a32063447026e144928bfd6b4ac0bb2",
+  "review": {
+    "path": "references/final-capability-review.json",
+    "sha256": "bb57f8bccceca6ba8e1ca72794773789ad908c8ead8ba9e8101998a049c76749",
+    "bytes": 75807
+  },
+  "originalUnrepairedBranchRecords": 22,
+  "additionalChartGaps": 2,
+  "knownRecordCount": 24,
+  "functionalFamilies": [
+    {
+      "id": "cynefin-string",
+      "title": "Cynefin 字符串转义与字面换行",
+      "branches": [
+        "cynefin-double-unknown",
+        "cynefin-double-unicode",
+        "cynefin-single-newline",
+        "cynefin-literal-newline",
+        "cynefin-single-tab",
+        "cynefin-transition-escape"
+      ],
+      "status": "confirmed_not_repaired_current_final_review",
+      "currentEvidence": "references/final-capability-review.json"
+    },
+    {
+      "id": "architecture-multiline-metadata",
+      "title": "Architecture 多行元数据输入拒绝",
+      "branches": [
+        "architecture-accessibility"
+      ],
+      "status": "confirmed_not_repaired_current_final_review",
+      "currentEvidence": "references/final-capability-review.json"
+    },
+    {
+      "id": "gantt-date",
+      "title": "Gantt 日期解析/星期与 ISO week 格式",
+      "branches": [
+        "BV-B-DATE-LOCALIZED",
+        "BV-B-DATE-WEEKDAY",
+        "BV-B-DAYJS-ISO"
+      ],
+      "status": "confirmed_not_repaired_current_final_review",
+      "currentEvidence": "references/final-capability-review.json"
+    },
+    {
+      "id": "gantt-axis-format",
+      "title": "D3 轴格式：locale、百分号、padding、远年 ISO",
+      "branches": [
+        "BV-B-AXIS-ALL",
+        "BV-B-AXIS-LOCALE",
+        "BV-B-AXIS-ESCAPE",
+        "BV-B-AXIS-PADDING",
+        "BV-B-AXIS-FAR"
+      ],
+      "status": "confirmed_not_repaired_current_final_review",
+      "currentEvidence": "references/final-capability-review.json"
+    },
+    {
+      "id": "gantt-week-phase",
+      "title": "多周刻度 weekday epoch 相位",
+      "branches": [
+        "BV-B-TICK-WEEKDAY"
+      ],
+      "status": "confirmed_not_repaired_current_final_review",
+      "currentEvidence": "references/final-capability-review.json"
+    },
+    {
+      "id": "agentflow-collapsed-selfloop",
+      "title": "AgentFlow 折叠组丢失真实自环",
+      "branches": [
+        "BV-B-AGENT-GENUINE"
+      ],
+      "status": "confirmed_not_repaired_current_final_review",
+      "currentEvidence": "references/final-capability-review.json"
+    },
+    {
+      "id": "sequence-static-paint",
+      "title": "Sequence 中央连接点、反向编号与 self path 填色",
+      "branches": [
+        "C-sequence-central",
+        "C-sequence-number",
+        "C-sequence-self"
+      ],
+      "status": "confirmed_not_repaired_current_final_review",
+      "currentEvidence": "references/final-capability-review.json"
+    },
+    {
+      "id": "zenuml-comment-escape",
+      "title": "Zen 注释转义文字误读",
+      "branches": [
+        "C-zen-comment-escape"
+      ],
+      "status": "confirmed_not_repaired_current_final_review",
+      "currentEvidence": "references/final-capability-review.json"
+    },
+    {
+      "id": "abnf-comment",
+      "title": "ABNF comment-only 行拒绝",
+      "branches": [
+        "C-abnf-priority"
+      ],
+      "status": "confirmed_not_repaired_current_final_review",
+      "currentEvidence": "references/final-capability-review.json"
+    },
+    {
+      "id": "venn-multiple-singletons",
+      "title": "Venn超过三个单集合",
+      "branches": [
+        "venn-four-sets"
+      ],
+      "status": "confirmed_not_repaired_current_final_review",
+      "dependency": "Extend public py-visactor-vchart layouts.venn in a new supplier release, then pin and verify consumer. Preserve current published files; no private/fallback legacy geometry."
+    },
+    {
+      "id": "treemap-d3-value-format",
+      "title": "Treemap合法D3数值格式",
+      "branches": [
+        "treemap-d3-si-format"
+      ],
+      "status": "confirmed_not_repaired_current_final_review",
+      "dependency": "Consumer D3-compatible static formatter; preserve source semantics, no JS runtime."
+    }
+  ],
+  "compatibilityObservations": {
+    "semanticValueDifferenceRecords": 4,
+    "eventModelingOriginalRejectedNativeAcceptedInputs": 3,
+    "sourceExpectationCorrection": "Event title positive expectation was not reached in original; do not repair native by satisfying a false source golden.",
+    "notAddedTo22FunctionalGapCount": true
+  },
+  "unverifiedItems": [
+    {
+      "id": "unverified-c4-boundary-sprite",
+      "title": "c4 boundary sprite",
+      "status": "NOT_VERIFIED_ORIGINAL_PARITY"
+    },
+    {
+      "id": "unverified-BV-B-TICK-DST",
+      "title": "Tick Dst",
+      "status": "NOT_VERIFIED_ORIGINAL_PARITY"
+    },
+    {
+      "id": "unverified-BV-B-GIT-BRANCH-LABEL",
+      "title": "Git Branch Label",
+      "status": "NOT_VERIFIED_ORIGINAL_PARITY"
+    },
+    {
+      "id": "unverified-BV-B-AGENT-GROUP-ALGO",
+      "title": "Agent Group Algo",
+      "status": "NOT_VERIFIED_ORIGINAL_PARITY"
+    },
+    {
+      "id": "unverified-BV-B-AGENT-CROSS-ALGO",
+      "title": "Agent Cross Algo",
+      "status": "NOT_VERIFIED_ORIGINAL_PARITY"
+    },
+    {
+      "id": "unverified-BV-B-NUMERIC-FAILURE",
+      "title": "Numeric Failure",
+      "status": "NOT_VERIFIED_ORIGINAL_PARITY"
+    },
+    {
+      "id": "unverified-complete-field-branch-audit",
+      "title": "供应方全字段和全分支穷尽证明",
+      "status": "NOT_ESTABLISHED"
+    }
+  ],
+  "requiredOrder": [
+    "P0 contracts and current-source snapshot already available",
+    "P1 complete all retained gap source changes before tests; unique file owners including supplier",
+    "P2 independent source assertions and corrected invalid expectations",
+    "P3 full first grouped execution, preserve failures then batch repair",
+    "P4 frozen same-candidate full/static/backend/visual/export/Windows/Linux install acceptance",
+    "P5 formal metadata and same-artifact publication/download validation only after no-gap condition met"
+  ],
+  "newScopeExclusions": false,
+  "repaired": false
+}

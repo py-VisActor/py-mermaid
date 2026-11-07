@@ -1,0 +1,2103 @@
+{
+  "schema": "py-mermaid-feature-gap-audit/v1",
+  "group": "B",
+  "baselineSourceSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "upstreamVersion": "12.2.0",
+  "entries": [
+    {
+      "id": "gantt",
+      "features": [
+        {
+          "id": "gantt-grammar",
+          "title": "Task fields, tags, sections and directives",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/gantt/parser/gantt.jison",
+              "symbol": "%%",
+              "line": 17
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/temporal/gantt.py",
+              "symbol": "def parse(",
+              "line": 40
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/b/test_temporal_semantics.py",
+              "symbol": "GanttSemantics.test_g01_task_fields_and_tag_order",
+              "line": 8
+            },
+            {
+              "path": "tests/bulk/b/test_temporal_semantics.py",
+              "symbol": "GanttSemantics.test_g02_auto_ids_do_not_count_explicit_ids",
+              "line": 15
+            },
+            {
+              "path": "tests/bulk/b/test_temporal_semantics.py",
+              "symbol": "GanttSemantics.test_g03_calendar_directives",
+              "line": 20
+            },
+            {
+              "path": "tests/bulk/b/test_temporal_semantics.py",
+              "symbol": "GanttSemantics.test_g04_milestone_and_vertical_are_distinct",
+              "line": 29
+            },
+            {
+              "path": "tests/bulk/b/test_temporal_semantics.py",
+              "symbol": "GanttSemantics.test_g05_section_and_title_keep_punctuation",
+              "line": 35
+            },
+            {
+              "path": "tests/bulk/b/test_temporal_semantics.py",
+              "symbol": "GanttSemantics.test_g06_missing_task_colon_rejected",
+              "line": 40
+            },
+            {
+              "path": "tests/bulk/b/test_branch_tables.py",
+              "symbol": "SourceParameterTables.test_bt01_gantt_weekday_and_weekend_terminals",
+              "line": 12
+            },
+            {
+              "path": "tests/bulk/b/test_branch_tables.py",
+              "symbol": "SourceParameterTables.test_bt02_gantt_tag_combinations_remain_independent",
+              "line": 19
+            }
+          ],
+          "reason": "Grammar and DB field mappings, explicit tag combinations and syntax errors have independent assertions."
+        },
+        {
+          "id": "gantt-calendar",
+          "title": "Date arithmetic, dependencies, exclusions and inclusive ends",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/gantt/ganttDb.js",
+              "symbol": "getStartDate",
+              "line": 305
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/temporal/gantt.py",
+              "symbol": "def compile_tasks(",
+              "line": 76
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/b/test_source_algorithms.py",
+              "symbol": "CalendarAlgorithms.test_d01_leap_day_duration",
+              "line": 27
+            },
+            {
+              "path": "tests/bulk/b/test_source_algorithms.py",
+              "symbol": "CalendarAlgorithms.test_d02_calendar_month_and_year_clamp",
+              "line": 31
+            },
+            {
+              "path": "tests/bulk/b/test_source_algorithms.py",
+              "symbol": "CalendarAlgorithms.test_d03_day_and_week_rounding",
+              "line": 35
+            },
+            {
+              "path": "tests/bulk/b/test_source_algorithms.py",
+              "symbol": "CalendarAlgorithms.test_d04_after_uses_latest_end_until_earliest_start",
+              "line": 40
+            },
+            {
+              "path": "tests/bulk/b/test_source_algorithms.py",
+              "symbol": "CalendarAlgorithms.test_d05_inclusive_end_applies_date_not_duration",
+              "line": 45
+            },
+            {
+              "path": "tests/bulk/b/test_source_algorithms.py",
+              "symbol": "CalendarAlgorithms.test_d06_include_overrides_weekend",
+              "line": 50
+            },
+            {
+              "path": "tests/bulk/b/test_source_algorithms.py",
+              "symbol": "CalendarAlgorithms.test_d07_duration_extends_weekend_manual_end_does_not",
+              "line": 55
+            },
+            {
+              "path": "tests/bulk/b/test_source_algorithms.py",
+              "symbol": "CalendarAlgorithms.test_d08_unknown_dependency_retains_warning_and_source_today",
+              "line": 60
+            },
+            {
+              "path": "tests/bulk/b/test_source_algorithms.py",
+              "symbol": "CalendarAlgorithms.test_d09_invalid_end_is_explicit_zero_duration_warning",
+              "line": 65
+            },
+            {
+              "path": "tests/bulk/b/test_source_algorithms.py",
+              "symbol": "CalendarAlgorithms.test_d10_dependency_cycle_is_not_successful_stub",
+              "line": 70
+            },
+            {
+              "path": "tests/bulk/b/test_source_algorithms.py",
+              "symbol": "CalendarAlgorithms.test_d11_duration_only_first_task_rejected",
+              "line": 74
+            },
+            {
+              "path": "tests/bulk/b/test_source_algorithms.py",
+              "symbol": "CalendarAlgorithms.test_d12_epoch_start_X_source_milliseconds_quirk",
+              "line": 78
+            },
+            {
+              "path": "tests/bulk/b/test_source_algorithms.py",
+              "symbol": "CalendarAlgorithms.test_d13_strict_date_rejects_calendar_overflow",
+              "line": 86
+            },
+            {
+              "path": "tests/bulk/b/test_source_algorithms.py",
+              "symbol": "CalendarAlgorithms.test_d14_extended_gregorian_400_year_cycle",
+              "line": 90
+            },
+            {
+              "path": "tests/bulk/b/test_source_algorithms.py",
+              "symbol": "CalendarAlgorithms.test_d15_year_zero_and_negative_leap_day",
+              "line": 97
+            },
+            {
+              "path": "tests/bulk/b/test_source_algorithms.py",
+              "symbol": "CalendarAlgorithms.test_d16_extended_year_fallback_and_limits",
+              "line": 104
+            },
+            {
+              "path": "tests/bulk/b/test_source_algorithms.py",
+              "symbol": "CalendarAlgorithms.test_d17_DST_calendar_day_vs_elapsed_hours_controlled_host",
+              "line": 109
+            },
+            {
+              "path": "tests/bulk/b/test_source_algorithms.py",
+              "symbol": "CalendarAlgorithms.test_d18_duration_units_and_case",
+              "line": 133
+            }
+          ],
+          "reason": "Literal calendar assertions include month/leap arithmetic, after/until, exclusions, DST controlled seam, epoch and far-year cases; this is not every Dayjs token."
+        },
+        {
+          "id": "gantt-render",
+          "title": "Time scale, task bars, milestones, labels and axes",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/gantt/ganttRenderer.js",
+              "symbol": "draw",
+              "line": 85
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/temporal/gantt.py",
+              "symbol": "async def build(",
+              "line": 122
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/b/test_branch_tables.py",
+              "symbol": "StyleAndGeometryBranches.test_bs04_gantt_milestone_source_rotated_scale",
+              "line": 130
+            },
+            {
+              "path": "tests/bulk/b/test_geometry.py",
+              "symbol": "TemporalGeometry.test_v06_gantt_time_scaling_and_constant_row_gap",
+              "line": 67
+            },
+            {
+              "path": "tests/bulk/b/test_geometry.py",
+              "symbol": "TemporalGeometry.test_v07_gantt_compact_reuses_disjoint_lane",
+              "line": 74
+            }
+          ],
+          "reason": "Existing dedicated renderer fixtures and geometry evidence cover ordinary axes/bars and milestone geometry; arbitrary tick-format combinations remain outside exact branch proof."
+        },
+        {
+          "id": "gantt-static-scope",
+          "title": "Interaction, DOM accessibility and responsive host behavior",
+          "status": "excluded",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/gantt/parser/gantt.jison",
+              "symbol": "%%",
+              "line": 17
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/temporal/gantt.py",
+              "symbol": "def parse(",
+              "line": 40
+            }
+          ],
+          "tests": [],
+          "reason": "Static rendering scope excludes interaction/playback/DOM accessibility. Responsive SVG width is a host adaptation, not an omitted native drawing primitive."
+        },
+        {
+          "id": "B-gap-quarter",
+          "title": "Quarter Q custom date parsing",
+          "status": "confirmed_gap",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/gantt/ganttDb.js",
+              "symbol": "getStartDate",
+              "line": 305
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/temporal/_dates.py",
+              "symbol": "DATE_TOKENS=",
+              "line": 8
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/b/test_gap_audit.py",
+              "symbol": "QuarterDateSource.test_gap_b01_quarter_start_and_end_months",
+              "line": 21,
+              "execution": "designed_not_executed"
+            },
+            {
+              "path": "tests/bulk/b/test_gap_audit.py",
+              "symbol": "QuarterDateSource.test_gap_b02_invalid_quarter_fails_strict_roundtrip",
+              "line": 30,
+              "execution": "designed_not_executed"
+            },
+            {
+              "path": "tests/bulk/b/test_gap_audit.py",
+              "symbol": "QuarterDateSource.test_gap_b03_quarter_literal_and_ordinary_month_remain_distinct",
+              "line": 35,
+              "execution": "designed_not_executed"
+            }
+          ],
+          "reason": "Source explicitly installs customParseFormat and advancedFormat. Dependency quarter parser maps Q to 3*(Q-1)+1 month; Python recognizes Q only in formatting, not parsing.",
+          "reproducer": {
+            "source": "gantt\ndateFormat YYYY-[Q]Q-DD\ntodayMarker off\nA :a, 2024-Q2-01, 1d\n"
+          },
+          "expected": "Start 2024-04-01, end 2024-04-02; also Q1/Q4 strict roundtrip.",
+          "confirmation": "Static control-flow divergence; new behavior execution intentionally deferred to unified G03 first run."
+        },
+        {
+          "id": "source-cycle",
+          "title": "source-cycle",
+          "status": "upstream_defect",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/gantt/ganttDb.js",
+              "symbol": "getTasks",
+              "line": 169
+            }
+          ],
+          "python": [],
+          "tests": [],
+          "reason": "Source bounded retries can return unprocessed cyclic tasks and SVG NaN; native precise CYCLIC_GANTT_DEPENDENCY retained as documented defect adaptation.",
+          "evidence": [
+            "references/bulk-B-assertions.json",
+            "tests/bulk/cases-B.json",
+            "docs/BULK_STATIC_ACCEPTANCE.md"
+          ]
+        },
+        {
+          "id": "source-topaxis",
+          "title": "source-topaxis",
+          "status": "upstream_defect",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/gantt/parser/gantt.jison",
+              "symbol": "TopAxis",
+              "line": 141
+            }
+          ],
+          "python": [],
+          "tests": [],
+          "reason": "Grammar calls TopAxis while fixed DB exports enableTopAxis. Keyword official runtime error preserved; valid config topAxis remains implemented.",
+          "evidence": [
+            "references/bulk-B-assertions.json",
+            "tests/bulk/cases-B.json",
+            "docs/BULK_STATIC_ACCEPTANCE.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "journey",
+      "features": [
+        {
+          "id": "journey-grammar",
+          "title": "Sections, actor union and JavaScript Number score semantics",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/user-journey/journeyDb.js",
+              "symbol": "addTask",
+              "line": 61
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/temporal/journey.py",
+              "symbol": "def parse(",
+              "line": 27
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/b/test_temporal_semantics.py",
+              "symbol": "JourneySemantics.test_j01_actor_sorted_union_and_task_order",
+              "line": 45
+            },
+            {
+              "path": "tests/bulk/b/test_temporal_semantics.py",
+              "symbol": "JourneySemantics.test_j02_no_actor_and_empty_numeric_coercion",
+              "line": 52
+            },
+            {
+              "path": "tests/bulk/b/test_temporal_semantics.py",
+              "symbol": "JourneySemantics.test_j03_fractional_and_unbounded_finite_scores_are_not_clamped",
+              "line": 57
+            },
+            {
+              "path": "tests/bulk/b/test_temporal_semantics.py",
+              "symbol": "JourneySemantics.test_j04_non_number_rejected",
+              "line": 61
+            },
+            {
+              "path": "tests/bulk/b/test_temporal_semantics.py",
+              "symbol": "JourneySemantics.test_j05_missing_score_separator_rejected",
+              "line": 69
+            }
+          ],
+          "reason": "Source score coercion and task/actor order are asserted, including source-valid nonfinite values."
+        },
+        {
+          "id": "journey-faces",
+          "title": "Faces and actor/emotion geometry",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/user-journey/journeyRenderer.ts",
+              "symbol": "draw",
+              "line": 18
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/temporal/journey.py",
+              "symbol": "async def build(",
+              "line": 51
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/b/test_journey_visual_regressions.py",
+              "symbol": "JourneySourceVisualRegressions.test_jv12_source_note_rect_default_border_is_preserved",
+              "line": 20
+            },
+            {
+              "path": "tests/bulk/b/test_journey_visual_regressions.py",
+              "symbol": "JourneySourceVisualRegressions.test_jv10_nonfinite_source_attributes_default_independently",
+              "line": 29
+            },
+            {
+              "path": "tests/bulk/b/test_journey_visual_regressions.py",
+              "symbol": "JourneySourceVisualRegressions.test_jv11_invalid_face_real_pixels_match_public_circle_not_white",
+              "line": 50
+            },
+            {
+              "path": "tests/bulk/b/test_journey_visual_regressions.py",
+              "symbol": "JourneySourceVisualRegressions.test_jv01_default_title_ex_uses_public_glyph_metric",
+              "line": 67
+            },
+            {
+              "path": "tests/bulk/b/test_journey_visual_regressions.py",
+              "symbol": "JourneySourceVisualRegressions.test_jv02_absolute_title_px_and_baseline",
+              "line": 81
+            },
+            {
+              "path": "tests/bulk/b/test_journey_visual_regressions.py",
+              "symbol": "JourneySourceVisualRegressions.test_jv03_FO_wraps_text_inside_explicit_foreign_object",
+              "line": 89
+            },
+            {
+              "path": "tests/bulk/b/test_journey_visual_regressions.py",
+              "symbol": "JourneySourceVisualRegressions.test_jv04_old_is_unwrapped_root_font_and_source_baseline",
+              "line": 101
+            },
+            {
+              "path": "tests/bulk/b/test_journey_visual_regressions.py",
+              "symbol": "JourneySourceVisualRegressions.test_jv05_tspan_breaks_only_explicit_br_and_uses_task_font",
+              "line": 110
+            },
+            {
+              "path": "tests/bulk/b/test_journey_visual_regressions.py",
+              "symbol": "JourneySourceVisualRegressions.test_jv06_single_task_activity_source_bounds_176_pixels",
+              "line": 120
+            },
+            {
+              "path": "tests/bulk/b/test_journey_visual_regressions.py",
+              "symbol": "JourneySourceVisualRegressions.test_jv07_many_task_activity_includes_last_source_bound",
+              "line": 127
+            },
+            {
+              "path": "tests/bulk/b/test_journey_visual_regressions.py",
+              "symbol": "JourneySourceVisualRegressions.test_jv08_fo_actual_ink_clips_and_negative_controls_detect_regression",
+              "line": 133
+            },
+            {
+              "path": "tests/bulk/b/test_journey_visual_regressions.py",
+              "symbol": "JourneySourceVisualRegressions.test_jv09_activity_visible_ink_rejects_zero_length_negative",
+              "line": 156
+            },
+            {
+              "path": "tests/bulk/b/test_geometry.py",
+              "symbol": "TemporalGeometry.test_v23_journey_nonfinite_score_keeps_real_content",
+              "line": 12
+            }
+          ],
+          "reason": "P4 independent public-Canvas and SVG-default regressions cover nonfinite face defaults, 4ex units, actor labels and activity-axis bounds."
+        },
+        {
+          "id": "journey-text",
+          "title": "FO/old/tspan text modes and clipping",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/user-journey/journeyRenderer.ts",
+              "symbol": "draw",
+              "line": 18
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/temporal/journey.py",
+              "symbol": "async def build(",
+              "line": 51
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/b/test_journey_visual_regressions.py",
+              "symbol": "JourneySourceVisualRegressions.test_jv12_source_note_rect_default_border_is_preserved",
+              "line": 20
+            },
+            {
+              "path": "tests/bulk/b/test_journey_visual_regressions.py",
+              "symbol": "JourneySourceVisualRegressions.test_jv10_nonfinite_source_attributes_default_independently",
+              "line": 29
+            },
+            {
+              "path": "tests/bulk/b/test_journey_visual_regressions.py",
+              "symbol": "JourneySourceVisualRegressions.test_jv11_invalid_face_real_pixels_match_public_circle_not_white",
+              "line": 50
+            },
+            {
+              "path": "tests/bulk/b/test_journey_visual_regressions.py",
+              "symbol": "JourneySourceVisualRegressions.test_jv01_default_title_ex_uses_public_glyph_metric",
+              "line": 67
+            },
+            {
+              "path": "tests/bulk/b/test_journey_visual_regressions.py",
+              "symbol": "JourneySourceVisualRegressions.test_jv02_absolute_title_px_and_baseline",
+              "line": 81
+            },
+            {
+              "path": "tests/bulk/b/test_journey_visual_regressions.py",
+              "symbol": "JourneySourceVisualRegressions.test_jv03_FO_wraps_text_inside_explicit_foreign_object",
+              "line": 89
+            },
+            {
+              "path": "tests/bulk/b/test_journey_visual_regressions.py",
+              "symbol": "JourneySourceVisualRegressions.test_jv04_old_is_unwrapped_root_font_and_source_baseline",
+              "line": 101
+            },
+            {
+              "path": "tests/bulk/b/test_journey_visual_regressions.py",
+              "symbol": "JourneySourceVisualRegressions.test_jv05_tspan_breaks_only_explicit_br_and_uses_task_font",
+              "line": 110
+            },
+            {
+              "path": "tests/bulk/b/test_journey_visual_regressions.py",
+              "symbol": "JourneySourceVisualRegressions.test_jv06_single_task_activity_source_bounds_176_pixels",
+              "line": 120
+            },
+            {
+              "path": "tests/bulk/b/test_journey_visual_regressions.py",
+              "symbol": "JourneySourceVisualRegressions.test_jv07_many_task_activity_includes_last_source_bound",
+              "line": 127
+            },
+            {
+              "path": "tests/bulk/b/test_journey_visual_regressions.py",
+              "symbol": "JourneySourceVisualRegressions.test_jv08_fo_actual_ink_clips_and_negative_controls_detect_regression",
+              "line": 133
+            },
+            {
+              "path": "tests/bulk/b/test_journey_visual_regressions.py",
+              "symbol": "JourneySourceVisualRegressions.test_jv09_activity_visible_ink_rejects_zero_length_negative",
+              "line": 156
+            }
+          ],
+          "reason": "Previous manual blockers were fixed and accepted on a6; historical P3 omissions are not new gaps."
+        },
+        {
+          "id": "journey-static-scope",
+          "title": "Interaction, DOM accessibility and responsive host behavior",
+          "status": "excluded",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/user-journey/parser/journey.jison",
+              "symbol": "%%",
+              "line": 12
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/temporal/journey.py",
+              "symbol": "def parse(",
+              "line": 27
+            }
+          ],
+          "tests": [],
+          "reason": "Static rendering scope excludes interaction/playback/DOM accessibility. Responsive SVG width is a host adaptation, not an omitted native drawing primitive."
+        }
+      ]
+    },
+    {
+      "id": "timeline",
+      "features": [
+        {
+          "id": "timeline-grammar",
+          "title": "Period/event continuation, direction and repeated sections",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/timeline/timelineDb.js",
+              "symbol": "addTask",
+              "line": 52
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/temporal/timeline.py",
+              "symbol": "def parse(",
+              "line": 23
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/b/test_temporal_semantics.py",
+              "symbol": "TimelineSemantics.test_t01_period_events_and_continuations",
+              "line": 75
+            },
+            {
+              "path": "tests/bulk/b/test_temporal_semantics.py",
+              "symbol": "TimelineSemantics.test_t02_explicit_directions",
+              "line": 83
+            },
+            {
+              "path": "tests/bulk/b/test_temporal_semantics.py",
+              "symbol": "TimelineSemantics.test_t03_event_colon_requires_whitespace",
+              "line": 87
+            },
+            {
+              "path": "tests/bulk/b/test_temporal_semantics.py",
+              "symbol": "TimelineSemantics.test_t04_event_before_period_rejected",
+              "line": 90
+            },
+            {
+              "path": "tests/bulk/b/test_temporal_semantics.py",
+              "symbol": "TimelineSemantics.test_t05_repeated_sections_preserve_declarations",
+              "line": 93
+            }
+          ],
+          "reason": "Repeated section declaration behavior matches renderer filtering by section name, including repeated tasks."
+        },
+        {
+          "id": "timeline-layout",
+          "title": "Horizontal and vertical timeline/event placement",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/timeline/timelineRenderer.ts",
+              "symbol": "draw",
+              "line": 29
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/temporal/timeline.py",
+              "symbol": "async def build(",
+              "line": 45
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/b/test_geometry.py",
+              "symbol": "TemporalGeometry.test_v03_timeline_LR_200px_columns",
+              "line": 43
+            },
+            {
+              "path": "tests/bulk/b/test_geometry.py",
+              "symbol": "TemporalGeometry.test_v04_timeline_TD_event_and_period_columns",
+              "line": 50
+            },
+            {
+              "path": "tests/bulk/b/test_geometry.py",
+              "symbol": "TemporalGeometry.test_v05_timeline_theme_shapes_keep_content",
+              "line": 59
+            }
+          ],
+          "reason": "Dedicated timeline placement is used rather than graph fallback; representative directions have scene geometry evidence."
+        },
+        {
+          "id": "timeline-style",
+          "title": "Theme CSS, section palette and event brightness",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/timeline/styles.js",
+              "symbol": "export",
+              "line": 202
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/temporal/timeline.py",
+              "symbol": "async def build(",
+              "line": 45
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/b/test_branch_tables.py",
+              "symbol": "StyleAndGeometryBranches.test_bs01_timeline_event_brightness_is_real_style",
+              "line": 106
+            },
+            {
+              "path": "tests/bulk/b/test_branch_tables.py",
+              "symbol": "StyleAndGeometryBranches.test_bs02_user_css_wins_source_defaults",
+              "line": 113
+            }
+          ],
+          "reason": "Source brightness uses actual native CSS filter; shared gradient/filter implementation evidence remains owned by root."
+        },
+        {
+          "id": "timeline-static-scope",
+          "title": "Interaction, DOM accessibility and responsive host behavior",
+          "status": "excluded",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/timeline/parser/timeline.jison",
+              "symbol": "%%",
+              "line": 12
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/temporal/timeline.py",
+              "symbol": "def parse(",
+              "line": 23
+            }
+          ],
+          "tests": [],
+          "reason": "Static rendering scope excludes interaction/playback/DOM accessibility. Responsive SVG width is a host adaptation, not an omitted native drawing primitive."
+        }
+      ]
+    },
+    {
+      "id": "gitGraph",
+      "features": [
+        {
+          "id": "gitGraph-db",
+          "title": "Commit DAG, branch/checkouts, merge and cherry-pick preconditions",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/git/gitGraphParser.ts",
+              "symbol": "import",
+              "line": 1
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/temporal/gitgraph.py",
+              "symbol": "def parse(",
+              "line": 30
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/b/test_temporal_semantics.py",
+              "symbol": "GitSemantics.test_git01_commit_chain_and_explicit_metadata",
+              "line": 100
+            },
+            {
+              "path": "tests/bulk/b/test_temporal_semantics.py",
+              "symbol": "GitSemantics.test_git02_branch_implicitly_checks_out",
+              "line": 108
+            },
+            {
+              "path": "tests/bulk/b/test_temporal_semantics.py",
+              "symbol": "GitSemantics.test_git03_merge_parent_order_and_custom_type",
+              "line": 113
+            },
+            {
+              "path": "tests/bulk/b/test_temporal_semantics.py",
+              "symbol": "GitSemantics.test_git04_default_branch_and_stable_order",
+              "line": 118
+            },
+            {
+              "path": "tests/bulk/b/test_temporal_semantics.py",
+              "symbol": "GitSemantics.test_git05_cherry_pick_preserves_both_parent_links",
+              "line": 122
+            },
+            {
+              "path": "tests/bulk/b/test_temporal_semantics.py",
+              "symbol": "GitSemantics.test_git06_directions_require_colon",
+              "line": 130
+            },
+            {
+              "path": "tests/bulk/b/test_temporal_semantics.py",
+              "symbol": "GitSemantics.test_git07_unknown_checkout_exact_error",
+              "line": 135
+            },
+            {
+              "path": "tests/bulk/b/test_temporal_semantics.py",
+              "symbol": "GitSemantics.test_git08_duplicate_branch_exact_error",
+              "line": 138
+            },
+            {
+              "path": "tests/bulk/b/test_temporal_semantics.py",
+              "symbol": "GitSemantics.test_git09_self_merge_exact_error",
+              "line": 141
+            },
+            {
+              "path": "tests/bulk/b/test_temporal_semantics.py",
+              "symbol": "GitSemantics.test_git10_cherry_pick_current_branch_rejected",
+              "line": 144
+            },
+            {
+              "path": "tests/bulk/b/test_temporal_semantics.py",
+              "symbol": "GitSemantics.test_git11_semicolon_and_unquoted_id_rejected",
+              "line": 147
+            },
+            {
+              "path": "tests/bulk/b/test_temporal_semantics.py",
+              "symbol": "GitSemantics.test_git12_duplicate_ordinary_id_matches_source_map_overwrite",
+              "line": 151
+            },
+            {
+              "path": "tests/bulk/b/test_branch_tables.py",
+              "symbol": "SourceParameterTables.test_bt03_git_all_merge_preconditions",
+              "line": 25
+            },
+            {
+              "path": "tests/bulk/b/test_branch_tables.py",
+              "symbol": "SourceParameterTables.test_bt04_git_cherry_pick_merge_requires_immediate_parent",
+              "line": 30
+            }
+          ],
+          "reason": "Explicit IDs/parents/order and source-specific overwrite/error behavior are independently asserted."
+        },
+        {
+          "id": "gitGraph-layout",
+          "title": "LR/TB/BT, parallel commits and dedicated edge routing",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/git/gitGraphRenderer.ts",
+              "symbol": "draw",
+              "line": 38
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/temporal/gitgraph.py",
+              "symbol": "async def build(",
+              "line": 100
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/b/test_source_algorithms.py",
+              "symbol": "GitCoordinates.test_gitc01_source_LR_50px_step",
+              "line": 144
+            },
+            {
+              "path": "tests/bulk/b/test_source_algorithms.py",
+              "symbol": "GitCoordinates.test_gitc02_source_TB_and_BT_reverse",
+              "line": 148
+            },
+            {
+              "path": "tests/bulk/b/test_source_algorithms.py",
+              "symbol": "GitCoordinates.test_gitc03_parallel_siblings_share_chronological_axis",
+              "line": 154
+            },
+            {
+              "path": "tests/bulk/b/test_source_algorithms.py",
+              "symbol": "GitCoordinates.test_gitc04_redux_lane_offset",
+              "line": 160
+            },
+            {
+              "path": "tests/bulk/b/test_geometry.py",
+              "symbol": "TemporalGeometry.test_v08_gitgraph_all_direction_and_parallel_layout",
+              "line": 81
+            },
+            {
+              "path": "tests/bulk/b/test_geometry.py",
+              "symbol": "TemporalGeometry.test_v09_gitgraph_commit_types_and_tag_visible",
+              "line": 95
+            }
+          ],
+          "reason": "Dedicated source layout is present. Complex collision rerouting cross-products are not exhaustively verified by the available fixtures."
+        },
+        {
+          "id": "gitGraph-style",
+          "title": "Branch palettes, commit variants, tags and theme look",
+          "status": "implemented_unverified",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/git/styles.js",
+              "symbol": "export",
+              "line": 176
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/temporal/gitgraph.py",
+              "symbol": "async def build(",
+              "line": 100
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/b/test_geometry.py",
+              "symbol": "TemporalGeometry.test_v08_gitgraph_all_direction_and_parallel_layout",
+              "line": 81
+            },
+            {
+              "path": "tests/bulk/b/test_geometry.py",
+              "symbol": "TemporalGeometry.test_v09_gitgraph_commit_types_and_tag_visible",
+              "line": 95
+            }
+          ],
+          "reason": "All source commit-type branches have implementations; accepted A/B samples establish representative static output, not every theme/type combination."
+        },
+        {
+          "id": "gitGraph-static-scope",
+          "title": "Interaction, DOM accessibility and responsive host behavior",
+          "status": "excluded",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/git/gitGraphParser.ts",
+              "symbol": "import",
+              "line": 1
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/temporal/gitgraph.py",
+              "symbol": "def parse(",
+              "line": 30
+            }
+          ],
+          "tests": [],
+          "reason": "Static rendering scope excludes interaction/playback/DOM accessibility. Responsive SVG width is a host adaptation, not an omitted native drawing primitive."
+        },
+        {
+          "id": "B-gap-branch-lines",
+          "title": "Literal escaped newline in configured branch name",
+          "status": "confirmed_gap",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/git/gitGraphRenderer.ts",
+              "symbol": "const drawText",
+              "line": 84
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/temporal/gitgraph.py",
+              "symbol": "label=p.measure(plain_label(name)",
+              "line": 109
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/b/test_gap_audit.py",
+              "symbol": "RendererApplicability.test_gap_b07_git_config_literal_backslash_n_is_two_rows",
+              "line": 69,
+              "execution": "designed_not_executed"
+            },
+            {
+              "path": "tests/bulk/b/test_gap_audit.py",
+              "symbol": "RendererApplicability.test_gap_b08_git_newline_br_and_row_trim",
+              "line": 76,
+              "execution": "designed_not_executed"
+            }
+          ],
+          "reason": "Source drawText splits literal backslash-n, actual newline and br tags then trims rows. Config mainBranchName bypasses grammar unescaping; Python plain_label misses literal backslash-n.",
+          "reproducer": {
+            "source": "gitGraph\ncommit id:\"A\"\n",
+            "config": {
+              "gitGraph": {
+                "mainBranchName": "alpha\\nbeta"
+              }
+            }
+          },
+          "expected": "Two visible branch label rows alpha and beta; branch identity remains original config value.",
+          "confirmation": "Static control-flow divergence; new behavior execution intentionally deferred to unified G03 first run."
+        }
+      ]
+    },
+    {
+      "id": "swimlane",
+      "features": [
+        {
+          "id": "swimlane-grammar",
+          "title": "Flowchart grammar, nesting, shapes, labels and spans",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/flowchart/parser/flow.jison",
+              "symbol": "%%",
+              "line": 30
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/business/swimlane.py",
+              "symbol": "def parse(",
+              "line": 15
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/b/test_business_semantics.py",
+              "symbol": "SwimlaneSemantics.test_s01_full_flow_shape_and_edge_grammar",
+              "line": 169
+            },
+            {
+              "path": "tests/bulk/b/test_business_semantics.py",
+              "symbol": "SwimlaneSemantics.test_s02_nested_membership",
+              "line": 176
+            },
+            {
+              "path": "tests/bulk/b/test_business_semantics.py",
+              "symbol": "SwimlaneSemantics.test_s03_all_flow_directions_preserved",
+              "line": 182
+            },
+            {
+              "path": "tests/bulk/b/test_business_semantics.py",
+              "symbol": "SwimlaneSemantics.test_s04_source_spans_refer_to_original_input",
+              "line": 186
+            }
+          ],
+          "reason": "The fixed source reuses flow grammar. Python shares its real parser and full F014 measurement/rendering."
+        },
+        {
+          "id": "swimlane-layout",
+          "title": "Layering, crossing optimization and lane ordering",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/layoutCore.ts",
+              "symbol": "export function runSwimlaneLayoutCore",
+              "line": 20
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/business/swimlane.py",
+              "symbol": "async def layout_provider(",
+              "line": 31
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/b/test_source_algorithms.py",
+              "symbol": "SwimlaneNumeric.test_sn01_nested_lane_map_uses_topmost_container",
+              "line": 198
+            },
+            {
+              "path": "tests/bulk/b/test_source_algorithms.py",
+              "symbol": "SwimlaneNumeric.test_sn02_cycle_reversal_preserves_ids_and_yields_DAG",
+              "line": 202
+            },
+            {
+              "path": "tests/bulk/b/test_source_algorithms.py",
+              "symbol": "SwimlaneNumeric.test_sn03_proper_graph_inserts_each_intermediate_rank",
+              "line": 210
+            },
+            {
+              "path": "tests/bulk/b/test_source_algorithms.py",
+              "symbol": "SwimlaneNumeric.test_sn04_label_node_cross_lane_belongs_to_target",
+              "line": 220
+            },
+            {
+              "path": "tests/bulk/b/test_source_algorithms.py",
+              "symbol": "SwimlaneNumeric.test_sn05_default_lane_is_real_group_and_idempotent",
+              "line": 229
+            },
+            {
+              "path": "tests/bulk/b/test_source_algorithms.py",
+              "symbol": "SwimlaneNumeric.test_sn06_title_rect_fixed_21_and_content_floor",
+              "line": 237
+            }
+          ],
+          "reason": "Source-specific Sugiyama/lane stages and five configuration consumers are present; numeric assertions cover selected stage invariants."
+        },
+        {
+          "id": "swimlane-paint",
+          "title": "Lane bands, group overlays and LR title pivot",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/rendering-util/rendering-elements/clusters/swimlane.js",
+              "symbol": "export const swimlane",
+              "line": 16
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/business/swimlane.py",
+              "symbol": "async def build(",
+              "line": 125
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/b/test_branch_tables.py",
+              "symbol": "StyleAndGeometryBranches.test_bs03_swimlane_group_overlay_text_is_centered_after_rotation",
+              "line": 119
+            },
+            {
+              "path": "tests/bulk/b/test_geometry.py",
+              "symbol": "BusinessGeometry.test_v21_swimlane_public_provider_retains_source_group_metadata",
+              "line": 103
+            },
+            {
+              "path": "tests/bulk/b/test_geometry.py",
+              "symbol": "BusinessGeometry.test_v22_swimlane_public_provider_exposes_synthetic_group_data",
+              "line": 123
+            },
+            {
+              "path": "tests/bulk/b/test_geometry.py",
+              "symbol": "BusinessGeometry.test_v17_swimlane_all_directions_complete_ids_and_label",
+              "line": 192
+            },
+            {
+              "path": "tests/bulk/b/test_geometry.py",
+              "symbol": "BusinessGeometry.test_v18_swimlane_nested_containment_and_title_rotation",
+              "line": 204
+            }
+          ],
+          "reason": "Dedicated lane overlays preserve real flow shapes and markers. Full private routing conditions have separate C ownership and are not re-certified here."
+        },
+        {
+          "id": "swimlane-static-scope",
+          "title": "Interaction, DOM accessibility and responsive host behavior",
+          "status": "excluded",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/swimlanes/styles.ts",
+              "symbol": "export",
+              "line": 8
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/business/swimlane.py",
+              "symbol": "def parse(",
+              "line": 15
+            }
+          ],
+          "tests": [],
+          "reason": "Static rendering scope excludes interaction/playback/DOM accessibility. Responsive SVG width is a host adaptation, not an omitted native drawing primitive."
+        }
+      ]
+    },
+    {
+      "id": "agentflow",
+      "features": [
+        {
+          "id": "agentflow-grammar",
+          "title": "Flow/global/connectors, metadata and containment",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/agentflow/parser/agentflow.jison",
+              "symbol": "%%",
+              "line": 56
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/business/agentflow.py",
+              "symbol": "def parse(",
+              "line": 13
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/b/test_business_semantics.py",
+              "symbol": "AgentSemantics.test_a01_source_kinds_and_shapes",
+              "line": 131
+            },
+            {
+              "path": "tests/bulk/b/test_business_semantics.py",
+              "symbol": "AgentSemantics.test_a02_flow_membership_and_connector",
+              "line": 137
+            },
+            {
+              "path": "tests/bulk/b/test_business_semantics.py",
+              "symbol": "AgentSemantics.test_a03_global_nodes_not_claimed_by_flow",
+              "line": 144
+            },
+            {
+              "path": "tests/bulk/b/test_business_semantics.py",
+              "symbol": "AgentSemantics.test_a04_metadata_does_not_create_reserved_semantic_diagnostics",
+              "line": 149
+            },
+            {
+              "path": "tests/bulk/b/test_business_semantics.py",
+              "symbol": "AgentSemantics.test_a05_edges_preserve_reference_and_failure_markers",
+              "line": 155
+            },
+            {
+              "path": "tests/bulk/b/test_business_semantics.py",
+              "symbol": "AgentSemantics.test_a06_unterminated_flow_has_structured_error",
+              "line": 160
+            }
+          ],
+          "reason": "Specialized parser retains source flow semantics rather than projecting arbitrary agent input to a generic graph."
+        },
+        {
+          "id": "agentflow-kinds",
+          "title": "Kind aliases, removed/unknown kinds and recovery diagnostics",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/agentflow/parser/agentflowParser.ts",
+              "symbol": "import",
+              "line": 2
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/business/agentflow.py",
+              "symbol": "def parse(",
+              "line": 13
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/b/test_branch_tables.py",
+              "symbol": "SourceParameterTables.test_bt11_agent_removed_shape_table_has_visible_recovery_and_diagnostic",
+              "line": 72
+            },
+            {
+              "path": "tests/bulk/b/test_branch_tables.py",
+              "symbol": "SourceParameterTables.test_bt12_agent_aliases_and_default_kind",
+              "line": 80
+            },
+            {
+              "path": "tests/bulk/b/test_branch_tables.py",
+              "symbol": "SourceParameterTables.test_bt13_agent_unknown_registered_shape_warning_vs_invalid_name",
+              "line": 89
+            }
+          ],
+          "reason": "Source alias/removed shape tables are explicitly asserted. Reserved diagnostic identifiers are not assumed to be emitted."
+        },
+        {
+          "id": "agentflow-presentation",
+          "title": "Kind colors, containers and real registered layout dispatch",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/agentflow/colorSlots.ts",
+              "symbol": "export",
+              "line": 29
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/business/agentflow.py",
+              "symbol": "async def build(",
+              "line": 35
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/b/test_geometry.py",
+              "symbol": "BusinessGeometry.test_v20_agentflow_real_ELK_and_explicit_swimlane",
+              "line": 230
+            }
+          ],
+          "reason": "Presentation and registered-provider routing are implemented, including real full-flow rendering for built-in swimlane; exhaustive registry override combinations belong to shared tests."
+        },
+        {
+          "id": "agentflow-static-scope",
+          "title": "Interaction, DOM accessibility and responsive host behavior",
+          "status": "excluded",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/agentflow/parser/agentflow.jison",
+              "symbol": "%%",
+              "line": 56
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/business/agentflow.py",
+              "symbol": "def parse(",
+              "line": 13
+            }
+          ],
+          "tests": [],
+          "reason": "Static rendering scope excludes interaction/playback/DOM accessibility. Responsive SVG width is a host adaptation, not an omitted native drawing primitive."
+        }
+      ]
+    },
+    {
+      "id": "eventmodeling",
+      "features": [
+        {
+          "id": "eventmodeling-grammar",
+          "title": "Frame type aliases, resets, references and data declarations",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/eventmodeling/parser.ts",
+              "symbol": "import",
+              "line": 1
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/business/eventmodeling.py",
+              "symbol": "def parse(",
+              "line": 31
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/b/test_business_semantics.py",
+              "symbol": "EventSemantics.test_e01_aliases_qualified_names_and_reset",
+              "line": 32
+            },
+            {
+              "path": "tests/bulk/b/test_business_semantics.py",
+              "symbol": "EventSemantics.test_e02_explicit_multiple_sources",
+              "line": 39
+            },
+            {
+              "path": "tests/bulk/b/test_business_semantics.py",
+              "symbol": "EventSemantics.test_e03_data_reference_and_raw_block",
+              "line": 43
+            },
+            {
+              "path": "tests/bulk/b/test_business_semantics.py",
+              "symbol": "EventSemantics.test_e04_inline_data_formats",
+              "line": 49
+            },
+            {
+              "path": "tests/bulk/b/test_business_semantics.py",
+              "symbol": "EventSemantics.test_e05_reset_without_source_has_no_inferred_reference",
+              "line": 55
+            },
+            {
+              "path": "tests/bulk/b/test_business_semantics.py",
+              "symbol": "EventSemantics.test_e06_duplicate_frame_including_reset_rejected",
+              "line": 60
+            },
+            {
+              "path": "tests/bulk/b/test_business_semantics.py",
+              "symbol": "EventSemantics.test_e07_frame_identifier_limit_and_unknown_data_format",
+              "line": 63
+            },
+            {
+              "path": "tests/bulk/b/test_business_semantics.py",
+              "symbol": "EventSemantics.test_e08_invalid_source_type_rejected",
+              "line": 67
+            },
+            {
+              "path": "tests/bulk/b/test_branch_tables.py",
+              "symbol": "SourceParameterTables.test_bt05_event_model_source_type_table",
+              "line": 38
+            },
+            {
+              "path": "tests/bulk/b/test_branch_tables.py",
+              "symbol": "SourceParameterTables.test_bt06_event_notes_and_gwt_are_preserved_not_silently_dropped",
+              "line": 47
+            }
+          ],
+          "reason": "Pure model assertions cover type table, data/reference extraction and structured errors."
+        },
+        {
+          "id": "eventmodeling-layout",
+          "title": "Source namespace lanes, frame dimensions and relations",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/eventmodeling/renderer.ts",
+              "symbol": "renderD3Box",
+              "line": 12
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/business/eventmodeling.py",
+              "symbol": "async def build(",
+              "line": 113
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/b/test_branch_tables.py",
+              "symbol": "StyleAndGeometryBranches.test_bs05_event_namespace_source_inherited_repeated_lane",
+              "line": 136
+            },
+            {
+              "path": "tests/bulk/b/test_geometry.py",
+              "symbol": "BusinessGeometry.test_v14_event_frames_have_min100_and_no_missing_text",
+              "line": 164
+            }
+          ],
+          "reason": "Namespace lanes intentionally repeat according to source DB behavior, and geometry/relations have representative evidence."
+        },
+        {
+          "id": "eventmodeling-style",
+          "title": "Lane/frame colors and code content",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/eventmodeling/styles.js",
+              "symbol": "export",
+              "line": 3
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/business/eventmodeling.py",
+              "symbol": "async def build(",
+              "line": 113
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/b/test_geometry.py",
+              "symbol": "BusinessGeometry.test_v14_event_frames_have_min100_and_no_missing_text",
+              "line": 164
+            }
+          ],
+          "reason": "Source type style branches are implemented. Independent source HTML applicability gap is recorded separately below."
+        },
+        {
+          "id": "eventmodeling-static-scope",
+          "title": "Interaction, DOM accessibility and responsive host behavior",
+          "status": "excluded",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/eventmodeling/parser.ts",
+              "symbol": "import",
+              "line": 1
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/business/eventmodeling.py",
+              "symbol": "def parse(",
+              "line": 31
+            }
+          ],
+          "tests": [],
+          "reason": "Static rendering scope excludes interaction/playback/DOM accessibility. Responsive SVG width is a host adaptation, not an omitted native drawing primitive."
+        },
+        {
+          "id": "B-gap-own-html",
+          "title": "Own HTML boxes incorrectly follow global htmlLabels false",
+          "status": "confirmed_gap",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/eventmodeling/renderer.ts",
+              "symbol": "function renderD3Box",
+              "line": 12
+            },
+            {
+              "path": "packages/mermaid/src/diagrams/eventmodeling/renderer.ts",
+              "symbol": ".html(box.text)",
+              "line": 48
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/business/eventmodeling.py",
+              "symbol": "measured=p.measure(content",
+              "line": 136
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/b/test_gap_audit.py",
+              "symbol": "RendererApplicability.test_gap_b09_event_own_html_ignores_global_label_mode",
+              "line": 85,
+              "execution": "designed_not_executed"
+            }
+          ],
+          "reason": "Source unconditionally paints its own foreignObject HTML. Python own generated b/code markup is measured with html=None and therefore becomes literal under htmlLabels:false.",
+          "reproducer": {
+            "source": "eventmodeling\ntf 1 ui Page\n",
+            "config": {
+              "htmlLabels": false
+            }
+          },
+          "expected": "Visible Page with bold HTML formatting and no literal b/code tags, regardless of global flow label mode.",
+          "confirmation": "Static control-flow divergence; new behavior execution intentionally deferred to unified G03 first run."
+        },
+        {
+          "id": "source-title",
+          "title": "source-title",
+          "status": "upstream_defect",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/eventmodeling/parser.ts",
+              "symbol": "import",
+              "line": 1
+            }
+          ],
+          "python": [],
+          "tests": [],
+          "reason": "Declared metadata grammar title is rejected by fixed official lexer; retain intended metadata and separate no-title/frontmatter fixtures, not a native missing feature.",
+          "evidence": [
+            "references/bulk-B-assertions.json",
+            "tests/bulk/cases-B.json",
+            "docs/BULK_STATIC_ACCEPTANCE.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ishikawa",
+      "features": [
+        {
+          "id": "ishikawa-grammar",
+          "title": "Effect/cause indentation tree and dedents",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/ishikawa/ishikawaDb.ts",
+              "symbol": "export",
+              "line": 20
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/business/ishikawa.py",
+              "symbol": "def parse(",
+              "line": 12
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/b/test_business_semantics.py",
+              "symbol": "IshikawaSemantics.test_i01_indent_relative_to_first_cause",
+              "line": 72
+            },
+            {
+              "path": "tests/bulk/b/test_business_semantics.py",
+              "symbol": "IshikawaSemantics.test_i02_effect_indentation_does_not_own_cause_depth",
+              "line": 78
+            },
+            {
+              "path": "tests/bulk/b/test_business_semantics.py",
+              "symbol": "IshikawaSemantics.test_i03_sibling_dedent_closes_only_deeper_causes",
+              "line": 82
+            },
+            {
+              "path": "tests/bulk/b/test_business_semantics.py",
+              "symbol": "IshikawaSemantics.test_i04_missing_effect_rejected",
+              "line": 87
+            }
+          ],
+          "reason": "Relative first-cause indentation and sibling hierarchy have independent model assertions."
+        },
+        {
+          "id": "ishikawa-geometry",
+          "title": "Alternating bones, descendants and label placement",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/ishikawa/ishikawaRenderer.ts",
+              "symbol": "draw",
+              "line": 36
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/business/ishikawa.py",
+              "symbol": "async def build(",
+              "line": 49
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/b/test_geometry.py",
+              "symbol": "BusinessGeometry.test_v15_ishikawa_spine_and_leaf_bone_source_scale",
+              "line": 172
+            },
+            {
+              "path": "tests/bulk/b/test_geometry.py",
+              "symbol": "BusinessGeometry.test_v16_all_generic_business_scene_ink_is_inside_viewport",
+              "line": 180
+            }
+          ],
+          "reason": "Dedicated alternating-bone algorithm is present, including source handdrawn branch; UTF-16 character wrapping is a separate confirmed gap."
+        },
+        {
+          "id": "ishikawa-style",
+          "title": "Font, color and handdrawn settings",
+          "status": "implemented_unverified",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/ishikawa/ishikawaRenderer.ts",
+              "symbol": "draw",
+              "line": 36
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/business/ishikawa.py",
+              "symbol": "async def build(",
+              "line": 49
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/b/test_geometry.py",
+              "symbol": "BusinessGeometry.test_v16_all_generic_business_scene_ink_is_inside_viewport",
+              "line": 180
+            }
+          ],
+          "reason": "Source font-size parsing intentionally uses its numeric component; do not apply generic CSS-unit semantics where source ignores units."
+        },
+        {
+          "id": "ishikawa-static-scope",
+          "title": "Interaction, DOM accessibility and responsive host behavior",
+          "status": "excluded",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/ishikawa/parser/ishikawa.jison",
+              "symbol": "%%",
+              "line": 4
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/business/ishikawa.py",
+              "symbol": "def parse(",
+              "line": 12
+            }
+          ],
+          "tests": [],
+          "reason": "Static rendering scope excludes interaction/playback/DOM accessibility. Responsive SVG width is a host adaptation, not an omitted native drawing primitive."
+        },
+        {
+          "id": "B-gap-utf16-wrap",
+          "title": "Character-count wrapping counts Unicode codepoints instead of UTF-16 units",
+          "status": "confirmed_gap",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/ishikawa/ishikawaRenderer.ts",
+              "symbol": "const wrapText",
+              "line": 441
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/business/ishikawa.py",
+              "symbol": "def wrap(",
+              "line": 30
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/b/test_gap_audit.py",
+              "symbol": "IshikawaCharacterCount.test_gap_b04_supplementary_characters_use_utf16_threshold",
+              "line": 44,
+              "execution": "designed_not_executed"
+            },
+            {
+              "path": "tests/bulk/b/test_gap_audit.py",
+              "symbol": "IshikawaCharacterCount.test_gap_b05_ascii_threshold_and_indivisible_word",
+              "line": 49,
+              "execution": "designed_not_executed"
+            },
+            {
+              "path": "tests/bulk/b/test_gap_audit.py",
+              "symbol": "IshikawaCharacterCount.test_gap_b06_bmp_characters_are_single_units",
+              "line": 54,
+              "execution": "designed_not_executed"
+            }
+          ],
+          "reason": "Source String.length is UTF-16 units, while Python len counts scalar characters. This changes source algorithm before any font measurement, not natural text wrapping.",
+          "reproducer": {
+            "source": "ishikawa\nEffect\n Cause\n  \ud83d\ude00 \ud83d\ude00 \ud83d\ude00 \ud83d\ude00 \ud83d\ude00 \ud83d\ude00 \ud83d\ude00 \ud83d\ude00\n",
+            "maxChars": 15
+          },
+          "expected": "Eight space-separated supplementary characters wrap as five then three; an indivisible overlong word remains intact.",
+          "confirmation": "Static control-flow divergence; new behavior execution intentionally deferred to unified G03 first run."
+        }
+      ]
+    },
+    {
+      "id": "wardley",
+      "features": [
+        {
+          "id": "wardley-grammar",
+          "title": "Coordinates, decorators, pipeline, evolution and links",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/wardley/wardleyParser.ts",
+              "symbol": "populateDb",
+              "line": 68
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/business/wardley.py",
+              "symbol": "def parse(",
+              "line": 45
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/b/test_business_semantics.py",
+              "symbol": "WardleySemantics.test_w01_coordinate_swap_fraction_and_percent",
+              "line": 92
+            },
+            {
+              "path": "tests/bulk/b/test_business_semantics.py",
+              "symbol": "WardleySemantics.test_w02_anchor_offset_strategy_and_inertia",
+              "line": 96
+            },
+            {
+              "path": "tests/bulk/b/test_business_semantics.py",
+              "symbol": "WardleySemantics.test_w03_pipeline_children_share_parent_visibility",
+              "line": 102
+            },
+            {
+              "path": "tests/bulk/b/test_business_semantics.py",
+              "symbol": "WardleySemantics.test_w04_latest_evolve_and_unknown_ignored",
+              "line": 107
+            },
+            {
+              "path": "tests/bulk/b/test_business_semantics.py",
+              "symbol": "WardleySemantics.test_w05_size_and_custom_stages",
+              "line": 111
+            },
+            {
+              "path": "tests/bulk/b/test_business_semantics.py",
+              "symbol": "WardleySemantics.test_w06_link_endpoints_and_dash",
+              "line": 116
+            },
+            {
+              "path": "tests/bulk/b/test_business_semantics.py",
+              "symbol": "WardleySemantics.test_w07_invalid_coordinate_rejected",
+              "line": 120
+            },
+            {
+              "path": "tests/bulk/b/test_business_semantics.py",
+              "symbol": "WardleySemantics.test_w08_integer_coordinate_is_not_decimal_terminal",
+              "line": 123
+            },
+            {
+              "path": "tests/bulk/b/test_business_semantics.py",
+              "symbol": "WardleySemantics.test_w09_pipeline_requires_declared_parent",
+              "line": 126
+            },
+            {
+              "path": "tests/bulk/b/test_branch_tables.py",
+              "symbol": "SourceParameterTables.test_bt07_wardley_decorator_table",
+              "line": 54
+            },
+            {
+              "path": "tests/bulk/b/test_branch_tables.py",
+              "symbol": "SourceParameterTables.test_bt09_wardley_duplicate_preserves_unspecified_offset",
+              "line": 63
+            },
+            {
+              "path": "tests/bulk/b/test_branch_tables.py",
+              "symbol": "SourceParameterTables.test_bt10_wardley_link_label_includes_source_semicolon",
+              "line": 68
+            }
+          ],
+          "reason": "Grammar/model tests cover coordinate conversion, pipeline inheritance, latest evolution and decorator tables."
+        },
+        {
+          "id": "wardley-geometry",
+          "title": "Evolution axes, map coordinates and annotations",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/wardley/wardleyRenderer.ts",
+              "symbol": "getConfigValues",
+              "line": 52
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/business/wardley.py",
+              "symbol": "async def build(",
+              "line": 139
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/b/test_geometry.py",
+              "symbol": "BusinessGeometry.test_v10_wardley_percentage_projection",
+              "line": 133
+            },
+            {
+              "path": "tests/bulk/b/test_branch_tables.py",
+              "symbol": "SourceParameterTables.test_bt08_wardley_annotations_and_first_box_wins",
+              "line": 58
+            }
+          ],
+          "reason": "Source dimensions/padding/axis boundaries/node radii and label offsets have implementations and selected independent numeric tests."
+        },
+        {
+          "id": "wardley-config",
+          "title": "Grid, stages, size and theme consumers",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/wardley/wardleyRenderer.ts",
+              "symbol": "getConfigValues",
+              "line": 52
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/business/wardley.py",
+              "symbol": "async def build(",
+              "line": 139
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/b/test_business_semantics.py",
+              "symbol": "WardleySemantics.test_w05_size_and_custom_stages",
+              "line": 111
+            },
+            {
+              "path": "tests/bulk/b/test_geometry.py",
+              "symbol": "BusinessGeometry.test_v10_wardley_percentage_projection",
+              "line": 133
+            }
+          ],
+          "reason": "Physical source config consumers are implemented. Responsive useMaxWidth is native-host adaptation; builder-only multiple-coordinate annotations are not grammar-reachable and remain a scope note."
+        },
+        {
+          "id": "wardley-static-scope",
+          "title": "Interaction, DOM accessibility and responsive host behavior",
+          "status": "excluded",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/wardley/wardleyParser.ts",
+              "symbol": "import",
+              "line": 1
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/business/wardley.py",
+              "symbol": "def parse(",
+              "line": 45
+            }
+          ],
+          "tests": [],
+          "reason": "Static rendering scope excludes interaction/playback/DOM accessibility. Responsive SVG width is a host adaptation, not an omitted native drawing primitive."
+        }
+      ]
+    },
+    {
+      "id": "cynefin",
+      "features": [
+        {
+          "id": "cynefin-grammar",
+          "title": "Domains, quoted items, transitions and repeated blocks",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/cynefin/cynefinParser.ts",
+              "symbol": "import",
+              "line": 1
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/business/cynefin.py",
+              "symbol": "def parse(",
+              "line": 19
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/b/test_business_semantics.py",
+              "symbol": "CynefinSemantics.test_c01_five_domains_and_quoted_items",
+              "line": 6
+            },
+            {
+              "path": "tests/bulk/b/test_business_semantics.py",
+              "symbol": "CynefinSemantics.test_c02_transition_order_and_optional_label",
+              "line": 10
+            },
+            {
+              "path": "tests/bulk/b/test_business_semantics.py",
+              "symbol": "CynefinSemantics.test_c03_repeated_domain_last_block_wins",
+              "line": 14
+            },
+            {
+              "path": "tests/bulk/b/test_business_semantics.py",
+              "symbol": "CynefinSemantics.test_c04_self_transition_warns_and_is_not_drawn",
+              "line": 17
+            },
+            {
+              "path": "tests/bulk/b/test_business_semantics.py",
+              "symbol": "CynefinSemantics.test_c05_unquoted_item_rejected",
+              "line": 23
+            },
+            {
+              "path": "tests/bulk/b/test_business_semantics.py",
+              "symbol": "CynefinSemantics.test_c06_unknown_domain_and_missing_eol_rejected",
+              "line": 26
+            }
+          ],
+          "reason": "Last domain block wins; self transitions warn and remain undrawn exactly as source."
+        },
+        {
+          "id": "cynefin-geometry",
+          "title": "Seeded fold, rift, cliff and domain/item layout",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/cynefin/cynefinBoundaries.ts",
+              "symbol": "seededRandom",
+              "line": 5
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/business/cynefin.py",
+              "symbol": "async def build(",
+              "line": 71
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/b/test_source_algorithms.py",
+              "symbol": "CynefinCoordinates.test_cyc01_literal_mulberry32_seed_zero",
+              "line": 166
+            },
+            {
+              "path": "tests/bulk/b/test_source_algorithms.py",
+              "symbol": "CynefinCoordinates.test_cyc02_UTF16_hash_literal_values",
+              "line": 171
+            },
+            {
+              "path": "tests/bulk/b/test_source_algorithms.py",
+              "symbol": "CynefinCoordinates.test_cyc03_zero_amplitude_fold_is_exact_centerline",
+              "line": 177
+            },
+            {
+              "path": "tests/bulk/b/test_source_algorithms.py",
+              "symbol": "CynefinCoordinates.test_cyc04_cliff_literal_control_points",
+              "line": 186
+            },
+            {
+              "path": "tests/bulk/b/test_source_algorithms.py",
+              "symbol": "CynefinCoordinates.test_cyc05_confusion_ellipse_dimensions",
+              "line": 190
+            },
+            {
+              "path": "tests/bulk/b/test_geometry.py",
+              "symbol": "BusinessGeometry.test_v11_cynefin_transition_uses_domain_centers",
+              "line": 143
+            },
+            {
+              "path": "tests/bulk/b/test_geometry.py",
+              "symbol": "BusinessGeometry.test_v12_cynefin_confusion_caps_three_and_overflow",
+              "line": 149
+            },
+            {
+              "path": "tests/bulk/b/test_geometry.py",
+              "symbol": "BusinessGeometry.test_v13_cynefin_seed_is_reproducible_and_render_id_host_input",
+              "line": 155
+            }
+          ],
+          "reason": "Literal random/hash/curve tests and A/B fixtures prove representative real geometry; invalid seed applicability is recorded separately."
+        },
+        {
+          "id": "cynefin-host",
+          "title": "Explicit host identity and amplitude override",
+          "status": "implemented_with_evidence",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/cynefin/cynefinBoundaries.ts",
+              "symbol": "resolveSeed",
+              "line": 32
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/business/cynefin.py",
+              "symbol": "async def build(",
+              "line": 71
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/b/test_geometry.py",
+              "symbol": "BusinessGeometry.test_v13_cynefin_seed_is_reproducible_and_render_id_host_input",
+              "line": 155
+            }
+          ],
+          "reason": "Painter.render_id supplies source render(id) deterministically; default kind is a documented host adaptation, not a claimed source fixed ID."
+        },
+        {
+          "id": "cynefin-static-scope",
+          "title": "Interaction, DOM accessibility and responsive host behavior",
+          "status": "excluded",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/cynefin/cynefinParser.ts",
+              "symbol": "import",
+              "line": 1
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/business/cynefin.py",
+              "symbol": "def parse(",
+              "line": 19
+            }
+          ],
+          "tests": [],
+          "reason": "Static rendering scope excludes interaction/playback/DOM accessibility. Responsive SVG width is a host adaptation, not an omitted native drawing primitive."
+        },
+        {
+          "id": "B-gap-seed-type",
+          "title": "Seed finite-number policy is replaced by Python truthiness",
+          "status": "confirmed_gap",
+          "source": [
+            {
+              "path": "packages/mermaid/src/diagrams/cynefin/cynefinBoundaries.ts",
+              "symbol": "export function resolveSeed",
+              "line": 32
+            }
+          ],
+          "python": [
+            {
+              "path": "src/py_mermaid/diagrams/business/cynefin.py",
+              "symbol": "seed=cfg.get('seed',0)",
+              "line": 76
+            }
+          ],
+          "tests": [
+            {
+              "path": "tests/bulk/b/test_gap_audit.py",
+              "symbol": "RendererApplicability.test_gap_b10_cynefin_nonfinite_seed_hashes_host",
+              "line": 107,
+              "execution": "designed_not_executed"
+            },
+            {
+              "path": "tests/bulk/b/test_gap_audit.py",
+              "symbol": "RendererApplicability.test_gap_b11_cynefin_non_number_seed_hashes_host",
+              "line": 115,
+              "execution": "designed_not_executed"
+            },
+            {
+              "path": "tests/bulk/b/test_gap_audit.py",
+              "symbol": "RendererApplicability.test_gap_b12_cynefin_zero_and_nonzero_priority",
+              "line": 121,
+              "execution": "designed_not_executed"
+            }
+          ],
+          "reason": "Source nonzero finite number guard rejects NaN/Infinity, strings and booleans and hashes host ID. Python truthy NaN/Infinity/string can crash or booleans become numeric seed.",
+          "reproducer": {
+            "source": "cynefin-beta\nclear\n \"Repeat\"\n",
+            "pythonConfigCases": [
+              "seed=float(\"nan\")",
+              "seed=float(\"inf\")",
+              "seed=-float(\"inf\")",
+              "seed=True",
+              "seed=\"17\""
+            ],
+            "renderId": "abc"
+          },
+          "expected": "All non-number/nonfinite seeds use source hashString(\"abc\") = 96354; finite nonzero seed still wins.",
+          "confirmation": "Static control-flow divergence; new behavior execution intentionally deferred to unified G03 first run."
+        }
+      ]
+    }
+  ],
+  "actualReviewDepth": {
+    "method": "Static grammar/DB/config/layout/render source-to-port review plus existing source-independent assertion/evidence inspection. No new product execution. Feature groups are review units, not statement coverage.",
+    "existingEvidence": "B152 unit +115 fixtures and accepted joint a6 candidate; evidence is only attributed to tested behaviors, never a proof of whole-module completeness.",
+    "reviewedFalsePositives": [
+      "Timeline repeated sections intentionally reselect tasks by section name.",
+      "Eventmodeling lane background always Odd in source.",
+      "Wardley multiple annotation coordinates are builder-only and not reachable through fixed grammar.",
+      "Historical Journey P3 gaps were fixed before a6 acceptance.",
+      "Source Ishikawa numeric font-size parsing is intentional."
+    ]
+  },
+  "unresolvedScope": [
+    "Every Dayjs custom/advanced-format token combination and every D3 tick/strftime directive for CivilDate far years; Q is confirmed, no blanket claim for all unsupported-looking tokens.",
+    "Git multi-branch collision/reroute cross-products, dense tags and all theme/rotation/direction combinations lack exhaustive independent branch mapping.",
+    "Swimlane private routing/postprocess branch audit is C-owned; this B review maps pipeline consumers, not all port/feedback combinations.",
+    "Agentflow nested collapsed containers/ancestral edges and opaque metadata cross-products share F014; individual rare branch correspondence remains unexpanded.",
+    "Wardley DB-only host mutation APIs (e.g. annotation coordinate arrays) require separate public API scope decision, not a grammar omission.",
+    "All source styles/default consumers have static implementations, but selector/config/theme cross-products are not individually experimentally verified in this audit."
+  ],
+  "exclusions": [
+    "pie",
+    "quadrantChart",
+    "xychart",
+    "radar",
+    "treemap",
+    "sankey",
+    "venn",
+    "interaction",
+    "Dagre",
+    "installation verification"
+  ],
+  "newBehaviorExecuted": false,
+  "dependencyEvidence": [
+    {
+      "path": ".local/f011-oracle/node_modules/dayjs/plugin/customParseFormat.js",
+      "sha256": "b199a58d0fbbdc519a072eb9b140a2ca3d4775ea1b054a0c0e5aeed86603c941",
+      "symbol": "Q token parser: this.month=3*(e-1)+1",
+      "line": 1,
+      "observedPackageVersion": "1.11.23",
+      "scope": "Existing development oracle dependency; feature is selected by fixed ganttDb plugin imports. No installation performed."
+    }
+  ],
+  "newTests": {
+    "path": "tests/bulk/b/test_gap_audit.py",
+    "methods": 12,
+    "fixturePath": "tests/bulk/cases-gap-B.json",
+    "fixtures": 8,
+    "execution": "designed_not_executed",
+    "nonfinitePolicy": "NaN and infinities only occur in Python methods, never JSON."
+  }
+}

@@ -1,0 +1,12 @@
+vchart venn
+size 640 400
+categoryField = "sets"
+valueField = "value"
+seriesField = "sets"
+label.visible = false
+overlapLabel.visible = false
+data = { values: table(sets, value) {
+  [["A"], 8]
+  [["B"], 10]
+  [["A", "B"], 3]
+} }

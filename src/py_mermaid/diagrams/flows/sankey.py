@@ -3,7 +3,8 @@ from dataclasses import dataclass
 import csv,io,math,re
 from ...runtime.common import make_diagram,config_dict,error
 from ..charts._syntax import theme
-from ._sankey import sankey
+from types import SimpleNamespace
+from ..charts._vchart_bridge import geometry
 
 TABLEAU=('#4e79a7','#f28e2c','#e15759','#76b7b2','#59a14f','#edc949','#af7aa1','#ff9da7','#9c755f','#bab0ab')
 
@@ -32,8 +33,9 @@ def parse(document,config):
 
 async def build(diagram,p):
     c=config_dict(diagram);q=c.get('sankey',{});width=q.get('width',600);height=q.get('height',400);show=q.get('showValues',True);alignment=q.get('nodeAlignment','justify')
-    try:nodes,links=sankey(diagram.model.nodes,diagram.model.links,width,height,q.get('nodeWidth',10),q.get('nodePadding',12)+(15 if show else 0),alignment)
-    except ValueError as exc:raise error(diagram.source,0,str(exc),'SANKEY_LAYOUT_ERROR') from exc
+    raw_nodes,raw_links=geometry('sankey',diagram.source,diagram.model.nodes,diagram.model.links,width,height,node_width=q.get('nodeWidth',10),node_gap=q.get('nodePadding',12)+(15 if show else 0),alignment=alignment)
+    nodes=[SimpleNamespace(**v) for v in raw_nodes];by_id={n.id:n for n in nodes}
+    links=[SimpleNamespace(**{**v,'source':by_id[v['source']],'target':by_id[v['target']]}) for v in raw_links]
     colors={n.id:q.get('nodeColors',{}).get(n.id,TABLEAU[i%len(TABLEAU)]) for i,n in enumerate(nodes)}
     central=max(nodes,key=lambda n:n.value).layer if nodes else 0
     for n in nodes:

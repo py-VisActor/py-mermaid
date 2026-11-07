@@ -1,0 +1,65 @@
+{
+  "schema": "py-mermaid-change/v1",
+  "task": "final-capability-review-and-conditional-stable-release",
+  "authorization": "User requests final capability review; publish stable only if no missing capabilities. Condition not met.",
+  "status": "REVIEW_COMPLETE_RELEASE_BLOCKED",
+  "sourceTreeSha256": "fe2c293f8ed4ea76e04d34669c8739c27a32063447026e144928bfd6b4ac0bb2",
+  "startingDirtyTree": "Preserved all preexisting migration, KaTeX,VChart,DSL changes; P0 snapshot retains status and full product capsule. No clean/reset/stage/commit/push.",
+  "acquisitionRun": "test-runs/FINAL-CAPABILITY-P0-acquisition-20261107T073819Z-31a1f361",
+  "productModified": false,
+  "testsModified": false,
+  "newRuntimeDependencies": 0,
+  "publicationPerformed": false,
+  "counts": {
+    "registeredEntries": 39,
+    "mermaidEntries": 38,
+    "vchartTypes": 68,
+    "originalUnrepairedBranchRecords": 22,
+    "originalRepairClusters": 9,
+    "additionalSourceValidChartGaps": 2,
+    "knownUnrepairedRecordsIncludingChartGaps": 24,
+    "releaseGates": 4,
+    "unverifiedItems": 7,
+    "itemCount": 35,
+    "freshUnittestMethodInvocations": 182,
+    "notDistinctMethodCount": true,
+    "previousSameSourceSuiteMethodsNotRerun": 2364
+  },
+  "scope": {
+    "retained": "Current38Mermaid entries plus native VChart DSL/spec integration68static2D types",
+    "excluded": [
+      "interaction",
+      "animation",
+      "Dagre",
+      "video/audio",
+      "arbitrary HTML/CSS extension",
+      "3D"
+    ],
+    "noNewScopeExclusion": true,
+    "notClaimed": "Finite final capability review; not expression-complete source coverage or release acceptance."
+  },
+  "evidence": [
+    {
+      "path": "docs/FINAL_CAPABILITY_REVIEW.md",
+      "sha256": "ae8e8243e511651d40f41d531fd1ae1fca46ebb636d776db7b5ad7deb519a4b3",
+      "bytes": 6304
+    },
+    {
+      "path": "references/final-capability-review.json",
+      "sha256": "bb57f8bccceca6ba8e1ca72794773789ad908c8ead8ba9e8101998a049c76749",
+      "bytes": 75807
+    },
+    {
+      "path": "references/final-capability-repair-queue.json",
+      "sha256": "cf4459310896f969b13ee6299bcb349d361b793039d503fdb941c09846c353bf",
+      "bytes": 6448
+    },
+    {
+      "path": "references/final-capability-delivery.json",
+      "sha256": "c6930b96e574de61cca733cc578a3b0f29ce79981108ff17c8ae502afa6f152c",
+      "bytes": 1630
+    }
+  ],
+  "reportUrl": "http://127.0.0.1:8765/FINAL-CAPABILITY-P5-delivery-20261107T074816Z-a497e757/index.html",
+  "next": "Repair the11clusters/24records and close declared verification/release gates; preserve conditional publication authorization."
+}

@@ -1,0 +1,183 @@
+{
+  "schema": "py-mermaid-change-receipt/v1",
+  "task": "HTML-HOST-P3-B",
+  "status": "source_complete_waiting_joint_related_run",
+  "initialFailureRun": "test-runs/HTML-HOST-P3-batch-20261106T113133Z-293a5335",
+  "initialProductSha256": "41fa957106b91178ff6677b14d86fa0c4150fee33d6ff62e1a0d6148c6ac219f",
+  "initialTestsSha256": "ed85a6b4313f2ce6bcc41a8a9966647b40d352f065fecc4cadce9a0aba1ce0da",
+  "files": {
+    "src/py_mermaid/rendering/labels/controls/layout.py": "747c5fc8a199e59b22aba92090bf4b11015b0967432a7214a1a1b4b803756833",
+    "tests/html_host/test_layout.py": "1534cffb02317a9b1b43cd874ba169e412a881db414af7efc85cc1b1ec420b4e"
+  },
+  "methods": 70,
+  "testChanges": {
+    "originalTestSha256": "ed85a6b4313f2ce6bcc41a8a9966647b40d352f065fecc4cadce9a0aba1ce0da",
+    "initialFailureRun": "test-runs/HTML-HOST-P3-batch-20261106T113133Z-293a5335",
+    "L51": "Explicitly set content-box in rich centering fixture. Source button default is border-box; the test purpose/100px content geometry remains unchanged, while new L58 independently covers default UA box sizing.",
+    "L24": "Resource callback kind now control-image to select natural intrinsic resource size. Original image width/aspect numeric expectations unchanged.",
+    "newMethods": "L58-L62 source UA box sizing/display/datefont/radio and author-text paint metadata."
+  },
+  "productChanges": [
+    "Consume border-top-width/style/color canonical longhand keys after shorthand expansion.",
+    "Source UA default box-sizing differs by control family; date/time inputs use monospace; display does not inherit parent block.",
+    "Radio checked state is a white outer disk with accent center, not an accent disk with white center.",
+    "All direct text paints and plain caption runs retain spacing, text shadows and text-stroke axes.",
+    "input image calls shared control-image natural-size protocol rather than ordinary configurable label-image protocol."
+  ],
+  "behaviorRerun": false,
+  "pendingSharedDiagnosis": "Resolved by fixed source-only six-probe evidence; original malformed source fixtures retained and shared encodeEntities prepass owned by root.",
+  "localeHostObservation": "Source date/week PNGs in this host are Chinese-localized. Native ISO initial display is a deterministic host adaptation, not a claim of Chinese locale equivalence.",
+  "next": "All owners stop writes; root runs one unified related regression.",
+  "installationCommitPush": false,
+  "mechanical": {
+    "run": "test-runs/HTML-HOST-record-20261106T124839Z-7018d52e",
+    "status": "SUCCESS",
+    "compile": true,
+    "discoveredMethods": 70,
+    "testBehaviorExecuted": false
+  },
+  "accentSourceRepair": {
+    "cause": "Fixed utils.encodeEntities removes the separator after an inline middle hex color; source HTML ignores malformed accent-color and uses auto.",
+    "sourceRun": "test-runs/HTML-HOST-P3-source-integration-probes-20261106T114139Z-c5d42512",
+    "sourceCases": [
+      "html-host-integration-checkbox-hex-middle",
+      "html-host-integration-checkbox-hex-last",
+      "html-host-integration-checkbox-rgb-middle",
+      "html-host-integration-range-hex-middle",
+      "html-host-integration-range-rgb-middle"
+    ],
+    "repair": "Validate absolute CSS Color 4 with public pure is_valid_css_color. Invalid declarations fall back to UA auto; valid rgb/hwb/oklch/color values are retained. Context-dependent system/relative/color-mix expressions explicitly require a resolver rather than being mislabeled invalid.",
+    "provider": "src/py_mermaid/rendering/labels/controls/color_values.py:is_valid_css_color",
+    "testsAdded": "L63 invalid source hex-middle fallback, L64 same valid rgb color, L65 valid modern absolute colors.",
+    "thresholdChanged": false,
+    "sourceFixturesRemoved": false
+  },
+  "selectViewport": {
+    "status": "source_viewport_confirmed_product_unchanged",
+    "oldSourceRun": "test-runs/HTML-HOST-P3-select-viewport-original-20261106T121356Z-1b2a9d94",
+    "newPaintBoundSourceRun": "test-runs/HTML-HOST-P3-paint-bound-viewport-original-20261106T121826Z-a45b8dc1",
+    "reason": "Chrome applies single-select initial scroll during first paint. Old pre-screenshot DOM snapshot said indices0/1 but raw PNG showed3/4; new source run preserves before/after metadata, querying after the original PNG without pixel mutation.",
+    "productDecision": "Existing first-selected anchor algorithm is correct for both cases. No layout source modification.",
+    "tests": "L66/L67 compute visible text by actual baseline ink interval intersecting the content clip, not by collecting all paint.text.",
+    "evidence": [
+      {
+        "id": "html-host-integration-select-viewport-single",
+        "json": "test-runs\\HTML-HOST-P3-paint-bound-viewport-original-20261106T121826Z-a45b8dc1\\artifacts\\oracle\\html-host-integration-select-viewport-single.json",
+        "jsonSha256": "65186e10b69db9cf89280bcc51ed848921b685d26532b41dfbe0b294089bafa4",
+        "png": "test-runs\\HTML-HOST-P3-paint-bound-viewport-original-20261106T121826Z-a45b8dc1\\artifacts\\oracle\\html-host-integration-select-viewport-single.png",
+        "pngSha256": "7fc6c61656d27f7c5ebaad7d3e4f395545cc63bb7be9c686e63cbead932ec198",
+        "actualImageReviewed": true,
+        "visibleOptionIndices": [
+          3,
+          4
+        ],
+        "scrollTop": 51,
+        "expectedVisibleText": [
+          "Four",
+          "Five"
+        ]
+      },
+      {
+        "id": "html-host-integration-select-viewport-multiple",
+        "json": "test-runs\\HTML-HOST-P3-paint-bound-viewport-original-20261106T121826Z-a45b8dc1\\artifacts\\oracle\\html-host-integration-select-viewport-multiple.json",
+        "jsonSha256": "b8ac66761799daa36363b4789435d4aa8781bb2e078515819dc4ad195d165d80",
+        "png": "test-runs\\HTML-HOST-P3-paint-bound-viewport-original-20261106T121826Z-a45b8dc1\\artifacts\\oracle\\html-host-integration-select-viewport-multiple.png",
+        "pngSha256": "e410825d9b67b91274b8942278b45cc1f885d01b7622a44f7f753fd64d0599b3",
+        "actualImageReviewed": true,
+        "visibleOptionIndices": [
+          0,
+          1
+        ],
+        "scrollTop": 0,
+        "expectedVisibleText": [
+          "One",
+          "Two"
+        ]
+      }
+    ]
+  },
+  "zeroDimensionsRepair": {
+    "status": "source_complete_pending_unified_execution",
+    "sourceProbe": "test-runs/HTML-HOST-audit-dimension-default-probe-20261106T124046Z-c3670b63",
+    "sourceJSON": "test-runs\\HTML-HOST-audit-dimension-default-probe-20261106T124046Z-c3670b63\\artifacts\\oracle\\html-host-zero-dimension-source-probe.json",
+    "sourceJSONSha256": "fe8c28231d89e20b57d7b665f528664e40c6dcd33d57c599b5b004632a57a3fb",
+    "sourcePNG": "test-runs\\HTML-HOST-audit-dimension-default-probe-20261106T124046Z-c3670b63\\artifacts\\oracle\\html-host-zero-dimension-source-probe.png",
+    "sourcePNGSha256": "998f58ded35995fbd908cae3a54f0a567ecd17ccae060e34217b50c482b39991",
+    "sourceDimensions": [
+      {
+        "tag": "input",
+        "attributes": {
+          "id": "i0",
+          "size": "0",
+          "value": "Size",
+          "style": "font-family:monospace;font-size:16px;padding:0;border:0"
+        },
+        "width": 189,
+        "height": 19
+      },
+      {
+        "tag": "input",
+        "attributes": {
+          "value": "Size",
+          "style": "font-family:monospace;font-size:16px;padding:0;border:0"
+        },
+        "width": 189,
+        "height": 19
+      },
+      {
+        "tag": "textarea",
+        "attributes": {
+          "id": "t0",
+          "cols": "0",
+          "rows": "0",
+          "style": "font-family:monospace;font-size:16px;padding:0;border:0"
+        },
+        "width": 195,
+        "height": 38
+      },
+      {
+        "tag": "textarea",
+        "attributes": {
+          "id": "td",
+          "style": "font-family:monospace;font-size:16px;padding:0;border:0"
+        },
+        "width": 195,
+        "height": 38
+      },
+      {
+        "tag": "select",
+        "attributes": {
+          "id": "s0",
+          "multiple": "",
+          "size": "0",
+          "style": "font-family:monospace;font-size:16px;padding:0;border:0"
+        },
+        "width": 47.984375,
+        "height": 80.75
+      },
+      {
+        "tag": "select",
+        "attributes": {
+          "id": "sd",
+          "multiple": "",
+          "style": "font-family:monospace;font-size:16px;padding:0;border:0"
+        },
+        "width": 47.984375,
+        "height": 80.75
+      }
+    ],
+    "sourceRelation": "Each size=0/rows=0/cols=0 control equals its same-style omitted-attribute partner. Numeric zero falls back to the attribute default rather than clamping to 1.",
+    "nativeFailure": "Old native input showed only S instead of Size, textarea only T instead of Text, and multiple select only One instead of all four default visible rows. Real visible-content loss, not font/pixel differences.",
+    "minimalProductChanges": [
+      "Integer parser returns per-attribute default if parsed number is below minimum.",
+      "Multiple select initial display rows use default4 for omitted or invalid/zero size; valid size1 remains1."
+    ],
+    "newTests": [
+      "L68 input size0 default-size/clip and complete visible Size",
+      "L69 textarea cols0/rows0 default-size/clip and two complete visible lines",
+      "L70 multiple select size0 default-size/clip and four visible labels"
+    ],
+    "priorCandidateEvidence": "test-runs/BULK-P4-final-20261106T123440Z-e777012f remains SUCCESS/sourceUnchanged=true with 66 commands; root rejects acceptance due this additional source-audit defect. No closed run modified.",
+    "fixtureOwnership": "Root adds comprehensive six-control fixture and dynamic denominator gate; B changes no cases."
+  }
+}

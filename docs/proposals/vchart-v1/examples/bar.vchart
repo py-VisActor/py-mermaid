@@ -1,0 +1,13 @@
+vchart bar
+size 800 420
+let sales = table(month, revenue) {
+  ["Jan", 120]
+  ["Feb", 180]
+  ["Mar", 150]
+}
+data = { values: $sales }
+xField = "month"
+yField = "revenue"
+bar { style { fill = "#1664ff" } }
+axis bottom { type = "band" }
+axis left { type = "linear"; min = 0 }

@@ -1,0 +1,417 @@
+{
+  "schema": "py-mermaid-branch-verification/v1",
+  "group": "root",
+  "baselineSourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "reviewDepth": "Six named source predicates with exact existing source-derived test receipts; no new product behavior executed by this catalogue.",
+  "branches": [
+    {
+      "id": "BV-R-01",
+      "title": "Same-layer scoped appearance fallback",
+      "legacyUnresolved": "A.shared-config / B.styles-default-consumer-combinations / root.shared functional-group audit",
+      "predicate": "readAppearance considers scoped key then sibling root, skips unusable value",
+      "arms": [
+        "unusable scoped look",
+        "usable root look"
+      ],
+      "source": [
+        {
+          "path": "packages/mermaid/src/config.ts",
+          "symbol": "readAppearance",
+          "line": 42,
+          "sha256": "91dd68a9e7d57c4635a04fab0ccd78ec230b4417a02f4f4b3cd9a6bb445f09ef"
+        }
+      ],
+      "sourceExpected": {
+        "class.look": "not-a-look",
+        "root.look": "classic",
+        "resolved.look": "classic"
+      },
+      "python": [
+        {
+          "path": "src/py_mermaid/runtime/configuration.py",
+          "symbol": "resolve"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/bulk/shared/test_gap_configuration.py",
+          "symbol": "AppearanceGapContracts.test_invalid_scoped_look_falls_through_to_same_layer_root",
+          "sha256": "acdcd52a8591b29199cfbae1afae64ae9413ca6d3e1e6b09064f83ec83d4e9ad",
+          "executedBy": {
+            "run": {
+              "path": "test-runs/BULK-P4-final-20261106T125300Z-435e50af/run.json",
+              "sha256": "ed8d1d50c0e967f229b62090cec5f0277ac995712f6818512360dee454468d03",
+              "bytes": 4534656
+            },
+            "command": "unit-shared",
+            "stderr": {
+              "path": "test-runs/BULK-P4-final-20261106T125300Z-435e50af/commands/008-unit-shared/stderr.log",
+              "sha256": "fdd4ce814869b323545ff70fcf489fd6b79c6cf18cb25c3c4cbeab555de076b2",
+              "bytes": 17675
+            }
+          }
+        }
+      ],
+      "caseIds": [],
+      "classification": "VERIFIED_EXISTING",
+      "reason": "Exact named source-derived assertions passed in the closed unchanged b605 P4; archived test bytes match current tests. This closes these named branches, not all config/selector cross-products."
+    },
+    {
+      "id": "BV-R-02",
+      "title": "Layer fallback and diagram defaults",
+      "legacyUnresolved": "A.shared-config / B.styles-default-consumer-combinations / root.shared functional-group audit",
+      "predicate": "unusable directive/root look does not win later valid site/default layers",
+      "arms": [
+        "invalid directive -> site",
+        "invalid root -> diagram default",
+        "explicit user root -> wins diagram default"
+      ],
+      "source": [
+        {
+          "path": "packages/mermaid/src/config.ts",
+          "symbol": "resolveAppearance",
+          "line": 79,
+          "sha256": "91dd68a9e7d57c4635a04fab0ccd78ec230b4417a02f4f4b3cd9a6bb445f09ef"
+        }
+      ],
+      "sourceExpected": {
+        "site.handDrawn": "handDrawn",
+        "class.default": "neo",
+        "info.default": "classic"
+      },
+      "python": [
+        {
+          "path": "src/py_mermaid/runtime/configuration.py",
+          "symbol": "resolve"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/bulk/shared/test_gap_configuration.py",
+          "symbol": "AppearanceGapContracts.test_invalid_directive_look_falls_through_to_site",
+          "sha256": "acdcd52a8591b29199cfbae1afae64ae9413ca6d3e1e6b09064f83ec83d4e9ad",
+          "executedBy": {
+            "run": {
+              "path": "test-runs/BULK-P4-final-20261106T125300Z-435e50af/run.json",
+              "sha256": "ed8d1d50c0e967f229b62090cec5f0277ac995712f6818512360dee454468d03",
+              "bytes": 4534656
+            },
+            "command": "unit-shared",
+            "stderr": {
+              "path": "test-runs/BULK-P4-final-20261106T125300Z-435e50af/commands/008-unit-shared/stderr.log",
+              "sha256": "fdd4ce814869b323545ff70fcf489fd6b79c6cf18cb25c3c4cbeab555de076b2",
+              "bytes": 17675
+            }
+          }
+        },
+        {
+          "path": "tests/bulk/shared/test_gap_configuration.py",
+          "symbol": "AppearanceGapContracts.test_invalid_root_look_falls_through_to_diagram_default",
+          "sha256": "acdcd52a8591b29199cfbae1afae64ae9413ca6d3e1e6b09064f83ec83d4e9ad",
+          "executedBy": {
+            "run": {
+              "path": "test-runs/BULK-P4-final-20261106T125300Z-435e50af/run.json",
+              "sha256": "ed8d1d50c0e967f229b62090cec5f0277ac995712f6818512360dee454468d03",
+              "bytes": 4534656
+            },
+            "command": "unit-shared",
+            "stderr": {
+              "path": "test-runs/BULK-P4-final-20261106T125300Z-435e50af/commands/008-unit-shared/stderr.log",
+              "sha256": "fdd4ce814869b323545ff70fcf489fd6b79c6cf18cb25c3c4cbeab555de076b2",
+              "bytes": 17675
+            }
+          }
+        },
+        {
+          "path": "tests/bulk/shared/test_configuration.py",
+          "symbol": "ConfigurationContracts.test_source_diagram_default_wins_global_default_but_not_user_root",
+          "sha256": "1ed020778a841ceac2a53e7127c9766a83ff7951e3b54c542c8e50dddd875814",
+          "executedBy": {
+            "run": {
+              "path": "test-runs/BULK-P4-final-20261106T125300Z-435e50af/run.json",
+              "sha256": "ed8d1d50c0e967f229b62090cec5f0277ac995712f6818512360dee454468d03",
+              "bytes": 4534656
+            },
+            "command": "unit-shared",
+            "stderr": {
+              "path": "test-runs/BULK-P4-final-20261106T125300Z-435e50af/commands/008-unit-shared/stderr.log",
+              "sha256": "fdd4ce814869b323545ff70fcf489fd6b79c6cf18cb25c3c4cbeab555de076b2",
+              "bytes": 17675
+            }
+          }
+        }
+      ],
+      "caseIds": [],
+      "classification": "VERIFIED_EXISTING",
+      "reason": "Exact named source-derived assertions passed in the closed unchanged b605 P4; archived test bytes match current tests. This closes these named branches, not all config/selector cross-products."
+    },
+    {
+      "id": "BV-R-03",
+      "title": "Synchronize existing section keys only",
+      "legacyUnresolved": "A.shared-config / B.styles-default-consumer-combinations / root.shared functional-group audit",
+      "predicate": "section?.[key] !== undefined",
+      "arms": [
+        "existing section key synchronized",
+        "absent section key not added"
+      ],
+      "source": [
+        {
+          "path": "packages/mermaid/src/config.ts",
+          "symbol": "resolveAppearance section synchronization",
+          "line": 100,
+          "sha256": "91dd68a9e7d57c4635a04fab0ccd78ec230b4417a02f4f4b3cd9a6bb445f09ef"
+        }
+      ],
+      "sourceExpected": {
+        "existingSectionMatchesRoot": true,
+        "absentLayoutRemainsAbsent": true
+      },
+      "python": [
+        {
+          "path": "src/py_mermaid/runtime/configuration.py",
+          "symbol": "resolve"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/bulk/shared/test_gap_configuration.py",
+          "symbol": "AppearanceGapContracts.test_resolved_appearance_keeps_existing_section_in_step",
+          "sha256": "acdcd52a8591b29199cfbae1afae64ae9413ca6d3e1e6b09064f83ec83d4e9ad",
+          "executedBy": {
+            "run": {
+              "path": "test-runs/BULK-P4-final-20261106T125300Z-435e50af/run.json",
+              "sha256": "ed8d1d50c0e967f229b62090cec5f0277ac995712f6818512360dee454468d03",
+              "bytes": 4534656
+            },
+            "command": "unit-shared",
+            "stderr": {
+              "path": "test-runs/BULK-P4-final-20261106T125300Z-435e50af/commands/008-unit-shared/stderr.log",
+              "sha256": "fdd4ce814869b323545ff70fcf489fd6b79c6cf18cb25c3c4cbeab555de076b2",
+              "bytes": 17675
+            }
+          }
+        }
+      ],
+      "caseIds": [],
+      "classification": "VERIFIED_EXISTING",
+      "reason": "Exact named source-derived assertions passed in the closed unchanged b605 P4; archived test bytes match current tests. This closes these named branches, not all config/selector cross-products."
+    },
+    {
+      "id": "BV-R-04",
+      "title": "Palette rebuild guard",
+      "legacyUnresolved": "A.shared-config / B.styles-default-consumer-combinations / root.shared functional-group audit",
+      "predicate": "themeWasOverridden && cfg.theme && Object.hasOwn(theme,cfg.theme)",
+      "arms": [
+        "palette-only directive leaves existing derived palette",
+        "null named theme does not rebuild unknown theme"
+      ],
+      "source": [
+        {
+          "path": "packages/mermaid/src/config.ts",
+          "symbol": "updateCurrentConfig",
+          "line": 109,
+          "sha256": "91dd68a9e7d57c4635a04fab0ccd78ec230b4417a02f4f4b3cd9a6bb445f09ef"
+        }
+      ],
+      "sourceExpected": {
+        "primaryColor": "#112233",
+        "derivedDefaultBorder": "hsl(240, 60%, 86.2745098039%)",
+        "nullDarkMainBkg": "#1f2020"
+      },
+      "python": [
+        {
+          "path": "src/py_mermaid/runtime/configuration.py",
+          "symbol": "resolve"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/bulk/shared/test_gap_configuration.py",
+          "symbol": "AppearanceGapContracts.test_directive_palette_only_does_not_recalculate_derived_values",
+          "sha256": "acdcd52a8591b29199cfbae1afae64ae9413ca6d3e1e6b09064f83ec83d4e9ad",
+          "executedBy": {
+            "run": {
+              "path": "test-runs/BULK-P4-final-20261106T125300Z-435e50af/run.json",
+              "sha256": "ed8d1d50c0e967f229b62090cec5f0277ac995712f6818512360dee454468d03",
+              "bytes": 4534656
+            },
+            "command": "unit-shared",
+            "stderr": {
+              "path": "test-runs/BULK-P4-final-20261106T125300Z-435e50af/commands/008-unit-shared/stderr.log",
+              "sha256": "fdd4ce814869b323545ff70fcf489fd6b79c6cf18cb25c3c4cbeab555de076b2",
+              "bytes": 17675
+            }
+          }
+        },
+        {
+          "path": "tests/bulk/shared/test_gap_configuration.py",
+          "symbol": "AppearanceGapContracts.test_null_directive_theme_keeps_dark_site_palette",
+          "sha256": "acdcd52a8591b29199cfbae1afae64ae9413ca6d3e1e6b09064f83ec83d4e9ad",
+          "executedBy": {
+            "run": {
+              "path": "test-runs/BULK-P4-final-20261106T125300Z-435e50af/run.json",
+              "sha256": "ed8d1d50c0e967f229b62090cec5f0277ac995712f6818512360dee454468d03",
+              "bytes": 4534656
+            },
+            "command": "unit-shared",
+            "stderr": {
+              "path": "test-runs/BULK-P4-final-20261106T125300Z-435e50af/commands/008-unit-shared/stderr.log",
+              "sha256": "fdd4ce814869b323545ff70fcf489fd6b79c6cf18cb25c3c4cbeab555de076b2",
+              "bytes": 17675
+            }
+          }
+        }
+      ],
+      "caseIds": [],
+      "classification": "VERIFIED_EXISTING",
+      "reason": "Exact named source-derived assertions passed in the closed unchanged b605 P4; archived test bytes match current tests. This closes these named branches, not all config/selector cross-products."
+    },
+    {
+      "id": "BV-R-05",
+      "title": "Legacy root font bridge",
+      "legacyUnresolved": "A.shared-config / B.styles-default-consumer-combinations / root.shared functional-group audit",
+      "predicate": "options.fontFamily && !options.themeVariables?.fontFamily",
+      "arms": [
+        "empty theme font uses root font",
+        "explicit family retained"
+      ],
+      "source": [
+        {
+          "path": "packages/mermaid/src/mermaidAPI.ts",
+          "symbol": "initialize legacy fontFamily bridge",
+          "line": 707,
+          "sha256": "c38ef136d815a638993d271f253d2ca825046fb97292d30a7a4de8ea57fc0318"
+        }
+      ],
+      "sourceExpected": {
+        "rootFont": "Arial",
+        "emptyThemeFontResolvesTo": "Arial",
+        "explicitFont": "Fixture Font"
+      },
+      "python": [
+        {
+          "path": "src/py_mermaid/runtime/configuration.py",
+          "symbol": "resolve"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/bulk/shared/test_gap_configuration.py",
+          "symbol": "AppearanceGapContracts.test_empty_theme_font_family_takes_legacy_root_bridge",
+          "sha256": "acdcd52a8591b29199cfbae1afae64ae9413ca6d3e1e6b09064f83ec83d4e9ad",
+          "executedBy": {
+            "run": {
+              "path": "test-runs/BULK-P4-final-20261106T125300Z-435e50af/run.json",
+              "sha256": "ed8d1d50c0e967f229b62090cec5f0277ac995712f6818512360dee454468d03",
+              "bytes": 4534656
+            },
+            "command": "unit-shared",
+            "stderr": {
+              "path": "test-runs/BULK-P4-final-20261106T125300Z-435e50af/commands/008-unit-shared/stderr.log",
+              "sha256": "fdd4ce814869b323545ff70fcf489fd6b79c6cf18cb25c3c4cbeab555de076b2",
+              "bytes": 17675
+            }
+          }
+        },
+        {
+          "path": "tests/bulk/shared/test_configuration.py",
+          "symbol": "ConfigurationContracts.test_all_eleven_themes_compute_full_family_variables",
+          "sha256": "1ed020778a841ceac2a53e7127c9766a83ff7951e3b54c542c8e50dddd875814",
+          "executedBy": {
+            "run": {
+              "path": "test-runs/BULK-P4-final-20261106T125300Z-435e50af/run.json",
+              "sha256": "ed8d1d50c0e967f229b62090cec5f0277ac995712f6818512360dee454468d03",
+              "bytes": 4534656
+            },
+            "command": "unit-shared",
+            "stderr": {
+              "path": "test-runs/BULK-P4-final-20261106T125300Z-435e50af/commands/008-unit-shared/stderr.log",
+              "sha256": "fdd4ce814869b323545ff70fcf489fd6b79c6cf18cb25c3c4cbeab555de076b2",
+              "bytes": 17675
+            }
+          }
+        }
+      ],
+      "caseIds": [],
+      "classification": "VERIFIED_EXISTING",
+      "reason": "Exact named source-derived assertions passed in the closed unchanged b605 P4; archived test bytes match current tests. This closes these named branches, not all config/selector cross-products."
+    },
+    {
+      "id": "BV-R-06",
+      "title": "Secure directive key filter",
+      "legacyUnresolved": "A.shared-config / B.styles-default-consumer-combinations / root.shared functional-group audit",
+      "predicate": "site secure keys resist overrides, remaining keys apply",
+      "arms": [
+        "fontSize and securityLevel denied",
+        "fontFamily permitted"
+      ],
+      "source": [
+        {
+          "path": "packages/mermaid/src/config.ts",
+          "symbol": "sanitize",
+          "line": 239,
+          "sha256": "91dd68a9e7d57c4635a04fab0ccd78ec230b4417a02f4f4b3cd9a6bb445f09ef"
+        }
+      ],
+      "sourceExpected": {
+        "fontSize": 12345,
+        "securityLevel": "strict",
+        "fontFamily": "baf"
+      },
+      "python": [
+        {
+          "path": "src/py_mermaid/runtime/configuration.py",
+          "symbol": "resolve"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/bulk/shared/test_configuration.py",
+          "symbol": "ConfigurationContracts.test_secure_keys_from_site_resist_directive_overrides",
+          "sha256": "1ed020778a841ceac2a53e7127c9766a83ff7951e3b54c542c8e50dddd875814",
+          "executedBy": {
+            "run": {
+              "path": "test-runs/BULK-P4-final-20261106T125300Z-435e50af/run.json",
+              "sha256": "ed8d1d50c0e967f229b62090cec5f0277ac995712f6818512360dee454468d03",
+              "bytes": 4534656
+            },
+            "command": "unit-shared",
+            "stderr": {
+              "path": "test-runs/BULK-P4-final-20261106T125300Z-435e50af/commands/008-unit-shared/stderr.log",
+              "sha256": "fdd4ce814869b323545ff70fcf489fd6b79c6cf18cb25c3c4cbeab555de076b2",
+              "bytes": 17675
+            }
+          }
+        }
+      ],
+      "caseIds": [],
+      "classification": "VERIFIED_EXISTING",
+      "reason": "Exact named source-derived assertions passed in the closed unchanged b605 P4; archived test bytes match current tests. This closes these named branches, not all config/selector cross-products."
+    }
+  ],
+  "coverageBoundaries": [
+    {
+      "legacyUnresolved": "root[0] exhaustive expression-level scope",
+      "status": "UNVERIFIED",
+      "reason": "Unbounded global/source-expression completeness not inferred from this finite branch catalogue."
+    },
+    {
+      "legacyUnresolved": "root[1] static host expansion",
+      "status": "EXCLUDED_BY_USER",
+      "decision": "references/html-css-extension-exclusion.json",
+      "reason": "Advanced static HTML/CSS expansion excluded; prior accepted basic static controls retained."
+    },
+    {
+      "legacyUnresolved": "root[2] deployment",
+      "status": "DEFERRED_BY_USER",
+      "reason": "Fresh installation/Linux/no-loader/release remain deferred, not verified."
+    }
+  ],
+  "documentRole": "P2 source-derived contract. Initial branch classifications and authored expectations are historical; actual execution dispositions are in currentResults.",
+  "currentResults": {
+    "path": "references/branch-verification-summary.json",
+    "sha256": "cdf4226c982290875052614751fdf774d3bcb36609e4bc8f0c908205ce61613d",
+    "bytes": 1723432
+  }
+}

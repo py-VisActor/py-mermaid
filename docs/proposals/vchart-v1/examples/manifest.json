@@ -1,0 +1,63 @@
+{
+  "schema": "py-mermaid-vchart-dsl-design-examples/v1",
+  "status": "DESIGN_ONLY_NOT_IMPLEMENTED",
+  "expectation": "Independent expected JSON values for design review. Rendering these JSON files does not execute the proposed DSL.",
+  "examples": [
+    {
+      "id": "bar",
+      "type": "bar",
+      "source": "bar.vchart",
+      "expectedSpec": "bar.expected.json",
+      "resources": "bar.resources.json"
+    },
+    {
+      "id": "kde",
+      "type": "kdePlot",
+      "source": "kde.vchart",
+      "expectedSpec": "kde.expected.json",
+      "resources": "kde.resources.json"
+    },
+    {
+      "id": "common-dual-axis",
+      "type": "common",
+      "source": "common-dual-axis.vchart",
+      "expectedSpec": "common-dual-axis.expected.json",
+      "resources": "common-dual-axis.resources.json"
+    },
+    {
+      "id": "treemap",
+      "type": "treemap",
+      "source": "treemap.vchart",
+      "expectedSpec": "treemap.expected.json",
+      "resources": "treemap.resources.json"
+    },
+    {
+      "id": "sankey",
+      "type": "sankey",
+      "source": "sankey.vchart",
+      "expectedSpec": "sankey.expected.json",
+      "resources": "sankey.resources.json"
+    },
+    {
+      "id": "venn",
+      "type": "venn",
+      "source": "venn.vchart",
+      "expectedSpec": "venn.expected.json",
+      "resources": "venn.resources.json"
+    },
+    {
+      "id": "map",
+      "type": "map",
+      "source": "map.vchart",
+      "expectedSpec": "map.expected.json",
+      "resources": "map.resources.json"
+    },
+    {
+      "id": "pictogram",
+      "type": "pictogram",
+      "source": "pictogram.vchart",
+      "expectedSpec": "pictogram.expected.json",
+      "resources": "pictogram.resources.json"
+    }
+  ]
+}

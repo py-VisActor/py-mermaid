@@ -1,0 +1,111 @@
+{
+  "schema": "py-mermaid-html-host-canvas-receipt/v1",
+  "status": "code_complete_unverified",
+  "phase": "P1",
+  "sourceStopped": true,
+  "product": "src/py_mermaid/rendering/skia/controls.py",
+  "productSha256": "e71580e4be102ed19164bbc436b8473067d49fde3e4bb102ae911b310758a053",
+  "sourceMap": "references/html-host-canvas.json",
+  "sourceMapSha256": "c939d34420462668e7cf2f7b9db49f64fdb0a78e7a16e1a6031e3f8e8e210502",
+  "onlyOwnedFilesWritten": [
+    "src/py_mermaid/rendering/skia/controls.py",
+    "references/html-host-canvas.json",
+    "docs/changes/html-host-C.json"
+  ],
+  "mechanicalRuns": [
+    "HTML-HOST-record-20261106T111235Z-05897be4",
+    "HTML-HOST-record-20261106T111312Z-b00eb9ef",
+    "HTML-HOST-record-20261106T111352Z-dbf7f27a",
+    "HTML-HOST-record-20261106T111426Z-41329c20",
+    "HTML-HOST-record-20261106T111448Z-3a2bc8d3",
+    "HTML-HOST-record-20261106T111541Z-da2237d8"
+  ],
+  "latestImportRun": "HTML-HOST-record-20261106T111541Z-da2237d8",
+  "behaviorTestsRun": false,
+  "imagesGenerated": false,
+  "controlPaintingExecuted": false,
+  "noNewRuntimeDependencyOrInstall": true,
+  "callbacks": "PureDrawEventsreturned,sourcecoordinatesuntransferrednative;root ownsSessionrichrunintegration/parentalphafiltercombination",
+  "additiveContract": "RootapprovedControlPaint.direction/decoration;ControlLayout.caption_runs/caption_offset consumed withbudget andunclippedcaptioncallback.",
+  "limits": [
+    "P2independentactualpixels forcheckbox/radio/tracks/text/image/caption andclip",
+    "nativeowner/fault/saveRestore/currentpath behavior",
+    "publicfontmatching/decorations/opacity/filter withnestedcontrols",
+    "samecontrolpaint throughCPU/auto/GPU andexistingexports;nodrawingbehaviorclaimnow"
+  ],
+  "next": "RootfreezeallP1thenP2source-independenttests;thismechanicalreceiptisnotfunctionalPASS",
+  "p3Repair": {
+    "status": "code_complete_unverified",
+    "firstRun": "HTML-HOST-P3-batch-20261106T113133Z-293a5335",
+    "firstProductSha256": "e71580e4be102ed19164bbc436b8473067d49fde3e4bb102ae911b310758a053",
+    "firstCanvasTestSha256": "dcac648ebb541e8a04c0cfa76d153700c7854bdf0c3c514b4d400f5b8eda1d4c",
+    "productSha256": "9ce647b445f493fa355473433446bd81a54b27620fc0cec3f08db4d9b39e9d1c",
+    "canvasTestSha256": "9910382ef71f5de371e6e0524afde5246f7c93870d9d42764b154189973615f6",
+    "sourceMapSha256": "c373ab06b6676ebb1c65efd76e6d304e74a014c1716fde90bf3149eb402240cf",
+    "mechanicalRun": "HTML-HOST-record-20261106T114342Z-0401f92c",
+    "behaviorRun": null,
+    "testCorrections": [
+      {
+        "method": "control",
+        "reason": "ControlSpec.input_type defaults empty for non-input. Actual container resource_id is tag + colon + spec.input_type; B effective layout kind is a separate fallback. Four original StopIteration errors retained."
+      },
+      {
+        "method": "StaticControlPixels.test_radio_selected_has_center_dot_and_unselected_not_accented",
+        "reason": "Independent original Chromium image shows white ring and blue center; old white center assertion read incorrect candidate appearance. Existing checked/unchecked and real blue pixel requirements preserved.",
+        "sourcePng": "test-runs/HTML-HOST-P3-batch-20261106T113133Z-293a5335/artifacts/oracle/html-host-radio-last-checked.png",
+        "sourcePngSha256": "4e78f693d1a9fb5f77d2e6105d5b3d3ba4a77d89aaf5609fcf51bd0703e43126"
+      },
+      {
+        "methods": [
+          "ControlExecutorPublicCanvas.test_content_clip_does_not_clip_frame_or_replace_current_path",
+          "ControlExecutorPublicCanvas.test_multiple_decoration_lines_add_pixels_beyond_plain_glyphs"
+        ],
+        "reason": "Direct text now correctly requires paint_runs. Tests inject real existing Session._draw_runs instead of no-op callback; expected clip and decoration pixel relations unchanged."
+      },
+      {
+        "methods": [
+          "StaticControlPixels.test_checkbox_checked_has_real_mark_unchecked_does_not",
+          "StaticControlPixels.test_radio_selected_has_center_dot_and_unselected_not_accented",
+          "StaticControlPixels.test_range_thumb_moves_with_value_and_reverses_in_rtl"
+        ],
+        "sourceRun": "HTML-HOST-P3-source-integration-probes-20261106T114139Z-c5d42512",
+        "sourcePath": ".local/upstream-mermaid/packages/mermaid/src/utils.ts",
+        "symbol": "encodeEntities",
+        "line": 895,
+        "reason": "Source removes last semicolon in style.*:\\S*#.*; match. Actual original #2468ac;margin:0 became #2468acmargin:0 and #2468ac;direction:rtl became #2468acdirection:rtl with computed ltr. Use equal RGB numeric color to isolate authored accent and RTL semantics; no thresholds or original evidence removed."
+      },
+      {
+        "method": "StaticControlPixels.test_input_image_data_uri_is_offline_and_missing_resource_is_explicit",
+        "sourcePath": ".local/f011-oracle/node_modules/dompurify/dist/purify.cjs.js",
+        "symbol": "DEFAULT_DATA_URI_TAGS",
+        "line": 1254,
+        "reason": "Default set omits input; source strict first applies default sanitizer then configured sanitizer. Add default-no-image assertion and explicit loose+ADD_DATA_URI_TAGS input positive. No production security widening."
+      }
+    ],
+    "pending": [
+      "Root uniform functional regression after all owners freeze. No native or tests run by C during repair."
+    ],
+    "testsOrNativeRunDuringRepair": false,
+    "assertionMapSha256": "cb99a234040af54fd2f0adaa327d30605e8a6bf8a329f38122e1684235df3248",
+    "sourceStopped": true
+  },
+  "p3OpacityFixtureCorrection": {
+    "status": "COMPILE_ONLY",
+    "failedRun": "HTML-HOST-P3-related-repair-sweep-20261106T115256Z-5f4fc3ae",
+    "method": "StaticControlPixels.test_nested_opacity_composes_once_per_element",
+    "beforeTestSha256": "9910382ef71f5de371e6e0524afde5246f7c93870d9d42764b154189973615f6",
+    "afterTestSha256": "22f6493349e9ce97dca8c614e47d6605fbf4c2ac4fb23d440b6829856015a36a",
+    "sourceProbe": "HTML-HOST-P3-source-integration-probes-20261106T114139Z-c5d42512",
+    "source": {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/utils.ts",
+      "symbol": "encodeEntities",
+      "line": 895
+    },
+    "reason": "Source greedy style.*:\\S*#.*; removes the last matched semicolon. Original background:#d02030;width:80px;height:40px;border:0 becomes height:40pxborder:0. Change only authored background to numerically identical rgb(208,32,48), isolating true .5*.5 opacity composition. Alpha .25, RGB formula, pixel thresholds, method ID unchanged.",
+    "productSha256": "9ce647b445f493fa355473433446bd81a54b27620fc0cec3f08db4d9b39e9d1c",
+    "productChanged": false,
+    "mechanicalRun": "HTML-HOST-record-20261106T115516Z-a848eb92",
+    "behaviorRun": null,
+    "stopped": true
+  }
+}

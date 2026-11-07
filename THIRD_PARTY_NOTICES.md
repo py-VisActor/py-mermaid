@@ -11,6 +11,12 @@
 
 任何后续源码移植需要同步来源映射和本说明。发布前检查最终 wheel 实际携带的代码、资源、NOTICE 和许可证。
 
+## 2026-11-07 非图表收口来源
+
+- `langium@4.4.0`，MIT，字符串单字符转义和 CommonValueConverter 的纯值规则按固定 Mermaid parser bundle 的 sourcesContent 移植；不包含或执行 Langium/JavaScript 运行时。原许可见 [langium-4.4.0-LICENSE](references/licenses/langium-4.4.0-LICENSE)。
+- `dayjs@1.11.21`，MIT，固定 Gantt 日期解析、星期/ISO week/advancedFormat 语义作为 Python 日历实现的来源；生产不加载 Dayjs。原许可见 [dayjs-1.11.21-LICENSE](references/licenses/dayjs-1.11.21-LICENSE)。
+- 两份许可来自对应 npm 精确版本 tarball，SHA512 integrity 已核验；原始元数据、tarball与许可指纹保存在 `CLOSURE-P1-SOURCES-record-20261107T075917Z-c684fc9f`。D3时间/格式规则继续使用已列原许可，不以源码参考引入npm运行依赖。
+
 ## 2026-11-06 静态批次新增来源
 
 下列通知记录实际移植来源与已纳入的资产；功能、设备和导出验收状态由执行账本单独记录。
@@ -57,3 +63,9 @@
 - RoughJS：固定 roughjs@4.6.6，MIT（Copyright (c) 2019 Preet Shihn）。F01.4 将必要的 seeded Random、线段/Bezier 扰动及手绘填充职责实现为纯 Python，生产不依赖 JavaScript；许可证随包保留于 [roughjs-LICENSE](references/licenses/roughjs-LICENSE)，来源见 `references/f014-canvas-sources.json`。
 
 - py-visactor-katex：固定正式版本 0.1.0，MIT，Python 导入名 `py_katex`，源码仓库 `py-VisActor/py-katex`。该独立发行包携带 KaTeX 0.18.11 数学字体、度量及来源许可；本项目只调用其 API，不复制其字体或数学实现。
+
+- py-visactor-vchart：图表依赖版本 0.1.1，MIT，导入名 `py_vchart`，仓库 `py-VisActor/py-vchart`。发行包保留 VChart、venn.js、fmin 与统计色板的来源许可；本项目通过其公开静态 spec/布局/Canvas API 调用，不内嵌该包源码。NumPy 为该独立包声明的运行依赖；skia-python 仅属于其可选 reference 开发校验模式，不是本项目运行依赖。发行与安装实测状态见 [VChart 接入](docs/VCHART_INTEGRATION.md)。
+
+- W3C CSS Color 4：控件初始色值的纯 Python 转换参考官方 `conversions.js` 示例中的矩阵与传递函数，未引入 JavaScript 运行依赖。来源、固定下载 SHA 与 `csswg-drafts` 根许可适用记录见 `references/html-host-semantics.json`。保留 [W3C notice](references/licenses/w3c-css-color-NOTICE.txt)、[完整 Software and Document License 2023](references/licenses/w3c-software-document-license-2023.html)、[官方 short notice](references/licenses/w3c-software-document-short-notice-2023.html) 及 [原仓库许可声明](references/licenses/csswg-drafts-LICENSE.md)；这些来源权利与免责声明不被本项目 MIT 声明替换。
+
+- Chromium / Skia 色彩状态数值：控件色值归一化还参考固定 Chrome 156.0.8078.76 的 Chromium `skcms_ext` / color-input 调用路径及其精确 DEPS 对应的 Skia `SkColorSpace.h` 传递函数与 D50/ICC 系数，独立改写为 Python 标量计算以保持静态初始色值；不调用或复制其栅格器、字体、设备或浏览器运行实现。Copyright 2025 The Chromium Authors；Copyright 2016 Google Inc.。适用 BSD 许可随包保留于 [chromium-LICENSE](references/licenses/chromium-LICENSE) 与 [skia-LICENSE](references/licenses/skia-LICENSE)，固定 revision、原头部及 primary URL/SHA 见 `references/html-host-semantics.json`。

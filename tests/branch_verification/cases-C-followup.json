@@ -1,0 +1,40 @@
+{
+  "schema": "py-mermaid-bulk-cases/v1",
+  "group": "C",
+  "cases": [
+    {
+      "id": "BV-C-zen-comment-raw-link-SOURCE-VALID",
+      "kind": "zenuml",
+      "group": "C",
+      "source": "zenuml\nA B\n// See [label](https://example.invalid)\nA->B.call()",
+      "expect": "render",
+      "origin": {
+        "path": "src/svg/components/comment.ts",
+        "symbol": "collectLines/walkToken/renderComment",
+        "line": 16,
+        "sha256": "de16149e5f49bce9c09e0093836425e28b3810df1e53c607db8aaf968ef5efc1",
+        "repository": "zenuml-core",
+        "synthesized": true
+      },
+      "config": {
+        "theme": "default"
+      },
+      "expectedText": [
+        "A",
+        "B",
+        "call()"
+      ],
+      "branchProbe": {
+        "type": "comment",
+        "branch": "C-zen-comment-raw-link",
+        "comment": "See [label](https://example.invalid)",
+        "visible": "See [label](https://example.invalid)",
+        "bold": false,
+        "italic": false,
+        "rawLineCount": 1
+      },
+      "parentCaseId": "BV-C-zen-comment-raw-link",
+      "followupReason": "See prefix bypasses Comment.parseLine style-prefix consumption; old original/native source-consumed-empty case is retained unchanged."
+    }
+  ]
+}

@@ -1,0 +1,1934 @@
+{
+  "schema": "py-mermaid-final-capability-review/v1",
+  "group": "A",
+  "reviewMode": "READ_ONLY_PRODUCTS_AND_TESTS",
+  "sourceTreeSha256": "fe2c293f8ed4ea76e04d34669c8739c27a32063447026e144928bfd6b4ac0bb2",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "releaseGate": "BLOCKED_CONFIRMED_RETAINED_SCOPE_GAPS",
+  "canClaimNoMissingFeatures": false,
+  "counts": {
+    "confirmedFunctionalGapRecords": 9,
+    "semanticValueDifferences": 4,
+    "nativeOveracceptanceFamilies": 1,
+    "scopeOfCurrentNativeFacts": 14
+  },
+  "runs": [
+    {
+      "run": {
+        "path": "test-runs/FINAL-CAPABILITY-A-audit-20261107T073855Z-51cce6e4/run.json",
+        "sha256": "94d4d3af9a01cacddfdbfa7347721bd5dc2118d09e63a6f7bb64466c7feeaca7",
+        "bytes": 33836
+      },
+      "status": "FAILED",
+      "sourceUnchanged": true,
+      "commands": [
+        {
+          "name": "fixed-abnf-source",
+          "argv": [
+            "node",
+            "tests/branch_verification/oracle_c.cjs",
+            "--out",
+            "C:\\code\\py-visactor\\py-mermaid\\test-runs\\FINAL-CAPABILITY-A-audit-20261107T073855Z-51cce6e4\\artifacts\\source-abnf"
+          ],
+          "cwd": "C:\\code\\py-visactor\\py-mermaid",
+          "startedAtUtc": "2026-11-07T07:38:56.173+00:00",
+          "timeoutSeconds": 60,
+          "finishedAtUtc": "2026-11-07T07:38:56.293+00:00",
+          "exitCode": 0,
+          "status": "SUCCESS",
+          "stdout": "commands/001-fixed-abnf-source/stdout.log",
+          "stderr": "commands/001-fixed-abnf-source/stderr.log",
+          "toolFiles": {
+            "C:\\code\\py-visactor\\py-mermaid\\tests\\branch_verification\\oracle_c.cjs": {
+              "sha256": "2d5ea2e8d6548766d13f2a1d44d561c0780218e690201abc36a665c6295cbf72",
+              "bytes": 2579
+            }
+          },
+          "durationSeconds": 0.117895,
+          "stdoutSha256": "988636653a459359c77a24c473177275704ed9a4b901e7cd0f8940f1801a9dee",
+          "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "name": "source-literal-A-current",
+          "argv": [
+            "C:\\venvs\\pymmd-20261102\\Scripts\\python.exe",
+            "-m",
+            "unittest",
+            "tests.branch_verification.test_a_semantics",
+            "-v"
+          ],
+          "cwd": "C:\\code\\py-visactor\\py-mermaid",
+          "startedAtUtc": "2026-11-07T07:38:56.297+00:00",
+          "timeoutSeconds": 180,
+          "finishedAtUtc": "2026-11-07T07:38:57.468+00:00",
+          "exitCode": 1,
+          "status": "FAILED",
+          "stdout": "commands/002-source-literal-A-current/stdout.log",
+          "stderr": "commands/002-source-literal-A-current/stderr.log",
+          "toolFiles": {},
+          "durationSeconds": 1.1695,
+          "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderrSha256": "f97c3949b22041ba5e055a271eaa45c3e1f6e98e92e04027f0cbd811dddf14d6"
+        },
+        {
+          "name": "abnf-and-zen-source-assertions",
+          "argv": [
+            "C:\\venvs\\pymmd-20261102\\Scripts\\python.exe",
+            "-m",
+            "unittest",
+            "test_c_geometry.AbnfSourcePriority",
+            "test_c_geometry.ZenMarkedBranches",
+            "-v"
+          ],
+          "cwd": "C:\\code\\py-visactor\\py-mermaid",
+          "startedAtUtc": "2026-11-07T07:38:57.472+00:00",
+          "timeoutSeconds": 90,
+          "finishedAtUtc": "2026-11-07T07:38:57.735+00:00",
+          "exitCode": 1,
+          "status": "FAILED",
+          "stdout": "commands/003-abnf-and-zen-source-assertions/stdout.log",
+          "stderr": "commands/003-abnf-and-zen-source-assertions/stderr.log",
+          "toolFiles": {},
+          "durationSeconds": 0.260755,
+          "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderrSha256": "4be7324e99a0923ffedd6db703db1c40c16474efdd828dda47e53f0d2f138b00"
+        }
+      ],
+      "interpretation": "Original source probe exit0; A30 exit1=8fail4error; ABNF/Zen3 exit1=2fail. Green controls are not repairs."
+    },
+    {
+      "run": {
+        "path": "test-runs/FINAL-CAPABILITY-A-facts-20261107T074002Z-3c051804/run.json",
+        "sha256": "c022b255c134bb72b6a44adfafa16194681b68b531b2b26d32142de21304cc60",
+        "bytes": 30478
+      },
+      "status": "SUCCESS",
+      "interpretation": "Diagnostic capture exit0 only; records mismatches/rejections, not feature acceptance."
+    }
+  ],
+  "confirmedFunctionalGaps": [
+    {
+      "id": "cynefin-double-unknown",
+      "caseId": "BV-A-cynefin-double-unknown",
+      "input": "cynefin-beta\nclear\n \"A\\qB\"\n",
+      "config": {},
+      "source": [
+        {
+          "path": "packages/parser/src/language/cynefin/cynefin.langium",
+          "symbol": "DomainItem/Transition",
+          "line": 18,
+          "sha256": "94276271b3dfe6dd78ced62249cd1d69bdd785e1498b90e678f101a23e1d26e0",
+          "repository": "mermaid",
+          "canonicalSha256": "e39c321b5a98b7160270c4275d4dfc309769478fca6e8f93fa67973431b66881",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob",
+          "currentFile": ".local/upstream-mermaid/packages/parser/src/language/cynefin/cynefin.langium",
+          "currentSha256": "94276271b3dfe6dd78ced62249cd1d69bdd785e1498b90e678f101a23e1d26e0",
+          "identityMatches": true
+        },
+        {
+          "path": "../../../../../node_modules/.pnpm/langium@4.4.0/node_modules/langium/src/parser/value-converter.ts",
+          "symbol": "convertString/convertEscapeCharacter",
+          "line": 60,
+          "sha256": "4f8b6454347b73fc775918037feb598808481e1cc026709e045dfe9f5817e191",
+          "repository": "mermaid-bundle-sourcesContent",
+          "hashMeaning": "exact UTF-8 sourcesContent",
+          "bundleMapPath": ".local/f011-oracle/node_modules/@mermaid-js/parser/dist/chunks/mermaid-parser.core/chunk-NGNAAXSQ.mjs.map",
+          "bundleMapSha256": "7ff2c3967be6db0b0603e2773b6afa80bf8157d144e530bd21fac6f9e61d424d",
+          "currentSha256": "4f8b6454347b73fc775918037feb598808481e1cc026709e045dfe9f5817e191",
+          "currentBundleMapSha256": "7ff2c3967be6db0b0603e2773b6afa80bf8157d144e530bd21fac6f9e61d424d",
+          "identityMatches": true
+        }
+      ],
+      "sourceExpected": "STRING converts one-character escapes in both quote styles; unknown escape drops backslash and does not interpret JSON Unicode.",
+      "literalExpected": [
+        {
+          "path": [
+            "domains",
+            0,
+            1,
+            0
+          ],
+          "equals": "AqB"
+        }
+      ],
+      "fixedOriginal": {
+        "path": "test-runs/BRANCH-VERIFY-P3-batch-20261106T143957Z-5bcb3fcf/artifacts/oracle-A-getters/BV-A-cynefin-double-unknown.json",
+        "sha256": "5a220c19374dc30a7b83016cdcc2393a2e4242f097258b1668b4e91b2f365ee8",
+        "value": {
+          "id": "BV-A-cynefin-double-unknown",
+          "source": "cynefin-beta\nclear\n \"A\\qB\"\n",
+          "config": {},
+          "status": "PARSED",
+          "kind": "cynefin",
+          "snapshot": {
+            "getDomains": {
+              "clear": {
+                "name": "clear",
+                "items": [
+                  {
+                    "label": "AqB"
+                  }
+                ]
+              }
+            },
+            "getTransitions": [],
+            "getDiagramTitle": "",
+            "getAccTitle": "",
+            "getAccDescription": ""
+          }
+        }
+      },
+      "currentActual": {
+        "accepted": false,
+        "error": {
+          "code": "SYNTAX_ERROR",
+          "message": "Invalid quoted label",
+          "span": {
+            "start": {
+              "index": 20,
+              "utf16_offset": 20,
+              "line": 3,
+              "column": 1
+            },
+            "end": {
+              "index": 20,
+              "utf16_offset": 20,
+              "line": 3,
+              "column": 1
+            }
+          }
+        }
+      },
+      "evidence": [
+        {
+          "path": "test-runs/FINAL-CAPABILITY-A-facts-20261107T074002Z-3c051804/artifacts/current-values.json",
+          "sha256": "5a544f5d277ef39274a2bf07b818f4a5c349acf273320343c744b3991e37f19c",
+          "bytes": 32094
+        },
+        {
+          "path": "test-runs/FINAL-CAPABILITY-A-audit-20261107T073855Z-51cce6e4/commands/002-source-literal-A-current/stderr.log",
+          "sha256": "f97c3949b22041ba5e055a271eaa45c3e1f6e98e92e04027f0cbd811dddf14d6",
+          "bytes": 25532
+        }
+      ],
+      "classification": "CONFIRMED_GAP",
+      "reason": "Pinned Langium STRING single-character escape converter is not JSON. Current double-quote json.loads rejects valid unknown escapes/raw newlines and decodes Unicode escapes unlike source; single-quote branch fails to decode newline/tab.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/business/cynefin.py",
+          "sha256": "c55d6d4040be3af0c71b803027c97c1075c7d84265965b1509601f7ad8ab0181",
+          "bytes": 7962,
+          "symbol": "parse.string",
+          "line": 35
+        }
+      ]
+    },
+    {
+      "id": "cynefin-double-unicode",
+      "caseId": "BV-A-cynefin-double-unicode",
+      "input": "cynefin-beta\nclear\n \"\\u0041\"\n",
+      "config": {},
+      "source": [
+        {
+          "path": "packages/parser/src/language/cynefin/cynefin.langium",
+          "symbol": "DomainItem/Transition",
+          "line": 18,
+          "sha256": "94276271b3dfe6dd78ced62249cd1d69bdd785e1498b90e678f101a23e1d26e0",
+          "repository": "mermaid",
+          "canonicalSha256": "e39c321b5a98b7160270c4275d4dfc309769478fca6e8f93fa67973431b66881",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob",
+          "currentFile": ".local/upstream-mermaid/packages/parser/src/language/cynefin/cynefin.langium",
+          "currentSha256": "94276271b3dfe6dd78ced62249cd1d69bdd785e1498b90e678f101a23e1d26e0",
+          "identityMatches": true
+        },
+        {
+          "path": "../../../../../node_modules/.pnpm/langium@4.4.0/node_modules/langium/src/parser/value-converter.ts",
+          "symbol": "convertString/convertEscapeCharacter",
+          "line": 60,
+          "sha256": "4f8b6454347b73fc775918037feb598808481e1cc026709e045dfe9f5817e191",
+          "repository": "mermaid-bundle-sourcesContent",
+          "hashMeaning": "exact UTF-8 sourcesContent",
+          "bundleMapPath": ".local/f011-oracle/node_modules/@mermaid-js/parser/dist/chunks/mermaid-parser.core/chunk-NGNAAXSQ.mjs.map",
+          "bundleMapSha256": "7ff2c3967be6db0b0603e2773b6afa80bf8157d144e530bd21fac6f9e61d424d",
+          "currentSha256": "4f8b6454347b73fc775918037feb598808481e1cc026709e045dfe9f5817e191",
+          "currentBundleMapSha256": "7ff2c3967be6db0b0603e2773b6afa80bf8157d144e530bd21fac6f9e61d424d",
+          "identityMatches": true
+        }
+      ],
+      "sourceExpected": "STRING converts one-character escapes in both quote styles; unknown escape drops backslash and does not interpret JSON Unicode.",
+      "literalExpected": [
+        {
+          "path": [
+            "domains",
+            0,
+            1,
+            0
+          ],
+          "equals": "u0041"
+        }
+      ],
+      "fixedOriginal": {
+        "path": "test-runs/BRANCH-VERIFY-P3-batch-20261106T143957Z-5bcb3fcf/artifacts/oracle-A-getters/BV-A-cynefin-double-unicode.json",
+        "sha256": "227bcb08de077820edb42683e008288bd61dae749373708ca9716c671f7c5cc9",
+        "value": {
+          "id": "BV-A-cynefin-double-unicode",
+          "source": "cynefin-beta\nclear\n \"\\u0041\"\n",
+          "config": {},
+          "status": "PARSED",
+          "kind": "cynefin",
+          "snapshot": {
+            "getDomains": {
+              "clear": {
+                "name": "clear",
+                "items": [
+                  {
+                    "label": "u0041"
+                  }
+                ]
+              }
+            },
+            "getTransitions": [],
+            "getDiagramTitle": "",
+            "getAccTitle": "",
+            "getAccDescription": ""
+          }
+        }
+      },
+      "currentActual": {
+        "accepted": true,
+        "assertions": [
+          {
+            "path": [
+              "domains",
+              0,
+              1,
+              0
+            ],
+            "expected": "u0041",
+            "actual": "A",
+            "matches": false
+          }
+        ],
+        "actualModel": {
+          "domains": [
+            [
+              "clear",
+              [
+                "A"
+              ]
+            ]
+          ],
+          "transitions": [],
+          "title": "",
+          "accessibility": [
+            [
+              "title",
+              ""
+            ]
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "path": "test-runs/FINAL-CAPABILITY-A-facts-20261107T074002Z-3c051804/artifacts/current-values.json",
+          "sha256": "5a544f5d277ef39274a2bf07b818f4a5c349acf273320343c744b3991e37f19c",
+          "bytes": 32094
+        },
+        {
+          "path": "test-runs/FINAL-CAPABILITY-A-audit-20261107T073855Z-51cce6e4/commands/002-source-literal-A-current/stderr.log",
+          "sha256": "f97c3949b22041ba5e055a271eaa45c3e1f6e98e92e04027f0cbd811dddf14d6",
+          "bytes": 25532
+        }
+      ],
+      "classification": "CONFIRMED_GAP",
+      "reason": "Pinned Langium STRING single-character escape converter is not JSON. Current double-quote json.loads rejects valid unknown escapes/raw newlines and decodes Unicode escapes unlike source; single-quote branch fails to decode newline/tab.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/business/cynefin.py",
+          "sha256": "c55d6d4040be3af0c71b803027c97c1075c7d84265965b1509601f7ad8ab0181",
+          "bytes": 7962,
+          "symbol": "parse.string",
+          "line": 35
+        }
+      ]
+    },
+    {
+      "id": "cynefin-single-newline",
+      "caseId": "BV-A-cynefin-single-newline",
+      "input": "cynefin-beta\nclear\n 'A\\nB'\n",
+      "config": {},
+      "source": [
+        {
+          "path": "packages/parser/src/language/cynefin/cynefin.langium",
+          "symbol": "DomainItem/Transition",
+          "line": 18,
+          "sha256": "94276271b3dfe6dd78ced62249cd1d69bdd785e1498b90e678f101a23e1d26e0",
+          "repository": "mermaid",
+          "canonicalSha256": "e39c321b5a98b7160270c4275d4dfc309769478fca6e8f93fa67973431b66881",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob",
+          "currentFile": ".local/upstream-mermaid/packages/parser/src/language/cynefin/cynefin.langium",
+          "currentSha256": "94276271b3dfe6dd78ced62249cd1d69bdd785e1498b90e678f101a23e1d26e0",
+          "identityMatches": true
+        },
+        {
+          "path": "../../../../../node_modules/.pnpm/langium@4.4.0/node_modules/langium/src/parser/value-converter.ts",
+          "symbol": "convertString/convertEscapeCharacter",
+          "line": 60,
+          "sha256": "4f8b6454347b73fc775918037feb598808481e1cc026709e045dfe9f5817e191",
+          "repository": "mermaid-bundle-sourcesContent",
+          "hashMeaning": "exact UTF-8 sourcesContent",
+          "bundleMapPath": ".local/f011-oracle/node_modules/@mermaid-js/parser/dist/chunks/mermaid-parser.core/chunk-NGNAAXSQ.mjs.map",
+          "bundleMapSha256": "7ff2c3967be6db0b0603e2773b6afa80bf8157d144e530bd21fac6f9e61d424d",
+          "currentSha256": "4f8b6454347b73fc775918037feb598808481e1cc026709e045dfe9f5817e191",
+          "currentBundleMapSha256": "7ff2c3967be6db0b0603e2773b6afa80bf8157d144e530bd21fac6f9e61d424d",
+          "identityMatches": true
+        }
+      ],
+      "sourceExpected": "STRING converts one-character escapes in both quote styles; unknown escape drops backslash and does not interpret JSON Unicode.",
+      "literalExpected": [
+        {
+          "path": [
+            "domains",
+            0,
+            1,
+            0
+          ],
+          "equals": "A\nB"
+        }
+      ],
+      "fixedOriginal": {
+        "path": "test-runs/BRANCH-VERIFY-P3-batch-20261106T143957Z-5bcb3fcf/artifacts/oracle-A-getters/BV-A-cynefin-single-newline.json",
+        "sha256": "ffdcffd84fd91059b8ae546e6fb170ed1fb7f26bc16188fcaf235c1f926ae45c",
+        "value": {
+          "id": "BV-A-cynefin-single-newline",
+          "source": "cynefin-beta\nclear\n 'A\\nB'\n",
+          "config": {},
+          "status": "PARSED",
+          "kind": "cynefin",
+          "snapshot": {
+            "getDomains": {
+              "clear": {
+                "name": "clear",
+                "items": [
+                  {
+                    "label": "A\nB"
+                  }
+                ]
+              }
+            },
+            "getTransitions": [],
+            "getDiagramTitle": "",
+            "getAccTitle": "",
+            "getAccDescription": ""
+          }
+        }
+      },
+      "currentActual": {
+        "accepted": true,
+        "assertions": [
+          {
+            "path": [
+              "domains",
+              0,
+              1,
+              0
+            ],
+            "expected": "A\nB",
+            "actual": "A\\nB",
+            "matches": false
+          }
+        ],
+        "actualModel": {
+          "domains": [
+            [
+              "clear",
+              [
+                "A\\nB"
+              ]
+            ]
+          ],
+          "transitions": [],
+          "title": "",
+          "accessibility": [
+            [
+              "title",
+              ""
+            ]
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "path": "test-runs/FINAL-CAPABILITY-A-facts-20261107T074002Z-3c051804/artifacts/current-values.json",
+          "sha256": "5a544f5d277ef39274a2bf07b818f4a5c349acf273320343c744b3991e37f19c",
+          "bytes": 32094
+        },
+        {
+          "path": "test-runs/FINAL-CAPABILITY-A-audit-20261107T073855Z-51cce6e4/commands/002-source-literal-A-current/stderr.log",
+          "sha256": "f97c3949b22041ba5e055a271eaa45c3e1f6e98e92e04027f0cbd811dddf14d6",
+          "bytes": 25532
+        }
+      ],
+      "classification": "CONFIRMED_GAP",
+      "reason": "Pinned Langium STRING single-character escape converter is not JSON. Current double-quote json.loads rejects valid unknown escapes/raw newlines and decodes Unicode escapes unlike source; single-quote branch fails to decode newline/tab.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/business/cynefin.py",
+          "sha256": "c55d6d4040be3af0c71b803027c97c1075c7d84265965b1509601f7ad8ab0181",
+          "bytes": 7962,
+          "symbol": "parse.string",
+          "line": 35
+        }
+      ]
+    },
+    {
+      "id": "cynefin-literal-newline",
+      "caseId": "BV-A-cynefin-literal-newline",
+      "input": "cynefin-beta\nclear\n \"A\nB\"\n",
+      "config": {},
+      "source": [
+        {
+          "path": "packages/parser/src/language/cynefin/cynefin.langium",
+          "symbol": "DomainItem/Transition",
+          "line": 18,
+          "sha256": "94276271b3dfe6dd78ced62249cd1d69bdd785e1498b90e678f101a23e1d26e0",
+          "repository": "mermaid",
+          "canonicalSha256": "e39c321b5a98b7160270c4275d4dfc309769478fca6e8f93fa67973431b66881",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob",
+          "currentFile": ".local/upstream-mermaid/packages/parser/src/language/cynefin/cynefin.langium",
+          "currentSha256": "94276271b3dfe6dd78ced62249cd1d69bdd785e1498b90e678f101a23e1d26e0",
+          "identityMatches": true
+        },
+        {
+          "path": "../../../../../node_modules/.pnpm/langium@4.4.0/node_modules/langium/src/parser/value-converter.ts",
+          "symbol": "convertString/convertEscapeCharacter",
+          "line": 60,
+          "sha256": "4f8b6454347b73fc775918037feb598808481e1cc026709e045dfe9f5817e191",
+          "repository": "mermaid-bundle-sourcesContent",
+          "hashMeaning": "exact UTF-8 sourcesContent",
+          "bundleMapPath": ".local/f011-oracle/node_modules/@mermaid-js/parser/dist/chunks/mermaid-parser.core/chunk-NGNAAXSQ.mjs.map",
+          "bundleMapSha256": "7ff2c3967be6db0b0603e2773b6afa80bf8157d144e530bd21fac6f9e61d424d",
+          "currentSha256": "4f8b6454347b73fc775918037feb598808481e1cc026709e045dfe9f5817e191",
+          "currentBundleMapSha256": "7ff2c3967be6db0b0603e2773b6afa80bf8157d144e530bd21fac6f9e61d424d",
+          "identityMatches": true
+        }
+      ],
+      "sourceExpected": "STRING converts one-character escapes in both quote styles; unknown escape drops backslash and does not interpret JSON Unicode.",
+      "literalExpected": [
+        {
+          "path": [
+            "domains",
+            0,
+            1,
+            0
+          ],
+          "equals": "A\nB"
+        }
+      ],
+      "fixedOriginal": {
+        "path": "test-runs/BRANCH-VERIFY-P3-batch-20261106T143957Z-5bcb3fcf/artifacts/oracle-A-getters/BV-A-cynefin-literal-newline.json",
+        "sha256": "64210cb5c9918caa9dc3570d124e645c39113bf797895401f51cdd30d72e5d3a",
+        "value": {
+          "id": "BV-A-cynefin-literal-newline",
+          "source": "cynefin-beta\nclear\n \"A\nB\"\n",
+          "config": {},
+          "status": "PARSED",
+          "kind": "cynefin",
+          "snapshot": {
+            "getDomains": {
+              "clear": {
+                "name": "clear",
+                "items": [
+                  {
+                    "label": "A\nB"
+                  }
+                ]
+              }
+            },
+            "getTransitions": [],
+            "getDiagramTitle": "",
+            "getAccTitle": "",
+            "getAccDescription": ""
+          }
+        }
+      },
+      "currentActual": {
+        "accepted": false,
+        "error": {
+          "code": "SYNTAX_ERROR",
+          "message": "Invalid quoted label",
+          "span": {
+            "start": {
+              "index": 20,
+              "utf16_offset": 20,
+              "line": 3,
+              "column": 1
+            },
+            "end": {
+              "index": 20,
+              "utf16_offset": 20,
+              "line": 3,
+              "column": 1
+            }
+          }
+        }
+      },
+      "evidence": [
+        {
+          "path": "test-runs/FINAL-CAPABILITY-A-facts-20261107T074002Z-3c051804/artifacts/current-values.json",
+          "sha256": "5a544f5d277ef39274a2bf07b818f4a5c349acf273320343c744b3991e37f19c",
+          "bytes": 32094
+        },
+        {
+          "path": "test-runs/FINAL-CAPABILITY-A-audit-20261107T073855Z-51cce6e4/commands/002-source-literal-A-current/stderr.log",
+          "sha256": "f97c3949b22041ba5e055a271eaa45c3e1f6e98e92e04027f0cbd811dddf14d6",
+          "bytes": 25532
+        }
+      ],
+      "classification": "CONFIRMED_GAP",
+      "reason": "Pinned Langium STRING single-character escape converter is not JSON. Current double-quote json.loads rejects valid unknown escapes/raw newlines and decodes Unicode escapes unlike source; single-quote branch fails to decode newline/tab.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/business/cynefin.py",
+          "sha256": "c55d6d4040be3af0c71b803027c97c1075c7d84265965b1509601f7ad8ab0181",
+          "bytes": 7962,
+          "symbol": "parse.string",
+          "line": 35
+        }
+      ]
+    },
+    {
+      "id": "cynefin-single-tab",
+      "caseId": "BV-A-cynefin-single-tab",
+      "input": "cynefin-beta\nclear\n 'A\\tB'\n",
+      "config": {},
+      "source": [
+        {
+          "path": "packages/parser/src/language/cynefin/cynefin.langium",
+          "symbol": "DomainItem/Transition",
+          "line": 18,
+          "sha256": "94276271b3dfe6dd78ced62249cd1d69bdd785e1498b90e678f101a23e1d26e0",
+          "repository": "mermaid",
+          "canonicalSha256": "e39c321b5a98b7160270c4275d4dfc309769478fca6e8f93fa67973431b66881",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob",
+          "currentFile": ".local/upstream-mermaid/packages/parser/src/language/cynefin/cynefin.langium",
+          "currentSha256": "94276271b3dfe6dd78ced62249cd1d69bdd785e1498b90e678f101a23e1d26e0",
+          "identityMatches": true
+        },
+        {
+          "path": "../../../../../node_modules/.pnpm/langium@4.4.0/node_modules/langium/src/parser/value-converter.ts",
+          "symbol": "convertString/convertEscapeCharacter",
+          "line": 60,
+          "sha256": "4f8b6454347b73fc775918037feb598808481e1cc026709e045dfe9f5817e191",
+          "repository": "mermaid-bundle-sourcesContent",
+          "hashMeaning": "exact UTF-8 sourcesContent",
+          "bundleMapPath": ".local/f011-oracle/node_modules/@mermaid-js/parser/dist/chunks/mermaid-parser.core/chunk-NGNAAXSQ.mjs.map",
+          "bundleMapSha256": "7ff2c3967be6db0b0603e2773b6afa80bf8157d144e530bd21fac6f9e61d424d",
+          "currentSha256": "4f8b6454347b73fc775918037feb598808481e1cc026709e045dfe9f5817e191",
+          "currentBundleMapSha256": "7ff2c3967be6db0b0603e2773b6afa80bf8157d144e530bd21fac6f9e61d424d",
+          "identityMatches": true
+        }
+      ],
+      "sourceExpected": "STRING converts one-character escapes in both quote styles; unknown escape drops backslash and does not interpret JSON Unicode.",
+      "literalExpected": [
+        {
+          "path": [
+            "domains",
+            0,
+            1,
+            0
+          ],
+          "equals": "A\tB"
+        }
+      ],
+      "fixedOriginal": {
+        "path": "test-runs/BRANCH-VERIFY-P3-batch-20261106T143957Z-5bcb3fcf/artifacts/oracle-A-getters/BV-A-cynefin-single-tab.json",
+        "sha256": "3120a946810c9b0a6ee52fb6b7a36199b1cf0e1f70c7caddbc0e1566a050badf",
+        "value": {
+          "id": "BV-A-cynefin-single-tab",
+          "source": "cynefin-beta\nclear\n 'A\\tB'\n",
+          "config": {},
+          "status": "PARSED",
+          "kind": "cynefin",
+          "snapshot": {
+            "getDomains": {
+              "clear": {
+                "name": "clear",
+                "items": [
+                  {
+                    "label": "A\tB"
+                  }
+                ]
+              }
+            },
+            "getTransitions": [],
+            "getDiagramTitle": "",
+            "getAccTitle": "",
+            "getAccDescription": ""
+          }
+        }
+      },
+      "currentActual": {
+        "accepted": true,
+        "assertions": [
+          {
+            "path": [
+              "domains",
+              0,
+              1,
+              0
+            ],
+            "expected": "A\tB",
+            "actual": "A\\tB",
+            "matches": false
+          }
+        ],
+        "actualModel": {
+          "domains": [
+            [
+              "clear",
+              [
+                "A\\tB"
+              ]
+            ]
+          ],
+          "transitions": [],
+          "title": "",
+          "accessibility": [
+            [
+              "title",
+              ""
+            ]
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "path": "test-runs/FINAL-CAPABILITY-A-facts-20261107T074002Z-3c051804/artifacts/current-values.json",
+          "sha256": "5a544f5d277ef39274a2bf07b818f4a5c349acf273320343c744b3991e37f19c",
+          "bytes": 32094
+        },
+        {
+          "path": "test-runs/FINAL-CAPABILITY-A-audit-20261107T073855Z-51cce6e4/commands/002-source-literal-A-current/stderr.log",
+          "sha256": "f97c3949b22041ba5e055a271eaa45c3e1f6e98e92e04027f0cbd811dddf14d6",
+          "bytes": 25532
+        }
+      ],
+      "classification": "CONFIRMED_GAP",
+      "reason": "Pinned Langium STRING single-character escape converter is not JSON. Current double-quote json.loads rejects valid unknown escapes/raw newlines and decodes Unicode escapes unlike source; single-quote branch fails to decode newline/tab.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/business/cynefin.py",
+          "sha256": "c55d6d4040be3af0c71b803027c97c1075c7d84265965b1509601f7ad8ab0181",
+          "bytes": 7962,
+          "symbol": "parse.string",
+          "line": 35
+        }
+      ]
+    },
+    {
+      "id": "cynefin-transition-escape",
+      "caseId": "BV-A-cynefin-transition-escape",
+      "input": "cynefin-beta\nclear --> complex : \"A\\qB\"\n",
+      "config": {},
+      "source": [
+        {
+          "path": "packages/parser/src/language/cynefin/cynefin.langium",
+          "symbol": "DomainItem/Transition",
+          "line": 18,
+          "sha256": "94276271b3dfe6dd78ced62249cd1d69bdd785e1498b90e678f101a23e1d26e0",
+          "repository": "mermaid",
+          "canonicalSha256": "e39c321b5a98b7160270c4275d4dfc309769478fca6e8f93fa67973431b66881",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob",
+          "currentFile": ".local/upstream-mermaid/packages/parser/src/language/cynefin/cynefin.langium",
+          "currentSha256": "94276271b3dfe6dd78ced62249cd1d69bdd785e1498b90e678f101a23e1d26e0",
+          "identityMatches": true
+        },
+        {
+          "path": "../../../../../node_modules/.pnpm/langium@4.4.0/node_modules/langium/src/parser/value-converter.ts",
+          "symbol": "convertString/convertEscapeCharacter",
+          "line": 60,
+          "sha256": "4f8b6454347b73fc775918037feb598808481e1cc026709e045dfe9f5817e191",
+          "repository": "mermaid-bundle-sourcesContent",
+          "hashMeaning": "exact UTF-8 sourcesContent",
+          "bundleMapPath": ".local/f011-oracle/node_modules/@mermaid-js/parser/dist/chunks/mermaid-parser.core/chunk-NGNAAXSQ.mjs.map",
+          "bundleMapSha256": "7ff2c3967be6db0b0603e2773b6afa80bf8157d144e530bd21fac6f9e61d424d",
+          "currentSha256": "4f8b6454347b73fc775918037feb598808481e1cc026709e045dfe9f5817e191",
+          "currentBundleMapSha256": "7ff2c3967be6db0b0603e2773b6afa80bf8157d144e530bd21fac6f9e61d424d",
+          "identityMatches": true
+        }
+      ],
+      "sourceExpected": "Transition label uses identical STRING converter.",
+      "literalExpected": [
+        {
+          "path": [
+            "transitions",
+            0,
+            2
+          ],
+          "equals": "AqB"
+        }
+      ],
+      "fixedOriginal": {
+        "path": "test-runs/BRANCH-VERIFY-P3-batch-20261106T143957Z-5bcb3fcf/artifacts/oracle-A-getters/BV-A-cynefin-transition-escape.json",
+        "sha256": "47449c3e1ba4fcafe3ef865839854cd153fdc187129a78a121c3d3a6dad7316c",
+        "value": {
+          "id": "BV-A-cynefin-transition-escape",
+          "source": "cynefin-beta\nclear --> complex : \"A\\qB\"\n",
+          "config": {},
+          "status": "PARSED",
+          "kind": "cynefin",
+          "snapshot": {
+            "getDomains": {},
+            "getTransitions": [
+              {
+                "from": "clear",
+                "to": "complex",
+                "label": "AqB"
+              }
+            ],
+            "getDiagramTitle": "",
+            "getAccTitle": "",
+            "getAccDescription": ""
+          }
+        }
+      },
+      "currentActual": {
+        "accepted": false,
+        "error": {
+          "code": "SYNTAX_ERROR",
+          "message": "Invalid quoted label",
+          "span": {
+            "start": {
+              "index": 33,
+              "utf16_offset": 33,
+              "line": 2,
+              "column": 20
+            },
+            "end": {
+              "index": 33,
+              "utf16_offset": 33,
+              "line": 2,
+              "column": 20
+            }
+          }
+        }
+      },
+      "evidence": [
+        {
+          "path": "test-runs/FINAL-CAPABILITY-A-facts-20261107T074002Z-3c051804/artifacts/current-values.json",
+          "sha256": "5a544f5d277ef39274a2bf07b818f4a5c349acf273320343c744b3991e37f19c",
+          "bytes": 32094
+        },
+        {
+          "path": "test-runs/FINAL-CAPABILITY-A-audit-20261107T073855Z-51cce6e4/commands/002-source-literal-A-current/stderr.log",
+          "sha256": "f97c3949b22041ba5e055a271eaa45c3e1f6e98e92e04027f0cbd811dddf14d6",
+          "bytes": 25532
+        }
+      ],
+      "classification": "CONFIRMED_GAP",
+      "reason": "Pinned Langium STRING single-character escape converter is not JSON. Current double-quote json.loads rejects valid unknown escapes/raw newlines and decodes Unicode escapes unlike source; single-quote branch fails to decode newline/tab.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/business/cynefin.py",
+          "sha256": "c55d6d4040be3af0c71b803027c97c1075c7d84265965b1509601f7ad8ab0181",
+          "bytes": 7962,
+          "symbol": "parse.string",
+          "line": 35
+        }
+      ]
+    },
+    {
+      "id": "architecture-accessibility",
+      "caseId": "BV-A-architecture-accessibility",
+      "input": "architecture-beta\naccTitle:  A   B %% hidden\naccDescr {\n One   two\n\n Three\n}\nservice api[API]",
+      "config": {},
+      "source": [
+        {
+          "path": "packages/parser/src/language/common/valueConverter.ts",
+          "symbol": "runCommonConverter",
+          "line": 44,
+          "sha256": "d93aa5dd1f7fed8aa903f55eb3e463c6b69b455af22004a6405a61c7560f58e5",
+          "repository": "mermaid",
+          "canonicalSha256": "43b58df0bba9087c8b831cd53a12e8f1f85bf4a7352b388873d793325953ab37",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob",
+          "currentFile": ".local/upstream-mermaid/packages/parser/src/language/common/valueConverter.ts",
+          "currentSha256": "d93aa5dd1f7fed8aa903f55eb3e463c6b69b455af22004a6405a61c7560f58e5",
+          "identityMatches": true
+        }
+      ],
+      "sourceExpected": "Canonical metadata stored independently of visible title.",
+      "literalExpected": [
+        {
+          "path": [
+            "acc_title"
+          ],
+          "equals": "A B"
+        },
+        {
+          "path": [
+            "acc_description"
+          ],
+          "equals": "One two\nThree"
+        }
+      ],
+      "fixedOriginal": {
+        "path": "test-runs/BRANCH-VERIFY-P3-batch-20261106T143957Z-5bcb3fcf/artifacts/oracle-A-getters/BV-A-architecture-accessibility.json",
+        "sha256": "42c4714559826fd3d5b3e5a0a789ae5c2643e2210294aca30795403922d30476",
+        "value": {
+          "id": "BV-A-architecture-accessibility",
+          "source": "architecture-beta\naccTitle:  A   B %% hidden\naccDescr {\n One   two\n\n Three\n}\nservice api[API]",
+          "config": {},
+          "status": "PARSED",
+          "kind": "architecture",
+          "snapshot": {
+            "getDataStructures": {
+              "adjList": {
+                "api": {}
+              },
+              "spatialMaps": [
+                {
+                  "api": [
+                    0,
+                    0
+                  ]
+                }
+              ],
+              "groupAlignments": {}
+            },
+            "getDiagramTitle": "",
+            "getAccTitle": "A B",
+            "getAccDescription": "One two\nThree"
+          }
+        }
+      },
+      "currentActual": {
+        "accepted": false,
+        "error": {
+          "code": "SYNTAX_ERROR",
+          "message": "Invalid architecture statement",
+          "span": {
+            "start": {
+              "index": 45,
+              "utf16_offset": 45,
+              "line": 3,
+              "column": 0
+            },
+            "end": {
+              "index": 45,
+              "utf16_offset": 45,
+              "line": 3,
+              "column": 0
+            }
+          }
+        }
+      },
+      "evidence": [
+        {
+          "path": "test-runs/FINAL-CAPABILITY-A-facts-20261107T074002Z-3c051804/artifacts/current-values.json",
+          "sha256": "5a544f5d277ef39274a2bf07b818f4a5c349acf273320343c744b3991e37f19c",
+          "bytes": 32094
+        },
+        {
+          "path": "test-runs/FINAL-CAPABILITY-A-audit-20261107T073855Z-51cce6e4/commands/002-source-literal-A-current/stderr.log",
+          "sha256": "f97c3949b22041ba5e055a271eaa45c3e1f6e98e92e04027f0cbd811dddf14d6",
+          "bytes": 25532
+        }
+      ],
+      "classification": "CONFIRMED_GAP",
+      "reason": "Common multiline ACC_DESCR is legal original syntax; row-oriented Python architecture tokenizer does not collect this brace block and rejects before any diagram can render.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/structures/architecture.py",
+          "sha256": "12ea3b28fb7b9dbcd04031ee31a7ba31e005765959fed844dea9f21ff5ba2dbd",
+          "bytes": 17860,
+          "symbol": "parse",
+          "line": 64
+        }
+      ]
+    },
+    {
+      "id": "C-abnf-priority",
+      "classification": "CONFIRMED_GAP",
+      "input": "railroad-abnf-beta\n; comment only\nword = \"a\";",
+      "source": [
+        {
+          "path": "packages/parser/src/language/railroad-abnf/railroad-abnf.langium",
+          "symbol": "ABNF_COMMENT/AbnfRule",
+          "line": 17,
+          "sha256": "d156141dab0c649a6a063c59a5d277aec56eda295f955d5c65c28cffe077ad84",
+          "currentFile": ".local/upstream-mermaid/packages/parser/src/language/railroad-abnf/railroad-abnf.langium",
+          "currentSha256": "d156141dab0c649a6a063c59a5d277aec56eda295f955d5c65c28cffe077ad84",
+          "identityMatches": true
+        },
+        {
+          "path": "packages/parser/src/language/common/tokenBuilder.ts",
+          "symbol": "AbstractMermaidTokenBuilder.buildKeywordTokens",
+          "line": 17,
+          "sha256": "e20bdad7aa651779e986cb69dd389670453224dc83fdcae872cff756f0733c82",
+          "currentFile": ".local/upstream-mermaid/packages/parser/src/language/common/tokenBuilder.ts",
+          "currentSha256": "e20bdad7aa651779e986cb69dd389670453224dc83fdcae872cff756f0733c82",
+          "identityMatches": true
+        },
+        {
+          "path": "packages/mermaid/src/diagrams/railroad/parser/abnfParser.ts",
+          "symbol": "langiumParser/result.lexerErrors/result.parserErrors",
+          "line": 23,
+          "sha256": "f6d7c15a91c27c3da8cca009098600f2242c4d0537795fe264411db3d0d1f25b",
+          "currentFile": ".local/upstream-mermaid/packages/mermaid/src/diagrams/railroad/parser/abnfParser.ts",
+          "currentSha256": "f6d7c15a91c27c3da8cca009098600f2242c4d0537795fe264411db3d0d1f25b",
+          "identityMatches": true
+        }
+      ],
+      "sourceExpected": {
+        "accepted": true,
+        "rules": [
+          "word"
+        ]
+      },
+      "sourceActual": {
+        "id": "comment-line",
+        "source": "railroad-abnf-beta\n; comment only\nword = \"a\";",
+        "accepted": true,
+        "rules": [
+          "word"
+        ],
+        "errors": []
+      },
+      "currentActual": {
+        "accepted": false,
+        "reason": "Existing source-priority test actually rerun: False != True on comment-line only."
+      },
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/railroad/parser.py",
+          "sha256": "e523ecdd94b19508be0f06d956b10f4d1330a7a4faabb00caff3839f8f5238a0",
+          "bytes": 9226,
+          "symbol": "Grammar.scan",
+          "line": 28
+        }
+      ],
+      "reason": "Source hidden ABNF_COMMENT and rule semicolon keyword priority accept a comment-only line; Python emits leading semicolon as grammar token and expects a rule identifier. Fresh fixed original five-input probe confirms this, not source grammar intuition.",
+      "evidence": [
+        {
+          "path": "test-runs/FINAL-CAPABILITY-A-audit-20261107T073855Z-51cce6e4/artifacts/source-abnf/abnf.json",
+          "sha256": "bc64b0ad4c225c06839dcd5984ddcb8dfe26d5a63fd37a3e29950ce136a6331d",
+          "bytes": 1415
+        },
+        {
+          "path": "test-runs/FINAL-CAPABILITY-A-audit-20261107T073855Z-51cce6e4/commands/003-abnf-and-zen-source-assertions/stderr.log",
+          "sha256": "4be7324e99a0923ffedd6db703db1c40c16474efdd828dda47e53f0d2f138b00",
+          "bytes": 2647
+        }
+      ]
+    },
+    {
+      "id": "C-zen-comment-escape",
+      "caseId": "BV-C-zen-comment-escape",
+      "classification": "CONFIRMED_GAP",
+      "input": "zenuml\nA B\n// \\*literal\\*\nA->B.call()",
+      "source": [
+        {
+          "path": "src/svg/components/comment.ts",
+          "symbol": "markdownToSvgLines/collectLines/walkToken/renderComment",
+          "line": 11,
+          "sha256": "de16149e5f49bce9c09e0093836425e28b3810df1e53c607db8aaf968ef5efc1",
+          "repository": "zenuml-core",
+          "currentFile": ".local/bulk-sources/zenuml/source/src/svg/components/comment.ts",
+          "currentSha256": "de16149e5f49bce9c09e0093836425e28b3810df1e53c607db8aaf968ef5efc1",
+          "identityMatches": true
+        },
+        {
+          "path": "src/svg/buildStatementGeometry.ts",
+          "symbol": "msgCommentHeight",
+          "line": 143,
+          "sha256": "30afc8cf61570f959140dd6508e044b7d115ef3920030846909af64de9717524",
+          "repository": "zenuml-core",
+          "currentFile": ".local/bulk-sources/zenuml/source/src/svg/buildStatementGeometry.ts",
+          "currentSha256": "30afc8cf61570f959140dd6508e044b7d115ef3920030846909af64de9717524",
+          "identityMatches": true
+        }
+      ],
+      "sourceExpected": {
+        "visible": "\\*literal\\*",
+        "bold": false,
+        "italic": false
+      },
+      "currentActual": {
+        "visible": "\\literal\\",
+        "reason": "Existing source token projection test failed at visible text before its italic assertion.",
+        "stylePredicate": "Not reached in current unittest because visible text assertion fails first; emphasis interpretation independently apparent in current inline source, not claimed as fresh style measurement."
+      },
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/zenuml/layout.py",
+          "sha256": "824799bc0a898b266d8d00e5d67b97521731dfede3cc07183a98205fd6b6ff7b",
+          "bytes": 28283,
+          "symbol": "_comment_markup.inline",
+          "line": 50
+        }
+      ],
+      "reason": "Pinned collectLines default branch retains Marked escape token.raw, including authored backslash/star. Python inline delimiter scanner interprets escaped star as emphasis and removes stars. This is static visible comment text, not excluded interaction.",
+      "evidence": [
+        {
+          "path": "test-runs/FINAL-CAPABILITY-A-audit-20261107T073855Z-51cce6e4/commands/003-abnf-and-zen-source-assertions/stderr.log",
+          "sha256": "4be7324e99a0923ffedd6db703db1c40c16474efdd828dda47e53f0d2f138b00",
+          "bytes": 2647
+        },
+        {
+          "path": "test-runs/BRANCH-VERIFY-P3-batch-20261106T143957Z-5bcb3fcf/artifacts/oracle/BV-C-zen-comment-escape.svg",
+          "sha256": "6b965f59e5398e2b31c1b6f16ded1c971b3f3f3bf4f2158eb533543873b342e9",
+          "bytes": 4402
+        }
+      ]
+    }
+  ],
+  "semanticDifferences": [
+    {
+      "id": "tree-title",
+      "caseId": "BV-A-tree-title",
+      "input": "treeView-beta\ntitle   A\t  B %% hidden\nroot/",
+      "config": {},
+      "source": [
+        {
+          "path": "packages/parser/src/language/treeView/valueConverter.ts",
+          "symbol": "runCustomConverter",
+          "line": 5,
+          "sha256": "83c0745f0363edb64dcb150e460a8d60c3a4019022caac24eaa2ae63d950051b",
+          "repository": "mermaid",
+          "canonicalSha256": "fddddb34d256698a6c2b25bbff416c5dc949ddc9eac8f935a9a80ad02123d0cf",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob",
+          "currentFile": ".local/upstream-mermaid/packages/parser/src/language/treeView/valueConverter.ts",
+          "currentSha256": "83c0745f0363edb64dcb150e460a8d60c3a4019022caac24eaa2ae63d950051b",
+          "identityMatches": true
+        },
+        {
+          "path": "packages/parser/src/language/common/valueConverter.ts",
+          "symbol": "runCommonConverter",
+          "line": 44,
+          "sha256": "d93aa5dd1f7fed8aa903f55eb3e463c6b69b455af22004a6405a61c7560f58e5",
+          "repository": "mermaid",
+          "canonicalSha256": "43b58df0bba9087c8b831cd53a12e8f1f85bf4a7352b388873d793325953ab37",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob",
+          "currentFile": ".local/upstream-mermaid/packages/parser/src/language/common/valueConverter.ts",
+          "currentSha256": "d93aa5dd1f7fed8aa903f55eb3e463c6b69b455af22004a6405a61c7560f58e5",
+          "identityMatches": true
+        }
+      ],
+      "sourceExpected": "Common TITLE stops at comment and trims/collapses whitespace to A B.",
+      "literalExpected": [
+        {
+          "path": [
+            "title"
+          ],
+          "equals": "A B"
+        }
+      ],
+      "fixedOriginal": {
+        "path": "test-runs/BRANCH-VERIFY-P3-batch-20261106T143957Z-5bcb3fcf/artifacts/oracle-A-getters/BV-A-tree-title.json",
+        "sha256": "690cb9c9abdd67007ff41cbf4de8b8e396b68a7d3c1bb1688aea499df979339b",
+        "value": {
+          "id": "BV-A-tree-title",
+          "source": "treeView-beta\ntitle   A\t  B %% hidden\nroot/",
+          "config": {},
+          "status": "PARSED",
+          "kind": "treeView",
+          "snapshot": {
+            "getRoot": {
+              "id": 0,
+              "level": -1,
+              "name": "/",
+              "nodeType": "directory",
+              "children": [
+                {
+                  "id": 1,
+                  "level": 0,
+                  "name": "root",
+                  "nodeType": "directory",
+                  "children": []
+                }
+              ]
+            },
+            "getDiagramTitle": "A B",
+            "getAccTitle": "",
+            "getAccDescription": ""
+          }
+        }
+      },
+      "currentActual": {
+        "accepted": true,
+        "assertions": [
+          {
+            "path": [
+              "title"
+            ],
+            "expected": "A B",
+            "actual": "A\t  B",
+            "matches": false
+          }
+        ],
+        "actualModel": {
+          "nodes": [
+            {
+              "id": 0,
+              "name": "/",
+              "level": -1,
+              "parent": null,
+              "directory": true,
+              "css_class": "",
+              "icon": null,
+              "description": ""
+            },
+            {
+              "id": 1,
+              "name": "root",
+              "level": 0,
+              "parent": 0,
+              "directory": true,
+              "css_class": "",
+              "icon": null,
+              "description": ""
+            }
+          ],
+          "title": "A\t  B",
+          "acc_title": "",
+          "acc_description": ""
+        }
+      },
+      "evidence": [
+        {
+          "path": "test-runs/FINAL-CAPABILITY-A-facts-20261107T074002Z-3c051804/artifacts/current-values.json",
+          "sha256": "5a544f5d277ef39274a2bf07b818f4a5c349acf273320343c744b3991e37f19c",
+          "bytes": 32094
+        },
+        {
+          "path": "test-runs/FINAL-CAPABILITY-A-audit-20261107T073855Z-51cce6e4/commands/002-source-literal-A-current/stderr.log",
+          "sha256": "f97c3949b22041ba5e055a271eaa45c3e1f6e98e92e04027f0cbd811dddf14d6",
+          "bytes": 25532
+        }
+      ],
+      "classification": "CONFIRMED_SEMANTIC_DIFFERENCE",
+      "reason": "Original common converter trims/collapses horizontal whitespace and strips comment delimiters; multiline description also trims each line and repeated line breaks. Current model preserves extra whitespace/comment content. Kept separate from nine input/visible comment gaps.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/hierarchy/tree_view.py",
+          "sha256": "a1a9a3404f758be010d4c17a437a54d9a2229407c73c468c1ffa6a44dde9d27c",
+          "bytes": 10892,
+          "symbol": "parse",
+          "line": 60
+        }
+      ]
+    },
+    {
+      "id": "architecture-title",
+      "caseId": "BV-A-architecture-title",
+      "input": "architecture-beta\ntitle   A\t  B %% hidden\nservice api[API]",
+      "config": {},
+      "source": [
+        {
+          "path": "packages/parser/src/language/architecture/architecture.langium",
+          "symbol": "Architecture",
+          "line": 5,
+          "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+          "repository": "mermaid",
+          "canonicalSha256": "08b6acbfa6f48b3dc6b590e3a5339a3fe554c394a0307d6cbfebb75c175b5147",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob",
+          "currentFile": ".local/upstream-mermaid/packages/parser/src/language/architecture/architecture.langium",
+          "currentSha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+          "identityMatches": true
+        },
+        {
+          "path": "packages/parser/src/language/common/valueConverter.ts",
+          "symbol": "runCommonConverter",
+          "line": 44,
+          "sha256": "d93aa5dd1f7fed8aa903f55eb3e463c6b69b455af22004a6405a61c7560f58e5",
+          "repository": "mermaid",
+          "canonicalSha256": "43b58df0bba9087c8b831cd53a12e8f1f85bf4a7352b388873d793325953ab37",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob",
+          "currentFile": ".local/upstream-mermaid/packages/parser/src/language/common/valueConverter.ts",
+          "currentSha256": "d93aa5dd1f7fed8aa903f55eb3e463c6b69b455af22004a6405a61c7560f58e5",
+          "identityMatches": true
+        }
+      ],
+      "sourceExpected": "Common TITLE stops at comment and trims/collapses whitespace to A B.",
+      "literalExpected": [
+        {
+          "path": [
+            "title"
+          ],
+          "equals": "A B"
+        }
+      ],
+      "fixedOriginal": {
+        "path": "test-runs/BRANCH-VERIFY-P3-batch-20261106T143957Z-5bcb3fcf/artifacts/oracle-A-getters/BV-A-architecture-title.json",
+        "sha256": "d9f38a1e434b11cfe3191f7c12fb698f1d8ccfe3ae42ac1fd05797cd36c042a6",
+        "value": {
+          "id": "BV-A-architecture-title",
+          "source": "architecture-beta\ntitle   A\t  B %% hidden\nservice api[API]",
+          "config": {},
+          "status": "PARSED",
+          "kind": "architecture",
+          "snapshot": {
+            "getDataStructures": {
+              "adjList": {
+                "api": {}
+              },
+              "spatialMaps": [
+                {
+                  "api": [
+                    0,
+                    0
+                  ]
+                }
+              ],
+              "groupAlignments": {}
+            },
+            "getDiagramTitle": "A B",
+            "getAccTitle": "",
+            "getAccDescription": ""
+          }
+        }
+      },
+      "currentActual": {
+        "accepted": true,
+        "assertions": [
+          {
+            "path": [
+              "title"
+            ],
+            "expected": "A B",
+            "actual": "A\t  B %% hidden",
+            "matches": false
+          }
+        ],
+        "actualModel": {
+          "nodes": [
+            {
+              "id": "api",
+              "kind": "service",
+              "parent": null,
+              "icon": null,
+              "label": "API",
+              "icon_text": null
+            }
+          ],
+          "groups": [],
+          "edges": [],
+          "alignments": [],
+          "title": "A\t  B %% hidden",
+          "acc_title": "",
+          "acc_description": ""
+        }
+      },
+      "evidence": [
+        {
+          "path": "test-runs/FINAL-CAPABILITY-A-facts-20261107T074002Z-3c051804/artifacts/current-values.json",
+          "sha256": "5a544f5d277ef39274a2bf07b818f4a5c349acf273320343c744b3991e37f19c",
+          "bytes": 32094
+        },
+        {
+          "path": "test-runs/FINAL-CAPABILITY-A-audit-20261107T073855Z-51cce6e4/commands/002-source-literal-A-current/stderr.log",
+          "sha256": "f97c3949b22041ba5e055a271eaa45c3e1f6e98e92e04027f0cbd811dddf14d6",
+          "bytes": 25532
+        }
+      ],
+      "classification": "CONFIRMED_SEMANTIC_DIFFERENCE",
+      "reason": "Original common converter trims/collapses horizontal whitespace and strips comment delimiters; multiline description also trims each line and repeated line breaks. Current model preserves extra whitespace/comment content. Kept separate from nine input/visible comment gaps.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/structures/architecture.py",
+          "sha256": "12ea3b28fb7b9dbcd04031ee31a7ba31e005765959fed844dea9f21ff5ba2dbd",
+          "bytes": 17860,
+          "symbol": "parse",
+          "line": 62
+        }
+      ]
+    },
+    {
+      "id": "cynefin-title",
+      "caseId": "BV-A-cynefin-title",
+      "input": "cynefin-beta\ntitle   A\t  B %% hidden\nclear\n \"Item\"",
+      "config": {},
+      "source": [
+        {
+          "path": "packages/parser/src/language/common/valueConverter.ts",
+          "symbol": "runCommonConverter",
+          "line": 44,
+          "sha256": "d93aa5dd1f7fed8aa903f55eb3e463c6b69b455af22004a6405a61c7560f58e5",
+          "repository": "mermaid",
+          "canonicalSha256": "43b58df0bba9087c8b831cd53a12e8f1f85bf4a7352b388873d793325953ab37",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob",
+          "currentFile": ".local/upstream-mermaid/packages/parser/src/language/common/valueConverter.ts",
+          "currentSha256": "d93aa5dd1f7fed8aa903f55eb3e463c6b69b455af22004a6405a61c7560f58e5",
+          "identityMatches": true
+        },
+        {
+          "path": "packages/parser/src/language/common/valueConverter.ts",
+          "symbol": "runCommonConverter",
+          "line": 44,
+          "sha256": "d93aa5dd1f7fed8aa903f55eb3e463c6b69b455af22004a6405a61c7560f58e5",
+          "repository": "mermaid",
+          "canonicalSha256": "43b58df0bba9087c8b831cd53a12e8f1f85bf4a7352b388873d793325953ab37",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob",
+          "currentFile": ".local/upstream-mermaid/packages/parser/src/language/common/valueConverter.ts",
+          "currentSha256": "d93aa5dd1f7fed8aa903f55eb3e463c6b69b455af22004a6405a61c7560f58e5",
+          "identityMatches": true
+        }
+      ],
+      "sourceExpected": "Common TITLE stops at comment and trims/collapses whitespace to A B.",
+      "literalExpected": [
+        {
+          "path": [
+            "title"
+          ],
+          "equals": "A B"
+        }
+      ],
+      "fixedOriginal": {
+        "path": "test-runs/BRANCH-VERIFY-P3-batch-20261106T143957Z-5bcb3fcf/artifacts/oracle-A-getters/BV-A-cynefin-title.json",
+        "sha256": "717fcceae2dd4d767d29c94efbe1208b57648c77aa4b37a576bb098fe9687766",
+        "value": {
+          "id": "BV-A-cynefin-title",
+          "source": "cynefin-beta\ntitle   A\t  B %% hidden\nclear\n \"Item\"",
+          "config": {},
+          "status": "PARSED",
+          "kind": "cynefin",
+          "snapshot": {
+            "getDomains": {
+              "clear": {
+                "name": "clear",
+                "items": [
+                  {
+                    "label": "Item"
+                  }
+                ]
+              }
+            },
+            "getTransitions": [],
+            "getDiagramTitle": "A B",
+            "getAccTitle": "",
+            "getAccDescription": ""
+          }
+        }
+      },
+      "currentActual": {
+        "accepted": true,
+        "assertions": [
+          {
+            "path": [
+              "title"
+            ],
+            "expected": "A B",
+            "actual": "A\t  B %% hidden",
+            "matches": false
+          }
+        ],
+        "actualModel": {
+          "domains": [
+            [
+              "clear",
+              [
+                "Item"
+              ]
+            ]
+          ],
+          "transitions": [],
+          "title": "A\t  B %% hidden",
+          "accessibility": [
+            [
+              "title",
+              "A\t  B %% hidden"
+            ]
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "path": "test-runs/FINAL-CAPABILITY-A-facts-20261107T074002Z-3c051804/artifacts/current-values.json",
+          "sha256": "5a544f5d277ef39274a2bf07b818f4a5c349acf273320343c744b3991e37f19c",
+          "bytes": 32094
+        },
+        {
+          "path": "test-runs/FINAL-CAPABILITY-A-audit-20261107T073855Z-51cce6e4/commands/002-source-literal-A-current/stderr.log",
+          "sha256": "f97c3949b22041ba5e055a271eaa45c3e1f6e98e92e04027f0cbd811dddf14d6",
+          "bytes": 25532
+        }
+      ],
+      "classification": "CONFIRMED_SEMANTIC_DIFFERENCE",
+      "reason": "Original common converter trims/collapses horizontal whitespace and strips comment delimiters; multiline description also trims each line and repeated line breaks. Current model preserves extra whitespace/comment content. Kept separate from nine input/visible comment gaps.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/business/cynefin.py",
+          "sha256": "c55d6d4040be3af0c71b803027c97c1075c7d84265965b1509601f7ad8ab0181",
+          "bytes": 7962,
+          "symbol": "parse",
+          "line": 20
+        }
+      ]
+    },
+    {
+      "id": "tree-multiline-accessibility",
+      "caseId": "BV-A-tree-multiline-accessibility",
+      "input": "treeView-beta\naccDescr {\n  One   two\n\n   Three\n}\nroot/",
+      "config": {},
+      "source": [
+        {
+          "path": "packages/parser/src/language/common/valueConverter.ts",
+          "symbol": "runCommonConverter",
+          "line": 44,
+          "sha256": "d93aa5dd1f7fed8aa903f55eb3e463c6b69b455af22004a6405a61c7560f58e5",
+          "repository": "mermaid",
+          "canonicalSha256": "43b58df0bba9087c8b831cd53a12e8f1f85bf4a7352b388873d793325953ab37",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob",
+          "currentFile": ".local/upstream-mermaid/packages/parser/src/language/common/valueConverter.ts",
+          "currentSha256": "d93aa5dd1f7fed8aa903f55eb3e463c6b69b455af22004a6405a61c7560f58e5",
+          "identityMatches": true
+        }
+      ],
+      "sourceExpected": "Multiline converter trims each line, collapses horizontal whitespace and repeated newlines.",
+      "literalExpected": [
+        {
+          "path": [
+            "acc_description"
+          ],
+          "equals": "One two\nThree"
+        }
+      ],
+      "fixedOriginal": {
+        "path": "test-runs/BRANCH-VERIFY-P3-batch-20261106T143957Z-5bcb3fcf/artifacts/oracle-A-getters/BV-A-tree-multiline-accessibility.json",
+        "sha256": "35b5041831ad01e91a9c220df9c46050405a7a552801c0b68b07ad1543947bbf",
+        "value": {
+          "id": "BV-A-tree-multiline-accessibility",
+          "source": "treeView-beta\naccDescr {\n  One   two\n\n   Three\n}\nroot/",
+          "config": {},
+          "status": "PARSED",
+          "kind": "treeView",
+          "snapshot": {
+            "getRoot": {
+              "id": 0,
+              "level": -1,
+              "name": "/",
+              "nodeType": "directory",
+              "children": [
+                {
+                  "id": 1,
+                  "level": 0,
+                  "name": "root",
+                  "nodeType": "directory",
+                  "children": []
+                }
+              ]
+            },
+            "getDiagramTitle": "",
+            "getAccTitle": "",
+            "getAccDescription": "One two\nThree"
+          }
+        }
+      },
+      "currentActual": {
+        "accepted": true,
+        "assertions": [
+          {
+            "path": [
+              "acc_description"
+            ],
+            "expected": "One two\nThree",
+            "actual": "One   two\n\n   Three",
+            "matches": false
+          }
+        ],
+        "actualModel": {
+          "nodes": [
+            {
+              "id": 0,
+              "name": "/",
+              "level": -1,
+              "parent": null,
+              "directory": true,
+              "css_class": "",
+              "icon": null,
+              "description": ""
+            },
+            {
+              "id": 1,
+              "name": "root",
+              "level": 0,
+              "parent": 0,
+              "directory": true,
+              "css_class": "",
+              "icon": null,
+              "description": ""
+            }
+          ],
+          "title": "",
+          "acc_title": "",
+          "acc_description": "One   two\n\n   Three"
+        }
+      },
+      "evidence": [
+        {
+          "path": "test-runs/FINAL-CAPABILITY-A-facts-20261107T074002Z-3c051804/artifacts/current-values.json",
+          "sha256": "5a544f5d277ef39274a2bf07b818f4a5c349acf273320343c744b3991e37f19c",
+          "bytes": 32094
+        },
+        {
+          "path": "test-runs/FINAL-CAPABILITY-A-audit-20261107T073855Z-51cce6e4/commands/002-source-literal-A-current/stderr.log",
+          "sha256": "f97c3949b22041ba5e055a271eaa45c3e1f6e98e92e04027f0cbd811dddf14d6",
+          "bytes": 25532
+        }
+      ],
+      "classification": "CONFIRMED_SEMANTIC_DIFFERENCE",
+      "reason": "Original common converter trims/collapses horizontal whitespace and strips comment delimiters; multiline description also trims each line and repeated line breaks. Current model preserves extra whitespace/comment content. Kept separate from nine input/visible comment gaps.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/hierarchy/tree_view.py",
+          "sha256": "a1a9a3404f758be010d4c17a437a54d9a2229407c73c468c1ffa6a44dde9d27c",
+          "bytes": 10892,
+          "symbol": "parse",
+          "line": 60
+        }
+      ]
+    }
+  ],
+  "additionalCompatibility": [
+    {
+      "id": "event-title-input-acceptance",
+      "classification": "CONFIRMED_NATIVE_OVERACCEPTANCE_WITH_SEPARATE_INVALID_TEST_EXPECTATION",
+      "cases": [
+        {
+          "id": "BV-A-event-title-terminal",
+          "source": "eventmodeling\ntitle   A   B %% hidden\ntf 1 ui Page\n",
+          "config": {},
+          "expected": {
+            "description": "EM_TITLE is not in CommonValueConverter rulesRegexes; default terminal conversion leaves token unnormalized. P3 captures exact source title.",
+            "nativeChecks": [
+              {
+                "path": [
+                  "title"
+                ],
+                "equals": "title   A   B "
+              }
+            ],
+            "sourceChecks": [
+              {
+                "path": [
+                  "getDiagramTitle"
+                ],
+                "equals": "title   A   B "
+              }
+            ]
+          },
+          "accepted": true,
+          "actualModel": {
+            "frames": [
+              {
+                "id": "1",
+                "type": "ui",
+                "entity": "Page",
+                "reset": false,
+                "sources": [],
+                "data_reference": "",
+                "data_inline": "",
+                "offset": 38
+              }
+            ],
+            "data": [],
+            "entities": [],
+            "notes": [],
+            "assertions": [],
+            "title": "A   B %% hidden",
+            "accessibility": [
+              [
+                "title",
+                "A   B %% hidden"
+              ]
+            ]
+          },
+          "assertions": [
+            {
+              "path": [
+                "title"
+              ],
+              "expected": "title   A   B ",
+              "actual": "A   B %% hidden",
+              "matches": false
+            }
+          ],
+          "fixedOriginal": {
+            "path": "test-runs/BRANCH-VERIFY-P3-batch-20261106T143957Z-5bcb3fcf/artifacts/oracle-A-getters/BV-A-event-title-terminal.json",
+            "sha256": "6a5eaee4c2c6078db13eaf131de069e9495677f92802256737cfd6ec8ab621da",
+            "value": {
+              "id": "BV-A-event-title-terminal",
+              "source": "eventmodeling\ntitle   A   B %% hidden\ntf 1 ui Page\n",
+              "config": {},
+              "status": "SOURCE_PARSE_ERROR",
+              "error": "Error: Parsing failed:  Parse error on line 2, column 1: Expecting token of type 'EOF' but found `title`.",
+              "location": null
+            }
+          }
+        },
+        {
+          "id": "BV-A-event-title-leading-space",
+          "source": "eventmodeling\n title   A   B %% hidden\ntf 1 ui Page\n",
+          "config": {},
+          "expected": {
+            "description": "EM_ID occurs before EM_TITLE and wins at column1. Leading whitespace prevents EM_ID from matching, while EM_TITLE occurs before EM_WS and can match the entire token; CommonValueConverter does not handle EM_TITLE and DefaultValueConverter returns it unchanged. Source expectation is deliberately unexecuted pending original capture.",
+            "nativeChecks": [
+              {
+                "path": [
+                  "title"
+                ],
+                "equals": " title   A   B "
+              }
+            ],
+            "sourceChecks": [
+              {
+                "path": [
+                  "getDiagramTitle"
+                ],
+                "equals": " title   A   B "
+              }
+            ]
+          },
+          "accepted": true,
+          "actualModel": {
+            "frames": [
+              {
+                "id": "1",
+                "type": "ui",
+                "entity": "Page",
+                "reset": false,
+                "sources": [],
+                "data_reference": "",
+                "data_inline": "",
+                "offset": 39
+              }
+            ],
+            "data": [],
+            "entities": [],
+            "notes": [],
+            "assertions": [],
+            "title": "A   B %% hidden",
+            "accessibility": [
+              [
+                "title",
+                "A   B %% hidden"
+              ]
+            ]
+          },
+          "assertions": [
+            {
+              "path": [
+                "title"
+              ],
+              "expected": " title   A   B ",
+              "actual": "A   B %% hidden",
+              "matches": false
+            }
+          ],
+          "fixedOriginal": {
+            "path": "test-runs/BRANCH-VERIFY-P3-FOLLOWUP-batch-20261106T145346Z-9a049125/artifacts/oracle-A-getters/BV-A-event-title-leading-space.json",
+            "sha256": "bf2c190cdec83a0707c018186e0e1dbd0f25bb3e922b10076b6074b7287ab745",
+            "value": {
+              "id": "BV-A-event-title-leading-space",
+              "source": "eventmodeling\n title   A   B %% hidden\ntf 1 ui Page\n",
+              "config": {},
+              "status": "SOURCE_PARSE_ERROR",
+              "error": "Error: Parsing failed:  Parse error on line 2, column 2: Expecting token of type 'EOF' but found `title`.",
+              "location": null
+            }
+          }
+        },
+        {
+          "id": "BV-A-event-title-leading-tab",
+          "source": "eventmodeling\n\ttitle   A   B %% hidden\ntf 1 ui Page\n",
+          "config": {},
+          "expected": {
+            "description": "EM_ID occurs before EM_TITLE and wins at column1. Leading whitespace prevents EM_ID from matching, while EM_TITLE occurs before EM_WS and can match the entire token; CommonValueConverter does not handle EM_TITLE and DefaultValueConverter returns it unchanged. Source expectation is deliberately unexecuted pending original capture.",
+            "nativeChecks": [
+              {
+                "path": [
+                  "title"
+                ],
+                "equals": "\ttitle   A   B "
+              }
+            ],
+            "sourceChecks": [
+              {
+                "path": [
+                  "getDiagramTitle"
+                ],
+                "equals": "\ttitle   A   B "
+              }
+            ]
+          },
+          "accepted": true,
+          "actualModel": {
+            "frames": [
+              {
+                "id": "1",
+                "type": "ui",
+                "entity": "Page",
+                "reset": false,
+                "sources": [],
+                "data_reference": "",
+                "data_inline": "",
+                "offset": 39
+              }
+            ],
+            "data": [],
+            "entities": [],
+            "notes": [],
+            "assertions": [],
+            "title": "A   B %% hidden",
+            "accessibility": [
+              [
+                "title",
+                "A   B %% hidden"
+              ]
+            ]
+          },
+          "assertions": [
+            {
+              "path": [
+                "title"
+              ],
+              "expected": "\ttitle   A   B ",
+              "actual": "A   B %% hidden",
+              "matches": false
+            }
+          ],
+          "fixedOriginal": {
+            "path": "test-runs/BRANCH-VERIFY-P3-FOLLOWUP-batch-20261106T145346Z-9a049125/artifacts/oracle-A-getters/BV-A-event-title-leading-tab.json",
+            "sha256": "f637a712c499f3b2f2ac148528a160c59ad44cf5feffc377d5d6c6956bf3981b",
+            "value": {
+              "id": "BV-A-event-title-leading-tab",
+              "source": "eventmodeling\n\ttitle   A   B %% hidden\ntf 1 ui Page\n",
+              "config": {},
+              "status": "SOURCE_PARSE_ERROR",
+              "error": "Error: Parsing failed:  Parse error on line 2, column 2: Expecting token of type 'EOF' but found `title`.",
+              "location": null
+            }
+          }
+        }
+      ],
+      "reason": "All three tested title inputs are fixed-source parse-invalid yet current native accepts them. Old expected raw EM_TITLE positive value is not reached by original: terminal EM_ID shadows title; hidden EM_WS consumes preceding whitespace. Do not count its failing value assertion as a valid title-output feature gap. Acceptance/rejection divergence remains real.",
+      "sourceAnalysis": [
+        "The entry permits title=EM_TITLE (line11); EM_TITLE is declared at line62, but a declaration is not evidence that these inputs produce that token.",
+        "EM_ID regex at line54 matches the leading word title. DefaultTokenBuilder lines56-59 appends terminal tokens in defined order; buildTerminalTokens lines76-78 retains that order. EM_ID precedes EM_TITLE.",
+        "Hidden EM_WS at line64 is /\\s+/: from the newline immediately after eventmodeling it greedily consumes the newline plus following space/tab indentation in these two probes. At the next token boundary the lexer sees title, not its former leading whitespace. Thus the attempted whitespace workaround does not reach EM_TITLE.",
+        "The observed exact parser failures are line2,column1 for unindented title and line2,column2 for space/tab variants, all expecting EOF and finding title. The attempted terminal converter was never reached.",
+        "CommonValueConverter rulesRegexes only recognizes TITLE/ACC_TITLE/ACC_DESCR, not prefixed EM_TITLE. DefaultValueConverter would return an unrecognized string terminal unchanged IF it were actually recognized; that conditional source fact does not make these three tested inputs legal."
+      ],
+      "source": [
+        {
+          "path": "packages/parser/src/language/eventmodeling/event-modeling.langium",
+          "repository": "mermaid",
+          "sha256": "be3da489f5114237acbd7ec50494e8bb48f8e6753b6e2f7f2137dae170000611",
+          "symbol": "EmModel entry, EM_ID, EM_TITLE, EM_WS",
+          "line": 54
+        },
+        {
+          "repository": "mermaid-bundle-sourcesContent",
+          "path": "../../../../../node_modules/.pnpm/langium@4.4.0/node_modules/langium/src/parser/token-builder.ts",
+          "sha256": "eb0096cb8f4174152d847c52774812a32af2eccd4d4726f4367a315134658692",
+          "bundleMapPath": ".local/f011-oracle/node_modules/@mermaid-js/parser/dist/chunks/mermaid-parser.core/chunk-NGNAAXSQ.mjs.map",
+          "bundleMapSha256": "7ff2c3967be6db0b0603e2773b6afa80bf8157d144e530bd21fac6f9e61d424d",
+          "symbol": "DefaultTokenBuilder.buildTokens/buildTerminalTokens",
+          "line": 51
+        },
+        {
+          "repository": "mermaid-bundle-sourcesContent",
+          "path": "../../../../../node_modules/.pnpm/langium@4.4.0/node_modules/langium/src/parser/value-converter.ts",
+          "sha256": "4f8b6454347b73fc775918037feb598808481e1cc026709e045dfe9f5817e191",
+          "bundleMapPath": ".local/f011-oracle/node_modules/@mermaid-js/parser/dist/chunks/mermaid-parser.core/chunk-NGNAAXSQ.mjs.map",
+          "bundleMapSha256": "7ff2c3967be6db0b0603e2773b6afa80bf8157d144e530bd21fac6f9e61d424d",
+          "symbol": "DefaultValueConverter.runConverter",
+          "line": 42
+        }
+      ],
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/business/eventmodeling.py",
+          "sha256": "155e2bc32314ef9825956d5266480c2286f7bfabe581c9d5d2b9f8827734f36b",
+          "bytes": 10718,
+          "symbol": "parse",
+          "line": 31
+        }
+      ],
+      "evidence": [
+        {
+          "path": "test-runs/branch-triage-A-followup.json",
+          "sha256": "6c5d3780c1ef64536fdf451b380f9f581973d2718a116ded6535516cf41d26cd",
+          "bytes": 15203
+        },
+        {
+          "path": "test-runs/FINAL-CAPABILITY-A-facts-20261107T074002Z-3c051804/artifacts/current-values.json",
+          "sha256": "5a544f5d277ef39274a2bf07b818f4a5c349acf273320343c744b3991e37f19c",
+          "bytes": 32094
+        }
+      ]
+    }
+  ],
+  "existingControlsActuallyPassed": [
+    "Cynefin escaped quote and unclosed-string rejection",
+    "C4 command-vs-config/no-op and first-known shape priority",
+    "Class first annotation source consumer",
+    "State no-action productions paint equivalence",
+    "Mindmap root-vs-scoped layout and tree constraints",
+    "Ishikawa relative indent/tab source branches",
+    "Tree quoted literal",
+    "Zen raw-line comment height"
+  ],
+  "sourceAnomaliesNotNativeMissing": [
+    "Block third recursive node chain source anomaly stays separately documented; current native two/three-node semantic checks pass, not proof original anomaly repaired.",
+    "Event title positive hand-expectation not reached by fixed original; kept separate above."
+  ],
+  "parserStaticMarkerScan": {
+    "files": 36,
+    "paths": [
+      "src/py_mermaid/diagrams/modeling",
+      "src/py_mermaid/diagrams/hierarchy",
+      "src/py_mermaid/diagrams/structures",
+      "src/py_mermaid/diagrams/railroad",
+      "src/py_mermaid/diagrams/zenuml",
+      "src/py_mermaid/diagrams/business/cynefin.py",
+      "src/py_mermaid/diagrams/business/eventmodeling.py",
+      "src/py_mermaid/diagrams/business/ishikawa.py"
+    ],
+    "markers": [
+      {
+        "path": "src/py_mermaid/diagrams/hierarchy/treemap.py",
+        "line": 148,
+        "text": "'UNSUPPORTED_VCHART_OPTION')"
+      }
+    ],
+    "interpretation": "No TODO marker does not prove exhaustive grammar support. Treemap UNSUPPORTED_VCHART_OPTION is declared valueFormat backend limit, not removed/excluded static functionality."
+  },
+  "declaredBackendLimitsNotSilentlyImplemented": [
+    {
+      "path": "src/py_mermaid/diagrams/hierarchy/treemap.py",
+      "line": 148,
+      "kind": "treemap",
+      "reason": "D3 valueFormat beyond implemented common forms explicitly UNSUPPORTED_VCHART_OPTION; declared previous integration constraint remains."
+    },
+    {
+      "path": "src/py_mermaid/diagrams/flows/venn.py",
+      "line": 217,
+      "kind": "venn",
+      "reason": "More than three singleton sets explicitly unsupported by VChart provider; declared integration constraint remains, not arbitrary all-N compatibility."
+    }
+  ],
+  "excluded": [
+    "Dagre and interactive behavior",
+    "Video/audio",
+    "Arbitrary HTML/CSS extensions; accepted basic static controls remain"
+  ],
+  "unknowns": [
+    "This finite review does not exhaust token permutations, arbitrary topology numerical identity, CSS/resource cross-products or every supplier static option.",
+    "Only designated current tests/probes were rerun, not every historical source oracle or full release suite.",
+    "Source getter snapshots for A use archived fixed-original runs with unchanged source file identities; ABNF source probe was freshly rerun.",
+    "Pure accessibility whitespace mismatch is separately classified; root decides release contract severity without hiding it."
+  ],
+  "modifiedProductsOrTests": false
+}

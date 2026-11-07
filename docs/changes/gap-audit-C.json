@@ -1,0 +1,143 @@
+{
+  "schema": "py-mermaid-gap-audit-receipt/v1",
+  "group": "C",
+  "task": "G01-C",
+  "status": "AUDIT_AND_SOURCE_TEST_DESIGN_COMPLETE_NOT_EXECUTED",
+  "baselineSourceSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
+  "report": "references/gap-audit-C.json",
+  "reportSha256": "5dc9a2ce2899d738a1107542d9d09e8fcbcb59d4f21ef531c245250f7dff987b",
+  "summary": {
+    "entries": 7,
+    "featureGroups": 62,
+    "statusCounts": {
+      "implemented_with_evidence": 44,
+      "confirmed_gap": 11,
+      "excluded": 2,
+      "unresolved": 3,
+      "upstream_defect": 1,
+      "implemented_unverified": 1
+    },
+    "confirmedGapFeatureRecords": 11,
+    "confirmedGapDistinctRootCauses": 8,
+    "newBehaviorExecuted": false,
+    "newProductTestsWrittenAtAudit": false,
+    "productModified": false
+  },
+  "written": [
+    "references/gap-audit-C.json",
+    "docs/changes/gap-audit-C.json",
+    "tests/bulk/c/test_gap_audit.py",
+    "tests/bulk/cases-gap-C.json"
+  ],
+  "newBehaviorExecuted": false,
+  "noInstallCommitPush": true,
+  "confirmedRootCauses": [
+    "C-GAP-RR-THEME-FALLBACK",
+    "C-GAP-SEQ-GENERIC-FONT-ALIAS",
+    "C-GAP-SEQ-LIFECYCLE-ENDPOINT",
+    "C-GAP-SEQ-NUMBER-FIT",
+    "C-GAP-ZEN-DIGIT-UNICODE",
+    "C-GAP-ZEN-HIDDEN-NEWLINE",
+    "C-GAP-ZEN-MODIFIERS",
+    "C-GAP-ZEN-MULTI-ASSIGNEE"
+  ],
+  "next": "Root unified baseline first run then batch fixes; existing P4pass does not cover newly identified source branches.",
+  "productModified": false,
+  "testsAuthoredNotExecuted": true,
+  "newMethods": 15,
+  "newFixtures": 33,
+  "newMethodNames": [
+    "test_await_never_becomes_a_participant",
+    "test_assignment_modifiers_are_hidden_before_participant_collection",
+    "test_entire_arbitrary_length_assignee_list_is_preserved",
+    "test_typed_assignee_list_preserves_type_separately",
+    "test_digit_leading_unicode_names_are_one_source_token",
+    "test_hidden_cr_between_qualified_call_tokens_is_whitespace",
+    "test_multi_assignee_actual_return_text_and_glyph_ink",
+    "test_invalid_terminal_fill_uses_theme_derived_color_in_all_dialects",
+    "test_valid_override_wins_theme_in_all_dialects",
+    "test_invalid_font_size_uses_derived_size_not_literal_default",
+    "test_zero_numeric_override_is_valid_source_boundary",
+    "test_invalid_font_family_uses_theme_family",
+    "test_root_generic_sequence_font_size_and_weight_reach_all_roles",
+    "test_sequence_number_font_length_source_branches",
+    "test_destroy_receiver_arrow_stops_before_visible_footer"
+  ],
+  "newTestSha256": "e288f0b219e46c0c33729ff5d0b8a3b67325c7b899025113b1a65e8315914896",
+  "newFixturesSha256": "ee3f922a5e31b1788c7ca087ce1526ac27bc589290a987002abc9328c0d213d5",
+  "productToolsExistingTestsModified": false,
+  "testDesignNote": "New tests only; no old assertions changed. AST/compile mechanical only. No success or failure prediction substituted for actual unified baseline run.",
+  "argvForRoot": [
+    "python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests/bulk/c",
+    "-t",
+    "tests",
+    "-p",
+    "test_gap_audit.py",
+    "-v"
+  ],
+  "auditedProductsUnchanged": true,
+  "oldCasesCUnchangedSha256": "732db377af6ade9561e74171a812ed8877218a35641b70d44ca76ec2b23c1265",
+  "mechanicalChecks": {
+    "pythonASTandCompile": "PASS; compile(source,filename,exec), no module execution",
+    "newJSONDecode": "PASS; both audit/receipt and33fixtures",
+    "auditedProductSHACompare": "PASS; all audited product bytes unchanged",
+    "testsNotExecuted": true
+  },
+  "exactNewTestBindings": {
+    "confirmedGapRecords": 11,
+    "allHaveTestPathSymbolLine": true,
+    "updates": [
+      [
+        "sequence.destroy-attachment",
+        1
+      ],
+      [
+        "sequence.counter-fit",
+        1
+      ],
+      [
+        "sequence.root-fonts",
+        1
+      ],
+      [
+        "zenuml.modifiers",
+        2
+      ],
+      [
+        "zenuml.multi-assignee",
+        3
+      ],
+      [
+        "zenuml.digit-unicode",
+        1
+      ],
+      [
+        "zenuml.hidden-cr",
+        1
+      ],
+      [
+        "railroad.theme-fallback",
+        5
+      ],
+      [
+        "railroadEbnf.theme-fallback",
+        5
+      ],
+      [
+        "railroadAbnf.theme-fallback",
+        5
+      ],
+      [
+        "railroadPeg.theme-fallback",
+        5
+      ]
+    ],
+    "changeScope": "Audit and receipt only; product/test/fixture untouched",
+    "existingFirstRun": "G03-first-batch-20261106T080449Z-54f22284/commands/003-gap-unit-C"
+  }
+}

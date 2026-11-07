@@ -1,0 +1,55 @@
+{
+  "schema": "py-mermaid-change-receipt/v1",
+  "status": "VERIFIED",
+  "sourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+  "affectedTools": [
+    {
+      "path": "tools/bulk_export.py",
+      "sha256": "f820b606aadb5e0e5f2aaadd8eef38dab95f642e43c099b18a8879347abec128",
+      "bytes": 5745
+    },
+    {
+      "path": "tools/finalize_html_host_evidence.py",
+      "sha256": "54faf0ef095a7f9d4203a5b432163f2563a6e2d9a117386db73528bba8287cb4",
+      "bytes": 23489
+    },
+    {
+      "path": "tools/build_bulk_report.py",
+      "sha256": "525acea8ec8d4b1069bcf1672d6a49f28b83b0d6493e1a0284b1862092d60d6d",
+      "bytes": 18414
+    },
+    {
+      "path": "tools/check_bulk_acceptance_controls.py",
+      "sha256": "a4ed30f450e89b11666fd577d2add2b6d868abe94a1ba6c24da128fcfcd3f66d",
+      "bytes": 4272
+    }
+  ],
+  "originalP4": {
+    "path": "test-runs/BULK-P4-final-20261106T125300Z-435e50af/run.json",
+    "sha256": "ed8d1d50c0e967f229b62090cec5f0277ac995712f6818512360dee454468d03",
+    "bytes": 4534656
+  },
+  "rejectedOriginalSavedExports": true,
+  "reason": "SVG width/height iteration shadowed outer filename key, causing subsequent format/backend outputs to overwrite height-* files. Initial render streams had passed but saved artifacts did not bind; old evidence was not edited.",
+  "repair": {
+    "path": "test-runs/HTML-HOST-P4-EXPORT-repair-20261106T130826Z-cebc530d/run.json",
+    "sha256": "a8fcaef967db5c76895e67435b110043b43f9b8d214046d026fe8010984f6183",
+    "bytes": 195006
+  },
+  "verifiedExports": 915,
+  "verification": "Unique exclusive artifact filenames, persisted byte SHA/size, all3 profiles and five real formats; finalizer verifies closed same-candidate Run and identical frozen fixture/device argv.",
+  "failedDeliveryAttempts": [
+    {
+      "path": "test-runs/HTML-HOST-P5-delivery-20261106T130645Z-58b6878a/run.json",
+      "sha256": "08639df17758de3de67cdb19b305aa95222b76ec8040ff54e934ffeba82296d9",
+      "bytes": 30540
+    },
+    {
+      "path": "test-runs/HTML-HOST-P5-delivery-20261106T131052Z-9705f4d8/run.json",
+      "sha256": "aed6e1cd152f74f52068e563f33903ccdf18660a81c699d9556ae3faebf0631c",
+      "bytes": 37618
+    }
+  ],
+  "productChangedForRepair": false,
+  "installationVerification": false
+}

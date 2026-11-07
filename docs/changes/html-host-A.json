@@ -1,0 +1,29 @@
+{
+  "schema": "py-mermaid-html-host-owner-receipt/v1",
+  "owner": "A",
+  "status": "code_complete_unverified",
+  "sourceMap": "references/html-host-semantics.json",
+  "productFiles": [
+    {
+      "path": "src/py_mermaid/rendering/labels/controls/semantic.py",
+      "sha256": "1895df78de09896ebf0e948b118e443eb0dac8bcdc06715e86852382fcedef54"
+    },
+    {
+      "path": "src/py_mermaid/rendering/labels/sanitize.py",
+      "sha256": "692fc3a1b9531a77b225aa037ef30b71ec54cd4fbf63d93dd7a07e8edc0bf703"
+    }
+  ],
+  "mechanicalRun": "HTML-HOST-record-20261106T111546Z-5102aa74",
+  "mechanicalResult": "SUCCESS compile/import/signatures only; comment-only edit after run has no executable effect",
+  "formalTestsWritten": false,
+  "behaviorExecuted": false,
+  "modelEdited": false,
+  "otherOwnerFilesEdited": false,
+  "remaining": [
+    "All new product behavior remains unexecuted until P2/P3 by phase contract.",
+    "Color branch currently implements legacy six-digit opaque sRGB and invalid->black; modern named/function CSS colors, alpha/colorspace custom-allowed modes require pinned browser oracle classification and may need additional source-backed implementation.",
+    "No general HTML tree-builder/CSS/browser/UA-theme clone claimed; malformed nested forms/selects, arbitrary option child content, extreme year/numeric sizes and nonstandard custom attributes require independent boundary tests.",
+    "All static input families are mapped but this P1 status is not acceptance; source handoff to browser does not prove native equivalence."
+  ],
+  "phaseGate": "Stop product writes; await root unified P1 freeze then P2 independent tests."
+}

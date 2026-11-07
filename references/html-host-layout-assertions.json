@@ -1,0 +1,1572 @@
+{
+  "schema": "py-mermaid-html-host-layout-assertions/v1",
+  "status": "designed_not_executed",
+  "phase": "P2",
+  "p1SourceSha256": "881656d5439e4ba08b4f3182d215680020653592e2d6ba0f9e265af97faf8fe1",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "source": [
+    {
+      "path": "packages/mermaid/src/diagrams/common/common.ts",
+      "symbol": "export const sanitizeText",
+      "line": 85,
+      "sha256": "b14851667f7d45d101d4e028204babb1628faefe4812a88ae2d8acac72f8e144",
+      "role": "Sanitize then delegate to foreignObject HTML host; does not define native control layout mathematics."
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/createText.ts",
+      "symbol": "async function addHtmlSpan",
+      "line": 34,
+      "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+      "role": "Sanitize then delegate to foreignObject HTML host; does not define native control layout mathematics."
+    }
+  ],
+  "nativeHostContract": "src/py_mermaid/model/controls.py and docs/STATIC_HTML_HOST_PLAN.md",
+  "nativeContractBoundary": "Mermaid common/createText sanitize and delegate to browser HTML. These tests do not pretend Mermaid contains its own browser UA geometry algorithm. Invariant static state, CSS box arithmetic, pure callback measurements and visible-content intent are tested; source browser expansion/pixel tests are separate A/C responsibilities.",
+  "fontFixture": {
+    "fontSize": 10,
+    "advancePerScalar": 5,
+    "fontAscent": 8,
+    "fontDescent": 2,
+    "xHeight": 4,
+    "purpose": "Exactly computable callback inputs; no native Canvas created. Actual shaping/font geometry and multi-backend pixels are not established by fake metrics."
+  },
+  "methods": [
+    {
+      "id": "HTML-L01",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l01_all_retained_input_types_have_finite_initial_boxes",
+        "line": 53
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L02",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l02_hidden_and_display_none_never_measure_or_paint",
+        "line": 64
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L03",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l03_relative_meter_font_and_form_ua_are_separate_bases",
+        "line": 71
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L04",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l04_text_size_attribute_adds_real_zero_advances",
+        "line": 81
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L05",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l05_password_masks_value_but_preserves_placeholder",
+        "line": 86
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L06",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l06_value_wins_over_placeholder",
+        "line": 93
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L07",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l07_missing_action_caption_differs_from_explicit_empty",
+        "line": 97
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L08",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l08_readonly_keeps_content_and_geometry",
+        "line": 103
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L09",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l09_content_box_dimensions_add_padding_and_border",
+        "line": 109
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L10",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l10_border_box_dimensions_include_padding_and_border",
+        "line": 114
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L11",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l11_minimum_wins_over_smaller_maximum",
+        "line": 119
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L12",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l12_asymmetric_padding_border_and_content_origin",
+        "line": 123
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L13",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l13_margins_shift_once_and_are_in_total_size",
+        "line": 129
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L14",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l14_finite_percentage_has_containing_block_reference",
+        "line": 136
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L15",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l15_indefinite_percentage_is_auto",
+        "line": 140
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L16",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l16_physical_css_units_use_96dpi",
+        "line": 144
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L17",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l17_ex_and_ch_use_injected_metrics",
+        "line": 148
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L18",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l18_textarea_row_height_uses_resolved_line_height",
+        "line": 152
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L19",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l19_important_shorthand_blocks_later_normal_longhand",
+        "line": 156
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L20",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l20_later_border_shorthand_resets_prior_width",
+        "line": 160
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L21",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l21_radius_is_bounded_by_the_box",
+        "line": 165
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L22",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l22_unsupported_css_is_explicit",
+        "line": 170
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L23",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l23_nonfinite_public_metric_is_rejected",
+        "line": 174
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L24",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l24_image_single_dimension_preserves_ratio",
+        "line": 179
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L25",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l25_image_both_dimensions_are_explicit",
+        "line": 188
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L26",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l26_image_cannot_silently_skip_missing_loader",
+        "line": 193
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L27",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l27_image_without_source_has_measured_alt",
+        "line": 196
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L28",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l28_checked_checkbox_and_radio_have_additional_visible_marks",
+        "line": 200
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L29",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l29_range_fraction_moves_thumb_and_rtl_reverses",
+        "line": 207
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L30",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l30_meter_quality_bands_are_not_a_single_generic_fill",
+        "line": 216
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L31",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l31_meter_optimum_middle_reverses_quality_at_outer_bands",
+        "line": 223
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L32",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l32_indeterminate_progress_is_visible_but_not_zero_value",
+        "line": 228
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L33",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l33_disabled_range_removes_active_accent",
+        "line": 234
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L34",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l34_single_select_uses_selected_index_not_first_option",
+        "line": 238
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L35",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l35_multiple_list_highlights_stay_within_visible_content",
+        "line": 242
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L36",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l36_optgroup_heading_and_disabled_option_are_distinct",
+        "line": 250
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L37",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l37_select_size_adds_rows_without_changing_option_identity",
+        "line": 256
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L38",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l38_rtl_value_and_text_decoration_survive_to_paints",
+        "line": 261
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L39",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l39_textarea_cols_and_rows_are_measured",
+        "line": 267
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L40",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l40_textarea_explicit_linebreaks_have_ordered_baselines",
+        "line": 271
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L41",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l41_textarea_wrap_prefers_word_boundaries",
+        "line": 276
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L42",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l42_textarea_wrap_off_keeps_unbroken_content_with_clip",
+        "line": 280
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L43",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l43_empty_textarea_placeholder_is_not_value",
+        "line": 285
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L44",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l44_long_value_clips_instead_of_expanding_explicit_box",
+        "line": 291
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L45",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l45_visible_overflow_has_no_content_clip",
+        "line": 296
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L46",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l46_numeric_vertical_align_changes_baseline_not_box_dimensions",
+        "line": 300
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L47",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l47_appearance_none_removes_checkbox_mark_but_keeps_author_border",
+        "line": 305
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L48",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l48_margin_does_not_translate_path_coordinates_twice",
+        "line": 310
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L49",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l49_disabled_author_color_can_override_ua_gray",
+        "line": 316
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L50",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l50_css_split_does_not_lose_generic_declarations_or_important",
+        "line": 322
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L58",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l58_source_ua_box_sizing_defaults_are_type_specific",
+        "line": 328
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L59",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l59_ua_display_does_not_inherit_parent_block",
+        "line": 339
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L60",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l60_date_time_ua_font_is_monospace",
+        "line": 345
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L61",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l61_radio_checked_center_uses_accent_inside_white_circle",
+        "line": 350
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L62",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l62_author_text_paint_axes_are_forwarded",
+        "line": 358
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L63",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l63_source_invalid_accent_declaration_uses_ua_default",
+        "line": 366
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L64",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l64_valid_rgb_accent_is_not_replaced_by_default",
+        "line": 375
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L65",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l65_absolute_modern_css_color_is_not_called_invalid",
+        "line": 380
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L66",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l66_single_select_far_selected_item_sets_initial_visible_rows",
+        "line": 386
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L67",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l67_multiple_select_keeps_first_selected_item_in_initial_view",
+        "line": 396
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L68",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l68_zero_input_size_uses_default_and_keeps_value_visible",
+        "line": 406
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L69",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l69_zero_textarea_rows_and_cols_use_default_dimensions",
+        "line": 415
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L70",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l70_zero_multiple_select_size_uses_default_four_visible_rows",
+        "line": 424
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L51",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "RichControlLayout.test_l51_rich_button_content_is_centered_in_inner_box",
+        "line": 445
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L52",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "RichControlLayout.test_l52_rich_child_base_does_not_duplicate_parent_compositing",
+        "line": 452
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L53",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "RichControlLayout.test_l53_fieldset_has_separate_body_and_rich_caption",
+        "line": 460
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L54",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "RichControlLayout.test_l54_plain_fieldset_caption_is_not_in_clipped_body",
+        "line": 466
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L55",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "RichControlLayout.test_l55_fieldset_top_frame_has_a_real_caption_gap",
+        "line": 472
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L56",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "RichControlLayout.test_l56_hidden_visibility_keeps_geometry_and_restorable_children",
+        "line": 479
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    },
+    {
+      "id": "HTML-L57",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "RichControlLayout.test_l57_rich_markup_requires_explicit_provider",
+        "line": 485
+      },
+      "basis": "Fixed source host probes and pure CSS/initial-state relation invariants; no candidate-generated golden.",
+      "execution": "current_candidate_not_executed"
+    }
+  ],
+  "methodCount": 70,
+  "featureGroups": {
+    "basics": 8,
+    "css-box": 15,
+    "image-resource": 4,
+    "state-meters": 6,
+    "select-direction": 5,
+    "textarea": 6,
+    "css-visibility-affordances": 6,
+    "rich-fieldset": 7
+  },
+  "retainedInputTypes": [
+    "hidden",
+    "text",
+    "search",
+    "tel",
+    "url",
+    "email",
+    "password",
+    "date",
+    "month",
+    "week",
+    "time",
+    "datetime-local",
+    "number",
+    "range",
+    "color",
+    "checkbox",
+    "radio",
+    "file",
+    "submit",
+    "image",
+    "reset",
+    "button"
+  ],
+  "boundaryControls": [
+    "Hidden/none must never invoke measure or paint.",
+    "Value vs placeholder and missing submit/reset caption vs explicit empty input.",
+    "Normal/readonly geometry and disabled author-color override.",
+    "CSS content-box vs border-box, shorthand order/important, min/max, finite/indefinite percentage reference.",
+    "Nonfinite public metrics and missing resource/rich-content provider are explicit errors.",
+    "Single-axis image aspect ratio vs explicit two-axis dimensions.",
+    "Checked state adds marks; range RTL reverses thumb direction; meter quality bands differ; indeterminate progress differs from zero.",
+    "List selections/clips, optgroup heading/disabled state, textarea wrap/no-wrap/newline and no fake expansion of explicit box.",
+    "Margin path coordinates shift once; visible overflow vs clip; appearance:none retains author border; vertical baseline offset.",
+    "Rich body/caption remain separate; fieldset frame really has a caption gap; inherited opacity/filter are not applied twice; hidden own paint can retain restorable descendants."
+  ],
+  "excluded": [
+    "video/audio entire feature",
+    "editing/focus/selection actions/submission/animation",
+    "pixel equality to platform UA controls",
+    "installation verification"
+  ],
+  "testsExecuted": false,
+  "fixturesWritten": "None; owner A provides fixture inputs.",
+  "p3SourceCorrections": {
+    "originalTestSha256": "ed85a6b4313f2ce6bcc41a8a9966647b40d352f065fecc4cadce9a0aba1ce0da",
+    "initialFailureRun": "test-runs/HTML-HOST-P3-batch-20261106T113133Z-293a5335",
+    "L51": "Explicitly set content-box in rich centering fixture. Source button default is border-box; the test purpose/100px content geometry remains unchanged, while new L58 independently covers default UA box sizing.",
+    "L24": "Resource callback kind now control-image to select natural intrinsic resource size. Original image width/aspect numeric expectations unchanged.",
+    "newMethods": "L58-L62 source UA box sizing/display/datefont/radio and author-text paint metadata.",
+    "accentRepair": {
+      "cause": "Fixed utils.encodeEntities removes the separator after an inline middle hex color; source HTML ignores malformed accent-color and uses auto.",
+      "sourceRun": "test-runs/HTML-HOST-P3-source-integration-probes-20261106T114139Z-c5d42512",
+      "sourceCases": [
+        "html-host-integration-checkbox-hex-middle",
+        "html-host-integration-checkbox-hex-last",
+        "html-host-integration-checkbox-rgb-middle",
+        "html-host-integration-range-hex-middle",
+        "html-host-integration-range-rgb-middle"
+      ],
+      "repair": "Validate absolute CSS Color 4 with public pure is_valid_css_color. Invalid declarations fall back to UA auto; valid rgb/hwb/oklch/color values are retained. Context-dependent system/relative/color-mix expressions explicitly require a resolver rather than being mislabeled invalid.",
+      "provider": "src/py_mermaid/rendering/labels/controls/color_values.py:is_valid_css_color",
+      "testsAdded": "L63 invalid source hex-middle fallback, L64 same valid rgb color, L65 valid modern absolute colors.",
+      "thresholdChanged": false,
+      "sourceFixturesRemoved": false
+    }
+  },
+  "currentMethodCount": 70,
+  "currentTestSha256": "1534cffb02317a9b1b43cd874ba169e412a881db414af7efc85cc1b1ec420b4e",
+  "p2OriginalMethods": [
+    {
+      "id": "HTML-L01",
+      "group": "basics",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l01_all_retained_input_types_have_finite_initial_boxes",
+        "line": 53
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L02",
+      "group": "basics",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l02_hidden_and_display_none_never_measure_or_paint",
+        "line": 64
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L03",
+      "group": "basics",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l03_relative_meter_font_and_form_ua_are_separate_bases",
+        "line": 71
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L04",
+      "group": "basics",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l04_text_size_attribute_adds_real_zero_advances",
+        "line": 81
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L05",
+      "group": "basics",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l05_password_masks_value_but_preserves_placeholder",
+        "line": 86
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L06",
+      "group": "basics",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l06_value_wins_over_placeholder",
+        "line": 93
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L07",
+      "group": "basics",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l07_missing_action_caption_differs_from_explicit_empty",
+        "line": 97
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L08",
+      "group": "basics",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l08_readonly_keeps_content_and_geometry",
+        "line": 103
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L09",
+      "group": "css-box",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l09_content_box_dimensions_add_padding_and_border",
+        "line": 109
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L10",
+      "group": "css-box",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l10_border_box_dimensions_include_padding_and_border",
+        "line": 114
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L11",
+      "group": "css-box",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l11_minimum_wins_over_smaller_maximum",
+        "line": 119
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L12",
+      "group": "css-box",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l12_asymmetric_padding_border_and_content_origin",
+        "line": 123
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L13",
+      "group": "css-box",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l13_margins_shift_once_and_are_in_total_size",
+        "line": 129
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L14",
+      "group": "css-box",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l14_finite_percentage_has_containing_block_reference",
+        "line": 136
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L15",
+      "group": "css-box",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l15_indefinite_percentage_is_auto",
+        "line": 140
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L16",
+      "group": "css-box",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l16_physical_css_units_use_96dpi",
+        "line": 144
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L17",
+      "group": "css-box",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l17_ex_and_ch_use_injected_metrics",
+        "line": 148
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L18",
+      "group": "css-box",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l18_textarea_row_height_uses_resolved_line_height",
+        "line": 152
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L19",
+      "group": "css-box",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l19_important_shorthand_blocks_later_normal_longhand",
+        "line": 156
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L20",
+      "group": "css-box",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l20_later_border_shorthand_resets_prior_width",
+        "line": 160
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L21",
+      "group": "css-box",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l21_radius_is_bounded_by_the_box",
+        "line": 165
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L22",
+      "group": "css-box",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l22_unsupported_css_is_explicit",
+        "line": 170
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L23",
+      "group": "css-box",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l23_nonfinite_public_metric_is_rejected",
+        "line": 174
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L24",
+      "group": "image-resource",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l24_image_single_dimension_preserves_ratio",
+        "line": 179
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L25",
+      "group": "image-resource",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l25_image_both_dimensions_are_explicit",
+        "line": 188
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L26",
+      "group": "image-resource",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l26_image_cannot_silently_skip_missing_loader",
+        "line": 193
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L27",
+      "group": "image-resource",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l27_image_without_source_has_measured_alt",
+        "line": 196
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L28",
+      "group": "state-meters",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l28_checked_checkbox_and_radio_have_additional_visible_marks",
+        "line": 200
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L29",
+      "group": "state-meters",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l29_range_fraction_moves_thumb_and_rtl_reverses",
+        "line": 207
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L30",
+      "group": "state-meters",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l30_meter_quality_bands_are_not_a_single_generic_fill",
+        "line": 216
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L31",
+      "group": "state-meters",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l31_meter_optimum_middle_reverses_quality_at_outer_bands",
+        "line": 223
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L32",
+      "group": "state-meters",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l32_indeterminate_progress_is_visible_but_not_zero_value",
+        "line": 228
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L33",
+      "group": "state-meters",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l33_disabled_range_removes_active_accent",
+        "line": 234
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L34",
+      "group": "select-direction",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l34_single_select_uses_selected_index_not_first_option",
+        "line": 238
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L35",
+      "group": "select-direction",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l35_multiple_list_highlights_stay_within_visible_content",
+        "line": 242
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L36",
+      "group": "select-direction",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l36_optgroup_heading_and_disabled_option_are_distinct",
+        "line": 250
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L37",
+      "group": "select-direction",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l37_select_size_adds_rows_without_changing_option_identity",
+        "line": 256
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L38",
+      "group": "select-direction",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l38_rtl_value_and_text_decoration_survive_to_paints",
+        "line": 261
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L39",
+      "group": "textarea",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l39_textarea_cols_and_rows_are_measured",
+        "line": 267
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L40",
+      "group": "textarea",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l40_textarea_explicit_linebreaks_have_ordered_baselines",
+        "line": 271
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L41",
+      "group": "textarea",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l41_textarea_wrap_prefers_word_boundaries",
+        "line": 276
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L42",
+      "group": "textarea",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l42_textarea_wrap_off_keeps_unbroken_content_with_clip",
+        "line": 280
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L43",
+      "group": "textarea",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l43_empty_textarea_placeholder_is_not_value",
+        "line": 285
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L44",
+      "group": "textarea",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l44_long_value_clips_instead_of_expanding_explicit_box",
+        "line": 291
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L45",
+      "group": "css-visibility-affordances",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l45_visible_overflow_has_no_content_clip",
+        "line": 296
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L46",
+      "group": "css-visibility-affordances",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l46_numeric_vertical_align_changes_baseline_not_box_dimensions",
+        "line": 300
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L47",
+      "group": "css-visibility-affordances",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l47_appearance_none_removes_checkbox_mark_but_keeps_author_border",
+        "line": 305
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L48",
+      "group": "css-visibility-affordances",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l48_margin_does_not_translate_path_coordinates_twice",
+        "line": 310
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L49",
+      "group": "css-visibility-affordances",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l49_disabled_author_color_can_override_ua_gray",
+        "line": 316
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L50",
+      "group": "css-visibility-affordances",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "StaticControlLayout.test_l50_css_split_does_not_lose_generic_declarations_or_important",
+        "line": 322
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L51",
+      "group": "rich-fieldset",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "RichControlLayout.test_l51_rich_button_content_is_centered_in_inner_box",
+        "line": 340
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L52",
+      "group": "rich-fieldset",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "RichControlLayout.test_l52_rich_child_base_does_not_duplicate_parent_compositing",
+        "line": 347
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L53",
+      "group": "rich-fieldset",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "RichControlLayout.test_l53_fieldset_has_separate_body_and_rich_caption",
+        "line": 355
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L54",
+      "group": "rich-fieldset",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "RichControlLayout.test_l54_plain_fieldset_caption_is_not_in_clipped_body",
+        "line": 361
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L55",
+      "group": "rich-fieldset",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "RichControlLayout.test_l55_fieldset_top_frame_has_a_real_caption_gap",
+        "line": 367
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L56",
+      "group": "rich-fieldset",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "RichControlLayout.test_l56_hidden_visibility_keeps_geometry_and_restorable_children",
+        "line": 374
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    },
+    {
+      "id": "HTML-L57",
+      "group": "rich-fieldset",
+      "test": {
+        "path": "tests/html_host/test_layout.py",
+        "symbol": "RichControlLayout.test_l57_rich_markup_requires_explicit_provider",
+        "line": 380
+      },
+      "basis": "CSS box/initial static state and injected pure provider contract; numeric font values are synthetic inputs, not candidate output or UA screenshot coordinates.",
+      "execution": "designed_not_executed"
+    }
+  ],
+  "selectViewportSourceEvidence": {
+    "status": "source_viewport_confirmed_product_unchanged",
+    "oldSourceRun": "test-runs/HTML-HOST-P3-select-viewport-original-20261106T121356Z-1b2a9d94",
+    "newPaintBoundSourceRun": "test-runs/HTML-HOST-P3-paint-bound-viewport-original-20261106T121826Z-a45b8dc1",
+    "reason": "Chrome applies single-select initial scroll during first paint. Old pre-screenshot DOM snapshot said indices0/1 but raw PNG showed3/4; new source run preserves before/after metadata, querying after the original PNG without pixel mutation.",
+    "productDecision": "Existing first-selected anchor algorithm is correct for both cases. No layout source modification.",
+    "tests": "L66/L67 compute visible text by actual baseline ink interval intersecting the content clip, not by collecting all paint.text.",
+    "evidence": [
+      {
+        "id": "html-host-integration-select-viewport-single",
+        "json": "test-runs\\HTML-HOST-P3-paint-bound-viewport-original-20261106T121826Z-a45b8dc1\\artifacts\\oracle\\html-host-integration-select-viewport-single.json",
+        "jsonSha256": "65186e10b69db9cf89280bcc51ed848921b685d26532b41dfbe0b294089bafa4",
+        "png": "test-runs\\HTML-HOST-P3-paint-bound-viewport-original-20261106T121826Z-a45b8dc1\\artifacts\\oracle\\html-host-integration-select-viewport-single.png",
+        "pngSha256": "7fc6c61656d27f7c5ebaad7d3e4f395545cc63bb7be9c686e63cbead932ec198",
+        "actualImageReviewed": true,
+        "visibleOptionIndices": [
+          3,
+          4
+        ],
+        "scrollTop": 51,
+        "expectedVisibleText": [
+          "Four",
+          "Five"
+        ]
+      },
+      {
+        "id": "html-host-integration-select-viewport-multiple",
+        "json": "test-runs\\HTML-HOST-P3-paint-bound-viewport-original-20261106T121826Z-a45b8dc1\\artifacts\\oracle\\html-host-integration-select-viewport-multiple.json",
+        "jsonSha256": "b8ac66761799daa36363b4789435d4aa8781bb2e078515819dc4ad195d165d80",
+        "png": "test-runs\\HTML-HOST-P3-paint-bound-viewport-original-20261106T121826Z-a45b8dc1\\artifacts\\oracle\\html-host-integration-select-viewport-multiple.png",
+        "pngSha256": "e410825d9b67b91274b8942278b45cc1f885d01b7622a44f7f753fd64d0599b3",
+        "actualImageReviewed": true,
+        "visibleOptionIndices": [
+          0,
+          1
+        ],
+        "scrollTop": 0,
+        "expectedVisibleText": [
+          "One",
+          "Two"
+        ]
+      }
+    ]
+  },
+  "zeroDimensionsSourceEvidence": {
+    "status": "source_complete_pending_unified_execution",
+    "sourceProbe": "test-runs/HTML-HOST-audit-dimension-default-probe-20261106T124046Z-c3670b63",
+    "sourceJSON": "test-runs\\HTML-HOST-audit-dimension-default-probe-20261106T124046Z-c3670b63\\artifacts\\oracle\\html-host-zero-dimension-source-probe.json",
+    "sourceJSONSha256": "fe8c28231d89e20b57d7b665f528664e40c6dcd33d57c599b5b004632a57a3fb",
+    "sourcePNG": "test-runs\\HTML-HOST-audit-dimension-default-probe-20261106T124046Z-c3670b63\\artifacts\\oracle\\html-host-zero-dimension-source-probe.png",
+    "sourcePNGSha256": "998f58ded35995fbd908cae3a54f0a567ecd17ccae060e34217b50c482b39991",
+    "sourceDimensions": [
+      {
+        "tag": "input",
+        "attributes": {
+          "id": "i0",
+          "size": "0",
+          "value": "Size",
+          "style": "font-family:monospace;font-size:16px;padding:0;border:0"
+        },
+        "width": 189,
+        "height": 19
+      },
+      {
+        "tag": "input",
+        "attributes": {
+          "value": "Size",
+          "style": "font-family:monospace;font-size:16px;padding:0;border:0"
+        },
+        "width": 189,
+        "height": 19
+      },
+      {
+        "tag": "textarea",
+        "attributes": {
+          "id": "t0",
+          "cols": "0",
+          "rows": "0",
+          "style": "font-family:monospace;font-size:16px;padding:0;border:0"
+        },
+        "width": 195,
+        "height": 38
+      },
+      {
+        "tag": "textarea",
+        "attributes": {
+          "id": "td",
+          "style": "font-family:monospace;font-size:16px;padding:0;border:0"
+        },
+        "width": 195,
+        "height": 38
+      },
+      {
+        "tag": "select",
+        "attributes": {
+          "id": "s0",
+          "multiple": "",
+          "size": "0",
+          "style": "font-family:monospace;font-size:16px;padding:0;border:0"
+        },
+        "width": 47.984375,
+        "height": 80.75
+      },
+      {
+        "tag": "select",
+        "attributes": {
+          "id": "sd",
+          "multiple": "",
+          "style": "font-family:monospace;font-size:16px;padding:0;border:0"
+        },
+        "width": 47.984375,
+        "height": 80.75
+      }
+    ],
+    "sourceRelation": "Each size=0/rows=0/cols=0 control equals its same-style omitted-attribute partner. Numeric zero falls back to the attribute default rather than clamping to 1.",
+    "nativeFailure": "Old native input showed only S instead of Size, textarea only T instead of Text, and multiple select only One instead of all four default visible rows. Real visible-content loss, not font/pixel differences.",
+    "minimalProductChanges": [
+      "Integer parser returns per-attribute default if parsed number is below minimum.",
+      "Multiple select initial display rows use default4 for omitted or invalid/zero size; valid size1 remains1."
+    ],
+    "newTests": [
+      "L68 input size0 default-size/clip and complete visible Size",
+      "L69 textarea cols0/rows0 default-size/clip and two complete visible lines",
+      "L70 multiple select size0 default-size/clip and four visible labels"
+    ],
+    "priorCandidateEvidence": "test-runs/BULK-P4-final-20261106T123440Z-e777012f remains SUCCESS/sourceUnchanged=true with 66 commands; root rejects acceptance due this additional source-audit defect. No closed run modified.",
+    "fixtureOwnership": "Root adds comprehensive six-control fixture and dynamic denominator gate; B changes no cases."
+  }
+}

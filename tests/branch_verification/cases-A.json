@@ -1,0 +1,1606 @@
+{
+  "schema": "py-mermaid-bulk-cases/v1",
+  "group": "A",
+  "frozenSource": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+  "cases": [
+    {
+      "id": "BV-A-cynefin-double-unknown",
+      "kind": "cynefin",
+      "source": "cynefin-beta\nclear\n \"A\\qB\"\n",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/cynefin/cynefin.langium",
+        "symbol": "DomainItem/Transition",
+        "line": 18,
+        "sha256": "94276271b3dfe6dd78ced62249cd1d69bdd785e1498b90e678f101a23e1d26e0",
+        "repository": "mermaid",
+        "synthesized": true,
+        "canonicalSha256": "e39c321b5a98b7160270c4275d4dfc309769478fca6e8f93fa67973431b66881",
+        "hashMeaning": "sha256 binds Windows checkout; canonicalSha256 binds fixed commit git blob"
+      },
+      "expect": "render",
+      "features": [
+        "cynefin-double-unknown"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "branchExpected": {
+        "description": "STRING converts one-character escapes in both quote styles; unknown escape drops backslash and does not interpret JSON Unicode.",
+        "nativeChecks": [
+          {
+            "path": [
+              "domains",
+              0,
+              1,
+              0
+            ],
+            "equals": "AqB"
+          }
+        ],
+        "sourceChecks": [
+          {
+            "path": [
+              "getDomains",
+              "clear",
+              "items",
+              0,
+              "label"
+            ],
+            "equals": "AqB"
+          }
+        ]
+      }
+    },
+    {
+      "id": "BV-A-cynefin-double-unicode",
+      "kind": "cynefin",
+      "source": "cynefin-beta\nclear\n \"\\u0041\"\n",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/cynefin/cynefin.langium",
+        "symbol": "DomainItem/Transition",
+        "line": 18,
+        "sha256": "94276271b3dfe6dd78ced62249cd1d69bdd785e1498b90e678f101a23e1d26e0",
+        "repository": "mermaid",
+        "synthesized": true,
+        "canonicalSha256": "e39c321b5a98b7160270c4275d4dfc309769478fca6e8f93fa67973431b66881",
+        "hashMeaning": "sha256 binds Windows checkout; canonicalSha256 binds fixed commit git blob"
+      },
+      "expect": "render",
+      "features": [
+        "cynefin-double-unicode"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "branchExpected": {
+        "description": "STRING converts one-character escapes in both quote styles; unknown escape drops backslash and does not interpret JSON Unicode.",
+        "nativeChecks": [
+          {
+            "path": [
+              "domains",
+              0,
+              1,
+              0
+            ],
+            "equals": "u0041"
+          }
+        ],
+        "sourceChecks": [
+          {
+            "path": [
+              "getDomains",
+              "clear",
+              "items",
+              0,
+              "label"
+            ],
+            "equals": "u0041"
+          }
+        ]
+      }
+    },
+    {
+      "id": "BV-A-cynefin-single-newline",
+      "kind": "cynefin",
+      "source": "cynefin-beta\nclear\n 'A\\nB'\n",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/cynefin/cynefin.langium",
+        "symbol": "DomainItem/Transition",
+        "line": 18,
+        "sha256": "94276271b3dfe6dd78ced62249cd1d69bdd785e1498b90e678f101a23e1d26e0",
+        "repository": "mermaid",
+        "synthesized": true,
+        "canonicalSha256": "e39c321b5a98b7160270c4275d4dfc309769478fca6e8f93fa67973431b66881",
+        "hashMeaning": "sha256 binds Windows checkout; canonicalSha256 binds fixed commit git blob"
+      },
+      "expect": "render",
+      "features": [
+        "cynefin-single-newline"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "branchExpected": {
+        "description": "STRING converts one-character escapes in both quote styles; unknown escape drops backslash and does not interpret JSON Unicode.",
+        "nativeChecks": [
+          {
+            "path": [
+              "domains",
+              0,
+              1,
+              0
+            ],
+            "equals": "A\nB"
+          }
+        ],
+        "sourceChecks": [
+          {
+            "path": [
+              "getDomains",
+              "clear",
+              "items",
+              0,
+              "label"
+            ],
+            "equals": "A\nB"
+          }
+        ]
+      }
+    },
+    {
+      "id": "BV-A-cynefin-literal-newline",
+      "kind": "cynefin",
+      "source": "cynefin-beta\nclear\n \"A\nB\"\n",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/cynefin/cynefin.langium",
+        "symbol": "DomainItem/Transition",
+        "line": 18,
+        "sha256": "94276271b3dfe6dd78ced62249cd1d69bdd785e1498b90e678f101a23e1d26e0",
+        "repository": "mermaid",
+        "synthesized": true,
+        "canonicalSha256": "e39c321b5a98b7160270c4275d4dfc309769478fca6e8f93fa67973431b66881",
+        "hashMeaning": "sha256 binds Windows checkout; canonicalSha256 binds fixed commit git blob"
+      },
+      "expect": "render",
+      "features": [
+        "cynefin-literal-newline"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "branchExpected": {
+        "description": "STRING converts one-character escapes in both quote styles; unknown escape drops backslash and does not interpret JSON Unicode.",
+        "nativeChecks": [
+          {
+            "path": [
+              "domains",
+              0,
+              1,
+              0
+            ],
+            "equals": "A\nB"
+          }
+        ],
+        "sourceChecks": [
+          {
+            "path": [
+              "getDomains",
+              "clear",
+              "items",
+              0,
+              "label"
+            ],
+            "equals": "A\nB"
+          }
+        ]
+      }
+    },
+    {
+      "id": "BV-A-cynefin-escaped-quote",
+      "kind": "cynefin",
+      "source": "cynefin-beta\nclear\n \"A\\\"B\"\n",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/cynefin/cynefin.langium",
+        "symbol": "DomainItem/Transition",
+        "line": 18,
+        "sha256": "94276271b3dfe6dd78ced62249cd1d69bdd785e1498b90e678f101a23e1d26e0",
+        "repository": "mermaid",
+        "synthesized": true,
+        "canonicalSha256": "e39c321b5a98b7160270c4275d4dfc309769478fca6e8f93fa67973431b66881",
+        "hashMeaning": "sha256 binds Windows checkout; canonicalSha256 binds fixed commit git blob"
+      },
+      "expect": "render",
+      "features": [
+        "cynefin-escaped-quote"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "branchExpected": {
+        "description": "STRING converts one-character escapes in both quote styles; unknown escape drops backslash and does not interpret JSON Unicode.",
+        "nativeChecks": [
+          {
+            "path": [
+              "domains",
+              0,
+              1,
+              0
+            ],
+            "equals": "A\"B"
+          }
+        ],
+        "sourceChecks": [
+          {
+            "path": [
+              "getDomains",
+              "clear",
+              "items",
+              0,
+              "label"
+            ],
+            "equals": "A\"B"
+          }
+        ]
+      }
+    },
+    {
+      "id": "BV-A-cynefin-single-tab",
+      "kind": "cynefin",
+      "source": "cynefin-beta\nclear\n 'A\\tB'\n",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/cynefin/cynefin.langium",
+        "symbol": "DomainItem/Transition",
+        "line": 18,
+        "sha256": "94276271b3dfe6dd78ced62249cd1d69bdd785e1498b90e678f101a23e1d26e0",
+        "repository": "mermaid",
+        "synthesized": true,
+        "canonicalSha256": "e39c321b5a98b7160270c4275d4dfc309769478fca6e8f93fa67973431b66881",
+        "hashMeaning": "sha256 binds Windows checkout; canonicalSha256 binds fixed commit git blob"
+      },
+      "expect": "render",
+      "features": [
+        "cynefin-single-tab"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "branchExpected": {
+        "description": "STRING converts one-character escapes in both quote styles; unknown escape drops backslash and does not interpret JSON Unicode.",
+        "nativeChecks": [
+          {
+            "path": [
+              "domains",
+              0,
+              1,
+              0
+            ],
+            "equals": "A\tB"
+          }
+        ],
+        "sourceChecks": [
+          {
+            "path": [
+              "getDomains",
+              "clear",
+              "items",
+              0,
+              "label"
+            ],
+            "equals": "A\tB"
+          }
+        ]
+      }
+    },
+    {
+      "id": "BV-A-cynefin-transition-escape",
+      "kind": "cynefin",
+      "source": "cynefin-beta\nclear --> complex : \"A\\qB\"\n",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/cynefin/cynefin.langium",
+        "symbol": "DomainItem/Transition",
+        "line": 18,
+        "sha256": "94276271b3dfe6dd78ced62249cd1d69bdd785e1498b90e678f101a23e1d26e0",
+        "repository": "mermaid",
+        "synthesized": true,
+        "canonicalSha256": "e39c321b5a98b7160270c4275d4dfc309769478fca6e8f93fa67973431b66881",
+        "hashMeaning": "sha256 binds Windows checkout; canonicalSha256 binds fixed commit git blob"
+      },
+      "expect": "render",
+      "features": [
+        "cynefin-transition-escape"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "branchExpected": {
+        "description": "Transition label uses identical STRING converter.",
+        "nativeChecks": [
+          {
+            "path": [
+              "transitions",
+              0,
+              2
+            ],
+            "equals": "AqB"
+          }
+        ],
+        "sourceChecks": [
+          {
+            "path": [
+              "getTransitions",
+              0,
+              "label"
+            ],
+            "equals": "AqB"
+          }
+        ]
+      }
+    },
+    {
+      "id": "BV-A-block-two-node",
+      "kind": "block",
+      "source": "block\nA-->B",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "symbol": "nodeStatement",
+        "line": 218,
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "repository": "mermaid",
+        "synthesized": true,
+        "canonicalSha256": "323acca843736b66334fa088b97519ef96c22aa5a1a1eed4f468379ebecf09f2",
+        "hashMeaning": "sha256 binds Windows checkout; canonicalSha256 binds fixed commit git blob"
+      },
+      "expect": "render",
+      "features": [
+        "block-two-node"
+      ],
+      "expectedText": [
+        "A",
+        "B"
+      ],
+      "expectedErrorCodes": [],
+      "branchExpected": {
+        "description": "Recursive nodeStatement produces array but next recursive action reads $1.id; observe three-node source parse/render before defect classification.",
+        "nativeChecks": [
+          {
+            "path": [
+              "edges",
+              0,
+              "source"
+            ],
+            "equals": "A"
+          },
+          {
+            "path": [
+              "edges",
+              0,
+              "target"
+            ],
+            "equals": "B"
+          }
+        ],
+        "sourceChecks": []
+      }
+    },
+    {
+      "id": "BV-A-block-three-node",
+      "kind": "block",
+      "source": "block\nA-->B-->C",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "symbol": "nodeStatement",
+        "line": 218,
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "repository": "mermaid",
+        "synthesized": true,
+        "canonicalSha256": "323acca843736b66334fa088b97519ef96c22aa5a1a1eed4f468379ebecf09f2",
+        "hashMeaning": "sha256 binds Windows checkout; canonicalSha256 binds fixed commit git blob"
+      },
+      "expect": "render",
+      "features": [
+        "block-three-node"
+      ],
+      "expectedText": [
+        "A",
+        "B"
+      ],
+      "expectedErrorCodes": [],
+      "branchExpected": {
+        "description": "Recursive nodeStatement produces array but next recursive action reads $1.id; observe three-node source parse/render before defect classification.",
+        "nativeChecks": [],
+        "sourceChecks": []
+      }
+    },
+    {
+      "id": "BV-A-block-split-three",
+      "kind": "block",
+      "source": "block\nA-->B\nB-->C",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "symbol": "nodeStatement",
+        "line": 218,
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "repository": "mermaid",
+        "synthesized": true,
+        "canonicalSha256": "323acca843736b66334fa088b97519ef96c22aa5a1a1eed4f468379ebecf09f2",
+        "hashMeaning": "sha256 binds Windows checkout; canonicalSha256 binds fixed commit git blob"
+      },
+      "expect": "render",
+      "features": [
+        "block-split-three"
+      ],
+      "expectedText": [
+        "A",
+        "B"
+      ],
+      "expectedErrorCodes": [],
+      "branchExpected": {
+        "description": "Recursive nodeStatement produces array but next recursive action reads $1.id; observe three-node source parse/render before defect classification.",
+        "nativeChecks": [
+          {
+            "path": [
+              "edges",
+              0,
+              "source"
+            ],
+            "equals": "A"
+          },
+          {
+            "path": [
+              "edges",
+              0,
+              "target"
+            ],
+            "equals": "B"
+          }
+        ],
+        "sourceChecks": []
+      }
+    },
+    {
+      "id": "BV-A-c4-shape-priority",
+      "kind": "c4",
+      "source": "C4Context\nSystem(a,\"Alpha\",$shape=\"database\",$sprite=\"person\",$tags=\"queue\")",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/c4ShapeAdapter.ts",
+        "symbol": "resolveNodeShape",
+        "line": 69,
+        "sha256": "84edb89d1e6393b82db03dcefb56bd256014e40399e5eed4708d2daef97ed167",
+        "repository": "mermaid",
+        "synthesized": true,
+        "canonicalSha256": "e86b2557cd3294e2eee387e4146eb310cfd2277a4046173ae43adfcf297b0595",
+        "hashMeaning": "sha256 binds Windows checkout; canonicalSha256 binds fixed commit git blob"
+      },
+      "expect": "render",
+      "features": [
+        "c4-shape-priority"
+      ],
+      "expectedText": [
+        "Alpha"
+      ],
+      "expectedErrorCodes": [],
+      "branchExpected": {
+        "description": "Recognized shape then sprite then first recognized comma-separated tag then element type.",
+        "nativeChecks": [],
+        "sourceChecks": []
+      }
+    },
+    {
+      "id": "BV-A-c4-sprite-fallback",
+      "kind": "c4",
+      "source": "C4Context\nSystem(a,\"Alpha\",$shape=\"unknown\",$sprite=\"person\",$tags=\"queue\")",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/c4ShapeAdapter.ts",
+        "symbol": "resolveNodeShape",
+        "line": 69,
+        "sha256": "84edb89d1e6393b82db03dcefb56bd256014e40399e5eed4708d2daef97ed167",
+        "repository": "mermaid",
+        "synthesized": true,
+        "canonicalSha256": "e86b2557cd3294e2eee387e4146eb310cfd2277a4046173ae43adfcf297b0595",
+        "hashMeaning": "sha256 binds Windows checkout; canonicalSha256 binds fixed commit git blob"
+      },
+      "expect": "render",
+      "features": [
+        "c4-sprite-fallback"
+      ],
+      "expectedText": [
+        "Alpha"
+      ],
+      "expectedErrorCodes": [],
+      "branchExpected": {
+        "description": "Recognized shape then sprite then first recognized comma-separated tag then element type.",
+        "nativeChecks": [],
+        "sourceChecks": []
+      }
+    },
+    {
+      "id": "BV-A-c4-tags-first-known",
+      "kind": "c4",
+      "source": "C4Context\nSystem(a,\"Alpha\",$tags=\"unknown,queue,person\")",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/c4ShapeAdapter.ts",
+        "symbol": "resolveNodeShape",
+        "line": 69,
+        "sha256": "84edb89d1e6393b82db03dcefb56bd256014e40399e5eed4708d2daef97ed167",
+        "repository": "mermaid",
+        "synthesized": true,
+        "canonicalSha256": "e86b2557cd3294e2eee387e4146eb310cfd2277a4046173ae43adfcf297b0595",
+        "hashMeaning": "sha256 binds Windows checkout; canonicalSha256 binds fixed commit git blob"
+      },
+      "expect": "render",
+      "features": [
+        "c4-tags-first-known"
+      ],
+      "expectedText": [
+        "Alpha"
+      ],
+      "expectedErrorCodes": [],
+      "branchExpected": {
+        "description": "Recognized shape then sprite then first recognized comma-separated tag then element type.",
+        "nativeChecks": [],
+        "sourceChecks": []
+      }
+    },
+    {
+      "id": "BV-A-c4-type-fallback",
+      "kind": "c4",
+      "source": "C4Context\nSystem(a,\"Alpha\",$shape=\"unknown\",$sprite=\"unknown\",$tags=\"unknown\")",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/c4ShapeAdapter.ts",
+        "symbol": "resolveNodeShape",
+        "line": 69,
+        "sha256": "84edb89d1e6393b82db03dcefb56bd256014e40399e5eed4708d2daef97ed167",
+        "repository": "mermaid",
+        "synthesized": true,
+        "canonicalSha256": "e86b2557cd3294e2eee387e4146eb310cfd2277a4046173ae43adfcf297b0595",
+        "hashMeaning": "sha256 binds Windows checkout; canonicalSha256 binds fixed commit git blob"
+      },
+      "expect": "render",
+      "features": [
+        "c4-type-fallback"
+      ],
+      "expectedText": [
+        "Alpha"
+      ],
+      "expectedErrorCodes": [],
+      "branchExpected": {
+        "description": "Recognized shape then sprite then first recognized comma-separated tag then element type.",
+        "nativeChecks": [],
+        "sourceChecks": []
+      }
+    },
+    {
+      "id": "BV-A-c4-rows-base",
+      "kind": "c4",
+      "source": "C4Context\nPerson(a,\"Alpha\")\nSystem(b,\"Beta\")",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/c4Renderer.ts",
+        "symbol": "drawInsideBoundary",
+        "line": 435,
+        "sha256": "d58ffb63def9c7117a332a0a94ec3b30fd7d34ba93ccb590d3e148a69460c909",
+        "repository": "mermaid",
+        "synthesized": true,
+        "canonicalSha256": "1d09b55fa11a8c2c0987e02186495d8ed1d8cdbfeda02d4160f0010e3a653e52",
+        "hashMeaning": "sha256 binds Windows checkout; canonicalSha256 binds fixed commit git blob"
+      },
+      "expect": "render",
+      "features": [
+        "c4-rows-base"
+      ],
+      "expectedText": [
+        "Alpha",
+        "Beta"
+      ],
+      "expectedErrorCodes": [],
+      "branchExpected": {
+        "description": "Renderer uses DB rows default4; UpdateLayoutConfig changes DB count; config.c4ShapeInRow is not read.",
+        "nativeChecks": [
+          {
+            "path": [
+              "shape_in_row"
+            ],
+            "equals": 4
+          }
+        ],
+        "sourceChecks": []
+      }
+    },
+    {
+      "id": "BV-A-c4-rows-config",
+      "kind": "c4",
+      "source": "C4Context\nPerson(a,\"Alpha\")\nSystem(b,\"Beta\")",
+      "config": {
+        "c4": {
+          "c4ShapeInRow": 1
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/c4Renderer.ts",
+        "symbol": "drawInsideBoundary",
+        "line": 435,
+        "sha256": "d58ffb63def9c7117a332a0a94ec3b30fd7d34ba93ccb590d3e148a69460c909",
+        "repository": "mermaid",
+        "synthesized": true,
+        "canonicalSha256": "1d09b55fa11a8c2c0987e02186495d8ed1d8cdbfeda02d4160f0010e3a653e52",
+        "hashMeaning": "sha256 binds Windows checkout; canonicalSha256 binds fixed commit git blob"
+      },
+      "expect": "render",
+      "features": [
+        "c4-rows-config"
+      ],
+      "expectedText": [
+        "Alpha",
+        "Beta"
+      ],
+      "expectedErrorCodes": [],
+      "branchExpected": {
+        "description": "Renderer uses DB rows default4; UpdateLayoutConfig changes DB count; config.c4ShapeInRow is not read.",
+        "nativeChecks": [
+          {
+            "path": [
+              "shape_in_row"
+            ],
+            "equals": 4
+          }
+        ],
+        "sourceChecks": [],
+        "equivalentPaintTo": "BV-A-c4-rows-base"
+      }
+    },
+    {
+      "id": "BV-A-c4-rows-command",
+      "kind": "c4",
+      "source": "C4Context\nPerson(a,\"Alpha\")\nSystem(b,\"Beta\")\nUpdateLayoutConfig($c4ShapeInRow=\"1\")",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/c4Renderer.ts",
+        "symbol": "drawInsideBoundary",
+        "line": 435,
+        "sha256": "d58ffb63def9c7117a332a0a94ec3b30fd7d34ba93ccb590d3e148a69460c909",
+        "repository": "mermaid",
+        "synthesized": true,
+        "canonicalSha256": "1d09b55fa11a8c2c0987e02186495d8ed1d8cdbfeda02d4160f0010e3a653e52",
+        "hashMeaning": "sha256 binds Windows checkout; canonicalSha256 binds fixed commit git blob"
+      },
+      "expect": "render",
+      "features": [
+        "c4-rows-command"
+      ],
+      "expectedText": [
+        "Alpha",
+        "Beta"
+      ],
+      "expectedErrorCodes": [],
+      "branchExpected": {
+        "description": "Renderer uses DB rows default4; UpdateLayoutConfig changes DB count; config.c4ShapeInRow is not read.",
+        "nativeChecks": [
+          {
+            "path": [
+              "shape_in_row"
+            ],
+            "equals": 1
+          }
+        ],
+        "sourceChecks": []
+      }
+    },
+    {
+      "id": "BV-A-c4-shadow-legend",
+      "kind": "c4",
+      "source": "C4Context\nSystem(a,\"Alpha\")\nUpdateElementStyle(a,$shadowing=\"true\",$legendText=\"LEGEND\",$legendSprite=\"person\")",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/c4Db.ts",
+        "symbol": "updateElementStyle",
+        "line": 493,
+        "sha256": "461e4c00f8c5dfe0db51cc1b8e12bb7106b7f722752e016cd1e5730369aa7b36",
+        "repository": "mermaid",
+        "synthesized": true,
+        "canonicalSha256": "0dc55e891eb14e08f93b0951a3592ed11bacf34c539141ee978213aacdb25004",
+        "hashMeaning": "sha256 binds Windows checkout; canonicalSha256 binds fixed commit git blob"
+      },
+      "expect": "render",
+      "features": [
+        "c4-shadow-legend"
+      ],
+      "expectedText": [
+        "Alpha"
+      ],
+      "expectedErrorCodes": [],
+      "branchExpected": {
+        "description": "Attributes are stored but active renderer has no visible legend/shadow consumer; must not invent LEGEND.",
+        "nativeChecks": [],
+        "sourceChecks": []
+      }
+    },
+    {
+      "id": "BV-A-c4-boundary-sprite",
+      "kind": "c4",
+      "source": "C4Context\nBoundary(g,\"Group\",$sprite=\"person\") {\n System(a,\"Alpha\")\n}",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/c4/c4Renderer.ts",
+        "symbol": "drawInsideBoundary",
+        "line": 435,
+        "sha256": "d58ffb63def9c7117a332a0a94ec3b30fd7d34ba93ccb590d3e148a69460c909",
+        "repository": "mermaid",
+        "synthesized": true,
+        "canonicalSha256": "1d09b55fa11a8c2c0987e02186495d8ed1d8cdbfeda02d4160f0010e3a653e52",
+        "hashMeaning": "sha256 binds Windows checkout; canonicalSha256 binds fixed commit git blob"
+      },
+      "expect": "render",
+      "features": [
+        "c4-boundary-sprite"
+      ],
+      "expectedText": [
+        "Group",
+        "Alpha"
+      ],
+      "expectedErrorCodes": [],
+      "branchExpected": {
+        "description": "Truthy boundary.sprite reserves 48px image height, not an external sprite asset.",
+        "nativeChecks": [],
+        "sourceChecks": []
+      }
+    },
+    {
+      "id": "BV-A-state-base",
+      "kind": "stateDiagram",
+      "source": "stateDiagram-v2\nA --> B",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/state/parser/stateDiagram.jison",
+        "symbol": "statement HIDE_EMPTY / scale WIDTH",
+        "line": 225,
+        "sha256": "72568f98201c5ba59dca96842d1805d5a9908c5965d0609ab27f192929285d4d",
+        "repository": "mermaid",
+        "synthesized": true,
+        "canonicalSha256": "94d4715707c3b35192b8586fa271e843f2c084e9ff70dd8db07c510c1a23e231",
+        "hashMeaning": "sha256 binds Windows checkout; canonicalSha256 binds fixed commit git blob"
+      },
+      "expect": "render",
+      "features": [
+        "state-base"
+      ],
+      "expectedText": [
+        "A",
+        "B"
+      ],
+      "expectedErrorCodes": [],
+      "branchExpected": {
+        "description": "HIDE_EMPTY / scale WIDTH have no semantic action; visible geometry and labels equal baseline.",
+        "nativeChecks": [],
+        "sourceChecks": []
+      }
+    },
+    {
+      "id": "BV-A-state-noops",
+      "kind": "stateDiagram",
+      "source": "stateDiagram-v2\nhide empty description\nscale 2 width\nA --> B",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/state/parser/stateDiagram.jison",
+        "symbol": "statement HIDE_EMPTY / scale WIDTH",
+        "line": 225,
+        "sha256": "72568f98201c5ba59dca96842d1805d5a9908c5965d0609ab27f192929285d4d",
+        "repository": "mermaid",
+        "synthesized": true,
+        "canonicalSha256": "94d4715707c3b35192b8586fa271e843f2c084e9ff70dd8db07c510c1a23e231",
+        "hashMeaning": "sha256 binds Windows checkout; canonicalSha256 binds fixed commit git blob"
+      },
+      "expect": "render",
+      "features": [
+        "state-noops"
+      ],
+      "expectedText": [
+        "A",
+        "B"
+      ],
+      "expectedErrorCodes": [],
+      "branchExpected": {
+        "description": "HIDE_EMPTY / scale WIDTH have no semantic action; visible geometry and labels equal baseline.",
+        "nativeChecks": [],
+        "sourceChecks": [],
+        "equivalentPaintTo": "BV-A-state-base"
+      }
+    },
+    {
+      "id": "BV-A-tree-title",
+      "kind": "treeView",
+      "source": "treeView-beta\ntitle   A\t  B %% hidden\nroot/",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/treeView/valueConverter.ts",
+        "symbol": "runCustomConverter",
+        "line": 5,
+        "sha256": "83c0745f0363edb64dcb150e460a8d60c3a4019022caac24eaa2ae63d950051b",
+        "repository": "mermaid",
+        "synthesized": true,
+        "canonicalSha256": "fddddb34d256698a6c2b25bbff416c5dc949ddc9eac8f935a9a80ad02123d0cf",
+        "hashMeaning": "sha256 binds Windows checkout; canonicalSha256 binds fixed commit git blob"
+      },
+      "expect": "render",
+      "features": [
+        "tree-title"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "branchExpected": {
+        "description": "Common TITLE stops at comment and trims/collapses whitespace to A B.",
+        "nativeChecks": [
+          {
+            "path": [
+              "title"
+            ],
+            "equals": "A B"
+          }
+        ],
+        "sourceChecks": [
+          {
+            "path": [
+              "getDiagramTitle"
+            ],
+            "equals": "A B"
+          }
+        ]
+      }
+    },
+    {
+      "id": "BV-A-architecture-title",
+      "kind": "architecture",
+      "source": "architecture-beta\ntitle   A\t  B %% hidden\nservice api[API]",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/architecture/architecture.langium",
+        "symbol": "Architecture",
+        "line": 5,
+        "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+        "repository": "mermaid",
+        "synthesized": true,
+        "canonicalSha256": "08b6acbfa6f48b3dc6b590e3a5339a3fe554c394a0307d6cbfebb75c175b5147",
+        "hashMeaning": "sha256 binds Windows checkout; canonicalSha256 binds fixed commit git blob"
+      },
+      "expect": "render",
+      "features": [
+        "architecture-title"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "branchExpected": {
+        "description": "Common TITLE stops at comment and trims/collapses whitespace to A B.",
+        "nativeChecks": [
+          {
+            "path": [
+              "title"
+            ],
+            "equals": "A B"
+          }
+        ],
+        "sourceChecks": [
+          {
+            "path": [
+              "getDiagramTitle"
+            ],
+            "equals": "A B"
+          }
+        ]
+      }
+    },
+    {
+      "id": "BV-A-cynefin-title",
+      "kind": "cynefin",
+      "source": "cynefin-beta\ntitle   A\t  B %% hidden\nclear\n \"Item\"",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/common/valueConverter.ts",
+        "symbol": "runCommonConverter",
+        "line": 44,
+        "sha256": "d93aa5dd1f7fed8aa903f55eb3e463c6b69b455af22004a6405a61c7560f58e5",
+        "repository": "mermaid",
+        "synthesized": true,
+        "canonicalSha256": "43b58df0bba9087c8b831cd53a12e8f1f85bf4a7352b388873d793325953ab37",
+        "hashMeaning": "sha256 binds Windows checkout; canonicalSha256 binds fixed commit git blob"
+      },
+      "expect": "render",
+      "features": [
+        "cynefin-title"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "branchExpected": {
+        "description": "Common TITLE stops at comment and trims/collapses whitespace to A B.",
+        "nativeChecks": [
+          {
+            "path": [
+              "title"
+            ],
+            "equals": "A B"
+          }
+        ],
+        "sourceChecks": [
+          {
+            "path": [
+              "getDiagramTitle"
+            ],
+            "equals": "A B"
+          }
+        ]
+      }
+    },
+    {
+      "id": "BV-A-tree-multiline-accessibility",
+      "kind": "treeView",
+      "source": "treeView-beta\naccDescr {\n  One   two\n\n   Three\n}\nroot/",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/common/valueConverter.ts",
+        "symbol": "runCommonConverter",
+        "line": 44,
+        "sha256": "d93aa5dd1f7fed8aa903f55eb3e463c6b69b455af22004a6405a61c7560f58e5",
+        "repository": "mermaid",
+        "synthesized": true,
+        "canonicalSha256": "43b58df0bba9087c8b831cd53a12e8f1f85bf4a7352b388873d793325953ab37",
+        "hashMeaning": "sha256 binds Windows checkout; canonicalSha256 binds fixed commit git blob"
+      },
+      "expect": "render",
+      "features": [
+        "tree-multiline-accessibility"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "branchExpected": {
+        "description": "Multiline converter trims each line, collapses horizontal whitespace and repeated newlines.",
+        "nativeChecks": [
+          {
+            "path": [
+              "acc_description"
+            ],
+            "equals": "One two\nThree"
+          }
+        ],
+        "sourceChecks": [
+          {
+            "path": [
+              "getAccDescription"
+            ],
+            "equals": "One two\nThree"
+          }
+        ]
+      }
+    },
+    {
+      "id": "BV-A-tree-quoted-literal",
+      "kind": "treeView",
+      "source": "treeView-beta\n\"A\\nB/\" icon()",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/treeView/valueConverter.ts",
+        "symbol": "runCustomConverter",
+        "line": 5,
+        "sha256": "83c0745f0363edb64dcb150e460a8d60c3a4019022caac24eaa2ae63d950051b",
+        "repository": "mermaid",
+        "synthesized": true,
+        "canonicalSha256": "fddddb34d256698a6c2b25bbff416c5dc949ddc9eac8f935a9a80ad02123d0cf",
+        "hashMeaning": "sha256 binds Windows checkout; canonicalSha256 binds fixed commit git blob"
+      },
+      "expect": "render",
+      "features": [
+        "tree-quoted-literal"
+      ],
+      "expectedText": [
+        "A\\nB"
+      ],
+      "expectedErrorCodes": [],
+      "branchExpected": {
+        "description": "QUOTED_NAME strips outer quotes only; no escape decoding, directory slash removed, empty icon suppresses default.",
+        "nativeChecks": [
+          {
+            "path": [
+              "nodes",
+              1,
+              "name"
+            ],
+            "equals": "A\\nB"
+          },
+          {
+            "path": [
+              "nodes",
+              1,
+              "directory"
+            ],
+            "equals": true
+          },
+          {
+            "path": [
+              "nodes",
+              1,
+              "icon"
+            ],
+            "equals": "none"
+          }
+        ],
+        "sourceChecks": []
+      }
+    },
+    {
+      "id": "BV-A-architecture-accessibility",
+      "kind": "architecture",
+      "source": "architecture-beta\naccTitle:  A   B %% hidden\naccDescr {\n One   two\n\n Three\n}\nservice api[API]",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/common/valueConverter.ts",
+        "symbol": "runCommonConverter",
+        "line": 44,
+        "sha256": "d93aa5dd1f7fed8aa903f55eb3e463c6b69b455af22004a6405a61c7560f58e5",
+        "repository": "mermaid",
+        "synthesized": true,
+        "canonicalSha256": "43b58df0bba9087c8b831cd53a12e8f1f85bf4a7352b388873d793325953ab37",
+        "hashMeaning": "sha256 binds Windows checkout; canonicalSha256 binds fixed commit git blob"
+      },
+      "expect": "render",
+      "features": [
+        "architecture-accessibility"
+      ],
+      "expectedText": [
+        "API"
+      ],
+      "expectedErrorCodes": [],
+      "branchExpected": {
+        "description": "Canonical metadata stored independently of visible title.",
+        "nativeChecks": [
+          {
+            "path": [
+              "acc_title"
+            ],
+            "equals": "A B"
+          },
+          {
+            "path": [
+              "acc_description"
+            ],
+            "equals": "One two\nThree"
+          }
+        ],
+        "sourceChecks": [
+          {
+            "path": [
+              "getAccTitle"
+            ],
+            "equals": "A B"
+          },
+          {
+            "path": [
+              "getAccDescription"
+            ],
+            "equals": "One two\nThree"
+          }
+        ]
+      }
+    },
+    {
+      "id": "BV-A-event-title-terminal",
+      "kind": "eventmodeling",
+      "source": "eventmodeling\ntitle   A   B %% hidden\ntf 1 ui Page\n",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/eventmodeling/event-modeling.langium",
+        "symbol": "EventModel/EmGwt/EM_TITLE",
+        "line": 9,
+        "sha256": "be3da489f5114237acbd7ec50494e8bb48f8e6753b6e2f7f2137dae170000611",
+        "repository": "mermaid",
+        "synthesized": true,
+        "canonicalSha256": "9432c3c986e2d2135fbdedbc5b4cf7fe22b9c893e10b4d23cc63332f776bbba4",
+        "hashMeaning": "sha256 binds Windows checkout; canonicalSha256 binds fixed commit git blob"
+      },
+      "expect": "syntax_error",
+      "features": [
+        "event-title-terminal"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "SYNTAX_ERROR"
+      ],
+      "branchExpected": {
+        "description": "Fixed original rejects these inputs: EM_ID precedes EM_TITLE; leading EM_WS consumes whitespace. Do not assert unreachable terminal conversion.",
+        "nativeChecks": [],
+        "sourceChecks": []
+      },
+      "sourceExpectationMigration": {
+        "previousFixture": {
+          "id": "BV-A-event-title-terminal",
+          "kind": "eventmodeling",
+          "source": "eventmodeling\ntitle   A   B %% hidden\ntf 1 ui Page\n",
+          "config": {},
+          "origin": {
+            "path": "packages/parser/src/language/eventmodeling/event-modeling.langium",
+            "symbol": "EventModel/EmGwt/EM_TITLE",
+            "line": 9,
+            "sha256": "be3da489f5114237acbd7ec50494e8bb48f8e6753b6e2f7f2137dae170000611",
+            "repository": "mermaid",
+            "synthesized": true,
+            "canonicalSha256": "9432c3c986e2d2135fbdedbc5b4cf7fe22b9c893e10b4d23cc63332f776bbba4",
+            "hashMeaning": "sha256 binds Windows checkout; canonicalSha256 binds fixed commit git blob"
+          },
+          "expect": "render",
+          "features": [
+            "event-title-terminal"
+          ],
+          "expectedText": [
+            "Page"
+          ],
+          "expectedErrorCodes": [],
+          "branchExpected": {
+            "description": "EM_TITLE is not in CommonValueConverter rulesRegexes; default terminal conversion leaves token unnormalized. P3 captures exact source title.",
+            "nativeChecks": [
+              {
+                "path": [
+                  "title"
+                ],
+                "equals": "title   A   B "
+              }
+            ],
+            "sourceChecks": [
+              {
+                "path": [
+                  "getDiagramTitle"
+                ],
+                "equals": "title   A   B "
+              }
+            ]
+          }
+        },
+        "evidence": "test-runs/branch-triage-A-followup.json",
+        "reason": "Three actual original parse rejections, not candidate-derived expected output."
+      }
+    },
+    {
+      "id": "BV-A-event-gwt-noop",
+      "kind": "eventmodeling",
+      "source": "eventmodeling\nentity Done\ntf 1 evt Done\ngwt 1 given evt Done then evt Done\n",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/eventmodeling/event-modeling.langium",
+        "symbol": "EventModel/EmGwt/EM_TITLE",
+        "line": 9,
+        "sha256": "be3da489f5114237acbd7ec50494e8bb48f8e6753b6e2f7f2137dae170000611",
+        "repository": "mermaid",
+        "synthesized": true,
+        "canonicalSha256": "9432c3c986e2d2135fbdedbc5b4cf7fe22b9c893e10b4d23cc63332f776bbba4",
+        "hashMeaning": "sha256 binds Windows checkout; canonicalSha256 binds fixed commit git blob"
+      },
+      "expect": "render",
+      "features": [
+        "event-gwt-noop"
+      ],
+      "expectedText": [
+        "Done"
+      ],
+      "expectedErrorCodes": [],
+      "branchExpected": {
+        "description": "GWT validates/retains AST but does not invent extra visible frame/edge.",
+        "nativeChecks": [
+          {
+            "path": [
+              "frames",
+              0,
+              "id"
+            ],
+            "equals": "1"
+          }
+        ],
+        "sourceChecks": []
+      }
+    },
+    {
+      "id": "BV-A-mindmap-default",
+      "kind": "mindmap",
+      "source": "mindmap\nRoot\n  Left\n    Leaf\n  Right",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/mindmap/mindmapDb.ts",
+        "symbol": "flattenNodes/getData",
+        "line": 225,
+        "sha256": "df8af0d61221a62053ccacd42b6ff9c95d812139e72e842fbb920044ef2c4223",
+        "repository": "mermaid",
+        "synthesized": true,
+        "canonicalSha256": "ced0dcad082a2cd50d8a74908687dd85de0fda074189d7c45024df01f24b48fb",
+        "hashMeaning": "sha256 binds Windows checkout; canonicalSha256 binds fixed commit git blob"
+      },
+      "expect": "render",
+      "features": [
+        "mindmap-default"
+      ],
+      "expectedText": [
+        "Root",
+        "Left",
+        "Leaf",
+        "Right"
+      ],
+      "expectedErrorCodes": [],
+      "branchExpected": {
+        "description": "Only explicit root layout selects tidy-tree; scoped-only root defaults source COSE; preserve tree/no overlap.",
+        "nativeChecks": [],
+        "sourceChecks": []
+      }
+    },
+    {
+      "id": "BV-A-mindmap-scoped-layout",
+      "kind": "mindmap",
+      "source": "mindmap\nRoot\n  Left\n    Leaf\n  Right",
+      "config": {
+        "mindmap": {
+          "layout": "tidy-tree"
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/mindmap/mindmapDb.ts",
+        "symbol": "flattenNodes/getData",
+        "line": 225,
+        "sha256": "df8af0d61221a62053ccacd42b6ff9c95d812139e72e842fbb920044ef2c4223",
+        "repository": "mermaid",
+        "synthesized": true,
+        "canonicalSha256": "ced0dcad082a2cd50d8a74908687dd85de0fda074189d7c45024df01f24b48fb",
+        "hashMeaning": "sha256 binds Windows checkout; canonicalSha256 binds fixed commit git blob"
+      },
+      "expect": "render",
+      "features": [
+        "mindmap-scoped-layout"
+      ],
+      "expectedText": [
+        "Root",
+        "Left",
+        "Leaf",
+        "Right"
+      ],
+      "expectedErrorCodes": [],
+      "branchExpected": {
+        "description": "Only explicit root layout selects tidy-tree; scoped-only root defaults source COSE; preserve tree/no overlap.",
+        "nativeChecks": [],
+        "sourceChecks": []
+      }
+    },
+    {
+      "id": "BV-A-mindmap-explicit-tidy",
+      "kind": "mindmap",
+      "source": "mindmap\nRoot\n  Left\n    Leaf\n  Right",
+      "config": {
+        "layout": "tidy-tree"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/mindmap/mindmapDb.ts",
+        "symbol": "flattenNodes/getData",
+        "line": 225,
+        "sha256": "df8af0d61221a62053ccacd42b6ff9c95d812139e72e842fbb920044ef2c4223",
+        "repository": "mermaid",
+        "synthesized": true,
+        "canonicalSha256": "ced0dcad082a2cd50d8a74908687dd85de0fda074189d7c45024df01f24b48fb",
+        "hashMeaning": "sha256 binds Windows checkout; canonicalSha256 binds fixed commit git blob"
+      },
+      "expect": "render",
+      "features": [
+        "mindmap-explicit-tidy"
+      ],
+      "expectedText": [
+        "Root",
+        "Left",
+        "Leaf",
+        "Right"
+      ],
+      "expectedErrorCodes": [],
+      "branchExpected": {
+        "description": "Only explicit root layout selects tidy-tree; scoped-only root defaults source COSE; preserve tree/no overlap.",
+        "nativeChecks": [],
+        "sourceChecks": []
+      }
+    },
+    {
+      "id": "BV-A-mindmap-icon-base",
+      "kind": "mindmap",
+      "source": "mindmap\nRoot\n  Child",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/mindmap/mindmapDb.ts",
+        "symbol": "flattenNodes/getData",
+        "line": 225,
+        "sha256": "df8af0d61221a62053ccacd42b6ff9c95d812139e72e842fbb920044ef2c4223",
+        "repository": "mermaid",
+        "synthesized": true,
+        "canonicalSha256": "ced0dcad082a2cd50d8a74908687dd85de0fda074189d7c45024df01f24b48fb",
+        "hashMeaning": "sha256 binds Windows checkout; canonicalSha256 binds fixed commit git blob"
+      },
+      "expect": "render",
+      "features": [
+        "mindmap-icon-base"
+      ],
+      "expectedText": [
+        "Root",
+        "Child"
+      ],
+      "expectedErrorCodes": [],
+      "branchExpected": {
+        "description": "DB forwards icon; actual active shape consumer must determine visible effect, not metadata declaration.",
+        "nativeChecks": [],
+        "sourceChecks": []
+      }
+    },
+    {
+      "id": "BV-A-mindmap-icon-icon",
+      "kind": "mindmap",
+      "source": "mindmap\nRoot\n  Child\n  ::icon(fa:book)",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/mindmap/mindmapDb.ts",
+        "symbol": "flattenNodes/getData",
+        "line": 225,
+        "sha256": "df8af0d61221a62053ccacd42b6ff9c95d812139e72e842fbb920044ef2c4223",
+        "repository": "mermaid",
+        "synthesized": true,
+        "canonicalSha256": "ced0dcad082a2cd50d8a74908687dd85de0fda074189d7c45024df01f24b48fb",
+        "hashMeaning": "sha256 binds Windows checkout; canonicalSha256 binds fixed commit git blob"
+      },
+      "expect": "render",
+      "features": [
+        "mindmap-icon-icon"
+      ],
+      "expectedText": [
+        "Root",
+        "Child"
+      ],
+      "expectedErrorCodes": [],
+      "branchExpected": {
+        "description": "DB forwards icon; actual active shape consumer must determine visible effect, not metadata declaration.",
+        "nativeChecks": [],
+        "sourceChecks": []
+      }
+    },
+    {
+      "id": "BV-A-kanban-icon-base",
+      "kind": "kanban",
+      "source": "kanban\nTodo\n  item[Task]@{ticket: T-1}",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/kanban/kanbanDb.ts",
+        "symbol": "getData",
+        "line": 54,
+        "sha256": "5e96a2a5d8df7ce08c79c0da7fe4edc4decceb8dfe7b27434f799dcdfc2ad38a",
+        "repository": "mermaid",
+        "synthesized": true,
+        "canonicalSha256": "d26473103e8b12917944a97f47f86b7e3785b22784224c66ab0ef1a3a926742b",
+        "hashMeaning": "sha256 binds Windows checkout; canonicalSha256 binds fixed commit git blob"
+      },
+      "expect": "render",
+      "features": [
+        "kanban-icon-base"
+      ],
+      "expectedText": [
+        "Todo",
+        "Task"
+      ],
+      "expectedErrorCodes": [],
+      "branchExpected": {
+        "description": "DB forwards icon metadata; compare original card/section active consumer.",
+        "nativeChecks": [],
+        "sourceChecks": []
+      }
+    },
+    {
+      "id": "BV-A-kanban-icon-icon",
+      "kind": "kanban",
+      "source": "kanban\nTodo\n  item[Task]@{ticket: T-1, icon: fa:book}",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/kanban/kanbanDb.ts",
+        "symbol": "getData",
+        "line": 54,
+        "sha256": "5e96a2a5d8df7ce08c79c0da7fe4edc4decceb8dfe7b27434f799dcdfc2ad38a",
+        "repository": "mermaid",
+        "synthesized": true,
+        "canonicalSha256": "d26473103e8b12917944a97f47f86b7e3785b22784224c66ab0ef1a3a926742b",
+        "hashMeaning": "sha256 binds Windows checkout; canonicalSha256 binds fixed commit git blob"
+      },
+      "expect": "render",
+      "features": [
+        "kanban-icon-icon"
+      ],
+      "expectedText": [
+        "Todo",
+        "Task"
+      ],
+      "expectedErrorCodes": [],
+      "branchExpected": {
+        "description": "DB forwards icon metadata; compare original card/section active consumer.",
+        "nativeChecks": [],
+        "sourceChecks": []
+      }
+    },
+    {
+      "id": "BV-A-class-first-annotation",
+      "kind": "classDiagram",
+      "source": "classDiagram\nclass A\n<<interface>> A\n<<service>> A",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+        "symbol": "classStatement",
+        "line": 1,
+        "sha256": "3c99e4613bd8235f4d3485d8444a8b119e8af9ede50f88505c24d5a6cc93280f",
+        "repository": "mermaid",
+        "synthesized": true,
+        "canonicalSha256": "c2ea20022e4adf501dbbcda909a1bdb74e05a2ac53ff5276d09d00fd54a3e21e",
+        "hashMeaning": "sha256 binds Windows checkout; canonicalSha256 binds fixed commit git blob"
+      },
+      "expect": "render",
+      "features": [
+        "class-first-annotation"
+      ],
+      "expectedText": [
+        "A",
+        "interface"
+      ],
+      "expectedErrorCodes": [],
+      "branchExpected": {
+        "description": "DB retains both annotations; active label shows first annotation only.",
+        "nativeChecks": [
+          {
+            "path": [
+              "classes",
+              0,
+              "annotations"
+            ],
+            "equals": [
+              "interface",
+              "service"
+            ]
+          }
+        ],
+        "sourceChecks": []
+      }
+    },
+    {
+      "id": "BV-A-ishikawa-tab-depth",
+      "kind": "ishikawa",
+      "source": "ishikawa-beta\nEffect\n\tPeople\n\t\tTraining\n\tProcess\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/ishikawa/parser/ishikawa.jison",
+        "symbol": "statement",
+        "line": 54,
+        "sha256": "1bbf4d461534b1c0d4c9e375bf821fac6219f73add5727e5aa51fe4aa044f57b",
+        "repository": "mermaid",
+        "synthesized": true,
+        "canonicalSha256": "d830768515552cb082bf94743930808b478800ae3491565fc6d00d35f66460d9",
+        "hashMeaning": "sha256 binds Windows checkout; canonicalSha256 binds fixed commit git blob"
+      },
+      "expect": "render",
+      "features": [
+        "ishikawa-tab-depth"
+      ],
+      "expectedText": [
+        "Effect",
+        "People",
+        "Training",
+        "Process"
+      ],
+      "expectedErrorCodes": [],
+      "branchExpected": {
+        "description": "SPACELIST length counts tab as one character; relative first-cause depth preserved.",
+        "nativeChecks": [
+          {
+            "path": [
+              "children",
+              0,
+              "text"
+            ],
+            "equals": "People"
+          },
+          {
+            "path": [
+              "children",
+              0,
+              "children",
+              0,
+              "text"
+            ],
+            "equals": "Training"
+          },
+          {
+            "path": [
+              "children",
+              1,
+              "text"
+            ],
+            "equals": "Process"
+          }
+        ],
+        "sourceChecks": []
+      }
+    },
+    {
+      "id": "BV-A-ishikawa-relative-indent",
+      "kind": "ishikawa",
+      "source": "ishikawa-beta\n   Effect\n       People\n         Training\n       Process\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/ishikawa/parser/ishikawa.jison",
+        "symbol": "statement",
+        "line": 54,
+        "sha256": "1bbf4d461534b1c0d4c9e375bf821fac6219f73add5727e5aa51fe4aa044f57b",
+        "repository": "mermaid",
+        "synthesized": true,
+        "canonicalSha256": "d830768515552cb082bf94743930808b478800ae3491565fc6d00d35f66460d9",
+        "hashMeaning": "sha256 binds Windows checkout; canonicalSha256 binds fixed commit git blob"
+      },
+      "expect": "render",
+      "features": [
+        "ishikawa-relative-indent"
+      ],
+      "expectedText": [
+        "Effect",
+        "People",
+        "Training",
+        "Process"
+      ],
+      "expectedErrorCodes": [],
+      "branchExpected": {
+        "description": "First cause, not effect indent, establishes DB baseLevel.",
+        "nativeChecks": [
+          {
+            "path": [
+              "children",
+              0,
+              "children",
+              0,
+              "text"
+            ],
+            "equals": "Training"
+          },
+          {
+            "path": [
+              "children",
+              1,
+              "text"
+            ],
+            "equals": "Process"
+          }
+        ],
+        "sourceChecks": []
+      }
+    },
+    {
+      "id": "BV-A-cynefin-unclosed",
+      "kind": "cynefin",
+      "source": "cynefin-beta\nclear\n \"Unclosed\n",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/cynefin/cynefin.langium",
+        "symbol": "DomainItem/Transition",
+        "line": 18,
+        "sha256": "94276271b3dfe6dd78ced62249cd1d69bdd785e1498b90e678f101a23e1d26e0",
+        "repository": "mermaid",
+        "synthesized": true,
+        "canonicalSha256": "e39c321b5a98b7160270c4275d4dfc309769478fca6e8f93fa67973431b66881",
+        "hashMeaning": "sha256 binds Windows checkout; canonicalSha256 binds fixed commit git blob"
+      },
+      "expect": "syntax_error",
+      "features": [
+        "cynefin-unclosed"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "SYNTAX_ERROR"
+      ],
+      "branchExpected": {
+        "description": "STRING requires matching terminating quote; source grammar has no unquoted DomainItem alternative.",
+        "nativeChecks": [],
+        "sourceChecks": []
+      }
+    }
+  ]
+}

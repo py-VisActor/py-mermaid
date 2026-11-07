@@ -21,7 +21,11 @@ def parse(document,config):
 async def build(diagram,painter):
     # Source infoRenderer receives the pinned Mermaid version, independent of
     # showInfo/title/accessibility metadata, and paints one version string.
-    st=painter.style('version',tag='text',base={'font_size':32})
+    # styles.ts gives the root SVG theme.textColor; this unclassified version
+    # text inherits it rather than the nodeTextColor used by ordinary labels.
+    # Resolve the element stylesheet afterward so themeCSS remains authoritative.
+    text_color=painter.config.get('themeVariables',{}).get('textColor') or '#333'
+    st=painter.style('version',tag='text',base={'font_size':32,'text_color':text_color})
     label=painter.measure('v12.2.0',size=st.font_size,family=st.font_family,weight=st.font_weight,italic=st.font_style!='normal',html=False,style=st)
     painter.text(label,100-label.width/2,40-label.ascent,color=st.text_color,id='version',role='version',style=st)
     return painter.finish(width=400,height=100,padding=0,layout=())

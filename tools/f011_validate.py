@@ -244,10 +244,13 @@ def validate(args, diagnostics):
                         if ImageColor.getrgb(node[css])!=ImageColor.getrgb(scene['diagram']['config'][key]):
                             entry['errors'].append('L2 default style disagrees with A: '+css)
             if not all(entry['controls'].values()):entry['errors'].append('Comparator fault control failed')
-            command=[sys.executable,str(ROOT/'tools/pixel_compare.py'),'--reference',str(args.oracle/(case['id']+'.png')),'--candidate',str(png),'--out',str(args.out/(case['id']+'-pixels'))]
-            pixel=diagnostics.command(case['id'],command);entry['pixelDiagnosticExitCode']=pixel['exitCode']
-            entry['pixelLogs']={'run':str(diagnostics.path),'stdout':pixel['stdout'],'stderr':pixel['stderr']}
-            if pixel['exitCode']:entry['errors'].append('Pixel tool failed to complete')
+            if getattr(args,'skip_pixel_diagnostics',False):
+                entry['pixelDiagnosticStatus']='SKIPPED_EXPLICIT_NON_GATING_DIAGNOSTIC'
+            else:
+                command=[sys.executable,str(ROOT/'tools/pixel_compare.py'),'--reference',str(args.oracle/(case['id']+'.png')),'--candidate',str(png),'--out',str(args.out/(case['id']+'-pixels'))]
+                pixel=diagnostics.command(case['id'],command);entry['pixelDiagnosticExitCode']=pixel['exitCode']
+                entry['pixelLogs']={'run':str(diagnostics.path),'stdout':pixel['stdout'],'stderr':pixel['stderr']}
+                if pixel['exitCode']:entry['errors'].append('Pixel tool failed to complete')
             entry['pngSha256']=hashlib.sha256(result.data).hexdigest();entry['engine']=dict(result.backend)
             entry['rendererVariation']='Browser/Canvas text metrics, natural sizes and ELK0.9.3/0.12.1 routes can differ; pixels diagnostic only'
         except Exception:
@@ -318,6 +321,7 @@ def main():
     parser.add_argument('--oracle',type=Path,required=True)
     parser.add_argument('--backend',choices=('auto','cpu','gpu'),default='auto')
     parser.add_argument('--fixtures',type=Path,default=ROOT/'tests/f011/cases.json')
+    parser.add_argument('--skip-pixel-diagnostics',action='store_true',help='Skip only A/B heatmaps/metrics; preserve fresh render, actual-ink, semantic, geometry and fault-control gates')
     args=parser.parse_args();args.out.mkdir(parents=True,exist_ok=False)
     fixture=json.loads(args.fixtures.read_text(encoding='utf-8'))
     with Run(fixture.get('scope','F01.1'),'pixel-diagnostics',runs_dir=args.out/'logs') as diagnostics:

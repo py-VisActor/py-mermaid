@@ -1,0 +1,52 @@
+{
+  "schema": "py-mermaid-change-receipt/v1",
+  "status": "PAGED_REPORT_DELIVERED",
+  "request": "Reports separated by iteration into different pages",
+  "presentation": {
+    "status": "PAGED_PRESENTATION_VERIFIED",
+    "reportUrl": "http://127.0.0.1:8765/REPORT-ROUNDS-delivery-20261106T110340Z-823e8bf0/index.html",
+    "manifest": {
+      "path": "reports/REPORT-ROUNDS-delivery-20261106T110340Z-823e8bf0/report.json",
+      "sha256": "d42fdc35ac1b9d3869b461e1f7ad078c332e192a0a23b835aff154ec1c7050a3",
+      "bytes": 95350
+    },
+    "run": {
+      "path": "test-runs/REPORT-ROUNDS-delivery-20261106T110340Z-823e8bf0/run.json",
+      "sha256": "c1b4a5367fa209b58906be86465c16595d3cab32fa000ec1218c849d8457fc05",
+      "bytes": 63665
+    },
+    "rounds": 2,
+    "pages": 62,
+    "cases": 734,
+    "pageSize": 12,
+    "indexBytes": 106889,
+    "rawPNG": 2746,
+    "rawSVG": 685,
+    "newFunctionalAcceptance": false
+  },
+  "productCodeChanged": false,
+  "historicalReportsModified": false,
+  "newRendering": false,
+  "installationVerification": false,
+  "commit": false,
+  "push": false,
+  "publication": false,
+  "browserQA": {
+    "path": "test-runs/REPORT-ROUNDS-delivery-20261106T110340Z-823e8bf0/artifacts/viewer/viewer.json",
+    "sha256": "1ed3ba8b90eb88ac1cdf4322c85dfc74d199183ea0b53c9d1bd4c85578d99aa1",
+    "bytes": 8589,
+    "status": "PASS"
+  },
+  "limitations": [
+    "Historical F01/math reports keep their original viewer; new bulk reports are split into bounded pages.",
+    "Existing734-case statuses and candidate retained; no new functional acceptance."
+  ],
+  "preservedInitialPresentationAttempt": "test-runs/REPORT-ROUNDS-delivery-20261106T110104Z-3f574401",
+  "initialQAIssue": "QA awaited hidden lazy images indefinitely; repaired QA to eagerly decode only displayed images. No report images or functional checks modified.",
+  "finalChecks": {
+    "path": "test-runs/REPORT-ROUNDS-final-checks-20261106T110504Z-95297314/run.json",
+    "sha256": "0c5de8f0a6cbb2bcd2d214347b74342ad08f772bb876df5878faacf1f50fe170",
+    "bytes": 30343,
+    "status": "SUCCESS"
+  }
+}

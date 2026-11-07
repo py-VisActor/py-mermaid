@@ -83,12 +83,43 @@ def check(root: Path = ROOT) -> dict:
             elif hashlib.sha256((root / evidence['path']).read_bytes()).hexdigest() != evidence.get("sha256"):
                 errors.append(f"Evidence hash differs: {item['id']}")
     math_lock=json.loads((root/'references/math-release-lock.json').read_text('utf-8'))
+    chart_lock=json.loads((root/'references/vchart-release-lock.json').read_text('utf-8'))
+    chart_asset=chart_lock.get('asset',{})
+    chart_tag=f"py-visactor-vchart-v{chart_lock['version']}"
+    chart_url=(f"https://github.com/py-VisActor/py-vchart/releases/download/{chart_tag}/"
+               f"py_visactor_vchart-{chart_lock['version']}-py3-none-any.whl")
+    chart_sha=chart_asset.get('sha256','')
+    chart_requirement=chart_lock.get('requirement')
+    chart_delivery=chart_lock.get('delivery')
+    if chart_delivery=='pypi':
+        chart_delivery_valid=(chart_lock.get('pypi',{}).get('published') is True
+            and chart_lock.get('pypi',{}).get('status')=='published'
+            and chart_lock['pypi'].get('metadataUrl')==f"https://pypi.org/pypi/{chart_lock['distribution']}/{chart_lock['version']}/json"
+            and chart_asset.get('url','').startswith('https://files.pythonhosted.org/packages/')
+            and chart_asset['url'].endswith('/'+chart_asset.get('filename',''))
+            and chart_requirement==f"{chart_lock['distribution']}=={chart_lock['version']}")
+    else:
+        chart_delivery_valid=(chart_delivery=='github-release-wheel' and chart_asset.get('url')==chart_url
+            and chart_requirement==f"{chart_lock['distribution']} @ {chart_url}#sha256={chart_sha}")
+    if (chart_lock.get('distribution')!='py-visactor-vchart' or not chart_delivery_valid
+            or chart_lock.get('tag')!=chart_tag
+            or chart_asset.get('filename')!=f"py_visactor_vchart-{chart_lock['version']}-py3-none-any.whl"
+            or chart_lock.get('githubRelease',{}).get('tag')!=chart_tag
+            or chart_lock.get('githubRelease',{}).get('draft') is not False
+            or chart_lock.get('githubRelease',{}).get('prerelease') is not False
+            or not re.fullmatch(r'[0-9a-f]{64}',chart_sha)
+            or not re.fullmatch(r'[0-9a-f]{40}',chart_lock.get('sourceCommit',''))):
+        errors.append('VChart delivery requirement/version/asset SHA differs from release lock')
     expected_dependencies = [f"py-skia-canvas=={lock['canvas']['version']}", "py-visactor-elk==0.1.0",
-                             f"{math_lock['distribution']}=={math_lock['version']}"]
+                             f"{math_lock['distribution']}=={math_lock['version']}",
+                             chart_requirement]
     if expected_dependencies[0] not in project["dependencies"]:
         errors.append("Canvas dependency differs from lock")
     elif project["dependencies"] != expected_dependencies:
-        errors.append("Runtime dependencies differ from pinned Canvas/ELK/published math requirements")
+        errors.append("Runtime dependencies differ from pinned Canvas/ELK/math/VChart requirements")
+    dependency_inventory=json.loads((root/'references/dependencies.json').read_text('utf-8'))
+    if dependency_inventory.get('pythonDeclaredDependencies')!=expected_dependencies:
+        errors.append('Dependency inventory pythonDeclaredDependencies differs from exact release requirements')
     if project["requires-python"] != lock["canvas"]["requiresPython"]:
         errors.append("Python support differs from locked Canvas ABI scope")
     tree = ast.parse((root / "src/py_mermaid/__init__.py").read_text(encoding="utf-8"))
@@ -134,7 +165,10 @@ def check(root: Path = ROOT) -> dict:
             errors.append(f"Unclosed code fence: {path.relative_to(root)}")
     zh = (root / "README.md").read_text(encoding="utf-8")
     en = (root / "README.en.md").read_text(encoding="utf-8")
-    if "中文 | [English](README.en.md)" not in zh or "[中文](README.md) | English" not in en:
+    readme_base = 'https://github.com/py-VisActor/py-mermaid/blob/main/'
+    zh_links = ("中文 | [English](README.en.md)", f"中文 | [English]({readme_base}README.en.md)")
+    en_links = ("[中文](README.md) | English", f"[中文]({readme_base}README.md) | English")
+    if not any(value in zh for value in zh_links) or not any(value in en for value in en_links):
         errors.append("Missing reciprocal README language links")
     command_blocks = lambda text: re.findall(r"```(?:shell|python|powershell|bash)\n(.*?)\n```", text, re.S)
     if command_blocks(zh) != command_blocks(en):

@@ -1,0 +1,336 @@
+{
+  "schema": "py-mermaid-bulk-cases/v1",
+  "group": "shared",
+  "cases": [
+    {
+      "id": "gap-shared-look-sibling",
+      "kind": "classDiagram",
+      "source": "classDiagram\nclass Visible",
+      "config": {
+        "look": "classic",
+        "class": {
+          "look": "not-a-look"
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/config.ts",
+        "symbol": "readAppearance / resolveAppearance / updateCurrentConfig",
+        "line": 57,
+        "sha256": "91dd68a9e7d57c4635a04fab0ccd78ec230b4417a02f4f4b3cd9a6bb445f09ef",
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "configuration-schema-defaults",
+        "themes-css-cascade"
+      ],
+      "expectedText": [
+        "Visible"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-shared-look-default",
+      "kind": "classDiagram",
+      "source": "classDiagram\nclass Visible",
+      "config": {
+        "look": "not-a-look"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/config.ts",
+        "symbol": "readAppearance / resolveAppearance / updateCurrentConfig",
+        "line": 57,
+        "sha256": "91dd68a9e7d57c4635a04fab0ccd78ec230b4417a02f4f4b3cd9a6bb445f09ef",
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "configuration-schema-defaults",
+        "themes-css-cascade"
+      ],
+      "expectedText": [
+        "Visible"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-shared-look-directive",
+      "kind": "classDiagram",
+      "source": "%%{init: {\"look\":\"not-a-look\"}}%%\nclassDiagram\nclass Visible",
+      "config": {
+        "look": "handDrawn",
+        "handDrawnSeed": 42
+      },
+      "origin": {
+        "path": "packages/mermaid/src/config.ts",
+        "symbol": "readAppearance / resolveAppearance / updateCurrentConfig",
+        "line": 57,
+        "sha256": "91dd68a9e7d57c4635a04fab0ccd78ec230b4417a02f4f4b3cd9a6bb445f09ef",
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "configuration-schema-defaults",
+        "themes-css-cascade"
+      ],
+      "expectedText": [
+        "Visible"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-shared-null-theme",
+      "kind": "classDiagram",
+      "source": "%%{init: {\"theme\":\"null\"}}%%\nclassDiagram\nclass Visible",
+      "config": {
+        "theme": "dark"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/config.ts",
+        "symbol": "readAppearance / resolveAppearance / updateCurrentConfig",
+        "line": 57,
+        "sha256": "91dd68a9e7d57c4635a04fab0ccd78ec230b4417a02f4f4b3cd9a6bb445f09ef",
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "configuration-schema-defaults",
+        "themes-css-cascade"
+      ],
+      "expectedText": [
+        "Visible"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-shared-unknown-theme",
+      "kind": "classDiagram",
+      "source": "classDiagram\nclass Visible",
+      "config": {
+        "theme": "not-a-theme"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/config.ts",
+        "symbol": "readAppearance / resolveAppearance / updateCurrentConfig",
+        "line": 57,
+        "sha256": "91dd68a9e7d57c4635a04fab0ccd78ec230b4417a02f4f4b3cd9a6bb445f09ef",
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "configuration-schema-defaults",
+        "themes-css-cascade"
+      ],
+      "expectedText": [
+        "Visible"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-shared-font-bridge",
+      "kind": "classDiagram",
+      "source": "classDiagram\nclass Visible",
+      "config": {
+        "fontFamily": "Arial",
+        "themeVariables": {
+          "fontFamily": ""
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/config.ts",
+        "symbol": "readAppearance / resolveAppearance / updateCurrentConfig",
+        "line": 57,
+        "sha256": "91dd68a9e7d57c4635a04fab0ccd78ec230b4417a02f4f4b3cd9a6bb445f09ef",
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "configuration-schema-defaults",
+        "themes-css-cascade"
+      ],
+      "expectedText": [
+        "Visible"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-shared-palette-no-recalculate",
+      "kind": "info",
+      "source": "%%{init: {\"themeVariables\":{\"primaryColor\":\"#112233\"}}}%%\ninfo",
+      "config": {
+        "theme": "default"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/config.ts",
+        "symbol": "readAppearance / resolveAppearance / updateCurrentConfig",
+        "line": 57,
+        "sha256": "91dd68a9e7d57c4635a04fab0ccd78ec230b4417a02f4f4b3cd9a6bb445f09ef",
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "configuration-schema-defaults",
+        "themes-css-cascade"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-shared-visibility-child",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<span style='visibility:hidden'>Hidden<span style='visibility:visible'>Visible</span></span>\"]",
+      "config": {
+        "securityLevel": "loose"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "symbol": "createText / HTML foreignObject label with authored static visibility cascade",
+        "line": 1,
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "themes-css-cascade",
+        "text-html-markdown-math"
+      ],
+      "expectedText": [
+        "Visible"
+      ],
+      "hiddenText": [
+        "Hidden"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-shared-visibility-inherit",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<span style='visibility:hidden'>Hidden<span>AlsoHidden</span></span>Shown\"]",
+      "config": {
+        "securityLevel": "loose"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "symbol": "createText / HTML foreignObject label with authored static visibility cascade",
+        "line": 1,
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "themes-css-cascade",
+        "text-html-markdown-math"
+      ],
+      "expectedText": [
+        "Shown"
+      ],
+      "hiddenText": [
+        "Hidden"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-shared-visibility-alpha",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<span style='opacity:0.5;visibility:hidden'>Hidden<span style='visibility:visible'>Visible</span></span>\"]",
+      "config": {
+        "securityLevel": "loose"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "symbol": "createText / HTML foreignObject label with authored static visibility cascade",
+        "line": 1,
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "themes-css-cascade",
+        "text-html-markdown-math"
+      ],
+      "expectedText": [
+        "Visible"
+      ],
+      "hiddenText": [
+        "Hidden"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-shared-elk-identity",
+      "kind": "flowchart-elk",
+      "source": "flowchart-elk TD\nA --> B",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/flowchart/elk/detector.ts",
+        "symbol": "explicit flowchart-elk id / shared FlowDB",
+        "line": 7,
+        "sha256": "b4eece883310920a6b190024db93338e942480ea8f423b85705d38a3fe69f150",
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "layout-engines"
+      ],
+      "expectedText": [
+        "A",
+        "B"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-shared-base-palette-no-recalculate",
+      "kind": "info",
+      "source": "%%{init: {\"themeVariables\":{\"primaryColor\":\"#112233\"}}}%%\ninfo",
+      "config": {
+        "theme": "base"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/config.ts",
+        "symbol": "readAppearance / resolveAppearance / updateCurrentConfig",
+        "line": 57,
+        "sha256": "91dd68a9e7d57c4635a04fab0ccd78ec230b4417a02f4f4b3cd9a6bb445f09ef",
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "configuration-schema-defaults",
+        "themes-css-cascade"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-shared-cross-kind-site-config",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[Start] --> B[Done]",
+      "config": {
+        "sequence": {
+          "actorFontSize": 24
+        },
+        "gantt": {
+          "barHeight": 42
+        },
+        "class": {
+          "look": "classic"
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/config.ts",
+        "symbol": "setSiteConfig / resolveAppearance keeps unrelated diagram sections",
+        "line": 205,
+        "sha256": "91dd68a9e7d57c4635a04fab0ccd78ec230b4417a02f4f4b3cd9a6bb445f09ef",
+        "synthetic": true
+      },
+      "expect": "render",
+      "features": [
+        "configuration-schema-defaults"
+      ],
+      "expectedText": [
+        "Start",
+        "Done"
+      ],
+      "expectedErrorCodes": []
+    }
+  ]
+}

@@ -25,6 +25,143 @@ def _union(boxes):
     return Box(left,top,max(b.x+b.width for b in boxes)-left,max(b.y+b.height for b in boxes)-top)
 
 
+def _stroke_box(path,width,cap='butt',join='miter',dash=()):
+    """Bound actual centered stroke using public Path2D.edges only.
+
+    Curves use positive-weight rational Bezier convex hulls and their tangent
+    direction cone. Subdivision tightens those *conservative* offset intervals;
+    sampled offsets are only pruning witnesses, never the returned boundary.
+    Real segment joins alone receive miter tips (Canvas default miterLimit 10).
+    Depth/work limits retain the last conservative interval, not a clipped
+    sampled approximation. Native paths/handles remain on their owner thread.
+    """
+    r=width/2;boxes=[];contours=[];segments=[];start=current=None
+    fallback=False;work=0
+
+    def point(h):return h[0]/h[2],h[1]/h[2]
+    def unit(v):
+        length=math.hypot(*v)
+        return (v[0]/length,v[1]/length) if length>1e-12 else None
+    def add_points(points):
+        xs,ys=zip(*points);boxes.append(Box(min(xs),min(ys),max(xs)-min(xs),max(ys)-min(ys)))
+    def disk(p,radius=r):boxes.append(Box(p[0]-radius,p[1]-radius,2*radius,2*radius))
+    def flush(closed=False):
+        nonlocal segments
+        if segments:contours.append((segments,closed));segments=[]
+    def tangent(control,end=False):
+        pts=[point(h) for h in control];origin=pts[-1] if end else pts[0]
+        for p in (reversed(pts[:-1]) if end else pts[1:]):
+            direction=unit((origin[0]-p[0],origin[1]-p[1]) if end else (p[0]-origin[0],p[1]-origin[1]))
+            if direction:return direction
+        return None
+    def split(control):
+        rows=[control]
+        while len(rows[-1])>1:
+            row=rows[-1];rows.append([tuple((a+b)/2 for a,b in zip(p,q)) for p,q in zip(row,row[1:])])
+        return [row[0] for row in rows],[row[-1] for row in reversed(rows)]
+    def samples(control):
+        pts=[point(h) for h in control]
+        mid=split(control)[0][-1];p=point(mid)
+        left,right=split(control)
+        samples=((pts[0],tangent(control)),(p,tangent(left,True) or tangent(right)),(pts[-1],tangent(control,True)))
+        result=[]
+        for (x,y),t in samples:
+            if t:result.extend(((x-r*t[1],y+r*t[0]),(x+r*t[1],y-r*t[0])))
+            else:result.extend(((x-r,y-r),(x+r,y+r)))
+        return result
+    def interval(control):
+        pts=[point(h) for h in control]
+        directions=[unit((q[0]-p[0],q[1]-p[1])) for p,q in zip(pts,pts[1:])]
+        angles=[math.atan2(v[1],v[0]) for v in directions if v]
+        nx=ny=1
+        if angles:
+            base=angles[0];angles=[base+math.atan2(math.sin(a-base),math.cos(a-base)) for a in angles]
+            lo,hi=min(angles),max(angles)
+            if hi-lo<math.pi-1e-10:
+                critical=[lo,hi]+[k*math.pi/2 for k in range(math.ceil(lo/(math.pi/2)),math.floor(hi/(math.pi/2))+1)]
+                nx=max(abs(math.sin(a)) for a in critical);ny=max(abs(math.cos(a)) for a in critical)
+        xs,ys=zip(*pts)
+        return min(xs)-r*nx,min(ys)-r*ny,max(xs)+r*nx,max(ys)+r*ny
+    def curve(control):
+        nonlocal work,fallback
+        # Positive homogeneous weights keep every subcurve in its control hull.
+        if any(h[2]<=0 for h in control):
+            fallback=True
+            b=path.bounds;boxes.append(Box(b['left']-r,b['top']-r,b['width']+2*r,b['height']+2*r));return
+        witness=samples(control)
+        xmin=min(p[0] for p in witness);xmax=max(p[0] for p in witness)
+        ymin=min(p[1] for p in witness);ymax=max(p[1] for p in witness)
+        stack=[(control,0)]
+        while stack:
+            c,depth=stack.pop();work+=1
+            samples_=samples(c)
+            xmin=min(xmin,*(p[0] for p in samples_));xmax=max(xmax,*(p[0] for p in samples_))
+            ymin=min(ymin,*(p[1] for p in samples_));ymax=max(ymax,*(p[1] for p in samples_))
+            left,top,right,bottom=interval(c)
+            accurate=left>=xmin-.125 and right<=xmax+.125 and top>=ymin-.125 and bottom<=ymax+.125
+            if accurate or depth>=16 or work>=8192:
+                boxes.append(Box(left,top,right-left,bottom-top))
+                if not accurate:fallback=True
+            else:
+                a,b=split(c);stack.extend(((a,depth+1),(b,depth+1)))
+    for edge in path.edges:
+        command=edge[0];values=edge[1:]
+        if command=='moveTo':
+            flush();current=start=(values[0],values[1])
+        elif command=='closePath':
+            if current is not None and start is not None and current!=start:
+                segments.append([(current[0],current[1],1),(start[0],start[1],1)])
+            flush(True);current=start
+        elif current is not None:
+            control=[(*current,1)]
+            if command=='lineTo':control.append((values[0],values[1],1))
+            elif command=='quadraticCurveTo':control.extend(((values[0],values[1],1),(values[2],values[3],1)))
+            elif command=='bezierCurveTo':control.extend(tuple((*values[i:i+2],1)) for i in (0,2,4))
+            elif command=='conicCurveTo':
+                w=values[4];control.extend(((values[0]*w,values[1]*w,w),(values[2],values[3],1)))
+            else:
+                fallback=True;continue
+            segments.append(control);current=point(control[-1])
+    flush()
+    for contour,closed in contours:
+        for control in contour:curve(control)
+        joins=list(zip(contour,contour[1:]))+([(contour[-1],contour[0])] if closed else [])
+        for incoming,outgoing in joins:
+            p=point(incoming[-1]);u=tangent(incoming,True);v=tangent(outgoing)
+            if not u or not v:continue
+            if join=='round':disk(p)
+            elif join=='miter':
+                denom=1+u[0]*v[0]+u[1]*v[1]
+                if denom>1e-12:
+                    dx=r*(-u[1]-v[1])/denom;dy=r*(u[0]+v[0])/denom
+                    if math.hypot(dx,dy)<=10*r+1e-9:add_points(((p[0]+dx,p[1]+dy),(p[0]-dx,p[1]-dy)))
+        if not closed:
+            for control,end in ((contour[0],False),(contour[-1],True)):
+                p=point(control[-1] if end else control[0]);t=tangent(control,end)
+                if cap=='round':disk(p)
+                elif cap=='square':
+                    if not t:disk(p,r*math.sqrt(2));continue
+                    sign=1 if end else -1
+                    add_points(((p[0]+sign*r*t[0]-r*t[1],p[1]+sign*r*t[1]+r*t[0]),
+                                (p[0]+sign*r*t[0]+r*t[1],p[1]+sign*r*t[1]-r*t[0])))
+    if dash and cap in ('round','square'):
+        # Internal dash endpoints can occur anywhere on the curve. Their cap
+        # disks/squares are a subset of this centerline Minkowski envelope.
+        b=path.bounds;extra=r*(math.sqrt(2) if cap=='square' else 1)
+        boxes.append(Box(b['left']-extra,b['top']-extra,b['width']+2*extra,b['height']+2*extra))
+    if not boxes:
+        b=path.bounds;boxes.append(Box(b['left'],b['top'],b['width'],b['height']))
+    return _union(boxes),fallback
+
+
+def _paint_path_box(path,fill,stroke,width,dash=(),style=None):
+    b=path.bounds;box=Box(b['left'],b['top'],b['width'],b['height']);fallback=False
+    if stroke not in (None,'none','transparent','') and width>0:
+        box,fallback=_stroke_box(path,width,style.line_cap if style else 'butt',style.line_join if style else 'miter',dash)
+        if fill not in (None,'none','transparent',''):box=_union((box,Box(b['left'],b['top'],b['width'],b['height'])))
+    return box,fallback
+
+
 def _mapped(box,matrix):
     a,b,c,d,e,f=matrix
     pts=tuple(Point(a*x+c*y+e,b*x+d*y+f) for x,y in ((box.x,box.y),(box.x+box.width,box.y),(box.x,box.y+box.height),(box.x+box.width,box.y+box.height)))
@@ -99,6 +236,8 @@ class Painter:
         self.diagram=diagram
         self.config=config_dict(diagram)
         self.session=CanvasSession(backend=backend,resources=resources)
+        self._vchart_backend=backend
+        self._vchart_resources=resources
         self.commands=[]
         self._gradients={}
         self._diagnostics=[]
@@ -171,16 +310,19 @@ class Painter:
             style=apply_declarations(style,declarations,kind='node-label' if tag in ('text','tspan','span','label') else 'node',svg_text=tag in ('text','tspan'),inherited=inherited,paint_resources=self._gradients)
         return replace(style,paint_context=tuple(ancestors)+(element,))
 
-    def measure(self,text,*,size=None,family=None,weight='normal',italic=False,html=None,width=None,align=None,label_kind='text',style=None):
+    def measure(self,text,*,size=None,family=None,weight='normal',italic=False,html=None,width=None,align=None,label_kind='text',style=None,literal=False,raw_html=False):
         self._check()
         if not isinstance(text,str):raise MermaidError('Label must be text',code='INVALID_LABEL')
         if label_kind not in ('text','markdown'):raise MermaidError('Unknown label kind',code='INVALID_LABEL')
+        if not isinstance(literal,bool) or (literal and label_kind!='text'):raise MermaidError('literal measurement requires plain text',code='INVALID_LABEL')
+        if not isinstance(raw_html,bool) or (raw_html and (literal or label_kind!='text')):raise MermaidError('raw_html requires a direct HTML text consumer',code='INVALID_LABEL')
         if utf16_length(text)>self._label_config.max_text_size:raise MermaidError('Label exceeds maxTextSize',code='TEXT_LIMIT')
         style=style or self._base_style()
         style=replace(style,font_size=number(size if size is not None else style.font_size,name='fontSize',minimum=.01),
             font_family=family or style.font_family,font_weight=str(weight) if weight!='normal' else style.font_weight,font_style='italic' if italic else style.font_style)
         if align is not None:style=replace(style,text_align=align,text_anchor={'left':'start','center':'middle','right':'end'}.get(align,'start'))
         cfg=replace(self._label_config,html_labels=self._label_config.html_labels if html is None else bool(html))
+        if raw_html and not cfg.html_labels:raise MermaidError('raw_html requires HTML measurement',code='INVALID_LABEL')
         def asset_loader(identifier,kind,attrs,run_style,image_only):
             natural_w,natural_h=self.session._asset_size(identifier,kind)
             if kind=='icon':return run_style.font_size,run_style.font_size
@@ -194,7 +336,7 @@ class Painter:
         w,h,lines,runs=measure_label(text,label_kind,cfg,style,self.session._measure_span,
             width=number(width,name='label width',minimum=0) if width is not None else math.inf,
             diagnostics=self._diagnostics,asset_loader=asset_loader,math_loader=self.session._math_atom,
-            tag_style=tag_style,svg_style=svg_style)
+            tag_style=tag_style,svg_style=svg_style,literal=literal,raw_html=raw_html)
         return TextBox(text,w,h,max((line.ascent for line in lines),default=0),max((line.descent for line in lines),default=0),runs)
 
     def font_size(self,value,*,base=None,family=None,weight='normal',italic=False):
@@ -259,7 +401,7 @@ class Painter:
         if style is not None:
             fill=style.fill if fill is None else fill;stroke=style.stroke if stroke is None else stroke
             line_width=style.stroke_width if line_width is None else line_width
-            opacity=style.opacity if opacity is None else opacity
+            opacity=(style.opacity if opacity is None else opacity) if style.visibility=='visible' else 0
             dash=style.dash if dash is None else dash
         line_width=number(1 if line_width is None else line_width,minimum=0);opacity=number(1 if opacity is None else opacity,minimum=0,maximum=1)
         dash=tuple(number(n,minimum=0) for n in (dash or ()))
@@ -280,9 +422,9 @@ class Painter:
         else:self._record_path(d,transform,fill=fill,stroke=stroke,line_width=line_width,dash=dash,id=id,role=role,opacity=opacity,style=style)
 
     def _record_path(self,d,transform,*,fill,stroke,line_width,dash,id,role,opacity,style):
-        bounds=self.session._path_factory(d).transform(*transform).bounds
-        margin=line_width*5 if stroke not in (None,'none','transparent','') else 0 # default miterLimit=10
-        box=Box(bounds['left']-margin,bounds['top']-margin,bounds['width']+2*margin,bounds['height']+2*margin)
+        path=self.session._path_factory(d).transform(*transform)
+        box,fallback=_paint_path_box(path,fill,stroke,line_width,dash,style)
+        if fallback:self._diagnostics.append('stroke_bounds_conservative_fallback')
         if style is not None and style.shadow_opacity>0:
             blur=style.shadow_blur*3
             box=_union((box,Box(box.x+style.shadow_dx-blur,box.y+style.shadow_dy-blur,box.width+2*blur,box.height+2*blur)))
@@ -310,6 +452,22 @@ class Painter:
         pts=tuple((number(p.x),number(p.y)) if isinstance(p,Point) else (number(p[0]),number(p[1])) for p in points)
         if not pts:return
         self.path('M'+'L'.join(f'{x},{y}' for x,y in pts)+'Z',fill=fill,stroke=stroke,line_width=line_width,id=id,role=role,opacity=opacity,style=style)
+
+    def marker_path(self,d,*,kind='point',**options):
+        """Paint explicit source marker geometry and retain its semantic kind.
+
+        Diagram-specific marker anchors and outlines belong to the caller;
+        ordinary path validation, styles, bounds and drawing stay here.
+        """
+        self._check()
+        if not isinstance(kind,str) or not kind:
+            raise MermaidError('Marker path requires a semantic kind',code='INVALID_GEOMETRY')
+        start=len(self.commands)
+        options.setdefault('role','marker')
+        self.path(d,**options)
+        for index in range(start,len(self.commands)):
+            command=self.commands[index]
+            self.commands[index]=replace(command,style=tuple({**dict(command.style),'marker':kind}.items()))
 
     def marker(self,x,y,dx,dy,*,kind='point',size=8,color=None,fill=None,id='',line_width=1):
         x,y,dx,dy,size=number(x),number(y),number(dx),number(dy),number(size,minimum=0)
@@ -355,6 +513,25 @@ class Painter:
         resource='data:image/svg+xml;base64,'+base64.b64encode(svg.encode('utf-8')).decode('ascii')
         self.asset(resource,x,y,w,h,kind='icon',id=id,color=color,style=style)
 
+    def vchart(self,spec,x=0,y=0,*,maps=None,svgs=None,id=''):
+        """Draw the real VChart renderer, returning immutable layout metadata.
+
+        The measuring pass supplies actual chart marks to family overlays. The
+        command pass draws on the final owner Canvas, keeping vector exports;
+        no PNG embedding or reference to a temporary Canvas enters the Scene.
+        Source: py_vchart.core.VChart.render/draw_to/public scene metadata.
+        """
+        self._check()
+        from ...vchart_bridge import model_from_spec, scene_for, measure_vchart
+        model=model_from_spec(spec)
+        scene=scene_for(model,maps=maps,svgs=svgs)
+        x,y=number(x),number(y)
+        metadata=measure_vchart(scene,backend=self._vchart_backend,resources=self._vchart_resources)
+        command=Paint('vchart',(scene,x,y),semantic_id=id,role='chart',
+                      bounds=Box(x,y,model.width,model.height))
+        self.commands.append(command)
+        return metadata
+
     def finish(self,*,width=None,height=None,padding=None,background=None,layout=None,measured=(),diagnostics=()):
         self._check()
         if getattr(layout,'engine',None)=='mermaid-swimlane' and getattr(layout,'group_data',()):
@@ -389,9 +566,9 @@ class Painter:
     def _path_shadow(self,ctx,path,style,resolved):
         # Compose the source alpha before recoloring it. A transparent fill or
         # a partially opaque stroke must cast exactly its own silhouette.
-        bounds=path.bounds;margin=style['line_width']*5+1
-        left,top=bounds['left']-margin,bounds['top']-margin
-        width=max(1,math.ceil(bounds['width']+2*margin));height=max(1,math.ceil(bounds['height']+2*margin))
+        bounds,_=_paint_path_box(path,style['fill'],style['stroke'],style['line_width'],style['dash'],resolved)
+        left,top=math.floor(bounds.x)-1,math.floor(bounds.y)-1
+        width=max(1,math.ceil(bounds.x+bounds.width)-left+1);height=max(1,math.ceil(bounds.y+bounds.height)-top+1)
         if max(width,height)>32768 or width*height>64_000_000:raise MermaidError('Shadow exceeds canvas budget',code='RENDER_BUDGET')
         surface=self.session._new_canvas(width,height);mask=surface.getContext('2d')
         mask.translate(-left,-top);mask.lineWidth=style['line_width'];mask.setLineDash(list(style['dash']))
@@ -412,7 +589,15 @@ class Painter:
         for command in commands:
             ctx.save()
             try:
-                if command.kind=='path':
+                if command.kind=='vchart':
+                    from ...vchart_bridge import draw_vchart
+                    scene,x,y=command.values
+                    draw_vchart(scene,ctx.canvas,backend=self._vchart_backend,
+                                x=x,y=y,resources=self._vchart_resources)
+                    trace.append(DrawEvent('vchart',command.semantic_id,
+                        Box(command.bounds.x+tx,command.bounds.y+ty,command.bounds.width,command.bounds.height),
+                        resource_id=scene.model.spec()['type']))
+                elif command.kind=='path':
                     d,matrix=command.values;style=dict(command.style)
                     path=self.session._path_factory(d).transform(*matrix)
                     ctx.globalAlpha=style['opacity'];ctx.lineWidth=style['line_width'];ctx.setLineDash(list(style['dash']))
@@ -429,9 +614,9 @@ class Painter:
                     resource,kind,color=command.values[:3];box=command.values[3] if len(command.values)>3 else command.bounds
                     resolved=dict(command.style).get('resolved')
                     if resolved is not None:
-                        ctx.globalAlpha=resolved.opacity;ctx.filter=self.session._filter_css(resolved);ctx.globalCompositeOperation=resolved.blend_mode
+                        ctx.globalAlpha=resolved.paint_opacity;ctx.filter=self.session._filter_css(resolved);ctx.globalCompositeOperation=resolved.blend_mode
                     ctx.drawImage(self.session._asset(resource,kind,color or self._label_config.text_color),box.x,box.y,box.width,box.height)
-                    trace.append(DrawEvent(command.role,command.semantic_id,Box(command.bounds.x+tx,command.bounds.y+ty,command.bounds.width,command.bounds.height),resource_id=resource,opacity=resolved.opacity if resolved else 1,brightness=resolved.brightness if resolved else 1,filter_chain=resolved.filter_chain if resolved else (),blend_mode=resolved.blend_mode if resolved else 'source-over'))
+                    trace.append(DrawEvent(command.role,command.semantic_id,Box(command.bounds.x+tx,command.bounds.y+ty,command.bounds.width,command.bounds.height),resource_id=resource,opacity=resolved.paint_opacity if resolved else 1,brightness=resolved.brightness if resolved else 1,filter_chain=resolved.filter_chain if resolved else (),blend_mode=resolved.blend_mode if resolved else 'source-over'))
                 elif command.kind=='text':
                     text,x,y,rotation,clip=command.values
                     if clip is not None:ctx.clip(self.session._path_factory(f'M{clip.x},{clip.y} h{clip.width} v{clip.height} h{-clip.width}Z'))

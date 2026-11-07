@@ -1,0 +1,2241 @@
+{
+  "schema": "py-mermaid-branch-verification/v1",
+  "group": "A",
+  "baselineSourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "branches": [
+    {
+      "id": "cynefin-double-unknown",
+      "title": "cynefin double unknown",
+      "legacyUnresolved": "cross-products",
+      "source": [
+        {
+          "path": "packages/parser/src/language/cynefin/cynefin.langium",
+          "symbol": "DomainItem/Transition",
+          "line": 18,
+          "sha256": "94276271b3dfe6dd78ced62249cd1d69bdd785e1498b90e678f101a23e1d26e0",
+          "repository": "mermaid",
+          "canonicalSha256": "e39c321b5a98b7160270c4275d4dfc309769478fca6e8f93fa67973431b66881",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob"
+        },
+        {
+          "path": "../../../../../node_modules/.pnpm/langium@4.4.0/node_modules/langium/src/parser/value-converter.ts",
+          "symbol": "convertString/convertEscapeCharacter",
+          "line": 60,
+          "sha256": "4f8b6454347b73fc775918037feb598808481e1cc026709e045dfe9f5817e191",
+          "repository": "mermaid-bundle-sourcesContent",
+          "hashMeaning": "exact UTF-8 sourcesContent",
+          "bundleMapPath": ".local/f011-oracle/node_modules/@mermaid-js/parser/dist/chunks/mermaid-parser.core/chunk-NGNAAXSQ.mjs.map",
+          "bundleMapSha256": "7ff2c3967be6db0b0603e2773b6afa80bf8157d144e530bd21fac6f9e61d424d"
+        }
+      ],
+      "predicate": "STRING converts one-character escapes in both quote styles; unknown escape drops backslash and does not interpret JSON Unicode.",
+      "arms": [
+        "concrete input BV-A-cynefin-double-unknown"
+      ],
+      "sourceExpected": "STRING converts one-character escapes in both quote styles; unknown escape drops backslash and does not interpret JSON Unicode.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/business/cynefin.py",
+          "symbol": "parse",
+          "line": 20
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_a_semantics.py",
+          "symbol": "ASourceLiteralTests.test_cynefin_double_unknown",
+          "line": 22,
+          "binding": "generated from independent literal case table"
+        }
+      ],
+      "caseIds": [
+        "BV-A-cynefin-double-unknown"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Fixed-source independent design; native/original behavior not executed during P2.",
+      "dependencySourceIds": [
+        "../../../../../node_modules/.pnpm/langium@4.4.0/node_modules/langium/src/parser/value-converter.ts"
+      ]
+    },
+    {
+      "id": "cynefin-double-unicode",
+      "title": "cynefin double unicode",
+      "legacyUnresolved": "cross-products",
+      "source": [
+        {
+          "path": "packages/parser/src/language/cynefin/cynefin.langium",
+          "symbol": "DomainItem/Transition",
+          "line": 18,
+          "sha256": "94276271b3dfe6dd78ced62249cd1d69bdd785e1498b90e678f101a23e1d26e0",
+          "repository": "mermaid",
+          "canonicalSha256": "e39c321b5a98b7160270c4275d4dfc309769478fca6e8f93fa67973431b66881",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob"
+        },
+        {
+          "path": "../../../../../node_modules/.pnpm/langium@4.4.0/node_modules/langium/src/parser/value-converter.ts",
+          "symbol": "convertString/convertEscapeCharacter",
+          "line": 60,
+          "sha256": "4f8b6454347b73fc775918037feb598808481e1cc026709e045dfe9f5817e191",
+          "repository": "mermaid-bundle-sourcesContent",
+          "hashMeaning": "exact UTF-8 sourcesContent",
+          "bundleMapPath": ".local/f011-oracle/node_modules/@mermaid-js/parser/dist/chunks/mermaid-parser.core/chunk-NGNAAXSQ.mjs.map",
+          "bundleMapSha256": "7ff2c3967be6db0b0603e2773b6afa80bf8157d144e530bd21fac6f9e61d424d"
+        }
+      ],
+      "predicate": "STRING converts one-character escapes in both quote styles; unknown escape drops backslash and does not interpret JSON Unicode.",
+      "arms": [
+        "concrete input BV-A-cynefin-double-unicode"
+      ],
+      "sourceExpected": "STRING converts one-character escapes in both quote styles; unknown escape drops backslash and does not interpret JSON Unicode.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/business/cynefin.py",
+          "symbol": "parse",
+          "line": 20
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_a_semantics.py",
+          "symbol": "ASourceLiteralTests.test_cynefin_double_unicode",
+          "line": 22,
+          "binding": "generated from independent literal case table"
+        }
+      ],
+      "caseIds": [
+        "BV-A-cynefin-double-unicode"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Fixed-source independent design; native/original behavior not executed during P2.",
+      "dependencySourceIds": [
+        "../../../../../node_modules/.pnpm/langium@4.4.0/node_modules/langium/src/parser/value-converter.ts"
+      ]
+    },
+    {
+      "id": "cynefin-single-newline",
+      "title": "cynefin single newline",
+      "legacyUnresolved": "cross-products",
+      "source": [
+        {
+          "path": "packages/parser/src/language/cynefin/cynefin.langium",
+          "symbol": "DomainItem/Transition",
+          "line": 18,
+          "sha256": "94276271b3dfe6dd78ced62249cd1d69bdd785e1498b90e678f101a23e1d26e0",
+          "repository": "mermaid",
+          "canonicalSha256": "e39c321b5a98b7160270c4275d4dfc309769478fca6e8f93fa67973431b66881",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob"
+        },
+        {
+          "path": "../../../../../node_modules/.pnpm/langium@4.4.0/node_modules/langium/src/parser/value-converter.ts",
+          "symbol": "convertString/convertEscapeCharacter",
+          "line": 60,
+          "sha256": "4f8b6454347b73fc775918037feb598808481e1cc026709e045dfe9f5817e191",
+          "repository": "mermaid-bundle-sourcesContent",
+          "hashMeaning": "exact UTF-8 sourcesContent",
+          "bundleMapPath": ".local/f011-oracle/node_modules/@mermaid-js/parser/dist/chunks/mermaid-parser.core/chunk-NGNAAXSQ.mjs.map",
+          "bundleMapSha256": "7ff2c3967be6db0b0603e2773b6afa80bf8157d144e530bd21fac6f9e61d424d"
+        }
+      ],
+      "predicate": "STRING converts one-character escapes in both quote styles; unknown escape drops backslash and does not interpret JSON Unicode.",
+      "arms": [
+        "concrete input BV-A-cynefin-single-newline"
+      ],
+      "sourceExpected": "STRING converts one-character escapes in both quote styles; unknown escape drops backslash and does not interpret JSON Unicode.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/business/cynefin.py",
+          "symbol": "parse",
+          "line": 20
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_a_semantics.py",
+          "symbol": "ASourceLiteralTests.test_cynefin_single_newline",
+          "line": 22,
+          "binding": "generated from independent literal case table"
+        }
+      ],
+      "caseIds": [
+        "BV-A-cynefin-single-newline"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Fixed-source independent design; native/original behavior not executed during P2.",
+      "dependencySourceIds": [
+        "../../../../../node_modules/.pnpm/langium@4.4.0/node_modules/langium/src/parser/value-converter.ts"
+      ]
+    },
+    {
+      "id": "cynefin-literal-newline",
+      "title": "cynefin literal newline",
+      "legacyUnresolved": "cross-products",
+      "source": [
+        {
+          "path": "packages/parser/src/language/cynefin/cynefin.langium",
+          "symbol": "DomainItem/Transition",
+          "line": 18,
+          "sha256": "94276271b3dfe6dd78ced62249cd1d69bdd785e1498b90e678f101a23e1d26e0",
+          "repository": "mermaid",
+          "canonicalSha256": "e39c321b5a98b7160270c4275d4dfc309769478fca6e8f93fa67973431b66881",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob"
+        },
+        {
+          "path": "../../../../../node_modules/.pnpm/langium@4.4.0/node_modules/langium/src/parser/value-converter.ts",
+          "symbol": "convertString/convertEscapeCharacter",
+          "line": 60,
+          "sha256": "4f8b6454347b73fc775918037feb598808481e1cc026709e045dfe9f5817e191",
+          "repository": "mermaid-bundle-sourcesContent",
+          "hashMeaning": "exact UTF-8 sourcesContent",
+          "bundleMapPath": ".local/f011-oracle/node_modules/@mermaid-js/parser/dist/chunks/mermaid-parser.core/chunk-NGNAAXSQ.mjs.map",
+          "bundleMapSha256": "7ff2c3967be6db0b0603e2773b6afa80bf8157d144e530bd21fac6f9e61d424d"
+        }
+      ],
+      "predicate": "STRING converts one-character escapes in both quote styles; unknown escape drops backslash and does not interpret JSON Unicode.",
+      "arms": [
+        "concrete input BV-A-cynefin-literal-newline"
+      ],
+      "sourceExpected": "STRING converts one-character escapes in both quote styles; unknown escape drops backslash and does not interpret JSON Unicode.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/business/cynefin.py",
+          "symbol": "parse",
+          "line": 20
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_a_semantics.py",
+          "symbol": "ASourceLiteralTests.test_cynefin_literal_newline",
+          "line": 22,
+          "binding": "generated from independent literal case table"
+        }
+      ],
+      "caseIds": [
+        "BV-A-cynefin-literal-newline"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Fixed-source independent design; native/original behavior not executed during P2.",
+      "dependencySourceIds": [
+        "../../../../../node_modules/.pnpm/langium@4.4.0/node_modules/langium/src/parser/value-converter.ts"
+      ]
+    },
+    {
+      "id": "cynefin-escaped-quote",
+      "title": "cynefin escaped quote",
+      "legacyUnresolved": "cross-products",
+      "source": [
+        {
+          "path": "packages/parser/src/language/cynefin/cynefin.langium",
+          "symbol": "DomainItem/Transition",
+          "line": 18,
+          "sha256": "94276271b3dfe6dd78ced62249cd1d69bdd785e1498b90e678f101a23e1d26e0",
+          "repository": "mermaid",
+          "canonicalSha256": "e39c321b5a98b7160270c4275d4dfc309769478fca6e8f93fa67973431b66881",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob"
+        },
+        {
+          "path": "../../../../../node_modules/.pnpm/langium@4.4.0/node_modules/langium/src/parser/value-converter.ts",
+          "symbol": "convertString/convertEscapeCharacter",
+          "line": 60,
+          "sha256": "4f8b6454347b73fc775918037feb598808481e1cc026709e045dfe9f5817e191",
+          "repository": "mermaid-bundle-sourcesContent",
+          "hashMeaning": "exact UTF-8 sourcesContent",
+          "bundleMapPath": ".local/f011-oracle/node_modules/@mermaid-js/parser/dist/chunks/mermaid-parser.core/chunk-NGNAAXSQ.mjs.map",
+          "bundleMapSha256": "7ff2c3967be6db0b0603e2773b6afa80bf8157d144e530bd21fac6f9e61d424d"
+        }
+      ],
+      "predicate": "STRING converts one-character escapes in both quote styles; unknown escape drops backslash and does not interpret JSON Unicode.",
+      "arms": [
+        "concrete input BV-A-cynefin-escaped-quote"
+      ],
+      "sourceExpected": "STRING converts one-character escapes in both quote styles; unknown escape drops backslash and does not interpret JSON Unicode.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/business/cynefin.py",
+          "symbol": "parse",
+          "line": 20
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_a_semantics.py",
+          "symbol": "ASourceLiteralTests.test_cynefin_escaped_quote",
+          "line": 22,
+          "binding": "generated from independent literal case table"
+        }
+      ],
+      "caseIds": [
+        "BV-A-cynefin-escaped-quote"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Fixed-source independent design; native/original behavior not executed during P2.",
+      "dependencySourceIds": [
+        "../../../../../node_modules/.pnpm/langium@4.4.0/node_modules/langium/src/parser/value-converter.ts"
+      ]
+    },
+    {
+      "id": "cynefin-single-tab",
+      "title": "cynefin single tab",
+      "legacyUnresolved": "cross-products",
+      "source": [
+        {
+          "path": "packages/parser/src/language/cynefin/cynefin.langium",
+          "symbol": "DomainItem/Transition",
+          "line": 18,
+          "sha256": "94276271b3dfe6dd78ced62249cd1d69bdd785e1498b90e678f101a23e1d26e0",
+          "repository": "mermaid",
+          "canonicalSha256": "e39c321b5a98b7160270c4275d4dfc309769478fca6e8f93fa67973431b66881",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob"
+        },
+        {
+          "path": "../../../../../node_modules/.pnpm/langium@4.4.0/node_modules/langium/src/parser/value-converter.ts",
+          "symbol": "convertString/convertEscapeCharacter",
+          "line": 60,
+          "sha256": "4f8b6454347b73fc775918037feb598808481e1cc026709e045dfe9f5817e191",
+          "repository": "mermaid-bundle-sourcesContent",
+          "hashMeaning": "exact UTF-8 sourcesContent",
+          "bundleMapPath": ".local/f011-oracle/node_modules/@mermaid-js/parser/dist/chunks/mermaid-parser.core/chunk-NGNAAXSQ.mjs.map",
+          "bundleMapSha256": "7ff2c3967be6db0b0603e2773b6afa80bf8157d144e530bd21fac6f9e61d424d"
+        }
+      ],
+      "predicate": "STRING converts one-character escapes in both quote styles; unknown escape drops backslash and does not interpret JSON Unicode.",
+      "arms": [
+        "concrete input BV-A-cynefin-single-tab"
+      ],
+      "sourceExpected": "STRING converts one-character escapes in both quote styles; unknown escape drops backslash and does not interpret JSON Unicode.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/business/cynefin.py",
+          "symbol": "parse",
+          "line": 20
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_a_semantics.py",
+          "symbol": "ASourceLiteralTests.test_cynefin_single_tab",
+          "line": 22,
+          "binding": "generated from independent literal case table"
+        }
+      ],
+      "caseIds": [
+        "BV-A-cynefin-single-tab"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Fixed-source independent design; native/original behavior not executed during P2.",
+      "dependencySourceIds": [
+        "../../../../../node_modules/.pnpm/langium@4.4.0/node_modules/langium/src/parser/value-converter.ts"
+      ]
+    },
+    {
+      "id": "cynefin-transition-escape",
+      "title": "cynefin transition escape",
+      "legacyUnresolved": "cross-products",
+      "source": [
+        {
+          "path": "packages/parser/src/language/cynefin/cynefin.langium",
+          "symbol": "DomainItem/Transition",
+          "line": 18,
+          "sha256": "94276271b3dfe6dd78ced62249cd1d69bdd785e1498b90e678f101a23e1d26e0",
+          "repository": "mermaid",
+          "canonicalSha256": "e39c321b5a98b7160270c4275d4dfc309769478fca6e8f93fa67973431b66881",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob"
+        },
+        {
+          "path": "../../../../../node_modules/.pnpm/langium@4.4.0/node_modules/langium/src/parser/value-converter.ts",
+          "symbol": "convertString/convertEscapeCharacter",
+          "line": 60,
+          "sha256": "4f8b6454347b73fc775918037feb598808481e1cc026709e045dfe9f5817e191",
+          "repository": "mermaid-bundle-sourcesContent",
+          "hashMeaning": "exact UTF-8 sourcesContent",
+          "bundleMapPath": ".local/f011-oracle/node_modules/@mermaid-js/parser/dist/chunks/mermaid-parser.core/chunk-NGNAAXSQ.mjs.map",
+          "bundleMapSha256": "7ff2c3967be6db0b0603e2773b6afa80bf8157d144e530bd21fac6f9e61d424d"
+        }
+      ],
+      "predicate": "Transition label uses identical STRING converter.",
+      "arms": [
+        "concrete input BV-A-cynefin-transition-escape"
+      ],
+      "sourceExpected": "Transition label uses identical STRING converter.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/business/cynefin.py",
+          "symbol": "parse",
+          "line": 20
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_a_semantics.py",
+          "symbol": "ASourceLiteralTests.test_cynefin_transition_escape",
+          "line": 22,
+          "binding": "generated from independent literal case table"
+        }
+      ],
+      "caseIds": [
+        "BV-A-cynefin-transition-escape"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Fixed-source independent design; native/original behavior not executed during P2.",
+      "dependencySourceIds": [
+        "../../../../../node_modules/.pnpm/langium@4.4.0/node_modules/langium/src/parser/value-converter.ts"
+      ]
+    },
+    {
+      "id": "cynefin-unclosed",
+      "title": "cynefin unterminated STRING guard",
+      "legacyUnresolved": "cross-products",
+      "source": [
+        {
+          "path": "packages/parser/src/language/cynefin/cynefin.langium",
+          "symbol": "DomainItem/Transition",
+          "line": 18,
+          "sha256": "94276271b3dfe6dd78ced62249cd1d69bdd785e1498b90e678f101a23e1d26e0",
+          "repository": "mermaid",
+          "canonicalSha256": "e39c321b5a98b7160270c4275d4dfc309769478fca6e8f93fa67973431b66881",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob"
+        },
+        {
+          "path": "../../../../../node_modules/.pnpm/langium@4.4.0/node_modules/langium/src/parser/value-converter.ts",
+          "symbol": "convertString/convertEscapeCharacter",
+          "line": 60,
+          "sha256": "4f8b6454347b73fc775918037feb598808481e1cc026709e045dfe9f5817e191",
+          "repository": "mermaid-bundle-sourcesContent",
+          "hashMeaning": "exact UTF-8 sourcesContent",
+          "bundleMapPath": ".local/f011-oracle/node_modules/@mermaid-js/parser/dist/chunks/mermaid-parser.core/chunk-NGNAAXSQ.mjs.map",
+          "bundleMapSha256": "7ff2c3967be6db0b0603e2773b6afa80bf8157d144e530bd21fac6f9e61d424d"
+        }
+      ],
+      "predicate": "STRING requires matching terminating quote; source grammar has no unquoted DomainItem alternative.",
+      "arms": [
+        "missing closing quote must reject"
+      ],
+      "sourceExpected": "STRING requires matching terminating quote; source grammar has no unquoted DomainItem alternative.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/business/cynefin.py",
+          "symbol": "parse",
+          "line": 20
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/probe_a.py",
+          "symbol": "main",
+          "line": 36,
+          "binding": "original/native evidence comparison; visual predicates require explicit P3 review"
+        }
+      ],
+      "caseIds": [
+        "BV-A-cynefin-unclosed"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Fixed-source independent design; native/original behavior not executed during P2.",
+      "dependencySourceIds": [
+        "../../../../../node_modules/.pnpm/langium@4.4.0/node_modules/langium/src/parser/value-converter.ts"
+      ]
+    },
+    {
+      "id": "block-two-node",
+      "title": "block two node",
+      "legacyUnresolved": "block-chain-source-anomaly",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+          "symbol": "nodeStatement",
+          "line": 218,
+          "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+          "repository": "mermaid",
+          "canonicalSha256": "323acca843736b66334fa088b97519ef96c22aa5a1a1eed4f468379ebecf09f2",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob"
+        }
+      ],
+      "predicate": "Recursive nodeStatement produces array but next recursive action reads $1.id; observe three-node source parse/render before defect classification.",
+      "arms": [
+        "concrete input BV-A-block-two-node"
+      ],
+      "sourceExpected": "Recursive nodeStatement produces array but next recursive action reads $1.id; observe three-node source parse/render before defect classification.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/structures/block.py",
+          "symbol": "parse",
+          "line": 143
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_a_semantics.py",
+          "symbol": "ASourceLiteralTests.test_block_two_node",
+          "line": 22,
+          "binding": "generated from independent literal case table"
+        }
+      ],
+      "caseIds": [
+        "BV-A-block-two-node"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Fixed-source independent design; native/original behavior not executed during P2."
+    },
+    {
+      "id": "block-three-node",
+      "title": "block three node",
+      "legacyUnresolved": "block-chain-source-anomaly",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+          "symbol": "nodeStatement",
+          "line": 218,
+          "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+          "repository": "mermaid",
+          "canonicalSha256": "323acca843736b66334fa088b97519ef96c22aa5a1a1eed4f468379ebecf09f2",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob"
+        }
+      ],
+      "predicate": "Recursive nodeStatement produces array but next recursive action reads $1.id; observe three-node source parse/render before defect classification.",
+      "arms": [
+        "concrete input BV-A-block-three-node"
+      ],
+      "sourceExpected": "Recursive nodeStatement produces array but next recursive action reads $1.id; observe three-node source parse/render before defect classification.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/structures/block.py",
+          "symbol": "parse",
+          "line": 143
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/probe_a.py",
+          "symbol": "main",
+          "line": 36,
+          "binding": "original/native evidence comparison; visual predicates require explicit P3 review"
+        }
+      ],
+      "caseIds": [
+        "BV-A-block-three-node"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Fixed-source independent design; native/original behavior not executed during P2."
+    },
+    {
+      "id": "block-split-three",
+      "title": "block split three",
+      "legacyUnresolved": "block-chain-source-anomaly",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+          "symbol": "nodeStatement",
+          "line": 218,
+          "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+          "repository": "mermaid",
+          "canonicalSha256": "323acca843736b66334fa088b97519ef96c22aa5a1a1eed4f468379ebecf09f2",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob"
+        }
+      ],
+      "predicate": "Recursive nodeStatement produces array but next recursive action reads $1.id; observe three-node source parse/render before defect classification.",
+      "arms": [
+        "concrete input BV-A-block-split-three"
+      ],
+      "sourceExpected": "Recursive nodeStatement produces array but next recursive action reads $1.id; observe three-node source parse/render before defect classification.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/structures/block.py",
+          "symbol": "parse",
+          "line": 143
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_a_semantics.py",
+          "symbol": "ASourceLiteralTests.test_block_split_three",
+          "line": 22,
+          "binding": "generated from independent literal case table"
+        }
+      ],
+      "caseIds": [
+        "BV-A-block-split-three"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Fixed-source independent design; native/original behavior not executed during P2."
+    },
+    {
+      "id": "c4-shape-priority",
+      "title": "c4 shape priority",
+      "legacyUnresolved": "source-noop-fields",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/c4/c4ShapeAdapter.ts",
+          "symbol": "resolveNodeShape",
+          "line": 69,
+          "sha256": "84edb89d1e6393b82db03dcefb56bd256014e40399e5eed4708d2daef97ed167",
+          "repository": "mermaid",
+          "canonicalSha256": "e86b2557cd3294e2eee387e4146eb310cfd2277a4046173ae43adfcf297b0595",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob"
+        }
+      ],
+      "predicate": "Recognized shape then sprite then first recognized comma-separated tag then element type.",
+      "arms": [
+        "concrete input BV-A-c4-shape-priority"
+      ],
+      "sourceExpected": "Recognized shape then sprite then first recognized comma-separated tag then element type.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/modeling/c4.py",
+          "symbol": "parse",
+          "line": 86
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/probe_a.py",
+          "symbol": "main",
+          "line": 36,
+          "binding": "original/native evidence comparison; visual predicates require explicit P3 review"
+        },
+        {
+          "path": "tests/branch_verification/test_a_semantics.py",
+          "symbol": "ASourceShapeTests.test_c4_shape_keyword_priority_and_fallback",
+          "line": 91
+        }
+      ],
+      "caseIds": [
+        "BV-A-c4-shape-priority"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Fixed-source independent design; native/original behavior not executed during P2."
+    },
+    {
+      "id": "c4-sprite-fallback",
+      "title": "c4 sprite fallback",
+      "legacyUnresolved": "source-noop-fields",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/c4/c4ShapeAdapter.ts",
+          "symbol": "resolveNodeShape",
+          "line": 69,
+          "sha256": "84edb89d1e6393b82db03dcefb56bd256014e40399e5eed4708d2daef97ed167",
+          "repository": "mermaid",
+          "canonicalSha256": "e86b2557cd3294e2eee387e4146eb310cfd2277a4046173ae43adfcf297b0595",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob"
+        }
+      ],
+      "predicate": "Recognized shape then sprite then first recognized comma-separated tag then element type.",
+      "arms": [
+        "concrete input BV-A-c4-sprite-fallback"
+      ],
+      "sourceExpected": "Recognized shape then sprite then first recognized comma-separated tag then element type.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/modeling/c4.py",
+          "symbol": "parse",
+          "line": 86
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/probe_a.py",
+          "symbol": "main",
+          "line": 36,
+          "binding": "original/native evidence comparison; visual predicates require explicit P3 review"
+        },
+        {
+          "path": "tests/branch_verification/test_a_semantics.py",
+          "symbol": "ASourceShapeTests.test_c4_shape_keyword_priority_and_fallback",
+          "line": 91
+        }
+      ],
+      "caseIds": [
+        "BV-A-c4-sprite-fallback"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Fixed-source independent design; native/original behavior not executed during P2."
+    },
+    {
+      "id": "c4-tags-first-known",
+      "title": "c4 tags first known",
+      "legacyUnresolved": "source-noop-fields",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/c4/c4ShapeAdapter.ts",
+          "symbol": "resolveNodeShape",
+          "line": 69,
+          "sha256": "84edb89d1e6393b82db03dcefb56bd256014e40399e5eed4708d2daef97ed167",
+          "repository": "mermaid",
+          "canonicalSha256": "e86b2557cd3294e2eee387e4146eb310cfd2277a4046173ae43adfcf297b0595",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob"
+        }
+      ],
+      "predicate": "Recognized shape then sprite then first recognized comma-separated tag then element type.",
+      "arms": [
+        "concrete input BV-A-c4-tags-first-known"
+      ],
+      "sourceExpected": "Recognized shape then sprite then first recognized comma-separated tag then element type.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/modeling/c4.py",
+          "symbol": "parse",
+          "line": 86
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/probe_a.py",
+          "symbol": "main",
+          "line": 36,
+          "binding": "original/native evidence comparison; visual predicates require explicit P3 review"
+        },
+        {
+          "path": "tests/branch_verification/test_a_semantics.py",
+          "symbol": "ASourceShapeTests.test_c4_shape_keyword_priority_and_fallback",
+          "line": 91
+        }
+      ],
+      "caseIds": [
+        "BV-A-c4-tags-first-known"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Fixed-source independent design; native/original behavior not executed during P2."
+    },
+    {
+      "id": "c4-type-fallback",
+      "title": "c4 type fallback",
+      "legacyUnresolved": "source-noop-fields",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/c4/c4ShapeAdapter.ts",
+          "symbol": "resolveNodeShape",
+          "line": 69,
+          "sha256": "84edb89d1e6393b82db03dcefb56bd256014e40399e5eed4708d2daef97ed167",
+          "repository": "mermaid",
+          "canonicalSha256": "e86b2557cd3294e2eee387e4146eb310cfd2277a4046173ae43adfcf297b0595",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob"
+        }
+      ],
+      "predicate": "Recognized shape then sprite then first recognized comma-separated tag then element type.",
+      "arms": [
+        "concrete input BV-A-c4-type-fallback"
+      ],
+      "sourceExpected": "Recognized shape then sprite then first recognized comma-separated tag then element type.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/modeling/c4.py",
+          "symbol": "parse",
+          "line": 86
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/probe_a.py",
+          "symbol": "main",
+          "line": 36,
+          "binding": "original/native evidence comparison; visual predicates require explicit P3 review"
+        },
+        {
+          "path": "tests/branch_verification/test_a_semantics.py",
+          "symbol": "ASourceShapeTests.test_c4_shape_keyword_priority_and_fallback",
+          "line": 91
+        }
+      ],
+      "caseIds": [
+        "BV-A-c4-type-fallback"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Fixed-source independent design; native/original behavior not executed during P2."
+    },
+    {
+      "id": "c4-rows-base",
+      "title": "c4 rows base",
+      "legacyUnresolved": "source-noop-fields",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/c4/c4Renderer.ts",
+          "symbol": "drawInsideBoundary",
+          "line": 435,
+          "sha256": "d58ffb63def9c7117a332a0a94ec3b30fd7d34ba93ccb590d3e148a69460c909",
+          "repository": "mermaid",
+          "canonicalSha256": "1d09b55fa11a8c2c0987e02186495d8ed1d8cdbfeda02d4160f0010e3a653e52",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob"
+        }
+      ],
+      "predicate": "Renderer uses DB rows default4; UpdateLayoutConfig changes DB count; config.c4ShapeInRow is not read.",
+      "arms": [
+        "concrete input BV-A-c4-rows-base"
+      ],
+      "sourceExpected": "Renderer uses DB rows default4; UpdateLayoutConfig changes DB count; config.c4ShapeInRow is not read.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/modeling/c4.py",
+          "symbol": "parse",
+          "line": 86
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_a_semantics.py",
+          "symbol": "ASourceLiteralTests.test_c4_rows_base",
+          "line": 22,
+          "binding": "generated from independent literal case table"
+        }
+      ],
+      "caseIds": [
+        "BV-A-c4-rows-base"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Fixed-source independent design; native/original behavior not executed during P2."
+    },
+    {
+      "id": "c4-rows-config",
+      "title": "c4 rows config",
+      "legacyUnresolved": "source-noop-fields",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/c4/c4Renderer.ts",
+          "symbol": "drawInsideBoundary",
+          "line": 435,
+          "sha256": "d58ffb63def9c7117a332a0a94ec3b30fd7d34ba93ccb590d3e148a69460c909",
+          "repository": "mermaid",
+          "canonicalSha256": "1d09b55fa11a8c2c0987e02186495d8ed1d8cdbfeda02d4160f0010e3a653e52",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob"
+        }
+      ],
+      "predicate": "Renderer uses DB rows default4; UpdateLayoutConfig changes DB count; config.c4ShapeInRow is not read.",
+      "arms": [
+        "concrete input BV-A-c4-rows-config"
+      ],
+      "sourceExpected": "Renderer uses DB rows default4; UpdateLayoutConfig changes DB count; config.c4ShapeInRow is not read.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/modeling/c4.py",
+          "symbol": "parse",
+          "line": 86
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_a_semantics.py",
+          "symbol": "ASourceLiteralTests.test_c4_rows_config",
+          "line": 22,
+          "binding": "generated from independent literal case table"
+        },
+        {
+          "path": "tests/branch_verification/test_a_semantics.py",
+          "symbol": "ASourcePaintTests.test_c4_rows_config_is_not_db_update_command",
+          "line": 47
+        }
+      ],
+      "caseIds": [
+        "BV-A-c4-rows-config"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Fixed-source independent design; native/original behavior not executed during P2."
+    },
+    {
+      "id": "c4-rows-command",
+      "title": "c4 rows command",
+      "legacyUnresolved": "source-noop-fields",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/c4/c4Renderer.ts",
+          "symbol": "drawInsideBoundary",
+          "line": 435,
+          "sha256": "d58ffb63def9c7117a332a0a94ec3b30fd7d34ba93ccb590d3e148a69460c909",
+          "repository": "mermaid",
+          "canonicalSha256": "1d09b55fa11a8c2c0987e02186495d8ed1d8cdbfeda02d4160f0010e3a653e52",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob"
+        }
+      ],
+      "predicate": "Renderer uses DB rows default4; UpdateLayoutConfig changes DB count; config.c4ShapeInRow is not read.",
+      "arms": [
+        "concrete input BV-A-c4-rows-command"
+      ],
+      "sourceExpected": "Renderer uses DB rows default4; UpdateLayoutConfig changes DB count; config.c4ShapeInRow is not read.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/modeling/c4.py",
+          "symbol": "parse",
+          "line": 86
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_a_semantics.py",
+          "symbol": "ASourceLiteralTests.test_c4_rows_command",
+          "line": 22,
+          "binding": "generated from independent literal case table"
+        }
+      ],
+      "caseIds": [
+        "BV-A-c4-rows-command"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Fixed-source independent design; native/original behavior not executed during P2."
+    },
+    {
+      "id": "c4-shadow-legend",
+      "title": "c4 shadow legend",
+      "legacyUnresolved": "source-noop-fields",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/c4/c4Db.ts",
+          "symbol": "updateElementStyle",
+          "line": 493,
+          "sha256": "461e4c00f8c5dfe0db51cc1b8e12bb7106b7f722752e016cd1e5730369aa7b36",
+          "repository": "mermaid",
+          "canonicalSha256": "0dc55e891eb14e08f93b0951a3592ed11bacf34c539141ee978213aacdb25004",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob"
+        }
+      ],
+      "predicate": "Attributes are stored but active renderer has no visible legend/shadow consumer; must not invent LEGEND.",
+      "arms": [
+        "concrete input BV-A-c4-shadow-legend"
+      ],
+      "sourceExpected": "Attributes are stored but active renderer has no visible legend/shadow consumer; must not invent LEGEND.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/modeling/c4.py",
+          "symbol": "parse",
+          "line": 86
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/probe_a.py",
+          "symbol": "main",
+          "line": 36,
+          "binding": "original/native evidence comparison; visual predicates require explicit P3 review"
+        }
+      ],
+      "caseIds": [
+        "BV-A-c4-shadow-legend"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Fixed-source independent design; native/original behavior not executed during P2."
+    },
+    {
+      "id": "c4-boundary-sprite",
+      "title": "c4 boundary sprite",
+      "legacyUnresolved": "source-noop-fields",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/c4/c4Renderer.ts",
+          "symbol": "drawInsideBoundary",
+          "line": 435,
+          "sha256": "d58ffb63def9c7117a332a0a94ec3b30fd7d34ba93ccb590d3e148a69460c909",
+          "repository": "mermaid",
+          "canonicalSha256": "1d09b55fa11a8c2c0987e02186495d8ed1d8cdbfeda02d4160f0010e3a653e52",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob"
+        }
+      ],
+      "predicate": "Truthy boundary.sprite reserves 48px image height, not an external sprite asset.",
+      "arms": [
+        "concrete input BV-A-c4-boundary-sprite"
+      ],
+      "sourceExpected": "Truthy boundary.sprite reserves 48px image height, not an external sprite asset.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/modeling/c4.py",
+          "symbol": "parse",
+          "line": 86
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/probe_a.py",
+          "symbol": "main",
+          "line": 36,
+          "binding": "original/native evidence comparison; visual predicates require explicit P3 review"
+        }
+      ],
+      "caseIds": [
+        "BV-A-c4-boundary-sprite"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Fixed-source independent design; native/original behavior not executed during P2."
+    },
+    {
+      "id": "state-base",
+      "title": "state base",
+      "legacyUnresolved": "source-noop-fields",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/state/parser/stateDiagram.jison",
+          "symbol": "statement HIDE_EMPTY / scale WIDTH",
+          "line": 225,
+          "sha256": "72568f98201c5ba59dca96842d1805d5a9908c5965d0609ab27f192929285d4d",
+          "repository": "mermaid",
+          "canonicalSha256": "94d4715707c3b35192b8586fa271e843f2c084e9ff70dd8db07c510c1a23e231",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob"
+        }
+      ],
+      "predicate": "HIDE_EMPTY / scale WIDTH have no semantic action; visible geometry and labels equal baseline.",
+      "arms": [
+        "concrete input BV-A-state-base"
+      ],
+      "sourceExpected": "HIDE_EMPTY / scale WIDTH have no semantic action; visible geometry and labels equal baseline.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/modeling/state_diagram.py",
+          "symbol": "parse",
+          "line": 43
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/probe_a.py",
+          "symbol": "main",
+          "line": 36,
+          "binding": "original/native evidence comparison; visual predicates require explicit P3 review"
+        }
+      ],
+      "caseIds": [
+        "BV-A-state-base"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Fixed-source independent design; native/original behavior not executed during P2."
+    },
+    {
+      "id": "state-noops",
+      "title": "state noops",
+      "legacyUnresolved": "source-noop-fields",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/state/parser/stateDiagram.jison",
+          "symbol": "statement HIDE_EMPTY / scale WIDTH",
+          "line": 225,
+          "sha256": "72568f98201c5ba59dca96842d1805d5a9908c5965d0609ab27f192929285d4d",
+          "repository": "mermaid",
+          "canonicalSha256": "94d4715707c3b35192b8586fa271e843f2c084e9ff70dd8db07c510c1a23e231",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob"
+        }
+      ],
+      "predicate": "HIDE_EMPTY / scale WIDTH have no semantic action; visible geometry and labels equal baseline.",
+      "arms": [
+        "concrete input BV-A-state-noops"
+      ],
+      "sourceExpected": "HIDE_EMPTY / scale WIDTH have no semantic action; visible geometry and labels equal baseline.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/modeling/state_diagram.py",
+          "symbol": "parse",
+          "line": 43
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/probe_a.py",
+          "symbol": "main",
+          "line": 36,
+          "binding": "original/native evidence comparison; visual predicates require explicit P3 review"
+        },
+        {
+          "path": "tests/branch_verification/test_a_semantics.py",
+          "symbol": "ASourcePaintTests.test_state_no_action_productions_do_not_change_paint",
+          "line": 40
+        }
+      ],
+      "caseIds": [
+        "BV-A-state-noops"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Fixed-source independent design; native/original behavior not executed during P2."
+    },
+    {
+      "id": "tree-title",
+      "title": "tree title",
+      "legacyUnresolved": "common-metadata-normalization",
+      "source": [
+        {
+          "path": "packages/parser/src/language/treeView/valueConverter.ts",
+          "symbol": "runCustomConverter",
+          "line": 5,
+          "sha256": "83c0745f0363edb64dcb150e460a8d60c3a4019022caac24eaa2ae63d950051b",
+          "repository": "mermaid",
+          "canonicalSha256": "fddddb34d256698a6c2b25bbff416c5dc949ddc9eac8f935a9a80ad02123d0cf",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob"
+        },
+        {
+          "path": "packages/parser/src/language/common/valueConverter.ts",
+          "symbol": "runCommonConverter",
+          "line": 44,
+          "sha256": "d93aa5dd1f7fed8aa903f55eb3e463c6b69b455af22004a6405a61c7560f58e5",
+          "repository": "mermaid",
+          "canonicalSha256": "43b58df0bba9087c8b831cd53a12e8f1f85bf4a7352b388873d793325953ab37",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob"
+        }
+      ],
+      "predicate": "Common TITLE stops at comment and trims/collapses whitespace to A B.",
+      "arms": [
+        "concrete input BV-A-tree-title"
+      ],
+      "sourceExpected": "Common TITLE stops at comment and trims/collapses whitespace to A B.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/hierarchy/tree_view.py",
+          "symbol": "parse",
+          "line": 60
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_a_semantics.py",
+          "symbol": "ASourceLiteralTests.test_tree_title",
+          "line": 22,
+          "binding": "generated from independent literal case table"
+        }
+      ],
+      "caseIds": [
+        "BV-A-tree-title"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Fixed-source independent design; native/original behavior not executed during P2."
+    },
+    {
+      "id": "architecture-title",
+      "title": "architecture title",
+      "legacyUnresolved": "common-metadata-normalization",
+      "source": [
+        {
+          "path": "packages/parser/src/language/architecture/architecture.langium",
+          "symbol": "Architecture",
+          "line": 5,
+          "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+          "repository": "mermaid",
+          "canonicalSha256": "08b6acbfa6f48b3dc6b590e3a5339a3fe554c394a0307d6cbfebb75c175b5147",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob"
+        },
+        {
+          "path": "packages/parser/src/language/common/valueConverter.ts",
+          "symbol": "runCommonConverter",
+          "line": 44,
+          "sha256": "d93aa5dd1f7fed8aa903f55eb3e463c6b69b455af22004a6405a61c7560f58e5",
+          "repository": "mermaid",
+          "canonicalSha256": "43b58df0bba9087c8b831cd53a12e8f1f85bf4a7352b388873d793325953ab37",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob"
+        }
+      ],
+      "predicate": "Common TITLE stops at comment and trims/collapses whitespace to A B.",
+      "arms": [
+        "concrete input BV-A-architecture-title"
+      ],
+      "sourceExpected": "Common TITLE stops at comment and trims/collapses whitespace to A B.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/structures/architecture.py",
+          "symbol": "parse",
+          "line": 62
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_a_semantics.py",
+          "symbol": "ASourceLiteralTests.test_architecture_title",
+          "line": 22,
+          "binding": "generated from independent literal case table"
+        }
+      ],
+      "caseIds": [
+        "BV-A-architecture-title"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Fixed-source independent design; native/original behavior not executed during P2."
+    },
+    {
+      "id": "cynefin-title",
+      "title": "cynefin title",
+      "legacyUnresolved": "common-metadata-normalization",
+      "source": [
+        {
+          "path": "packages/parser/src/language/common/valueConverter.ts",
+          "symbol": "runCommonConverter",
+          "line": 44,
+          "sha256": "d93aa5dd1f7fed8aa903f55eb3e463c6b69b455af22004a6405a61c7560f58e5",
+          "repository": "mermaid",
+          "canonicalSha256": "43b58df0bba9087c8b831cd53a12e8f1f85bf4a7352b388873d793325953ab37",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob"
+        },
+        {
+          "path": "packages/parser/src/language/common/valueConverter.ts",
+          "symbol": "runCommonConverter",
+          "line": 44,
+          "sha256": "d93aa5dd1f7fed8aa903f55eb3e463c6b69b455af22004a6405a61c7560f58e5",
+          "repository": "mermaid",
+          "canonicalSha256": "43b58df0bba9087c8b831cd53a12e8f1f85bf4a7352b388873d793325953ab37",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob"
+        }
+      ],
+      "predicate": "Common TITLE stops at comment and trims/collapses whitespace to A B.",
+      "arms": [
+        "concrete input BV-A-cynefin-title"
+      ],
+      "sourceExpected": "Common TITLE stops at comment and trims/collapses whitespace to A B.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/business/cynefin.py",
+          "symbol": "parse",
+          "line": 20
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_a_semantics.py",
+          "symbol": "ASourceLiteralTests.test_cynefin_title",
+          "line": 22,
+          "binding": "generated from independent literal case table"
+        }
+      ],
+      "caseIds": [
+        "BV-A-cynefin-title"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Fixed-source independent design; native/original behavior not executed during P2."
+    },
+    {
+      "id": "tree-multiline-accessibility",
+      "title": "tree multiline accessibility",
+      "legacyUnresolved": "common-metadata-normalization",
+      "source": [
+        {
+          "path": "packages/parser/src/language/common/valueConverter.ts",
+          "symbol": "runCommonConverter",
+          "line": 44,
+          "sha256": "d93aa5dd1f7fed8aa903f55eb3e463c6b69b455af22004a6405a61c7560f58e5",
+          "repository": "mermaid",
+          "canonicalSha256": "43b58df0bba9087c8b831cd53a12e8f1f85bf4a7352b388873d793325953ab37",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob"
+        }
+      ],
+      "predicate": "Multiline converter trims each line, collapses horizontal whitespace and repeated newlines.",
+      "arms": [
+        "concrete input BV-A-tree-multiline-accessibility"
+      ],
+      "sourceExpected": "Multiline converter trims each line, collapses horizontal whitespace and repeated newlines.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/hierarchy/tree_view.py",
+          "symbol": "parse",
+          "line": 60
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_a_semantics.py",
+          "symbol": "ASourceLiteralTests.test_tree_multiline_accessibility",
+          "line": 22,
+          "binding": "generated from independent literal case table"
+        }
+      ],
+      "caseIds": [
+        "BV-A-tree-multiline-accessibility"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Fixed-source independent design; native/original behavior not executed during P2."
+    },
+    {
+      "id": "tree-quoted-literal",
+      "title": "tree quoted literal",
+      "legacyUnresolved": "cross-products",
+      "source": [
+        {
+          "path": "packages/parser/src/language/treeView/valueConverter.ts",
+          "symbol": "runCustomConverter",
+          "line": 5,
+          "sha256": "83c0745f0363edb64dcb150e460a8d60c3a4019022caac24eaa2ae63d950051b",
+          "repository": "mermaid",
+          "canonicalSha256": "fddddb34d256698a6c2b25bbff416c5dc949ddc9eac8f935a9a80ad02123d0cf",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob"
+        }
+      ],
+      "predicate": "QUOTED_NAME strips outer quotes only; no escape decoding, directory slash removed, empty icon suppresses default.",
+      "arms": [
+        "concrete input BV-A-tree-quoted-literal"
+      ],
+      "sourceExpected": "QUOTED_NAME strips outer quotes only; no escape decoding, directory slash removed, empty icon suppresses default.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/hierarchy/tree_view.py",
+          "symbol": "parse",
+          "line": 60
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_a_semantics.py",
+          "symbol": "ASourceLiteralTests.test_tree_quoted_literal",
+          "line": 22,
+          "binding": "generated from independent literal case table"
+        }
+      ],
+      "caseIds": [
+        "BV-A-tree-quoted-literal"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Fixed-source independent design; native/original behavior not executed during P2."
+    },
+    {
+      "id": "architecture-accessibility",
+      "title": "architecture accessibility",
+      "legacyUnresolved": "common-metadata-normalization",
+      "source": [
+        {
+          "path": "packages/parser/src/language/common/valueConverter.ts",
+          "symbol": "runCommonConverter",
+          "line": 44,
+          "sha256": "d93aa5dd1f7fed8aa903f55eb3e463c6b69b455af22004a6405a61c7560f58e5",
+          "repository": "mermaid",
+          "canonicalSha256": "43b58df0bba9087c8b831cd53a12e8f1f85bf4a7352b388873d793325953ab37",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob"
+        }
+      ],
+      "predicate": "Canonical metadata stored independently of visible title.",
+      "arms": [
+        "concrete input BV-A-architecture-accessibility"
+      ],
+      "sourceExpected": "Canonical metadata stored independently of visible title.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/structures/architecture.py",
+          "symbol": "parse",
+          "line": 62
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_a_semantics.py",
+          "symbol": "ASourceLiteralTests.test_architecture_accessibility",
+          "line": 22,
+          "binding": "generated from independent literal case table"
+        }
+      ],
+      "caseIds": [
+        "BV-A-architecture-accessibility"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Fixed-source independent design; native/original behavior not executed during P2."
+    },
+    {
+      "id": "event-title-terminal",
+      "title": "event title terminal",
+      "legacyUnresolved": "common-metadata-normalization",
+      "source": [
+        {
+          "path": "packages/parser/src/language/eventmodeling/event-modeling.langium",
+          "symbol": "EventModel/EmGwt/EM_TITLE",
+          "line": 9,
+          "sha256": "be3da489f5114237acbd7ec50494e8bb48f8e6753b6e2f7f2137dae170000611",
+          "repository": "mermaid",
+          "canonicalSha256": "9432c3c986e2d2135fbdedbc5b4cf7fe22b9c893e10b4d23cc63332f776bbba4",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob"
+        },
+        {
+          "path": "packages/parser/src/language/common/valueConverter.ts",
+          "symbol": "runCommonConverter",
+          "line": 44,
+          "sha256": "d93aa5dd1f7fed8aa903f55eb3e463c6b69b455af22004a6405a61c7560f58e5",
+          "repository": "mermaid",
+          "canonicalSha256": "43b58df0bba9087c8b831cd53a12e8f1f85bf4a7352b388873d793325953ab37",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob"
+        },
+        {
+          "path": "../../../../../node_modules/.pnpm/langium@4.4.0/node_modules/langium/src/parser/value-converter.ts",
+          "symbol": "convertString/convertEscapeCharacter",
+          "line": 60,
+          "sha256": "4f8b6454347b73fc775918037feb598808481e1cc026709e045dfe9f5817e191",
+          "repository": "mermaid-bundle-sourcesContent",
+          "hashMeaning": "exact UTF-8 sourcesContent",
+          "bundleMapPath": ".local/f011-oracle/node_modules/@mermaid-js/parser/dist/chunks/mermaid-parser.core/chunk-NGNAAXSQ.mjs.map",
+          "bundleMapSha256": "7ff2c3967be6db0b0603e2773b6afa80bf8157d144e530bd21fac6f9e61d424d"
+        }
+      ],
+      "predicate": "EM_TITLE is not in CommonValueConverter rulesRegexes; default terminal conversion leaves token unnormalized. P3 captures exact source title.",
+      "arms": [
+        "concrete input BV-A-event-title-terminal"
+      ],
+      "sourceExpected": "EM_TITLE is not in CommonValueConverter rulesRegexes; default terminal conversion leaves token unnormalized. P3 captures exact source title.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/business/eventmodeling.py",
+          "symbol": "parse",
+          "line": 31
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_a_semantics.py",
+          "symbol": "ASourceLiteralTests.test_event_title_terminal",
+          "line": 22,
+          "binding": "generated from independent literal case table"
+        }
+      ],
+      "caseIds": [
+        "BV-A-event-title-terminal"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Fixed-source independent design; native/original behavior not executed during P2.",
+      "dependencySourceIds": [
+        "../../../../../node_modules/.pnpm/langium@4.4.0/node_modules/langium/src/parser/value-converter.ts"
+      ]
+    },
+    {
+      "id": "event-gwt-noop",
+      "title": "event gwt noop",
+      "legacyUnresolved": "source-noop-fields",
+      "source": [
+        {
+          "path": "packages/parser/src/language/eventmodeling/event-modeling.langium",
+          "symbol": "EventModel/EmGwt/EM_TITLE",
+          "line": 9,
+          "sha256": "be3da489f5114237acbd7ec50494e8bb48f8e6753b6e2f7f2137dae170000611",
+          "repository": "mermaid",
+          "canonicalSha256": "9432c3c986e2d2135fbdedbc5b4cf7fe22b9c893e10b4d23cc63332f776bbba4",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob"
+        }
+      ],
+      "predicate": "GWT validates/retains AST but does not invent extra visible frame/edge.",
+      "arms": [
+        "concrete input BV-A-event-gwt-noop"
+      ],
+      "sourceExpected": "GWT validates/retains AST but does not invent extra visible frame/edge.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/business/eventmodeling.py",
+          "symbol": "parse",
+          "line": 31
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_a_semantics.py",
+          "symbol": "ASourceLiteralTests.test_event_gwt_noop",
+          "line": 22,
+          "binding": "generated from independent literal case table"
+        }
+      ],
+      "caseIds": [
+        "BV-A-event-gwt-noop"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Fixed-source independent design; native/original behavior not executed during P2."
+    },
+    {
+      "id": "mindmap-default",
+      "title": "mindmap default",
+      "legacyUnresolved": "force-numerical-adaptation",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/mindmap/mindmapDb.ts",
+          "symbol": "flattenNodes/getData",
+          "line": 225,
+          "sha256": "df8af0d61221a62053ccacd42b6ff9c95d812139e72e842fbb920044ef2c4223",
+          "repository": "mermaid",
+          "canonicalSha256": "ced0dcad082a2cd50d8a74908687dd85de0fda074189d7c45024df01f24b48fb",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob"
+        }
+      ],
+      "predicate": "Only explicit root layout selects tidy-tree; scoped-only root defaults source COSE; preserve tree/no overlap.",
+      "arms": [
+        "concrete input BV-A-mindmap-default"
+      ],
+      "sourceExpected": "Only explicit root layout selects tidy-tree; scoped-only root defaults source COSE; preserve tree/no overlap.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/hierarchy/mindmap.py",
+          "symbol": "parse",
+          "line": 47
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/probe_a.py",
+          "symbol": "main",
+          "line": 36,
+          "binding": "original/native evidence comparison; visual predicates require explicit P3 review"
+        },
+        {
+          "path": "tests/branch_verification/test_a_semantics.py",
+          "symbol": "ASourcePaintTests.test_mindmap_layout_selection_and_tree_constraints",
+          "line": 69
+        }
+      ],
+      "caseIds": [
+        "BV-A-mindmap-default"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Fixed-source independent design; native/original behavior not executed during P2."
+    },
+    {
+      "id": "mindmap-scoped-layout",
+      "title": "mindmap scoped layout",
+      "legacyUnresolved": "force-numerical-adaptation",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/mindmap/mindmapDb.ts",
+          "symbol": "flattenNodes/getData",
+          "line": 225,
+          "sha256": "df8af0d61221a62053ccacd42b6ff9c95d812139e72e842fbb920044ef2c4223",
+          "repository": "mermaid",
+          "canonicalSha256": "ced0dcad082a2cd50d8a74908687dd85de0fda074189d7c45024df01f24b48fb",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob"
+        }
+      ],
+      "predicate": "Only explicit root layout selects tidy-tree; scoped-only root defaults source COSE; preserve tree/no overlap.",
+      "arms": [
+        "concrete input BV-A-mindmap-scoped-layout"
+      ],
+      "sourceExpected": "Only explicit root layout selects tidy-tree; scoped-only root defaults source COSE; preserve tree/no overlap.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/hierarchy/mindmap.py",
+          "symbol": "parse",
+          "line": 47
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/probe_a.py",
+          "symbol": "main",
+          "line": 36,
+          "binding": "original/native evidence comparison; visual predicates require explicit P3 review"
+        },
+        {
+          "path": "tests/branch_verification/test_a_semantics.py",
+          "symbol": "ASourcePaintTests.test_mindmap_layout_selection_and_tree_constraints",
+          "line": 69
+        }
+      ],
+      "caseIds": [
+        "BV-A-mindmap-scoped-layout"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Fixed-source independent design; native/original behavior not executed during P2."
+    },
+    {
+      "id": "mindmap-explicit-tidy",
+      "title": "mindmap explicit tidy",
+      "legacyUnresolved": "force-numerical-adaptation",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/mindmap/mindmapDb.ts",
+          "symbol": "flattenNodes/getData",
+          "line": 225,
+          "sha256": "df8af0d61221a62053ccacd42b6ff9c95d812139e72e842fbb920044ef2c4223",
+          "repository": "mermaid",
+          "canonicalSha256": "ced0dcad082a2cd50d8a74908687dd85de0fda074189d7c45024df01f24b48fb",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob"
+        }
+      ],
+      "predicate": "Only explicit root layout selects tidy-tree; scoped-only root defaults source COSE; preserve tree/no overlap.",
+      "arms": [
+        "concrete input BV-A-mindmap-explicit-tidy"
+      ],
+      "sourceExpected": "Only explicit root layout selects tidy-tree; scoped-only root defaults source COSE; preserve tree/no overlap.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/hierarchy/mindmap.py",
+          "symbol": "parse",
+          "line": 47
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/probe_a.py",
+          "symbol": "main",
+          "line": 36,
+          "binding": "original/native evidence comparison; visual predicates require explicit P3 review"
+        },
+        {
+          "path": "tests/branch_verification/test_a_semantics.py",
+          "symbol": "ASourcePaintTests.test_mindmap_layout_selection_and_tree_constraints",
+          "line": 69
+        }
+      ],
+      "caseIds": [
+        "BV-A-mindmap-explicit-tidy"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Fixed-source independent design; native/original behavior not executed during P2."
+    },
+    {
+      "id": "mindmap-icon-base",
+      "title": "mindmap icon base",
+      "legacyUnresolved": "source-noop-fields",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/mindmap/mindmapDb.ts",
+          "symbol": "flattenNodes/getData",
+          "line": 225,
+          "sha256": "df8af0d61221a62053ccacd42b6ff9c95d812139e72e842fbb920044ef2c4223",
+          "repository": "mermaid",
+          "canonicalSha256": "ced0dcad082a2cd50d8a74908687dd85de0fda074189d7c45024df01f24b48fb",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob"
+        }
+      ],
+      "predicate": "DB forwards icon; actual active shape consumer must determine visible effect, not metadata declaration.",
+      "arms": [
+        "concrete input BV-A-mindmap-icon-base"
+      ],
+      "sourceExpected": "DB forwards icon; actual active shape consumer must determine visible effect, not metadata declaration.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/hierarchy/mindmap.py",
+          "symbol": "parse",
+          "line": 47
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/probe_a.py",
+          "symbol": "main",
+          "line": 36,
+          "binding": "original/native evidence comparison; visual predicates require explicit P3 review"
+        }
+      ],
+      "caseIds": [
+        "BV-A-mindmap-icon-base"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Fixed-source independent design; native/original behavior not executed during P2."
+    },
+    {
+      "id": "mindmap-icon-icon",
+      "title": "mindmap icon icon",
+      "legacyUnresolved": "source-noop-fields",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/mindmap/mindmapDb.ts",
+          "symbol": "flattenNodes/getData",
+          "line": 225,
+          "sha256": "df8af0d61221a62053ccacd42b6ff9c95d812139e72e842fbb920044ef2c4223",
+          "repository": "mermaid",
+          "canonicalSha256": "ced0dcad082a2cd50d8a74908687dd85de0fda074189d7c45024df01f24b48fb",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob"
+        }
+      ],
+      "predicate": "DB forwards icon; actual active shape consumer must determine visible effect, not metadata declaration.",
+      "arms": [
+        "concrete input BV-A-mindmap-icon-icon"
+      ],
+      "sourceExpected": "DB forwards icon; actual active shape consumer must determine visible effect, not metadata declaration.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/hierarchy/mindmap.py",
+          "symbol": "parse",
+          "line": 47
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/probe_a.py",
+          "symbol": "main",
+          "line": 36,
+          "binding": "original/native evidence comparison; visual predicates require explicit P3 review"
+        }
+      ],
+      "caseIds": [
+        "BV-A-mindmap-icon-icon"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Fixed-source independent design; native/original behavior not executed during P2."
+    },
+    {
+      "id": "kanban-icon-base",
+      "title": "kanban icon base",
+      "legacyUnresolved": "source-noop-fields",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/kanban/kanbanDb.ts",
+          "symbol": "getData",
+          "line": 54,
+          "sha256": "5e96a2a5d8df7ce08c79c0da7fe4edc4decceb8dfe7b27434f799dcdfc2ad38a",
+          "repository": "mermaid",
+          "canonicalSha256": "d26473103e8b12917944a97f47f86b7e3785b22784224c66ab0ef1a3a926742b",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob"
+        }
+      ],
+      "predicate": "DB forwards icon metadata; compare original card/section active consumer.",
+      "arms": [
+        "concrete input BV-A-kanban-icon-base"
+      ],
+      "sourceExpected": "DB forwards icon metadata; compare original card/section active consumer.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/structures/kanban.py",
+          "symbol": "parse",
+          "line": 48
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/probe_a.py",
+          "symbol": "main",
+          "line": 36,
+          "binding": "original/native evidence comparison; visual predicates require explicit P3 review"
+        }
+      ],
+      "caseIds": [
+        "BV-A-kanban-icon-base"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Fixed-source independent design; native/original behavior not executed during P2."
+    },
+    {
+      "id": "kanban-icon-icon",
+      "title": "kanban icon icon",
+      "legacyUnresolved": "source-noop-fields",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/kanban/kanbanDb.ts",
+          "symbol": "getData",
+          "line": 54,
+          "sha256": "5e96a2a5d8df7ce08c79c0da7fe4edc4decceb8dfe7b27434f799dcdfc2ad38a",
+          "repository": "mermaid",
+          "canonicalSha256": "d26473103e8b12917944a97f47f86b7e3785b22784224c66ab0ef1a3a926742b",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob"
+        }
+      ],
+      "predicate": "DB forwards icon metadata; compare original card/section active consumer.",
+      "arms": [
+        "concrete input BV-A-kanban-icon-icon"
+      ],
+      "sourceExpected": "DB forwards icon metadata; compare original card/section active consumer.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/structures/kanban.py",
+          "symbol": "parse",
+          "line": 48
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/probe_a.py",
+          "symbol": "main",
+          "line": 36,
+          "binding": "original/native evidence comparison; visual predicates require explicit P3 review"
+        }
+      ],
+      "caseIds": [
+        "BV-A-kanban-icon-icon"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Fixed-source independent design; native/original behavior not executed during P2."
+    },
+    {
+      "id": "class-first-annotation",
+      "title": "class first annotation",
+      "legacyUnresolved": "cross-products",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+          "symbol": "classStatement",
+          "line": 323,
+          "sha256": "3c99e4613bd8235f4d3485d8444a8b119e8af9ede50f88505c24d5a6cc93280f",
+          "repository": "mermaid",
+          "canonicalSha256": "c2ea20022e4adf501dbbcda909a1bdb74e05a2ac53ff5276d09d00fd54a3e21e",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob"
+        }
+      ],
+      "predicate": "DB retains both annotations; active label shows first annotation only.",
+      "arms": [
+        "concrete input BV-A-class-first-annotation"
+      ],
+      "sourceExpected": "DB retains both annotations; active label shows first annotation only.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/modeling/class_diagram.py",
+          "symbol": "parse",
+          "line": 131
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_a_semantics.py",
+          "symbol": "ASourceLiteralTests.test_class_first_annotation",
+          "line": 22,
+          "binding": "generated from independent literal case table"
+        }
+      ],
+      "caseIds": [
+        "BV-A-class-first-annotation"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Fixed-source independent design; native/original behavior not executed during P2."
+    },
+    {
+      "id": "ishikawa-tab-depth",
+      "title": "ishikawa tab depth",
+      "legacyUnresolved": "cross-products",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/ishikawa/parser/ishikawa.jison",
+          "symbol": "statement",
+          "line": 54,
+          "sha256": "1bbf4d461534b1c0d4c9e375bf821fac6219f73add5727e5aa51fe4aa044f57b",
+          "repository": "mermaid",
+          "canonicalSha256": "d830768515552cb082bf94743930808b478800ae3491565fc6d00d35f66460d9",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob"
+        }
+      ],
+      "predicate": "SPACELIST length counts tab as one character; relative first-cause depth preserved.",
+      "arms": [
+        "concrete input BV-A-ishikawa-tab-depth"
+      ],
+      "sourceExpected": "SPACELIST length counts tab as one character; relative first-cause depth preserved.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/business/ishikawa.py",
+          "symbol": "parse",
+          "line": 12
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_a_semantics.py",
+          "symbol": "ASourceLiteralTests.test_ishikawa_tab_depth",
+          "line": 22,
+          "binding": "generated from independent literal case table"
+        }
+      ],
+      "caseIds": [
+        "BV-A-ishikawa-tab-depth"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Fixed-source independent design; native/original behavior not executed during P2."
+    },
+    {
+      "id": "ishikawa-relative-indent",
+      "title": "ishikawa relative indent",
+      "legacyUnresolved": "cross-products",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/ishikawa/parser/ishikawa.jison",
+          "symbol": "statement",
+          "line": 54,
+          "sha256": "1bbf4d461534b1c0d4c9e375bf821fac6219f73add5727e5aa51fe4aa044f57b",
+          "repository": "mermaid",
+          "canonicalSha256": "d830768515552cb082bf94743930808b478800ae3491565fc6d00d35f66460d9",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob"
+        }
+      ],
+      "predicate": "First cause, not effect indent, establishes DB baseLevel.",
+      "arms": [
+        "concrete input BV-A-ishikawa-relative-indent"
+      ],
+      "sourceExpected": "First cause, not effect indent, establishes DB baseLevel.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/business/ishikawa.py",
+          "symbol": "parse",
+          "line": 12
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_a_semantics.py",
+          "symbol": "ASourceLiteralTests.test_ishikawa_relative_indent",
+          "line": 22,
+          "binding": "generated from independent literal case table"
+        }
+      ],
+      "caseIds": [
+        "BV-A-ishikawa-relative-indent"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Fixed-source independent design; native/original behavior not executed during P2."
+    },
+    {
+      "id": "existing-er",
+      "title": "er existing exact evidence",
+      "legacyUnresolved": "cross-products",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/er/parser/erDiagram.jison",
+          "symbol": "entity attributes/groups",
+          "line": 121,
+          "sha256": "6aa3496c3d7fc2319ce303b4e95e1061f5a9002667ea29300a86ab9f198da6ef",
+          "repository": "mermaid",
+          "canonicalSha256": "4f7c96b05d15bcc9c0e753bb106a5b8a67cfa4c8b2e13faab1d7098b92f9e5be",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob"
+        }
+      ],
+      "predicate": "cardinalities / identification / group direction",
+      "arms": [
+        "existing source case tables, not recounted"
+      ],
+      "sourceExpected": "cardinalities / identification / group direction",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/modeling/er.py",
+          "symbol": "parse",
+          "line": 77
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/bulk/a/test_modeling.py",
+          "symbol": "ModelingSourceTests.test_er_attributes",
+          "line": 4,
+          "sha256": "afd786c4367cbcfd528eb4d5d24b57dd914b0c906ed48bdcc61d53bcea681204"
+        }
+      ],
+      "caseIds": [],
+      "classification": "EXISTING_EVIDENCE_REVIEWED",
+      "reason": "Prior final evidence BULK-P4-final-20261106T125300Z-435e50af; exact P4 command binding to be retained. Does not prove arbitrary cross-products."
+    },
+    {
+      "id": "existing-requirement",
+      "title": "requirement existing exact evidence",
+      "legacyUnresolved": "cross-products",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/requirement/parser/requirementDiagram.jison",
+          "symbol": "requirementDef",
+          "line": 146,
+          "sha256": "44692497660e25f6fe5d51fb3ea7ed17159bbf27bd901632127342e135bff635",
+          "repository": "mermaid",
+          "canonicalSha256": "32030ae34660128966d31ecc25e5ce224ce9bf947e1e31bd3961f3879ae26ae7",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob"
+        }
+      ],
+      "predicate": "types / risk verify enums / relationships / duplicate-first",
+      "arms": [
+        "existing source case tables, not recounted"
+      ],
+      "sourceExpected": "types / risk verify enums / relationships / duplicate-first",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/modeling/requirement.py",
+          "symbol": "parse",
+          "line": 44
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/bulk/a/test_modeling.py",
+          "symbol": "ModelingSourceTests.test_requirement_type_requirement",
+          "line": 4,
+          "sha256": "afd786c4367cbcfd528eb4d5d24b57dd914b0c906ed48bdcc61d53bcea681204"
+        }
+      ],
+      "caseIds": [],
+      "classification": "EXISTING_EVIDENCE_REVIEWED",
+      "reason": "Prior final evidence BULK-P4-final-20261106T125300Z-435e50af; exact P4 command binding to be retained. Does not prove arbitrary cross-products."
+    },
+    {
+      "id": "existing-usecase",
+      "title": "usecase existing exact evidence",
+      "legacyUnresolved": "cross-products",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/usecase/parser/usecase.parser.ts",
+          "symbol": "UsecaseParser",
+          "line": 84,
+          "sha256": "5de9335d83bd4a8a45ad28cd84862f717f5f1bcef58b7df1018aee8554bc7d2d",
+          "repository": "mermaid",
+          "canonicalSha256": "b63e3003a824e2178a9a9b0ec8db23879661b9ae9ef95fe2b786acd5dfd55f04",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob"
+        }
+      ],
+      "predicate": "actor / relation table / genuine invalid JSON target",
+      "arms": [
+        "existing source case tables, not recounted"
+      ],
+      "sourceExpected": "actor / relation table / genuine invalid JSON target",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/modeling/usecase.py",
+          "symbol": "parse",
+          "line": 134
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/bulk/a/test_modeling.py",
+          "symbol": "ModelingSourceTests.test_usecase_actor_references",
+          "line": 4,
+          "sha256": "afd786c4367cbcfd528eb4d5d24b57dd914b0c906ed48bdcc61d53bcea681204"
+        }
+      ],
+      "caseIds": [],
+      "classification": "EXISTING_EVIDENCE_REVIEWED",
+      "reason": "Prior final evidence BULK-P4-final-20261106T125300Z-435e50af; exact P4 command binding to be retained. Does not prove arbitrary cross-products."
+    },
+    {
+      "id": "existing-class",
+      "title": "class existing exact evidence",
+      "legacyUnresolved": "cross-products",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+          "symbol": "classStatement",
+          "line": 323,
+          "sha256": "3c99e4613bd8235f4d3485d8444a8b119e8af9ede50f88505c24d5a6cc93280f",
+          "repository": "mermaid",
+          "canonicalSha256": "c2ea20022e4adf501dbbcda909a1bdb74e05a2ac53ff5276d09d00fd54a3e21e",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob"
+        }
+      ],
+      "predicate": "real currentColor/font units/intersections",
+      "arms": [
+        "existing source case tables, not recounted"
+      ],
+      "sourceExpected": "real currentColor/font units/intersections",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/modeling/class_diagram.py",
+          "symbol": "parse",
+          "line": 131
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/bulk/a/test_visual_repairs.py",
+          "symbol": "ManualVisualSourceRegressions.test_classdef_color_inherits_to_label_without_recoloring_fill",
+          "line": 46,
+          "sha256": "a3a15be2f9593abc5503e962f80adc3c96bf39eadf0f79e045fda0c2d582b809"
+        }
+      ],
+      "caseIds": [],
+      "classification": "EXISTING_EVIDENCE_REVIEWED",
+      "reason": "Prior final evidence BULK-P4-final-20261106T125300Z-435e50af; exact P4 command binding to be retained. Does not prove arbitrary cross-products."
+    },
+    {
+      "id": "existing-architecture",
+      "title": "architecture existing exact evidence",
+      "legacyUnresolved": "cross-products",
+      "source": [
+        {
+          "path": "packages/parser/src/language/architecture/architecture.langium",
+          "symbol": "Architecture",
+          "line": 5,
+          "sha256": "931bec53366f6a652ff92501ec412cc6f6d4c1e0aa95ef1a707cb2d9bef537f6",
+          "repository": "mermaid",
+          "canonicalSha256": "08b6acbfa6f48b3dc6b590e3a5339a3fe554c394a0307d6cbfebb75c175b5147",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob"
+        }
+      ],
+      "predicate": "fCoSE hierarchy/alignment/relative/no-overlap",
+      "arms": [
+        "existing source case tables, not recounted"
+      ],
+      "sourceExpected": "fCoSE hierarchy/alignment/relative/no-overlap",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/structures/architecture.py",
+          "symbol": "parse",
+          "line": 62
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/bulk/a/test_algorithms.py",
+          "symbol": "ArchitectureFcoseSourceTests.test_horizontal_relative_constraint_and_alignment",
+          "line": 78,
+          "sha256": "b7ca2c4d5fd5b7d8f512fcdd32a228a364a8687bd64ad1475eedb9469edcd16a"
+        }
+      ],
+      "caseIds": [],
+      "classification": "EXISTING_EVIDENCE_REVIEWED",
+      "reason": "Prior final evidence BULK-P4-final-20261106T125300Z-435e50af; exact P4 command binding to be retained. Does not prove arbitrary cross-products."
+    },
+    {
+      "id": "existing-kanban",
+      "title": "kanban existing exact evidence",
+      "legacyUnresolved": "cross-products",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/kanban/kanbanDb.ts",
+          "symbol": "getData",
+          "line": 54,
+          "sha256": "5e96a2a5d8df7ce08c79c0da7fe4edc4decceb8dfe7b27434f799dcdfc2ad38a",
+          "repository": "mermaid",
+          "canonicalSha256": "d26473103e8b12917944a97f47f86b7e3785b22784224c66ab0ef1a3a926742b",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob"
+        }
+      ],
+      "predicate": "ticket decoration/rough section-item geometry",
+      "arms": [
+        "existing source case tables, not recounted"
+      ],
+      "sourceExpected": "ticket decoration/rough section-item geometry",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/structures/kanban.py",
+          "symbol": "parse",
+          "line": 48
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/bulk/a/test_visual_repairs.py",
+          "symbol": "ManualVisualSourceRegressions.test_kanban_ticket_url_draws_real_static_underline_with_no_url_negative",
+          "line": 100,
+          "sha256": "a3a15be2f9593abc5503e962f80adc3c96bf39eadf0f79e045fda0c2d582b809"
+        }
+      ],
+      "caseIds": [],
+      "classification": "EXISTING_EVIDENCE_REVIEWED",
+      "reason": "Prior final evidence BULK-P4-final-20261106T125300Z-435e50af; exact P4 command binding to be retained. Does not prove arbitrary cross-products."
+    },
+    {
+      "id": "existing-eventmodeling",
+      "title": "eventmodeling existing exact evidence",
+      "legacyUnresolved": "cross-products",
+      "source": [
+        {
+          "path": "packages/parser/src/language/eventmodeling/event-modeling.langium",
+          "symbol": "EventModel/EmGwt/EM_TITLE",
+          "line": 9,
+          "sha256": "be3da489f5114237acbd7ec50494e8bb48f8e6753b6e2f7f2137dae170000611",
+          "repository": "mermaid",
+          "canonicalSha256": "9432c3c986e2d2135fbdedbc5b4cf7fe22b9c893e10b4d23cc63332f776bbba4",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob"
+        }
+      ],
+      "predicate": "source-target type cartesian/references",
+      "arms": [
+        "existing source case tables, not recounted"
+      ],
+      "sourceExpected": "source-target type cartesian/references",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/business/eventmodeling.py",
+          "symbol": "parse",
+          "line": 31
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/bulk/b/test_branch_tables.py",
+          "symbol": "SourceParameterTables.test_bt05_event_model_source_type_table",
+          "line": 38,
+          "sha256": "60a737252e8334711555abfc1fa255fd0d8614ba63aa96501d96b6090952ecec"
+        }
+      ],
+      "caseIds": [],
+      "classification": "EXISTING_EVIDENCE_REVIEWED",
+      "reason": "Prior final evidence BULK-P4-final-20261106T125300Z-435e50af; exact P4 command binding to be retained. Does not prove arbitrary cross-products."
+    },
+    {
+      "id": "existing-cynefin",
+      "title": "cynefin existing exact evidence",
+      "legacyUnresolved": "cross-products",
+      "source": [
+        {
+          "path": "packages/parser/src/language/cynefin/cynefin.langium",
+          "symbol": "DomainItem/Transition",
+          "line": 18,
+          "sha256": "94276271b3dfe6dd78ced62249cd1d69bdd785e1498b90e678f101a23e1d26e0",
+          "repository": "mermaid",
+          "canonicalSha256": "e39c321b5a98b7160270c4275d4dfc309769478fca6e8f93fa67973431b66881",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob"
+        }
+      ],
+      "predicate": "finite nonzero seed source condition",
+      "arms": [
+        "existing source case tables, not recounted"
+      ],
+      "sourceExpected": "finite nonzero seed source condition",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/business/cynefin.py",
+          "symbol": "parse",
+          "line": 20
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/bulk/b/test_gap_audit.py",
+          "symbol": "RendererApplicability.test_gap_b12_cynefin_zero_and_nonzero_priority",
+          "line": 121,
+          "sha256": "974660f02bb6e072d5aa5e03b0c970619fc3a389e4a31fbdf1d01dc9bd6f8d93"
+        }
+      ],
+      "caseIds": [],
+      "classification": "EXISTING_EVIDENCE_REVIEWED",
+      "reason": "Prior final evidence BULK-P4-final-20261106T125300Z-435e50af; exact P4 command binding to be retained. Does not prove arbitrary cross-products."
+    },
+    {
+      "id": "existing-ishikawa",
+      "title": "ishikawa existing exact evidence",
+      "legacyUnresolved": "cross-products",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/ishikawa/parser/ishikawa.jison",
+          "symbol": "statement",
+          "line": 54,
+          "sha256": "1bbf4d461534b1c0d4c9e375bf821fac6219f73add5727e5aa51fe4aa044f57b",
+          "repository": "mermaid",
+          "canonicalSha256": "d830768515552cb082bf94743930808b478800ae3491565fc6d00d35f66460d9",
+          "hashMeaning": "checkout bytes; canonicalSha256 is fixed git blob"
+        }
+      ],
+      "predicate": "source UTF16 wrap",
+      "arms": [
+        "existing source case tables, not recounted"
+      ],
+      "sourceExpected": "source UTF16 wrap",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/business/ishikawa.py",
+          "symbol": "parse",
+          "line": 12
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/bulk/b/test_gap_audit.py",
+          "symbol": "IshikawaCharacterCount.test_gap_b04_supplementary_characters_use_utf16_threshold",
+          "line": 44,
+          "sha256": "974660f02bb6e072d5aa5e03b0c970619fc3a389e4a31fbdf1d01dc9bd6f8d93"
+        }
+      ],
+      "caseIds": [],
+      "classification": "EXISTING_EVIDENCE_REVIEWED",
+      "reason": "Prior final evidence BULK-P4-final-20261106T125300Z-435e50af; exact P4 command binding to be retained. Does not prove arbitrary cross-products."
+    }
+  ],
+  "actualReviewDepth": {
+    "newInputs": 40,
+    "literalModelCases": 23,
+    "method": "Concrete old unresolved predicates, no expression-complete coverage claim. No behavior executed in P2.",
+    "negativeInputs": 1,
+    "testMethods": 30
+  },
+  "excluded": [
+    "static HTML/CSS expansion",
+    "video/audio",
+    "interaction",
+    "Dagre",
+    "seven py-vchart diagrams"
+  ],
+  "remaining": [
+    "Force arbitrary topology numeric identity and host pruning/regrowth optimizations not claimed.",
+    "Block three-node and icon metadata active consumers require original P3 evidence.",
+    "Shared fallback/palette/visibility branches root-owned."
+  ],
+  "dependencySources": [
+    {
+      "path": "../../../../../node_modules/.pnpm/langium@4.4.0/node_modules/langium/src/parser/value-converter.ts",
+      "symbol": "convertString/convertEscapeCharacter",
+      "line": 60,
+      "sha256": "4f8b6454347b73fc775918037feb598808481e1cc026709e045dfe9f5817e191",
+      "repository": "mermaid-bundle-sourcesContent",
+      "hashMeaning": "exact UTF-8 sourcesContent",
+      "bundleMapPath": ".local/f011-oracle/node_modules/@mermaid-js/parser/dist/chunks/mermaid-parser.core/chunk-NGNAAXSQ.mjs.map",
+      "bundleMapSha256": "7ff2c3967be6db0b0603e2773b6afa80bf8157d144e530bd21fac6f9e61d424d"
+    }
+  ],
+  "reviewDepth": {
+    "newInputs": 40,
+    "literalModelCases": 23,
+    "method": "Concrete old unresolved predicates, no expression-complete coverage claim. No behavior executed in P2.",
+    "negativeInputs": 1,
+    "testMethods": 30
+  },
+  "documentRole": "P2 source-derived contract. Initial branch classifications and authored expectations are historical; actual execution dispositions are in currentResults.",
+  "currentResults": {
+    "path": "references/branch-verification-summary.json",
+    "sha256": "cdf4226c982290875052614751fdf774d3bcb36609e4bc8f0c908205ce61613d",
+    "bytes": 1723432
+  }
+}

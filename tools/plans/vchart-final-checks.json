@@ -1,0 +1,113 @@
+{
+  "schema": "py-mermaid-command-plan/v1",
+  "scope": "VCHART-P5-FINAL-CHECKS",
+  "description": "Final metadata, immutable artifact and current candidate checks; then push supplier release documentation only. No runtime/source changes.",
+  "inputs": [
+    "{repo}/docs/VCHART_ACCEPTANCE.md",
+    "{repo}/references/vchart-verification-summary.json",
+    "{repo}/references/vchart-release-lock.json",
+    "{repo}/tools/run_vchart_delivery.py",
+    "{repo}/../py-vchart/docs/RELEASE_0_1_1.md"
+  ],
+  "steps": [
+    {
+      "name": "validate-final-bootstrap",
+      "argv": [
+        "{python}",
+        "{repo}/scripts/validate_bootstrap.py"
+      ],
+      "timeoutSeconds": 180
+    },
+    {
+      "name": "audit-final-dependencies",
+      "argv": [
+        "{python}",
+        "{repo}/scripts/audit_dependencies.py",
+        "--check"
+      ],
+      "timeoutSeconds": 180
+    },
+    {
+      "name": "verify-final-functional-run",
+      "argv": [
+        "{python}",
+        "{repo}/tools/workflow.py",
+        "verify",
+        "--run",
+        "{repo}/test-runs/VCHART-P4-batch-20261107T045154Z-dd03474c"
+      ],
+      "timeoutSeconds": 180
+    },
+    {
+      "name": "verify-final-delivery-run",
+      "argv": [
+        "{python}",
+        "{repo}/tools/workflow.py",
+        "verify",
+        "--run",
+        "{repo}/test-runs/VCHART-P5-delivery-20261107T045848Z-3903b480"
+      ],
+      "timeoutSeconds": 180
+    },
+    {
+      "name": "check-current-candidate",
+      "argv": [
+        "{python}",
+        "-c",
+        "import json;from pathlib import Path;from tools.run_support import source_identity;assert source_identity()==json.loads(Path('test-runs/VCHART-P4-batch-20261107T045154Z-dd03474c/run.json').read_text('utf-8'))['source'];print('Final product candidate unchanged')"
+      ],
+      "timeoutSeconds": 180
+    },
+    {
+      "name": "check-mermaid-whitespace",
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "timeoutSeconds": 180
+    },
+    {
+      "name": "supplier-whitespace",
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "timeoutSeconds": 180,
+      "cwd": "{repo}/../py-vchart"
+    },
+    {
+      "name": "stage-supplier-final-record",
+      "argv": [
+        "git",
+        "add",
+        "docs/RELEASE_0_1_1.md"
+      ],
+      "timeoutSeconds": 180,
+      "cwd": "{repo}/../py-vchart"
+    },
+    {
+      "name": "commit-supplier-final-record",
+      "argv": [
+        "git",
+        "commit",
+        "-m",
+        "Record completed Mermaid static integration validation"
+      ],
+      "timeoutSeconds": 180,
+      "cwd": "{repo}/../py-vchart"
+    },
+    {
+      "name": "push-supplier-final-record",
+      "argv": [
+        "git",
+        "push",
+        "origin",
+        "main"
+      ],
+      "timeoutSeconds": 180,
+      "cwd": "{repo}/../py-vchart"
+    }
+  ]
+}

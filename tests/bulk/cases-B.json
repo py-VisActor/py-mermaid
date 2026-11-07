@@ -1377,7 +1377,7 @@
         "symbol": "synthetic production/renderer boundary: fiveTypes,inferredRelations,lanes,titleSourceUnconsumed",
         "line": 1
       },
-      "expect": "upstream_defect",
+      "expect": "syntax_error",
       "features": [
         "fiveTypes",
         "inferredRelations",
@@ -1385,15 +1385,52 @@
         "titleSourceUnconsumed",
         "declaredTitlePublishedLexerMismatch"
       ],
-      "expectedText": [
-        "Page",
-        "Place",
-        "Placed",
-        "Orders",
-        "React"
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "SYNTAX_ERROR"
       ],
-      "expectedErrorCodes": [],
-      "notes": "event-modeling.langium declares title=EM_TITLE; published source lexer rejects title at EOF. Official repaired-oracle error retained in 044453Z-0f6c21dc."
+      "notes": "Source-negative retained input/ID: published EM_ID/EM_WS priority rejects newline title on line2 before renderer. Source-original parse failure bound in previousExpectation; old expectedText/features retained there as historical expectation only.",
+      "previousExpectation": {
+        "fixture": {
+          "id": "B-eventmodeling-all-types",
+          "kind": "eventmodeling",
+          "source": "eventmodeling\ntitle Order\ntf 1 ui Page\ntf 2 cmd Place\ntf 3 evt Placed\ntf 4 rmo Orders\ntf 5 pcr React\n",
+          "config": {},
+          "origin": {
+            "path": "packages/parser/src/language/eventmodeling/event-modeling.langium",
+            "sha256": "be3da489f5114237acbd7ec50494e8bb48f8e6753b6e2f7f2137dae170000611",
+            "symbol": "synthetic production/renderer boundary: fiveTypes,inferredRelations,lanes,titleSourceUnconsumed",
+            "line": 1
+          },
+          "expect": "upstream_defect",
+          "features": [
+            "fiveTypes",
+            "inferredRelations",
+            "lanes",
+            "titleSourceUnconsumed",
+            "declaredTitlePublishedLexerMismatch"
+          ],
+          "expectedText": [
+            "Page",
+            "Place",
+            "Placed",
+            "Orders",
+            "React"
+          ],
+          "expectedErrorCodes": [],
+          "notes": "event-modeling.langium declares title=EM_TITLE; published source lexer rejects title at EOF. Official repaired-oracle error retained in 044453Z-0f6c21dc."
+        },
+        "reason": "Fresh fixed original fails during Diagram.fromText -> parse, before renderer. This is source parser rejection, not an upstream renderer defect or a valid five-type visual example. Native strict rejection is correct and must not be weakened.",
+        "sourceRun": "test-runs/BULK-P4-final-20261107T085934Z-18770265",
+        "evidence": {
+          "path": "test-runs/BULK-P4-final-20261107T085934Z-18770265/artifacts/oracle/B-eventmodeling-all-types.error.json",
+          "bytes": 1273,
+          "sha256": "97ee7bf5a99347c9a786d9f376e7a1bdae566b92f76bd6d69c10b12e69da68ee"
+        },
+        "message": "Parsing failed:  Parse error on line 2, column 1: Expecting token of type 'EOF' but found `title`.",
+        "sourceStage": "parse",
+        "sourceStack": "Error: Parsing failed:  Parse error on line 2, column 1: Expecting token of type 'EOF' but found `title`.\n    at parse (C:\\code\\py-visactor\\py-mermaid\\.local\\f011-oracle\\node_modules\\mermaid\\dist\\mermaid.js:246854:13)\n    at async Object.parse (C:\\code\\py-visactor\\py-mermaid\\.local\\f011-oracle\\node_modules\\mermaid\\dist\\mermaid.js:286613:23)\n    at async Diagram.fromText (C:\\code\\py-visactor\\py-mermaid\\.local\\f011-oracle\\node_modules\\mermaid\\dist\\mermaid.js:306833:7)\n    at async eval (eval at evaluate (:311:30), <anonymous>:33:14)\n    at async <anonymous>:337:30"
+      }
     },
     {
       "id": "B-eventmodeling-data",
@@ -3004,6 +3041,65 @@
         "React"
       ],
       "expectedErrorCodes": []
+    },
+    {
+      "id": "B-eventmodeling-all-types-inline-header",
+      "kind": "eventmodeling",
+      "source": "eventmodeling title Order\ntf 1 ui Page\ntf 2 cmd Place\ntf 3 evt Placed\ntf 4 rmo Orders\ntf 5 pcr React\n",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/eventmodeling/event-modeling.langium",
+        "sha256": "be3da489f5114237acbd7ec50494e8bb48f8e6753b6e2f7f2137dae170000611",
+        "symbol": "independent source control: valid header-inline EM_TITLE + unchanged five frame types",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "fiveTypes",
+        "inferredRelations",
+        "lanes",
+        "validHeaderInlineTitle",
+        "titleSourceUnconsumed"
+      ],
+      "expectedText": [
+        "Page",
+        "Place",
+        "Placed",
+        "Orders",
+        "React"
+      ],
+      "expectedErrorCodes": [],
+      "notes": "Source-verified complete all-types positive. Same original source/config except title moved onto header. Fixed original parser+renderer captured successfully, preserving all5 type frames,3 lanes and inferred chain. Old standalone title remains separate syntax_error case; no native overacceptance restored.",
+      "sourceProvenance": {
+        "run": "test-runs/CLOSURE-REPAIR-A-event-alltypes-source-control-20261107T093223Z-c7bf28a5",
+        "original": {
+          "path": "test-runs/CLOSURE-REPAIR-A-event-alltypes-source-control-20261107T093223Z-c7bf28a5/artifacts/oracle/B-eventmodeling-all-types-inline-header.json",
+          "bytes": 41913,
+          "sha256": "8a1901ca0570cdf8c565373c7b40e9f035c4069e633ed1e28585e70ab99eaa81"
+        },
+        "png": {
+          "path": "test-runs/CLOSURE-REPAIR-A-event-alltypes-source-control-20261107T093223Z-c7bf28a5/artifacts/oracle/B-eventmodeling-all-types-inline-header.png",
+          "bytes": 14519,
+          "sha256": "c1e04ff745e1babfdb29fed2b19a2cc972341780cc5b08c97137fba33b434ecd"
+        },
+        "svg": {
+          "path": "test-runs/CLOSURE-REPAIR-A-event-alltypes-source-control-20261107T093223Z-c7bf28a5/artifacts/oracle/B-eventmodeling-all-types-inline-header.svg",
+          "bytes": 6892,
+          "sha256": "17881658ea8044b8b869443323d9c9f5bc1b09ee304d6c7052d571bb79bf8aa3"
+        },
+        "actualTexts": [
+          "UI/Automation",
+          "Command/Read Model",
+          "Events",
+          "Page",
+          "Place",
+          "Placed",
+          "Orders",
+          "React"
+        ],
+        "actualDiagramTitle": " title Order",
+        "observed": "Actually viewed original raw PNG: Page white UI, Place blue command, Placed orange event, Orders green readmodel, React purple process; all three lanes and connecting arrows present. Raw metadata title not separately painted, matching actual original."
+      }
     }
   ]
 }

@@ -3,6 +3,7 @@ from dataclasses import dataclass
 import re
 from ...runtime.common import make_diagram,config_dict,error
 from ._syntax import statements,common_statement,words,split,scalar,theme,number
+from ._vchart_bridge import geometry
 
 @dataclass(frozen=True)
 class Quadrant:
@@ -27,6 +28,32 @@ def _styles(document,seq):
         out[key]=converted
     return tuple(out.items())
 
+
+def _coordinate_lexemes(document, offset):
+    r"""Honor the pinned exclusive point states, including their regex quirk.
+
+    The pinned quadrant.jison spells its decimal dot as a wildcard:
+    (1)|(0(.\d+)?). Consequently tight ``0,0`` consumes the comma as part of
+    the x token and is source-invalid, whereas ``0, 0`` and ``0.0,0`` work.
+    Validating floats alone incorrectly accepts those source lexer failures.
+    """
+    text = document.cleaned
+    # JavaScript \d is ASCII; Python \d also accepts Unicode decimal digits.
+    x = re.match(r'(1)|(0(.[0-9]+)?)', text[offset:])
+    if x is None:
+        raise error(document, offset, 'Invalid quadrant x coordinate token')
+    cursor = offset + x.end()
+    comma = re.match(r'\s*,\s*', text[cursor:])
+    if comma is None:
+        raise error(document, cursor, 'Expected comma after quadrant x coordinate')
+    cursor += comma.end()
+    y = re.match(r'(1)|(0(.[0-9]+)?)', text[cursor:])
+    if y is None:
+        raise error(document, cursor, 'Invalid quadrant y coordinate token')
+    cursor += y.end()
+    if re.match(r'\s*\]', text[cursor:]) is None:
+        raise error(document, cursor, 'Expected closing bracket after quadrant y coordinate')
+
 def parse(document,config):
     rows=statements(document);meta={'title':document.title};axes={'x-left':'','x-right':'','y-bottom':'','y-top':''};quadrants=['']*4;points=[];classes={}
     if not rows or rows[0][0].value.lower()!='quadrantchart':raise error(document,0,'Expected quadrantChart')
@@ -50,6 +77,7 @@ def parse(document,config):
             if opening<1:raise error(document,row[0].offset,'Expected quadrant point : [x,y]')
             closing=next((i for i in range(opening+2,len(row)) if row[i].value==']'),-1)
             if closing<0 or closing-opening!=5 or row[opening+3].value!=',':raise error(document,row[opening].offset,'Expected quadrant [x,y]')
+            _coordinate_lexemes(document,row[opening+2].offset)
             x=scalar(document,row[opening+2]);y=scalar(document,row[opening+4])
             if not 0<=x<=1 or not 0<=y<=1:raise error(document,row[opening].offset,'Quadrant coordinates must be in [0,1]')
             prefix=row[:opening];class_name='';classpos=next((i for i,t in enumerate(prefix) if t.value==':::'),-1)
@@ -86,8 +114,15 @@ async def build(diagram,p):
         for i,key in enumerate(('y-bottom','y-top')):
             if axes[key]:p.text(axes[key],x,top+h-i*h/2-(h/4 if middle else 0),align='center' if middle else 'left',rotation=-90,size=q['yAxisLabelFontSize'],color=theme(c,'quadrantYAxisTextFill','#333'),id=key)
     positions=[]
-    for i,(label,class_name,x,y,styles) in enumerate(m.points):
-        style={**dict(classes.get(class_name,())),**dict(styles)};px=left+x*w;py=top+(1-y)*h;r=style.get('radius',q['pointRadius']);fill=style.get('color',theme(c,'quadrantPointFill','#333'))
-        p.ellipse(px,py,r,r,fill=fill,stroke=style.get('stroke-color',theme(c,'quadrantPointFill','#333')),line_width=number(style.get('stroke-width','0px'),0),id=f'point-{i}')
+    projected=geometry('scatter',diagram.source,[(x,y) for _,_,x,y,_ in m.points],w,h)
+    from ...rendering.labels.controls.color_values import is_valid_css_color
+    def presentation_color(value):
+        # A rejected SVG presentation attribute inherits the root SVG fill.
+        # Pinned theme darken() without amount produces hsl(...NaN%) here;
+        # forwarding that invalid string to Canvas silently changes the paint.
+        return value if is_valid_css_color(value) else theme(c,'textColor','#333')
+    for i,((label,class_name,x,y,styles),(vx,vy)) in enumerate(zip(m.points,projected)):
+        style={**dict(classes.get(class_name,())),**dict(styles)};px=left+vx;py=top+vy;r=style.get('radius',q['pointRadius']);fill=style.get('color',theme(c,'quadrantPointFill','#333'))
+        p.ellipse(px,py,r,r,fill=presentation_color(fill),stroke=presentation_color(style.get('stroke-color',theme(c,'quadrantPointFill','#333'))),line_width=number(style.get('stroke-width','0px'),0),id=f'point-{i}')
         p.text(label,px,py+q['pointTextPadding'],align='center',size=q['pointLabelFontSize'],color=theme(c,'quadrantPointTextFill','#333'),id=f'point-label-{i}');positions.append((label,px,py))
     return p.finish(width=q['chartWidth'],height=q['chartHeight'],padding=0,layout={'kind':'quadrant','frame':(left,top,w,h),'points':tuple(positions)})

@@ -1,0 +1,126 @@
+{
+  "schema": "py-mermaid-command-plan/v1",
+  "scope": "G03-first",
+  "description": "All new source-derived gap contracts on one unchanged candidate; run with --keep-going. No installs.",
+  "inputs": [
+    "{repo}/references/next-iteration-scope.json",
+    "{repo}/tests/bulk/cases-gap-A.json",
+    "{repo}/tests/bulk/cases-gap-B.json",
+    "{repo}/tests/bulk/cases-gap-C.json",
+    "{repo}/tests/bulk/cases-gap-shared.json",
+    "{repo}/tests/bulk/a/test_gap_audit.py",
+    "{repo}/tests/bulk/b/test_gap_audit.py",
+    "{repo}/tests/bulk/c/test_gap_audit.py",
+    "{repo}/tests/bulk/shared/test_gap_configuration.py",
+    "{repo}/tests/bulk/shared/test_gap_visibility.py"
+  ],
+  "steps": [
+    {
+      "name": "gap-unit-A",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests/bulk/a",
+        "-t",
+        "{repo}/tests",
+        "-p",
+        "test_gap*.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src",
+        "PYTHONUTF8": "1"
+      }
+    },
+    {
+      "name": "gap-unit-B",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests/bulk/b",
+        "-t",
+        "{repo}/tests",
+        "-p",
+        "test_gap*.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src",
+        "PYTHONUTF8": "1"
+      }
+    },
+    {
+      "name": "gap-unit-C",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests/bulk/c",
+        "-t",
+        "{repo}/tests",
+        "-p",
+        "test_gap*.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src",
+        "PYTHONUTF8": "1"
+      }
+    },
+    {
+      "name": "gap-unit-shared",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests/bulk/shared",
+        "-t",
+        "{repo}/tests",
+        "-p",
+        "test_gap*.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src",
+        "PYTHONUTF8": "1"
+      }
+    },
+    {
+      "name": "gap-fixture-freeze",
+      "argv": [
+        "{python}",
+        "{repo}/tools/collect_bulk_cases.py",
+        "--allow-subset",
+        "--fixtures",
+        "{repo}/tests/bulk/cases-gap-A.json",
+        "{repo}/tests/bulk/cases-gap-B.json",
+        "{repo}/tests/bulk/cases-gap-C.json",
+        "{repo}/tests/bulk/cases-gap-shared.json",
+        "--out",
+        "{run}/artifacts/fixtures"
+      ]
+    },
+    {
+      "name": "gap-fixed-original",
+      "argv": [
+        "node",
+        "{repo}/tools/oracle/bulk_capture.cjs",
+        "--fixtures",
+        "{run}/artifacts/fixtures/browser-cases.json",
+        "--out",
+        "{run}/artifacts/oracle"
+      ],
+      "timeoutSeconds": 1800
+    }
+  ]
+}

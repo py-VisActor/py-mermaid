@@ -1,0 +1,55 @@
+{
+  "schema": "py-mermaid-change-receipt/v1",
+  "task": "HTML-HOST-B-P1",
+  "status": "code_complete_unverified",
+  "sourceMap": "references/html-host-layout.json",
+  "sourceSha256": "41fa957106b91178ff6677b14d86fa0c4150fee33d6ff62e1a0d6148c6ac219f",
+  "modifiedProducts": [
+    "src/py_mermaid/rendering/labels/controls/layout.py"
+  ],
+  "publicInterfaces": {
+    "signature": "layout_control(spec,style,measure,*,content_layout=None,asset_loader=None,containing_width=None,containing_height=None)",
+    "measure": "Injected public TextMetrics object/Mapping; no private Canvas/font constructor.",
+    "content_layout": "markup,style,width -> width,height,lines,runs. Parent opacity/filter/background are cleared from child base, child visibility retained.",
+    "asset_loader": "id,image,attributes,style,False -> width,height; explicit original resource_id retained.",
+    "coordinates": "CSS px, control-local, text baseline y, circle bbox, line delta, path local coords. Margins included in dimensions and baseline; all paints offset once.",
+    "clipping": "Text/image/body runs only; fieldset caption runs and outer chrome not clipped.",
+    "uaStyle": "Caller applies low-priority control_ua_style(tag,parent,disabled=...), then author CSS; layout consumes resolved result.",
+    "css": "CONTROL_CSS_PROPERTIES exported; split_control_style returns two CSS strings; parse_control_declarations returns name,value,important tuples."
+  },
+  "implementedFeatureGroups": [
+    "input-textual",
+    "input-state",
+    "input-temporal",
+    "input-action-resource",
+    "button",
+    "select",
+    "textarea",
+    "meter-progress",
+    "fieldset",
+    "inline-control-css"
+  ],
+  "testsWrittenOrRun": false,
+  "productBehaviorExecuted": false,
+  "limits": [
+    "Complex CSS calc()/min()/max()/clamp() and non-solid control box background resources are explicitly unsupported, not silently ignored.",
+    "Per-corner/elliptical border radii and arbitrary CSS layout systems are outside this control-local box implementation.",
+    "Contextual vertical-align top/bottom/middle/text-top/text-bottom requires shared line-layout placement; numeric/sub/super offsets are represented through baseline.",
+    "Date/time UI locale/picker surface, platform file chooser wording and exact UA pixel appearance are host-dependent; no interaction/picker/scroll action is implemented.",
+    "Emergency text wrapping preserves combining/variation/ZWJ groups, but is not a standalone Unicode bidi/grapheme/shaping engine; actual text shaping remains the injected Canvas provider."
+  ],
+  "next": "Freeze all owners, design independent source/host tests, then unified first behavior run.",
+  "installationCommitPush": false,
+  "mechanical": {
+    "run": "test-runs/HTML-HOST-record-20261106T112002Z-4988d513",
+    "status": "SUCCESS",
+    "checks": [
+      "compile",
+      "import",
+      "signature inspection"
+    ],
+    "layoutInvoked": false,
+    "testBehaviorExecuted": false
+  },
+  "writeLease": "Product stopped; only receipt metadata finalized after source freeze."
+}

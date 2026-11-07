@@ -1,0 +1,1925 @@
+{
+  "schema": "py-mermaid-bulk-cases/v1",
+  "group": "C",
+  "cases": [
+    {
+      "id": "BV-C-endpoint-classic-filled-ltr",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nparticipant A\nparticipant B\nA->>B: Endpoint",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "buildMessageModel/drawMessage",
+        "line": 1867,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "look": "classic",
+        "theme": "default"
+      },
+      "expectedText": [
+        "A",
+        "B",
+        "Endpoint"
+      ],
+      "branchProbe": {
+        "type": "endpoint",
+        "branch": "C-sequence-endpoint",
+        "sender": "A",
+        "receiver": "B",
+        "startOffset": 1,
+        "endOffset": -4
+      }
+    },
+    {
+      "id": "BV-C-endpoint-classic-filled-rtl",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nparticipant A\nparticipant B\nB->>A: Endpoint",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "buildMessageModel/drawMessage",
+        "line": 1867,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "look": "classic",
+        "theme": "default"
+      },
+      "expectedText": [
+        "A",
+        "B",
+        "Endpoint"
+      ],
+      "branchProbe": {
+        "type": "endpoint",
+        "branch": "C-sequence-endpoint",
+        "sender": "B",
+        "receiver": "A",
+        "startOffset": -1,
+        "endOffset": 4
+      }
+    },
+    {
+      "id": "BV-C-endpoint-classic-open-ltr",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nparticipant A\nparticipant B\nA->B: Endpoint",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "buildMessageModel/drawMessage",
+        "line": 1867,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "look": "classic",
+        "theme": "default"
+      },
+      "expectedText": [
+        "A",
+        "B",
+        "Endpoint"
+      ],
+      "branchProbe": {
+        "type": "endpoint",
+        "branch": "C-sequence-endpoint",
+        "sender": "A",
+        "receiver": "B",
+        "startOffset": 1,
+        "endOffset": -1
+      }
+    },
+    {
+      "id": "BV-C-endpoint-classic-open-rtl",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nparticipant A\nparticipant B\nB->A: Endpoint",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "buildMessageModel/drawMessage",
+        "line": 1867,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "look": "classic",
+        "theme": "default"
+      },
+      "expectedText": [
+        "A",
+        "B",
+        "Endpoint"
+      ],
+      "branchProbe": {
+        "type": "endpoint",
+        "branch": "C-sequence-endpoint",
+        "sender": "B",
+        "receiver": "A",
+        "startOffset": -1,
+        "endOffset": 1
+      }
+    },
+    {
+      "id": "BV-C-endpoint-neo-filled-ltr",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nparticipant A\nparticipant B\nA->>B: Endpoint",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "buildMessageModel/drawMessage",
+        "line": 1867,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "look": "neo",
+        "theme": "default"
+      },
+      "expectedText": [
+        "A",
+        "B",
+        "Endpoint"
+      ],
+      "branchProbe": {
+        "type": "endpoint",
+        "branch": "C-sequence-endpoint",
+        "sender": "A",
+        "receiver": "B",
+        "startOffset": 1,
+        "endOffset": -7
+      }
+    },
+    {
+      "id": "BV-C-endpoint-neo-filled-rtl",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nparticipant A\nparticipant B\nB->>A: Endpoint",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "buildMessageModel/drawMessage",
+        "line": 1867,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "look": "neo",
+        "theme": "default"
+      },
+      "expectedText": [
+        "A",
+        "B",
+        "Endpoint"
+      ],
+      "branchProbe": {
+        "type": "endpoint",
+        "branch": "C-sequence-endpoint",
+        "sender": "B",
+        "receiver": "A",
+        "startOffset": -1,
+        "endOffset": 7
+      }
+    },
+    {
+      "id": "BV-C-number-normal-ltr",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nautonumber\nparticipant A\nparticipant B\nA->>B: Number",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "buildMessageModel/drawMessage",
+        "line": 1867,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "look": "classic",
+        "theme": "default"
+      },
+      "expectedText": [
+        "A",
+        "B",
+        "Number",
+        "1"
+      ],
+      "branchProbe": {
+        "type": "number",
+        "branch": "C-sequence-number",
+        "anchor": "A"
+      }
+    },
+    {
+      "id": "BV-C-number-normal-rtl",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nautonumber\nparticipant A\nparticipant B\nB->>A: Number",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "buildMessageModel/drawMessage",
+        "line": 1867,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "look": "classic",
+        "theme": "default"
+      },
+      "expectedText": [
+        "A",
+        "B",
+        "Number",
+        "1"
+      ],
+      "branchProbe": {
+        "type": "number",
+        "branch": "C-sequence-number",
+        "anchor": "B"
+      }
+    },
+    {
+      "id": "BV-C-number-reverse-ltr",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nautonumber\nparticipant A\nparticipant B\nA//-B: Number",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "buildMessageModel/drawMessage",
+        "line": 1867,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "look": "classic",
+        "theme": "default"
+      },
+      "expectedText": [
+        "A",
+        "B",
+        "Number",
+        "1"
+      ],
+      "branchProbe": {
+        "type": "number",
+        "branch": "C-sequence-number",
+        "anchor": "B"
+      }
+    },
+    {
+      "id": "BV-C-self-curved-normal",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nautonumber\nparticipant A\nA->>A: Self",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "buildMessageModel/drawMessage",
+        "line": 1867,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "look": "classic",
+        "theme": "default",
+        "sequence": {
+          "rightAngles": false
+        }
+      },
+      "expectedText": [
+        "A",
+        "Self",
+        "1"
+      ],
+      "branchProbe": {
+        "type": "self",
+        "branch": "C-sequence-self",
+        "sender": "A",
+        "startOffset": 1,
+        "angular": false
+      }
+    },
+    {
+      "id": "BV-C-self-curved-reverse",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nautonumber\nparticipant A\nA//-A: Self",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "buildMessageModel/drawMessage",
+        "line": 1867,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "look": "classic",
+        "theme": "default",
+        "sequence": {
+          "rightAngles": false
+        }
+      },
+      "expectedText": [
+        "A",
+        "Self",
+        "1"
+      ],
+      "branchProbe": {
+        "type": "self",
+        "branch": "C-sequence-self",
+        "sender": "A",
+        "startOffset": 11,
+        "angular": false
+      }
+    },
+    {
+      "id": "BV-C-self-angular-bidirectional",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nautonumber\nparticipant A\nA<<->>A: Self",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "buildMessageModel/drawMessage",
+        "line": 1867,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "look": "classic",
+        "theme": "default",
+        "sequence": {
+          "rightAngles": true
+        }
+      },
+      "expectedText": [
+        "A",
+        "Self",
+        "1"
+      ],
+      "branchProbe": {
+        "type": "self",
+        "branch": "C-sequence-self",
+        "sender": "A",
+        "startOffset": 11,
+        "angular": true
+      }
+    },
+    {
+      "id": "BV-C-central-source-plain",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nparticipant A\nparticipant B\nA()->>B: Center",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "buildMessageModel/drawMessage",
+        "line": 1867,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "look": "classic",
+        "theme": "default"
+      },
+      "expectedText": [
+        "A",
+        "B",
+        "Center"
+      ],
+      "branchProbe": {
+        "type": "central",
+        "branch": "C-sequence-central",
+        "circles": [
+          {
+            "actor": "A",
+            "offset": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "BV-C-central-source-number",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nautonumber\nparticipant A\nparticipant B\nA()->>B: Center",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "buildMessageModel/drawMessage",
+        "line": 1867,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "look": "classic",
+        "theme": "default"
+      },
+      "expectedText": [
+        "A",
+        "B",
+        "Center",
+        "1"
+      ],
+      "branchProbe": {
+        "type": "central",
+        "branch": "C-sequence-central",
+        "circles": [
+          {
+            "actor": "A",
+            "offset": 16.5
+          }
+        ]
+      }
+    },
+    {
+      "id": "BV-C-central-target-plain",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nparticipant A\nparticipant B\nA->>()B: Center",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "buildMessageModel/drawMessage",
+        "line": 1867,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "look": "classic",
+        "theme": "default"
+      },
+      "expectedText": [
+        "A",
+        "B",
+        "Center"
+      ],
+      "branchProbe": {
+        "type": "central",
+        "branch": "C-sequence-central",
+        "circles": [
+          {
+            "actor": "B",
+            "offset": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "BV-C-central-target-number",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nautonumber\nparticipant A\nparticipant B\nA->>()B: Center",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "buildMessageModel/drawMessage",
+        "line": 1867,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "look": "classic",
+        "theme": "default"
+      },
+      "expectedText": [
+        "A",
+        "B",
+        "Center",
+        "1"
+      ],
+      "branchProbe": {
+        "type": "central",
+        "branch": "C-sequence-central",
+        "circles": [
+          {
+            "actor": "B",
+            "offset": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "BV-C-central-dual-plain",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nparticipant A\nparticipant B\nA()->>()B: Center",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "buildMessageModel/drawMessage",
+        "line": 1867,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "look": "classic",
+        "theme": "default"
+      },
+      "expectedText": [
+        "A",
+        "B",
+        "Center"
+      ],
+      "branchProbe": {
+        "type": "central",
+        "branch": "C-sequence-central",
+        "circles": [
+          {
+            "actor": "A",
+            "offset": 0
+          },
+          {
+            "actor": "B",
+            "offset": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "BV-C-central-dual-number",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nautonumber\nparticipant A\nparticipant B\nA()->>()B: Center",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "buildMessageModel/drawMessage",
+        "line": 1867,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "look": "classic",
+        "theme": "default"
+      },
+      "expectedText": [
+        "A",
+        "B",
+        "Center",
+        "1"
+      ],
+      "branchProbe": {
+        "type": "central",
+        "branch": "C-sequence-central",
+        "circles": [
+          {
+            "actor": "A",
+            "offset": 16.5
+          },
+          {
+            "actor": "B",
+            "offset": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "BV-C-frame-nested",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nparticipant A\nparticipant B\nloop Outer\nactivate A\nalt Inner\nA->>B: Message\nelse Other\nNote over A,B: A wider shared note\nend\ndeactivate A\nend",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "buildMessageModel/drawMessage",
+        "line": 1867,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "look": "classic",
+        "theme": "default"
+      },
+      "expectedText": [
+        "A",
+        "B",
+        "Message"
+      ],
+      "branchProbe": {
+        "type": "frame",
+        "branch": "C-sequence-frame",
+        "requiredFrames": 2
+      }
+    },
+    {
+      "id": "BV-C-frame-sections",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nparticipant A\nparticipant B\npar First\nA->>B: One\nand Second\nB->>A: Two\nend",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "buildMessageModel/drawMessage",
+        "line": 1867,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "look": "classic",
+        "theme": "default"
+      },
+      "expectedText": [
+        "A",
+        "B",
+        "One"
+      ],
+      "branchProbe": {
+        "type": "frame",
+        "branch": "C-sequence-frame",
+        "requiredFrames": 1
+      }
+    },
+    {
+      "id": "BV-C-zen-comment-escape",
+      "kind": "zenuml",
+      "group": "C",
+      "source": "zenuml\nA B\n// \\*literal\\*\nA->B.call()",
+      "expect": "render",
+      "origin": {
+        "path": "src/svg/components/comment.ts",
+        "symbol": "collectLines/walkToken/renderComment",
+        "line": 16,
+        "sha256": "de16149e5f49bce9c09e0093836425e28b3810df1e53c607db8aaf968ef5efc1",
+        "repository": "zenuml-core",
+        "synthesized": true
+      },
+      "config": {
+        "theme": "default"
+      },
+      "expectedText": [
+        "A",
+        "B",
+        "call()"
+      ],
+      "branchProbe": {
+        "type": "comment",
+        "branch": "C-zen-comment-escape",
+        "comment": "\\*literal\\*",
+        "visible": "\\*literal\\*",
+        "bold": false,
+        "italic": false,
+        "rawLineCount": 1
+      }
+    },
+    {
+      "id": "BV-C-zen-comment-space-delimiter",
+      "kind": "zenuml",
+      "group": "C",
+      "source": "zenuml\nA B\n// * spaced *\nA->B.call()",
+      "expect": "render",
+      "origin": {
+        "path": "src/svg/components/comment.ts",
+        "symbol": "collectLines/walkToken/renderComment",
+        "line": 16,
+        "sha256": "de16149e5f49bce9c09e0093836425e28b3810df1e53c607db8aaf968ef5efc1",
+        "repository": "zenuml-core",
+        "synthesized": true
+      },
+      "config": {
+        "theme": "default"
+      },
+      "expectedText": [
+        "A",
+        "B",
+        "call()"
+      ],
+      "branchProbe": {
+        "type": "comment",
+        "branch": "C-zen-comment-space-delimiter",
+        "comment": "* spaced *",
+        "visible": "* spaced *",
+        "bold": false,
+        "italic": false,
+        "rawLineCount": 1
+      }
+    },
+    {
+      "id": "BV-C-zen-comment-intraword",
+      "kind": "zenuml",
+      "group": "C",
+      "source": "zenuml\nA B\n// word_with_underscores\nA->B.call()",
+      "expect": "render",
+      "origin": {
+        "path": "src/svg/components/comment.ts",
+        "symbol": "collectLines/walkToken/renderComment",
+        "line": 16,
+        "sha256": "de16149e5f49bce9c09e0093836425e28b3810df1e53c607db8aaf968ef5efc1",
+        "repository": "zenuml-core",
+        "synthesized": true
+      },
+      "config": {
+        "theme": "default"
+      },
+      "expectedText": [
+        "A",
+        "B",
+        "call()"
+      ],
+      "branchProbe": {
+        "type": "comment",
+        "branch": "C-zen-comment-intraword",
+        "comment": "word_with_underscores",
+        "visible": "word_with_underscores",
+        "bold": false,
+        "italic": false,
+        "rawLineCount": 1
+      }
+    },
+    {
+      "id": "BV-C-zen-comment-triple",
+      "kind": "zenuml",
+      "group": "C",
+      "source": "zenuml\nA B\n// ***Both***\nA->B.call()",
+      "expect": "render",
+      "origin": {
+        "path": "src/svg/components/comment.ts",
+        "symbol": "collectLines/walkToken/renderComment",
+        "line": 16,
+        "sha256": "de16149e5f49bce9c09e0093836425e28b3810df1e53c607db8aaf968ef5efc1",
+        "repository": "zenuml-core",
+        "synthesized": true
+      },
+      "config": {
+        "theme": "default"
+      },
+      "expectedText": [
+        "A",
+        "B",
+        "call()"
+      ],
+      "branchProbe": {
+        "type": "comment",
+        "branch": "C-zen-comment-triple",
+        "comment": "***Both***",
+        "visible": "Both",
+        "bold": true,
+        "italic": true,
+        "rawLineCount": 1
+      }
+    },
+    {
+      "id": "BV-C-zen-comment-nested",
+      "kind": "zenuml",
+      "group": "C",
+      "source": "zenuml\nA B\n// **Outer *Inner* Tail**\nA->B.call()",
+      "expect": "render",
+      "origin": {
+        "path": "src/svg/components/comment.ts",
+        "symbol": "collectLines/walkToken/renderComment",
+        "line": 16,
+        "sha256": "de16149e5f49bce9c09e0093836425e28b3810df1e53c607db8aaf968ef5efc1",
+        "repository": "zenuml-core",
+        "synthesized": true
+      },
+      "config": {
+        "theme": "default"
+      },
+      "expectedText": [
+        "A",
+        "B",
+        "call()"
+      ],
+      "branchProbe": {
+        "type": "comment",
+        "branch": "C-zen-comment-nested",
+        "comment": "**Outer *Inner* Tail**",
+        "visible": "Outer Inner Tail",
+        "bold": true,
+        "italic": true,
+        "rawLineCount": 1
+      }
+    },
+    {
+      "id": "BV-C-zen-comment-unclosed",
+      "kind": "zenuml",
+      "group": "C",
+      "source": "zenuml\nA B\n// **Unclosed\nA->B.call()",
+      "expect": "render",
+      "origin": {
+        "path": "src/svg/components/comment.ts",
+        "symbol": "collectLines/walkToken/renderComment",
+        "line": 16,
+        "sha256": "de16149e5f49bce9c09e0093836425e28b3810df1e53c607db8aaf968ef5efc1",
+        "repository": "zenuml-core",
+        "synthesized": true
+      },
+      "config": {
+        "theme": "default"
+      },
+      "expectedText": [
+        "A",
+        "B",
+        "call()"
+      ],
+      "branchProbe": {
+        "type": "comment",
+        "branch": "C-zen-comment-unclosed",
+        "comment": "**Unclosed",
+        "visible": "**Unclosed",
+        "bold": false,
+        "italic": false,
+        "rawLineCount": 1
+      }
+    },
+    {
+      "id": "BV-C-zen-comment-codespan",
+      "kind": "zenuml",
+      "group": "C",
+      "source": "zenuml\nA B\n// `` code ` literal ``\nA->B.call()",
+      "expect": "render",
+      "origin": {
+        "path": "src/svg/components/comment.ts",
+        "symbol": "collectLines/walkToken/renderComment",
+        "line": 16,
+        "sha256": "de16149e5f49bce9c09e0093836425e28b3810df1e53c607db8aaf968ef5efc1",
+        "repository": "zenuml-core",
+        "synthesized": true
+      },
+      "config": {
+        "theme": "default"
+      },
+      "expectedText": [
+        "A",
+        "B",
+        "call()"
+      ],
+      "branchProbe": {
+        "type": "comment",
+        "branch": "C-zen-comment-codespan",
+        "comment": "`` code ` literal ``",
+        "visible": "code ` literal",
+        "bold": false,
+        "italic": false,
+        "rawLineCount": 1
+      }
+    },
+    {
+      "id": "BV-C-zen-comment-paragraph",
+      "kind": "zenuml",
+      "group": "C",
+      "source": "zenuml\nA B\n// First\n// \n// Second\nA->B.call()",
+      "expect": "render",
+      "origin": {
+        "path": "src/svg/components/comment.ts",
+        "symbol": "collectLines/walkToken/renderComment",
+        "line": 16,
+        "sha256": "de16149e5f49bce9c09e0093836425e28b3810df1e53c607db8aaf968ef5efc1",
+        "repository": "zenuml-core",
+        "synthesized": true
+      },
+      "config": {
+        "theme": "default"
+      },
+      "expectedText": [
+        "A",
+        "B",
+        "call()"
+      ],
+      "branchProbe": {
+        "type": "comment",
+        "branch": "C-zen-comment-paragraph",
+        "comment": "First\n\nSecond",
+        "visible": "FirstSecond",
+        "bold": false,
+        "italic": false,
+        "rawLineCount": 3
+      }
+    },
+    {
+      "id": "BV-C-zen-comment-fence",
+      "kind": "zenuml",
+      "group": "C",
+      "source": "zenuml\nA B\n// ```\n// Code\n// ```\nA->B.call()",
+      "expect": "render",
+      "origin": {
+        "path": "src/svg/components/comment.ts",
+        "symbol": "collectLines/walkToken/renderComment",
+        "line": 16,
+        "sha256": "de16149e5f49bce9c09e0093836425e28b3810df1e53c607db8aaf968ef5efc1",
+        "repository": "zenuml-core",
+        "synthesized": true
+      },
+      "config": {
+        "theme": "default"
+      },
+      "expectedText": [
+        "A",
+        "B",
+        "call()"
+      ],
+      "branchProbe": {
+        "type": "comment",
+        "branch": "C-zen-comment-fence",
+        "comment": "```\nCode\n```",
+        "visible": "Code",
+        "bold": false,
+        "italic": false,
+        "rawLineCount": 3
+      }
+    },
+    {
+      "id": "BV-C-zen-comment-raw-link",
+      "kind": "zenuml",
+      "group": "C",
+      "source": "zenuml\nA B\n// [label](https://example.invalid)\nA->B.call()",
+      "expect": "render",
+      "origin": {
+        "path": "src/svg/components/comment.ts",
+        "symbol": "collectLines/walkToken/renderComment",
+        "line": 16,
+        "sha256": "de16149e5f49bce9c09e0093836425e28b3810df1e53c607db8aaf968ef5efc1",
+        "repository": "zenuml-core",
+        "synthesized": true
+      },
+      "config": {
+        "theme": "default"
+      },
+      "expectedText": [
+        "A",
+        "B",
+        "call()"
+      ],
+      "branchProbe": {
+        "type": "comment",
+        "branch": "C-zen-comment-raw-link",
+        "comment": "[label](https://example.invalid)",
+        "visible": "[label](https://example.invalid)",
+        "bold": false,
+        "italic": false,
+        "rawLineCount": 1
+      }
+    },
+    {
+      "id": "BV-C-info-base",
+      "kind": "info",
+      "group": "C",
+      "source": "info showInfo",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/info/infoRenderer.ts",
+        "symbol": "draw/version",
+        "line": 13,
+        "sha256": "100b9e0f2afe51cd725b5818d1423d871deeaa950c8bcb31c04c403c4f7454a9",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "theme": "base"
+      },
+      "expectedText": [
+        "v12.2.0"
+      ],
+      "branchProbe": {
+        "type": "info",
+        "branch": "C-info-themes",
+        "color": "#333",
+        "fontSize": 32,
+        "version": "v12.2.0",
+        "priorSourceProof": {
+          "path": "test-runs/BULK-P4-final-20261106T125300Z-435e50af/artifacts/original-themes.json",
+          "sha256": "d0b64b226648bc230abffa969db7630b916999b7f5c1d1b7944211f426824340",
+          "rowId": "gap-shared-base-palette-no-recalculate"
+        }
+      }
+    },
+    {
+      "id": "BV-C-info-dark",
+      "kind": "info",
+      "group": "C",
+      "source": "info showInfo",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/info/infoRenderer.ts",
+        "symbol": "draw/version",
+        "line": 13,
+        "sha256": "100b9e0f2afe51cd725b5818d1423d871deeaa950c8bcb31c04c403c4f7454a9",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "theme": "dark"
+      },
+      "expectedText": [
+        "v12.2.0"
+      ],
+      "branchProbe": {
+        "type": "info",
+        "branch": "C-info-themes",
+        "color": "#ccc",
+        "fontSize": 32,
+        "version": "v12.2.0",
+        "priorSourceProof": {
+          "path": "test-runs/BULK-P4-final-20261106T125300Z-435e50af/artifacts/original-themes.json",
+          "sha256": "d0b64b226648bc230abffa969db7630b916999b7f5c1d1b7944211f426824340",
+          "rowId": "gap-shared-null-theme"
+        }
+      }
+    },
+    {
+      "id": "BV-C-info-default",
+      "kind": "info",
+      "group": "C",
+      "source": "info showInfo",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/info/infoRenderer.ts",
+        "symbol": "draw/version",
+        "line": 13,
+        "sha256": "100b9e0f2afe51cd725b5818d1423d871deeaa950c8bcb31c04c403c4f7454a9",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "theme": "default"
+      },
+      "expectedText": [
+        "v12.2.0"
+      ],
+      "branchProbe": {
+        "type": "info",
+        "branch": "C-info-themes",
+        "color": "#333",
+        "fontSize": 32,
+        "version": "v12.2.0",
+        "priorSourceProof": {
+          "path": "test-runs/BULK-P4-final-20261106T125300Z-435e50af/artifacts/original-themes.json",
+          "sha256": "d0b64b226648bc230abffa969db7630b916999b7f5c1d1b7944211f426824340",
+          "rowId": "gap-shared-palette-no-recalculate"
+        }
+      }
+    },
+    {
+      "id": "BV-C-info-forest",
+      "kind": "info",
+      "group": "C",
+      "source": "info showInfo",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/info/infoRenderer.ts",
+        "symbol": "draw/version",
+        "line": 13,
+        "sha256": "100b9e0f2afe51cd725b5818d1423d871deeaa950c8bcb31c04c403c4f7454a9",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "theme": "forest"
+      },
+      "expectedText": [
+        "v12.2.0"
+      ],
+      "branchProbe": {
+        "type": "info",
+        "branch": "C-info-themes",
+        "color": "#000000",
+        "fontSize": 32,
+        "version": "v12.2.0",
+        "priorSourceProof": {
+          "path": "test-runs/BULK-P4-final-20261106T125300Z-435e50af/artifacts/original-themes.json",
+          "sha256": "d0b64b226648bc230abffa969db7630b916999b7f5c1d1b7944211f426824340",
+          "rowId": "shared-theme-forest"
+        }
+      }
+    },
+    {
+      "id": "BV-C-info-neutral",
+      "kind": "info",
+      "group": "C",
+      "source": "info showInfo",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/info/infoRenderer.ts",
+        "symbol": "draw/version",
+        "line": 13,
+        "sha256": "100b9e0f2afe51cd725b5818d1423d871deeaa950c8bcb31c04c403c4f7454a9",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "theme": "neutral"
+      },
+      "expectedText": [
+        "v12.2.0"
+      ],
+      "branchProbe": {
+        "type": "info",
+        "branch": "C-info-themes",
+        "color": "#000000",
+        "fontSize": 32,
+        "version": "v12.2.0",
+        "priorSourceProof": {
+          "path": "test-runs/BULK-P4-final-20261106T125300Z-435e50af/artifacts/original-themes.json",
+          "sha256": "d0b64b226648bc230abffa969db7630b916999b7f5c1d1b7944211f426824340",
+          "rowId": "shared-theme-neutral"
+        }
+      }
+    },
+    {
+      "id": "BV-C-info-neo",
+      "kind": "info",
+      "group": "C",
+      "source": "info showInfo",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/info/infoRenderer.ts",
+        "symbol": "draw/version",
+        "line": 13,
+        "sha256": "100b9e0f2afe51cd725b5818d1423d871deeaa950c8bcb31c04c403c4f7454a9",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "theme": "neo"
+      },
+      "expectedText": [
+        "v12.2.0"
+      ],
+      "branchProbe": {
+        "type": "info",
+        "branch": "C-info-themes",
+        "color": "#333",
+        "fontSize": 32,
+        "version": "v12.2.0",
+        "priorSourceProof": {
+          "path": "test-runs/BULK-P4-final-20261106T125300Z-435e50af/artifacts/original-themes.json",
+          "sha256": "d0b64b226648bc230abffa969db7630b916999b7f5c1d1b7944211f426824340",
+          "rowId": "shared-theme-neo"
+        }
+      }
+    },
+    {
+      "id": "BV-C-info-neo-dark",
+      "kind": "info",
+      "group": "C",
+      "source": "info showInfo",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/info/infoRenderer.ts",
+        "symbol": "draw/version",
+        "line": 13,
+        "sha256": "100b9e0f2afe51cd725b5818d1423d871deeaa950c8bcb31c04c403c4f7454a9",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "theme": "neo-dark"
+      },
+      "expectedText": [
+        "v12.2.0"
+      ],
+      "branchProbe": {
+        "type": "info",
+        "branch": "C-info-themes",
+        "color": "#ccc",
+        "fontSize": 32,
+        "version": "v12.2.0",
+        "priorSourceProof": {
+          "path": "test-runs/BULK-P4-final-20261106T125300Z-435e50af/artifacts/original-themes.json",
+          "sha256": "d0b64b226648bc230abffa969db7630b916999b7f5c1d1b7944211f426824340",
+          "rowId": "shared-theme-neo-dark"
+        }
+      }
+    },
+    {
+      "id": "BV-C-info-redux",
+      "kind": "info",
+      "group": "C",
+      "source": "info showInfo",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/info/infoRenderer.ts",
+        "symbol": "draw/version",
+        "line": 13,
+        "sha256": "100b9e0f2afe51cd725b5818d1423d871deeaa950c8bcb31c04c403c4f7454a9",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "theme": "redux"
+      },
+      "expectedText": [
+        "v12.2.0"
+      ],
+      "branchProbe": {
+        "type": "info",
+        "branch": "C-info-themes",
+        "color": "#28253D",
+        "fontSize": 32,
+        "version": "v12.2.0",
+        "priorSourceProof": {
+          "path": "test-runs/BULK-P4-final-20261106T125300Z-435e50af/artifacts/original-themes.json",
+          "sha256": "d0b64b226648bc230abffa969db7630b916999b7f5c1d1b7944211f426824340",
+          "rowId": "shared-theme-redux"
+        }
+      }
+    },
+    {
+      "id": "BV-C-info-redux-color",
+      "kind": "info",
+      "group": "C",
+      "source": "info showInfo",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/info/infoRenderer.ts",
+        "symbol": "draw/version",
+        "line": 13,
+        "sha256": "100b9e0f2afe51cd725b5818d1423d871deeaa950c8bcb31c04c403c4f7454a9",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "theme": "redux-color"
+      },
+      "expectedText": [
+        "v12.2.0"
+      ],
+      "branchProbe": {
+        "type": "info",
+        "branch": "C-info-themes",
+        "color": "#28253D",
+        "fontSize": 32,
+        "version": "v12.2.0",
+        "priorSourceProof": {
+          "path": "test-runs/BULK-P4-final-20261106T125300Z-435e50af/artifacts/original-themes.json",
+          "sha256": "d0b64b226648bc230abffa969db7630b916999b7f5c1d1b7944211f426824340",
+          "rowId": "shared-theme-redux-color"
+        }
+      }
+    },
+    {
+      "id": "BV-C-info-redux-dark",
+      "kind": "info",
+      "group": "C",
+      "source": "info showInfo",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/info/infoRenderer.ts",
+        "symbol": "draw/version",
+        "line": 13,
+        "sha256": "100b9e0f2afe51cd725b5818d1423d871deeaa950c8bcb31c04c403c4f7454a9",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "theme": "redux-dark"
+      },
+      "expectedText": [
+        "v12.2.0"
+      ],
+      "branchProbe": {
+        "type": "info",
+        "branch": "C-info-themes",
+        "color": "#ccc",
+        "fontSize": 32,
+        "version": "v12.2.0",
+        "priorSourceProof": {
+          "path": "test-runs/BULK-P4-final-20261106T125300Z-435e50af/artifacts/original-themes.json",
+          "sha256": "d0b64b226648bc230abffa969db7630b916999b7f5c1d1b7944211f426824340",
+          "rowId": "shared-theme-redux-dark"
+        }
+      }
+    },
+    {
+      "id": "BV-C-info-redux-dark-color",
+      "kind": "info",
+      "group": "C",
+      "source": "info showInfo",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/info/infoRenderer.ts",
+        "symbol": "draw/version",
+        "line": 13,
+        "sha256": "100b9e0f2afe51cd725b5818d1423d871deeaa950c8bcb31c04c403c4f7454a9",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "theme": "redux-dark-color"
+      },
+      "expectedText": [
+        "v12.2.0"
+      ],
+      "branchProbe": {
+        "type": "info",
+        "branch": "C-info-themes",
+        "color": "#ccc",
+        "fontSize": 32,
+        "version": "v12.2.0",
+        "priorSourceProof": {
+          "path": "test-runs/BULK-P4-final-20261106T125300Z-435e50af/artifacts/original-themes.json",
+          "sha256": "d0b64b226648bc230abffa969db7630b916999b7f5c1d1b7944211f426824340",
+          "rowId": "shared-theme-redux-dark-color"
+        }
+      }
+    },
+    {
+      "id": "BV-C-info-version-css",
+      "kind": "info",
+      "group": "C",
+      "source": "info",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/info/infoRenderer.ts",
+        "symbol": "draw/version",
+        "line": 13,
+        "sha256": "100b9e0f2afe51cd725b5818d1423d871deeaa950c8bcb31c04c403c4f7454a9",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "theme": "default",
+        "themeCSS": ".version{fill:#b02030;font-size:40px;font-weight:bold}"
+      },
+      "expectedText": [
+        "v12.2.0"
+      ],
+      "branchProbe": {
+        "type": "info",
+        "branch": "C-info-version-css",
+        "color": "#b02030",
+        "fontSize": 40,
+        "version": "v12.2.0"
+      }
+    },
+    {
+      "id": "BV-C-activation-first-activate",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nparticipant A\nparticipant B\nA->>+B: Activated",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "buildMessageModel/drawMessage",
+        "line": 1867,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "look": "classic",
+        "theme": "default"
+      },
+      "expectedText": [
+        "A",
+        "B",
+        "Activated"
+      ],
+      "branchProbe": {
+        "type": "activation",
+        "branch": "C-sequence-activation",
+        "sender": "A",
+        "receiver": "B",
+        "startOffset": 1,
+        "endOffset": -8
+      }
+    },
+    {
+      "id": "BV-C-activation-existing-target",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nparticipant A\nparticipant B\nactivate B\nA->>B: Activated",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "buildMessageModel/drawMessage",
+        "line": 1867,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "look": "classic",
+        "theme": "default"
+      },
+      "expectedText": [
+        "A",
+        "B",
+        "Activated"
+      ],
+      "branchProbe": {
+        "type": "activation",
+        "branch": "C-sequence-activation",
+        "sender": "A",
+        "receiver": "B",
+        "startOffset": 1,
+        "endOffset": -8
+      }
+    },
+    {
+      "id": "BV-C-activation-sender-depth1",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nparticipant A\nparticipant B\nactivate A\nA->>B: Activated",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "buildMessageModel/drawMessage",
+        "line": 1867,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "look": "classic",
+        "theme": "default"
+      },
+      "expectedText": [
+        "A",
+        "B",
+        "Activated"
+      ],
+      "branchProbe": {
+        "type": "activation",
+        "branch": "C-sequence-activation",
+        "sender": "A",
+        "receiver": "B",
+        "startOffset": 5,
+        "endOffset": -4
+      }
+    },
+    {
+      "id": "BV-C-activation-sender-depth2",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nparticipant A\nparticipant B\nactivate A\nactivate A\nA->>B: Activated",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "buildMessageModel/drawMessage",
+        "line": 1867,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "look": "classic",
+        "theme": "default"
+      },
+      "expectedText": [
+        "A",
+        "B",
+        "Activated"
+      ],
+      "branchProbe": {
+        "type": "activation",
+        "branch": "C-sequence-activation",
+        "sender": "A",
+        "receiver": "B",
+        "startOffset": 10,
+        "endOffset": -4
+      }
+    },
+    {
+      "id": "BV-C-arrow-gallery-ltr",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nparticipant A\nparticipant B\nA->>B: Arrow 0\nA-->>B: Arrow 1\nA<<->>B: Arrow 2\nA<<-->>B: Arrow 3\nA->B: Arrow 4\nA-->B: Arrow 5\nA-xB: Arrow 6\nA--xB: Arrow 7\nA-)B: Arrow 8\nA--)B: Arrow 9\nA-|\\B: Arrow 10\nA-|/B: Arrow 11\nA-\\\\B: Arrow 12\nA-//B: Arrow 13\nA/|-B: Arrow 14\nA\\|-B: Arrow 15\nA//-B: Arrow 16\nA\\\\-B: Arrow 17\nA--|\\B: Arrow 18\nA--|/B: Arrow 19\nA--\\\\B: Arrow 20\nA--//B: Arrow 21\nA/|--B: Arrow 22\nA\\|--B: Arrow 23\nA//--B: Arrow 24\nA\\\\--B: Arrow 25",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "buildMessageModel/drawMessage",
+        "line": 1867,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "look": "classic",
+        "theme": "default"
+      },
+      "expectedText": [
+        "A",
+        "B",
+        "Arrow 0",
+        "Arrow 1",
+        "Arrow 2",
+        "Arrow 3",
+        "Arrow 4",
+        "Arrow 5",
+        "Arrow 6",
+        "Arrow 7",
+        "Arrow 8",
+        "Arrow 9",
+        "Arrow 10",
+        "Arrow 11",
+        "Arrow 12",
+        "Arrow 13",
+        "Arrow 14",
+        "Arrow 15",
+        "Arrow 16",
+        "Arrow 17",
+        "Arrow 18",
+        "Arrow 19",
+        "Arrow 20",
+        "Arrow 21",
+        "Arrow 22",
+        "Arrow 23",
+        "Arrow 24",
+        "Arrow 25"
+      ],
+      "branchProbe": {
+        "type": "arrows",
+        "branch": "C-sequence-arrow-paint",
+        "expected": [
+          {
+            "arrow": "->>",
+            "start": "",
+            "end": "arrowhead",
+            "dashed": false
+          },
+          {
+            "arrow": "-->>",
+            "start": "",
+            "end": "arrowhead",
+            "dashed": true
+          },
+          {
+            "arrow": "<<->>",
+            "start": "arrowhead",
+            "end": "arrowhead",
+            "dashed": false
+          },
+          {
+            "arrow": "<<-->>",
+            "start": "arrowhead",
+            "end": "arrowhead",
+            "dashed": true
+          },
+          {
+            "arrow": "->",
+            "start": "",
+            "end": "",
+            "dashed": false
+          },
+          {
+            "arrow": "-->",
+            "start": "",
+            "end": "",
+            "dashed": true
+          },
+          {
+            "arrow": "-x",
+            "start": "",
+            "end": "crosshead",
+            "dashed": false
+          },
+          {
+            "arrow": "--x",
+            "start": "",
+            "end": "crosshead",
+            "dashed": true
+          },
+          {
+            "arrow": "-)",
+            "start": "",
+            "end": "filled-head",
+            "dashed": false
+          },
+          {
+            "arrow": "--)",
+            "start": "",
+            "end": "filled-head",
+            "dashed": true
+          },
+          {
+            "arrow": "-|\\",
+            "start": "",
+            "end": "solidTopArrowHead",
+            "dashed": false
+          },
+          {
+            "arrow": "-|/",
+            "start": "",
+            "end": "solidBottomArrowHead",
+            "dashed": false
+          },
+          {
+            "arrow": "-\\\\",
+            "start": "",
+            "end": "stickTopArrowHead",
+            "dashed": false
+          },
+          {
+            "arrow": "-//",
+            "start": "",
+            "end": "stickBottomArrowHead",
+            "dashed": false
+          },
+          {
+            "arrow": "/|-",
+            "start": "solidBottomArrowHead",
+            "end": "",
+            "dashed": false
+          },
+          {
+            "arrow": "\\|-",
+            "start": "solidTopArrowHead",
+            "end": "",
+            "dashed": false
+          },
+          {
+            "arrow": "//-",
+            "start": "stickBottomArrowHead",
+            "end": "",
+            "dashed": false
+          },
+          {
+            "arrow": "\\\\-",
+            "start": "stickTopArrowHead",
+            "end": "",
+            "dashed": false
+          },
+          {
+            "arrow": "--|\\",
+            "start": "",
+            "end": "solidTopArrowHead",
+            "dashed": true
+          },
+          {
+            "arrow": "--|/",
+            "start": "",
+            "end": "solidBottomArrowHead",
+            "dashed": true
+          },
+          {
+            "arrow": "--\\\\",
+            "start": "",
+            "end": "stickTopArrowHead",
+            "dashed": true
+          },
+          {
+            "arrow": "--//",
+            "start": "",
+            "end": "stickBottomArrowHead",
+            "dashed": true
+          },
+          {
+            "arrow": "/|--",
+            "start": "solidBottomArrowHead",
+            "end": "",
+            "dashed": true
+          },
+          {
+            "arrow": "\\|--",
+            "start": "solidTopArrowHead",
+            "end": "",
+            "dashed": true
+          },
+          {
+            "arrow": "//--",
+            "start": "stickBottomArrowHead",
+            "end": "",
+            "dashed": true
+          },
+          {
+            "arrow": "\\\\--",
+            "start": "stickTopArrowHead",
+            "end": "",
+            "dashed": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "BV-C-arrow-gallery-rtl",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nparticipant A\nparticipant B\nB->>A: Arrow 0\nB-->>A: Arrow 1\nB<<->>A: Arrow 2\nB<<-->>A: Arrow 3\nB->A: Arrow 4\nB-->A: Arrow 5\nB-xA: Arrow 6\nB--xA: Arrow 7\nB-)A: Arrow 8\nB--)A: Arrow 9\nB-|\\A: Arrow 10\nB-|/A: Arrow 11\nB-\\\\A: Arrow 12\nB-//A: Arrow 13\nB/|-A: Arrow 14\nB\\|-A: Arrow 15\nB//-A: Arrow 16\nB\\\\-A: Arrow 17\nB--|\\A: Arrow 18\nB--|/A: Arrow 19\nB--\\\\A: Arrow 20\nB--//A: Arrow 21\nB/|--A: Arrow 22\nB\\|--A: Arrow 23\nB//--A: Arrow 24\nB\\\\--A: Arrow 25",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "buildMessageModel/drawMessage",
+        "line": 1867,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "look": "classic",
+        "theme": "default"
+      },
+      "expectedText": [
+        "A",
+        "B",
+        "Arrow 0",
+        "Arrow 1",
+        "Arrow 2",
+        "Arrow 3",
+        "Arrow 4",
+        "Arrow 5",
+        "Arrow 6",
+        "Arrow 7",
+        "Arrow 8",
+        "Arrow 9",
+        "Arrow 10",
+        "Arrow 11",
+        "Arrow 12",
+        "Arrow 13",
+        "Arrow 14",
+        "Arrow 15",
+        "Arrow 16",
+        "Arrow 17",
+        "Arrow 18",
+        "Arrow 19",
+        "Arrow 20",
+        "Arrow 21",
+        "Arrow 22",
+        "Arrow 23",
+        "Arrow 24",
+        "Arrow 25"
+      ],
+      "branchProbe": {
+        "type": "arrows",
+        "branch": "C-sequence-arrow-paint",
+        "expected": [
+          {
+            "arrow": "->>",
+            "start": "",
+            "end": "arrowhead",
+            "dashed": false
+          },
+          {
+            "arrow": "-->>",
+            "start": "",
+            "end": "arrowhead",
+            "dashed": true
+          },
+          {
+            "arrow": "<<->>",
+            "start": "arrowhead",
+            "end": "arrowhead",
+            "dashed": false
+          },
+          {
+            "arrow": "<<-->>",
+            "start": "arrowhead",
+            "end": "arrowhead",
+            "dashed": true
+          },
+          {
+            "arrow": "->",
+            "start": "",
+            "end": "",
+            "dashed": false
+          },
+          {
+            "arrow": "-->",
+            "start": "",
+            "end": "",
+            "dashed": true
+          },
+          {
+            "arrow": "-x",
+            "start": "",
+            "end": "crosshead",
+            "dashed": false
+          },
+          {
+            "arrow": "--x",
+            "start": "",
+            "end": "crosshead",
+            "dashed": true
+          },
+          {
+            "arrow": "-)",
+            "start": "",
+            "end": "filled-head",
+            "dashed": false
+          },
+          {
+            "arrow": "--)",
+            "start": "",
+            "end": "filled-head",
+            "dashed": true
+          },
+          {
+            "arrow": "-|\\",
+            "start": "",
+            "end": "solidTopArrowHead",
+            "dashed": false
+          },
+          {
+            "arrow": "-|/",
+            "start": "",
+            "end": "solidBottomArrowHead",
+            "dashed": false
+          },
+          {
+            "arrow": "-\\\\",
+            "start": "",
+            "end": "stickTopArrowHead",
+            "dashed": false
+          },
+          {
+            "arrow": "-//",
+            "start": "",
+            "end": "stickBottomArrowHead",
+            "dashed": false
+          },
+          {
+            "arrow": "/|-",
+            "start": "solidBottomArrowHead",
+            "end": "",
+            "dashed": false
+          },
+          {
+            "arrow": "\\|-",
+            "start": "solidTopArrowHead",
+            "end": "",
+            "dashed": false
+          },
+          {
+            "arrow": "//-",
+            "start": "stickBottomArrowHead",
+            "end": "",
+            "dashed": false
+          },
+          {
+            "arrow": "\\\\-",
+            "start": "stickTopArrowHead",
+            "end": "",
+            "dashed": false
+          },
+          {
+            "arrow": "--|\\",
+            "start": "",
+            "end": "solidTopArrowHead",
+            "dashed": true
+          },
+          {
+            "arrow": "--|/",
+            "start": "",
+            "end": "solidBottomArrowHead",
+            "dashed": true
+          },
+          {
+            "arrow": "--\\\\",
+            "start": "",
+            "end": "stickTopArrowHead",
+            "dashed": true
+          },
+          {
+            "arrow": "--//",
+            "start": "",
+            "end": "stickBottomArrowHead",
+            "dashed": true
+          },
+          {
+            "arrow": "/|--",
+            "start": "solidBottomArrowHead",
+            "end": "",
+            "dashed": true
+          },
+          {
+            "arrow": "\\|--",
+            "start": "solidTopArrowHead",
+            "end": "",
+            "dashed": true
+          },
+          {
+            "arrow": "//--",
+            "start": "stickBottomArrowHead",
+            "end": "",
+            "dashed": true
+          },
+          {
+            "arrow": "\\\\--",
+            "start": "stickTopArrowHead",
+            "end": "",
+            "dashed": true
+          }
+        ]
+      }
+    }
+  ]
+}

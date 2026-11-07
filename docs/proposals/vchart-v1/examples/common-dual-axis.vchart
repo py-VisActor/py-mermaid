@@ -1,0 +1,11 @@
+vchart common
+size 800 420
+data = { values: table(month, revenue, margin) {
+  ["Jan", 120, 18]
+  ["Feb", 180, 24]
+} }
+series bar { xField = "month"; yField = "revenue" }
+series line { xField = "month"; yField = "margin" }
+axis bottom { type = "band" }
+axis left { type = "linear"; seriesIndex = [0] }
+axis right { type = "linear"; min = 0; max = 100; seriesIndex = [1] }

@@ -7,7 +7,7 @@ years use these integer calendar values. No alternate layout algorithm.
 from dataclasses import dataclass
 from datetime import datetime,timedelta
 from functools import total_ordering
-import calendar,math
+import calendar,math,os
 
 def days_from_civil(year,month,day):
     year-=month<=2;era=year//400;yoe=year-era*400;mp=month+(-3 if month>2 else 9);doy=(153*mp+2)//5+day-1;doe=yoe*365+yoe//4-yoe//100+doy
@@ -17,7 +17,28 @@ def civil_from_days(days):
     days+=719468;era=days//146097;doe=days-era*146097;yoe=(doe-doe//1460+doe//36524-doe//146096)//365;year=yoe+era*400;doy=doe-(365*yoe+yoe//4-yoe//100);mp=(5*doy+2)//153;day=doy-(153*mp+2)//5+1;month=mp+(3 if mp<10 else -9);year+=month<=2
     return year,month,day
 
-def _local_offset():return datetime.now().astimezone().utcoffset().total_seconds()
+def _local_offset(value=None):
+    """Host local offset at the date, not today's possibly different DST.
+
+    UTC is an explicit portable host setting, including on Windows where the
+    C runtime does not implement POSIX tzset. Other zones use the actual host
+    rules; no bundled or invented IANA rule database is substituted.
+    """
+    if isinstance(value,datetime) and value.utcoffset() is not None:
+        return value.utcoffset().total_seconds()
+    if os.environ.get('TZ','').upper() in ('UTC','ETC/UTC','GMT','ETC/GMT','UTC0','GMT0'):
+        return 0
+    current=value if isinstance(value,datetime) else datetime.now()
+    try:
+        offset=current.utcoffset()
+        if offset is None:offset=current.astimezone().utcoffset()
+        return offset.total_seconds()
+    except (ValueError,OverflowError,OSError):
+        return datetime.now().astimezone().utcoffset().total_seconds()
+
+def epoch_seconds(value):
+    """Gregorian epoch arithmetic avoids Windows mktime's negative limits."""
+    return _microseconds(value)/1000000-_local_offset(value)
 
 def _microseconds(value):
     return (days_from_civil(value.year,value.month,value.day)*86400+value.hour*3600+value.minute*60+value.second)*1000000+value.microsecond
@@ -49,7 +70,7 @@ class CivilDate:
         if isinstance(other,datetime):return timedelta(microseconds=_microseconds(other)-_microseconds(self))
         return NotImplemented
     def replace(self,**values):return date(**{key:values.get(key,getattr(self,key)) for key in ('year','month','day','hour','minute','second','microsecond')})
-    def timestamp(self):return _microseconds(self)/1000000-_local_offset()
+    def timestamp(self):return epoch_seconds(self)
     def weekday(self):return (days_from_civil(self.year,self.month,self.day)+3)%7
     def isoformat(self):return f'{self.year:04}-{self.month:02}-{self.day:02}T{self.hour:02}:{self.minute:02}:{self.second:02}'+(f'.{self.microsecond:06}' if self.microsecond else '')
     def strftime(self,pattern):
@@ -70,5 +91,8 @@ def from_microseconds(value):
     return date(year,month,day,hour,minute,second,micro)
 
 def timestamp(seconds):
+    if not math.isfinite(seconds):raise ValueError('Invalid calendar timestamp')
+    if os.environ.get('TZ','').upper() in ('UTC','ETC/UTC','GMT','ETC/GMT','UTC0','GMT0'):
+        return from_microseconds(round(seconds*1000000))
     try:return datetime.fromtimestamp(seconds)
     except (ValueError,OverflowError,OSError):return from_microseconds(round((seconds+_local_offset())*1000000))

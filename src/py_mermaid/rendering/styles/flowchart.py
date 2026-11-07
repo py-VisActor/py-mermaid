@@ -10,6 +10,7 @@ import math
 import re
 
 from ...model.flowchart import Flowchart, MermaidError, ResolvedStyle
+from ...config.values import thaw_value
 
 _TEXT = frozenset({'node-label', 'edge-label', 'group-title', 'title'})
 _PROPERTIES = frozenset({'fill','stroke','color','stroke-width','font-size','font-family',
@@ -23,6 +24,7 @@ _PROPERTIES |= frozenset({'stroke-linecap','stroke-linejoin','stroke-dashoffset'
     'animation-iteration-count','cursor','pointer-events','transition'})
 _LAYOUT_CSS = frozenset({'display','white-space','text-anchor','dominant-baseline','max-width'})
 _PROPERTIES |= frozenset({'mix-blend-mode','paint-order'})
+_PROPERTIES |= frozenset({'-webkit-text-stroke','-webkit-text-stroke-width','-webkit-text-stroke-color'})
 
 
 def _error(message: str) -> MermaidError:
@@ -210,6 +212,18 @@ def _expand(declarations):
     fields=('font-style','font-weight','font-size','line-height','font-family')
     for name,value,*flags in declarations:
         important=bool(flags[0]) if flags else False
+        if name=='-webkit-text-stroke':
+            if value in {'inherit','initial','unset'}:
+                for field in ('-webkit-text-stroke-width','-webkit-text-stroke-color'):yield field,value,important
+            else:
+                width,color='0','currentColor'
+                for token in _split(value,' '):
+                    if not token:continue
+                    if re.fullmatch(r'(?:thin|medium|thick|\d+(?:\.\d*)?(?:px|pt|em|rem)?)',token):width=token
+                    else:color=token
+                yield '-webkit-text-stroke-width',width,important
+                yield '-webkit-text-stroke-color',color,important
+            continue
         if name!='font':
             yield name,value,important;continue
         if value in {'inherit','initial','unset'}:
@@ -280,7 +294,9 @@ def apply_declarations(style: ResolvedStyle, declarations, *, kind: str='node-la
                    'stroke-linecap':'line_cap','stroke-linejoin':'line_join','stroke-dashoffset':'dash_offset',
                    'letter-spacing':'letter_spacing','word-spacing':'word_spacing','text-transform':'text_transform',
                    'overflow-wrap':'overflow_wrap','word-wrap':'overflow_wrap','word-break':'word_break',
-                   'hyphens':'hyphens','text-shadow':'text_shadows','max-width':'max_width'}.get(name)
+                   'hyphens':'hyphens','text-shadow':'text_shadows','max-width':'max_width',
+                   '-webkit-text-stroke-width':'text_stroke_width','-webkit-text-stroke-color':'text_stroke_color',
+                   'visibility':'visibility'}.get(name)
             if field:style=replace(style,**{field:getattr(parent,field)})
             if name=='line-height':style=replace(style,line_height_px=parent.line_height_px)
             if name=='text-anchor':style=replace(style,text_anchor=parent.text_anchor)
@@ -301,6 +317,14 @@ def apply_declarations(style: ResolvedStyle, declarations, *, kind: str='node-la
                    'word-spacing':'normal','text-transform':'none','overflow-wrap':'normal',
                    'word-wrap':'normal','word-break':'normal','hyphens':'manual','text-shadow':'none',
                    'visibility':'visible','overflow':'visible','max-width':'none'}.get(name,value)
+        if name=='-webkit-text-stroke-color':
+            style=replace(style,text_stroke_color=(style.current_color or style.text_color) if value=='initial' else _color(value,style.current_color or style.text_color))
+            continue
+        if name=='-webkit-text-stroke-width':
+            value={'initial':'0','thin':'1px','medium':'3px','thick':'5px'}.get(value,value)
+            width=css_size(value,parent.font_size)
+            style=replace(style,text_stroke_width=width)
+            continue
         if name.startswith('--'):continue
         if name in _LAYOUT_CSS:
             if name=='max-width':
@@ -400,7 +424,7 @@ def apply_declarations(style: ResolvedStyle, declarations, *, kind: str='node-la
             style=replace(style,text_shadows=tuple(shadows))
         elif name=='visibility':
             if value not in {'visible','hidden','collapse'}:raise _error('Invalid visibility')
-            if value!='visible':style=replace(style,opacity=0)
+            style=replace(style,visibility=value)
         elif name in {'animation','animation-name','animation-duration','animation-timing-function',
                       'animation-iteration-count','cursor','pointer-events','transition','text-overflow'}:
             continue  # Static snapshot; natural-size labels have no overflow host.
@@ -487,6 +511,7 @@ def _matches(selector: str, diagram: Flowchart, kind: str, identifier: str, tag:
     if kind=='node':
         shape=next((n.shape for n in diagram.nodes if n.id==identifier),'square')
         physical='circle' if shape in {'circle','doublecircle'} else 'rect' if shape in {'square','round','subroutine'} else 'polygon' if shape in {'diamond','hexagon','lean_left','lean_right','trapezoid','inv_trapezoid'} else 'path'
+        if shape=='collapsedGroup':physical='path' if diagram.config.look=='handDrawn' else 'rect'
     allowed={'svg','g'}
     if host_classes is not None:allowed|={'foreignObject','div','span','p',tag}
     elif kind=='canvas':allowed={'svg'}
@@ -558,7 +583,7 @@ def _specificity(selector: str) -> int:
     return 100*len(re.findall(r'#[\w-]+',selector))+10*len(re.findall(r'\.[\w-]+|\[[^]]+\]|:[\w-]+',selector))+len(re.findall(r'(?:^|[\s>+~])[A-Za-z][\w-]*',selector))
 
 
-def _theme_specificity(diagram: Flowchart, kind: str, name: str, selector: str, *, inline_tag: bool=False) -> int | None:
+def _theme_specificity(diagram: Flowchart, kind: str, name: str, selector: str, *, inline_tag: bool=False, semantic_id: str='') -> int | None:
     """Explicit source theme declarations beat inherited ancestor declarations.
 
     This carries provenance on native paint intents, not a recreated element tree.
@@ -568,8 +593,17 @@ def _theme_specificity(diagram: Flowchart, kind: str, name: str, selector: str, 
     if inline_tag:return 0
     last=re.split(r'\s+',selector.strip())[-1]
     if kind in {'node','group'} and name in {'fill','stroke','stroke-width','stroke-dasharray','filter'}:
-        own=bool(re.search(r'(?:^|\W)(?:rect|circle|ellipse|polygon|path)(?:$|\W)',last)) or any('.'+c in last for c in ('label-container','outer-path','basic')) or '*' in last
+        own=bool(re.search(r'(?:^|\W)(?:rect|circle|ellipse|polygon|path)(?:$|\W)',last)) or any('.'+c in last for c in ('label-container','outer-path','basic','collapsed-group','flow-collapsed')) or '*' in last
         if not own:return None
+        if kind=='node':
+            node=next((n for n in diagram.nodes if n.id==semantic_id),None)
+            if node is not None and node.shape=='collapsedGroup':
+                variables=dict(diagram.config.theme_variables)
+                palette=variables.get('borderColorArray',diagram.config.group_borders)
+                gated=diagram.config.theme in {'redux-color','redux-dark-color'} and isinstance(palette,(tuple,list)) and bool(palette)
+                flow=(thaw_value(node.metadata) if node.metadata else {}).get('containerType')=='flow'
+                if gated and name in {'fill','stroke'} and (not flow or diagram.config.look!='handDrawn'):
+                    return 31 if flow else 40
         if kind=='group':
             variables=dict(diagram.config.theme_variables)
             palette=variables.get('borderColorArray',diagram.config.group_borders)
@@ -656,8 +690,25 @@ def resolve_style(diagram: Flowchart, kind: str, semantic_id: str='', *, tag: st
             fills=variables.get('bkgColorArray',config.group_fills)
             slot=semantic.color_index or 0
             palette=config.theme in {'redux-color','redux-dark-color'} and isinstance(borders,(tuple,list)) and bool(borders)
-            style=replace(style,fill=str(fills[slot%len(fills)]) if palette and fills else str(variables.get('clusterBkg',config.fill)),
-                stroke=str(borders[slot%len(borders)]) if palette else str(variables.get('clusterBorder',config.stroke)),stroke_gradient=())
+            meta=thaw_value(semantic.metadata) if semantic.metadata else {}
+            flow=meta.get('containerType')=='flow'
+            hand=config.look=='handDrawn'
+            css_classes=tuple(dict.fromkeys((*css_classes,'basic','label-container','flow-collapsed' if flow else 'collapsed-group')))
+            # Presentation attributes precede .node shape rules and palette CSS.
+            # Rough-node has no ordinary .node shape rule; Agent's palette does
+            # not target rough-node, unlike flowchart's collapsed-specific rules.
+            fill='none' if flow else str(variables.get('clusterBkg',config.fill))
+            stroke=str(variables.get('flowContainerStroke') or variables.get('secondaryBorderColor',config.stroke)) if flow else str(variables.get('clusterBorder',config.stroke))
+            # userNodeOverrides defaults to 1.3; only Agent's explicit
+            # CollapsedStyle.strokeWidth=.75 replaces that RoughJS default.
+            width=.75 if flow and hand else 1.3 if hand else (config.node_stroke_width if config.look=='neo' else css_size(str(variables.get('strokeWidth',1)),config.font_size))
+            if not hand:fill,stroke=config.fill,config.stroke
+            if palette and (not flow or not hand):
+                if fills:fill=str(fills[slot%len(fills)])
+                stroke=str(borders[slot%len(borders)])
+            style=replace(style,fill=fill,stroke=stroke,stroke_width=width,
+                stroke_gradient=() if (palette and (not flow or not hand)) or hand else style.stroke_gradient,
+                shadow_opacity=style.shadow_opacity if config.look=='neo' else 0)
     if kind=='edge' and semantic is not None:
         if semantic.stroke=='thick':style=replace(style,stroke_width=3.5)
         elif semantic.stroke=='invisible':style=replace(style,stroke_width=0)
@@ -677,7 +728,7 @@ def resolve_style(diagram: Flowchart, kind: str, semantic_id: str='', *, tag: st
         if not _matches(selector,diagram,kind,semantic_id,tag,css_classes):continue
         specificity=_specificity(selector)
         for declaration_order,(name,value,important) in enumerate(_expand(declarations)):
-            threshold=_theme_specificity(diagram,kind,name,selector,inline_tag=tag is not None and base is not None)
+            threshold=_theme_specificity(diagram,kind,name,selector,inline_tag=tag is not None and base is not None,semantic_id=semantic_id)
             if threshold is None or (not important and specificity<threshold):continue
             rank=(int(important),specificity,order,declaration_order)
             if name not in winners or rank>=winners[name][0]:winners[name]=(rank,value)
@@ -724,3 +775,63 @@ def resolve_style(diagram: Flowchart, kind: str, semantic_id: str='', *, tag: st
     if kind=='node' and semantic is not None and semantic.shape in {'stateStart','stateEnd'} and config.look=='handDrawn':
         style=replace(style,hachure_color=style.stroke)
     return style
+
+
+
+def resolve_shape_part_style(diagram: Flowchart, semantic_id: str, part, base: ResolvedStyle) -> ResolvedStyle:
+    """Resolve a real source child primitive without inheriting outer inline paint.
+
+    Ordinary preexisting parts retain their exact token/opacity contract. The
+    collapsed line/circles have source-specific classes, attributes and CSS rules;
+    the outer rect's local fill/stroke declarations do not style these siblings.
+    """
+    def fill(value):return base.fill if value=='node' else base.stroke if value=='stroke' else value
+    stroke=base.stroke if part.stroke=='node' else base.fill if part.stroke=='fill' else part.stroke
+    style=replace(base,fill=fill(part.fill),stroke=stroke,
+        stroke_width=base.stroke_width if part.stroke_width is None else part.stroke_width,
+        opacity=part.opacity*base.opacity,dash=base.dash if part.dash is None else part.dash)
+    if not part.css_classes:return style
+    semantic=next(n for n in diagram.nodes if n.id==semantic_id)
+    if semantic.shape!='collapsedGroup':return style
+    config=diagram.config;variables=dict(config.theme_variables)
+    meta=thaw_value(semantic.metadata) if semantic.metadata else {};flow=meta.get('containerType')=='flow'
+    hand=config.look=='handDrawn';circle=part.tag=='circle';neo=config.look=='neo'
+    borders=variables.get('borderColorArray',config.group_borders);slot=semantic.color_index or 0
+    palette=config.theme in {'redux-color','redux-dark-color'} and isinstance(borders,(tuple,list)) and bool(borders)
+    cluster=str(variables.get('clusterBorder',config.stroke))
+    attr_stroke=str(variables.get('flowContainerStroke') or variables.get('secondaryBorderColor',config.stroke)) if flow else cluster
+    # Presentation attrs: root default stroke width1; no inherited outer filter.
+    style=ResolvedStyle(fill=attr_stroke if circle else 'none',stroke='none' if circle else attr_stroke,
+        stroke_width=1,font_family=config.font_family,font_size=config.font_size,
+        opacity=1,shadow_opacity=0,dash=() if circle else (3,3))
+    thresholds={}
+    if not hand:
+        if circle:
+            style=replace(style,fill=config.stroke if flow else cluster,stroke='none',
+                          stroke_width=0 if flow else (config.node_stroke_width if neo else css_size(str(variables.get('strokeWidth',1)),config.font_size)),
+                          opacity=.5 if flow else .6)
+            thresholds.update(fill=20,stroke=20,opacity=20,**{'stroke-width':20 if flow else 11})
+        else:
+            style=replace(style,stroke_width=.75);thresholds.update(stroke=20,**{'stroke-width':20})
+    if circle and neo:
+        # styles.ts neo circle rule outranks collapsed stroke:none; Agent's
+        # explicit zero stroke-width remains, while ordinary flowchart rings paint.
+        style=replace(style,stroke=config.stroke)
+        thresholds['stroke']=21;thresholds['filter']=21
+        if variables.get('useGradient'):
+            a,b=variables.get('gradientStart'),variables.get('gradientStop')
+            if isinstance(a,str) and isinstance(b,str):style=replace(style,stroke_gradient=((0,a),(1,b)))
+        shadow=variables.get('dropShadow')
+        style=_shadow(style,str(shadow) if shadow else 'none',dark='dark' in config.theme)
+    if palette and not flow:
+        if circle:style=replace(style,fill=str(borders[slot%len(borders)]));thresholds['fill']=40
+        else:style=replace(style,stroke=str(borders[slot%len(borders)]));thresholds['stroke']=40
+    winners={};host=(('rough-node',) if hand else ('node',))+tuple(semantic.classes)
+    for order,(selector,declarations) in enumerate(parse_css(config.theme_css)):
+        if not _matches(selector,diagram,'node',semantic_id,part.tag,part.css_classes,host_classes=host):continue
+        specificity=_specificity(selector)
+        for index,(name,value,important) in enumerate(_expand(declarations)):
+            if not important and specificity<thresholds.get(name,0):continue
+            rank=(int(important),specificity,order,index)
+            if name not in winners or rank>=winners[name][0]:winners[name]=(rank,value)
+    return apply_declarations(style,tuple((name,value,bool(rank[0])) for name,(rank,value) in winners.items()),kind='node',inherited=style)

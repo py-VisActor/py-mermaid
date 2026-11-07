@@ -4,16 +4,21 @@ from collections.abc import Mapping
 from copy import deepcopy
 import math
 import re
+import json
+from importlib.resources import files
 from py_mermaid.model.flowchart import FlowConfig, MermaidError
 from .values import assign_with_depth, freeze_value, thaw_value, merge_layers
 from .themes import THEMES, get_theme_variables
 from .source_keys import CONFIG_KEYS
 from .elk import LAYOUTS, CURVES, DEFAULTS as ELK_DEFAULTS, validate_elk
 
-_ROOT_KEYS = frozenset({"fontFamily", "fontSize", "htmlLabels", "maxTextSize", "maxEdges", "layout", "theme", "look", "flowchart",
+_ROOT_KEYS = frozenset({"fontFamily", "fontSize", "fontWeight", "htmlLabels", "maxTextSize", "maxEdges", "layout", "theme", "look", "flowchart",
     "themeVariables", "themeCSS", "securityLevel", "secure", "dompurifyConfig", "markdownAutoWrap", "wrap", "altFontFamily",
     "darkMode", "logLevel", "startOnLoad", "suppressErrorRendering", "elk", "handDrawnSeed",
     "deterministicIds", "deterministicIDSeed", "arrowMarkerAbsolute"})
+# setSiteConfig accepts the declared global config, even when this diagram
+# consumes only its own section. Do not reject another kind's valid settings.
+_ROOT_KEYS |= frozenset(json.loads(files('py_mermaid').joinpath('data/diagram_defaults.json').read_text('utf-8'))['config'])
 _FLOW_KEYS = frozenset({"padding", "diagramPadding", "nodeSpacing", "rankSpacing", "minNodeWidth", "wrappingWidth", "htmlLabels",
     "layout", "theme", "look", "inheritDir", "subGraphTitleMargin", "titleTopMargin", "useWidth", "useMaxWidth", "arrowMarkerAbsolute", "curve"})
 SECURE = ("secure", "securityLevel", "startOnLoad", "maxTextSize", "suppressErrorRendering", "maxEdges")

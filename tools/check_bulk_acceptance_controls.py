@@ -20,11 +20,17 @@ def main():
     if '--out' in base or '--acceptance' in base:raise ValueError('Plan must omit output and acceptance arguments')
     original=json.loads(args.acceptance.read_text('utf-8'));args.out.mkdir(parents=True,exist_ok=False)
     rows=[]
-    for name,expected in [('wrong-candidate','Acceptance status/candidate differs'),
+    controls=[('wrong-candidate','Acceptance status/candidate differs'),
                           ('failed-whole-run','successful closed whole P4 candidate'),
                           ('changed-image-bytes','Acceptance evidence fingerprint differs'),
                           ('missing-kind-review','Visual review does not cover all retained kinds'),
-                          ('missing-device-profile','complete fixture and three-profile report')]:
+                          ('missing-device-profile','complete fixture and three-profile report')]
+    if original.get('htmlControlVerification'):
+        controls.append(('missing-html-control-proof','HTML control verification incomplete'))
+        controls.append(('missing-html-export-proof','HTML control exports incomplete'))
+    if original.get('exportRepair'):
+        controls.append(('missing-export-repair-proof','HTML export repair proof incomplete'))
+    for name,expected in controls:
         directory=args.out/name;directory.mkdir();value=copy.deepcopy(original);argv=list(base)
         if name=='wrong-candidate':value['sourceTreeSha256']='0'*64
         elif name=='failed-whole-run':
@@ -38,6 +44,9 @@ def main():
                 kind=visual['cases'][-1]['kind'];visual['cases']=[c for c in visual['cases'] if c['kind']!=kind]
             target=directory/'controlled-visual-review.json';write_json(target,visual)
             value['visualReview']={'path':str(target.resolve()),**file_identity(target)}
+        elif name=='missing-html-control-proof':value['htmlControlVerification']=[]
+        elif name=='missing-html-export-proof':value.pop('htmlControlExports',None)
+        elif name=='missing-export-repair-proof':value.pop('exportRepair',None)
         else:argv=[a for a in argv if not Path(a).name.startswith(('native-auto-','native-gpu-'))]
         acceptance=directory/'controlled-acceptance.json';write_json(acceptance,value)
         argv += ['--acceptance',str(acceptance),'--out',str(directory/'rejected-report')]

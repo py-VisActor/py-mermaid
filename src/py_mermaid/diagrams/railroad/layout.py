@@ -34,14 +34,25 @@ def _style(config):
     for key,keys in mapping.items():
         for source in keys:
             if tv.get(source) is not None:result[key]=tv[source];break
-    result.update(config.get('railroad',{}) or {})
     color_pattern=r'^#(?:[\da-f]{3,4}|[\da-f]{6}|[\da-f]{8})$|^(?:rgb|rgba|hsl|hsla|hwb|lab|lch|oklab|oklch)\([\d\s%+,./-]+\)$|^[a-z]+$'
-    for key,value in tuple(result.items()):
-        if key.endswith(('Fill','Stroke','Color')) and (not isinstance(value,str) or not re.fullmatch(color_pattern,value.strip(),re.I)):result[key]=DEFAULTS[key]
-        elif key in {'padding','verticalSeparation','horizontalSeparation','arcRadius','fontSize','strokeWidth','markerRadius'}:
-            m=re.match(r'^[ \t]*([-+]?(?:\d+(?:\.\d*)?|\.\d+))',str(value))
-            number=float(m[1]) if m else math.nan;result[key]=number if math.isfinite(number) and number>=0 else DEFAULTS[key]
-    if not isinstance(result['fontFamily'],str) or not re.fullmatch(r'[\w "\',.-]+',result['fontFamily']):result['fontFamily']=DEFAULTS['fontFamily']
+    def sanitize(key,value,fallback,*,theme=False):
+        if key.endswith(('Fill','Stroke','Color')):
+            return value.strip() if isinstance(value,str) and re.fullmatch(color_pattern,value.strip(),re.I) else fallback
+        if key=='fontFamily':
+            return value.strip() if isinstance(value,str) and re.fullmatch(r'[\w "\',.-]+',value.strip()) else fallback
+        if key in {'padding','verticalSeparation','horizontalSeparation','arcRadius','fontSize','strokeWidth','markerRadius'}:
+            # Source typeof boolean is neither number nor string. Theme font
+            # defaults require >0; explicit railroad numeric overrides allow0.
+            match=re.match(r'^([-+]?(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][-+]?\d+)?)',str(value).lstrip()) if isinstance(value,(str,int,float)) and not isinstance(value,bool) else None
+            number=float(match[1]) if match else math.nan
+            return number if math.isfinite(number) and (number>0 if theme and key=='fontSize' else number>=0) else fallback
+        return value if value is not None else fallback
+    # Two source phases matter: malformed theme values use literal defaults;
+    # malformed explicit overrides use the already resolved themeDefaults.
+    result={key:sanitize(key,value,DEFAULTS[key],theme=True) for key,value in result.items()}
+    theme_defaults=dict(result)
+    for key,value in (config.get('railroad',{}) or {}).items():
+        if key in DEFAULTS:result[key]=sanitize(key,value,theme_defaults[key])
     return result
 
 

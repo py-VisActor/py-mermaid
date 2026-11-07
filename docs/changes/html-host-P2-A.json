@@ -1,0 +1,44 @@
+{
+  "schema": "py-mermaid-html-host-P2-owner/v1",
+  "owner": "A",
+  "status": "tests_designed_compile_collected_unexecuted",
+  "sourceFrozenSha256": "881656d5439e4ba08b4f3182d215680020653592e2d6ba0f9e265af97faf8fe1",
+  "methodCount": 111,
+  "singleControlLiteralCount": 89,
+  "explicitMethods": 22,
+  "fixtureCount": 112,
+  "oracleProbeCount": 5,
+  "files": [
+    {
+      "path": "tests/html_host/test_semantics.py",
+      "sha256": "231ad7d2e0ddefcab2854ae6e75432a9751e59a19cf2ecfb048871597435e1c4"
+    },
+    {
+      "path": "tests/html_host/cases.json",
+      "sha256": "43ec766a838eded468c09ad4f7bc367cec6abe051a40227dd636a16e6c21531e"
+    },
+    {
+      "path": "references/html-host-assertions.json",
+      "sha256": "6e27d666b0770f11d9c0e37442ca665f1a7dca3ae82b7482e81f8342cbc0dec3"
+    }
+  ],
+  "mechanicalRun": "HTML-HOST-record-20261106T112716Z-92c4b999",
+  "testExecution": "None; mechanical compile/import/TestLoader.countTestCases only. Fixture metadata later gained an explicit inline image resource, with no product behavior invoked.",
+  "futureArgv": [
+    "python -m unittest discover -s tests/html_host -t tests -p test_semantics.py -v",
+    "node tools/oracle/bulk_capture.cjs --fixtures tests/html_host/cases.json --out <new-run>/artifacts/oracle",
+    "python tools/bulk_validate.py --fixtures tests/html_host/cases.json --group shared --backend cpu --out <new-run>/artifacts/native-cpu"
+  ],
+  "productModified": false,
+  "sourceExpectedFromCandidate": false,
+  "knownQuestions": [
+    "Five CSS color extensions intentionally do not handwrite unknown .value; P3 must observe locked original DOM and always compare actual native value, even absent handwritten value.",
+    "Readonly/multiple IDL reflects attributes on inapplicable input types; effective semantic applicability differs. Pure unit checks effective state; fixtures do not falsely assert reflected IDL is absent.",
+    "Extra HTML consumers class/mindmap and source text-vs-markdown textarea are deliberate genuine source probes. If original paints literal or changes whitespace, preserve first-run evidence and classify via canonical source, never replace fixture solely to pass.",
+    "Malformed nesting is not treated as a complete browser-tree clone. Only specific source rules tested; no browser/CSS pixel-identical promise."
+  ],
+  "phaseGate": "Stop test/fixture writes; await root unified P3 first execution.",
+  "notes": [
+    "Explicit input image data URI uses DOMPurify ADD_DATA_URI_TAGS:[input]; default DOMPurify permits data images for img, not input. No implicit fetch or new resource file."
+  ]
+}

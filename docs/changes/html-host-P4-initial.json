@@ -1,0 +1,17 @@
+{
+  "schema": "py-mermaid-change-receipt/v1",
+  "status": "AUTOMATIC_MATRIX_PASSED_CANDIDATE_REJECTED_BY_ADDITIONAL_SOURCE_AUDIT",
+  "run": {
+    "path": "test-runs/BULK-P4-final-20261106T123440Z-e777012f/run.json",
+    "sha256": "8e64be730de7d42360d07c3d5f81a5e698dc07c4b1a8005df05ebd991505ef87",
+    "bytes": 4531149
+  },
+  "executionStatus": "SUCCESS",
+  "sourceUnchanged": true,
+  "sourceTreeSha256": "4ab189617bdb4f41b2099cefe3ef4290da01b53d5a23b55f54340544362b7650",
+  "commands": 66,
+  "reason": "Zero input size, textarea rows/cols and multiple-select size must use defaults. Candidate shrank them to one character/row and clipped visible content. Existing130-case matrix did not cover this source branch; no final acceptance issued.",
+  "audit": "test-runs/HTML-HOST-audit-dimension-default-probe-20261106T124046Z-c3670b63",
+  "expandedCase": "html-host-zero-dimensions-default-equivalence",
+  "priorEvidenceUnmodified": true
+}

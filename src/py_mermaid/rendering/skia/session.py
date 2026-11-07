@@ -18,6 +18,7 @@ from ...model.flowchart import (Box, DrawEvent, Flowchart, FlowLayout, MeasuredN
                                MermaidError, Point, RenderResult, MeasuredAsset, ExportOptions, ResourceBundle)
 from ..labels import measure_label
 from ..styles import resolve_style,resolve_inline_svg_style
+from ..styles.flowchart import resolve_shape_part_style
 
 
 class CanvasSession:
@@ -50,6 +51,25 @@ class CanvasSession:
         self._math_sources = {}
         self._math_ink = {}
         self._request_diagram: Flowchart | None = None
+        self._control_diagram = None
+        self._control_labels = {}
+
+    def _prepare_control_labels(self,diagram):
+        if self._control_diagram is diagram:return
+        self._control_diagram=diagram;self._control_labels={}
+        if not diagram.config.html_labels:return
+        from ...geometry.shapes import LABELLESS_SHAPES
+        from ...geometry.shape_registry import canonical_shape
+        labels=[('node-label',n.id,n.raw_label if n.raw_label is not None else n.label,n.label_kind)
+            for n in diagram.nodes if canonical_shape(n.shape) not in LABELLESS_SHAPES]
+        labels += [('group-title',g.id,g.raw_label if g.raw_label is not None else g.label,g.label_kind) for g in diagram.groups]
+        labels += [('edge-label',e.id,e.raw_label if e.raw_label is not None else e.label,e.label_kind) for e in diagram.edges if e.label]
+        if sum(bool(re.search(r'<input\b',text,re.I) and re.search(r'\bradio\b',text,re.I)) for _,_,text,_ in labels)<2:return
+        from ..labels.rich import prepare_label_markup
+        from ..labels.controls.semantic import normalize_control_labels
+        prepared=[prepare_label_markup(text,label_kind,diagram.config) for _,_,text,label_kind in labels]
+        normalized=normalize_control_labels([entry[0] for entry in prepared])
+        self._control_labels={(kind,identifier):(markup,*entry[1:]) for (kind,identifier,_,_),markup,entry in zip(labels,normalized,prepared)}
 
     @staticmethod
     def _filter_css(paint,extra=''):
@@ -187,6 +207,7 @@ class CanvasSession:
         self._check_owner()
         self._diagnostics=[]
         self._request_diagram=diagram
+        self._prepare_control_labels(diagram)
         measured=[]
         for node in diagram.nodes:
             style=resolve_style(diagram,'node-label',node.id)
@@ -209,7 +230,7 @@ class CanvasSession:
                     wrap_width=max(1,wrap_width-4)
                 width,height,lines,runs=measure_label(label,node.label_kind,diagram.config,style,
                     self._measure_span,width=wrap_width,min_width=minimum,
-                    tag_style=self._tag_style(diagram,'node-label',node.id),diagnostics=self._diagnostics,asset_loader=self._inline_asset(diagram),svg_style=self._svg_style(diagram,'node-label',node.id),math_loader=self._math_atom)
+                    tag_style=self._tag_style(diagram,'node-label',node.id),diagnostics=self._diagnostics,asset_loader=self._inline_asset(diagram),svg_style=self._svg_style(diagram,'node-label',node.id),math_loader=self._math_atom,_prepared=self._control_labels.get(('node-label',node.id)))
                 if labelless or (asset_id and not label):
                     width=height=0.;lines=();runs=()
                 if asset_id and label:
@@ -277,7 +298,8 @@ class CanvasSession:
 
     def _inline_asset(self,diagram):
         def load(identifier,kind,attrs,style,image_only):
-            width,height=self._asset_size(identifier,kind)
+            width,height=self._asset_size(identifier,'image' if kind=='control-image' else kind)
+            if kind=='control-image':return(width,height)
             if kind=='icon':return(style.font_size,style.font_size)
             if kind=='svg':return(width,height)
             target=diagram.config.site_font_size*5 if image_only else diagram.config.wrapping_width
@@ -320,6 +342,7 @@ class CanvasSession:
 
     def measure_annotations(self, diagram: Flowchart) -> MeasuredAnnotations:
         self._check_owner()
+        self._prepare_control_labels(diagram)
         if self._request_diagram is not diagram:
             self._diagnostics=[];self._request_diagram=diagram
         groups = []
@@ -327,14 +350,14 @@ class CanvasSession:
         for group in diagram.groups:
             style=resolve_style(diagram,'group-title',group.id)
             width,height,lines,runs=measure_label(group.raw_label if group.raw_label is not None else group.label,group.label_kind,diagram.config,style,
-                self._measure_span,width=math.inf,tag_style=self._tag_style(diagram,'group-title',group.id),diagnostics=self._diagnostics,asset_loader=self._inline_asset(diagram),svg_style=self._svg_style(diagram,'group-title',group.id),math_loader=self._math_atom)
+                self._measure_span,width=math.inf,tag_style=self._tag_style(diagram,'group-title',group.id),diagnostics=self._diagnostics,asset_loader=self._inline_asset(diagram),svg_style=self._svg_style(diagram,'group-title',group.id),math_loader=self._math_atom,_prepared=self._control_labels.get(('group-title',group.id)))
             groups.append(MeasuredGroup(group.id,width,height,lines,runs))
         for edge in diagram.edges:
             if edge.label:
                 style=resolve_style(diagram,'edge-label',edge.id)
                 width,height,lines,runs=measure_label(edge.raw_label if edge.raw_label is not None else edge.label,edge.label_kind,diagram.config,style,
                     self._measure_span,width=diagram.config.edge_label_wrapping_width,
-                    tag_style=self._tag_style(diagram,'edge-label',edge.id),diagnostics=self._diagnostics,asset_loader=self._inline_asset(diagram),svg_style=self._svg_style(diagram,'edge-label',edge.id),math_loader=self._math_atom)
+                    tag_style=self._tag_style(diagram,'edge-label',edge.id),diagnostics=self._diagnostics,asset_loader=self._inline_asset(diagram),svg_style=self._svg_style(diagram,'edge-label',edge.id),math_loader=self._math_atom,_prepared=self._control_labels.get(('edge-label',edge.id)))
                 edge_labels.append(MeasuredEdgeLabel(edge.id,width,height,lines,runs))
         title=None
         if diagram.title:
@@ -352,7 +375,7 @@ class CanvasSession:
             height=ascent+descent
             run=MeasuredTextRun(text,-left,ascent,advance,ascent,descent,style.font_family.rstrip().removesuffix(';').rstrip(),style.font_size,
                                 style.font_weight,style.font_style,style.text_color,style.decoration,style.background,
-                                ink_left,ink_right,style.opacity*style.fill_opacity,style.direction,
+                                ink_left,ink_right,style.paint_opacity*style.fill_opacity,style.direction,
                                 letter_spacing=style.letter_spacing,word_spacing=style.word_spacing,text_shadows=style.text_shadows,
                                 brightness=style.brightness,filter_chain=style.filter_chain,
                                 filter_shadow=(style.shadow_dx,style.shadow_dy,style.shadow_blur) if style.filter_chain and style.shadow_opacity else None)
@@ -376,7 +399,7 @@ class CanvasSession:
                      stroke_width: float | None = None, paint: ResolvedStyle | None = None) -> Box:
         config = diagram.config
         stroke_width = config.node_stroke_width if stroke_width is None else stroke_width
-        opacity=(paint.shadow_opacity*paint.opacity) if paint is not None else config.shadow_opacity
+        opacity=(paint.shadow_opacity*paint.paint_opacity) if paint is not None else config.shadow_opacity
         dx=paint.shadow_dx if paint is not None else config.shadow_offset_x
         dy=paint.shadow_dy if paint is not None else config.shadow_offset_y
         blur=paint.shadow_blur if paint is not None else 0
@@ -430,7 +453,7 @@ class CanvasSession:
         context.save();context.translate(box.x,box.y)
         context.lineCap=style.line_cap;context.lineJoin=style.line_join;context.lineDashOffset=style.dash_offset
         if geometry.fill_path and style.fill not in {'none','transparent',''}:
-            context.globalAlpha=style.opacity*style.fill_opacity
+            context.globalAlpha=style.paint_opacity*style.fill_opacity
             if geometry.fill_style=='solid':
                 context.fillStyle=style.fill;context.fill(self._path_factory(geometry.fill_path))
             else:
@@ -441,10 +464,10 @@ class CanvasSession:
             # RoughJS set presentation fill=none. Its final continuous ellipse
             # closes implicitly and covers prior hachure. Our generic arc
             # stroke is segmented, so fill the same pure closed shape outline.
-            context.globalAlpha=style.opacity*style.fill_opacity;context.fillStyle=style.fill
+            context.globalAlpha=style.paint_opacity*style.fill_opacity;context.fillStyle=style.fill
             context.fill(self._path_factory(outline_fill))
         context.strokeStyle=self._stroke_paint(context,style,Box(0,0,box.width,box.height))
-        context.lineWidth=style.stroke_width;context.globalAlpha=style.opacity*style.stroke_opacity
+        context.lineWidth=style.stroke_width;context.globalAlpha=style.paint_opacity*style.stroke_opacity
         context.setLineDash(list(style.dash))
         if geometry.stroke_path and style.stroke_width:context.stroke(self._path_factory(geometry.stroke_path))
         context.restore()
@@ -464,6 +487,8 @@ class CanvasSession:
         return style.stroke
 
     def _ink_box(self, run: MeasuredTextRun, box: Box) -> Box:
+        if run.control is not None:
+            return self._filter_ink(Box(box.x+run.x,box.y+run.baseline-run.control.baseline,run.control.width,run.control.height),run)
         if run.asset_box is not None:return self._filter_ink(Box(box.x+run.asset_box.x,box.y+run.asset_box.y,run.asset_box.width,run.asset_box.height),run)
         top=run.baseline-run.ascent;bottom=run.baseline+run.descent
         if 'underline' in run.decoration:bottom=max(bottom,run.baseline+.22*run.font_size)
@@ -526,6 +551,39 @@ class CanvasSession:
                    semantic_id: str, tx: float, ty: float) -> list[DrawEvent]:
         events=[]
         for run in runs:
+            if run.control is not None:
+                from .controls import paint_control
+                x=box.x+run.x;y=box.y+run.baseline-run.control.baseline
+                context.save()
+                try:
+                    context.globalAlpha=run.opacity
+                    context.globalCompositeOperation=run.blend_mode
+                    context.filter=self._filter_css(run)
+                    def paint_runs(children,cx,cy):
+                        nested=tuple(replace(child,opacity=child.opacity*run.opacity,
+                            filter_chain=run.filter_chain+child.filter_chain,
+                            brightness=run.brightness*child.brightness) for child in children)
+                        return self._draw_runs(context,nested,Box(cx,cy,0,0),kind,semantic_id,0,0)
+                    def paint_image(identifier,ix,iy,iw,ih):
+                        context.drawImage(self._asset(identifier,'image',run.color),ix,iy,iw,ih)
+                    drawn=paint_control(context,run.control,x,y,paint_runs=paint_runs,paint_image=paint_image)
+                    def moved(rect):
+                        return None if rect is None else Box(rect.x+tx,rect.y+ty,rect.width,rect.height)
+                    for event in drawn:
+                        nested=bool(event.semantic_id)
+                        events.append(replace(event,semantic_id=semantic_id,box=moved(event.box),clip=moved(event.clip),
+                            control_id=event.control_id or run.control.spec.attr('id') or None,
+                            points=tuple(Point(point.x+tx,point.y+ty) for point in event.points),
+                            opacity=event.opacity,
+                            brightness=run.brightness if not nested else event.brightness,
+                            filter_chain=run.filter_chain if not nested else event.filter_chain,
+                            blend_mode=run.blend_mode if not nested else event.blend_mode))
+                    ink=self._ink_box(run,box)
+                    events.append(DrawEvent('control',semantic_id,moved(ink),points=(Point(x+tx,y+ty),),resource_id=run.control.spec.tag+':'+run.control.spec.input_type,
+                        control_id=run.control.spec.attr('id') or None,
+                        opacity=run.opacity,brightness=run.brightness,filter_chain=run.filter_chain,blend_mode=run.blend_mode))
+                finally:context.restore()
+                continue
             if run.kind=='math':
                 context.save()
                 try:
@@ -651,7 +709,10 @@ class CanvasSession:
                 size=sizes[node.id]
                 path=size.outline or f'M 0 0 H {size.width:g} V {size.height:g} H 0 Z'
                 if size.paint_outline:rough_nodes[node.id]=rough_path(path,seed=diagram.config.hand_drawn_seed,roughness=.2 if node.shape=='doublecircle' else .7,fill_style='solid' if node.shape in {'filledCircle','anchor','collapsedGroup'} else 'hachure',hachure_angle=120 if node.shape=='stateStart' else -41)
-                for index,part in enumerate(size.parts):rough_components[(node.id,index)]=rough_path(part.path,seed=diagram.config.hand_drawn_seed,fill=part.fill!='none',fill_style=part.fill_style)
+                for index,part in enumerate(size.parts):
+                    # Source collapsed indicators and separator remain plain even
+                    # when only the outer container is drawn with RoughJS.
+                    if not part.css_classes:rough_components[(node.id,index)]=rough_path(part.path,seed=diagram.config.hand_drawn_seed,fill=part.fill!='none',fill_style=part.fill_style)
                 for index,detail in enumerate(size.details):rough_details[(node.id,index)]=rough_path(detail,seed=diagram.config.hand_drawn_seed,roughness=.2 if node.shape=='doublecircle' else .7,fill=node.shape=='doublecircle')
             for group in layout.groups:
                 box=group.paint_box or group.box
@@ -706,7 +767,12 @@ class CanvasSession:
                 for (identifier,index),item in table.items():
                     if identifier==node.id:include_box(Box(box.x+item.bounds.x,box.y+item.bounds.y,item.bounds.width,item.bounds.height),max(style.stroke_width,3)/2)
             for part in size.parts:
-                b=self._path_factory(part.path).bounds;include_box(Box(box.x+b['left'],box.y+b['top'],b['width'],b['height']),style.stroke_width/2)
+                paint=resolve_shape_part_style(diagram,node.id,part,style)
+                if paint.display=='none' or not paint.paint_opacity:continue
+                b=self._path_factory(part.path).bounds
+                include_box(Box(box.x+b['left'],box.y+b['top'],b['width'],b['height']),
+                            paint.stroke_width/2 if paint.stroke not in {'none',''} else 0,
+                            shadow=paint if paint.shadow_opacity>0 else None)
             half_stroke = style.stroke_width / 2
             include_box(box,half_stroke,shadow=style if not size.assets and style.shadow_opacity>0 and self._shadow_for_shape(shapes[node.id]) else None)
             if size.label_box:
@@ -753,7 +819,7 @@ class CanvasSession:
         context = canvas.getContext("2d")
         self._text_state(context, diagram)
         context.fillStyle = canvas_style.fill if canvas_style.fill not in {'none',''} else 'transparent'
-        context.globalAlpha=canvas_style.opacity*canvas_style.fill_opacity
+        context.globalAlpha=canvas_style.paint_opacity*canvas_style.fill_opacity
         context.filter=self._filter_css(canvas_style)
         context.fillRect(0, 0, width, height)
         context.globalAlpha=1;context.filter='none'
@@ -789,15 +855,15 @@ class CanvasSession:
             context.filter=self._filter_css(style)
             context.strokeStyle=self._stroke_paint(context,style,box)
             context.lineWidth=style.stroke_width;context.setLineDash(list(style.dash))
-            context.globalAlpha=style.opacity*style.fill_opacity
+            context.globalAlpha=style.paint_opacity*style.fill_opacity
             if group.id in rough_groups:self._paint_rough(context,rough_groups[group.id],style,box)
             else:
                 context.fillRect(box.x,box.y,box.width,box.height)
-                context.globalAlpha=style.opacity*style.stroke_opacity
+                context.globalAlpha=style.paint_opacity*style.stroke_opacity
                 if style.stroke_width:context.strokeRect(box.x,box.y,box.width,box.height)
             context.globalAlpha=1;context.filter='none'
             trace.append(DrawEvent("group",group.id,Box(box.x+tx,box.y+ty,box.width,box.height),
-                                   fill=style.fill,stroke=self._trace_stroke(style),stroke_width=style.stroke_width,opacity=style.opacity))
+                                   fill=style.fill,stroke=self._trace_stroke(style),stroke_width=style.stroke_width,opacity=style.paint_opacity))
             context.fillStyle=resolve_style(diagram,'group-title',group.id).text_color
             title=group_sizes[group.id]
             trace.extend(self._draw_runs(context,title.runs,placed.title_box,'group-title',group.id,tx,ty)
@@ -814,7 +880,7 @@ class CanvasSession:
             context.strokeStyle=style.stroke if style.stroke not in {'none',''} else 'transparent'
             context.fillStyle=context.strokeStyle;context.lineWidth=style.stroke_width
             context.lineCap=style.line_cap;context.lineJoin=style.line_join;context.lineDashOffset=style.dash_offset
-            context.setLineDash(list(self._edge_dash(diagram,edge,route,style)));context.globalAlpha=style.opacity*style.stroke_opacity
+            context.setLineDash(list(self._edge_dash(diagram,edge,route,style)));context.globalAlpha=style.paint_opacity*style.stroke_opacity
             if edge.id in rough_edges:
                 context.stroke(self._path_factory(rough_edges[edge.id].stroke_path))
             elif route.path:
@@ -824,9 +890,9 @@ class CanvasSession:
                     points=(section.start,*section.bends,section.end);context.beginPath();context.moveTo(points[0].x,points[0].y)
                     for point in points[1:]:context.lineTo(point.x,point.y)
                     if style.stroke_width:context.stroke()
-                    trace.append(DrawEvent('edge',edge.id,points=tuple(Point(p.x+tx,p.y+ty) for p in points),curve=route.effective_curve,stroke=style.stroke,stroke_width=style.stroke_width,opacity=style.opacity))
+                    trace.append(DrawEvent('edge',edge.id,points=tuple(Point(p.x+tx,p.y+ty) for p in points),curve=route.effective_curve,stroke=style.stroke,stroke_width=style.stroke_width,opacity=style.paint_opacity))
             if route.path or edge.id in rough_edges:
-                trace.append(DrawEvent('edge',edge.id,points=tuple(Point(p.x+tx,p.y+ty) for p in route.paint_points),path=rough_edges[edge.id].stroke_path if edge.id in rough_edges else route.path,curve=route.effective_curve,stroke=style.stroke,stroke_width=style.stroke_width,opacity=style.opacity))
+                trace.append(DrawEvent('edge',edge.id,points=tuple(Point(p.x+tx,p.y+ty) for p in route.paint_points),path=rough_edges[edge.id].stroke_path if edge.id in rough_edges else route.path,curve=route.effective_curve,stroke=style.stroke,stroke_width=style.stroke_width,opacity=style.paint_opacity))
             for marker in arrows[edge.id]:
                 context.save();context.setLineDash([]);context.lineWidth=marker.stroke_width
                 context.fillStyle=diagram.config.edge_color if marker.kind=='circle' else style.stroke
@@ -839,7 +905,7 @@ class CanvasSession:
                     vertices=list(dict.fromkeys(flatten_path(marker.path,steps=1)[0]))
                     if not marker.at_start:vertices=vertices[1:]+vertices[:1]
                     marker_points=tuple(Point(p.x+tx,p.y+ty) for p in vertices)
-                trace.append(DrawEvent('arrow',edge.id,Box(b.x+tx,b.y+ty,b.width,b.height),points=marker_points,path=marker.path,marker=marker.kind,fill=str(context.fillStyle) if marker.filled else 'none',stroke=style.stroke,stroke_width=marker.stroke_width,opacity=style.opacity))
+                trace.append(DrawEvent('arrow',edge.id,Box(b.x+tx,b.y+ty,b.width,b.height),points=marker_points,path=marker.path,marker=marker.kind,fill=str(context.fillStyle) if marker.filled else 'none',stroke=style.stroke,stroke_width=marker.stroke_width,opacity=style.paint_opacity))
                 context.restore()
         context.globalAlpha=1;context.setLineDash([]);context.filter='none'
         for node in diagram.nodes:
@@ -864,9 +930,9 @@ class CanvasSession:
                                   outline_fill=size.outline if node.shape in {'stateStart','stateEnd'} else None)
                 for index,detail in enumerate(size.details):self._paint_rough(context,rough_details[(node.id,index)],replace(style,stroke_width=1.5) if node.shape=='doublecircle' else style,box)
             elif node.shape=="square":
-                context.globalAlpha=style.opacity*style.fill_opacity
+                context.globalAlpha=style.paint_opacity*style.fill_opacity
                 context.fillRect(box.x, box.y, box.width, box.height)
-                context.globalAlpha=style.opacity*style.stroke_opacity
+                context.globalAlpha=style.paint_opacity*style.stroke_opacity
                 if style.stroke_width:context.strokeRect(box.x, box.y, box.width, box.height)
             else:
                 if not size.outline:
@@ -875,8 +941,8 @@ class CanvasSession:
                 context.translate(box.x,box.y)
                 context.strokeStyle=self._stroke_paint(context,style,Box(0,0,box.width,box.height))
                 path=self._path_factory(size.outline)
-                context.globalAlpha=style.opacity*style.fill_opacity;context.fill(path)
-                context.globalAlpha=style.opacity*style.stroke_opacity
+                context.globalAlpha=style.paint_opacity*style.fill_opacity;context.fill(path)
+                context.globalAlpha=style.paint_opacity*style.stroke_opacity
                 if style.stroke_width:context.stroke(path)
                 for detail in size.details:
                     detail_path=self._path_factory(detail)
@@ -891,50 +957,56 @@ class CanvasSession:
                                                    Box(box.x+tx+inner_shadow.x,box.y+ty+inner_shadow.y,
                                                        inner_shadow.width,inner_shadow.height)))
                         context.fillStyle=style.fill if style.fill not in {'none',''} else 'transparent'
-                        context.globalAlpha=style.opacity*style.fill_opacity
+                        context.globalAlpha=style.paint_opacity*style.fill_opacity
                         context.fill(detail_path)
-                    context.globalAlpha=style.opacity*style.stroke_opacity
+                    context.globalAlpha=style.paint_opacity*style.stroke_opacity
                     if style.stroke_width:context.stroke(detail_path)
                 context.restore()
             context.globalAlpha=1;context.setLineDash([])
             if size.parts or size.assets:
                 context.save();context.translate(box.x,box.y)
                 for index,part in enumerate(size.parts):
-                    context.save()
-                    context.setLineDash(list(style.dash if part.dash is None else part.dash))
-                    def color(value):return style.fill if value=='node' else style.stroke if value=='stroke' else value
-                    context.fillStyle=color(part.fill) if part.fill!='none' else 'transparent'
-                    context.strokeStyle=style.stroke if part.stroke=='node' else style.fill if part.stroke=='fill' else part.stroke if part.stroke!='none' else 'transparent'
-                    context.lineWidth=style.stroke_width;context.globalAlpha=part.opacity*style.opacity
+                    paint=resolve_shape_part_style(diagram,node.id,part,style)
+                    if paint.display=='none':continue
+                    context.save();context.filter='none'
+                    context.setLineDash(list(paint.dash));context.lineWidth=paint.stroke_width
+                    context.lineCap=paint.line_cap;context.lineJoin=paint.line_join;context.lineDashOffset=paint.dash_offset
                     path=self._path_factory(part.path)
+                    if part.css_classes and paint.shadow_opacity and not paint.filter_chain:
+                        self._draw_shadow(context,Box(0,0,box.width,box.height),diagram,outline=part.path,stroke_width=paint.stroke_width,paint=paint)
+                    context.filter=self._filter_css(paint)
+                    context.fillStyle=paint.fill if paint.fill not in {'none',''} else 'transparent'
+                    context.strokeStyle=self._stroke_paint(context,paint,Box(0,0,box.width,box.height))
                     if (node.id,index) in rough_components:
-                        paint=replace(style,fill=color(part.fill),stroke=style.stroke if part.stroke=='node' else style.fill if part.stroke=='fill' else part.stroke,opacity=part.opacity*style.opacity,dash=style.dash if part.dash is None else part.dash)
                         self._paint_rough(context,rough_components[(node.id,index)],paint,Box(0,0,box.width,box.height))
                     else:
-                        if part.fill!='none':
-                            context.globalAlpha=part.opacity*style.opacity*style.fill_opacity;context.fill(path)
-                        if part.stroke!='none' and style.stroke_width:
-                            context.globalAlpha=part.opacity*style.opacity*style.stroke_opacity;context.stroke(path)
-                    trace.append(DrawEvent('node-part',node.id,path=part.path,fill=part.fill,stroke=part.stroke,opacity=part.opacity*style.opacity))
+                        if paint.fill not in {'none',''}:
+                            context.globalAlpha=paint.paint_opacity*paint.fill_opacity;context.fill(path)
+                        if paint.stroke not in {'none',''} and paint.stroke_width:
+                            context.globalAlpha=paint.paint_opacity*paint.stroke_opacity;context.stroke(path)
+                    b=path.bounds
+                    trace.append(DrawEvent('node-part',node.id,Box(box.x+tx+b['left'],box.y+ty+b['top'],b['width'],b['height']),
+                        path=part.path,fill=paint.fill,stroke=paint.stroke,stroke_width=paint.stroke_width,
+                        opacity=paint.paint_opacity,dash=paint.dash,resource_id=' '.join(part.css_classes) or None))
                     context.restore()
                 for asset in size.assets:
-                    rect=asset.box;context.globalAlpha=asset.opacity*style.opacity
+                    rect=asset.box;context.globalAlpha=asset.opacity*style.paint_opacity
                     context.drawImage(self._asset(asset.resource_id,asset.kind,style.stroke),rect.x,rect.y,rect.width,rect.height)
-                    trace.append(DrawEvent('node-asset',node.id,Box(box.x+rect.x+tx,box.y+rect.y+ty,rect.width,rect.height),resource_id=asset.resource_id,opacity=asset.opacity*style.opacity))
+                    trace.append(DrawEvent('node-asset',node.id,Box(box.x+rect.x+tx,box.y+rect.y+ty,rect.width,rect.height),resource_id=asset.resource_id,opacity=asset.opacity*style.paint_opacity))
                 context.restore()
             actual_fill=(style.hachure_color or style.fill) if node.id in rough_nodes and node.shape not in {'stateStart','stateEnd'} and rough_nodes[node.id].fill_style=='hachure' and rough_nodes[node.id].fill_path else style.fill
             context.filter='none'
             trace.append(DrawEvent("node", node.id, Box(box.x + tx, box.y + ty, box.width, box.height),
-                                   fill=actual_fill,stroke=self._trace_stroke(style),stroke_width=style.stroke_width,opacity=style.opacity))
+                                   fill=actual_fill,stroke=self._trace_stroke(style),stroke_width=style.stroke_width,opacity=style.paint_opacity))
             local=size.label_box or Box((box.width-size.label_width)/2,(box.height-size.label_height)/2,
                                         size.label_width,size.label_height)
             context.fillStyle = resolve_style(diagram,'node-label',node.id).text_color
             label_box=Box(box.x+local.x,box.y+local.y,local.width,local.height)
             if size.assets and size.label_width>0 and any(run.text for run in size.runs):
-                context.save();context.globalAlpha=style.opacity*(1 if diagram.config.html_labels else .5)
+                context.save();context.globalAlpha=style.paint_opacity*(1 if diagram.config.html_labels else .5)
                 context.fillStyle=diagram.config.edge_label_background
                 context.fillRect(label_box.x,label_box.y,label_box.width,label_box.height);context.restore()
-                trace.append(DrawEvent('resource-label-background',node.id,Box(label_box.x+tx,label_box.y+ty,label_box.width,label_box.height),fill=diagram.config.edge_label_background,opacity=style.opacity*(1 if diagram.config.html_labels else .5)))
+                trace.append(DrawEvent('resource-label-background',node.id,Box(label_box.x+tx,label_box.y+ty,label_box.width,label_box.height),fill=diagram.config.edge_label_background,opacity=style.paint_opacity*(1 if diagram.config.html_labels else .5)))
             trace.extend(self._draw_runs(context,size.runs,label_box,'text',node.id,tx,ty)
                          if size.runs else self._draw_text(context,size.lines,label_box,'text',node.id,tx,ty))
         for edge in diagram.edges:
@@ -944,11 +1016,11 @@ class CanvasSession:
             style=edge_label_styles[edge.id]
             if style.display=='none':continue
             context.fillStyle=style.background if style.background not in {'none',''} else 'transparent'
-            context.globalAlpha=style.opacity*(1 if diagram.config.html_labels else .5)
+            context.globalAlpha=style.paint_opacity*(1 if diagram.config.html_labels else .5)
             context.fillRect(box.x,box.y,box.width,box.height)
             context.globalAlpha=1
             trace.append(DrawEvent("edge-label-background",edge.id,Box(box.x+tx,box.y+ty,box.width,box.height),
-                                   fill=style.background,opacity=style.opacity))
+                                   fill=style.background,opacity=style.paint_opacity))
             context.fillStyle=style.text_color
             label=label_sizes[edge.id]
             trace.extend(self._draw_runs(context,label.runs,box,'edge-label',edge.id,tx,ty)

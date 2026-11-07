@@ -1,0 +1,88 @@
+{
+  "schema": "py-mermaid-html-host-finalizer-receipt/v1",
+  "status": "FINALIZATION_EXECUTED_AND_GATED",
+  "tool": "tools/finalize_html_host_evidence.py",
+  "sha256": "54faf0ef095a7f9d4203a5b432163f2563a6e2d9a117386db73528bba8287cb4",
+  "evidenceFinalizationExecuted": true,
+  "productBehaviorExecutedByFinalizer": false,
+  "finalization": {
+    "path": "test-runs/HTML-HOST-P5-delivery-20261106T131153Z-15f07388/run.json",
+    "sha256": "1cb71d0fcc13146d1185ddda6bd966a2e266f3e90205ba55022130d927f130b0",
+    "bytes": 51065
+  },
+  "acceptance": {
+    "path": "test-runs/HTML-HOST-P5-delivery-20261106T131153Z-15f07388/artifacts/finalized/acceptance.json",
+    "sha256": "b3c312dad6fe5aea886b00a5c31a80c582f00a316400132f8b27efc56a0d18c9",
+    "bytes": 5991
+  },
+  "exportRepair": {
+    "path": "test-runs/HTML-HOST-P4-EXPORT-repair-20261106T130826Z-cebc530d/run.json",
+    "sha256": "a8fcaef967db5c76895e67435b110043b43f9b8d214046d026fe8010984f6183",
+    "bytes": 195006
+  },
+  "historicalMechanicalReceipt": {
+    "schema": "py-mermaid-html-host-finalizer-receipt/v1",
+    "status": "CODE_COMPLETE_MECHANICALLY_VERIFIED",
+    "tool": "tools/finalize_html_host_evidence.py",
+    "sha256": "7aa2b92c655ea0e438f1722424153ef69de6e08439456257def8ae93d9c19386",
+    "leaseReturned": true,
+    "productAndExistingTestsChanged": false,
+    "newToolingTests": 0,
+    "productBehaviorExecuted": false,
+    "evidenceFinalizationExecuted": false,
+    "cli": "python tools/finalize_html_host_evidence.py --p4 P4_RUN_DIR --visual-review FILE --out NEWDIR",
+    "outputs": [
+      "acceptance.json schema py-mermaid-gap-branch-acceptance/v1",
+      "summary.json schema py-mermaid-html-host-final-summary/v1"
+    ],
+    "mechanicalRuns": [
+      "HTML-HOST-record-20261106T123120Z-30dab891",
+      "HTML-HOST-record-20261106T123146Z-73c40fb3",
+      "HTML-HOST-record-20261106T123250Z-a72cdd40",
+      "HTML-HOST-record-20261106T124907Z-d6e93382",
+      "HTML-HOST-record-20261106T124959Z-400b6316"
+    ],
+    "guards": [
+      "closed SUCCESS unchanged full BULK-P4 final, zero finished command exits, full immutable verify_run file ledger",
+      "complete required family units/native/comparison, regression/tooling/legacy/strictZen/theme/export/control commands",
+      "frozen31kinds and dynamic complete archived controlExpected family vs734 priorcases; typed JSON whole-row equality; no duplicate IDs",
+      "source candidate matches opening Run, canonical tree hash and exact source ZIP bytes",
+      "unittest counts from actual successful Ran lines, never hardcoded254",
+      "all3profile native exact fixture IDs; control proofs exact complete archived fixture IDs/status/source/input hashes and commandbindings",
+      "actual 186strictZen cases and1990 rejected mutations perbackend",
+      "legacy positive12+35+50+200 and negative diagnostics PASS perbackend",
+      "11canonical themes and all expected shared theme fixtureIDs checked",
+      "31case x3backend x5formats465 plus dynamic control selection x3x5, exact tuple identity and fullcontroltype coverage; outputfile sizes and closedRunhashes",
+      "external PASS human review samecandidate coversall31kinds and original/native SHA and exact case/pathbindings",
+      "output must be new and cannot descend beneath a closed immutableRun"
+    ],
+    "remaining": [
+      "Actual successful final P4 and external human review are still required; this receipt is not acceptance."
+    ],
+    "scope": [
+      "Mermaid12.2.0 fixed1fb7869866dd619168d840291c9c54b4f129758b",
+      "bounded static HTML/CSS and retained31detectors only",
+      "video/audio,interactions,Dagre excluded;7deferredchartdetectors outside scope",
+      "installation validation NOT_EXECUTED; no platformwide or arbitraryHTML/CSS claim"
+    ],
+    "archiveDenominatorRevision": {
+      "reason": "First successful P4 candidate rejected after supplemental source proof of zero size/rows/cols value clipping; original SUCCESS Run remains immutable. New controls can be added without hardcoded total.",
+      "sourceArchive": "artifacts/test-tool-candidate.zip",
+      "pattern": "tests/html_host/cases*.json (direct children)",
+      "algorithm": "Read every archived fixture row, inherit document group exactly like load_cases; require shared/controlExpected and unique casefold IDs; compare entire rows to frozen controlExpected subset via canonical typed JSON; dedicated control fixture also exact rows/order. Keep only prior base734 fixed.",
+      "hardcodedTotalRemoved": [
+        864,
+        130
+      ],
+      "mechanicalRun": "HTML-HOST-record-20261106T124907Z-d6e93382",
+      "nativeOrProductExecuted": false
+    },
+    "reviewRequiredRevision": {
+      "algorithm": "All archived control cases with reviewRequired:true must occur in external PASS review cases; existing source/native original path and SHA checks apply unchanged. No case ID is hardcoded.",
+      "productChanged": false,
+      "sourceStopped": true,
+      "mechanicalRun": "HTML-HOST-record-20261106T124959Z-400b6316"
+    }
+  },
+  "remaining": []
+}

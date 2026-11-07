@@ -1,0 +1,30 @@
+{
+  "schema": "py-mermaid-change-receipt/v1",
+  "status": "SCOPE_UPDATED_EXPLICIT_REJECTION_VERIFIED",
+  "date": "2026-11-06T10:55:10.672+00:00",
+  "authority": "User explicitly requested: video / audio 功能 整体删除掉",
+  "decision": "references/media-exclusion.json",
+  "baselineSourceTreeSha256": "fae1001df0d2c07ada1b8474eb03901429af0a5f81c9b7dfbf5e65b89e962062",
+  "currentSourceTreeSha256": "a25d9e8624eb6b8dd41175441b28630859ea8ecc63f831190052089c9301c1c6",
+  "sourceIdentityChange": "README wording only; all implementation/assets/dependency bytes unchanged",
+  "productCodeChanged": false,
+  "startingGitStatus": " M AGENTS.md\n M README.en.md\n M README.md\n M docs/EXECUTION_HANDOFF.md\n M docs/NEW_SESSION.md\n M docs/RELEASE_STATUS.md\n M docs/compatibility.json\n M docs/execution-state.json\n M src/py_mermaid/config/flowchart.py\n M src/py_mermaid/diagrams/business/cynefin.py\n M src/py_mermaid/diagrams/business/eventmodeling.py\n M src/py_mermaid/diagrams/business/ishikawa.py\n M src/py_mermaid/diagrams/flowchart/parser.py\n M src/py_mermaid/diagrams/modeling/class_diagram.py\n M src/py_mermaid/diagrams/railroad/layout.py\n M src/py_mermaid/diagrams/sequence/layout.py\n M src/py_mermaid/diagrams/structures/block.py\n M src/py_mermaid/diagrams/structures/kanban.py\n M src/py_mermaid/diagrams/structures/packet.py\n M src/py_mermaid/diagrams/temporal/_dates.py\n M src/py_mermaid/diagrams/zenuml/parser.py\n M src/py_mermaid/model/flowchart.py\n M src/py_mermaid/rendering/labels/rich.py\n M src/py_mermaid/rendering/skia/scene.py\n M src/py_mermaid/rendering/skia/session.py\n M src/py_mermaid/rendering/styles/flowchart.py\n M src/py_mermaid/resources/svg.py\n M src/py_mermaid/runtime/configuration.py\n M tests/bulk/shared/test_configuration.py\n M tools/RUNS_AND_REPORTS.md\n M tools/build_bulk_report.py\n M tools/check_zenuml_parity.py\n M tools/collect_bulk_cases.py\n M tools/f011_validate.py\n M tools/run_bulk.py\n?? docs/GAP_AUDIT_ACCEPTANCE.md\n?? docs/NEXT_ITERATION.md\n?? docs/STATIC_HTML_HOST_PLAN.md\n?? docs/changes/gap-P4-initial.json\n?? docs/changes/gap-P4-repair-C.json\n?? docs/changes/gap-P5-delivery.json\n?? docs/changes/gap-audit-A.json\n?? docs/changes/gap-audit-B.json\n?? docs/changes/gap-audit-C.json\n?? docs/changes/gap-oracle-merge.json\n?? docs/changes/gap-repair-A.json\n?? docs/changes/gap-repair-B.json\n?? docs/changes/gap-repair-C.json\n?? docs/changes/gap-repair-root.json\n?? references/gap-audit-A.json\n?? references/gap-audit-B.json\n?? references/gap-audit-C.json\n?? references/gap-audit-root.json\n?? references/gap-verification-summary.json\n?? references/next-iteration-scope.json\n?? references/static-html-host-gap.json\n?? tests/bulk/a/test_gap_audit.py\n?? tests/bulk/b/test_gap_audit.py\n?? tests/bulk/c/test_gap_audit.py\n?? tests/bulk/cases-gap-A.json\n?? tests/bulk/cases-gap-B.json\n?? tests/bulk/cases-gap-C.json\n?? tests/bulk/cases-gap-shared.json\n?? tests/bulk/shared/test_gap_configuration.py\n?? tests/bulk/shared/test_gap_visibility.py\n?? tests/tooling/test_bulk_oracle_merge.py\n?? tests/tooling/test_zenuml_denominator.py\n?? tools/check_gap_audit.py\n?? tools/merge_bulk_oracles.py\n?? tools/plans/gap-first.json\n?? tools/plans/gap-new-visual.json\n?? tools/plans/gap-related.json\n",
+  "historicalReportsModified": false,
+  "implementationAndMigrationRemoved": [
+    "video",
+    "audio"
+  ],
+  "remainingHtmlHostObservedCases": 7,
+  "newDependencies": false,
+  "installationVerification": false,
+  "commit": false,
+  "push": false,
+  "publication": false,
+  "verification": {
+    "path": "test-runs/MEDIA-exclusion-scope-and-boundary-verification-20261106T105535Z-614536bf/run.json",
+    "sha256": "f08926c1f29af2f8555bdcae9cd2fbdbdc00416c34f024df46bfa5d5f0109750",
+    "bytes": 33106,
+    "status": "SUCCESS",
+    "sourceUnchanged": true
+  }
+}

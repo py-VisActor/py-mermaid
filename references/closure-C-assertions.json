@@ -1,0 +1,157 @@
+{
+  "schema": "py-mermaid-closure-assertions/v1",
+  "group": "C",
+  "baselineSourceTreeSha256": "dab675b768488413fd60bb07b656d28ef8e2e6c4f34af45056eec9763c98f0f4",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "phase": "P2_SOURCE_INDEPENDENT_NOT_EXECUTED",
+  "sources": [
+    {
+      "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+      "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c"
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/sequence/svgDraw.js",
+      "sha256": "54dfd9f1a67bf7e935a4800150a086818fe639ada82f06c3b1c7cb04874023db"
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/sequence/styles.js",
+      "sha256": "f80f572951cb6367a52b9ceeb443ce2872a020d8356ce14685237ff0b9bbcfa4"
+    },
+    {
+      "path": "packages/mermaid/src/diagrams/sequence/parser/sequenceDiagram.jison",
+      "sha256": "45c71ea8dfd62594c9b315f7285efa497ed8f88219ec016625c37d4bd5823ebf"
+    }
+  ],
+  "fixtureCount": 36,
+  "methods": [
+    "test_activation_union_literal_depths",
+    "test_filled_plain_endpoints_both_directions",
+    "test_inline_activation_first_excludes_full_half_bar",
+    "test_number_normal_and_reverse_literal_actor_anchors",
+    "test_central_plain_does_not_use_shortened_shaft_anchor",
+    "test_source_numbered_central_circle_adjusts_only_source",
+    "test_reverse_numbered_central_circle_adjusts_only_target",
+    "test_self_curve_and_rightangle_source_end_baselines",
+    "test_half_markers_reverse_orientation_names_literal",
+    "test_actual_central_solid_cores_actor_relative_both_sides",
+    "test_actual_number_forward_reverse_bidir_actor_ownership",
+    "test_actual_self_open_curves_dashed_rightangle_and_handdrawn",
+    "test_actual_all_26_marker_paints_one_logical_cross",
+    "test_actual_activation_boundaries_and_inline_nested_lifetimes",
+    "test_actual_plain_and_neo_endpoints",
+    "test_important_dash_overrides_source_inline_not_fill",
+    "test_circle_core_negative_white_noop_and_hollow_ring_rejected",
+    "test_self_interior_rejects_invented_filled_wedge",
+    "test_number_text_has_real_white_glyph_not_only_dark_circle",
+    "test_real_transformed_triangle_bounds_semantics_and_pixels",
+    "test_marker_missing_component_fault_is_rejected",
+    "test_wrong_number_owner_fault_is_rejected"
+  ],
+  "methodCount": 22,
+  "assertions": [
+    {
+      "source": "sequenceRenderer.ts:289-371",
+      "predicate": "r5 plain filled circle actor-center anchoring; numbered source/target +-16.5 only applicable end; source and native PNG core >=80% dark"
+    },
+    {
+      "source": "sequenceRenderer.ts:662-744",
+      "predicate": "number anchor fromBounds/toBounds based self/reverse/direction; actual number glyph ROI contains light and dark pixels"
+    },
+    {
+      "source": "sequenceRenderer.ts:468-641",
+      "predicate": "self return y+20 or25; numbered reverse start+10; inline fill:none; source inline dash3,3 yields to stylesheet!important"
+    },
+    {
+      "source": "svgDraw.js:1685-1778,2080-2147",
+      "predicate": "all26 lexical arrows and exact marker families/multiplicity from source; single combined cross path is one actual marker"
+    },
+    {
+      "source": "sequenceRenderer.ts:149,896,1117",
+      "predicate": "nested activation source union and inline activation bounds; finite actual geometry"
+    },
+    {
+      "source": "Painter.marker_path public contract",
+      "predicate": "independent literal transformed triangle actual red pixels and exact12px bounds; real marker metadata"
+    }
+  ],
+  "negativeControls": [
+    "white circle output",
+    "hollow central core",
+    "invented self fill metadata",
+    "lost half of bidirectional markers",
+    "reverse number anchored to wrong actor"
+  ],
+  "styleScope": [
+    "default theme/classic/neo",
+    "handDrawn self source open fill",
+    "stylesheet stroke-dasharray!important versus source inline fill:none",
+    "No arbitrary HTML/CSS expansion"
+  ],
+  "portable": "tests import only installed py_mermaid/Pillow/stdlib; no source workspace/node/native calls at discovery",
+  "commands": [
+    "python -m unittest discover -s tests/closure -t tests -p test_sequence.py -v",
+    "python tools/check_closure_c.py --oracle DIR --native DIR --out NEWFILE"
+  ],
+  "oldEvidencePreserved": "Original branch_verification fixtures/tests/source failures unchanged; only new closure IDs and checker use updated independent path-marker contract.",
+  "P3": {
+    "status": "RELATED_VERIFIED_NOT_WHOLE_BATCH_ACCEPTANCE",
+    "initialRun": "test-runs/CLOSURE-P3-batch-20261107T082546Z-6350b9b0",
+    "initialFailures": [
+      {
+        "id": "mutation-pale-self-fill",
+        "cause": "Fault color #ECECFF has minRGB236, so a black-ink threshold220 did not reject it. Source interior is white255; now test rejects <250 at the independently derived interior point, retaining original pale fault color."
+      },
+      {
+        "id": "important-dash-source",
+        "cause": "Raw SVG inline3,3 is overridden by source stylesheet!important7,2. Original computed shape.strokeDasharray=7px,2px is authoritative; expected7,2 remains unchanged."
+      },
+      {
+        "id": "branch-discovery",
+        "cause": "Old standalone helper modules need tests/branch_verification on PYTHONPATH. No product correction."
+      }
+    ],
+    "failedRepairRun": "test-runs/CLOSURE-P3-C-RELATED-batch-20261107T083657Z-172baac2",
+    "failedRepairToolFix": "Source computed classes can be null; dash none means no dash. Normalize these literal source representations; do not change predicates.",
+    "comparisonRecheck": "test-runs/CLOSURE-P3-C-COMPUTED-batch-20261107T083746Z-92b357c5",
+    "finalRun": "test-runs/CLOSURE-P3-C-FINAL-batch-20261107T083820Z-adac3164",
+    "sourceUnchanged": true,
+    "methods": {
+      "closure": 22,
+      "oldSequenceToolsRouting": 20,
+      "oldBulkC": 368
+    },
+    "realNativeCases": {
+      "cpu": 36,
+      "gpu": 36
+    },
+    "sourceComparisons": {
+      "cpu": "36 VERIFIED",
+      "gpu": "36 VERIFIED"
+    },
+    "crossEncoding": {
+      "source": "svgDraw.js insertCrossHead has one path with two opposite-diagonal M/L subpaths",
+      "accepted": "one compound realPaint or previous two independent realPaints",
+      "reject": "missing, repeated, parallel, disconnected, degenerate diagonals",
+      "negativeEvidence": "test-runs/CLOSURE-P3-C-RELATED-batch-20261107T083657Z-172baac2/commands/008-compound-cross-source-encoding-faults"
+    },
+    "changedTestToolFiles": [
+      {
+        "path": "tests/closure/support_C.py",
+        "sha256": "36dab474c2dad88e7c5cc91764a95bf531ccd65111343751c2e7d50c1126c8e0",
+        "bytes": 8146
+      },
+      {
+        "path": "tools/check_closure_c.py",
+        "sha256": "95ef0492acf4f66bf3458ada1183ec062e9d2bf7d60156546e95bddcf3795de5",
+        "bytes": 3691
+      },
+      {
+        "path": "tests/branch_verification/support_c.py",
+        "sha256": "e5b322f4447579f90f0962a5dabe8a21d98d81e9e08aec35ec754da40c166d50",
+        "bytes": 6733
+      }
+    ],
+    "productChangedDuringP3": false,
+    "visualReceipt": "test-runs\\CLOSURE-P3-C-VISUAL-record-20261107T083934Z-05750805\\artifacts\\visual.json"
+  }
+}

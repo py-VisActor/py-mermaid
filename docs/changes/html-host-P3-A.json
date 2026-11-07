@@ -1,0 +1,377 @@
+{
+  "schema": "py-mermaid-html-host-P3-owner/v1",
+  "owner": "A",
+  "status": "repairs_code_complete_unverified_stopped",
+  "firstFailureRun": "HTML-HOST-P3-batch-20261106T113133Z-293a5335",
+  "firstFailurePreserved": true,
+  "productFiles": [
+    {
+      "path": "src/py_mermaid/rendering/labels/controls/semantic.py",
+      "sha256": "12384110d4833dc38ff11997eec16246e037ca6b1ca20204f6ed14e400603d46"
+    },
+    {
+      "path": "src/py_mermaid/rendering/labels/controls/color_values.py",
+      "sha256": "cac1e35e364640e4b69433625490f02474c88624c30d40f68d9c3a44e8b4d666"
+    },
+    {
+      "path": "src/py_mermaid/rendering/labels/sanitize.py",
+      "sha256": "692fc3a1b9531a77b225aa037ef30b71ec54cd4fbf63d93dd7a07e8edc0bf703"
+    }
+  ],
+  "changes": [
+    {
+      "id": "color-general",
+      "reason": "All five fixed-original extensions normalize to opaque #ff0000; six-digit-only old branch was false.",
+      "implementation": "Reuse channels for named/hex/rgb/hsl, validate grammar/separators, pure CSS Color4 conversion of hwb/extended predefined spaces/Lab/OKLab; final opaque sRGB rounding; public is_valid_css_color for B accent validation."
+    },
+    {
+      "id": "nested-fieldset",
+      "reason": "Original nested inner fieldset.disabled false but :disabled true; pure model stores effective state.",
+      "implementation": "Include fieldset itself in inherited-disabled normalization with first-direct-legend exemption preserved."
+    },
+    {
+      "id": "textarea-test-adapter",
+      "reason": "First native scene and original both already hold &lt;b&gt;; only helper decoded to <b>.",
+      "implementation": "No product/expected change. Adapter does not html.unescape a second time when runtime HTMLParser exposes native RCDATA_CONTENT_ELEMENTS.",
+      "stdlibPath": "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\Lib\\html\\parser.py",
+      "stdlibSha256": "816c7b267625410961811830d7d33bf67c6b167d7424085cc04871ee46e87542",
+      "sourceLines": [
+        135,
+        270
+      ],
+      "firstNativeEvidence": "test-runs/HTML-HOST-P3-batch-20261106T113133Z-293a5335/artifacts/native-cpu/html-host-textarea-entities-one-pass.scene.json"
+    },
+    {
+      "id": "diagram-radio-scope",
+      "reason": "Source browser radio name/form groups share a diagram document across multiple label foreignObjects, not just one label string.",
+      "implementation": "Local parser root per label; unified IDs and radio groups; preserve each original string when no state mutation; synthetic roots never serialized and never assigned form ownership."
+    },
+    {
+      "id": "fixed-host-color-path",
+      "status": "code_complete_unverified",
+      "closedFailureRun": "HTML-HOST-P3-source-native-controls-20261106T120054Z-0e217266",
+      "sourceHost": {
+        "browser": "156.0.8078.76",
+        "skiaRevision": "a65b5cc03a5131808aec172085b7074fc66625b9",
+        "files": [
+          {
+            "path": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\HTML-HOST-host-color-source-20261106T120713Z-faa6225e\\artifacts\\chromium-color.cc",
+            "url": "https://raw.githubusercontent.com/chromium/chromium/156.0.8078.76/third_party/blink/renderer/platform/graphics/color.cc",
+            "sha256": "bdd14bfbac4a746c7e1ca6cb531d1117001c46810e38c42b3895ad47f02f787e"
+          },
+          {
+            "path": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\HTML-HOST-host-color-source-20261106T120713Z-faa6225e\\artifacts\\chromium-color-input.cc",
+            "url": "https://raw.githubusercontent.com/chromium/chromium/156.0.8078.76/third_party/blink/renderer/core/html/forms/color_input_type.cc",
+            "sha256": "65ff5cdec53ac8291d9d0fac0a730710b299b41b7c3489ee0b1cfbeed7062526"
+          },
+          {
+            "path": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\HTML-HOST-host-color-source-20261106T120713Z-faa6225e\\artifacts\\chromium-skcms-ext.cc",
+            "url": "https://raw.githubusercontent.com/chromium/chromium/156.0.8078.76/skia/ext/skcms_ext.cc",
+            "sha256": "851966fbb7f103ffa5e0ba889a91faf17a00d3861ca428dd210ffbcf063c708f"
+          },
+          {
+            "path": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\HTML-HOST-host-color-source-20261106T120713Z-faa6225e\\artifacts\\chromium-color-conversions.cc",
+            "url": "https://raw.githubusercontent.com/chromium/chromium/156.0.8078.76/ui/gfx/color_conversions.cc",
+            "sha256": "62a38e5e83107a03365c51b28dc3241a3d1566f14d5fe9f8a0338b496935ff29"
+          },
+          {
+            "path": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\HTML-HOST-host-color-source-20261106T120713Z-faa6225e\\artifacts\\chromium-DEPS",
+            "url": "https://raw.githubusercontent.com/chromium/chromium/156.0.8078.76/DEPS",
+            "sha256": "8778ffaa9a30b9e825b291978804c6c2e55a3ae829ff387b025592ffb9090e8e"
+          },
+          {
+            "path": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\HTML-HOST-host-color-source-20261106T120713Z-faa6225e\\artifacts\\skia-SkColorSpace.h",
+            "url": "https://raw.githubusercontent.com/google/skia/a65b5cc03a5131808aec172085b7074fc66625b9/include/core/SkColorSpace.h",
+            "sha256": "f7308d5be05b0edbe487a330b49d055359d32d6e0a9524fc81a3c2b26f824093"
+          },
+          {
+            "path": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\HTML-HOST-host-color-source-20261106T120713Z-faa6225e\\artifacts\\chromium-LICENSE",
+            "url": "https://raw.githubusercontent.com/chromium/chromium/156.0.8078.76/LICENSE",
+            "sha256": "368cca1106be99d39ecd32a38d8305585d802a475effb66380b91ffc9bcf709b"
+          },
+          {
+            "path": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\HTML-HOST-host-color-source-20261106T120713Z-faa6225e\\artifacts\\skia-LICENSE",
+            "url": "https://raw.githubusercontent.com/google/skia/a65b5cc03a5131808aec172085b7074fc66625b9/LICENSE",
+            "sha256": "5f787c1dee3c56547f09ccc2906ab5f5293c4d8dd6c8654e573216c38e908dbd"
+          },
+          {
+            "path": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\HTML-HOST-host-color-source-20261106T120713Z-faa6225e\\artifacts\\w3c-css-color-4-20221101.html",
+            "url": "https://www.w3.org/TR/2022/CRD-css-color-4-20221101/",
+            "sha256": "cad7c7fe30efe98c773f7e052968f8c413650dbc96ed44714b0d5a5b57ca81a9"
+          }
+        ]
+      },
+      "sourceEvidence": [
+        {
+          "id": "html-host-color-regression-display-p3-mixed",
+          "member": 0,
+          "path": "test-runs/HTML-HOST-P3-source-native-controls-20261106T120054Z-0e217266/artifacts/oracle/html-host-color-regression-display-p3-mixed.json",
+          "sha256": "2223843a4b80759cee258bf4b257090c87ee736067d151f111c070dbfc35b56f",
+          "value": "#1a689d",
+          "attributes": {
+            "id": "c0",
+            "type": "color",
+            "value": "color(display-p3 0.2 0.4 0.6)"
+          }
+        },
+        {
+          "id": "html-host-color-regression-xyz-mixed",
+          "member": 3,
+          "path": "test-runs/HTML-HOST-P3-source-native-controls-20261106T120054Z-0e217266/artifacts/oracle/html-host-color-regression-xyz-mixed.json",
+          "sha256": "5ab358b9d8c060f1a9af8b4826b59f44ca35f186c2f843473129c0da264e8688",
+          "value": "#0078a8",
+          "attributes": {
+            "id": "c3",
+            "type": "color",
+            "value": "color(rec2020 0.2 0.4 0.6)"
+          }
+        }
+      ],
+      "findings": [
+        {
+          "id": "p3-byte",
+          "reason": "W3C high-precision D65 direct conversion and pinned Skia D50/ICC float32 route differ across an eight-bit rounding boundary; do not adjust tolerance or inject input-specific constants.",
+          "sourcePath": "Chromium156 color.cc:156,567,608,819 and ui/gfx/color_conversions.cc:263; Skia SkColorSpace.h:214-241",
+          "implementation": "Generic Display P3 family now evaluates source float32 transfer, D50 matrix, inverse source ICC sRGB matrix, inverse source transfer and existing final byte rounding."
+        },
+        {
+          "id": "rec2020-transfer",
+          "reason": "2026 W3C sample switched to pure BT.1886 gamma2.4. Fixed Chromium156/Skia retains piecewise BT.2020 inverse OETF, matching older W3C 2022 section10.6/appendix code. These are different transfer definitions, not acceptable floating error.",
+          "sourcePath": "Pinned Skia SkColorSpace.h:128; Chromium skcms_ext.cc:17-66; W3C2022 rec2020 section",
+          "implementation": "Rec2020 family uses (g,a,b,c,d,e,f)=(2.22222,.909672,.0903276,.222222,.0812429,0,0), same source D50/ICC path and float32 operations."
+        }
+      ],
+      "licenseNotes": "New host-specific scalar/matrix adaptation is sourced from Chromium/Skia BSD files. Exact Chromium and Skia LICENSE artifacts included; root owns bundled licenses/notice integration. This adds no runtime library/Canvas/JS dependency.",
+      "fixtureChanges": false,
+      "oldExpectedValuesChanged": false,
+      "newTests": [
+        "InitialControlStateSourceTests.test_color_host_p3_d50_quantization",
+        "InitialControlStateSourceTests.test_color_host_rec2020_transfer"
+      ],
+      "mechanicalRun": "HTML-HOST-record-20261106T120807Z-e4eb5c56",
+      "behaviorAfterRepairExecuted": false,
+      "changedFiles": [
+        {
+          "path": "src/py_mermaid/rendering/labels/controls/color_values.py",
+          "sha256": "cac1e35e364640e4b69433625490f02474c88624c30d40f68d9c3a44e8b4d666"
+        },
+        {
+          "path": "tests/html_host/test_semantics.py",
+          "sha256": "74cc5a57d11c1a76dac5e8230c658b1e4977c232cddf7fa5723d6790ada047dd"
+        }
+      ]
+    }
+  ],
+  "cssSource": {
+    "repository": "W3C/csswg-drafts",
+    "url": "https://raw.githubusercontent.com/w3c/csswg-drafts/main/css-color-4/conversions.js",
+    "spec": "https://www.w3.org/TR/2026/CRD-css-color-4-20261103/",
+    "localSnapshot": "test-runs/HTML-HOST-css-source-20261106T114135Z-fb5a713d/artifacts/css-color-4-conversions.js",
+    "sha256": "73f35687ee3a6fed38f65c9dca4327fa3efabb0c73faa884be83231520855f38",
+    "sourceAcquisitionRun": "HTML-HOST-css-source-20261106T114135Z-fb5a713d",
+    "runtimeUse": "None; mathematical conversion equations/matrices re-expressed in pure Python. No JS execution or new runtime dependency.",
+    "responsibilities": [
+      "sRGB transfer and XYZ matrices",
+      "Display P3/A98/ProPhoto/Rec2020 transfer and matrices",
+      "Bradford D50/D65 adaptation",
+      "CIE Lab/LCH and OKLab/OKLCH conversions",
+      "HWB normalized white/black mixing; opaque HTML color-well serialization verified by pinned original"
+    ],
+    "license": {
+      "name": "W3C Software and Document License, 2023 version",
+      "repositoryLicenseUrl": "https://raw.githubusercontent.com/w3c/csswg-drafts/main/LICENSE.md",
+      "repositoryDeclaredLicenseUrl": "https://www.w3.org/Consortium/Legal/copyright-software",
+      "resolvedOfficialLicenseUrl": "https://www.w3.org/copyright/software-license-2023/",
+      "officialShortNoticeUrl": "https://www.w3.org/Consortium/Legal/2023/copyright-software-short-notice.html",
+      "evidenceRun": "HTML-HOST-license-source-20261106T115706Z-c5fca466",
+      "snapshots": [
+        {
+          "file": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\HTML-HOST-license-source-20261106T115706Z-c5fca466\\artifacts\\csswg-LICENSE.md",
+          "url": "https://raw.githubusercontent.com/w3c/csswg-drafts/main/LICENSE.md",
+          "sha256": "232da9c6c2b9f7e19e5d85cc7cf43760d80b7c4174406ac6404fa2c1b51d531b",
+          "bytes": 167
+        },
+        {
+          "file": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\HTML-HOST-license-source-20261106T115706Z-c5fca466\\artifacts\\w3c-software-document-license-2023.html",
+          "url": "https://www.w3.org/copyright/software-license-2023/",
+          "sha256": "9234807e23edbf8f1058fd85e4d9bd19f2beebebcd8f74433cc59e8a54059771",
+          "bytes": 26722
+        },
+        {
+          "file": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\HTML-HOST-license-source-20261106T115706Z-c5fca466\\artifacts\\w3c-software-document-short-notice-2023.html",
+          "url": "https://www.w3.org/Consortium/Legal/2023/copyright-software-short-notice.html",
+          "sha256": "fdce0a54ed4870977bbbb5f637d0ed8c6116736d167825a87d56fcfee94b71a0",
+          "bytes": 1496
+        }
+      ],
+      "applicability": "csswg-drafts root LICENSE.md explicitly applies the W3C Software and Document License to all repository documents, covering the referenced conversions.js source. This is stronger provenance than inferring from the generated specification page footer.",
+      "sourceContainsPreexistingIpHeader": false,
+      "redistributionRequirements": [
+        "Include the complete license NOTICE where redistributed/derived-work users can view it.",
+        "Retain pre-existing IP notices, disclaimers and terms; where none exist include the official W3C short notice.",
+        "Include a notice identifying modifications/derivation, original title and URI.",
+        "Preserve warranty/liability and name/trademark disclaimers in the full notice."
+      ],
+      "rootPackagingAction": "Root should add complete official license text plus W3C short notice and project-specific Python-adaptation attribution to bundled references/licenses and THIRD_PARTY_NOTICES. The current owner did not edit shared notice/license files.",
+      "suggestedAttribution": "Pure-Python adaptation of CSS Color Module Level 4 sample conversion equations and matrices, https://www.w3.org/TR/2026/CRD-css-color-4-20261103/ and css-color-4/conversions.js. Copyright 2026 World Wide Web Consortium. Modified for py-mermaid initial static HTML color controls; no runtime JavaScript.",
+      "confirmedScope": "Specific upstream license/source facts only; not a claim of full CSS Color5 support or general legal advice."
+    }
+  },
+  "tests": {
+    "methodCount": 133,
+    "singleControlLiterals": 105,
+    "explicitMethods": 28,
+    "expectedValuesChanged": false,
+    "adapterFixed": true
+  },
+  "fixtures": {
+    "count": 120,
+    "original112RowsUnmodified": true,
+    "added": 8
+  },
+  "mechanicalRun": "HTML-HOST-record-20261106T120807Z-e4eb5c56",
+  "mechanicalResult": "SUCCESS compile/import/signatures/collection only; no product state/layout/render calls or unit execution",
+  "behaviorExecutedAfterRepair": false,
+  "actualFunctionalPassClaim": false,
+  "residuals": [
+    "No repair behavior has executed; all new conversion families await unified rerun and fresh original capture of appended eight fixtures.",
+    "Absolute CSS Color4 literal families are implemented. Context-dependent system colors, relative/calc/color-mix/profile-defined colors are not a general browser CSS evaluator; no arbitrary HTML/CSS compatibility claim.",
+    "Fixed original opaque serialization ignores alpha/colorspace effects even when attributes survive; fresh non-red out-of-gamut conversions may expose browser rounding/gamut/transfer differences, especially newer Rec2020 definitions.",
+    "Existing native label budgets and malformed HTML tree limitations remain; media and interaction stay excluded."
+  ],
+  "testAndFixtureFiles": [
+    {
+      "path": "tests/html_host/test_semantics.py",
+      "sha256": "74cc5a57d11c1a76dac5e8230c658b1e4977c232cddf7fa5723d6790ada047dd"
+    },
+    {
+      "path": "tests/html_host/cases.json",
+      "sha256": "9ccf7e5f972a927503eebbf78812786c061ed4e824896ebf1cf14cf201c8030a"
+    }
+  ],
+  "nextGate": "Root fresh-captures appended eight and performs unified related rerun; old112 source evidence strict-reused by canonical row identity.",
+  "diagramRadioInterface": "normalize_control_labels(labels: Sequence[str])->tuple[str,...]. Already-sanitized labels supplied in final host tree/insertion order. Separate nonserialized synthetic roots preserve label boundaries; one per-diagram ID/radio/form scope; no state shared across calls.",
+  "licenseConfirmationOnly": {
+    "run": "HTML-HOST-license-source-20261106T115706Z-c5fca466",
+    "productChanged": false,
+    "testsChanged": false,
+    "fixturesChanged": false,
+    "sharedNoticesChanged": false,
+    "rootIntegrationPending": true
+  },
+  "fixedHostColorRepair": {
+    "id": "fixed-host-color-path",
+    "status": "code_complete_unverified",
+    "closedFailureRun": "HTML-HOST-P3-source-native-controls-20261106T120054Z-0e217266",
+    "sourceHost": {
+      "browser": "156.0.8078.76",
+      "skiaRevision": "a65b5cc03a5131808aec172085b7074fc66625b9",
+      "files": [
+        {
+          "path": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\HTML-HOST-host-color-source-20261106T120713Z-faa6225e\\artifacts\\chromium-color.cc",
+          "url": "https://raw.githubusercontent.com/chromium/chromium/156.0.8078.76/third_party/blink/renderer/platform/graphics/color.cc",
+          "sha256": "bdd14bfbac4a746c7e1ca6cb531d1117001c46810e38c42b3895ad47f02f787e"
+        },
+        {
+          "path": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\HTML-HOST-host-color-source-20261106T120713Z-faa6225e\\artifacts\\chromium-color-input.cc",
+          "url": "https://raw.githubusercontent.com/chromium/chromium/156.0.8078.76/third_party/blink/renderer/core/html/forms/color_input_type.cc",
+          "sha256": "65ff5cdec53ac8291d9d0fac0a730710b299b41b7c3489ee0b1cfbeed7062526"
+        },
+        {
+          "path": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\HTML-HOST-host-color-source-20261106T120713Z-faa6225e\\artifacts\\chromium-skcms-ext.cc",
+          "url": "https://raw.githubusercontent.com/chromium/chromium/156.0.8078.76/skia/ext/skcms_ext.cc",
+          "sha256": "851966fbb7f103ffa5e0ba889a91faf17a00d3861ca428dd210ffbcf063c708f"
+        },
+        {
+          "path": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\HTML-HOST-host-color-source-20261106T120713Z-faa6225e\\artifacts\\chromium-color-conversions.cc",
+          "url": "https://raw.githubusercontent.com/chromium/chromium/156.0.8078.76/ui/gfx/color_conversions.cc",
+          "sha256": "62a38e5e83107a03365c51b28dc3241a3d1566f14d5fe9f8a0338b496935ff29"
+        },
+        {
+          "path": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\HTML-HOST-host-color-source-20261106T120713Z-faa6225e\\artifacts\\chromium-DEPS",
+          "url": "https://raw.githubusercontent.com/chromium/chromium/156.0.8078.76/DEPS",
+          "sha256": "8778ffaa9a30b9e825b291978804c6c2e55a3ae829ff387b025592ffb9090e8e"
+        },
+        {
+          "path": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\HTML-HOST-host-color-source-20261106T120713Z-faa6225e\\artifacts\\skia-SkColorSpace.h",
+          "url": "https://raw.githubusercontent.com/google/skia/a65b5cc03a5131808aec172085b7074fc66625b9/include/core/SkColorSpace.h",
+          "sha256": "f7308d5be05b0edbe487a330b49d055359d32d6e0a9524fc81a3c2b26f824093"
+        },
+        {
+          "path": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\HTML-HOST-host-color-source-20261106T120713Z-faa6225e\\artifacts\\chromium-LICENSE",
+          "url": "https://raw.githubusercontent.com/chromium/chromium/156.0.8078.76/LICENSE",
+          "sha256": "368cca1106be99d39ecd32a38d8305585d802a475effb66380b91ffc9bcf709b"
+        },
+        {
+          "path": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\HTML-HOST-host-color-source-20261106T120713Z-faa6225e\\artifacts\\skia-LICENSE",
+          "url": "https://raw.githubusercontent.com/google/skia/a65b5cc03a5131808aec172085b7074fc66625b9/LICENSE",
+          "sha256": "5f787c1dee3c56547f09ccc2906ab5f5293c4d8dd6c8654e573216c38e908dbd"
+        },
+        {
+          "path": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\HTML-HOST-host-color-source-20261106T120713Z-faa6225e\\artifacts\\w3c-css-color-4-20221101.html",
+          "url": "https://www.w3.org/TR/2022/CRD-css-color-4-20221101/",
+          "sha256": "cad7c7fe30efe98c773f7e052968f8c413650dbc96ed44714b0d5a5b57ca81a9"
+        }
+      ]
+    },
+    "sourceEvidence": [
+      {
+        "id": "html-host-color-regression-display-p3-mixed",
+        "member": 0,
+        "path": "test-runs/HTML-HOST-P3-source-native-controls-20261106T120054Z-0e217266/artifacts/oracle/html-host-color-regression-display-p3-mixed.json",
+        "sha256": "2223843a4b80759cee258bf4b257090c87ee736067d151f111c070dbfc35b56f",
+        "value": "#1a689d",
+        "attributes": {
+          "id": "c0",
+          "type": "color",
+          "value": "color(display-p3 0.2 0.4 0.6)"
+        }
+      },
+      {
+        "id": "html-host-color-regression-xyz-mixed",
+        "member": 3,
+        "path": "test-runs/HTML-HOST-P3-source-native-controls-20261106T120054Z-0e217266/artifacts/oracle/html-host-color-regression-xyz-mixed.json",
+        "sha256": "5ab358b9d8c060f1a9af8b4826b59f44ca35f186c2f843473129c0da264e8688",
+        "value": "#0078a8",
+        "attributes": {
+          "id": "c3",
+          "type": "color",
+          "value": "color(rec2020 0.2 0.4 0.6)"
+        }
+      }
+    ],
+    "findings": [
+      {
+        "id": "p3-byte",
+        "reason": "W3C high-precision D65 direct conversion and pinned Skia D50/ICC float32 route differ across an eight-bit rounding boundary; do not adjust tolerance or inject input-specific constants.",
+        "sourcePath": "Chromium156 color.cc:156,567,608,819 and ui/gfx/color_conversions.cc:263; Skia SkColorSpace.h:214-241",
+        "implementation": "Generic Display P3 family now evaluates source float32 transfer, D50 matrix, inverse source ICC sRGB matrix, inverse source transfer and existing final byte rounding."
+      },
+      {
+        "id": "rec2020-transfer",
+        "reason": "2026 W3C sample switched to pure BT.1886 gamma2.4. Fixed Chromium156/Skia retains piecewise BT.2020 inverse OETF, matching older W3C 2022 section10.6/appendix code. These are different transfer definitions, not acceptable floating error.",
+        "sourcePath": "Pinned Skia SkColorSpace.h:128; Chromium skcms_ext.cc:17-66; W3C2022 rec2020 section",
+        "implementation": "Rec2020 family uses (g,a,b,c,d,e,f)=(2.22222,.909672,.0903276,.222222,.0812429,0,0), same source D50/ICC path and float32 operations."
+      }
+    ],
+    "licenseNotes": "New host-specific scalar/matrix adaptation is sourced from Chromium/Skia BSD files. Exact Chromium and Skia LICENSE artifacts included; root owns bundled licenses/notice integration. This adds no runtime library/Canvas/JS dependency.",
+    "fixtureChanges": false,
+    "oldExpectedValuesChanged": false,
+    "newTests": [
+      "InitialControlStateSourceTests.test_color_host_p3_d50_quantization",
+      "InitialControlStateSourceTests.test_color_host_rec2020_transfer"
+    ],
+    "mechanicalRun": "HTML-HOST-record-20261106T120807Z-e4eb5c56",
+    "behaviorAfterRepairExecuted": false,
+    "changedFiles": [
+      {
+        "path": "src/py_mermaid/rendering/labels/controls/color_values.py",
+        "sha256": "cac1e35e364640e4b69433625490f02474c88624c30d40f68d9c3a44e8b4d666"
+      },
+      {
+        "path": "tests/html_host/test_semantics.py",
+        "sha256": "74cc5a57d11c1a76dac5e8230c658b1e4977c232cddf7fa5723d6790ada047dd"
+      }
+    ]
+  }
+}

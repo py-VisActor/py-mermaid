@@ -1,0 +1,193 @@
+{
+  "schema": "py-mermaid-command-plan/v1",
+  "scope": "HTML-HOST-P3",
+  "description": "First complete static-control sweep with original source capture; preserve failures, no installation.",
+  "inputs": [
+    "{repo}/tests/html_host/cases.json",
+    "{repo}/tests/html_host/test_semantics.py",
+    "{repo}/tests/html_host/test_layout.py",
+    "{repo}/tests/html_host/test_canvas.py",
+    "{repo}/tests/html_host/test_controls_checker.py",
+    "{repo}/tests/html_host/cases-integration.json"
+  ],
+  "steps": [
+    {
+      "name": "freeze-fixtures",
+      "argv": [
+        "{python}",
+        "{repo}/tools/collect_bulk_cases.py",
+        "--fixtures",
+        "{repo}/tests/html_host/cases.json",
+        "{repo}/tests/html_host/cases-integration.json",
+        "--allow-subset",
+        "--out",
+        "{run}/artifacts/fixtures"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 120
+    },
+    {
+      "name": "original-control-capture",
+      "argv": [
+        "node",
+        "{repo}/tools/oracle/bulk_capture.cjs",
+        "--fixtures",
+        "{run}/artifacts/fixtures/browser-cases.json",
+        "--out",
+        "{run}/artifacts/oracle"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 1800
+    },
+    {
+      "name": "new-control-contracts",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests/html_host",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 1800
+    },
+    {
+      "name": "related-shared",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests/bulk/shared",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 1800
+    },
+    {
+      "name": "related-f013",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests/f013",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 1800
+    },
+    {
+      "name": "related-f014",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests/f014",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 1800
+    },
+    {
+      "name": "related-math",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests/math",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 1800
+    },
+    {
+      "name": "native-controls-cpu",
+      "argv": [
+        "{python}",
+        "{repo}/tools/bulk_validate.py",
+        "--fixtures",
+        "{run}/artifacts/fixtures/cases.json",
+        "--backend",
+        "cpu",
+        "--out",
+        "{run}/artifacts/native-cpu"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 1800
+    },
+    {
+      "name": "source-control-compare",
+      "argv": [
+        "{python}",
+        "{repo}/tools/bulk_compare.py",
+        "--fixtures",
+        "{run}/artifacts/fixtures/cases.json",
+        "--oracle",
+        "{run}/artifacts/oracle",
+        "--native",
+        "{run}/artifacts/native-cpu",
+        "--pixels",
+        "--out",
+        "{run}/artifacts/comparison-cpu"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 1800
+    },
+    {
+      "name": "static-control-state-and-ink",
+      "argv": [
+        "{python}",
+        "{repo}/tools/check_html_controls.py",
+        "--fixtures",
+        "{run}/artifacts/fixtures/cases.json",
+        "--oracle",
+        "{run}/artifacts/oracle",
+        "--native",
+        "{run}/artifacts/native-cpu",
+        "--out",
+        "{run}/artifacts/control-verification-cpu"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 1800
+    }
+  ]
+}

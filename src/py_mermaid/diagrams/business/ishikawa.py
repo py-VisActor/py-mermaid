@@ -2,7 +2,7 @@
 from dataclasses import dataclass
 import math
 import re
-from ...runtime.common import make_diagram,config_dict,error,sanitize_text
+from ...runtime.common import make_diagram,config_dict,error,sanitize_text,utf16_length
 
 @dataclass(frozen=True)
 class Cause:
@@ -28,10 +28,11 @@ def parse(document,config):
     return make_diagram('ishikawa',document,config,freeze(root))
 
 def wrap(text,n):
-    if len(text)<=n:return text
+    # Renderer wrapText uses JavaScript String.length before font layout.
+    if utf16_length(text)<=n:return text
     lines=[]
     for word in text.split():
-        if lines and len(lines[-1])+1+len(word)<=n:lines[-1]+=' '+word
+        if lines and utf16_length(lines[-1])+1+utf16_length(word)<=n:lines[-1]+=' '+word
         else:lines.append(word)
     return '\n'.join(lines)
 

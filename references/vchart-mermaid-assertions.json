@@ -1,0 +1,682 @@
+{
+  "schema": "py-mermaid-vchart-mermaid-assertions/v1",
+  "phase": "P3_REPAIRED_PENDING_COORDINATED_RUN",
+  "upstreamMermaidCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "upstreamVChartCommit": "fdb63276cf8b71f5a6cca128c409e009cc94615a",
+  "source": [
+    {
+      "repository": "mermaid",
+      "commit": "1fb7869866dd619168d840291c9c54b4f129758b",
+      "path": "packages/parser/src/language/pie/pie.langium",
+      "symbol": "PieSection / pieDb.addSection",
+      "line": 17,
+      "sha256": "fe9346e70f5d5028fa5aaa0470ba651e445c904e615feaf79a4eb2b5a401118d",
+      "canonicalSha256": "dc326f2fb756e9d2e171a9f26328d4d106164fea21e2e359d46cb62b9d82f45c",
+      "synthesized": true
+    },
+    {
+      "repository": "mermaid",
+      "commit": "1fb7869866dd619168d840291c9c54b4f129758b",
+      "path": "packages/mermaid/src/diagrams/quadrant-chart/parser/quadrant.jison",
+      "symbol": "axis / point / classDef",
+      "line": 1,
+      "sha256": "b4cf7e71d667e51c2082ef8e6b1c897d2d3124933026bef0ab72c959a8f46b6a",
+      "canonicalSha256": "50ee71fea6f3ee64bbe25e41c1b20a5e93a41b895544f94fca43afe28a7d12bb",
+      "synthesized": true
+    },
+    {
+      "repository": "mermaid",
+      "commit": "1fb7869866dd619168d840291c9c54b4f129758b",
+      "path": "packages/mermaid/src/diagrams/xychart/parser/xychart.jison",
+      "symbol": "plotData/dataPoint/parseXAxis/parseYAxis",
+      "line": 1,
+      "sha256": "cc1f2f0f8a320bf64c974c132516b7393876188d70bd0fd22c93587e504862f1",
+      "canonicalSha256": "ce1e4904b3c2036ac29cc62b6e6561058b00e4bc9c9bbf661873451bb55bf0fc",
+      "synthesized": true
+    },
+    {
+      "repository": "mermaid",
+      "commit": "1fb7869866dd619168d840291c9c54b4f129758b",
+      "path": "packages/parser/src/language/radar/radar.langium",
+      "symbol": "axes / curves / options",
+      "line": 1,
+      "sha256": "acd5171f3413f29242e8250c5a9c9d67e247a6b87acfbe7543bfc333bbdf3ac5",
+      "canonicalSha256": "e6bab113778803c5b45969fc3197a9c01f7b8162b9dd4b71d421da20625ec535",
+      "synthesized": true
+    },
+    {
+      "repository": "mermaid",
+      "commit": "1fb7869866dd619168d840291c9c54b4f129758b",
+      "path": "packages/parser/src/language/treemap/treemap.langium",
+      "symbol": "Section / Leaf / ClassDef",
+      "line": 45,
+      "sha256": "7f1be037f66fb9b42379e36023f1c3c3949a3f02149780003b018eb1c4a706d0",
+      "canonicalSha256": "09ae0dfbd0cb7747a6c161ada9a529b657c5181aa5e98dc5501b4b6a33d7f909",
+      "synthesized": true
+    },
+    {
+      "repository": "mermaid",
+      "commit": "1fb7869866dd619168d840291c9c54b4f129758b",
+      "path": "packages/mermaid/src/diagrams/sankey/parser/sankey.jison",
+      "symbol": "CSV records and fields",
+      "line": 1,
+      "sha256": "1f966d7e436d0255233522aca236c301f00c18cbd1b2f98c4845956a4a034f27",
+      "canonicalSha256": "1f5b7bf55f5cf1c9149543678aa827f5ab5340998dd33fbdeaaf73921b49cff0",
+      "synthesized": true
+    },
+    {
+      "repository": "mermaid",
+      "commit": "1fb7869866dd619168d840291c9c54b4f129758b",
+      "path": "packages/mermaid/src/diagrams/venn/parser/venn.jison",
+      "symbol": "set / union / text / style",
+      "line": 70,
+      "sha256": "6fe3a8d928c0de0be6cda1075e437cb5ca759b92242b65ced65f002d50d50007",
+      "canonicalSha256": "63b984882e29432bfcbb99083043d3118c103834a531199a962ef399ebee437f",
+      "synthesized": true
+    },
+    {
+      "repository": "mermaid",
+      "commit": "1fb7869866dd619168d840291c9c54b4f129758b",
+      "path": "packages/mermaid/src/diagrams/pie/pieDb.ts",
+      "symbol": "addSection/getShowData",
+      "line": 38,
+      "sha256": "e64377c8d3e0501a859b46e329ca1aacd2e205faa0aaed203be012324f868471"
+    },
+    {
+      "repository": "mermaid",
+      "commit": "1fb7869866dd619168d840291c9c54b4f129758b",
+      "path": "packages/mermaid/src/diagrams/pie/pieRenderer.ts",
+      "symbol": "draw sectors / labels / legends",
+      "line": 35,
+      "sha256": "12cbb88cead5b79b5a3aa4946d78da32e711feb8687bfd54ca119f98b2dd7df4"
+    },
+    {
+      "repository": "mermaid",
+      "commit": "1fb7869866dd619168d840291c9c54b4f129758b",
+      "path": "packages/mermaid/src/diagrams/quadrant-chart/quadrantDb.ts",
+      "symbol": "addPoint/parseStyles",
+      "line": 100,
+      "sha256": "cee47dc6e16fc27f5371575cbf7e3c3ec13db53cb2b9108748b8eab8b828c207"
+    },
+    {
+      "repository": "mermaid",
+      "commit": "1fb7869866dd619168d840291c9c54b4f129758b",
+      "path": "packages/mermaid/src/diagrams/quadrant-chart/quadrantBuilder.ts",
+      "symbol": "addPoints/build",
+      "line": 1,
+      "sha256": "62f2e191dbe3521848c38595b23644288728f912ab8b344a1ea77eafe712fbcb"
+    },
+    {
+      "repository": "mermaid",
+      "commit": "1fb7869866dd619168d840291c9c54b4f129758b",
+      "path": "packages/mermaid/src/diagrams/xychart/xychartDb.ts",
+      "symbol": "setXAxisBand/addPlot",
+      "line": 1,
+      "sha256": "12d17c3ee9c7b8fdc21438d4c9e41d94fc217437415fcb420a2f8ba6de065b76"
+    },
+    {
+      "repository": "mermaid",
+      "commit": "1fb7869866dd619168d840291c9c54b4f129758b",
+      "path": "packages/mermaid/src/diagrams/radar/parser.ts",
+      "symbol": "populate axes before curves",
+      "line": 8,
+      "sha256": "85d050ccaad3a8556dffcd5ae5a11cf6f0adcd5b343569587de9e1b43cb38449"
+    },
+    {
+      "repository": "mermaid",
+      "commit": "1fb7869866dd619168d840291c9c54b4f129758b",
+      "path": "packages/mermaid/src/diagrams/treemap/parser.ts",
+      "symbol": "populate",
+      "line": 13,
+      "sha256": "61595f35565a916142a1356e9fb3c18e57cb4a9d2cff4b40fbb39dcffe53b25e"
+    },
+    {
+      "repository": "mermaid",
+      "commit": "1fb7869866dd619168d840291c9c54b4f129758b",
+      "path": "packages/mermaid/src/diagrams/treemap/utils.ts",
+      "symbol": "buildHierarchy",
+      "line": 8,
+      "sha256": "e9b91a0f05cf499a0181e64ef30cc382c872c1c0f12f5614f09d0b8b2fbdfd5a"
+    },
+    {
+      "repository": "mermaid",
+      "commit": "1fb7869866dd619168d840291c9c54b4f129758b",
+      "path": "packages/mermaid/src/diagrams/treemap/renderer.ts",
+      "symbol": "leaf/section class label styles",
+      "line": 145,
+      "sha256": "f70a67c00490c1f9b34b721f37503f21e41c9ad6151a9459e04dbe0a5f8a432b"
+    },
+    {
+      "repository": "mermaid",
+      "commit": "1fb7869866dd619168d840291c9c54b4f129758b",
+      "path": "packages/mermaid/src/diagrams/venn/vennDB.ts",
+      "symbol": "addSubsetData/validateUnionIdentifiers/addTextData",
+      "line": 25,
+      "sha256": "ce5f2f3cb66457d2d69c4998b1a88ee15d52d840d10207685bf57b3da9b95f71"
+    },
+    {
+      "repository": "mermaid",
+      "commit": "1fb7869866dd619168d840291c9c54b4f129758b",
+      "path": "packages/mermaid/src/diagrams/venn/vennRenderer.ts",
+      "symbol": "ensurePairwiseSubsets/renderTextNodes",
+      "line": 256,
+      "sha256": "095ed3292bab2860a4b7ca68b9fe86f9ef021861bd0f93c971bb2a6cbab9b909"
+    },
+    {
+      "repository": "mermaid",
+      "commit": "1fb7869866dd619168d840291c9c54b4f129758b",
+      "path": "packages/mermaid/src/diagrams/sankey/sankeyDB.ts",
+      "symbol": "findOrCreateNode/addLink",
+      "line": 1,
+      "sha256": "65e242878bfe6b7ca14734c6f9539b9628c9c235dafb554a4d30641ca5b43035"
+    }
+  ],
+  "vchartSource": [
+    {
+      "repository": "VChart",
+      "commit": "fdb63276cf8b71f5a6cca128c409e009cc94615a",
+      "path": "packages/vchart/src/series/pie/pie.ts",
+      "sha256": "67df13aed8eedba74c95f02ceb861d19fca162354eeb51b1e310ad1cbb0a62af",
+      "symbol": "pie series encoding/layout contract",
+      "line": 1
+    },
+    {
+      "repository": "VChart",
+      "commit": "fdb63276cf8b71f5a6cca128c409e009cc94615a",
+      "path": "packages/vchart/src/series/scatter/scatter.ts",
+      "sha256": "a8c1fcc4845a4725f645487ec9778eea73138f32f846eed5d3a515885f1e3fa2",
+      "symbol": "scatter series encoding/layout contract",
+      "line": 1
+    },
+    {
+      "repository": "VChart",
+      "commit": "fdb63276cf8b71f5a6cca128c409e009cc94615a",
+      "path": "packages/vchart/src/series/line/line.ts",
+      "sha256": "74945cce4f17dad0fe54f87e709a5be42c88d0c873972914c23c9e7f455d1c16",
+      "symbol": "line series encoding/layout contract",
+      "line": 1
+    },
+    {
+      "repository": "VChart",
+      "commit": "fdb63276cf8b71f5a6cca128c409e009cc94615a",
+      "path": "packages/vchart/src/series/bar/bar.ts",
+      "sha256": "b2045d3d054499a8c44788a613e95c82fea9b9f1c55b8be2ec49dc5e05677c11",
+      "symbol": "bar series encoding/layout contract",
+      "line": 1
+    },
+    {
+      "repository": "VChart",
+      "commit": "fdb63276cf8b71f5a6cca128c409e009cc94615a",
+      "path": "packages/vchart/src/series/radar/radar.ts",
+      "sha256": "38e1b21c35df3e81d7a2264ac51869c6311151ce680cd560d6817522de6ff342",
+      "symbol": "radar series encoding/layout contract",
+      "line": 1
+    },
+    {
+      "repository": "VChart",
+      "commit": "fdb63276cf8b71f5a6cca128c409e009cc94615a",
+      "path": "packages/vchart/src/series/sankey/sankey.ts",
+      "sha256": "9f151cd21b2f9ced126097753c907c943bd59481cfdf8afb4d19a1b3a7ce2e74",
+      "symbol": "sankey series encoding/layout contract",
+      "line": 1
+    },
+    {
+      "repository": "VChart",
+      "commit": "fdb63276cf8b71f5a6cca128c409e009cc94615a",
+      "path": "packages/vchart/src/series/treemap/treemap.ts",
+      "sha256": "774d90b25f32a3709db121fb82ba2a53af005a69e958527c0760f153306f4a09",
+      "symbol": "treemap series encoding/layout contract",
+      "line": 1
+    },
+    {
+      "repository": "VChart",
+      "commit": "fdb63276cf8b71f5a6cca128c409e009cc94615a",
+      "path": "packages/vchart/src/series/venn/venn.ts",
+      "sha256": "888070a82c018b47b47e2442ad409b6193b311ee611b87009544559b2f71da3f",
+      "symbol": "venn series encoding/layout contract",
+      "line": 1
+    }
+  ],
+  "fixture": {
+    "path": "tests/vchart_integration/cases-mermaid-charts.json",
+    "sha256": "27e2d5fc977f4f361b138c66e496886d6dd2c8af01c735b19643ed8614f4ce7d",
+    "renderInputs": 30,
+    "sourceInvalidInputs": 10,
+    "separateNativeLimitInputs": 2
+  },
+  "testMethods": 94,
+  "groups": [
+    {
+      "id": "dsl-semantic-fields",
+      "cases": [
+        "VC-M-pie-basic",
+        "VC-M-pie-showdata",
+        "VC-M-pie-duplicate",
+        "VC-M-pie-donut",
+        "VC-M-quadrant-basic",
+        "VC-M-quadrant-style",
+        "VC-M-quadrant-blank-axis",
+        "VC-M-quadrant-repeated-points",
+        "VC-M-xy-line",
+        "VC-M-xy-default-bar",
+        "VC-M-xy-mixed",
+        "VC-M-xy-horizontal-labels",
+        "VC-M-xy-numeric-x",
+        "VC-M-radar-basic",
+        "VC-M-radar-named",
+        "VC-M-radar-multiple",
+        "VC-M-radar-polygon",
+        "VC-M-treemap-basic",
+        "VC-M-treemap-nested",
+        "VC-M-treemap-class",
+        "VC-M-treemap-numbers",
+        "VC-M-sankey-basic",
+        "VC-M-sankey-quoted",
+        "VC-M-sankey-colors",
+        "VC-M-sankey-no-values",
+        "VC-M-venn-basic",
+        "VC-M-venn-default-sizes",
+        "VC-M-venn-triple",
+        "VC-M-venn-text",
+        "VC-M-venn-style",
+        "VC-M-pie-negative",
+        "VC-M-quadrant-range",
+        "VC-M-xy-broken-list",
+        "VC-M-radar-reference",
+        "VC-M-treemap-unquoted",
+        "VC-M-sankey-field-count",
+        "VC-M-venn-forward-union",
+        "VC-M-quadrant-repeated-valid",
+        "VC-M-quadrant-tight-zero-lexical",
+        "VC-M-quadrant-one-decimal-lexical"
+      ],
+      "tests": [
+        {
+          "path": "tests/vchart_integration/test_mermaid_charts.py",
+          "symbol": "MermaidSourceSemantics.test_source_<caseId>"
+        }
+      ],
+      "basis": "Handwritten source grammar/DB modelExpected paths in fixture: order, identity, labels, duplicate-first-wins, domain/orientation, named radar mapping, tree parent relations, CSV escaping, region default sizes/known-set validation."
+    },
+    {
+      "id": "public-vchart-pure-geometry",
+      "tests": [
+        {
+          "path": "tests/vchart_integration/test_mermaid_charts.py",
+          "symbol": "PublicVChartGeometry.test_pie_one_to_three_preserves_order_and_area_angles",
+          "line": 84
+        },
+        {
+          "path": "tests/vchart_integration/test_mermaid_charts.py",
+          "symbol": "PublicVChartGeometry.test_numeric_scatter_uses_domain_corners_and_y_inversion",
+          "line": 93
+        },
+        {
+          "path": "tests/vchart_integration/test_mermaid_charts.py",
+          "symbol": "PublicVChartGeometry.test_line_has_missing_value_segment_boundary",
+          "line": 98
+        },
+        {
+          "path": "tests/vchart_integration/test_mermaid_charts.py",
+          "symbol": "PublicVChartGeometry.test_continuous_x_bar_keeps_nonuniform_distances",
+          "line": 107
+        },
+        {
+          "path": "tests/vchart_integration/test_mermaid_charts.py",
+          "symbol": "PublicVChartGeometry.test_radar_cardinal_axes_use_one_common_domain",
+          "line": 115
+        },
+        {
+          "path": "tests/vchart_integration/test_mermaid_charts.py",
+          "symbol": "PublicVChartGeometry.test_sankey_two_node_flow_conserves_full_height",
+          "line": 122
+        },
+        {
+          "path": "tests/vchart_integration/test_mermaid_charts.py",
+          "symbol": "PublicVChartGeometry.test_binary_treemap_equal_leaf_area_and_identity",
+          "line": 131
+        },
+        {
+          "path": "tests/vchart_integration/test_mermaid_charts.py",
+          "symbol": "PublicVChartGeometry.test_single_venn_circle_uses_limiting_plot_dimension",
+          "line": 139
+        },
+        {
+          "path": "tests/vchart_integration/test_mermaid_charts.py",
+          "symbol": "PublicVChartGeometry.test_layout_helpers_never_allocate_a_canvas",
+          "line": 150
+        },
+        {
+          "path": "tests/vchart_integration/test_mermaid_charts.py",
+          "symbol": "PublicVChartGeometry.test_runtime_layouts_comes_from_installed_dependency",
+          "line": 159
+        }
+      ],
+      "basis": "Independent analytic source consequences: 1:3 sector angles; continuous-domain corners; missing-value segment break; 9:1 uneven continuous x spacing; cardinal radar projections; two-node conserved flow 10/100px; equal leaf partitions; single circle fitted to limiting height. Never generated from candidate output."
+    },
+    {
+      "id": "paint-content-provider",
+      "tests": [
+        {
+          "path": "tests/vchart_integration/test_mermaid_charts.py",
+          "symbol": "MermaidVChartRendering.test_each_chart_really_consumes_vchart_geometry_and_keeps_text",
+          "line": 167
+        },
+        {
+          "path": "tests/vchart_integration/test_mermaid_charts.py",
+          "symbol": "MermaidVChartRendering.test_quadrant_class_style_reaches_actual_point",
+          "line": 184
+        },
+        {
+          "path": "tests/vchart_integration/test_mermaid_charts.py",
+          "symbol": "MermaidVChartRendering.test_treemap_class_style_reaches_actual_leaf",
+          "line": 190
+        },
+        {
+          "path": "tests/vchart_integration/test_mermaid_charts.py",
+          "symbol": "MermaidVChartRendering.test_venn_style_reaches_intersection_and_label",
+          "line": 203
+        },
+        {
+          "path": "tests/vchart_integration/test_mermaid_charts.py",
+          "symbol": "MermaidVChartRendering.test_sankey_gradient_and_prefix_remain_vector_semantics",
+          "line": 210
+        },
+        {
+          "path": "tests/vchart_integration/test_mermaid_charts.py",
+          "symbol": "MermaidVChartRendering.test_sankey_show_values_false_keeps_names_without_value_labels",
+          "line": 217
+        },
+        {
+          "path": "tests/vchart_integration/test_mermaid_charts.py",
+          "symbol": "MermaidVChartRendering.test_venn_union_and_indented_text_all_remain_visible",
+          "line": 222
+        },
+        {
+          "path": "tests/vchart_integration/test_mermaid_charts.py",
+          "symbol": "MermaidVChartRendering.test_advanced_provider_limits_are_explicit_diagnostics",
+          "line": 229
+        }
+      ],
+      "basis": "Require actual public layout provider invocation AND actual data-path semantic IDs, expected visible text, class color reaching trace and PNG ink, intersection fill/label, Sankey native vector gradient, strict diagnostic codes."
+    },
+    {
+      "id": "five-native-exports",
+      "tests": [
+        {
+          "path": "tests/vchart_integration/test_mermaid_charts.py",
+          "symbol": "MermaidChartExports.test_export_<kind>_<format>"
+        }
+      ],
+      "methodCount": 35,
+      "basis": "All seven basic source inputs in PNG/JPEG/WebP/PDF/SVG; encoded signatures, positive dimensions, actual path events, SVG native path/text and no flattened PNG, PDF no full image object."
+    }
+  ],
+  "commands": {
+    "unit": "python -m unittest discover -s tests/vchart_integration -p test_mermaid_charts.py -v",
+    "source": "node tools/oracle/vchart_mermaid_capture.cjs --fixtures tests/vchart_integration/cases-mermaid-charts.json --out NEW_ORACLE_DIR",
+    "native": "python tools/vchart_mermaid_probe.py --fixtures tests/vchart_integration/cases-mermaid-charts.json --out NEW_NATIVE_DIR --backend cpu|auto|gpu --export-formats svg pdf jpg webp"
+  },
+  "evidenceBoundary": [
+    "P2 has performed no parse/build/render/layout/oracle or test behavior.",
+    "Installed provider must include public layouts; no adjacent source fallback.",
+    "Venn >3 sets and Treemap SI formatter are native unsupported diagnostic inputs, not source-negative/excluded inputs.",
+    "Treemap binary numerical layout differs from original D3 squarify by chosen integration engine; preserve content/hierarchy/styles/readability rather than exact coordinates.",
+    "Source-original renderer inconsistencies or test interpretation errors found at P3 must retain first evidence and be triaged separately.",
+    "No claim that seven Mermaid grammars cover all68 VChart direct specs; separate B suite owns them."
+  ],
+  "artifactIdentities": [
+    {
+      "path": "tests/vchart_integration/test_mermaid_charts.py",
+      "sha256": "a4f334dce1c40c735290e68338dd16b2ea70fa4047e420d36d9d9b18feefb38c",
+      "bytes": 13398
+    },
+    {
+      "path": "tests/vchart_integration/cases-mermaid-charts.json",
+      "sha256": "27e2d5fc977f4f361b138c66e496886d6dd2c8af01c735b19643ed8614f4ce7d",
+      "bytes": 48160
+    },
+    {
+      "path": "tools/vchart_mermaid_probe.py",
+      "sha256": "282e4096184e64dfc2a6340db81f6987e3d9eae9122d491784d48fed24855686",
+      "bytes": 7177
+    },
+    {
+      "path": "tools/oracle/vchart_mermaid_capture.cjs",
+      "sha256": "3c314283e62f8cb8ca29341362ce3582d3695b3032c48c4473796fd7ad7000d4",
+      "bytes": 2260
+    }
+  ],
+  "mechanicalEvidence": [
+    "test-runs/VCHART-INTEGRATION-record-20261107T034055Z-b32f61e6/run.json",
+    "test-runs/VCHART-INTEGRATION-record-20261107T034102Z-ef0b9be3/run.json",
+    "test-runs/VCHART-INTEGRATION-record-20261107T035245Z-ee211a1a/run.json",
+    "test-runs/VCHART-INTEGRATION-record-20261107T035319Z-5c68c96e/run.json"
+  ],
+  "rawExportEvidence": "Probe optional --export-formats saves actual first successful kind representative files and row.exports SHA/bytes. Expected unsupported rows are diagnostic_error records and do not satisfy rendered-case denominator.",
+  "previousAssertionReceiptSha256": "6c1d500d8d40e08bfbf3ef6aec147c7183fe16e43482fc4ae2f4400127089073",
+  "initialArtifactIdentities": [
+    {
+      "path": "tests/vchart_integration/test_mermaid_charts.py",
+      "sha256": "8e4517bf6a115e09c82c3d2d8e01a13ac7a7223a92ef0e8c25564a927dca32c6"
+    },
+    {
+      "path": "tests/vchart_integration/cases-mermaid-charts.json",
+      "sha256": "4a422bba7d81a5e93c5a5e277122139723de6e4ef234edfb900ed836bba48427"
+    },
+    {
+      "path": "tools/vchart_mermaid_probe.py",
+      "sha256": "282e4096184e64dfc2a6340db81f6987e3d9eae9122d491784d48fed24855686"
+    },
+    {
+      "path": "tools/oracle/vchart_mermaid_capture.cjs",
+      "sha256": "3c314283e62f8cb8ca29341362ce3582d3695b3032c48c4473796fd7ad7000d4"
+    }
+  ],
+  "repairs": [
+    {
+      "id": "treemap-label-class-color",
+      "classification": "product_fix",
+      "source": "Treemap renderer styles.labelStyles.replace(color:,fill:) appended to label/value defaults; original actual Alpha and10 computed fill rgb(0,255,0).",
+      "change": "Use existing pure _support.label_style to project current_color into text_color only for the label subtree. Preserve node fill/stroke and original green trace/real-pixel assertion.",
+      "product": {
+        "path": "src/py_mermaid/diagrams/hierarchy/treemap.py",
+        "sha256": "77faf6943c498a36d05bfc82ce1955413fd845d3b1b695dc195c146ba4f424bc",
+        "bytes": 9865
+      },
+      "originalEvidence": {
+        "path": "test-runs/VCHART-P3-batch-20261107T034344Z-94957548/artifacts/mermaid-oracle/VC-M-treemap-class.json",
+        "sha256": "41b0af1f9b72c8ab8f1f22f51db5b96c7801c5e482e06cca38a5fd2c4277e330",
+        "bytes": 36753
+      },
+      "initialFailure": {
+        "path": "test-runs/VCHART-P3-batch-20261107T034344Z-94957548/commands/010-bridge-contracts/stderr.log",
+        "sha256": "c62145e1e60be3627749182f479080aacae7ff5aa37cb76dd137642144afa16b",
+        "bytes": 24073
+      }
+    },
+    {
+      "id": "quadrant-coordinate-exclusive-lexer",
+      "classification": "product_fix_and_source_backed_fixture_correction",
+      "source": "quadrant.jison point_start/point_y patterns (1)|(0(.\\d+)?), unescaped dot; exclusive point_x then requires comma. The x token greedily consumes 0,0. Upper bound1.0 instead leaves .0. Not reserved Point, duplicate-label or newline behavior.",
+      "change": "Validate raw coordinate state lexemes before numeric range checks, preserving actual source rejection and UTF16 error mapping. JavaScript ASCII digit semantics preserved. Retain original invalid case ID/raw as negative; add one legal repeated-label source fixture and two independent lexical source-negative controls; add direct valid spaced-zero semantic guard.",
+      "product": {
+        "path": "src/py_mermaid/diagrams/charts/quadrant.py",
+        "sha256": "cda7a9ca004adca68bd3e2729cd678f52066f26e2ef3663ddf1f0712d41d802c",
+        "bytes": 9682
+      },
+      "initialOriginalError": {
+        "path": "test-runs/VCHART-P3-batch-20261107T034344Z-94957548/artifacts/mermaid-oracle/VC-M-quadrant-repeated-points.error.json",
+        "sha256": "a18674cdd0d30ae9695fa6648e87022d3071816efdfb87a6e00e09c89af5361d",
+        "bytes": 1880
+      },
+      "oldInputSnapshot": {
+        "path": "test-runs/VCHART-P3-batch-20261107T034344Z-94957548/artifacts/mermaid-oracle.fixtures.json",
+        "sha256": "aa963cb677da1fdb58fa5acca397b5ffe376a4633c8ede04c4bfe57c1e38be08",
+        "bytes": 44307
+      },
+      "diagnosticRun": {
+        "path": "test-runs/VCHART-QUADRANT-diagnostic-20261107T034921Z-6b9834bf/run.json",
+        "sha256": "ccec86fa92222d8d8694c2c36db6f1287e6532a80487bb7d89a2c172fdfdf2cc",
+        "bytes": 32007
+      },
+      "diagnosticSummary": {
+        "path": "test-runs/VCHART-QUADRANT-diagnostic-20261107T034921Z-6b9834bf/artifacts/oracle/vchart-mermaid-source-summary.json",
+        "sha256": "6ecf144aa610b0729b9f2adec99a53e7ce24e5b9df0c121a6971b78252f1903f",
+        "bytes": 487870
+      },
+      "diagnosticResults": {
+        "tight-zero": "source lexical error",
+        "repeated-decimal": "source captured",
+        "repeated-spaced": "source captured",
+        "one-decimal": "source lexical error"
+      },
+      "newFixtureIds": [
+        "VC-M-quadrant-repeated-valid",
+        "VC-M-quadrant-tight-zero-lexical",
+        "VC-M-quadrant-one-decimal-lexical"
+      ]
+    }
+  ],
+  "postRepairExecution": "Only compile/discovery (94 methods) performed; no native parse/build/layout/render/test behavior rerun after repairs. Root coordinates new related batch. Supplier layouts.py unchanged; no supplier production edits in this repair.",
+  "visualRepairs": [
+    {
+      "phase": "P4-manual-visual-repair",
+      "previousAssertionReceiptSha256": "475f89ae1c95bc707ec79ca020eb11185aad97530b163509489797b51cdcac94",
+      "reviewReceipt": "test-runs/vchart-visual-review-20261107T043500Z.json",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/pie/pieRenderer.ts",
+          "symbol": "draw titleText",
+          "line": 143,
+          "sha256": "12cbb88cead5b79b5a3aa4946d78da32e711feb8687bfd54ca119f98b2dd7df4"
+        },
+        {
+          "path": "packages/mermaid/src/diagrams/quadrant-chart/quadrantRenderer.ts",
+          "symbol": "draw data points",
+          "line": 104,
+          "sha256": "ec3355a031c5b66c3df218ad44432581866cc1cbe2b502f01019dfbafc7f0639"
+        },
+        {
+          "path": "packages/mermaid/src/diagrams/xychart/chartBuilder/components/plot/barPlot.ts",
+          "symbol": "BarPlot.getDrawableElement",
+          "line": 15,
+          "sha256": "17569f3371c3629c92e498351f041921699a6f32562a7805da280503853b0526"
+        },
+        {
+          "path": "packages/mermaid/src/diagrams/treemap/renderer.ts",
+          "symbol": "draw ordinal scales/sections/leaves",
+          "line": 80,
+          "sha256": "f70a67c00490c1f9b34b721f37503f21e41c9ad6151a9459e04dbe0a5f8a432b"
+        }
+      ],
+      "changes": [
+        "Pie source title baseline converted to Painter top using actual ascent.",
+        "Quadrant invalid NaN CSS fill inherits root textColor, matching actual original SVG computed appearance; original theme string unchanged.",
+        "XY bars use source min(2*axis.outer,tickDistance)*.95 width around actual VChart positions; no supplier algorithm/file change.",
+        "Treemap source ordinal section palette, immediate-parent leaf color, .3 leaf fill alpha/.4 section stroke alpha, centered leaf label and independent smaller value. Root-level transparent parent branch intentionally retained, including original white invisible default text anomaly."
+      ],
+      "regressions": [
+        "test_pie_svg_title_baseline_keeps_glyphs_above_outer_arc",
+        "test_quadrant_invalid_source_color_inherits_visible_svg_fill",
+        "test_xy_numeric_bars_remain_inside_axis_plot",
+        "test_treemap_leaf_source_opacity_has_real_translucent_ink"
+      ],
+      "testMethods": 98,
+      "mechanicalEvidence": "test-runs/VCHART-VISUAL-REPAIR-record-20261107T043605Z-24342c42/run.json",
+      "artifacts": [
+        {
+          "path": "src/py_mermaid/diagrams/charts/pie.py",
+          "sha256": "f94f8c04d1b501408ce2c547a13699f23374d79c677558cf410a373d192b5305",
+          "bytes": 4769
+        },
+        {
+          "path": "src/py_mermaid/diagrams/charts/quadrant.py",
+          "sha256": "b3d3a071ea2a17353ad7ee4bb7dfebc848d8bcade9e4295a9862d9f8f1ec5a0a",
+          "bytes": 10147
+        },
+        {
+          "path": "src/py_mermaid/diagrams/charts/xychart.py",
+          "sha256": "7274d6d3a52eceac409982ddcd1709afef3e72e9a477f569a946f816726c1974",
+          "bytes": 12316
+        },
+        {
+          "path": "src/py_mermaid/diagrams/hierarchy/treemap.py",
+          "sha256": "193cc747d2bb1bb3e320b9f224f4cfce4368bcc281addbb07fea71a45e642f8f",
+          "bytes": 11817
+        },
+        {
+          "path": "tests/vchart_integration/test_mermaid_charts.py",
+          "sha256": "b761b737a515f68cc535bd96d107dc37905495a1dac352bc1944b684d7fb5734",
+          "bytes": 16279
+        }
+      ],
+      "status": "code_complete_unverified",
+      "remaining": [
+        "Sankey stroke bounds inflation is shared Painter._record_path owner root; A has notified exact 5*stroke margin root cause.",
+        "Root will run joint related/final P4; no behavior executed by A during this repair."
+      ]
+    }
+  ],
+  "followupRepairs": [
+    {
+      "initialFailedRun": "test-runs/VCHART-VISUAL-REPAIR-record-20261107T043919Z-8882b2ed",
+      "rootCause": "A new premeasurement call omitted label style, freezing default #333 runs before p.text; passing the style while measuring preserves source class color.",
+      "product": "src/py_mermaid/diagrams/hierarchy/treemap.py",
+      "sha256": "74928e7eb4c172234d1c16fc44801bf45f77f405d49a63fee89d94aeb1fd4921",
+      "unchangedExpectation": "test_treemap_class_style_reaches_actual_leaf asserts #00ff00 plus actual green PNG ink.",
+      "evidence": "test-runs/VCHART-VISUAL-REPAIR-record-20261107T044026Z-e60a4eab/run.json",
+      "actualExit": 0,
+      "remaining": "XY total width 710 requires shared real stroke bounds; bar-inside-background assertions already passed. Test not relaxed."
+    }
+  ],
+  "readableHostRepairs": [
+    {
+      "authorization": "Root after closed FAILED P4 permits readable default text only for missing parent fill; explicit styles preserve precedence.",
+      "baselineFailedRun": "test-runs/VCHART-P4-batch-20261107T044508Z-506fd409",
+      "sourceDefects": [
+        {
+          "case": "VC-M-treemap-basic",
+          "invisibleSourceText": [
+            "Alpha",
+            "1"
+          ]
+        },
+        {
+          "case": "VC-M-treemap-class",
+          "invisibleSourceText": [
+            "Beta",
+            "20"
+          ]
+        },
+        {
+          "case": "VC-M-treemap-numbers",
+          "invisibleSourceText": [
+            "Revenue"
+          ]
+        }
+      ],
+      "sourceFacts": "Root palette slot is transparent; source leaf default label white on white, display:block opacity1. Original raw PNG genuinely has no glyph ink. Preserve source transparent fill and .3 opacity; native host substitutes theme.textColor only for absent-parent-fill default; explicit class/inline color remains authoritative.",
+      "visualBaselineReceipt": "test-runs/vchart-visual-review-20261107T045200Z.json",
+      "product": "src/py_mermaid/diagrams/hierarchy/treemap.py",
+      "sha256": "401ee72e2ac515822d058ccf5d93e3221422de3fdabbc7e39e235017083422be",
+      "test": "MermaidVChartRendering.test_treemap_missing_parent_fill_uses_readable_default_label_ink",
+      "testSha256": "322e55a27e8e48298ed7e0e0cc651219a39b36d03c087abce1bbceea73a76f40",
+      "evidence": [
+        {
+          "run": "test-runs/VCHART-VISUAL-REPAIR-record-20261107T044954Z-280461b0/run.json",
+          "methods": 99,
+          "exit": 0
+        },
+        {
+          "run": "test-runs/VCHART-VISUAL-REPAIR-record-20261107T045008Z-922c61b5/run.json",
+          "methods": 1,
+          "exit": 0
+        }
+      ],
+      "status": "related_regression_passed_waiting_joint_P4",
+      "fixturesChanged": false,
+      "sharedFilesChanged": false
+    }
+  ]
+}

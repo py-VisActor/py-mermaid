@@ -1,0 +1,189 @@
+{
+  "schema": "py-mermaid-change/v1",
+  "task": "non-vchart-single-closure-batch",
+  "status": "LOCAL_STATIC_FINAL_VERIFIED_FORMAL_RELEASE_PENDING",
+  "authorization": "All remaining non-VChart capabilities in one batch; previous conditional stable-publication authorization persists.",
+  "baselineSourceTreeSha256": "fe2c293f8ed4ea76e04d34669c8739c27a32063447026e144928bfd6b4ac0bb2",
+  "acquisitionRun": "test-runs/CLOSURE-P0-acquisition-20261107T075501Z-2f1df0de",
+  "priorDirtyTreePreserved": true,
+  "plan": "docs/CLOSURE_BATCH_PLAN.md",
+  "scope": "references/closure-batch-scope.json",
+  "runtimeDependenciesAdded": 0,
+  "activeOwners": {
+    "root": [
+      "related validation and final-candidate orchestration"
+    ],
+    "A": [],
+    "B": [],
+    "C": []
+  },
+  "priorStatePreserved": {
+    "schema": "py-mermaid-change/v1",
+    "task": "non-vchart-single-closure-batch",
+    "status": "P1_SOURCE_IN_PROGRESS",
+    "authorization": "All remaining non-VChart capabilities in one batch; previous conditional stable-publication authorization persists.",
+    "baselineSourceTreeSha256": "fe2c293f8ed4ea76e04d34669c8739c27a32063447026e144928bfd6b4ac0bb2",
+    "acquisitionRun": "test-runs/CLOSURE-P0-acquisition-20261107T075501Z-2f1df0de",
+    "priorDirtyTreePreserved": true,
+    "plan": "docs/CLOSURE_BATCH_PLAN.md",
+    "scope": "references/closure-batch-scope.json",
+    "runtimeDependenciesAdded": 0,
+    "activeOwners": {
+      "A": [
+        "cynefin",
+        "architecture",
+        "ABNF",
+        "Zen comments",
+        "title/metadata",
+        "Event strictness",
+        "C4 sprite"
+      ],
+      "B": [
+        "date/civil/D3 formatting",
+        "Agent collapse",
+        "Git labels",
+        "ELK unknown boundaries"
+      ],
+      "C": [
+        "Sequence static paint"
+      ],
+      "root": [
+        "shared collapse hook",
+        "package/version/CI",
+        "validation/report integration"
+      ]
+    }
+  },
+  "eventManualBlocker": {
+    "candidateRun": "test-runs/CLOSURE-P4-batch-20261107T101239Z-1852a0e5",
+    "sourceTreeSha256": "cbef7716bb31c3187587f54bd34eac607c8c6823d84a2ace6ce85a19365ee683",
+    "machineStatus": "SUCCESS",
+    "sourceUnchanged": true,
+    "testToolsUnchanged": true,
+    "manualStatus": "NEEDS_REPAIR",
+    "accepted": false,
+    "detail": "Place is covered by Orders in the same lane despite all automated checks passing. Source literal SVG markup measurement was incorrectly replaced by native rich HTML visible text measurement.",
+    "sourceOnlyProposals": [
+      "test-runs/CLOSURE-EVENT-B-preparation-20261107T102803Z-4af848b7",
+      "test-runs/CLOSURE-EVENT-B-wrap-contract-preparation-20261107T102942Z-a6a63abf"
+    ],
+    "repairApplied": true,
+    "sourceRules": "Literal markup measurement, two-font rounding/selection, source wrapLabel/breakString and exact code literal; calculateX/lane.r/maxR unchanged.",
+    "independentVerificationApplied": true,
+    "relatedRun": "test-runs/CLOSURE-EVENT-P3-related-20261107T103759Z-d4488fc8",
+    "relatedStatus": "STARTED_NOT_BEHAVIOR_ACCEPTED"
+  },
+  "currentPendingCounts": {
+    "newUnitMethods": 132,
+    "baseClosureMethods": 120,
+    "eventMethods": 12,
+    "allFixtures": 132,
+    "renderFixtures": 119,
+    "parserOnlyFixtures": 13,
+    "closureExports": 255,
+    "exportRepresentatives": 17,
+    "profiles": 3,
+    "formats": 5
+  },
+  "releaseGates": {
+    "formalPublicationPerformed": false,
+    "publisher": "USER_CONFIRMED_ADDED",
+    "authorization": "Existing conditional publication authorization; do not ask again after all gates pass.",
+    "next": "Commit reviewed full tree, build clean exact files once, validate both artifacts on Windows/Linux with Linux real TZ, OIDC upload, actual PyPI SHA/installed verification and stable promotion.",
+    "repeatDevelopmentInstallInFinalP4": false,
+    "windowsRealIanaDST": "NOT_VERIFIED",
+    "linuxRealTZGate": "PENDING",
+    "dualPlatformArtifacts": "PENDING",
+    "formalBuildOnce": true,
+    "sameWorkflowValidateBeforeOIDC": true,
+    "actualPyPITwoArtifactHashAndInstallReadback": "PENDING",
+    "additionalAuditAfterFinalFreeze": false
+  },
+  "historicalCountsNotRewritten": true,
+  "documentationTransitions": [
+    {
+      "status": "P3_EVENT_REPAIR_APPLIED_RELATED_VALIDATION_PENDING",
+      "currentPendingCounts": {
+        "newUnitMethods": 127,
+        "allFixtures": 130,
+        "renderFixtures": 117,
+        "parserOnlyFixtures": 13,
+        "closureExports": 225,
+        "exportRepresentatives": 15,
+        "profiles": 3,
+        "formats": 5
+      },
+      "releaseGates": {
+        "formalPublicationPerformed": false,
+        "publisher": "USER_CONFIRMED_ADDED",
+        "authorization": "Existing conditional publication authorization; do not ask again after all gates pass.",
+        "next": [
+          "Finish related verification and batch any failures",
+          "Freeze final source and execute all existing final P4 gates without repeating development installation",
+          "Build clean exact wheel and sdist once",
+          "Same workflow Windows/Linux independently install both exact artifacts and validate Linux actual real-TZ",
+          "OIDC upload job needs validate; upload the same verified artifact bytes without rebuilding",
+          "Read actual PyPI wheel and sdist SHA and independently install them outside repository"
+        ],
+        "repeatDevelopmentInstallInFinalP4": false,
+        "windowsRealIanaDST": "NOT_VERIFIED",
+        "linuxRealTZGate": "PENDING",
+        "dualPlatformArtifacts": "PENDING",
+        "formalBuildOnce": true,
+        "sameWorkflowValidateBeforeOIDC": true,
+        "actualPyPITwoArtifactHashAndInstallReadback": "PENDING",
+        "additionalAuditAfterFinalFreeze": false
+      }
+    }
+  ],
+  "eventHtmlConsumerRepair": {
+    "secondP4Run": "test-runs/CLOSURE-P4-batch-20261107T103937Z-ea2939c1",
+    "sourceTreeSha256": "619a71d5a65f0907785528cf5cf5df48c0fc34d1e657c9afb99c64f344e32d57",
+    "machineStatus": "SUCCESS",
+    "sourceUnchanged": true,
+    "testToolsUnchanged": true,
+    "historical866AndVchartDsl": "PASS",
+    "manualStatus": "REJECTED_MULTILINE_DATA_CONSUMER",
+    "accepted": false,
+    "originalIndependentEvidence": [
+      "test-runs/CLOSURE-EVENT-MULTILINE-audit-20261107T104301Z-575750c6",
+      "test-runs/CLOSURE-EVENT-SVG-whitespace-source-probe-20261107T104410Z-281b126b",
+      "test-runs/CLOSURE-EVENT-HTML-linebox-source-probe-20261107T105708Z-a25cc0ce",
+      "test-runs/CLOSURE-EVENT-C-ENTITY-source-batch-20261107T105251Z-6b8d6c97"
+    ],
+    "sourceProposal": "test-runs/CLOSURE-EVENT-B-transport-order-preparation-20261107T105408Z-6e83f527",
+    "rootProviderProposal": "test-runs/CLOSURE-EVENT-HTML-normal-line-box-proposal-20261107T105615Z-254d8524",
+    "sourceAndIndependentTestsApplied": true,
+    "relatedRun": "test-runs/CLOSURE-EVENT-HTML-P3-related-20261107T110330Z-53265a55",
+    "relatedStatus": "SUCCESS_ALL132_AND_RETAINED_GROUPS_AND_SOURCE5_X3",
+    "sourceContracts": [
+      "SVG XML ASCII collapse and edge trim only",
+      "Preserve NBSP/EM spaces",
+      "normal HTML line boxes and explicit br, no extra final normal row",
+      "left/full-width code block",
+      "literal backslash-n and $$ stay literal",
+      "encode raw data before source substring slicing; measure protected content; final decode followed by one HTML parse"
+    ],
+    "oldFalseAssumptionsAndFailuresPreserved": true,
+    "finalP4": "test-runs/CLOSURE-P4-batch-20261107T110557Z-684a5d28",
+    "finalStatus": "SOURCE_NATIVE_VISUAL_VERIFIED"
+  },
+  "finalP4": "test-runs/CLOSURE-P4-batch-20261107T110557Z-684a5d28",
+  "finalSourceTreeSha256": "fca211bbfc3b75db6a2553b0c01f24d37753dbb87eab3f21c4f3ff8f289db14a",
+  "localAcceptance": "references/closure-verification-summary.json",
+  "reportUrl": "http://127.0.0.1:8765/CLOSURE-P5-delivery-20261107T113304Z-8513c1b4/index.html",
+  "reportOnlyRepairs": {
+    "sourceUnchanged": true,
+    "oldFailuresPreserved": [
+      "test-runs/CLOSURE-P5-delivery-20261107T112729Z-19705303",
+      "test-runs/CLOSURE-P5-delivery-20261107T112928Z-2dec754f",
+      "test-runs/CLOSURE-P5-delivery-20261107T113023Z-cb029cb3"
+    ],
+    "fixed": [
+      "exact UTF8 source attachment bytes",
+      "mobile long identity wrapping",
+      "wait actual image load then mandatory decode"
+    ],
+    "finalDelivery": "test-runs/CLOSURE-P5-delivery-20261107T113304Z-8513c1b4"
+  }
+}

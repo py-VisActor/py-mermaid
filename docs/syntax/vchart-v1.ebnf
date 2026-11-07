@@ -1,0 +1,50 @@
+(* py-mermaid VChart DSL v1 -- implemented syntax contract.
+   Optional BOM and whitespace may precede the header; a comment may not.
+   NL is retained between statements/rows and skipped inside JSON values.
+   Whitespace and %% comments are skipped outside strings; %%{ directives
+   are diagnosed separately. Exact lexical/semantic rules are in the RFC. *)
+
+document       = "vchart", WS, identifier, ( NL | EOF_LOOKAHEAD ), { root_item } ;
+root_item      = property_item | size_stmt | let_stmt | axis_stmt
+               | series_stmt | resource_stmt | NL ;
+property_item  = assignment | property_block ;
+assignment     = path, "=", value, end ;
+property_block = path, "{", { property_item | NL }, "}" ;
+size_stmt      = "size", WS, number, WS, number, end ;
+let_stmt       = "let", WS, identifier, "=", value, end ;
+axis_stmt      = "axis", WS, identifier, "{", { property_item | NL }, "}" ;
+series_stmt    = "series", WS, identifier, "{", { property_item | NL }, "}" ;
+resource_stmt  = "resource", WS, ( "map" | "svg" ), WS, string, "=", value, end ;
+
+path           = ( identifier | string ),
+                 { ".", identifier | "[", ( unsigned_integer | string ), "]" } ;
+value          = string | number | "true" | "false" | "null"
+               | object | array | table | reference ;
+reference      = "$", identifier ;
+object         = "{", [ member, { ",", member }, [ "," ] ], "}" ;
+member         = ( identifier | string ), ":", value ;
+array          = "[", [ value, { ",", value }, [ "," ] ], "]" ;
+table          = "table", "(", column, { ",", column }, ")", "{",
+                 { NL | array, row_end }, "}" ;
+column         = identifier | string ;
+row_end        = ";" | NL | BLOCK_CLOSE_LOOKAHEAD ;
+end            = ";" | NL | BLOCK_CLOSE_LOOKAHEAD | EOF_LOOKAHEAD ;
+
+identifier     = IDENT_ASCII ;  (* [A-Za-z_][A-Za-z0-9_]*, case-sensitive *)
+unsigned_integer = UINT_JSON ; (* 0 or [1-9][0-9]* *)
+number         = NUMBER_JSON ; (* finite JSON number; preserve int/float *)
+string         = STRING_JSON ; (* double-quoted JSON string, same escapes *)
+WS             = HORIZONTAL_SPACE ;
+NL             = NEWLINE ;
+
+(* Additional semantic rules:
+   - The header owns spec.type. No body write to root type.
+   - Keywords only have special meaning in the stated root-item position.
+   - Declared names cannot be rebound or forward-referenced.
+   - A table row has exactly the number of unique header columns.
+   - Duplicate keys/writes and ancestor/descendant atomic writes are errors.
+   - Indexed arrays are contiguous. Literal/indexed/append construction modes
+     cannot be mixed for one array. No implicit nulls fill holes.
+   - axis/series append to axes/series; orient/type is owned by that statement.
+   - No expression evaluation, filesystem lookup, network loading or imports.
+   - A final table row may be followed directly by its closing brace. *)

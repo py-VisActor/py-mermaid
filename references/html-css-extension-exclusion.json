@@ -1,0 +1,20 @@
+{
+  "schema": "py-mermaid-user-scope-decision/v1",
+  "date": "2026-11-06",
+  "authority": "User: 不支持 静态 HTML/CSS 扩展，进行 分支覆盖核实",
+  "id": "advanced-static-html-css-extensions",
+  "status": "excluded_by_user",
+  "documentation": "docs/BRANCH_COVERAGE_VERIFICATION.md",
+  "excluded": [
+    "general CSS calc/min/max/clamp expression evaluation",
+    "general non-solid CSS backgrounds",
+    "elliptical CSS border radii",
+    "contextual/system/relative color evaluation",
+    "CSS Color 5 and general browser HTML/CSS host expansion"
+  ],
+  "preserved": "Already accepted static labels, Markdown, basic styles, existing Color4/control behavior, math and offline images are retained. No product code removed by this documentation decision.",
+  "notPendingMigration": true,
+  "notCountedAsVerified": true,
+  "installationValidation": "deferred_by_user",
+  "productCodeChanged": false
+}

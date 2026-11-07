@@ -1,0 +1,51 @@
+{
+  "schema": "py-mermaid-event-source-assertions/v1",
+  "status": "FINAL_SOURCE_NATIVE_ALL_PROFILES_VERIFIED",
+  "sourceCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "sourcePaths": [
+    "packages/mermaid/src/diagrams/eventmodeling/db.ts",
+    "packages/mermaid/src/utils.ts"
+  ],
+  "candidateSourceTreeSha256": "fca211bbfc3b75db6a2553b0c01f24d37753dbb87eab3f21c4f3ff8f289db14a",
+  "fixtures": {
+    "path": "tests/closure/cases-event.json",
+    "sha256": "244bad541334d5dc64f6aaa43feb6d61a9ba1f2fdf41f7c24ecb8a18950ff98d",
+    "bytes": 5820
+  },
+  "sourceObservations": {
+    "path": "tests/closure/event-source-expectations.json",
+    "sha256": "4a3738cd9276634ce22f2362908acf9c3fbc56315c72e267177e89a8c7286917",
+    "bytes": 10026
+  },
+  "sourceAcquisition": "test-runs/CLOSURE-EVENT-C-source-preparation-batch-20261107T102910Z-ac5ac82b",
+  "sourceProducerStatus": "exit0; enclosing ERROR retained for initial HTML-as-XML projection error, no raw source modification",
+  "related": "test-runs/CLOSURE-EVENT-HTML-P3-related-20261107T110330Z-53265a55",
+  "retainedBInvocationRepair": "test-runs/CLOSURE-EVENT-P3-retained-B-invocation-repair-20261107T103844Z-4dd678d2",
+  "methods": 12,
+  "actualSourceCases": 5,
+  "scope": [
+    "literal markup and source exact data code style",
+    "source two-family dimensions/rounding/selection",
+    "source wrap thresholds and hyphenation",
+    "actual CPU cards and labels; old HTML dimension mutation rejected",
+    "source-observed same-lane disjoint relationships checked per backend",
+    "SVG ASCII XML whitespace collapses and trims; NBSP preserved",
+    "direct source HTML bypasses flow newline/math/hash rules; fixed containing-block width and normal linebox",
+    "source global entity encode before data substring, protected dimensions and final one HTML decode",
+    "source-contained caption/body relationships and code left inset checked against actual trace and pixels"
+  ],
+  "limits": [
+    "Native public font metrics replace SVG getBBox; ordinary font differences remain explicit.",
+    "No universal same-lane nonoverlap guarantee beyond source-observed fixture relationships.",
+    "Original data substring omission is retained, not mistaken for missing migration."
+  ],
+  "consumerContract": "docs/F01_4_INTERFACES.md",
+  "sourceAdditionalReceipts": [
+    "test-runs/CLOSURE-EVENT-SVG-whitespace-source-probe-20261107T104410Z-281b126b",
+    "test-runs/CLOSURE-EVENT-HTML-linebox-source-probe-20261107T105708Z-a25cc0ce",
+    "test-runs/CLOSURE-EVENT-C-RAWHTML-source-batch-20261107T104857Z-dd9eb14a",
+    "test-runs/CLOSURE-EVENT-C-ENTITY-source-batch-20261107T105251Z-6b8d6c97"
+  ],
+  "finalP4": "test-runs/CLOSURE-P4-batch-20261107T110557Z-684a5d28",
+  "localAcceptance": "references/closure-verification-summary.json"
+}

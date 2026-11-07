@@ -1,0 +1,56 @@
+{
+  "schema": "py-mermaid-change-receipt/v1",
+  "task": "G01-B",
+  "status": "audit_and_test_design_complete_unexecuted",
+  "baselineSourceSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
+  "audit": "references/gap-audit-B.json",
+  "entryCount": 10,
+  "featureGroupCount": 48,
+  "classifications": {
+    "implemented_with_evidence": 28,
+    "excluded": 10,
+    "confirmed_gap": 5,
+    "upstream_defect": 3,
+    "implemented_unverified": 2
+  },
+  "confirmedGapIds": [
+    "B-gap-quarter",
+    "B-gap-branch-lines",
+    "B-gap-own-html",
+    "B-gap-utf16-wrap",
+    "B-gap-seed-type"
+  ],
+  "productModified": false,
+  "newBehaviorExecuted": false,
+  "limits": [
+    "Every Dayjs custom/advanced-format token combination and every D3 tick/strftime directive for CivilDate far years; Q is confirmed, no blanket claim for all unsupported-looking tokens.",
+    "Git multi-branch collision/reroute cross-products, dense tags and all theme/rotation/direction combinations lack exhaustive independent branch mapping.",
+    "Swimlane private routing/postprocess branch audit is C-owned; this B review maps pipeline consumers, not all port/feedback combinations.",
+    "Agentflow nested collapsed containers/ancestral edges and opaque metadata cross-products share F014; individual rare branch correspondence remains unexpanded.",
+    "Wardley DB-only host mutation APIs (e.g. annotation coordinate arrays) require separate public API scope decision, not a grammar omission.",
+    "All source styles/default consumers have static implementations, but selector/config/theme cross-products are not individually experimentally verified in this audit."
+  ],
+  "next": "Unified first behavior execution on unchanged a6 baseline by root; no product repairs before failure evidence is preserved.",
+  "newTests": {
+    "path": "tests/bulk/b/test_gap_audit.py",
+    "methods": 12,
+    "fixturePath": "tests/bulk/cases-gap-B.json",
+    "fixtures": 8,
+    "execution": "designed_not_executed",
+    "nonfinitePolicy": "NaN and infinities only occur in Python methods, never JSON."
+  },
+  "testSha256": "974660f02bb6e072d5aa5e03b0c970619fc3a389e4a31fbdf1d01dc9bd6f8d93",
+  "fixtureSha256": "269772787f63f102326a412689176f12f2b902a3a5e24f7a3aedb3c30f4af329",
+  "auditSha256": "969bb8b05b313073bb6283ea08dadc15a97f208a9d76084ba59150fe2d9db346",
+  "mechanical": {
+    "runId": "G01-record-20261106T080203Z-2cfc8256",
+    "status": "SUCCESS",
+    "checks": [
+      "Python source compile",
+      "JSON schema/portable case ID uniqueness",
+      "unittest discovery: 12 methods"
+    ],
+    "behaviorExecuted": false
+  },
+  "productSourceUnchanged": true
+}

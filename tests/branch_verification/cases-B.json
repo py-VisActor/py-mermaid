@@ -1,0 +1,2264 @@
+{
+  "schema": "py-mermaid-bulk-cases/v1",
+  "group": "B",
+  "cases": [
+    {
+      "id": "BV-B-DATE-LOCALIZED",
+      "kind": "gantt",
+      "source": "gantt\ndateFormat L\naxisFormat %Y-%m-%d\ntodayMarker off\nLocalized :a, 01/02/2024, 2d\n",
+      "config": {
+        "gantt": {
+          "width": 1200
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/gantt/ganttRenderer.js",
+        "symbol": "function makeGrid",
+        "line": 649,
+        "sha256": "bf1c7231c8666070124eed4f6078b1d62ab4dea0973c44cc5d6264469961e488",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "date-format",
+        "time-axis"
+      ],
+      "expectedText": [
+        "Localized"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "BV-B-DATE-WEEKDAY",
+      "kind": "gantt",
+      "source": "gantt\ndateFormat YYYY-MM-DD dddd\naxisFormat %Y-%m-%d\ntodayMarker off\nWeekday :a, 2024-01-01 Monday, 2d\n",
+      "config": {
+        "gantt": {
+          "width": 1200
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/gantt/ganttRenderer.js",
+        "symbol": "function makeGrid",
+        "line": 649,
+        "sha256": "bf1c7231c8666070124eed4f6078b1d62ab4dea0973c44cc5d6264469961e488",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "date-format",
+        "time-axis"
+      ],
+      "expectedText": [
+        "Weekday"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "BV-B-DATE-ISOWEEK",
+      "kind": "gantt",
+      "source": "gantt\ndateFormat YYYY-MM-DD [W]WW\naxisFormat %G-W%V\ntodayMarker off\nISOWeek :a, 2021-01-01 W53, 2d\n",
+      "config": {
+        "gantt": {
+          "width": 1200
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/gantt/ganttRenderer.js",
+        "symbol": "function makeGrid",
+        "line": 649,
+        "sha256": "bf1c7231c8666070124eed4f6078b1d62ab4dea0973c44cc5d6264469961e488",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "date-format",
+        "time-axis"
+      ],
+      "expectedText": [
+        "ISOWeek"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "BV-B-AXIS-LOCALE",
+      "kind": "gantt",
+      "source": "gantt\ndateFormat YYYY-MM-DD\naxisFormat %c | %x | %X\ntodayMarker off\nLocaleAxis :a, 2021-01-01, 2d\n",
+      "config": {
+        "gantt": {
+          "width": 1200
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/gantt/ganttRenderer.js",
+        "symbol": "function makeGrid",
+        "line": 649,
+        "sha256": "bf1c7231c8666070124eed4f6078b1d62ab4dea0973c44cc5d6264469961e488",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "date-format",
+        "time-axis"
+      ],
+      "expectedText": [
+        "LocaleAxis"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "BV-B-AXIS-ESCAPE",
+      "kind": "gantt",
+      "source": "gantt\ndateFormat YYYY-MM-DD\naxisFormat %%Q %%L %%s\ntodayMarker off\nLiteralPercent :a, 2024-01-01, 2d\n",
+      "config": {
+        "gantt": {
+          "width": 1200
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/gantt/ganttRenderer.js",
+        "symbol": "function makeGrid",
+        "line": 649,
+        "sha256": "bf1c7231c8666070124eed4f6078b1d62ab4dea0973c44cc5d6264469961e488",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "date-format",
+        "time-axis"
+      ],
+      "expectedText": [
+        "LiteralPercent"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "BV-B-TICKS-MONDAY",
+      "kind": "gantt",
+      "source": "gantt\ndateFormat YYYY-MM-DD\naxisFormat %Y-%m-%d\ntickInterval 2week\nweekday monday\ntodayMarker off\nMondayPhase :a, 2024-01-01, 31d\n",
+      "config": {
+        "gantt": {
+          "width": 1200
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/gantt/ganttRenderer.js",
+        "symbol": "function makeGrid",
+        "line": 649,
+        "sha256": "bf1c7231c8666070124eed4f6078b1d62ab4dea0973c44cc5d6264469961e488",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "date-format",
+        "time-axis"
+      ],
+      "expectedText": [
+        "MondayPhase"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "BV-B-TICKS-CAP",
+      "kind": "gantt",
+      "source": "gantt\ndateFormat YYYY-MM-DD\naxisFormat %Y-%m-%d\ntickInterval 1millisecond\ntodayMarker off\nBoundedTicks :a, 2024-01-01, 2d\n",
+      "config": {
+        "gantt": {
+          "width": 1200
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/gantt/ganttRenderer.js",
+        "symbol": "function makeGrid",
+        "line": 649,
+        "sha256": "bf1c7231c8666070124eed4f6078b1d62ab4dea0973c44cc5d6264469961e488",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "date-format",
+        "time-axis"
+      ],
+      "expectedText": [
+        "BoundedTicks"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "BV-B-AXIS-FAR",
+      "kind": "gantt",
+      "source": "gantt\ndateFormat YYYY-MM-DD\naxisFormat %Y | %G-W%V\ntodayMarker off\nFarYear :a, +010000-01-01, 2d\n",
+      "config": {
+        "gantt": {
+          "width": 1200
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/gantt/ganttRenderer.js",
+        "symbol": "function makeGrid",
+        "line": 649,
+        "sha256": "bf1c7231c8666070124eed4f6078b1d62ab4dea0973c44cc5d6264469961e488",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "date-format",
+        "time-axis"
+      ],
+      "expectedText": [
+        "FarYear"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "BV-B-GIT-LR-FLAT",
+      "kind": "gitGraph",
+      "source": "gitGraph LR:\ncommit id:\"A\" tag:\"first\" tag:\"long-release\" tag:\"last\"\nbranch dev\ncommit id:\"B\"\ncommit id:\"C\"\ncheckout main\ncommit id:\"D\"\ncherry-pick id:\"B\"\ncheckout dev\ncherry-pick id:\"A\"\ncheckout main\nmerge dev id:\"M\"\n",
+      "config": {
+        "gitGraph": {
+          "rotateCommitLabel": false,
+          "parallelCommits": false
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/git/gitGraphRenderer.ts",
+        "symbol": "const drawArrow",
+        "line": 653,
+        "sha256": "d90f6685b76b2f33bebd6e5b47912c076e77f3180c3e27d821ae06261f1aac81",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "dense-routing",
+        "cherry-pick",
+        "tag-stack",
+        "rotation",
+        "direction"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "M",
+        "main",
+        "dev",
+        "first",
+        "long-release",
+        "last"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "BV-B-GIT-LR-ROTATE",
+      "kind": "gitGraph",
+      "source": "gitGraph LR:\ncommit id:\"A\" tag:\"first\" tag:\"long-release\" tag:\"last\"\nbranch dev\ncommit id:\"B\"\ncommit id:\"C\"\ncheckout main\ncommit id:\"D\"\ncherry-pick id:\"B\"\ncheckout dev\ncherry-pick id:\"A\"\ncheckout main\nmerge dev id:\"M\"\n",
+      "config": {
+        "gitGraph": {
+          "rotateCommitLabel": true,
+          "parallelCommits": false
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/git/gitGraphRenderer.ts",
+        "symbol": "const drawArrow",
+        "line": 653,
+        "sha256": "d90f6685b76b2f33bebd6e5b47912c076e77f3180c3e27d821ae06261f1aac81",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "dense-routing",
+        "cherry-pick",
+        "tag-stack",
+        "rotation",
+        "direction"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "M",
+        "main",
+        "dev",
+        "first",
+        "long-release",
+        "last"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "BV-B-GIT-TB-FLAT",
+      "kind": "gitGraph",
+      "source": "gitGraph TB:\ncommit id:\"A\" tag:\"first\" tag:\"long-release\" tag:\"last\"\nbranch dev\ncommit id:\"B\"\ncommit id:\"C\"\ncheckout main\ncommit id:\"D\"\ncherry-pick id:\"B\"\ncheckout dev\ncherry-pick id:\"A\"\ncheckout main\nmerge dev id:\"M\"\n",
+      "config": {
+        "gitGraph": {
+          "rotateCommitLabel": false,
+          "parallelCommits": false
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/git/gitGraphRenderer.ts",
+        "symbol": "const drawArrow",
+        "line": 653,
+        "sha256": "d90f6685b76b2f33bebd6e5b47912c076e77f3180c3e27d821ae06261f1aac81",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "dense-routing",
+        "cherry-pick",
+        "tag-stack",
+        "rotation",
+        "direction"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "M",
+        "main",
+        "dev",
+        "first",
+        "long-release",
+        "last"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "BV-B-GIT-TB-ROTATE",
+      "kind": "gitGraph",
+      "source": "gitGraph TB:\ncommit id:\"A\" tag:\"first\" tag:\"long-release\" tag:\"last\"\nbranch dev\ncommit id:\"B\"\ncommit id:\"C\"\ncheckout main\ncommit id:\"D\"\ncherry-pick id:\"B\"\ncheckout dev\ncherry-pick id:\"A\"\ncheckout main\nmerge dev id:\"M\"\n",
+      "config": {
+        "gitGraph": {
+          "rotateCommitLabel": true,
+          "parallelCommits": false
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/git/gitGraphRenderer.ts",
+        "symbol": "const drawArrow",
+        "line": 653,
+        "sha256": "d90f6685b76b2f33bebd6e5b47912c076e77f3180c3e27d821ae06261f1aac81",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "dense-routing",
+        "cherry-pick",
+        "tag-stack",
+        "rotation",
+        "direction"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "M",
+        "main",
+        "dev",
+        "first",
+        "long-release",
+        "last"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "BV-B-GIT-BT-FLAT",
+      "kind": "gitGraph",
+      "source": "gitGraph BT:\ncommit id:\"A\" tag:\"first\" tag:\"long-release\" tag:\"last\"\nbranch dev\ncommit id:\"B\"\ncommit id:\"C\"\ncheckout main\ncommit id:\"D\"\ncherry-pick id:\"B\"\ncheckout dev\ncherry-pick id:\"A\"\ncheckout main\nmerge dev id:\"M\"\n",
+      "config": {
+        "gitGraph": {
+          "rotateCommitLabel": false,
+          "parallelCommits": true
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/git/gitGraphRenderer.ts",
+        "symbol": "const drawArrow",
+        "line": 653,
+        "sha256": "d90f6685b76b2f33bebd6e5b47912c076e77f3180c3e27d821ae06261f1aac81",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "dense-routing",
+        "cherry-pick",
+        "tag-stack",
+        "rotation",
+        "direction"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "M",
+        "main",
+        "dev",
+        "first",
+        "long-release",
+        "last"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "BV-B-GIT-BT-ROTATE",
+      "kind": "gitGraph",
+      "source": "gitGraph BT:\ncommit id:\"A\" tag:\"first\" tag:\"long-release\" tag:\"last\"\nbranch dev\ncommit id:\"B\"\ncommit id:\"C\"\ncheckout main\ncommit id:\"D\"\ncherry-pick id:\"B\"\ncheckout dev\ncherry-pick id:\"A\"\ncheckout main\nmerge dev id:\"M\"\n",
+      "config": {
+        "gitGraph": {
+          "rotateCommitLabel": true,
+          "parallelCommits": true
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/git/gitGraphRenderer.ts",
+        "symbol": "const drawArrow",
+        "line": 653,
+        "sha256": "d90f6685b76b2f33bebd6e5b47912c076e77f3180c3e27d821ae06261f1aac81",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "dense-routing",
+        "cherry-pick",
+        "tag-stack",
+        "rotation",
+        "direction"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "M",
+        "main",
+        "dev",
+        "first",
+        "long-release",
+        "last"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "BV-B-AGENT-GENUINE",
+      "kind": "agentflow",
+      "source": "agentflow-beta TB\nflow Outer\n A --> A\nend\nOuter@{view:collapsed}\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/agentflow/agentflowDb.ts",
+        "symbol": "public getData()",
+        "line": 1696,
+        "sha256": "aa74eb6cb3eb0821c1e3960eefbbc83afe167bc5dcf9380dc4acfa8fce82b1b6",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "compound-routing",
+        "collapsed-identity"
+      ],
+      "expectedText": [
+        "Outer"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "BV-B-AGENT-INTERNAL",
+      "kind": "agentflow",
+      "source": "agentflow-beta TB\nflow Outer\n A --> B\nend\nOuter@{view:collapsed}\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/agentflow/agentflowDb.ts",
+        "symbol": "public getData()",
+        "line": 1696,
+        "sha256": "aa74eb6cb3eb0821c1e3960eefbbc83afe167bc5dcf9380dc4acfa8fce82b1b6",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "compound-routing",
+        "collapsed-identity"
+      ],
+      "expectedText": [
+        "Outer"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "BV-B-AGENT-NESTED",
+      "kind": "agentflow",
+      "source": "agentflow-beta LR\nflow Outer\n flow Inner\n  A --> B\n end\nend\nOuter@{view:collapsed}\nInner@{view:collapsed}\nX --> A\nB --> Y\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/agentflow/agentflowDb.ts",
+        "symbol": "public getData()",
+        "line": 1696,
+        "sha256": "aa74eb6cb3eb0821c1e3960eefbbc83afe167bc5dcf9380dc4acfa8fce82b1b6",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "compound-routing",
+        "collapsed-identity"
+      ],
+      "expectedText": [
+        "Outer",
+        "X",
+        "Y"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "BV-B-AGENT-ANCESTOR",
+      "kind": "agentflow",
+      "source": "agentflow-beta TB\nflow Outer\n flow Inner\n  A --> B\n end\nend\nOuter --> A\nB --> Inner\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/agentflow/agentflowDb.ts",
+        "symbol": "public getData()",
+        "line": 1696,
+        "sha256": "aa74eb6cb3eb0821c1e3960eefbbc83afe167bc5dcf9380dc4acfa8fce82b1b6",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "compound-routing",
+        "collapsed-identity"
+      ],
+      "expectedText": [
+        "Outer",
+        "Inner",
+        "A",
+        "B"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "BV-B-AGENT-GROUP-ALGO",
+      "kind": "agentflow",
+      "source": "agentflow-beta TB\nflow Outer@{algorithm:elk.box}\n A --> B\nend\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/agentflow/agentflowDb.ts",
+        "symbol": "public getData()",
+        "line": 1696,
+        "sha256": "aa74eb6cb3eb0821c1e3960eefbbc83afe167bc5dcf9380dc4acfa8fce82b1b6",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "compound-routing",
+        "collapsed-identity"
+      ],
+      "expectedText": [
+        "Outer",
+        "A",
+        "B"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "BV-B-AGENT-CROSS-ALGO",
+      "kind": "agentflow",
+      "source": "agentflow-beta LR\nflow Outer@{algorithm:elk.box}\n A --> B\nend\nX --> A\nB --> Y\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/agentflow/agentflowDb.ts",
+        "symbol": "public getData()",
+        "line": 1696,
+        "sha256": "aa74eb6cb3eb0821c1e3960eefbbc83afe167bc5dcf9380dc4acfa8fce82b1b6",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "compound-routing",
+        "collapsed-identity"
+      ],
+      "expectedText": [
+        "Outer",
+        "A",
+        "B",
+        "X",
+        "Y"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "BV-B-ENGINE-FORCE-GRAPH",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA --> B\nB --> C\nC --> A\n",
+      "config": {
+        "layout": "elk.force"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/layout-algorithms/elk/render.ts",
+        "symbol": "async function runElkLayout",
+        "line": 689,
+        "sha256": "6258890b3f311e86e4cd4dc99d480f704fde7473e150dc62b88838c5015c5011",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "actual-engine",
+        "no-fallback",
+        "nonrouting"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "C"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "BV-B-ENGINE-STRESS-GRAPH",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA --> B\nC\n",
+      "config": {
+        "layout": "elk.stress"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/layout-algorithms/elk/render.ts",
+        "symbol": "async function runElkLayout",
+        "line": 689,
+        "sha256": "6258890b3f311e86e4cd4dc99d480f704fde7473e150dc62b88838c5015c5011",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "actual-engine",
+        "no-fallback",
+        "nonrouting"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "C"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "BV-B-ENGINE-BOX-GRAPH",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA --> B\nC\n",
+      "config": {
+        "layout": "elk.box"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/layout-algorithms/elk/render.ts",
+        "symbol": "async function runElkLayout",
+        "line": 689,
+        "sha256": "6258890b3f311e86e4cd4dc99d480f704fde7473e150dc62b88838c5015c5011",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "actual-engine",
+        "no-fallback",
+        "nonrouting"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "C"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "BV-B-ENGINE-RECTPACKING-GRAPH",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA --> B\nC\n",
+      "config": {
+        "layout": "elk.rectpacking"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/layout-algorithms/elk/render.ts",
+        "symbol": "async function runElkLayout",
+        "line": 689,
+        "sha256": "6258890b3f311e86e4cd4dc99d480f704fde7473e150dc62b88838c5015c5011",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "actual-engine",
+        "no-fallback",
+        "nonrouting"
+      ],
+      "expectedText": [
+        "A",
+        "B",
+        "C"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "BV-B-ENGINE-FORCE-COINCIDENT",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA --> A\n",
+      "config": {
+        "layout": "elk.force"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/layout-algorithms/elk/render.ts",
+        "symbol": "async function runElkLayout",
+        "line": 689,
+        "sha256": "6258890b3f311e86e4cd4dc99d480f704fde7473e150dc62b88838c5015c5011",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "actual-engine",
+        "no-fallback",
+        "nonrouting"
+      ],
+      "expectedText": [
+        "A"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "BV-B-ENGINE-STRESS-COINCIDENT",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA --> A\n",
+      "config": {
+        "layout": "elk.stress"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/layout-algorithms/elk/render.ts",
+        "symbol": "async function runElkLayout",
+        "line": 689,
+        "sha256": "6258890b3f311e86e4cd4dc99d480f704fde7473e150dc62b88838c5015c5011",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "actual-engine",
+        "no-fallback",
+        "nonrouting"
+      ],
+      "expectedText": [
+        "A"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "BV-B-WARDLEY-ANNOTATION-PUSH",
+      "kind": "wardley",
+      "source": "wardley-beta\ncomponent A [0.5, 0.5]\nannotations [0.7, 0.2]\nannotation 1, [0.2, 0.3] \"First\"\nannotation 1, [0.8, 0.7] \"Second\"\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/wardley/wardleyParser.ts",
+        "symbol": "// Add individual annotations",
+        "line": 206,
+        "sha256": "01ad339d6884fd4aabea7841b8c9c0e5d30c5c3b95973d4a31be6f6d2cf5977f",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "repeated-number-push",
+        "one-coordinate-per-grammar-record"
+      ],
+      "expectedText": [
+        "A",
+        "First",
+        "Second"
+      ],
+      "expectedErrorCodes": []
+    }
+  ],
+  "pureProbes": [
+    {
+      "id": "BV-B-P-PARSE-ISO",
+      "kind": "parse",
+      "branch": "DATE-PARSE",
+      "input": {
+        "value": "2024-02-29",
+        "format": "YYYY-MM-DD"
+      }
+    },
+    {
+      "id": "BV-B-P-PARSE-QUARTER",
+      "kind": "parse",
+      "branch": "DATE-PARSE",
+      "input": {
+        "value": "2024-Q2-01",
+        "format": "YYYY-[Q]Q-DD"
+      }
+    },
+    {
+      "id": "BV-B-P-PARSE-LOCAL-L",
+      "kind": "parse",
+      "branch": "DATE-PARSE",
+      "input": {
+        "value": "01/02/2024",
+        "format": "L"
+      }
+    },
+    {
+      "id": "BV-B-P-PARSE-LOCAL-LL",
+      "kind": "parse",
+      "branch": "DATE-PARSE",
+      "input": {
+        "value": "January 2, 2024",
+        "format": "LL"
+      }
+    },
+    {
+      "id": "BV-B-P-PARSE-LOCAL-LLL",
+      "kind": "parse",
+      "branch": "DATE-PARSE",
+      "input": {
+        "value": "January 2, 2024 1:04 PM",
+        "format": "LLL"
+      }
+    },
+    {
+      "id": "BV-B-P-PARSE-WEEKDAY",
+      "kind": "parse",
+      "branch": "DATE-PARSE",
+      "input": {
+        "value": "2024-01-01 Monday",
+        "format": "YYYY-MM-DD dddd"
+      }
+    },
+    {
+      "id": "BV-B-P-PARSE-ORDINAL",
+      "kind": "parse",
+      "branch": "DATE-PARSE",
+      "input": {
+        "value": "January 2nd 2024",
+        "format": "MMMM Do YYYY"
+      }
+    },
+    {
+      "id": "BV-B-P-PARSE-INVALID",
+      "kind": "parse",
+      "branch": "DATE-PARSE",
+      "input": {
+        "value": "2023-02-29",
+        "format": "YYYY-MM-DD"
+      }
+    },
+    {
+      "id": "BV-B-P-PARSE-MERIDIEM",
+      "kind": "parse",
+      "branch": "DATE-PARSE",
+      "input": {
+        "value": "2024-01-01 12:01 AM",
+        "format": "YYYY-MM-DD hh:mm A"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-LOWER-a",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%a"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-UPPER-A",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%A"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-LOWER-b",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%b"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-UPPER-B",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%B"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-LOWER-c",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%c"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-LOWER-d",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%d"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-LOWER-e",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%e"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-LOWER-f",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%f"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-LOWER-g",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%g"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-UPPER-G",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%G"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-UPPER-H",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%H"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-UPPER-I",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%I"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-LOWER-j",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%j"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-UPPER-L",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%L"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-LOWER-m",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%m"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-UPPER-M",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%M"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-LOWER-p",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%p"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-LOWER-q",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%q"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-UPPER-Q",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%Q"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-LOWER-s",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%s"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-UPPER-S",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%S"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-LOWER-u",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%u"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-UPPER-U",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%U"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-UPPER-V",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%V"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-LOWER-w",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%w"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-UPPER-W",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%W"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-LOWER-x",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%x"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-UPPER-X",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%X"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-LOWER-y",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%y"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-UPPER-Y",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%Y"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-UPPER-Z",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%Z"
+      }
+    },
+    {
+      "id": "BV-B-P-AXIS-PERCENT",
+      "kind": "axis",
+      "branch": "AXIS-FORMAT",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%%"
+      }
+    },
+    {
+      "id": "BV-B-P-PAD-0",
+      "kind": "axis",
+      "branch": "AXIS-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%-d"
+      }
+    },
+    {
+      "id": "BV-B-P-PAD-1",
+      "kind": "axis",
+      "branch": "AXIS-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%_d"
+      }
+    },
+    {
+      "id": "BV-B-P-PAD-2",
+      "kind": "axis",
+      "branch": "AXIS-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%0d"
+      }
+    },
+    {
+      "id": "BV-B-P-PAD-3",
+      "kind": "axis",
+      "branch": "AXIS-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%-I"
+      }
+    },
+    {
+      "id": "BV-B-P-PAD-4",
+      "kind": "axis",
+      "branch": "AXIS-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%%Q"
+      }
+    },
+    {
+      "id": "BV-B-P-PAD-5",
+      "kind": "axis",
+      "branch": "AXIS-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%%L"
+      }
+    },
+    {
+      "id": "BV-B-P-PAD-6",
+      "kind": "axis",
+      "branch": "AXIS-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%%s"
+      }
+    },
+    {
+      "id": "BV-B-P-PAD-7",
+      "kind": "axis",
+      "branch": "AXIS-PADDING",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          13,
+          4,
+          5,
+          123
+        ],
+        "format": "%n"
+      }
+    },
+    {
+      "id": "BV-B-P-FAR-NEG1-49",
+      "kind": "axis",
+      "branch": "AXIS-FAR",
+      "input": {
+        "date": [
+          -1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "format": "%Y"
+      }
+    },
+    {
+      "id": "BV-B-P-FAR-NEG1-50",
+      "kind": "axis",
+      "branch": "AXIS-FAR",
+      "input": {
+        "date": [
+          -1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "format": "%G-W%V"
+      }
+    },
+    {
+      "id": "BV-B-P-FAR-NEG1-51",
+      "kind": "axis",
+      "branch": "AXIS-FAR",
+      "input": {
+        "date": [
+          -1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "format": "%U/%W"
+      }
+    },
+    {
+      "id": "BV-B-P-FAR-0-52",
+      "kind": "axis",
+      "branch": "AXIS-FAR",
+      "input": {
+        "date": [
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "format": "%Y"
+      }
+    },
+    {
+      "id": "BV-B-P-FAR-0-53",
+      "kind": "axis",
+      "branch": "AXIS-FAR",
+      "input": {
+        "date": [
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "format": "%G-W%V"
+      }
+    },
+    {
+      "id": "BV-B-P-FAR-0-54",
+      "kind": "axis",
+      "branch": "AXIS-FAR",
+      "input": {
+        "date": [
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "format": "%U/%W"
+      }
+    },
+    {
+      "id": "BV-B-P-FAR-10000-55",
+      "kind": "axis",
+      "branch": "AXIS-FAR",
+      "input": {
+        "date": [
+          10000,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "format": "%Y"
+      }
+    },
+    {
+      "id": "BV-B-P-FAR-10000-56",
+      "kind": "axis",
+      "branch": "AXIS-FAR",
+      "input": {
+        "date": [
+          10000,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "format": "%G-W%V"
+      }
+    },
+    {
+      "id": "BV-B-P-FAR-10000-57",
+      "kind": "axis",
+      "branch": "AXIS-FAR",
+      "input": {
+        "date": [
+          10000,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "format": "%U/%W"
+      }
+    },
+    {
+      "id": "BV-B-P-DAYFORMAT-58",
+      "kind": "dayFormat",
+      "branch": "DAYJS-ADVANCED",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          0,
+          4,
+          5,
+          123
+        ],
+        "format": "Q",
+        "sourceMayThrow": false
+      }
+    },
+    {
+      "id": "BV-B-P-DAYFORMAT-59",
+      "kind": "dayFormat",
+      "branch": "DAYJS-ADVANCED",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          0,
+          4,
+          5,
+          123
+        ],
+        "format": "Do",
+        "sourceMayThrow": false
+      }
+    },
+    {
+      "id": "BV-B-P-DAYFORMAT-60",
+      "kind": "dayFormat",
+      "branch": "DAYJS-ADVANCED",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          0,
+          4,
+          5,
+          123
+        ],
+        "format": "dddd",
+        "sourceMayThrow": false
+      }
+    },
+    {
+      "id": "BV-B-P-DAYFORMAT-61",
+      "kind": "dayFormat",
+      "branch": "DAYJS-ADVANCED",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          0,
+          4,
+          5,
+          123
+        ],
+        "format": "ddd",
+        "sourceMayThrow": false
+      }
+    },
+    {
+      "id": "BV-B-P-DAYFORMAT-62",
+      "kind": "dayFormat",
+      "branch": "DAYJS-ADVANCED",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          0,
+          4,
+          5,
+          123
+        ],
+        "format": "W WW GGGG",
+        "sourceMayThrow": false
+      }
+    },
+    {
+      "id": "BV-B-P-DAYFORMAT-63",
+      "kind": "dayFormat",
+      "branch": "DAYJS-ADVANCED",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          0,
+          4,
+          5,
+          123
+        ],
+        "format": "k kk",
+        "sourceMayThrow": false
+      }
+    },
+    {
+      "id": "BV-B-P-DAYFORMAT-64",
+      "kind": "dayFormat",
+      "branch": "DAYJS-ADVANCED",
+      "input": {
+        "date": [
+          2021,
+          1,
+          1,
+          0,
+          4,
+          5,
+          123
+        ],
+        "format": "w ww gggg z",
+        "sourceMayThrow": true
+      }
+    },
+    {
+      "id": "BV-B-P-WEEK-MONDAY",
+      "kind": "ticks",
+      "branch": "TICK-WEEKDAY",
+      "input": {
+        "start": [
+          2024,
+          1,
+          1
+        ],
+        "end": [
+          2024,
+          2,
+          1
+        ],
+        "interval": "2week",
+        "weekday": "monday",
+        "count": 10
+      }
+    },
+    {
+      "id": "BV-B-P-WEEK-TUESDAY",
+      "kind": "ticks",
+      "branch": "TICK-WEEKDAY",
+      "input": {
+        "start": [
+          2024,
+          1,
+          1
+        ],
+        "end": [
+          2024,
+          2,
+          1
+        ],
+        "interval": "2week",
+        "weekday": "tuesday",
+        "count": 10
+      }
+    },
+    {
+      "id": "BV-B-P-WEEK-WEDNESDAY",
+      "kind": "ticks",
+      "branch": "TICK-WEEKDAY",
+      "input": {
+        "start": [
+          2024,
+          1,
+          1
+        ],
+        "end": [
+          2024,
+          2,
+          1
+        ],
+        "interval": "2week",
+        "weekday": "wednesday",
+        "count": 10
+      }
+    },
+    {
+      "id": "BV-B-P-WEEK-THURSDAY",
+      "kind": "ticks",
+      "branch": "TICK-WEEKDAY",
+      "input": {
+        "start": [
+          2024,
+          1,
+          1
+        ],
+        "end": [
+          2024,
+          2,
+          1
+        ],
+        "interval": "2week",
+        "weekday": "thursday",
+        "count": 10
+      }
+    },
+    {
+      "id": "BV-B-P-WEEK-FRIDAY",
+      "kind": "ticks",
+      "branch": "TICK-WEEKDAY",
+      "input": {
+        "start": [
+          2024,
+          1,
+          1
+        ],
+        "end": [
+          2024,
+          2,
+          1
+        ],
+        "interval": "2week",
+        "weekday": "friday",
+        "count": 10
+      }
+    },
+    {
+      "id": "BV-B-P-WEEK-SATURDAY",
+      "kind": "ticks",
+      "branch": "TICK-WEEKDAY",
+      "input": {
+        "start": [
+          2024,
+          1,
+          1
+        ],
+        "end": [
+          2024,
+          2,
+          1
+        ],
+        "interval": "2week",
+        "weekday": "saturday",
+        "count": 10
+      }
+    },
+    {
+      "id": "BV-B-P-WEEK-SUNDAY",
+      "kind": "ticks",
+      "branch": "TICK-WEEKDAY",
+      "input": {
+        "start": [
+          2024,
+          1,
+          1
+        ],
+        "end": [
+          2024,
+          2,
+          1
+        ],
+        "interval": "2week",
+        "weekday": "sunday",
+        "count": 10
+      }
+    },
+    {
+      "id": "BV-B-P-UNIT-MILLISECOND",
+      "kind": "ticks",
+      "branch": "TICK-EXPLICIT",
+      "input": {
+        "start": [
+          2024,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "end": [
+          2024,
+          1,
+          1,
+          0,
+          0,
+          0,
+          20
+        ],
+        "interval": "5millisecond",
+        "weekday": "sunday",
+        "count": 10
+      }
+    },
+    {
+      "id": "BV-B-P-UNIT-SECOND",
+      "kind": "ticks",
+      "branch": "TICK-EXPLICIT",
+      "input": {
+        "start": [
+          2024,
+          1,
+          1
+        ],
+        "end": [
+          2024,
+          1,
+          1,
+          0,
+          0,
+          20
+        ],
+        "interval": "5second",
+        "weekday": "sunday",
+        "count": 10
+      }
+    },
+    {
+      "id": "BV-B-P-UNIT-MINUTE",
+      "kind": "ticks",
+      "branch": "TICK-EXPLICIT",
+      "input": {
+        "start": [
+          2024,
+          1,
+          1
+        ],
+        "end": [
+          2024,
+          1,
+          1,
+          0,
+          20
+        ],
+        "interval": "5minute",
+        "weekday": "sunday",
+        "count": 10
+      }
+    },
+    {
+      "id": "BV-B-P-UNIT-HOUR",
+      "kind": "ticks",
+      "branch": "TICK-EXPLICIT",
+      "input": {
+        "start": [
+          2024,
+          1,
+          1
+        ],
+        "end": [
+          2024,
+          1,
+          2
+        ],
+        "interval": "3hour",
+        "weekday": "sunday",
+        "count": 10
+      }
+    },
+    {
+      "id": "BV-B-P-UNIT-DAY",
+      "kind": "ticks",
+      "branch": "TICK-EXPLICIT",
+      "input": {
+        "start": [
+          2024,
+          1,
+          30
+        ],
+        "end": [
+          2024,
+          2,
+          5
+        ],
+        "interval": "2day",
+        "weekday": "sunday",
+        "count": 10
+      }
+    },
+    {
+      "id": "BV-B-P-UNIT-MONTH",
+      "kind": "ticks",
+      "branch": "TICK-EXPLICIT",
+      "input": {
+        "start": [
+          2023,
+          12,
+          1
+        ],
+        "end": [
+          2025,
+          1,
+          1
+        ],
+        "interval": "3month",
+        "weekday": "sunday",
+        "count": 10
+      }
+    },
+    {
+      "id": "BV-B-P-AUTO-SHORT",
+      "kind": "ticks",
+      "branch": "TICK-AUTO",
+      "input": {
+        "start": [
+          2024,
+          1,
+          1
+        ],
+        "end": [
+          2024,
+          1,
+          1,
+          0,
+          0,
+          0,
+          40
+        ],
+        "interval": null,
+        "weekday": "sunday",
+        "count": 10
+      }
+    },
+    {
+      "id": "BV-B-P-AUTO-YEARS",
+      "kind": "ticks",
+      "branch": "TICK-AUTO",
+      "input": {
+        "start": [
+          1800,
+          1,
+          1
+        ],
+        "end": [
+          2200,
+          1,
+          1
+        ],
+        "interval": null,
+        "weekday": "sunday",
+        "count": 10
+      }
+    },
+    {
+      "id": "BV-B-P-AUTO-CAP",
+      "kind": "ticks",
+      "branch": "TICK-AUTO",
+      "input": {
+        "start": [
+          2024,
+          1,
+          1
+        ],
+        "end": [
+          2024,
+          1,
+          3
+        ],
+        "interval": "1millisecond",
+        "weekday": "sunday",
+        "count": 10
+      }
+    },
+    {
+      "id": "BV-B-P-AUTO-REVERSE",
+      "kind": "ticks",
+      "branch": "TICK-AUTO",
+      "input": {
+        "start": [
+          2024,
+          1,
+          3
+        ],
+        "end": [
+          2024,
+          1,
+          1
+        ],
+        "interval": "1day",
+        "weekday": "sunday",
+        "count": 10
+      }
+    },
+    {
+      "id": "BV-B-P-AUTO-ZERO",
+      "kind": "ticks",
+      "branch": "TICK-AUTO",
+      "input": {
+        "start": [
+          2024,
+          1,
+          1
+        ],
+        "end": [
+          2024,
+          1,
+          1
+        ],
+        "interval": null,
+        "weekday": "sunday",
+        "count": 10
+      }
+    },
+    {
+      "id": "BV-B-P-LANE-EMPTY",
+      "kind": "gitLane",
+      "branch": "GIT-LANES",
+      "input": {
+        "a": 0,
+        "b": 100,
+        "lanes": []
+      }
+    },
+    {
+      "id": "BV-B-P-LANE-ONE",
+      "kind": "gitLane",
+      "branch": "GIT-LANES",
+      "input": {
+        "a": 0,
+        "b": 100,
+        "lanes": [
+          50
+        ]
+      }
+    },
+    {
+      "id": "BV-B-P-LANE-DEPTH",
+      "kind": "gitLane",
+      "branch": "GIT-LANES",
+      "input": {
+        "a": 0,
+        "b": 100,
+        "lanes": [
+          50,
+          40,
+          32,
+          25.6,
+          20.48,
+          16.384
+        ]
+      }
+    },
+    {
+      "id": "BV-B-P-RANDOM-86",
+      "kind": "random",
+      "branch": "NUMERIC-PRNG",
+      "input": {
+        "seed": 0
+      }
+    },
+    {
+      "id": "BV-B-P-RANDOM-87",
+      "kind": "random",
+      "branch": "NUMERIC-PRNG",
+      "input": {
+        "seed": -1
+      }
+    },
+    {
+      "id": "BV-B-P-RANDOM-88",
+      "kind": "random",
+      "branch": "NUMERIC-PRNG",
+      "input": {
+        "seed": 4294967295
+      }
+    },
+    {
+      "id": "BV-B-P-RANDOM-89",
+      "kind": "random",
+      "branch": "NUMERIC-PRNG",
+      "input": {
+        "seed": 1.25
+      }
+    }
+  ],
+  "pureProbeContract": "Separate exact-source helper observations; pure rows are never counted as rendered diagram fixtures."
+}

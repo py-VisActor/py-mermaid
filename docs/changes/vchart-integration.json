@@ -1,0 +1,72 @@
+{
+  "schema": "py-mermaid-change/v1",
+  "task": "vchart-release-and-integration",
+  "date": "2026-11-07",
+  "authorization": "Publish py-vchart, then integrate all py-vchart chart types into py-mermaid",
+  "plan": "docs/VCHART_INTEGRATION.md",
+  "mermaidBaseline": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "vchartBaseline": "fdb63276cf8b71f5a6cca128c409e009cc94615a",
+  "supplierStartCommit": "f1ae8a7910b94cd4d2e9ef675ed7607b40b9eb57",
+  "startingProductSourceSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+  "startingDirtyTree": "Existing multi-iteration Mermaid source/docs/tests/tools changes retained. No reset/clean. VChart started clean. First acquisition git status: test-runs/VCHART-P0-acquisition-20261107T032024Z-d58f173a/git-status.txt",
+  "status": "P5_published_pypi_verified",
+  "acceptance": "bounded_static_local_accepted_with_documented_source_differences",
+  "evidence": [
+    "test-runs/VCHART-P0-acquisition-20261107T032024Z-d58f173a/run.json",
+    "test-runs/VCHART-INTEGRATION-record-20261107T032532Z-11472d0f/run.json",
+    "test-runs/VCHART-P1-record-20261107T032649Z-c10b3a97/run.json",
+    "test-runs/VCHART-P1-root-record-20261107T032804Z-17dff624/run.json",
+    "test-runs/VCHART-P3-batch-20261107T034344Z-94957548/run.json",
+    "test-runs/VCHART-P3-batch-20261107T035511Z-365b9ec8/run.json",
+    "test-runs/VCHART-P3-security-batch-20261107T040131Z-2fcb8e60/run.json",
+    "test-runs/VCHART-P4-batch-20261107T041705Z-6c07df8d/run.json",
+    "test-runs/VCHART-P5-github-release-batch-20261107T042245Z-356c34f3/run.json",
+    "test-runs/vchart-visual-review-20261107T043500Z.json",
+    "test-runs/VCHART-VISUAL-REPAIR-record-20261107T043919Z-8882b2ed/run.json",
+    "test-runs/VCHART-P4-batch-20261107T044508Z-506fd409/run.json",
+    "test-runs/stroke-bounds-repair.json",
+    "test-runs/vchart-visual-review-20261107T045200Z.json",
+    "test-runs/VCHART-VISUAL-REPAIR-record-20261107T045049Z-74816ee1/run.json",
+    "test-runs/VCHART-P4-batch-20261107T045154Z-dd03474c/run.json",
+    "test-runs/VCHART-P5-delivery-20261107T045848Z-3903b480/run.json",
+    "test-runs/vchart-visual-review-final-20261107T045500Z.json",
+    "test-runs/vchart-report-visual-final-20261107T045848Z-3903b480.json",
+    "test-runs/VCHART-P5-delivery-20261107T045554Z-bf0caefe/run.json",
+    "test-runs/VCHART-P5-delivery-20261107T045815Z-4720ded1/run.json",
+    "test-runs/VCHART-P5-FINAL-CHECKS-batch-20261107T050127Z-a31bc070/run.json"
+  ],
+  "preservedLimits": [
+    "static only",
+    "no Dagre",
+    "no video/audio",
+    "no arbitrary HTML/CSS extension",
+    "22 prior branch records are not addressed by this task"
+  ],
+  "publication": "PyPI and GitHub stable published; Mermaid pinned py-visactor-vchart==0.1.1",
+  "next": "Current publication/integration scope complete. Prior22 Mermaid branch gaps remain separate.",
+  "supplierCandidateCommit": "ff16c91d38ab61e57d03b58579d5bf1beb2a1840",
+  "finalRun": "test-runs/VCHART-P4-batch-20261107T045154Z-dd03474c",
+  "deliveryRun": "test-runs/VCHART-P5-delivery-20261107T045848Z-3903b480",
+  "sourceTreeSha256": "756a21de6e1845dd81ab9d6ca7e08a84c8e8190e9d7ec03312cc923e872d6dc3",
+  "reportUrl": "http://127.0.0.1:8765/VCHART-P5-delivery-20261107T045848Z-3903b480/index.html",
+  "finalEvidence": [
+    {
+      "path": "docs/VCHART_ACCEPTANCE.md",
+      "sha256": "b17de95bccb4cde59e17b72308b963011d5731ace1a3a0e8be200a7edddbf01e",
+      "bytes": 6447
+    },
+    {
+      "path": "references/vchart-pypi-verification.json",
+      "sha256": "2a512a95e02f40577b99d43d92c65c1a52ce892b0e1a16dc785cd7520fbab8ba",
+      "bytes": 3763
+    }
+  ],
+  "finalChecks": {
+    "path": "test-runs/VCHART-P5-FINAL-CHECKS-batch-20261107T050127Z-a31bc070/run.json",
+    "sha256": "30a084d6e75292f8990bb1949dfb49f8c009db665ab323bf7e11a8526d5c3a83",
+    "bytes": 45026,
+    "status": "SUCCESS"
+  },
+  "supplierDocumentationCommit": "a04e27c",
+  "pypiVerification": "references/vchart-pypi-verification.json"
+}

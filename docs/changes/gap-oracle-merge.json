@@ -1,0 +1,68 @@
+{
+  "schema": "py-mermaid-change-receipt/v1",
+  "task": "strict-source-oracle-union",
+  "status": "actual_733_merge_pass_stopped_writing",
+  "productModified": false,
+  "files": {
+    "tools/merge_bulk_oracles.py": "985f56676b4788bea71ad322356e8ecede64bc1476954174bc94ae676883dc09",
+    "tests/tooling/test_bulk_oracle_merge.py": "02dd322a4490af5e1f101a010ddc5e463534449a94e1ae11dd4c5a840e8a3bad"
+  },
+  "validation": {
+    "run": "test-runs/G03-record-20261106T081855Z-3bbafcac",
+    "status": "SUCCESS",
+    "methods": 14,
+    "type": "Independent synthetic closed-run evidence tests; no production rendering"
+  },
+  "contracts": [
+    "Final frozen browser fixture bytes determine merged fixtureSha256.",
+    "Every final row equals the original donor row using typed canonical JSON, including every field, not a selected subset.",
+    "Final denominator equals full donor union; no casefold duplicates or missing/extra cases.",
+    "Donor oracle manifest and identity are closed-run hashed artifacts and identities agree across donors.",
+    "Donor fixture bytes match both its run artifact hash and oracle fixtureSha256.",
+    "Exactly one corresponding bulk_capture command and its hashed result are closed SUCCESS/exit0. Overall FAILED donor status is preserved, not relabeled.",
+    "All copied PNG/SVG/snapshot/error bytes match closed Run.artifacts hashes and are rehashed after copying.",
+    "No image transformation; output directory must not exist.",
+    "Reuse provenance records donor run/hash/status, manifest/identity/fixture hashes, exact source command, and every copied file hash."
+  ],
+  "actualMerge": {
+    "run": "test-runs/G03-record-20261106T081856Z-6c41ad8a",
+    "status": "SUCCESS",
+    "out": "test-runs/gap-combined-original-20261106T0818",
+    "manifestSha256": "347232835118d266e3718d3c83b36a7063138f0837801f787cde3a79a726cd6b",
+    "cases": 733,
+    "copiedCaseFiles": 2100,
+    "donors": 3,
+    "fixtureSha256": "1d48481e86a85d1d310c6b9ba7c0e74c3e1299a5319ded23b785155b3a8887a5"
+  },
+  "cli": "python tools/merge_bulk_oracles.py --fixtures FINAL_BROWSER_CASES --donor RUN_JSON ORACLE_DIR BROWSER_FIXTURE_JSON [--donor ...] --out NEW_DIR",
+  "realDonors": [
+    {
+      "run": "test-runs/BULK-P3-fixed-original-refresh-20261106T062015Z-fe05c71f/run.json",
+      "oracle": "artifacts/oracle",
+      "fixtures": "artifacts/fixtures/browser-cases.json",
+      "caseCount": 670
+    },
+    {
+      "run": "test-runs/G03-first-batch-20261106T080449Z-54f22284/run.json",
+      "oracle": "artifacts/oracle",
+      "fixtures": "artifacts/fixtures/browser-cases.json",
+      "caseCount": 62,
+      "runStatus": "FAILED",
+      "sourceCommand": "006-gap-fixed-original",
+      "sourceExitCode": 0
+    }
+  ],
+  "installationCommitPush": false,
+  "preservedAttempts": [
+    {
+      "run": "test-runs/G03-record-20261106T081736Z-a46a2e16",
+      "status": "FAILED",
+      "reason": "Tool assumed excluded manifest rows contained kind/expect; fixed source records only id/status. Complete frozen row remains strictly bound."
+    },
+    {
+      "run": "test-runs/G03-record-20261106T081818Z-06340917",
+      "status": "FAILED",
+      "reason": "Prefix glob incorrectly treated dotted IDs elk.box etc as files of case elk; exact suffix lookup fixed and independent dotted-ID test added."
+    }
+  ]
+}

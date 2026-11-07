@@ -1,0 +1,54 @@
+{
+  "schema": "py-mermaid-gap-audit-receipt/v1",
+  "group": "A",
+  "baselineSourceSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
+  "status": "source_audit_and_independent_tests_complete_unexecuted",
+  "productModified": false,
+  "existingTestsModified": false,
+  "newBehaviorExecuted": false,
+  "detectors": 12,
+  "featureGroups": 83,
+  "counts": {
+    "implemented_with_evidence": 63,
+    "excluded": 12,
+    "confirmed_gap": 5,
+    "upstream_defect": 2,
+    "implemented_unverified": 1
+  },
+  "audit": "references/gap-audit-A.json",
+  "notes": [
+    "Five confirmed gaps are static source deductions pending uniform first execution. Expected values are not generated from candidate.",
+    "Line 1 grammar references reflect inherited original case origins; precise new gap references point to actual source rules. No exhaustive expression coverage claim."
+  ],
+  "newTestMethods": 13,
+  "newFixtures": 10,
+  "fixtureBreakdown": {
+    "render": 7,
+    "syntax_error": 3
+  },
+  "newTestFiles": [
+    "tests/bulk/a/test_gap_audit.py",
+    "tests/bulk/cases-gap-A.json"
+  ],
+  "testMethods": [
+    "test_packet_title_stops_at_common_inline_comment",
+    "test_packet_title_converter_collapses_horizontal_whitespace",
+    "test_packet_title_quoted_field_percent_is_not_comment",
+    "test_class_cssclass_normalizes_generic_target",
+    "test_class_cssclass_normalizes_each_comma_separated_target",
+    "test_block_empty_quoted_label_has_no_str_token",
+    "test_block_empty_composite_has_no_document",
+    "test_kanban_empty_quoted_label_has_no_node_descr",
+    "test_block_nonempty_quoted_label_control",
+    "test_block_nonempty_composite_control",
+    "test_kanban_nonempty_quoted_label_control",
+    "test_packet_comment_never_becomes_visible_title",
+    "test_generic_cssclass_reaches_real_node_fill"
+  ],
+  "executionArgv": [
+    "python -m unittest tests.bulk.a.test_gap_audit",
+    "python tools/bulk_validate.py --fixtures tests/bulk/cases-gap-A.json --group A --backend cpu --out <new-standard-run>/artifacts/native-gap-A"
+  ],
+  "mechanicalRun": "G01-record-20261106T080412Z-d0aae6e0",
+  "mechanicalResult": "SUCCESS: py_compile only; no parse/build/layout/render/test/oracle execution"
+}

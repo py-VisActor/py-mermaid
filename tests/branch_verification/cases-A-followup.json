@@ -1,0 +1,160 @@
+{
+  "schema": "py-mermaid-bulk-cases/v1",
+  "group": "A",
+  "frozenSource": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+  "cases": [
+    {
+      "id": "BV-A-event-title-leading-space",
+      "kind": "eventmodeling",
+      "source": "eventmodeling\n title   A   B %% hidden\ntf 1 ui Page\n",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/eventmodeling/event-modeling.langium",
+        "symbol": "EM_ID (54), EM_TITLE (62), EM_WS (64); CommonValueConverter rulesRegexes; DefaultValueConverter.runConverter",
+        "line": 54,
+        "sha256": "be3da489f5114237acbd7ec50494e8bb48f8e6753b6e2f7f2137dae170000611",
+        "repository": "mermaid",
+        "synthesized": true,
+        "canonicalSha256": "9432c3c986e2d2135fbdedbc5b4cf7fe22b9c893e10b4d23cc63332f776bbba4",
+        "hashMeaning": "sha256 binds Windows checkout; canonicalSha256 binds fixed commit git blob"
+      },
+      "expect": "syntax_error",
+      "features": [
+        "EM_TITLE-leading-space"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "SYNTAX_ERROR"
+      ],
+      "branchExpected": {
+        "description": "Fixed original rejects these inputs: EM_ID precedes EM_TITLE; leading EM_WS consumes whitespace. Do not assert unreachable terminal conversion.",
+        "nativeChecks": [],
+        "sourceChecks": []
+      },
+      "sourceExpectationMigration": {
+        "previousFixture": {
+          "id": "BV-A-event-title-leading-space",
+          "kind": "eventmodeling",
+          "source": "eventmodeling\n title   A   B %% hidden\ntf 1 ui Page\n",
+          "config": {},
+          "origin": {
+            "path": "packages/parser/src/language/eventmodeling/event-modeling.langium",
+            "symbol": "EM_ID (54), EM_TITLE (62), EM_WS (64); CommonValueConverter rulesRegexes; DefaultValueConverter.runConverter",
+            "line": 54,
+            "sha256": "be3da489f5114237acbd7ec50494e8bb48f8e6753b6e2f7f2137dae170000611",
+            "repository": "mermaid",
+            "synthesized": true,
+            "canonicalSha256": "9432c3c986e2d2135fbdedbc5b4cf7fe22b9c893e10b4d23cc63332f776bbba4",
+            "hashMeaning": "sha256 binds Windows checkout; canonicalSha256 binds fixed commit git blob"
+          },
+          "expect": "render",
+          "features": [
+            "EM_TITLE-leading-space"
+          ],
+          "expectedText": [
+            "Page"
+          ],
+          "expectedErrorCodes": [],
+          "branchExpected": {
+            "description": "EM_ID occurs before EM_TITLE and wins at column1. Leading whitespace prevents EM_ID from matching, while EM_TITLE occurs before EM_WS and can match the entire token; CommonValueConverter does not handle EM_TITLE and DefaultValueConverter returns it unchanged. Source expectation is deliberately unexecuted pending original capture.",
+            "nativeChecks": [
+              {
+                "path": [
+                  "title"
+                ],
+                "equals": " title   A   B "
+              }
+            ],
+            "sourceChecks": [
+              {
+                "path": [
+                  "getDiagramTitle"
+                ],
+                "equals": " title   A   B "
+              }
+            ]
+          }
+        },
+        "evidence": "test-runs/branch-triage-A-followup.json",
+        "reason": "Three actual original parse rejections, not candidate-derived expected output."
+      }
+    },
+    {
+      "id": "BV-A-event-title-leading-tab",
+      "kind": "eventmodeling",
+      "source": "eventmodeling\n\ttitle   A   B %% hidden\ntf 1 ui Page\n",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/eventmodeling/event-modeling.langium",
+        "symbol": "EM_ID (54), EM_TITLE (62), EM_WS (64); CommonValueConverter rulesRegexes; DefaultValueConverter.runConverter",
+        "line": 54,
+        "sha256": "be3da489f5114237acbd7ec50494e8bb48f8e6753b6e2f7f2137dae170000611",
+        "repository": "mermaid",
+        "synthesized": true,
+        "canonicalSha256": "9432c3c986e2d2135fbdedbc5b4cf7fe22b9c893e10b4d23cc63332f776bbba4",
+        "hashMeaning": "sha256 binds Windows checkout; canonicalSha256 binds fixed commit git blob"
+      },
+      "expect": "syntax_error",
+      "features": [
+        "EM_TITLE-leading-tab"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "SYNTAX_ERROR"
+      ],
+      "branchExpected": {
+        "description": "Fixed original rejects these inputs: EM_ID precedes EM_TITLE; leading EM_WS consumes whitespace. Do not assert unreachable terminal conversion.",
+        "nativeChecks": [],
+        "sourceChecks": []
+      },
+      "sourceExpectationMigration": {
+        "previousFixture": {
+          "id": "BV-A-event-title-leading-tab",
+          "kind": "eventmodeling",
+          "source": "eventmodeling\n\ttitle   A   B %% hidden\ntf 1 ui Page\n",
+          "config": {},
+          "origin": {
+            "path": "packages/parser/src/language/eventmodeling/event-modeling.langium",
+            "symbol": "EM_ID (54), EM_TITLE (62), EM_WS (64); CommonValueConverter rulesRegexes; DefaultValueConverter.runConverter",
+            "line": 54,
+            "sha256": "be3da489f5114237acbd7ec50494e8bb48f8e6753b6e2f7f2137dae170000611",
+            "repository": "mermaid",
+            "synthesized": true,
+            "canonicalSha256": "9432c3c986e2d2135fbdedbc5b4cf7fe22b9c893e10b4d23cc63332f776bbba4",
+            "hashMeaning": "sha256 binds Windows checkout; canonicalSha256 binds fixed commit git blob"
+          },
+          "expect": "render",
+          "features": [
+            "EM_TITLE-leading-tab"
+          ],
+          "expectedText": [
+            "Page"
+          ],
+          "expectedErrorCodes": [],
+          "branchExpected": {
+            "description": "EM_ID occurs before EM_TITLE and wins at column1. Leading whitespace prevents EM_ID from matching, while EM_TITLE occurs before EM_WS and can match the entire token; CommonValueConverter does not handle EM_TITLE and DefaultValueConverter returns it unchanged. Source expectation is deliberately unexecuted pending original capture.",
+            "nativeChecks": [
+              {
+                "path": [
+                  "title"
+                ],
+                "equals": "\ttitle   A   B "
+              }
+            ],
+            "sourceChecks": [
+              {
+                "path": [
+                  "getDiagramTitle"
+                ],
+                "equals": "\ttitle   A   B "
+              }
+            ]
+          }
+        },
+        "evidence": "test-runs/branch-triage-A-followup.json",
+        "reason": "Three actual original parse rejections, not candidate-derived expected output."
+      }
+    }
+  ],
+  "note": "New source-first probes only. Original 40 inputs/expectations and closed P3 evidence unchanged. probe_a.py currently reads cases-A.json; compare followup sourceChecks explicitly or authorize separate comparator input."
+}

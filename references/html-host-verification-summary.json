@@ -1,0 +1,208 @@
+{
+  "schema": "py-mermaid-html-host-final-summary/v1",
+  "functionalStatus": "RETAINED_STATIC_LOCAL_ACCEPTED",
+  "scopeStatus": "SCOPED_RETAINED_STATIC_WITH_INITIAL_HTML_CONTROLS",
+  "sourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+  "fixtureCount": 865,
+  "htmlControlFixtureCount": 131,
+  "legacyFixtureCount": 734,
+  "retainedDetectors": [
+    "agentflow",
+    "architecture",
+    "block",
+    "c4",
+    "classDiagram",
+    "cynefin",
+    "er",
+    "eventmodeling",
+    "flowchart-elk",
+    "flowchart-v2",
+    "gantt",
+    "gitGraph",
+    "info",
+    "ishikawa",
+    "journey",
+    "kanban",
+    "mindmap",
+    "packet",
+    "railroad",
+    "railroadAbnf",
+    "railroadEbnf",
+    "railroadPeg",
+    "requirement",
+    "sequence",
+    "stateDiagram",
+    "swimlane",
+    "timeline",
+    "treeView",
+    "usecase",
+    "wardley",
+    "zenuml"
+  ],
+  "deferredDetectors": [
+    "pie",
+    "quadrantChart",
+    "xychart",
+    "radar",
+    "treemap",
+    "sankey",
+    "venn"
+  ],
+  "p4Manifest": {
+    "path": "test-runs/BULK-P4-final-20261106T125300Z-435e50af/run.json",
+    "sha256": "ed8d1d50c0e967f229b62090cec5f0277ac995712f6818512360dee454468d03",
+    "bytes": 4534656
+  },
+  "visualReview": {
+    "path": "test-runs/HTML-HOST-P5-delivery-20261106T131153Z-15f07388/artifacts/visual-review.json",
+    "sha256": "5641dc4f783536d982d5f02822e30abc6347d8d846a0799ba73e6d003c19fce8",
+    "bytes": 91841
+  },
+  "unitMethods": 2046,
+  "unitGroups": {
+    "unit-a": 612,
+    "unit-b": 164,
+    "unit-c": 368,
+    "unit-shared": 78,
+    "unit-html-host": 257,
+    "regression-f011": 89,
+    "regression-f012": 66,
+    "regression-f013": 126,
+    "regression-f014": 171,
+    "regression-math": 17,
+    "verification-tools-bootstrap": 12,
+    "verification-tools-tooling": 69,
+    "verification-tools-pixel_compare": 17
+  },
+  "nativeProfiles": {
+    "cpu": {
+      "CHECKS_PASSED": 818,
+      "EXPECTED_ERROR": 46,
+      "EXCLUDED": 1
+    },
+    "auto": {
+      "CHECKS_PASSED": 818,
+      "EXPECTED_ERROR": 46,
+      "EXCLUDED": 1
+    },
+    "gpu": {
+      "CHECKS_PASSED": 818,
+      "EXPECTED_ERROR": 46,
+      "EXCLUDED": 1
+    }
+  },
+  "zenumlStrict": {
+    "cpu": {
+      "baseVisual": 148,
+      "additional": 38,
+      "total": 186,
+      "rejectedMutationControls": 1990
+    },
+    "auto": {
+      "baseVisual": 148,
+      "additional": 38,
+      "total": 186,
+      "rejectedMutationControls": 1990
+    },
+    "gpu": {
+      "baseVisual": 148,
+      "additional": 38,
+      "total": 186,
+      "rejectedMutationControls": 1990
+    }
+  },
+  "legacy": {
+    "cpu": {
+      "f011": 12,
+      "f012": 35,
+      "f013": 50,
+      "f014": 200
+    },
+    "auto": {
+      "f011": 12,
+      "f012": 35,
+      "f013": 50,
+      "f014": 200
+    },
+    "gpu": {
+      "f011": 12,
+      "f012": 35,
+      "f013": 50,
+      "f014": 200
+    }
+  },
+  "htmlControlVerification": [
+    {
+      "path": "test-runs/BULK-P4-final-20261106T125300Z-435e50af/artifacts/html-control-verification-cpu/verification.json",
+      "sha256": "b5e27daeb3c1202faab2ef0cb599000fb0fc21f1dd87c963ef7d8a9121c1850a",
+      "bytes": 40300
+    },
+    {
+      "path": "test-runs/BULK-P4-final-20261106T125300Z-435e50af/artifacts/html-control-verification-auto/verification.json",
+      "sha256": "f44217f9f26fbf6116619440116295b1df20b9db0a0fac80a65a4e1add1e2faa",
+      "bytes": 40302
+    },
+    {
+      "path": "test-runs/BULK-P4-final-20261106T125300Z-435e50af/artifacts/html-control-verification-gpu/verification.json",
+      "sha256": "73ef40f99ea1c3fd7aa1044a25b9e842b3d7ac31bb3e6afc51dff768b417309c",
+      "bytes": 40300
+    }
+  ],
+  "htmlControlExports": {
+    "path": "test-runs/HTML-HOST-P4-EXPORT-repair-20261106T130826Z-cebc530d/artifacts/html-control-exports/exports.json",
+    "sha256": "e10aeb4de1702db691021b9fb3ccb95493d2063404086fd6fd444132710e8e20",
+    "bytes": 348423
+  },
+  "exports": {
+    "proof": {
+      "path": "test-runs/HTML-HOST-P4-EXPORT-repair-20261106T130826Z-cebc530d/artifacts/exports/exports.json",
+      "sha256": "25d87ca7b9028d0c9f2b2d12fcbfd69a110c614ef1a94a14b38b2bf4498dc513",
+      "bytes": 345830
+    },
+    "count": 465
+  },
+  "exportRepair": {
+    "manifest": {
+      "path": "test-runs/HTML-HOST-P4-EXPORT-repair-20261106T130826Z-cebc530d/run.json",
+      "sha256": "a8fcaef967db5c76895e67435b110043b43f9b8d214046d026fe8010984f6183",
+      "bytes": 195006
+    },
+    "exporter": {
+      "path": "test-runs/HTML-HOST-P4-EXPORT-repair-20261106T130826Z-cebc530d/artifacts/bulk_export.py",
+      "sha256": "f820b606aadb5e0e5f2aaadd8eef38dab95f642e43c099b18a8879347abec128",
+      "bytes": 5745
+    },
+    "reason": "Original P4 saved exports had filename collisions; both same-candidate matrices were rerun, with unique filenames and saved-byte hashes.",
+    "rejectedOriginalExports": [
+      {
+        "path": "test-runs/BULK-P4-final-20261106T125300Z-435e50af/artifacts/exports/exports.json",
+        "sha256": "507a1aa791b59794bba35e23aac87593591ff9c3224a678517f5a5d8fda62359",
+        "bytes": 305535
+      },
+      {
+        "path": "test-runs/BULK-P4-final-20261106T125300Z-435e50af/artifacts/html-control-exports/exports.json",
+        "sha256": "1c97d7f92cf61815242a963c80aafa1618e8943ecba57b07d159ba6af4dc9fc9",
+        "bytes": 303320
+      }
+    ]
+  },
+  "htmlControlExportCount": 450,
+  "htmlControlExportSelectedCaseCount": 30,
+  "requiredControlVisualReviewIds": [
+    "html-host-zero-dimensions-default-equivalence"
+  ],
+  "canonicalSource": {
+    "package": "mermaid@12.2.0",
+    "commit": "1fb7869866dd619168d840291c9c54b4f129758b"
+  },
+  "installationValidation": {
+    "status": "NOT_EXECUTED"
+  },
+  "limitations": [
+    "video/audio fully excluded",
+    "interaction and Dagre excluded",
+    "seven deferred chart detectors remain outside this scope",
+    "bounded static HTML/CSS only; no claim of arbitrary HTML/CSS, browser UI or all platforms",
+    "local evidence only; no installation validation or publication"
+  ]
+}

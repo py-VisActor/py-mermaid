@@ -84,6 +84,7 @@ def parse(document,config):
                 if not m:raise error(document,offset,'Unterminated Kanban node')
                 label=m[1];closing=m[2]
             if not re.fullmatch(r'(?:\)\)|\}\}|\(-|-\)|\(\(|[\])\(])\s*',closing):raise error(document,offset,'Invalid Kanban closing delimiter')
+            if not label:raise error(document,offset+level+start.end(),'Kanban node requires a NODE_DESCR token')
             if not node_id:node_id=label
         elif any(c in body for c in '{}]@'):raise error(document,offset,'Invalid Kanban node')
         if section_level is None:section_level=level

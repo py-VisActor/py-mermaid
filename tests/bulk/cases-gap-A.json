@@ -1,0 +1,222 @@
+{
+  "schema": "py-mermaid-bulk-cases/v1",
+  "group": "A",
+  "frozenSource": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
+  "cases": [
+    {
+      "id": "gap-a-packet-title-comment",
+      "kind": "packet",
+      "source": "packet\ntitle Register %% hidden\n0: \"X\"",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/common/common.langium",
+        "symbol": "TITLE",
+        "line": 16,
+        "sha256": "d8b0c0056f6339ca6a0d3b966c02b1f4d53ad768069e2889450dc29312f1f65b",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "title-comment-normalization"
+      ],
+      "expectedText": [
+        "Register",
+        "X"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-a-packet-title-spaces",
+      "kind": "packet",
+      "source": "packet\ntitle Register   Map\n0: \"X\"",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/common/common.langium",
+        "symbol": "TITLE",
+        "line": 16,
+        "sha256": "d8b0c0056f6339ca6a0d3b966c02b1f4d53ad768069e2889450dc29312f1f65b",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "title-comment-normalization"
+      ],
+      "expectedText": [
+        "Register Map",
+        "X"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-a-packet-title-and-percent-field",
+      "kind": "packet",
+      "source": "packet\ntitle Register %% hidden\n0: \"%% data\"",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/common/common.langium",
+        "symbol": "TITLE",
+        "line": 16,
+        "sha256": "d8b0c0056f6339ca6a0d3b966c02b1f4d53ad768069e2889450dc29312f1f65b",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "title-comment-normalization"
+      ],
+      "expectedText": [
+        "Register",
+        "%% data"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-a-class-generic-cssclass",
+      "kind": "classDiagram",
+      "source": "classDiagram\nclass A~T~\ncssClass \"A~T~\" red\nclassDef red fill:#ff0000",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/classDb.ts",
+        "symbol": "setCssClass",
+        "line": 331,
+        "sha256": "694ae4bb58801b72cb703cb481e662d4e1a6208b91ab84b574786467ea0054c5",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "generic-cssclass-target"
+      ],
+      "expectedText": [
+        "A"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-a-class-generic-cssclass-two",
+      "kind": "classDiagram",
+      "source": "classDiagram\nclass A~T~\nclass B~U~\ncssClass \"A~T~,B~U~\" red\nclassDef red fill:#ff0000",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/class/classDb.ts",
+        "symbol": "setCssClass",
+        "line": 331,
+        "sha256": "694ae4bb58801b72cb703cb481e662d4e1a6208b91ab84b574786467ea0054c5",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "generic-cssclass-target"
+      ],
+      "expectedText": [
+        "A",
+        "B"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-a-block-empty-label",
+      "kind": "block",
+      "source": "block\nA[\"\"]",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "symbol": "string close rule",
+        "line": 54,
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "synthesized": true
+      },
+      "expect": "syntax_error",
+      "features": [
+        "empty-quoted-label"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "SYNTAX_ERROR"
+      ]
+    },
+    {
+      "id": "gap-a-block-empty-composite",
+      "kind": "block",
+      "source": "block\nblock:X\nend",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "symbol": "document",
+        "line": 198,
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "synthesized": true
+      },
+      "expect": "syntax_error",
+      "features": [
+        "empty-composite"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "SYNTAX_ERROR"
+      ]
+    },
+    {
+      "id": "gap-a-kanban-empty-label",
+      "kind": "kanban",
+      "source": "kanban\nTodo\n  item[\"\"]",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/kanban/parser/kanban.jison",
+        "symbol": "NSTR",
+        "line": 76,
+        "sha256": "b59eba92f4caf14b99343d4058880d958d4326b01dc1d1b4feba710ff94ed0af",
+        "synthesized": true
+      },
+      "expect": "syntax_error",
+      "features": [
+        "empty-quoted-label"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [
+        "SYNTAX_ERROR"
+      ]
+    },
+    {
+      "id": "gap-a-block-nonempty-control",
+      "kind": "block",
+      "source": "block\nblock:X\nA[\"Alpha\"]\nend",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/block/parser/block.jison",
+        "symbol": "document",
+        "line": 198,
+        "sha256": "50089847bac5c061dee73f11b17b0bdf6b66ef08248915f538efa94ea8b4bac7",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "empty-composite"
+      ],
+      "expectedText": [
+        "Alpha"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-a-kanban-nonempty-control",
+      "kind": "kanban",
+      "source": "kanban\nTodo\n  item[\"Alpha\"]",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/kanban/parser/kanban.jison",
+        "symbol": "NSTR",
+        "line": 76,
+        "sha256": "b59eba92f4caf14b99343d4058880d958d4326b01dc1d1b4feba710ff94ed0af",
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "empty-quoted-label"
+      ],
+      "expectedText": [
+        "Todo",
+        "Alpha"
+      ],
+      "expectedErrorCodes": []
+    }
+  ]
+}

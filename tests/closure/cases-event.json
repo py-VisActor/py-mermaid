@@ -1,0 +1,164 @@
+{
+  "schema": "py-mermaid-bulk-cases/v1",
+  "group": "event",
+  "cases": [
+    {
+      "id": "CLOSURE-EVENT-chain-revisit",
+      "kind": "eventmodeling",
+      "source": "eventmodeling\ntf 1 ui Page\ntf 2 cmd Place\ntf 3 evt Placed\ntf 4 rmo Orders\ntf 5 pcr React\n",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/eventmodeling/event-modeling.langium",
+        "sha256": "be3da489f5114237acbd7ec50494e8bb48f8e6753b6e2f7f2137dae170000611",
+        "symbol": "synthetic production/renderer boundary: fiveTypes,inferredRelations,lanes",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "fiveTypes",
+        "inferredRelations",
+        "lanes"
+      ],
+      "expectedText": [
+        "Page",
+        "Place",
+        "Placed",
+        "Orders",
+        "React"
+      ],
+      "expectedErrorCodes": [],
+      "group": "event",
+      "derivedFrom": {
+        "path": "tests/bulk/cases-B.json",
+        "id": "B-eventmodeling-all-types-valid",
+        "preservesExactSourceAndConfig": true
+      },
+      "eventProbe": {
+        "laneRelation": "Only pairs empirically nonoverlapping in original SVG are required nonoverlapping natively; no universal event-layout rule."
+      }
+    },
+    {
+      "id": "CLOSURE-EVENT-data",
+      "kind": "eventmodeling",
+      "source": "eventmodeling\ndata payload {\n \"count\": 2\n}\ntf 1 ui Page [[payload]]\ntf 2 cmd Submit `json` {\"id\":1}\n",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/eventmodeling/event-modeling.langium",
+        "sha256": "be3da489f5114237acbd7ec50494e8bb48f8e6753b6e2f7f2137dae170000611",
+        "symbol": "synthetic production/renderer boundary: dataBlock,dataReference,dataInline",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "dataBlock",
+        "dataReference",
+        "dataInline"
+      ],
+      "expectedText": [
+        "Page",
+        "Submit"
+      ],
+      "expectedErrorCodes": [],
+      "group": "event",
+      "derivedFrom": {
+        "path": "tests/bulk/cases-B.json",
+        "id": "B-eventmodeling-data",
+        "preservesExactSourceAndConfig": true
+      },
+      "eventProbe": {
+        "laneRelation": "Only pairs empirically nonoverlapping in original SVG are required nonoverlapping natively; no universal event-layout rule."
+      }
+    },
+    {
+      "id": "CLOSURE-EVENT-reset-multi",
+      "kind": "eventmodeling",
+      "source": "eventmodeling\ntf 1 cmd Place\ntf 2 cmd Pay\nrf 3 evt Placed ->> 1 ->> 2\nrf 4 ui Empty\n",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/eventmodeling/event-modeling.langium",
+        "sha256": "be3da489f5114237acbd7ec50494e8bb48f8e6753b6e2f7f2137dae170000611",
+        "symbol": "synthetic production/renderer boundary: multipleSources,reset,noResetInference",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "multipleSources",
+        "reset",
+        "noResetInference"
+      ],
+      "expectedText": [
+        "Place",
+        "Pay",
+        "Placed",
+        "Empty"
+      ],
+      "expectedErrorCodes": [],
+      "group": "event",
+      "derivedFrom": {
+        "path": "tests/bulk/cases-B.json",
+        "id": "B-eventmodeling-reset-multi",
+        "preservesExactSourceAndConfig": true
+      },
+      "eventProbe": {
+        "laneRelation": "Only pairs empirically nonoverlapping in original SVG are required nonoverlapping natively; no universal event-layout rule."
+      }
+    },
+    {
+      "id": "CLOSURE-EVENT-MULTILINE-JSON-AUDIT",
+      "kind": "eventmodeling",
+      "source": "eventmodeling\ndata payload {\n \"count\": 2,\n \"items\": [\"alpha\", \"beta\"],\n \"status\": \"ready\"\n}\ntf 1 ui Page [[payload]]\ntf 2 cmd Submit `json` {\"id\":1}\n",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/eventmodeling/event-modeling.langium",
+        "sha256": "be3da489f5114237acbd7ec50494e8bb48f8e6753b6e2f7f2137dae170000611",
+        "symbol": "synthetic production/renderer boundary: dataBlock,dataReference,dataInline",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "dataBlock",
+        "dataReference",
+        "dataInline"
+      ],
+      "expectedText": [
+        "Page",
+        "Submit",
+        "count",
+        "items",
+        "status",
+        "ready"
+      ],
+      "expectedErrorCodes": [],
+      "group": "event",
+      "notes": "Narrow source/native whitespace consumer audit. Source expected independently from actual original, not native golden."
+    },
+    {
+      "id": "CLOSURE-EVENT-LITERAL-DATA-HTML",
+      "kind": "eventmodeling",
+      "source": "eventmodeling\ndata payload {\n \"literal\": \"left\\nright\",\n \"math\": \"$$x$$\",\n \"entity\": \"#amp;\"\n}\ntf 1 ui Page [[payload]]\ntf 2 cmd Submit `json` {\"id\":1}\n",
+      "config": {},
+      "origin": {
+        "path": "packages/parser/src/language/eventmodeling/event-modeling.langium",
+        "sha256": "be3da489f5114237acbd7ec50494e8bb48f8e6753b6e2f7f2137dae170000611",
+        "symbol": "synthetic production/renderer boundary: dataBlock,dataReference,dataInline",
+        "line": 1
+      },
+      "expect": "render",
+      "features": [
+        "dataBlock",
+        "dataReference",
+        "dataInline"
+      ],
+      "expectedText": [
+        "Page",
+        "Submit",
+        "left\\nright",
+        "$$x$$",
+        "&"
+      ],
+      "expectedErrorCodes": [],
+      "group": "event",
+      "notes": "Narrow source/native whitespace consumer audit. Source expected independently from actual original, not native golden."
+    }
+  ]
+}

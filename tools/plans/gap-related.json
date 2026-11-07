@@ -1,0 +1,107 @@
+{
+  "schema": "py-mermaid-command-plan/v1",
+  "scope": "G03-related",
+  "description": "Shared configuration/visibility and all affected historical local contracts; no installation.",
+  "inputs": [
+    "{repo}/tests/bulk/shared/test_gap_configuration.py",
+    "{repo}/tests/bulk/shared/test_gap_visibility.py"
+  ],
+  "steps": [
+    {
+      "name": "related-bulk-shared",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests/bulk/shared",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src",
+        "PYTHONUTF8": "1"
+      }
+    },
+    {
+      "name": "related-f011",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests/f011",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src",
+        "PYTHONUTF8": "1"
+      }
+    },
+    {
+      "name": "related-f012",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests/f012",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src",
+        "PYTHONUTF8": "1"
+      }
+    },
+    {
+      "name": "related-f013",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests/f013",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src",
+        "PYTHONUTF8": "1"
+      }
+    },
+    {
+      "name": "related-f014",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests/f014",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src",
+        "PYTHONUTF8": "1"
+      }
+    },
+    {
+      "name": "related-math",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests/math",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src",
+        "PYTHONUTF8": "1"
+      }
+    }
+  ]
+}

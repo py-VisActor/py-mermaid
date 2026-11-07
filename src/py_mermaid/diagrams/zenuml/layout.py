@@ -57,6 +57,11 @@ def _comment_markup(value):
         if depth>128:raise ValueError('Comment nesting budget exceeded')
         output=[];i=0
         while i<len(text):
+            # Marked emits an escape token for backslash + ASCII punctuation.
+            # Source collectLines' default case preserves token.raw, rather
+            # than interpreting its escaped star/backtick as a delimiter.
+            if text[i]=='\\' and i+1<len(text) and text[i+1] in r'!"#$%&\'()*+,-./:;<=>?@[\]^_`{|}~':
+                output.append(html.escape(text[i:i+2]));i+=2;continue
             # collectLines leaves link/image tokens as their authored raw text.
             link=re.match(r'!?\[[^\]]*\](?:\([^)]*\)|\[[^\]]*\])',text[i:])
             if link:output.append(html.escape(link[0]));i+=len(link[0]);continue

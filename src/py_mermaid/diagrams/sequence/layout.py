@@ -9,6 +9,7 @@ from py_mermaid.model.flowchart import Box
 from py_mermaid.config.values import thaw_value
 from py_mermaid.runtime.common import config_dict
 from .presentation import Presentation
+from .message_geometry import message_geometry,marker_geometry
 
 
 @dataclass(frozen=True)
@@ -37,6 +38,11 @@ def _number(value,default=0):
 
 async def build(diagram,p):
     model=diagram.model;p=Presentation(p,model.actors);cfg=config_dict(diagram);c={**DEFAULTS,**cfg.get('sequence',{})};tv=cfg.get('themeVariables',{}) or {}
+    # Source draw sets conf=sequence, then bounds.init calls setConf(root).
+    # Generic truthy root font aliases overwrite all three specific role keys.
+    for key in ('fontFamily','fontSize','fontWeight'):
+        if cfg.get(key):
+            for role in ('actor','note','message'):c[role+key[0].upper()+key[1:]]=cfg[key]
     from .parser import KINDS
     from py_mermaid.model.flowchart import MermaidError
     unsupported=[a.kind for a in model.actors if a.kind not in KINDS]
@@ -117,11 +123,21 @@ async def build(diagram,p):
         if e.kind.endswith('_end'):
             frame=frame_stack.pop();y=max(y,frame['max_y'])+boxmargin;frame['bottom']=y;frames.append(frame);placed[i]=Box(extent_left,y,extent_right-extent_left,0);y+=boxmargin;continue
         if e.kind=='activate':
-            if e.source in active:active[e.source].append((y-4,len(active[e.source])))
+            if e.source in active:
+                # Inline '+' is a separate DB activation immediately after its
+                # message; it begins at the message line +2, not the next row.
+                previous=events[i-1] if i else None
+                inline=previous is not None and previous.kind=='message' and previous.offset==e.offset
+                start=placed[i-1].y+texts[i-1].height+12 if inline else y-4
+                active[e.source].append((start,len(active[e.source])))
             placed[i]=Box(xs.get(e.source,margin),y,activity_width,0);continue
         if e.kind=='deactivate':
             if e.source in active and active[e.source]:
-                start,level=active[e.source].pop();ab=Box(xs[e.source]+(level-1)*activity_width/2,start,activity_width,max(2,y-start));activation_boxes.append((e.source,ab));activation_levels[(e.source,ab)]=level
+                start,level=active[e.source].pop();previous=events[i-1] if i else None
+                inline=previous is not None and previous.kind=='message' and previous.offset==e.offset
+                end=placed[i-1].y+texts[i-1].height+10+(30 if previous.source==previous.target else 0) if inline else y
+                if start+18>end:start=end-6;end+=12  # source activeEnd minimum visible bar
+                ab=Box(xs[e.source]+(level-1)*activity_width/2,start,activity_width,end-start);activation_boxes.append((e.source,ab));activation_levels[(e.source,ab)]=level
             placed[i]=Box(xs.get(e.source,margin),y,activity_width,0);continue
         t=texts.get(i)
         if e.kind=='note':
@@ -133,7 +149,9 @@ async def build(diagram,p):
             level_s=len(active.get(e.source,()));level_t=len(active.get(e.target,()))
             event_depth[i]=(level_s,level_t)
             h=t.height+10+(25 if e.source==e.target else 0)
-            if e.source==e.target:extent_right=max(extent_right,xs[e.source]+max(width/2,t.width/2)+pad)
+            if e.source==e.target:
+                extent_right=max(extent_right,xs[e.source]+max(width/2,t.width/2)+pad)
+                extent_left=min(extent_left,xs[e.source]-t.width/2-pad)
             placed[i]=Box(min(xs[e.source],xs[e.target]),y,abs(xs[e.source]-xs[e.target]),h)
             lifecycle=False
             for a in actors:
@@ -241,41 +259,57 @@ async def build(diagram,p):
             p.rect(b.x,b.y,b.width,b.height,fill=color('noteBkgColor','#FFF5AD'),stroke=color('noteBorderColor','#AAAA33'),id=identity,role='note')
             align=c['noteAlign'];tx=b.x+note_pad if align=='left' else b.x+b.width-note_pad-t.width if align=='right' else b.x+(b.width-t.width)/2
             p.text(t,tx,b.y+note_pad,color=color('noteTextColor',textcolor),id=identity,role='note-text');continue
-        sx=xs[e.source];tx=xs[e.target];sy=b.y+t.height+10;ey=sy;ls,lt=event_depth[i];direction=1 if tx>=sx else -1
-        if e.source!=e.target:
-            if ls:sx+=(ls-1)*activity_width/2+direction*activity_width/2
-            if lt:tx+=(lt-1)*activity_width/2-direction*activity_width/2
-        if e.target in birth and birth[e.target]==sy-row_height/2:tx-=direction*actor_width[e.target]/2
-        dash=(3,3) if '--' in e.arrow else ()
-        if sx==tx:
-            if c['rightAngles']:
-                ex=sx+max(width/2,t.width/2);ey=sy+25;p.path(f'M {sx} {sy} H {ex} V {ey} H {sx}',stroke=signalcolor,line_width=1.5,dash=dash,id=identity,role='message')
-            else:
-                ey=sy+20;p.path(f'M {sx} {sy} C {sx+60} {sy-10} {sx+60} {sy+30} {sx} {ey}',stroke=signalcolor,line_width=1.5,dash=dash,id=identity,role='message')
-            lx=sx+10
-        else:p.line(sx,sy,tx,sy,stroke=signalcolor,line_width=1.5,dash=dash,id=identity,role='message');lx=min(sx,tx)+(abs(tx-sx)-t.width)/2
+        sx=xs[e.source];tx=xs[e.target];sy=b.y+t.height+10;ls,lt=event_depth[i];direction=1 if tx>=sx else -1
+        start_override=end_override=None
+        glyph_types={'actor','control','entity','database'}
+        def lifecycle_half(name):
+            # Source ACTOR_TYPE_WIDTH=18*2 for these glyph participants; other
+            # handlers attach to the actual participant rectangle boundary.
+            return 18 if actors[indices[name]].kind in glyph_types else actor_width[name]/2
+        if e.target in birth and birth[e.target]==sy-row_height/2:
+            end_override=tx-direction*(lifecycle_half(e.target)+3)
+        elif c['mirrorActors'] and e.source in death and death[e.source]==sy:
+            start_override=sx+direction*lifecycle_half(e.source)
+        elif c['mirrorActors'] and e.target in death and death[e.target]==sy:
+            end_override=tx-direction*(lifecycle_half(e.target)+3)
+        following=events[i+1] if i+1<len(events) else None
+        first_activate=following is not None and following.kind=='activate' and following.source==e.target and following.offset==e.offset
+        geom=message_geometry(e.arrow,e.connection,sx,tx,ls,lt,activity_width,
+            y=sy,numbered=e.number is not None,look=look,activate=first_activate,
+            self_reference=e.source==e.target,right_angles=c['rightAngles'],loop_width=max(width/2,t.width/2),
+            start_override=start_override,end_override=end_override)
+        dash=(3,3) if geom.dashed else ()
+        if geom.self_message:p.path(geom.path,fill='none',stroke=signalcolor,line_width=1.5,dash=dash,id=identity,role='message')
+        else:p.line(*geom.painted_start,*geom.painted_end,stroke=signalcolor,line_width=1.5,dash=dash,id=identity,role='message')
+        sx,tx=geom.startx,geom.stopx
+        lx=min(sx,tx)+(abs(tx-sx)-t.width)/2
         align=c['messageAlign']
-        if sx!=tx and align=='left':lx=min(sx,tx)+pad
-        elif sx!=tx and align=='right':lx=max(sx,tx)-t.width-pad
+        if align=='left':lx=min(sx,tx)+pad
+        elif align=='right':lx=max(sx,tx)-t.width-pad
         p.text(t,lx,b.y,color=signaltext,id=identity,role='message-text')
-        reverse=e.arrow.startswith(('/','\\'));half=any(ch in e.arrow for ch in '|/\\')
-        endx=sx if reverse else tx;endy=sy if reverse else ey;dx=-direction if reverse else direction
-        if half:
-            top_half=('|\\' in e.arrow or '/|' in e.arrow or '\\\\' in e.arrow)
-            dy=-6 if top_half else 6;back=endx-dx*9
-            if '|' in e.arrow:p.polygon(((endx,endy),(back,endy),(back,endy+dy)),fill=signalcolor,stroke=signalcolor,id=identity,role='message-arrow')
-            else:p.line(endx,endy,back,endy+dy,stroke=signalcolor,line_width=1.5,id=identity,role='message-arrow')
-        elif e.arrow.endswith('x'):p.marker(tx,ey,direction,0,kind='cross',size=8,color=signalcolor,id=identity)
-        elif e.arrow.endswith(')'):p.marker(tx,ey,direction,0,kind='open',size=8,color=signalcolor,id=identity)
-        elif e.arrow.endswith('>>'):
-            p.marker(tx,ey,-1 if e.source==e.target else direction,0,kind='point',size=8,color=signalcolor,id=identity)
-            if e.arrow.startswith('<<'):p.marker(sx,sy,-direction,0,kind='point',size=8,color=signalcolor,id=identity)
-        if e.connection:
-            if e.connection in {'source','dual'}:p.ellipse(sx+direction*16.5,sy,5,5,fill=fill,stroke=signalcolor,line_width=1.5,id=identity,role='central-connection')
-            if e.connection in {'target','dual'}:p.ellipse(tx-direction*16.5,ey,5,5,fill=fill,stroke=signalcolor,line_width=1.5,id=identity,role='central-connection')
-        if e.number is not None:
-            nx=sx+direction*10;p.ellipse(nx,sy,8,8,fill=signalcolor,stroke=signalcolor,id=identity,role='sequence-number-box')
-            nt=p.measure(f'{e.number:g}',size=10,html=False);p.text(nt,nx-nt.width/2,sy-nt.height/2,color=color('sequenceNumberColor','#FFFFFF'),id=identity,role='sequence-number')
+        for at_start,name,point,tangent in ((True,geom.start_marker,geom.painted_start,geom.start_tangent),
+                                           (False,geom.end_marker,geom.painted_end,geom.end_tangent)):
+            if not name:continue
+            shape,matrix,kind,marker_fill,marker_stroke,marker_width=marker_geometry(name,point,tangent,at_start=at_start,line_width=p.message_stroke_width)
+            colors={'signal':signalcolor,'text':color('textColor',signalcolor),'black':'black','none':'none'}
+            marker_id=p.render_id+'-'+name
+            marker_style=p.style('',tag='path',base={'fill':colors[marker_fill],'stroke':colors[marker_stroke],'stroke_width':marker_width},
+                ancestors=(('svg',('sequenceDiagram',),''),('defs',(),''),('marker',(),marker_id)))
+            p.marker_path(shape,kind=kind,transform=matrix,style=marker_style,id=identity)
+        for cx in geom.central_circles:
+            p.ellipse(cx,sy,5,5,fill=color('textColor',signalcolor),stroke='none',line_width=0,id=identity,role='central-connection')
+        if geom.number_x is not None:
+            nx=geom.number_x
+            # Source markerUnits=strokeWidth; its zero-length line's inherited
+            # `.actor-man circle, line` rule supplies the default 2px scale.
+            number_line=p.style('',tag='line',base={'stroke_width':2},ancestors=(('svg',('sequenceDiagram',),''),))
+            radius=6*number_line.stroke_width
+            number_style=p.style('',tag='circle',base={'fill':signalcolor,'stroke':'none','stroke_width':0},
+                ancestors=(('svg',('sequenceDiagram',),''),('defs',(),''),('marker',(),p.render_id+'-sequencenumber')))
+            p.ellipse(nx,sy,radius,radius,style=number_style,id=identity,role='sequence-number-box')
+            number_text=f'{e.number:g}';number_size=7 if len(number_text)>5 else 9 if len(number_text)>3 else 12
+            nt=p.measure(number_text,size=number_size,family='sans-serif',html=False)
+            p.text(nt,nx-nt.width/2,sy+4-nt.ascent,color=color('sequenceNumberColor','#FFFFFF'),id=identity,role='sequence-number')
     if title_box:p.text(title_box,(extent_left+extent_right-title_box.width)/2,top,color=textcolor,id='diagram-title',role='diagram-title')
     layout=SequenceLayout(tuple(actor_boxes.items()),tuple(placed.items()),tuple(activation_boxes),tuple((f['kind'],f['box']) for f in frames),extent_right+margin,total_height)
     return p.finish(width=extent_right+margin,height=total_height,padding=0,layout=layout,measured=tuple(actor_text.items()))

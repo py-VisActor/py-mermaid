@@ -1,0 +1,221 @@
+{
+  "schema": "py-mermaid-vchart-acceptance/v1",
+  "status": "PASS",
+  "candidateRun": "test-runs/VCHART-P4-batch-20261107T045154Z-dd03474c",
+  "sourceTreeSha256": "756a21de6e1845dd81ab9d6ca7e08a84c8e8190e9d7ec03312cc923e872d6dc3",
+  "p4Manifest": {
+    "path": "test-runs/VCHART-P4-batch-20261107T045154Z-dd03474c/run.json",
+    "sha256": "694c32b91cdee41a0f473cca1df93758c4faba8b6b6bdc06cb0abd6d522e7a82",
+    "bytes": 1468045
+  },
+  "candidateArchive": {
+    "archive": {
+      "path": "test-runs/VCHART-P4-batch-20261107T045154Z-dd03474c/artifacts/consumer-candidate.zip",
+      "sha256": "918725d99373fccb42a07361b10681dae1f47896a511e5edae0a4d780d7c5a31",
+      "bytes": 1506958
+    },
+    "manifest": {
+      "path": "test-runs/VCHART-P4-batch-20261107T045154Z-dd03474c/artifacts/consumer-candidate.json",
+      "sha256": "7506c117fc72d180b660047e7c53c803b20c86482f584423525ef4a11fa93f11",
+      "bytes": 69120
+    }
+  },
+  "scope": "DECLARED_RETAINED_STATIC_LOCAL_ACCEPTED",
+  "unittestMethodsByCommand": {
+    "supplier-unit": [
+      67
+    ],
+    "bridge-contracts": [
+      156
+    ],
+    "regression-bootstrap": [
+      12
+    ],
+    "regression-dependencies": [
+      14
+    ],
+    "regression-f011": [
+      89
+    ],
+    "regression-f012": [
+      66
+    ],
+    "regression-f013": [
+      126
+    ],
+    "regression-f014": [
+      171
+    ],
+    "regression-math": [
+      17
+    ],
+    "regression-bulk": [
+      1222
+    ],
+    "regression-html_host": [
+      257
+    ],
+    "regression-pixel_compare": [
+      17
+    ],
+    "regression-tooling": [
+      69
+    ]
+  },
+  "supplier": {
+    "release": {
+      "project": "py-visactor-vchart",
+      "version": "0.1.1",
+      "tag": "py-visactor-vchart-v0.1.1",
+      "sourceCommit": "ff16c91d38ab61e57d03b58579d5bf1beb2a1840",
+      "sourceTreeSha256": "3cb3dca5f8c1712a13566ec147f2c004b6fdbbaadaeec41930455597aa2d9065",
+      "dirtySource": false,
+      "distributions": {
+        "py_visactor_vchart-0.1.1-py3-none-any.whl": {
+          "bytes": 123546,
+          "sha256": "45b66f82d0c74a8d15306b117d93ad2d88c26d2997719306336bcc92b7ce49e2"
+        },
+        "py_visactor_vchart-0.1.1.tar.gz": {
+          "bytes": 113467,
+          "sha256": "fee51a35d75b7f8572e76b0028d63c833f6e01c670c7ea41dc412386b3bcef7f"
+        }
+      }
+    },
+    "native": [
+      {
+        "path": "test-runs/VCHART-P4-batch-20261107T045154Z-dd03474c/artifacts/native-cpu/result.json",
+        "sha256": "2d919a24b78a1b518ce88c77af70a1769bea0754ac37950cd52a2421b90a1289",
+        "bytes": 377376
+      },
+      {
+        "path": "test-runs/VCHART-P4-batch-20261107T045154Z-dd03474c/artifacts/native-auto/result.json",
+        "sha256": "6d1694ca514332c5c970e31d32a704c1803982d0ac04770a61052dae9107a738",
+        "bytes": 386896
+      },
+      {
+        "path": "test-runs/VCHART-P4-batch-20261107T045154Z-dd03474c/artifacts/native-gpu/result.json",
+        "sha256": "6d0df5c555dd33c00534177466f4b3317d28e308c4661c7b1e2479c04f869c25",
+        "bytes": 386895
+      }
+    ],
+    "reference": {
+      "path": "test-runs/VCHART-P4-batch-20261107T045154Z-dd03474c/artifacts/reference/report.json",
+      "sha256": "a8ebca4a02e2662f67e95d90f8f371787ed124bbfe8b2bbb5d29cc2b5763194e",
+      "bytes": 64923
+    }
+  },
+  "mermaid": {
+    "fixture": {
+      "path": "test-runs/VCHART-P4-batch-20261107T045154Z-dd03474c/artifacts/mermaid-oracle.fixtures.json",
+      "sha256": "742e156b684141f0d15f6e3fa7adb85c9ad70771c395fd1836748062fb0d7ea5",
+      "bytes": 47903
+    },
+    "oracle": {
+      "path": "test-runs/VCHART-P4-batch-20261107T045154Z-dd03474c/artifacts/mermaid-oracle/manifest.json",
+      "sha256": "680a7efcd978e4cc1579a4bb09f5dada1ccd83d35a55102483a77ebe9d0278a2",
+      "bytes": 505995
+    },
+    "bridge": {
+      "path": "test-runs/VCHART-P4-batch-20261107T045154Z-dd03474c/artifacts/bridge-specs/result.json",
+      "sha256": "b6e0b0a69c769e1c4f4563679576563c426bbc23bbb1a679f8dcd5b7c2af7be0",
+      "bytes": 29701
+    },
+    "profiles": [
+      {
+        "path": "test-runs/VCHART-P4-batch-20261107T045154Z-dd03474c/artifacts/mermaid-cpu/results.json",
+        "sha256": "e95f219a11b5b9012cce3a587f932a2e90703f533af139c3fee5b4e1432f9358",
+        "bytes": 91242
+      },
+      {
+        "path": "test-runs/VCHART-P4-batch-20261107T045154Z-dd03474c/artifacts/mermaid-auto/results.json",
+        "sha256": "fd9de5ba50b142bee44b3d42540c4ced23d57e2356ba43e7d08042b4054f2f7f",
+        "bytes": 91841
+      },
+      {
+        "path": "test-runs/VCHART-P4-batch-20261107T045154Z-dd03474c/artifacts/mermaid-gpu/results.json",
+        "sha256": "0b92259e43028bc6e704b387900efa90f65ba6c128e5dfe0516429dce0014be2",
+        "bytes": 91812
+      }
+    ]
+  },
+  "visualReview": {
+    "path": "test-runs/vchart-visual-review-final-20261107T045500Z.json",
+    "sha256": "91323f5236db035912781979aed5efb89bd12d1775b58ae56a28c4bd3539e60b",
+    "bytes": 86619
+  },
+  "freshInstallations": [
+    {
+      "mode": "wheel",
+      "manifest": {
+        "path": "test-runs/VCHART-INSTALL-wheel-20261107T045110Z-b3e13278/run.json",
+        "sha256": "786000579351f0a4ec9ef546bad3f93ea7f69acc77116f0ecb5576be3978e817",
+        "bytes": 52731
+      },
+      "installed": {
+        "path": "test-runs/VCHART-INSTALL-wheel-20261107T045110Z-b3e13278/artifacts/installed/result.json",
+        "sha256": "4647bd4f765003dcac48774ab19a1fe2a38d3a90e59bc99705960259329294e6",
+        "bytes": 39756
+      }
+    },
+    {
+      "mode": "sdist",
+      "manifest": {
+        "path": "test-runs/VCHART-INSTALL-sdist-20261107T045143Z-d4d79369/run.json",
+        "sha256": "74da2fcd18d142b6fa3af699fca5f6edda668129c98d2d14eae1d4b84353c511",
+        "bytes": 52721
+      },
+      "installed": {
+        "path": "test-runs/VCHART-INSTALL-sdist-20261107T045143Z-d4d79369/artifacts/installed/result.json",
+        "sha256": "175937cf6a5db6a09486c4b721b773d3959c9801c1f61439c14a5f8f382dfeb2",
+        "bytes": 39756
+      }
+    }
+  ],
+  "ciValidation": {
+    "summary": {
+      "path": "C:\\code\\py-visactor\\py-vchart\\test-runs\\vchart-ci-final-42337813981\\summary.json",
+      "sha256": "5b2afeeccf7685cd43a506d1ae6615cb7170841ac15ecc6ce5a83f1972a2ad2c",
+      "bytes": 31575
+    },
+    "api": {
+      "path": "C:\\code\\py-visactor\\py-vchart\\test-runs\\vchart-ci-final-42337813981\\github-evidence.json",
+      "sha256": "ea6dd11bc6c6065652a6a401fa3a1b3d682419385181944e57efdb583bea1bf1",
+      "bytes": 36297
+    },
+    "validationJobs": 4,
+    "externalInstallations": 8,
+    "casesPerInstallation": 225,
+    "nativeMethodsPerInstallation": 36
+  },
+  "publication": {
+    "github": "STABLE_RELEASED",
+    "releaseProof": {
+      "path": "test-runs/VCHART-P5-github-release-batch-20261107T042245Z-356c34f3/artifacts/promoted/result.json",
+      "sha256": "5c1b8bf0bedb0c0a70b715ef7fd169f30202ceadeeeab8f2098356c743c3f30f",
+      "bytes": 9834
+    },
+    "pypi": "BLOCKED_INVALID_PUBLISHER",
+    "workflowConclusion": "failure",
+    "verify": "skipped"
+  },
+  "remaining": {
+    "legacyConfirmedBranchGaps": 22,
+    "sourceValidEmbeddingRestrictions": [
+      {
+        "id": "VC-M-venn-four-sets",
+        "reason": "Source-valid advanced static option beyond current VChart embedding; not a source parse negative or static exclusion."
+      },
+      {
+        "id": "VC-M-treemap-si-format",
+        "reason": "Source-valid advanced static option beyond current VChart embedding; not a source parse negative or static exclusion."
+      }
+    ],
+    "exclusions": [
+      "Dagre",
+      "interaction",
+      "video/audio",
+      "arbitrary HTML/CSS extension"
+    ]
+  },
+  "limits": "PASS is not a PyPI publication, arbitrary static option completion, or exact native/reference pixel equivalence."
+}

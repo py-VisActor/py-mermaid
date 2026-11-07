@@ -1,0 +1,114 @@
+{
+  "schema": "py-mermaid-command-plan/v1",
+  "scope": "FINAL-CAPABILITY-METADATA",
+  "description": "Review artifacts/documentation/source-integrity only. Worker runs intentionally contain real failures; integrityPASS never upgrades them. No package build/commit/publish.",
+  "inputs": [
+    "{repo}/docs/FINAL_CAPABILITY_REVIEW.md",
+    "{repo}/references/final-capability-review.json",
+    "{repo}/references/final-capability-repair-queue.json",
+    "{repo}/references/final-capability-delivery.json"
+  ],
+  "steps": [
+    {
+      "name": "validate-documents",
+      "argv": [
+        "{python}",
+        "{repo}/scripts/validate_bootstrap.py"
+      ],
+      "timeoutSeconds": 180
+    },
+    {
+      "name": "locked-dependencies",
+      "argv": [
+        "{python}",
+        "{repo}/scripts/audit_dependencies.py",
+        "--check"
+      ],
+      "timeoutSeconds": 180
+    },
+    {
+      "name": "whitespace",
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "timeoutSeconds": 180
+    },
+    {
+      "name": "integrity-3",
+      "argv": [
+        "{python}",
+        "{repo}/tools/workflow.py",
+        "verify",
+        "--run",
+        "{repo}/test-runs/FINAL-CAPABILITY-A-audit-20261107T073855Z-51cce6e4"
+      ],
+      "timeoutSeconds": 180
+    },
+    {
+      "name": "integrity-4",
+      "argv": [
+        "{python}",
+        "{repo}/tools/workflow.py",
+        "verify",
+        "--run",
+        "{repo}/test-runs/FINAL-CAPABILITY-B-review-20261107T073915Z-a5a59886"
+      ],
+      "timeoutSeconds": 180
+    },
+    {
+      "name": "integrity-5",
+      "argv": [
+        "{python}",
+        "{repo}/tools/workflow.py",
+        "verify",
+        "--run",
+        "{repo}/test-runs/FINAL-CAPABILITY-C-batch-20261107T074051Z-414c8c8f"
+      ],
+      "timeoutSeconds": 180
+    },
+    {
+      "name": "integrity-6",
+      "argv": [
+        "{python}",
+        "{repo}/tools/workflow.py",
+        "verify",
+        "--run",
+        "{repo}/test-runs/FINAL-CAPABILITY-C-SOURCE-batch-20261107T074503Z-775a7421"
+      ],
+      "timeoutSeconds": 180
+    },
+    {
+      "name": "integrity-7",
+      "argv": [
+        "{python}",
+        "{repo}/tools/workflow.py",
+        "verify",
+        "--run",
+        "{repo}/test-runs/FINAL-CAPABILITY-root-review-20261107T074045Z-d616752a"
+      ],
+      "timeoutSeconds": 180
+    },
+    {
+      "name": "integrity-8",
+      "argv": [
+        "{python}",
+        "{repo}/tools/workflow.py",
+        "verify",
+        "--run",
+        "{repo}/test-runs/FINAL-CAPABILITY-P5-delivery-20261107T074816Z-a497e757"
+      ],
+      "timeoutSeconds": 180
+    },
+    {
+      "name": "source-queue-and-current-evidence",
+      "argv": [
+        "{python}",
+        "-c",
+        "import json;from pathlib import Path;from tools.run_support import source_identity,file_identity;d=json.loads(Path('references/final-capability-review.json').read_text('utf-8'));assert source_identity()['sourceTreeSha256']==d['sourceTreeSha256'];assert d['releaseReady'] is False and d['counts']['knownUnrepairedRecordsIncludingChartGaps']==24;assert all(file_identity(Path(e['path']))=={k:e[k] for k in ('bytes','sha256')} for e in d['evidence']);q=json.loads(Path('references/final-capability-repair-queue.json').read_text('utf-8'));assert sum(len(f['branches']) for f in q['functionalFamilies'])==24;print('Review complete; release still blocked. Source and original evidence unchanged.')"
+      ],
+      "timeoutSeconds": 180
+    }
+  ]
+}

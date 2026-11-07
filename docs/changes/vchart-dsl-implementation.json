@@ -1,0 +1,80 @@
+{
+  "schema": "py-mermaid-change/v1",
+  "task": "vchart-dsl-full-implementation",
+  "authorization": "Plan and implement complete VChart DSL capability integration",
+  "status": "declared_dsl_static_scope_accepted_with_documented_limits",
+  "design": "docs/VCHART_DSL_DESIGN.md",
+  "plan": "docs/VCHART_DSL_EXECUTION_PLAN.md",
+  "provider": "py-visactor-vchart==0.1.1",
+  "startingSource": "d7a26bdc6aa104ada9aef8b32f8e365c7df3ec1f51853032958b950d2476f136",
+  "acquisitionRun": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\VCHART-DSL-P0-acquisition-20261107T065122Z-05a86059",
+  "startingDirtyTree": "Full prior migration/pub/design worktree retained; see acquisition git-status.txt. No reset or broad commit.",
+  "sourceScope": "68 actual registered static2D types and225 existing specifications, all DSL lowering/resources/API/CLI; no backend feature invention",
+  "phases": [
+    "P0 source/contracts",
+    "P1 all source mechanical only",
+    "P2 source-based tests",
+    "P3 first complete grouped run and batch repair",
+    "P4 same-candidate final",
+    "P5 paginated report/delivery"
+  ],
+  "preservedLimits": [
+    "static only",
+    "no Dagre",
+    "no video/audio",
+    "no arbitrary HTML/CSS extension",
+    "22 prior branch gaps unchanged"
+  ],
+  "acquisitionSource": "69451c283a3eb2e907452707439f09540d0c65d0226b98d06ff6b332c3ba268f",
+  "startingSourceEvidence": "test-runs/VCHART-DSL-DESIGN-checks-20261107T064339Z-1d36e190/run.json",
+  "acquisitionTiming": "Initial model contract was already created when concurrent P0 capture ran; preserve its actual acquisitionSource separately and use the closed pre-implementation design source as baseline.",
+  "upstreamCheck": "test-runs/VCHART-DSL-P0-record-20261107T065153Z-c4a20d29/run.json",
+  "interfaces": "docs/VCHART_DSL_INTERFACES.md",
+  "p1Run": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\VCHART-DSL-P1-freeze-20261107T070051Z-d973ef81",
+  "p1Source": "8d225816e8f51773f9eae450af123269e232b6a05855fd4f8cb0a380fa3640a0",
+  "p1Meaning": "Mechanical compile/import only; behavior unverified",
+  "p2Run": "test-runs/VCHART-DSL-P2-freeze-20261107T071014Z-2c01eb63",
+  "firstRun": "test-runs/VCHART-DSL-P3-batch-20261107T071015Z-cae93e0e",
+  "relatedRun": "test-runs/VCHART-DSL-P3-REPAIR-batch-20261107T071557Z-37375aad",
+  "finalRun": "test-runs/VCHART-DSL-P4-batch-20261107T072312Z-7cdc1791",
+  "deliveryRun": "test-runs/VCHART-DSL-P5-delivery-20261107T072726Z-cd08a488",
+  "failedDeliveryRun": "test-runs/VCHART-DSL-P5-delivery-20261107T072548Z-d40f369a",
+  "sourceTreeSha256": "fe2c293f8ed4ea76e04d34669c8739c27a32063447026e144928bfd6b4ac0bb2",
+  "counts": {
+    "types": 68,
+    "casesPerProfile": 301,
+    "supplier": 225,
+    "representative": 68,
+    "examples": 8,
+    "profiles": 3,
+    "matrixCases": 903,
+    "actualExportFiles": 816,
+    "unittestMethods": 2364
+  },
+  "reportUrl": "http://127.0.0.1:8765/VCHART-DSL-P5-delivery-20261107T072726Z-cd08a488/index.html",
+  "postprocessingChanges": "After closed P4 only: normalize review-binding status while preserving original verdict; report QA transport concurrency4 and at most3 read-only retries, every exception recorded, HTTP status/hash mismatches remain failures. Product and tests unchanged.",
+  "remaining": "Exhaustive provider field/branch inventory not established;22 previous Mermaid gaps unchanged; no Mermaid publish/commit/push performed.",
+  "next": "Review report and scope; no active write leases.",
+  "evidence": [
+    {
+      "path": "docs/VCHART_DSL_ACCEPTANCE.md",
+      "sha256": "e88380f6004542c044204c3aa6cd8602e557899938b26721360da42cd9c973af",
+      "bytes": 6959
+    },
+    {
+      "path": "references/vchart-dsl-verification-summary.json",
+      "sha256": "1ba82b9e5aa37f5d5d69a41fa90f6b561f54511fd4f92ed3d7744e7eea042c2a",
+      "bytes": 20065
+    },
+    {
+      "path": "test-runs/VCHART-DSL-P4-batch-20261107T072312Z-7cdc1791/run.json",
+      "sha256": "4591f605603f8f3f71764d2c35a8c69c21b0fa71e1258638d1162d9f6d401e53",
+      "bytes": 2807961
+    },
+    {
+      "path": "test-runs/VCHART-DSL-P5-delivery-20261107T072726Z-cd08a488/run.json",
+      "sha256": "172fa2e855803e51fa1112fce4d14221fd9db8d74e2e3fdf5a9f71ea6b473d99",
+      "bytes": 38920
+    }
+  ]
+}

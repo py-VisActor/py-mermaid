@@ -227,11 +227,31 @@ async function main(){
     const texts=[...svg.querySelectorAll('text,foreignObject')].filter(e=>!e.closest('defs')).map(e=>{
      const s=getComputedStyle(e);return {text:e.tagName==='foreignObject'?(e.innerText||e.textContent):e.textContent,box:box(e),fontFamily:s.fontFamily,fontSize:s.fontSize,fontWeight:s.fontWeight,textAnchor:s.textAnchor,dominantBaseline:s.dominantBaseline,fill:s.fill,display:s.display,visibility:s.visibility};
     });
+    // Read-only initial host state. This adds evidence fields only: no DOM
+    // mutation, event dispatch, value assignment or screenshot changes.
+    const htmlControls=[...svg.querySelectorAll('input,button,select,textarea,meter,progress,fieldset')].map(e=>{
+     const s=getComputedStyle(e),tag=e.localName;
+     let effectiveOpacity=1;for(let ancestor=e;ancestor;ancestor=ancestor.parentElement)effectiveOpacity*=Number(getComputedStyle(ancestor).opacity);
+     const viewport=e.getBoundingClientRect();
+     const visibleOptionIndices=tag!=='select'?null:!(e.multiple||e.size>1)?[...e.options].flatMap((o,i)=>o.selected?[i]:[]):[...e.options].flatMap((o,i)=>{
+      const r=o.getBoundingClientRect(),intersection=Math.max(0,Math.min(r.bottom,viewport.bottom)-Math.max(r.top,viewport.top));
+      return r.width>0&&r.height>0&&intersection>=r.height*.5?[i]:[];
+     });
+     return {tag,id:e.id,type:e.type||'',attributes:Object.fromEntries([...e.attributes].map(a=>[a.name,a.value])),
+      text:e.textContent,value:'value' in e?e.value:null,valueAsNumber:'valueAsNumber' in e?e.valueAsNumber:null,
+      checked:'checked' in e?e.checked:null,disabled:'disabled' in e?e.disabled:null,effectiveDisabled:e.matches(':disabled'),
+      readonly:'readOnly' in e?e.readOnly:null,multiple:'multiple' in e?e.multiple:null,
+      minimum:'min' in e?e.min:null,maximum:'max' in e?e.max:null,position:'position' in e?e.position:null,
+      selectedIndices:e.options?[...e.options].flatMap((o,i)=>o.selected?[i]:[]):null,
+      options:e.options?[...e.options].map(o=>({label:o.label,value:o.value,selected:o.selected,disabled:o.matches(':disabled'),group:o.parentElement?.localName==='optgroup'?o.parentElement.label:''})):null,
+      box:box(e),effectiveOpacity,visibleOptionIndices,scrollTop:e.scrollTop,scrollHeight:e.scrollHeight,clientHeight:e.clientHeight,
+      style:Object.fromEntries(['display','visibility','opacity','fontFamily','fontSize','fontWeight','fontStyle','lineHeight','color','backgroundColor','width','height','paddingTop','paddingRight','paddingBottom','paddingLeft','borderTopWidth','boxSizing','direction','textAlign','verticalAlign','appearance'].map(k=>[k,s[k]]))};
+    });
     return {kind:diagram?.type||item.kind,snapshot,config:renderConfig||pure(mermaid.mermaidAPI.getConfig()),transport,originalOutput,
      configurationCapture:renderConfig?'read-only observation at original SVG/iframe creation':'unscoped core configuration (ZenUML core does not consume Mermaid palette)',
      snapshotSerialization:{maximumDepth:16,maximumEntries:20000,referenceMarkers:true},
      layoutLoaders:{tidyTreeRegistered:true,tidyTreeInvocations:globalThis.__bulkTidyLoads},
-     svg:svg.outerHTML,shapes,texts,viewport:{width:rect.width,height:rect.height}};
+     svg:svg.outerHTML,shapes,texts,htmlControls,viewport:{width:rect.width,height:rect.height}};
     }catch(error){
      // Return only explicit scalar grammar-location fields. Letting Playwright
      // serialize Mermaid's thrown parser object can itself overflow on yy/AST.
@@ -243,12 +263,31 @@ async function main(){
     }
    },item),60000);
    if(result.$captureError){const error=Error(result.$captureError.message);error.sourceError=result.$captureError;throw error;}
-   if(item.kind==='mindmap'&&result.config?.layout==='tidy-tree'&&!result.layoutLoaders?.tidyTreeInvocations)
+   if(item.kind==='mindmap'&&result.snapshot?.getData?.config?.layout==='tidy-tree'&&!result.layoutLoaders?.tidyTreeInvocations)
     throw Error('Oracle transport failed to invoke the explicitly requested canonical tidy-tree provider');
    fs.writeFileSync(path.join(out,item.id+'.svg'),result.svg);delete result.svg;
    if(result.originalOutput)fs.writeFileSync(path.join(out,item.id+'.sandbox.html'),result.originalOutput);delete result.originalOutput;
    result.blockedRequests=network;result.pageErrors=pageErrors;save(path.join(out,item.id+'.json'),result);
    await page.locator('#host > svg').screenshot({path:path.join(out,item.id+'.png'),timeout:30000});
+   // Some native select listboxes initialize their scroll during the first
+   // paint used by screenshot(). Bind visible-option evidence to that actual
+   // raw PNG, retaining the earlier layout snapshot; never scroll or mutate.
+   if(result.htmlControls?.some(c=>c.tag==='select')){
+    const painted=await page.evaluate(()=>[...document.querySelectorAll('#host svg input,#host svg button,#host svg select,#host svg textarea,#host svg meter,#host svg progress,#host svg fieldset')].map((e,index)=>{
+     if(e.localName!=='select')return null;const viewport=e.getBoundingClientRect();
+     const visibleOptionIndices=!(e.multiple||e.size>1)?[...e.options].flatMap((o,i)=>o.selected?[i]:[]):[...e.options].flatMap((o,i)=>{
+      const r=o.getBoundingClientRect(),overlap=Math.max(0,Math.min(r.bottom,viewport.bottom)-Math.max(r.top,viewport.top));
+      return r.width>0&&r.height>0&&overlap>=r.height*.5?[i]:[];
+     });return {index,id:e.id,visibleOptionIndices,scrollTop:e.scrollTop,scrollHeight:e.scrollHeight,clientHeight:e.clientHeight};
+    }).filter(Boolean));
+    result.htmlControlViewportBeforeScreenshot=result.htmlControls.filter(c=>c.tag==='select').map(c=>({id:c.id,visibleOptionIndices:c.visibleOptionIndices,scrollTop:c.scrollTop}));
+    for(const snapshot of painted){const control=result.htmlControls[snapshot.index];
+     if(control?.tag!=='select'||control.id!==snapshot.id)throw Error('Select identity changed during source screenshot');
+     const {index,...viewport}=snapshot;Object.assign(control,viewport);
+    }
+    result.htmlControlViewportCapture='read-only after raw screenshot; original first-paint initialization, no scrolling or state assignment';
+    save(path.join(out,item.id+'.json'),result);
+   }
    manifest.cases.push({id:item.id,kind:item.kind,expect:item.expect,status:'captured',blockedRequests:network});
   }catch(error){
    const result={id:item.id,kind:item.kind,status:'error',expect:item.expect,message:String(error),stack:error.stack,sourceError:error.sourceError,blockedRequests:network,pageErrors};

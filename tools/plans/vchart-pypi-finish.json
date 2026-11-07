@@ -1,0 +1,75 @@
+{
+  "schema": "py-mermaid-command-plan/v1",
+  "scope": "VCHART-PYPI-FINISH",
+  "inputs": [
+    "{repo}/docs/VCHART_PYPI_PUBLICATION.md",
+    "{repo}/references/vchart-pypi-verification.json",
+    "{repo}/references/vchart-release-lock.json",
+    "{repo}/../py-vchart/README.md",
+    "{repo}/../py-vchart/docs/RELEASE_0_1_1.md"
+  ],
+  "steps": [
+    {
+      "name": "bootstrap-current-publication",
+      "argv": [
+        "{python}",
+        "scripts/validate_bootstrap.py"
+      ]
+    },
+    {
+      "name": "audit-current-publication",
+      "argv": [
+        "{python}",
+        "scripts/audit_dependencies.py",
+        "--check"
+      ]
+    },
+    {
+      "name": "check-consumer-whitespace",
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ]
+    },
+    {
+      "name": "check-supplier-whitespace",
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "cwd": "{repo}/../py-vchart"
+    },
+    {
+      "name": "stage-published-supplier-docs",
+      "argv": [
+        "git",
+        "add",
+        "README.md",
+        "docs/RELEASE_0_1_1.md"
+      ],
+      "cwd": "{repo}/../py-vchart"
+    },
+    {
+      "name": "commit-published-supplier-docs",
+      "argv": [
+        "git",
+        "commit",
+        "-m",
+        "Record verified PyPI 0.1.1 publication and install command"
+      ],
+      "cwd": "{repo}/../py-vchart"
+    },
+    {
+      "name": "push-published-supplier-docs",
+      "argv": [
+        "git",
+        "push",
+        "origin",
+        "main"
+      ],
+      "cwd": "{repo}/../py-vchart"
+    }
+  ]
+}

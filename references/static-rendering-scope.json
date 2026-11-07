@@ -19,10 +19,12 @@
     "drag-zoom-select-edit-and-hit-testing",
     "animation-playback-timeline-and-frame-sequences",
     "interactive-metadata-and-link-annotations",
-    "dom-aria-accessibility-behavior-and-new-host-protocols"
+    "dom-aria-accessibility-behavior-and-new-host-protocols",
+    "html-video-audio-entire-feature-including-initial-static-appearance",
+    "advanced-static-html-css-extensions"
   ],
   "sourceInventory": "Retain original indexes and dependency facts; classify excluded assertions as excluded_by_static_scope, neither pending nor passed",
-  "mixedEntries": "Keep static visible effects and security assertions; exclude interaction subassertions only",
+  "mixedEntries": "Keep in-scope static visible effects and security assertions; video/audio are entirely user-excluded, including static initial appearance.",
   "animationStaticReference": "Initial time t=0; preserve and record initial visible styles; no playback or image postprocessing",
   "syntax": "Future grammar expansion may safely recognize and ignore interaction directives; no claim that existing parsers already accept them",
   "existingPureValueCompatibility": "Retain existing fields without requiring interaction exports or runtime",
@@ -32,5 +34,8 @@
   "layoutPolicy": "references/layout-policy.json",
   "excludedAlgorithms": [
     "dagre"
-  ]
+  ],
+  "mediaExclusion": "references/media-exclusion.json",
+  "latestDecisionAt": "2026-11-06",
+  "htmlCssExtensionExclusion": "references/html-css-extension-exclusion.json"
 }

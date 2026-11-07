@@ -1,0 +1,67 @@
+{
+  "schema": "py-mermaid-command-plan/v1",
+  "scope": "VCHART-PYPI-CHECKS",
+  "inputs": [
+    "{repo}/pyproject.toml",
+    "{repo}/references/vchart-release-lock.json",
+    "{repo}/tools/verify_vchart_install.py"
+  ],
+  "steps": [
+    {
+      "name": "bootstrap",
+      "argv": [
+        "{python}",
+        "scripts/validate_bootstrap.py"
+      ],
+      "timeoutSeconds": 600
+    },
+    {
+      "name": "dependency-audit",
+      "argv": [
+        "{python}",
+        "scripts/audit_dependencies.py",
+        "--check"
+      ],
+      "timeoutSeconds": 600
+    },
+    {
+      "name": "bootstrap-tests",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests/bootstrap",
+        "-v"
+      ],
+      "timeoutSeconds": 600
+    },
+    {
+      "name": "dependency-tests",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests/dependencies",
+        "-v"
+      ],
+      "timeoutSeconds": 600
+    },
+    {
+      "name": "integration-tests",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests/vchart_integration",
+        "-v"
+      ],
+      "timeoutSeconds": 600
+    }
+  ]
+}

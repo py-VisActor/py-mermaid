@@ -11,7 +11,12 @@ class AgentFlow:
     connectors:tuple
 
 def parse(document,config):
-    resolved=flow_config(config)
+    # Appearance was resolved for agentflow already. Unrelated flowchart
+    # defaults must not select another theme/look and recalculate its palette.
+    projected=dict(config)
+    projected['flowchart']={**config.get('flowchart',{}),
+                            'theme':config['theme'],'look':config['look']}
+    resolved=flow_config(projected)
     if len(document.cleaned.encode('utf-16-le',errors='surrogatepass'))//2>resolved.max_text_size:raise error(document,0,'Source exceeds maxTextSize','MAX_TEXT_SIZE_EXCEEDED')
     parser=AgentParser(document.cleaned,resolved,document);graph=parser.parse()
     return make_diagram('agentflow',document,config,AgentFlow(graph,tuple(parser.kinds.items()),tuple(parser.connectors)),tuple(parser.diagnostics))
@@ -29,7 +34,7 @@ def presentation(graph,c,kinds):
     css='\n'.join(rules)+'\n'+graph.config.theme_css
     conf=replace(graph.config,theme_css=css,node_spacing=cfg.get('nodeSpacing') or 50,rank_spacing=cfg.get('rankSpacing') or 50,diagram_padding=cfg.get('diagramPadding',8),title_top_margin=cfg.get('titleTopMargin',0),min_node_width=cfg.get('minNodeWidth',graph.config.min_node_width),wrapping_width=cfg.get('wrappingWidth',graph.config.wrapping_width))
     groups=tuple(replace(group,classes=(*group.classes,'af-flow'),color_index=(7+group.color_index%max(1,len(borders)-7))%len(borders) if palette else group.color_index) for group in graph.groups)
-    nodes=tuple(replace(node,classes=(*node.classes,'af-kind-'+kinds.get(node.id,'task')),color_index=(7+(node.color_index or 0)%max(1,len(borders)-7))%len(borders) if palette and node.shape=='collapsedGroup' else node.color_index) for node in graph.nodes)
+    nodes=tuple(replace(node,classes=node.classes if node.shape=='collapsedGroup' else (*node.classes,'af-kind-'+kinds.get(node.id,'task')),color_index=(7+(node.color_index or 0)%max(1,len(borders)-7))%len(borders) if palette and node.shape=='collapsedGroup' else node.color_index) for node in graph.nodes)
     return replace(graph,config=conf,groups=groups,nodes=nodes)
 
 async def build(diagram,p):

@@ -1,11 +1,11 @@
 """Explicit local-file CLI for the public static renderer."""
 from __future__ import annotations
 import argparse
-from dataclasses import asdict
+from dataclasses import asdict,is_dataclass
 import json
 from pathlib import Path
 import sys
-from .api import render
+from .api import render,compile_vchart
 from .model.flowchart import MermaidError, ExportOptions, ResourceBundle, ImageResource, IconResource, FontResource
 
 
@@ -57,7 +57,11 @@ def main(argv=None):
     parser.add_argument('--backend',choices=('auto','cpu','gpu'),default='auto')
     parser.add_argument('--config',type=Path,help='Explicit local JSON configuration file')
     parser.add_argument('--resources',type=Path,help='Offline JSON resource manifest with explicit image/icon/font paths')
+    parser.add_argument('--vchart-maps',type=Path,help='Offline JSON object mapping VChart map names to GeoJSON objects')
+    parser.add_argument('--vchart-svgs',type=Path,help='Offline JSON object mapping VChart SVG names to SVG source text')
     parser.add_argument('--metadata',type=Path,help='Write output size, MIME, actual backend and diagnostics as JSON')
+    parser.add_argument('--compile','--compile-only',dest='compile_only',action='store_true',
+        help='Compile explicit VChart text to inspectable JSON (spec, maps/SVGs, source spans and diagnostics), without rendering')
     parser.add_argument('--quality',type=float,default=.92)
     parser.add_argument('--density',type=int,default=1)
     parser.add_argument('--matte')
@@ -69,11 +73,26 @@ def main(argv=None):
         fmt=args.format or (args.output.suffix.lstrip('.').lower() if args.output and args.output.suffix else 'png')
         if args.output and args.metadata and args.output.resolve()==args.metadata.resolve():raise ValueError('Image and metadata paths must differ')
         protected=[Path(args.input)] if args.input!='-' else []
-        protected.extend(p for p in (args.config,args.resources) if p)
+        protected.extend(p for p in (args.config,args.resources,args.vchart_maps,args.vchart_svgs) if p)
         for output in (args.output,args.metadata):
             if output and any(output.resolve()==source.resolve() for source in protected):raise ValueError('Output cannot overwrite an input file')
-        result=render(text,config=_json_object(args.config) if args.config else None,format=fmt,backend=args.backend,
-            resources=_resource_bundle(args.resources),export_options=ExportOptions(args.quality,args.density,args.matte,args.outline,args.downsample))
+        from .resources import MAX_BUNDLE_BYTES
+        for source in (args.vchart_maps,args.vchart_svgs):
+            if source and source.stat().st_size>MAX_BUNDLE_BYTES:raise ValueError('VChart resource JSON exceeds bundle budget')
+        config=_json_object(args.config) if args.config else None
+        maps=_json_object(args.vchart_maps) if args.vchart_maps else None
+        svgs=_json_object(args.vchart_svgs) if args.vchart_svgs else None
+        if args.compile_only:
+            if args.resources:raise ValueError('--resources is a rendering bundle; compile-only accepts --vchart-maps and --vchart-svgs')
+            if args.metadata:raise ValueError('--metadata is for rendered outputs; compilation JSON already includes all source/resource metadata')
+            compilation=compile_vchart(text,config=config,maps=maps,svgs=svgs)
+            encoded=json.dumps(compilation.as_dict(),ensure_ascii=True,allow_nan=False,indent=2)+'\n'
+            if args.output:args.output.write_text(encoded,encoding='utf-8')
+            else:sys.stdout.write(encoded)
+            return 0
+        result=render(text,config=config,format=fmt,backend=args.backend,
+            resources=_resource_bundle(args.resources),export_options=ExportOptions(args.quality,args.density,args.matte,args.outline,args.downsample),
+            maps=maps,svgs=svgs)
         if args.output:args.output.write_bytes(result.data)
         else:sys.stdout.buffer.write(result.data)
         if args.metadata:
@@ -82,6 +101,9 @@ def main(argv=None):
         return 0
     except MermaidError as exc:
         payload={'code':exc.code,'message':str(exc),'span':asdict(exc.span) if exc.span else None}
+        if hasattr(exc,'spec_path'):payload['spec_path']=list(exc.spec_path)
+        if hasattr(exc,'related_spans'):
+            payload['related_spans']=[asdict(v) if is_dataclass(v) else v for v in exc.related_spans]
         print(json.dumps(payload,ensure_ascii=True),file=sys.stderr);return 1
     except (OSError,ValueError) as exc:
         print(json.dumps({'code':'CLI_INPUT_ERROR','message':str(exc)},ensure_ascii=True),file=sys.stderr);return 2

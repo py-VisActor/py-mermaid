@@ -1,0 +1,104 @@
+{
+  "schema": "py-mermaid-command-plan/v1",
+  "scope": "VCHART-DSL-P5-FINAL-CHECKS",
+  "description": "Current documentation/evidence/source integrity only; no product behavior rerun or publish.",
+  "inputs": [
+    "{repo}/docs/VCHART_DSL_ACCEPTANCE.md",
+    "{repo}/references/vchart-dsl-verification-summary.json",
+    "{repo}/docs/changes/vchart-dsl-implementation.json",
+    "{repo}/tools/bind_vchart_dsl_review.py",
+    "{repo}/tools/qa_vchart_dsl_report.cjs"
+  ],
+  "steps": [
+    {
+      "name": "validate-bootstrap",
+      "argv": [
+        "{python}",
+        "{repo}/scripts/validate_bootstrap.py"
+      ],
+      "timeoutSeconds": 180
+    },
+    {
+      "name": "audit-dependencies",
+      "argv": [
+        "{python}",
+        "{repo}/scripts/audit_dependencies.py",
+        "--check"
+      ],
+      "timeoutSeconds": 180
+    },
+    {
+      "name": "verify-DSL-2",
+      "argv": [
+        "{python}",
+        "{repo}/tools/workflow.py",
+        "verify",
+        "--run",
+        "{repo}/test-runs/VCHART-DSL-P4-batch-20261107T072312Z-7cdc1791"
+      ],
+      "timeoutSeconds": 180
+    },
+    {
+      "name": "verify-DSL-3",
+      "argv": [
+        "{python}",
+        "{repo}/tools/workflow.py",
+        "verify",
+        "--run",
+        "{repo}/test-runs/VCHART-DSL-P5-delivery-20261107T072726Z-cd08a488"
+      ],
+      "timeoutSeconds": 180
+    },
+    {
+      "name": "verify-INSTALL-4",
+      "argv": [
+        "{python}",
+        "{repo}/tools/workflow.py",
+        "verify",
+        "--run",
+        "{repo}/test-runs/VCHART-INSTALL-wheel-20261107T071751Z-d6268c2c"
+      ],
+      "timeoutSeconds": 180
+    },
+    {
+      "name": "verify-INSTALL-5",
+      "argv": [
+        "{python}",
+        "{repo}/tools/workflow.py",
+        "verify",
+        "--run",
+        "{repo}/test-runs/VCHART-INSTALL-sdist-20261107T071829Z-d552a24f"
+      ],
+      "timeoutSeconds": 180
+    },
+    {
+      "name": "verify-DSL-6",
+      "argv": [
+        "{python}",
+        "{repo}/tools/workflow.py",
+        "verify",
+        "--run",
+        "{repo}/test-runs/VCHART-DSL-REVIEW-binding-20261107T072540Z-f3832b39"
+      ],
+      "timeoutSeconds": 180
+    },
+    {
+      "name": "current-source-and-doc-evidence",
+      "argv": [
+        "{python}",
+        "-c",
+        "import json;from pathlib import Path;from tools.run_support import source_identity,file_identity;d=json.loads(Path('references/vchart-dsl-verification-summary.json').read_text('utf-8'));assert source_identity()['sourceTreeSha256']==d['sourceTreeSha256'];c=json.loads(Path('docs/compatibility.json').read_text('utf-8'));assert all(file_identity(Path(e['path']))=={k:e[k] for k in ('bytes','sha256')} for e in c['vchartDsl']['evidence']);print('Current candidate and DSL documentation evidence match')"
+      ],
+      "timeoutSeconds": 180
+    },
+    {
+      "name": "whitespace",
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "timeoutSeconds": 180
+    }
+  ]
+}

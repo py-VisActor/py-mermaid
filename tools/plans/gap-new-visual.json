@@ -1,0 +1,47 @@
+{
+  "schema": "py-mermaid-command-plan/v1",
+  "scope": "G03-new-visual",
+  "description": "New source-defined regression cases on the repaired candidate, no installation.",
+  "inputs": [
+    "{repo}/test-runs/G03-first-batch-20261106T080449Z-54f22284/artifacts/fixtures/cases.json",
+    "{repo}/test-runs/G03-first-batch-20261106T080449Z-54f22284/artifacts/oracle/manifest.json",
+    "{repo}/test-runs/G03-first-batch-20261106T080449Z-54f22284/artifacts/oracle/identity.json"
+  ],
+  "steps": [
+    {
+      "name": "new-native-cpu",
+      "argv": [
+        "{python}",
+        "{repo}/tools/bulk_validate.py",
+        "--fixtures",
+        "{repo}/test-runs/G03-first-batch-20261106T080449Z-54f22284/artifacts/fixtures/cases.json",
+        "--backend",
+        "cpu",
+        "--out",
+        "{run}/artifacts/native-cpu"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 1800
+    },
+    {
+      "name": "new-source-compare",
+      "argv": [
+        "{python}",
+        "{repo}/tools/bulk_compare.py",
+        "--fixtures",
+        "{repo}/test-runs/G03-first-batch-20261106T080449Z-54f22284/artifacts/fixtures/cases.json",
+        "--oracle",
+        "{repo}/test-runs/G03-first-batch-20261106T080449Z-54f22284/artifacts/oracle",
+        "--native",
+        "{run}/artifacts/native-cpu",
+        "--pixels",
+        "--out",
+        "{run}/artifacts/comparison"
+      ],
+      "timeoutSeconds": 1800
+    }
+  ]
+}

@@ -1,0 +1,624 @@
+{
+  "schema": "py-mermaid-html-host-semantics/v1",
+  "status": "P3_repair_code_complete_unverified",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "upstreamVersion": "12.2.0",
+  "dompurifyVersion": "3.4.12",
+  "sources": [
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/common/common.ts",
+      "sha256": "b14851667f7d45d101d4e028204babb1628faefe4812a88ae2d8acac72f8e144",
+      "symbol": "sanitizeMore/sanitizeText and DOMPurify hooks",
+      "line": 34
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/createText.ts",
+      "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+      "symbol": "addHtmlSpan browser foreignObject handoff",
+      "line": 34
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/handle-markdown-text.ts",
+      "sha256": "6f99a7b3f5b11f87f5509a370663f14650f8f8c3cbb9a34ea496a1aa183cd0ca",
+      "symbol": "nonMarkdownToHTML/markdownToHTML host preparation",
+      "line": 99
+    },
+    {
+      "repository": "DOMPurify",
+      "path": "../../../node_modules/.pnpm/dompurify@3.4.12/node_modules/dompurify/src/tags.ts",
+      "transport": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+      "transportSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679",
+      "sha256": "959dc7f21ddbf2dbe584f3511c0ae41eed313236e217d099856b7c3dc94e66e8",
+      "symbol": "HTML tag/attribute default allowlists and sanitizer configuration",
+      "line": 1
+    },
+    {
+      "repository": "DOMPurify",
+      "path": "../../../node_modules/.pnpm/dompurify@3.4.12/node_modules/dompurify/src/attrs.ts",
+      "transport": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+      "transportSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679",
+      "sha256": "a55feea9f64a386729bfbcfec489ab6ef6a96d712b427ffd18fe25b5628b1deb",
+      "symbol": "HTML tag/attribute default allowlists and sanitizer configuration",
+      "line": 1
+    },
+    {
+      "repository": "DOMPurify",
+      "path": "../../../node_modules/.pnpm/dompurify@3.4.12/node_modules/dompurify/src/purify.ts",
+      "transport": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+      "transportSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679",
+      "sha256": "cd71d3e2d10ac95ebdc7447e73f74f18bb0b94e1fce9132aa0c18c3e21f6c313",
+      "symbol": "HTML tag/attribute default allowlists and sanitizer configuration",
+      "line": 1
+    }
+  ],
+  "interfaces": {
+    "CONTROL_TAGS": [
+      "input",
+      "button",
+      "select",
+      "textarea",
+      "meter",
+      "progress",
+      "fieldset"
+    ],
+    "ControlCapture": "ControlCapture(tag, attrs, *, inherited_disabled=False); root start is not fed again; start(tag,attrs), end(tag), data(decoded_text), finished, build()->ControlSpec",
+    "normalize_control_markup": "Single-element normalize_control_labels wrapper; canonical strings unchanged when no relevant state changes.",
+    "legend": "First direct legend removed from body; legend_markup includes complete safe outer legend with class/style and descendants, legend_text holds plain content.",
+    "normalize_control_labels": "normalize_control_labels(labels: Sequence[str])->tuple[str,...]. Already-sanitized labels supplied in final host tree/insertion order. Separate nonserialized synthetic roots preserve label boundaries; one per-diagram ID/radio/form scope; no state shared across calls."
+  },
+  "families": [
+    {
+      "id": "input-types",
+      "retained": [
+        "hidden",
+        "text",
+        "search",
+        "tel",
+        "url",
+        "email",
+        "password",
+        "date",
+        "month",
+        "week",
+        "time",
+        "datetime-local",
+        "number",
+        "range",
+        "color",
+        "checkbox",
+        "radio",
+        "file",
+        "submit",
+        "image",
+        "reset",
+        "button"
+      ],
+      "semantics": "Enumerated type defaults; applicable boolean states; newline/ASCII trimming; date/time validity; number validation; range min/max/default/step with positive tie break; empty selected file list; raw safe image src/alt attributes. submit/reset IDL value stays empty when absent; layout supplies default caption only when attribute absent."
+    },
+    {
+      "id": "selection",
+      "semantics": "Option label/value/ASCII whitespace, optgroup disabled/group label, multiple versus single-last-selected, size1 first-enabled fallback, no fallback for larger listboxes."
+    },
+    {
+      "id": "textarea",
+      "semantics": "Decoded RCDATA payload, literal descendant-token reconstruction, CRLF/CR to LF and single initial LF removal; placeholder remains separate attribute. Mermaid text-versus-Markdown newline preprocessing belongs to root rich."
+    },
+    {
+      "id": "meter-progress",
+      "semantics": "Finite HTML numeric attribute parsing; min/max/value clamping; meter fraction and low/high/optimum attrs; missing progress value gives indeterminate fraction=None."
+    },
+    {
+      "id": "cross-control",
+      "semantics": "Tree/form-owned case-sensitive nonempty radio-name groups, last checked wins including disabled inputs; nested fieldset disabling with first direct legend exemption; explicit form override when sanitizer allows it."
+    },
+    {
+      "id": "safe-markup",
+      "semantics": "Full118 HTML attrs from fixed DOMPurify bundle, including checked/selected/disabled/readonly/multiple/rows/cols/label/placeholder/min/max/low/high/optimum/step; existing custom allow/forbid and URI checks still apply; background URL filtered as well."
+    },
+    {
+      "id": "budgets",
+      "semantics": "20,000 capture/normalizer nodes/events and256 nesting; pure immutable output; request-local state; no runtime DOM/Node/JS/media/network/events."
+    }
+  ],
+  "htmlAttributeAllowlist": [
+    "accept",
+    "action",
+    "align",
+    "alt",
+    "autocapitalize",
+    "autocomplete",
+    "autopictureinpicture",
+    "autoplay",
+    "background",
+    "bgcolor",
+    "border",
+    "capture",
+    "cellpadding",
+    "cellspacing",
+    "checked",
+    "cite",
+    "class",
+    "clear",
+    "color",
+    "cols",
+    "colspan",
+    "command",
+    "commandfor",
+    "controls",
+    "controlslist",
+    "coords",
+    "crossorigin",
+    "datetime",
+    "decoding",
+    "default",
+    "dir",
+    "disabled",
+    "disablepictureinpicture",
+    "disableremoteplayback",
+    "download",
+    "draggable",
+    "enctype",
+    "enterkeyhint",
+    "exportparts",
+    "face",
+    "for",
+    "headers",
+    "height",
+    "hidden",
+    "high",
+    "href",
+    "hreflang",
+    "id",
+    "inert",
+    "inputmode",
+    "integrity",
+    "ismap",
+    "kind",
+    "label",
+    "lang",
+    "list",
+    "loading",
+    "loop",
+    "low",
+    "max",
+    "maxlength",
+    "media",
+    "method",
+    "min",
+    "minlength",
+    "multiple",
+    "muted",
+    "name",
+    "nonce",
+    "noshade",
+    "novalidate",
+    "nowrap",
+    "open",
+    "optimum",
+    "part",
+    "pattern",
+    "placeholder",
+    "playsinline",
+    "popover",
+    "popovertarget",
+    "popovertargetaction",
+    "poster",
+    "preload",
+    "pubdate",
+    "radiogroup",
+    "readonly",
+    "rel",
+    "required",
+    "rev",
+    "reversed",
+    "role",
+    "rows",
+    "rowspan",
+    "spellcheck",
+    "scope",
+    "selected",
+    "shape",
+    "size",
+    "sizes",
+    "slot",
+    "span",
+    "srclang",
+    "start",
+    "src",
+    "srcset",
+    "step",
+    "style",
+    "summary",
+    "tabindex",
+    "title",
+    "translate",
+    "type",
+    "usemap",
+    "valign",
+    "value",
+    "width",
+    "wrap",
+    "xmlns"
+  ],
+  "normativeHostReferences": [
+    {
+      "url": "https://html.spec.whatwg.org/multipage/input.html",
+      "observed": "2026-11-06",
+      "responsibility": "Host input state/value sanitation; Living Standard is supplemental, not the locked Mermaid release or a browser-version guarantee."
+    },
+    {
+      "url": "https://html.spec.whatwg.org/multipage/form-elements.html",
+      "responsibility": "Initial selection, textarea, meter/progress and fieldset/legend host rules."
+    },
+    {
+      "url": "https://html.spec.whatwg.org/multipage/common-microsyntaxes.html",
+      "responsibility": "Numeric/date/time grammar."
+    },
+    {
+      "url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html",
+      "responsibility": "Disabled inheritance/form ownership."
+    }
+  ],
+  "mechanicalRun": "HTML-HOST-record-20261106T120807Z-e4eb5c56",
+  "productFiles": [
+    {
+      "path": "src/py_mermaid/rendering/labels/controls/semantic.py",
+      "sha256": "12384110d4833dc38ff11997eec16246e037ca6b1ca20204f6ed14e400603d46"
+    },
+    {
+      "path": "src/py_mermaid/rendering/labels/controls/color_values.py",
+      "sha256": "cac1e35e364640e4b69433625490f02474c88624c30d40f68d9c3a44e8b4d666"
+    },
+    {
+      "path": "src/py_mermaid/rendering/labels/sanitize.py",
+      "sha256": "692fc3a1b9531a77b225aa037ef30b71ec54cd4fbf63d93dd7a07e8edc0bf703"
+    }
+  ],
+  "behaviorExecuted": false,
+  "testsWritten": false,
+  "residualVerification": [
+    "No repair behavior has executed; all new conversion families await unified rerun and fresh original capture of appended eight fixtures.",
+    "Absolute CSS Color4 literal families are implemented. Context-dependent system colors, relative/calc/color-mix/profile-defined colors are not a general browser CSS evaluator; no arbitrary HTML/CSS compatibility claim.",
+    "Fixed original opaque serialization ignores alpha/colorspace effects even when attributes survive; fresh non-red out-of-gamut conversions may expose browser rounding/gamut/transfer differences, especially newer Rec2020 definitions.",
+    "Existing native label budgets and malformed HTML tree limitations remain; media and interaction stay excluded."
+  ],
+  "excluded": [
+    "video/audio in entirety by user",
+    "events/editing/selection/submit/playback",
+    "installation verification"
+  ],
+  "history": [
+    {
+      "phase": "P1",
+      "status": "code_complete_unverified",
+      "productFiles": [
+        {
+          "path": "src/py_mermaid/rendering/labels/controls/semantic.py",
+          "sha256": "1895df78de09896ebf0e948b118e443eb0dac8bcdc06715e86852382fcedef54"
+        },
+        {
+          "path": "src/py_mermaid/rendering/labels/sanitize.py",
+          "sha256": "692fc3a1b9531a77b225aa037ef30b71ec54cd4fbf63d93dd7a07e8edc0bf703"
+        }
+      ],
+      "residualVerification": [
+        "All new product behavior remains unexecuted until P2/P3 by phase contract.",
+        "Color branch currently implements legacy six-digit opaque sRGB and invalid->black; modern named/function CSS colors, alpha/colorspace custom-allowed modes require pinned browser oracle classification and may need additional source-backed implementation.",
+        "No general HTML tree-builder/CSS/browser/UA-theme clone claimed; malformed nested forms/selects, arbitrary option child content, extreme year/numeric sizes and nonstandard custom attributes require independent boundary tests.",
+        "All static input families are mapped but this P1 status is not acceptance; source handoff to browser does not prove native equivalence."
+      ]
+    }
+  ],
+  "primaryCssColorSource": {
+    "repository": "W3C/csswg-drafts",
+    "url": "https://raw.githubusercontent.com/w3c/csswg-drafts/main/css-color-4/conversions.js",
+    "spec": "https://www.w3.org/TR/2026/CRD-css-color-4-20261103/",
+    "localSnapshot": "test-runs/HTML-HOST-css-source-20261106T114135Z-fb5a713d/artifacts/css-color-4-conversions.js",
+    "sha256": "73f35687ee3a6fed38f65c9dca4327fa3efabb0c73faa884be83231520855f38",
+    "sourceAcquisitionRun": "HTML-HOST-css-source-20261106T114135Z-fb5a713d",
+    "runtimeUse": "None; mathematical conversion equations/matrices re-expressed in pure Python. No JS execution or new runtime dependency.",
+    "responsibilities": [
+      "sRGB transfer and XYZ matrices",
+      "Display P3/A98/ProPhoto/Rec2020 transfer and matrices",
+      "Bradford D50/D65 adaptation",
+      "CIE Lab/LCH and OKLab/OKLCH conversions",
+      "HWB normalized white/black mixing; opaque HTML color-well serialization verified by pinned original"
+    ],
+    "license": {
+      "name": "W3C Software and Document License, 2023 version",
+      "repositoryLicenseUrl": "https://raw.githubusercontent.com/w3c/csswg-drafts/main/LICENSE.md",
+      "repositoryDeclaredLicenseUrl": "https://www.w3.org/Consortium/Legal/copyright-software",
+      "resolvedOfficialLicenseUrl": "https://www.w3.org/copyright/software-license-2023/",
+      "officialShortNoticeUrl": "https://www.w3.org/Consortium/Legal/2023/copyright-software-short-notice.html",
+      "evidenceRun": "HTML-HOST-license-source-20261106T115706Z-c5fca466",
+      "snapshots": [
+        {
+          "file": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\HTML-HOST-license-source-20261106T115706Z-c5fca466\\artifacts\\csswg-LICENSE.md",
+          "url": "https://raw.githubusercontent.com/w3c/csswg-drafts/main/LICENSE.md",
+          "sha256": "232da9c6c2b9f7e19e5d85cc7cf43760d80b7c4174406ac6404fa2c1b51d531b",
+          "bytes": 167
+        },
+        {
+          "file": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\HTML-HOST-license-source-20261106T115706Z-c5fca466\\artifacts\\w3c-software-document-license-2023.html",
+          "url": "https://www.w3.org/copyright/software-license-2023/",
+          "sha256": "9234807e23edbf8f1058fd85e4d9bd19f2beebebcd8f74433cc59e8a54059771",
+          "bytes": 26722
+        },
+        {
+          "file": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\HTML-HOST-license-source-20261106T115706Z-c5fca466\\artifacts\\w3c-software-document-short-notice-2023.html",
+          "url": "https://www.w3.org/Consortium/Legal/2023/copyright-software-short-notice.html",
+          "sha256": "fdce0a54ed4870977bbbb5f637d0ed8c6116736d167825a87d56fcfee94b71a0",
+          "bytes": 1496
+        }
+      ],
+      "applicability": "csswg-drafts root LICENSE.md explicitly applies the W3C Software and Document License to all repository documents, covering the referenced conversions.js source. This is stronger provenance than inferring from the generated specification page footer.",
+      "sourceContainsPreexistingIpHeader": false,
+      "redistributionRequirements": [
+        "Include the complete license NOTICE where redistributed/derived-work users can view it.",
+        "Retain pre-existing IP notices, disclaimers and terms; where none exist include the official W3C short notice.",
+        "Include a notice identifying modifications/derivation, original title and URI.",
+        "Preserve warranty/liability and name/trademark disclaimers in the full notice."
+      ],
+      "rootPackagingAction": "Root should add complete official license text plus W3C short notice and project-specific Python-adaptation attribution to bundled references/licenses and THIRD_PARTY_NOTICES. The current owner did not edit shared notice/license files.",
+      "suggestedAttribution": "Pure-Python adaptation of CSS Color Module Level 4 sample conversion equations and matrices, https://www.w3.org/TR/2026/CRD-css-color-4-20261103/ and css-color-4/conversions.js. Copyright 2026 World Wide Web Consortium. Modified for py-mermaid initial static HTML color controls; no runtime JavaScript.",
+      "confirmedScope": "Specific upstream license/source facts only; not a claim of full CSS Color5 support or general legal advice."
+    }
+  },
+  "observedColorState": [
+    {
+      "id": "html-host-color-probe-named",
+      "path": "test-runs/HTML-HOST-P3-batch-20261106T113133Z-293a5335/artifacts/oracle/html-host-color-probe-named.json",
+      "sha256": "a000e7b14ff8699720946bb8e6d76749beba8cfda372337d83fbe4a8bcbe2f56",
+      "value": "#ff0000",
+      "attributes": {
+        "id": "c0",
+        "type": "color",
+        "value": "red"
+      }
+    },
+    {
+      "id": "html-host-color-probe-rgb",
+      "path": "test-runs/HTML-HOST-P3-batch-20261106T113133Z-293a5335/artifacts/oracle/html-host-color-probe-rgb.json",
+      "sha256": "58449243d6084d8647a972a9813972ec8015a824eb198000718ef5391b72ead4",
+      "value": "#ff0000",
+      "attributes": {
+        "id": "c0",
+        "type": "color",
+        "value": "rgb(255, 0, 0)"
+      }
+    },
+    {
+      "id": "html-host-color-probe-short-hex",
+      "path": "test-runs/HTML-HOST-P3-batch-20261106T113133Z-293a5335/artifacts/oracle/html-host-color-probe-short-hex.json",
+      "sha256": "949fc5c3cd79aa751f377de3e9b3ea31f6794013d4175493064a94bd8ba182b3",
+      "value": "#ff0000",
+      "attributes": {
+        "id": "c0",
+        "type": "color",
+        "value": "#f00"
+      }
+    },
+    {
+      "id": "html-host-color-probe-alpha",
+      "path": "test-runs/HTML-HOST-P3-batch-20261106T113133Z-293a5335/artifacts/oracle/html-host-color-probe-alpha.json",
+      "sha256": "a686bbb703d36b3ea8b47ecdb272357c5e058fa5e04f538ecfd3f6f32d701b2d",
+      "value": "#ff0000",
+      "attributes": {
+        "id": "c0",
+        "type": "color",
+        "value": "rgba(255, 0, 0, 0.5)",
+        "alpha": ""
+      }
+    },
+    {
+      "id": "html-host-color-probe-display-p3",
+      "path": "test-runs/HTML-HOST-P3-batch-20261106T113133Z-293a5335/artifacts/oracle/html-host-color-probe-display-p3.json",
+      "sha256": "ebb434e13bae3a188d61128e2d92ca426337be87b1401db4827f324a0afae46b",
+      "value": "#ff0000",
+      "attributes": {
+        "id": "c0",
+        "type": "color",
+        "value": "color(display-p3 1 0 0)",
+        "colorspace": "display-p3"
+      }
+    }
+  ],
+  "P3Changes": [
+    {
+      "id": "color-general",
+      "reason": "All five fixed-original extensions normalize to opaque #ff0000; six-digit-only old branch was false.",
+      "implementation": "Reuse channels for named/hex/rgb/hsl, validate grammar/separators, pure CSS Color4 conversion of hwb/extended predefined spaces/Lab/OKLab; final opaque sRGB rounding; public is_valid_css_color for B accent validation."
+    },
+    {
+      "id": "nested-fieldset",
+      "reason": "Original nested inner fieldset.disabled false but :disabled true; pure model stores effective state.",
+      "implementation": "Include fieldset itself in inherited-disabled normalization with first-direct-legend exemption preserved."
+    },
+    {
+      "id": "textarea-test-adapter",
+      "reason": "First native scene and original both already hold &lt;b&gt;; only helper decoded to <b>.",
+      "implementation": "No product/expected change. Adapter does not html.unescape a second time when runtime HTMLParser exposes native RCDATA_CONTENT_ELEMENTS.",
+      "stdlibPath": "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\Lib\\html\\parser.py",
+      "stdlibSha256": "816c7b267625410961811830d7d33bf67c6b167d7424085cc04871ee46e87542",
+      "sourceLines": [
+        135,
+        270
+      ],
+      "firstNativeEvidence": "test-runs/HTML-HOST-P3-batch-20261106T113133Z-293a5335/artifacts/native-cpu/html-host-textarea-entities-one-pass.scene.json"
+    },
+    {
+      "id": "diagram-radio-scope",
+      "reason": "Source browser radio name/form groups share a diagram document across multiple label foreignObjects, not just one label string.",
+      "implementation": "Local parser root per label; unified IDs and radio groups; preserve each original string when no state mutation; synthetic roots never serialized and never assigned form ownership."
+    },
+    {
+      "id": "fixed-host-color-path",
+      "status": "code_complete_unverified",
+      "closedFailureRun": "HTML-HOST-P3-source-native-controls-20261106T120054Z-0e217266",
+      "sourceHost": {
+        "browser": "156.0.8078.76",
+        "skiaRevision": "a65b5cc03a5131808aec172085b7074fc66625b9",
+        "files": [
+          {
+            "path": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\HTML-HOST-host-color-source-20261106T120713Z-faa6225e\\artifacts\\chromium-color.cc",
+            "url": "https://raw.githubusercontent.com/chromium/chromium/156.0.8078.76/third_party/blink/renderer/platform/graphics/color.cc",
+            "sha256": "bdd14bfbac4a746c7e1ca6cb531d1117001c46810e38c42b3895ad47f02f787e"
+          },
+          {
+            "path": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\HTML-HOST-host-color-source-20261106T120713Z-faa6225e\\artifacts\\chromium-color-input.cc",
+            "url": "https://raw.githubusercontent.com/chromium/chromium/156.0.8078.76/third_party/blink/renderer/core/html/forms/color_input_type.cc",
+            "sha256": "65ff5cdec53ac8291d9d0fac0a730710b299b41b7c3489ee0b1cfbeed7062526"
+          },
+          {
+            "path": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\HTML-HOST-host-color-source-20261106T120713Z-faa6225e\\artifacts\\chromium-skcms-ext.cc",
+            "url": "https://raw.githubusercontent.com/chromium/chromium/156.0.8078.76/skia/ext/skcms_ext.cc",
+            "sha256": "851966fbb7f103ffa5e0ba889a91faf17a00d3861ca428dd210ffbcf063c708f"
+          },
+          {
+            "path": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\HTML-HOST-host-color-source-20261106T120713Z-faa6225e\\artifacts\\chromium-color-conversions.cc",
+            "url": "https://raw.githubusercontent.com/chromium/chromium/156.0.8078.76/ui/gfx/color_conversions.cc",
+            "sha256": "62a38e5e83107a03365c51b28dc3241a3d1566f14d5fe9f8a0338b496935ff29"
+          },
+          {
+            "path": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\HTML-HOST-host-color-source-20261106T120713Z-faa6225e\\artifacts\\chromium-DEPS",
+            "url": "https://raw.githubusercontent.com/chromium/chromium/156.0.8078.76/DEPS",
+            "sha256": "8778ffaa9a30b9e825b291978804c6c2e55a3ae829ff387b025592ffb9090e8e"
+          },
+          {
+            "path": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\HTML-HOST-host-color-source-20261106T120713Z-faa6225e\\artifacts\\skia-SkColorSpace.h",
+            "url": "https://raw.githubusercontent.com/google/skia/a65b5cc03a5131808aec172085b7074fc66625b9/include/core/SkColorSpace.h",
+            "sha256": "f7308d5be05b0edbe487a330b49d055359d32d6e0a9524fc81a3c2b26f824093"
+          },
+          {
+            "path": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\HTML-HOST-host-color-source-20261106T120713Z-faa6225e\\artifacts\\chromium-LICENSE",
+            "url": "https://raw.githubusercontent.com/chromium/chromium/156.0.8078.76/LICENSE",
+            "sha256": "368cca1106be99d39ecd32a38d8305585d802a475effb66380b91ffc9bcf709b"
+          },
+          {
+            "path": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\HTML-HOST-host-color-source-20261106T120713Z-faa6225e\\artifacts\\skia-LICENSE",
+            "url": "https://raw.githubusercontent.com/google/skia/a65b5cc03a5131808aec172085b7074fc66625b9/LICENSE",
+            "sha256": "5f787c1dee3c56547f09ccc2906ab5f5293c4d8dd6c8654e573216c38e908dbd"
+          },
+          {
+            "path": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\HTML-HOST-host-color-source-20261106T120713Z-faa6225e\\artifacts\\w3c-css-color-4-20221101.html",
+            "url": "https://www.w3.org/TR/2022/CRD-css-color-4-20221101/",
+            "sha256": "cad7c7fe30efe98c773f7e052968f8c413650dbc96ed44714b0d5a5b57ca81a9"
+          }
+        ]
+      },
+      "sourceEvidence": [
+        {
+          "id": "html-host-color-regression-display-p3-mixed",
+          "member": 0,
+          "path": "test-runs/HTML-HOST-P3-source-native-controls-20261106T120054Z-0e217266/artifacts/oracle/html-host-color-regression-display-p3-mixed.json",
+          "sha256": "2223843a4b80759cee258bf4b257090c87ee736067d151f111c070dbfc35b56f",
+          "value": "#1a689d",
+          "attributes": {
+            "id": "c0",
+            "type": "color",
+            "value": "color(display-p3 0.2 0.4 0.6)"
+          }
+        },
+        {
+          "id": "html-host-color-regression-xyz-mixed",
+          "member": 3,
+          "path": "test-runs/HTML-HOST-P3-source-native-controls-20261106T120054Z-0e217266/artifacts/oracle/html-host-color-regression-xyz-mixed.json",
+          "sha256": "5ab358b9d8c060f1a9af8b4826b59f44ca35f186c2f843473129c0da264e8688",
+          "value": "#0078a8",
+          "attributes": {
+            "id": "c3",
+            "type": "color",
+            "value": "color(rec2020 0.2 0.4 0.6)"
+          }
+        }
+      ],
+      "findings": [
+        {
+          "id": "p3-byte",
+          "reason": "W3C high-precision D65 direct conversion and pinned Skia D50/ICC float32 route differ across an eight-bit rounding boundary; do not adjust tolerance or inject input-specific constants.",
+          "sourcePath": "Chromium156 color.cc:156,567,608,819 and ui/gfx/color_conversions.cc:263; Skia SkColorSpace.h:214-241",
+          "implementation": "Generic Display P3 family now evaluates source float32 transfer, D50 matrix, inverse source ICC sRGB matrix, inverse source transfer and existing final byte rounding."
+        },
+        {
+          "id": "rec2020-transfer",
+          "reason": "2026 W3C sample switched to pure BT.1886 gamma2.4. Fixed Chromium156/Skia retains piecewise BT.2020 inverse OETF, matching older W3C 2022 section10.6/appendix code. These are different transfer definitions, not acceptable floating error.",
+          "sourcePath": "Pinned Skia SkColorSpace.h:128; Chromium skcms_ext.cc:17-66; W3C2022 rec2020 section",
+          "implementation": "Rec2020 family uses (g,a,b,c,d,e,f)=(2.22222,.909672,.0903276,.222222,.0812429,0,0), same source D50/ICC path and float32 operations."
+        }
+      ],
+      "licenseNotes": "New host-specific scalar/matrix adaptation is sourced from Chromium/Skia BSD files. Exact Chromium and Skia LICENSE artifacts included; root owns bundled licenses/notice integration. This adds no runtime library/Canvas/JS dependency.",
+      "fixtureChanges": false,
+      "oldExpectedValuesChanged": false,
+      "newTests": [
+        "InitialControlStateSourceTests.test_color_host_p3_d50_quantization",
+        "InitialControlStateSourceTests.test_color_host_rec2020_transfer"
+      ],
+      "mechanicalRun": "HTML-HOST-record-20261106T120807Z-e4eb5c56",
+      "behaviorAfterRepairExecuted": false,
+      "changedFiles": [
+        {
+          "path": "src/py_mermaid/rendering/labels/controls/color_values.py",
+          "sha256": "cac1e35e364640e4b69433625490f02474c88624c30d40f68d9c3a44e8b4d666"
+        },
+        {
+          "path": "tests/html_host/test_semantics.py",
+          "sha256": "74cc5a57d11c1a76dac5e8230c658b1e4977c232cddf7fa5723d6790ada047dd"
+        }
+      ]
+    }
+  ],
+  "fixedHostColorSource": {
+    "browser": "156.0.8078.76",
+    "skiaRevision": "a65b5cc03a5131808aec172085b7074fc66625b9",
+    "files": [
+      {
+        "path": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\HTML-HOST-host-color-source-20261106T120713Z-faa6225e\\artifacts\\chromium-color.cc",
+        "url": "https://raw.githubusercontent.com/chromium/chromium/156.0.8078.76/third_party/blink/renderer/platform/graphics/color.cc",
+        "sha256": "bdd14bfbac4a746c7e1ca6cb531d1117001c46810e38c42b3895ad47f02f787e"
+      },
+      {
+        "path": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\HTML-HOST-host-color-source-20261106T120713Z-faa6225e\\artifacts\\chromium-color-input.cc",
+        "url": "https://raw.githubusercontent.com/chromium/chromium/156.0.8078.76/third_party/blink/renderer/core/html/forms/color_input_type.cc",
+        "sha256": "65ff5cdec53ac8291d9d0fac0a730710b299b41b7c3489ee0b1cfbeed7062526"
+      },
+      {
+        "path": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\HTML-HOST-host-color-source-20261106T120713Z-faa6225e\\artifacts\\chromium-skcms-ext.cc",
+        "url": "https://raw.githubusercontent.com/chromium/chromium/156.0.8078.76/skia/ext/skcms_ext.cc",
+        "sha256": "851966fbb7f103ffa5e0ba889a91faf17a00d3861ca428dd210ffbcf063c708f"
+      },
+      {
+        "path": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\HTML-HOST-host-color-source-20261106T120713Z-faa6225e\\artifacts\\chromium-color-conversions.cc",
+        "url": "https://raw.githubusercontent.com/chromium/chromium/156.0.8078.76/ui/gfx/color_conversions.cc",
+        "sha256": "62a38e5e83107a03365c51b28dc3241a3d1566f14d5fe9f8a0338b496935ff29"
+      },
+      {
+        "path": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\HTML-HOST-host-color-source-20261106T120713Z-faa6225e\\artifacts\\chromium-DEPS",
+        "url": "https://raw.githubusercontent.com/chromium/chromium/156.0.8078.76/DEPS",
+        "sha256": "8778ffaa9a30b9e825b291978804c6c2e55a3ae829ff387b025592ffb9090e8e"
+      },
+      {
+        "path": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\HTML-HOST-host-color-source-20261106T120713Z-faa6225e\\artifacts\\skia-SkColorSpace.h",
+        "url": "https://raw.githubusercontent.com/google/skia/a65b5cc03a5131808aec172085b7074fc66625b9/include/core/SkColorSpace.h",
+        "sha256": "f7308d5be05b0edbe487a330b49d055359d32d6e0a9524fc81a3c2b26f824093"
+      },
+      {
+        "path": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\HTML-HOST-host-color-source-20261106T120713Z-faa6225e\\artifacts\\chromium-LICENSE",
+        "url": "https://raw.githubusercontent.com/chromium/chromium/156.0.8078.76/LICENSE",
+        "sha256": "368cca1106be99d39ecd32a38d8305585d802a475effb66380b91ffc9bcf709b"
+      },
+      {
+        "path": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\HTML-HOST-host-color-source-20261106T120713Z-faa6225e\\artifacts\\skia-LICENSE",
+        "url": "https://raw.githubusercontent.com/google/skia/a65b5cc03a5131808aec172085b7074fc66625b9/LICENSE",
+        "sha256": "5f787c1dee3c56547f09ccc2906ab5f5293c4d8dd6c8654e573216c38e908dbd"
+      },
+      {
+        "path": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\HTML-HOST-host-color-source-20261106T120713Z-faa6225e\\artifacts\\w3c-css-color-4-20221101.html",
+        "url": "https://www.w3.org/TR/2022/CRD-css-color-4-20221101/",
+        "sha256": "cad7c7fe30efe98c773f7e052968f8c413650dbc96ed44714b0d5a5b57ca81a9"
+      }
+    ]
+  }
+}

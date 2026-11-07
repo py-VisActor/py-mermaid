@@ -3,15 +3,252 @@
   "template": false,
   "plan": "references/migration-execution.json",
   "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
-  "phase": "P5",
+  "phase": "P5_RELEASE",
   "startedAtUtc": "20261104T132038Z",
   "currentSourceIdentity": {
-    "treeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
-    "kind": "P4_joint_refrozen_candidate",
-    "frozenAtUtc": "2026-11-06T06:51:42.111+00:00"
+    "sourceTreeSha256": "fca211bbfc3b75db6a2553b0c01f24d37753dbb87eab3f21c4f3ff8f289db14a",
+    "files": {
+      "LICENSE": "d925ca50a75467a0a8d28c4f7236922346b52c782cd80840d0aec258eaf4f870",
+      "pyproject.toml": "a94f6d0adcae4b434ba47bc92d7917d1f756933e9e382d8859262b8b6050c8a2",
+      "README.md": "6045c0db3ae561c16e29308467ba45e08cffc43db77fbac53d34817dd107443a",
+      "references/licenses/chromium-LICENSE": "368cca1106be99d39ecd32a38d8305585d802a475effb66380b91ffc9bcf709b",
+      "references/licenses/cose-base-1.0.3-LICENSE": "5fb3cf4a14c3c5af6e473a192df8bca10c77754e3a0c6492c79fb92a76a5478a",
+      "references/licenses/cose-base-2.2.0-LICENSE": "5fb3cf4a14c3c5af6e473a192df8bca10c77754e3a0c6492c79fb92a76a5478a",
+      "references/licenses/csswg-drafts-LICENSE.md": "232da9c6c2b9f7e19e5d85cc7cf43760d80b7c4174406ac6404fa2c1b51d531b",
+      "references/licenses/cytoscape-cose-bilkent-4.1.0-LICENSE": "440fc58a56a12814e417d2b341da89b050da052dc75bdb235607d37ec5fe74ef",
+      "references/licenses/cytoscape-fcose-2.2.0-LICENSE": "2837634f403949215760fcdd2fa1ed0c64875d02099ecc8318c704b852f1421d",
+      "references/licenses/d3-array-LICENSE": "2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3",
+      "references/licenses/d3-path-LICENSE": "f5dff44740d51a1849b4d16b657eccf60577fb5d28d8ee46d33dcc780a11f94a",
+      "references/licenses/d3-shape-LICENSE": "2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3",
+      "references/licenses/d3-time-format-LICENSE": "2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3",
+      "references/licenses/d3-time-LICENSE": "2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3",
+      "references/licenses/dayjs-1.11.21-LICENSE": "5faab7526d055651be3aab769d58897be6bd91f3d39d137f25f12dba1b31d5dc",
+      "references/licenses/khroma-LICENSE": "66b333b0f66759a0b710459e03f7029abe17f4358114a128d2c972e642961b49",
+      "references/licenses/langium-4.4.0-LICENSE": "599bf70b4e55f06250571d103dbd8441e0c47cb7f858c0147ca312ce38e9ef2a",
+      "references/licenses/layout-base-1.0.2-LICENSE": "eabb762d8a95109a39c9be3247325529a5239a7aca327d909c3ccdc41f3a06bf",
+      "references/licenses/layout-base-2.0.1-LICENSE": "eabb762d8a95109a39c9be3247325529a5239a7aca327d909c3ccdc41f3a06bf",
+      "references/licenses/mermaid-LICENSE": "ec9fb67dcb25eccc416ed56e1aab819222c805a2a4bfe4cb19e7556bf2ffde80",
+      "references/licenses/non-layered-tidy-tree-layout-LICENSE": "4f2be5251c6ca29343617220bce48bbbe814de871dc42435164442a0c007d11e",
+      "references/licenses/roughjs-LICENSE": "dca9a392272606ac748ac0976a2a1133f14eef841c27beaa51a844d53c56a09d",
+      "references/licenses/skia-LICENSE": "5f787c1dee3c56547f09ccc2906ab5f5293c4d8dd6c8654e573216c38e908dbd",
+      "references/licenses/w3c-css-color-NOTICE.txt": "aab13d8a006341085d36e86c343adbe4515492533c366addad4c448d0b3cd43b",
+      "references/licenses/w3c-software-document-license-2023.html": "9234807e23edbf8f1058fd85e4d9bd19f2beebebcd8f74433cc59e8a54059771",
+      "references/licenses/w3c-software-document-short-notice-2023.html": "fdce0a54ed4870977bbbb5f637d0ed8c6116736d167825a87d56fcfee94b71a0",
+      "references/licenses/zenuml-core-LICENSE": "d4a77cbf1dc0975cd4be7266972dc6d3a6c6d68d43235384d6e4b6f12934e978",
+      "src/py_mermaid/__init__.py": "e80fa655f830d6763456bf1387047bc52ddfca1cf1eefa47f8ce451324c27da9",
+      "src/py_mermaid/__main__.py": "4b917090ff60caeb0a715808c08f84753afb9fcb9a5dc9aae45544e4df48d26a",
+      "src/py_mermaid/api.py": "14c040a59bca81ce2652fe394ca1054ddf3c5e62e5e5538ca550edf8f8b129c1",
+      "src/py_mermaid/cli.py": "159c21be055aabb79fec8e3af35ed7a0fef3a5d2387f35789c2965616998fa07",
+      "src/py_mermaid/config/__init__.py": "0a1a35bc6930e3ec4b021e68d66da16df4f0a576472bc4ec2410598579e6ab4f",
+      "src/py_mermaid/config/color_names.py": "53d1453fb57e005c66543e099172dd159a650522f6428c2bca32907ed20c6ca4",
+      "src/py_mermaid/config/colors.py": "26389cc297f46aef569121e81f5e334c361238351c7cf28f5abe5b4ce97e0781",
+      "src/py_mermaid/config/elk.py": "cf9d99b7c7b334f26dc36b95ac1b0d34af089e193097e6e0d6f219bdadb06e02",
+      "src/py_mermaid/config/flowchart.py": "6512aa80ce631cc5d027597cb74f35a70e6f71420727a543ddf2b87fa84d9032",
+      "src/py_mermaid/config/source_keys.py": "0ae56a02cb58872c0f11a2bf49b26de413616807f1f832db56f0fbbd19b86141",
+      "src/py_mermaid/config/theme_rules.py": "fd2aa045a0ea00a2898fd7da25fa2ef50fee2dac447f980e4ddea9e7b3fb8c85",
+      "src/py_mermaid/config/theme_rules_full.py": "454ba2f5ed9a856e960224522c604f4ce4c34f0156a1a80e1810b85f27cd97b1",
+      "src/py_mermaid/config/themes.py": "43cc587b6a09be7b093450cbb4b4d6a761f8cf202ff81ee149d58c555baa4cd8",
+      "src/py_mermaid/config/values.py": "a637721f11866e18a1f6de2595358eb80a427501094420ef914006376b114789",
+      "src/py_mermaid/data/diagram_defaults.json": "9419ea68da79547b9d3b2797b3e69e72ba301f593e27b926b3cff85fb03d5517",
+      "src/py_mermaid/diagrams/__init__.py": "9154145bccf3c978abe2ae3b6934ba969a756e9a6e77bdf2dbf3dbfd373cb619",
+      "src/py_mermaid/diagrams/business/__init__.py": "d3d8f0861871403c88aa63c10dff4f759a3a289acaad149c7cc6a26aed5e222a",
+      "src/py_mermaid/diagrams/business/_agent_parser.py": "29d4efd965195d9ca0a65dda608f781bbb41c2706e6c6e0efad15bf41e8795a0",
+      "src/py_mermaid/diagrams/business/_cynefin_geometry.py": "01e5465e14f823d9c78b960d995146bc062f278ff29fbae1ff2f33e556db7a62",
+      "src/py_mermaid/diagrams/business/_flow_config.py": "0203350e6641560b7af62d47e3e28f82658697bb294050e7c6efab32fbf83240",
+      "src/py_mermaid/diagrams/business/_source_styles.py": "26f9e941b5afc79acc317d93be4f9631962e0e78e44ee7514d62b5af39a803cd",
+      "src/py_mermaid/diagrams/business/_swimlane_intersect.py": "4035f33a4788861443de914909027c7bf46a665e06e782d8b75c2d32770637ea",
+      "src/py_mermaid/diagrams/business/_swimlane_prepare.py": "d454563283eb947baceb8d41616e8dd9f40e0fb25b0f5a8f606150592573a8e3",
+      "src/py_mermaid/diagrams/business/_swimlane_routing/__init__.py": "a0872233b4fb985c7e9ef3c8214e51869c4cd88d425f532aeab6a99cc6c15c6a",
+      "src/py_mermaid/diagrams/business/_swimlane_routing/detours.py": "1286cd2e791ff5589b6eb7cf8e1d0c8ec1dc7db830708e205ecd60be09439695",
+      "src/py_mermaid/diagrams/business/_swimlane_routing/direction.py": "704f61e6334035affd24f4e22f40ce4328e9bc2c22733f9ad927110d68c32c35",
+      "src/py_mermaid/diagrams/business/_swimlane_routing/endpoint_clip.py": "c78c8106840b04d7fb3110d19b50a96c1a75d4b5745eca26bdf1882e0f91234d",
+      "src/py_mermaid/diagrams/business/_swimlane_routing/geometry.py": "ff80abe76b4381d44a866948f499814d694f4a727530052521517e118f475503",
+      "src/py_mermaid/diagrams/business/_swimlane_routing/label_anchoring.py": "6d9d968a3252723d0bf8a2c7d03b7fc19175af86201d552b85acb81cb2361d08",
+      "src/py_mermaid/diagrams/business/_swimlane_routing/materialized.py": "621023f77414e94acbe69ee048466959fd3d5397e68c7aedc3bf6c40a188aaa3",
+      "src/py_mermaid/diagrams/business/_swimlane_routing/router.py": "64caadc01cba284bda4168296d9ff8316bdc671a7b075d1c2c7b03be9e214a24",
+      "src/py_mermaid/diagrams/business/_swimlane_routing/shared_tracks.py": "abe833d3ddfb48dcc6bedde8c96c51c5910bae754774a1a7cbbd3f8364bc8c56",
+      "src/py_mermaid/diagrams/business/_swimlane_routing/terminal_routes.py": "de48c8b38fc0b8faf3f853df4be47698ffc208f7463501efe221978ccea0f7d1",
+      "src/py_mermaid/diagrams/business/_swimlane_routing/validation.py": "e3fd59df65ea474eb4e812382510fc23b4cf6f13a9f284ded5a7d7337f15af4e",
+      "src/py_mermaid/diagrams/business/_swimlane_sugiyama.py": "59412f797cf48df17f19311a85b5f15e34ac3712acf3121eda56121a39f92ee8",
+      "src/py_mermaid/diagrams/business/agentflow.py": "d2f4c6d61ff97abf7c6e4f75dff342728003a36c419a3c871fb2ae197bd1b0eb",
+      "src/py_mermaid/diagrams/business/cynefin.py": "c947b69965967081870a5f8b4ce98bfb196a4d3faa9fa737f45970ff3439c65c",
+      "src/py_mermaid/diagrams/business/eventmodeling.py": "5b7bf7db9fbca4c53b642e0dc29a80cec7d3223b82686238cb5bbce88ddc2e5c",
+      "src/py_mermaid/diagrams/business/ishikawa.py": "35950441f80103bb5c0a179505a392d75f703ef7c1e20f4608d3e5eaa85acf0d",
+      "src/py_mermaid/diagrams/business/swimlane.py": "2f9c0665f78e9192ce5bc412988b253da57b59cfed4f4edb038b6575ccfc614c",
+      "src/py_mermaid/diagrams/business/wardley.py": "3e90d8ddc1f2d030844e740d5f6aeb35805c18aa43d1e1ca4a707e1277fae91a",
+      "src/py_mermaid/diagrams/charts/__init__.py": "d00074f603508ad1f24dad0ae86d9e366392c2f1165c942b6c5a2aafdf6b308d",
+      "src/py_mermaid/diagrams/charts/_scales.py": "671c8d5d9400ece5c20b8499a9ecc42716cc1df0bd2463c5c0b84f00280da102",
+      "src/py_mermaid/diagrams/charts/_syntax.py": "df968c143dc57aee9f24149fdcdc12425129149679ab5933e93786fed83333fd",
+      "src/py_mermaid/diagrams/charts/_vchart_bridge.py": "44a77fd032dfb6c71b2759b402c543d99b312da596758d9986b329cdbb349fa9",
+      "src/py_mermaid/diagrams/charts/_xyaxis.py": "26c9f01e1bb9b87c4406419a952343970770e8451252382dd08c26abf5980f58",
+      "src/py_mermaid/diagrams/charts/pie.py": "f94f8c04d1b501408ce2c547a13699f23374d79c677558cf410a373d192b5305",
+      "src/py_mermaid/diagrams/charts/quadrant.py": "b3d3a071ea2a17353ad7ee4bb7dfebc848d8bcade9e4295a9862d9f8f1ec5a0a",
+      "src/py_mermaid/diagrams/charts/radar.py": "a66f3a1a57001273ba791c33adc4ea13aab56b9f89090d6a18f7bbdd07144fe4",
+      "src/py_mermaid/diagrams/charts/vchart.py": "5a27ca299e5857fcb9fd380f34561a8cee5f88efd26931758b7ffa313146b189",
+      "src/py_mermaid/diagrams/charts/xychart.py": "7274d6d3a52eceac409982ddcd1709afef3e72e9a477f569a946f816726c1974",
+      "src/py_mermaid/diagrams/flowchart/__init__.py": "648b1a3ca353ad86c12facbcb0d900aa2595a274b64b0d2c2a931c131c3c8a96",
+      "src/py_mermaid/diagrams/flowchart/lexical.py": "91fd1b80a853d01e1bbced1a7aafcdcc8e0c18a7009ba8617591e3fbeb1da42d",
+      "src/py_mermaid/diagrams/flowchart/parser.py": "bc4c5308b98e8e77920acbb87d741f93828d7b20f31d201f8650d7c1578b03de",
+      "src/py_mermaid/diagrams/flowchart/syntax.py": "47fe17165ba7dae86f628ebebd3038da7177c2592c7c00af006ff7075cc94d19",
+      "src/py_mermaid/diagrams/flows/__init__.py": "a4e51f7a0a9a79538cbbebde8038493f820846d709cd083a2d97abf5d49c45e5",
+      "src/py_mermaid/diagrams/flows/_circles.py": "fb86694e174f2f2407134a901ab39a98fdf60258deeb19fa38c14845392a0073",
+      "src/py_mermaid/diagrams/flows/_optimize.py": "3e50090e38df9f441ba6968d5b27696810172de2ccb114b49d1f50050a32071e",
+      "src/py_mermaid/diagrams/flows/_sankey.py": "649cd69ac3b6c64deebf23b56e5e4dda2bc2117e2c443358514ee89e02bb6e80",
+      "src/py_mermaid/diagrams/flows/_venn.py": "dc3843f65b36a05a867d90dc92f3417e76a01a235c2ac72247f9c146ab0cab7a",
+      "src/py_mermaid/diagrams/flows/sankey.py": "0f28dd34a317dbe1f292b7334c1d2c6522d1f75a9ead80a88416f7f003a8f41e",
+      "src/py_mermaid/diagrams/flows/venn.py": "99b3ac26b3c040af56f858e040241c77378c678761b349b5fe0d106456a3d37b",
+      "src/py_mermaid/diagrams/hierarchy/__init__.py": "420faaf9d17f5d92ce12f1606f307c4047ec2bdc3bd911e9960a41004392fbfb",
+      "src/py_mermaid/diagrams/hierarchy/_cose_tree.py": "4308600fb321a5e434e033b67518630e5aecbd3a7b0508c36751d33a779eb1df",
+      "src/py_mermaid/diagrams/hierarchy/_tidy.py": "d90c556104efbc49474889e10f23f8ac452a7948cb0cfc68b0183e6611dbc561",
+      "src/py_mermaid/diagrams/hierarchy/mindmap.py": "163d0e9f4a92fcfef11e50c2d507a72135e261ec345ef28a33ea785213e61c9d",
+      "src/py_mermaid/diagrams/hierarchy/tree_view.py": "0622be4a811ff522e0fc50939c5fa5e1ce36ea95d51b13c973f6f6b5f6bfbd60",
+      "src/py_mermaid/diagrams/hierarchy/treemap.py": "401ee72e2ac515822d058ccf5d93e3221422de3fdabbc7e39e235017083422be",
+      "src/py_mermaid/diagrams/info/__init__.py": "95328cef42630d473230b44ee494cb48edbc75990620a851fae1916ce906ee17",
+      "src/py_mermaid/diagrams/modeling/__init__.py": "9d858e7d83430dfa88fe5ce02c9ea7f9954706766f5d9c99c8e75714b0a220ab",
+      "src/py_mermaid/diagrams/modeling/_support.py": "1a47ea0aa579923b30bf243a1bc3c04f3f876224438715ea768c6395af953c83",
+      "src/py_mermaid/diagrams/modeling/_usecase_glyphs.py": "a32d8b6c730648410414e03497693768d2d1ba08b1afba4feb3e9c2318401832",
+      "src/py_mermaid/diagrams/modeling/c4.py": "7fdb2f73ba6f0ccc29dd8f9f7798327402c817e0e40bbeb90ae593420793cecb",
+      "src/py_mermaid/diagrams/modeling/class_diagram.py": "1de7368306e61b294f5410c2906e82ed45a3d042a325262febd5aeaf542dbfd8",
+      "src/py_mermaid/diagrams/modeling/er.py": "bf193779c5b5c73f3c47b7026225b7b9f026d57fa95b57a60135ffd3fa142175",
+      "src/py_mermaid/diagrams/modeling/requirement.py": "a16a245c9802e95d0f74866d80c5bc92df932048fa35620f5078acd4b63c91ac",
+      "src/py_mermaid/diagrams/modeling/state_diagram.py": "c0ef575e39efad97e6cedc34c535a71265ba652366245cccda0fe79509c00aee",
+      "src/py_mermaid/diagrams/modeling/usecase.py": "d31bbae9abae3e2756cdd539918c6b263ae8e18362aa72fcd2ad1032a0a166ec",
+      "src/py_mermaid/diagrams/railroad/__init__.py": "78d18a55ddb85967cd8cdb420e52670002890d748472be91d86d4c44525d3a4b",
+      "src/py_mermaid/diagrams/railroad/layout.py": "81bb27e2888f5eed8c82ad5ce81c62ecb945b5a48193394148106f9dd58b0f51",
+      "src/py_mermaid/diagrams/railroad/model.py": "f49afe67da2fb4187d280b16aaed7449b517f192b34e49982080b9f5fb1e98c2",
+      "src/py_mermaid/diagrams/railroad/parser.py": "e89807b730505f5898a250c97215fed5b5ad9746af9aa705fe52e8534c1eb4cb",
+      "src/py_mermaid/diagrams/sequence/__init__.py": "6e726c93d670e2f3fb9bbaf48ad2c5a36de032552669e819c4f976cb99507326",
+      "src/py_mermaid/diagrams/sequence/layout.py": "712ec26f1c9796a254f38b3036fff36d68c0858240866d6f510197e339c33331",
+      "src/py_mermaid/diagrams/sequence/message_geometry.py": "947878f158d2e7108989a5f813fa90c075497561b161dc5c34c9f3859513facc",
+      "src/py_mermaid/diagrams/sequence/model.py": "e08b36a53ae3e1070b0359413e142bf29b1a7d4bdc52d54c2253ae5a92a4c677",
+      "src/py_mermaid/diagrams/sequence/parser.py": "dcc0731aca75c83464c45e01daef92a255cfc56f538ca500e92b372a92f9738f",
+      "src/py_mermaid/diagrams/sequence/presentation.py": "1c7985d23eab1b416e0e3186d1a79a8b0349cb96487517c4658218440d5d65a9",
+      "src/py_mermaid/diagrams/structures/__init__.py": "4bfc1c26791ccc0b2dbfd4690855b5f5268488fca0cca59bc41936dcb6ce5682",
+      "src/py_mermaid/diagrams/structures/_architecture_icons.py": "448e43f40ccfd6b16d0e648a2a59a685c27f71de737dfff2c264ede12b075c57",
+      "src/py_mermaid/diagrams/structures/_block_arrows.py": "2b86262b35094544859e770f8490eda65432807687b513f60f4b8da4a0d3a4e8",
+      "src/py_mermaid/diagrams/structures/_fcose.py": "76119ebba4097d4a209d840324a74ab9acc3ebfbf9a47bbe6fbee7ee37775082",
+      "src/py_mermaid/diagrams/structures/architecture.py": "9ca951ce10ffb18cdf47a1071e8ca73af104576bb9f0b508b0f8f6757e0acd01",
+      "src/py_mermaid/diagrams/structures/block.py": "8db2ff5fa5ce2df30913cfc7b6b7673cd8d15af88b3af9fbeae59dff5365fe9d",
+      "src/py_mermaid/diagrams/structures/kanban.py": "ba523879f2c8dcea40a6c05575a8fe06f033b33f8c7e929e8ad25fd1f62c2f31",
+      "src/py_mermaid/diagrams/structures/packet.py": "ba88fd2180348c0433a29f42f5b213695cd17568246bfdf44aa5b53a3c21686f",
+      "src/py_mermaid/diagrams/temporal/__init__.py": "1985c5a8a929517d99683cee489f4ae00cdd901fc23606504e03e56ffa0b2cc5",
+      "src/py_mermaid/diagrams/temporal/_civil.py": "25186accfb115449b4577a2eba8906d44e5c2774fb8e6f6e195c6129ce11f463",
+      "src/py_mermaid/diagrams/temporal/_dates.py": "5b51ffc71f3584bdf6a968ac006f5d3b49114f143561575ec81b2bfac8235aac",
+      "src/py_mermaid/diagrams/temporal/_git_layout.py": "017ffa6e6cffa8e3d268d23ea00e6970fa527dbba740901867ecd74d5b316d01",
+      "src/py_mermaid/diagrams/temporal/_paint.py": "03e0351abba8ba60ef75d85cef21e9374bb50c47aedfb5d4a35dff40f3f4926a",
+      "src/py_mermaid/diagrams/temporal/_source_styles.py": "b8702c40e69c3678f0b3cfa757b4b7c765c7076689e2ce1b610609dd9811a9a1",
+      "src/py_mermaid/diagrams/temporal/_syntax.py": "cea02a8d47c54c062ef2f4a1ace526865efc793b283e98ae1637e32a782bfc8d",
+      "src/py_mermaid/diagrams/temporal/gantt.py": "4c05af24a614bb8307d08c8a855c426c52adaee08119a24834e440767163ab76",
+      "src/py_mermaid/diagrams/temporal/gitgraph.py": "352c437c30a6fa14e152b29e2c46092a7f3d199e55e57ace0be94253c09df385",
+      "src/py_mermaid/diagrams/temporal/journey.py": "3f6667afbeb608cda4ade772ac6018e16c8a90ea7bb62781994b9c7b170e18a6",
+      "src/py_mermaid/diagrams/temporal/timeline.py": "63471b526ab2d7ed53b149f96dd6752d577810d254d676d9b6978b9351788b7a",
+      "src/py_mermaid/diagrams/zenuml/__init__.py": "0cc8def7994025c755e3ee3ec81ecb49fccfe89697ca845981fba3c46f81ebdf",
+      "src/py_mermaid/diagrams/zenuml/assets/actor.svg": "502a5b8566f9d7f3621c9459c3d35cd25a8628fbca4c123d0b023f88a2a333cd",
+      "src/py_mermaid/diagrams/zenuml/assets/alt-fragment.svg": "661310f14d8779bcf6a8171a28905dcc6db69ec8919703bc6c55c5d074815440",
+      "src/py_mermaid/diagrams/zenuml/assets/azurefunction.svg": "1a6c9c108d5f63f7b78bc6fbc464059acd2eaa8c1d111e9bcd28a8b2cdf470b9",
+      "src/py_mermaid/diagrams/zenuml/assets/boundary.svg": "4c3f60734af2fbd2191f880b2d2ec55225ff339b59f0bdcd4fe77d3b54dbd2f5",
+      "src/py_mermaid/diagrams/zenuml/assets/control.svg": "64d9aa04d905c62762ab7bf19e7f42ba78b4843d026e7d3823db6addb613cae8",
+      "src/py_mermaid/diagrams/zenuml/assets/critical-fragment.svg": "2b2634f268f04784d5b9afd5e00cf4eeedd89e78bb52aa7e90228efc68922431",
+      "src/py_mermaid/diagrams/zenuml/assets/database.svg": "c400ec7b8da9a1c8e4324e02feb4b4743c528ad45ea0d5d443feb15315b7e400",
+      "src/py_mermaid/diagrams/zenuml/assets/ec2.svg": "155b13065f4420c794f71fcc3c5d3f78be4e1e53d65f3b5388ec7742f8875ddb",
+      "src/py_mermaid/diagrams/zenuml/assets/entity.svg": "0ebeda02e1922d323d7118b7f6025ef28043ceb940b64ba87576cabf009d257d",
+      "src/py_mermaid/diagrams/zenuml/assets/iam.svg": "2bdcac04a28e4b5bdfc3cd35d7ca496ad1f6fa0bc70e5f9200599b443af71624",
+      "src/py_mermaid/diagrams/zenuml/assets/lambda.svg": "6f29b9801170221431fbc78f67b689a9580c62f64e453f8d18a5cefd807636bf",
+      "src/py_mermaid/diagrams/zenuml/assets/LICENSE-core": "d4a77cbf1dc0975cd4be7266972dc6d3a6c6d68d43235384d6e4b6f12934e978",
+      "src/py_mermaid/diagrams/zenuml/assets/loop-fragment.svg": "24d3b7bf2b3c53d7463201af017ca46b47cfe8d8ab67c48f2e064d9430a8876e",
+      "src/py_mermaid/diagrams/zenuml/assets/Microsoft_Terms_of_Use.pdf": "983e83cef1a8f85164760b076a96df54cb50af345861cb1d8344040037d0531c",
+      "src/py_mermaid/diagrams/zenuml/assets/opt-fragment.svg": "f06ceede25ac9ab4c669cf9f158b44cfdec7ab6aedf9f49613ba085f592d0dbf",
+      "src/py_mermaid/diagrams/zenuml/assets/par-fragment.svg": "82abd7f9b1386281ebaceabf3fbbbab1123cb7e851857e84550f38c39bc5f3be",
+      "src/py_mermaid/diagrams/zenuml/assets/ref-fragment.svg": "60d4a29de41e8a6738b5776d4409c55cc72a35fb02a2ccc1d19e00c92d3f6587",
+      "src/py_mermaid/diagrams/zenuml/assets/section-fragment.svg": "81fb298a6460f96bc68a79613673b35d1d232ed23f68bfa13ef92cedd0a3c9d2",
+      "src/py_mermaid/diagrams/zenuml/assets/sns.svg": "1e3d19286abcc04364d5a2e8f83faa1dddf1657d68a1d9e9c6bfe351f0c5e242",
+      "src/py_mermaid/diagrams/zenuml/assets/sqs.svg": "39915b6e2eb2d77286a905bb0ca94912bca36605d518433db3b3f0d113e5d07d",
+      "src/py_mermaid/diagrams/zenuml/assets/try-catch-fragment.svg": "b48b67f7f6d53fc424611cec28f424020434dbd5f46105782e2eb883e398df50",
+      "src/py_mermaid/diagrams/zenuml/emoji.py": "840bdacc296cfe42d0eee5d6877e5771cb7603a65890c94c44266f61033822ad",
+      "src/py_mermaid/diagrams/zenuml/geometry.py": "d9dc47378a9d0d5d08ac3d9572d1a37e00fc5948ad81afa4ad187a271bc6528b",
+      "src/py_mermaid/diagrams/zenuml/layout.py": "840f07d7aa96749befc37bbe9a1909cf01d475b81a1ab8f207d82aaf01b3fe21",
+      "src/py_mermaid/diagrams/zenuml/model.py": "05ecfe619c92e6704f2e08a080425349cc28af64ef9e02d916d8d4da4b0a8a61",
+      "src/py_mermaid/diagrams/zenuml/parser.py": "75ac670a2f7ae6e5742958d845bc22c634c88517bb4b820ada3eff844fe4197d",
+      "src/py_mermaid/geometry/__init__.py": "107fecdf0bc750e9300aae4cd28b545a61b180ef3065996c82d1faed6ae77b82",
+      "src/py_mermaid/geometry/edges/__init__.py": "26cbc445bdcf626c9e8e054330804c277fe6718ecc0bc86969a516b4048100d2",
+      "src/py_mermaid/geometry/edges/alignment.py": "ccbf30ce7b3749bf708bbd9078940bebed658113ec73cd6b4f353b82ce6b1c49",
+      "src/py_mermaid/geometry/edges/paths.py": "4cca5fd64b89dc9da1ce8b0b54a6681cb7f7a4ed7023c1e0aa944c7223f75739",
+      "src/py_mermaid/geometry/edges/pipeline.py": "368dca37a3f65dc5d71d7e32432452d3fd224e959022c15c909ac511f9154a74",
+      "src/py_mermaid/geometry/flowchart.py": "ea8ec1510211813e3829ea468dadb9a3ca91bd6f91a4462bf25696a47aa26a5e",
+      "src/py_mermaid/geometry/path_geometry.py": "d5d95b42c6f56b240a9918c9e34b29d5d6b1852a21fb8f9cc76c702ae8e1c7b4",
+      "src/py_mermaid/geometry/rough.py": "2b82b47819993fcba9d01a443e7887fd37d067ba76598ed1fe2dedf12f2cc86c",
+      "src/py_mermaid/geometry/shape_registry.py": "6b9cb66f463d2e2fed5aa4ba418c497c498870d6855825d7b71effdeffd1b27a",
+      "src/py_mermaid/geometry/shapes.py": "c7780a5a347bdba00fb8d7866073cf6667eeddc0c822dfce5577c9e7064e1e03",
+      "src/py_mermaid/layout/__init__.py": "6d1ecc869efa4cd9a7edd97fbd986cb719aa5509366da8775096b1fbd3074add",
+      "src/py_mermaid/layout/elk/__init__.py": "9baa94a4f1ce971d55a2f5008bd33c126764842ed68909c731f88d822c28498b",
+      "src/py_mermaid/layout/elk/compound.py": "379ef3b9a47d3ebf91583973be3365b5d24a65977d47463131a45aa41d65b446",
+      "src/py_mermaid/layout/elk/flowchart.py": "607e68f3a040c7fb75aaaf130a81e7d4a16442654b95b3fba55020f201940ef5",
+      "src/py_mermaid/layout/elk/options.py": "241b4b90902ff3d4f784351d20d11336af59be2d24309844f3c64aa758d46677",
+      "src/py_mermaid/model/__init__.py": "dc03b5bae51198aa7a4252ce4f65fb4717b4d1c241f1fed23dd0506f00743b3c",
+      "src/py_mermaid/model/controls.py": "3b7faf64b60a392fea4662dbd1481e99e660445098952deb950236ae48e3c273",
+      "src/py_mermaid/model/flowchart.py": "8b97e49215570719dabfbe32e86a07b965e4b1752b909d654e2c7b3e8a1e8cc3",
+      "src/py_mermaid/model/scene.py": "131a3ab123c5f2dabf29505f55d07772283d778c92f3e7685ccb87744096e7e0",
+      "src/py_mermaid/model/vchart.py": "fd581caafa3c069e56f7581ac7927e723b847ff478ebb82cd48e8e63029b7a8c",
+      "src/py_mermaid/model/vchart_dsl.py": "37918a24b193d0dae08a0a4d35b84ca6d848b2c642944cdb98876187945c2721",
+      "src/py_mermaid/parsing/__init__.py": "b927e8e23113a95e0258b2c5c085251b941dbb16f7cb78552319ab44b5785974",
+      "src/py_mermaid/parsing/preprocess.py": "735e9dca13b4c2f7ee1663dabda784ab19c602ffbafc2c5297f7302d9d4eb5c4",
+      "src/py_mermaid/parsing/vchart_dsl/__init__.py": "2bdaa9d8e8df2b2911cb2f7a759b68454e8c601f7bbcf78821c25f80701d4396",
+      "src/py_mermaid/parsing/vchart_dsl/compiler.py": "1d7ac6326298d045b56633c06eedd682fb85126af0755c07257f8b10e48e8a47",
+      "src/py_mermaid/parsing/vchart_dsl/lexer.py": "af49d011096f2d14f1f0e22a8033733c5b582ba428eff3dd2e49e4c7d8b011e2",
+      "src/py_mermaid/parsing/vchart_dsl/parser.py": "e503fea8167b83dc5a420ceae92978671a79ec04ab71a3f0efa4fb63e0aa99a3",
+      "src/py_mermaid/parsing/yaml_json.py": "568345c47a13bfb65651dafa9b4fcec9a65b2ebd646fa470c8d9717dbecea465",
+      "src/py_mermaid/py.typed": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "src/py_mermaid/rendering/__init__.py": "ed89819539fa2b113c92aa2530d8598d7a1ba665a8127ab2c1641e6445415573",
+      "src/py_mermaid/rendering/labels/__init__.py": "5081ad1eea53fb7fde3208c095c5d409a90d144b9758c89f8c3177ef08345a55",
+      "src/py_mermaid/rendering/labels/controls/__init__.py": "5bc53dd8880967c58373b82d4a655da8a9150d878c78c28b4fc9757915ac0f27",
+      "src/py_mermaid/rendering/labels/controls/color_values.py": "cac1e35e364640e4b69433625490f02474c88624c30d40f68d9c3a44e8b4d666",
+      "src/py_mermaid/rendering/labels/controls/layout.py": "747c5fc8a199e59b22aba92090bf4b11015b0967432a7214a1a1b4b803756833",
+      "src/py_mermaid/rendering/labels/controls/semantic.py": "12384110d4833dc38ff11997eec16246e037ca6b1ca20204f6ed14e400603d46",
+      "src/py_mermaid/rendering/labels/math.py": "b967f27754c0b4ac18ab8e798eb876aa208c775a2adfe335f724a9662c8c1a16",
+      "src/py_mermaid/rendering/labels/plain.py": "fa0bd7c05a82a7412f5cce1fea62acc580b6389789510bc0b893d9eb4e88fac5",
+      "src/py_mermaid/rendering/labels/rich.py": "aa76ec9d0958e42b17bfbda41eed8d5041611e5e87e2a933ab2981a54aa60362",
+      "src/py_mermaid/rendering/labels/sanitize.py": "692fc3a1b9531a77b225aa037ef30b71ec54cd4fbf63d93dd7a07e8edc0bf703",
+      "src/py_mermaid/rendering/skia/__init__.py": "60776be795ea6008f72da9be2517dd538cfb7f61f937930944bfa915c706df7a",
+      "src/py_mermaid/rendering/skia/controls.py": "9ce647b445f493fa355473433446bd81a54b27620fc0cec3f08db4d9b39e9d1c",
+      "src/py_mermaid/rendering/skia/graph_groups.py": "b5597fc93246eea487485eb6299a02c3509652110d24439e7e3108ef5c7ba4e9",
+      "src/py_mermaid/rendering/skia/scene.py": "dae69e31b02c2667d3eea9a10e5734185a6fdf0ded424a0bc1f3a5491cc815e1",
+      "src/py_mermaid/rendering/skia/session.py": "8f7f8923e5a60d0395abf6d97f4dbc0d53e8f705c26fec1852bd38315fdaecb1",
+      "src/py_mermaid/rendering/styles/__init__.py": "1294d44dcafa9f89a808eae202d6cdcb20a0ffccfec7855ad84ace98f82b7c37",
+      "src/py_mermaid/rendering/styles/flowchart.py": "b5224fcc147776f4c35a4ea98fe7f9b813e3b0dbb84dc8e8ee30b18978bed244",
+      "src/py_mermaid/resources/__init__.py": "900cc92343f24c7b2787454c1bbc6f87b3321eaeafbba0e0d87a41d29be8f4d5",
+      "src/py_mermaid/resources/geometry.py": "a9f5f89ff41be174162647b843b0aef8367e342e87f92b8626c2012142e4a7d0",
+      "src/py_mermaid/resources/svg.py": "4ac747b56f076511b2c5272b065980d99e3c6fd0471dbdd23673c8e9c270ec2c",
+      "src/py_mermaid/runtime/__init__.py": "837e68c6f9642d7a3f5de71bfbbae1b2a9efbc4e8af19deec55018e8c838eff6",
+      "src/py_mermaid/runtime/common.py": "24e264f20cc7d64621d99d186ea2438ec6549972dc625681f0b696b34ea043cc",
+      "src/py_mermaid/runtime/configuration.py": "3c85b5699abe6bb0232691c316591dcdfd08da23b2753b07c4995791367b1329",
+      "src/py_mermaid/runtime/flow_variants.py": "4d3db0be8e0e62ef616188a2406a6cd5767cec3ab95d9d6488124aa44786e30b",
+      "src/py_mermaid/runtime/graph.py": "951f0236d7fd0ffcc77c962ddcbf42526418f46902d221347d02bedfd685a074",
+      "src/py_mermaid/runtime/layouts.py": "ada6dc2495b4a6e7af00df2061c06af1153aa4193363917c6ffab8a53a17ad07",
+      "src/py_mermaid/runtime/registry.py": "665b570bf7f5db9a9d2d4cc4597a97fe1c33e8687c5e117033b6e12c9ed1c400",
+      "src/py_mermaid/vchart_bridge.py": "e0df45978ec9057ba12410b7b7f2ef892182c51ca3ef1703dd41ee2391a5a73f",
+      "src/py_mermaid/vchart_compilation.py": "721395e42732de4e39dea3818f43a2da074f7aa821ab7d2c4241539443677b7c",
+      "THIRD_PARTY_NOTICES.md": "699e1fb6f41b9170550a5f10da750575f87072eccda9a2bbf30e3198f46da501"
+    }
   },
   "interfaceVersion": "bulk-static-v1",
-  "activeLeases": [],
+  "activeLeases": [
+    {
+      "owner": "A",
+      "scope": "originalA source/tests/sourceoracle repairs"
+    },
+    {
+      "owner": "B",
+      "scope": "gantt directive and B old source expectations"
+    },
+    {
+      "owner": "C",
+      "scope": "Sequence verification tools/tests and authorized support_c logicalcross"
+    },
+    {
+      "owner": "root",
+      "scope": "runner env/packaging/meta/report integration"
+    }
+  ],
   "commonRequests": [],
   "blockers": [],
   "nextTaskIds": [],
@@ -1105,8 +1342,8 @@
       "status": "closed_verified_local_scope"
     }
   },
-  "activePlan": "docs/BULK_STATIC_EXECUTION.md",
-  "activeScope": "31 static diagram entries: 29 new migrations and 2 flowchart regressions; 7 deferred by user",
+  "activePlan": "docs/CLOSURE_BATCH_PLAN.md",
+  "activeScope": "31 retained static entries; 7 excluded entries planned for future py-vchart coverage",
   "scopeOverride": {
     "date": "2026-11-05",
     "authorization": "继续完成流程图收口；数学模块独立后续实现，本轮先完成其余静态流程图能力",
@@ -1354,8 +1591,8 @@
       "remainingWork": []
     }
   },
-  "installationValidation": "Affected Windows wheel/sdist + published math dependency verified; other installation/platform scope retains prior limitations",
-  "currentScopeStatus": "in_progress",
+  "installationValidation": "Deferred by user; no new installation verification in this iteration",
+  "currentScopeStatus": "AGREED_STATIC_LOCAL_VERIFIED_RELEASE_PENDING",
   "remainingEnvironmentItems": [
     "不是完整 KaTeX 兼容实现；注册项与功能族映射不等于逐分支覆盖率。",
     "自动公式编号/tag、CD、部分宏展开边界尚未实现；明确拒绝未支持语法。",
@@ -1367,16 +1604,19 @@
     "版本 0.1.0a0 未发布；Mermaid 声明依赖版本，开发验证使用两个源码目录 PYTHONPATH，安装解析需后续发布或本地安装阶段验证。"
   ],
   "visualReport": {
-    "path": "reports/MATH-batch-20261105T122804Z-878bf5d4/index.html",
-    "url": "http://127.0.0.1:8765/MATH-batch-20261105T122804Z-878bf5d4/index.html",
-    "sha256": "9f7ef845b1a8f495d66824f48208da6206f6b3235d3b9e3f5b7a20bf493e88ee",
-    "bytes": 849853,
-    "sourceTreeSha256": "6e37306deb59a5eb21a2bcceedd66c128a2367f392b094854e2e9bdb3e0e4088",
-    "mathSourceTreeSha256": "6e11f0a8f9f88c78fb387faf4429cfea72781a4e961328bf53299625bea2cb80",
-    "qa": "../py-katex/test-runs/MATH-batch-20261105T122948Z-8bf16e51/artifacts/html-qa/report.json",
-    "functionalStatus": "PASS",
-    "historicalCandidate": true,
-    "currentSourceMatches": false
+    "path": "reports/REPORT-ROUNDS-delivery-20261106T131320Z-1382c778/index.html",
+    "sha256": "2899873b754c917fa68a189d54547c1621fcc4bd104e0af360fc2f4b83601ce2",
+    "bytes": 127019,
+    "url": "http://127.0.0.1:8765/REPORT-ROUNDS-delivery-20261106T131320Z-1382c778/index.html",
+    "sourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+    "qa": {
+      "path": "test-runs/REPORT-ROUNDS-delivery-20261106T131320Z-1382c778/artifacts/viewer/viewer.json",
+      "sha256": "b09fe59c6c08cf94e6e5de9beabcc7c794f24abb92430d372b74892528a507f5",
+      "bytes": 10205
+    },
+    "presentationOnly": true,
+    "sourceReportFunctionalStatus": "RETAINED_STATIC_LOCAL_ACCEPTED",
+    "functionalStatus": "NOT_EVALUATED"
   },
   "tooling": {
     "status": "standardized_v1",
@@ -1393,10 +1633,32 @@
     "installationValidation": "deferred; not executed",
     "productTestMethodsPassed": 280,
     "mathEntry": "../py-katex/tools/workflow.py",
-    "mathDocumentation": "../py-katex/docs/RUNS_AND_REPORTS.md"
+    "mathDocumentation": "../py-katex/docs/RUNS_AND_REPORTS.md",
+    "iterationReport": {
+      "status": "PAGED_PRESENTATION_VERIFIED",
+      "reportUrl": "http://127.0.0.1:8765/REPORT-ROUNDS-delivery-20261106T110340Z-823e8bf0/index.html",
+      "manifest": {
+        "path": "reports/REPORT-ROUNDS-delivery-20261106T110340Z-823e8bf0/report.json",
+        "sha256": "d42fdc35ac1b9d3869b461e1f7ad078c332e192a0a23b835aff154ec1c7050a3",
+        "bytes": 95350
+      },
+      "run": {
+        "path": "test-runs/REPORT-ROUNDS-delivery-20261106T110340Z-823e8bf0/run.json",
+        "sha256": "c1b4a5367fa209b58906be86465c16595d3cab32fa000ec1218c849d8457fc05",
+        "bytes": 63665
+      },
+      "rounds": 2,
+      "pages": 62,
+      "cases": 734,
+      "pageSize": 12,
+      "indexBytes": 106889,
+      "rawPNG": 2746,
+      "rawSVG": 685,
+      "newFunctionalAcceptance": false
+    }
   },
-  "functionalStatus": "NOT_EVALUATED_FOR_CURRENT_CANDIDATE",
-  "nextPlannedScope": "Explicit remaining KaTeX compatibility inventory and deferred package/install validation; other diagrams require subsequent scope",
+  "functionalStatus": "BRANCH_AUDIT_COMPLETED_WITH_CONFIRMED_GAPS",
+  "nextPlannedScope": "Repair confirmed retained branch gap families; not executed by this verification task. Advanced HTML/CSS excluded; installation remains deferred.",
   "previousVisualReport": {
     "path": "reports/F01.3-render-20261105T022709Z-575768e1/index.html",
     "url": "http://127.0.0.1:8765/F01.3-render-20261105T022709Z-575768e1/index.html",
@@ -1410,9 +1672,10 @@
   "targetScope": "static-rendering-only",
   "scopePolicy": "references/static-rendering-scope.json",
   "latestScopeDecision": {
-    "date": "2026-11-05",
-    "scope": "all modules static-rendering-only",
+    "date": "2026-11-06",
+    "scope": "video/audio entirely excluded, including initial static appearance",
     "productCodeChanged": false,
+    "decision": "references/media-exclusion.json",
     "doc": "docs/STATIC_RENDERING_SCOPE.md"
   },
   "layoutPolicy": "references/layout-policy.json",
@@ -1424,9 +1687,9 @@
     "evidence": "references/dagre-removal-verification.json"
   },
   "previousSourceIdentity": {
-    "treeSha256": "d2d0f36c2e2b8eb2818e1377cf1e25b81d81b846b3c0807ddc916639af917737",
-    "evidence": "test-runs/MATH-PYPI-batch-20261106T010610Z-054fd721/run.json",
-    "wheelSha256": "6b420c6383c31c88c48d5fccb3f3808ba9dfa0e1e48d306a8890cb472d8ab399"
+    "treeSha256": "fae1001df0d2c07ada1b8474eb03901429af0a5f81c9b7dfbf5e65b89e962062",
+    "kind": "GAP_P4_verified_candidate",
+    "p4Run": "BULK-P4-final-20261106T084124Z-83cc2c1e"
   },
   "f014WorkerStatus": {
     "root": "verified_local_static_scope",
@@ -1521,8 +1784,8 @@
   "fullFirstPlan": "tools/plans/full-first.json",
   "fullFirstExecution": "../py-katex/test-runs/MATH-batch-20261105T155834Z-e542e4f2",
   "manualRejectedCandidate": "../py-katex/references/full-manual-rejected-candidate.json",
-  "status": "in_progress",
-  "scope": "MATH-PYPI",
+  "status": "verification_complete_with_confirmed_gaps",
+  "scope": "BRANCH-VERIFY",
   "remainingCoreStaticWork": [],
   "coreStaticScopeComplete": false,
   "fullKaTeXCompatibility": false,
@@ -1538,23 +1801,23 @@
   },
   "historicalExecutionState": "docs/changes/math-full-prior-execution-state.json",
   "report": {
-    "url": "http://127.0.0.1:8765/MATH-FULL-batch-20261105T172308Z-e0e12af6/index.html",
-    "path": "py-mermaid/reports/MATH-FULL-batch-20261105T172308Z-e0e12af6",
-    "html": {
-      "sha256": "8a197796328ef10e5c3244bd613ce1957d44e8254a7b5c99dab142e5db6118ae",
-      "bytes": 5705477
+    "url": "http://127.0.0.1:8765/BRANCH-VERIFY-P5-delivery-20261106T150821Z-81018151/index.html",
+    "path": "reports/BRANCH-VERIFY-P5-delivery-20261106T150821Z-81018151",
+    "manifest": {
+      "path": "reports/BRANCH-VERIFY-P5-delivery-20261106T150821Z-81018151/summary-report.json",
+      "sha256": "f1b47c523be176ed83cda222ee456eaf07e803deed638afd91963b27988e090d",
+      "bytes": 6956
     },
     "qaStatus": "PASS",
-    "qaViews": 825,
-    "desktopAndMobile": true,
-    "externalRequests": 0,
-    "currentSourceMatches": false,
-    "historicalCandidate": true
+    "functionalStatus": "BRANCH_AUDIT_COMPLETED_WITH_CONFIRMED_GAPS",
+    "sourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268"
   },
   "legacyTaskTablesHistorical": true,
   "remainingScope": [
-    "py-mermaid Linux/no-loader installation remains unverified.",
-    "Other diagram types and browser/independent contrib scope unchanged."
+    "Confirmed22 functional branch records grouped into9 root-cause families remain unrepaired.",
+    "Four pure-value differences and additional syntax/config interpretation differences are separately recorded.",
+    "Six unverified predicates, source-internal APIs and historical-only reviews remain accurately scoped.",
+    "Installation/Linux/no-loader/release and seven py-vchart-deferred chart entries remain deferred."
   ],
   "publishedMathIntegration": {
     "summary": "references/math-published-integration.json",
@@ -2040,5 +2303,571 @@
       "status": "complete",
       "scope": "31 retained static entrypoints; 7deferred"
     }
+  },
+  "functionalityGapAudit": {
+    "status": "scoped_branch_iteration_locally_verified_html_host_unimplemented",
+    "auditReference": "test-runs/gap-audit-check-20261106T0806.json",
+    "records": 219,
+    "entryCount": 31,
+    "sharedCapabilityCount": 13,
+    "initialGapRecords": 24,
+    "auditFalsePositive": [
+      "B Git branch literal newline already consumed by shared rich-text pipeline"
+    ],
+    "initialRun": "G03-first-batch-20261106T080449Z-54f22284",
+    "sourceOnlyNewCases": 64,
+    "newTestMethods": 56,
+    "currentSourceTreeSha256": "fae1001df0d2c07ada1b8474eb03901429af0a5f81c9b7dfbf5e65b89e962062",
+    "productWritersStopped": true,
+    "installationVerification": false,
+    "publication": false,
+    "remainingSourceAudit": "Functional groups reviewed; exhaustive expression-level and arbitrary in-scope HTML/CSS branches remain unproven. Video/audio are entirely user-excluded.",
+    "finalSourceTreeSha256": "fae1001df0d2c07ada1b8474eb03901429af0a5f81c9b7dfbf5e65b89e962062",
+    "p4Final": "BULK-P4-final-20261106T084124Z-83cc2c1e",
+    "delivery": "GAP-P5-delivery-20261106T090602Z-1b174f02",
+    "unitMethods": 1780,
+    "fixtures": 734,
+    "strictZen": 186,
+    "mutationControlsPerProfile": 1990,
+    "reportUrl": "http://127.0.0.1:8765/GAP-P5-delivery-20261106T090602Z-1b174f02/index.html",
+    "remainingStaticModule": "references/static-html-host-gap.json",
+    "acceptanceDocument": "docs/GAP_AUDIT_ACCEPTANCE.md",
+    "nextPlan": "docs/STATIC_HTML_HOST_PLAN.md",
+    "overallStaticMigrationComplete": false,
+    "previousRepairSourceTreeSha256": "5c48038b58c474437e47ab14a0925cf7697a4aad63afe8749f8e5e68003fd5e3",
+    "historical": true,
+    "supersededBy": "docs/HTML_HOST_ACCEPTANCE.md"
+  },
+  "staticHtmlControlsIteration": {
+    "status": "locally_verified",
+    "baselineSourceTreeSha256": "a25d9e8624eb6b8dd41175441b28630859ea8ecc63f831190052089c9301c1c6",
+    "p0Run": "test-runs/HTML-HOST-P0-bootstrap-and-contracts-20261106T111054Z-bff85431",
+    "contracts": "src/py_mermaid/model/controls.py",
+    "installationVerification": false,
+    "newRuntimeDependencies": false,
+    "videoAudio": "excluded_by_user",
+    "evidenceNotYetGenerated": false,
+    "p1Candidate": "881656d5439e4ba08b4f3182d215680020653592e2d6ba0f9e265af97faf8fe1",
+    "p1FreezeRun": "test-runs/HTML-HOST-P1-joint-mechanical-freeze-20261106T112031Z-a17b9755",
+    "productWritersStopped": true,
+    "unitMethods": 257,
+    "fixtures": 131,
+    "plan": "tools/plans/html-host-first.json",
+    "firstSweep": "HTML-HOST-P3-batch-20261106T113133Z-293a5335",
+    "firstSweepSourceUnchanged": true,
+    "firstSweepNewTests": {
+      "methods": 216,
+      "failures": 24,
+      "errors": 5
+    },
+    "sourceOriginalCaptured": 131,
+    "currentFixtureCount": 131,
+    "currentMethods": 257,
+    "relatedContractsPassed": "HTML-HOST-P3-refined-contracts-20261106T120003Z-9269b4b5",
+    "sourceNative128Run": "HTML-HOST-P3-source-native-controls-20261106T120054Z-0e217266",
+    "remainingRepair": [],
+    "fullFixtureCount": 865,
+    "p3FinalGate": "HTML-HOST-P3-final-control-gate-20261106T123130Z-09bfb090",
+    "p4Oracle": "test-runs/HTML-HOST-P4-refrozen-source-union-20261106T125255Z-2c3a216d/artifacts/oracle",
+    "p4SourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+    "previousP4": "BULK-P4-final-20261106T123440Z-e777012f",
+    "previousP4Acceptance": "rejected-by-additional-source-dimension-audit",
+    "relatedFinal": "HTML-HOST-P3-zero-default-final-source-20261106T125040Z-a9d3f815",
+    "unitMethodsAll": 2046,
+    "p4Final": "BULK-P4-final-20261106T125300Z-435e50af",
+    "exportRepairRun": "HTML-HOST-P4-EXPORT-repair-20261106T130826Z-cebc530d",
+    "delivery": "HTML-HOST-P5-delivery-20261106T131153Z-15f07388",
+    "pagedReport": "REPORT-ROUNDS-delivery-20261106T131320Z-1382c778",
+    "summary": {
+      "path": "references/html-host-verification-summary.json",
+      "sha256": "a3156f9ba7565c360de3ee963a92f79573ca3407175cbddacf5430691d7f47f2",
+      "bytes": 5993
+    },
+    "acceptance": {
+      "path": "test-runs/HTML-HOST-P5-delivery-20261106T131153Z-15f07388/artifacts/finalized/acceptance.json",
+      "sha256": "b3c312dad6fe5aea886b00a5c31a80c582f00a316400132f8b27efc56a0d18c9",
+      "bytes": 5991
+    },
+    "manualReviewPairs": 78,
+    "manualFreshPairs": 16,
+    "manualTransferredExactPairs": 62,
+    "currentScopeComplete": true,
+    "historicalFirstSweepMethods": 216,
+    "historicalFirstSweepFixtures": 112,
+    "exportEvidenceCorrection": {
+      "originalP4ExportsAccepted": false,
+      "reason": "SVG dimension loop shadowed fixture filename; replaced only by explicit closed same-candidate export rerun",
+      "repair": "HTML-HOST-P4-EXPORT-repair-20261106T130826Z-cebc530d"
+    },
+    "deliveryReceipt": "docs/changes/html-host-P5-delivery.json",
+    "metadataFinal": {
+      "path": "test-runs/HTML-HOST-P5-metadata-repair-20261106T131702Z-04b1d695/run.json",
+      "sha256": "3410472c666eff5795b12efa6167a0aeb9d3dcaef28863654b88d4686ac92db5",
+      "bytes": 43290
+    }
+  },
+  "historicalReportPointers": [
+    {
+      "visualReport": {
+        "path": "reports/MATH-batch-20261105T122804Z-878bf5d4/index.html",
+        "url": "http://127.0.0.1:8765/MATH-batch-20261105T122804Z-878bf5d4/index.html",
+        "sha256": "9f7ef845b1a8f495d66824f48208da6206f6b3235d3b9e3f5b7a20bf493e88ee",
+        "bytes": 849853,
+        "sourceTreeSha256": "6e37306deb59a5eb21a2bcceedd66c128a2367f392b094854e2e9bdb3e0e4088",
+        "mathSourceTreeSha256": "6e11f0a8f9f88c78fb387faf4429cfea72781a4e961328bf53299625bea2cb80",
+        "qa": "../py-katex/test-runs/MATH-batch-20261105T122948Z-8bf16e51/artifacts/html-qa/report.json",
+        "functionalStatus": "PASS",
+        "historicalCandidate": true,
+        "currentSourceMatches": false
+      }
+    },
+    {
+      "report": {
+        "url": "http://127.0.0.1:8765/MATH-FULL-batch-20261105T172308Z-e0e12af6/index.html",
+        "path": "py-mermaid/reports/MATH-FULL-batch-20261105T172308Z-e0e12af6",
+        "html": {
+          "sha256": "8a197796328ef10e5c3244bd613ce1957d44e8254a7b5c99dab142e5db6118ae",
+          "bytes": 5705477
+        },
+        "qaStatus": "PASS",
+        "qaViews": 825,
+        "desktopAndMobile": true,
+        "externalRequests": 0,
+        "currentSourceMatches": false,
+        "historicalCandidate": true
+      }
+    }
+  ],
+  "branchVerification": {
+    "status": "COMPLETED_WITH_CONFIRMED_GAPS",
+    "baselineSourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+    "scopeDecision": "references/html-css-extension-exclusion.json",
+    "productionReadOnly": true,
+    "initialRun": "test-runs/BRANCH-VERIFY-P0-scope-20261106T141035Z-51e3798c",
+    "installationVerification": false,
+    "scope": "Concrete retained source branches from previous unresolved lists; no arbitrary HTML/CSS expansion or blanket coverage claim",
+    "branchRecords": 122,
+    "fixtures": 115,
+    "pureBProbes": 90,
+    "abnfSourceProbes": 5,
+    "unitMethods": 79,
+    "plan": "tools/plans/branch-verification-first.json",
+    "firstRun": "test-runs/BRANCH-VERIFY-P3-batch-20261106T143957Z-5bcb3fcf",
+    "firstRunStatus": "FAILED",
+    "sourceUnchanged": true,
+    "followupPlan": "tools/plans/branch-verification-followup.json",
+    "followupNewFixtures": 9,
+    "combinedFixtures": 124,
+    "productRepairPerformed": false,
+    "catalogueDispositionComplete": true,
+    "allSelectedBranchesVerified": false,
+    "globalBranchCoverageEstablished": false,
+    "productSourceModified": false,
+    "summary": {
+      "path": "references/branch-verification-summary.json",
+      "sha256": "cdf4226c982290875052614751fdf774d3bcb36609e4bc8f0c908205ce61613d",
+      "bytes": 1723432
+    },
+    "repairQueue": {
+      "path": "references/branch-repair-queue.json",
+      "sha256": "7e6322ad17e20e648a587ec0d6839b67c7fa7f25e1824150ee9b2b7a1da6be92",
+      "bytes": 3628
+    },
+    "resultDocument": {
+      "path": "docs/BRANCH_VERIFICATION_RESULTS.md",
+      "sha256": "737ceac0dd351c6272ce4d7dfdfadcbf5922eb66944a9fa5956fc56af00df298",
+      "bytes": 6246
+    },
+    "delivery": "test-runs/BRANCH-VERIFY-P5-delivery-20261106T150821Z-81018151",
+    "reportUrl": "http://127.0.0.1:8765/BRANCH-VERIFY-P5-delivery-20261106T150821Z-81018151/index.html",
+    "comparisonReportUrl": "http://127.0.0.1:8765/REPORT-ROUNDS-delivery-20261106T150823Z-94db3ad3/index.html",
+    "confirmedFunctionalGapRecords": 22,
+    "semanticValueDifferences": 4,
+    "remainingRepairs": [
+      {
+        "id": "cynefin-string",
+        "title": "Cynefin 字符串转义与字面换行",
+        "branches": [
+          "cynefin-double-unknown",
+          "cynefin-double-unicode",
+          "cynefin-single-newline",
+          "cynefin-literal-newline",
+          "cynefin-single-tab",
+          "cynefin-transition-escape"
+        ],
+        "status": "confirmed_not_repaired"
+      },
+      {
+        "id": "architecture-multiline-metadata",
+        "title": "Architecture 多行元数据输入拒绝",
+        "branches": [
+          "architecture-accessibility"
+        ],
+        "status": "confirmed_not_repaired"
+      },
+      {
+        "id": "gantt-date",
+        "title": "Gantt 日期解析/星期与 ISO week 格式",
+        "branches": [
+          "BV-B-DATE-LOCALIZED",
+          "BV-B-DATE-WEEKDAY",
+          "BV-B-DAYJS-ISO"
+        ],
+        "status": "confirmed_not_repaired"
+      },
+      {
+        "id": "gantt-axis-format",
+        "title": "D3 轴格式：locale、百分号、padding、远年 ISO",
+        "branches": [
+          "BV-B-AXIS-ALL",
+          "BV-B-AXIS-LOCALE",
+          "BV-B-AXIS-ESCAPE",
+          "BV-B-AXIS-PADDING",
+          "BV-B-AXIS-FAR"
+        ],
+        "status": "confirmed_not_repaired"
+      },
+      {
+        "id": "gantt-week-phase",
+        "title": "多周刻度 weekday epoch 相位",
+        "branches": [
+          "BV-B-TICK-WEEKDAY"
+        ],
+        "status": "confirmed_not_repaired"
+      },
+      {
+        "id": "agentflow-collapsed-selfloop",
+        "title": "AgentFlow 折叠组丢失真实自环",
+        "branches": [
+          "BV-B-AGENT-GENUINE"
+        ],
+        "status": "confirmed_not_repaired"
+      },
+      {
+        "id": "sequence-static-paint",
+        "title": "Sequence 中央连接点、反向编号与 self path 填色",
+        "branches": [
+          "C-sequence-central",
+          "C-sequence-number",
+          "C-sequence-self"
+        ],
+        "status": "confirmed_not_repaired"
+      },
+      {
+        "id": "zenuml-comment-escape",
+        "title": "Zen 注释转义文字误读",
+        "branches": [
+          "C-zen-comment-escape"
+        ],
+        "status": "confirmed_not_repaired"
+      },
+      {
+        "id": "abnf-comment",
+        "title": "ABNF comment-only 行拒绝",
+        "branches": [
+          "C-abnf-priority"
+        ],
+        "status": "confirmed_not_repaired"
+      }
+    ],
+    "finalChecks": {
+      "path": "test-runs/BRANCH-VERIFY-P5-final-checks-20261106T151312Z-34f6b81c/run.json",
+      "sha256": "fc09bd2a65e9e6226be72faf355004932225cc45b925272309bbbf0d3636fd2e",
+      "bytes": 39686
+    },
+    "changeReceipt": "docs/changes/branch-verification.json"
+  },
+  "vchartIntegration": {
+    "status": "P5_published_pypi_verified",
+    "plan": "docs/VCHART_INTEGRATION.md",
+    "distribution": "py-visactor-vchart",
+    "candidateVersion": "0.1.1",
+    "specTypes": 68,
+    "mermaidEntries": [
+      "pie",
+      "quadrantChart",
+      "xychart",
+      "radar",
+      "treemap",
+      "sankey",
+      "venn"
+    ],
+    "publication": "published_pypi_0.1.1",
+    "knownBranchGapsPreserved": 22,
+    "supplierCommit": "ff16c91d38ab61e57d03b58579d5bf1beb2a1840",
+    "p3Evidence": [
+      "VCHART-P3-batch-20261107T035511Z-365b9ec8",
+      "VCHART-P3-record-20261107T035857Z-796debc5",
+      "VCHART-P3-security-batch-20261107T040131Z-2fcb8e60"
+    ],
+    "visualReview": "test-runs/vchart-visual-review-20261107T043500Z.json",
+    "acceptance": "docs/VCHART_ACCEPTANCE.md",
+    "evidence": [
+      {
+        "path": "docs/VCHART_ACCEPTANCE.md",
+        "sha256": "b17de95bccb4cde59e17b72308b963011d5731ace1a3a0e8be200a7edddbf01e",
+        "bytes": 6447
+      },
+      {
+        "path": "references/vchart-pypi-verification.json",
+        "sha256": "2a512a95e02f40577b99d43d92c65c1a52ce892b0e1a16dc785cd7520fbab8ba",
+        "bytes": 3763
+      }
+    ],
+    "finalRun": "test-runs/VCHART-P4-batch-20261107T045154Z-dd03474c",
+    "deliveryRun": "test-runs/VCHART-P5-delivery-20261107T045848Z-3903b480",
+    "sourceTreeSha256": "756a21de6e1845dd81ab9d6ca7e08a84c8e8190e9d7ec03312cc923e872d6dc3",
+    "reportUrl": "http://127.0.0.1:8765/VCHART-P5-delivery-20261107T045848Z-3903b480/index.html",
+    "finalChecks": "test-runs/VCHART-P5-FINAL-CHECKS-batch-20261107T050127Z-a31bc070/run.json",
+    "supplierDocumentationCommit": "a04e27c",
+    "pypiPublication": "docs/VCHART_PYPI_PUBLICATION.md",
+    "pypiVerification": "references/vchart-pypi-verification.json",
+    "deliverySourceTreeSha256": "d7a26bdc6aa104ada9aef8b32f8e365c7df3ec1f51853032958b950d2476f136"
+  },
+  "vchartDslDesign": {
+    "status": "design_complete_implemented_with_bounded_verification",
+    "design": "docs/VCHART_DSL_DESIGN.md",
+    "plan": "docs/VCHART_DSL_EXECUTION_PLAN.md",
+    "grammar": "docs/syntax/vchart-v1.ebnf",
+    "catalogue": "references/vchart-dsl-design.json",
+    "examples": "docs/proposals/vchart-v1/examples/manifest.json",
+    "types": 68,
+    "existingSpecs": 225,
+    "newRuntimeDependencies": 0,
+    "dslImplemented": true,
+    "inventoryRun": "test-runs/VCHART-DSL-DESIGN-inventory-20261107T063954Z-eef1d415",
+    "expectedJsonPreview": "test-runs/VCHART-DSL-DESIGN-expected-json-preview-20261107T064126Z-3fa0cbed",
+    "firstExpectedPreviewFailure": "test-runs/VCHART-DSL-DESIGN-expected-json-preview-20261107T064105Z-fe18cef6",
+    "next": "See current DSL implementation acceptance; inventory source hashes remain historical",
+    "finalChecks": "test-runs/VCHART-DSL-DESIGN-checks-20261107T064339Z-1d36e190"
+  },
+  "vchartDslImplementation": {
+    "status": "declared_dsl_static_scope_accepted_with_documented_limits",
+    "plan": "docs/VCHART_DSL_EXECUTION_PLAN.md",
+    "startingSource": "69451c283a3eb2e907452707439f09540d0c65d0226b98d06ff6b332c3ba268f",
+    "acquisitionRun": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\VCHART-DSL-P0-acquisition-20261107T065122Z-05a86059",
+    "owners": {
+      "A": [
+        "model/vchart_dsl.py",
+        "parsing/vchart_dsl/lexer.py",
+        "parsing/vchart_dsl/parser.py",
+        "parsing/vchart_dsl/__init__.py"
+      ],
+      "B": [
+        "parsing/vchart_dsl/compiler.py",
+        "references/vchart-dsl-capabilities.json"
+      ],
+      "C": [
+        "model/vchart.py",
+        "diagrams/charts/vchart.py",
+        "vchart_bridge.py",
+        "api.py",
+        "__init__.py",
+        "cli.py",
+        "runtime/registry.py",
+        "vchart_compilation.py"
+      ],
+      "root": [
+        "docs",
+        "execution-state",
+        "root validation/report tooling and final metadata"
+      ]
+    },
+    "provider": "py-visactor-vchart==0.1.1",
+    "declaredTypes": 68,
+    "existingSpecs": 225,
+    "next": "No active source work. Provider exhaustive option/branch audit and22 prior Mermaid gaps remain separate; Mermaid release not performed.",
+    "p1Run": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\VCHART-DSL-P1-freeze-20261107T070051Z-d973ef81",
+    "p1Source": "8d225816e8f51773f9eae450af123269e232b6a05855fd4f8cb0a380fa3640a0",
+    "p2Run": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\VCHART-DSL-P2-freeze-20261107T071014Z-2c01eb63",
+    "sourceTreeSha256": "fe2c293f8ed4ea76e04d34669c8739c27a32063447026e144928bfd6b4ac0bb2",
+    "firstRun": "test-runs/VCHART-DSL-P3-batch-20261107T071015Z-cae93e0e",
+    "relatedRun": "test-runs/VCHART-DSL-P3-REPAIR-batch-20261107T071557Z-37375aad",
+    "finalRun": "test-runs/VCHART-DSL-P4-batch-20261107T072312Z-7cdc1791",
+    "deliveryRun": "test-runs/VCHART-DSL-P5-delivery-20261107T072726Z-cd08a488",
+    "acceptance": "docs/VCHART_DSL_ACCEPTANCE.md",
+    "summary": "references/vchart-dsl-verification-summary.json",
+    "visualReview": "test-runs/VCHART-DSL-REVIEW-binding-20261107T072540Z-f3832b39/artifacts/visual-review.json",
+    "reportUrl": "http://127.0.0.1:8765/VCHART-DSL-P5-delivery-20261107T072726Z-cd08a488/index.html",
+    "counts": {
+      "types": 68,
+      "casesPerProfile": 301,
+      "supplier": 225,
+      "representative": 68,
+      "examples": 8,
+      "profiles": 3,
+      "matrixCases": 903,
+      "actualExportFiles": 816,
+      "unittestMethods": 2364
+    },
+    "finalChecks": "test-runs/VCHART-DSL-P5-FINAL-CHECKS-batch-20261107T073023Z-77e12883"
+  },
+  "previousCurrentSourceIdentity": {
+    "treeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+    "kind": "same_candidate_static_html_controls_locally_verified",
+    "p4Run": "BULK-P4-final-20261106T125300Z-435e50af",
+    "exportRepairRun": "HTML-HOST-P4-EXPORT-repair-20261106T130826Z-cebc530d",
+    "acceptance": {
+      "path": "test-runs/HTML-HOST-P5-delivery-20261106T131153Z-15f07388/artifacts/finalized/acceptance.json",
+      "sha256": "b3c312dad6fe5aea886b00a5c31a80c582f00a316400132f8b27efc56a0d18c9",
+      "bytes": 5991
+    }
+  },
+  "finalCapabilityReview": {
+    "status": "REVIEW_COMPLETE_RELEASE_BLOCKED",
+    "sourceTreeSha256": "fe2c293f8ed4ea76e04d34669c8739c27a32063447026e144928bfd6b4ac0bb2",
+    "document": "docs/FINAL_CAPABILITY_REVIEW.md",
+    "summary": "references/final-capability-review.json",
+    "delivery": "references/final-capability-delivery.json",
+    "repairQueue": "references/final-capability-repair-queue.json",
+    "reportUrl": "http://127.0.0.1:8765/FINAL-CAPABILITY-P5-delivery-20261107T074816Z-a497e757/index.html",
+    "counts": {
+      "registeredEntries": 39,
+      "mermaidEntries": 38,
+      "vchartTypes": 68,
+      "originalUnrepairedBranchRecords": 22,
+      "originalRepairClusters": 9,
+      "additionalSourceValidChartGaps": 2,
+      "knownUnrepairedRecordsIncludingChartGaps": 24,
+      "releaseGates": 4,
+      "unverifiedItems": 7,
+      "itemCount": 35,
+      "freshUnittestMethodInvocations": 182,
+      "notDistinctMethodCount": true,
+      "previousSameSourceSuiteMethodsNotRerun": 2364
+    },
+    "publicationPerformed": false,
+    "sourceModified": false,
+    "testsModified": false,
+    "next": "Known capability repair before new formal-release candidate; no pending source writes.",
+    "finalChecks": "test-runs/FINAL-CAPABILITY-METADATA-batch-20261107T075048Z-9fe3e168"
+  },
+  "closureBatch": {
+    "schema": "py-mermaid-change/v1",
+    "task": "non-vchart-single-closure-batch",
+    "status": "LOCAL_STATIC_FULL_VERIFIED_FORMAL_RELEASE_PENDING",
+    "authorization": "All remaining non-VChart capabilities in one batch; previous conditional stable-publication authorization persists.",
+    "baselineSourceTreeSha256": "fe2c293f8ed4ea76e04d34669c8739c27a32063447026e144928bfd6b4ac0bb2",
+    "acquisitionRun": "test-runs/CLOSURE-P0-acquisition-20261107T075501Z-2f1df0de",
+    "priorDirtyTreePreserved": true,
+    "plan": "docs/CLOSURE_BATCH_PLAN.md",
+    "scope": "references/closure-batch-scope.json",
+    "runtimeDependenciesAdded": 0,
+    "activeOwners": {
+      "root": [
+        "clean exact artifact build and dual-platform OIDC publication"
+      ],
+      "A": [],
+      "B": [],
+      "C": []
+    },
+    "next": "Commit reviewed full tree, build clean exact files once, validate both artifacts on Windows/Linux with Linux real TZ, OIDC upload, actual PyPI SHA/installed verification and stable promotion.",
+    "formalReleasePerformed": false,
+    "p1Run": "test-runs/CLOSURE-P1-freeze-20261107T080532Z-62686ca0",
+    "p2Run": "test-runs/CLOSURE-P2-freeze-20261107T082538Z-e755b2c7",
+    "candidateSourceTreeSha256": "fca211bbfc3b75db6a2553b0c01f24d37753dbb87eab3f21c4f3ff8f289db14a",
+    "firstRun": "test-runs/CLOSURE-P3-batch-20261107T082546Z-6350b9b0",
+    "newUnitMethods": 132,
+    "sourceCases": {
+      "A": 45,
+      "B": 40,
+      "C": 36,
+      "shared": 6,
+      "pureB": 191,
+      "hostB": 11,
+      "event": 5
+    },
+    "firstRunStatus": "FAILED",
+    "firstSourceUnchanged": true,
+    "firstTestToolsUnchanged": true,
+    "distribution": "py-visactor-mermaid",
+    "version": "0.1.0",
+    "relatedRuns": {
+      "A_source": "test-runs/CLOSURE-P3-A-source-final-20261107T084111Z-3bcde7e4",
+      "A_native": "test-runs/CLOSURE-P3-A-related-20261107T083745Z-c7828325",
+      "B": "test-runs/CLOSURE-P3-B-FINAL-batch-20261107T083855Z-75778f31",
+      "C": "test-runs/CLOSURE-P3-C-FINAL-batch-20261107T083820Z-adac3164",
+      "C_Info": "test-runs/CLOSURE-P3-C-INFO-record-20261107T084657Z-aa4899c8",
+      "root": "test-runs/CLOSURE-P3-ROOT-related-20261107T084459Z-9926f568",
+      "root_install": "test-runs/CLOSURE-P3-ROOT-related-20261107T084459Z-9926f568-INSTALL",
+      "A_literal": "test-runs/CLOSURE-P3-A-literal-test-semantic-repair-20261107T100503Z-efc95dcd",
+      "C_pixel": "test-runs/CLOSURE-P3-C-PIXEL-FINAL-batch-20261107T100649Z-f82ccef1",
+      "B_public_paint": "test-runs/CLOSURE-P3-batch-20261107T095511Z-86ae62a0",
+      "B_refreeze": "test-runs/CLOSURE-SOURCE-B-public-paint-freeze-20261107T100647Z-dda98841",
+      "event": "test-runs/CLOSURE-EVENT-P3-related-20261107T103759Z-d4488fc8",
+      "eventRetainedB": "test-runs/CLOSURE-EVENT-P3-retained-B-invocation-repair-20261107T103844Z-4dd678d2",
+      "eventDirectHTML": "test-runs/CLOSURE-EVENT-HTML-P3-related-20261107T110330Z-53265a55"
+    },
+    "additionalRetainedRepair": {
+      "id": "info-dark-theme-text-role",
+      "reason": "Complete old79 regression exposed a known source STYLE_ROLE_DIFFERENCE; fixed source textColor with CSS override preserved. Original expectations unchanged.",
+      "additionalOld22Count": false
+    },
+    "initialP4": {
+      "path": "test-runs/CLOSURE-P4-batch-20261107T085101Z-2d330c0d",
+      "status": "FAILED",
+      "sourceUnchanged": true,
+      "testToolsUnchanged": true,
+      "historicalRun": "test-runs/BULK-P4-final-20261107T085934Z-18770265",
+      "computationalFailure": "One source-false old Event upstream_defect expectation caused3 native and3 comparison failures; original syntax rejection retained.",
+      "manualFindings": [
+        "cynefin SVG whitespace",
+        "gantt inline percent format",
+        "git cherry marker paint",
+        "agent collapsed metadata/parts/style"
+      ]
+    },
+    "sourceApplication": "test-runs/CLOSURE-PAINT-P3-source-application-20261107T093735Z-97d223ca",
+    "verificationApplication": "test-runs/CLOSURE-PAINT-P3-verification-application-20261107T093851Z-a77f060f",
+    "pendingPyPIPublisher": "USER_CONFIRMED_ADDED",
+    "frozenCounts": {
+      "all": 132,
+      "renderOrError": 119,
+      "parserOnly": 13
+    },
+    "historicalOriginalReuse": "test-runs/CLOSURE-HISTORICAL-oracle-union-20261107T095632Z-0d18c968",
+    "historicalInputs": 866,
+    "closureExports": 255,
+    "latestClosedP4": {
+      "path": "test-runs/CLOSURE-P4-batch-20261107T103937Z-ea2939c1",
+      "machineStatus": "SUCCESS",
+      "sourceUnchanged": true,
+      "testToolsUnchanged": true,
+      "acceptance": "NEEDS_MULTILINE_DIRECT_HTML_REPAIR",
+      "visualBlocker": "test-runs/CLOSURE-P4-B-VISUAL-transfer-review-20261107T104532Z-7f723194/artifacts/Event-followup.json",
+      "sourceTreeSha256": "619a71d5a65f0907785528cf5cf5df48c0fc34d1e657c9afb99c64f344e32d57"
+    },
+    "eventRelatedStatus": "SUCCESS/sourceUnchanged: all132 portable methods; retained HTML/F01.3/math/B; five fixed-original diagrams with fresh CPU/auto/GPU draws and source actual-paint/containment/alignment/negative controls all exit0.",
+    "formalArtifactValidation": "PENDING; local P4 will not repeat development artifacts, formal exact reviewed files require both OS and both distributions.",
+    "rawHTMLSourceApplication": "test-runs/CLOSURE-EVENT-HTML-P3-source-application-20261107T110245Z-f721c8b2",
+    "rawHTMLVerificationApplication": "test-runs/CLOSURE-EVENT-HTML-P3-verification-application-20261107T110259Z-ce4df31b",
+    "finalP4": "test-runs/CLOSURE-P4-batch-20261107T110557Z-684a5d28",
+    "finalP4Status": "SUCCESS",
+    "finalSourceUnchanged": true,
+    "finalTestToolsUnchanged": true,
+    "localAcceptance": "references/closure-verification-summary.json",
+    "report": {
+      "run": "test-runs/CLOSURE-P5-delivery-20261107T113304Z-8513c1b4",
+      "url": "http://127.0.0.1:8765/CLOSURE-P5-delivery-20261107T113304Z-8513c1b4/index.html",
+      "status": "PASS",
+      "pages": 12,
+      "cases": 119,
+      "rawAssetsVerified": 1572,
+      "httpAssetsVerified": 3172,
+      "linksVerified": 1586,
+      "desktopAndMobile": [
+        1440,
+        390
+      ],
+      "rootActuallyViewed": [
+        "index-390.png",
+        "page-011-1440.png"
+      ]
+    },
+    "knownScopedFunctionalGaps": [],
+    "externalReleaseGates": [
+      "Formal clean reviewed wheel/sdist installation on Windows and Linux",
+      "Linux actual-TZ installed artifact evidence"
+    ]
   }
 }

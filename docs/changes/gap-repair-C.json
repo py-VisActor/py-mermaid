@@ -1,0 +1,195 @@
+{
+  "schema": "py-mermaid-gap-repair-receipt/v1",
+  "group": "C",
+  "status": "RELATED_REGRESSION_PASS_STOPPED_PENDING_JOINT_P4",
+  "baselineSourceSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
+  "fixedSourceTreeAtRelatedRun": "90372bf7d7608da3792d09f0041be24ef55e891ad6f1293bc679b8d87becf5a7",
+  "sourceStopped": true,
+  "testFixtureToolStopped": true,
+  "changedProducts": {
+    "src/py_mermaid/diagrams/zenuml/parser.py": "55f9b3309a6e8d5f8826a92d54e1adfbf6d0cd52a6277905a3f487eccf45d1ad",
+    "src/py_mermaid/diagrams/sequence/layout.py": "aa17312f6d61d0701bd283c50c28a619be9f4b6531c6606ed1e9289bc395d423",
+    "src/py_mermaid/diagrams/railroad/layout.py": "81bb27e2888f5eed8c82ad5ce81c62ecb945b5a48193394148106f9dd58b0f51"
+  },
+  "changedProductsAggregateSha256": "e9d8b740998b052353553f09498727c2f0ddb929c6e41111450f69e119024c5b",
+  "aggregateMethod": "SHA256(sorted compact JSON path->sha256 for these3changed product files)",
+  "sourceMaps": [
+    {
+      "path": ".local/bulk-sources/zenuml/source/src/g4/sequenceLexer.g4",
+      "symbol": "MODIFIER_CHANNEL; DIGIT_LEADING_NAME; CR",
+      "sha256": "9bf0cc267143cce32641831d0a6ca8ee5dbb5de995e2e713f9521f7a06ee2ece"
+    },
+    {
+      "path": ".local/bulk-sources/zenuml/source/src/g4/sequenceParser.g4",
+      "symbol": "assignment/type?/assignee list/fromTo/func",
+      "sha256": "9e7624e377f5e08ace461a099e91d90e92ac795f59fd716552c7a5a630cc6c54"
+    },
+    {
+      "path": ".local/bulk-sources/zenuml/source/src/parser/Messages/Assignment.ts",
+      "symbol": "wholeassignee.getFormattedText",
+      "sha256": "5b8afef04bb60037f1f5756cd49309d6129eb2c55e687e2733ef16eb7128361e"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+      "symbol": "bounds.init/setConf; drawMessage sequenceIndexLength; adjustCreatedDestroyedData",
+      "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/sequence/svgDraw.js",
+      "symbol": "ACTOR_TYPE_WIDTH18*2",
+      "sha256": "54dfd9f1a67bf7e935a4800150a086818fe639ada82f06c3b1c7cb04874023db"
+    },
+    {
+      "path": ".local/upstream-mermaid/packages/mermaid/src/diagrams/railroad/styles.ts",
+      "symbol": "buildThemeDefaults then perfield override sanitization",
+      "sha256": "595aadfbfd8ad925e6cc63e05180f1b9b6f5247e99beb94eb62aca72be083bed"
+    }
+  ],
+  "repairs": [
+    {
+      "rootCause": "C-GAP-ZEN-MODIFIERS",
+      "change": "Discard exact source const/readonly/static/await keywords during lexer default-mode processing before declarations; EVENT/TITLE payload untouched."
+    },
+    {
+      "rootCause": "C-GAP-ZEN-MULTI-ASSIGNEE",
+      "change": "Source-shaped assignment_prefix scans complete comma-list and optionaltype without fixed4token limit; same lookahead stops type being misdeclared. Full assignee used in existing returnpaint."
+    },
+    {
+      "rootCause": "C-GAP-ZEN-DIGIT-UNICODE",
+      "change": "Numeric-leading name suffix accepts Unicode letter followed by word codepoints; preserves1Chinese-name token."
+    },
+    {
+      "rootCause": "C-GAP-ZEN-HIDDEN-NEWLINE",
+      "change": "Newline hints around qualified-call dot removed, matching source hiddenCR while keeping EVENT/title payload terminators and existing native statement-boundary hints."
+    },
+    {
+      "rootCause": "C-GAP-RR-THEME-FALLBACK",
+      "change": "Two-phase sanitizer: first validated theme-derived defaults, then configured overrides fallback to those validated defaults. Colors/family trim; numeric bool rejected; sourceparseFloat exponent honored; themefont>0 but explicitnumber>=0."
+    },
+    {
+      "rootCause": "C-GAP-SEQ-GENERIC-FONT-ALIAS",
+      "change": "Source bounds.init/setConf rootfontFamily/fontSize/fontWeight truthy aliases transferred to actor/note/message before measurement/draw."
+    },
+    {
+      "rootCause": "C-GAP-SEQ-NUMBER-FIT",
+      "change": "Actual sequence number uses source12/9/7px thresholds and sans-seriffamily; real measurementandpaint identical."
+    },
+    {
+      "rootCause": "C-GAP-SEQ-LIFECYCLE-ENDPOINT",
+      "change": "Birthreceiver+3 and mirrorsender/receiver destruction adjust actual sx/tx. Source glyph ACTOR_TYPE_WIDTH36 giveshalf18; plainhandlers useactualwidth/2. Source3px gap retained."
+    }
+  ],
+  "preservedBaselineFailure": {
+    "run": "G03-first-batch-20261106T080449Z-54f22284",
+    "command": "003-gap-unit-C",
+    "result": "15methods54subtestfailures10errors; source unchanged originalfirstsweep. No logs modified."
+  },
+  "attempts": [
+    {
+      "run": "G03-record-20261106T080947Z-dd9b6701",
+      "result": "14of15methodsPASS;1preciseprobeproblem traceallocationbounds vs actualpath"
+    },
+    {
+      "run": "G03-record-20261106T081023Z-ad215b38",
+      "result": "FAILED diagnostic shell -c quoting SyntaxError,no product call executed;retained"
+    },
+    {
+      "run": "G03-record-20261106T081045Z-9f0eed61",
+      "result": "366methods;only sameprobeFAIL;old351allPASS"
+    },
+    {
+      "run": "G03-record-20261106T081120Z-9295dfdd",
+      "result": "15newmethodsPASS after approved exactpathprobe"
+    },
+    {
+      "run": "G03-batch-20261106T081159Z-b0240430",
+      "result": "SUCCESS sourceUnchanged=true;366CunitallPASS and33newCPUallPASS"
+    }
+  ],
+  "probeCorrection": {
+    "authorization": "Root approved actual path endpoint vs rectangle boundary,source3px expectation unchanged.",
+    "file": "tests/bulk/c/test_gap_audit.py",
+    "beforeSha256": "e288f0b219e46c0c33729ff5d0b8a3b67325c7b899025113b1a65e8315914896",
+    "afterSha256": "65eb874037bbaf6cb48dbaa5657778c5d487853d44b2936b55cea29a6535e46e",
+    "reason": "DrawEvent.box in NativePainter._record_path is strokeWidth*5 miter-conservative allocation pluspotentialshadow,not physicalpathbounds. Original less-than test measured inflatedboxes. Corrected publicPath2D(actualDrawEvent.path).bounds pins exact3px + actualendpointPNGink;no thresholdrelaxation.",
+    "sourceConstantCorrection": "Initial sourcepatchcomment incorrectly assumedglyphwidth50; staticread svgDraw.js:12 ACTOR_TYPE_WIDTH=18*2 correctedhalf18 before finalrelatedrun."
+  },
+  "fixturePolicy": {
+    "oldCasesC": "732db377af6ade9561e74171a812ed8877218a35641b70d44ca76ec2b23c1265",
+    "newCasesGapC": "ee3f922a5e31b1788c7ca087ce1526ac27bc589290a987002abc9328c0d213d5",
+    "inputsUnchangedDuringRepair": true,
+    "newFixtureCount": 33,
+    "oldCMethods": 351,
+    "newMethods": 15,
+    "totalCMethods": 366,
+    "noOldTestsDeletedOrSkipped": true
+  },
+  "actualVisualQA": {
+    "pairs": [
+      {
+        "id": "gap-c-zen-hidden-await",
+        "native": "test-runs/G03-batch-20261106T081159Z-b0240430/artifacts/native-cpu-C-gap/gap-c-zen-hidden-await.png",
+        "nativeSha256": "40930a3e85dda4cfa634a17bd7ed62ee22a4edcc2e233de5a7f11e1fd2938340",
+        "official": "test-runs/G03-first-batch-20261106T080449Z-54f22284/artifacts/oracle/gap-c-zen-hidden-await.png",
+        "officialSha256": "5f75e0de834c8642c632d9b88f37a2f600e8b3fcec674c322dac95c0c4736147",
+        "actuallyViewed": true
+      },
+      {
+        "id": "gap-c-zen-assignee-8",
+        "native": "test-runs/G03-batch-20261106T081159Z-b0240430/artifacts/native-cpu-C-gap/gap-c-zen-assignee-8.png",
+        "nativeSha256": "c9a1482c234cf44123b66d306f4c46890f10460e366e46a05f4115c8ef492b1b",
+        "official": "test-runs/G03-first-batch-20261106T080449Z-54f22284/artifacts/oracle/gap-c-zen-assignee-8.png",
+        "officialSha256": "42b9c6a3b5a163be0f08df6d3e80eae5265c0910c3c1a95685b023bd4e6b401f",
+        "actuallyViewed": true
+      },
+      {
+        "id": "gap-c-zen-unicode-digit",
+        "native": "test-runs/G03-batch-20261106T081159Z-b0240430/artifacts/native-cpu-C-gap/gap-c-zen-unicode-digit.png",
+        "nativeSha256": "448e198bf64419787acedd8cb50ba55e59346f0f5a4371f1cee9b2163e36e6a6",
+        "official": "test-runs/G03-first-batch-20261106T080449Z-54f22284/artifacts/oracle/gap-c-zen-unicode-digit.png",
+        "officialSha256": "4119ea2fe8eb8f7b87916f9df2b53438352c78b91e3efc8c66967105a6e965da",
+        "actuallyViewed": true
+      },
+      {
+        "id": "gap-c-sequence-root-font",
+        "native": "test-runs/G03-batch-20261106T081159Z-b0240430/artifacts/native-cpu-C-gap/gap-c-sequence-root-font.png",
+        "nativeSha256": "76478968189ec71ee67d29317e8404493b21b63c0e4488a39316ae021cd05395",
+        "official": "test-runs/G03-first-batch-20261106T080449Z-54f22284/artifacts/oracle/gap-c-sequence-root-font.png",
+        "officialSha256": "5b56c675326127329e5255c59cfcd82fc44950756bfb49a7ee659fc445b827e0",
+        "actuallyViewed": true
+      },
+      {
+        "id": "gap-c-sequence-destroy-attachment",
+        "native": "test-runs/G03-batch-20261106T081159Z-b0240430/artifacts/native-cpu-C-gap/gap-c-sequence-destroy-attachment.png",
+        "nativeSha256": "60cbf36faedf626b023e507faea460d3d6cacc35f37aec4e0ad11a759e8a0906",
+        "official": "test-runs/G03-first-batch-20261106T080449Z-54f22284/artifacts/oracle/gap-c-sequence-destroy-attachment.png",
+        "officialSha256": "a2a14241217cad5e72c7c019302527138e6f337124dcef3b129907dfa74abf4d",
+        "actuallyViewed": true
+      },
+      {
+        "id": "gap-c-sequence-long-number",
+        "native": "test-runs/G03-batch-20261106T081159Z-b0240430/artifacts/native-cpu-C-gap/gap-c-sequence-long-number.png",
+        "nativeSha256": "ce109c8d1246ca97ed28f7c82b73bb58f26eaadd4e200d49aa55bca07731803b",
+        "official": "test-runs/G03-first-batch-20261106T080449Z-54f22284/artifacts/oracle/gap-c-sequence-long-number.png",
+        "officialSha256": "c05761d165b224265abea91fd86f1aad36213bd3ccf30b222eb61b538090aa61",
+        "actuallyViewed": true
+      },
+      {
+        "id": "gap-c-railroadebnf-derived-color-0",
+        "native": "test-runs/G03-batch-20261106T081159Z-b0240430/artifacts/native-cpu-C-gap/gap-c-railroadebnf-derived-color-0.png",
+        "nativeSha256": "d39ee4ed4dc4bccd114a7687b5ba50c9ab62b1fe50547db4a250351f80fe59f2",
+        "official": "test-runs/G03-first-batch-20261106T080449Z-54f22284/artifacts/oracle/gap-c-railroadebnf-derived-color-0.png",
+        "officialSha256": "de766282d489e6c2302447052c90abe5196af213360f28e65f744f7f9c83bec7",
+        "actuallyViewed": true
+      }
+    ],
+    "result": "Seven real raw A/B pairs viewed; correctedfeatures present with source-required fonts/colors/participants/labels and no newly identified lostcontent. Naturalfontmetrics/spacing/raster differ.",
+    "sourceKnownVisibleConstraint": "8assignee returnlabel/number overlap occurs in both fixedA and nativeB (actualviews boundabove). Full string ispresent. This was not silently counted as clean source geometry nor independently changed in this8rootcause repair."
+  },
+  "limits": [
+    "Related CPU regression is not finaljointthreebackend/fulllegacy acceptance. Root owns finalfreeze/P4.",
+    "HiddenCR repair addresses qualified-call dot whitespace,not an assertion that every editor-recovery/whitespacecrossproduct has been exhaustively proved. Remainingaudit unresolvedScope preserved.",
+    "No productJS/DOM/Dagre/newdependency/systemfont replacement/installation/commit/push."
+  ],
+  "next": "Root jointfreeze and fullsource-matched relevant/finalmatrix; existing baselineaudit retained unchanged as originaldiscovery."
+}

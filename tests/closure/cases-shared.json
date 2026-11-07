@@ -1,0 +1,231 @@
+{
+  "schema": "py-mermaid-bulk-cases/v1",
+  "group": "shared",
+  "cases": [
+    {
+      "id": "COLLAPSED-SOURCE-flowchart-palette-neo",
+      "kind": "flowchart-v2",
+      "group": "shared",
+      "source": "flowchart TD\nsubgraph G[Group]\nA --> B\nend\nB --> Z\nG@{view: collapsed}",
+      "expect": "render",
+      "config": {
+        "layout": "elk",
+        "theme": "redux-color",
+        "look": "neo"
+      },
+      "derivedFrom": {
+        "path": "tests/f014/language-cases.json",
+        "id": "collapsed-boundary"
+      },
+      "expectedText": [
+        "Group",
+        "Z"
+      ],
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/collapsedGroup.ts",
+        "repository": "mermaid",
+        "symbol": "collapsedGroup/getCollapsedStyle/indicator+separator",
+        "line": 35,
+        "sha256": "7241a9e4c26783bdb1e8c31398e1572751d42836a5ce7f1b2726e07b179cc2f3",
+        "synthesized": true
+      },
+      "sourceProvenance": {
+        "run": "test-runs/CLOSURE-C-COLLAPSED-SOURCE-batch-20261107T090536Z-bef2cda0",
+        "fixture": "test-runs\\CLOSURE-C-COLLAPSED-SOURCE-batch-20261107T090536Z-bef2cda0\\artifacts\\cases.json",
+        "fixtureSha256": "51427e943d941819ea169ac3b8bbf354d9dc87f1e9f5a6944992f7288d8edf74",
+        "preservesExactSourceAndConfig": true
+      },
+      "collapsedProbe": {
+        "nodeId": "G",
+        "radius": 8
+      }
+    },
+    {
+      "id": "COLLAPSED-SOURCE-flowchart-base-classic",
+      "kind": "flowchart-v2",
+      "group": "shared",
+      "source": "flowchart TD\nsubgraph G[Group]\nA --> B\nend\nB --> Z\nG@{view: collapsed}",
+      "expect": "render",
+      "config": {
+        "layout": "elk",
+        "theme": "base",
+        "look": "classic"
+      },
+      "derivedFrom": {
+        "path": "tests/f014/language-cases.json",
+        "id": "collapsed-boundary"
+      },
+      "expectedText": [
+        "Group",
+        "Z"
+      ],
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/collapsedGroup.ts",
+        "repository": "mermaid",
+        "symbol": "collapsedGroup/getCollapsedStyle/indicator+separator",
+        "line": 35,
+        "sha256": "7241a9e4c26783bdb1e8c31398e1572751d42836a5ce7f1b2726e07b179cc2f3",
+        "synthesized": true
+      },
+      "sourceProvenance": {
+        "run": "test-runs/CLOSURE-C-COLLAPSED-SOURCE-batch-20261107T090536Z-bef2cda0",
+        "fixture": "test-runs\\CLOSURE-C-COLLAPSED-SOURCE-batch-20261107T090536Z-bef2cda0\\artifacts\\cases.json",
+        "fixtureSha256": "51427e943d941819ea169ac3b8bbf354d9dc87f1e9f5a6944992f7288d8edf74",
+        "preservesExactSourceAndConfig": true
+      },
+      "collapsedProbe": {
+        "nodeId": "G",
+        "radius": 8
+      }
+    },
+    {
+      "id": "COLLAPSED-SOURCE-flowchart-palette-handdrawn",
+      "kind": "flowchart-v2",
+      "group": "shared",
+      "source": "flowchart TD\nsubgraph G[Group]\nA --> B\nend\nB --> Z\nG@{view: collapsed}",
+      "expect": "render",
+      "config": {
+        "layout": "elk",
+        "theme": "redux-color",
+        "look": "handDrawn"
+      },
+      "derivedFrom": {
+        "path": "tests/f014/language-cases.json",
+        "id": "collapsed-boundary"
+      },
+      "expectedText": [
+        "Group",
+        "Z"
+      ],
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/collapsedGroup.ts",
+        "repository": "mermaid",
+        "symbol": "collapsedGroup/getCollapsedStyle/indicator+separator",
+        "line": 35,
+        "sha256": "7241a9e4c26783bdb1e8c31398e1572751d42836a5ce7f1b2726e07b179cc2f3",
+        "synthesized": true
+      },
+      "sourceProvenance": {
+        "run": "test-runs/CLOSURE-C-COLLAPSED-SOURCE-batch-20261107T090536Z-bef2cda0",
+        "fixture": "test-runs\\CLOSURE-C-COLLAPSED-SOURCE-batch-20261107T090536Z-bef2cda0\\artifacts\\cases.json",
+        "fixtureSha256": "51427e943d941819ea169ac3b8bbf354d9dc87f1e9f5a6944992f7288d8edf74",
+        "preservesExactSourceAndConfig": true
+      },
+      "collapsedProbe": {
+        "nodeId": "G",
+        "radius": 8
+      }
+    },
+    {
+      "id": "COLLAPSED-SOURCE-agentflow-palette-neo",
+      "kind": "agentflow",
+      "group": "shared",
+      "source": "agentflow-beta TB\nflow Outer[\"Outer\"]\n A --> A\nend\nOuter@{view: \"collapsed\"}\n",
+      "expect": "render",
+      "config": {
+        "layout": "elk",
+        "theme": "redux-color",
+        "look": "neo"
+      },
+      "derivedFrom": {
+        "path": "tests/closure/cases-B.json",
+        "id": "CL-B-AGENT-GENUINE-SOURCE-VALID"
+      },
+      "expectedText": [
+        "Outer"
+      ],
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/collapsedGroup.ts",
+        "repository": "mermaid",
+        "symbol": "collapsedGroup/getCollapsedStyle/indicator+separator",
+        "line": 35,
+        "sha256": "7241a9e4c26783bdb1e8c31398e1572751d42836a5ce7f1b2726e07b179cc2f3",
+        "synthesized": true
+      },
+      "sourceProvenance": {
+        "run": "test-runs/CLOSURE-C-COLLAPSED-SOURCE-batch-20261107T090536Z-bef2cda0",
+        "fixture": "test-runs\\CLOSURE-C-COLLAPSED-SOURCE-batch-20261107T090536Z-bef2cda0\\artifacts\\cases.json",
+        "fixtureSha256": "51427e943d941819ea169ac3b8bbf354d9dc87f1e9f5a6944992f7288d8edf74",
+        "preservesExactSourceAndConfig": true
+      },
+      "collapsedProbe": {
+        "nodeId": "Outer",
+        "radius": 10
+      }
+    },
+    {
+      "id": "COLLAPSED-SOURCE-agentflow-base-classic",
+      "kind": "agentflow",
+      "group": "shared",
+      "source": "agentflow-beta TB\nflow Outer[\"Outer\"]\n A --> A\nend\nOuter@{view: \"collapsed\"}\n",
+      "expect": "render",
+      "config": {
+        "layout": "elk",
+        "theme": "base",
+        "look": "classic"
+      },
+      "derivedFrom": {
+        "path": "tests/closure/cases-B.json",
+        "id": "CL-B-AGENT-GENUINE-SOURCE-VALID"
+      },
+      "expectedText": [
+        "Outer"
+      ],
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/collapsedGroup.ts",
+        "repository": "mermaid",
+        "symbol": "collapsedGroup/getCollapsedStyle/indicator+separator",
+        "line": 35,
+        "sha256": "7241a9e4c26783bdb1e8c31398e1572751d42836a5ce7f1b2726e07b179cc2f3",
+        "synthesized": true
+      },
+      "sourceProvenance": {
+        "run": "test-runs/CLOSURE-C-COLLAPSED-SOURCE-batch-20261107T090536Z-bef2cda0",
+        "fixture": "test-runs\\CLOSURE-C-COLLAPSED-SOURCE-batch-20261107T090536Z-bef2cda0\\artifacts\\cases.json",
+        "fixtureSha256": "51427e943d941819ea169ac3b8bbf354d9dc87f1e9f5a6944992f7288d8edf74",
+        "preservesExactSourceAndConfig": true
+      },
+      "collapsedProbe": {
+        "nodeId": "Outer",
+        "radius": 10
+      }
+    },
+    {
+      "id": "COLLAPSED-SOURCE-agentflow-palette-handdrawn",
+      "kind": "agentflow",
+      "group": "shared",
+      "source": "agentflow-beta TB\nflow Outer[\"Outer\"]\n A --> A\nend\nOuter@{view: \"collapsed\"}\n",
+      "expect": "render",
+      "config": {
+        "layout": "elk",
+        "theme": "redux-color",
+        "look": "handDrawn"
+      },
+      "derivedFrom": {
+        "path": "tests/closure/cases-B.json",
+        "id": "CL-B-AGENT-GENUINE-SOURCE-VALID"
+      },
+      "expectedText": [
+        "Outer"
+      ],
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/rendering-elements/shapes/collapsedGroup.ts",
+        "repository": "mermaid",
+        "symbol": "collapsedGroup/getCollapsedStyle/indicator+separator",
+        "line": 35,
+        "sha256": "7241a9e4c26783bdb1e8c31398e1572751d42836a5ce7f1b2726e07b179cc2f3",
+        "synthesized": true
+      },
+      "sourceProvenance": {
+        "run": "test-runs/CLOSURE-C-COLLAPSED-SOURCE-batch-20261107T090536Z-bef2cda0",
+        "fixture": "test-runs\\CLOSURE-C-COLLAPSED-SOURCE-batch-20261107T090536Z-bef2cda0\\artifacts\\cases.json",
+        "fixtureSha256": "51427e943d941819ea169ac3b8bbf354d9dc87f1e9f5a6944992f7288d8edf74",
+        "preservesExactSourceAndConfig": true
+      },
+      "collapsedProbe": {
+        "nodeId": "Outer",
+        "radius": 10
+      }
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "type": "treemap",
+  "width": 640,
+  "height": 400,
+  "categoryField": "name",
+  "valueField": "value",
+  "data": {
+    "values": [
+      {
+        "name": "Group A",
+        "children": [
+          {
+            "name": "A1",
+            "value": 8
+          },
+          {
+            "name": "A2",
+            "value": 5
+          }
+        ]
+      },
+      {
+        "name": "Group B",
+        "value": 3
+      }
+    ]
+  },
+  "label": {
+    "visible": false
+  },
+  "splitType": "binary",
+  "nodePadding": [
+    5,
+    3
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "schema": "py-mermaid-vchart-release-lock/v1",
+  "distribution": "py-visactor-vchart",
+  "importName": "py_vchart",
+  "version": "0.1.1",
+  "status": "published_pypi_external_install_verified",
+  "repository": "https://github.com/py-VisActor/py-vchart",
+  "tag": "py-visactor-vchart-v0.1.1",
+  "scope": "68 registered 2D static spec types; supported options remain bounded by each provider",
+  "canvas": ">=0.1.0a18,<=0.1.0a19",
+  "mermaidCanvas": "0.1.0a18",
+  "requiredPublicApi": [
+    "VChart.supported_types",
+    "VChart.spec_size",
+    "VChart.render",
+    "VChart.to_buffer",
+    "VChart.draw_to",
+    "layouts"
+  ],
+  "plan": "docs/VCHART_INTEGRATION.md",
+  "requirement": "py-visactor-vchart==0.1.1",
+  "sourceCommit": "ff16c91d38ab61e57d03b58579d5bf1beb2a1840",
+  "delivery": "pypi",
+  "githubRelease": {
+    "repository": "py-VisActor/py-vchart",
+    "tag": "py-visactor-vchart-v0.1.1",
+    "url": "https://github.com/py-VisActor/py-vchart/releases/tag/py-visactor-vchart-v0.1.1",
+    "prerelease": false,
+    "draft": false
+  },
+  "asset": {
+    "filename": "py_visactor_vchart-0.1.1-py3-none-any.whl",
+    "url": "https://files.pythonhosted.org/packages/d9/0c/98542f2305fc91638cebc3c7da3f033ba8421157f8161a17de68a71b5e5b/py_visactor_vchart-0.1.1-py3-none-any.whl",
+    "sha256": "45b66f82d0c74a8d15306b117d93ad2d88c26d2997719306336bcc92b7ce49e2",
+    "bytes": 123546
+  },
+  "pypi": {
+    "status": "published",
+    "published": true,
+    "url": "https://pypi.org/project/py-visactor-vchart/0.1.1/",
+    "metadataUrl": "https://pypi.org/pypi/py-visactor-vchart/0.1.1/json",
+    "verificationRun": "test-runs/VCHART-PYPI-published-20261107T061650Z-c417a0e5",
+    "workflowRun": "42337813981",
+    "workflowAttempt": 2,
+    "distributions": [
+      {
+        "filename": "py_visactor_vchart-0.1.1-py3-none-any.whl",
+        "url": "https://files.pythonhosted.org/packages/d9/0c/98542f2305fc91638cebc3c7da3f033ba8421157f8161a17de68a71b5e5b/py_visactor_vchart-0.1.1-py3-none-any.whl",
+        "sha256": "45b66f82d0c74a8d15306b117d93ad2d88c26d2997719306336bcc92b7ce49e2",
+        "bytes": 123546
+      },
+      {
+        "filename": "py_visactor_vchart-0.1.1.tar.gz",
+        "url": "https://files.pythonhosted.org/packages/b7/29/f0efd21072eb524475f813144bf413eb3a3ed0a0ec099bffbe3353f657c6/py_visactor_vchart-0.1.1.tar.gz",
+        "sha256": "fee51a35d75b7f8572e76b0028d63c833f6e01c670c7ea41dc412386b3bcef7f",
+        "bytes": 113467
+      }
+    ],
+    "workflowConclusion": "success",
+    "verificationSummary": "references/vchart-pypi-verification.json"
+  },
+  "externalInstallValidation": [
+    {
+      "run": "test-runs\\VCHART-INSTALL-wheel-20261107T061840Z-c4a0291f",
+      "artifactKind": "wheel",
+      "sourceTreeSha256": "d7a26bdc6aa104ada9aef8b32f8e365c7df3ec1f51853032958b950d2476f136",
+      "consumerArtifactSha256": "4371e46ce4074d7aea8c8e7d7c46a50aa6c73ebb2f1dc5b70ec022d73dd034e5",
+      "scope": "PyPI normal resolver; installed68 types, SVG/PDF, math and real ELK"
+    },
+    {
+      "run": "test-runs\\VCHART-INSTALL-sdist-20261107T061940Z-cd8458f2",
+      "artifactKind": "sdist",
+      "sourceTreeSha256": "d7a26bdc6aa104ada9aef8b32f8e365c7df3ec1f51853032958b950d2476f136",
+      "consumerArtifactSha256": "6c3f994d657afd56232f50901aa5d05e143d8913856b998debc713848a482bd0",
+      "scope": "PyPI normal resolver; installed68 types, SVG/PDF, math and real ELK"
+    }
+  ],
+  "historicalExternalInstallValidation": [
+    {
+      "run": "test-runs/VCHART-INSTALL-wheel-20261107T043051Z-19d06dea",
+      "artifactKind": "wheel",
+      "sourceTreeSha256": "0561d9996b120f0714f84de6a7b483b74e4a99e111214318415c93e758198389",
+      "consumerArtifactSha256": "75b4de72933722a88ea96139044b355d4ecf23bd75b8ed92f53ce798475d5d51",
+      "scope": "External resolver delivery and isolated installed68spec/math/ELK; not a substitute for later full visual candidate validation."
+    },
+    {
+      "run": "test-runs/VCHART-INSTALL-sdist-20261107T043123Z-fcf20236",
+      "artifactKind": "sdist",
+      "sourceTreeSha256": "0561d9996b120f0714f84de6a7b483b74e4a99e111214318415c93e758198389",
+      "consumerArtifactSha256": "16009189ab76e0458b68e3a9cc5c2018b41f6dc25cdb560eb9f23c9b911db514",
+      "scope": "External resolver delivery and isolated installed68spec/math/ELK; not a substitute for later full visual candidate validation."
+    },
+    {
+      "run": "test-runs/VCHART-INSTALL-wheel-20261107T045110Z-b3e13278",
+      "artifactKind": "wheel",
+      "sourceTreeSha256": "756a21de6e1845dd81ab9d6ca7e08a84c8e8190e9d7ec03312cc923e872d6dc3",
+      "consumerArtifactSha256": "a5825e84eff10f45132abcb3b0c042dd1c16f67adccaae68514497c1e96b6d6b",
+      "scope": "Final same-candidate normal resolver delivery and installed 68spec/math/realELK/SVG/PDF"
+    },
+    {
+      "run": "test-runs/VCHART-INSTALL-sdist-20261107T045143Z-d4d79369",
+      "artifactKind": "sdist",
+      "sourceTreeSha256": "756a21de6e1845dd81ab9d6ca7e08a84c8e8190e9d7ec03312cc923e872d6dc3",
+      "consumerArtifactSha256": "494cda4371d905c42fd04a0a58a04834ad9e47ef42db3981d60b89b165916b95",
+      "scope": "Final same-candidate normal resolver delivery and installed 68spec/math/realELK/SVG/PDF"
+    }
+  ],
+  "previousDelivery": {
+    "requirement": "py-visactor-vchart @ https://github.com/py-VisActor/py-vchart/releases/download/py-visactor-vchart-v0.1.1/py_visactor_vchart-0.1.1-py3-none-any.whl#sha256=45b66f82d0c74a8d15306b117d93ad2d88c26d2997719306336bcc92b7ce49e2",
+    "delivery": "github-release-wheel",
+    "asset": {
+      "filename": "py_visactor_vchart-0.1.1-py3-none-any.whl",
+      "url": "https://github.com/py-VisActor/py-vchart/releases/download/py-visactor-vchart-v0.1.1/py_visactor_vchart-0.1.1-py3-none-any.whl",
+      "sha256": "45b66f82d0c74a8d15306b117d93ad2d88c26d2997719306336bcc92b7ce49e2"
+    },
+    "pypi": {
+      "status": "blocked",
+      "published": false,
+      "reason": "invalid-publisher: Trusted Publisher configuration has not authorized the release workflow",
+      "validationWorkflowRun": "42337813981",
+      "note": "GitHub release delivery is separate from PyPI publication; no released_pypi claim."
+    }
+  }
+}

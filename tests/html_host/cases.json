@@ -1,0 +1,3888 @@
+{
+  "schema": "py-mermaid-bulk-cases/v1",
+  "group": "shared",
+  "frozenSource": "881656d5439e4ba08b4f3182d215680020653592e2d6ba0f9e265af97faf8fe1",
+  "cases": [
+    {
+      "id": "html-host-type-text",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='text' value='Hello'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "type-text"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "type": "text",
+          "value": "Hello"
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-type-search",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='search' value='Find'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "type-search"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "type": "search",
+          "value": "Find"
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-type-tel",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='tel' value='+1 555'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "type-tel"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "type": "tel",
+          "value": "+1 555"
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-type-url",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='url' value=' https://example.test/ '>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "type-url"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "type": "url",
+          "value": "https://example.test/"
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-type-email",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='email' value=' a@example.test '>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "type-email"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "type": "email",
+          "value": "a@example.test"
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-type-password",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='password' value='Secret'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "type-password"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "type": "password",
+          "value": "Secret"
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-type-hidden",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='hidden' value='Secret'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "type-hidden"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "type": "hidden",
+          "value": "Secret",
+          "nativeAbsent": true
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-type-date",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='date' value='2024-02-29'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "type-date"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "type": "date",
+          "value": "2024-02-29"
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-type-month",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='month' value='2024-02'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "type-month"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "type": "month",
+          "value": "2024-02"
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-type-week",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='week' value='2020-W53'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "type-week"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "type": "week",
+          "value": "2020-W53"
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-type-time",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='time' value='13:45'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "type-time"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "type": "time",
+          "value": "13:45"
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-type-datetime-local",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='datetime-local' value='2024-02-29T13:45'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "type-datetime-local"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "type": "datetime-local",
+          "value": "2024-02-29T13:45"
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-type-number",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='number' value='2.5'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "type-number"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "type": "number",
+          "value": "2.5"
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-type-range",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='range' min='0' max='10' step='2' value='7'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "type-range"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "type": "range",
+          "value": "8",
+          "fraction": 0.8
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-type-color",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='color' value='#FFAA00'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "type-color"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "type": "color",
+          "value": "#ffaa00"
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-type-checkbox",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='checkbox' checked>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "type-checkbox"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "type": "checkbox",
+          "value": "on",
+          "checked": true
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-type-radio",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='radio'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "type-radio"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "type": "radio",
+          "value": "on",
+          "checked": false
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-type-file",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='file' value='C:/private.txt'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "type-file"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "type": "file",
+          "value": ""
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-type-submit",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='submit'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "type-submit"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "type": "submit",
+          "value": ""
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-type-image",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='image' alt='Image'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "type-image"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "type": "image",
+          "value": ""
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-type-reset",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='reset'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "type-reset"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "type": "reset",
+          "value": ""
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-type-button",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='button' value='Push'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "type-button"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "type": "button",
+          "value": "Push"
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-missing-type",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' value='Default'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "missing-type"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "type": "text",
+          "value": "Default"
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-unknown-type",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='future-kind' value='Default'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "unknown-type"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "type": "text",
+          "value": "Default"
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-case-insensitive-type",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='CHECKBOX' checked='false'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "case-insensitive-type"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "type": "checkbox",
+          "checked": true
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-duplicate-attribute-first-wins",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' value='First' value='Second'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "duplicate-attribute-first-wins"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "value": "First"
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-tel-retains-edge-spaces",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='tel' value=' 123 '>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "tel-retains-edge-spaces"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "value": " 123 "
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-email-multiple-trims-each",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='email' multiple value=' a@x.test , b@y.test '>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "email-multiple-trims-each"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "value": "a@x.test,b@y.test",
+          "multiple": true
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-disabled-presence-not-string",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' disabled='false' value='X'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "disabled-presence-not-string"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "value": "X",
+          "effectiveDisabled": true
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-readonly-text",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' readonly value='X'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "readonly-text"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "value": "X",
+          "readonly": true
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-checkbox-explicit-empty-value",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='checkbox' value='' checked>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "checkbox-explicit-empty-value"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "value": "",
+          "checked": true
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-submit-explicit-empty",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='submit' value=''>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "submit-explicit-empty"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "value": ""
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-invalid-date-nonleap",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='date' value='2023-02-29'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "invalid-date-nonleap"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "value": ""
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-invalid-date-year-zero",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='date' value='0000-01-01'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "invalid-date-year-zero"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "value": ""
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-invalid-month",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='month' value='2024-13'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "invalid-month"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "value": ""
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-invalid-week-53",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='week' value='2021-W53'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "invalid-week-53"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "value": ""
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-invalid-time-hour",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='time' value='24:00'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "invalid-time-hour"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "value": ""
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-valid-time-milliseconds",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='time' value='12:30:45.125'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "valid-time-milliseconds"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "value": "12:30:45.125"
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-datetime-shortest-normalization",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='datetime-local' value='2024-02-29 13:45:00.000'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "datetime-shortest-normalization"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "value": "2024-02-29T13:45"
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-invalid-datetime-zone",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='datetime-local' value='2024-02-29T13:45Z'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "invalid-datetime-zone"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "value": ""
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-number-nan-invalid",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='number' value='NaN'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "number-nan-invalid"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "value": ""
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-number-leading-plus-invalid",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='number' value='+2'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "number-leading-plus-invalid"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "value": ""
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-number-trailing-dot-invalid",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='number' value='1.'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "number-trailing-dot-invalid"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "value": ""
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-number-outside-range-retained",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='number' min='0' max='10' value='100'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "number-outside-range-retained"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "value": "100"
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-number-exponent-retained",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='number' value='1e2'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "number-exponent-retained"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "value": "1e2"
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-range-default-midpoint",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='range'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "range-default-midpoint"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "value": "50",
+          "fraction": 0.5
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-range-invalid-value-midpoint",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='range' min='10' max='20' value='bad'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "range-invalid-value-midpoint"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "value": "15",
+          "fraction": 0.5
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-range-clamp-upper",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='range' min='0' max='10' value='99'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "range-clamp-upper"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "value": "10",
+          "fraction": 1.0
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-range-inverted-bounds",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='range' min='20' max='10'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "range-inverted-bounds"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "value": "20",
+          "fraction": 0.0
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-range-step-any",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='range' min='0' max='10' step='any' value='3.25'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "range-step-any"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "value": "3.25",
+          "fraction": 0.325
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-range-content-value-step-base",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='range' step='2' value='7'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "range-content-value-step-base"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "value": "7"
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-color-default",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='color'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "color-default"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "value": "#000000"
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-color-invalid",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='color' value='not-a-color'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "color-invalid"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "value": "#000000"
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-button-label-versus-value",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<button id='c0' value='payload'><b>Save</b></button>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "button-label-versus-value"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "button",
+          "value": "payload",
+          "text": "Save"
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-button-disabled",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<button id='c0' disabled>Save</button>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "button-disabled"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "button",
+          "effectiveDisabled": true,
+          "text": "Save"
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-textarea-rcdata-not-elements",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<textarea id='c0'><b>literal</b></textarea>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "textarea-rcdata-not-elements"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "textarea",
+          "value": "<b>literal</b>"
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-textarea-entities-one-pass",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<textarea id='c0'>&amp;lt;b&amp;gt;</textarea>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "textarea-entities-one-pass"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "textarea",
+          "value": "&lt;b&gt;"
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-textarea-value-attribute-ignored",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<textarea id='c0' value='ignored'>Body</textarea>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "textarea-value-attribute-ignored"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "textarea",
+          "value": "Body"
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-textarea-readonly-disabled",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<textarea id='c0' readonly disabled>Body</textarea>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "textarea-readonly-disabled"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "textarea",
+          "value": "Body",
+          "effectiveDisabled": true,
+          "readonly": true
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-select-default-first-enabled",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<select id='c0'><option disabled>Skip</option><option>One</option></select>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "select-default-first-enabled"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "select",
+          "value": "One",
+          "selectedIndices": [
+            1
+          ]
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-select-last-selected-wins",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<select id='c0'><option selected>One</option><option selected>Two</option></select>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "select-last-selected-wins"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "select",
+          "value": "Two",
+          "selectedIndices": [
+            1
+          ]
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-select-explicit-disabled-selected",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<select id='c0'><option disabled selected>One</option><option>Two</option></select>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "select-explicit-disabled-selected"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "select",
+          "value": "One",
+          "selectedIndices": [
+            0
+          ]
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-select-multiple-no-default",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<select id='c0' multiple><option>One</option></select>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "select-multiple-no-default"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "select",
+          "value": "",
+          "multiple": true,
+          "selectedIndices": []
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-select-multiple-selected",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<select id='c0' multiple><option selected>One</option><option selected>Two</option></select>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "select-multiple-selected"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "select",
+          "value": "One",
+          "selectedIndices": [
+            0,
+            1
+          ]
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-select-size-two-no-default",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<select id='c0' size='2'><option>One</option><option>Two</option></select>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "select-size-two-no-default"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "select",
+          "value": "",
+          "selectedIndices": []
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-select-all-disabled",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<select id='c0'><option disabled>One</option><option disabled>Two</option></select>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "select-all-disabled"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "select",
+          "value": "",
+          "selectedIndices": []
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-select-option-label-value",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<select id='c0'><option label='Shown' value='sent'>Body</option></select>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "select-option-label-value"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "select",
+          "value": "sent",
+          "options": [
+            {
+              "label": "Shown",
+              "value": "sent"
+            }
+          ]
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-select-optgroup-disables-options",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<select id='c0'><optgroup label='Group' disabled><option>One</option></optgroup><option>Two</option></select>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "select-optgroup-disables-options"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "select",
+          "value": "Two",
+          "selectedIndices": [
+            1
+          ]
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-select-option-end-omission",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<select id='c0'><option>One<option selected>Two</select>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "select-option-end-omission"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "select",
+          "value": "Two",
+          "selectedIndices": [
+            1
+          ]
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-progress-indeterminate",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<progress id='c0'></progress>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "progress-indeterminate"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "progress",
+          "fraction": null
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-progress-fraction",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<progress id='c0' max='10' value='6'></progress>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "progress-fraction"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "progress",
+          "value": 6.0,
+          "fraction": 0.6
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-progress-invalid-value-determinate-zero",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<progress id='c0' value='bad'></progress>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "progress-invalid-value-determinate-zero"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "progress",
+          "value": 0.0,
+          "fraction": 0.0
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-progress-max-invalid-default",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<progress id='c0' max='0' value='2'></progress>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "progress-max-invalid-default"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "progress",
+          "value": 1.0,
+          "fraction": 1.0
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-progress-negative-value",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<progress id='c0' value='-2'></progress>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "progress-negative-value"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "progress",
+          "value": 0.0,
+          "fraction": 0.0
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-meter-default",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<meter id='c0'></meter>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "meter-default"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "meter",
+          "fraction": 0.0
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-meter-nonzero-minimum",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<meter id='c0' min='10' max='20' value='15'></meter>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "meter-nonzero-minimum"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "meter",
+          "value": 15.0,
+          "fraction": 0.5
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-meter-clamp-value",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<meter id='c0' min='0' max='10' value='99'></meter>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "meter-clamp-value"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "meter",
+          "value": 10.0,
+          "fraction": 1.0
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-meter-invalid-numbers",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<meter id='c0' min='bad' max='bad' value='bad'></meter>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "meter-invalid-numbers"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "meter",
+          "fraction": 0.0
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-meter-inverted-bounds",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<meter id='c0' min='5' max='2' value='3'></meter>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "meter-inverted-bounds"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "meter",
+          "value": 5.0,
+          "fraction": 0.0
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-textarea-plain-newline",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<textarea id='c0'>One\nTwo</textarea>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "textarea-plain-newline"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "textarea",
+          "value": "One<br />Two"
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-textarea-markdown-newline",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"`<textarea id='c0'>One\nTwo</textarea>`\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "textarea-markdown-newline"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "textarea",
+          "value": "One\nTwo"
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-textarea-markdown-first-lf",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"`<textarea id='c0'>\nOne\nTwo</textarea>`\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "textarea-markdown-first-lf"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "textarea",
+          "value": "One\nTwo"
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-textarea-plain-rcdata-literal-br",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<textarea id='c0'>A<br>B</textarea>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "textarea-plain-rcdata-literal-br"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "textarea",
+          "value": "A<br>B"
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-textarea-markdown-entity-once",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"`<textarea id='c0'>&amp;lt;b&amp;gt;</textarea>`\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "textarea-markdown-entity-once"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "textarea",
+          "value": "&lt;b&gt;"
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-textarea-plain-backslash-n",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<textarea id='c0'>A\\nB</textarea>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "textarea-plain-backslash-n"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "textarea",
+          "value": "A<br />B"
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-radio-last-checked",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='first' type='radio' name='g' checked><input id='second' type='radio' name='g' checked>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "radio-last-checked"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "first",
+          "tag": "input",
+          "type": "radio",
+          "checked": false,
+          "value": "on"
+        },
+        {
+          "id": "second",
+          "tag": "input",
+          "type": "radio",
+          "checked": true,
+          "value": "on"
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-radio-disabled-last",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='first' type='radio' name='g' checked><input id='second' type='radio' name='g' checked disabled>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "radio-disabled-last"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "first",
+          "tag": "input",
+          "checked": false
+        },
+        {
+          "id": "second",
+          "tag": "input",
+          "checked": true,
+          "effectiveDisabled": true
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-radio-form-owner",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<form id='f'><input id='first' type='radio' name='g' checked></form><form id='h'><input id='second' type='radio' name='g' checked></form>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "radio-form-owner"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "first",
+          "tag": "input",
+          "checked": true
+        },
+        {
+          "id": "second",
+          "tag": "input",
+          "checked": true
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-radio-explicit-form",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<form id='f'><input id='first' type='radio' name='g' checked></form><input id='second' type='radio' name='g' form='f' checked>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true,
+        "dompurifyConfig": {
+          "ADD_ATTR": [
+            "form"
+          ]
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "radio-explicit-form"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "first",
+          "tag": "input",
+          "checked": false
+        },
+        {
+          "id": "second",
+          "tag": "input",
+          "checked": true
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-fieldset-legend-exemption",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<fieldset id='frame' disabled><legend>Legend <input id='first' value='Enabled'></legend><input id='second' value='Disabled'></fieldset>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "fieldset-legend-exemption"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "frame",
+          "tag": "fieldset",
+          "effectiveDisabled": true
+        },
+        {
+          "id": "first",
+          "tag": "input",
+          "value": "Enabled",
+          "effectiveDisabled": false
+        },
+        {
+          "id": "second",
+          "tag": "input",
+          "value": "Disabled",
+          "effectiveDisabled": true
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-fieldset-two-legends",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<fieldset id='frame' disabled><legend>First <input id='first'></legend><legend>Second <input id='second'></legend></fieldset>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "fieldset-two-legends"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "frame",
+          "tag": "fieldset",
+          "effectiveDisabled": true
+        },
+        {
+          "id": "first",
+          "tag": "input",
+          "effectiveDisabled": false
+        },
+        {
+          "id": "second",
+          "tag": "input",
+          "effectiveDisabled": true
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-fieldset-rich-legend",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<fieldset id='frame'><legend><b>Legend</b></legend><button id='child'><i>Save</i></button></fieldset>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "fieldset-rich-legend"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "frame",
+          "tag": "fieldset"
+        },
+        {
+          "id": "child",
+          "tag": "button",
+          "text": "Save",
+          "effectiveDisabled": false
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-fieldset-nested-disabled",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<fieldset id='outer' disabled><fieldset id='inner'><legend><input id='child'></legend></fieldset></fieldset>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "fieldset-nested-disabled"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "outer",
+          "tag": "fieldset",
+          "effectiveDisabled": true
+        },
+        {
+          "id": "inner",
+          "tag": "fieldset",
+          "effectiveDisabled": true
+        },
+        {
+          "id": "child",
+          "tag": "input",
+          "effectiveDisabled": true
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-select-complete-options",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<select id='choices' multiple><optgroup label='Group' disabled><option selected value='a'>Alpha</option></optgroup><option selected value='b'>Beta</option></select>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "select-complete-options"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "choices",
+          "tag": "select",
+          "multiple": true,
+          "value": "a",
+          "selectedIndices": [
+            0,
+            1
+          ],
+          "options": [
+            {
+              "label": "Alpha",
+              "value": "a",
+              "selected": true,
+              "disabled": true,
+              "group": "Group"
+            },
+            {
+              "label": "Beta",
+              "value": "b",
+              "selected": true,
+              "disabled": false,
+              "group": ""
+            }
+          ]
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-literal-html-disabled",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<button id='c0'>Save</button>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": false
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "literal-html-disabled"
+      ],
+      "expectedText": [
+        "Save"
+      ],
+      "expectedErrorCodes": [],
+      "controlExpected": [],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-custom-forbid-checked",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='checkbox' checked disabled>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true,
+        "dompurifyConfig": {
+          "FORBID_ATTR": [
+            "checked"
+          ]
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "custom-forbid-checked"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "checked": false,
+          "effectiveDisabled": true
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-custom-forbid-button",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<button id='c0'>Save</button>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true,
+        "dompurifyConfig": {
+          "FORBID_TAGS": [
+            "button"
+          ]
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "custom-forbid-button"
+      ],
+      "expectedText": [
+        "Save"
+      ],
+      "expectedErrorCodes": [],
+      "controlExpected": [],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-events-stripped",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' value='Safe' onclick='alert(1)' onfocus='alert(2)'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "events-stripped"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "value": "Safe",
+          "forbiddenAttributes": [
+            "onclick",
+            "onfocus"
+          ]
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-button-rich-content",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<button id='c0'><b>Save</b> <i>Now</i></button>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "button-rich-content"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "button",
+          "text": "Save Now"
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-meter-optimum-regions",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<meter id='c0' min='0' max='10' low='3' high='7' optimum='1' value='9'></meter>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "meter-optimum-regions"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "meter",
+          "value": 9,
+          "fraction": 0.9
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-progress-determinate-zero",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<progress id='c0' value='0'></progress>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "progress-determinate-zero"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "progress",
+          "value": 0,
+          "fraction": 0
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-color-probe-named",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='color' value='red'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "color-probe-named"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "type": "color"
+        }
+      ],
+      "oracleProbe": {
+        "id": "color-value-normalization",
+        "observe": [
+          "value",
+          "attributes",
+          "style"
+        ],
+        "reason": "Fixed browser host value not yet captured; classify source extension before asserting value."
+      },
+      "group": "shared"
+    },
+    {
+      "id": "html-host-color-probe-rgb",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='color' value='rgb(255, 0, 0)'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "color-probe-rgb"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "type": "color"
+        }
+      ],
+      "oracleProbe": {
+        "id": "color-value-normalization",
+        "observe": [
+          "value",
+          "attributes",
+          "style"
+        ],
+        "reason": "Fixed browser host value not yet captured; classify source extension before asserting value."
+      },
+      "group": "shared"
+    },
+    {
+      "id": "html-host-color-probe-short-hex",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='color' value='#f00'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "color-probe-short-hex"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "type": "color"
+        }
+      ],
+      "oracleProbe": {
+        "id": "color-value-normalization",
+        "observe": [
+          "value",
+          "attributes",
+          "style"
+        ],
+        "reason": "Fixed browser host value not yet captured; classify source extension before asserting value."
+      },
+      "group": "shared"
+    },
+    {
+      "id": "html-host-color-probe-alpha",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='color' value='rgba(255, 0, 0, 0.5)' alpha>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true,
+        "dompurifyConfig": {
+          "ADD_ATTR": [
+            "alpha",
+            "colorspace"
+          ]
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "color-probe-alpha"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "type": "color"
+        }
+      ],
+      "oracleProbe": {
+        "id": "color-value-normalization",
+        "observe": [
+          "value",
+          "attributes",
+          "style"
+        ],
+        "reason": "Fixed browser host value not yet captured; classify source extension before asserting value."
+      },
+      "group": "shared"
+    },
+    {
+      "id": "html-host-color-probe-display-p3",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='color' value='color(display-p3 1 0 0)' colorspace='display-p3'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true,
+        "dompurifyConfig": {
+          "ADD_ATTR": [
+            "alpha",
+            "colorspace"
+          ]
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "color-probe-display-p3"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "type": "color"
+        }
+      ],
+      "oracleProbe": {
+        "id": "color-value-normalization",
+        "observe": [
+          "value",
+          "attributes",
+          "style"
+        ],
+        "reason": "Fixed browser host value not yet captured; classify source extension before asserting value."
+      },
+      "group": "shared"
+    },
+    {
+      "id": "html-host-class-label-consumer",
+      "kind": "classDiagram",
+      "source": "classDiagram\nclass A[\"<button id='c0'>Save</button>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "class-label-consumer"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "button",
+          "text": "Save"
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-mindmap-label-consumer",
+      "kind": "mindmap",
+      "source": "mindmap\nroot[\"<input id='c0' value='Mind'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "mindmap-label-consumer"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "value": "Mind"
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-flowchart-edge-consumer",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA -->|\"<button id='c0'>Edge</button>\"| B",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "flowchart-edge-consumer"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "button",
+          "text": "Edge"
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-unicode-value",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' value='\u4e2d\u6587 \ud83d\ude42'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "unicode-value"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "value": "\u4e2d\u6587 \ud83d\ude42"
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-attribute-entity-once",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' value='&amp;lt;b&amp;gt;'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "attribute-entity-once"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "value": "&lt;b&gt;"
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-image-explicit-data-resource",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='image' src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MCcgaGVpZ2h0PScyMCc+PHJlY3Qgd2lkdGg9JzIwJyBoZWlnaHQ9JzIwJyBmaWxsPScjZTAyMDIwJy8+PHJlY3QgeD0nMjAnIHdpZHRoPScyMCcgaGVpZ2h0PScyMCcgZmlsbD0nIzIwNDBlMCcvPjwvc3ZnPg==' alt='Two colors' width='80' height='40'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true,
+        "dompurifyConfig": {
+          "ADD_DATA_URI_TAGS": [
+            "input"
+          ]
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "input-image-static-resource"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "type": "image",
+          "value": ""
+        }
+      ],
+      "group": "shared"
+    },
+    {
+      "id": "html-host-color-regression-rgb-percent-nonred",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='color' value='rgb(0% 50% 100%)'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "source-css-color-general-regression",
+        "rgb-percent-nonred"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "type": "color",
+          "value": "#0080ff"
+        }
+      ],
+      "addedAt": "P3-source-backed-repair"
+    },
+    {
+      "id": "html-host-color-regression-hsl-nonred",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='color' value='hsl(120 100% 25%)'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "source-css-color-general-regression",
+        "hsl-nonred"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "type": "color",
+          "value": "#008000"
+        }
+      ],
+      "addedAt": "P3-source-backed-repair"
+    },
+    {
+      "id": "html-host-color-regression-hwb-nonred",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='color' value='hwb(240 0% 0%)'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "source-css-color-general-regression",
+        "hwb-nonred"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "type": "color",
+          "value": "#0000ff"
+        }
+      ],
+      "addedAt": "P3-source-backed-repair"
+    },
+    {
+      "id": "html-host-color-regression-srgb-linear-nonred",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='color' value='color(srgb-linear 0 0 1)'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "source-css-color-general-regression",
+        "srgb-linear-nonred"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "type": "color",
+          "value": "#0000ff"
+        }
+      ],
+      "addedAt": "P3-source-backed-repair"
+    },
+    {
+      "id": "html-host-color-regression-display-p3-mixed",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='color' value='color(display-p3 0.2 0.4 0.6)'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "source-css-color-general-regression",
+        "display-p3-mixed"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "type": "color"
+        }
+      ],
+      "addedAt": "P3-source-backed-repair",
+      "oracleProbe": {
+        "id": "non-red-color-coordinate-conversion",
+        "observe": [
+          "value"
+        ],
+        "reason": "Fresh fixed-source DOM required; native is always compared to actual source value."
+      }
+    },
+    {
+      "id": "html-host-color-regression-lab-neutral",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='color' value='lab(50% 0 0)'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "source-css-color-general-regression",
+        "lab-neutral"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "type": "color",
+          "value": "#777777"
+        }
+      ],
+      "addedAt": "P3-source-backed-repair"
+    },
+    {
+      "id": "html-host-color-regression-oklab-neutral",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='color' value='oklab(50% 0 0)'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "source-css-color-general-regression",
+        "oklab-neutral"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "type": "color",
+          "value": "#636363"
+        }
+      ],
+      "addedAt": "P3-source-backed-repair"
+    },
+    {
+      "id": "html-host-color-regression-xyz-mixed",
+      "kind": "flowchart-v2",
+      "source": "flowchart LR\nA[\"<input id='c0' type='color' value='color(xyz-d65 0.2 0.3 0.4)'><input id='c1' type='color' value='color(a98-rgb 0.2 0.4 0.6)'><input id='c2' type='color' value='color(prophoto-rgb 0.2 0.4 0.6)'><input id='c3' type='color' value='color(rec2020 0.2 0.4 0.6)'>\"]",
+      "config": {
+        "securityLevel": "loose",
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state",
+        "line": 34,
+        "synthesized": true
+      },
+      "expect": "render",
+      "features": [
+        "source-css-color-general-regression",
+        "xyz-mixed"
+      ],
+      "expectedText": [],
+      "expectedErrorCodes": [],
+      "controlExpected": [
+        {
+          "id": "c0",
+          "tag": "input",
+          "type": "color"
+        },
+        {
+          "id": "c1",
+          "tag": "input",
+          "type": "color"
+        },
+        {
+          "id": "c2",
+          "tag": "input",
+          "type": "color"
+        },
+        {
+          "id": "c3",
+          "tag": "input",
+          "type": "color"
+        }
+      ],
+      "addedAt": "P3-source-backed-repair",
+      "oracleProbe": {
+        "id": "non-red-color-coordinate-conversion",
+        "observe": [
+          "value"
+        ],
+        "reason": "Fresh fixed-source values for XYZ/A98/ProPhoto/Rec2020 conversion families, not candidate-generated expectations."
+      }
+    }
+  ]
+}

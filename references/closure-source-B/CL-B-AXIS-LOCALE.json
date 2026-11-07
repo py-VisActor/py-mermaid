@@ -1,0 +1,354 @@
+{
+  "id": "CL-B-AXIS-LOCALE",
+  "source": "gantt\ndateFormat YYYY-MM-DD\naxisFormat %c | %x | %X\ntodayMarker off\nLocaleAxis :a, 2021-01-01, 2d\n",
+  "config": {
+    "gantt": {
+      "width": 1200
+    }
+  },
+  "timezone": "UTC",
+  "status": "CAPTURED",
+  "snapshot": {
+    "tasks": [
+      {
+        "id": "a",
+        "start": {
+          "local": [
+            2021,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "epochMs": 1609459200000
+        },
+        "end": {
+          "local": [
+            2021,
+            1,
+            3,
+            0,
+            0,
+            0,
+            0
+          ],
+          "epochMs": 1609632000000
+        }
+      }
+    ]
+  },
+  "elkInputs": [],
+  "elkOutputs": [],
+  "labels": [],
+  "texts": [
+    {
+      "text": "1/1/2021, 12:00:00 AM | 1/1/2021 | 12:00:00 AM",
+      "box": {
+        "x": -110.828125,
+        "y": 4,
+        "width": 222.560546875,
+        "height": 11
+      },
+      "classes": null
+    },
+    {
+      "text": "1/1/2021, 6:00:00 AM | 1/1/2021 | 6:00:00 AM",
+      "box": {
+        "x": -105.5859375,
+        "y": 4,
+        "width": 212.072265625,
+        "height": 11
+      },
+      "classes": null
+    },
+    {
+      "text": "1/1/2021, 12:00:00 PM | 1/1/2021 | 12:00:00 PM",
+      "box": {
+        "x": -111.0625,
+        "y": 4,
+        "width": 223.01953125,
+        "height": 11
+      },
+      "classes": null
+    },
+    {
+      "text": "1/1/2021, 6:00:00 PM | 1/1/2021 | 6:00:00 PM",
+      "box": {
+        "x": -105.8203125,
+        "y": 4,
+        "width": 212.53125,
+        "height": 11
+      },
+      "classes": null
+    },
+    {
+      "text": "1/2/2021, 12:00:00 AM | 1/2/2021 | 12:00:00 AM",
+      "box": {
+        "x": -110.828125,
+        "y": 4,
+        "width": 222.560546875,
+        "height": 11
+      },
+      "classes": null
+    },
+    {
+      "text": "1/2/2021, 6:00:00 AM | 1/2/2021 | 6:00:00 AM",
+      "box": {
+        "x": -105.5859375,
+        "y": 4,
+        "width": 212.072265625,
+        "height": 11
+      },
+      "classes": null
+    },
+    {
+      "text": "1/2/2021, 12:00:00 PM | 1/2/2021 | 12:00:00 PM",
+      "box": {
+        "x": -111.0625,
+        "y": 4,
+        "width": 223.01953125,
+        "height": 11
+      },
+      "classes": null
+    },
+    {
+      "text": "1/2/2021, 6:00:00 PM | 1/2/2021 | 6:00:00 PM",
+      "box": {
+        "x": -105.8203125,
+        "y": 4,
+        "width": 212.53125,
+        "height": 11
+      },
+      "classes": null
+    },
+    {
+      "text": "1/3/2021, 12:00:00 AM | 1/3/2021 | 12:00:00 AM",
+      "box": {
+        "x": -110.828125,
+        "y": 4,
+        "width": 222.560546875,
+        "height": 11
+      },
+      "classes": null
+    },
+    {
+      "text": "LocaleAxis ",
+      "box": {
+        "x": 766.234375,
+        "y": 53.5,
+        "width": 52.07763671875,
+        "height": 12
+      },
+      "classes": "taskText taskText0  width-52.07763671875"
+    },
+    {
+      "text": "",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "classes": "sectionTitle sectionTitle0"
+    },
+    {
+      "text": "",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "classes": "titleText"
+    }
+  ],
+  "publicPaint": {
+    "ticks": [
+      {
+        "tag": "text",
+        "classes": "",
+        "text": "1/1/2021, 12:00:00 AM | 1/1/2021 | 12:00:00 AM",
+        "fill": "rgb(51, 51, 51)",
+        "stroke": "none",
+        "strokeWidth": "1px",
+        "opacity": "1",
+        "fillOpacity": "1",
+        "strokeOpacity": "1",
+        "numeric": {
+          "y": "3"
+        },
+        "screenBox": {
+          "x": -35.328125,
+          "y": 78,
+          "width": 222.560546875,
+          "height": 11
+        }
+      },
+      {
+        "tag": "text",
+        "classes": "",
+        "text": "1/1/2021, 6:00:00 AM | 1/1/2021 | 6:00:00 AM",
+        "fill": "rgb(51, 51, 51)",
+        "stroke": "none",
+        "strokeWidth": "1px",
+        "opacity": "1",
+        "fillOpacity": "1",
+        "strokeOpacity": "1",
+        "numeric": {
+          "y": "3"
+        },
+        "screenBox": {
+          "x": 148.9140625,
+          "y": 78,
+          "width": 212.072265625,
+          "height": 11
+        }
+      },
+      {
+        "tag": "text",
+        "classes": "",
+        "text": "1/1/2021, 12:00:00 PM | 1/1/2021 | 12:00:00 PM",
+        "fill": "rgb(51, 51, 51)",
+        "stroke": "none",
+        "strokeWidth": "1px",
+        "opacity": "1",
+        "fillOpacity": "1",
+        "strokeOpacity": "1",
+        "numeric": {
+          "y": "3"
+        },
+        "screenBox": {
+          "x": 323.4375,
+          "y": 78,
+          "width": 223.01953125,
+          "height": 11
+        }
+      },
+      {
+        "tag": "text",
+        "classes": "",
+        "text": "1/1/2021, 6:00:00 PM | 1/1/2021 | 6:00:00 PM",
+        "fill": "rgb(51, 51, 51)",
+        "stroke": "none",
+        "strokeWidth": "1px",
+        "opacity": "1",
+        "fillOpacity": "1",
+        "strokeOpacity": "1",
+        "numeric": {
+          "y": "3"
+        },
+        "screenBox": {
+          "x": 507.6796875,
+          "y": 78,
+          "width": 212.53125,
+          "height": 11
+        }
+      },
+      {
+        "tag": "text",
+        "classes": "",
+        "text": "1/2/2021, 12:00:00 AM | 1/2/2021 | 12:00:00 AM",
+        "fill": "rgb(51, 51, 51)",
+        "stroke": "none",
+        "strokeWidth": "1px",
+        "opacity": "1",
+        "fillOpacity": "1",
+        "strokeOpacity": "1",
+        "numeric": {
+          "y": "3"
+        },
+        "screenBox": {
+          "x": 681.671875,
+          "y": 78,
+          "width": 222.560546875,
+          "height": 11
+        }
+      },
+      {
+        "tag": "text",
+        "classes": "",
+        "text": "1/2/2021, 6:00:00 AM | 1/2/2021 | 6:00:00 AM",
+        "fill": "rgb(51, 51, 51)",
+        "stroke": "none",
+        "strokeWidth": "1px",
+        "opacity": "1",
+        "fillOpacity": "1",
+        "strokeOpacity": "1",
+        "numeric": {
+          "y": "3"
+        },
+        "screenBox": {
+          "x": 865.9140625,
+          "y": 78,
+          "width": 212.072265625,
+          "height": 11
+        }
+      },
+      {
+        "tag": "text",
+        "classes": "",
+        "text": "1/2/2021, 12:00:00 PM | 1/2/2021 | 12:00:00 PM",
+        "fill": "rgb(51, 51, 51)",
+        "stroke": "none",
+        "strokeWidth": "1px",
+        "opacity": "1",
+        "fillOpacity": "1",
+        "strokeOpacity": "1",
+        "numeric": {
+          "y": "3"
+        },
+        "screenBox": {
+          "x": 1040.4375,
+          "y": 78,
+          "width": 223.01953125,
+          "height": 11
+        }
+      },
+      {
+        "tag": "text",
+        "classes": "",
+        "text": "1/2/2021, 6:00:00 PM | 1/2/2021 | 6:00:00 PM",
+        "fill": "rgb(51, 51, 51)",
+        "stroke": "none",
+        "strokeWidth": "1px",
+        "opacity": "1",
+        "fillOpacity": "1",
+        "strokeOpacity": "1",
+        "numeric": {
+          "y": "3"
+        },
+        "screenBox": {
+          "x": 1224.6796875,
+          "y": 78,
+          "width": 212.53125,
+          "height": 11
+        }
+      },
+      {
+        "tag": "text",
+        "classes": "",
+        "text": "1/3/2021, 12:00:00 AM | 1/3/2021 | 12:00:00 AM",
+        "fill": "rgb(51, 51, 51)",
+        "stroke": "none",
+        "strokeWidth": "1px",
+        "opacity": "1",
+        "fillOpacity": "1",
+        "strokeOpacity": "1",
+        "numeric": {
+          "y": "3"
+        },
+        "screenBox": {
+          "x": 1398.671875,
+          "y": 78,
+          "width": 222.560546875,
+          "height": 11
+        }
+      }
+    ],
+    "cherries": [],
+    "collapsed": []
+  },
+  "blockedRequests": []
+}

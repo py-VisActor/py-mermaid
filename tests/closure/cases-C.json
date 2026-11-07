@@ -1,0 +1,1510 @@
+{
+  "schema": "py-mermaid-bulk-cases/v1",
+  "group": "C",
+  "cases": [
+    {
+      "id": "CLOSURE-C-endpoint-classic-filled-ltr",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nparticipant A\nparticipant B\nA->>B: Endpoint",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "buildMessageModel/drawMessage",
+        "line": 1867,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "look": "classic",
+        "theme": "default"
+      },
+      "expectedText": [
+        "A",
+        "B",
+        "Endpoint"
+      ],
+      "closureProbe": {
+        "type": "endpoint",
+        "branch": "C-sequence-endpoint",
+        "sender": "A",
+        "receiver": "B",
+        "startOffset": 1,
+        "endOffset": -4
+      }
+    },
+    {
+      "id": "CLOSURE-C-endpoint-classic-filled-rtl",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nparticipant A\nparticipant B\nB->>A: Endpoint",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "buildMessageModel/drawMessage",
+        "line": 1867,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "look": "classic",
+        "theme": "default"
+      },
+      "expectedText": [
+        "A",
+        "B",
+        "Endpoint"
+      ],
+      "closureProbe": {
+        "type": "endpoint",
+        "branch": "C-sequence-endpoint",
+        "sender": "B",
+        "receiver": "A",
+        "startOffset": -1,
+        "endOffset": 4
+      }
+    },
+    {
+      "id": "CLOSURE-C-endpoint-classic-open-ltr",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nparticipant A\nparticipant B\nA->B: Endpoint",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "buildMessageModel/drawMessage",
+        "line": 1867,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "look": "classic",
+        "theme": "default"
+      },
+      "expectedText": [
+        "A",
+        "B",
+        "Endpoint"
+      ],
+      "closureProbe": {
+        "type": "endpoint",
+        "branch": "C-sequence-endpoint",
+        "sender": "A",
+        "receiver": "B",
+        "startOffset": 1,
+        "endOffset": -1
+      }
+    },
+    {
+      "id": "CLOSURE-C-endpoint-classic-open-rtl",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nparticipant A\nparticipant B\nB->A: Endpoint",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "buildMessageModel/drawMessage",
+        "line": 1867,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "look": "classic",
+        "theme": "default"
+      },
+      "expectedText": [
+        "A",
+        "B",
+        "Endpoint"
+      ],
+      "closureProbe": {
+        "type": "endpoint",
+        "branch": "C-sequence-endpoint",
+        "sender": "B",
+        "receiver": "A",
+        "startOffset": -1,
+        "endOffset": 1
+      }
+    },
+    {
+      "id": "CLOSURE-C-endpoint-neo-filled-ltr",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nparticipant A\nparticipant B\nA->>B: Endpoint",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "buildMessageModel/drawMessage",
+        "line": 1867,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "look": "neo",
+        "theme": "default"
+      },
+      "expectedText": [
+        "A",
+        "B",
+        "Endpoint"
+      ],
+      "closureProbe": {
+        "type": "endpoint",
+        "branch": "C-sequence-endpoint",
+        "sender": "A",
+        "receiver": "B",
+        "startOffset": 1,
+        "endOffset": -7
+      }
+    },
+    {
+      "id": "CLOSURE-C-endpoint-neo-filled-rtl",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nparticipant A\nparticipant B\nB->>A: Endpoint",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "buildMessageModel/drawMessage",
+        "line": 1867,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "look": "neo",
+        "theme": "default"
+      },
+      "expectedText": [
+        "A",
+        "B",
+        "Endpoint"
+      ],
+      "closureProbe": {
+        "type": "endpoint",
+        "branch": "C-sequence-endpoint",
+        "sender": "B",
+        "receiver": "A",
+        "startOffset": -1,
+        "endOffset": 7
+      }
+    },
+    {
+      "id": "CLOSURE-C-number-normal-ltr",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nautonumber\nparticipant A\nparticipant B\nA->>B: Number",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "buildMessageModel/drawMessage",
+        "line": 1867,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "look": "classic",
+        "theme": "default"
+      },
+      "expectedText": [
+        "A",
+        "B",
+        "Number",
+        "1"
+      ],
+      "closureProbe": {
+        "type": "number",
+        "branch": "C-sequence-number",
+        "anchor": "A"
+      }
+    },
+    {
+      "id": "CLOSURE-C-number-normal-rtl",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nautonumber\nparticipant A\nparticipant B\nB->>A: Number",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "buildMessageModel/drawMessage",
+        "line": 1867,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "look": "classic",
+        "theme": "default"
+      },
+      "expectedText": [
+        "A",
+        "B",
+        "Number",
+        "1"
+      ],
+      "closureProbe": {
+        "type": "number",
+        "branch": "C-sequence-number",
+        "anchor": "B"
+      }
+    },
+    {
+      "id": "CLOSURE-C-number-reverse-ltr",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nautonumber\nparticipant A\nparticipant B\nA//-B: Number",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "buildMessageModel/drawMessage",
+        "line": 1867,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "look": "classic",
+        "theme": "default"
+      },
+      "expectedText": [
+        "A",
+        "B",
+        "Number",
+        "1"
+      ],
+      "closureProbe": {
+        "type": "number",
+        "branch": "C-sequence-number",
+        "anchor": "B"
+      }
+    },
+    {
+      "id": "CLOSURE-C-self-curved-normal",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nautonumber\nparticipant A\nA->>A: Self",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "buildMessageModel/drawMessage",
+        "line": 1867,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "look": "classic",
+        "theme": "default",
+        "sequence": {
+          "rightAngles": false
+        }
+      },
+      "expectedText": [
+        "A",
+        "Self",
+        "1"
+      ],
+      "closureProbe": {
+        "type": "self",
+        "branch": "C-sequence-self",
+        "sender": "A",
+        "startOffset": 1,
+        "angular": false
+      }
+    },
+    {
+      "id": "CLOSURE-C-self-curved-reverse",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nautonumber\nparticipant A\nA//-A: Self",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "buildMessageModel/drawMessage",
+        "line": 1867,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "look": "classic",
+        "theme": "default",
+        "sequence": {
+          "rightAngles": false
+        }
+      },
+      "expectedText": [
+        "A",
+        "Self",
+        "1"
+      ],
+      "closureProbe": {
+        "type": "self",
+        "branch": "C-sequence-self",
+        "sender": "A",
+        "startOffset": 11,
+        "angular": false
+      }
+    },
+    {
+      "id": "CLOSURE-C-self-angular-bidirectional",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nautonumber\nparticipant A\nA<<->>A: Self",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "buildMessageModel/drawMessage",
+        "line": 1867,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "look": "classic",
+        "theme": "default",
+        "sequence": {
+          "rightAngles": true
+        }
+      },
+      "expectedText": [
+        "A",
+        "Self",
+        "1"
+      ],
+      "closureProbe": {
+        "type": "self",
+        "branch": "C-sequence-self",
+        "sender": "A",
+        "startOffset": 11,
+        "angular": true
+      }
+    },
+    {
+      "id": "CLOSURE-C-central-source-plain",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nparticipant A\nparticipant B\nA()->>B: Center",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "buildMessageModel/drawMessage",
+        "line": 1867,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "look": "classic",
+        "theme": "default"
+      },
+      "expectedText": [
+        "A",
+        "B",
+        "Center"
+      ],
+      "closureProbe": {
+        "type": "central",
+        "branch": "C-sequence-central",
+        "circles": [
+          {
+            "actor": "A",
+            "offset": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "CLOSURE-C-central-source-number",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nautonumber\nparticipant A\nparticipant B\nA()->>B: Center",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "buildMessageModel/drawMessage",
+        "line": 1867,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "look": "classic",
+        "theme": "default"
+      },
+      "expectedText": [
+        "A",
+        "B",
+        "Center",
+        "1"
+      ],
+      "closureProbe": {
+        "type": "central",
+        "branch": "C-sequence-central",
+        "circles": [
+          {
+            "actor": "A",
+            "offset": 16.5
+          }
+        ]
+      }
+    },
+    {
+      "id": "CLOSURE-C-central-target-plain",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nparticipant A\nparticipant B\nA->>()B: Center",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "buildMessageModel/drawMessage",
+        "line": 1867,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "look": "classic",
+        "theme": "default"
+      },
+      "expectedText": [
+        "A",
+        "B",
+        "Center"
+      ],
+      "closureProbe": {
+        "type": "central",
+        "branch": "C-sequence-central",
+        "circles": [
+          {
+            "actor": "B",
+            "offset": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "CLOSURE-C-central-target-number",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nautonumber\nparticipant A\nparticipant B\nA->>()B: Center",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "buildMessageModel/drawMessage",
+        "line": 1867,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "look": "classic",
+        "theme": "default"
+      },
+      "expectedText": [
+        "A",
+        "B",
+        "Center",
+        "1"
+      ],
+      "closureProbe": {
+        "type": "central",
+        "branch": "C-sequence-central",
+        "circles": [
+          {
+            "actor": "B",
+            "offset": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "CLOSURE-C-central-dual-plain",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nparticipant A\nparticipant B\nA()->>()B: Center",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "buildMessageModel/drawMessage",
+        "line": 1867,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "look": "classic",
+        "theme": "default"
+      },
+      "expectedText": [
+        "A",
+        "B",
+        "Center"
+      ],
+      "closureProbe": {
+        "type": "central",
+        "branch": "C-sequence-central",
+        "circles": [
+          {
+            "actor": "A",
+            "offset": 0
+          },
+          {
+            "actor": "B",
+            "offset": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "CLOSURE-C-central-dual-number",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nautonumber\nparticipant A\nparticipant B\nA()->>()B: Center",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "buildMessageModel/drawMessage",
+        "line": 1867,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "look": "classic",
+        "theme": "default"
+      },
+      "expectedText": [
+        "A",
+        "B",
+        "Center",
+        "1"
+      ],
+      "closureProbe": {
+        "type": "central",
+        "branch": "C-sequence-central",
+        "circles": [
+          {
+            "actor": "A",
+            "offset": 16.5
+          },
+          {
+            "actor": "B",
+            "offset": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "CLOSURE-C-activation-first-activate",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nparticipant A\nparticipant B\nA->>+B: Activated",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "buildMessageModel/drawMessage",
+        "line": 1867,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "look": "classic",
+        "theme": "default"
+      },
+      "expectedText": [
+        "A",
+        "B",
+        "Activated"
+      ],
+      "closureProbe": {
+        "type": "activation",
+        "branch": "C-sequence-activation",
+        "sender": "A",
+        "receiver": "B",
+        "startOffset": 1,
+        "endOffset": -8
+      }
+    },
+    {
+      "id": "CLOSURE-C-activation-existing-target",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nparticipant A\nparticipant B\nactivate B\nA->>B: Activated",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "buildMessageModel/drawMessage",
+        "line": 1867,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "look": "classic",
+        "theme": "default"
+      },
+      "expectedText": [
+        "A",
+        "B",
+        "Activated"
+      ],
+      "closureProbe": {
+        "type": "activation",
+        "branch": "C-sequence-activation",
+        "sender": "A",
+        "receiver": "B",
+        "startOffset": 1,
+        "endOffset": -8
+      }
+    },
+    {
+      "id": "CLOSURE-C-activation-sender-depth1",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nparticipant A\nparticipant B\nactivate A\nA->>B: Activated",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "buildMessageModel/drawMessage",
+        "line": 1867,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "look": "classic",
+        "theme": "default"
+      },
+      "expectedText": [
+        "A",
+        "B",
+        "Activated"
+      ],
+      "closureProbe": {
+        "type": "activation",
+        "branch": "C-sequence-activation",
+        "sender": "A",
+        "receiver": "B",
+        "startOffset": 5,
+        "endOffset": -4
+      }
+    },
+    {
+      "id": "CLOSURE-C-activation-sender-depth2",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nparticipant A\nparticipant B\nactivate A\nactivate A\nA->>B: Activated",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "buildMessageModel/drawMessage",
+        "line": 1867,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "look": "classic",
+        "theme": "default"
+      },
+      "expectedText": [
+        "A",
+        "B",
+        "Activated"
+      ],
+      "closureProbe": {
+        "type": "activation",
+        "branch": "C-sequence-activation",
+        "sender": "A",
+        "receiver": "B",
+        "startOffset": 10,
+        "endOffset": -4
+      }
+    },
+    {
+      "id": "CLOSURE-C-arrow-gallery-ltr",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nparticipant A\nparticipant B\nA->>B: Arrow 0\nA-->>B: Arrow 1\nA<<->>B: Arrow 2\nA<<-->>B: Arrow 3\nA->B: Arrow 4\nA-->B: Arrow 5\nA-xB: Arrow 6\nA--xB: Arrow 7\nA-)B: Arrow 8\nA--)B: Arrow 9\nA-|\\B: Arrow 10\nA-|/B: Arrow 11\nA-\\\\B: Arrow 12\nA-//B: Arrow 13\nA/|-B: Arrow 14\nA\\|-B: Arrow 15\nA//-B: Arrow 16\nA\\\\-B: Arrow 17\nA--|\\B: Arrow 18\nA--|/B: Arrow 19\nA--\\\\B: Arrow 20\nA--//B: Arrow 21\nA/|--B: Arrow 22\nA\\|--B: Arrow 23\nA//--B: Arrow 24\nA\\\\--B: Arrow 25",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "buildMessageModel/drawMessage",
+        "line": 1867,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "look": "classic",
+        "theme": "default"
+      },
+      "expectedText": [
+        "A",
+        "B",
+        "Arrow 0",
+        "Arrow 1",
+        "Arrow 2",
+        "Arrow 3",
+        "Arrow 4",
+        "Arrow 5",
+        "Arrow 6",
+        "Arrow 7",
+        "Arrow 8",
+        "Arrow 9",
+        "Arrow 10",
+        "Arrow 11",
+        "Arrow 12",
+        "Arrow 13",
+        "Arrow 14",
+        "Arrow 15",
+        "Arrow 16",
+        "Arrow 17",
+        "Arrow 18",
+        "Arrow 19",
+        "Arrow 20",
+        "Arrow 21",
+        "Arrow 22",
+        "Arrow 23",
+        "Arrow 24",
+        "Arrow 25"
+      ],
+      "closureProbe": {
+        "type": "arrows",
+        "branch": "C-sequence-arrow-paint",
+        "expected": [
+          {
+            "arrow": "->>",
+            "start": "",
+            "end": "arrowhead",
+            "dashed": false
+          },
+          {
+            "arrow": "-->>",
+            "start": "",
+            "end": "arrowhead",
+            "dashed": true
+          },
+          {
+            "arrow": "<<->>",
+            "start": "arrowhead",
+            "end": "arrowhead",
+            "dashed": false
+          },
+          {
+            "arrow": "<<-->>",
+            "start": "arrowhead",
+            "end": "arrowhead",
+            "dashed": true
+          },
+          {
+            "arrow": "->",
+            "start": "",
+            "end": "",
+            "dashed": false
+          },
+          {
+            "arrow": "-->",
+            "start": "",
+            "end": "",
+            "dashed": true
+          },
+          {
+            "arrow": "-x",
+            "start": "",
+            "end": "crosshead",
+            "dashed": false
+          },
+          {
+            "arrow": "--x",
+            "start": "",
+            "end": "crosshead",
+            "dashed": true
+          },
+          {
+            "arrow": "-)",
+            "start": "",
+            "end": "filled-head",
+            "dashed": false
+          },
+          {
+            "arrow": "--)",
+            "start": "",
+            "end": "filled-head",
+            "dashed": true
+          },
+          {
+            "arrow": "-|\\",
+            "start": "",
+            "end": "solidTopArrowHead",
+            "dashed": false
+          },
+          {
+            "arrow": "-|/",
+            "start": "",
+            "end": "solidBottomArrowHead",
+            "dashed": false
+          },
+          {
+            "arrow": "-\\\\",
+            "start": "",
+            "end": "stickTopArrowHead",
+            "dashed": false
+          },
+          {
+            "arrow": "-//",
+            "start": "",
+            "end": "stickBottomArrowHead",
+            "dashed": false
+          },
+          {
+            "arrow": "/|-",
+            "start": "solidBottomArrowHead",
+            "end": "",
+            "dashed": false
+          },
+          {
+            "arrow": "\\|-",
+            "start": "solidTopArrowHead",
+            "end": "",
+            "dashed": false
+          },
+          {
+            "arrow": "//-",
+            "start": "stickBottomArrowHead",
+            "end": "",
+            "dashed": false
+          },
+          {
+            "arrow": "\\\\-",
+            "start": "stickTopArrowHead",
+            "end": "",
+            "dashed": false
+          },
+          {
+            "arrow": "--|\\",
+            "start": "",
+            "end": "solidTopArrowHead",
+            "dashed": true
+          },
+          {
+            "arrow": "--|/",
+            "start": "",
+            "end": "solidBottomArrowHead",
+            "dashed": true
+          },
+          {
+            "arrow": "--\\\\",
+            "start": "",
+            "end": "stickTopArrowHead",
+            "dashed": true
+          },
+          {
+            "arrow": "--//",
+            "start": "",
+            "end": "stickBottomArrowHead",
+            "dashed": true
+          },
+          {
+            "arrow": "/|--",
+            "start": "solidBottomArrowHead",
+            "end": "",
+            "dashed": true
+          },
+          {
+            "arrow": "\\|--",
+            "start": "solidTopArrowHead",
+            "end": "",
+            "dashed": true
+          },
+          {
+            "arrow": "//--",
+            "start": "stickBottomArrowHead",
+            "end": "",
+            "dashed": true
+          },
+          {
+            "arrow": "\\\\--",
+            "start": "stickTopArrowHead",
+            "end": "",
+            "dashed": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "CLOSURE-C-arrow-gallery-rtl",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nparticipant A\nparticipant B\nB->>A: Arrow 0\nB-->>A: Arrow 1\nB<<->>A: Arrow 2\nB<<-->>A: Arrow 3\nB->A: Arrow 4\nB-->A: Arrow 5\nB-xA: Arrow 6\nB--xA: Arrow 7\nB-)A: Arrow 8\nB--)A: Arrow 9\nB-|\\A: Arrow 10\nB-|/A: Arrow 11\nB-\\\\A: Arrow 12\nB-//A: Arrow 13\nB/|-A: Arrow 14\nB\\|-A: Arrow 15\nB//-A: Arrow 16\nB\\\\-A: Arrow 17\nB--|\\A: Arrow 18\nB--|/A: Arrow 19\nB--\\\\A: Arrow 20\nB--//A: Arrow 21\nB/|--A: Arrow 22\nB\\|--A: Arrow 23\nB//--A: Arrow 24\nB\\\\--A: Arrow 25",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "buildMessageModel/drawMessage",
+        "line": 1867,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "repository": "mermaid",
+        "synthesized": true
+      },
+      "config": {
+        "look": "classic",
+        "theme": "default"
+      },
+      "expectedText": [
+        "A",
+        "B",
+        "Arrow 0",
+        "Arrow 1",
+        "Arrow 2",
+        "Arrow 3",
+        "Arrow 4",
+        "Arrow 5",
+        "Arrow 6",
+        "Arrow 7",
+        "Arrow 8",
+        "Arrow 9",
+        "Arrow 10",
+        "Arrow 11",
+        "Arrow 12",
+        "Arrow 13",
+        "Arrow 14",
+        "Arrow 15",
+        "Arrow 16",
+        "Arrow 17",
+        "Arrow 18",
+        "Arrow 19",
+        "Arrow 20",
+        "Arrow 21",
+        "Arrow 22",
+        "Arrow 23",
+        "Arrow 24",
+        "Arrow 25"
+      ],
+      "closureProbe": {
+        "type": "arrows",
+        "branch": "C-sequence-arrow-paint",
+        "expected": [
+          {
+            "arrow": "->>",
+            "start": "",
+            "end": "arrowhead",
+            "dashed": false
+          },
+          {
+            "arrow": "-->>",
+            "start": "",
+            "end": "arrowhead",
+            "dashed": true
+          },
+          {
+            "arrow": "<<->>",
+            "start": "arrowhead",
+            "end": "arrowhead",
+            "dashed": false
+          },
+          {
+            "arrow": "<<-->>",
+            "start": "arrowhead",
+            "end": "arrowhead",
+            "dashed": true
+          },
+          {
+            "arrow": "->",
+            "start": "",
+            "end": "",
+            "dashed": false
+          },
+          {
+            "arrow": "-->",
+            "start": "",
+            "end": "",
+            "dashed": true
+          },
+          {
+            "arrow": "-x",
+            "start": "",
+            "end": "crosshead",
+            "dashed": false
+          },
+          {
+            "arrow": "--x",
+            "start": "",
+            "end": "crosshead",
+            "dashed": true
+          },
+          {
+            "arrow": "-)",
+            "start": "",
+            "end": "filled-head",
+            "dashed": false
+          },
+          {
+            "arrow": "--)",
+            "start": "",
+            "end": "filled-head",
+            "dashed": true
+          },
+          {
+            "arrow": "-|\\",
+            "start": "",
+            "end": "solidTopArrowHead",
+            "dashed": false
+          },
+          {
+            "arrow": "-|/",
+            "start": "",
+            "end": "solidBottomArrowHead",
+            "dashed": false
+          },
+          {
+            "arrow": "-\\\\",
+            "start": "",
+            "end": "stickTopArrowHead",
+            "dashed": false
+          },
+          {
+            "arrow": "-//",
+            "start": "",
+            "end": "stickBottomArrowHead",
+            "dashed": false
+          },
+          {
+            "arrow": "/|-",
+            "start": "solidBottomArrowHead",
+            "end": "",
+            "dashed": false
+          },
+          {
+            "arrow": "\\|-",
+            "start": "solidTopArrowHead",
+            "end": "",
+            "dashed": false
+          },
+          {
+            "arrow": "//-",
+            "start": "stickBottomArrowHead",
+            "end": "",
+            "dashed": false
+          },
+          {
+            "arrow": "\\\\-",
+            "start": "stickTopArrowHead",
+            "end": "",
+            "dashed": false
+          },
+          {
+            "arrow": "--|\\",
+            "start": "",
+            "end": "solidTopArrowHead",
+            "dashed": true
+          },
+          {
+            "arrow": "--|/",
+            "start": "",
+            "end": "solidBottomArrowHead",
+            "dashed": true
+          },
+          {
+            "arrow": "--\\\\",
+            "start": "",
+            "end": "stickTopArrowHead",
+            "dashed": true
+          },
+          {
+            "arrow": "--//",
+            "start": "",
+            "end": "stickBottomArrowHead",
+            "dashed": true
+          },
+          {
+            "arrow": "/|--",
+            "start": "solidBottomArrowHead",
+            "end": "",
+            "dashed": true
+          },
+          {
+            "arrow": "\\|--",
+            "start": "solidTopArrowHead",
+            "end": "",
+            "dashed": true
+          },
+          {
+            "arrow": "//--",
+            "start": "stickBottomArrowHead",
+            "end": "",
+            "dashed": true
+          },
+          {
+            "arrow": "\\\\--",
+            "start": "stickTopArrowHead",
+            "end": "",
+            "dashed": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "CLOSURE-C-number-reverse-rtl",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nparticipant A\nparticipant B\nautonumber\nB/|-A: Reply",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "drawMessage/drawCentralConnection/buildMessageModel",
+        "line": 289,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "synthesized": true
+      },
+      "config": {
+        "theme": "default",
+        "look": "classic"
+      },
+      "expectedText": [
+        "A",
+        "B"
+      ],
+      "closureProbe": {
+        "type": "number",
+        "anchor": "A"
+      }
+    },
+    {
+      "id": "CLOSURE-C-number-bidirectional-ltr",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nparticipant A\nparticipant B\nautonumber\nA<<->>B: Both",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "drawMessage/drawCentralConnection/buildMessageModel",
+        "line": 289,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "synthesized": true
+      },
+      "config": {
+        "theme": "default",
+        "look": "classic"
+      },
+      "expectedText": [
+        "A",
+        "B"
+      ],
+      "closureProbe": {
+        "type": "number",
+        "anchor": "A"
+      }
+    },
+    {
+      "id": "CLOSURE-C-number-bidirectional-rtl",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nparticipant A\nparticipant B\nautonumber\nB<<-->>A: Both",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "drawMessage/drawCentralConnection/buildMessageModel",
+        "line": 289,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "synthesized": true
+      },
+      "config": {
+        "theme": "default",
+        "look": "classic"
+      },
+      "expectedText": [
+        "A",
+        "B"
+      ],
+      "closureProbe": {
+        "type": "number",
+        "anchor": "B"
+      }
+    },
+    {
+      "id": "CLOSURE-C-central-reverse-source",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nparticipant A\nparticipant B\nautonumber\nA()/|-B: Reverse",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "drawMessage/drawCentralConnection/buildMessageModel",
+        "line": 289,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "synthesized": true
+      },
+      "config": {
+        "theme": "default",
+        "look": "classic"
+      },
+      "expectedText": [
+        "A",
+        "B"
+      ],
+      "closureProbe": {
+        "type": "central",
+        "circles": [
+          {
+            "actor": "A",
+            "offset": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "CLOSURE-C-central-reverse-target",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nparticipant A\nparticipant B\nautonumber\nA/|-()B: Reverse",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "drawMessage/drawCentralConnection/buildMessageModel",
+        "line": 289,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "synthesized": true
+      },
+      "config": {
+        "theme": "default",
+        "look": "classic"
+      },
+      "expectedText": [
+        "A",
+        "B"
+      ],
+      "closureProbe": {
+        "type": "central",
+        "circles": [
+          {
+            "actor": "B",
+            "offset": -16.5
+          }
+        ]
+      }
+    },
+    {
+      "id": "CLOSURE-C-central-reverse-dual-rtl",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nparticipant A\nparticipant B\nautonumber\nB()/|-()A: Reverse",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "drawMessage/drawCentralConnection/buildMessageModel",
+        "line": 289,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "synthesized": true
+      },
+      "config": {
+        "theme": "default",
+        "look": "classic"
+      },
+      "expectedText": [
+        "A",
+        "B"
+      ],
+      "closureProbe": {
+        "type": "central",
+        "circles": [
+          {
+            "actor": "B",
+            "offset": 0
+          },
+          {
+            "actor": "A",
+            "offset": 16.5
+          }
+        ]
+      }
+    },
+    {
+      "id": "CLOSURE-C-central-activated",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nparticipant A\nparticipant B\nactivate A\nactivate B\nA()->>()B: Center\ndeactivate B\ndeactivate A",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "drawMessage/drawCentralConnection/buildMessageModel",
+        "line": 289,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "synthesized": true
+      },
+      "config": {
+        "theme": "default",
+        "look": "classic"
+      },
+      "expectedText": [
+        "A",
+        "B"
+      ],
+      "closureProbe": {
+        "type": "central",
+        "circles": [
+          {
+            "actor": "A",
+            "offset": 0
+          },
+          {
+            "actor": "B",
+            "offset": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "CLOSURE-C-self-curved-dashed",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nparticipant A\nparticipant B\nA-->>A: Loop",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "drawMessage/drawCentralConnection/buildMessageModel",
+        "line": 289,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "synthesized": true
+      },
+      "config": {
+        "theme": "default",
+        "look": "classic"
+      },
+      "expectedText": [
+        "A",
+        "B"
+      ],
+      "closureProbe": {
+        "type": "self",
+        "sender": "A",
+        "startOffset": 1,
+        "angular": false
+      }
+    },
+    {
+      "id": "CLOSURE-C-self-angular-reverse",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nparticipant A\nparticipant B\nautonumber\nA/|-A: Loop",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "drawMessage/drawCentralConnection/buildMessageModel",
+        "line": 289,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "synthesized": true
+      },
+      "config": {
+        "theme": "default",
+        "look": "classic",
+        "sequence": {
+          "rightAngles": true
+        }
+      },
+      "expectedText": [
+        "A",
+        "B"
+      ],
+      "closureProbe": {
+        "type": "self",
+        "sender": "A",
+        "startOffset": 11,
+        "angular": true
+      }
+    },
+    {
+      "id": "CLOSURE-C-self-handdrawn",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nparticipant A\nparticipant B\nA->>A: Loop",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "drawMessage/drawCentralConnection/buildMessageModel",
+        "line": 289,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "synthesized": true
+      },
+      "config": {
+        "theme": "default",
+        "look": "handDrawn"
+      },
+      "expectedText": [
+        "A",
+        "B"
+      ],
+      "closureProbe": {
+        "type": "self",
+        "sender": "A",
+        "startOffset": 1,
+        "angular": false
+      }
+    },
+    {
+      "id": "CLOSURE-C-nested-inline-lifecycle",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nparticipant A\nparticipant B\nA->>+B: Begin\nactivate B\nB-->>-A: Return\ndeactivate B",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "drawMessage/drawCentralConnection/buildMessageModel",
+        "line": 289,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "synthesized": true
+      },
+      "config": {
+        "theme": "default",
+        "look": "classic"
+      },
+      "expectedText": [
+        "A",
+        "B"
+      ],
+      "closureProbe": {
+        "type": "lifecycle",
+        "activationCount": 2,
+        "messageCount": 2
+      }
+    },
+    {
+      "id": "CLOSURE-C-important-message-paint",
+      "kind": "sequence",
+      "group": "C",
+      "source": "sequenceDiagram\nparticipant A\nparticipant B\nA-->>A: Loop",
+      "expect": "render",
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+        "symbol": "drawMessage/drawCentralConnection/buildMessageModel",
+        "line": 289,
+        "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c",
+        "synthesized": true
+      },
+      "config": {
+        "theme": "default",
+        "look": "classic",
+        "themeCSS": ".messageLine1 { stroke-dasharray:7,2 !important; }"
+      },
+      "expectedText": [
+        "A",
+        "B"
+      ],
+      "closureProbe": {
+        "type": "paint",
+        "fill": "none",
+        "dash": [
+          7,
+          2
+        ]
+      }
+    }
+  ]
+}

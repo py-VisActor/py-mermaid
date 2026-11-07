@@ -73,6 +73,7 @@ class _Parser:
             if self.text.startswith('`',start):raise error(self.doc,start,'Markdown lexical tokens are not block STR arguments')
             end=self.text.find('"',start)
             if end<0:raise error(self.doc,start,'Unterminated block label')
+            if end==start:raise error(self.doc,start,'Block label requires a STR token')
             label=self.text[start:end];self.pos=end+1
             closer=next((t for t in _CLOSERS if self.text.startswith(t,self.pos)),None)
             if opener=='<[':
@@ -88,7 +89,7 @@ class _Parser:
         if m:span=int(m[1]);self.pos+=m.end()
         return BlockNode(id,sanitize_text(label or id,self.config),shape,parent,span,directions=directions)
     def document(self,parent='root',nested=False):
-        out=[];columns=-1
+        out=[];columns=-1;statement_count=0
         while True:
             self.gap()
             if self.pos>=len(self.text):
@@ -98,6 +99,9 @@ class _Parser:
             if m:
                 if not nested:raise error(self.doc,self.pos,'Unexpected block end')
                 self.pos+=m.end();break
+            # The grammar's document has no empty production. Count actual
+            # statements, including columns/styles that add no child node.
+            statement_count+=1
             m=re.match(r'columns\s+(auto|[0-9]+)\b',self.text[self.pos:])
             if m:columns=-1 if m[1]=='auto' else int(m[1]);self.pos+=m.end();continue
             m=re.match(r'(classDef|class|style)\s+([^\r\n]+)',self.text[self.pos:])
@@ -132,6 +136,7 @@ class _Parser:
                     op=link[0];self.pos=link.end()
                 target=self.node(parent);out.append(target);key=head.id+'-'+target.id;count=self.edge_counts.get(key,0)+1;self.edge_counts[key]=count
                 self.edges.append(BlockEdge(str(count)+'-'+key,head.id,target.id,sanitize_text(label,self.config),{'x':'cross','o':'circle','<':'point'}.get(op[0],'open'),{'x':'cross','o':'circle','>':'point'}.get(op[-1],'none'),'==' in op,'.-' in op));head=target
+        if not statement_count:raise error(self.doc,self.pos,'Block document requires a statement')
         return out,columns
 
 

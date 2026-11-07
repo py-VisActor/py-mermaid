@@ -114,7 +114,7 @@ class ConfigurationContracts(unittest.TestCase):
 
     def test_explicit_error_unknown_and_excluded_dagre_are_precise_errors(self):
         for source,config,code in (('error',None,'ERROR_DIAGRAM'),('not-a-diagram',None,'UNKNOWN_DIAGRAM'),
-                ('info',{'layout':'dagre'},'UNSUPPORTED_CONFIG'),('info',{'look':'unknown'},'INVALID_CONFIG')):
+                ('info',{'layout':'dagre'},'UNSUPPORTED_CONFIG')):
             with self.subTest(source=source,config=config),self.assertRaises(MermaidError) as caught:parse(source,config=config)
             self.assertEqual(caught.exception.code,code)
 

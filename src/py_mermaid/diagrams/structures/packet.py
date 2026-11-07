@@ -42,7 +42,10 @@ def parse(document,config):
         if gap:pos+=gap.end();continue
         common=re.match(r'(title(?:[\t ]+([^\r\n]*))?|accTitle[\t ]*:[\t ]*([^\r\n]*)|accDescr[\t ]*:[\t ]*([^\r\n]*)|accDescr\s*\{([^}]*)\})[\t ]*(?:\r?\n|$)',text[pos:])
         if common:
-            if common[1].startswith('title'):title=(common[2] or '').strip()
+            if common[1].startswith('title'):
+                # CommonGrammar.TITLE stops before %% and runCommonConverter
+                # collapses horizontal whitespace after trimming the token.
+                title=re.sub(r'[\t ]{2,}',' ',(common[2] or '').split('%%',1)[0].strip())
             elif common[3] is not None:acc_title=common[3].strip()
             else:acc_description=(common[4] if common[4] is not None else common[5] or '').strip()
             pos+=common.end();continue

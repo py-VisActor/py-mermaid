@@ -1,0 +1,13 @@
+vchart map
+size 640 400
+resource map "local" = {
+  type: "FeatureCollection",
+  features: [{type: "Feature", properties: {name: "A"},
+    geometry: {type: "Polygon", coordinates: [[[0,0],[0,1],[2,1],[2,0],[0,0]]]}
+  }]
+}
+map = "local"
+nameField = "name"
+seriesField = "group"
+data = { values: [{name: "A", group: "alpha"}] }
+label { visible = false }

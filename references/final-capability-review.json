@@ -1,0 +1,1343 @@
+{
+  "schema": "py-mermaid-final-capability-summary/v1",
+  "status": "REVIEW_COMPLETE_RELEASE_BLOCKED",
+  "reviewCompleted": true,
+  "releaseReady": false,
+  "publicationPerformed": false,
+  "productModified": false,
+  "testsModified": false,
+  "sourceTreeSha256": "fe2c293f8ed4ea76e04d34669c8739c27a32063447026e144928bfd6b4ac0bb2",
+  "candidateRun": "test-runs/FINAL-CAPABILITY-root-review-20261107T074045Z-d616752a",
+  "fixedUpstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "scope": {
+    "retained": "Current38Mermaid entries plus native VChart DSL/spec integration68static2D types",
+    "excluded": [
+      "interaction",
+      "animation",
+      "Dagre",
+      "video/audio",
+      "arbitrary HTML/CSS extension",
+      "3D"
+    ],
+    "noNewScopeExclusion": true,
+    "notClaimed": "Finite final capability review; not expression-complete source coverage or release acceptance."
+  },
+  "counts": {
+    "registeredEntries": 39,
+    "mermaidEntries": 38,
+    "vchartTypes": 68,
+    "originalUnrepairedBranchRecords": 22,
+    "originalRepairClusters": 9,
+    "additionalSourceValidChartGaps": 2,
+    "knownUnrepairedRecordsIncludingChartGaps": 24,
+    "releaseGates": 4,
+    "unverifiedItems": 7,
+    "itemCount": 35,
+    "freshUnittestMethodInvocations": 182,
+    "notDistinctMethodCount": true,
+    "previousSameSourceSuiteMethodsNotRerun": 2364
+  },
+  "items": [
+    {
+      "id": "cynefin-double-unknown",
+      "group": "functional",
+      "title": "Cynefin 字符串转义与字面换行",
+      "status": "CONFIRMED_GAP",
+      "branches": [
+        "cynefin-double-unknown"
+      ],
+      "repairCluster": "cynefin-string",
+      "detail": {
+        "固定来源预期": "STRING converts one-character escapes in both quote styles; unknown escape drops backslash and does not interpret JSON Unicode.",
+        "当前实际": "{\"accepted\": false, \"error\": {\"code\": \"SYNTAX_ERROR\", \"message\": \"Invalid quoted label\", \"span\": {\"start\": {\"index\": 20, \"utf16_offset\": 20, \"line\": 3, \"column\": 1}, \"end\": {\"index\": 20, \"utf16_offset\": 20, \"line\": 3, \"column\": 1}}}}",
+        "原因": "Pinned Langium STRING single-character escape converter is not JSON. Current double-quote json.loads rejects valid unknown escapes/raw newlines and decodes Unicode escapes unlike source; single-quote branch fails to decode newline/tab.",
+        "源码位置": [
+          {
+            "path": "src/py_mermaid/diagrams/business/cynefin.py",
+            "sha256": "c55d6d4040be3af0c71b803027c97c1075c7d84265965b1509601f7ad8ab0181",
+            "bytes": 7962,
+            "symbol": "parse.string",
+            "line": 35
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "path": "references/final-capability-review-A.json",
+          "sha256": "45252956a5d8cdea5f68aa2d409ebcb44c5a94f4e81cea8f24040351dd056e07",
+          "bytes": 77885
+        }
+      ],
+      "repaired": false
+    },
+    {
+      "id": "cynefin-double-unicode",
+      "group": "functional",
+      "title": "Cynefin 字符串转义与字面换行",
+      "status": "CONFIRMED_GAP",
+      "branches": [
+        "cynefin-double-unicode"
+      ],
+      "repairCluster": "cynefin-string",
+      "detail": {
+        "固定来源预期": "STRING converts one-character escapes in both quote styles; unknown escape drops backslash and does not interpret JSON Unicode.",
+        "当前实际": "{\"accepted\": true, \"assertions\": [{\"path\": [\"domains\", 0, 1, 0], \"expected\": \"u0041\", \"actual\": \"A\", \"matches\": false}], \"actualModel\": {\"domains\": [[\"clear\", [\"A\"]]], \"transitions\": [], \"title\": \"\", \"accessibility\": [[\"title\", \"\"]]}}",
+        "原因": "Pinned Langium STRING single-character escape converter is not JSON. Current double-quote json.loads rejects valid unknown escapes/raw newlines and decodes Unicode escapes unlike source; single-quote branch fails to decode newline/tab.",
+        "源码位置": [
+          {
+            "path": "src/py_mermaid/diagrams/business/cynefin.py",
+            "sha256": "c55d6d4040be3af0c71b803027c97c1075c7d84265965b1509601f7ad8ab0181",
+            "bytes": 7962,
+            "symbol": "parse.string",
+            "line": 35
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "path": "references/final-capability-review-A.json",
+          "sha256": "45252956a5d8cdea5f68aa2d409ebcb44c5a94f4e81cea8f24040351dd056e07",
+          "bytes": 77885
+        }
+      ],
+      "repaired": false
+    },
+    {
+      "id": "cynefin-single-newline",
+      "group": "functional",
+      "title": "Cynefin 字符串转义与字面换行",
+      "status": "CONFIRMED_GAP",
+      "branches": [
+        "cynefin-single-newline"
+      ],
+      "repairCluster": "cynefin-string",
+      "detail": {
+        "固定来源预期": "STRING converts one-character escapes in both quote styles; unknown escape drops backslash and does not interpret JSON Unicode.",
+        "当前实际": "{\"accepted\": true, \"assertions\": [{\"path\": [\"domains\", 0, 1, 0], \"expected\": \"A\\nB\", \"actual\": \"A\\\\nB\", \"matches\": false}], \"actualModel\": {\"domains\": [[\"clear\", [\"A\\\\nB\"]]], \"transitions\": [], \"title\": \"\", \"accessibility\": [[\"title\", \"\"]]}}",
+        "原因": "Pinned Langium STRING single-character escape converter is not JSON. Current double-quote json.loads rejects valid unknown escapes/raw newlines and decodes Unicode escapes unlike source; single-quote branch fails to decode newline/tab.",
+        "源码位置": [
+          {
+            "path": "src/py_mermaid/diagrams/business/cynefin.py",
+            "sha256": "c55d6d4040be3af0c71b803027c97c1075c7d84265965b1509601f7ad8ab0181",
+            "bytes": 7962,
+            "symbol": "parse.string",
+            "line": 35
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "path": "references/final-capability-review-A.json",
+          "sha256": "45252956a5d8cdea5f68aa2d409ebcb44c5a94f4e81cea8f24040351dd056e07",
+          "bytes": 77885
+        }
+      ],
+      "repaired": false
+    },
+    {
+      "id": "cynefin-literal-newline",
+      "group": "functional",
+      "title": "Cynefin 字符串转义与字面换行",
+      "status": "CONFIRMED_GAP",
+      "branches": [
+        "cynefin-literal-newline"
+      ],
+      "repairCluster": "cynefin-string",
+      "detail": {
+        "固定来源预期": "STRING converts one-character escapes in both quote styles; unknown escape drops backslash and does not interpret JSON Unicode.",
+        "当前实际": "{\"accepted\": false, \"error\": {\"code\": \"SYNTAX_ERROR\", \"message\": \"Invalid quoted label\", \"span\": {\"start\": {\"index\": 20, \"utf16_offset\": 20, \"line\": 3, \"column\": 1}, \"end\": {\"index\": 20, \"utf16_offset\": 20, \"line\": 3, \"column\": 1}}}}",
+        "原因": "Pinned Langium STRING single-character escape converter is not JSON. Current double-quote json.loads rejects valid unknown escapes/raw newlines and decodes Unicode escapes unlike source; single-quote branch fails to decode newline/tab.",
+        "源码位置": [
+          {
+            "path": "src/py_mermaid/diagrams/business/cynefin.py",
+            "sha256": "c55d6d4040be3af0c71b803027c97c1075c7d84265965b1509601f7ad8ab0181",
+            "bytes": 7962,
+            "symbol": "parse.string",
+            "line": 35
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "path": "references/final-capability-review-A.json",
+          "sha256": "45252956a5d8cdea5f68aa2d409ebcb44c5a94f4e81cea8f24040351dd056e07",
+          "bytes": 77885
+        }
+      ],
+      "repaired": false
+    },
+    {
+      "id": "cynefin-single-tab",
+      "group": "functional",
+      "title": "Cynefin 字符串转义与字面换行",
+      "status": "CONFIRMED_GAP",
+      "branches": [
+        "cynefin-single-tab"
+      ],
+      "repairCluster": "cynefin-string",
+      "detail": {
+        "固定来源预期": "STRING converts one-character escapes in both quote styles; unknown escape drops backslash and does not interpret JSON Unicode.",
+        "当前实际": "{\"accepted\": true, \"assertions\": [{\"path\": [\"domains\", 0, 1, 0], \"expected\": \"A\\tB\", \"actual\": \"A\\\\tB\", \"matches\": false}], \"actualModel\": {\"domains\": [[\"clear\", [\"A\\\\tB\"]]], \"transitions\": [], \"title\": \"\", \"accessibility\": [[\"title\", \"\"]]}}",
+        "原因": "Pinned Langium STRING single-character escape converter is not JSON. Current double-quote json.loads rejects valid unknown escapes/raw newlines and decodes Unicode escapes unlike source; single-quote branch fails to decode newline/tab.",
+        "源码位置": [
+          {
+            "path": "src/py_mermaid/diagrams/business/cynefin.py",
+            "sha256": "c55d6d4040be3af0c71b803027c97c1075c7d84265965b1509601f7ad8ab0181",
+            "bytes": 7962,
+            "symbol": "parse.string",
+            "line": 35
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "path": "references/final-capability-review-A.json",
+          "sha256": "45252956a5d8cdea5f68aa2d409ebcb44c5a94f4e81cea8f24040351dd056e07",
+          "bytes": 77885
+        }
+      ],
+      "repaired": false
+    },
+    {
+      "id": "cynefin-transition-escape",
+      "group": "functional",
+      "title": "Cynefin 字符串转义与字面换行",
+      "status": "CONFIRMED_GAP",
+      "branches": [
+        "cynefin-transition-escape"
+      ],
+      "repairCluster": "cynefin-string",
+      "detail": {
+        "固定来源预期": "Transition label uses identical STRING converter.",
+        "当前实际": "{\"accepted\": false, \"error\": {\"code\": \"SYNTAX_ERROR\", \"message\": \"Invalid quoted label\", \"span\": {\"start\": {\"index\": 33, \"utf16_offset\": 33, \"line\": 2, \"column\": 20}, \"end\": {\"index\": 33, \"utf16_offset\": 33, \"line\": 2, \"column\": 20}}}}",
+        "原因": "Pinned Langium STRING single-character escape converter is not JSON. Current double-quote json.loads rejects valid unknown escapes/raw newlines and decodes Unicode escapes unlike source; single-quote branch fails to decode newline/tab.",
+        "源码位置": [
+          {
+            "path": "src/py_mermaid/diagrams/business/cynefin.py",
+            "sha256": "c55d6d4040be3af0c71b803027c97c1075c7d84265965b1509601f7ad8ab0181",
+            "bytes": 7962,
+            "symbol": "parse.string",
+            "line": 35
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "path": "references/final-capability-review-A.json",
+          "sha256": "45252956a5d8cdea5f68aa2d409ebcb44c5a94f4e81cea8f24040351dd056e07",
+          "bytes": 77885
+        }
+      ],
+      "repaired": false
+    },
+    {
+      "id": "architecture-accessibility",
+      "group": "functional",
+      "title": "Architecture 多行元数据输入拒绝",
+      "status": "CONFIRMED_GAP",
+      "branches": [
+        "architecture-accessibility"
+      ],
+      "repairCluster": "architecture-multiline-metadata",
+      "detail": {
+        "固定来源预期": "Canonical metadata stored independently of visible title.",
+        "当前实际": "{\"accepted\": false, \"error\": {\"code\": \"SYNTAX_ERROR\", \"message\": \"Invalid architecture statement\", \"span\": {\"start\": {\"index\": 45, \"utf16_offset\": 45, \"line\": 3, \"column\": 0}, \"end\": {\"index\": 45, \"utf16_offset\": 45, \"line\": 3, \"column\": 0}}}}",
+        "原因": "Common multiline ACC_DESCR is legal original syntax; row-oriented Python architecture tokenizer does not collect this brace block and rejects before any diagram can render.",
+        "源码位置": [
+          {
+            "path": "src/py_mermaid/diagrams/structures/architecture.py",
+            "sha256": "12ea3b28fb7b9dbcd04031ee31a7ba31e005765959fed844dea9f21ff5ba2dbd",
+            "bytes": 17860,
+            "symbol": "parse",
+            "line": 64
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "path": "references/final-capability-review-A.json",
+          "sha256": "45252956a5d8cdea5f68aa2d409ebcb44c5a94f4e81cea8f24040351dd056e07",
+          "bytes": 77885
+        }
+      ],
+      "repaired": false
+    },
+    {
+      "id": "BV-B-DATE-LOCALIZED",
+      "group": "functional",
+      "title": "Gantt 日期解析/星期与 ISO week 格式",
+      "status": "CONFIRMED_GAP_STILL_PRESENT",
+      "branches": [
+        "BV-B-DATE-LOCALIZED"
+      ],
+      "repairCluster": "gantt-date",
+      "detail": {
+        "固定来源预期": "Do not invent localizedFormat plugin; Gantt fallback accepts01/02/2024 as Jan2.",
+        "当前实际": "{\"error\": \"MermaidError INVALID_DATE: Invalid date:01/02/2024\", \"layer\": \"public parse+compile_tasks getStartDate fallback\"}",
+        "原因": "Gantt 日期解析/星期与 ISO week 格式",
+        "源码位置": [
+          {
+            "path": "src/py_mermaid/diagrams/temporal/_dates.py",
+            "sha256": "91aaadfebf8b5202d83796732e2e2bee435c19f4dea35a327329c00196e4a202",
+            "bytes": 11017,
+            "symbol": "def parse_date",
+            "line": 10
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "path": "references/final-capability-review-B.json",
+          "sha256": "88e85ebeb5d56e3c974d05dec714835d34cfc8531cc86e600d20e982aa77eee1",
+          "bytes": 171768
+        }
+      ],
+      "repaired": false
+    },
+    {
+      "id": "BV-B-DATE-WEEKDAY",
+      "group": "functional",
+      "title": "Gantt 日期解析/星期与 ISO week 格式",
+      "status": "CONFIRMED_GAP_STILL_PRESENT",
+      "branches": [
+        "BV-B-DATE-WEEKDAY"
+      ],
+      "repairCluster": "gantt-date",
+      "detail": {
+        "固定来源预期": "Token consumption and strict validation determine actual date;2024-Jan1 Monday.",
+        "当前实际": "[{\"id\": \"BV-B-P-PARSE-WEEKDAY\", \"branch\": \"DATE-PARSE\", \"sourceExpected\": {\"operation\": \"parse\", \"fixedOriginalModule\": \"See oracle identity.modules; no native-generated golden\", \"input\": {\"value\": \"2024-01-01 Monday\", \"format\": \"YYYY-MM-DD dddd\"}}, \"sourceActual\": {\"id\": \"BV-B-P-PARSE-WEEKDAY\", \"kind\": \"parse\", \"input\": {\"value\": \"2024-01-01 Monday\", \"format\": \"YYYY-MM-DD dddd\"}, \"value\": {\"local\": [2024, 1, 1, 0, 0, 0, 0], \"epochMs\": 1704067200000}, \"error\": null}, \"nativeActual\": {\"id\": \"BV-B-P-PARSE-WEEKDAY\", \"kind\": \"parse\", \"input\": {\"value\": \"2024-01-01 Monday\", \"format\": \"YYYY-MM-DD dddd\"}, \"value\": null, \"error\": null}, \"classification\": \"OBSERVED_DIFFERENCE_REQUIRES_REVIEW\"}, {\"id\": \"BV-B-P-PARSE-ORDINAL\", \"branch\": \"DATE-PARSE\", \"sourceExpected\": {\"operation\": \"parse\", \"fixedOriginalModule\": \"See oracle identity.modules; no native-generated golden\", \"input\": {\"value\": \"January 2nd 2024\", \"format\": \"MMMM Do YYYY\"}}, \"sourceActual\": {\"id\": \"BV-B-P-PARSE-ORDINAL\", \"kind\": \"parse\", \"input\": {\"value\": \"January 2nd 2024\", \"format\": \"MMMM Do YYYY\"}, \"value\": {\"local\": [2024, 1, 2, 0, 0, 0, 0], \"epochMs\": 1704153600000}, \"error\": null}, \"nativeActual\": {\"id\": \"BV-B-P-PARSE-ORDINAL\", \"kind\": \"parse\", \"input\": {\"value\": \"January 2nd 2024\", \"format\": \"MMMM Do YYYY\"}, \"value\": {\"local\": [2024, 1, 2, 0, 0, 0, 0], \"epochMs\": 170415 …（完整值见原始审计JSON）",
+        "原因": "Gantt 日期解析/星期与 ISO week 格式",
+        "源码位置": [
+          {
+            "path": "src/py_mermaid/diagrams/temporal/_dates.py",
+            "sha256": "91aaadfebf8b5202d83796732e2e2bee435c19f4dea35a327329c00196e4a202",
+            "bytes": 11017,
+            "symbol": "def parse_date",
+            "line": 10
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "path": "references/final-capability-review-B.json",
+          "sha256": "88e85ebeb5d56e3c974d05dec714835d34cfc8531cc86e600d20e982aa77eee1",
+          "bytes": 171768
+        }
+      ],
+      "repaired": false
+    },
+    {
+      "id": "BV-B-DAYJS-ISO",
+      "group": "functional",
+      "title": "Gantt 日期解析/星期与 ISO week 格式",
+      "status": "CONFIRMED_GAP_STILL_PRESENT",
+      "branches": [
+        "BV-B-DAYJS-ISO"
+      ],
+      "repairCluster": "gantt-date",
+      "detail": {
+        "固定来源预期": "Jan1 2021=2020-W53;midnight k=24.",
+        "当前实际": "[{\"id\": \"BV-B-P-DAYFORMAT-58\", \"branch\": \"DAYJS-ADVANCED\", \"sourceExpected\": {\"operation\": \"dayFormat\", \"fixedOriginalModule\": \"See oracle identity.modules; no native-generated golden\", \"input\": {\"date\": [2021, 1, 1, 0, 4, 5, 123], \"format\": \"Q\", \"sourceMayThrow\": false}}, \"sourceActual\": {\"id\": \"BV-B-P-DAYFORMAT-58\", \"kind\": \"dayFormat\", \"input\": {\"date\": [2021, 1, 1, 0, 4, 5, 123], \"format\": \"Q\", \"sourceMayThrow\": false}, \"value\": \"1\", \"error\": null}, \"nativeActual\": {\"id\": \"BV-B-P-DAYFORMAT-58\", \"kind\": \"dayFormat\", \"input\": {\"date\": [2021, 1, 1, 0, 4, 5, 123], \"format\": \"Q\", \"sourceMayThrow\": false}, \"value\": \"1\", \"error\": null}, \"classification\": \"VERIFIED_OBSERVED_EQUAL\"}, {\"id\": \"BV-B-P-DAYFORMAT-59\", \"branch\": \"DAYJS-ADVANCED\", \"sourceExpected\": {\"operation\": \"dayFormat\", \"fixedOriginalModule\": \"See oracle identity.modules; no native-generated golden\", \"input\": {\"date\": [2021, 1, 1, 0, 4, 5, 123], \"format\": \"Do\", \"sourceMayThrow\": false}}, \"sourceActual\": {\"id\": \"BV-B-P-DAYFORMAT-59\", \"kind\": \"dayFormat\", \"input\": {\"date\": [2021, 1, 1, 0, 4, 5, 123], \"format\": \"Do\", \"sourceMayThrow\": false}, \"value\": \"1st\", \"error\": null}, \"nativeActual\": {\"id\": \"BV-B-P-DAYFORMAT-59\", \"kind\": \"dayFormat\", \"input\": {\"date\": [2021, 1, 1, 0, 4, 5, 123], \"format\": \"Do\", \"sourceMayThrow\": false}, \"value\": \"1st\", \"error\": null}, \"classificatio …（完整值见原始审计JSON）",
+        "原因": "Friday/Fri capitalization, ISO week/year and midnight k missing. w/ww/gggg/z source plugin TypeError is retained as upstream exception, not counted as a native-only missing feature.",
+        "源码位置": [
+          {
+            "path": "src/py_mermaid/diagrams/temporal/_dates.py",
+            "sha256": "91aaadfebf8b5202d83796732e2e2bee435c19f4dea35a327329c00196e4a202",
+            "bytes": 11017,
+            "symbol": "def format_day",
+            "line": 99
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "path": "references/final-capability-review-B.json",
+          "sha256": "88e85ebeb5d56e3c974d05dec714835d34cfc8531cc86e600d20e982aa77eee1",
+          "bytes": 171768
+        }
+      ],
+      "repaired": false
+    },
+    {
+      "id": "BV-B-AXIS-ALL",
+      "group": "functional",
+      "title": "D3 轴格式：locale、百分号、padding、远年 ISO",
+      "status": "CONFIRMED_GAP_STILL_PRESENT",
+      "branches": [
+        "BV-B-AXIS-ALL"
+      ],
+      "repairCluster": "gantt-axis-format",
+      "detail": {
+        "固定来源预期": "Fixed D3 locale dispatch instead of OS strftime.",
+        "当前实际": "[{\"id\": \"BV-B-P-AXIS-LOWER-a\", \"branch\": \"AXIS-FORMAT\", \"sourceExpected\": {\"operation\": \"axis\", \"fixedOriginalModule\": \"See oracle identity.modules; no native-generated golden\", \"input\": {\"date\": [2021, 1, 1, 13, 4, 5, 123], \"format\": \"%a\"}}, \"sourceActual\": {\"id\": \"BV-B-P-AXIS-LOWER-a\", \"kind\": \"axis\", \"input\": {\"date\": [2021, 1, 1, 13, 4, 5, 123], \"format\": \"%a\"}, \"value\": \"Fri\", \"error\": null}, \"nativeActual\": {\"id\": \"BV-B-P-AXIS-LOWER-a\", \"kind\": \"axis\", \"input\": {\"date\": [2021, 1, 1, 13, 4, 5, 123], \"format\": \"%a\"}, \"value\": \"Fri\", \"error\": null}, \"classification\": \"VERIFIED_OBSERVED_EQUAL\"}, {\"id\": \"BV-B-P-AXIS-UPPER-A\", \"branch\": \"AXIS-FORMAT\", \"sourceExpected\": {\"operation\": \"axis\", \"fixedOriginalModule\": \"See oracle identity.modules; no native-generated golden\", \"input\": {\"date\": [2021, 1, 1, 13, 4, 5, 123], \"format\": \"%A\"}}, \"sourceActual\": {\"id\": \"BV-B-P-AXIS-UPPER-A\", \"kind\": \"axis\", \"input\": {\"date\": [2021, 1, 1, 13, 4, 5, 123], \"format\": \"%A\"}, \"value\": \"Friday\", \"error\": null}, \"nativeActual\": {\"id\": \"BV-B-P-AXIS-UPPER-A\", \"kind\": \"axis\", \"input\": {\"date\": [2021, 1, 1, 13, 4, 5, 123], \"format\": \"%A\"}, \"value\": \"Friday\", \"error\": null}, \"classification\": \"VERIFIED_OBSERVED_EQUAL\"}, {\"id\": \"BV-B-P-AXIS-LOWER-b\", \"branch\": \"AXIS-FORMAT\", \"sourceExpected\": {\"operation\": \"axis\", \"fixedOriginalModule\": \"See oracle ident …（完整值见原始审计JSON）",
+        "原因": "D3 轴格式：locale、百分号、padding、远年 ISO",
+        "源码位置": [
+          {
+            "path": "src/py_mermaid/diagrams/temporal/_dates.py",
+            "sha256": "91aaadfebf8b5202d83796732e2e2bee435c19f4dea35a327329c00196e4a202",
+            "bytes": 11017,
+            "symbol": "def axis_format",
+            "line": 156
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "path": "references/final-capability-review-B.json",
+          "sha256": "88e85ebeb5d56e3c974d05dec714835d34cfc8531cc86e600d20e982aa77eee1",
+          "bytes": 171768
+        }
+      ],
+      "repaired": false
+    },
+    {
+      "id": "BV-B-AXIS-LOCALE",
+      "group": "functional",
+      "title": "D3 轴格式：locale、百分号、padding、远年 ISO",
+      "status": "CONFIRMED_GAP_STILL_PRESENT",
+      "branches": [
+        "BV-B-AXIS-LOCALE"
+      ],
+      "repairCluster": "gantt-axis-format",
+      "detail": {
+        "固定来源预期": "Jan1 2021 13:04:05 -> %c=1/1/2021, 1:04:05 PM; %x=1/1/2021; %X=1:04:05 PM.",
+        "当前实际": "[{\"id\": \"BV-B-P-AXIS-LOWER-c\", \"branch\": \"AXIS-FORMAT\", \"sourceExpected\": {\"operation\": \"axis\", \"fixedOriginalModule\": \"See oracle identity.modules; no native-generated golden\", \"input\": {\"date\": [2021, 1, 1, 13, 4, 5, 123], \"format\": \"%c\"}}, \"sourceActual\": {\"id\": \"BV-B-P-AXIS-LOWER-c\", \"kind\": \"axis\", \"input\": {\"date\": [2021, 1, 1, 13, 4, 5, 123], \"format\": \"%c\"}, \"value\": \"1/1/2021, 1:04:05 PM\", \"error\": null}, \"nativeActual\": {\"id\": \"BV-B-P-AXIS-LOWER-c\", \"kind\": \"axis\", \"input\": {\"date\": [2021, 1, 1, 13, 4, 5, 123], \"format\": \"%c\"}, \"value\": \"Fri Jan  1 13:04:05 2021\", \"error\": null}, \"classification\": \"OBSERVED_DIFFERENCE_REQUIRES_REVIEW\"}, {\"id\": \"BV-B-P-AXIS-LOWER-x\", \"branch\": \"AXIS-FORMAT\", \"sourceExpected\": {\"operation\": \"axis\", \"fixedOriginalModule\": \"See oracle identity.modules; no native-generated golden\", \"input\": {\"date\": [2021, 1, 1, 13, 4, 5, 123], \"format\": \"%x\"}}, \"sourceActual\": {\"id\": \"BV-B-P-AXIS-LOWER-x\", \"kind\": \"axis\", \"input\": {\"date\": [2021, 1, 1, 13, 4, 5, 123], \"format\": \"%x\"}, \"value\": \"1/1/2021\", \"error\": null}, \"nativeActual\": {\"id\": \"BV-B-P-AXIS-LOWER-x\", \"kind\": \"axis\", \"input\": {\"date\": [2021, 1, 1, 13, 4, 5, 123], \"format\": \"%x\"}, \"value\": \"01/01/21\", \"error\": null}, \"classification\": \"OBSERVED_DIFFERENCE_REQUIRES_REVIEW\"}, {\"id\": \"BV-B-P-AXIS-UPPER-X\", \"branch\": \"AXIS-FORMAT\", \"sourceExpecte …（完整值见原始审计JSON）",
+        "原因": "D3 轴格式：locale、百分号、padding、远年 ISO",
+        "源码位置": [
+          {
+            "path": "src/py_mermaid/diagrams/temporal/_dates.py",
+            "sha256": "91aaadfebf8b5202d83796732e2e2bee435c19f4dea35a327329c00196e4a202",
+            "bytes": 11017,
+            "symbol": "def axis_format",
+            "line": 156
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "path": "references/final-capability-review-B.json",
+          "sha256": "88e85ebeb5d56e3c974d05dec714835d34cfc8531cc86e600d20e982aa77eee1",
+          "bytes": 171768
+        }
+      ],
+      "repaired": false
+    },
+    {
+      "id": "BV-B-AXIS-ESCAPE",
+      "group": "functional",
+      "title": "D3 轴格式：locale、百分号、padding、远年 ISO",
+      "status": "CONFIRMED_GAP_STILL_PRESENT",
+      "branches": [
+        "BV-B-AXIS-ESCAPE"
+      ],
+      "repairCluster": "gantt-axis-format",
+      "detail": {
+        "固定来源预期": "Literal %Q/%L/%s must not be globally replaced.",
+        "当前实际": "[{\"id\": \"BV-B-P-AXIS-PERCENT\", \"branch\": \"AXIS-FORMAT\", \"sourceExpected\": {\"operation\": \"axis\", \"fixedOriginalModule\": \"See oracle identity.modules; no native-generated golden\", \"input\": {\"date\": [2021, 1, 1, 13, 4, 5, 123], \"format\": \"%%\"}}, \"sourceActual\": {\"id\": \"BV-B-P-AXIS-PERCENT\", \"kind\": \"axis\", \"input\": {\"date\": [2021, 1, 1, 13, 4, 5, 123], \"format\": \"%%\"}, \"value\": \"%\", \"error\": null}, \"nativeActual\": {\"id\": \"BV-B-P-AXIS-PERCENT\", \"kind\": \"axis\", \"input\": {\"date\": [2021, 1, 1, 13, 4, 5, 123], \"format\": \"%%\"}, \"value\": \"%\", \"error\": null}, \"classification\": \"VERIFIED_OBSERVED_EQUAL\"}, {\"id\": \"BV-B-P-PAD-4\", \"branch\": \"AXIS-PADDING\", \"sourceExpected\": {\"operation\": \"axis\", \"fixedOriginalModule\": \"See oracle identity.modules; no native-generated golden\", \"input\": {\"date\": [2021, 1, 1, 13, 4, 5, 123], \"format\": \"%%Q\"}}, \"sourceActual\": {\"id\": \"BV-B-P-PAD-4\", \"kind\": \"axis\", \"input\": {\"date\": [2021, 1, 1, 13, 4, 5, 123], \"format\": \"%%Q\"}, \"value\": \"%Q\", \"error\": null}, \"nativeActual\": {\"id\": \"BV-B-P-PAD-4\", \"kind\": \"axis\", \"input\": {\"date\": [2021, 1, 1, 13, 4, 5, 123], \"format\": \"%%Q\"}, \"value\": null, \"error\": {\"name\": \"ValueError\", \"message\": \"Invalid format string\"}}, \"classification\": \"CONFIRMED_NUMERICAL_GAP\"}, {\"id\": \"BV-B-P-PAD-5\", \"branch\": \"AXIS-PADDING\", \"sourceExpected\": {\"operation\": \"axis\", \"fixedOriginalModule\" …（完整值见原始审计JSON）",
+        "原因": "D3 轴格式：locale、百分号、padding、远年 ISO",
+        "源码位置": [
+          {
+            "path": "src/py_mermaid/diagrams/temporal/_dates.py",
+            "sha256": "91aaadfebf8b5202d83796732e2e2bee435c19f4dea35a327329c00196e4a202",
+            "bytes": 11017,
+            "symbol": "def axis_format",
+            "line": 156
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "path": "references/final-capability-review-B.json",
+          "sha256": "88e85ebeb5d56e3c974d05dec714835d34cfc8531cc86e600d20e982aa77eee1",
+          "bytes": 171768
+        }
+      ],
+      "repaired": false
+    },
+    {
+      "id": "BV-B-AXIS-PADDING",
+      "group": "functional",
+      "title": "D3 轴格式：locale、百分号、padding、远年 ISO",
+      "status": "CONFIRMED_GAP_STILL_PRESENT",
+      "branches": [
+        "BV-B-AXIS-PADDING"
+      ],
+      "repairCluster": "gantt-axis-format",
+      "detail": {
+        "固定来源预期": "Jan1=1/space1/01;ISO2020-W53.",
+        "当前实际": "[{\"id\": \"BV-B-P-PAD-0\", \"branch\": \"AXIS-PADDING\", \"sourceExpected\": {\"operation\": \"axis\", \"fixedOriginalModule\": \"See oracle identity.modules; no native-generated golden\", \"input\": {\"date\": [2021, 1, 1, 13, 4, 5, 123], \"format\": \"%-d\"}}, \"sourceActual\": {\"id\": \"BV-B-P-PAD-0\", \"kind\": \"axis\", \"input\": {\"date\": [2021, 1, 1, 13, 4, 5, 123], \"format\": \"%-d\"}, \"value\": \"1\", \"error\": null}, \"nativeActual\": {\"id\": \"BV-B-P-PAD-0\", \"kind\": \"axis\", \"input\": {\"date\": [2021, 1, 1, 13, 4, 5, 123], \"format\": \"%-d\"}, \"value\": \"1\", \"error\": null}, \"classification\": \"VERIFIED_OBSERVED_EQUAL\"}, {\"id\": \"BV-B-P-PAD-1\", \"branch\": \"AXIS-PADDING\", \"sourceExpected\": {\"operation\": \"axis\", \"fixedOriginalModule\": \"See oracle identity.modules; no native-generated golden\", \"input\": {\"date\": [2021, 1, 1, 13, 4, 5, 123], \"format\": \"%_d\"}}, \"sourceActual\": {\"id\": \"BV-B-P-PAD-1\", \"kind\": \"axis\", \"input\": {\"date\": [2021, 1, 1, 13, 4, 5, 123], \"format\": \"%_d\"}, \"value\": \" 1\", \"error\": null}, \"nativeActual\": {\"id\": \"BV-B-P-PAD-1\", \"kind\": \"axis\", \"input\": {\"date\": [2021, 1, 1, 13, 4, 5, 123], \"format\": \"%_d\"}, \"value\": null, \"error\": {\"name\": \"ValueError\", \"message\": \"Invalid format string\"}}, \"classification\": \"CONFIRMED_NUMERICAL_GAP\"}, {\"id\": \"BV-B-P-PAD-2\", \"branch\": \"AXIS-PADDING\", \"sourceExpected\": {\"operation\": \"axis\", \"fixedOriginalModule\": \"See oracle ide …（完整值见原始审计JSON）",
+        "原因": "D3 轴格式：locale、百分号、padding、远年 ISO",
+        "源码位置": [
+          {
+            "path": "src/py_mermaid/diagrams/temporal/_dates.py",
+            "sha256": "91aaadfebf8b5202d83796732e2e2bee435c19f4dea35a327329c00196e4a202",
+            "bytes": 11017,
+            "symbol": "def axis_format",
+            "line": 156
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "path": "references/final-capability-review-B.json",
+          "sha256": "88e85ebeb5d56e3c974d05dec714835d34cfc8531cc86e600d20e982aa77eee1",
+          "bytes": 171768
+        }
+      ],
+      "repaired": false
+    },
+    {
+      "id": "BV-B-AXIS-FAR",
+      "group": "functional",
+      "title": "D3 轴格式：locale、百分号、padding、远年 ISO",
+      "status": "CONFIRMED_GAP_STILL_PRESENT",
+      "branches": [
+        "BV-B-AXIS-FAR"
+      ],
+      "repairCluster": "gantt-axis-format",
+      "detail": {
+        "固定来源预期": "D3 year10000 %Y uses modulo10000->0000; ISO/week computations remain actual values.",
+        "当前实际": "[{\"id\": \"BV-B-P-FAR-NEG1-49\", \"branch\": \"AXIS-FAR\", \"sourceExpected\": {\"operation\": \"axis\", \"fixedOriginalModule\": \"See oracle identity.modules; no native-generated golden\", \"input\": {\"date\": [-1, 1, 1, 0, 0, 0, 0], \"format\": \"%Y\"}}, \"sourceActual\": {\"id\": \"BV-B-P-FAR-NEG1-49\", \"kind\": \"axis\", \"input\": {\"date\": [-1, 1, 1, 0, 0, 0, 0], \"format\": \"%Y\"}, \"value\": \"-0001\", \"error\": null}, \"nativeActual\": {\"id\": \"BV-B-P-FAR-NEG1-49\", \"kind\": \"axis\", \"input\": {\"date\": [-1, 1, 1, 0, 0, 0, 0], \"format\": \"%Y\"}, \"value\": \"-001\", \"error\": null}, \"classification\": \"OBSERVED_DIFFERENCE_REQUIRES_REVIEW\"}, {\"id\": \"BV-B-P-FAR-NEG1-50\", \"branch\": \"AXIS-FAR\", \"sourceExpected\": {\"operation\": \"axis\", \"fixedOriginalModule\": \"See oracle identity.modules; no native-generated golden\", \"input\": {\"date\": [-1, 1, 1, 0, 0, 0, 0], \"format\": \"%G-W%V\"}}, \"sourceActual\": {\"id\": \"BV-B-P-FAR-NEG1-50\", \"kind\": \"axis\", \"input\": {\"date\": [-1, 1, 1, 0, 0, 0, 0], \"format\": \"%G-W%V\"}, \"value\": \"-0002-W53\", \"error\": null}, \"nativeActual\": {\"id\": \"BV-B-P-FAR-NEG1-50\", \"kind\": \"axis\", \"input\": {\"date\": [-1, 1, 1, 0, 0, 0, 0], \"format\": \"%G-W%V\"}, \"value\": \"%G-W%V\", \"error\": null}, \"classification\": \"OBSERVED_DIFFERENCE_REQUIRES_REVIEW\"}, {\"id\": \"BV-B-P-FAR-NEG1-51\", \"branch\": \"AXIS-FAR\", \"sourceExpected\": {\"operation\": \"axis\", \"fixedOriginalModule\": \"See oracle identity. …（完整值见原始审计JSON）",
+        "原因": "D3 轴格式：locale、百分号、padding、远年 ISO",
+        "源码位置": [
+          {
+            "path": "src/py_mermaid/diagrams/temporal/_dates.py",
+            "sha256": "91aaadfebf8b5202d83796732e2e2bee435c19f4dea35a327329c00196e4a202",
+            "bytes": 11017,
+            "symbol": "def axis_format",
+            "line": 156
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "path": "references/final-capability-review-B.json",
+          "sha256": "88e85ebeb5d56e3c974d05dec714835d34cfc8531cc86e600d20e982aa77eee1",
+          "bytes": 171768
+        }
+      ],
+      "repaired": false
+    },
+    {
+      "id": "BV-B-TICK-WEEKDAY",
+      "group": "functional",
+      "title": "多周刻度 weekday epoch 相位",
+      "status": "CONFIRMED_GAP_STILL_PRESENT",
+      "branches": [
+        "BV-B-TICK-WEEKDAY"
+      ],
+      "repairCluster": "gantt-week-phase",
+      "detail": {
+        "固定来源预期": "Monday Jan2024=Jan1/15/29;epoch floor1969-Dec29.",
+        "当前实际": "[{\"id\": \"BV-B-P-WEEK-MONDAY\", \"branch\": \"TICK-WEEKDAY\", \"sourceExpected\": {\"operation\": \"ticks\", \"fixedOriginalModule\": \"See oracle identity.modules; no native-generated golden\", \"input\": {\"start\": [2024, 1, 1], \"end\": [2024, 2, 1], \"interval\": \"2week\", \"weekday\": \"monday\", \"count\": 10}}, \"sourceActual\": {\"id\": \"BV-B-P-WEEK-MONDAY\", \"kind\": \"ticks\", \"input\": {\"start\": [2024, 1, 1], \"end\": [2024, 2, 1], \"interval\": \"2week\", \"weekday\": \"monday\", \"count\": 10}, \"value\": [{\"local\": [2024, 1, 1, 0, 0, 0, 0], \"epochMs\": 1704067200000}, {\"local\": [2024, 1, 15, 0, 0, 0, 0], \"epochMs\": 1705276800000}, {\"local\": [2024, 1, 29, 0, 0, 0, 0], \"epochMs\": 1706486400000}], \"error\": null}, \"nativeActual\": {\"id\": \"BV-B-P-WEEK-MONDAY\", \"kind\": \"ticks\", \"input\": {\"start\": [2024, 1, 1], \"end\": [2024, 2, 1], \"interval\": \"2week\", \"weekday\": \"monday\", \"count\": 10}, \"value\": [{\"local\": [2024, 1, 8, 0, 0, 0, 0], \"epochMs\": 1704672000000}, {\"local\": [2024, 1, 22, 0, 0, 0, 0], \"epochMs\": 1705881600000}], \"error\": null}, \"classification\": \"OBSERVED_DIFFERENCE_REQUIRES_REVIEW\"}, {\"id\": \"BV-B-P-WEEK-TUESDAY\", \"branch\": \"TICK-WEEKDAY\", \"sourceExpected\": {\"operation\": \"ticks\", \"fixedOriginalModule\": \"See oracle identity.modules; no native-generated golden\", \"input\": {\"start\": [2024, 1, 1], \"end\": [2024, 2, 1], \"interval\": \"2week\", \"weekday\": \"tuesday\", \"count\": 1 …（完整值见原始审计JSON）",
+        "原因": "D3 weekday.every(2) counts from its weekday-specific epoch floor; native uses one fixed Monday1970-Jan5 origin. Mon..Thu differ; Fri..Sun match the sampled interval.",
+        "源码位置": [
+          {
+            "path": "src/py_mermaid/diagrams/temporal/_dates.py",
+            "sha256": "91aaadfebf8b5202d83796732e2e2bee435c19f4dea35a327329c00196e4a202",
+            "bytes": 11017,
+            "symbol": "def time_ticks",
+            "line": 118
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "path": "references/final-capability-review-B.json",
+          "sha256": "88e85ebeb5d56e3c974d05dec714835d34cfc8531cc86e600d20e982aa77eee1",
+          "bytes": 171768
+        }
+      ],
+      "repaired": false
+    },
+    {
+      "id": "BV-B-AGENT-GENUINE",
+      "group": "functional",
+      "title": "AgentFlow 折叠组丢失真实自环",
+      "status": "CONFIRMED_GAP_STILL_PRESENT",
+      "branches": [
+        "BV-B-AGENT-GENUINE"
+      ],
+      "repairCluster": "agentflow-collapsed-selfloop",
+      "detail": {
+        "固定来源预期": "Authored hidden A->A redirects to Outer->Outer and survives.",
+        "当前实际": "{\"id\": \"BV-B-AGENT-GENUINE-SOURCE-VALID\", \"source\": \"agentflow-beta TB\\nflow Outer[\\\"Outer\\\"]\\n A --> A\\nend\\nOuter@{view: \\\"collapsed\\\"}\\n\", \"config\": {}, \"nodes\": [\"Outer\"], \"groups\": [], \"edges\": [], \"rawInputs\": [{\"id\": \"root\", \"layoutOptions\": {\"elk.algorithm\": \"elk.layered\", \"elk.direction\": \"DOWN\", \"elk.hierarchyHandling\": \"INCLUDE_CHILDREN\", \"spacing.baseValue\": 40, \"elk.layered.nodePlacement.strategy\": \"BRANDES_KOEPF\", \"elk.layered.nodePlacement.bk.fixedAlignment\": \"BALANCED\", \"elk.layered.layering.strategy\": \"NETWORK_SIMPLEX\", \"elk.layered.layering.coffmanGraham.layerBound\": 4, \"elk.layered.cycleBreaking.strategy\": \"DEPTH_FIRST\", \"elk.layered.mergeEdges\": false, \"elk.layered.crossingMinimization.forceNodeModelOrder\": false, \"elk.layered.considerModelOrder.strategy\": \"NODES_AND_EDGES\", \"elk.layered.wrapping.multiEdge.improveCuts\": true, \"elk.layered.wrapping.multiEdge.improveWrappedEdges\": true, \"elk.layered.unnecessaryBendpoints\": true, \"elk.layered.edgeRouting.selfLoopDistribution\": \"EQUALLY\", \"elk.layered.mergeHierarchyEdges\": true, \"elk.spacing.portsSurrounding\": \"[top=12,left=12,bottom=12,right=12]\"}, \"children\": [{\"id\": \"n0\", \"width\": 150.0, \"height\": 79.0}], \"edges\": []}], \"engine\": \"pyelk/elk.layered\", \"routedEdges\": [], \"error\": null}",
+        "原因": "Native drops every redirected selfloop, including authored A->A. Fixed source only drops when rawEdge.start != rawEdge.end. Source-valid spaced/quoted YAML trigger used in current real-ELK observation; old compact metadata tests are not sole evidence.",
+        "源码位置": [
+          {
+            "path": "src/py_mermaid/diagrams/flowchart/parser.py",
+            "sha256": "d62f2e000eb75f412e0108d97a5b3507cc2cd68d85c6235e18c5fa3e7f278596",
+            "bytes": 43827,
+            "symbol": "if source == target and",
+            "line": 740
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "path": "references/final-capability-review-B.json",
+          "sha256": "88e85ebeb5d56e3c974d05dec714835d34cfc8531cc86e600d20e982aa77eee1",
+          "bytes": 171768
+        }
+      ],
+      "repaired": false
+    },
+    {
+      "id": "C-sequence-central",
+      "group": "functional",
+      "title": "Sequence 中央连接点、反向编号与 self path 填色",
+      "status": "CONFIRMED_RETAINED_FUNCTIONAL_GAP",
+      "branches": [
+        "C-sequence-central"
+      ],
+      "repairCluster": "sequence-static-paint",
+      "detail": {
+        "固定来源预期": "Without autonumber circles center exactly on source/target actor centers; source raw computed fill rgb(51,51,51), stroke none. Autonumber arms adjust only the source-specified endpoint.",
+        "当前实际": "{\"id\": \"BV-C-central-dual-plain\", \"sourceErrors\": [], \"nativeErrors\": [\"central-actor-relative-position\"], \"sourceActual\": {\"actors\": {\"B\": 275.0, \"A\": 75.0}, \"messages\": [{\"start\": [80.0, 117.0], \"end\": [267.0, 117.0], \"markerStart\": \"\", \"markerEnd\": \"url(#bulk_BV_C_central_dual_plain-arrowhead)\", \"class\": \"messageLine0\"}], \"circles\": [[75.0, 117.0], [275.0, 117.0]], \"numbers\": [], \"comments\": []}, \"nativeActual\": {\"actors\": {\"A\": 135.0, \"B\": 335.0}, \"messages\": [{\"start\": [135.0, 136.0], \"end\": [335.0, 136.0], \"dash\": []}], \"circles\": [[151.5, 136.0], [318.5000006869173, 136.0]], \"numbers\": [], \"comments\": [], \"arrowComponents\": {\"message-0\": [{\"kind\": \"marker\", \"marker\": \"point\", \"path\": \"M327 132L335 136L327 140L327 132Z\"}]}}, \"paint\": [{\"kind\": \"message\", \"fill\": \"none\", \"stroke\": \"#333\", \"path\": \"M135 136L335 136\", \"box\": {\"x\": 135.0, \"y\": 135.0, \"width\": 200.0, \"height\": 2.0}}, {\"kind\": \"central-connection\", \"fill\": \"#ECECFF\", \"stroke\": \"#333\", \"path\": \"M146.5 136Q146.5 136.12274 146.50603 136.24533Q146.51205 136.36794 146.52408 136.4901Q146.5361 136.61224 146.55411 136.73366Q146.57211 136.85507 146.59607 136.97545Q146.62001 137.09583 146.64984 137.21489Q146.67966 137.33395 146.7153 137.45143Q146.75092 137.56888 146.79227 137.68445Q146.83362 137.80002 146.88058 137.91341Q146.92755 138.02681 146.98004 138.13777Q147.03253 1 …（完整值见原始审计JSON）",
+        "原因": "Current circles are +16.5/-16.5px away from actor axes and hollow/light actor-fill. Actual PNG confirms disconnected circles, not merely a coordinate tolerance difference.",
+        "源码位置": [
+          {
+            "path": "src/py_mermaid/diagrams/sequence/layout.py",
+            "symbol": "build message/central/number painting",
+            "line": 267,
+            "sha256": "aa17312f6d61d0701bd283c50c28a619be9f4b6531c6606ed1e9289bc395d423"
+          },
+          {
+            "path": "src/py_mermaid/diagrams/sequence/presentation.py",
+            "symbol": "Presentation._shape",
+            "line": 44,
+            "sha256": "8de72776aa193b53327765352a5dfd923f72041a6d0a0211c1ae5a32b2485f19"
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "path": "references/final-capability-review-C.json",
+          "sha256": "01d7db6affe9b671dfe943cee55e09ca03508cda83fe880558c31fc079dd2315",
+          "bytes": 50139
+        }
+      ],
+      "repaired": false
+    },
+    {
+      "id": "C-sequence-number",
+      "group": "functional",
+      "title": "Sequence 中央连接点、反向编号与 self path 填色",
+      "status": "CONFIRMED_RETAINED_FUNCTIONAL_GAP",
+      "branches": [
+        "C-sequence-number"
+      ],
+      "repairCluster": "sequence-static-paint",
+      "detail": {
+        "固定来源预期": "Source isReverseArrowType chooses msgModel.toBounds-1 for this left-to-right reverse arrow; number remains near actor B.",
+        "当前实际": "{\"id\": \"BV-C-number-reverse-ltr\", \"sourceErrors\": [], \"nativeErrors\": [\"number-actor-anchor\"], \"sourceActual\": {\"actors\": {\"B\": 275.0, \"A\": 75.0}, \"messages\": [{\"start\": [76.0, 117.0], \"end\": [262.0, 117.0], \"markerStart\": \"url(#bulk_BV_C_number_reverse_ltr-stickBottomArrowHead)\", \"markerEnd\": \"\", \"class\": \"messageLine0\"}], \"circles\": [], \"numbers\": [[275.0, \"1\"]], \"comments\": []}, \"nativeActual\": {\"actors\": {\"A\": 135.0, \"B\": 335.0}, \"messages\": [{\"start\": [135.0, 136.0], \"end\": [335.0, 136.0], \"dash\": []}], \"circles\": [], \"numbers\": [[145.0, null]], \"comments\": [], \"arrowComponents\": {\"message-0\": [{\"kind\": \"message-arrow\", \"marker\": null, \"path\": \"M135 136L144 142\"}]}}, \"paint\": [{\"kind\": \"message\", \"fill\": \"none\", \"stroke\": \"#333\", \"path\": \"M135 136L335 136\", \"box\": {\"x\": 135.0, \"y\": 135.0, \"width\": 200.0, \"height\": 2.0}}, {\"kind\": \"sequence-number-box\", \"fill\": \"#333\", \"stroke\": \"#333\", \"path\": \"M137 136Q137 136.19638 137.00964 136.39253Q137.01929 136.58868 137.03854 136.78413Q137.05779 136.97957 137.08659 137.17383Q137.11542 137.36809 137.15372 137.5607Q137.19205 137.75333 137.23976 137.94383Q137.28748 138.13434 137.34448 138.32227Q137.40149 138.51019 137.46764 138.69511Q137.53378 138.88 137.60895 139.06145Q137.68411 139.24289 137.76808 139.42043Q137.85205 139.59796 137.94464 139.77116Q138.03722 139.94437 138.13818 140.1128 …（完整值见原始审计JSON）",
+        "原因": "Current number is near A (145px) while B center is335px; it overlaps the reverse arrow. Normal +10px shifts alone are not classified as new functional gaps.",
+        "源码位置": [
+          {
+            "path": "src/py_mermaid/diagrams/sequence/layout.py",
+            "symbol": "build message/central/number painting",
+            "line": 267,
+            "sha256": "aa17312f6d61d0701bd283c50c28a619be9f4b6531c6606ed1e9289bc395d423"
+          },
+          {
+            "path": "src/py_mermaid/diagrams/sequence/presentation.py",
+            "symbol": "Presentation._shape",
+            "line": 44,
+            "sha256": "8de72776aa193b53327765352a5dfd923f72041a6d0a0211c1ae5a32b2485f19"
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "path": "references/final-capability-review-C.json",
+          "sha256": "01d7db6affe9b671dfe943cee55e09ca03508cda83fe880558c31fc079dd2315",
+          "bytes": 50139
+        }
+      ],
+      "repaired": false
+    },
+    {
+      "id": "C-sequence-self",
+      "group": "functional",
+      "title": "Sequence 中央连接点、反向编号与 self path 填色",
+      "status": "CONFIRMED_RETAINED_FUNCTIONAL_GAP",
+      "branches": [
+        "C-sequence-self"
+      ],
+      "repairCluster": "sequence-static-paint",
+      "detail": {
+        "固定来源预期": "sequenceRenderer.ts582 sets inline fill:none on every message including curved self paths.",
+        "当前实际": "{\"id\": \"BV-C-self-curved-reverse\", \"sourceErrors\": [], \"nativeErrors\": [\"self-start-offset\", \"self-end-offset\"], \"sourceActual\": {\"actors\": {\"A\": 75.0}, \"messages\": [{\"start\": [86.0, 117.0], \"end\": [76.0, 137.0], \"markerStart\": \"url(#bulk_BV_C_self_curved_reverse-stickBottomArrowHead)\", \"markerEnd\": \"\", \"class\": \"messageLine0\"}], \"circles\": [], \"numbers\": [[75.0, \"1\"]], \"comments\": []}, \"nativeActual\": {\"actors\": {\"A\": 135.0}, \"messages\": [{\"start\": [135.0, 136.0], \"end\": [135.0, 156.0], \"dash\": []}], \"circles\": [], \"numbers\": [[145.0, null]], \"comments\": [], \"arrowComponents\": {\"message-0\": [{\"kind\": \"message-arrow\", \"marker\": null, \"path\": \"M135 136L144 142\"}]}}, \"paint\": [{\"kind\": \"message\", \"fill\": \"#ECECFF\", \"stroke\": \"#333\", \"path\": \"M135 136C195 126 195 166 135 156\", \"box\": {\"x\": 134.876700759521, \"y\": 133.53125, \"width\": 45.873299240479014, \"height\": 24.9375}}, {\"kind\": \"sequence-number-box\", \"fill\": \"#333\", \"stroke\": \"#333\", \"path\": \"M137 136Q137 136.19638 137.00964 136.39253Q137.01929 136.58868 137.03854 136.78413Q137.05779 136.97957 137.08659 137.17383Q137.11542 137.36809 137.15372 137.5607Q137.19205 137.75333 137.23976 137.94383Q137.28748 138.13434 137.34448 138.32227Q137.40149 138.51019 137.46764 138.69511Q137.53378 138.88 137.60895 139.06145Q137.68411 139.24289 137.76808 139.42043Q137.85205 139.59796 137.94464 139. …（完整值见原始审计JSON）",
+        "原因": "Current message trace fill #ECECFF and actual PNG has a visible filled loop body. Presentation._shape assigns inherited theme fill to paths that did not explicitly pass fill:none. 1/11px endpoint differences alone are secondary numeric differences.",
+        "源码位置": [
+          {
+            "path": "src/py_mermaid/diagrams/sequence/layout.py",
+            "symbol": "build message/central/number painting",
+            "line": 267,
+            "sha256": "aa17312f6d61d0701bd283c50c28a619be9f4b6531c6606ed1e9289bc395d423"
+          },
+          {
+            "path": "src/py_mermaid/diagrams/sequence/presentation.py",
+            "symbol": "Presentation._shape",
+            "line": 44,
+            "sha256": "8de72776aa193b53327765352a5dfd923f72041a6d0a0211c1ae5a32b2485f19"
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "path": "references/final-capability-review-C.json",
+          "sha256": "01d7db6affe9b671dfe943cee55e09ca03508cda83fe880558c31fc079dd2315",
+          "bytes": 50139
+        }
+      ],
+      "repaired": false
+    },
+    {
+      "id": "C-zen-comment-escape",
+      "group": "functional",
+      "title": "Zen 注释转义文字误读",
+      "status": "CONFIRMED_GAP",
+      "branches": [
+        "C-zen-comment-escape"
+      ],
+      "repairCluster": "zenuml-comment-escape",
+      "detail": {
+        "固定来源预期": "{\"visible\": \"\\\\*literal\\\\*\", \"bold\": false, \"italic\": false}",
+        "当前实际": "{\"visible\": \"\\\\literal\\\\\", \"reason\": \"Existing source token projection test failed at visible text before its italic assertion.\", \"stylePredicate\": \"Not reached in current unittest because visible text assertion fails first; emphasis interpretation independently apparent in current inline source, not claimed as fresh style measurement.\"}",
+        "原因": "Pinned collectLines default branch retains Marked escape token.raw, including authored backslash/star. Python inline delimiter scanner interprets escaped star as emphasis and removes stars. This is static visible comment text, not excluded interaction.",
+        "源码位置": [
+          {
+            "path": "src/py_mermaid/diagrams/zenuml/layout.py",
+            "sha256": "824799bc0a898b266d8d00e5d67b97521731dfede3cc07183a98205fd6b6ff7b",
+            "bytes": 28283,
+            "symbol": "_comment_markup.inline",
+            "line": 50
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "path": "references/final-capability-review-A.json",
+          "sha256": "45252956a5d8cdea5f68aa2d409ebcb44c5a94f4e81cea8f24040351dd056e07",
+          "bytes": 77885
+        }
+      ],
+      "repaired": false
+    },
+    {
+      "id": "C-abnf-priority",
+      "group": "functional",
+      "title": "ABNF comment-only 行拒绝",
+      "status": "CONFIRMED_GAP",
+      "branches": [
+        "C-abnf-priority"
+      ],
+      "repairCluster": "abnf-comment",
+      "detail": {
+        "固定来源预期": "{\"accepted\": true, \"rules\": [\"word\"]}",
+        "当前实际": "{\"accepted\": false, \"reason\": \"Existing source-priority test actually rerun: False != True on comment-line only.\"}",
+        "原因": "Source hidden ABNF_COMMENT and rule semicolon keyword priority accept a comment-only line; Python emits leading semicolon as grammar token and expects a rule identifier. Fresh fixed original five-input probe confirms this, not source grammar intuition.",
+        "源码位置": [
+          {
+            "path": "src/py_mermaid/diagrams/railroad/parser.py",
+            "sha256": "e523ecdd94b19508be0f06d956b10f4d1330a7a4faabb00caff3839f8f5238a0",
+            "bytes": 9226,
+            "symbol": "Grammar.scan",
+            "line": 28
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "path": "references/final-capability-review-A.json",
+          "sha256": "45252956a5d8cdea5f68aa2d409ebcb44c5a94f4e81cea8f24040351dd056e07",
+          "bytes": 77885
+        }
+      ],
+      "repaired": false
+    },
+    {
+      "id": "venn-four-sets",
+      "group": "chart_limit",
+      "title": "Venn四个单集合被拒绝",
+      "status": "CONFIRMED_SOURCE_VALID_STATIC_REJECTION",
+      "detail": {
+        "输入": "venn-beta\nset A\nset B\nset C\nset D",
+        "配置": {},
+        "固定来源预期": "Original Mermaid renders all A/B/C/D four singleton circles and labels; actual PNG visually confirmed.",
+        "当前实际": {
+          "status": "REJECTED",
+          "code": "UNSUPPORTED_VCHART_OPTION",
+          "message": "VChart Venn currently supports at most three singleton sets"
+        },
+        "说明": "No supplier change or scope expansion. Binary vs squarify layout alone is not claimed as a functional gap."
+      },
+      "evidence": [
+        {
+          "path": "references/final-capability-review-C.json",
+          "sha256": "01d7db6affe9b671dfe943cee55e09ca03508cda83fe880558c31fc079dd2315",
+          "bytes": 50139
+        },
+        {
+          "path": "test-runs/VCHART-P4-batch-20261107T045154Z-dd03474c/artifacts/mermaid-oracle/VC-M-venn-four-sets.json",
+          "sha256": "19c806a963bffb2edd93df960046729448b1959093b8a085d4caa36cdd5af520",
+          "bytes": 34847
+        },
+        {
+          "path": "test-runs/VCHART-P4-batch-20261107T045154Z-dd03474c/artifacts/mermaid-oracle/VC-M-venn-four-sets.png",
+          "sha256": "d0a4cf8226bf96164b5ff17b7f32d0c9defe2f4f62865b27d53b498c6cd8d9d6",
+          "bytes": 29236
+        }
+      ],
+      "repaired": false
+    },
+    {
+      "id": "treemap-d3-si-format",
+      "group": "chart_limit",
+      "title": "Treemap合法D3 SI数值格式被拒绝",
+      "status": "CONFIRMED_SOURCE_VALID_STATIC_REJECTION",
+      "detail": {
+        "输入": "treemap\n\"Alpha\": 1000",
+        "配置": {
+          "treemap": {
+            "valueFormat": ".2s"
+          }
+        },
+        "固定来源预期": "Original Mermaid d3.format(.2s) formats1000 as1.0k. Old default leaf PNG is white due a source visibility defect; separate valid hot class input produces actually visible green Alpha and1.0k.",
+        "当前实际": {
+          "status": "REJECTED",
+          "code": "UNSUPPORTED_VCHART_OPTION",
+          "message": "VChart embedding does not implement this D3 valueFormat: .2s"
+        },
+        "说明": "No supplier change or scope expansion. Binary vs squarify layout alone is not claimed as a functional gap."
+      },
+      "evidence": [
+        {
+          "path": "references/final-capability-review-C.json",
+          "sha256": "01d7db6affe9b671dfe943cee55e09ca03508cda83fe880558c31fc079dd2315",
+          "bytes": 50139
+        },
+        {
+          "path": "test-runs/VCHART-P4-batch-20261107T045154Z-dd03474c/artifacts/mermaid-oracle/VC-M-treemap-si-format.json",
+          "sha256": "5adfdc116202ef076f40a8bb8110ff222d9e4c84f07650ee781b101288b597e9",
+          "bytes": 35246
+        },
+        {
+          "path": "test-runs/VCHART-P4-batch-20261107T045154Z-dd03474c/artifacts/mermaid-oracle/VC-M-treemap-si-format.png",
+          "sha256": "d810b8e513a2d8557818e14728289d71a1d83e80faaf3d25aeb6084a473a5e78",
+          "bytes": 1957
+        },
+        {
+          "path": "test-runs/FINAL-CAPABILITY-C-SOURCE-batch-20261107T074503Z-775a7421/artifacts/fixtures.json",
+          "sha256": "67f0edc5eecce966c00909f60dfc41c6b5e9bf37e40001c5578d8681a12023a7",
+          "bytes": 697
+        },
+        {
+          "path": "test-runs/FINAL-CAPABILITY-C-SOURCE-batch-20261107T074503Z-775a7421/artifacts/oracle/FINAL-C-treemap-si-readable.json",
+          "sha256": "87f270b1b8b679c4a0ff4bf0d26dd45ec291e2ec37b15273ba2387b424122641",
+          "bytes": 35393
+        },
+        {
+          "path": "test-runs/FINAL-CAPABILITY-C-SOURCE-batch-20261107T074503Z-775a7421/artifacts/oracle/FINAL-C-treemap-si-readable.png",
+          "sha256": "9700c7a5aacd5095c185c7f3b70b6491de26be5c9d9751ce908d932f846eeef0",
+          "bytes": 4917
+        },
+        {
+          "path": "test-runs/FINAL-CAPABILITY-C-SOURCE-batch-20261107T074503Z-775a7421/artifacts/native.json",
+          "sha256": "41499871431873b79695341c288e91fa35c52d112b307e8b36a8883820559861",
+          "bytes": 166
+        }
+      ],
+      "repaired": false
+    },
+    {
+      "id": "release-retained-functional-gaps",
+      "group": "release_gate",
+      "title": "retained-functional-gaps",
+      "status": "BLOCKED",
+      "detail": "A/B/C fresh source-derived failures must be closed before conditional no-gap publication.",
+      "evidence": [
+        {
+          "path": "references/final-capability-review-root.json",
+          "sha256": "a9d58047c6a0e104476a774b029dc367f4384a8750a232587bb6700d1acd3723",
+          "bytes": 5265
+        }
+      ]
+    },
+    {
+      "id": "release-same-candidate-complete-release-tests",
+      "group": "release_gate",
+      "title": "same-candidate-complete-release-tests",
+      "status": "NOT_MET",
+      "detail": "Latest2364-method bounded DSL run does not include the intentionally failing branch verification suite. Correct false source expectations separately, then make real gap assertions part of release gating.",
+      "evidence": [
+        {
+          "path": "references/final-capability-review-root.json",
+          "sha256": "a9d58047c6a0e104476a774b029dc367f4384a8750a232587bb6700d1acd3723",
+          "bytes": 5265
+        }
+      ]
+    },
+    {
+      "id": "release-consumer-platform-validation",
+      "group": "release_gate",
+      "title": "consumer-platform-validation",
+      "status": "NOT_MET",
+      "detail": "Windows fresh wheel/sdist consumer proof exists. Same-candidate Linux consumer install/render proof is absent; supplier CI is not consumer proof.",
+      "evidence": [
+        {
+          "path": "references/final-capability-review-root.json",
+          "sha256": "a9d58047c6a0e104476a774b029dc367f4384a8750a232587bb6700d1acd3723",
+          "bytes": 5265
+        }
+      ]
+    },
+    {
+      "id": "release-stable-release-packaging-and-publishing",
+      "group": "release_gate",
+      "title": "stable-release-packaging-and-publishing",
+      "status": "NOT_READY",
+      "detail": "Version0.0.1a0 / Alpha; only local validate.yml bootstrap/source CI. No consumer release workflow or Trusted Publisher/normal release/download validation established. PyPI404 does not establish availability or publishing ownership.",
+      "evidence": [
+        {
+          "path": "references/final-capability-review-root.json",
+          "sha256": "a9d58047c6a0e104476a774b029dc367f4384a8750a232587bb6700d1acd3723",
+          "bytes": 5265
+        }
+      ]
+    },
+    {
+      "id": "unverified-c4-boundary-sprite",
+      "group": "unverified",
+      "title": "c4 boundary sprite",
+      "status": "NOT_VERIFIED_ORIGINAL_PARITY",
+      "detail": {
+        "既有边界": "Source and native retain boundary.sprite and display Group/Alpha; source reserves 48px and native builder contains corresponding branch. No independent captured baseline/control asserting 48px increment was designed/executed, so this branch remains geometry-unverified.",
+        "本轮界限": "原生组算法/跨层clear的真实ELK输入已有限验证；原版算法实际消费和C4独立几何对照仍未形成完整A/B控制。未证不等于已确认缺失。"
+      },
+      "evidence": [
+        {
+          "path": "references/branch-verification-summary.json",
+          "sha256": "cdf4226c982290875052614751fdf774d3bcb36609e4bc8f0c908205ce61613d",
+          "bytes": 1723432
+        },
+        {
+          "path": "references/final-capability-review-B.json",
+          "sha256": "88e85ebeb5d56e3c974d05dec714835d34cfc8531cc86e600d20e982aa77eee1",
+          "bytes": 171768
+        }
+      ]
+    },
+    {
+      "id": "unverified-BV-B-TICK-DST",
+      "group": "unverified",
+      "title": "Tick Dst",
+      "status": "NOT_VERIFIED_ORIGINAL_PARITY",
+      "detail": {
+        "既有边界": "No new independent execution proving this boundary in this finite round.",
+        "本轮界限": "原生组算法/跨层clear的真实ELK输入已有限验证；原版算法实际消费和C4独立几何对照仍未形成完整A/B控制。未证不等于已确认缺失。"
+      },
+      "evidence": [
+        {
+          "path": "references/branch-verification-summary.json",
+          "sha256": "cdf4226c982290875052614751fdf774d3bcb36609e4bc8f0c908205ce61613d",
+          "bytes": 1723432
+        },
+        {
+          "path": "references/final-capability-review-B.json",
+          "sha256": "88e85ebeb5d56e3c974d05dec714835d34cfc8531cc86e600d20e982aa77eee1",
+          "bytes": 171768
+        }
+      ]
+    },
+    {
+      "id": "unverified-BV-B-GIT-BRANCH-LABEL",
+      "group": "unverified",
+      "title": "Git Branch Label",
+      "status": "NOT_VERIFIED_ORIGINAL_PARITY",
+      "detail": {
+        "既有边界": "No new independent execution proving this boundary in this finite round.",
+        "本轮界限": "原生组算法/跨层clear的真实ELK输入已有限验证；原版算法实际消费和C4独立几何对照仍未形成完整A/B控制。未证不等于已确认缺失。"
+      },
+      "evidence": [
+        {
+          "path": "references/branch-verification-summary.json",
+          "sha256": "cdf4226c982290875052614751fdf774d3bcb36609e4bc8f0c908205ce61613d",
+          "bytes": 1723432
+        },
+        {
+          "path": "references/final-capability-review-B.json",
+          "sha256": "88e85ebeb5d56e3c974d05dec714835d34cfc8531cc86e600d20e982aa77eee1",
+          "bytes": 171768
+        }
+      ]
+    },
+    {
+      "id": "unverified-BV-B-AGENT-GROUP-ALGO",
+      "group": "unverified",
+      "title": "Agent Group Algo",
+      "status": "NOT_VERIFIED_ORIGINAL_PARITY",
+      "detail": {
+        "既有边界": "Sourcevalid metadata algorithm=elk.box is now present in getData;nativegroupsmetadata matches and1edge preserved. P3first unitb21 proves nativeinputrequestedoption, but no originalrawELKinput in sourceJSON; PNGpositionalone cannot prove originalalgorithm effective. Therefore retain source-consumption parity UNVERIFIED.",
+        "本轮界限": "原生组算法/跨层clear的真实ELK输入已有限验证；原版算法实际消费和C4独立几何对照仍未形成完整A/B控制。未证不等于已确认缺失。"
+      },
+      "evidence": [
+        {
+          "path": "references/branch-verification-summary.json",
+          "sha256": "cdf4226c982290875052614751fdf774d3bcb36609e4bc8f0c908205ce61613d",
+          "bytes": 1723432
+        },
+        {
+          "path": "references/final-capability-review-B.json",
+          "sha256": "88e85ebeb5d56e3c974d05dec714835d34cfc8531cc86e600d20e982aa77eee1",
+          "bytes": 171768
+        }
+      ]
+    },
+    {
+      "id": "unverified-BV-B-AGENT-CROSS-ALGO",
+      "group": "unverified",
+      "title": "Agent Cross Algo",
+      "status": "NOT_VERIFIED_ORIGINAL_PARITY",
+      "detail": {
+        "既有边界": "Sourcevalid metadata algorithm=elk.box plus3cross/internal edges;native all3edges/routes retained. Firstunitb20 assertsnativepolicy. SourceJSON stopsbeforeELKpolicy, so originaleffectivealgorithmremoval issource-read not runtimeobserved; no promotion from contentgate.",
+        "本轮界限": "原生组算法/跨层clear的真实ELK输入已有限验证；原版算法实际消费和C4独立几何对照仍未形成完整A/B控制。未证不等于已确认缺失。"
+      },
+      "evidence": [
+        {
+          "path": "references/branch-verification-summary.json",
+          "sha256": "cdf4226c982290875052614751fdf774d3bcb36609e4bc8f0c908205ce61613d",
+          "bytes": 1723432
+        },
+        {
+          "path": "references/final-capability-review-B.json",
+          "sha256": "88e85ebeb5d56e3c974d05dec714835d34cfc8531cc86e600d20e982aa77eee1",
+          "bytes": 171768
+        }
+      ]
+    },
+    {
+      "id": "unverified-BV-B-NUMERIC-FAILURE",
+      "group": "unverified",
+      "title": "Numeric Failure",
+      "status": "NOT_VERIFIED_ORIGINAL_PARITY",
+      "detail": {
+        "既有边界": "No new independent execution proving this boundary in this finite round.",
+        "本轮界限": "原生组算法/跨层clear的真实ELK输入已有限验证；原版算法实际消费和C4独立几何对照仍未形成完整A/B控制。未证不等于已确认缺失。"
+      },
+      "evidence": [
+        {
+          "path": "references/branch-verification-summary.json",
+          "sha256": "cdf4226c982290875052614751fdf774d3bcb36609e4bc8f0c908205ce61613d",
+          "bytes": 1723432
+        },
+        {
+          "path": "references/final-capability-review-B.json",
+          "sha256": "88e85ebeb5d56e3c974d05dec714835d34cfc8531cc86e600d20e982aa77eee1",
+          "bytes": 171768
+        }
+      ]
+    },
+    {
+      "id": "unverified-complete-field-branch-audit",
+      "group": "unverified",
+      "title": "供应方全字段和全分支穷尽证明",
+      "status": "NOT_ESTABLISHED",
+      "detail": "全部68类型、225原规格、通用JSON无损表达已经过有限验证；不代表任意选项组合或所有源码分支覆盖，原计划穷尽字段清单未完成。",
+      "evidence": [
+        {
+          "path": "references/vchart-dsl-capabilities.json",
+          "sha256": "7f45d188b70b442784c961036bf3b5d5e9b471a61d864527cc2398e45f897ff1",
+          "bytes": 404044
+        },
+        {
+          "path": "references/vchart-dsl-audit-root.json",
+          "sha256": "149d082d706704e5f810e14f9af2f668afedcb11aee51fa544ae0f9041ac43e1",
+          "bytes": 57326
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "path": "references/final-capability-review-A.json",
+      "sha256": "45252956a5d8cdea5f68aa2d409ebcb44c5a94f4e81cea8f24040351dd056e07",
+      "bytes": 77885
+    },
+    {
+      "path": "references/final-capability-review-B.json",
+      "sha256": "88e85ebeb5d56e3c974d05dec714835d34cfc8531cc86e600d20e982aa77eee1",
+      "bytes": 171768
+    },
+    {
+      "path": "references/final-capability-review-C.json",
+      "sha256": "01d7db6affe9b671dfe943cee55e09ca03508cda83fe880558c31fc079dd2315",
+      "bytes": 50139
+    },
+    {
+      "path": "references/final-capability-review-root.json",
+      "sha256": "a9d58047c6a0e104476a774b029dc367f4384a8750a232587bb6700d1acd3723",
+      "bytes": 5265
+    },
+    {
+      "path": "references/branch-repair-queue.json",
+      "sha256": "7e6322ad17e20e648a587ec0d6839b67c7fa7f25e1824150ee9b2b7a1da6be92",
+      "bytes": 3628
+    },
+    {
+      "path": "references/vchart-dsl-verification-summary.json",
+      "sha256": "1ba82b9e5aa37f5d5d69a41fa90f6b561f54511fd4f92ed3d7744e7eea042c2a",
+      "bytes": 20065
+    },
+    {
+      "path": "test-runs/FINAL-CAPABILITY-root-review-20261107T074045Z-d616752a/artifacts/inventory/inventory.json",
+      "sha256": "190b4cc1c93f1f214e64855a0836f5ec5338fffb0efe089eed84c617b45b25ba",
+      "bytes": 66876
+    },
+    {
+      "path": "test-runs/FINAL-CAPABILITY-A-audit-20261107T073855Z-51cce6e4/run.json",
+      "sha256": "94d4d3af9a01cacddfdbfa7347721bd5dc2118d09e63a6f7bb64466c7feeaca7",
+      "bytes": 33836
+    },
+    {
+      "path": "test-runs/FINAL-CAPABILITY-A-facts-20261107T074002Z-3c051804/run.json",
+      "sha256": "c022b255c134bb72b6a44adfafa16194681b68b531b2b26d32142de21304cc60",
+      "bytes": 30478
+    },
+    {
+      "path": "test-runs/FINAL-CAPABILITY-B-review-20261107T073915Z-a5a59886/run.json",
+      "sha256": "3571d00423ef99e7bfe7fcda59276b45035cec5f4576254d5c52427312a4ec0d",
+      "bytes": 40866
+    },
+    {
+      "path": "test-runs/FINAL-CAPABILITY-C-batch-20261107T074051Z-414c8c8f/run.json",
+      "sha256": "4eb7c9a4cb6a518d80f72644dfddfe6e091d28cdc0028045938c04ae334773fe",
+      "bytes": 46138
+    },
+    {
+      "path": "test-runs/FINAL-CAPABILITY-C-SOURCE-batch-20261107T074503Z-775a7421/run.json",
+      "sha256": "2775a453c38c6ad06070fbb5106348881bda7a2d92b38d84012fe44ca50aba17",
+      "bytes": 33850
+    },
+    {
+      "path": "test-runs/FINAL-CAPABILITY-root-review-20261107T074045Z-d616752a/run.json",
+      "sha256": "3476d14fcd7c1a3b754eea814ecd5a405d06b6e9050912f886766902a9362a1e",
+      "bytes": 41045
+    },
+    {
+      "path": "test-runs/FINAL-CAPABILITY-P0-acquisition-20261107T073819Z-31a1f361/run.json",
+      "sha256": "0896cf712300562d520c5401a7182ef414947f3c6dedfb25cbad56a3b532fc6a",
+      "bytes": 32081
+    },
+    {
+      "path": "test-runs/BRANCH-VERIFY-P3-batch-20261106T143957Z-5bcb3fcf/artifacts/oracle/BV-C-central-dual-plain.png",
+      "sha256": "95d0869f08c14bcde22c178d4d293bdab8e45e9fd5f7515217a0fee22cd4c010",
+      "bytes": 3031
+    },
+    {
+      "path": "test-runs/FINAL-CAPABILITY-C-batch-20261107T074051Z-414c8c8f/artifacts/current/BV-C-central-dual-plain.png",
+      "sha256": "a3a0264ff141e3cc747bbe093b26772d7110d7aa4ddda8e5a0803dce411aaf14",
+      "bytes": 4493
+    },
+    {
+      "path": "test-runs/BRANCH-VERIFY-P3-batch-20261106T143957Z-5bcb3fcf/artifacts/oracle/BV-C-number-reverse-ltr.png",
+      "sha256": "cf202fd23549d9303dc8723a1dbe5665b02b860bfaa3f2efd279a0facd8fcc4c",
+      "bytes": 3193
+    },
+    {
+      "path": "test-runs/FINAL-CAPABILITY-C-batch-20261107T074051Z-414c8c8f/artifacts/current/BV-C-number-reverse-ltr.png",
+      "sha256": "e64c898e3b2c23620d5bcb53e6040a352802d2bc612521f2f9daf36ba58e5671",
+      "bytes": 4448
+    },
+    {
+      "path": "test-runs/BRANCH-VERIFY-P3-batch-20261106T143957Z-5bcb3fcf/artifacts/oracle/BV-C-self-curved-reverse.png",
+      "sha256": "7b27e59e15d2642b0008a4be58b6c4ec5b54749cd76e7f63e984daafbf5210c1",
+      "bytes": 3344
+    },
+    {
+      "path": "test-runs/FINAL-CAPABILITY-C-batch-20261107T074051Z-414c8c8f/artifacts/current/BV-C-self-curved-reverse.png",
+      "sha256": "2a33c36d2ae0e37412f844457c122aaa872f3eb14503ef7a31e41f4c6ce9f6e5",
+      "bytes": 4256
+    },
+    {
+      "path": "test-runs/VCHART-P4-batch-20261107T045154Z-dd03474c/artifacts/mermaid-oracle/VC-M-venn-four-sets.png",
+      "sha256": "d0a4cf8226bf96164b5ff17b7f32d0c9defe2f4f62865b27d53b498c6cd8d9d6",
+      "bytes": 29236
+    },
+    {
+      "path": "test-runs/VCHART-P4-batch-20261107T045154Z-dd03474c/artifacts/mermaid-oracle/VC-M-treemap-si-format.png",
+      "sha256": "d810b8e513a2d8557818e14728289d71a1d83e80faaf3d25aeb6084a473a5e78",
+      "bytes": 1957
+    },
+    {
+      "path": "test-runs/FINAL-CAPABILITY-C-SOURCE-batch-20261107T074503Z-775a7421/artifacts/oracle/FINAL-C-treemap-si-readable.png",
+      "sha256": "9700c7a5aacd5095c185c7f3b70b6491de26be5c9d9751ce908d932f846eeef0",
+      "bytes": 4917
+    }
+  ],
+  "execution": {
+    "runs": [
+      {
+        "manifest": {
+          "path": "test-runs/FINAL-CAPABILITY-A-audit-20261107T073855Z-51cce6e4/run.json",
+          "sha256": "94d4d3af9a01cacddfdbfa7347721bd5dc2118d09e63a6f7bb64466c7feeaca7",
+          "bytes": 33836
+        },
+        "status": "FAILED",
+        "integrity": {
+          "schema": "py-mermaid-run-integrity/v1",
+          "runId": "FINAL-CAPABILITY-A-audit-20261107T073855Z-51cce6e4",
+          "integrityStatus": "PASS",
+          "executionStatus": "FAILED",
+          "functionalStatus": "NOT_EVALUATED",
+          "errors": []
+        }
+      },
+      {
+        "manifest": {
+          "path": "test-runs/FINAL-CAPABILITY-A-facts-20261107T074002Z-3c051804/run.json",
+          "sha256": "c022b255c134bb72b6a44adfafa16194681b68b531b2b26d32142de21304cc60",
+          "bytes": 30478
+        },
+        "status": "SUCCESS",
+        "integrity": {
+          "schema": "py-mermaid-run-integrity/v1",
+          "runId": "FINAL-CAPABILITY-A-facts-20261107T074002Z-3c051804",
+          "integrityStatus": "PASS",
+          "executionStatus": "SUCCESS",
+          "functionalStatus": "NOT_EVALUATED",
+          "errors": []
+        }
+      },
+      {
+        "manifest": {
+          "path": "test-runs/FINAL-CAPABILITY-B-review-20261107T073915Z-a5a59886/run.json",
+          "sha256": "3571d00423ef99e7bfe7fcda59276b45035cec5f4576254d5c52427312a4ec0d",
+          "bytes": 40866
+        },
+        "status": "FAILED",
+        "integrity": {
+          "schema": "py-mermaid-run-integrity/v1",
+          "runId": "FINAL-CAPABILITY-B-review-20261107T073915Z-a5a59886",
+          "integrityStatus": "PASS",
+          "executionStatus": "FAILED",
+          "functionalStatus": "NOT_EVALUATED",
+          "errors": []
+        }
+      },
+      {
+        "manifest": {
+          "path": "test-runs/FINAL-CAPABILITY-C-batch-20261107T074051Z-414c8c8f/run.json",
+          "sha256": "4eb7c9a4cb6a518d80f72644dfddfe6e091d28cdc0028045938c04ae334773fe",
+          "bytes": 46138
+        },
+        "status": "FAILED",
+        "integrity": {
+          "schema": "py-mermaid-run-integrity/v1",
+          "runId": "FINAL-CAPABILITY-C-batch-20261107T074051Z-414c8c8f",
+          "integrityStatus": "PASS",
+          "executionStatus": "FAILED",
+          "functionalStatus": "NOT_EVALUATED",
+          "errors": []
+        }
+      },
+      {
+        "manifest": {
+          "path": "test-runs/FINAL-CAPABILITY-C-SOURCE-batch-20261107T074503Z-775a7421/run.json",
+          "sha256": "2775a453c38c6ad06070fbb5106348881bda7a2d92b38d84012fe44ca50aba17",
+          "bytes": 33850
+        },
+        "status": "SUCCESS",
+        "integrity": {
+          "schema": "py-mermaid-run-integrity/v1",
+          "runId": "FINAL-CAPABILITY-C-SOURCE-batch-20261107T074503Z-775a7421",
+          "integrityStatus": "PASS",
+          "executionStatus": "SUCCESS",
+          "functionalStatus": "CONFIRMED_RETAINED_STATIC_FORMAT_GAP_NOT_ACCEPTED",
+          "errors": []
+        }
+      },
+      {
+        "manifest": {
+          "path": "test-runs/FINAL-CAPABILITY-root-review-20261107T074045Z-d616752a/run.json",
+          "sha256": "3476d14fcd7c1a3b754eea814ecd5a405d06b6e9050912f886766902a9362a1e",
+          "bytes": 41045
+        },
+        "status": "SUCCESS",
+        "integrity": {
+          "schema": "py-mermaid-run-integrity/v1",
+          "runId": "FINAL-CAPABILITY-root-review-20261107T074045Z-d616752a",
+          "integrityStatus": "PASS",
+          "executionStatus": "SUCCESS",
+          "functionalStatus": "REVIEW_INVENTORY_ONLY_KNOWN_GAPS_AND_RELEASE_GATES_CHECKED_SEPARATELY",
+          "errors": []
+        }
+      }
+    ],
+    "unittestInvocations": {
+      "FINAL-CAPABILITY-A-audit-20261107T073855Z-51cce6e4/source-literal-A-current": {
+        "methodInvocations": 30,
+        "exitCode": 1
+      },
+      "FINAL-CAPABILITY-A-audit-20261107T073855Z-51cce6e4/abnf-and-zen-source-assertions": {
+        "methodInvocations": 3,
+        "exitCode": 1
+      },
+      "FINAL-CAPABILITY-B-review-20261107T073915Z-a5a59886/existing-independent-B25-tests": {
+        "methodInvocations": 25,
+        "exitCode": 1
+      },
+      "FINAL-CAPABILITY-C-batch-20261107T074051Z-414c8c8f/source-independent-sequence-three-branches": {
+        "methodInvocations": 3,
+        "exitCode": 1
+      },
+      "FINAL-CAPABILITY-C-batch-20261107T074051Z-414c8c8f/dsl-api": {
+        "methodInvocations": 20,
+        "exitCode": 0
+      },
+      "FINAL-CAPABILITY-C-batch-20261107T074051Z-414c8c8f/dsl-cli": {
+        "methodInvocations": 10,
+        "exitCode": 0
+      },
+      "FINAL-CAPABILITY-C-batch-20261107T074051Z-414c8c8f/dsl-resources": {
+        "methodInvocations": 14,
+        "exitCode": 0
+      },
+      "FINAL-CAPABILITY-C-batch-20261107T074051Z-414c8c8f/rich-label-canvas": {
+        "methodInvocations": 33,
+        "exitCode": 0
+      },
+      "FINAL-CAPABILITY-C-batch-20261107T074051Z-414c8c8f/controls-canvas": {
+        "methodInvocations": 34,
+        "exitCode": 0
+      },
+      "FINAL-CAPABILITY-C-batch-20261107T074051Z-414c8c8f/stroke-bounds": {
+        "methodInvocations": 10,
+        "exitCode": 0
+      }
+    }
+  },
+  "additionalCompatibility": {
+    "semanticValueDifferenceRecords": 4,
+    "eventModelingOriginalRejectedNativeAcceptedInputs": 3,
+    "sourceExpectationCorrection": "Event title positive expectation was not reached in original; do not repair native by satisfying a false source golden.",
+    "notAddedTo22FunctionalGapCount": true
+  },
+  "sameSourcePriorEvidence": {
+    "functionalRun": "test-runs/VCHART-DSL-P4-batch-20261107T072312Z-7cdc1791",
+    "methods": 2364,
+    "matrixCases": 903,
+    "extraExports": 816,
+    "windowsWheelInstall": "test-runs/VCHART-INSTALL-wheel-20261107T071751Z-d6268c2c",
+    "windowsSdistInstall": "test-runs/VCHART-INSTALL-sdist-20261107T071829Z-d552a24f",
+    "meaning": "Manifest/artifact integrity freshly checked and source fingerprint exact. Not rerun and not whole-release/no-gap acceptance."
+  },
+  "overallSourceBranchCoverageEstablished": false,
+  "requiredNextWork": [
+    "集中修复9个原缺口簇和2个图表边界，保持来源黄金和失败历史",
+    "将真实缺口断言纳入统一发布门禁，并纠正原版证据不成立的测试期待",
+    "冻结新候选后完整回归、三后端、实际看图、多格式、Windows/Linux同组wheel/sdist新环境验证",
+    "正式元数据/CI/发布认证/上传/下载SHA回读后才能报告正式包已发布"
+  ]
+}

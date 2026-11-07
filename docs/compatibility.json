@@ -1,7 +1,7 @@
 {
   "schema": "py-mermaid-compatibility/v1",
   "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
-  "status": "retained_static_local_verified_installation_deferred",
+  "status": "retained_static_known_branch_gaps_confirmed",
   "stages": [
     "planned",
     "inventoried",
@@ -21,17 +21,35 @@
       "canvas": "verified",
       "evidence": [
         {
+          "path": "docs/HTML_HOST_ACCEPTANCE.md",
+          "sha256": "bd24649160bcd5c2e450ee38839b35b49483400733d6f2dc215cd05f9f6a5504"
+        },
+        {
+          "path": "references/html-host-verification-summary.json",
+          "sha256": "a3156f9ba7565c360de3ee963a92f79573ca3407175cbddacf5430691d7f47f2"
+        }
+      ],
+      "acceptedScope": "Current 865-case retained static matrix, including 131 initial HTML control fixtures and applicable shared rich-label consumers. Not arbitrary browser HTML/CSS, exhaustive source branches, fresh installation or release acceptance. Video/audio entirely user-excluded; seven chart entries remain deferred to py-vchart.",
+      "sourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+      "batchStatus": "retained_static_local_verified",
+      "previousEvidence": [
+        {
           "path": "docs/BULK_STATIC_ACCEPTANCE.md",
           "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
         },
         {
           "path": "references/bulk-verification-summary.json",
           "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        },
+        {
+          "path": "docs/GAP_AUDIT_ACCEPTANCE.md",
+          "sha256": "89442ee32db4a4ccaa40610dfc2e4fd883156b629340ca992fbe2248159c65fe"
+        },
+        {
+          "path": "references/gap-verification-summary.json",
+          "sha256": "a7877f02033bb952bbb6d5562b9a28148a69ca595232a1df68d13376dd7c963d"
         }
-      ],
-      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
-      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
-      "batchStatus": "retained_static_local_verified"
+      ]
     },
     {
       "id": "flowchart-v2",
@@ -43,17 +61,35 @@
       "canvas": "verified",
       "evidence": [
         {
+          "path": "docs/HTML_HOST_ACCEPTANCE.md",
+          "sha256": "bd24649160bcd5c2e450ee38839b35b49483400733d6f2dc215cd05f9f6a5504"
+        },
+        {
+          "path": "references/html-host-verification-summary.json",
+          "sha256": "a3156f9ba7565c360de3ee963a92f79573ca3407175cbddacf5430691d7f47f2"
+        }
+      ],
+      "acceptedScope": "Current 865-case retained static matrix, including 131 initial HTML control fixtures and applicable shared rich-label consumers. Not arbitrary browser HTML/CSS, exhaustive source branches, fresh installation or release acceptance. Video/audio entirely user-excluded; seven chart entries remain deferred to py-vchart.",
+      "sourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+      "batchStatus": "retained_static_local_verified",
+      "previousEvidence": [
+        {
           "path": "docs/BULK_STATIC_ACCEPTANCE.md",
           "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
         },
         {
           "path": "references/bulk-verification-summary.json",
           "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        },
+        {
+          "path": "docs/GAP_AUDIT_ACCEPTANCE.md",
+          "sha256": "89442ee32db4a4ccaa40610dfc2e4fd883156b629340ca992fbe2248159c65fe"
+        },
+        {
+          "path": "references/gap-verification-summary.json",
+          "sha256": "a7877f02033bb952bbb6d5562b9a28148a69ca595232a1df68d13376dd7c963d"
         }
-      ],
-      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
-      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
-      "batchStatus": "retained_static_local_verified"
+      ]
     },
     {
       "id": "agentflow",
@@ -65,17 +101,55 @@
       "canvas": "verified",
       "evidence": [
         {
+          "path": "docs/HTML_HOST_ACCEPTANCE.md",
+          "sha256": "bd24649160bcd5c2e450ee38839b35b49483400733d6f2dc215cd05f9f6a5504"
+        },
+        {
+          "path": "references/html-host-verification-summary.json",
+          "sha256": "a3156f9ba7565c360de3ee963a92f79573ca3407175cbddacf5430691d7f47f2"
+        }
+      ],
+      "acceptedScope": "Current 865-case retained static matrix, including 131 initial HTML control fixtures and applicable shared rich-label consumers. Not arbitrary browser HTML/CSS, exhaustive source branches, fresh installation or release acceptance. Video/audio entirely user-excluded; seven chart entries remain deferred to py-vchart.",
+      "sourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+      "batchStatus": "retained_static_local_verified",
+      "previousEvidence": [
+        {
           "path": "docs/BULK_STATIC_ACCEPTANCE.md",
           "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
         },
         {
           "path": "references/bulk-verification-summary.json",
           "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        },
+        {
+          "path": "docs/GAP_AUDIT_ACCEPTANCE.md",
+          "sha256": "89442ee32db4a4ccaa40610dfc2e4fd883156b629340ca992fbe2248159c65fe"
+        },
+        {
+          "path": "references/gap-verification-summary.json",
+          "sha256": "a7877f02033bb952bbb6d5562b9a28148a69ca595232a1df68d13376dd7c963d"
         }
       ],
-      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
-      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
-      "batchStatus": "retained_static_local_verified"
+      "knownBranchGaps": [
+        "BV-B-AGENT-GENUINE"
+      ],
+      "branchVerificationEvidence": [
+        {
+          "path": "docs/BRANCH_VERIFICATION_RESULTS.md",
+          "sha256": "737ceac0dd351c6272ce4d7dfdfadcbf5922eb66944a9fa5956fc56af00df298",
+          "bytes": 6246
+        },
+        {
+          "path": "references/branch-verification-summary.json",
+          "sha256": "cdf4226c982290875052614751fdf774d3bcb36609e4bc8f0c908205ce61613d",
+          "bytes": 1723432
+        },
+        {
+          "path": "references/branch-repair-queue.json",
+          "sha256": "7e6322ad17e20e648a587ec0d6839b67c7fa7f25e1824150ee9b2b7a1da6be92",
+          "bytes": 3628
+        }
+      ]
     },
     {
       "id": "swimlane",
@@ -87,17 +161,35 @@
       "canvas": "verified",
       "evidence": [
         {
+          "path": "docs/HTML_HOST_ACCEPTANCE.md",
+          "sha256": "bd24649160bcd5c2e450ee38839b35b49483400733d6f2dc215cd05f9f6a5504"
+        },
+        {
+          "path": "references/html-host-verification-summary.json",
+          "sha256": "a3156f9ba7565c360de3ee963a92f79573ca3407175cbddacf5430691d7f47f2"
+        }
+      ],
+      "acceptedScope": "Current 865-case retained static matrix, including 131 initial HTML control fixtures and applicable shared rich-label consumers. Not arbitrary browser HTML/CSS, exhaustive source branches, fresh installation or release acceptance. Video/audio entirely user-excluded; seven chart entries remain deferred to py-vchart.",
+      "sourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+      "batchStatus": "retained_static_local_verified",
+      "previousEvidence": [
+        {
           "path": "docs/BULK_STATIC_ACCEPTANCE.md",
           "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
         },
         {
           "path": "references/bulk-verification-summary.json",
           "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        },
+        {
+          "path": "docs/GAP_AUDIT_ACCEPTANCE.md",
+          "sha256": "89442ee32db4a4ccaa40610dfc2e4fd883156b629340ca992fbe2248159c65fe"
+        },
+        {
+          "path": "references/gap-verification-summary.json",
+          "sha256": "a7877f02033bb952bbb6d5562b9a28148a69ca595232a1df68d13376dd7c963d"
         }
-      ],
-      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
-      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
-      "batchStatus": "retained_static_local_verified"
+      ]
     },
     {
       "id": "er",
@@ -109,17 +201,35 @@
       "canvas": "verified",
       "evidence": [
         {
+          "path": "docs/HTML_HOST_ACCEPTANCE.md",
+          "sha256": "bd24649160bcd5c2e450ee38839b35b49483400733d6f2dc215cd05f9f6a5504"
+        },
+        {
+          "path": "references/html-host-verification-summary.json",
+          "sha256": "a3156f9ba7565c360de3ee963a92f79573ca3407175cbddacf5430691d7f47f2"
+        }
+      ],
+      "acceptedScope": "Current 865-case retained static matrix, including 131 initial HTML control fixtures and applicable shared rich-label consumers. Not arbitrary browser HTML/CSS, exhaustive source branches, fresh installation or release acceptance. Video/audio entirely user-excluded; seven chart entries remain deferred to py-vchart.",
+      "sourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+      "batchStatus": "retained_static_local_verified",
+      "previousEvidence": [
+        {
           "path": "docs/BULK_STATIC_ACCEPTANCE.md",
           "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
         },
         {
           "path": "references/bulk-verification-summary.json",
           "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        },
+        {
+          "path": "docs/GAP_AUDIT_ACCEPTANCE.md",
+          "sha256": "89442ee32db4a4ccaa40610dfc2e4fd883156b629340ca992fbe2248159c65fe"
+        },
+        {
+          "path": "references/gap-verification-summary.json",
+          "sha256": "a7877f02033bb952bbb6d5562b9a28148a69ca595232a1df68d13376dd7c963d"
         }
-      ],
-      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
-      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
-      "batchStatus": "retained_static_local_verified"
+      ]
     },
     {
       "id": "gitGraph",
@@ -131,17 +241,35 @@
       "canvas": "verified",
       "evidence": [
         {
+          "path": "docs/HTML_HOST_ACCEPTANCE.md",
+          "sha256": "bd24649160bcd5c2e450ee38839b35b49483400733d6f2dc215cd05f9f6a5504"
+        },
+        {
+          "path": "references/html-host-verification-summary.json",
+          "sha256": "a3156f9ba7565c360de3ee963a92f79573ca3407175cbddacf5430691d7f47f2"
+        }
+      ],
+      "acceptedScope": "Current 865-case retained static matrix, including 131 initial HTML control fixtures and applicable shared rich-label consumers. Not arbitrary browser HTML/CSS, exhaustive source branches, fresh installation or release acceptance. Video/audio entirely user-excluded; seven chart entries remain deferred to py-vchart.",
+      "sourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+      "batchStatus": "retained_static_local_verified",
+      "previousEvidence": [
+        {
           "path": "docs/BULK_STATIC_ACCEPTANCE.md",
           "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
         },
         {
           "path": "references/bulk-verification-summary.json",
           "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        },
+        {
+          "path": "docs/GAP_AUDIT_ACCEPTANCE.md",
+          "sha256": "89442ee32db4a4ccaa40610dfc2e4fd883156b629340ca992fbe2248159c65fe"
+        },
+        {
+          "path": "references/gap-verification-summary.json",
+          "sha256": "a7877f02033bb952bbb6d5562b9a28148a69ca595232a1df68d13376dd7c963d"
         }
-      ],
-      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
-      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
-      "batchStatus": "retained_static_local_verified"
+      ]
     },
     {
       "id": "gantt",
@@ -153,17 +281,62 @@
       "canvas": "verified",
       "evidence": [
         {
+          "path": "docs/HTML_HOST_ACCEPTANCE.md",
+          "sha256": "bd24649160bcd5c2e450ee38839b35b49483400733d6f2dc215cd05f9f6a5504"
+        },
+        {
+          "path": "references/html-host-verification-summary.json",
+          "sha256": "a3156f9ba7565c360de3ee963a92f79573ca3407175cbddacf5430691d7f47f2"
+        }
+      ],
+      "acceptedScope": "Current 865-case retained static matrix, including 131 initial HTML control fixtures and applicable shared rich-label consumers. Not arbitrary browser HTML/CSS, exhaustive source branches, fresh installation or release acceptance. Video/audio entirely user-excluded; seven chart entries remain deferred to py-vchart.",
+      "sourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+      "batchStatus": "retained_static_local_verified",
+      "previousEvidence": [
+        {
           "path": "docs/BULK_STATIC_ACCEPTANCE.md",
           "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
         },
         {
           "path": "references/bulk-verification-summary.json",
           "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        },
+        {
+          "path": "docs/GAP_AUDIT_ACCEPTANCE.md",
+          "sha256": "89442ee32db4a4ccaa40610dfc2e4fd883156b629340ca992fbe2248159c65fe"
+        },
+        {
+          "path": "references/gap-verification-summary.json",
+          "sha256": "a7877f02033bb952bbb6d5562b9a28148a69ca595232a1df68d13376dd7c963d"
         }
       ],
-      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
-      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
-      "batchStatus": "retained_static_local_verified"
+      "knownBranchGaps": [
+        "BV-B-AXIS-ALL",
+        "BV-B-AXIS-ESCAPE",
+        "BV-B-AXIS-FAR",
+        "BV-B-AXIS-LOCALE",
+        "BV-B-DATE-LOCALIZED",
+        "BV-B-DATE-WEEKDAY",
+        "BV-B-DAYJS-ISO",
+        "BV-B-TICK-WEEKDAY"
+      ],
+      "branchVerificationEvidence": [
+        {
+          "path": "docs/BRANCH_VERIFICATION_RESULTS.md",
+          "sha256": "737ceac0dd351c6272ce4d7dfdfadcbf5922eb66944a9fa5956fc56af00df298",
+          "bytes": 6246
+        },
+        {
+          "path": "references/branch-verification-summary.json",
+          "sha256": "cdf4226c982290875052614751fdf774d3bcb36609e4bc8f0c908205ce61613d",
+          "bytes": 1723432
+        },
+        {
+          "path": "references/branch-repair-queue.json",
+          "sha256": "7e6322ad17e20e648a587ec0d6839b67c7fa7f25e1824150ee9b2b7a1da6be92",
+          "bytes": 3628
+        }
+      ]
     },
     {
       "id": "info",
@@ -175,27 +348,60 @@
       "canvas": "verified",
       "evidence": [
         {
+          "path": "docs/HTML_HOST_ACCEPTANCE.md",
+          "sha256": "bd24649160bcd5c2e450ee38839b35b49483400733d6f2dc215cd05f9f6a5504"
+        },
+        {
+          "path": "references/html-host-verification-summary.json",
+          "sha256": "a3156f9ba7565c360de3ee963a92f79573ca3407175cbddacf5430691d7f47f2"
+        }
+      ],
+      "acceptedScope": "Current 865-case retained static matrix, including 131 initial HTML control fixtures and applicable shared rich-label consumers. Not arbitrary browser HTML/CSS, exhaustive source branches, fresh installation or release acceptance. Video/audio entirely user-excluded; seven chart entries remain deferred to py-vchart.",
+      "sourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+      "batchStatus": "retained_static_local_verified",
+      "previousEvidence": [
+        {
           "path": "docs/BULK_STATIC_ACCEPTANCE.md",
           "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
         },
         {
           "path": "references/bulk-verification-summary.json",
           "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        },
+        {
+          "path": "docs/GAP_AUDIT_ACCEPTANCE.md",
+          "sha256": "89442ee32db4a4ccaa40610dfc2e4fd883156b629340ca992fbe2248159c65fe"
+        },
+        {
+          "path": "references/gap-verification-summary.json",
+          "sha256": "a7877f02033bb952bbb6d5562b9a28148a69ca595232a1df68d13376dd7c963d"
         }
-      ],
-      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
-      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
-      "batchStatus": "retained_static_local_verified"
+      ]
     },
     {
       "id": "pie",
       "source": "packages/mermaid/src/diagrams/pie/pieDetector.ts",
       "scope": "core",
-      "status": "inventoried",
-      "parser": "planned",
-      "layout": "planned",
-      "canvas": "planned",
+      "status": "canvas_verified",
+      "parser": "verified",
+      "layout": "verified",
+      "canvas": "verified",
       "evidence": [
+        {
+          "path": "docs/VCHART_ACCEPTANCE.md",
+          "sha256": "b17de95bccb4cde59e17b72308b963011d5731ace1a3a0e8be200a7edddbf01e",
+          "bytes": 6447
+        },
+        {
+          "path": "references/vchart-pypi-verification.json",
+          "sha256": "2a512a95e02f40577b99d43d92c65c1a52ce892b0e1a16dc785cd7520fbab8ba",
+          "bytes": 3763
+        }
+      ],
+      "batchStatus": "vchart_static_local_verified",
+      "futureProvider": "py-vchart",
+      "futureIntegrationStatus": "integrated_bounded_static",
+      "previousEvidence": [
         {
           "path": "docs/BULK_STATIC_ACCEPTANCE.md",
           "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
@@ -203,19 +409,45 @@
         {
           "path": "references/bulk-verification-summary.json",
           "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        },
+        {
+          "path": "docs/VCHART_ACCEPTANCE.md",
+          "sha256": "728874dd150cb6cab8979cf97bc92a33775540474bf64743febfe85e75be85fa",
+          "bytes": 6373
+        },
+        {
+          "path": "references/vchart-verification-summary.json",
+          "sha256": "368d4f7b127106bcd3f0a0a9697482599e93ad6d079f52b3623db80a1c08632a",
+          "bytes": 7936
         }
       ],
-      "batchStatus": "deferred_by_user"
+      "sourceTreeSha256": "756a21de6e1845dd81ab9d6ca7e08a84c8e8190e9d7ec03312cc923e872d6dc3",
+      "acceptedScope": "Final 42-input corpus: 30 render/10 source errors/2 source-valid native limitations, three backends. Not all advanced options; Venn at most three singleton sets, bounded Treemap formats and binary layout. See VCHART_ACCEPTANCE."
     },
     {
       "id": "quadrantChart",
       "source": "packages/mermaid/src/diagrams/quadrant-chart/quadrantDetector.ts",
       "scope": "core",
-      "status": "inventoried",
-      "parser": "planned",
-      "layout": "planned",
-      "canvas": "planned",
+      "status": "canvas_verified",
+      "parser": "verified",
+      "layout": "verified",
+      "canvas": "verified",
       "evidence": [
+        {
+          "path": "docs/VCHART_ACCEPTANCE.md",
+          "sha256": "b17de95bccb4cde59e17b72308b963011d5731ace1a3a0e8be200a7edddbf01e",
+          "bytes": 6447
+        },
+        {
+          "path": "references/vchart-pypi-verification.json",
+          "sha256": "2a512a95e02f40577b99d43d92c65c1a52ce892b0e1a16dc785cd7520fbab8ba",
+          "bytes": 3763
+        }
+      ],
+      "batchStatus": "vchart_static_local_verified",
+      "futureProvider": "py-vchart",
+      "futureIntegrationStatus": "integrated_bounded_static",
+      "previousEvidence": [
         {
           "path": "docs/BULK_STATIC_ACCEPTANCE.md",
           "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
@@ -223,19 +455,45 @@
         {
           "path": "references/bulk-verification-summary.json",
           "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        },
+        {
+          "path": "docs/VCHART_ACCEPTANCE.md",
+          "sha256": "728874dd150cb6cab8979cf97bc92a33775540474bf64743febfe85e75be85fa",
+          "bytes": 6373
+        },
+        {
+          "path": "references/vchart-verification-summary.json",
+          "sha256": "368d4f7b127106bcd3f0a0a9697482599e93ad6d079f52b3623db80a1c08632a",
+          "bytes": 7936
         }
       ],
-      "batchStatus": "deferred_by_user"
+      "sourceTreeSha256": "756a21de6e1845dd81ab9d6ca7e08a84c8e8190e9d7ec03312cc923e872d6dc3",
+      "acceptedScope": "Final 42-input corpus: 30 render/10 source errors/2 source-valid native limitations, three backends. Not all advanced options; Venn at most three singleton sets, bounded Treemap formats and binary layout. See VCHART_ACCEPTANCE."
     },
     {
       "id": "xychart",
       "source": "packages/mermaid/src/diagrams/xychart/xychartDetector.ts",
       "scope": "core",
-      "status": "inventoried",
-      "parser": "planned",
-      "layout": "planned",
-      "canvas": "planned",
+      "status": "canvas_verified",
+      "parser": "verified",
+      "layout": "verified",
+      "canvas": "verified",
       "evidence": [
+        {
+          "path": "docs/VCHART_ACCEPTANCE.md",
+          "sha256": "b17de95bccb4cde59e17b72308b963011d5731ace1a3a0e8be200a7edddbf01e",
+          "bytes": 6447
+        },
+        {
+          "path": "references/vchart-pypi-verification.json",
+          "sha256": "2a512a95e02f40577b99d43d92c65c1a52ce892b0e1a16dc785cd7520fbab8ba",
+          "bytes": 3763
+        }
+      ],
+      "batchStatus": "vchart_static_local_verified",
+      "futureProvider": "py-vchart",
+      "futureIntegrationStatus": "integrated_bounded_static",
+      "previousEvidence": [
         {
           "path": "docs/BULK_STATIC_ACCEPTANCE.md",
           "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
@@ -243,9 +501,20 @@
         {
           "path": "references/bulk-verification-summary.json",
           "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        },
+        {
+          "path": "docs/VCHART_ACCEPTANCE.md",
+          "sha256": "728874dd150cb6cab8979cf97bc92a33775540474bf64743febfe85e75be85fa",
+          "bytes": 6373
+        },
+        {
+          "path": "references/vchart-verification-summary.json",
+          "sha256": "368d4f7b127106bcd3f0a0a9697482599e93ad6d079f52b3623db80a1c08632a",
+          "bytes": 7936
         }
       ],
-      "batchStatus": "deferred_by_user"
+      "sourceTreeSha256": "756a21de6e1845dd81ab9d6ca7e08a84c8e8190e9d7ec03312cc923e872d6dc3",
+      "acceptedScope": "Final 42-input corpus: 30 render/10 source errors/2 source-valid native limitations, three backends. Not all advanced options; Venn at most three singleton sets, bounded Treemap formats and binary layout. See VCHART_ACCEPTANCE."
     },
     {
       "id": "requirement",
@@ -257,17 +526,35 @@
       "canvas": "verified",
       "evidence": [
         {
+          "path": "docs/HTML_HOST_ACCEPTANCE.md",
+          "sha256": "bd24649160bcd5c2e450ee38839b35b49483400733d6f2dc215cd05f9f6a5504"
+        },
+        {
+          "path": "references/html-host-verification-summary.json",
+          "sha256": "a3156f9ba7565c360de3ee963a92f79573ca3407175cbddacf5430691d7f47f2"
+        }
+      ],
+      "acceptedScope": "Current 865-case retained static matrix, including 131 initial HTML control fixtures and applicable shared rich-label consumers. Not arbitrary browser HTML/CSS, exhaustive source branches, fresh installation or release acceptance. Video/audio entirely user-excluded; seven chart entries remain deferred to py-vchart.",
+      "sourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+      "batchStatus": "retained_static_local_verified",
+      "previousEvidence": [
+        {
           "path": "docs/BULK_STATIC_ACCEPTANCE.md",
           "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
         },
         {
           "path": "references/bulk-verification-summary.json",
           "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        },
+        {
+          "path": "docs/GAP_AUDIT_ACCEPTANCE.md",
+          "sha256": "89442ee32db4a4ccaa40610dfc2e4fd883156b629340ca992fbe2248159c65fe"
+        },
+        {
+          "path": "references/gap-verification-summary.json",
+          "sha256": "a7877f02033bb952bbb6d5562b9a28148a69ca595232a1df68d13376dd7c963d"
         }
-      ],
-      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
-      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
-      "batchStatus": "retained_static_local_verified"
+      ]
     },
     {
       "id": "sequence",
@@ -279,17 +566,57 @@
       "canvas": "verified",
       "evidence": [
         {
+          "path": "docs/HTML_HOST_ACCEPTANCE.md",
+          "sha256": "bd24649160bcd5c2e450ee38839b35b49483400733d6f2dc215cd05f9f6a5504"
+        },
+        {
+          "path": "references/html-host-verification-summary.json",
+          "sha256": "a3156f9ba7565c360de3ee963a92f79573ca3407175cbddacf5430691d7f47f2"
+        }
+      ],
+      "acceptedScope": "Current 865-case retained static matrix, including 131 initial HTML control fixtures and applicable shared rich-label consumers. Not arbitrary browser HTML/CSS, exhaustive source branches, fresh installation or release acceptance. Video/audio entirely user-excluded; seven chart entries remain deferred to py-vchart.",
+      "sourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+      "batchStatus": "retained_static_local_verified",
+      "previousEvidence": [
+        {
           "path": "docs/BULK_STATIC_ACCEPTANCE.md",
           "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
         },
         {
           "path": "references/bulk-verification-summary.json",
           "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        },
+        {
+          "path": "docs/GAP_AUDIT_ACCEPTANCE.md",
+          "sha256": "89442ee32db4a4ccaa40610dfc2e4fd883156b629340ca992fbe2248159c65fe"
+        },
+        {
+          "path": "references/gap-verification-summary.json",
+          "sha256": "a7877f02033bb952bbb6d5562b9a28148a69ca595232a1df68d13376dd7c963d"
         }
       ],
-      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
-      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
-      "batchStatus": "retained_static_local_verified"
+      "knownBranchGaps": [
+        "C-sequence-central",
+        "C-sequence-number",
+        "C-sequence-self"
+      ],
+      "branchVerificationEvidence": [
+        {
+          "path": "docs/BRANCH_VERIFICATION_RESULTS.md",
+          "sha256": "737ceac0dd351c6272ce4d7dfdfadcbf5922eb66944a9fa5956fc56af00df298",
+          "bytes": 6246
+        },
+        {
+          "path": "references/branch-verification-summary.json",
+          "sha256": "cdf4226c982290875052614751fdf774d3bcb36609e4bc8f0c908205ce61613d",
+          "bytes": 1723432
+        },
+        {
+          "path": "references/branch-repair-queue.json",
+          "sha256": "7e6322ad17e20e648a587ec0d6839b67c7fa7f25e1824150ee9b2b7a1da6be92",
+          "bytes": 3628
+        }
+      ]
     },
     {
       "id": "classDiagram",
@@ -301,17 +628,35 @@
       "canvas": "verified",
       "evidence": [
         {
+          "path": "docs/HTML_HOST_ACCEPTANCE.md",
+          "sha256": "bd24649160bcd5c2e450ee38839b35b49483400733d6f2dc215cd05f9f6a5504"
+        },
+        {
+          "path": "references/html-host-verification-summary.json",
+          "sha256": "a3156f9ba7565c360de3ee963a92f79573ca3407175cbddacf5430691d7f47f2"
+        }
+      ],
+      "acceptedScope": "Current 865-case retained static matrix, including 131 initial HTML control fixtures and applicable shared rich-label consumers. Not arbitrary browser HTML/CSS, exhaustive source branches, fresh installation or release acceptance. Video/audio entirely user-excluded; seven chart entries remain deferred to py-vchart.",
+      "sourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+      "batchStatus": "retained_static_local_verified",
+      "previousEvidence": [
+        {
           "path": "docs/BULK_STATIC_ACCEPTANCE.md",
           "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
         },
         {
           "path": "references/bulk-verification-summary.json",
           "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        },
+        {
+          "path": "docs/GAP_AUDIT_ACCEPTANCE.md",
+          "sha256": "89442ee32db4a4ccaa40610dfc2e4fd883156b629340ca992fbe2248159c65fe"
+        },
+        {
+          "path": "references/gap-verification-summary.json",
+          "sha256": "a7877f02033bb952bbb6d5562b9a28148a69ca595232a1df68d13376dd7c963d"
         }
-      ],
-      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
-      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
-      "batchStatus": "retained_static_local_verified"
+      ]
     },
     {
       "id": "stateDiagram",
@@ -323,17 +668,35 @@
       "canvas": "verified",
       "evidence": [
         {
+          "path": "docs/HTML_HOST_ACCEPTANCE.md",
+          "sha256": "bd24649160bcd5c2e450ee38839b35b49483400733d6f2dc215cd05f9f6a5504"
+        },
+        {
+          "path": "references/html-host-verification-summary.json",
+          "sha256": "a3156f9ba7565c360de3ee963a92f79573ca3407175cbddacf5430691d7f47f2"
+        }
+      ],
+      "acceptedScope": "Current 865-case retained static matrix, including 131 initial HTML control fixtures and applicable shared rich-label consumers. Not arbitrary browser HTML/CSS, exhaustive source branches, fresh installation or release acceptance. Video/audio entirely user-excluded; seven chart entries remain deferred to py-vchart.",
+      "sourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+      "batchStatus": "retained_static_local_verified",
+      "previousEvidence": [
+        {
           "path": "docs/BULK_STATIC_ACCEPTANCE.md",
           "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
         },
         {
           "path": "references/bulk-verification-summary.json",
           "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        },
+        {
+          "path": "docs/GAP_AUDIT_ACCEPTANCE.md",
+          "sha256": "89442ee32db4a4ccaa40610dfc2e4fd883156b629340ca992fbe2248159c65fe"
+        },
+        {
+          "path": "references/gap-verification-summary.json",
+          "sha256": "a7877f02033bb952bbb6d5562b9a28148a69ca595232a1df68d13376dd7c963d"
         }
-      ],
-      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
-      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
-      "batchStatus": "retained_static_local_verified"
+      ]
     },
     {
       "id": "journey",
@@ -345,17 +708,35 @@
       "canvas": "verified",
       "evidence": [
         {
+          "path": "docs/HTML_HOST_ACCEPTANCE.md",
+          "sha256": "bd24649160bcd5c2e450ee38839b35b49483400733d6f2dc215cd05f9f6a5504"
+        },
+        {
+          "path": "references/html-host-verification-summary.json",
+          "sha256": "a3156f9ba7565c360de3ee963a92f79573ca3407175cbddacf5430691d7f47f2"
+        }
+      ],
+      "acceptedScope": "Current 865-case retained static matrix, including 131 initial HTML control fixtures and applicable shared rich-label consumers. Not arbitrary browser HTML/CSS, exhaustive source branches, fresh installation or release acceptance. Video/audio entirely user-excluded; seven chart entries remain deferred to py-vchart.",
+      "sourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+      "batchStatus": "retained_static_local_verified",
+      "previousEvidence": [
+        {
           "path": "docs/BULK_STATIC_ACCEPTANCE.md",
           "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
         },
         {
           "path": "references/bulk-verification-summary.json",
           "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        },
+        {
+          "path": "docs/GAP_AUDIT_ACCEPTANCE.md",
+          "sha256": "89442ee32db4a4ccaa40610dfc2e4fd883156b629340ca992fbe2248159c65fe"
+        },
+        {
+          "path": "references/gap-verification-summary.json",
+          "sha256": "a7877f02033bb952bbb6d5562b9a28148a69ca595232a1df68d13376dd7c963d"
         }
-      ],
-      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
-      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
-      "batchStatus": "retained_static_local_verified"
+      ]
     },
     {
       "id": "flowchart-elk",
@@ -367,17 +748,35 @@
       "canvas": "verified",
       "evidence": [
         {
+          "path": "docs/HTML_HOST_ACCEPTANCE.md",
+          "sha256": "bd24649160bcd5c2e450ee38839b35b49483400733d6f2dc215cd05f9f6a5504"
+        },
+        {
+          "path": "references/html-host-verification-summary.json",
+          "sha256": "a3156f9ba7565c360de3ee963a92f79573ca3407175cbddacf5430691d7f47f2"
+        }
+      ],
+      "acceptedScope": "Current 865-case retained static matrix, including 131 initial HTML control fixtures and applicable shared rich-label consumers. Not arbitrary browser HTML/CSS, exhaustive source branches, fresh installation or release acceptance. Video/audio entirely user-excluded; seven chart entries remain deferred to py-vchart.",
+      "sourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+      "batchStatus": "retained_static_local_verified",
+      "previousEvidence": [
+        {
           "path": "docs/BULK_STATIC_ACCEPTANCE.md",
           "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
         },
         {
           "path": "references/bulk-verification-summary.json",
           "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        },
+        {
+          "path": "docs/GAP_AUDIT_ACCEPTANCE.md",
+          "sha256": "89442ee32db4a4ccaa40610dfc2e4fd883156b629340ca992fbe2248159c65fe"
+        },
+        {
+          "path": "references/gap-verification-summary.json",
+          "sha256": "a7877f02033bb952bbb6d5562b9a28148a69ca595232a1df68d13376dd7c963d"
         }
-      ],
-      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
-      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
-      "batchStatus": "retained_static_local_verified"
+      ]
     },
     {
       "id": "timeline",
@@ -389,17 +788,35 @@
       "canvas": "verified",
       "evidence": [
         {
+          "path": "docs/HTML_HOST_ACCEPTANCE.md",
+          "sha256": "bd24649160bcd5c2e450ee38839b35b49483400733d6f2dc215cd05f9f6a5504"
+        },
+        {
+          "path": "references/html-host-verification-summary.json",
+          "sha256": "a3156f9ba7565c360de3ee963a92f79573ca3407175cbddacf5430691d7f47f2"
+        }
+      ],
+      "acceptedScope": "Current 865-case retained static matrix, including 131 initial HTML control fixtures and applicable shared rich-label consumers. Not arbitrary browser HTML/CSS, exhaustive source branches, fresh installation or release acceptance. Video/audio entirely user-excluded; seven chart entries remain deferred to py-vchart.",
+      "sourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+      "batchStatus": "retained_static_local_verified",
+      "previousEvidence": [
+        {
           "path": "docs/BULK_STATIC_ACCEPTANCE.md",
           "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
         },
         {
           "path": "references/bulk-verification-summary.json",
           "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        },
+        {
+          "path": "docs/GAP_AUDIT_ACCEPTANCE.md",
+          "sha256": "89442ee32db4a4ccaa40610dfc2e4fd883156b629340ca992fbe2248159c65fe"
+        },
+        {
+          "path": "references/gap-verification-summary.json",
+          "sha256": "a7877f02033bb952bbb6d5562b9a28148a69ca595232a1df68d13376dd7c963d"
         }
-      ],
-      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
-      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
-      "batchStatus": "retained_static_local_verified"
+      ]
     },
     {
       "id": "mindmap",
@@ -411,17 +828,35 @@
       "canvas": "verified",
       "evidence": [
         {
+          "path": "docs/HTML_HOST_ACCEPTANCE.md",
+          "sha256": "bd24649160bcd5c2e450ee38839b35b49483400733d6f2dc215cd05f9f6a5504"
+        },
+        {
+          "path": "references/html-host-verification-summary.json",
+          "sha256": "a3156f9ba7565c360de3ee963a92f79573ca3407175cbddacf5430691d7f47f2"
+        }
+      ],
+      "acceptedScope": "Current 865-case retained static matrix, including 131 initial HTML control fixtures and applicable shared rich-label consumers. Not arbitrary browser HTML/CSS, exhaustive source branches, fresh installation or release acceptance. Video/audio entirely user-excluded; seven chart entries remain deferred to py-vchart.",
+      "sourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+      "batchStatus": "retained_static_local_verified",
+      "previousEvidence": [
+        {
           "path": "docs/BULK_STATIC_ACCEPTANCE.md",
           "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
         },
         {
           "path": "references/bulk-verification-summary.json",
           "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        },
+        {
+          "path": "docs/GAP_AUDIT_ACCEPTANCE.md",
+          "sha256": "89442ee32db4a4ccaa40610dfc2e4fd883156b629340ca992fbe2248159c65fe"
+        },
+        {
+          "path": "references/gap-verification-summary.json",
+          "sha256": "a7877f02033bb952bbb6d5562b9a28148a69ca595232a1df68d13376dd7c963d"
         }
-      ],
-      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
-      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
-      "batchStatus": "retained_static_local_verified"
+      ]
     },
     {
       "id": "kanban",
@@ -433,27 +868,60 @@
       "canvas": "verified",
       "evidence": [
         {
+          "path": "docs/HTML_HOST_ACCEPTANCE.md",
+          "sha256": "bd24649160bcd5c2e450ee38839b35b49483400733d6f2dc215cd05f9f6a5504"
+        },
+        {
+          "path": "references/html-host-verification-summary.json",
+          "sha256": "a3156f9ba7565c360de3ee963a92f79573ca3407175cbddacf5430691d7f47f2"
+        }
+      ],
+      "acceptedScope": "Current 865-case retained static matrix, including 131 initial HTML control fixtures and applicable shared rich-label consumers. Not arbitrary browser HTML/CSS, exhaustive source branches, fresh installation or release acceptance. Video/audio entirely user-excluded; seven chart entries remain deferred to py-vchart.",
+      "sourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+      "batchStatus": "retained_static_local_verified",
+      "previousEvidence": [
+        {
           "path": "docs/BULK_STATIC_ACCEPTANCE.md",
           "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
         },
         {
           "path": "references/bulk-verification-summary.json",
           "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        },
+        {
+          "path": "docs/GAP_AUDIT_ACCEPTANCE.md",
+          "sha256": "89442ee32db4a4ccaa40610dfc2e4fd883156b629340ca992fbe2248159c65fe"
+        },
+        {
+          "path": "references/gap-verification-summary.json",
+          "sha256": "a7877f02033bb952bbb6d5562b9a28148a69ca595232a1df68d13376dd7c963d"
         }
-      ],
-      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
-      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
-      "batchStatus": "retained_static_local_verified"
+      ]
     },
     {
       "id": "sankey",
       "source": "packages/mermaid/src/diagrams/sankey/sankeyDetector.ts",
       "scope": "core",
-      "status": "inventoried",
-      "parser": "planned",
-      "layout": "planned",
-      "canvas": "planned",
+      "status": "canvas_verified",
+      "parser": "verified",
+      "layout": "verified",
+      "canvas": "verified",
       "evidence": [
+        {
+          "path": "docs/VCHART_ACCEPTANCE.md",
+          "sha256": "b17de95bccb4cde59e17b72308b963011d5731ace1a3a0e8be200a7edddbf01e",
+          "bytes": 6447
+        },
+        {
+          "path": "references/vchart-pypi-verification.json",
+          "sha256": "2a512a95e02f40577b99d43d92c65c1a52ce892b0e1a16dc785cd7520fbab8ba",
+          "bytes": 3763
+        }
+      ],
+      "batchStatus": "vchart_static_local_verified",
+      "futureProvider": "py-vchart",
+      "futureIntegrationStatus": "integrated_bounded_static",
+      "previousEvidence": [
         {
           "path": "docs/BULK_STATIC_ACCEPTANCE.md",
           "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
@@ -461,9 +929,20 @@
         {
           "path": "references/bulk-verification-summary.json",
           "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        },
+        {
+          "path": "docs/VCHART_ACCEPTANCE.md",
+          "sha256": "728874dd150cb6cab8979cf97bc92a33775540474bf64743febfe85e75be85fa",
+          "bytes": 6373
+        },
+        {
+          "path": "references/vchart-verification-summary.json",
+          "sha256": "368d4f7b127106bcd3f0a0a9697482599e93ad6d079f52b3623db80a1c08632a",
+          "bytes": 7936
         }
       ],
-      "batchStatus": "deferred_by_user"
+      "sourceTreeSha256": "756a21de6e1845dd81ab9d6ca7e08a84c8e8190e9d7ec03312cc923e872d6dc3",
+      "acceptedScope": "Final 42-input corpus: 30 render/10 source errors/2 source-valid native limitations, three backends. Not all advanced options; Venn at most three singleton sets, bounded Treemap formats and binary layout. See VCHART_ACCEPTANCE."
     },
     {
       "id": "packet",
@@ -475,27 +954,60 @@
       "canvas": "verified",
       "evidence": [
         {
+          "path": "docs/HTML_HOST_ACCEPTANCE.md",
+          "sha256": "bd24649160bcd5c2e450ee38839b35b49483400733d6f2dc215cd05f9f6a5504"
+        },
+        {
+          "path": "references/html-host-verification-summary.json",
+          "sha256": "a3156f9ba7565c360de3ee963a92f79573ca3407175cbddacf5430691d7f47f2"
+        }
+      ],
+      "acceptedScope": "Current 865-case retained static matrix, including 131 initial HTML control fixtures and applicable shared rich-label consumers. Not arbitrary browser HTML/CSS, exhaustive source branches, fresh installation or release acceptance. Video/audio entirely user-excluded; seven chart entries remain deferred to py-vchart.",
+      "sourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+      "batchStatus": "retained_static_local_verified",
+      "previousEvidence": [
+        {
           "path": "docs/BULK_STATIC_ACCEPTANCE.md",
           "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
         },
         {
           "path": "references/bulk-verification-summary.json",
           "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        },
+        {
+          "path": "docs/GAP_AUDIT_ACCEPTANCE.md",
+          "sha256": "89442ee32db4a4ccaa40610dfc2e4fd883156b629340ca992fbe2248159c65fe"
+        },
+        {
+          "path": "references/gap-verification-summary.json",
+          "sha256": "a7877f02033bb952bbb6d5562b9a28148a69ca595232a1df68d13376dd7c963d"
         }
-      ],
-      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
-      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
-      "batchStatus": "retained_static_local_verified"
+      ]
     },
     {
       "id": "radar",
       "source": "packages/mermaid/src/diagrams/radar/detector.ts",
       "scope": "core",
-      "status": "inventoried",
-      "parser": "planned",
-      "layout": "planned",
-      "canvas": "planned",
+      "status": "canvas_verified",
+      "parser": "verified",
+      "layout": "verified",
+      "canvas": "verified",
       "evidence": [
+        {
+          "path": "docs/VCHART_ACCEPTANCE.md",
+          "sha256": "b17de95bccb4cde59e17b72308b963011d5731ace1a3a0e8be200a7edddbf01e",
+          "bytes": 6447
+        },
+        {
+          "path": "references/vchart-pypi-verification.json",
+          "sha256": "2a512a95e02f40577b99d43d92c65c1a52ce892b0e1a16dc785cd7520fbab8ba",
+          "bytes": 3763
+        }
+      ],
+      "batchStatus": "vchart_static_local_verified",
+      "futureProvider": "py-vchart",
+      "futureIntegrationStatus": "integrated_bounded_static",
+      "previousEvidence": [
         {
           "path": "docs/BULK_STATIC_ACCEPTANCE.md",
           "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
@@ -503,9 +1015,20 @@
         {
           "path": "references/bulk-verification-summary.json",
           "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        },
+        {
+          "path": "docs/VCHART_ACCEPTANCE.md",
+          "sha256": "728874dd150cb6cab8979cf97bc92a33775540474bf64743febfe85e75be85fa",
+          "bytes": 6373
+        },
+        {
+          "path": "references/vchart-verification-summary.json",
+          "sha256": "368d4f7b127106bcd3f0a0a9697482599e93ad6d079f52b3623db80a1c08632a",
+          "bytes": 7936
         }
       ],
-      "batchStatus": "deferred_by_user"
+      "sourceTreeSha256": "756a21de6e1845dd81ab9d6ca7e08a84c8e8190e9d7ec03312cc923e872d6dc3",
+      "acceptedScope": "Final 42-input corpus: 30 render/10 source errors/2 source-valid native limitations, three backends. Not all advanced options; Venn at most three singleton sets, bounded Treemap formats and binary layout. See VCHART_ACCEPTANCE."
     },
     {
       "id": "block",
@@ -517,17 +1040,35 @@
       "canvas": "verified",
       "evidence": [
         {
+          "path": "docs/HTML_HOST_ACCEPTANCE.md",
+          "sha256": "bd24649160bcd5c2e450ee38839b35b49483400733d6f2dc215cd05f9f6a5504"
+        },
+        {
+          "path": "references/html-host-verification-summary.json",
+          "sha256": "a3156f9ba7565c360de3ee963a92f79573ca3407175cbddacf5430691d7f47f2"
+        }
+      ],
+      "acceptedScope": "Current 865-case retained static matrix, including 131 initial HTML control fixtures and applicable shared rich-label consumers. Not arbitrary browser HTML/CSS, exhaustive source branches, fresh installation or release acceptance. Video/audio entirely user-excluded; seven chart entries remain deferred to py-vchart.",
+      "sourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+      "batchStatus": "retained_static_local_verified",
+      "previousEvidence": [
+        {
           "path": "docs/BULK_STATIC_ACCEPTANCE.md",
           "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
         },
         {
           "path": "references/bulk-verification-summary.json",
           "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        },
+        {
+          "path": "docs/GAP_AUDIT_ACCEPTANCE.md",
+          "sha256": "89442ee32db4a4ccaa40610dfc2e4fd883156b629340ca992fbe2248159c65fe"
+        },
+        {
+          "path": "references/gap-verification-summary.json",
+          "sha256": "a7877f02033bb952bbb6d5562b9a28148a69ca595232a1df68d13376dd7c963d"
         }
-      ],
-      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
-      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
-      "batchStatus": "retained_static_local_verified"
+      ]
     },
     {
       "id": "treeView",
@@ -539,17 +1080,35 @@
       "canvas": "verified",
       "evidence": [
         {
+          "path": "docs/HTML_HOST_ACCEPTANCE.md",
+          "sha256": "bd24649160bcd5c2e450ee38839b35b49483400733d6f2dc215cd05f9f6a5504"
+        },
+        {
+          "path": "references/html-host-verification-summary.json",
+          "sha256": "a3156f9ba7565c360de3ee963a92f79573ca3407175cbddacf5430691d7f47f2"
+        }
+      ],
+      "acceptedScope": "Current 865-case retained static matrix, including 131 initial HTML control fixtures and applicable shared rich-label consumers. Not arbitrary browser HTML/CSS, exhaustive source branches, fresh installation or release acceptance. Video/audio entirely user-excluded; seven chart entries remain deferred to py-vchart.",
+      "sourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+      "batchStatus": "retained_static_local_verified",
+      "previousEvidence": [
+        {
           "path": "docs/BULK_STATIC_ACCEPTANCE.md",
           "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
         },
         {
           "path": "references/bulk-verification-summary.json",
           "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        },
+        {
+          "path": "docs/GAP_AUDIT_ACCEPTANCE.md",
+          "sha256": "89442ee32db4a4ccaa40610dfc2e4fd883156b629340ca992fbe2248159c65fe"
+        },
+        {
+          "path": "references/gap-verification-summary.json",
+          "sha256": "a7877f02033bb952bbb6d5562b9a28148a69ca595232a1df68d13376dd7c963d"
         }
-      ],
-      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
-      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
-      "batchStatus": "retained_static_local_verified"
+      ]
     },
     {
       "id": "architecture",
@@ -561,17 +1120,55 @@
       "canvas": "verified",
       "evidence": [
         {
+          "path": "docs/HTML_HOST_ACCEPTANCE.md",
+          "sha256": "bd24649160bcd5c2e450ee38839b35b49483400733d6f2dc215cd05f9f6a5504"
+        },
+        {
+          "path": "references/html-host-verification-summary.json",
+          "sha256": "a3156f9ba7565c360de3ee963a92f79573ca3407175cbddacf5430691d7f47f2"
+        }
+      ],
+      "acceptedScope": "Current 865-case retained static matrix, including 131 initial HTML control fixtures and applicable shared rich-label consumers. Not arbitrary browser HTML/CSS, exhaustive source branches, fresh installation or release acceptance. Video/audio entirely user-excluded; seven chart entries remain deferred to py-vchart.",
+      "sourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+      "batchStatus": "retained_static_local_verified",
+      "previousEvidence": [
+        {
           "path": "docs/BULK_STATIC_ACCEPTANCE.md",
           "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
         },
         {
           "path": "references/bulk-verification-summary.json",
           "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        },
+        {
+          "path": "docs/GAP_AUDIT_ACCEPTANCE.md",
+          "sha256": "89442ee32db4a4ccaa40610dfc2e4fd883156b629340ca992fbe2248159c65fe"
+        },
+        {
+          "path": "references/gap-verification-summary.json",
+          "sha256": "a7877f02033bb952bbb6d5562b9a28148a69ca595232a1df68d13376dd7c963d"
         }
       ],
-      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
-      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
-      "batchStatus": "retained_static_local_verified"
+      "knownBranchGaps": [
+        "architecture-accessibility"
+      ],
+      "branchVerificationEvidence": [
+        {
+          "path": "docs/BRANCH_VERIFICATION_RESULTS.md",
+          "sha256": "737ceac0dd351c6272ce4d7dfdfadcbf5922eb66944a9fa5956fc56af00df298",
+          "bytes": 6246
+        },
+        {
+          "path": "references/branch-verification-summary.json",
+          "sha256": "cdf4226c982290875052614751fdf774d3bcb36609e4bc8f0c908205ce61613d",
+          "bytes": 1723432
+        },
+        {
+          "path": "references/branch-repair-queue.json",
+          "sha256": "7e6322ad17e20e648a587ec0d6839b67c7fa7f25e1824150ee9b2b7a1da6be92",
+          "bytes": 3628
+        }
+      ]
     },
     {
       "id": "eventmodeling",
@@ -583,17 +1180,35 @@
       "canvas": "verified",
       "evidence": [
         {
+          "path": "docs/HTML_HOST_ACCEPTANCE.md",
+          "sha256": "bd24649160bcd5c2e450ee38839b35b49483400733d6f2dc215cd05f9f6a5504"
+        },
+        {
+          "path": "references/html-host-verification-summary.json",
+          "sha256": "a3156f9ba7565c360de3ee963a92f79573ca3407175cbddacf5430691d7f47f2"
+        }
+      ],
+      "acceptedScope": "Current 865-case retained static matrix, including 131 initial HTML control fixtures and applicable shared rich-label consumers. Not arbitrary browser HTML/CSS, exhaustive source branches, fresh installation or release acceptance. Video/audio entirely user-excluded; seven chart entries remain deferred to py-vchart.",
+      "sourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+      "batchStatus": "retained_static_local_verified",
+      "previousEvidence": [
+        {
           "path": "docs/BULK_STATIC_ACCEPTANCE.md",
           "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
         },
         {
           "path": "references/bulk-verification-summary.json",
           "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        },
+        {
+          "path": "docs/GAP_AUDIT_ACCEPTANCE.md",
+          "sha256": "89442ee32db4a4ccaa40610dfc2e4fd883156b629340ca992fbe2248159c65fe"
+        },
+        {
+          "path": "references/gap-verification-summary.json",
+          "sha256": "a7877f02033bb952bbb6d5562b9a28148a69ca595232a1df68d13376dd7c963d"
         }
-      ],
-      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
-      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
-      "batchStatus": "retained_static_local_verified"
+      ]
     },
     {
       "id": "ishikawa",
@@ -605,27 +1220,60 @@
       "canvas": "verified",
       "evidence": [
         {
+          "path": "docs/HTML_HOST_ACCEPTANCE.md",
+          "sha256": "bd24649160bcd5c2e450ee38839b35b49483400733d6f2dc215cd05f9f6a5504"
+        },
+        {
+          "path": "references/html-host-verification-summary.json",
+          "sha256": "a3156f9ba7565c360de3ee963a92f79573ca3407175cbddacf5430691d7f47f2"
+        }
+      ],
+      "acceptedScope": "Current 865-case retained static matrix, including 131 initial HTML control fixtures and applicable shared rich-label consumers. Not arbitrary browser HTML/CSS, exhaustive source branches, fresh installation or release acceptance. Video/audio entirely user-excluded; seven chart entries remain deferred to py-vchart.",
+      "sourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+      "batchStatus": "retained_static_local_verified",
+      "previousEvidence": [
+        {
           "path": "docs/BULK_STATIC_ACCEPTANCE.md",
           "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
         },
         {
           "path": "references/bulk-verification-summary.json",
           "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        },
+        {
+          "path": "docs/GAP_AUDIT_ACCEPTANCE.md",
+          "sha256": "89442ee32db4a4ccaa40610dfc2e4fd883156b629340ca992fbe2248159c65fe"
+        },
+        {
+          "path": "references/gap-verification-summary.json",
+          "sha256": "a7877f02033bb952bbb6d5562b9a28148a69ca595232a1df68d13376dd7c963d"
         }
-      ],
-      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
-      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
-      "batchStatus": "retained_static_local_verified"
+      ]
     },
     {
       "id": "venn",
       "source": "packages/mermaid/src/diagrams/venn/vennDetector.ts",
       "scope": "core",
-      "status": "inventoried",
-      "parser": "planned",
-      "layout": "planned",
-      "canvas": "planned",
+      "status": "canvas_verified",
+      "parser": "verified",
+      "layout": "verified",
+      "canvas": "verified",
       "evidence": [
+        {
+          "path": "docs/VCHART_ACCEPTANCE.md",
+          "sha256": "b17de95bccb4cde59e17b72308b963011d5731ace1a3a0e8be200a7edddbf01e",
+          "bytes": 6447
+        },
+        {
+          "path": "references/vchart-pypi-verification.json",
+          "sha256": "2a512a95e02f40577b99d43d92c65c1a52ce892b0e1a16dc785cd7520fbab8ba",
+          "bytes": 3763
+        }
+      ],
+      "batchStatus": "vchart_static_local_verified",
+      "futureProvider": "py-vchart",
+      "futureIntegrationStatus": "integrated_bounded_static",
+      "previousEvidence": [
         {
           "path": "docs/BULK_STATIC_ACCEPTANCE.md",
           "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
@@ -633,19 +1281,45 @@
         {
           "path": "references/bulk-verification-summary.json",
           "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        },
+        {
+          "path": "docs/VCHART_ACCEPTANCE.md",
+          "sha256": "728874dd150cb6cab8979cf97bc92a33775540474bf64743febfe85e75be85fa",
+          "bytes": 6373
+        },
+        {
+          "path": "references/vchart-verification-summary.json",
+          "sha256": "368d4f7b127106bcd3f0a0a9697482599e93ad6d079f52b3623db80a1c08632a",
+          "bytes": 7936
         }
       ],
-      "batchStatus": "deferred_by_user"
+      "sourceTreeSha256": "756a21de6e1845dd81ab9d6ca7e08a84c8e8190e9d7ec03312cc923e872d6dc3",
+      "acceptedScope": "Final 42-input corpus: 30 render/10 source errors/2 source-valid native limitations, three backends. Not all advanced options; Venn at most three singleton sets, bounded Treemap formats and binary layout. See VCHART_ACCEPTANCE."
     },
     {
       "id": "treemap",
       "source": "packages/mermaid/src/diagrams/treemap/detector.ts",
       "scope": "core",
-      "status": "inventoried",
-      "parser": "planned",
-      "layout": "planned",
-      "canvas": "planned",
+      "status": "canvas_verified",
+      "parser": "verified",
+      "layout": "verified",
+      "canvas": "verified",
       "evidence": [
+        {
+          "path": "docs/VCHART_ACCEPTANCE.md",
+          "sha256": "b17de95bccb4cde59e17b72308b963011d5731ace1a3a0e8be200a7edddbf01e",
+          "bytes": 6447
+        },
+        {
+          "path": "references/vchart-pypi-verification.json",
+          "sha256": "2a512a95e02f40577b99d43d92c65c1a52ce892b0e1a16dc785cd7520fbab8ba",
+          "bytes": 3763
+        }
+      ],
+      "batchStatus": "vchart_static_local_verified",
+      "futureProvider": "py-vchart",
+      "futureIntegrationStatus": "integrated_bounded_static",
+      "previousEvidence": [
         {
           "path": "docs/BULK_STATIC_ACCEPTANCE.md",
           "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
@@ -653,9 +1327,20 @@
         {
           "path": "references/bulk-verification-summary.json",
           "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        },
+        {
+          "path": "docs/VCHART_ACCEPTANCE.md",
+          "sha256": "728874dd150cb6cab8979cf97bc92a33775540474bf64743febfe85e75be85fa",
+          "bytes": 6373
+        },
+        {
+          "path": "references/vchart-verification-summary.json",
+          "sha256": "368d4f7b127106bcd3f0a0a9697482599e93ad6d079f52b3623db80a1c08632a",
+          "bytes": 7936
         }
       ],
-      "batchStatus": "deferred_by_user"
+      "sourceTreeSha256": "756a21de6e1845dd81ab9d6ca7e08a84c8e8190e9d7ec03312cc923e872d6dc3",
+      "acceptedScope": "Final 42-input corpus: 30 render/10 source errors/2 source-valid native limitations, three backends. Not all advanced options; Venn at most three singleton sets, bounded Treemap formats and binary layout. See VCHART_ACCEPTANCE."
     },
     {
       "id": "usecase",
@@ -667,17 +1352,35 @@
       "canvas": "verified",
       "evidence": [
         {
+          "path": "docs/HTML_HOST_ACCEPTANCE.md",
+          "sha256": "bd24649160bcd5c2e450ee38839b35b49483400733d6f2dc215cd05f9f6a5504"
+        },
+        {
+          "path": "references/html-host-verification-summary.json",
+          "sha256": "a3156f9ba7565c360de3ee963a92f79573ca3407175cbddacf5430691d7f47f2"
+        }
+      ],
+      "acceptedScope": "Current 865-case retained static matrix, including 131 initial HTML control fixtures and applicable shared rich-label consumers. Not arbitrary browser HTML/CSS, exhaustive source branches, fresh installation or release acceptance. Video/audio entirely user-excluded; seven chart entries remain deferred to py-vchart.",
+      "sourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+      "batchStatus": "retained_static_local_verified",
+      "previousEvidence": [
+        {
           "path": "docs/BULK_STATIC_ACCEPTANCE.md",
           "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
         },
         {
           "path": "references/bulk-verification-summary.json",
           "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        },
+        {
+          "path": "docs/GAP_AUDIT_ACCEPTANCE.md",
+          "sha256": "89442ee32db4a4ccaa40610dfc2e4fd883156b629340ca992fbe2248159c65fe"
+        },
+        {
+          "path": "references/gap-verification-summary.json",
+          "sha256": "a7877f02033bb952bbb6d5562b9a28148a69ca595232a1df68d13376dd7c963d"
         }
-      ],
-      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
-      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
-      "batchStatus": "retained_static_local_verified"
+      ]
     },
     {
       "id": "wardley",
@@ -689,17 +1392,35 @@
       "canvas": "verified",
       "evidence": [
         {
+          "path": "docs/HTML_HOST_ACCEPTANCE.md",
+          "sha256": "bd24649160bcd5c2e450ee38839b35b49483400733d6f2dc215cd05f9f6a5504"
+        },
+        {
+          "path": "references/html-host-verification-summary.json",
+          "sha256": "a3156f9ba7565c360de3ee963a92f79573ca3407175cbddacf5430691d7f47f2"
+        }
+      ],
+      "acceptedScope": "Current 865-case retained static matrix, including 131 initial HTML control fixtures and applicable shared rich-label consumers. Not arbitrary browser HTML/CSS, exhaustive source branches, fresh installation or release acceptance. Video/audio entirely user-excluded; seven chart entries remain deferred to py-vchart.",
+      "sourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+      "batchStatus": "retained_static_local_verified",
+      "previousEvidence": [
+        {
           "path": "docs/BULK_STATIC_ACCEPTANCE.md",
           "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
         },
         {
           "path": "references/bulk-verification-summary.json",
           "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        },
+        {
+          "path": "docs/GAP_AUDIT_ACCEPTANCE.md",
+          "sha256": "89442ee32db4a4ccaa40610dfc2e4fd883156b629340ca992fbe2248159c65fe"
+        },
+        {
+          "path": "references/gap-verification-summary.json",
+          "sha256": "a7877f02033bb952bbb6d5562b9a28148a69ca595232a1df68d13376dd7c963d"
         }
-      ],
-      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
-      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
-      "batchStatus": "retained_static_local_verified"
+      ]
     },
     {
       "id": "cynefin",
@@ -711,17 +1432,60 @@
       "canvas": "verified",
       "evidence": [
         {
+          "path": "docs/HTML_HOST_ACCEPTANCE.md",
+          "sha256": "bd24649160bcd5c2e450ee38839b35b49483400733d6f2dc215cd05f9f6a5504"
+        },
+        {
+          "path": "references/html-host-verification-summary.json",
+          "sha256": "a3156f9ba7565c360de3ee963a92f79573ca3407175cbddacf5430691d7f47f2"
+        }
+      ],
+      "acceptedScope": "Current 865-case retained static matrix, including 131 initial HTML control fixtures and applicable shared rich-label consumers. Not arbitrary browser HTML/CSS, exhaustive source branches, fresh installation or release acceptance. Video/audio entirely user-excluded; seven chart entries remain deferred to py-vchart.",
+      "sourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+      "batchStatus": "retained_static_local_verified",
+      "previousEvidence": [
+        {
           "path": "docs/BULK_STATIC_ACCEPTANCE.md",
           "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
         },
         {
           "path": "references/bulk-verification-summary.json",
           "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        },
+        {
+          "path": "docs/GAP_AUDIT_ACCEPTANCE.md",
+          "sha256": "89442ee32db4a4ccaa40610dfc2e4fd883156b629340ca992fbe2248159c65fe"
+        },
+        {
+          "path": "references/gap-verification-summary.json",
+          "sha256": "a7877f02033bb952bbb6d5562b9a28148a69ca595232a1df68d13376dd7c963d"
         }
       ],
-      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
-      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
-      "batchStatus": "retained_static_local_verified"
+      "knownBranchGaps": [
+        "cynefin-double-unicode",
+        "cynefin-double-unknown",
+        "cynefin-literal-newline",
+        "cynefin-single-newline",
+        "cynefin-single-tab",
+        "cynefin-transition-escape"
+      ],
+      "branchVerificationEvidence": [
+        {
+          "path": "docs/BRANCH_VERIFICATION_RESULTS.md",
+          "sha256": "737ceac0dd351c6272ce4d7dfdfadcbf5922eb66944a9fa5956fc56af00df298",
+          "bytes": 6246
+        },
+        {
+          "path": "references/branch-verification-summary.json",
+          "sha256": "cdf4226c982290875052614751fdf774d3bcb36609e4bc8f0c908205ce61613d",
+          "bytes": 1723432
+        },
+        {
+          "path": "references/branch-repair-queue.json",
+          "sha256": "7e6322ad17e20e648a587ec0d6839b67c7fa7f25e1824150ee9b2b7a1da6be92",
+          "bytes": 3628
+        }
+      ]
     },
     {
       "id": "railroad",
@@ -733,17 +1497,35 @@
       "canvas": "verified",
       "evidence": [
         {
+          "path": "docs/HTML_HOST_ACCEPTANCE.md",
+          "sha256": "bd24649160bcd5c2e450ee38839b35b49483400733d6f2dc215cd05f9f6a5504"
+        },
+        {
+          "path": "references/html-host-verification-summary.json",
+          "sha256": "a3156f9ba7565c360de3ee963a92f79573ca3407175cbddacf5430691d7f47f2"
+        }
+      ],
+      "acceptedScope": "Current 865-case retained static matrix, including 131 initial HTML control fixtures and applicable shared rich-label consumers. Not arbitrary browser HTML/CSS, exhaustive source branches, fresh installation or release acceptance. Video/audio entirely user-excluded; seven chart entries remain deferred to py-vchart.",
+      "sourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+      "batchStatus": "retained_static_local_verified",
+      "previousEvidence": [
+        {
           "path": "docs/BULK_STATIC_ACCEPTANCE.md",
           "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
         },
         {
           "path": "references/bulk-verification-summary.json",
           "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        },
+        {
+          "path": "docs/GAP_AUDIT_ACCEPTANCE.md",
+          "sha256": "89442ee32db4a4ccaa40610dfc2e4fd883156b629340ca992fbe2248159c65fe"
+        },
+        {
+          "path": "references/gap-verification-summary.json",
+          "sha256": "a7877f02033bb952bbb6d5562b9a28148a69ca595232a1df68d13376dd7c963d"
         }
-      ],
-      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
-      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
-      "batchStatus": "retained_static_local_verified"
+      ]
     },
     {
       "id": "railroadEbnf",
@@ -755,17 +1537,35 @@
       "canvas": "verified",
       "evidence": [
         {
+          "path": "docs/HTML_HOST_ACCEPTANCE.md",
+          "sha256": "bd24649160bcd5c2e450ee38839b35b49483400733d6f2dc215cd05f9f6a5504"
+        },
+        {
+          "path": "references/html-host-verification-summary.json",
+          "sha256": "a3156f9ba7565c360de3ee963a92f79573ca3407175cbddacf5430691d7f47f2"
+        }
+      ],
+      "acceptedScope": "Current 865-case retained static matrix, including 131 initial HTML control fixtures and applicable shared rich-label consumers. Not arbitrary browser HTML/CSS, exhaustive source branches, fresh installation or release acceptance. Video/audio entirely user-excluded; seven chart entries remain deferred to py-vchart.",
+      "sourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+      "batchStatus": "retained_static_local_verified",
+      "previousEvidence": [
+        {
           "path": "docs/BULK_STATIC_ACCEPTANCE.md",
           "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
         },
         {
           "path": "references/bulk-verification-summary.json",
           "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        },
+        {
+          "path": "docs/GAP_AUDIT_ACCEPTANCE.md",
+          "sha256": "89442ee32db4a4ccaa40610dfc2e4fd883156b629340ca992fbe2248159c65fe"
+        },
+        {
+          "path": "references/gap-verification-summary.json",
+          "sha256": "a7877f02033bb952bbb6d5562b9a28148a69ca595232a1df68d13376dd7c963d"
         }
-      ],
-      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
-      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
-      "batchStatus": "retained_static_local_verified"
+      ]
     },
     {
       "id": "railroadAbnf",
@@ -777,17 +1577,35 @@
       "canvas": "verified",
       "evidence": [
         {
+          "path": "docs/HTML_HOST_ACCEPTANCE.md",
+          "sha256": "bd24649160bcd5c2e450ee38839b35b49483400733d6f2dc215cd05f9f6a5504"
+        },
+        {
+          "path": "references/html-host-verification-summary.json",
+          "sha256": "a3156f9ba7565c360de3ee963a92f79573ca3407175cbddacf5430691d7f47f2"
+        }
+      ],
+      "acceptedScope": "Current 865-case retained static matrix, including 131 initial HTML control fixtures and applicable shared rich-label consumers. Not arbitrary browser HTML/CSS, exhaustive source branches, fresh installation or release acceptance. Video/audio entirely user-excluded; seven chart entries remain deferred to py-vchart.",
+      "sourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+      "batchStatus": "retained_static_local_verified",
+      "previousEvidence": [
+        {
           "path": "docs/BULK_STATIC_ACCEPTANCE.md",
           "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
         },
         {
           "path": "references/bulk-verification-summary.json",
           "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        },
+        {
+          "path": "docs/GAP_AUDIT_ACCEPTANCE.md",
+          "sha256": "89442ee32db4a4ccaa40610dfc2e4fd883156b629340ca992fbe2248159c65fe"
+        },
+        {
+          "path": "references/gap-verification-summary.json",
+          "sha256": "a7877f02033bb952bbb6d5562b9a28148a69ca595232a1df68d13376dd7c963d"
         }
-      ],
-      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
-      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
-      "batchStatus": "retained_static_local_verified"
+      ]
     },
     {
       "id": "railroadPeg",
@@ -799,17 +1617,35 @@
       "canvas": "verified",
       "evidence": [
         {
+          "path": "docs/HTML_HOST_ACCEPTANCE.md",
+          "sha256": "bd24649160bcd5c2e450ee38839b35b49483400733d6f2dc215cd05f9f6a5504"
+        },
+        {
+          "path": "references/html-host-verification-summary.json",
+          "sha256": "a3156f9ba7565c360de3ee963a92f79573ca3407175cbddacf5430691d7f47f2"
+        }
+      ],
+      "acceptedScope": "Current 865-case retained static matrix, including 131 initial HTML control fixtures and applicable shared rich-label consumers. Not arbitrary browser HTML/CSS, exhaustive source branches, fresh installation or release acceptance. Video/audio entirely user-excluded; seven chart entries remain deferred to py-vchart.",
+      "sourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+      "batchStatus": "retained_static_local_verified",
+      "previousEvidence": [
+        {
           "path": "docs/BULK_STATIC_ACCEPTANCE.md",
           "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
         },
         {
           "path": "references/bulk-verification-summary.json",
           "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        },
+        {
+          "path": "docs/GAP_AUDIT_ACCEPTANCE.md",
+          "sha256": "89442ee32db4a4ccaa40610dfc2e4fd883156b629340ca992fbe2248159c65fe"
+        },
+        {
+          "path": "references/gap-verification-summary.json",
+          "sha256": "a7877f02033bb952bbb6d5562b9a28148a69ca595232a1df68d13376dd7c963d"
         }
-      ],
-      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
-      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
-      "batchStatus": "retained_static_local_verified"
+      ]
     },
     {
       "id": "zenuml",
@@ -821,17 +1657,55 @@
       "canvas": "verified",
       "evidence": [
         {
+          "path": "docs/HTML_HOST_ACCEPTANCE.md",
+          "sha256": "bd24649160bcd5c2e450ee38839b35b49483400733d6f2dc215cd05f9f6a5504"
+        },
+        {
+          "path": "references/html-host-verification-summary.json",
+          "sha256": "a3156f9ba7565c360de3ee963a92f79573ca3407175cbddacf5430691d7f47f2"
+        }
+      ],
+      "acceptedScope": "Current 865-case retained static matrix, including 131 initial HTML control fixtures and applicable shared rich-label consumers. Not arbitrary browser HTML/CSS, exhaustive source branches, fresh installation or release acceptance. Video/audio entirely user-excluded; seven chart entries remain deferred to py-vchart.",
+      "sourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+      "batchStatus": "retained_static_local_verified",
+      "previousEvidence": [
+        {
           "path": "docs/BULK_STATIC_ACCEPTANCE.md",
           "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
         },
         {
           "path": "references/bulk-verification-summary.json",
           "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        },
+        {
+          "path": "docs/GAP_AUDIT_ACCEPTANCE.md",
+          "sha256": "89442ee32db4a4ccaa40610dfc2e4fd883156b629340ca992fbe2248159c65fe"
+        },
+        {
+          "path": "references/gap-verification-summary.json",
+          "sha256": "a7877f02033bb952bbb6d5562b9a28148a69ca595232a1df68d13376dd7c963d"
         }
       ],
-      "acceptedScope": "31 retained static entrypoints only; interactions and Dagre excluded; installation/release deferred",
-      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
-      "batchStatus": "retained_static_local_verified"
+      "knownBranchGaps": [
+        "C-zen-comment-escape"
+      ],
+      "branchVerificationEvidence": [
+        {
+          "path": "docs/BRANCH_VERIFICATION_RESULTS.md",
+          "sha256": "737ceac0dd351c6272ce4d7dfdfadcbf5922eb66944a9fa5956fc56af00df298",
+          "bytes": 6246
+        },
+        {
+          "path": "references/branch-verification-summary.json",
+          "sha256": "cdf4226c982290875052614751fdf774d3bcb36609e4bc8f0c908205ce61613d",
+          "bytes": 1723432
+        },
+        {
+          "path": "references/branch-repair-queue.json",
+          "sha256": "7e6322ad17e20e648a587ec0d6839b67c7fa7f25e1824150ee9b2b7a1da6be92",
+          "bytes": 3628
+        }
+      ]
     }
   ],
   "crossCutting": [
@@ -840,74 +1714,172 @@
       "status": "canvas_verified",
       "evidence": [
         {
+          "path": "docs/HTML_HOST_ACCEPTANCE.md",
+          "sha256": "bd24649160bcd5c2e450ee38839b35b49483400733d6f2dc215cd05f9f6a5504"
+        },
+        {
+          "path": "references/html-host-verification-summary.json",
+          "sha256": "a3156f9ba7565c360de3ee963a92f79573ca3407175cbddacf5430691d7f47f2"
+        }
+      ],
+      "batchStatus": "retained_static_local_verified",
+      "acceptedScope": "Current 865-case retained static matrix, including 131 initial HTML control fixtures and applicable shared rich-label consumers. Not arbitrary browser HTML/CSS, exhaustive source branches, fresh installation or release acceptance. Video/audio entirely user-excluded; seven chart entries remain deferred to py-vchart.",
+      "sourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+      "previousEvidence": [
+        {
           "path": "docs/BULK_STATIC_ACCEPTANCE.md",
           "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
         },
         {
           "path": "references/bulk-verification-summary.json",
           "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        },
+        {
+          "path": "docs/GAP_AUDIT_ACCEPTANCE.md",
+          "sha256": "89442ee32db4a4ccaa40610dfc2e4fd883156b629340ca992fbe2248159c65fe"
+        },
+        {
+          "path": "references/gap-verification-summary.json",
+          "sha256": "a7877f02033bb952bbb6d5562b9a28148a69ca595232a1df68d13376dd7c963d"
         }
-      ],
-      "batchStatus": "retained_static_local_verified",
-      "acceptedScope": "Applicable retained static consumers only; excludes interaction/DOM and deferred diagram consumers; offline runtime verified, fresh installation deferred",
-      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0"
+      ]
     },
     {
       "id": "configuration-schema-defaults",
       "status": "canvas_verified",
       "evidence": [
         {
+          "path": "docs/HTML_HOST_ACCEPTANCE.md",
+          "sha256": "bd24649160bcd5c2e450ee38839b35b49483400733d6f2dc215cd05f9f6a5504"
+        },
+        {
+          "path": "references/html-host-verification-summary.json",
+          "sha256": "a3156f9ba7565c360de3ee963a92f79573ca3407175cbddacf5430691d7f47f2"
+        }
+      ],
+      "batchStatus": "retained_static_local_verified",
+      "acceptedScope": "Current 865-case retained static matrix, including 131 initial HTML control fixtures and applicable shared rich-label consumers. Not arbitrary browser HTML/CSS, exhaustive source branches, fresh installation or release acceptance. Video/audio entirely user-excluded; seven chart entries remain deferred to py-vchart.",
+      "sourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+      "previousEvidence": [
+        {
           "path": "docs/BULK_STATIC_ACCEPTANCE.md",
           "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
         },
         {
           "path": "references/bulk-verification-summary.json",
           "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        },
+        {
+          "path": "docs/GAP_AUDIT_ACCEPTANCE.md",
+          "sha256": "89442ee32db4a4ccaa40610dfc2e4fd883156b629340ca992fbe2248159c65fe"
+        },
+        {
+          "path": "references/gap-verification-summary.json",
+          "sha256": "a7877f02033bb952bbb6d5562b9a28148a69ca595232a1df68d13376dd7c963d"
         }
-      ],
-      "batchStatus": "retained_static_local_verified",
-      "acceptedScope": "Applicable retained static consumers only; excludes interaction/DOM and deferred diagram consumers; offline runtime verified, fresh installation deferred",
-      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0"
+      ]
     },
     {
       "id": "themes-css-cascade",
       "status": "canvas_verified",
       "evidence": [
         {
+          "path": "docs/HTML_HOST_ACCEPTANCE.md",
+          "sha256": "bd24649160bcd5c2e450ee38839b35b49483400733d6f2dc215cd05f9f6a5504"
+        },
+        {
+          "path": "references/html-host-verification-summary.json",
+          "sha256": "a3156f9ba7565c360de3ee963a92f79573ca3407175cbddacf5430691d7f47f2"
+        }
+      ],
+      "batchStatus": "retained_static_local_verified",
+      "acceptedScope": "Current 865-case retained static matrix, including 131 initial HTML control fixtures and applicable shared rich-label consumers. Not arbitrary browser HTML/CSS, exhaustive source branches, fresh installation or release acceptance. Video/audio entirely user-excluded; seven chart entries remain deferred to py-vchart.",
+      "sourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+      "previousEvidence": [
+        {
           "path": "docs/BULK_STATIC_ACCEPTANCE.md",
           "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
         },
         {
           "path": "references/bulk-verification-summary.json",
           "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        },
+        {
+          "path": "docs/GAP_AUDIT_ACCEPTANCE.md",
+          "sha256": "89442ee32db4a4ccaa40610dfc2e4fd883156b629340ca992fbe2248159c65fe"
+        },
+        {
+          "path": "references/gap-verification-summary.json",
+          "sha256": "a7877f02033bb952bbb6d5562b9a28148a69ca595232a1df68d13376dd7c963d"
         }
-      ],
-      "batchStatus": "retained_static_local_verified",
-      "acceptedScope": "Applicable retained static consumers only; excludes interaction/DOM and deferred diagram consumers; offline runtime verified, fresh installation deferred",
-      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0"
+      ]
     },
     {
       "id": "text-html-markdown-math",
       "status": "canvas_verified",
       "evidence": [
         {
+          "path": "docs/HTML_HOST_ACCEPTANCE.md",
+          "sha256": "bd24649160bcd5c2e450ee38839b35b49483400733d6f2dc215cd05f9f6a5504"
+        },
+        {
+          "path": "references/html-host-verification-summary.json",
+          "sha256": "a3156f9ba7565c360de3ee963a92f79573ca3407175cbddacf5430691d7f47f2"
+        }
+      ],
+      "batchStatus": "retained_static_html_controls_local_verified",
+      "acceptedScope": "Current 865-case retained static matrix, including 131 initial HTML control fixtures and applicable shared rich-label consumers. Not arbitrary browser HTML/CSS, exhaustive source branches, fresh installation or release acceptance. Video/audio entirely user-excluded; seven chart entries remain deferred to py-vchart.",
+      "sourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+      "previousEvidence": [
+        {
           "path": "docs/BULK_STATIC_ACCEPTANCE.md",
           "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
         },
         {
           "path": "references/bulk-verification-summary.json",
           "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        },
+        {
+          "path": "docs/GAP_AUDIT_ACCEPTANCE.md",
+          "sha256": "89442ee32db4a4ccaa40610dfc2e4fd883156b629340ca992fbe2248159c65fe"
+        },
+        {
+          "path": "references/gap-verification-summary.json",
+          "sha256": "a7877f02033bb952bbb6d5562b9a28148a69ca595232a1df68d13376dd7c963d"
         }
       ],
-      "batchStatus": "retained_static_local_verified",
-      "acceptedScope": "Applicable retained static consumers only; excludes interaction/DOM and deferred diagram consumers; offline runtime verified, fresh installation deferred",
-      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0"
+      "verifiedSubscope": "Plain/Markdown/HTML text and formal math plus initial input(22 types), button, select/options/optgroups, textarea, meter/progress and fieldset/legend in the verified native static host contract.",
+      "remainingWork": [],
+      "mediaExclusion": "references/media-exclusion.json",
+      "historicalRemainingWork": [
+        {
+          "id": "static-html-controls-initial-appearance",
+          "status": "unimplemented_not_user_excluded",
+          "evidence": "references/static-html-host-gap.json",
+          "plan": "docs/STATIC_HTML_HOST_PLAN.md",
+          "retainedObservedControlCases": 7,
+          "diagnosticReport": "http://127.0.0.1:8765/G02-static-host-preview-20261106T084708Z-fc6820ed/index.html",
+          "diagnosticScopeNote": "Historical9 cases;7 retained controls,2 media cases now user-excluded."
+        }
+      ]
     },
     {
       "id": "accessibility-metadata",
       "status": "inventoried",
       "evidence": [
         {
+          "path": "docs/GAP_AUDIT_ACCEPTANCE.md",
+          "sha256": "89442ee32db4a4ccaa40610dfc2e4fd883156b629340ca992fbe2248159c65fe"
+        },
+        {
+          "path": "references/gap-verification-summary.json",
+          "sha256": "a7877f02033bb952bbb6d5562b9a28148a69ca595232a1df68d13376dd7c963d"
+        }
+      ],
+      "batchStatus": "excluded_by_static_scope",
+      "acceptedScope": "Static title/description parsing retained where source consumes; DOM accessibility behavior excluded Video/audio entirely excluded by user.",
+      "previousEvidence": [
+        {
           "path": "docs/BULK_STATIC_ACCEPTANCE.md",
           "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
         },
@@ -915,55 +1887,89 @@
           "path": "references/bulk-verification-summary.json",
           "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
         }
-      ],
-      "batchStatus": "excluded_by_static_scope",
-      "acceptedScope": "Static title/description parsing retained where source consumes; DOM accessibility behavior excluded"
+      ]
     },
     {
       "id": "links-interaction-security",
       "status": "canvas_verified",
       "evidence": [
         {
+          "path": "docs/HTML_HOST_ACCEPTANCE.md",
+          "sha256": "bd24649160bcd5c2e450ee38839b35b49483400733d6f2dc215cd05f9f6a5504"
+        },
+        {
+          "path": "references/html-host-verification-summary.json",
+          "sha256": "a3156f9ba7565c360de3ee963a92f79573ca3407175cbddacf5430691d7f47f2"
+        }
+      ],
+      "batchStatus": "retained_static_local_verified",
+      "acceptedScope": "Current 865-case retained static matrix, including 131 initial HTML control fixtures and applicable shared rich-label consumers. Not arbitrary browser HTML/CSS, exhaustive source branches, fresh installation or release acceptance. Video/audio entirely user-excluded; seven chart entries remain deferred to py-vchart.",
+      "sourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+      "previousEvidence": [
+        {
           "path": "docs/BULK_STATIC_ACCEPTANCE.md",
           "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
         },
         {
           "path": "references/bulk-verification-summary.json",
           "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        },
+        {
+          "path": "docs/GAP_AUDIT_ACCEPTANCE.md",
+          "sha256": "89442ee32db4a4ccaa40610dfc2e4fd883156b629340ca992fbe2248159c65fe"
+        },
+        {
+          "path": "references/gap-verification-summary.json",
+          "sha256": "a7877f02033bb952bbb6d5562b9a28148a69ca595232a1df68d13376dd7c963d"
         }
-      ],
-      "batchStatus": "retained_static_local_verified",
-      "acceptedScope": "Applicable retained static consumers only; excludes interaction/DOM and deferred diagram consumers; offline runtime verified, fresh installation deferred",
-      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0"
+      ]
     },
     {
       "id": "icons-images-resource-policy",
       "status": "canvas_verified",
       "evidence": [
         {
+          "path": "docs/HTML_HOST_ACCEPTANCE.md",
+          "sha256": "bd24649160bcd5c2e450ee38839b35b49483400733d6f2dc215cd05f9f6a5504"
+        },
+        {
+          "path": "references/html-host-verification-summary.json",
+          "sha256": "a3156f9ba7565c360de3ee963a92f79573ca3407175cbddacf5430691d7f47f2"
+        }
+      ],
+      "batchStatus": "retained_static_local_verified",
+      "acceptedScope": "Current 865-case retained static matrix, including 131 initial HTML control fixtures and applicable shared rich-label consumers. Not arbitrary browser HTML/CSS, exhaustive source branches, fresh installation or release acceptance. Video/audio entirely user-excluded; seven chart entries remain deferred to py-vchart.",
+      "sourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+      "previousEvidence": [
+        {
           "path": "docs/BULK_STATIC_ACCEPTANCE.md",
           "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
         },
         {
           "path": "references/bulk-verification-summary.json",
           "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        },
+        {
+          "path": "docs/GAP_AUDIT_ACCEPTANCE.md",
+          "sha256": "89442ee32db4a4ccaa40610dfc2e4fd883156b629340ca992fbe2248159c65fe"
+        },
+        {
+          "path": "references/gap-verification-summary.json",
+          "sha256": "a7877f02033bb952bbb6d5562b9a28148a69ca595232a1df68d13376dd7c963d"
         }
-      ],
-      "batchStatus": "retained_static_local_verified",
-      "acceptedScope": "Applicable retained static consumers only; excludes interaction/DOM and deferred diagram consumers; offline runtime verified, fresh installation deferred",
-      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0"
+      ]
     },
     {
       "id": "layout-engines",
       "status": "canvas_verified",
       "evidence": [
         {
-          "path": "docs/BULK_STATIC_ACCEPTANCE.md",
-          "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
+          "path": "docs/HTML_HOST_ACCEPTANCE.md",
+          "sha256": "bd24649160bcd5c2e450ee38839b35b49483400733d6f2dc215cd05f9f6a5504"
         },
         {
-          "path": "references/bulk-verification-summary.json",
-          "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+          "path": "references/html-host-verification-summary.json",
+          "sha256": "a3156f9ba7565c360de3ee963a92f79573ca3407175cbddacf5430691d7f47f2"
         }
       ],
       "sourceId": "layout-engines-dagre-elk-tidy",
@@ -971,96 +1977,204 @@
         "dagre"
       ],
       "batchStatus": "retained_static_local_verified",
-      "acceptedScope": "Applicable retained static consumers only; excludes interaction/DOM and deferred diagram consumers; offline runtime verified, fresh installation deferred",
-      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0"
+      "acceptedScope": "Current 865-case retained static matrix, including 131 initial HTML control fixtures and applicable shared rich-label consumers. Not arbitrary browser HTML/CSS, exhaustive source branches, fresh installation or release acceptance. Video/audio entirely user-excluded; seven chart entries remain deferred to py-vchart.",
+      "sourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+      "previousEvidence": [
+        {
+          "path": "docs/BULK_STATIC_ACCEPTANCE.md",
+          "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
+        },
+        {
+          "path": "references/bulk-verification-summary.json",
+          "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        },
+        {
+          "path": "docs/GAP_AUDIT_ACCEPTANCE.md",
+          "sha256": "89442ee32db4a4ccaa40610dfc2e4fd883156b629340ca992fbe2248159c65fe"
+        },
+        {
+          "path": "references/gap-verification-summary.json",
+          "sha256": "a7877f02033bb952bbb6d5562b9a28148a69ca595232a1df68d13376dd7c963d"
+        }
+      ]
     },
     {
       "id": "handdrawn-random-seed",
       "status": "canvas_verified",
       "evidence": [
         {
+          "path": "docs/HTML_HOST_ACCEPTANCE.md",
+          "sha256": "bd24649160bcd5c2e450ee38839b35b49483400733d6f2dc215cd05f9f6a5504"
+        },
+        {
+          "path": "references/html-host-verification-summary.json",
+          "sha256": "a3156f9ba7565c360de3ee963a92f79573ca3407175cbddacf5430691d7f47f2"
+        }
+      ],
+      "batchStatus": "retained_static_local_verified",
+      "acceptedScope": "Current 865-case retained static matrix, including 131 initial HTML control fixtures and applicable shared rich-label consumers. Not arbitrary browser HTML/CSS, exhaustive source branches, fresh installation or release acceptance. Video/audio entirely user-excluded; seven chart entries remain deferred to py-vchart.",
+      "sourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+      "previousEvidence": [
+        {
           "path": "docs/BULK_STATIC_ACCEPTANCE.md",
           "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
         },
         {
           "path": "references/bulk-verification-summary.json",
           "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        },
+        {
+          "path": "docs/GAP_AUDIT_ACCEPTANCE.md",
+          "sha256": "89442ee32db4a4ccaa40610dfc2e4fd883156b629340ca992fbe2248159c65fe"
+        },
+        {
+          "path": "references/gap-verification-summary.json",
+          "sha256": "a7877f02033bb952bbb6d5562b9a28148a69ca595232a1df68d13376dd7c963d"
         }
-      ],
-      "batchStatus": "retained_static_local_verified",
-      "acceptedScope": "Applicable retained static consumers only; excludes interaction/DOM and deferred diagram consumers; offline runtime verified, fresh installation deferred",
-      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0"
+      ]
     },
     {
       "id": "exports-scale-background",
       "status": "canvas_verified",
       "evidence": [
         {
+          "path": "docs/HTML_HOST_ACCEPTANCE.md",
+          "sha256": "bd24649160bcd5c2e450ee38839b35b49483400733d6f2dc215cd05f9f6a5504"
+        },
+        {
+          "path": "references/html-host-verification-summary.json",
+          "sha256": "a3156f9ba7565c360de3ee963a92f79573ca3407175cbddacf5430691d7f47f2"
+        }
+      ],
+      "batchStatus": "retained_static_local_verified",
+      "acceptedScope": "Current 865-case retained static matrix, including 131 initial HTML control fixtures and applicable shared rich-label consumers. Not arbitrary browser HTML/CSS, exhaustive source branches, fresh installation or release acceptance. Video/audio entirely user-excluded; seven chart entries remain deferred to py-vchart.",
+      "sourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+      "previousEvidence": [
+        {
           "path": "docs/BULK_STATIC_ACCEPTANCE.md",
           "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
         },
         {
           "path": "references/bulk-verification-summary.json",
           "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        },
+        {
+          "path": "docs/GAP_AUDIT_ACCEPTANCE.md",
+          "sha256": "89442ee32db4a4ccaa40610dfc2e4fd883156b629340ca992fbe2248159c65fe"
+        },
+        {
+          "path": "references/gap-verification-summary.json",
+          "sha256": "a7877f02033bb952bbb6d5562b9a28148a69ca595232a1df68d13376dd7c963d"
         }
-      ],
-      "batchStatus": "retained_static_local_verified",
-      "acceptedScope": "Applicable retained static consumers only; excludes interaction/DOM and deferred diagram consumers; offline runtime verified, fresh installation deferred",
-      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0"
+      ]
     },
     {
       "id": "diagnostics-errors-utf16",
       "status": "canvas_verified",
       "evidence": [
         {
+          "path": "docs/HTML_HOST_ACCEPTANCE.md",
+          "sha256": "bd24649160bcd5c2e450ee38839b35b49483400733d6f2dc215cd05f9f6a5504"
+        },
+        {
+          "path": "references/html-host-verification-summary.json",
+          "sha256": "a3156f9ba7565c360de3ee963a92f79573ca3407175cbddacf5430691d7f47f2"
+        }
+      ],
+      "batchStatus": "retained_static_local_verified",
+      "acceptedScope": "Current 865-case retained static matrix, including 131 initial HTML control fixtures and applicable shared rich-label consumers. Not arbitrary browser HTML/CSS, exhaustive source branches, fresh installation or release acceptance. Video/audio entirely user-excluded; seven chart entries remain deferred to py-vchart.",
+      "sourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+      "previousEvidence": [
+        {
           "path": "docs/BULK_STATIC_ACCEPTANCE.md",
           "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
         },
         {
           "path": "references/bulk-verification-summary.json",
           "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        },
+        {
+          "path": "docs/GAP_AUDIT_ACCEPTANCE.md",
+          "sha256": "89442ee32db4a4ccaa40610dfc2e4fd883156b629340ca992fbe2248159c65fe"
+        },
+        {
+          "path": "references/gap-verification-summary.json",
+          "sha256": "a7877f02033bb952bbb6d5562b9a28148a69ca595232a1df68d13376dd7c963d"
         }
-      ],
-      "batchStatus": "retained_static_local_verified",
-      "acceptedScope": "Applicable retained static consumers only; excludes interaction/DOM and deferred diagram consumers; offline runtime verified, fresh installation deferred",
-      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0"
+      ]
     },
     {
       "id": "threading-lifecycle",
       "status": "canvas_verified",
       "evidence": [
         {
+          "path": "docs/HTML_HOST_ACCEPTANCE.md",
+          "sha256": "bd24649160bcd5c2e450ee38839b35b49483400733d6f2dc215cd05f9f6a5504"
+        },
+        {
+          "path": "references/html-host-verification-summary.json",
+          "sha256": "a3156f9ba7565c360de3ee963a92f79573ca3407175cbddacf5430691d7f47f2"
+        }
+      ],
+      "batchStatus": "retained_static_local_verified",
+      "acceptedScope": "Current 865-case retained static matrix, including 131 initial HTML control fixtures and applicable shared rich-label consumers. Not arbitrary browser HTML/CSS, exhaustive source branches, fresh installation or release acceptance. Video/audio entirely user-excluded; seven chart entries remain deferred to py-vchart.",
+      "sourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+      "previousEvidence": [
+        {
           "path": "docs/BULK_STATIC_ACCEPTANCE.md",
           "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
         },
         {
           "path": "references/bulk-verification-summary.json",
           "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        },
+        {
+          "path": "docs/GAP_AUDIT_ACCEPTANCE.md",
+          "sha256": "89442ee32db4a4ccaa40610dfc2e4fd883156b629340ca992fbe2248159c65fe"
+        },
+        {
+          "path": "references/gap-verification-summary.json",
+          "sha256": "a7877f02033bb952bbb6d5562b9a28148a69ca595232a1df68d13376dd7c963d"
         }
-      ],
-      "batchStatus": "retained_static_local_verified",
-      "acceptedScope": "Applicable retained static consumers only; excludes interaction/DOM and deferred diagram consumers; offline runtime verified, fresh installation deferred",
-      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0"
+      ]
     },
     {
       "id": "offline-deployment",
       "status": "canvas_verified",
       "evidence": [
         {
+          "path": "docs/HTML_HOST_ACCEPTANCE.md",
+          "sha256": "bd24649160bcd5c2e450ee38839b35b49483400733d6f2dc215cd05f9f6a5504"
+        },
+        {
+          "path": "references/html-host-verification-summary.json",
+          "sha256": "a3156f9ba7565c360de3ee963a92f79573ca3407175cbddacf5430691d7f47f2"
+        }
+      ],
+      "batchStatus": "retained_static_local_verified",
+      "acceptedScope": "Current 865-case retained static matrix, including 131 initial HTML control fixtures and applicable shared rich-label consumers. Not arbitrary browser HTML/CSS, exhaustive source branches, fresh installation or release acceptance. Video/audio entirely user-excluded; seven chart entries remain deferred to py-vchart.",
+      "sourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+      "previousEvidence": [
+        {
           "path": "docs/BULK_STATIC_ACCEPTANCE.md",
           "sha256": "7588f025ae0ba8f23e3b13e9546e630cc918e5fb1eabf02c0b5b3573906a3990"
         },
         {
           "path": "references/bulk-verification-summary.json",
           "sha256": "46c9ce050f8062ea5efe34058db50f1e66b9ea6f123f4058ed87d54d28ca1fc0"
+        },
+        {
+          "path": "docs/GAP_AUDIT_ACCEPTANCE.md",
+          "sha256": "89442ee32db4a4ccaa40610dfc2e4fd883156b629340ca992fbe2248159c65fe"
+        },
+        {
+          "path": "references/gap-verification-summary.json",
+          "sha256": "a7877f02033bb952bbb6d5562b9a28148a69ca595232a1df68d13376dd7c963d"
         }
-      ],
-      "batchStatus": "retained_static_local_verified",
-      "acceptedScope": "Applicable retained static consumers only; excludes interaction/DOM and deferred diagram consumers; offline runtime verified, fresh installation deferred",
-      "sourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0"
+      ]
     }
   ],
-  "limitation": "Local retained31 static acceptance, not38 complete, pixel identity, new package installation, distribution release or publication; seven user-deferred entrypoints remain unverified.",
+  "limitation": "Prior scoped case acceptance remains historical evidence. Fourth-round finite branch audit confirms22 functional gap records and4 pure-value differences; source unchanged and no product repairs. Advanced static HTML/CSS extensions, video/audio, interaction,Dagre excluded; seven chart entries deferred; installation deferred.",
   "localSlices": {
     "F01.1": {
       "status": "verified_local_regression",
@@ -1103,6 +2217,54 @@
         }
       ],
       "reportUrl": "http://127.0.0.1:8765/BULK-P5-delivery-20261106T071012Z-ec4937fd/index.html"
+    },
+    "HTML-HOST": {
+      "status": "local_accepted",
+      "sourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+      "fixtureCount": 865,
+      "htmlControlFixtureCount": 131,
+      "legacyFixtureCount": 734,
+      "unitMethods": 2046,
+      "nativeProfiles": {
+        "cpu": {
+          "CHECKS_PASSED": 818,
+          "EXPECTED_ERROR": 46,
+          "EXCLUDED": 1
+        },
+        "auto": {
+          "CHECKS_PASSED": 818,
+          "EXPECTED_ERROR": 46,
+          "EXCLUDED": 1
+        },
+        "gpu": {
+          "CHECKS_PASSED": 818,
+          "EXPECTED_ERROR": 46,
+          "EXCLUDED": 1
+        }
+      },
+      "p4Run": "test-runs/BULK-P4-final-20261106T125300Z-435e50af",
+      "exportRepairRun": "test-runs/HTML-HOST-P4-EXPORT-repair-20261106T130826Z-cebc530d",
+      "exportCounts": {
+        "regression": 465,
+        "htmlControls": 450,
+        "total": 915
+      },
+      "exportEvidenceNote": "Original P4 export file bindings were invalid because an SVG dimension-loop key overwrote the outer case key. Those saved exports are not accepted evidence. All 915 exports were independently rerun on the same frozen candidate in the closed successful exportRepairRun; original P4/P5 attempts are preserved.",
+      "evidence": [
+        {
+          "path": "docs/HTML_HOST_ACCEPTANCE.md",
+          "sha256": "bd24649160bcd5c2e450ee38839b35b49483400733d6f2dc215cd05f9f6a5504"
+        },
+        {
+          "path": "references/html-host-verification-summary.json",
+          "sha256": "a3156f9ba7565c360de3ee963a92f79573ca3407175cbddacf5430691d7f47f2"
+        }
+      ],
+      "installationVerification": "deferred_by_user",
+      "pixelEqualityClaimed": false,
+      "p5Run": "test-runs/HTML-HOST-P5-delivery-20261106T131153Z-15f07388",
+      "reportUrl": "http://127.0.0.1:8765/REPORT-ROUNDS-delivery-20261106T131320Z-1382c778/index.html",
+      "htmlControlsReportUrl": "http://127.0.0.1:8765/REPORT-ROUNDS-delivery-20261106T131320Z-1382c778/rounds/html-controls/index.html"
     }
   },
   "targetScope": "static-rendering-only",
@@ -1132,5 +2294,234 @@
     "verified",
     "not_applicable",
     "deferred_by_user"
-  ]
+  ],
+  "remainingStaticFunctions": [
+    {
+      "id": "cynefin-string",
+      "title": "Cynefin 字符串转义与字面换行",
+      "branches": [
+        "cynefin-double-unknown",
+        "cynefin-double-unicode",
+        "cynefin-single-newline",
+        "cynefin-literal-newline",
+        "cynefin-single-tab",
+        "cynefin-transition-escape"
+      ],
+      "status": "confirmed_not_repaired"
+    },
+    {
+      "id": "architecture-multiline-metadata",
+      "title": "Architecture 多行元数据输入拒绝",
+      "branches": [
+        "architecture-accessibility"
+      ],
+      "status": "confirmed_not_repaired"
+    },
+    {
+      "id": "gantt-date",
+      "title": "Gantt 日期解析/星期与 ISO week 格式",
+      "branches": [
+        "BV-B-DATE-LOCALIZED",
+        "BV-B-DATE-WEEKDAY",
+        "BV-B-DAYJS-ISO"
+      ],
+      "status": "confirmed_not_repaired"
+    },
+    {
+      "id": "gantt-axis-format",
+      "title": "D3 轴格式：locale、百分号、padding、远年 ISO",
+      "branches": [
+        "BV-B-AXIS-ALL",
+        "BV-B-AXIS-LOCALE",
+        "BV-B-AXIS-ESCAPE",
+        "BV-B-AXIS-PADDING",
+        "BV-B-AXIS-FAR"
+      ],
+      "status": "confirmed_not_repaired"
+    },
+    {
+      "id": "gantt-week-phase",
+      "title": "多周刻度 weekday epoch 相位",
+      "branches": [
+        "BV-B-TICK-WEEKDAY"
+      ],
+      "status": "confirmed_not_repaired"
+    },
+    {
+      "id": "agentflow-collapsed-selfloop",
+      "title": "AgentFlow 折叠组丢失真实自环",
+      "branches": [
+        "BV-B-AGENT-GENUINE"
+      ],
+      "status": "confirmed_not_repaired"
+    },
+    {
+      "id": "sequence-static-paint",
+      "title": "Sequence 中央连接点、反向编号与 self path 填色",
+      "branches": [
+        "C-sequence-central",
+        "C-sequence-number",
+        "C-sequence-self"
+      ],
+      "status": "confirmed_not_repaired"
+    },
+    {
+      "id": "zenuml-comment-escape",
+      "title": "Zen 注释转义文字误读",
+      "branches": [
+        "C-zen-comment-escape"
+      ],
+      "status": "confirmed_not_repaired"
+    },
+    {
+      "id": "abnf-comment",
+      "title": "ABNF comment-only 行拒绝",
+      "branches": [
+        "C-abnf-priority"
+      ],
+      "status": "confirmed_not_repaired"
+    }
+  ],
+  "excludedStaticFunctions": [
+    {
+      "id": "html-video-audio",
+      "status": "excluded_by_user",
+      "decision": "references/media-exclusion.json"
+    },
+    {
+      "id": "advanced-static-html-css-extensions",
+      "status": "excluded_by_user",
+      "decision": "references/html-css-extension-exclusion.json"
+    }
+  ],
+  "historicalRemainingStaticFunctions": [
+    {
+      "id": "static-html-controls-initial-appearance",
+      "status": "unimplemented_not_user_excluded",
+      "evidence": "references/static-html-host-gap.json",
+      "plan": "docs/STATIC_HTML_HOST_PLAN.md",
+      "retainedObservedControlCases": 7,
+      "diagnosticReport": "http://127.0.0.1:8765/G02-static-host-preview-20261106T084708Z-fc6820ed/index.html",
+      "diagnosticScopeNote": "Historical9 cases;7 retained controls,2 media cases now user-excluded."
+    }
+  ],
+  "completedStaticFunctions": [
+    {
+      "id": "static-html-controls-initial-appearance",
+      "status": "scoped_local_verified",
+      "evidence": [
+        {
+          "path": "docs/HTML_HOST_ACCEPTANCE.md",
+          "sha256": "bd24649160bcd5c2e450ee38839b35b49483400733d6f2dc215cd05f9f6a5504"
+        },
+        {
+          "path": "references/html-host-verification-summary.json",
+          "sha256": "a3156f9ba7565c360de3ee963a92f79573ca3407175cbddacf5430691d7f47f2"
+        }
+      ],
+      "plan": "docs/STATIC_HTML_HOST_PLAN.md",
+      "fixtureCount": 131,
+      "claim": "Initial static intent only; native UA appearance/localization can differ; no arbitrary HTML/CSS claim."
+    }
+  ],
+  "currentAcceptance": "docs/VCHART_DSL_ACCEPTANCE.md",
+  "branchVerification": {
+    "status": "COMPLETED_WITH_CONFIRMED_GAPS",
+    "sourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+    "branchRecords": 122,
+    "confirmedFunctionalGapRecords": 22,
+    "semanticValueDifferences": 4,
+    "globalBranchCoverageEstablished": false,
+    "productRepairsPerformed": false,
+    "evidence": [
+      {
+        "path": "docs/BRANCH_VERIFICATION_RESULTS.md",
+        "sha256": "737ceac0dd351c6272ce4d7dfdfadcbf5922eb66944a9fa5956fc56af00df298",
+        "bytes": 6246
+      },
+      {
+        "path": "references/branch-verification-summary.json",
+        "sha256": "cdf4226c982290875052614751fdf774d3bcb36609e4bc8f0c908205ce61613d",
+        "bytes": 1723432
+      },
+      {
+        "path": "references/branch-repair-queue.json",
+        "sha256": "7e6322ad17e20e648a587ec0d6839b67c7fa7f25e1824150ee9b2b7a1da6be92",
+        "bytes": 3628
+      }
+    ]
+  },
+  "vchartIntegration": {
+    "status": "bounded_static_locally_accepted",
+    "evidence": [
+      {
+        "path": "docs/VCHART_ACCEPTANCE.md",
+        "sha256": "728874dd150cb6cab8979cf97bc92a33775540474bf64743febfe85e75be85fa",
+        "bytes": 6373
+      },
+      {
+        "path": "references/vchart-verification-summary.json",
+        "sha256": "368d4f7b127106bcd3f0a0a9697482599e93ad6d079f52b3623db80a1c08632a",
+        "bytes": 7936
+      }
+    ],
+    "specTypes": 68,
+    "additionalNamespacedDetector": "vchart",
+    "originalDetectorDenominatorPreserved": 38,
+    "priorConfirmedBranchGapsUnchanged": 22,
+    "publication": "Supplier published to PyPI and GitHub; Mermaid package not published",
+    "pypiDeliveryEvidence": [
+      {
+        "path": "docs/VCHART_ACCEPTANCE.md",
+        "sha256": "b17de95bccb4cde59e17b72308b963011d5731ace1a3a0e8be200a7edddbf01e",
+        "bytes": 6447
+      },
+      {
+        "path": "references/vchart-pypi-verification.json",
+        "sha256": "2a512a95e02f40577b99d43d92c65c1a52ce892b0e1a16dc785cd7520fbab8ba",
+        "bytes": 3763
+      }
+    ],
+    "deliverySourceTreeSha256": "d7a26bdc6aa104ada9aef8b32f8e365c7df3ec1f51853032958b950d2476f136"
+  },
+  "vchartDsl": {
+    "status": "declared_dsl_static_scope_accepted_with_documented_limits",
+    "syntax": "vchart <type>",
+    "types": 68,
+    "provider": "py-visactor-vchart==0.1.1",
+    "sourceTreeSha256": "fe2c293f8ed4ea76e04d34669c8739c27a32063447026e144928bfd6b4ac0bb2",
+    "evidence": [
+      {
+        "path": "docs/VCHART_DSL_ACCEPTANCE.md",
+        "sha256": "e88380f6004542c044204c3aa6cd8602e557899938b26721360da42cd9c973af",
+        "bytes": 6959
+      },
+      {
+        "path": "references/vchart-dsl-verification-summary.json",
+        "sha256": "1ba82b9e5aa37f5d5d69a41fa90f6b561f54511fd4f92ed3d7744e7eea042c2a",
+        "bytes": 20065
+      }
+    ],
+    "scope": "Lossless native DSL/static provider integration; finite tests, no exhaustive supplier/JS option or branch claim. Old22 gaps remain. No new runtime dependency.",
+    "reportUrl": "http://127.0.0.1:8765/VCHART-DSL-P5-delivery-20261107T072726Z-cd08a488/index.html"
+  },
+  "finalCapabilityReview": {
+    "status": "REVIEW_COMPLETE_RELEASE_BLOCKED",
+    "releaseReady": false,
+    "knownUnrepairedRecords": 24,
+    "sourceTreeSha256": "fe2c293f8ed4ea76e04d34669c8739c27a32063447026e144928bfd6b4ac0bb2",
+    "evidence": [
+      {
+        "path": "docs/FINAL_CAPABILITY_REVIEW.md",
+        "sha256": "ae8e8243e511651d40f41d531fd1ae1fca46ebb636d776db7b5ad7deb519a4b3",
+        "bytes": 6304
+      },
+      {
+        "path": "references/final-capability-review.json",
+        "sha256": "bb57f8bccceca6ba8e1ca72794773789ad908c8ead8ba9e8101998a049c76749",
+        "bytes": 75807
+      }
+    ],
+    "meaning": "Finite existing feature acceptance unchanged; whole-package no-missing-capabilities publication condition not met."
+  }
 }

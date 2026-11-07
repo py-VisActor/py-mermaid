@@ -1,0 +1,37 @@
+{
+  "schema": "py-mermaid-final-capability-delivery/v1",
+  "status": "REVIEW_DELIVERED_RELEASE_BLOCKED",
+  "summary": {
+    "path": "references/final-capability-review.json",
+    "sha256": "bb57f8bccceca6ba8e1ca72794773789ad908c8ead8ba9e8101998a049c76749",
+    "bytes": 75807
+  },
+  "reportUrl": "http://127.0.0.1:8765/FINAL-CAPABILITY-P5-delivery-20261107T074816Z-a497e757/index.html",
+  "deliveryRun": {
+    "path": "test-runs/FINAL-CAPABILITY-P5-delivery-20261107T074816Z-a497e757/run.json",
+    "sha256": "78ca2213f555b5dd41d79f969aa33d78103d0fd4649cf27a2d2fc400c0a0bb50",
+    "bytes": 36600
+  },
+  "reportManifest": {
+    "path": "reports/FINAL-CAPABILITY-P5-delivery-20261107T074816Z-a497e757/manifest.json",
+    "sha256": "ef9765fb483e641fc496e4a5b0b3bc092229ad8308e9a45ca46dd4ffd3448fed",
+    "bytes": 17826
+  },
+  "qa": {
+    "path": "test-runs/FINAL-CAPABILITY-P5-delivery-20261107T074816Z-a497e757/artifacts/report-qa/viewer.json",
+    "sha256": "438209e1abbe176fe66797e06d390c6c472e30ab362e308b134eec57d4172201",
+    "bytes": 3122
+  },
+  "layoutReview": {
+    "path": "test-runs/final-capability-layout-review-20261107T075000Z.json",
+    "sha256": "be79c1685bc65df01cdc9df61ab95d79a89959baeb56a1db8513dc8bc807158d",
+    "bytes": 1806
+  },
+  "repairQueue": {
+    "path": "references/final-capability-repair-queue.json",
+    "sha256": "cf4459310896f969b13ee6299bcb349d361b793039d503fdb941c09846c353bf",
+    "bytes": 6448
+  },
+  "acceptanceClaim": "Report only; known24records/4release gates/7unverified items retained. No stable package uploaded.",
+  "publicationPerformed": false
+}

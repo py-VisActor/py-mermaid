@@ -19,7 +19,21 @@ def defaults():
 def resolve(document, kind, site=None):
     if site is not None and not isinstance(site,Mapping):raise MermaidError('config must be a mapping',code='INVALID_CONFIG')
     base=defaults();key=CONFIG_KEYS.get(kind,kind);original=deepcopy(dict(site or {}))
-    cfg=assign_with_depth(deepcopy(base),original)
+    # mermaidAPI.initialize normalizes an unknown root theme before it becomes
+    # a site-config delta. An absent name stays absent, so diagram defaults can
+    # still win. Keep raw variables separate from their calculated site palette.
+    if original.get('theme') is not None and original['theme'] not in (*THEMES,'null'):
+        original['theme']='default'
+    overrides=deepcopy(original.get('themeVariables') or {})
+    if original.get('fontFamily') and not overrides.get('fontFamily'):
+        overrides['fontFamily']=original['fontFamily']
+    initialized=deepcopy(original)
+    initialized['themeVariables']=get_theme_variables(original.get('theme','default'),overrides)
+    cfg=assign_with_depth(deepcopy(base),initialized)
+    if original.get('theme') in THEMES:
+        # setSiteConfig replaces, rather than merges, a selected theme's palette.
+        cfg['themeVariables']=deepcopy(initialized['themeVariables'])
+    site_theme=cfg.get('theme')
     secure=cfg.get('secure',list(SECURE))
     if not isinstance(secure,(tuple,list)):raise MermaidError('secure must be an array',code='INVALID_CONFIG')
     combined={}
@@ -32,19 +46,26 @@ def resolve(document, kind, site=None):
             scoped=layer.get(key,{})
             candidates=(scoped.get(prop) if isinstance(scoped,Mapping) else None,layer.get(prop))
             usable=next((value for value in candidates if value is not None and
-                         (prop!='theme' or isinstance(value,str) and value in (*THEMES,'null'))),None)
+                         (prop!='theme' or isinstance(value,str) and value in (*THEMES,'null')) and
+                         (prop!='look' or value in ('classic','neo','handDrawn'))),None)
             if usable is not None:
-                cfg[prop]=usable;break
+                cfg[prop]=usable
+                section=cfg.get(key)
+                if isinstance(section,dict) and prop in section:section[prop]=usable
+                break
     if cfg.get('theme') not in (*THEMES,'null'):cfg['theme']='default'
     if cfg.get('look') not in ('classic','neo','handDrawn'):raise MermaidError('Unsupported look',code='INVALID_CONFIG')
     layout=cfg.get('layout','elk')
     from .layouts import registered_layouts
     if layout not in (*registered_layouts(),'cose-bilkent','tidy-tree','swimlane'):
         raise MermaidError('Unregistered native layout',code='UNSUPPORTED_CONFIG')
-    overrides=deepcopy(original.get('themeVariables') or {})
-    assign_with_depth(overrides,directive.get('themeVariables') or {})
-    if original.get('fontFamily') and 'fontFamily' not in overrides:overrides['fontFamily']=original['fontFamily']
-    cfg['themeVariables']=get_theme_variables(cfg['theme'],overrides)
+    # config.ts:updateCurrentConfig only rebuilds after an effective theme
+    # override. Palette-only directives merge into the calculated site values;
+    # the 'null' sentinel also preserves those values instead of inventing a
+    # twelfth palette or resetting a dark site to the default palette.
+    if (directive.get('theme') or cfg['theme']!=site_theme) and cfg['theme'] in THEMES:
+        variables=assign_with_depth(deepcopy(overrides),directive.get('themeVariables') or {})
+        cfg['themeVariables']=get_theme_variables(cfg['theme'],variables)
     cfg.setdefault(key,{})
     cfg['_diagramKind']=kind;cfg['_diagramConfigKey']=key
     cfg['_explicitLayout']=any('layout' in layer or isinstance(layer.get(key),Mapping) and 'layout' in layer[key] for layer in (original,directive))

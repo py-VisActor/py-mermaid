@@ -52,7 +52,8 @@ def project_inline_svg(svg:str,label_style,resolver)->bytes:
                'opacity':f'{style.opacity:g}','color':style.text_color,
                'stroke-linecap':style.line_cap,'stroke-linejoin':style.line_join,
                'stroke-dasharray':' '.join(f'{value:g}' for value in style.dash) if style.dash else 'none',
-               'stroke-dashoffset':f'{style.dash_offset:g}','display':style.display}
+               'stroke-dashoffset':f'{style.dash_offset:g}','display':style.display,
+               'visibility':style.visibility}
         # Remove original inline paint values after cascading; otherwise native
         # SVG would give them a second priority pass over source !important.
         other=[name+':'+value+(' !important' if important else '') for name,value,important in inline if name not in PAINT]

@@ -1,0 +1,157 @@
+{
+  "schema": "py-mermaid-change/v1",
+  "task": "vchart-dsl-v1-design",
+  "authorization": "Design new py-mermaid syntax for all py-vchart capabilities; continue interrupted design work",
+  "status": "design_complete_unimplemented",
+  "provider": "py-visactor-vchart==0.1.1",
+  "design": "docs/VCHART_DSL_DESIGN.md",
+  "plan": "docs/VCHART_DSL_EXECUTION_PLAN.md",
+  "grammar": "docs/syntax/vchart-v1.ebnf",
+  "catalogue": "references/vchart-dsl-design.json",
+  "scope": {
+    "registeredTypes": 68,
+    "existingSupplierSpecs": 225,
+    "examples": 8,
+    "newRuntimeDependencies": 0
+  },
+  "implementationClaim": false,
+  "rendererSourceChanged": false,
+  "inventoryRun": "test-runs/VCHART-DSL-DESIGN-inventory-20261107T063954Z-eef1d415",
+  "expectedJsonPreview": "test-runs/VCHART-DSL-DESIGN-expected-json-preview-20261107T064126Z-3fa0cbed",
+  "previewMeaning": "Existing expected JSON specs render; proposed DSL was never parsed or executed",
+  "firstFailurePreserved": "test-runs/VCHART-DSL-DESIGN-expected-json-preview-20261107T064105Z-fe18cef6",
+  "limits": [
+    "All implemented static options must still be individually inventoried; fixture keys are not a full schema",
+    "Provider static limits and22 legacy branch gaps preserved",
+    "No new DSL parsing/rendering/install acceptance claimed"
+  ],
+  "next": "P0 field/conditional source inventory then implement P1/P2/P3/P4/P5 sequence",
+  "files": {
+    "docs/VCHART_DSL_DESIGN.md": {
+      "sha256": "8a430324521d51538c28c96ee49e3a5cd9bf1bc7f981fe76ff9743999a2d5ea8",
+      "bytes": 19106
+    },
+    "docs/VCHART_DSL_EXECUTION_PLAN.md": {
+      "sha256": "d5f2832ef38e1503523a7050197c78268b1e4db1fd503afc526643d9ca167bba",
+      "bytes": 9646
+    },
+    "docs/syntax/vchart-v1.ebnf": {
+      "sha256": "fb2a06d0df641e5eb5250f7f84472eac5ee63009399eb998419a527cc9bf7524",
+      "bytes": 2812
+    },
+    "references/vchart-dsl-design.json": {
+      "sha256": "bfa3f6dd28be54493df4dd04011b1ed62f582dc2491fe09425f5cfa60962875e",
+      "bytes": 94453
+    },
+    "docs/proposals/vchart-v1/examples/bar.expected.json": {
+      "sha256": "064aeb3a44c22fb8a8d37080f04a7b16e99715be0f83fe0af111ce252688d689",
+      "bytes": 579
+    },
+    "docs/proposals/vchart-v1/examples/bar.resources.json": {
+      "sha256": "d0c1a7bf996412241b327ec545c6aac61b1811d0134346289d70058c4353a646",
+      "bytes": 35
+    },
+    "docs/proposals/vchart-v1/examples/bar.vchart": {
+      "sha256": "879accf2a3f1d1516152a0538268c998f55ccb6582e93d362a00ab7dd449a715",
+      "bytes": 286
+    },
+    "docs/proposals/vchart-v1/examples/common-dual-axis.expected.json": {
+      "sha256": "d8aa459bf183e314f0e69b562d305600cfe1dba2253b2858ec699cfffe957a43",
+      "bytes": 822
+    },
+    "docs/proposals/vchart-v1/examples/common-dual-axis.resources.json": {
+      "sha256": "d0c1a7bf996412241b327ec545c6aac61b1811d0134346289d70058c4353a646",
+      "bytes": 35
+    },
+    "docs/proposals/vchart-v1/examples/common-dual-axis.vchart": {
+      "sha256": "e40c4e9fe4e68324a6b04558f9a08a71f54484de733c54193164b6cefe38d69a",
+      "bytes": 382
+    },
+    "docs/proposals/vchart-v1/examples/kde.expected.json": {
+      "sha256": "1c65d8c52f230d3d28cd54577a9738c0786c4a742bf810ad2913c0ff1c07a588",
+      "bytes": 601
+    },
+    "docs/proposals/vchart-v1/examples/kde.resources.json": {
+      "sha256": "d0c1a7bf996412241b327ec545c6aac61b1811d0134346289d70058c4353a646",
+      "bytes": 35
+    },
+    "docs/proposals/vchart-v1/examples/kde.vchart": {
+      "sha256": "6fb1ceedfd9887d2fbe994482218da8f6c5756652941194eeb78539287e1610a",
+      "bytes": 231
+    },
+    "docs/proposals/vchart-v1/examples/manifest.json": {
+      "sha256": "ebcd5d58a761d367317aa2d93bb632c0b35dfd4b636447fdf99008a8c382994b",
+      "bytes": 1776
+    },
+    "docs/proposals/vchart-v1/examples/map.expected.json": {
+      "sha256": "9f9008ee5742754a499438d9c00285edd38a33c3841c20282f631a4ccb8462e8",
+      "bytes": 279
+    },
+    "docs/proposals/vchart-v1/examples/map.resources.json": {
+      "sha256": "88aa5ef65c5c065761076aea29fdbeea2de72e9a420149da24cdabd4beafa60b",
+      "bytes": 804
+    },
+    "docs/proposals/vchart-v1/examples/map.vchart": {
+      "sha256": "4ecf18db17a1cc591c13e0a8ab45b045bd77bdf62f474869243d25d9f582f4ff",
+      "bytes": 364
+    },
+    "docs/proposals/vchart-v1/examples/pictogram.expected.json": {
+      "sha256": "651835309c5655438e10eee1912329be5cab42e99d8c50c713ea921a7aba4446",
+      "bytes": 305
+    },
+    "docs/proposals/vchart-v1/examples/pictogram.resources.json": {
+      "sha256": "db629ffe3dde824a7e7c0cec91816b865707831add5623846e8cc92a1c611e9d",
+      "bytes": 307
+    },
+    "docs/proposals/vchart-v1/examples/pictogram.vchart": {
+      "sha256": "137393c4721db671ca6aace22d6f752fddbf30533a4ae613b117ae5187247f35",
+      "bytes": 441
+    },
+    "docs/proposals/vchart-v1/examples/README.md": {
+      "sha256": "7d2235ec25b678ed6e3295d8fcc5438c089c8e68d779ddb63b7e841511970d3f",
+      "bytes": 2147
+    },
+    "docs/proposals/vchart-v1/examples/sankey.expected.json": {
+      "sha256": "86c946822f88ab63ba0bdf1fab01b56c4b420a15a419ce3f4adf4b181ab14e11",
+      "bytes": 603
+    },
+    "docs/proposals/vchart-v1/examples/sankey.resources.json": {
+      "sha256": "d0c1a7bf996412241b327ec545c6aac61b1811d0134346289d70058c4353a646",
+      "bytes": 35
+    },
+    "docs/proposals/vchart-v1/examples/sankey.vchart": {
+      "sha256": "c0737fa82cee466714a1d00b927aa8496cb0f094544e437d0bab057744e5d155",
+      "bytes": 271
+    },
+    "docs/proposals/vchart-v1/examples/treemap.expected.json": {
+      "sha256": "4d4dcfcd8ea7f7d04e9dd734c420fce949e247380e705deba73bf3ba213271eb",
+      "bytes": 570
+    },
+    "docs/proposals/vchart-v1/examples/treemap.resources.json": {
+      "sha256": "d0c1a7bf996412241b327ec545c6aac61b1811d0134346289d70058c4353a646",
+      "bytes": 35
+    },
+    "docs/proposals/vchart-v1/examples/treemap.vchart": {
+      "sha256": "a68e38dc1d02fb8b7201ed1345d4a96576c2654696a6256e85b1a76479167dd2",
+      "bytes": 285
+    },
+    "docs/proposals/vchart-v1/examples/venn.expected.json": {
+      "sha256": "82159cc4f407ee3de3e16b5a8243904af7bc6850a4fd09641f46a6d8bf24de8b",
+      "bytes": 544
+    },
+    "docs/proposals/vchart-v1/examples/venn.resources.json": {
+      "sha256": "d0c1a7bf996412241b327ec545c6aac61b1811d0134346289d70058c4353a646",
+      "bytes": 35
+    },
+    "docs/proposals/vchart-v1/examples/venn.vchart": {
+      "sha256": "11d47e5e6ec94e37b1402a032427775b6e930e356a0aca480b4d6a714d1281bc",
+      "bytes": 240
+    }
+  },
+  "finalChecks": {
+    "run": "test-runs/VCHART-DSL-DESIGN-checks-20261107T064339Z-1d36e190",
+    "status": "SUCCESS",
+    "productSourceUnchanged": true,
+    "meaning": "Documentation links/source metadata/tool compilation/closed evidence integrity only; not DSL implementation acceptance"
+  }
+}

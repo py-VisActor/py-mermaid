@@ -1,0 +1,406 @@
+{
+  "schema": "py-mermaid-bulk-cases/v1",
+  "group": "shared",
+  "cases": [
+    {
+      "id": "html-host-integration-checkbox-hex-middle",
+      "kind": "flowchart-v2",
+      "group": "shared",
+      "expect": "render",
+      "source": "flowchart LR\nA[\"<input id='probe' type='checkbox' checked style='width:28px;height:28px;accent-color:#2468ac;margin:0'>\"]",
+      "config": {
+        "securityLevel": "loose"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state / explicit source CSS preprocessing probe checkbox-hex-middle",
+        "line": 34,
+        "synthesized": true
+      },
+      "controlExpected": [
+        {
+          "id": "probe",
+          "tag": "input",
+          "type": "checkbox",
+          "checked": true,
+          "value": "on"
+        }
+      ],
+      "features": [
+        "html-host",
+        "source-CSS-preprocessing",
+        "static-rendering"
+      ]
+    },
+    {
+      "id": "html-host-integration-checkbox-hex-last",
+      "kind": "flowchart-v2",
+      "group": "shared",
+      "expect": "render",
+      "source": "flowchart LR\nA[\"<input id='probe' type='checkbox' checked style='width:28px;height:28px;margin:0;accent-color:#2468ac'>\"]",
+      "config": {
+        "securityLevel": "loose"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state / explicit source CSS preprocessing probe checkbox-hex-last",
+        "line": 34,
+        "synthesized": true
+      },
+      "controlExpected": [
+        {
+          "id": "probe",
+          "tag": "input",
+          "type": "checkbox",
+          "checked": true,
+          "value": "on"
+        }
+      ],
+      "features": [
+        "html-host",
+        "source-CSS-preprocessing",
+        "static-rendering"
+      ]
+    },
+    {
+      "id": "html-host-integration-checkbox-rgb-middle",
+      "kind": "flowchart-v2",
+      "group": "shared",
+      "expect": "render",
+      "source": "flowchart LR\nA[\"<input id='probe' type='checkbox' checked style='width:28px;height:28px;accent-color:rgb(36,104,172);margin:0'>\"]",
+      "config": {
+        "securityLevel": "loose"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state / explicit source CSS preprocessing probe checkbox-rgb-middle",
+        "line": 34,
+        "synthesized": true
+      },
+      "controlExpected": [
+        {
+          "id": "probe",
+          "tag": "input",
+          "type": "checkbox",
+          "checked": true,
+          "value": "on"
+        }
+      ],
+      "features": [
+        "html-host",
+        "source-CSS-preprocessing",
+        "static-rendering"
+      ]
+    },
+    {
+      "id": "html-host-integration-range-hex-middle",
+      "kind": "flowchart-v2",
+      "group": "shared",
+      "expect": "render",
+      "source": "flowchart LR\nA[\"<input id='probe' type='range' value='50' style='width:140px;height:24px;accent-color:#2468ac;direction:rtl'>\"]",
+      "config": {
+        "securityLevel": "loose"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state / explicit source CSS preprocessing probe range-hex-middle",
+        "line": 34,
+        "synthesized": true
+      },
+      "controlExpected": [
+        {
+          "id": "probe",
+          "tag": "input",
+          "type": "range",
+          "value": "50"
+        }
+      ],
+      "features": [
+        "html-host",
+        "source-CSS-preprocessing",
+        "static-rendering"
+      ]
+    },
+    {
+      "id": "html-host-integration-range-rgb-middle",
+      "kind": "flowchart-v2",
+      "group": "shared",
+      "expect": "render",
+      "source": "flowchart LR\nA[\"<input id='probe' type='range' value='50' style='width:140px;height:24px;accent-color:rgb(36,104,172);direction:rtl'>\"]",
+      "config": {
+        "securityLevel": "loose"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state / explicit source CSS preprocessing probe range-rgb-middle",
+        "line": 34,
+        "synthesized": true
+      },
+      "controlExpected": [
+        {
+          "id": "probe",
+          "tag": "input",
+          "type": "range",
+          "value": "50"
+        }
+      ],
+      "features": [
+        "html-host",
+        "source-CSS-preprocessing",
+        "static-rendering"
+      ]
+    },
+    {
+      "id": "html-host-integration-input-text-stroke",
+      "kind": "flowchart-v2",
+      "group": "shared",
+      "expect": "render",
+      "source": "flowchart LR\nA[\"<input id='probe' value='Stroke' style='width:180px;height:40px;font-size:24px;color:white;-webkit-text-stroke:2px rgb(32,64,224)'>\"]",
+      "config": {
+        "securityLevel": "loose"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state / explicit source CSS preprocessing probe input-text-stroke",
+        "line": 34,
+        "synthesized": true
+      },
+      "controlExpected": [
+        {
+          "id": "probe",
+          "tag": "input",
+          "type": "text",
+          "value": "Stroke"
+        }
+      ],
+      "features": [
+        "html-host",
+        "source-CSS-preprocessing",
+        "static-rendering"
+      ]
+    },
+    {
+      "kind": "flowchart-v2",
+      "group": "shared",
+      "expect": "render",
+      "config": {
+        "securityLevel": "loose"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state / explicit source CSS preprocessing probe checkbox-hex-middle",
+        "line": 34,
+        "synthesized": true
+      },
+      "features": [
+        "html-host",
+        "graph-wide-initial-radio-state"
+      ],
+      "id": "html-host-integration-radio-across-nodes",
+      "source": "flowchart LR\nA[\"<input id='ra' name='group' type='radio' checked>\"] --> B[\"<input id='rb' name='group' type='radio' checked>\"]",
+      "controlExpected": [
+        {
+          "id": "ra",
+          "tag": "input",
+          "type": "radio",
+          "value": "on",
+          "checked": false
+        },
+        {
+          "id": "rb",
+          "tag": "input",
+          "type": "radio",
+          "value": "on",
+          "checked": true
+        }
+      ]
+    },
+    {
+      "kind": "flowchart-v2",
+      "group": "shared",
+      "expect": "render",
+      "config": {
+        "securityLevel": "loose"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state / explicit source CSS preprocessing probe checkbox-hex-middle",
+        "line": 34,
+        "synthesized": true
+      },
+      "features": [
+        "html-host",
+        "graph-wide-initial-radio-state"
+      ],
+      "id": "html-host-integration-radio-across-forms",
+      "source": "flowchart LR\nA[\"<form id='fa'><input id='ra' name='group' type='radio' checked></form>\"] --> B[\"<form id='fb'><input id='rb' name='group' type='radio' checked></form>\"]",
+      "controlExpected": [
+        {
+          "id": "ra",
+          "tag": "input",
+          "type": "radio",
+          "value": "on",
+          "checked": true
+        },
+        {
+          "id": "rb",
+          "tag": "input",
+          "type": "radio",
+          "value": "on",
+          "checked": true
+        }
+      ]
+    },
+    {
+      "id": "html-host-integration-select-viewport-single",
+      "kind": "flowchart-v2",
+      "group": "shared",
+      "expect": "render",
+      "source": "flowchart LR\nA[\"<select id='far' size='2'><option value='a'>One</option><option value='b'>Two</option><option value='c'>Three</option><option value='d'>Four</option><option value='e' selected>Five</option></select>\"]",
+      "config": {
+        "securityLevel": "loose"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state / explicit source CSS preprocessing probe checkbox-hex-middle",
+        "line": 34,
+        "synthesized": true
+      },
+      "features": [
+        "html-host",
+        "initial-list-viewport",
+        "source-visible-content"
+      ],
+      "controlExpected": [
+        {
+          "id": "far",
+          "tag": "select",
+          "value": "e",
+          "multiple": false,
+          "selectedIndices": [
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "html-host-integration-select-viewport-multiple",
+      "kind": "flowchart-v2",
+      "group": "shared",
+      "expect": "render",
+      "source": "flowchart LR\nA[\"<select id='far' size='2' multiple><option value='a'>One</option><option value='b' selected>Two</option><option value='c'>Three</option><option value='d'>Four</option><option value='e' selected>Five</option></select>\"]",
+      "config": {
+        "securityLevel": "loose"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state / explicit source CSS preprocessing probe checkbox-hex-middle",
+        "line": 34,
+        "synthesized": true
+      },
+      "features": [
+        "html-host",
+        "initial-list-viewport",
+        "source-visible-content"
+      ],
+      "controlExpected": [
+        {
+          "id": "far",
+          "tag": "select",
+          "value": "b",
+          "multiple": true,
+          "selectedIndices": [
+            1,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "html-host-zero-dimensions-default-equivalence",
+      "kind": "flowchart-v2",
+      "group": "shared",
+      "expect": "render",
+      "source": "flowchart TD\nI0[\"<input id='i0' size='0' value='Size' style='font-family:monospace;font-size:16px;padding:0;border:0'>\"]\nI1[\"<input id='idefault' value='Size' style='font-family:monospace;font-size:16px;padding:0;border:0'>\"]\nT0[\"<textarea id='t0' cols='0' rows='0' style='font-family:monospace;font-size:16px;padding:0;border:0'>Text</textarea>\"]\nT1[\"<textarea id='tdefault' style='font-family:monospace;font-size:16px;padding:0;border:0'>Text</textarea>\"]\nS0[\"<select id='s0' multiple size='0' style='font-family:monospace;font-size:16px;padding:0;border:0'><option>One</option><option>Two</option><option>Three</option><option>Four</option><option>Five</option></select>\"]\nS1[\"<select id='sdefault' multiple style='font-family:monospace;font-size:16px;padding:0;border:0'><option>One</option><option>Two</option><option>Three</option><option>Four</option><option>Five</option></select>\"]",
+      "config": {
+        "securityLevel": "loose"
+      },
+      "origin": {
+        "path": "packages/mermaid/src/rendering-util/createText.ts",
+        "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+        "symbol": "addHtmlSpan/createText sanitized initial HTML state / explicit source CSS preprocessing probe checkbox-hex-middle",
+        "line": 34,
+        "synthesized": true
+      },
+      "controlExpected": [
+        {
+          "id": "i0",
+          "tag": "input",
+          "value": "Size",
+          "type": "text"
+        },
+        {
+          "id": "idefault",
+          "tag": "input",
+          "value": "Size",
+          "type": "text"
+        },
+        {
+          "id": "t0",
+          "tag": "textarea",
+          "value": "Text"
+        },
+        {
+          "id": "tdefault",
+          "tag": "textarea",
+          "value": "Text"
+        },
+        {
+          "id": "s0",
+          "tag": "select",
+          "value": "",
+          "multiple": true,
+          "selectedIndices": []
+        },
+        {
+          "id": "sdefault",
+          "tag": "select",
+          "value": "",
+          "multiple": true,
+          "selectedIndices": []
+        }
+      ],
+      "controlDimensionEquivalence": [
+        [
+          "i0",
+          "idefault"
+        ],
+        [
+          "t0",
+          "tdefault"
+        ],
+        [
+          "s0",
+          "sdefault"
+        ]
+      ],
+      "reviewRequired": true,
+      "features": [
+        "html-host",
+        "zero-attribute-defaults",
+        "source-dimension-equivalence",
+        "actual-visible-content"
+      ]
+    }
+  ]
+}

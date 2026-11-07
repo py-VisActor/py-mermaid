@@ -1,0 +1,166 @@
+{
+  "schema": "py-mermaid-change-receipt/v1",
+  "status": "SCOPED_LOCAL_ACCEPTED",
+  "date": "2026-11-06",
+  "objective": "Initial static HTML controls across shared Mermaid label consumers; no new diagram entry",
+  "baselineSourceTreeSha256": "a25d9e8624eb6b8dd41175441b28630859ea8ecc63f831190052089c9301c1c6",
+  "finalSourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+  "startingDirtyTree": "test-runs/HTML-HOST-P0-bootstrap-and-contracts-20261106T111054Z-bff85431/git-status.txt",
+  "p4": {
+    "path": "test-runs/BULK-P4-final-20261106T125300Z-435e50af/run.json",
+    "sha256": "ed8d1d50c0e967f229b62090cec5f0277ac995712f6818512360dee454468d03",
+    "bytes": 4534656
+  },
+  "exportRepair": {
+    "path": "test-runs/HTML-HOST-P4-EXPORT-repair-20261106T130826Z-cebc530d/run.json",
+    "sha256": "a8fcaef967db5c76895e67435b110043b43f9b8d214046d026fe8010984f6183",
+    "bytes": 195006
+  },
+  "delivery": {
+    "path": "test-runs/HTML-HOST-P5-delivery-20261106T131153Z-15f07388/run.json",
+    "sha256": "1cb71d0fcc13146d1185ddda6bd966a2e266f3e90205ba55022130d927f130b0",
+    "bytes": 51065
+  },
+  "pagination": {
+    "path": "test-runs/REPORT-ROUNDS-delivery-20261106T131320Z-1382c778/run.json",
+    "sha256": "712f17c5291bf68a4ac64b8ca0cf5d9e48ec2e20befb3001652b443fda063a61",
+    "bytes": 70830
+  },
+  "acceptance": {
+    "path": "test-runs/HTML-HOST-P5-delivery-20261106T131153Z-15f07388/artifacts/finalized/acceptance.json",
+    "sha256": "b3c312dad6fe5aea886b00a5c31a80c582f00a316400132f8b27efc56a0d18c9",
+    "bytes": 5991
+  },
+  "summary": {
+    "path": "references/html-host-verification-summary.json",
+    "sha256": "a3156f9ba7565c360de3ee963a92f79573ca3407175cbddacf5430691d7f47f2",
+    "bytes": 5993
+  },
+  "counts": {
+    "unitMethodsP4": 2046,
+    "htmlControlUnitMethods": 257,
+    "fixtures": 865,
+    "htmlControlFixtures": 131,
+    "perBackend": {
+      "cpu": {
+        "CHECKS_PASSED": 818,
+        "EXPECTED_ERROR": 46,
+        "EXCLUDED": 1
+      },
+      "auto": {
+        "CHECKS_PASSED": 818,
+        "EXPECTED_ERROR": 46,
+        "EXCLUDED": 1
+      },
+      "gpu": {
+        "CHECKS_PASSED": 818,
+        "EXPECTED_ERROR": 46,
+        "EXCLUDED": 1
+      }
+    },
+    "generalExports": 465,
+    "htmlControlExports": 450,
+    "strictZenPerBackend": 186,
+    "strictZenFaultControlsPerBackend": 1990,
+    "legacyPositivePerBackend": 297,
+    "reportAcceptanceFaultControls": 8,
+    "manualPairs": 78,
+    "freshManualPairs": 16,
+    "exactABByteTransferredPriorManualPairs": 62,
+    "rawPNG": 3270,
+    "rawSVG": 816
+  },
+  "reports": {
+    "url": "http://127.0.0.1:8765/REPORT-ROUNDS-delivery-20261106T131320Z-1382c778/index.html",
+    "thirdRound": "http://127.0.0.1:8765/REPORT-ROUNDS-delivery-20261106T131320Z-1382c778/rounds/html-controls/index.html",
+    "roundPages": {
+      "html-controls": 11,
+      "branch-repairs": 6,
+      "retained-diagrams": 56
+    },
+    "manifest": {
+      "path": "reports/REPORT-ROUNDS-delivery-20261106T131320Z-1382c778/report.json",
+      "sha256": "d4e3cc9f4064b7003f93d6ac6b8ae4cc93a6aefaa5ede3cb165fbf4f4d8d3ce2",
+      "bytes": 113547
+    },
+    "qa": {
+      "path": "test-runs/REPORT-ROUNDS-delivery-20261106T131320Z-1382c778/artifacts/viewer/viewer.json",
+      "sha256": "b09fe59c6c08cf94e6e5de9beabcc7c794f24abb92430d372b74892528a507f5",
+      "bytes": 10205
+    },
+    "rawQA": {
+      "path": "test-runs/HTML-HOST-P5-delivery-20261106T131153Z-15f07388/artifacts/viewer/viewer.json",
+      "sha256": "b3912fa8e42068abef77c9db122e75f055ceb21869e36ce5e26697d8a3f8f306",
+      "bytes": 25942
+    }
+  },
+  "metadata": {
+    "final": {
+      "path": "test-runs/HTML-HOST-P5-metadata-repair-20261106T131702Z-04b1d695/run.json",
+      "sha256": "3410472c666eff5795b12efa6167a0aeb9d3dcaef28863654b88d4686ac92db5",
+      "bytes": 43290
+    },
+    "earlierAttemptRetained": {
+      "path": "test-runs/HTML-HOST-P5-metadata-final-20261106T131604Z-d53d51c7/run.json",
+      "sha256": "bc349803415d4a633d82c29a878d38f3375b5c69df2bd49ee140af61afb8011f",
+      "bytes": 41172
+    },
+    "toolingTests69PassedInEarlierAttempt": true,
+    "dependencyInventoryCorrection": "Existing saved inventory lacked already-declared formal py-visactor-katex dependency from earlier integration. Regenerated from unchanged pinned source+pyproject; no runtime dependency was introduced by this iteration."
+  },
+  "documentation": [
+    {
+      "path": "docs/HTML_HOST_ACCEPTANCE.md",
+      "sha256": "bd24649160bcd5c2e450ee38839b35b49483400733d6f2dc215cd05f9f6a5504",
+      "bytes": 4678
+    },
+    {
+      "path": "docs/HTML_HOST_EXECUTION.md",
+      "sha256": "b2c544c2c9b0dbfbd9207950603036508730b62ad088b3ca05918703af8a2719",
+      "bytes": 3908
+    },
+    {
+      "path": "docs/STATIC_HTML_HOST_PLAN.md",
+      "sha256": "e3d95f0d4c585a7745a0af99c509d570f0db25b8396f70799969250a01d9e4b7",
+      "bytes": 6813
+    },
+    {
+      "path": "docs/NEXT_ITERATION.md",
+      "sha256": "a4bc24e447a68740b3497b6a019b1a30e78f045c79e6d66a5fb738829b6697fa",
+      "bytes": 4463
+    },
+    {
+      "path": "docs/compatibility.json",
+      "sha256": "f66b98f60a2a62f3511f0e5ecb24c786de0c1fdb6e10e74b99b09be1ef603ac9",
+      "bytes": 91297
+    },
+    {
+      "path": "references/static-html-host-gap.json",
+      "sha256": "5d353edc449eb10d4b01b23af2887e026d314e233718ec5db0e2e9af526e025c",
+      "bytes": 7197
+    },
+    {
+      "path": "references/next-iteration-scope.json",
+      "sha256": "c77cae259a6072a3afe2efbcacfae53f350813ebeb5b0a07f484a1900c074427",
+      "bytes": 5472
+    },
+    {
+      "path": "tools/RUNS_AND_REPORTS.md",
+      "sha256": "6e62b609313bff35fc248e48bef9bfdc6210ea58c49c97ba89a811cb2bb49099",
+      "bytes": 18828
+    }
+  ],
+  "limits": [
+    "video/audio fully excluded",
+    "interaction and Dagre excluded",
+    "seven deferred chart detectors remain outside this scope",
+    "bounded static HTML/CSS only; no claim of arbitrary HTML/CSS, browser UI or all platforms",
+    "local evidence only; no installation validation or publication"
+  ],
+  "installationVerification": false,
+  "externalActions": {
+    "commit": false,
+    "push": false,
+    "publish": false
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "schema": "py-mermaid-html-host-P2-C-receipt/v1",
+  "status": "SOURCE_TEST_DESIGN_COMPLETE_FROZEN_NOT_EXECUTED",
+  "candidateSourceSha256": "881656d5439e4ba08b4f3182d215680020653592e2d6ba0f9e265af97faf8fe1",
+  "counts": {
+    "canvasMethods": 34,
+    "checkerMethods": 14,
+    "total": 48
+  },
+  "sourceStopped": true,
+  "testsStopped": true,
+  "files": {
+    "tests/html_host/test_canvas.py": "dcac648ebb541e8a04c0cfa76d153700c7854bdf0c3c514b4d400f5b8eda1d4c",
+    "tests/html_host/test_controls_checker.py": "61cf5640d4fc540b3f3f188ae6704a453788fa9cddbf1c6d484916503928be04",
+    "references/html-host-canvas-assertions.json": "d42d951848b672de33329bcee31a7aff52e6239340e527dfe9c080faaea9563d"
+  },
+  "mechanicalRun": "HTML-HOST-batch-20261106T113032Z-051ddc54",
+  "mechanicalStatus": "SUCCESS",
+  "mechanicalScope": "Onlyunittest.defaultTestLoader.discover/countTestCases;noSuite.run,asyncSetUp,productparse/layout/render/nativeallocation. BothfilesAST/compilealsoPASS.",
+  "behaviorTestsRun": false,
+  "imagesGenerated": false,
+  "productsModified": false,
+  "writtenFiles": [
+    "tests/html_host/test_canvas.py",
+    "tests/html_host/test_controls_checker.py",
+    "references/html-host-canvas-assertions.json",
+    "docs/changes/html-host-P2-C.json"
+  ],
+  "pendingP3Candidates": [
+    "Naturalinput-image40x20vsinlineimgconfigureLabelImages200/80;CSSwidth80ratio.",
+    "Directcontrolvaluetextletter/wordspacing/red6pxshadow/blue2pxstroke.",
+    "Checkerforgedvalueglyphboxatborderandwrongvisibletextmetadata."
+  ],
+  "negativeControls": "Checkboxmarkdrop/buttontextdrop/framepreserved,wrongstate,forgedsourceExpected,missingcontrolmetadata/trace,texttraceerase,whitePNG,actualglyphpixelserase,border-onlyfabricatedtextbox,wrongtext,passwordleak,missingcheckmark,encodedsize. Expectedfailureskeptforfirstsweep.",
+  "sourceExpectedPolicy": "ExplicitauthorCSSsize/color/compositingformula;HTMLinitialstate;normalizedratio;actualglyphROIs. Nocandidateimagegoldens/nozero-browserpixelgate.",
+  "retainedMechanicalError": {
+    "run": "adhoc-batch-20261106T113003Z-dfa7e6db",
+    "result": "ERROR nonexistentplan afterdocumentation-source lookupStopIteration;nochildproduct/testexecuted;fixedASCIIsourcelookupandnewstandardcollectionrunretainedabove."
+  },
+  "argvForRoot": [
+    [
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests/html_host",
+      "-p",
+      "test_canvas.py",
+      "-v"
+    ],
+    [
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests/html_host",
+      "-p",
+      "test_controls_checker.py",
+      "-v"
+    ]
+  ],
+  "next": "RootuniformfirstsweeponfrozenP1;retainallinitialfailuresbeforeproduction/tool/testrepairs. No install/commit/push."
+}

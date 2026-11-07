@@ -4,6 +4,7 @@ import math,re
 from ...runtime.common import make_diagram,config_dict,error
 from ._syntax import statements,common_statement,words,split,scalar,theme,number,palette
 from ._scales import closed_round
+from ._vchart_bridge import geometry
 
 @dataclass(frozen=True)
 class Radar:
@@ -109,7 +110,7 @@ async def build(diagram,p):
     for i,(name,label,values) in enumerate(model.curves):
         if len(values)==n and n:
             if maximum==minimum:raise error(diagram.source,0,'Radar min/max produce non-finite radius','INVALID_GEOMETRY')
-            pts=tuple((cx+radius*(min(max(v,minimum),maximum)-minimum)/(maximum-minimum)*math.cos(math.tau*j/n-math.pi/2),cy+radius*(min(max(v,minimum),maximum)-minimum)/(maximum-minimum)*math.sin(math.tau*j/n-math.pi/2)) for j,v in enumerate(values))
+            pts=geometry('radar',diagram.source,values,minimum,maximum,center=(cx,cy),radius=radius)
             kwargs=dict(fill=colors[i%len(colors)],stroke=colors[i%len(colors)],line_width=style.get('curveStrokeWidth',2),opacity=style.get('curveOpacity',.5),id='curve-'+name)
             if options['graticule']=='circle':p.path(closed_round(pts,cfg.get('curveTension',.17)),**kwargs)
             else:p.polygon(pts,**kwargs)

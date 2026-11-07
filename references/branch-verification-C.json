@@ -1,0 +1,2479 @@
+{
+  "schema": "py-mermaid-branch-verification/v1",
+  "group": "C",
+  "baselineSourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "branches": [
+    {
+      "id": "C-sequence-endpoint",
+      "title": "Message endpoint shape/look branches",
+      "legacyUnresolved": {
+        "path": "references/gap-audit-C.json",
+        "index": 1,
+        "text": "Sequence26arrows?direction?activation?self?central?number numerical endpoint cross-product and every temporal frame constraint not fully independently pinned."
+      },
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+          "symbol": "buildMessageModel/drawMessage/activationBounds",
+          "line": 1867,
+          "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c"
+        }
+      ],
+      "predicate": "direction, open vs filled end, classic vs neo",
+      "arms": [
+        "LTR",
+        "RTL",
+        "open end no3px shortening",
+        "filled end3px shortening",
+        "neo extra3px"
+      ],
+      "sourceExpected": [
+        {
+          "type": "endpoint",
+          "branch": "C-sequence-endpoint",
+          "sender": "A",
+          "receiver": "B",
+          "startOffset": 1,
+          "endOffset": -4
+        },
+        {
+          "type": "endpoint",
+          "branch": "C-sequence-endpoint",
+          "sender": "B",
+          "receiver": "A",
+          "startOffset": -1,
+          "endOffset": 4
+        },
+        {
+          "type": "endpoint",
+          "branch": "C-sequence-endpoint",
+          "sender": "A",
+          "receiver": "B",
+          "startOffset": 1,
+          "endOffset": -1
+        },
+        {
+          "type": "endpoint",
+          "branch": "C-sequence-endpoint",
+          "sender": "B",
+          "receiver": "A",
+          "startOffset": -1,
+          "endOffset": 1
+        },
+        {
+          "type": "endpoint",
+          "branch": "C-sequence-endpoint",
+          "sender": "A",
+          "receiver": "B",
+          "startOffset": 1,
+          "endOffset": -7
+        },
+        {
+          "type": "endpoint",
+          "branch": "C-sequence-endpoint",
+          "sender": "B",
+          "receiver": "A",
+          "startOffset": -1,
+          "endOffset": 7
+        }
+      ],
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/sequence/layout.py",
+          "symbol": "build",
+          "line": 39
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_c_geometry.py",
+          "symbol": "SequenceGeometryBranches.test_source_endpoint_classes_and_neo_offsets",
+          "line": 20,
+          "sha256": "90d6a1369ebe892ac7a662e844732f3938a43291b468f2d2d9f83ce3fa2c3aad"
+        }
+      ],
+      "caseIds": [
+        "BV-C-endpoint-classic-filled-ltr",
+        "BV-C-endpoint-classic-filled-rtl",
+        "BV-C-endpoint-classic-open-ltr",
+        "BV-C-endpoint-classic-open-rtl",
+        "BV-C-endpoint-neo-filled-ltr",
+        "BV-C-endpoint-neo-filled-rtl"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-derived predicate contract authored; original and native execution not performed in P2. Exact numeric differences require visual/semantic review and are not automatic confirmed functional gaps."
+    },
+    {
+      "id": "C-sequence-activation",
+      "title": "Activation bound and first-message correction",
+      "legacyUnresolved": {
+        "path": "references/gap-audit-C.json",
+        "index": 1,
+        "text": "Sequence26arrows?direction?activation?self?central?number numerical endpoint cross-product and every temporal frame constraint not fully independently pinned."
+      },
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+          "symbol": "buildMessageModel/drawMessage/activationBounds",
+          "line": 896,
+          "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c"
+        }
+      ],
+      "predicate": "msg.activate and isArrowToActivation; stack depth changes sender bound",
+      "arms": [
+        "first inline activate",
+        "existing target activation",
+        "sender depth1",
+        "sender depth2"
+      ],
+      "sourceExpected": [
+        {
+          "type": "activation",
+          "branch": "C-sequence-activation",
+          "sender": "A",
+          "receiver": "B",
+          "startOffset": 1,
+          "endOffset": -8
+        },
+        {
+          "type": "activation",
+          "branch": "C-sequence-activation",
+          "sender": "A",
+          "receiver": "B",
+          "startOffset": 1,
+          "endOffset": -8
+        },
+        {
+          "type": "activation",
+          "branch": "C-sequence-activation",
+          "sender": "A",
+          "receiver": "B",
+          "startOffset": 5,
+          "endOffset": -4
+        },
+        {
+          "type": "activation",
+          "branch": "C-sequence-activation",
+          "sender": "A",
+          "receiver": "B",
+          "startOffset": 10,
+          "endOffset": -4
+        }
+      ],
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/sequence/layout.py",
+          "symbol": "build",
+          "line": 39
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_c_geometry.py",
+          "symbol": "SequenceGeometryBranches.test_source_endpoint_classes_and_neo_offsets",
+          "line": 20,
+          "sha256": "90d6a1369ebe892ac7a662e844732f3938a43291b468f2d2d9f83ce3fa2c3aad"
+        }
+      ],
+      "caseIds": [
+        "BV-C-activation-first-activate",
+        "BV-C-activation-existing-target",
+        "BV-C-activation-sender-depth1",
+        "BV-C-activation-sender-depth2"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-derived predicate contract authored; original and native execution not performed in P2. Exact numeric differences require visual/semantic review and are not automatic confirmed functional gaps."
+    },
+    {
+      "id": "C-sequence-central",
+      "title": "Central connection visible circle relative to actor",
+      "legacyUnresolved": {
+        "path": "references/gap-audit-C.json",
+        "index": 1,
+        "text": "Sequence26arrows?direction?activation?self?central?number numerical endpoint cross-product and every temporal frame constraint not fully independently pinned."
+      },
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+          "symbol": "buildMessageModel/drawMessage/activationBounds",
+          "line": 290,
+          "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c"
+        }
+      ],
+      "predicate": "source/target/dual circle and sequenceVisible conditional adjustment",
+      "arms": [
+        "source plain",
+        "target plain",
+        "dual plain",
+        "source numbered",
+        "target numbered",
+        "dual numbered"
+      ],
+      "sourceExpected": [
+        {
+          "type": "central",
+          "branch": "C-sequence-central",
+          "circles": [
+            {
+              "actor": "A",
+              "offset": 0
+            }
+          ]
+        },
+        {
+          "type": "central",
+          "branch": "C-sequence-central",
+          "circles": [
+            {
+              "actor": "A",
+              "offset": 16.5
+            }
+          ]
+        },
+        {
+          "type": "central",
+          "branch": "C-sequence-central",
+          "circles": [
+            {
+              "actor": "B",
+              "offset": 0
+            }
+          ]
+        },
+        {
+          "type": "central",
+          "branch": "C-sequence-central",
+          "circles": [
+            {
+              "actor": "B",
+              "offset": 0
+            }
+          ]
+        },
+        {
+          "type": "central",
+          "branch": "C-sequence-central",
+          "circles": [
+            {
+              "actor": "A",
+              "offset": 0
+            },
+            {
+              "actor": "B",
+              "offset": 0
+            }
+          ]
+        },
+        {
+          "type": "central",
+          "branch": "C-sequence-central",
+          "circles": [
+            {
+              "actor": "A",
+              "offset": 16.5
+            },
+            {
+              "actor": "B",
+              "offset": 0
+            }
+          ]
+        }
+      ],
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/sequence/layout.py",
+          "symbol": "build",
+          "line": 39
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_c_geometry.py",
+          "symbol": "SequenceGeometryBranches.test_source_central_circles_follow_actor_centers_and_autonumber_arm",
+          "line": 36,
+          "sha256": "90d6a1369ebe892ac7a662e844732f3938a43291b468f2d2d9f83ce3fa2c3aad"
+        }
+      ],
+      "caseIds": [
+        "BV-C-central-source-plain",
+        "BV-C-central-source-number",
+        "BV-C-central-target-plain",
+        "BV-C-central-target-number",
+        "BV-C-central-dual-plain",
+        "BV-C-central-dual-number"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-derived predicate contract authored; original and native execution not performed in P2. Exact numeric differences require visual/semantic review and are not automatic confirmed functional gaps."
+    },
+    {
+      "id": "C-sequence-number",
+      "title": "Number anchor depends on direction and reverse arrow",
+      "legacyUnresolved": {
+        "path": "references/gap-audit-C.json",
+        "index": 1,
+        "text": "Sequence26arrows?direction?activation?self?central?number numerical endpoint cross-product and every temporal frame constraint not fully independently pinned."
+      },
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+          "symbol": "buildMessageModel/drawMessage/activationBounds",
+          "line": 644,
+          "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c"
+        }
+      ],
+      "predicate": "isSelfMessage/isLeftToRight/isReverseArrowType",
+      "arms": [
+        "normalLTR sender bounds",
+        "normalRTL sender bounds",
+        "reverseLTR receiver bounds"
+      ],
+      "sourceExpected": [
+        {
+          "type": "number",
+          "branch": "C-sequence-number",
+          "anchor": "A"
+        },
+        {
+          "type": "number",
+          "branch": "C-sequence-number",
+          "anchor": "B"
+        },
+        {
+          "type": "number",
+          "branch": "C-sequence-number",
+          "anchor": "B"
+        }
+      ],
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/sequence/layout.py",
+          "symbol": "build",
+          "line": 39
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_c_geometry.py",
+          "symbol": "SequenceGeometryBranches.test_source_number_anchor_tracks_sender_or_reverse_receiver",
+          "line": 47,
+          "sha256": "90d6a1369ebe892ac7a662e844732f3938a43291b468f2d2d9f83ce3fa2c3aad"
+        }
+      ],
+      "caseIds": [
+        "BV-C-number-normal-ltr",
+        "BV-C-number-normal-rtl",
+        "BV-C-number-reverse-ltr"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-derived predicate contract authored; original and native execution not performed in P2. Exact numeric differences require visual/semantic review and are not automatic confirmed functional gaps."
+    },
+    {
+      "id": "C-sequence-self",
+      "title": "Self curve/orthogonal path numbering entry offset",
+      "legacyUnresolved": {
+        "path": "references/gap-audit-C.json",
+        "index": 1,
+        "text": "Sequence26arrows?direction?activation?self?central?number numerical endpoint cross-product and every temporal frame constraint not fully independently pinned."
+      },
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+          "symbol": "buildMessageModel/drawMessage/activationBounds",
+          "line": 461,
+          "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c"
+        }
+      ],
+      "predicate": "startx==stopx, rightAngles, reverse or bidirectional with sequence number",
+      "arms": [
+        "cubic normal",
+        "cubic reverse",
+        "orthogonal bidirectional"
+      ],
+      "sourceExpected": [
+        {
+          "type": "self",
+          "branch": "C-sequence-self",
+          "sender": "A",
+          "startOffset": 1,
+          "angular": false
+        },
+        {
+          "type": "self",
+          "branch": "C-sequence-self",
+          "sender": "A",
+          "startOffset": 11,
+          "angular": false
+        },
+        {
+          "type": "self",
+          "branch": "C-sequence-self",
+          "sender": "A",
+          "startOffset": 11,
+          "angular": true
+        }
+      ],
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/sequence/layout.py",
+          "symbol": "build",
+          "line": 39
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_c_geometry.py",
+          "symbol": "SequenceGeometryBranches.test_source_self_path_start_offset_with_reverse_and_bidirectional_numbering",
+          "line": 57,
+          "sha256": "90d6a1369ebe892ac7a662e844732f3938a43291b468f2d2d9f83ce3fa2c3aad"
+        }
+      ],
+      "caseIds": [
+        "BV-C-self-curved-normal",
+        "BV-C-self-curved-reverse",
+        "BV-C-self-angular-bidirectional"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-derived predicate contract authored; original and native execution not performed in P2. Exact numeric differences require visual/semantic review and are not automatic confirmed functional gaps."
+    },
+    {
+      "id": "C-sequence-frame",
+      "title": "Nested frames, sections and bounded visible content",
+      "legacyUnresolved": {
+        "path": "references/gap-audit-C.json",
+        "index": 1,
+        "text": "Sequence26arrows?direction?activation?self?central?number numerical endpoint cross-product and every temporal frame constraint not fully independently pinned."
+      },
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+          "symbol": "buildMessageModel/drawMessage/activationBounds",
+          "line": 108,
+          "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c"
+        },
+        {
+          "path": "packages/mermaid/src/diagrams/sequence/svgDraw.js",
+          "symbol": "drawLoop",
+          "line": 1519,
+          "sha256": "54dfd9f1a67bf7e935a4800150a086818fe639ada82f06c3b1c7cb04874023db"
+        }
+      ],
+      "predicate": "nested loop/alt activation and note; par sections",
+      "arms": [
+        "two nested frames",
+        "shared wide note",
+        "two par sections",
+        "inline dash3,3"
+      ],
+      "sourceExpected": [
+        {
+          "type": "frame",
+          "branch": "C-sequence-frame",
+          "requiredFrames": 2
+        },
+        {
+          "type": "frame",
+          "branch": "C-sequence-frame",
+          "requiredFrames": 1
+        }
+      ],
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/sequence/layout.py",
+          "symbol": "build",
+          "line": 39
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_c_geometry.py",
+          "symbol": "SequenceGeometryBranches.test_nested_frames_retain_content_and_section_geometry",
+          "line": 69,
+          "sha256": "90d6a1369ebe892ac7a662e844732f3938a43291b468f2d2d9f83ce3fa2c3aad"
+        }
+      ],
+      "caseIds": [
+        "BV-C-frame-nested",
+        "BV-C-frame-sections"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-derived predicate contract authored; original and native execution not performed in P2. Exact numeric differences require visual/semantic review and are not automatic confirmed functional gaps."
+    },
+    {
+      "id": "C-sequence-arrow-paint",
+      "title": "26 arrow paint table in both directions",
+      "legacyUnresolved": {
+        "path": "references/gap-audit-C.json",
+        "index": 1,
+        "text": "Sequence26arrows?direction?activation?self?central?number numerical endpoint cross-product and every temporal frame constraint not fully independently pinned."
+      },
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/sequence/sequenceRenderer.ts",
+          "symbol": "buildMessageModel/drawMessage/activationBounds",
+          "line": 550,
+          "sha256": "282530e0e948684101e19d083205f235d7d2263933d1c74d99fc018aa914312c"
+        }
+      ],
+      "predicate": "all fixed lexer arrow alternatives select marker side/family and dash",
+      "arms": [
+        "26LTR",
+        "26RTL",
+        "start/end marker",
+        "filled/cross/open/half",
+        "solid/dotted"
+      ],
+      "sourceExpected": [
+        {
+          "type": "arrows",
+          "branch": "C-sequence-arrow-paint",
+          "expected": [
+            {
+              "arrow": "->>",
+              "start": "",
+              "end": "arrowhead",
+              "dashed": false
+            },
+            {
+              "arrow": "-->>",
+              "start": "",
+              "end": "arrowhead",
+              "dashed": true
+            },
+            {
+              "arrow": "<<->>",
+              "start": "arrowhead",
+              "end": "arrowhead",
+              "dashed": false
+            },
+            {
+              "arrow": "<<-->>",
+              "start": "arrowhead",
+              "end": "arrowhead",
+              "dashed": true
+            },
+            {
+              "arrow": "->",
+              "start": "",
+              "end": "",
+              "dashed": false
+            },
+            {
+              "arrow": "-->",
+              "start": "",
+              "end": "",
+              "dashed": true
+            },
+            {
+              "arrow": "-x",
+              "start": "",
+              "end": "crosshead",
+              "dashed": false
+            },
+            {
+              "arrow": "--x",
+              "start": "",
+              "end": "crosshead",
+              "dashed": true
+            },
+            {
+              "arrow": "-)",
+              "start": "",
+              "end": "filled-head",
+              "dashed": false
+            },
+            {
+              "arrow": "--)",
+              "start": "",
+              "end": "filled-head",
+              "dashed": true
+            },
+            {
+              "arrow": "-|\\",
+              "start": "",
+              "end": "solidTopArrowHead",
+              "dashed": false
+            },
+            {
+              "arrow": "-|/",
+              "start": "",
+              "end": "solidBottomArrowHead",
+              "dashed": false
+            },
+            {
+              "arrow": "-\\\\",
+              "start": "",
+              "end": "stickTopArrowHead",
+              "dashed": false
+            },
+            {
+              "arrow": "-//",
+              "start": "",
+              "end": "stickBottomArrowHead",
+              "dashed": false
+            },
+            {
+              "arrow": "/|-",
+              "start": "solidBottomArrowHead",
+              "end": "",
+              "dashed": false
+            },
+            {
+              "arrow": "\\|-",
+              "start": "solidTopArrowHead",
+              "end": "",
+              "dashed": false
+            },
+            {
+              "arrow": "//-",
+              "start": "stickBottomArrowHead",
+              "end": "",
+              "dashed": false
+            },
+            {
+              "arrow": "\\\\-",
+              "start": "stickTopArrowHead",
+              "end": "",
+              "dashed": false
+            },
+            {
+              "arrow": "--|\\",
+              "start": "",
+              "end": "solidTopArrowHead",
+              "dashed": true
+            },
+            {
+              "arrow": "--|/",
+              "start": "",
+              "end": "solidBottomArrowHead",
+              "dashed": true
+            },
+            {
+              "arrow": "--\\\\",
+              "start": "",
+              "end": "stickTopArrowHead",
+              "dashed": true
+            },
+            {
+              "arrow": "--//",
+              "start": "",
+              "end": "stickBottomArrowHead",
+              "dashed": true
+            },
+            {
+              "arrow": "/|--",
+              "start": "solidBottomArrowHead",
+              "end": "",
+              "dashed": true
+            },
+            {
+              "arrow": "\\|--",
+              "start": "solidTopArrowHead",
+              "end": "",
+              "dashed": true
+            },
+            {
+              "arrow": "//--",
+              "start": "stickBottomArrowHead",
+              "end": "",
+              "dashed": true
+            },
+            {
+              "arrow": "\\\\--",
+              "start": "stickTopArrowHead",
+              "end": "",
+              "dashed": true
+            }
+          ]
+        },
+        {
+          "type": "arrows",
+          "branch": "C-sequence-arrow-paint",
+          "expected": [
+            {
+              "arrow": "->>",
+              "start": "",
+              "end": "arrowhead",
+              "dashed": false
+            },
+            {
+              "arrow": "-->>",
+              "start": "",
+              "end": "arrowhead",
+              "dashed": true
+            },
+            {
+              "arrow": "<<->>",
+              "start": "arrowhead",
+              "end": "arrowhead",
+              "dashed": false
+            },
+            {
+              "arrow": "<<-->>",
+              "start": "arrowhead",
+              "end": "arrowhead",
+              "dashed": true
+            },
+            {
+              "arrow": "->",
+              "start": "",
+              "end": "",
+              "dashed": false
+            },
+            {
+              "arrow": "-->",
+              "start": "",
+              "end": "",
+              "dashed": true
+            },
+            {
+              "arrow": "-x",
+              "start": "",
+              "end": "crosshead",
+              "dashed": false
+            },
+            {
+              "arrow": "--x",
+              "start": "",
+              "end": "crosshead",
+              "dashed": true
+            },
+            {
+              "arrow": "-)",
+              "start": "",
+              "end": "filled-head",
+              "dashed": false
+            },
+            {
+              "arrow": "--)",
+              "start": "",
+              "end": "filled-head",
+              "dashed": true
+            },
+            {
+              "arrow": "-|\\",
+              "start": "",
+              "end": "solidTopArrowHead",
+              "dashed": false
+            },
+            {
+              "arrow": "-|/",
+              "start": "",
+              "end": "solidBottomArrowHead",
+              "dashed": false
+            },
+            {
+              "arrow": "-\\\\",
+              "start": "",
+              "end": "stickTopArrowHead",
+              "dashed": false
+            },
+            {
+              "arrow": "-//",
+              "start": "",
+              "end": "stickBottomArrowHead",
+              "dashed": false
+            },
+            {
+              "arrow": "/|-",
+              "start": "solidBottomArrowHead",
+              "end": "",
+              "dashed": false
+            },
+            {
+              "arrow": "\\|-",
+              "start": "solidTopArrowHead",
+              "end": "",
+              "dashed": false
+            },
+            {
+              "arrow": "//-",
+              "start": "stickBottomArrowHead",
+              "end": "",
+              "dashed": false
+            },
+            {
+              "arrow": "\\\\-",
+              "start": "stickTopArrowHead",
+              "end": "",
+              "dashed": false
+            },
+            {
+              "arrow": "--|\\",
+              "start": "",
+              "end": "solidTopArrowHead",
+              "dashed": true
+            },
+            {
+              "arrow": "--|/",
+              "start": "",
+              "end": "solidBottomArrowHead",
+              "dashed": true
+            },
+            {
+              "arrow": "--\\\\",
+              "start": "",
+              "end": "stickTopArrowHead",
+              "dashed": true
+            },
+            {
+              "arrow": "--//",
+              "start": "",
+              "end": "stickBottomArrowHead",
+              "dashed": true
+            },
+            {
+              "arrow": "/|--",
+              "start": "solidBottomArrowHead",
+              "end": "",
+              "dashed": true
+            },
+            {
+              "arrow": "\\|--",
+              "start": "solidTopArrowHead",
+              "end": "",
+              "dashed": true
+            },
+            {
+              "arrow": "//--",
+              "start": "stickBottomArrowHead",
+              "end": "",
+              "dashed": true
+            },
+            {
+              "arrow": "\\\\--",
+              "start": "stickTopArrowHead",
+              "end": "",
+              "dashed": true
+            }
+          ]
+        }
+      ],
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/sequence/layout.py",
+          "symbol": "build",
+          "line": 39
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_c_geometry.py",
+          "symbol": "SequenceGeometryBranches.test_all_26_painted_arrow_components_and_dash_in_both_directions",
+          "line": 85,
+          "sha256": "90d6a1369ebe892ac7a662e844732f3938a43291b468f2d2d9f83ce3fa2c3aad"
+        }
+      ],
+      "caseIds": [
+        "BV-C-arrow-gallery-ltr",
+        "BV-C-arrow-gallery-rtl"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-derived predicate contract authored; original and native execution not performed in P2. Exact numeric differences require visual/semantic review and are not automatic confirmed functional gaps."
+    },
+    {
+      "id": "C-sequence-arrow-parser-existing",
+      "title": "Existing26 arrow terminal spellings close parser transport only",
+      "legacyUnresolved": {
+        "path": "references/gap-audit-C.json",
+        "index": 1,
+        "text": "Sequence26arrows?direction?activation?self?central?number numerical endpoint cross-product and every temporal frame constraint not fully independently pinned."
+      },
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/sequence/parser/sequenceDiagram.jison",
+          "symbol": "arrow token alternatives",
+          "line": 85,
+          "sha256": "45c71ea8dfd62594c9b315f7285efa497ed8f88219ec016625c37d4bd5823ebf"
+        }
+      ],
+      "predicate": "one valid message per fixed26 arrow spelling",
+      "arms": [
+        "26 grammar spellings"
+      ],
+      "sourceExpected": "source/target/arrow/text DB fields preserved; no inference about endpoints/number/circle paint",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/sequence/parser.py",
+          "symbol": "parse",
+          "line": 1
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/bulk/c/test_sequence.py",
+          "symbol": "_arrow_method",
+          "line": 109,
+          "sha256": "270f8085f1e4ccd6ca0c069493dc614c1fc22c3b21de7b46b899e5fbab67671d"
+        }
+      ],
+      "caseIds": [],
+      "classification": "EXISTING_EVIDENCE_REVIEWED",
+      "reason": "Reviewed unit-c baseline P4 and exact dynamic test_source_arrow_00..25 design; not promoted VERIFIED_EXISTING because no new exact stderr/archive binding is asserted in this P2 catalogue. Geometry separately probed.",
+      "existingEvidence": {
+        "run": "test-runs/BULK-P4-final-20261106T125300Z-435e50af/run.json",
+        "command": "unit-c"
+      }
+    },
+    {
+      "id": "C-zen-comment-escape",
+      "title": "Marked consumed token: escape",
+      "legacyUnresolved": {
+        "path": "references/gap-audit-C.json",
+        "index": 2,
+        "text": "Zen arbitrary Marked delimiter/escape/paragraph/commentheight behavior beyond source corpus requires focused source cases."
+      },
+      "source": [
+        {
+          "path": "src/svg/components/comment.ts",
+          "symbol": "markdownToSvgLines/collectLines/walkToken/renderComment",
+          "line": 11,
+          "sha256": "de16149e5f49bce9c09e0093836425e28b3810df1e53c607db8aaf968ef5efc1",
+          "repository": "zenuml-core"
+        },
+        {
+          "path": "src/svg/buildStatementGeometry.ts",
+          "symbol": "msgCommentHeight",
+          "line": 143,
+          "sha256": "30afc8cf61570f959140dd6508e044b7d115ef3920030846909af64de9717524",
+          "repository": "zenuml-core"
+        }
+      ],
+      "predicate": "Marked gfm=true/breaks=true tokenization then collectLines token switch",
+      "arms": [
+        "escape",
+        "visible text",
+        "bold/italic consumed token attributes",
+        "raw line count x20 separate from rendered lines"
+      ],
+      "sourceExpected": [
+        {
+          "type": "comment",
+          "branch": "C-zen-comment-escape",
+          "comment": "\\*literal\\*",
+          "visible": "\\*literal\\*",
+          "bold": false,
+          "italic": false,
+          "rawLineCount": 1
+        }
+      ],
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/zenuml/layout.py",
+          "symbol": "_comment_markup/comment_height",
+          "line": 50
+        },
+        {
+          "path": "src/py_mermaid/diagrams/zenuml/geometry.py",
+          "symbol": "vertical_layout",
+          "line": 53
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_c_geometry.py",
+          "symbol": "ZenMarkedBranches.test_delimiter_and_escape_predicates_against_consumed_source_tokens",
+          "line": 133,
+          "sha256": "90d6a1369ebe892ac7a662e844732f3938a43291b468f2d2d9f83ce3fa2c3aad"
+        },
+        {
+          "path": "tests/branch_verification/test_c_geometry.py",
+          "symbol": "ZenMarkedBranches.test_comment_height_uses_raw_trimmed_line_count_even_fence_and_paragraph",
+          "line": 148,
+          "sha256": "90d6a1369ebe892ac7a662e844732f3938a43291b468f2d2d9f83ce3fa2c3aad"
+        }
+      ],
+      "caseIds": [
+        "BV-C-zen-comment-escape"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-derived predicate contract authored; original and native execution not performed in P2. Exact numeric differences require visual/semantic review and are not automatic confirmed functional gaps."
+    },
+    {
+      "id": "C-zen-comment-space-delimiter",
+      "title": "Marked consumed token: space-delimiter",
+      "legacyUnresolved": {
+        "path": "references/gap-audit-C.json",
+        "index": 2,
+        "text": "Zen arbitrary Marked delimiter/escape/paragraph/commentheight behavior beyond source corpus requires focused source cases."
+      },
+      "source": [
+        {
+          "path": "src/svg/components/comment.ts",
+          "symbol": "markdownToSvgLines/collectLines/walkToken/renderComment",
+          "line": 11,
+          "sha256": "de16149e5f49bce9c09e0093836425e28b3810df1e53c607db8aaf968ef5efc1",
+          "repository": "zenuml-core"
+        },
+        {
+          "path": "src/svg/buildStatementGeometry.ts",
+          "symbol": "msgCommentHeight",
+          "line": 143,
+          "sha256": "30afc8cf61570f959140dd6508e044b7d115ef3920030846909af64de9717524",
+          "repository": "zenuml-core"
+        }
+      ],
+      "predicate": "Marked gfm=true/breaks=true tokenization then collectLines token switch",
+      "arms": [
+        "space-delimiter",
+        "visible text",
+        "bold/italic consumed token attributes",
+        "raw line count x20 separate from rendered lines"
+      ],
+      "sourceExpected": [
+        {
+          "type": "comment",
+          "branch": "C-zen-comment-space-delimiter",
+          "comment": "* spaced *",
+          "visible": "* spaced *",
+          "bold": false,
+          "italic": false,
+          "rawLineCount": 1
+        }
+      ],
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/zenuml/layout.py",
+          "symbol": "_comment_markup/comment_height",
+          "line": 50
+        },
+        {
+          "path": "src/py_mermaid/diagrams/zenuml/geometry.py",
+          "symbol": "vertical_layout",
+          "line": 53
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_c_geometry.py",
+          "symbol": "ZenMarkedBranches.test_delimiter_and_escape_predicates_against_consumed_source_tokens",
+          "line": 133,
+          "sha256": "90d6a1369ebe892ac7a662e844732f3938a43291b468f2d2d9f83ce3fa2c3aad"
+        },
+        {
+          "path": "tests/branch_verification/test_c_geometry.py",
+          "symbol": "ZenMarkedBranches.test_comment_height_uses_raw_trimmed_line_count_even_fence_and_paragraph",
+          "line": 148,
+          "sha256": "90d6a1369ebe892ac7a662e844732f3938a43291b468f2d2d9f83ce3fa2c3aad"
+        }
+      ],
+      "caseIds": [
+        "BV-C-zen-comment-space-delimiter"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-derived predicate contract authored; original and native execution not performed in P2. Exact numeric differences require visual/semantic review and are not automatic confirmed functional gaps."
+    },
+    {
+      "id": "C-zen-comment-intraword",
+      "title": "Marked consumed token: intraword",
+      "legacyUnresolved": {
+        "path": "references/gap-audit-C.json",
+        "index": 2,
+        "text": "Zen arbitrary Marked delimiter/escape/paragraph/commentheight behavior beyond source corpus requires focused source cases."
+      },
+      "source": [
+        {
+          "path": "src/svg/components/comment.ts",
+          "symbol": "markdownToSvgLines/collectLines/walkToken/renderComment",
+          "line": 11,
+          "sha256": "de16149e5f49bce9c09e0093836425e28b3810df1e53c607db8aaf968ef5efc1",
+          "repository": "zenuml-core"
+        },
+        {
+          "path": "src/svg/buildStatementGeometry.ts",
+          "symbol": "msgCommentHeight",
+          "line": 143,
+          "sha256": "30afc8cf61570f959140dd6508e044b7d115ef3920030846909af64de9717524",
+          "repository": "zenuml-core"
+        }
+      ],
+      "predicate": "Marked gfm=true/breaks=true tokenization then collectLines token switch",
+      "arms": [
+        "intraword",
+        "visible text",
+        "bold/italic consumed token attributes",
+        "raw line count x20 separate from rendered lines"
+      ],
+      "sourceExpected": [
+        {
+          "type": "comment",
+          "branch": "C-zen-comment-intraword",
+          "comment": "word_with_underscores",
+          "visible": "word_with_underscores",
+          "bold": false,
+          "italic": false,
+          "rawLineCount": 1
+        }
+      ],
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/zenuml/layout.py",
+          "symbol": "_comment_markup/comment_height",
+          "line": 50
+        },
+        {
+          "path": "src/py_mermaid/diagrams/zenuml/geometry.py",
+          "symbol": "vertical_layout",
+          "line": 53
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_c_geometry.py",
+          "symbol": "ZenMarkedBranches.test_delimiter_and_escape_predicates_against_consumed_source_tokens",
+          "line": 133,
+          "sha256": "90d6a1369ebe892ac7a662e844732f3938a43291b468f2d2d9f83ce3fa2c3aad"
+        },
+        {
+          "path": "tests/branch_verification/test_c_geometry.py",
+          "symbol": "ZenMarkedBranches.test_comment_height_uses_raw_trimmed_line_count_even_fence_and_paragraph",
+          "line": 148,
+          "sha256": "90d6a1369ebe892ac7a662e844732f3938a43291b468f2d2d9f83ce3fa2c3aad"
+        }
+      ],
+      "caseIds": [
+        "BV-C-zen-comment-intraword"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-derived predicate contract authored; original and native execution not performed in P2. Exact numeric differences require visual/semantic review and are not automatic confirmed functional gaps."
+    },
+    {
+      "id": "C-zen-comment-triple",
+      "title": "Marked consumed token: triple",
+      "legacyUnresolved": {
+        "path": "references/gap-audit-C.json",
+        "index": 2,
+        "text": "Zen arbitrary Marked delimiter/escape/paragraph/commentheight behavior beyond source corpus requires focused source cases."
+      },
+      "source": [
+        {
+          "path": "src/svg/components/comment.ts",
+          "symbol": "markdownToSvgLines/collectLines/walkToken/renderComment",
+          "line": 11,
+          "sha256": "de16149e5f49bce9c09e0093836425e28b3810df1e53c607db8aaf968ef5efc1",
+          "repository": "zenuml-core"
+        },
+        {
+          "path": "src/svg/buildStatementGeometry.ts",
+          "symbol": "msgCommentHeight",
+          "line": 143,
+          "sha256": "30afc8cf61570f959140dd6508e044b7d115ef3920030846909af64de9717524",
+          "repository": "zenuml-core"
+        }
+      ],
+      "predicate": "Marked gfm=true/breaks=true tokenization then collectLines token switch",
+      "arms": [
+        "triple",
+        "visible text",
+        "bold/italic consumed token attributes",
+        "raw line count x20 separate from rendered lines"
+      ],
+      "sourceExpected": [
+        {
+          "type": "comment",
+          "branch": "C-zen-comment-triple",
+          "comment": "***Both***",
+          "visible": "Both",
+          "bold": true,
+          "italic": true,
+          "rawLineCount": 1
+        }
+      ],
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/zenuml/layout.py",
+          "symbol": "_comment_markup/comment_height",
+          "line": 50
+        },
+        {
+          "path": "src/py_mermaid/diagrams/zenuml/geometry.py",
+          "symbol": "vertical_layout",
+          "line": 53
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_c_geometry.py",
+          "symbol": "ZenMarkedBranches.test_delimiter_and_escape_predicates_against_consumed_source_tokens",
+          "line": 133,
+          "sha256": "90d6a1369ebe892ac7a662e844732f3938a43291b468f2d2d9f83ce3fa2c3aad"
+        },
+        {
+          "path": "tests/branch_verification/test_c_geometry.py",
+          "symbol": "ZenMarkedBranches.test_comment_height_uses_raw_trimmed_line_count_even_fence_and_paragraph",
+          "line": 148,
+          "sha256": "90d6a1369ebe892ac7a662e844732f3938a43291b468f2d2d9f83ce3fa2c3aad"
+        }
+      ],
+      "caseIds": [
+        "BV-C-zen-comment-triple"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-derived predicate contract authored; original and native execution not performed in P2. Exact numeric differences require visual/semantic review and are not automatic confirmed functional gaps."
+    },
+    {
+      "id": "C-zen-comment-nested",
+      "title": "Marked consumed token: nested",
+      "legacyUnresolved": {
+        "path": "references/gap-audit-C.json",
+        "index": 2,
+        "text": "Zen arbitrary Marked delimiter/escape/paragraph/commentheight behavior beyond source corpus requires focused source cases."
+      },
+      "source": [
+        {
+          "path": "src/svg/components/comment.ts",
+          "symbol": "markdownToSvgLines/collectLines/walkToken/renderComment",
+          "line": 11,
+          "sha256": "de16149e5f49bce9c09e0093836425e28b3810df1e53c607db8aaf968ef5efc1",
+          "repository": "zenuml-core"
+        },
+        {
+          "path": "src/svg/buildStatementGeometry.ts",
+          "symbol": "msgCommentHeight",
+          "line": 143,
+          "sha256": "30afc8cf61570f959140dd6508e044b7d115ef3920030846909af64de9717524",
+          "repository": "zenuml-core"
+        }
+      ],
+      "predicate": "Marked gfm=true/breaks=true tokenization then collectLines token switch",
+      "arms": [
+        "nested",
+        "visible text",
+        "bold/italic consumed token attributes",
+        "raw line count x20 separate from rendered lines"
+      ],
+      "sourceExpected": [
+        {
+          "type": "comment",
+          "branch": "C-zen-comment-nested",
+          "comment": "**Outer *Inner* Tail**",
+          "visible": "Outer Inner Tail",
+          "bold": true,
+          "italic": true,
+          "rawLineCount": 1
+        }
+      ],
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/zenuml/layout.py",
+          "symbol": "_comment_markup/comment_height",
+          "line": 50
+        },
+        {
+          "path": "src/py_mermaid/diagrams/zenuml/geometry.py",
+          "symbol": "vertical_layout",
+          "line": 53
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_c_geometry.py",
+          "symbol": "ZenMarkedBranches.test_delimiter_and_escape_predicates_against_consumed_source_tokens",
+          "line": 133,
+          "sha256": "90d6a1369ebe892ac7a662e844732f3938a43291b468f2d2d9f83ce3fa2c3aad"
+        },
+        {
+          "path": "tests/branch_verification/test_c_geometry.py",
+          "symbol": "ZenMarkedBranches.test_comment_height_uses_raw_trimmed_line_count_even_fence_and_paragraph",
+          "line": 148,
+          "sha256": "90d6a1369ebe892ac7a662e844732f3938a43291b468f2d2d9f83ce3fa2c3aad"
+        }
+      ],
+      "caseIds": [
+        "BV-C-zen-comment-nested"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-derived predicate contract authored; original and native execution not performed in P2. Exact numeric differences require visual/semantic review and are not automatic confirmed functional gaps."
+    },
+    {
+      "id": "C-zen-comment-unclosed",
+      "title": "Marked consumed token: unclosed",
+      "legacyUnresolved": {
+        "path": "references/gap-audit-C.json",
+        "index": 2,
+        "text": "Zen arbitrary Marked delimiter/escape/paragraph/commentheight behavior beyond source corpus requires focused source cases."
+      },
+      "source": [
+        {
+          "path": "src/svg/components/comment.ts",
+          "symbol": "markdownToSvgLines/collectLines/walkToken/renderComment",
+          "line": 11,
+          "sha256": "de16149e5f49bce9c09e0093836425e28b3810df1e53c607db8aaf968ef5efc1",
+          "repository": "zenuml-core"
+        },
+        {
+          "path": "src/svg/buildStatementGeometry.ts",
+          "symbol": "msgCommentHeight",
+          "line": 143,
+          "sha256": "30afc8cf61570f959140dd6508e044b7d115ef3920030846909af64de9717524",
+          "repository": "zenuml-core"
+        }
+      ],
+      "predicate": "Marked gfm=true/breaks=true tokenization then collectLines token switch",
+      "arms": [
+        "unclosed",
+        "visible text",
+        "bold/italic consumed token attributes",
+        "raw line count x20 separate from rendered lines"
+      ],
+      "sourceExpected": [
+        {
+          "type": "comment",
+          "branch": "C-zen-comment-unclosed",
+          "comment": "**Unclosed",
+          "visible": "**Unclosed",
+          "bold": false,
+          "italic": false,
+          "rawLineCount": 1
+        }
+      ],
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/zenuml/layout.py",
+          "symbol": "_comment_markup/comment_height",
+          "line": 50
+        },
+        {
+          "path": "src/py_mermaid/diagrams/zenuml/geometry.py",
+          "symbol": "vertical_layout",
+          "line": 53
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_c_geometry.py",
+          "symbol": "ZenMarkedBranches.test_delimiter_and_escape_predicates_against_consumed_source_tokens",
+          "line": 133,
+          "sha256": "90d6a1369ebe892ac7a662e844732f3938a43291b468f2d2d9f83ce3fa2c3aad"
+        },
+        {
+          "path": "tests/branch_verification/test_c_geometry.py",
+          "symbol": "ZenMarkedBranches.test_comment_height_uses_raw_trimmed_line_count_even_fence_and_paragraph",
+          "line": 148,
+          "sha256": "90d6a1369ebe892ac7a662e844732f3938a43291b468f2d2d9f83ce3fa2c3aad"
+        }
+      ],
+      "caseIds": [
+        "BV-C-zen-comment-unclosed"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-derived predicate contract authored; original and native execution not performed in P2. Exact numeric differences require visual/semantic review and are not automatic confirmed functional gaps."
+    },
+    {
+      "id": "C-zen-comment-codespan",
+      "title": "Marked consumed token: codespan",
+      "legacyUnresolved": {
+        "path": "references/gap-audit-C.json",
+        "index": 2,
+        "text": "Zen arbitrary Marked delimiter/escape/paragraph/commentheight behavior beyond source corpus requires focused source cases."
+      },
+      "source": [
+        {
+          "path": "src/svg/components/comment.ts",
+          "symbol": "markdownToSvgLines/collectLines/walkToken/renderComment",
+          "line": 11,
+          "sha256": "de16149e5f49bce9c09e0093836425e28b3810df1e53c607db8aaf968ef5efc1",
+          "repository": "zenuml-core"
+        },
+        {
+          "path": "src/svg/buildStatementGeometry.ts",
+          "symbol": "msgCommentHeight",
+          "line": 143,
+          "sha256": "30afc8cf61570f959140dd6508e044b7d115ef3920030846909af64de9717524",
+          "repository": "zenuml-core"
+        }
+      ],
+      "predicate": "Marked gfm=true/breaks=true tokenization then collectLines token switch",
+      "arms": [
+        "codespan",
+        "visible text",
+        "bold/italic consumed token attributes",
+        "raw line count x20 separate from rendered lines"
+      ],
+      "sourceExpected": [
+        {
+          "type": "comment",
+          "branch": "C-zen-comment-codespan",
+          "comment": "`` code ` literal ``",
+          "visible": "code ` literal",
+          "bold": false,
+          "italic": false,
+          "rawLineCount": 1
+        }
+      ],
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/zenuml/layout.py",
+          "symbol": "_comment_markup/comment_height",
+          "line": 50
+        },
+        {
+          "path": "src/py_mermaid/diagrams/zenuml/geometry.py",
+          "symbol": "vertical_layout",
+          "line": 53
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_c_geometry.py",
+          "symbol": "ZenMarkedBranches.test_delimiter_and_escape_predicates_against_consumed_source_tokens",
+          "line": 133,
+          "sha256": "90d6a1369ebe892ac7a662e844732f3938a43291b468f2d2d9f83ce3fa2c3aad"
+        },
+        {
+          "path": "tests/branch_verification/test_c_geometry.py",
+          "symbol": "ZenMarkedBranches.test_comment_height_uses_raw_trimmed_line_count_even_fence_and_paragraph",
+          "line": 148,
+          "sha256": "90d6a1369ebe892ac7a662e844732f3938a43291b468f2d2d9f83ce3fa2c3aad"
+        }
+      ],
+      "caseIds": [
+        "BV-C-zen-comment-codespan"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-derived predicate contract authored; original and native execution not performed in P2. Exact numeric differences require visual/semantic review and are not automatic confirmed functional gaps."
+    },
+    {
+      "id": "C-zen-comment-paragraph",
+      "title": "Marked consumed token: paragraph",
+      "legacyUnresolved": {
+        "path": "references/gap-audit-C.json",
+        "index": 2,
+        "text": "Zen arbitrary Marked delimiter/escape/paragraph/commentheight behavior beyond source corpus requires focused source cases."
+      },
+      "source": [
+        {
+          "path": "src/svg/components/comment.ts",
+          "symbol": "markdownToSvgLines/collectLines/walkToken/renderComment",
+          "line": 11,
+          "sha256": "de16149e5f49bce9c09e0093836425e28b3810df1e53c607db8aaf968ef5efc1",
+          "repository": "zenuml-core"
+        },
+        {
+          "path": "src/svg/buildStatementGeometry.ts",
+          "symbol": "msgCommentHeight",
+          "line": 143,
+          "sha256": "30afc8cf61570f959140dd6508e044b7d115ef3920030846909af64de9717524",
+          "repository": "zenuml-core"
+        }
+      ],
+      "predicate": "Marked gfm=true/breaks=true tokenization then collectLines token switch",
+      "arms": [
+        "paragraph",
+        "visible text",
+        "bold/italic consumed token attributes",
+        "raw line count x20 separate from rendered lines"
+      ],
+      "sourceExpected": [
+        {
+          "type": "comment",
+          "branch": "C-zen-comment-paragraph",
+          "comment": "First\n\nSecond",
+          "visible": "FirstSecond",
+          "bold": false,
+          "italic": false,
+          "rawLineCount": 3
+        }
+      ],
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/zenuml/layout.py",
+          "symbol": "_comment_markup/comment_height",
+          "line": 50
+        },
+        {
+          "path": "src/py_mermaid/diagrams/zenuml/geometry.py",
+          "symbol": "vertical_layout",
+          "line": 53
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_c_geometry.py",
+          "symbol": "ZenMarkedBranches.test_delimiter_and_escape_predicates_against_consumed_source_tokens",
+          "line": 133,
+          "sha256": "90d6a1369ebe892ac7a662e844732f3938a43291b468f2d2d9f83ce3fa2c3aad"
+        },
+        {
+          "path": "tests/branch_verification/test_c_geometry.py",
+          "symbol": "ZenMarkedBranches.test_comment_height_uses_raw_trimmed_line_count_even_fence_and_paragraph",
+          "line": 148,
+          "sha256": "90d6a1369ebe892ac7a662e844732f3938a43291b468f2d2d9f83ce3fa2c3aad"
+        }
+      ],
+      "caseIds": [
+        "BV-C-zen-comment-paragraph"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-derived predicate contract authored; original and native execution not performed in P2. Exact numeric differences require visual/semantic review and are not automatic confirmed functional gaps."
+    },
+    {
+      "id": "C-zen-comment-fence",
+      "title": "Marked consumed token: fence",
+      "legacyUnresolved": {
+        "path": "references/gap-audit-C.json",
+        "index": 2,
+        "text": "Zen arbitrary Marked delimiter/escape/paragraph/commentheight behavior beyond source corpus requires focused source cases."
+      },
+      "source": [
+        {
+          "path": "src/svg/components/comment.ts",
+          "symbol": "markdownToSvgLines/collectLines/walkToken/renderComment",
+          "line": 11,
+          "sha256": "de16149e5f49bce9c09e0093836425e28b3810df1e53c607db8aaf968ef5efc1",
+          "repository": "zenuml-core"
+        },
+        {
+          "path": "src/svg/buildStatementGeometry.ts",
+          "symbol": "msgCommentHeight",
+          "line": 143,
+          "sha256": "30afc8cf61570f959140dd6508e044b7d115ef3920030846909af64de9717524",
+          "repository": "zenuml-core"
+        }
+      ],
+      "predicate": "Marked gfm=true/breaks=true tokenization then collectLines token switch",
+      "arms": [
+        "fence",
+        "visible text",
+        "bold/italic consumed token attributes",
+        "raw line count x20 separate from rendered lines"
+      ],
+      "sourceExpected": [
+        {
+          "type": "comment",
+          "branch": "C-zen-comment-fence",
+          "comment": "```\nCode\n```",
+          "visible": "Code",
+          "bold": false,
+          "italic": false,
+          "rawLineCount": 3
+        }
+      ],
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/zenuml/layout.py",
+          "symbol": "_comment_markup/comment_height",
+          "line": 50
+        },
+        {
+          "path": "src/py_mermaid/diagrams/zenuml/geometry.py",
+          "symbol": "vertical_layout",
+          "line": 53
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_c_geometry.py",
+          "symbol": "ZenMarkedBranches.test_delimiter_and_escape_predicates_against_consumed_source_tokens",
+          "line": 133,
+          "sha256": "90d6a1369ebe892ac7a662e844732f3938a43291b468f2d2d9f83ce3fa2c3aad"
+        },
+        {
+          "path": "tests/branch_verification/test_c_geometry.py",
+          "symbol": "ZenMarkedBranches.test_comment_height_uses_raw_trimmed_line_count_even_fence_and_paragraph",
+          "line": 148,
+          "sha256": "90d6a1369ebe892ac7a662e844732f3938a43291b468f2d2d9f83ce3fa2c3aad"
+        }
+      ],
+      "caseIds": [
+        "BV-C-zen-comment-fence"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-derived predicate contract authored; original and native execution not performed in P2. Exact numeric differences require visual/semantic review and are not automatic confirmed functional gaps."
+    },
+    {
+      "id": "C-zen-comment-raw-link",
+      "title": "Marked consumed token: raw-link",
+      "legacyUnresolved": {
+        "path": "references/gap-audit-C.json",
+        "index": 2,
+        "text": "Zen arbitrary Marked delimiter/escape/paragraph/commentheight behavior beyond source corpus requires focused source cases."
+      },
+      "source": [
+        {
+          "path": "src/svg/components/comment.ts",
+          "symbol": "markdownToSvgLines/collectLines/walkToken/renderComment",
+          "line": 11,
+          "sha256": "de16149e5f49bce9c09e0093836425e28b3810df1e53c607db8aaf968ef5efc1",
+          "repository": "zenuml-core"
+        },
+        {
+          "path": "src/svg/buildStatementGeometry.ts",
+          "symbol": "msgCommentHeight",
+          "line": 143,
+          "sha256": "30afc8cf61570f959140dd6508e044b7d115ef3920030846909af64de9717524",
+          "repository": "zenuml-core"
+        }
+      ],
+      "predicate": "Marked gfm=true/breaks=true tokenization then collectLines token switch",
+      "arms": [
+        "raw-link",
+        "visible text",
+        "bold/italic consumed token attributes",
+        "raw line count x20 separate from rendered lines"
+      ],
+      "sourceExpected": [
+        {
+          "type": "comment",
+          "branch": "C-zen-comment-raw-link",
+          "comment": "[label](https://example.invalid)",
+          "visible": "[label](https://example.invalid)",
+          "bold": false,
+          "italic": false,
+          "rawLineCount": 1
+        }
+      ],
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/zenuml/layout.py",
+          "symbol": "_comment_markup/comment_height",
+          "line": 50
+        },
+        {
+          "path": "src/py_mermaid/diagrams/zenuml/geometry.py",
+          "symbol": "vertical_layout",
+          "line": 53
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_c_geometry.py",
+          "symbol": "ZenMarkedBranches.test_delimiter_and_escape_predicates_against_consumed_source_tokens",
+          "line": 133,
+          "sha256": "90d6a1369ebe892ac7a662e844732f3938a43291b468f2d2d9f83ce3fa2c3aad"
+        },
+        {
+          "path": "tests/branch_verification/test_c_geometry.py",
+          "symbol": "ZenMarkedBranches.test_comment_height_uses_raw_trimmed_line_count_even_fence_and_paragraph",
+          "line": 148,
+          "sha256": "90d6a1369ebe892ac7a662e844732f3938a43291b468f2d2d9f83ce3fa2c3aad"
+        }
+      ],
+      "caseIds": [
+        "BV-C-zen-comment-raw-link"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-derived predicate contract authored; original and native execution not performed in P2. Exact numeric differences require visual/semantic review and are not automatic confirmed functional gaps."
+    },
+    {
+      "id": "C-info-themes",
+      "title": "Info version role themes",
+      "legacyUnresolved": {
+        "path": "references/gap-audit-C.json",
+        "index": 4,
+        "text": "Nondefault info.version CSS and all11themes?everyrole not independently asserted here."
+      },
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/info/infoRenderer.ts",
+          "symbol": "draw/version text",
+          "line": 13,
+          "sha256": "100b9e0f2afe51cd725b5818d1423d871deeaa950c8bcb31c04c403c4f7454a9"
+        },
+        {
+          "path": "packages/mermaid/src/styles.ts",
+          "symbol": "root inherited font/fill",
+          "line": 42,
+          "sha256": "dd53a582b0c2411e16beeb37f51664968f278b08b97f63fc8808cbc8381f73fb"
+        }
+      ],
+      "predicate": "version text role inherits canonical theme root fill/family while presentation fontsize32 remains",
+      "arms": [
+        "11 canonical theme names",
+        "single version role",
+        "400x100 viewport"
+      ],
+      "sourceExpected": [
+        {
+          "type": "info",
+          "branch": "C-info-themes",
+          "color": "#333",
+          "fontSize": 32,
+          "version": "v12.2.0",
+          "priorSourceProof": {
+            "path": "test-runs/BULK-P4-final-20261106T125300Z-435e50af/artifacts/original-themes.json",
+            "sha256": "d0b64b226648bc230abffa969db7630b916999b7f5c1d1b7944211f426824340",
+            "rowId": "gap-shared-base-palette-no-recalculate"
+          }
+        },
+        {
+          "type": "info",
+          "branch": "C-info-themes",
+          "color": "#ccc",
+          "fontSize": 32,
+          "version": "v12.2.0",
+          "priorSourceProof": {
+            "path": "test-runs/BULK-P4-final-20261106T125300Z-435e50af/artifacts/original-themes.json",
+            "sha256": "d0b64b226648bc230abffa969db7630b916999b7f5c1d1b7944211f426824340",
+            "rowId": "gap-shared-null-theme"
+          }
+        },
+        {
+          "type": "info",
+          "branch": "C-info-themes",
+          "color": "#333",
+          "fontSize": 32,
+          "version": "v12.2.0",
+          "priorSourceProof": {
+            "path": "test-runs/BULK-P4-final-20261106T125300Z-435e50af/artifacts/original-themes.json",
+            "sha256": "d0b64b226648bc230abffa969db7630b916999b7f5c1d1b7944211f426824340",
+            "rowId": "gap-shared-palette-no-recalculate"
+          }
+        },
+        {
+          "type": "info",
+          "branch": "C-info-themes",
+          "color": "#000000",
+          "fontSize": 32,
+          "version": "v12.2.0",
+          "priorSourceProof": {
+            "path": "test-runs/BULK-P4-final-20261106T125300Z-435e50af/artifacts/original-themes.json",
+            "sha256": "d0b64b226648bc230abffa969db7630b916999b7f5c1d1b7944211f426824340",
+            "rowId": "shared-theme-forest"
+          }
+        },
+        {
+          "type": "info",
+          "branch": "C-info-themes",
+          "color": "#000000",
+          "fontSize": 32,
+          "version": "v12.2.0",
+          "priorSourceProof": {
+            "path": "test-runs/BULK-P4-final-20261106T125300Z-435e50af/artifacts/original-themes.json",
+            "sha256": "d0b64b226648bc230abffa969db7630b916999b7f5c1d1b7944211f426824340",
+            "rowId": "shared-theme-neutral"
+          }
+        },
+        {
+          "type": "info",
+          "branch": "C-info-themes",
+          "color": "#333",
+          "fontSize": 32,
+          "version": "v12.2.0",
+          "priorSourceProof": {
+            "path": "test-runs/BULK-P4-final-20261106T125300Z-435e50af/artifacts/original-themes.json",
+            "sha256": "d0b64b226648bc230abffa969db7630b916999b7f5c1d1b7944211f426824340",
+            "rowId": "shared-theme-neo"
+          }
+        },
+        {
+          "type": "info",
+          "branch": "C-info-themes",
+          "color": "#ccc",
+          "fontSize": 32,
+          "version": "v12.2.0",
+          "priorSourceProof": {
+            "path": "test-runs/BULK-P4-final-20261106T125300Z-435e50af/artifacts/original-themes.json",
+            "sha256": "d0b64b226648bc230abffa969db7630b916999b7f5c1d1b7944211f426824340",
+            "rowId": "shared-theme-neo-dark"
+          }
+        },
+        {
+          "type": "info",
+          "branch": "C-info-themes",
+          "color": "#28253D",
+          "fontSize": 32,
+          "version": "v12.2.0",
+          "priorSourceProof": {
+            "path": "test-runs/BULK-P4-final-20261106T125300Z-435e50af/artifacts/original-themes.json",
+            "sha256": "d0b64b226648bc230abffa969db7630b916999b7f5c1d1b7944211f426824340",
+            "rowId": "shared-theme-redux"
+          }
+        },
+        {
+          "type": "info",
+          "branch": "C-info-themes",
+          "color": "#28253D",
+          "fontSize": 32,
+          "version": "v12.2.0",
+          "priorSourceProof": {
+            "path": "test-runs/BULK-P4-final-20261106T125300Z-435e50af/artifacts/original-themes.json",
+            "sha256": "d0b64b226648bc230abffa969db7630b916999b7f5c1d1b7944211f426824340",
+            "rowId": "shared-theme-redux-color"
+          }
+        },
+        {
+          "type": "info",
+          "branch": "C-info-themes",
+          "color": "#ccc",
+          "fontSize": 32,
+          "version": "v12.2.0",
+          "priorSourceProof": {
+            "path": "test-runs/BULK-P4-final-20261106T125300Z-435e50af/artifacts/original-themes.json",
+            "sha256": "d0b64b226648bc230abffa969db7630b916999b7f5c1d1b7944211f426824340",
+            "rowId": "shared-theme-redux-dark"
+          }
+        },
+        {
+          "type": "info",
+          "branch": "C-info-themes",
+          "color": "#ccc",
+          "fontSize": 32,
+          "version": "v12.2.0",
+          "priorSourceProof": {
+            "path": "test-runs/BULK-P4-final-20261106T125300Z-435e50af/artifacts/original-themes.json",
+            "sha256": "d0b64b226648bc230abffa969db7630b916999b7f5c1d1b7944211f426824340",
+            "rowId": "shared-theme-redux-dark-color"
+          }
+        }
+      ],
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/info/__init__.py",
+          "symbol": "build",
+          "line": 26
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_c_geometry.py",
+          "symbol": "InfoRoleBranches.test_all_eleven_theme_version_roles_and_existing_css_override",
+          "line": 98,
+          "sha256": "90d6a1369ebe892ac7a662e844732f3938a43291b468f2d2d9f83ce3fa2c3aad"
+        }
+      ],
+      "caseIds": [
+        "BV-C-info-base",
+        "BV-C-info-dark",
+        "BV-C-info-default",
+        "BV-C-info-forest",
+        "BV-C-info-neutral",
+        "BV-C-info-neo",
+        "BV-C-info-neo-dark",
+        "BV-C-info-redux",
+        "BV-C-info-redux-color",
+        "BV-C-info-redux-dark",
+        "BV-C-info-redux-dark-color"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-derived predicate contract authored; original and native execution not performed in P2. Exact numeric differences require visual/semantic review and are not automatic confirmed functional gaps."
+    },
+    {
+      "id": "C-info-version-css",
+      "title": "Info version role version-css",
+      "legacyUnresolved": {
+        "path": "references/gap-audit-C.json",
+        "index": 4,
+        "text": "Nondefault info.version CSS and all11themes?everyrole not independently asserted here."
+      },
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/info/infoRenderer.ts",
+          "symbol": "draw/version text",
+          "line": 13,
+          "sha256": "100b9e0f2afe51cd725b5818d1423d871deeaa950c8bcb31c04c403c4f7454a9"
+        },
+        {
+          "path": "packages/mermaid/src/styles.ts",
+          "symbol": "root inherited font/fill",
+          "line": 42,
+          "sha256": "dd53a582b0c2411e16beeb37f51664968f278b08b97f63fc8808cbc8381f73fb"
+        }
+      ],
+      "predicate": "existing .version selector overrides presentation font-size and inherited fill",
+      "arms": [
+        "font-size40",
+        "fill authored #b02030",
+        "bold"
+      ],
+      "sourceExpected": [
+        {
+          "type": "info",
+          "branch": "C-info-version-css",
+          "color": "#b02030",
+          "fontSize": 40,
+          "version": "v12.2.0"
+        }
+      ],
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/info/__init__.py",
+          "symbol": "build",
+          "line": 26
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_c_geometry.py",
+          "symbol": "InfoRoleBranches.test_all_eleven_theme_version_roles_and_existing_css_override",
+          "line": 98,
+          "sha256": "90d6a1369ebe892ac7a662e844732f3938a43291b468f2d2d9f83ce3fa2c3aad"
+        }
+      ],
+      "caseIds": [
+        "BV-C-info-version-css"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-derived predicate contract authored; original and native execution not performed in P2. Exact numeric differences require visual/semantic review and are not automatic confirmed functional gaps."
+    },
+    {
+      "id": "C-abnf-priority",
+      "title": "ABNF semicolon keyword vs hidden comment priority",
+      "legacyUnresolved": {
+        "path": "references/gap-audit-C.json",
+        "index": 3,
+        "text": "ABNF semicolon hidden-comment lex priority requires exact fixedsource tokenization case."
+      },
+      "source": [
+        {
+          "path": "packages/parser/src/language/railroad-abnf/railroad-abnf.langium",
+          "symbol": "ABNF_COMMENT/AbnfRule",
+          "line": 17,
+          "sha256": "d156141dab0c649a6a063c59a5d277aec56eda295f955d5c65c28cffe077ad84"
+        },
+        {
+          "path": "packages/parser/src/language/common/tokenBuilder.ts",
+          "symbol": "AbstractMermaidTokenBuilder.buildKeywordTokens",
+          "line": 17,
+          "sha256": "e20bdad7aa651779e986cb69dd389670453224dc83fdcae872cff756f0733c82"
+        },
+        {
+          "path": "packages/mermaid/src/diagrams/railroad/parser/abnfParser.ts",
+          "symbol": "langiumParser/result.lexerErrors/result.parserErrors",
+          "line": 23,
+          "sha256": "f6d7c15a91c27c3da8cca009098600f2242c4d0537795fe264411db3d0d1f25b"
+        }
+      ],
+      "predicate": "generated fixed original parser decides token precedence; do not assume grammar alone",
+      "arms": [
+        "bare delimiter",
+        "trailing prose",
+        "comment-only line",
+        "semicolon inside string",
+        "two rules"
+      ],
+      "sourceExpected": "Native acceptance and accepted rule names must match independently saved fixed @mermaid-js/parser@2.0.1 LangiumParser.parse receipt for each exact input. Source rejection is retained as observed source behavior, never fabricated successful image.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/railroad/parser.py",
+          "symbol": "Parser.scan",
+          "line": 28
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_c_geometry.py",
+          "symbol": "AbnfSourcePriority.test_fixed_original_keyword_vs_hidden_comment_priority",
+          "line": 115,
+          "sha256": "90d6a1369ebe892ac7a662e844732f3938a43291b468f2d2d9f83ce3fa2c3aad"
+        }
+      ],
+      "caseIds": [],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Five pure parser inputs live in support_c.ABNF_PROBES and oracle_c.cjs, outside render fixture denominator; actual priority remains PENDING_EXECUTION."
+    },
+    {
+      "id": "C-router-bias",
+      "title": "Swimlane private routing bias",
+      "legacyUnresolved": {
+        "path": "references/gap-audit-B.json",
+        "index": 2,
+        "text": "Swimlane private routing/postprocess branch audit is C-owned; this B review maps pipeline consumers, not all port/feedback combinations."
+      },
+      "source": [
+        {
+          "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/orthogonalRouter/router.ts",
+          "symbol": "chooseOrthogonalSide",
+          "line": 82,
+          "sha256": "1afd2595a6a538e34fa87b6fe3cd93b183272f513c45d6c2e5c31800a4eada51"
+        }
+      ],
+      "predicate": "absDy*3 >= absDx and EPS/coincident fallback",
+      "arms": [
+        "inclusive threshold",
+        "just outside threshold",
+        "positive/negative",
+        "coincident fallback"
+      ],
+      "sourceExpected": {
+        "verticalBias": 3,
+        "inclusive": true
+      },
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/business/_swimlane_routing/router.py",
+          "symbol": "Router/route_edges_orthogonal",
+          "line": 21
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_c_routing.py",
+          "symbol": "SwimlanePrivateBranches.test_vertical_bias_inclusive_three_threshold_and_coincident_fallback",
+          "line": 18,
+          "sha256": "5da888dae1aedc15626652bc348f92253bb95f995e1e7026267658b832cf9992"
+        }
+      ],
+      "caseIds": [],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-derived predicate contract authored; original and native execution not performed in P2. Exact numeric differences require visual/semantic review and are not automatic confirmed functional gaps."
+    },
+    {
+      "id": "C-router-obstacles",
+      "title": "Swimlane private routing obstacles",
+      "legacyUnresolved": {
+        "path": "references/gap-audit-B.json",
+        "index": 2,
+        "text": "Swimlane private routing/postprocess branch audit is C-owned; this B review maps pipeline consumers, not all port/feedback combinations."
+      },
+      "source": [
+        {
+          "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/orthogonalRouter/router.ts",
+          "symbol": "obstacle map",
+          "line": 170,
+          "sha256": "1afd2595a6a538e34fa87b6fe3cd93b183272f513c45d6c2e5c31800a4eada51"
+        }
+      ],
+      "predicate": "!isGroup&&!isEdgeLabel and LR visual xhalf uses height",
+      "arms": [
+        "ordinary node",
+        "group skipped",
+        "label skipped",
+        "LR dimensional projection"
+      ],
+      "sourceExpected": {
+        "padding": 8,
+        "literalObstacle": {
+          "nodeId": "A",
+          "minX": 72,
+          "minY": 82,
+          "maxX": 128,
+          "maxY": 118,
+          "visualXHalfExtent": 18
+        }
+      },
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/business/_swimlane_routing/router.py",
+          "symbol": "Router/route_edges_orthogonal",
+          "line": 21
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_c_routing.py",
+          "symbol": "SwimlanePrivateBranches.test_obstacle_padding_excludes_groups_labels_and_lr_uses_visual_height",
+          "line": 25,
+          "sha256": "5da888dae1aedc15626652bc348f92253bb95f995e1e7026267658b832cf9992"
+        }
+      ],
+      "caseIds": [],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-derived predicate contract authored; original and native execution not performed in P2. Exact numeric differences require visual/semantic review and are not automatic confirmed functional gaps."
+    },
+    {
+      "id": "C-router-spacing",
+      "title": "Swimlane private routing spacing",
+      "legacyUnresolved": {
+        "path": "references/gap-audit-B.json",
+        "index": 2,
+        "text": "Swimlane private routing/postprocess branch audit is C-owned; this B review maps pipeline consumers, not all port/feedback combinations."
+      },
+      "source": [
+        {
+          "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/orthogonalRouter/router.ts",
+          "symbol": "portOffsets",
+          "line": 632,
+          "sha256": "1afd2595a6a538e34fa87b6fe3cd93b183272f513c45d6c2e5c31800a4eada51"
+        }
+      ],
+      "predicate": "clamp effectiveLength/(count+1) to [8,20]; diamond effectiveLength=.3*width",
+      "arms": [
+        "min8",
+        "middle12",
+        "max20",
+        "diamond .3"
+      ],
+      "sourceExpected": {
+        "offsets": [
+          [
+            -20,
+            0,
+            20
+          ],
+          [
+            -12,
+            0,
+            12
+          ],
+          [
+            -8,
+            0,
+            8
+          ]
+        ]
+      },
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/business/_swimlane_routing/router.py",
+          "symbol": "Router/route_edges_orthogonal",
+          "line": 21
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_c_routing.py",
+          "symbol": "SwimlanePrivateBranches.test_source_destination_port_spacing_minimum_middle_maximum_and_diamond_fraction",
+          "line": 29,
+          "sha256": "5da888dae1aedc15626652bc348f92253bb95f995e1e7026267658b832cf9992"
+        }
+      ],
+      "caseIds": [],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-derived predicate contract authored; original and native execution not performed in P2. Exact numeric differences require visual/semantic review and are not automatic confirmed functional gaps."
+    },
+    {
+      "id": "C-router-sibling",
+      "title": "Swimlane private routing sibling",
+      "legacyUnresolved": {
+        "path": "references/gap-audit-B.json",
+        "index": 2,
+        "text": "Swimlane private routing/postprocess branch audit is C-owned; this B review maps pipeline consumers, not all port/feedback combinations."
+      },
+      "source": [
+        {
+          "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/orthogonalRouter/router.ts",
+          "symbol": "Step6.2 sibling side splitting",
+          "line": 464,
+          "sha256": "1afd2595a6a538e34fa87b6fe3cd93b183272f513c45d6c2e5c31800a4eada51"
+        }
+      ],
+      "predicate": "weaker sibling only shifts if alternate load lower",
+      "arms": [
+        "strongest stays",
+        "weaker right"
+      ],
+      "sourceExpected": [
+        "bottom",
+        "right"
+      ],
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/business/_swimlane_routing/router.py",
+          "symbol": "Router/route_edges_orthogonal",
+          "line": 21
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_c_routing.py",
+          "symbol": "SwimlanePrivateBranches.test_sibling_side_split_moves_weaker_primary_only_when_secondary_less_loaded",
+          "line": 36,
+          "sha256": "5da888dae1aedc15626652bc348f92253bb95f995e1e7026267658b832cf9992"
+        }
+      ],
+      "caseIds": [],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-derived predicate contract authored; original and native execution not performed in P2. Exact numeric differences require visual/semantic review and are not automatic confirmed functional gaps."
+    },
+    {
+      "id": "C-router-diamond-bimodal",
+      "title": "Swimlane private routing diamond-bimodal",
+      "legacyUnresolved": {
+        "path": "references/gap-audit-B.json",
+        "index": 2,
+        "text": "Swimlane private routing/postprocess branch audit is C-owned; this B review maps pipeline consumers, not all port/feedback combinations."
+      },
+      "source": [
+        {
+          "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/orthogonalRouter/router.ts",
+          "symbol": "Step6.2b diamond de-collision",
+          "line": 566,
+          "sha256": "1afd2595a6a538e34fa87b6fe3cd93b183272f513c45d6c2e5c31800a4eada51"
+        }
+      ],
+      "predicate": "incoming same side and alternate unoccupied",
+      "arms": [
+        "incoming top",
+        "outgoing right"
+      ],
+      "sourceExpected": [
+        "top",
+        "right"
+      ],
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/business/_swimlane_routing/router.py",
+          "symbol": "Router/route_edges_orthogonal",
+          "line": 21
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_c_routing.py",
+          "symbol": "SwimlanePrivateBranches.test_diamond_incoming_outgoing_same_face_decollides_to_free_secondary",
+          "line": 40,
+          "sha256": "5da888dae1aedc15626652bc348f92253bb95f995e1e7026267658b832cf9992"
+        }
+      ],
+      "caseIds": [],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-derived predicate contract authored; original and native execution not performed in P2. Exact numeric differences require visual/semantic review and are not automatic confirmed functional gaps."
+    },
+    {
+      "id": "C-router-existing-route",
+      "title": "Swimlane private routing existing-route",
+      "legacyUnresolved": {
+        "path": "references/gap-audit-B.json",
+        "index": 2,
+        "text": "Swimlane private routing/postprocess branch audit is C-owned; this B review maps pipeline consumers, not all port/feedback combinations."
+      },
+      "source": [
+        {
+          "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/orthogonalRouter/router.ts",
+          "symbol": "Step6.1 existing points skip",
+          "line": 419,
+          "sha256": "1afd2595a6a538e34fa87b6fe3cd93b183272f513c45d6c2e5c31800a4eada51"
+        }
+      ],
+      "predicate": "edges with existing route or layoutOnly do not enter automatic port assignment",
+      "arms": [
+        "existing points",
+        "layoutOnly"
+      ],
+      "sourceExpected": {
+        "sideInfo": {},
+        "retainedPhysicalEdges": 1
+      },
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/business/_swimlane_routing/router.py",
+          "symbol": "Router/route_edges_orthogonal",
+          "line": 21
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_c_routing.py",
+          "symbol": "SwimlanePrivateBranches.test_preexisting_route_and_layout_only_edges_do_not_reassign_ports",
+          "line": 45,
+          "sha256": "5da888dae1aedc15626652bc348f92253bb95f995e1e7026267658b832cf9992"
+        }
+      ],
+      "caseIds": [],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-derived predicate contract authored; original and native execution not performed in P2. Exact numeric differences require visual/semantic review and are not automatic confirmed functional gaps."
+    },
+    {
+      "id": "C-router-crossing",
+      "title": "Swimlane private routing crossing",
+      "legacyUnresolved": {
+        "path": "references/gap-audit-B.json",
+        "index": 2,
+        "text": "Swimlane private routing/postprocess branch audit is C-owned; this B review maps pipeline consumers, not all port/feedback combinations."
+      },
+      "source": [
+        {
+          "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/orthogonalRouter/router.ts",
+          "symbol": "crossingPenalty/A*",
+          "line": 1191,
+          "sha256": "1afd2595a6a538e34fa87b6fe3cd93b183272f513c45d6c2e5c31800a4eada51"
+        }
+      ],
+      "predicate": "opposite-axis routed segment intersects candidate; own edge excluded",
+      "arms": [
+        "foreign cross1000",
+        "own0",
+        "outside0",
+        "diagonal0"
+      ],
+      "sourceExpected": [
+        1000,
+        0,
+        0,
+        0
+      ],
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/business/_swimlane_routing/router.py",
+          "symbol": "Router/route_edges_orthogonal",
+          "line": 21
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_c_routing.py",
+          "symbol": "SwimlanePrivateBranches.test_crossing_penalty_counts_other_axis_other_edge_only",
+          "line": 51,
+          "sha256": "5da888dae1aedc15626652bc348f92253bb95f995e1e7026267658b832cf9992"
+        }
+      ],
+      "caseIds": [],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-derived predicate contract authored; original and native execution not performed in P2. Exact numeric differences require visual/semantic review and are not automatic confirmed functional gaps."
+    },
+    {
+      "id": "C-router-pipe",
+      "title": "Swimlane private routing pipe",
+      "legacyUnresolved": {
+        "path": "references/gap-audit-B.json",
+        "index": 2,
+        "text": "Swimlane private routing/postprocess branch audit is C-owned; this B review maps pipeline consumers, not all port/feedback combinations."
+      },
+      "source": [
+        {
+          "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/orthogonalRouter/router.ts",
+          "symbol": "getOrAddPipe",
+          "line": 214,
+          "sha256": "1afd2595a6a538e34fa87b6fe3cd93b183272f513c45d6c2e5c31800a4eada51"
+        }
+      ],
+      "predicate": "same axis and abs(coordDelta)<1 reuses pipe",
+      "arms": [
+        ".999 reuse",
+        "1 separate",
+        "span union"
+      ],
+      "sourceExpected": {
+        "thresholdStrict": 1,
+        "span": [
+          -5,
+          10
+        ]
+      },
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/business/_swimlane_routing/router.py",
+          "symbol": "Router/route_edges_orthogonal",
+          "line": 21
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_c_routing.py",
+          "symbol": "SwimlanePrivateBranches.test_pipe_reuse_strict_one_pixel_threshold_and_union_span",
+          "line": 59,
+          "sha256": "5da888dae1aedc15626652bc348f92253bb95f995e1e7026267658b832cf9992"
+        }
+      ],
+      "caseIds": [],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-derived predicate contract authored; original and native execution not performed in P2. Exact numeric differences require visual/semantic review and are not automatic confirmed functional gaps."
+    },
+    {
+      "id": "C-router-feedback",
+      "title": "Swimlane private routing feedback",
+      "legacyUnresolved": {
+        "path": "references/gap-audit-B.json",
+        "index": 2,
+        "text": "Swimlane private routing/postprocess branch audit is C-owned; this B review maps pipeline consumers, not all port/feedback combinations."
+      },
+      "source": [
+        {
+          "path": "packages/mermaid/src/rendering-util/layout-algorithms/swimlanes/orthogonalRouter/router.ts",
+          "symbol": "portsForEdge/anchors",
+          "line": 764,
+          "sha256": "1afd2595a6a538e34fa87b6fe3cd93b183272f513c45d6c2e5c31800a4eada51"
+        }
+      ],
+      "predicate": "target above sender (canonical TB feedback edge) produces top/bottom outward endpoints",
+      "arms": [
+        "top sender",
+        "bottom receiver",
+        "orthogonal postprocess"
+      ],
+      "sourceExpected": {
+        "start": [
+          0,
+          260
+        ],
+        "end": [
+          0,
+          40
+        ]
+      },
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/business/_swimlane_routing/router.py",
+          "symbol": "Router/route_edges_orthogonal",
+          "line": 21
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_c_routing.py",
+          "symbol": "SwimlanePrivateBranches.test_feedback_upward_ports_point_outward_and_path_remains_orthogonal",
+          "line": 64,
+          "sha256": "5da888dae1aedc15626652bc348f92253bb95f995e1e7026267658b832cf9992"
+        }
+      ],
+      "caseIds": [],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-derived predicate contract authored; original and native execution not performed in P2. Exact numeric differences require visual/semantic review and are not automatic confirmed functional gaps."
+    }
+  ],
+  "reviewDepth": {
+    "unit": "finite explicit predicates/source arms, not arbitrary input combinations",
+    "newRenderableFixtures": 48,
+    "newUnittestMethods": 24,
+    "pureOriginalParserInputs": 5,
+    "privateRouterMethods": 9,
+    "productOrOriginalOrTestsExecutedInP2": false,
+    "classificationPolicy": "Exact coordinate/painter constant differences only establish NATIVE_BRANCH_DIFFERENCE; semantic/visible relation/algorithm contract impact and actual source/native evidence are required for root CONFIRMED_GAP disposition.",
+    "retainedUnexpanded": [
+      "All source editor recovery wording and arbitrary lexer malformed combinations.",
+      "Sequence every temporal-frame inequality and all half-arrow orientation/activation/central cross-products beyond the frozen selected probes; gallery closes marker existence/side/dash but not every glyph contour.",
+      "Marked full arbitrary delimiter-run combinations beyond the 10 finite token predicates.",
+      "Swimlane every sequential A* routing order/obstacle cross-product; B phase1 cycle reversal preparation is separate from C upward feedback route.",
+      "Shared math/resources/security/filter/export internals and HTML/CSS extensions remain outside this ledger."
+    ]
+  },
+  "execution": {
+    "sourceOracle": "node tests/branch_verification/oracle_c.cjs --out NEW_SOURCE_PROBES_DIR",
+    "unit": "python -m unittest discover -s tests/branch_verification -p test_c*.py -v",
+    "environment": {
+      "PYTHONPATH": "src",
+      "PYTHONUTF8": "1",
+      "BRANCH_C_ORACLE": "NEW_SOURCE_PROBES_DIR"
+    },
+    "native": "Existing root bulk_validate --fixtures tests/branch_verification/cases-C.json --group C --backend cpu|auto|gpu --out NEWDIR",
+    "compare": "python tests/branch_verification/probe_c.py --oracle DIR --native DIR --out NEWFILE"
+  },
+  "sourceOracleDependencies": {
+    "package": "@mermaid-js/parser@2.0.1",
+    "entry": ".local/f011-oracle/node_modules/@mermaid-js/parser/dist/mermaid-parser.core.mjs",
+    "entrySha256": "658383800496ab6c9dfc172cd1577cb1cf6baf1803d29523c020c11639e04fe5",
+    "installedCanonicalPackageVersionMatchesUpstreamSource": true
+  },
+  "fixtureProof": {
+    "path": "tests/branch_verification/cases-C.json",
+    "sha256": "827ba92d95225862bcaf48f5418cc8a811821b858c77bdb392b12dd71bfd6796"
+  },
+  "scopeExclusions": [
+    "arbitrary HTML/CSS extension",
+    "video/audio",
+    "interaction",
+    "Dagre",
+    "seven py-vchart deferred detectors",
+    "installation/no-loader/platform validation"
+  ],
+  "p2Mechanical": {
+    "runs": [
+      "BRANCH-VERIFY-record-20261106T142453Z-c7411ecc",
+      "BRANCH-VERIFY-record-20261106T142454Z-90d35ee8",
+      "BRANCH-VERIFY-record-20261106T142454Z-e8fd6122",
+      "BRANCH-VERIFY-record-20261106T142801Z-425ae6b4"
+    ],
+    "catalogue": "test-runs/branch-C-catalogue-mechanical-20261106T1458.json",
+    "collectionMethods": 24,
+    "productOriginalTestsOrImagesExecuted": false,
+    "sourceStopped": true,
+    "meaning": "Compile, unittest loader count, Node --check, pure catalogue provenance check only. No runtime functional conclusion.",
+    "toolFaultControlFollowup": {
+      "reason": "Root intermediate-read dispatch concern retracted after inspection: activation and arrows already dispatched. Add meaningful first-activation/26-gallery missing-marker, wrong-kind, missing-message and duplicate-kind multiplicity fault controls.",
+      "priorProbeSha256": "7fde3de0321e0706190987b5942ad4612ca37f885cbab5712efb9ea26ef768a1",
+      "probeSha256": "fe566ff563ea1d52e75c0c9d3a1843a039df67eb1e94bd0d86f92752714540a7",
+      "faultTestsSha256": "531e6e263e7744d4ed800c3b2bd24a5210b67429251ab196b245cf5a508e1b52",
+      "newMethods": 2,
+      "noSourceExpectedOrFixtureChanged": true,
+      "actualHalfOrientationFullyEstablished": false,
+      "sourceStopped": true
+    }
+  },
+  "documentRole": "P2 source-derived contract. Initial branch classifications and authored expectations are historical; actual execution dispositions are in currentResults.",
+  "currentResults": {
+    "path": "references/branch-verification-summary.json",
+    "sha256": "cdf4226c982290875052614751fdf774d3bcb36609e4bc8f0c908205ce61613d",
+    "bytes": 1723432
+  }
+}

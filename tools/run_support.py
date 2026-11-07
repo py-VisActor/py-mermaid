@@ -80,7 +80,7 @@ def source_identity(root: Path = ROOT) -> dict:
 
 def environment_identity(root: Path = ROOT) -> dict:
     packages = {}
-    for name in ("py-skia-canvas", "py-visactor-elk", "py-visactor-katex", "Pillow"):
+    for name in ("py-skia-canvas", "py-visactor-elk", "py-visactor-katex", "py-visactor-vchart", "Pillow"):
         try:
             packages[name] = importlib.metadata.version(name)
         except importlib.metadata.PackageNotFoundError:

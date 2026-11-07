@@ -5749,7 +5749,9 @@
   },
   "pythonDeclaredDependencies": [
     "py-skia-canvas==0.1.0a18",
-    "py-visactor-elk==0.1.0"
+    "py-visactor-elk==0.1.0",
+    "py-visactor-katex==0.1.0",
+    "py-visactor-vchart==0.1.1"
   ],
   "limitations": [
     "Manifest production closure includes declared types and resolved optional/peer contexts; it is not an executed bundle or minimal runtime SBOM.",

@@ -1,0 +1,202 @@
+{
+  "schema": "py-mermaid-bulk-cases/v1",
+  "group": "B",
+  "cases": [
+    {
+      "id": "gap-b-gantt-quarter-2",
+      "kind": "gantt",
+      "source": "gantt\ndateFormat YYYY-[Q]Q-DD\naxisFormat %Y-%m-%d\ntodayMarker off\nQuarter 2 :a, 2024-Q2-01, 1d\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/gantt/ganttDb.js",
+        "sha256": "d783881e9e5966aabc87f6dc170aa0a88ece551c48c49ba0693aa5271e3accec",
+        "symbol": "getStartDate",
+        "line": 305
+      },
+      "expect": "render",
+      "features": [
+        "customParseFormat-Q",
+        "strict-quarter-start"
+      ],
+      "expectedText": [
+        "Quarter 2"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-b-gantt-quarter-4",
+      "kind": "gantt",
+      "source": "gantt\ndateFormat YYYY-[Q]Q-DD\naxisFormat %Y-%m-%d\ntodayMarker off\nQuarter 4 :a, 2024-Q4-01, 1d\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/gantt/ganttDb.js",
+        "sha256": "d783881e9e5966aabc87f6dc170aa0a88ece551c48c49ba0693aa5271e3accec",
+        "symbol": "getStartDate",
+        "line": 305
+      },
+      "expect": "render",
+      "features": [
+        "customParseFormat-Q",
+        "strict-quarter-start"
+      ],
+      "expectedText": [
+        "Quarter 4"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-b-git-literal-lines",
+      "kind": "gitGraph",
+      "source": "gitGraph\ncommit id:\"A\"\n",
+      "config": {
+        "gitGraph": {
+          "mainBranchName": "alpha\\nbeta"
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/git/gitGraphRenderer.ts",
+        "sha256": "d90f6685b76b2f33bebd6e5b47912c076e77f3180c3e27d821ae06261f1aac81",
+        "symbol": "const drawText",
+        "line": 84
+      },
+      "expect": "render",
+      "features": [
+        "branch-name-lines",
+        "row-trim"
+      ],
+      "expectedText": [
+        "alpha",
+        "beta",
+        "A"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-b-git-trimmed-lines",
+      "kind": "gitGraph",
+      "source": "gitGraph\ncommit id:\"A\"\n",
+      "config": {
+        "gitGraph": {
+          "mainBranchName": "  alpha\\n beta  "
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/git/gitGraphRenderer.ts",
+        "sha256": "d90f6685b76b2f33bebd6e5b47912c076e77f3180c3e27d821ae06261f1aac81",
+        "symbol": "const drawText",
+        "line": 84
+      },
+      "expect": "render",
+      "features": [
+        "branch-name-lines",
+        "row-trim"
+      ],
+      "expectedText": [
+        "alpha",
+        "beta",
+        "A"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-b-event-own-html-false",
+      "kind": "eventmodeling",
+      "source": "eventmodeling\ntf 1 ui Page\ntf 2 cmd Submit\ntf 3 evt Submitted\n",
+      "config": {
+        "htmlLabels": false
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/eventmodeling/renderer.ts",
+        "sha256": "da39533504c85fd9397e97f08e711b3c44ecfda6efc1f792cd7fe312b71cbce7",
+        "symbol": "function renderD3Box",
+        "line": 12
+      },
+      "expect": "render",
+      "features": [
+        "own-foreignObject-html",
+        "global-label-mode-does-not-apply"
+      ],
+      "expectedText": [
+        "Page",
+        "Submit",
+        "Submitted"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-b-event-own-html-true",
+      "kind": "eventmodeling",
+      "source": "eventmodeling\ntf 1 ui Page\ntf 2 cmd Submit\ntf 3 evt Submitted\n",
+      "config": {
+        "htmlLabels": true
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/eventmodeling/renderer.ts",
+        "sha256": "da39533504c85fd9397e97f08e711b3c44ecfda6efc1f792cd7fe312b71cbce7",
+        "symbol": "function renderD3Box",
+        "line": 12
+      },
+      "expect": "render",
+      "features": [
+        "own-foreignObject-html",
+        "global-label-mode-does-not-apply"
+      ],
+      "expectedText": [
+        "Page",
+        "Submit",
+        "Submitted"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-b-ishikawa-utf16-wrap",
+      "kind": "ishikawa",
+      "source": "ishikawa\nEffect\n Cause\n  \ud83d\ude00 \ud83d\ude00 \ud83d\ude00 \ud83d\ude00 \ud83d\ude00 \ud83d\ude00 \ud83d\ude00 \ud83d\ude00\n",
+      "config": {},
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/ishikawa/ishikawaRenderer.ts",
+        "sha256": "37d469effd37088c6ca348599cc37d17dcf9c242d43950ea9daf10d71db1d2b4",
+        "symbol": "const wrapText",
+        "line": 441
+      },
+      "expect": "render",
+      "features": [
+        "UTF16-character-threshold",
+        "five-then-three-lines"
+      ],
+      "expectedText": [
+        "Effect",
+        "Cause",
+        "\ud83d\ude00"
+      ],
+      "expectedErrorCodes": []
+    },
+    {
+      "id": "gap-b-cynefin-boolean-seed",
+      "kind": "cynefin",
+      "source": "cynefin-beta\nclear\n \"Repeat\"\n",
+      "config": {
+        "renderId": "abc",
+        "cynefin": {
+          "seed": true
+        }
+      },
+      "origin": {
+        "path": "packages/mermaid/src/diagrams/cynefin/cynefinBoundaries.ts",
+        "sha256": "f5c71c15a4277d9ef36d07962ddb13a7b4fe32e4e038eb5fe10a8999a2c4efd2",
+        "symbol": "export function resolveSeed",
+        "line": 32
+      },
+      "expect": "render",
+      "features": [
+        "seed-type-guard",
+        "host-id-hash"
+      ],
+      "expectedText": [
+        "Clear",
+        "Repeat"
+      ],
+      "expectedErrorCodes": []
+    }
+  ]
+}

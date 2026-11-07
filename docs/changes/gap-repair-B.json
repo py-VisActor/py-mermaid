@@ -1,0 +1,98 @@
+{
+  "schema": "py-mermaid-change-receipt/v1",
+  "task": "G03-B",
+  "status": "targeted_pass_stopped_writing",
+  "baselineSourceSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
+  "originalAuditPreserved": "references/gap-audit-B.json",
+  "initialFailureRun": "test-runs/G03-first-batch-20261106T080449Z-54f22284",
+  "fixedRootCauseCount": 4,
+  "fixes": [
+    {
+      "id": "B-gap-quarter",
+      "file": "src/py_mermaid/diagrams/temporal/_dates.py",
+      "behavior": "Q consumes one digit and maps to quarter-start month; strict quarter/range checks preserve invalid-input rejection.",
+      "sourceEvidence": [
+        "packages/mermaid/src/diagrams/gantt/ganttDb.js:getStartDate",
+        "dayjs customParseFormat Q parser + advancedFormat quarter formatter"
+      ],
+      "officialEvidence": "test-runs/G03-first-batch-20261106T080449Z-54f22284/artifacts/oracle/gap-b-gantt-quarter-2.json",
+      "officialObserved": "startTime 2024-03-31T16:00:00.000Z = local 2024-04-01; endTime local 2024-04-02."
+    },
+    {
+      "id": "B-gap-utf16-wrap",
+      "file": "src/py_mermaid/diagrams/business/ishikawa.py",
+      "behavior": "Source character-count wrap uses shared utf16_length for initial length and accumulated lines. Font measurement does not decide this branch.",
+      "sourceEvidence": [
+        "packages/mermaid/src/diagrams/ishikawa/ishikawaRenderer.ts:wrapText"
+      ]
+    },
+    {
+      "id": "B-gap-own-html",
+      "file": "src/py_mermaid/diagrams/business/eventmodeling.py",
+      "behavior": "Both intrinsic HTML box measurement and final painted HTML box explicitly select html=True independently of global flow label mode.",
+      "sourceEvidence": [
+        "packages/mermaid/src/diagrams/eventmodeling/renderer.ts:renderD3Box .html(box.text)"
+      ]
+    },
+    {
+      "id": "B-gap-seed-type",
+      "file": "src/py_mermaid/diagrams/business/cynefin.py",
+      "behavior": "Only nonzero finite int/float values are selected as seeds; booleans/non-numbers/nonfinite inputs hash explicit host id per source resolveSeed.",
+      "sourceEvidence": [
+        "packages/mermaid/src/diagrams/cynefin/cynefinBoundaries.ts:resolveSeed"
+      ]
+    }
+  ],
+  "auditCorrection": {
+    "id": "B-gap-branch-lines",
+    "classification": "implemented_with_evidence",
+    "previousClassification": "confirmed_gap",
+    "reason": "Static audit stopped at temporal._syntax.plain_label and missed the shared measure_label preprocessing. First-run tests b07/b08 both passed without product changes.",
+    "consumptionChain": [
+      "gitgraph.build -> TemporalPainter.measure -> Painter.measure -> measure_label",
+      "rendering/labels/rich.py:332 replaces literal backslash-n with newline",
+      "rich.py:354 trims/normalizes each SVG text row"
+    ],
+    "source": "packages/mermaid/src/diagrams/git/gitGraphRenderer.ts:drawText",
+    "productChange": "None; gitgraph.py and _git_layout.py unchanged.",
+    "regressionTests": "b07/b08 retained unchanged."
+  },
+  "validation": {
+    "run": "test-runs/G03-record-20261106T080900Z-1a8ccaf1",
+    "status": "SUCCESS",
+    "methods": 164,
+    "newMethods": 12,
+    "existingMethods": 152,
+    "argv": [
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests/bulk/b",
+      "-t",
+      "tests",
+      "-v"
+    ],
+    "sourceAtRunStart": "0ad0427b128d4ebd00659617266a056ec39c56edc6c4caa0759a051846f75a06",
+    "sourceUnchanged": true,
+    "scope": "Targeted B regression during multi-owner repairs; does not replace root final same-candidate P4."
+  },
+  "files": {
+    "src/py_mermaid/diagrams/temporal/_dates.py": "91aaadfebf8b5202d83796732e2e2bee435c19f4dea35a327329c00196e4a202",
+    "src/py_mermaid/diagrams/business/ishikawa.py": "35950441f80103bb5c0a179505a392d75f703ef7c1e20f4608d3e5eaa85acf0d",
+    "src/py_mermaid/diagrams/business/eventmodeling.py": "155e2bc32314ef9825956d5266480c2286f7bfabe581c9d5d2b9f8827734f36b",
+    "src/py_mermaid/diagrams/business/cynefin.py": "c55d6d4040be3af0c71b803027c97c1075c7d84265965b1509601f7ad8ab0181"
+  },
+  "testsAndFixturesModified": false,
+  "installationCommitPush": false,
+  "limits": [
+    "Every Dayjs custom/advanced-format token combination and every D3 tick/strftime directive for CivilDate far years; Q is confirmed, no blanket claim for all unsupported-looking tokens.",
+    "Git multi-branch collision/reroute cross-products, dense tags and all theme/rotation/direction combinations lack exhaustive independent branch mapping.",
+    "Swimlane private routing/postprocess branch audit is C-owned; this B review maps pipeline consumers, not all port/feedback combinations.",
+    "Agentflow nested collapsed containers/ancestral edges and opaque metadata cross-products share F014; individual rare branch correspondence remains unexpanded.",
+    "Wardley DB-only host mutation APIs (e.g. annotation coordinate arrays) require separate public API scope decision, not a grammar omission.",
+    "All source styles/default consumers have static implementations, but selector/config/theme cross-products are not individually experimentally verified in this audit."
+  ],
+  "next": "Root freezes all owners and performs joint full verification; no B source/test changes pending."
+}

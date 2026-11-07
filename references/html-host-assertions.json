@@ -1,0 +1,1681 @@
+{
+  "schema": "py-mermaid-html-host-assertions/v1",
+  "status": "P3_repair_tests_extended_unexecuted",
+  "frozenSourceSha256": "881656d5439e4ba08b4f3182d215680020653592e2d6ba0f9e265af97faf8fe1",
+  "sourceIdentity": [
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/diagrams/common/common.ts",
+      "sha256": "b14851667f7d45d101d4e028204babb1628faefe4812a88ae2d8acac72f8e144",
+      "symbol": "sanitizeMore/sanitizeText and DOMPurify hooks",
+      "line": 34
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/createText.ts",
+      "sha256": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865",
+      "symbol": "addHtmlSpan browser foreignObject handoff",
+      "line": 34
+    },
+    {
+      "repository": "mermaid",
+      "path": "packages/mermaid/src/rendering-util/handle-markdown-text.ts",
+      "sha256": "6f99a7b3f5b11f87f5509a370663f14650f8f8c3cbb9a34ea496a1aa183cd0ca",
+      "symbol": "nonMarkdownToHTML/markdownToHTML host preparation",
+      "line": 99
+    },
+    {
+      "repository": "DOMPurify",
+      "path": "../../../node_modules/.pnpm/dompurify@3.4.12/node_modules/dompurify/src/tags.ts",
+      "transport": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+      "transportSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679",
+      "sha256": "959dc7f21ddbf2dbe584f3511c0ae41eed313236e217d099856b7c3dc94e66e8",
+      "symbol": "HTML tag/attribute default allowlists and sanitizer configuration",
+      "line": 1
+    },
+    {
+      "repository": "DOMPurify",
+      "path": "../../../node_modules/.pnpm/dompurify@3.4.12/node_modules/dompurify/src/attrs.ts",
+      "transport": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+      "transportSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679",
+      "sha256": "a55feea9f64a386729bfbcfec489ab6ef6a96d712b427ffd18fe25b5628b1deb",
+      "symbol": "HTML tag/attribute default allowlists and sanitizer configuration",
+      "line": 1
+    },
+    {
+      "repository": "DOMPurify",
+      "path": "../../../node_modules/.pnpm/dompurify@3.4.12/node_modules/dompurify/src/purify.ts",
+      "transport": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+      "transportSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679",
+      "sha256": "cd71d3e2d10ac95ebdc7447e73f74f18bb0b94e1fce9132aa0c18c3e21f6c313",
+      "symbol": "HTML tag/attribute default allowlists and sanitizer configuration",
+      "line": 1
+    }
+  ],
+  "normativeHostReferences": [
+    {
+      "url": "https://html.spec.whatwg.org/multipage/input.html",
+      "observed": "2026-11-06",
+      "responsibility": "Host input state/value sanitation; Living Standard is supplemental, not the locked Mermaid release or a browser-version guarantee."
+    },
+    {
+      "url": "https://html.spec.whatwg.org/multipage/form-elements.html",
+      "responsibility": "Initial selection, textarea, meter/progress and fieldset/legend host rules."
+    },
+    {
+      "url": "https://html.spec.whatwg.org/multipage/common-microsyntaxes.html",
+      "responsibility": "Numeric/date/time grammar."
+    },
+    {
+      "url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html",
+      "responsibility": "Disabled inheritance/form ownership."
+    }
+  ],
+  "methodCount": 133,
+  "singleControlMethods": [
+    {
+      "symbol": "InitialControlStateSourceTests.test_type_text",
+      "input": "<input type='text' value='Hello'>",
+      "expected": {
+        "input_type": "text",
+        "value": "Hello"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_text_unicode_value",
+      "input": "<input value='\u4e2d\u6587 \ud83d\ude42'>",
+      "expected": {
+        "value": "\u4e2d\u6587 \ud83d\ude42"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_text_attribute_entity_once",
+      "input": "<input value='&amp;lt;b&amp;gt;'>",
+      "expected": {
+        "value": "&lt;b&gt;"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_type_search",
+      "input": "<input type='search' value='Find'>",
+      "expected": {
+        "input_type": "search",
+        "value": "Find"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_type_tel",
+      "input": "<input type='tel' value='+1 555'>",
+      "expected": {
+        "input_type": "tel",
+        "value": "+1 555"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_type_url",
+      "input": "<input type='url' value=' https://example.test/ '>",
+      "expected": {
+        "input_type": "url",
+        "value": "https://example.test/"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_type_email",
+      "input": "<input type='email' value=' a@example.test '>",
+      "expected": {
+        "input_type": "email",
+        "value": "a@example.test"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_type_password",
+      "input": "<input type='password' value='Secret'>",
+      "expected": {
+        "input_type": "password",
+        "value": "Secret"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_type_hidden",
+      "input": "<input type='hidden' value='Secret'>",
+      "expected": {
+        "input_type": "hidden",
+        "value": "Secret",
+        "hidden": true
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_type_date",
+      "input": "<input type='date' value='2024-02-29'>",
+      "expected": {
+        "input_type": "date",
+        "value": "2024-02-29"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_type_month",
+      "input": "<input type='month' value='2024-02'>",
+      "expected": {
+        "input_type": "month",
+        "value": "2024-02"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_type_week",
+      "input": "<input type='week' value='2020-W53'>",
+      "expected": {
+        "input_type": "week",
+        "value": "2020-W53"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_type_time",
+      "input": "<input type='time' value='13:45'>",
+      "expected": {
+        "input_type": "time",
+        "value": "13:45"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_type_datetime_local",
+      "input": "<input type='datetime-local' value='2024-02-29T13:45'>",
+      "expected": {
+        "input_type": "datetime-local",
+        "value": "2024-02-29T13:45"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_type_number",
+      "input": "<input type='number' value='2.5'>",
+      "expected": {
+        "input_type": "number",
+        "value": "2.5"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_type_range",
+      "input": "<input type='range' min='0' max='10' step='2' value='7'>",
+      "expected": {
+        "input_type": "range",
+        "value": "8",
+        "fraction": 0.8
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_type_color",
+      "input": "<input type='color' value='#FFAA00'>",
+      "expected": {
+        "input_type": "color",
+        "value": "#ffaa00"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_type_checkbox",
+      "input": "<input type='checkbox' checked>",
+      "expected": {
+        "input_type": "checkbox",
+        "value": "on",
+        "checked": true
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_type_radio",
+      "input": "<input type='radio'>",
+      "expected": {
+        "input_type": "radio",
+        "value": "on",
+        "checked": false
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_type_file",
+      "input": "<input type='file' value='C:/private.txt'>",
+      "expected": {
+        "input_type": "file",
+        "value": ""
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_type_submit",
+      "input": "<input type='submit'>",
+      "expected": {
+        "input_type": "submit",
+        "value": ""
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_type_image",
+      "input": "<input type='image' alt='Image'>",
+      "expected": {
+        "input_type": "image",
+        "value": ""
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_type_reset",
+      "input": "<input type='reset'>",
+      "expected": {
+        "input_type": "reset",
+        "value": ""
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_type_button",
+      "input": "<input type='button' value='Push'>",
+      "expected": {
+        "input_type": "button",
+        "value": "Push"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_missing_type",
+      "input": "<input value='Default'>",
+      "expected": {
+        "input_type": "text",
+        "value": "Default"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_unknown_type",
+      "input": "<input type='future-kind' value='Default'>",
+      "expected": {
+        "input_type": "text",
+        "value": "Default"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_case_insensitive_type",
+      "input": "<input type='CHECKBOX' checked='false'>",
+      "expected": {
+        "input_type": "checkbox",
+        "checked": true
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_duplicate_attribute_first_wins",
+      "input": "<input value='First' value='Second'>",
+      "expected": {
+        "value": "First"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_text_removes_newlines",
+      "input": "<input value='A\r\nB\nC'>",
+      "expected": {
+        "value": "ABC"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_tel_retains_edge_spaces",
+      "input": "<input type='tel' value=' 123 '>",
+      "expected": {
+        "value": " 123 "
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_email_multiple_trims_each",
+      "input": "<input type='email' multiple value=' a@x.test , b@y.test '>",
+      "expected": {
+        "value": "a@x.test,b@y.test",
+        "multiple": true
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_password_removes_newlines",
+      "input": "<input type='password' value='A\nB'>",
+      "expected": {
+        "value": "AB"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_disabled_presence_not_string",
+      "input": "<input disabled='false' value='X'>",
+      "expected": {
+        "disabled": true,
+        "value": "X"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_readonly_text",
+      "input": "<input readonly value='X'>",
+      "expected": {
+        "readonly": true,
+        "value": "X"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_readonly_inapplicable_checkbox",
+      "input": "<input type='checkbox' readonly>",
+      "expected": {
+        "readonly": false
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_checkbox_explicit_empty_value",
+      "input": "<input type='checkbox' value='' checked>",
+      "expected": {
+        "value": "",
+        "checked": true
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_submit_explicit_empty",
+      "input": "<input type='submit' value=''>",
+      "expected": {
+        "value": ""
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_invalid_date_nonleap",
+      "input": "<input type='date' value='2023-02-29'>",
+      "expected": {
+        "value": ""
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_invalid_date_year_zero",
+      "input": "<input type='date' value='0000-01-01'>",
+      "expected": {
+        "value": ""
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_invalid_month",
+      "input": "<input type='month' value='2024-13'>",
+      "expected": {
+        "value": ""
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_invalid_week_53",
+      "input": "<input type='week' value='2021-W53'>",
+      "expected": {
+        "value": ""
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_invalid_time_hour",
+      "input": "<input type='time' value='24:00'>",
+      "expected": {
+        "value": ""
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_valid_time_milliseconds",
+      "input": "<input type='time' value='12:30:45.125'>",
+      "expected": {
+        "value": "12:30:45.125"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_datetime_shortest_normalization",
+      "input": "<input type='datetime-local' value='2024-02-29 13:45:00.000'>",
+      "expected": {
+        "value": "2024-02-29T13:45"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_invalid_datetime_zone",
+      "input": "<input type='datetime-local' value='2024-02-29T13:45Z'>",
+      "expected": {
+        "value": ""
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_number_nan_invalid",
+      "input": "<input type='number' value='NaN'>",
+      "expected": {
+        "value": ""
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_number_leading_plus_invalid",
+      "input": "<input type='number' value='+2'>",
+      "expected": {
+        "value": ""
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_number_trailing_dot_invalid",
+      "input": "<input type='number' value='1.'>",
+      "expected": {
+        "value": ""
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_number_outside_range_retained",
+      "input": "<input type='number' min='0' max='10' value='100'>",
+      "expected": {
+        "value": "100"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_number_exponent_retained",
+      "input": "<input type='number' value='1e2'>",
+      "expected": {
+        "value": "1e2"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_range_default_midpoint",
+      "input": "<input type='range'>",
+      "expected": {
+        "value": "50",
+        "minimum": 0.0,
+        "maximum": 100.0,
+        "fraction": 0.5
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_range_invalid_value_midpoint",
+      "input": "<input type='range' min='10' max='20' value='bad'>",
+      "expected": {
+        "value": "15",
+        "fraction": 0.5
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_range_clamp_upper",
+      "input": "<input type='range' min='0' max='10' value='99'>",
+      "expected": {
+        "value": "10",
+        "fraction": 1.0
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_range_inverted_bounds",
+      "input": "<input type='range' min='20' max='10'>",
+      "expected": {
+        "value": "20",
+        "minimum": 20.0,
+        "maximum": 20.0,
+        "fraction": 0.0
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_range_step_any",
+      "input": "<input type='range' min='0' max='10' step='any' value='3.25'>",
+      "expected": {
+        "value": "3.25",
+        "fraction": 0.325
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_range_content_value_step_base",
+      "input": "<input type='range' step='2' value='7'>",
+      "expected": {
+        "value": "7"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_color_default",
+      "input": "<input type='color'>",
+      "expected": {
+        "value": "#000000"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_color_invalid",
+      "input": "<input type='color' value='not-a-color'>",
+      "expected": {
+        "value": "#000000"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_color_named_purple",
+      "input": "<input type='color' value='rebeccapurple'>",
+      "expected": {
+        "value": "#663399"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_color_short_hex_blue",
+      "input": "<input type='color' value='#00f'>",
+      "expected": {
+        "value": "#0000ff"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_color_rgb_percent_half",
+      "input": "<input type='color' value='rgb(0% 50% 100%)'>",
+      "expected": {
+        "value": "#0080ff"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_color_hsl_green",
+      "input": "<input type='color' value='hsl(120 100% 25%)'>",
+      "expected": {
+        "value": "#008000"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_color_hsl_achromatic_half",
+      "input": "<input type='color' value='hsl(0 0% 50%)'>",
+      "expected": {
+        "value": "#808080"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_color_hwb_blue",
+      "input": "<input type='color' value='hwb(240 0% 0%)'>",
+      "expected": {
+        "value": "#0000ff"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_color_hwb_neutral",
+      "input": "<input type='color' value='hwb(240 50% 50%)'>",
+      "expected": {
+        "value": "#808080"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_color_srgb_blue_green",
+      "input": "<input type='color' value='color(srgb 0 0.5 1)'>",
+      "expected": {
+        "value": "#0080ff"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_color_srgb_linear_blue",
+      "input": "<input type='color' value='color(srgb-linear 0 0 1)'>",
+      "expected": {
+        "value": "#0000ff"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_color_display_p3_green",
+      "input": "<input type='color' value='color(display-p3 0 1 0)'>",
+      "expected": {
+        "value": "#00ff00"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_color_host_p3_d50_quantization",
+      "input": "<input type='color' value='color(display-p3 0.2 0.4 0.6)'>",
+      "expected": {
+        "value": "#1a689d"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_color_host_rec2020_transfer",
+      "input": "<input type='color' value='color(rec2020 0.2 0.4 0.6)'>",
+      "expected": {
+        "value": "#0078a8"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_color_lab_neutral",
+      "input": "<input type='color' value='lab(50% 0 0)'>",
+      "expected": {
+        "value": "#777777"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_color_lch_neutral",
+      "input": "<input type='color' value='lch(50% 0 120)'>",
+      "expected": {
+        "value": "#777777"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_color_oklab_neutral",
+      "input": "<input type='color' value='oklab(50% 0 0)'>",
+      "expected": {
+        "value": "#636363"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_color_oklch_black",
+      "input": "<input type='color' value='oklch(0 0 240)'>",
+      "expected": {
+        "value": "#000000"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_button_label_versus_value",
+      "input": "<button value='payload'><b>Save</b></button>",
+      "expected": {
+        "text": "Save",
+        "value": "payload",
+        "inner_markup": "<b>Save</b>"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_button_disabled",
+      "input": "<button disabled>Save</button>",
+      "expected": {
+        "text": "Save",
+        "disabled": true
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_textarea_initial_lf",
+      "input": "<textarea>\nFirst\nSecond</textarea>",
+      "expected": {
+        "value": "First\nSecond",
+        "text": "First\nSecond"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_textarea_crlf",
+      "input": "<textarea>\r\nFirst\rSecond</textarea>",
+      "expected": {
+        "value": "First\nSecond"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_textarea_rcdata_not_elements",
+      "input": "<textarea><b>literal</b></textarea>",
+      "expected": {
+        "value": "<b>literal</b>"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_textarea_entities_one_pass",
+      "input": "<textarea>&amp;lt;b&amp;gt;</textarea>",
+      "expected": {
+        "value": "&lt;b&gt;"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_textarea_value_attribute_ignored",
+      "input": "<textarea value='ignored'>Body</textarea>",
+      "expected": {
+        "value": "Body"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_textarea_readonly_disabled",
+      "input": "<textarea readonly disabled>Body</textarea>",
+      "expected": {
+        "value": "Body",
+        "readonly": true,
+        "disabled": true
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_select_default_first_enabled",
+      "input": "<select><option disabled>Skip</option><option>One</option></select>",
+      "expected": {
+        "value": "One",
+        "selected_indices": [
+          1
+        ]
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_select_last_selected_wins",
+      "input": "<select><option selected>One</option><option selected>Two</option></select>",
+      "expected": {
+        "value": "Two",
+        "selected_indices": [
+          1
+        ],
+        "options.0.selected": false
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_select_explicit_disabled_selected",
+      "input": "<select><option disabled selected>One</option><option>Two</option></select>",
+      "expected": {
+        "value": "One",
+        "selected_indices": [
+          0
+        ],
+        "options.0.disabled": true
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_select_multiple_no_default",
+      "input": "<select multiple><option>One</option></select>",
+      "expected": {
+        "value": "",
+        "multiple": true,
+        "selected_indices": []
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_select_multiple_selected",
+      "input": "<select multiple><option selected>One</option><option selected>Two</option></select>",
+      "expected": {
+        "value": "One",
+        "selected_indices": [
+          0,
+          1
+        ]
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_select_size_two_no_default",
+      "input": "<select size='2'><option>One</option><option>Two</option></select>",
+      "expected": {
+        "selected_indices": [],
+        "value": ""
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_select_all_disabled",
+      "input": "<select><option disabled>One</option><option disabled>Two</option></select>",
+      "expected": {
+        "selected_indices": [],
+        "value": ""
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_select_option_label_value",
+      "input": "<select><option label='Shown' value='sent'>Body</option></select>",
+      "expected": {
+        "value": "sent",
+        "options.0.label": "Shown",
+        "options.0.value": "sent"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_select_option_whitespace",
+      "input": "<select><option>  Alpha\n  Beta  </option></select>",
+      "expected": {
+        "value": "Alpha Beta",
+        "options.0.label": "Alpha Beta"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_select_optgroup_disables_options",
+      "input": "<select><optgroup label='Group' disabled><option>One</option></optgroup><option>Two</option></select>",
+      "expected": {
+        "value": "Two",
+        "selected_indices": [
+          1
+        ],
+        "options.0.group": "Group",
+        "options.0.disabled": true
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_select_option_end_omission",
+      "input": "<select><option>One<option selected>Two</select>",
+      "expected": {
+        "value": "Two",
+        "selected_indices": [
+          1
+        ]
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_progress_indeterminate",
+      "input": "<progress></progress>",
+      "expected": {
+        "fraction": null,
+        "maximum": 1.0
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_progress_fraction",
+      "input": "<progress max='10' value='6'></progress>",
+      "expected": {
+        "fraction": 0.6,
+        "value": "6"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_progress_invalid_value_determinate_zero",
+      "input": "<progress value='bad'></progress>",
+      "expected": {
+        "fraction": 0.0,
+        "value": "0"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_progress_max_invalid_default",
+      "input": "<progress max='0' value='2'></progress>",
+      "expected": {
+        "maximum": 1.0,
+        "fraction": 1.0,
+        "value": "1"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_progress_negative_value",
+      "input": "<progress value='-2'></progress>",
+      "expected": {
+        "fraction": 0.0,
+        "value": "0"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_meter_default",
+      "input": "<meter></meter>",
+      "expected": {
+        "minimum": 0.0,
+        "maximum": 1.0,
+        "fraction": 0.0
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_meter_nonzero_minimum",
+      "input": "<meter min='10' max='20' value='15'></meter>",
+      "expected": {
+        "minimum": 10.0,
+        "maximum": 20.0,
+        "fraction": 0.5,
+        "value": "15"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_meter_clamp_value",
+      "input": "<meter min='0' max='10' value='99'></meter>",
+      "expected": {
+        "value": "10",
+        "fraction": 1.0
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_meter_invalid_numbers",
+      "input": "<meter min='bad' max='bad' value='bad'></meter>",
+      "expected": {
+        "minimum": 0.0,
+        "maximum": 1.0,
+        "fraction": 0.0
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_meter_inverted_bounds",
+      "input": "<meter min='5' max='2' value='3'></meter>",
+      "expected": {
+        "minimum": 5.0,
+        "maximum": 5.0,
+        "value": "5",
+        "fraction": 0.0
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_fieldset_rich_legend",
+      "input": "<fieldset><legend><b>Legend</b></legend><input></fieldset>",
+      "expected": {
+        "legend_text": "Legend",
+        "legend_markup": "<legend><b>Legend</b></legend>",
+        "inner_markup": "<input>"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    },
+    {
+      "symbol": "InitialControlStateSourceTests.test_fieldset_first_direct_legend_only",
+      "input": "<fieldset><div><legend>Nested</legend></div><legend>First</legend><legend>Second</legend></fieldset>",
+      "expected": {
+        "legend_text": "First",
+        "inner_markup": "<div><legend>Nested</legend></div><legend>Second</legend>"
+      },
+      "sourceFamily": "HTML initial-state, normative CSS Color4, or captured pinned-host quantization as explicitly indexed"
+    }
+  ],
+  "crossControlAndSanitizerMethods": [
+    {
+      "symbol": "CrossControlHostSourceTests.test_radio_last_checked_tree_order_wins",
+      "line": 211
+    },
+    {
+      "symbol": "CrossControlHostSourceTests.test_radio_disabled_still_participates",
+      "line": 215
+    },
+    {
+      "symbol": "CrossControlHostSourceTests.test_radio_names_case_sensitive_and_empty_names_ungrouped",
+      "line": 219
+    },
+    {
+      "symbol": "CrossControlHostSourceTests.test_radio_distinct_form_owners",
+      "line": 223
+    },
+    {
+      "symbol": "CrossControlHostSourceTests.test_radio_explicit_form_owner_with_custom_allowed_attr",
+      "line": 227
+    },
+    {
+      "symbol": "CrossControlHostSourceTests.test_cross_label_radio_last_checked_and_call_isolation",
+      "line": 231
+    },
+    {
+      "symbol": "CrossControlHostSourceTests.test_cross_label_distinct_form_owners_remain_independent",
+      "line": 238
+    },
+    {
+      "symbol": "CrossControlHostSourceTests.test_cross_label_explicit_form_owner_resolves_forward_id",
+      "line": 243
+    },
+    {
+      "symbol": "CrossControlHostSourceTests.test_cross_label_unnamed_radios_stay_checked_without_markup_leak",
+      "line": 249
+    },
+    {
+      "symbol": "CrossControlHostSourceTests.test_fieldset_first_legend_exception_and_later_legend_disabled",
+      "line": 253
+    },
+    {
+      "symbol": "CrossControlHostSourceTests.test_nested_fieldset_outer_disabled_still_applies",
+      "line": 257
+    },
+    {
+      "symbol": "CrossControlHostSourceTests.test_nested_fieldset_itself_has_effective_disabled_state",
+      "line": 261
+    },
+    {
+      "symbol": "CrossControlHostSourceTests.test_fieldset_legend_exception_does_not_remove_own_disabled",
+      "line": 265
+    },
+    {
+      "symbol": "CrossControlHostSourceTests.test_no_control_markup_is_byte_preserved",
+      "line": 269
+    },
+    {
+      "symbol": "CrossControlHostSourceTests.test_normalization_without_cross_state_change_preserves_markup",
+      "line": 273
+    },
+    {
+      "symbol": "CrossControlHostSourceTests.test_normalization_is_request_local",
+      "line": 277
+    },
+    {
+      "symbol": "CrossControlHostSourceTests.test_textarea_literals_do_not_join_radio_groups",
+      "line": 281
+    },
+    {
+      "symbol": "CrossControlHostSourceTests.test_inherited_disabled_capture_flag",
+      "line": 285
+    },
+    {
+      "symbol": "CrossControlHostSourceTests.test_input_void_root_finished_immediately",
+      "line": 288
+    },
+    {
+      "symbol": "CrossControlHostSourceTests.test_unknown_control_explicit_error",
+      "line": 291
+    },
+    {
+      "symbol": "CrossControlHostSourceTests.test_css_color_validity_distinguishes_black_from_invalid",
+      "line": 296
+    },
+    {
+      "symbol": "CrossControlHostSourceTests.test_control_capture_budget_explicit",
+      "line": 303
+    },
+    {
+      "symbol": "SanitizedControlAttributeSourceTests.test_fixed_boolean_and_dimension_attributes_survive",
+      "line": 315
+    },
+    {
+      "symbol": "SanitizedControlAttributeSourceTests.test_fixed_option_range_and_gauge_attributes_survive",
+      "line": 320
+    },
+    {
+      "symbol": "SanitizedControlAttributeSourceTests.test_event_handlers_and_javascript_image_are_removed",
+      "line": 325
+    },
+    {
+      "symbol": "SanitizedControlAttributeSourceTests.test_custom_forbid_attribute_wins_over_default_allowlist",
+      "line": 329
+    },
+    {
+      "symbol": "SanitizedControlAttributeSourceTests.test_custom_forbid_tag_retains_button_content",
+      "line": 333
+    },
+    {
+      "symbol": "SanitizedControlAttributeSourceTests.test_form_association_attribute_not_default_allowed",
+      "line": 337
+    }
+  ],
+  "fixtureCount": 120,
+  "fixtureFile": "tests/html_host/cases.json",
+  "fixtureIds": [
+    "html-host-type-text",
+    "html-host-type-search",
+    "html-host-type-tel",
+    "html-host-type-url",
+    "html-host-type-email",
+    "html-host-type-password",
+    "html-host-type-hidden",
+    "html-host-type-date",
+    "html-host-type-month",
+    "html-host-type-week",
+    "html-host-type-time",
+    "html-host-type-datetime-local",
+    "html-host-type-number",
+    "html-host-type-range",
+    "html-host-type-color",
+    "html-host-type-checkbox",
+    "html-host-type-radio",
+    "html-host-type-file",
+    "html-host-type-submit",
+    "html-host-type-image",
+    "html-host-type-reset",
+    "html-host-type-button",
+    "html-host-missing-type",
+    "html-host-unknown-type",
+    "html-host-case-insensitive-type",
+    "html-host-duplicate-attribute-first-wins",
+    "html-host-tel-retains-edge-spaces",
+    "html-host-email-multiple-trims-each",
+    "html-host-disabled-presence-not-string",
+    "html-host-readonly-text",
+    "html-host-checkbox-explicit-empty-value",
+    "html-host-submit-explicit-empty",
+    "html-host-invalid-date-nonleap",
+    "html-host-invalid-date-year-zero",
+    "html-host-invalid-month",
+    "html-host-invalid-week-53",
+    "html-host-invalid-time-hour",
+    "html-host-valid-time-milliseconds",
+    "html-host-datetime-shortest-normalization",
+    "html-host-invalid-datetime-zone",
+    "html-host-number-nan-invalid",
+    "html-host-number-leading-plus-invalid",
+    "html-host-number-trailing-dot-invalid",
+    "html-host-number-outside-range-retained",
+    "html-host-number-exponent-retained",
+    "html-host-range-default-midpoint",
+    "html-host-range-invalid-value-midpoint",
+    "html-host-range-clamp-upper",
+    "html-host-range-inverted-bounds",
+    "html-host-range-step-any",
+    "html-host-range-content-value-step-base",
+    "html-host-color-default",
+    "html-host-color-invalid",
+    "html-host-button-label-versus-value",
+    "html-host-button-disabled",
+    "html-host-textarea-rcdata-not-elements",
+    "html-host-textarea-entities-one-pass",
+    "html-host-textarea-value-attribute-ignored",
+    "html-host-textarea-readonly-disabled",
+    "html-host-select-default-first-enabled",
+    "html-host-select-last-selected-wins",
+    "html-host-select-explicit-disabled-selected",
+    "html-host-select-multiple-no-default",
+    "html-host-select-multiple-selected",
+    "html-host-select-size-two-no-default",
+    "html-host-select-all-disabled",
+    "html-host-select-option-label-value",
+    "html-host-select-optgroup-disables-options",
+    "html-host-select-option-end-omission",
+    "html-host-progress-indeterminate",
+    "html-host-progress-fraction",
+    "html-host-progress-invalid-value-determinate-zero",
+    "html-host-progress-max-invalid-default",
+    "html-host-progress-negative-value",
+    "html-host-meter-default",
+    "html-host-meter-nonzero-minimum",
+    "html-host-meter-clamp-value",
+    "html-host-meter-invalid-numbers",
+    "html-host-meter-inverted-bounds",
+    "html-host-textarea-plain-newline",
+    "html-host-textarea-markdown-newline",
+    "html-host-textarea-markdown-first-lf",
+    "html-host-textarea-plain-rcdata-literal-br",
+    "html-host-textarea-markdown-entity-once",
+    "html-host-textarea-plain-backslash-n",
+    "html-host-radio-last-checked",
+    "html-host-radio-disabled-last",
+    "html-host-radio-form-owner",
+    "html-host-radio-explicit-form",
+    "html-host-fieldset-legend-exemption",
+    "html-host-fieldset-two-legends",
+    "html-host-fieldset-rich-legend",
+    "html-host-fieldset-nested-disabled",
+    "html-host-select-complete-options",
+    "html-host-literal-html-disabled",
+    "html-host-custom-forbid-checked",
+    "html-host-custom-forbid-button",
+    "html-host-events-stripped",
+    "html-host-button-rich-content",
+    "html-host-meter-optimum-regions",
+    "html-host-progress-determinate-zero",
+    "html-host-color-probe-named",
+    "html-host-color-probe-rgb",
+    "html-host-color-probe-short-hex",
+    "html-host-color-probe-alpha",
+    "html-host-color-probe-display-p3",
+    "html-host-class-label-consumer",
+    "html-host-mindmap-label-consumer",
+    "html-host-flowchart-edge-consumer",
+    "html-host-unicode-value",
+    "html-host-attribute-entity-once",
+    "html-host-image-explicit-data-resource",
+    "html-host-color-regression-rgb-percent-nonred",
+    "html-host-color-regression-hsl-nonred",
+    "html-host-color-regression-hwb-nonred",
+    "html-host-color-regression-srgb-linear-nonred",
+    "html-host-color-regression-display-p3-mixed",
+    "html-host-color-regression-lab-neutral",
+    "html-host-color-regression-oklab-neutral",
+    "html-host-color-regression-xyz-mixed"
+  ],
+  "inputTypeDenominator": 22,
+  "inputTypes": [
+    "hidden",
+    "text",
+    "search",
+    "tel",
+    "url",
+    "email",
+    "password",
+    "date",
+    "month",
+    "week",
+    "time",
+    "datetime-local",
+    "number",
+    "range",
+    "color",
+    "checkbox",
+    "radio",
+    "file",
+    "submit",
+    "image",
+    "reset",
+    "button"
+  ],
+  "sourceBranches": [
+    {
+      "id": "input",
+      "symbols": [
+        "input state type enumeration",
+        "per-state value sanitization",
+        "readonly applicability and boolean presence",
+        "range default/midpoint/step/clamp",
+        "file list initially empty",
+        "submit/reset IDL empty versus UA default caption"
+      ],
+      "tests": "InitialControlStateSourceTests"
+    },
+    {
+      "id": "selection",
+      "symbols": [
+        "last selected wins in single select",
+        "first enabled fallback only display size1",
+        "multiple preserves all selected; no forced default",
+        "option text/label/value and optgroup disabled",
+        "omissible option end tag"
+      ],
+      "tests": "InitialControlStateSourceTests"
+    },
+    {
+      "id": "container",
+      "symbols": [
+        "same-name radio group with form ownership",
+        "disabled fieldset first direct legend exemption",
+        "outer disabled ancestor still applies",
+        "first direct legend body separation preserves markup"
+      ],
+      "tests": "CrossControlHostSourceTests and fieldset source literals"
+    },
+    {
+      "id": "text-routes",
+      "symbols": [
+        "textarea RCDATA",
+        "initial LF and CRLF normalization",
+        "one entity decoding pass",
+        "nonMarkdownToHTML newline and literal slash-n replacement at99-117",
+        "markdownToHTML html token raw output"
+      ],
+      "tests": "textarea source literals plus six distinct integration fixtures"
+    },
+    {
+      "id": "numeric",
+      "symbols": [
+        "HTML parsing floating-point attributes",
+        "meter bounds/value clamp and threshold attributes",
+        "progress no value means indeterminate versus invalid value determinate0"
+      ],
+      "tests": "InitialControlStateSourceTests"
+    },
+    {
+      "id": "safety",
+      "symbols": [
+        "DOMPurify3.4.12 HTML tags/118 default attrs",
+        "custom FORBID_ATTR/FORBID_TAGS and explicit ADD_ATTR form association",
+        "on* removal and unsafe image URL rejection",
+        "bounded native label content; request-local state"
+      ],
+      "tests": "SanitizedControlAttributeSourceTests and CrossControlHostSourceTests"
+    }
+  ],
+  "controlExpectedContract": {
+    "group": "shared",
+    "identity": "unique id plus source DOM preorder; fieldset nested children independently identified",
+    "fields": [
+      "tag",
+      "type",
+      "value",
+      "text",
+      "checked",
+      "effectiveDisabled",
+      "readonly",
+      "multiple",
+      "selectedIndices",
+      "fraction",
+      "options",
+      "forbiddenAttributes",
+      "nativeAbsent"
+    ],
+    "values": "input/select/textarea value is string; meter/progress value is numeric JSON; fraction none means progress indeterminate",
+    "ordinaryExpectedText": "Input values are never copied into expectedText; only retained normal text such as literal or forbidden-button fallback is asserted there."
+  },
+  "oracleProbes": [
+    {
+      "id": "html-host-color-probe-named",
+      "reason": {
+        "id": "color-value-normalization",
+        "observe": [
+          "value",
+          "attributes",
+          "style"
+        ],
+        "reason": "Fixed browser host value not yet captured; classify source extension before asserting value."
+      }
+    },
+    {
+      "id": "html-host-color-probe-rgb",
+      "reason": {
+        "id": "color-value-normalization",
+        "observe": [
+          "value",
+          "attributes",
+          "style"
+        ],
+        "reason": "Fixed browser host value not yet captured; classify source extension before asserting value."
+      }
+    },
+    {
+      "id": "html-host-color-probe-short-hex",
+      "reason": {
+        "id": "color-value-normalization",
+        "observe": [
+          "value",
+          "attributes",
+          "style"
+        ],
+        "reason": "Fixed browser host value not yet captured; classify source extension before asserting value."
+      }
+    },
+    {
+      "id": "html-host-color-probe-alpha",
+      "reason": {
+        "id": "color-value-normalization",
+        "observe": [
+          "value",
+          "attributes",
+          "style"
+        ],
+        "reason": "Fixed browser host value not yet captured; classify source extension before asserting value."
+      }
+    },
+    {
+      "id": "html-host-color-probe-display-p3",
+      "reason": {
+        "id": "color-value-normalization",
+        "observe": [
+          "value",
+          "attributes",
+          "style"
+        ],
+        "reason": "Fixed browser host value not yet captured; classify source extension before asserting value."
+      }
+    },
+    {
+      "id": "html-host-color-regression-display-p3-mixed",
+      "reason": {
+        "id": "non-red-color-coordinate-conversion",
+        "observe": [
+          "value"
+        ],
+        "reason": "Fresh fixed-source DOM required; native is always compared to actual source value."
+      }
+    },
+    {
+      "id": "html-host-color-regression-xyz-mixed",
+      "reason": {
+        "id": "non-red-color-coordinate-conversion",
+        "observe": [
+          "value"
+        ],
+        "reason": "Fresh fixed-source values for XYZ/A98/ProPhoto/Rec2020 conversion families, not candidate-generated expectations."
+      }
+    }
+  ],
+  "ambiguities": [
+    "Five CSS color extensions intentionally do not handwrite unknown .value; P3 must observe locked original DOM and always compare actual native value, even absent handwritten value.",
+    "Readonly/multiple IDL reflects attributes on inapplicable input types; effective semantic applicability differs. Pure unit checks effective state; fixtures do not falsely assert reflected IDL is absent.",
+    "Extra HTML consumers class/mindmap and source text-vs-markdown textarea are deliberate genuine source probes. If original paints literal or changes whitespace, preserve first-run evidence and classify via canonical source, never replace fixture solely to pass.",
+    "Malformed nesting is not treated as a complete browser-tree clone. Only specific source rules tested; no browser/CSS pixel-identical promise."
+  ],
+  "mechanicalRun": "HTML-HOST-record-20261106T120807Z-e4eb5c56",
+  "productModified": false,
+  "behaviorExecuted": false,
+  "history": [
+    {
+      "phase": "P2",
+      "methodCount": 111,
+      "fixtureCount": 112,
+      "mechanicalRun": "HTML-HOST-record-20261106T112716Z-92c4b999"
+    }
+  ],
+  "primaryCssColorSource": {
+    "repository": "W3C/csswg-drafts",
+    "url": "https://raw.githubusercontent.com/w3c/csswg-drafts/main/css-color-4/conversions.js",
+    "spec": "https://www.w3.org/TR/2026/CRD-css-color-4-20261103/",
+    "localSnapshot": "test-runs/HTML-HOST-css-source-20261106T114135Z-fb5a713d/artifacts/css-color-4-conversions.js",
+    "sha256": "73f35687ee3a6fed38f65c9dca4327fa3efabb0c73faa884be83231520855f38",
+    "sourceAcquisitionRun": "HTML-HOST-css-source-20261106T114135Z-fb5a713d",
+    "runtimeUse": "None; mathematical conversion equations/matrices re-expressed in pure Python. No JS execution or new runtime dependency.",
+    "responsibilities": [
+      "sRGB transfer and XYZ matrices",
+      "Display P3/A98/ProPhoto/Rec2020 transfer and matrices",
+      "Bradford D50/D65 adaptation",
+      "CIE Lab/LCH and OKLab/OKLCH conversions",
+      "HWB normalized white/black mixing; opaque HTML color-well serialization verified by pinned original"
+    ]
+  },
+  "sourceColorObservations": [
+    {
+      "id": "html-host-color-probe-named",
+      "path": "test-runs/HTML-HOST-P3-batch-20261106T113133Z-293a5335/artifacts/oracle/html-host-color-probe-named.json",
+      "sha256": "a000e7b14ff8699720946bb8e6d76749beba8cfda372337d83fbe4a8bcbe2f56",
+      "value": "#ff0000",
+      "attributes": {
+        "id": "c0",
+        "type": "color",
+        "value": "red"
+      }
+    },
+    {
+      "id": "html-host-color-probe-rgb",
+      "path": "test-runs/HTML-HOST-P3-batch-20261106T113133Z-293a5335/artifacts/oracle/html-host-color-probe-rgb.json",
+      "sha256": "58449243d6084d8647a972a9813972ec8015a824eb198000718ef5391b72ead4",
+      "value": "#ff0000",
+      "attributes": {
+        "id": "c0",
+        "type": "color",
+        "value": "rgb(255, 0, 0)"
+      }
+    },
+    {
+      "id": "html-host-color-probe-short-hex",
+      "path": "test-runs/HTML-HOST-P3-batch-20261106T113133Z-293a5335/artifacts/oracle/html-host-color-probe-short-hex.json",
+      "sha256": "949fc5c3cd79aa751f377de3e9b3ea31f6794013d4175493064a94bd8ba182b3",
+      "value": "#ff0000",
+      "attributes": {
+        "id": "c0",
+        "type": "color",
+        "value": "#f00"
+      }
+    },
+    {
+      "id": "html-host-color-probe-alpha",
+      "path": "test-runs/HTML-HOST-P3-batch-20261106T113133Z-293a5335/artifacts/oracle/html-host-color-probe-alpha.json",
+      "sha256": "a686bbb703d36b3ea8b47ecdb272357c5e058fa5e04f538ecfd3f6f32d701b2d",
+      "value": "#ff0000",
+      "attributes": {
+        "id": "c0",
+        "type": "color",
+        "value": "rgba(255, 0, 0, 0.5)",
+        "alpha": ""
+      }
+    },
+    {
+      "id": "html-host-color-probe-display-p3",
+      "path": "test-runs/HTML-HOST-P3-batch-20261106T113133Z-293a5335/artifacts/oracle/html-host-color-probe-display-p3.json",
+      "sha256": "ebb434e13bae3a188d61128e2d92ca426337be87b1401db4827f324a0afae46b",
+      "value": "#ff0000",
+      "attributes": {
+        "id": "c0",
+        "type": "color",
+        "value": "color(display-p3 1 0 0)",
+        "colorspace": "display-p3"
+      }
+    }
+  ],
+  "fixtureReuse": {
+    "original112Unmodified": true,
+    "baselineFixture": "test-runs/HTML-HOST-P3-batch-20261106T113133Z-293a5335/artifacts/fixtures/cases.json",
+    "newFixtureIds": [
+      "html-host-color-regression-rgb-percent-nonred",
+      "html-host-color-regression-hsl-nonred",
+      "html-host-color-regression-hwb-nonred",
+      "html-host-color-regression-srgb-linear-nonred",
+      "html-host-color-regression-display-p3-mixed",
+      "html-host-color-regression-lab-neutral",
+      "html-host-color-regression-oklab-neutral",
+      "html-host-color-regression-xyz-mixed"
+    ],
+    "newInputs": 8
+  },
+  "testAdapterCorrection": {
+    "id": "textarea-test-adapter",
+    "reason": "First native scene and original both already hold &lt;b&gt;; only helper decoded to <b>.",
+    "implementation": "No product/expected change. Adapter does not html.unescape a second time when runtime HTMLParser exposes native RCDATA_CONTENT_ELEMENTS.",
+    "stdlibPath": "C:\\code\\ppt-compare\\.local\\tools\\python-3.13.15\\Lib\\html\\parser.py",
+    "stdlibSha256": "816c7b267625410961811830d7d33bf67c6b167d7424085cc04871ee46e87542",
+    "sourceLines": [
+      135,
+      270
+    ],
+    "firstNativeEvidence": "test-runs/HTML-HOST-P3-batch-20261106T113133Z-293a5335/artifacts/native-cpu/html-host-textarea-entities-one-pass.scene.json"
+  },
+  "diagramRadioContract": "normalize_control_labels(labels: Sequence[str])->tuple[str,...]. Already-sanitized labels supplied in final host tree/insertion order. Separate nonserialized synthetic roots preserve label boundaries; one per-diagram ID/radio/form scope; no state shared across calls.",
+  "fixedHostColorRepair": {
+    "id": "fixed-host-color-path",
+    "status": "code_complete_unverified",
+    "closedFailureRun": "HTML-HOST-P3-source-native-controls-20261106T120054Z-0e217266",
+    "sourceHost": {
+      "browser": "156.0.8078.76",
+      "skiaRevision": "a65b5cc03a5131808aec172085b7074fc66625b9",
+      "files": [
+        {
+          "path": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\HTML-HOST-host-color-source-20261106T120713Z-faa6225e\\artifacts\\chromium-color.cc",
+          "url": "https://raw.githubusercontent.com/chromium/chromium/156.0.8078.76/third_party/blink/renderer/platform/graphics/color.cc",
+          "sha256": "bdd14bfbac4a746c7e1ca6cb531d1117001c46810e38c42b3895ad47f02f787e"
+        },
+        {
+          "path": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\HTML-HOST-host-color-source-20261106T120713Z-faa6225e\\artifacts\\chromium-color-input.cc",
+          "url": "https://raw.githubusercontent.com/chromium/chromium/156.0.8078.76/third_party/blink/renderer/core/html/forms/color_input_type.cc",
+          "sha256": "65ff5cdec53ac8291d9d0fac0a730710b299b41b7c3489ee0b1cfbeed7062526"
+        },
+        {
+          "path": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\HTML-HOST-host-color-source-20261106T120713Z-faa6225e\\artifacts\\chromium-skcms-ext.cc",
+          "url": "https://raw.githubusercontent.com/chromium/chromium/156.0.8078.76/skia/ext/skcms_ext.cc",
+          "sha256": "851966fbb7f103ffa5e0ba889a91faf17a00d3861ca428dd210ffbcf063c708f"
+        },
+        {
+          "path": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\HTML-HOST-host-color-source-20261106T120713Z-faa6225e\\artifacts\\chromium-color-conversions.cc",
+          "url": "https://raw.githubusercontent.com/chromium/chromium/156.0.8078.76/ui/gfx/color_conversions.cc",
+          "sha256": "62a38e5e83107a03365c51b28dc3241a3d1566f14d5fe9f8a0338b496935ff29"
+        },
+        {
+          "path": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\HTML-HOST-host-color-source-20261106T120713Z-faa6225e\\artifacts\\chromium-DEPS",
+          "url": "https://raw.githubusercontent.com/chromium/chromium/156.0.8078.76/DEPS",
+          "sha256": "8778ffaa9a30b9e825b291978804c6c2e55a3ae829ff387b025592ffb9090e8e"
+        },
+        {
+          "path": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\HTML-HOST-host-color-source-20261106T120713Z-faa6225e\\artifacts\\skia-SkColorSpace.h",
+          "url": "https://raw.githubusercontent.com/google/skia/a65b5cc03a5131808aec172085b7074fc66625b9/include/core/SkColorSpace.h",
+          "sha256": "f7308d5be05b0edbe487a330b49d055359d32d6e0a9524fc81a3c2b26f824093"
+        },
+        {
+          "path": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\HTML-HOST-host-color-source-20261106T120713Z-faa6225e\\artifacts\\chromium-LICENSE",
+          "url": "https://raw.githubusercontent.com/chromium/chromium/156.0.8078.76/LICENSE",
+          "sha256": "368cca1106be99d39ecd32a38d8305585d802a475effb66380b91ffc9bcf709b"
+        },
+        {
+          "path": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\HTML-HOST-host-color-source-20261106T120713Z-faa6225e\\artifacts\\skia-LICENSE",
+          "url": "https://raw.githubusercontent.com/google/skia/a65b5cc03a5131808aec172085b7074fc66625b9/LICENSE",
+          "sha256": "5f787c1dee3c56547f09ccc2906ab5f5293c4d8dd6c8654e573216c38e908dbd"
+        },
+        {
+          "path": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\HTML-HOST-host-color-source-20261106T120713Z-faa6225e\\artifacts\\w3c-css-color-4-20221101.html",
+          "url": "https://www.w3.org/TR/2022/CRD-css-color-4-20221101/",
+          "sha256": "cad7c7fe30efe98c773f7e052968f8c413650dbc96ed44714b0d5a5b57ca81a9"
+        }
+      ]
+    },
+    "sourceEvidence": [
+      {
+        "id": "html-host-color-regression-display-p3-mixed",
+        "member": 0,
+        "path": "test-runs/HTML-HOST-P3-source-native-controls-20261106T120054Z-0e217266/artifacts/oracle/html-host-color-regression-display-p3-mixed.json",
+        "sha256": "2223843a4b80759cee258bf4b257090c87ee736067d151f111c070dbfc35b56f",
+        "value": "#1a689d",
+        "attributes": {
+          "id": "c0",
+          "type": "color",
+          "value": "color(display-p3 0.2 0.4 0.6)"
+        }
+      },
+      {
+        "id": "html-host-color-regression-xyz-mixed",
+        "member": 3,
+        "path": "test-runs/HTML-HOST-P3-source-native-controls-20261106T120054Z-0e217266/artifacts/oracle/html-host-color-regression-xyz-mixed.json",
+        "sha256": "5ab358b9d8c060f1a9af8b4826b59f44ca35f186c2f843473129c0da264e8688",
+        "value": "#0078a8",
+        "attributes": {
+          "id": "c3",
+          "type": "color",
+          "value": "color(rec2020 0.2 0.4 0.6)"
+        }
+      }
+    ],
+    "findings": [
+      {
+        "id": "p3-byte",
+        "reason": "W3C high-precision D65 direct conversion and pinned Skia D50/ICC float32 route differ across an eight-bit rounding boundary; do not adjust tolerance or inject input-specific constants.",
+        "sourcePath": "Chromium156 color.cc:156,567,608,819 and ui/gfx/color_conversions.cc:263; Skia SkColorSpace.h:214-241",
+        "implementation": "Generic Display P3 family now evaluates source float32 transfer, D50 matrix, inverse source ICC sRGB matrix, inverse source transfer and existing final byte rounding."
+      },
+      {
+        "id": "rec2020-transfer",
+        "reason": "2026 W3C sample switched to pure BT.1886 gamma2.4. Fixed Chromium156/Skia retains piecewise BT.2020 inverse OETF, matching older W3C 2022 section10.6/appendix code. These are different transfer definitions, not acceptable floating error.",
+        "sourcePath": "Pinned Skia SkColorSpace.h:128; Chromium skcms_ext.cc:17-66; W3C2022 rec2020 section",
+        "implementation": "Rec2020 family uses (g,a,b,c,d,e,f)=(2.22222,.909672,.0903276,.222222,.0812429,0,0), same source D50/ICC path and float32 operations."
+      }
+    ],
+    "licenseNotes": "New host-specific scalar/matrix adaptation is sourced from Chromium/Skia BSD files. Exact Chromium and Skia LICENSE artifacts included; root owns bundled licenses/notice integration. This adds no runtime library/Canvas/JS dependency.",
+    "fixtureChanges": false,
+    "oldExpectedValuesChanged": false,
+    "newTests": [
+      "InitialControlStateSourceTests.test_color_host_p3_d50_quantization",
+      "InitialControlStateSourceTests.test_color_host_rec2020_transfer"
+    ],
+    "mechanicalRun": "HTML-HOST-record-20261106T120807Z-e4eb5c56",
+    "behaviorAfterRepairExecuted": false,
+    "changedFiles": [
+      {
+        "path": "src/py_mermaid/rendering/labels/controls/color_values.py",
+        "sha256": "cac1e35e364640e4b69433625490f02474c88624c30d40f68d9c3a44e8b4d666"
+      },
+      {
+        "path": "tests/html_host/test_semantics.py",
+        "sha256": "74cc5a57d11c1a76dac5e8230c658b1e4977c232cddf7fa5723d6790ada047dd"
+      }
+    ]
+  }
+}

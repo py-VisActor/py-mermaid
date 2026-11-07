@@ -1,0 +1,1907 @@
+{
+  "schema": "py-mermaid-branch-verification/v1",
+  "group": "B",
+  "baselineSourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "reviewDepth": {
+    "scope": "Finite numerical/renderer source condition groups, not expression coverage or arbitrary combinations",
+    "execution": "P2 design only, no product/original function execution",
+    "boundaries": [
+      "Wardley DB mutator API not mapped to current public input",
+      "No exhaustive arbitrary timezone/locale/font cross-product",
+      "Engine coordinates assessed relationally; exact version differences remain observable"
+    ]
+  },
+  "branches": [
+    {
+      "id": "BV-B-DATE-STRICT",
+      "title": "Date Strict",
+      "legacyUnresolved": "gap-audit-B numerical/renderer follow-up",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/gantt/ganttDb.js",
+          "symbol": "const getStartDate",
+          "line": 305,
+          "sha256": "d783881e9e5966aabc87f6dc170aa0a88ece551c48c49ba0693aa5271e3accec"
+        },
+        {
+          "repository": "mermaid-bundle-sourcesContent",
+          "path": "../../../node_modules/.pnpm/dayjs@1.11.21/node_modules/dayjs/plugin/customParseFormat.js",
+          "symbol": "customParseFormat",
+          "line": 1,
+          "sha256": "b199a58d0fbbdc519a072eb9b140a2ca3d4775ea1b054a0c0e5aeed86603c941",
+          "bundleMapPath": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+          "bundleMapSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679"
+        }
+      ],
+      "predicate": "customParseFormat strict roundtrip",
+      "arms": [
+        "leap",
+        "overflow",
+        "quarter",
+        "meridiem"
+      ],
+      "sourceExpected": "Leap2024 valid,2023 invalid;Q2 April;12AM hour0.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/temporal/_dates.py",
+          "symbol": "parse_date",
+          "line": 10,
+          "sha256": "91aaadfebf8b5202d83796732e2e2bee435c19f4dea35a327329c00196e4a202"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_b_numeric.py",
+          "symbol": "CalendarBranchContracts.test_b01_custom_parse_positive_and_strict_overflow",
+          "line": 14,
+          "sha256": "e0b685f492ce129c1143c581a866a7f7486ff4fbe85e15b2d1ff2574614631d1"
+        }
+      ],
+      "caseIds": [],
+      "pureProbeIds": [
+        "BV-B-P-PARSE-ISO",
+        "BV-B-P-PARSE-QUARTER",
+        "BV-B-P-PARSE-LOCAL-L",
+        "BV-B-P-PARSE-LOCAL-LL",
+        "BV-B-P-PARSE-LOCAL-LLL",
+        "BV-B-P-PARSE-WEEKDAY",
+        "BV-B-P-PARSE-ORDINAL",
+        "BV-B-P-PARSE-INVALID",
+        "BV-B-P-PARSE-MERIDIEM"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-reviewed finite group. P2 executes neither source nor native algorithms; scope boundaries are not API parity claims."
+    },
+    {
+      "id": "BV-B-DATE-LOCALIZED",
+      "title": "Date Localized",
+      "legacyUnresolved": "gap-audit-B numerical/renderer follow-up",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/gantt/ganttDb.js",
+          "symbol": "const getStartDate",
+          "line": 305,
+          "sha256": "d783881e9e5966aabc87f6dc170aa0a88ece551c48c49ba0693aa5271e3accec"
+        },
+        {
+          "repository": "mermaid-bundle-sourcesContent",
+          "path": "../../../node_modules/.pnpm/dayjs@1.11.21/node_modules/dayjs/plugin/customParseFormat.js",
+          "symbol": "customParseFormat",
+          "line": 1,
+          "sha256": "b199a58d0fbbdc519a072eb9b140a2ca3d4775ea1b054a0c0e5aeed86603c941",
+          "bundleMapPath": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+          "bundleMapSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679"
+        }
+      ],
+      "predicate": "localized strict parsing followed by explicit new Date fallback",
+      "arms": [
+        "L",
+        "LL",
+        "LLL",
+        "fallback"
+      ],
+      "sourceExpected": "Do not invent localizedFormat plugin; Gantt fallback accepts01/02/2024 as Jan2.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/temporal/_dates.py",
+          "symbol": "parse_date",
+          "line": 10,
+          "sha256": "91aaadfebf8b5202d83796732e2e2bee435c19f4dea35a327329c00196e4a202"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_b_numeric.py",
+          "symbol": "CalendarBranchContracts.test_b02_source_browser_date_fallback_after_localized_format",
+          "line": 18,
+          "sha256": "e0b685f492ce129c1143c581a866a7f7486ff4fbe85e15b2d1ff2574614631d1"
+        }
+      ],
+      "caseIds": [
+        "BV-B-DATE-LOCALIZED"
+      ],
+      "pureProbeIds": [
+        "BV-B-P-PARSE-LOCAL-L",
+        "BV-B-P-PARSE-LOCAL-LL",
+        "BV-B-P-PARSE-LOCAL-LLL"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-reviewed finite group. P2 executes neither source nor native algorithms; scope boundaries are not API parity claims."
+    },
+    {
+      "id": "BV-B-DATE-WEEKDAY",
+      "title": "Date Weekday",
+      "legacyUnresolved": "gap-audit-B numerical/renderer follow-up",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/gantt/ganttDb.js",
+          "symbol": "const getStartDate",
+          "line": 305,
+          "sha256": "d783881e9e5966aabc87f6dc170aa0a88ece551c48c49ba0693aa5271e3accec"
+        },
+        {
+          "repository": "mermaid-bundle-sourcesContent",
+          "path": "../../../node_modules/.pnpm/dayjs@1.11.21/node_modules/dayjs/plugin/customParseFormat.js",
+          "symbol": "customParseFormat",
+          "line": 1,
+          "sha256": "b199a58d0fbbdc519a072eb9b140a2ca3d4775ea1b054a0c0e5aeed86603c941",
+          "bundleMapPath": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+          "bundleMapSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679"
+        }
+      ],
+      "predicate": "format weekday or ordinal",
+      "arms": [
+        "dddd",
+        "Do"
+      ],
+      "sourceExpected": "Token consumption and strict validation determine actual date;2024-Jan1 Monday.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/temporal/_dates.py",
+          "symbol": "parse_date",
+          "line": 10,
+          "sha256": "91aaadfebf8b5202d83796732e2e2bee435c19f4dea35a327329c00196e4a202"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_b_numeric.py",
+          "symbol": "CalendarBranchContracts.test_b03_source_weekday_name_custom_format",
+          "line": 29,
+          "sha256": "e0b685f492ce129c1143c581a866a7f7486ff4fbe85e15b2d1ff2574614631d1"
+        }
+      ],
+      "caseIds": [
+        "BV-B-DATE-WEEKDAY"
+      ],
+      "pureProbeIds": [
+        "BV-B-P-PARSE-WEEKDAY",
+        "BV-B-P-PARSE-ORDINAL"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-reviewed finite group. P2 executes neither source nor native algorithms; scope boundaries are not API parity claims."
+    },
+    {
+      "id": "BV-B-DAYJS-ISO",
+      "title": "Dayjs Iso",
+      "legacyUnresolved": "gap-audit-B numerical/renderer follow-up",
+      "source": [
+        {
+          "repository": "mermaid-bundle-sourcesContent",
+          "path": "../../../node_modules/.pnpm/dayjs@1.11.21/node_modules/dayjs/plugin/advancedFormat.js",
+          "symbol": "advancedFormat",
+          "line": 1,
+          "sha256": "6f9ca609c4af60f2a03033e72dec5714f4f8e7b240381934040f547a0282463f",
+          "bundleMapPath": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+          "bundleMapSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679"
+        },
+        {
+          "repository": "mermaid-bundle-sourcesContent",
+          "path": "../../../node_modules/.pnpm/dayjs@1.11.21/node_modules/dayjs/plugin/isoWeek.js",
+          "symbol": "isoWeek",
+          "line": 1,
+          "sha256": "9937b6f6e7f852fd180a75d02f223298a4541a8cec415d0cadad5dfde7d40929",
+          "bundleMapPath": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+          "bundleMapSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679"
+        }
+      ],
+      "predicate": "advanced format dispatch",
+      "arms": [
+        "Q/Do",
+        "dddd/ddd",
+        "W/WW/GGGG",
+        "k/kk"
+      ],
+      "sourceExpected": "Jan1 2021=2020-W53;midnight k=24.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/temporal/_dates.py",
+          "symbol": "format_day",
+          "line": 99,
+          "sha256": "91aaadfebf8b5202d83796732e2e2bee435c19f4dea35a327329c00196e4a202"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_b_numeric.py",
+          "symbol": "CalendarBranchContracts.test_b04_source_iso_week_and_midnight_format",
+          "line": 32,
+          "sha256": "e0b685f492ce129c1143c581a866a7f7486ff4fbe85e15b2d1ff2574614631d1"
+        }
+      ],
+      "caseIds": [
+        "BV-B-DATE-ISOWEEK"
+      ],
+      "pureProbeIds": [
+        "BV-B-P-DAYFORMAT-58",
+        "BV-B-P-DAYFORMAT-59",
+        "BV-B-P-DAYFORMAT-60",
+        "BV-B-P-DAYFORMAT-61",
+        "BV-B-P-DAYFORMAT-62",
+        "BV-B-P-DAYFORMAT-63",
+        "BV-B-P-DAYFORMAT-64"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-reviewed finite group. P2 executes neither source nor native algorithms; scope boundaries are not API parity claims."
+    },
+    {
+      "id": "BV-B-DAYJS-PLUGIN",
+      "title": "Dayjs Plugin",
+      "legacyUnresolved": "gap-audit-B numerical/renderer follow-up",
+      "source": [
+        {
+          "repository": "mermaid-bundle-sourcesContent",
+          "path": "../../../node_modules/.pnpm/dayjs@1.11.21/node_modules/dayjs/plugin/advancedFormat.js",
+          "symbol": "advancedFormat",
+          "line": 1,
+          "sha256": "6f9ca609c4af60f2a03033e72dec5714f4f8e7b240381934040f547a0282463f",
+          "bundleMapPath": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+          "bundleMapSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679"
+        }
+      ],
+      "predicate": "optional plugin methods absent",
+      "arms": [
+        "w/ww/gggg/z",
+        "supported methods"
+      ],
+      "sourceExpected": "Retain original exception/raw input, never silent successful fallback.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/temporal/_dates.py",
+          "symbol": "format_day",
+          "line": 99,
+          "sha256": "91aaadfebf8b5202d83796732e2e2bee435c19f4dea35a327329c00196e4a202"
+        }
+      ],
+      "tests": [],
+      "caseIds": [],
+      "pureProbeIds": [
+        "BV-B-P-DAYFORMAT-64"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-reviewed finite group. P2 executes neither source nor native algorithms; scope boundaries are not API parity claims."
+    },
+    {
+      "id": "BV-B-AXIS-ALL",
+      "title": "Axis All",
+      "legacyUnresolved": "gap-audit-B numerical/renderer follow-up",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/gantt/ganttRenderer.js",
+          "symbol": "function makeGrid",
+          "line": 649,
+          "sha256": "bf1c7231c8666070124eed4f6078b1d62ab4dea0973c44cc5d6264469961e488"
+        },
+        {
+          "repository": "mermaid-bundle-sourcesContent",
+          "path": "../../../node_modules/.pnpm/d3-time-format@4.1.0/node_modules/d3-time-format/src/locale.js",
+          "symbol": "function formatLocale",
+          "line": 36,
+          "sha256": "47df570989eca703c1d1a720aed8e8010d5992c2235348f135654ea930fbf4d8",
+          "bundleMapPath": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+          "bundleMapSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679"
+        }
+      ],
+      "predicate": "percent directive scanner",
+      "arms": [
+        "calendar",
+        "time",
+        "epoch",
+        "zone",
+        "unknown"
+      ],
+      "sourceExpected": "Fixed D3 locale dispatch instead of OS strftime.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/temporal/_dates.py",
+          "symbol": "axis_format",
+          "line": 156,
+          "sha256": "91aaadfebf8b5202d83796732e2e2bee435c19f4dea35a327329c00196e4a202"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_b_numeric.py",
+          "symbol": "CalendarBranchContracts.test_b05_d3_fixed_locale_composites",
+          "line": 38,
+          "sha256": "e0b685f492ce129c1143c581a866a7f7486ff4fbe85e15b2d1ff2574614631d1"
+        },
+        {
+          "path": "tests/branch_verification/test_b_numeric.py",
+          "symbol": "CalendarBranchContracts.test_b07_d3_iso_week_and_padding_literals",
+          "line": 46,
+          "sha256": "e0b685f492ce129c1143c581a866a7f7486ff4fbe85e15b2d1ff2574614631d1"
+        }
+      ],
+      "caseIds": [
+        "BV-B-AXIS-LOCALE"
+      ],
+      "pureProbeIds": [
+        "BV-B-P-AXIS-LOWER-a",
+        "BV-B-P-AXIS-UPPER-A",
+        "BV-B-P-AXIS-LOWER-b",
+        "BV-B-P-AXIS-UPPER-B",
+        "BV-B-P-AXIS-LOWER-c",
+        "BV-B-P-AXIS-LOWER-d",
+        "BV-B-P-AXIS-LOWER-e",
+        "BV-B-P-AXIS-LOWER-f",
+        "BV-B-P-AXIS-LOWER-g",
+        "BV-B-P-AXIS-UPPER-G",
+        "BV-B-P-AXIS-UPPER-H",
+        "BV-B-P-AXIS-UPPER-I",
+        "BV-B-P-AXIS-LOWER-j",
+        "BV-B-P-AXIS-UPPER-L",
+        "BV-B-P-AXIS-LOWER-m",
+        "BV-B-P-AXIS-UPPER-M",
+        "BV-B-P-AXIS-LOWER-p",
+        "BV-B-P-AXIS-LOWER-q",
+        "BV-B-P-AXIS-UPPER-Q",
+        "BV-B-P-AXIS-LOWER-s",
+        "BV-B-P-AXIS-UPPER-S",
+        "BV-B-P-AXIS-LOWER-u",
+        "BV-B-P-AXIS-UPPER-U",
+        "BV-B-P-AXIS-UPPER-V",
+        "BV-B-P-AXIS-LOWER-w",
+        "BV-B-P-AXIS-UPPER-W",
+        "BV-B-P-AXIS-LOWER-x",
+        "BV-B-P-AXIS-UPPER-X",
+        "BV-B-P-AXIS-LOWER-y",
+        "BV-B-P-AXIS-UPPER-Y",
+        "BV-B-P-AXIS-UPPER-Z",
+        "BV-B-P-AXIS-PERCENT"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-reviewed finite group. P2 executes neither source nor native algorithms; scope boundaries are not API parity claims."
+    },
+    {
+      "id": "BV-B-AXIS-LOCALE",
+      "title": "Axis Locale",
+      "legacyUnresolved": "gap-audit-B numerical/renderer follow-up",
+      "source": [
+        {
+          "repository": "mermaid-bundle-sourcesContent",
+          "path": "../../../node_modules/.pnpm/d3-time-format@4.1.0/node_modules/d3-time-format/src/locale.js",
+          "symbol": "function formatLocale",
+          "line": 36,
+          "sha256": "47df570989eca703c1d1a720aed8e8010d5992c2235348f135654ea930fbf4d8",
+          "bundleMapPath": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+          "bundleMapSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679"
+        }
+      ],
+      "predicate": "composite c/x/X",
+      "arms": [
+        "datetime",
+        "date",
+        "time"
+      ],
+      "sourceExpected": "Jan1 2021 13:04:05 -> %c=1/1/2021, 1:04:05 PM; %x=1/1/2021; %X=1:04:05 PM.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/temporal/_dates.py",
+          "symbol": "axis_format",
+          "line": 156,
+          "sha256": "91aaadfebf8b5202d83796732e2e2bee435c19f4dea35a327329c00196e4a202"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_b_numeric.py",
+          "symbol": "CalendarBranchContracts.test_b05_d3_fixed_locale_composites",
+          "line": 38,
+          "sha256": "e0b685f492ce129c1143c581a866a7f7486ff4fbe85e15b2d1ff2574614631d1"
+        }
+      ],
+      "caseIds": [
+        "BV-B-AXIS-LOCALE"
+      ],
+      "pureProbeIds": [
+        "BV-B-P-AXIS-LOWER-c",
+        "BV-B-P-AXIS-LOWER-x",
+        "BV-B-P-AXIS-UPPER-X"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-reviewed finite group. P2 executes neither source nor native algorithms; scope boundaries are not API parity claims."
+    },
+    {
+      "id": "BV-B-AXIS-ESCAPE",
+      "title": "Axis Escape",
+      "legacyUnresolved": "gap-audit-B numerical/renderer follow-up",
+      "source": [
+        {
+          "repository": "mermaid-bundle-sourcesContent",
+          "path": "../../../node_modules/.pnpm/d3-time-format@4.1.0/node_modules/d3-time-format/src/locale.js",
+          "symbol": "function formatLocale",
+          "line": 36,
+          "sha256": "47df570989eca703c1d1a720aed8e8010d5992c2235348f135654ea930fbf4d8",
+          "bundleMapPath": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+          "bundleMapSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679"
+        }
+      ],
+      "predicate": "double percent consumed before directive",
+      "arms": [
+        "%%Q",
+        "%%L",
+        "%%s",
+        "%%"
+      ],
+      "sourceExpected": "Literal %Q/%L/%s must not be globally replaced.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/temporal/_dates.py",
+          "symbol": "axis_format",
+          "line": 156,
+          "sha256": "91aaadfebf8b5202d83796732e2e2bee435c19f4dea35a327329c00196e4a202"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_b_numeric.py",
+          "symbol": "CalendarBranchContracts.test_b06_d3_literal_percent_escapes",
+          "line": 43,
+          "sha256": "e0b685f492ce129c1143c581a866a7f7486ff4fbe85e15b2d1ff2574614631d1"
+        }
+      ],
+      "caseIds": [
+        "BV-B-AXIS-ESCAPE"
+      ],
+      "pureProbeIds": [
+        "BV-B-P-AXIS-PERCENT",
+        "BV-B-P-PAD-4",
+        "BV-B-P-PAD-5",
+        "BV-B-P-PAD-6"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-reviewed finite group. P2 executes neither source nor native algorithms; scope boundaries are not API parity claims."
+    },
+    {
+      "id": "BV-B-AXIS-PADDING",
+      "title": "Axis Padding",
+      "legacyUnresolved": "gap-audit-B numerical/renderer follow-up",
+      "source": [
+        {
+          "repository": "mermaid-bundle-sourcesContent",
+          "path": "../../../node_modules/.pnpm/d3-time-format@4.1.0/node_modules/d3-time-format/src/locale.js",
+          "symbol": "function formatLocale",
+          "line": 36,
+          "sha256": "47df570989eca703c1d1a720aed8e8010d5992c2235348f135654ea930fbf4d8",
+          "bundleMapPath": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+          "bundleMapSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679"
+        }
+      ],
+      "predicate": "modifier -/_/0 or ISO fields",
+      "arms": [
+        "none",
+        "space",
+        "zero",
+        "ISO year/week"
+      ],
+      "sourceExpected": "Jan1=1/space1/01;ISO2020-W53.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/temporal/_dates.py",
+          "symbol": "axis_format",
+          "line": 156,
+          "sha256": "91aaadfebf8b5202d83796732e2e2bee435c19f4dea35a327329c00196e4a202"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_b_numeric.py",
+          "symbol": "CalendarBranchContracts.test_b07_d3_iso_week_and_padding_literals",
+          "line": 46,
+          "sha256": "e0b685f492ce129c1143c581a866a7f7486ff4fbe85e15b2d1ff2574614631d1"
+        }
+      ],
+      "caseIds": [],
+      "pureProbeIds": [
+        "BV-B-P-PAD-0",
+        "BV-B-P-PAD-1",
+        "BV-B-P-PAD-2",
+        "BV-B-P-PAD-3",
+        "BV-B-P-PAD-4",
+        "BV-B-P-PAD-5",
+        "BV-B-P-PAD-6",
+        "BV-B-P-PAD-7"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-reviewed finite group. P2 executes neither source nor native algorithms; scope boundaries are not API parity claims."
+    },
+    {
+      "id": "BV-B-AXIS-FAR",
+      "title": "Axis Far",
+      "legacyUnresolved": "gap-audit-B numerical/renderer follow-up",
+      "source": [
+        {
+          "repository": "mermaid-bundle-sourcesContent",
+          "path": "../../../node_modules/.pnpm/d3-time-format@4.1.0/node_modules/d3-time-format/src/locale.js",
+          "symbol": "function formatLocale",
+          "line": 36,
+          "sha256": "47df570989eca703c1d1a720aed8e8010d5992c2235348f135654ea930fbf4d8",
+          "bundleMapPath": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+          "bundleMapSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679"
+        }
+      ],
+      "predicate": "year outside datetime1..9999",
+      "arms": [
+        "-1",
+        "0",
+        "10000"
+      ],
+      "sourceExpected": "D3 year10000 %Y uses modulo10000->0000; ISO/week computations remain actual values.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/temporal/_dates.py",
+          "symbol": "axis_format",
+          "line": 156,
+          "sha256": "91aaadfebf8b5202d83796732e2e2bee435c19f4dea35a327329c00196e4a202"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_b_numeric.py",
+          "symbol": "CalendarBranchContracts.test_b08_d3_far_year_and_iso_week",
+          "line": 51,
+          "sha256": "e0b685f492ce129c1143c581a866a7f7486ff4fbe85e15b2d1ff2574614631d1"
+        }
+      ],
+      "caseIds": [
+        "BV-B-AXIS-FAR"
+      ],
+      "pureProbeIds": [
+        "BV-B-P-FAR-NEG1-49",
+        "BV-B-P-FAR-NEG1-50",
+        "BV-B-P-FAR-NEG1-51",
+        "BV-B-P-FAR-0-52",
+        "BV-B-P-FAR-0-53",
+        "BV-B-P-FAR-0-54",
+        "BV-B-P-FAR-10000-55",
+        "BV-B-P-FAR-10000-56",
+        "BV-B-P-FAR-10000-57"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-reviewed finite group. P2 executes neither source nor native algorithms; scope boundaries are not API parity claims."
+    },
+    {
+      "id": "BV-B-TICK-WEEKDAY",
+      "title": "Tick Weekday",
+      "legacyUnresolved": "gap-audit-B numerical/renderer follow-up",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/gantt/ganttRenderer.js",
+          "symbol": "function makeGrid",
+          "line": 649,
+          "sha256": "bf1c7231c8666070124eed4f6078b1d62ab4dea0973c44cc5d6264469961e488"
+        },
+        {
+          "repository": "mermaid-bundle-sourcesContent",
+          "path": "../../../node_modules/.pnpm/d3-time@3.1.0/node_modules/d3-time/src/week.js",
+          "symbol": "function weekday",
+          "line": 1,
+          "sha256": "f20da27d58580d1db19f2f7d899854394db4e17876ce1529c2b42bb4a9798086",
+          "bundleMapPath": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+          "bundleMapSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679"
+        }
+      ],
+      "predicate": "every2 week anchored to floor(epoch)",
+      "arms": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "sourceExpected": "Monday Jan2024=Jan1/15/29;epoch floor1969-Dec29.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/temporal/_dates.py",
+          "symbol": "time_ticks",
+          "line": 118,
+          "sha256": "91aaadfebf8b5202d83796732e2e2bee435c19f4dea35a327329c00196e4a202"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_b_numeric.py",
+          "symbol": "CalendarBranchContracts.test_b09_two_week_monday_epoch_phase",
+          "line": 55,
+          "sha256": "e0b685f492ce129c1143c581a866a7f7486ff4fbe85e15b2d1ff2574614631d1"
+        }
+      ],
+      "caseIds": [
+        "BV-B-TICKS-MONDAY"
+      ],
+      "pureProbeIds": [
+        "BV-B-P-WEEK-MONDAY",
+        "BV-B-P-WEEK-TUESDAY",
+        "BV-B-P-WEEK-WEDNESDAY",
+        "BV-B-P-WEEK-THURSDAY",
+        "BV-B-P-WEEK-FRIDAY",
+        "BV-B-P-WEEK-SATURDAY",
+        "BV-B-P-WEEK-SUNDAY"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-reviewed finite group. P2 executes neither source nor native algorithms; scope boundaries are not API parity claims."
+    },
+    {
+      "id": "BV-B-TICK-EXPLICIT",
+      "title": "Tick Explicit",
+      "legacyUnresolved": "gap-audit-B numerical/renderer follow-up",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/gantt/ganttRenderer.js",
+          "symbol": "function makeGrid",
+          "line": 649,
+          "sha256": "bf1c7231c8666070124eed4f6078b1d62ab4dea0973c44cc5d6264469961e488"
+        },
+        {
+          "repository": "mermaid-bundle-sourcesContent",
+          "path": "../../../node_modules/.pnpm/d3-time@3.1.0/node_modules/d3-time/src/day.js",
+          "symbol": "timeDay",
+          "line": 4,
+          "sha256": "45b32e5c3ac1b5aed42c3e60bc9daf669cf844e5e846fc547748d5b4ce4764e7",
+          "bundleMapPath": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+          "bundleMapSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679"
+        },
+        {
+          "repository": "mermaid-bundle-sourcesContent",
+          "path": "../../../node_modules/.pnpm/d3-time@3.1.0/node_modules/d3-time/src/month.js",
+          "symbol": "timeMonth",
+          "line": 3,
+          "sha256": "d41497348718ebe3855c03216846dd25f92f1b5145ba8f0039576940700873b9",
+          "bundleMapPath": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+          "bundleMapSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679"
+        }
+      ],
+      "predicate": "explicit interval estimated within cap",
+      "arms": [
+        "ms",
+        "second",
+        "minute",
+        "hour",
+        "day",
+        "month"
+      ],
+      "sourceExpected": "Day2 resets at month boundary;month3 Jan/Apr/Jul/Oct;not fixed seconds calendar substitute.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/temporal/_dates.py",
+          "symbol": "time_ticks",
+          "line": 118,
+          "sha256": "91aaadfebf8b5202d83796732e2e2bee435c19f4dea35a327329c00196e4a202"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_b_numeric.py",
+          "symbol": "CalendarBranchContracts.test_b10_day_filter_restarts_at_month_boundary",
+          "line": 61,
+          "sha256": "e0b685f492ce129c1143c581a866a7f7486ff4fbe85e15b2d1ff2574614631d1"
+        },
+        {
+          "path": "tests/branch_verification/test_b_numeric.py",
+          "symbol": "CalendarBranchContracts.test_b11_month_filter_starts_at_january",
+          "line": 65,
+          "sha256": "e0b685f492ce129c1143c581a866a7f7486ff4fbe85e15b2d1ff2574614631d1"
+        }
+      ],
+      "caseIds": [],
+      "pureProbeIds": [
+        "BV-B-P-UNIT-MILLISECOND",
+        "BV-B-P-UNIT-SECOND",
+        "BV-B-P-UNIT-MINUTE",
+        "BV-B-P-UNIT-HOUR",
+        "BV-B-P-UNIT-DAY",
+        "BV-B-P-UNIT-MONTH"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-reviewed finite group. P2 executes neither source nor native algorithms; scope boundaries are not API parity claims."
+    },
+    {
+      "id": "BV-B-TICK-AUTO",
+      "title": "Tick Auto",
+      "legacyUnresolved": "gap-audit-B numerical/renderer follow-up",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/gantt/ganttRenderer.js",
+          "symbol": "function makeGrid",
+          "line": 649,
+          "sha256": "bf1c7231c8666070124eed4f6078b1d62ab4dea0973c44cc5d6264469961e488"
+        },
+        {
+          "repository": "mermaid-bundle-sourcesContent",
+          "path": "../../../node_modules/.pnpm/d3-time@3.1.0/node_modules/d3-time/src/ticks.js",
+          "symbol": "function ticker",
+          "line": 12,
+          "sha256": "ca414e920f4923b08ed3d383b75f4e37706be4221db6136a46ed5a3eb2f222b3",
+          "bundleMapPath": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+          "bundleMapSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679"
+        }
+      ],
+      "predicate": "interval absent or unsuitable",
+      "arms": [
+        "short",
+        "centuries",
+        "zero",
+        "reverse helper-only domain"
+      ],
+      "sourceExpected": "Original bisector/tickStep selection;zero retains one timestamp;reverse helper domain distinguished from Gantt forward domain.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/temporal/_dates.py",
+          "symbol": "time_ticks",
+          "line": 118,
+          "sha256": "91aaadfebf8b5202d83796732e2e2bee435c19f4dea35a327329c00196e4a202"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_b_numeric.py",
+          "symbol": "CalendarBranchContracts.test_b13_zero_domain_retains_the_single_timestamp",
+          "line": 74,
+          "sha256": "e0b685f492ce129c1143c581a866a7f7486ff4fbe85e15b2d1ff2574614631d1"
+        }
+      ],
+      "caseIds": [],
+      "pureProbeIds": [
+        "BV-B-P-AUTO-SHORT",
+        "BV-B-P-AUTO-YEARS",
+        "BV-B-P-AUTO-CAP",
+        "BV-B-P-AUTO-REVERSE",
+        "BV-B-P-AUTO-ZERO"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-reviewed finite group. P2 executes neither source nor native algorithms; scope boundaries are not API parity claims."
+    },
+    {
+      "id": "BV-B-TICK-CAP",
+      "title": "Tick Cap",
+      "legacyUnresolved": "gap-audit-B numerical/renderer follow-up",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/gantt/ganttRenderer.js",
+          "symbol": "function getEstimatedTickCount",
+          "line": 631,
+          "sha256": "bf1c7231c8666070124eed4f6078b1d62ab4dea0973c44cc5d6264469961e488"
+        },
+        {
+          "path": "packages/mermaid/src/diagrams/gantt/ganttRenderer.js",
+          "symbol": "function makeGrid",
+          "line": 649,
+          "sha256": "bf1c7231c8666070124eed4f6078b1d62ab4dea0973c44cc5d6264469961e488"
+        },
+        {
+          "repository": "mermaid-bundle-sourcesContent",
+          "path": "../../../node_modules/.pnpm/d3-time@3.1.0/node_modules/d3-time/src/ticks.js",
+          "symbol": "function ticker",
+          "line": 12,
+          "sha256": "ca414e920f4923b08ed3d383b75f4e37706be4221db6136a46ed5a3eb2f222b3",
+          "bundleMapPath": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+          "bundleMapSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679"
+        }
+      ],
+      "predicate": "estimate greater10000",
+      "arms": [
+        "below limit",
+        "above limit"
+      ],
+      "sourceExpected": "1ms over2days switches to bounded automatic ticks.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/temporal/_dates.py",
+          "symbol": "time_ticks",
+          "line": 118,
+          "sha256": "91aaadfebf8b5202d83796732e2e2bee435c19f4dea35a327329c00196e4a202"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_b_numeric.py",
+          "symbol": "CalendarBranchContracts.test_b12_custom_tick_limit_falls_back_to_finite_auto_ticks",
+          "line": 69,
+          "sha256": "e0b685f492ce129c1143c581a866a7f7486ff4fbe85e15b2d1ff2574614631d1"
+        }
+      ],
+      "caseIds": [
+        "BV-B-TICKS-CAP"
+      ],
+      "pureProbeIds": [
+        "BV-B-P-AUTO-CAP"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-reviewed finite group. P2 executes neither source nor native algorithms; scope boundaries are not API parity claims."
+    },
+    {
+      "id": "BV-B-TICK-DST",
+      "title": "Tick Dst",
+      "legacyUnresolved": "gap-audit-B numerical/renderer follow-up",
+      "source": [
+        {
+          "repository": "mermaid-bundle-sourcesContent",
+          "path": "../../../node_modules/.pnpm/d3-time@3.1.0/node_modules/d3-time/src/day.js",
+          "symbol": "timeDay",
+          "line": 4,
+          "sha256": "45b32e5c3ac1b5aed42c3e60bc9daf669cf844e5e846fc547748d5b4ce4764e7",
+          "bundleMapPath": ".local/f011-oracle/node_modules/mermaid/dist/mermaid.js.map",
+          "bundleMapSha256": "8b844955879bad4b284a9603827b8268f11ecb57cd0fbf2f338c24e2afa99679"
+        },
+        {
+          "path": "packages/mermaid/src/diagrams/gantt/ganttRenderer.js",
+          "symbol": "function makeGrid",
+          "line": 649,
+          "sha256": "bf1c7231c8666070124eed4f6078b1d62ab4dea0973c44cc5d6264469961e488"
+        }
+      ],
+      "predicate": "calendar day crosses local DST",
+      "arms": [
+        "23hour",
+        "25hour"
+      ],
+      "sourceExpected": "Calendar setters preserve local midnight; existing controlled-host tests reviewed, not arbitrary timezone matrix proof.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/temporal/_dates.py",
+          "symbol": "time_ticks",
+          "line": 118,
+          "sha256": "91aaadfebf8b5202d83796732e2e2bee435c19f4dea35a327329c00196e4a202"
+        }
+      ],
+      "tests": [],
+      "caseIds": [],
+      "pureProbeIds": [],
+      "classification": "EXISTING_EVIDENCE_REVIEWED",
+      "reason": "Source-reviewed finite group. P2 executes neither source nor native algorithms; scope boundaries are not API parity claims."
+    },
+    {
+      "id": "BV-B-GIT-LANE",
+      "title": "Git Lane",
+      "legacyUnresolved": "gap-audit-B numerical/renderer follow-up",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/git/gitGraphRenderer.ts",
+          "symbol": "const findLane",
+          "line": 638,
+          "sha256": "d90f6685b76b2f33bebd6e5b47912c076e77f3180c3e27d821ae06261f1aac81"
+        }
+      ],
+      "predicate": "midpoint reserved",
+      "arms": [
+        "free",
+        "one reservation",
+        "depth>5"
+      ],
+      "sourceExpected": "0..100=>50;[50]=>40;six reserved midpoints=>13.1072.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/temporal/_git_layout.py",
+          "symbol": "edge_path",
+          "line": 28,
+          "sha256": "017ffa6e6cffa8e3d268d23ea00e6970fa527dbba740901867ecd74d5b316d01"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_b_numeric.py",
+          "symbol": "GitNumericBranchContracts.test_b14_lane_reservation_retry_and_depth_guard",
+          "line": 80,
+          "sha256": "e0b685f492ce129c1143c581a866a7f7486ff4fbe85e15b2d1ff2574614631d1"
+        }
+      ],
+      "caseIds": [
+        "BV-B-GIT-LR-FLAT",
+        "BV-B-GIT-LR-ROTATE",
+        "BV-B-GIT-TB-FLAT",
+        "BV-B-GIT-TB-ROTATE",
+        "BV-B-GIT-BT-FLAT",
+        "BV-B-GIT-BT-ROTATE"
+      ],
+      "pureProbeIds": [
+        "BV-B-P-LANE-EMPTY",
+        "BV-B-P-LANE-ONE",
+        "BV-B-P-LANE-DEPTH"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-reviewed finite group. P2 executes neither source nor native algorithms; scope boundaries are not API parity claims."
+    },
+    {
+      "id": "BV-B-GIT-ROUTE",
+      "title": "Git Route",
+      "legacyUnresolved": "gap-audit-B numerical/renderer follow-up",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/git/gitGraphRenderer.ts",
+          "symbol": "const drawArrow",
+          "line": 653,
+          "sha256": "d90f6685b76b2f33bebd6e5b47912c076e77f3180c3e27d821ae06261f1aac81"
+        },
+        {
+          "path": "packages/mermaid/src/diagrams/git/gitGraphRenderer.ts",
+          "symbol": "const findLane",
+          "line": 638,
+          "sha256": "d90f6685b76b2f33bebd6e5b47912c076e77f3180c3e27d821ae06261f1aac81"
+        }
+      ],
+      "predicate": "branch side/order/parentIndex",
+      "arms": [
+        "straight",
+        "forward cross",
+        "backtrack",
+        "second merge parent"
+      ],
+      "sourceExpected": "All9 authored parent routes retain identity;radius20 and side-dependent bend checks.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/temporal/_git_layout.py",
+          "symbol": "edge_path",
+          "line": 28,
+          "sha256": "017ffa6e6cffa8e3d268d23ea00e6970fa527dbba740901867ecd74d5b316d01"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_b_numeric.py",
+          "symbol": "GitNumericBranchContracts.test_b15_nonrerouted_parent_order_changes_bend_placement",
+          "line": 87,
+          "sha256": "e0b685f492ce129c1143c581a866a7f7486ff4fbe85e15b2d1ff2574614631d1"
+        },
+        {
+          "path": "tests/branch_verification/test_b_layout.py",
+          "symbol": "DedicatedNumericLayouts.test_b22_dense_git_routes_and_direction_across_rotation",
+          "line": 61,
+          "sha256": "c0b7137272a2971455c58738ed5cd8facc1e3436ff5bc4a1362585c1d77c6088"
+        }
+      ],
+      "caseIds": [
+        "BV-B-GIT-LR-FLAT",
+        "BV-B-GIT-LR-ROTATE",
+        "BV-B-GIT-TB-FLAT",
+        "BV-B-GIT-TB-ROTATE",
+        "BV-B-GIT-BT-FLAT",
+        "BV-B-GIT-BT-ROTATE"
+      ],
+      "pureProbeIds": [],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-reviewed finite group. P2 executes neither source nor native algorithms; scope boundaries are not API parity claims."
+    },
+    {
+      "id": "BV-B-GIT-DIRECTION",
+      "title": "Git Direction",
+      "legacyUnresolved": "gap-audit-B numerical/renderer follow-up",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/git/gitGraphRenderer.ts",
+          "symbol": "const drawArrow",
+          "line": 653,
+          "sha256": "d90f6685b76b2f33bebd6e5b47912c076e77f3180c3e27d821ae06261f1aac81"
+        }
+      ],
+      "predicate": "LR/TB/BT",
+      "arms": [
+        "positive x",
+        "positive y",
+        "negative y"
+      ],
+      "sourceExpected": "Child follows every parent on signed chronological axis;all9 routes retained.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/temporal/_git_layout.py",
+          "symbol": "positions",
+          "line": 3,
+          "sha256": "017ffa6e6cffa8e3d268d23ea00e6970fa527dbba740901867ecd74d5b316d01"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_b_layout.py",
+          "symbol": "DedicatedNumericLayouts.test_b22_dense_git_routes_and_direction_across_rotation",
+          "line": 61,
+          "sha256": "c0b7137272a2971455c58738ed5cd8facc1e3436ff5bc4a1362585c1d77c6088"
+        }
+      ],
+      "caseIds": [
+        "BV-B-GIT-LR-FLAT",
+        "BV-B-GIT-LR-ROTATE",
+        "BV-B-GIT-TB-FLAT",
+        "BV-B-GIT-TB-ROTATE",
+        "BV-B-GIT-BT-FLAT",
+        "BV-B-GIT-BT-ROTATE"
+      ],
+      "pureProbeIds": [],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-reviewed finite group. P2 executes neither source nor native algorithms; scope boundaries are not API parity claims."
+    },
+    {
+      "id": "BV-B-GIT-ROTATION",
+      "title": "Git Rotation",
+      "legacyUnresolved": "gap-audit-B numerical/renderer follow-up",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/git/gitGraphRenderer.ts",
+          "symbol": "if (gitGraphConfig.rotateCommitLabel)",
+          "line": 371,
+          "sha256": "d90f6685b76b2f33bebd6e5b47912c076e77f3180c3e27d821ae06261f1aac81"
+        }
+      ],
+      "predicate": "rotateCommitLabel boolean",
+      "arms": [
+        "flat",
+        "rotated"
+      ],
+      "sourceExpected": "Direction-specific rotation retains labels; P3 visible observations required before geometry parity claim.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/temporal/_git_layout.py",
+          "symbol": "positions",
+          "line": 3,
+          "sha256": "017ffa6e6cffa8e3d268d23ea00e6970fa527dbba740901867ecd74d5b316d01"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_b_layout.py",
+          "symbol": "DedicatedNumericLayouts.test_b22_dense_git_routes_and_direction_across_rotation",
+          "line": 61,
+          "sha256": "c0b7137272a2971455c58738ed5cd8facc1e3436ff5bc4a1362585c1d77c6088"
+        }
+      ],
+      "caseIds": [
+        "BV-B-GIT-LR-FLAT",
+        "BV-B-GIT-LR-ROTATE",
+        "BV-B-GIT-TB-FLAT",
+        "BV-B-GIT-TB-ROTATE",
+        "BV-B-GIT-BT-FLAT",
+        "BV-B-GIT-BT-ROTATE"
+      ],
+      "pureProbeIds": [],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-reviewed finite group. P2 executes neither source nor native algorithms; scope boundaries are not API parity claims."
+    },
+    {
+      "id": "BV-B-GIT-TAGS",
+      "title": "Git Tags",
+      "legacyUnresolved": "gap-audit-B numerical/renderer follow-up",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/git/gitGraphRenderer.ts",
+          "symbol": "for (const tagValue of commit.tags.reverse())",
+          "line": 416,
+          "sha256": "d90f6685b76b2f33bebd6e5b47912c076e77f3180c3e27d821ae06261f1aac81"
+        }
+      ],
+      "predicate": "multiple tags",
+      "arms": [
+        "reverse iteration",
+        "tag backgrounds"
+      ],
+      "sourceExpected": "A-tag0..2 last,long-release,first,each background retained.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/temporal/_git_layout.py",
+          "symbol": "positions",
+          "line": 3,
+          "sha256": "017ffa6e6cffa8e3d268d23ea00e6970fa527dbba740901867ecd74d5b316d01"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_b_layout.py",
+          "symbol": "DedicatedNumericLayouts.test_b23_multiple_tags_preserve_reverse_display_stack",
+          "line": 75,
+          "sha256": "c0b7137272a2971455c58738ed5cd8facc1e3436ff5bc4a1362585c1d77c6088"
+        }
+      ],
+      "caseIds": [
+        "BV-B-GIT-LR-FLAT",
+        "BV-B-GIT-LR-ROTATE",
+        "BV-B-GIT-TB-FLAT",
+        "BV-B-GIT-TB-ROTATE",
+        "BV-B-GIT-BT-FLAT",
+        "BV-B-GIT-BT-ROTATE"
+      ],
+      "pureProbeIds": [],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-reviewed finite group. P2 executes neither source nor native algorithms; scope boundaries are not API parity claims."
+    },
+    {
+      "id": "BV-B-GIT-BRANCH-LABEL",
+      "title": "Git Branch Label",
+      "legacyUnresolved": "gap-audit-B numerical/renderer follow-up",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/git/gitGraphRenderer.ts",
+          "symbol": "const setBranchPosition",
+          "line": 986,
+          "sha256": "d90f6685b76b2f33bebd6e5b47912c076e77f3180c3e27d821ae06261f1aac81"
+        }
+      ],
+      "predicate": "direction and rotation change measured reserve",
+      "arms": [
+        "LR",
+        "TB/BT",
+        "rotated"
+      ],
+      "sourceExpected": "setBranchPosition adds50+rotation40+vertical halfwidth; existing config tests reviewed, not exhaustive typography proof.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/temporal/_git_layout.py",
+          "symbol": "positions",
+          "line": 3,
+          "sha256": "017ffa6e6cffa8e3d268d23ea00e6970fa527dbba740901867ecd74d5b316d01"
+        }
+      ],
+      "tests": [],
+      "caseIds": [
+        "BV-B-GIT-LR-FLAT",
+        "BV-B-GIT-LR-ROTATE",
+        "BV-B-GIT-TB-FLAT",
+        "BV-B-GIT-TB-ROTATE",
+        "BV-B-GIT-BT-FLAT",
+        "BV-B-GIT-BT-ROTATE"
+      ],
+      "pureProbeIds": [],
+      "classification": "EXISTING_EVIDENCE_REVIEWED",
+      "reason": "Source-reviewed finite group. P2 executes neither source nor native algorithms; scope boundaries are not API parity claims."
+    },
+    {
+      "id": "BV-B-AGENT-GENUINE",
+      "title": "Agent Genuine",
+      "legacyUnresolved": "gap-audit-B numerical/renderer follow-up",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/agentflow/agentflowDb.ts",
+          "symbol": "const startId = collapsedAncestorMap",
+          "line": 1852,
+          "sha256": "aa74eb6cb3eb0821c1e3960eefbbc83afe167bc5dcf9380dc4acfa8fce82b1b6"
+        },
+        {
+          "path": "packages/mermaid/src/diagrams/agentflow/agentflowDb.ts",
+          "symbol": "const collapsedAncestorMap",
+          "line": 1714,
+          "sha256": "aa74eb6cb3eb0821c1e3960eefbbc83afe167bc5dcf9380dc4acfa8fce82b1b6"
+        },
+        {
+          "path": "packages/mermaid/src/rendering-util/layout-algorithms/elk/render.ts",
+          "symbol": "async function runElkLayout",
+          "line": 689,
+          "sha256": "6258890b3f311e86e4cd4dc99d480f704fde7473e150dc62b88838c5015c5011",
+          "synthesized": true
+        }
+      ],
+      "predicate": "getData/ELK compound condition GENUINE",
+      "arms": [
+        "active",
+        "control"
+      ],
+      "sourceExpected": "Authored hidden A->A redirects to Outer->Outer and survives.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/business/agentflow.py",
+          "symbol": "parse",
+          "line": 13,
+          "sha256": "dd5133099872d390aa8905906d52ca9950dcddbbd0aa26f2c33f8419055b583a"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_b_layout.py",
+          "symbol": "CompoundBranchContracts.test_b16_hidden_authored_selfloop_survives_agent_collapse",
+          "line": 12,
+          "sha256": "c0b7137272a2971455c58738ed5cd8facc1e3436ff5bc4a1362585c1d77c6088"
+        }
+      ],
+      "caseIds": [
+        "BV-B-AGENT-GENUINE"
+      ],
+      "pureProbeIds": [],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-reviewed finite group. P2 executes neither source nor native algorithms; scope boundaries are not API parity claims."
+    },
+    {
+      "id": "BV-B-AGENT-INTERNAL",
+      "title": "Agent Internal",
+      "legacyUnresolved": "gap-audit-B numerical/renderer follow-up",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/agentflow/agentflowDb.ts",
+          "symbol": "const startId = collapsedAncestorMap",
+          "line": 1852,
+          "sha256": "aa74eb6cb3eb0821c1e3960eefbbc83afe167bc5dcf9380dc4acfa8fce82b1b6"
+        },
+        {
+          "path": "packages/mermaid/src/diagrams/agentflow/agentflowDb.ts",
+          "symbol": "const collapsedAncestorMap",
+          "line": 1714,
+          "sha256": "aa74eb6cb3eb0821c1e3960eefbbc83afe167bc5dcf9380dc4acfa8fce82b1b6"
+        },
+        {
+          "path": "packages/mermaid/src/rendering-util/layout-algorithms/elk/render.ts",
+          "symbol": "async function runElkLayout",
+          "line": 689,
+          "sha256": "6258890b3f311e86e4cd4dc99d480f704fde7473e150dc62b88838c5015c5011",
+          "synthesized": true
+        }
+      ],
+      "predicate": "getData/ELK compound condition INTERNAL",
+      "arms": [
+        "active",
+        "control"
+      ],
+      "sourceExpected": "Distinct A->B collapse-induced selfloop dropped.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/business/agentflow.py",
+          "symbol": "parse",
+          "line": 13,
+          "sha256": "dd5133099872d390aa8905906d52ca9950dcddbbd0aa26f2c33f8419055b583a"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_b_layout.py",
+          "symbol": "CompoundBranchContracts.test_b17_distinct_internal_endpoints_collapse_to_no_edge",
+          "line": 17,
+          "sha256": "c0b7137272a2971455c58738ed5cd8facc1e3436ff5bc4a1362585c1d77c6088"
+        }
+      ],
+      "caseIds": [
+        "BV-B-AGENT-INTERNAL"
+      ],
+      "pureProbeIds": [],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-reviewed finite group. P2 executes neither source nor native algorithms; scope boundaries are not API parity claims."
+    },
+    {
+      "id": "BV-B-AGENT-NESTED",
+      "title": "Agent Nested",
+      "legacyUnresolved": "gap-audit-B numerical/renderer follow-up",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/agentflow/agentflowDb.ts",
+          "symbol": "const startId = collapsedAncestorMap",
+          "line": 1852,
+          "sha256": "aa74eb6cb3eb0821c1e3960eefbbc83afe167bc5dcf9380dc4acfa8fce82b1b6"
+        },
+        {
+          "path": "packages/mermaid/src/diagrams/agentflow/agentflowDb.ts",
+          "symbol": "const collapsedAncestorMap",
+          "line": 1714,
+          "sha256": "aa74eb6cb3eb0821c1e3960eefbbc83afe167bc5dcf9380dc4acfa8fce82b1b6"
+        },
+        {
+          "path": "packages/mermaid/src/rendering-util/layout-algorithms/elk/render.ts",
+          "symbol": "async function runElkLayout",
+          "line": 689,
+          "sha256": "6258890b3f311e86e4cd4dc99d480f704fde7473e150dc62b88838c5015c5011",
+          "synthesized": true
+        }
+      ],
+      "predicate": "getData/ELK compound condition NESTED",
+      "arms": [
+        "active",
+        "control"
+      ],
+      "sourceExpected": "Outermost visible collapsed ancestor owns redirected boundary endpoints.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/business/agentflow.py",
+          "symbol": "parse",
+          "line": 13,
+          "sha256": "dd5133099872d390aa8905906d52ca9950dcddbbd0aa26f2c33f8419055b583a"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_b_layout.py",
+          "symbol": "CompoundBranchContracts.test_b18_nested_collapse_redirects_to_outermost_visible_node",
+          "line": 21,
+          "sha256": "c0b7137272a2971455c58738ed5cd8facc1e3436ff5bc4a1362585c1d77c6088"
+        }
+      ],
+      "caseIds": [
+        "BV-B-AGENT-NESTED"
+      ],
+      "pureProbeIds": [],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-reviewed finite group. P2 executes neither source nor native algorithms; scope boundaries are not API parity claims."
+    },
+    {
+      "id": "BV-B-AGENT-ANCESTOR",
+      "title": "Agent Ancestor",
+      "legacyUnresolved": "gap-audit-B numerical/renderer follow-up",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/agentflow/agentflowDb.ts",
+          "symbol": "const startId = collapsedAncestorMap",
+          "line": 1852,
+          "sha256": "aa74eb6cb3eb0821c1e3960eefbbc83afe167bc5dcf9380dc4acfa8fce82b1b6"
+        },
+        {
+          "path": "packages/mermaid/src/diagrams/agentflow/agentflowDb.ts",
+          "symbol": "const collapsedAncestorMap",
+          "line": 1714,
+          "sha256": "aa74eb6cb3eb0821c1e3960eefbbc83afe167bc5dcf9380dc4acfa8fce82b1b6"
+        },
+        {
+          "path": "packages/mermaid/src/rendering-util/layout-algorithms/elk/render.ts",
+          "symbol": "async function runElkLayout",
+          "line": 689,
+          "sha256": "6258890b3f311e86e4cd4dc99d480f704fde7473e150dc62b88838c5015c5011",
+          "synthesized": true
+        }
+      ],
+      "predicate": "getData/ELK compound condition ANCESTOR",
+      "arms": [
+        "active",
+        "control"
+      ],
+      "sourceExpected": "Expanded ancestor/descendant edges retain IDs and real routes.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/business/agentflow.py",
+          "symbol": "parse",
+          "line": 13,
+          "sha256": "dd5133099872d390aa8905906d52ca9950dcddbbd0aa26f2c33f8419055b583a"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_b_layout.py",
+          "symbol": "CompoundBranchContracts.test_b19_ancestor_edges_keep_all_route_identities",
+          "line": 26,
+          "sha256": "c0b7137272a2971455c58738ed5cd8facc1e3436ff5bc4a1362585c1d77c6088"
+        }
+      ],
+      "caseIds": [
+        "BV-B-AGENT-ANCESTOR"
+      ],
+      "pureProbeIds": [],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-reviewed finite group. P2 executes neither source nor native algorithms; scope boundaries are not API parity claims."
+    },
+    {
+      "id": "BV-B-AGENT-GROUP-ALGO",
+      "title": "Agent Group Algo",
+      "legacyUnresolved": "gap-audit-B numerical/renderer follow-up",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/agentflow/agentflowDb.ts",
+          "symbol": "const startId = collapsedAncestorMap",
+          "line": 1852,
+          "sha256": "aa74eb6cb3eb0821c1e3960eefbbc83afe167bc5dcf9380dc4acfa8fce82b1b6"
+        },
+        {
+          "path": "packages/mermaid/src/diagrams/agentflow/agentflowDb.ts",
+          "symbol": "const collapsedAncestorMap",
+          "line": 1714,
+          "sha256": "aa74eb6cb3eb0821c1e3960eefbbc83afe167bc5dcf9380dc4acfa8fce82b1b6"
+        },
+        {
+          "path": "packages/mermaid/src/rendering-util/layout-algorithms/elk/render.ts",
+          "symbol": "async function runElkLayout",
+          "line": 689,
+          "sha256": "6258890b3f311e86e4cd4dc99d480f704fde7473e150dc62b88838c5015c5011",
+          "synthesized": true
+        }
+      ],
+      "predicate": "getData/ELK compound condition GROUP-ALGO",
+      "arms": [
+        "active",
+        "control"
+      ],
+      "sourceExpected": "Isolated group custom elk.box remains requested.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/business/agentflow.py",
+          "symbol": "parse",
+          "line": 13,
+          "sha256": "dd5133099872d390aa8905906d52ca9950dcddbbd0aa26f2c33f8419055b583a"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_b_layout.py",
+          "symbol": "CompoundBranchContracts.test_b21_isolated_group_algorithm_stays_requested",
+          "line": 48,
+          "sha256": "c0b7137272a2971455c58738ed5cd8facc1e3436ff5bc4a1362585c1d77c6088"
+        }
+      ],
+      "caseIds": [
+        "BV-B-AGENT-GROUP-ALGO"
+      ],
+      "pureProbeIds": [],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-reviewed finite group. P2 executes neither source nor native algorithms; scope boundaries are not API parity claims."
+    },
+    {
+      "id": "BV-B-AGENT-CROSS-ALGO",
+      "title": "Agent Cross Algo",
+      "legacyUnresolved": "gap-audit-B numerical/renderer follow-up",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/agentflow/agentflowDb.ts",
+          "symbol": "const startId = collapsedAncestorMap",
+          "line": 1852,
+          "sha256": "aa74eb6cb3eb0821c1e3960eefbbc83afe167bc5dcf9380dc4acfa8fce82b1b6"
+        },
+        {
+          "path": "packages/mermaid/src/diagrams/agentflow/agentflowDb.ts",
+          "symbol": "const collapsedAncestorMap",
+          "line": 1714,
+          "sha256": "aa74eb6cb3eb0821c1e3960eefbbc83afe167bc5dcf9380dc4acfa8fce82b1b6"
+        },
+        {
+          "path": "packages/mermaid/src/rendering-util/layout-algorithms/elk/render.ts",
+          "symbol": "async function runElkLayout",
+          "line": 689,
+          "sha256": "6258890b3f311e86e4cd4dc99d480f704fde7473e150dc62b88838c5015c5011",
+          "synthesized": true
+        }
+      ],
+      "predicate": "getData/ELK compound condition CROSS-ALGO",
+      "arms": [
+        "active",
+        "control"
+      ],
+      "sourceExpected": "Cross-hierarchy policy clears custom group algorithm while all edges survive.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/business/agentflow.py",
+          "symbol": "parse",
+          "line": 13,
+          "sha256": "dd5133099872d390aa8905906d52ca9950dcddbbd0aa26f2c33f8419055b583a"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_b_layout.py",
+          "symbol": "CompoundBranchContracts.test_b20_cross_hierarchy_clears_only_isolated_algorithm",
+          "line": 32,
+          "sha256": "c0b7137272a2971455c58738ed5cd8facc1e3436ff5bc4a1362585c1d77c6088"
+        }
+      ],
+      "caseIds": [
+        "BV-B-AGENT-CROSS-ALGO"
+      ],
+      "pureProbeIds": [],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-reviewed finite group. P2 executes neither source nor native algorithms; scope boundaries are not API parity claims."
+    },
+    {
+      "id": "BV-B-WARDLEY-MULTICOORD",
+      "title": "Wardley Multicoord",
+      "legacyUnresolved": "gap-audit-B numerical/renderer follow-up",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/wardley/wardleyDb.ts",
+          "symbol": "function addAnnotation",
+          "line": 64,
+          "sha256": "29a43cf13de0f0cacc8ba81bc90bb0361f1c047d4e45f1390c70f2956a8ea6e0"
+        },
+        {
+          "path": "packages/mermaid/src/diagrams/wardley/wardleyRenderer.ts",
+          "symbol": "const projectedCoords",
+          "line": 831,
+          "sha256": "6f4964f620c5319e8750624ef3f79ece899f63481020ea23fa2e1fdb42b9a751"
+        }
+      ],
+      "predicate": "internal DB coordinates length>1",
+      "arms": [
+        "one grammar coord",
+        "multiple DB coords"
+      ],
+      "sourceExpected": "Renderer projects/connects all coords: not no-op. Current public parse/render immutable-model contract does not promise DB mutator parity.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/business/wardley.py",
+          "symbol": "build",
+          "line": 139,
+          "sha256": "3e90d8ddc1f2d030844e740d5f6aeb35805c18aa43d1e1ca4a707e1277fae91a"
+        }
+      ],
+      "tests": [],
+      "caseIds": [],
+      "pureProbeIds": [],
+      "classification": "SOURCE_INTERNAL_API_NOT_MAPPED",
+      "reason": "Source-reviewed finite group. P2 executes neither source nor native algorithms; scope boundaries are not API parity claims."
+    },
+    {
+      "id": "BV-B-WARDLEY-PUSH",
+      "title": "Wardley Push",
+      "legacyUnresolved": "gap-audit-B numerical/renderer follow-up",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/wardley/wardleyDb.ts",
+          "symbol": "function addAnnotation",
+          "line": 64,
+          "sha256": "29a43cf13de0f0cacc8ba81bc90bb0361f1c047d4e45f1390c70f2956a8ea6e0"
+        },
+        {
+          "path": "packages/mermaid/src/diagrams/wardley/wardleyBuilder.ts",
+          "symbol": "this.annotations.push",
+          "line": 136,
+          "sha256": "cdeade146e49b7e45853f0302bf8d7c6c1d4083dac9baa1caf83b03b31d9d800"
+        }
+      ],
+      "predicate": "same annotation number twice",
+      "arms": [
+        "first",
+        "second"
+      ],
+      "sourceExpected": "Records remain independently30,20 First and70,80 Second.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/business/wardley.py",
+          "symbol": "parse",
+          "line": 45,
+          "sha256": "3e90d8ddc1f2d030844e740d5f6aeb35805c18aa43d1e1ca4a707e1277fae91a"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_b_layout.py",
+          "symbol": "DedicatedNumericLayouts.test_b25_repeated_wardley_annotation_number_is_not_merged",
+          "line": 99,
+          "sha256": "c0b7137272a2971455c58738ed5cd8facc1e3436ff5bc4a1362585c1d77c6088"
+        }
+      ],
+      "caseIds": [
+        "BV-B-WARDLEY-ANNOTATION-PUSH"
+      ],
+      "pureProbeIds": [],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-reviewed finite group. P2 executes neither source nor native algorithms; scope boundaries are not API parity claims."
+    },
+    {
+      "id": "BV-B-WARDLEY-AXES",
+      "title": "Wardley Axes",
+      "legacyUnresolved": "gap-audit-B numerical/renderer follow-up",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/wardley/wardleyRenderer.ts",
+          "symbol": "const xLabel",
+          "line": 186,
+          "sha256": "6f4964f620c5319e8750624ef3f79ece899f63481020ea23fa2e1fdb42b9a751"
+        }
+      ],
+      "predicate": "internal DB axes labels provided",
+      "arms": [
+        "defaults",
+        "custom"
+      ],
+      "sourceExpected": "Renderer really reads labels; grammar/current public input cannot reach that mutator. Neither syntax gap nor API compatibility complete.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/business/wardley.py",
+          "symbol": "build",
+          "line": 139,
+          "sha256": "3e90d8ddc1f2d030844e740d5f6aeb35805c18aa43d1e1ca4a707e1277fae91a"
+        }
+      ],
+      "tests": [],
+      "caseIds": [],
+      "pureProbeIds": [],
+      "classification": "SOURCE_INTERNAL_API_NOT_MAPPED",
+      "reason": "Source-reviewed finite group. P2 executes neither source nor native algorithms; scope boundaries are not API parity claims."
+    },
+    {
+      "id": "BV-B-NUMERIC-FORCE",
+      "title": "Numeric Force",
+      "legacyUnresolved": "gap-audit-B numerical/renderer follow-up",
+      "source": [
+        {
+          "path": "packages/mermaid/src/rendering-util/layout-algorithms/elk/render.ts",
+          "symbol": "async function runElkLayout",
+          "line": 689,
+          "sha256": "6258890b3f311e86e4cd4dc99d480f704fde7473e150dc62b88838c5015c5011",
+          "synthesized": true
+        }
+      ],
+      "predicate": "explicit elk.force",
+      "arms": [
+        "requested engine",
+        "IDs/finite geometry"
+      ],
+      "sourceExpected": "Exact requested algorithm sent once to real pyelk0.1.0; complete IDs, finite boxes; no layered/fake success fallback.",
+      "python": [
+        {
+          "path": "src/py_mermaid/layout/elk/compound.py",
+          "symbol": "prepare_compound",
+          "line": 189,
+          "sha256": "379ef3b9a47d3ebf91583973be3365b5d24a65977d47463131a45aa41d65b446"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_b_layout.py",
+          "symbol": "DedicatedNumericLayouts.test_b24_nonlayered_algorithms_use_real_requested_engine_once",
+          "line": 81,
+          "sha256": "c0b7137272a2971455c58738ed5cd8facc1e3436ff5bc4a1362585c1d77c6088"
+        }
+      ],
+      "caseIds": [
+        "BV-B-ENGINE-FORCE-GRAPH",
+        "BV-B-ENGINE-FORCE-COINCIDENT"
+      ],
+      "pureProbeIds": [],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-reviewed finite group. P2 executes neither source nor native algorithms; scope boundaries are not API parity claims."
+    },
+    {
+      "id": "BV-B-NUMERIC-STRESS",
+      "title": "Numeric Stress",
+      "legacyUnresolved": "gap-audit-B numerical/renderer follow-up",
+      "source": [
+        {
+          "path": "packages/mermaid/src/rendering-util/layout-algorithms/elk/render.ts",
+          "symbol": "async function runElkLayout",
+          "line": 689,
+          "sha256": "6258890b3f311e86e4cd4dc99d480f704fde7473e150dc62b88838c5015c5011",
+          "synthesized": true
+        }
+      ],
+      "predicate": "explicit elk.stress",
+      "arms": [
+        "requested engine",
+        "IDs/finite geometry"
+      ],
+      "sourceExpected": "Exact requested algorithm sent once to real pyelk0.1.0; complete IDs, finite boxes; no layered/fake success fallback.",
+      "python": [
+        {
+          "path": "src/py_mermaid/layout/elk/compound.py",
+          "symbol": "prepare_compound",
+          "line": 189,
+          "sha256": "379ef3b9a47d3ebf91583973be3365b5d24a65977d47463131a45aa41d65b446"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_b_layout.py",
+          "symbol": "DedicatedNumericLayouts.test_b24_nonlayered_algorithms_use_real_requested_engine_once",
+          "line": 81,
+          "sha256": "c0b7137272a2971455c58738ed5cd8facc1e3436ff5bc4a1362585c1d77c6088"
+        }
+      ],
+      "caseIds": [
+        "BV-B-ENGINE-STRESS-GRAPH",
+        "BV-B-ENGINE-STRESS-COINCIDENT"
+      ],
+      "pureProbeIds": [],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-reviewed finite group. P2 executes neither source nor native algorithms; scope boundaries are not API parity claims."
+    },
+    {
+      "id": "BV-B-NUMERIC-BOX",
+      "title": "Numeric Box",
+      "legacyUnresolved": "gap-audit-B numerical/renderer follow-up",
+      "source": [
+        {
+          "path": "packages/mermaid/src/rendering-util/layout-algorithms/elk/render.ts",
+          "symbol": "async function runElkLayout",
+          "line": 689,
+          "sha256": "6258890b3f311e86e4cd4dc99d480f704fde7473e150dc62b88838c5015c5011",
+          "synthesized": true
+        }
+      ],
+      "predicate": "explicit elk.box",
+      "arms": [
+        "requested engine",
+        "IDs/finite geometry"
+      ],
+      "sourceExpected": "Exact requested algorithm sent once to real pyelk0.1.0; complete IDs, finite boxes; no layered/fake success fallback.",
+      "python": [
+        {
+          "path": "src/py_mermaid/layout/elk/compound.py",
+          "symbol": "prepare_compound",
+          "line": 189,
+          "sha256": "379ef3b9a47d3ebf91583973be3365b5d24a65977d47463131a45aa41d65b446"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_b_layout.py",
+          "symbol": "DedicatedNumericLayouts.test_b24_nonlayered_algorithms_use_real_requested_engine_once",
+          "line": 81,
+          "sha256": "c0b7137272a2971455c58738ed5cd8facc1e3436ff5bc4a1362585c1d77c6088"
+        }
+      ],
+      "caseIds": [
+        "BV-B-ENGINE-BOX-GRAPH"
+      ],
+      "pureProbeIds": [],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-reviewed finite group. P2 executes neither source nor native algorithms; scope boundaries are not API parity claims."
+    },
+    {
+      "id": "BV-B-NUMERIC-RECTPACKING",
+      "title": "Numeric Rectpacking",
+      "legacyUnresolved": "gap-audit-B numerical/renderer follow-up",
+      "source": [
+        {
+          "path": "packages/mermaid/src/rendering-util/layout-algorithms/elk/render.ts",
+          "symbol": "async function runElkLayout",
+          "line": 689,
+          "sha256": "6258890b3f311e86e4cd4dc99d480f704fde7473e150dc62b88838c5015c5011",
+          "synthesized": true
+        }
+      ],
+      "predicate": "explicit elk.rectpacking",
+      "arms": [
+        "requested engine",
+        "IDs/finite geometry"
+      ],
+      "sourceExpected": "Exact requested algorithm sent once to real pyelk0.1.0; complete IDs, finite boxes; no layered/fake success fallback.",
+      "python": [
+        {
+          "path": "src/py_mermaid/layout/elk/compound.py",
+          "symbol": "prepare_compound",
+          "line": 189,
+          "sha256": "379ef3b9a47d3ebf91583973be3365b5d24a65977d47463131a45aa41d65b446"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_b_layout.py",
+          "symbol": "DedicatedNumericLayouts.test_b24_nonlayered_algorithms_use_real_requested_engine_once",
+          "line": 81,
+          "sha256": "c0b7137272a2971455c58738ed5cd8facc1e3436ff5bc4a1362585c1d77c6088"
+        }
+      ],
+      "caseIds": [
+        "BV-B-ENGINE-RECTPACKING-GRAPH"
+      ],
+      "pureProbeIds": [],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-reviewed finite group. P2 executes neither source nor native algorithms; scope boundaries are not API parity claims."
+    },
+    {
+      "id": "BV-B-NUMERIC-COINCIDENT",
+      "title": "Numeric Coincident",
+      "legacyUnresolved": "gap-audit-B numerical/renderer follow-up",
+      "source": [
+        {
+          "path": "packages/mermaid/src/rendering-util/layout-algorithms/elk/render.ts",
+          "symbol": "async function runElkLayout",
+          "line": 689,
+          "sha256": "6258890b3f311e86e4cd4dc99d480f704fde7473e150dc62b88838c5015c5011",
+          "synthesized": true
+        }
+      ],
+      "predicate": "singleton selfloop",
+      "arms": [
+        "force",
+        "stress"
+      ],
+      "sourceExpected": "Keep actual raw engine result/identity; no fabricated visible loop.",
+      "python": [
+        {
+          "path": "src/py_mermaid/layout/elk/compound.py",
+          "symbol": "prepare_compound",
+          "line": 189,
+          "sha256": "379ef3b9a47d3ebf91583973be3365b5d24a65977d47463131a45aa41d65b446"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/branch_verification/test_b_layout.py",
+          "symbol": "DedicatedNumericLayouts.test_b24_nonlayered_algorithms_use_real_requested_engine_once",
+          "line": 81,
+          "sha256": "c0b7137272a2971455c58738ed5cd8facc1e3436ff5bc4a1362585c1d77c6088"
+        }
+      ],
+      "caseIds": [
+        "BV-B-ENGINE-FORCE-COINCIDENT",
+        "BV-B-ENGINE-STRESS-COINCIDENT"
+      ],
+      "pureProbeIds": [],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-reviewed finite group. P2 executes neither source nor native algorithms; scope boundaries are not API parity claims."
+    },
+    {
+      "id": "BV-B-NUMERIC-PRNG",
+      "title": "Numeric Prng",
+      "legacyUnresolved": "gap-audit-B numerical/renderer follow-up",
+      "source": [
+        {
+          "path": "packages/mermaid/src/diagrams/cynefin/cynefinBoundaries.ts",
+          "symbol": "export function seededRandom(seed: number): number {",
+          "line": 5,
+          "sha256": "f5c71c15a4277d9ef36d07962ddb13a7b4fe32e4e038eb5fe10a8999a2c4efd2"
+        }
+      ],
+      "predicate": "seed int32 conversion",
+      "arms": [
+        "zero",
+        "negative",
+        "uint32max",
+        "fraction"
+      ],
+      "sourceExpected": "JavaScript wrap/division defines exact random sample; original/native observations separate.",
+      "python": [
+        {
+          "path": "src/py_mermaid/diagrams/business/_cynefin_geometry.py",
+          "symbol": "random",
+          "line": 2,
+          "sha256": "01e5465e14f823d9c78b960d995146bc062f278ff29fbae1ff2f33e556db7a62"
+        }
+      ],
+      "tests": [],
+      "caseIds": [],
+      "pureProbeIds": [
+        "BV-B-P-RANDOM-86",
+        "BV-B-P-RANDOM-87",
+        "BV-B-P-RANDOM-88",
+        "BV-B-P-RANDOM-89"
+      ],
+      "classification": "PENDING_EXECUTION",
+      "reason": "Source-reviewed finite group. P2 executes neither source nor native algorithms; scope boundaries are not API parity claims."
+    },
+    {
+      "id": "BV-B-NUMERIC-FAILURE",
+      "title": "Numeric Failure",
+      "legacyUnresolved": "gap-audit-B numerical/renderer follow-up",
+      "source": [
+        {
+          "path": "packages/mermaid/src/rendering-util/layout-algorithms/elk/render.ts",
+          "symbol": "async function runElkLayout",
+          "line": 689,
+          "sha256": "6258890b3f311e86e4cd4dc99d480f704fde7473e150dc62b88838c5015c5011",
+          "synthesized": true
+        }
+      ],
+      "predicate": "engine/raw output rejection",
+      "arms": [
+        "engine failure",
+        "invalid geometry"
+      ],
+      "sourceExpected": "Precise failure instead of successful stub; existing F014 controls reviewed only.",
+      "python": [
+        {
+          "path": "src/py_mermaid/layout/elk/compound.py",
+          "symbol": "prepare_compound",
+          "line": 189,
+          "sha256": "379ef3b9a47d3ebf91583973be3365b5d24a65977d47463131a45aa41d65b446"
+        }
+      ],
+      "tests": [],
+      "caseIds": [],
+      "pureProbeIds": [],
+      "classification": "EXISTING_EVIDENCE_REVIEWED",
+      "reason": "Source-reviewed finite group. P2 executes neither source nor native algorithms; scope boundaries are not API parity claims."
+    }
+  ],
+  "denominators": {
+    "branchRecords": 37,
+    "renderFixtures": 27,
+    "pureProbeRows": 90,
+    "unitMethods": 25
+  },
+  "execution": "P2: source/probe/test implementation only; mechanical checks may import but never execute cases.",
+  "documentRole": "P2 source-derived contract. Initial branch classifications and authored expectations are historical; actual execution dispositions are in currentResults.",
+  "currentResults": {
+    "path": "references/branch-verification-summary.json",
+    "sha256": "cdf4226c982290875052614751fdf774d3bcb36609e4bc8f0c908205ce61613d",
+    "bytes": 1723432
+  }
+}

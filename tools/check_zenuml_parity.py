@@ -330,11 +330,32 @@ def mutations(case,official,svg,scene,png,artifact_dir=None):
     return rows
 
 
+def select_zenuml_cases(cases):
+    """All static Zen positives, with exact preservation of the locked148.
+
+    Origin identifies the base corpus, never eligibility for the strict check.
+    New/regression inputs from any source path receive identical checks.
+    """
+    base_path=ROOT/'tests/bulk/c/zen-visual-source-cases.json'
+    raw=base_path.read_bytes()
+    if hashlib.sha256(raw).hexdigest()!='0b7b430524b8aacd48a0982e4dd9fc8401b9a397308b3f73b24ade70516bdeb1':
+        raise ValueError('Locked148 visual identity reference changed')
+    expected={row['id'] for row in json.loads(raw)}
+    if len(expected)!=148:raise ValueError('Locked visual identity set must contain148IDs')
+    selected=[c for c in cases if c['kind']=='zenuml' and c['expect'] in ('render','upstream_defect')]
+    ids=[c['id'] for c in selected]
+    if len(set(ids))!=len(ids):raise ValueError('Duplicate Zen positive ID')
+    base={c['id'] for c in selected if c['origin']['path']=='e2e/data/compare-cases.js'}
+    if base!=expected:
+        raise ValueError('Locked148 visual IDs missing/substituted: '+repr({'missing':sorted(expected-base),'extra':sorted(base-expected)}))
+    if not expected.issubset(ids):raise ValueError('Locked148 visual input missing')
+    return selected,dict(baseVisualDenominator=148,additionalDenominator=len(selected)-148,totalDenominator=len(selected))
+
+
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--fixtures',required=True,type=Path);parser.add_argument('--oracle',required=True,type=Path);parser.add_argument('--native',required=True,type=Path);parser.add_argument('--out',required=True,type=Path)
     args=parser.parse_args();args.out.mkdir(parents=True,exist_ok=False)
-    cases=[c for c in load_cases([args.fixtures]) if c['kind']=='zenuml' and c['origin']['path']=='e2e/data/compare-cases.js']
-    if len(cases)!=148:raise ValueError('Fixed source visual denominator must remain148')
+    cases,denominators=select_zenuml_cases(load_cases([args.fixtures]))
     rows=[]
     for case in cases:
         id=case['id'];row={'id':id,'status':'TOOL_ERROR'}
@@ -347,7 +368,7 @@ def main():
             row.update(status='FAIL' if errors else 'PASS',errors=errors,controls=controls,sourceProjection=reference,nativeProjection=actual,evidence={str(p):hashlib.sha256(p.read_bytes()).hexdigest() for p in (a,svg,b,png)})
         except Exception as exc:row.update(error=type(exc).__name__+': '+str(exc))
         rows.append(row);write(args.out/(id+'.parity.json'),row)
-    counts=Counter(r['status'] for r in rows);write(args.out/'report.json',{'schema':'py-mermaid-zenuml-parity/v1','counts':counts,'cases':rows,'denominator':148,'coordinatePolicy':'relative relationships only; no A/B exact pixel placement requirement'})
+    counts=Counter(r['status'] for r in rows);write(args.out/'report.json',{'schema':'py-mermaid-zenuml-parity/v1','counts':counts,'cases':rows,'denominator':len(cases),**denominators,'coordinatePolicy':'relative relationships only; no A/B exact pixel placement requirement'})
     print(json.dumps(dict(counts)));return int(counts['FAIL']>0 or counts['TOOL_ERROR']>0)
 
 if __name__=='__main__':raise SystemExit(main())

@@ -1,0 +1,295 @@
+{
+  "schema": "py-mermaid-event-source-relations/v1",
+  "sourceProducerRun": "test-runs\\CLOSURE-EVENT-C-source-preparation-batch-20261107T102910Z-ac5ac82b",
+  "sourceProducerExitCode": 0,
+  "rawSVGUnchanged": true,
+  "projection": "stdlib HTMLParser reads source foreignObject markup rather than assuming serialized browser HTML is XML. Absolute boxes taken from original computed shape records.",
+  "cases": [
+    {
+      "id": "CLOSURE-EVENT-chain-revisit",
+      "rectPaintCount": 8,
+      "cards": [
+        {
+          "label": "Page",
+          "box": {
+            "x": 280,
+            "y": 45,
+            "width": 157,
+            "height": 100
+          }
+        },
+        {
+          "label": "Place",
+          "box": {
+            "x": 367,
+            "y": 185,
+            "width": 160,
+            "height": 100
+          }
+        },
+        {
+          "label": "Placed",
+          "box": {
+            "x": 457,
+            "y": 325,
+            "width": 170,
+            "height": 100
+          }
+        },
+        {
+          "label": "Orders",
+          "box": {
+            "x": 557,
+            "y": 185,
+            "width": 172,
+            "height": 100
+          }
+        },
+        {
+          "label": "React",
+          "box": {
+            "x": 659,
+            "y": 45,
+            "width": 162,
+            "height": 100
+          }
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "path": "test-runs\\CLOSURE-EVENT-C-source-preparation-batch-20261107T102910Z-ac5ac82b\\artifacts\\oracle\\CLOSURE-EVENT-chain-revisit.json",
+          "sha256": "af978bc4dbd23cac61bf50d766f3357066a859341364b17be434a1658fe80264",
+          "bytes": 41853
+        },
+        {
+          "path": "test-runs\\CLOSURE-EVENT-C-source-preparation-batch-20261107T102910Z-ac5ac82b\\artifacts\\oracle\\CLOSURE-EVENT-chain-revisit.svg",
+          "sha256": "25c5c75417aa7565d0e846ec174bd51f633ec64e94aa660ae059e99952905d1d",
+          "bytes": 6484
+        },
+        {
+          "path": "test-runs\\CLOSURE-EVENT-C-source-preparation-batch-20261107T102910Z-ac5ac82b\\artifacts\\oracle\\CLOSURE-EVENT-chain-revisit.png",
+          "sha256": "c1e04ff745e1babfdb29fed2b19a2cc972341780cc5b08c97137fba33b434ecd",
+          "bytes": 14519
+        }
+      ]
+    },
+    {
+      "id": "CLOSURE-EVENT-data",
+      "rectPaintCount": 4,
+      "cards": [
+        {
+          "label": "Page\"count\":\u00a02",
+          "box": {
+            "x": 280.0019836425781,
+            "y": 44.99803161621094,
+            "width": 256.9887390136719,
+            "height": 123.99456787109375
+          }
+        },
+        {
+          "label": "Submit\"id\":",
+          "box": {
+            "x": 466.9938049316406,
+            "y": 208.99085998535156,
+            "width": 247.32247924804688,
+            "height": 102.99549865722656
+          }
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "path": "test-runs\\CLOSURE-EVENT-C-source-preparation-batch-20261107T102910Z-ac5ac82b\\artifacts\\oracle\\CLOSURE-EVENT-data.json",
+          "sha256": "10b32a8e3389549b16d7c3c723dcfd0d76e8a3269f71088b4c6f442bcfb26479",
+          "bytes": 36841
+        },
+        {
+          "path": "test-runs\\CLOSURE-EVENT-C-source-preparation-batch-20261107T102910Z-ac5ac82b\\artifacts\\oracle\\CLOSURE-EVENT-data.svg",
+          "sha256": "c64f6a0f92f664dc8ce9a03a197ee95f0fdc98c1843f84206b8585aa47235e92",
+          "bytes": 4568
+        },
+        {
+          "path": "test-runs\\CLOSURE-EVENT-C-source-preparation-batch-20261107T102910Z-ac5ac82b\\artifacts\\oracle\\CLOSURE-EVENT-data.png",
+          "sha256": "a1a8c6039c48b85f73d23b9cdc4151dabc8ddb5ca8ca08f6b4833f4866260e93",
+          "bytes": 9140
+        }
+      ]
+    },
+    {
+      "id": "CLOSURE-EVENT-reset-multi",
+      "rectPaintCount": 7,
+      "cards": [
+        {
+          "label": "Place",
+          "box": {
+            "x": 280,
+            "y": 185,
+            "width": 160,
+            "height": 100
+          }
+        },
+        {
+          "label": "Pay",
+          "box": {
+            "x": 450,
+            "y": 185,
+            "width": 146,
+            "height": 100
+          }
+        },
+        {
+          "label": "Placed",
+          "box": {
+            "x": 526,
+            "y": 325,
+            "width": 170,
+            "height": 100
+          }
+        },
+        {
+          "label": "Empty",
+          "box": {
+            "x": 626,
+            "y": 45,
+            "width": 169,
+            "height": 100
+          }
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "path": "test-runs\\CLOSURE-EVENT-C-source-preparation-batch-20261107T102910Z-ac5ac82b\\artifacts\\oracle\\CLOSURE-EVENT-reset-multi.json",
+          "sha256": "012e919795e33946404b72ad4aaa5a34887ab5e3719118b35f5d1377f2ec4b70",
+          "bytes": 39726
+        },
+        {
+          "path": "test-runs\\CLOSURE-EVENT-C-source-preparation-batch-20261107T102910Z-ac5ac82b\\artifacts\\oracle\\CLOSURE-EVENT-reset-multi.svg",
+          "sha256": "bf2969ccf2b1a1aee95da5abf9804391578a8bf6ee151d8a34971dcd78300ea0",
+          "bytes": 5663
+        },
+        {
+          "path": "test-runs\\CLOSURE-EVENT-C-source-preparation-batch-20261107T102910Z-ac5ac82b\\artifacts\\oracle\\CLOSURE-EVENT-reset-multi.png",
+          "sha256": "29a5985e5be5a7cdd74fb952edd940236a389edb52385ef3811361673f7b6e07",
+          "bytes": 12218
+        }
+      ]
+    },
+    {
+      "rectPaintCount": 4,
+      "cards": [
+        {
+          "label": "Page\"count\":\u00a02,\n\u00a0\"items\":\u00a0[\"alpha\",\u00a0\"beta\"],\n\u00a0\"status\":\"ready\"",
+          "box": {
+            "x": 280.00531005859375,
+            "y": 44.998138427734375,
+            "width": 429.98223876953125,
+            "height": 144.99400329589844
+          },
+          "sourceTextContained": true,
+          "caption": "Page",
+          "textWrapper": {
+            "x": 290.0048828125,
+            "y": 54.99772644042969,
+            "width": 409.98309326171875,
+            "height": 124.99482727050781
+          },
+          "codeInset": 10
+        },
+        {
+          "label": "Submit\"id\":",
+          "box": {
+            "x": 639.9904174804688,
+            "y": 229.99049377441406,
+            "width": 247.3231201171875,
+            "height": 102.99574279785156
+          },
+          "sourceTextContained": true,
+          "caption": "Submit",
+          "textWrapper": {
+            "x": 649.989990234375,
+            "y": 239.99008178710938,
+            "width": 227.3187255859375,
+            "height": 82.99655151367188
+          },
+          "codeInset": 10
+        }
+      ],
+      "id": "CLOSURE-EVENT-MULTILINE-JSON-AUDIT",
+      "rawEvidence": [
+        {
+          "path": "test-runs\\CLOSURE-EVENT-C-RAWHTML-source-batch-20261107T104857Z-dd9eb14a\\artifacts\\oracle\\CLOSURE-EVENT-MULTILINE-JSON-AUDIT.json",
+          "bytes": 36927,
+          "sha256": "dcd8a58ad6a873a94e3a026f72d9cde2e3cd6e48512e280d4a88dc86fbf064b8"
+        },
+        {
+          "path": "test-runs\\CLOSURE-EVENT-C-RAWHTML-source-batch-20261107T104857Z-dd9eb14a\\artifacts\\oracle\\CLOSURE-EVENT-MULTILINE-JSON-AUDIT.svg",
+          "bytes": 5135,
+          "sha256": "e97c6999a812d6a34d95aa1dedc61e0e70866576d8a281915d6099c4e3d9c017"
+        },
+        {
+          "path": "test-runs\\CLOSURE-EVENT-C-RAWHTML-source-batch-20261107T104857Z-dd9eb14a\\artifacts\\oracle\\CLOSURE-EVENT-MULTILINE-JSON-AUDIT.png",
+          "bytes": 11289,
+          "sha256": "bcaf1bd2fa69193b0b3da62a2a2e52f4de043442182cf6745402303476d1daa0"
+        }
+      ]
+    },
+    {
+      "rectPaintCount": 4,
+      "cards": [
+        {
+          "label": "Page\"literal\":\u00a0\"left\\nright\",\n\u00a0\"math\":\u00a0\"$$x$$\",\n\u00a0\"entity\":\"&\"",
+          "box": {
+            "x": 280.00506591796875,
+            "y": 44.998138427734375,
+            "width": 417.98272705078125,
+            "height": 144.99400329589844
+          },
+          "sourceTextContained": true,
+          "caption": "Page",
+          "textWrapper": {
+            "x": 290.004638671875,
+            "y": 54.99772644042969,
+            "width": 397.98358154296875,
+            "height": 124.99482727050781
+          },
+          "codeInset": 10
+        },
+        {
+          "label": "Submit\"id\":",
+          "box": {
+            "x": 627.9906616210938,
+            "y": 229.99049377441406,
+            "width": 247.3231201171875,
+            "height": 102.99574279785156
+          },
+          "sourceTextContained": true,
+          "caption": "Submit",
+          "textWrapper": {
+            "x": 637.990234375,
+            "y": 239.99008178710938,
+            "width": 227.3187255859375,
+            "height": 82.99655151367188
+          },
+          "codeInset": 10
+        }
+      ],
+      "id": "CLOSURE-EVENT-LITERAL-DATA-HTML",
+      "rawEvidence": [
+        {
+          "path": "test-runs\\CLOSURE-EVENT-C-RAWHTML-source-batch-20261107T104857Z-dd9eb14a\\artifacts\\oracle\\CLOSURE-EVENT-LITERAL-DATA-HTML.json",
+          "bytes": 36935,
+          "sha256": "59f308b9f2a7c2d71f8a10d099167a485cee9ed941909efa9355e7236e566cec"
+        },
+        {
+          "path": "test-runs\\CLOSURE-EVENT-C-RAWHTML-source-batch-20261107T104857Z-dd9eb14a\\artifacts\\oracle\\CLOSURE-EVENT-LITERAL-DATA-HTML.svg",
+          "bytes": 5040,
+          "sha256": "406e83702ba8219c63072205cfe1a284185413d09fc090d49ee137501220208a"
+        },
+        {
+          "path": "test-runs\\CLOSURE-EVENT-C-RAWHTML-source-batch-20261107T104857Z-dd9eb14a\\artifacts\\oracle\\CLOSURE-EVENT-LITERAL-DATA-HTML.png",
+          "bytes": 11478,
+          "sha256": "7c5ed2f433deae5ad3dc8de5b3aa57a864e53600c6a7f01b0f18fdb112ccf8f5"
+        }
+      ]
+    }
+  ]
+}

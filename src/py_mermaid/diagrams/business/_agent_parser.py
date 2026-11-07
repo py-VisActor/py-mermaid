@@ -16,6 +16,12 @@ class AgentParser(_Parser):
     def __init__(self,*args,**kwargs):
         super().__init__(*args,**kwargs);self.global_nodes=set();self.connectors=set();self.global_blocks=set();self.pending_metadata={};self.diagnostics=[];self.kinds={}
 
+    def _drop_collapsed_selfloop(self,edge,source,target,redirects):
+        # agentflowDb.getData issue #58: only distinct authored endpoints
+        # create an artificial selfloop when collapsed. An authored A->A
+        # remains a real edge on the visible collapsed ancestor.
+        return source==target and edge.source!=edge.target
+
     def node(self):
         ident=super().node()
         if ident=='connectors' and ident not in self.connectors and ident not in self.groups:self.nodes.pop(ident,None)
@@ -136,7 +142,12 @@ class AgentParser(_Parser):
                 self.diagnostics.append(f'SHAPE_UNSUPPORTED: {ident}: shape "{shape}" is not supported, using "roundedRect"');shape='roundedRect'
             self.kinds[ident]='connector' if ident in self.connectors else KIND.get(shape,'task')
             self.nodes[ident]=replace(node,shape=shape)
-        return super().finish()
+        graph=super().finish()
+        # Source agentflowDb forces the actual container kind onto collapsed
+        # nodes, overriding opaque authored metadata of the same name.
+        return replace(graph,nodes=tuple(replace(node,metadata=freeze_value({
+            **thaw_value(node.metadata),'containerType':'flow'}))
+            if node.shape=='collapsedGroup' else node for node in graph.nodes))
 
     def parse(self):
         self.separators();m=re.match(r'agentflow-beta(?=[\s;]|$)',self.text[self.cursor:])

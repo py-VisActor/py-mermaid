@@ -1,0 +1,68 @@
+{
+  "schema": "py-mermaid-change-receipt/v1",
+  "taskId": "G03-root",
+  "baselineSourceTreeSha256": "a6d05b852e156aac3227d839f1521f3e9a71a808ba8b701ad33b1443e993f2a0",
+  "status": "targeted_repair_verified_final_union_pending",
+  "firstFailureRun": "G03-first-batch-20261106T080449Z-54f22284",
+  "repaired": [
+    "Source readAppearance look fallthrough and existing scoped appearance synchronization",
+    "Initialize unknown root theme normalization, legacy font-family bridge and updateCurrentConfig palette rebuild guard including null sentinel",
+    "Independent inherited visibility versus ancestor alpha; native text/shapes/assets/inline SVG paint",
+    "Explicit flowchart-elk parsed model identity"
+  ],
+  "targetedRun": "G03-record-20261106T081102Z-1ba47a44",
+  "relatedRun": "G03-related-batch-20261106T081143Z-84aac52c",
+  "newVisualRun": "G03-new-visual-batch-20261106T081437Z-88a473e9",
+  "additionalOriginalPaletteRun": "G02-palette-source-batch-20261106T081645Z-bd4d9a38",
+  "probeCorrections": [
+    {
+      "run": "G03-record-20261106T081013Z-85508f50",
+      "reason": "New synchronization test incorrectly required absent class.layout to be invented. config.ts only synchronizes existing section keys; test now asserts both existing-key synchronization and absence preservation."
+    },
+    {
+      "run": "G03-related-batch-20261106T081131Z-9a03abb6",
+      "reason": "Command plan step ID mistakenly contained slash; corrected before successful unchanged relevant tests."
+    }
+  ],
+  "legacyExpectationCorrection": {
+    "path": "tests/bulk/shared/test_configuration.py",
+    "reason": "Old error test expected unknown look to raise; fixed config.ts and direct original capture prove fallback to valid same/lower layer, so remove only that incorrect error expectation and preserve explicit error/Dagre negative cases."
+  },
+  "productFiles": {
+    "src/py_mermaid/runtime/configuration.py": {
+      "sha256": "3c85b5699abe6bb0232691c316591dcdfd08da23b2753b07c4995791367b1329",
+      "bytes": 4696
+    },
+    "src/py_mermaid/diagrams/flowchart/parser.py": {
+      "sha256": "d62f2e000eb75f412e0108d97a5b3507cc2cd68d85c6235e18c5fa3e7f278596",
+      "bytes": 43827
+    },
+    "src/py_mermaid/model/flowchart.py": {
+      "sha256": "872c42d9e65de334830501542f3c19255dedfcd8a1d52a238c3b2ef9434b3135",
+      "bytes": 14514
+    },
+    "src/py_mermaid/rendering/styles/flowchart.py": {
+      "sha256": "bf211c385896eba700d1d8e5793da85d66f6bcc440edb87f65e11322e9ff21b9",
+      "bytes": 47836
+    },
+    "src/py_mermaid/rendering/labels/rich.py": {
+      "sha256": "a179ed57ef8f41419dc33c95e3715731ee2ab28e0c4773af28faf1b0ee409079",
+      "bytes": 33895
+    },
+    "src/py_mermaid/rendering/skia/session.py": {
+      "sha256": "98982da35abee02eaff45f22ebd869ec1b90bba7dfc73b4d7d8f503c6b74a65f",
+      "bytes": 68552
+    },
+    "src/py_mermaid/rendering/skia/scene.py": {
+      "sha256": "bd6adb9a5da25cc235f3c086045d1b483b0f070f10514dbe3b4974b9c568b201",
+      "bytes": 34457
+    },
+    "src/py_mermaid/resources/svg.py": {
+      "sha256": "4ac747b56f076511b2c5272b065980d99e3c6fd0471dbdd23673c8e9c270ec2c",
+      "bytes": 4485
+    }
+  },
+  "installationVerification": false,
+  "publication": false,
+  "currentProductCandidate": "2b9105e2a7279070fb98ac685560b51001d597c9ef059afa23f23bf78c005700"
+}

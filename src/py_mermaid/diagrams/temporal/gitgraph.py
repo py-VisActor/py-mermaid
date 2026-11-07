@@ -1,5 +1,5 @@
 """GitGraph Langium semantics, immutable commit DAG and dedicated lanes."""
-from dataclasses import dataclass
+from dataclasses import dataclass,replace
 import math,re,secrets
 from ...runtime.common import make_diagram,config_dict,error
 from ..charts._syntax import statements,common_statement,theme,number,palette,tokens
@@ -113,6 +113,16 @@ async def build(diagram,p):
         if color_theme:return theme(c,'nodeBorder','#333') if idx==0 else slots[idx%len(slots)] if slots else theme(c,'nodeBorder','#333')
         if redux or neo and idx==0:return theme(c,'nodeBorder','#333')
         return colors[idx]
+    # SVG parent .commit-bullets supplies inherited fill; CHERRY_PICK
+    # deliberately has no branch commitN class. Resolve the real source
+    # classes/ancestor through public CSS before painting each component.
+    cherry_parent=p.painter.style(('commit-bullets',),tag='g',base={
+        'fill':theme(c,'nodeBorder' if redux or neo else 'textColor','#333'),'stroke':'none','stroke_width':1})
+    def cherry_style(commit,tag,identifier,**attributes):
+        inherited=replace(cherry_parent,important_properties=(),**attributes)
+        return p.painter.style(('commit',commit.id,'commit-cherry-pick'),tag=tag,
+            id=identifier,base=inherited,inherited=cherry_parent,
+            ancestors=(('g',('commit-bullets',),''),))
     if cfg.get('showBranches',True):
         for name,order in m.branches:
             index=indices[name]
@@ -134,17 +144,25 @@ async def build(diagram,p):
             path,matrix,name=edge_path(byid[parent],commit,pos,m.commits,m.direction,lanes);ident='edge-'+parent+'-'+commit.id;p.extra[ident]=('arrow','arrow'+str(indices[name]));p.path(path,fill='none',stroke=branch_color(name),line_width=number(theme(c,'strokeWidth',2),2) if redux else 8,transform=matrix,id=ident,role='edge')
     for commit in sorted(m.commits,key=lambda v:v.seq,reverse=m.direction=='BT'):
         x,y=pos[commit.id];color=branch_color(commit.branch);kind=commit.custom_type or commit.type;inner=theme(c,'mainBkg','#fff') if redux or neo else theme(c,'primaryColor','#ececff');r=7 if redux else 10
-        slot=indices[commit.branch];p.extra[commit.id]=('commit','commit'+str(slot)) if kind!='HIGHLIGHT' else ('commit-highlight','commit-highlight'+str(slot),'commit-highlight-outer')
+        slot=indices[commit.branch];p.extra[commit.id]=('commit',commit.id,'commit-cherry-pick') if kind=='CHERRY_PICK' else ('commit','commit'+str(slot)) if kind!='HIGHLIGHT' else ('commit-highlight','commit-highlight'+str(slot),'commit-highlight-outer')
         p.extra[commit.id+'-inner']=('commit-highlight-inner',);p.extra[commit.id+'-merge']=('commit-merge',);p.extra[commit.id+'-reverse']=('commit-reverse',);p.extra[commit.id+'-label-bg']=('commit-label-bkg',)
         if kind=='HIGHLIGHT':
             p.rect(x-r,y-r,2*r,2*r,fill=color,stroke=color,id=commit.id);rr=4 if redux else 6;p.rect(x-rr,y-rr,rr*2,rr*2,fill=inner,stroke=inner,id=commit.id+'-inner')
+        elif kind=='CHERRY_PICK':
+            p.ellipse(x,y,r,r,style=cherry_style(commit,'circle',commit.id),id=commit.id,role='commit')
+            component_color='#000' if dark else '#fff'
+            for side in (-1,1):
+                circle_id=commit.id+'-cherry-'+str(side)
+                p.ellipse(x+side*3,y+2,2.5 if redux else 2.75,2.5 if redux else 2.75,
+                    style=cherry_style(commit,'circle',circle_id,fill=component_color),id=circle_id)
+                stem_id=commit.id+'-cherry-stem-'+str(side)
+                p.line(x+side*3,y+1,x,y-5,
+                    style=cherry_style(commit,'line',stem_id,stroke=component_color),id=stem_id)
         else:
             p.ellipse(x,y,r,r,fill=color,stroke=color,line_width=2,id=commit.id,role='commit')
             if kind=='MERGE':p.ellipse(x,y,5 if redux else 6,5 if redux else 6,fill=inner,stroke=inner,id=commit.id+'-merge')
             elif kind=='REVERSE':
                 rr=4 if redux else 5;p.path(f'M{x-rr:g},{y-rr:g}L{x+rr:g},{y+rr:g}M{x-rr:g},{y+rr:g}L{x+rr:g},{y-rr:g}',stroke=inner,line_width=number(theme(c,'strokeWidth',1),1) if redux or neo else 3,id=commit.id+'-reverse')
-            elif kind=='CHERRY_PICK':
-                for side in (-1,1):p.ellipse(x+side*3,y+2,2.5 if redux else 2.75,2.5 if redux else 2.75,fill='#000' if dark else '#fff',stroke='none',id=commit.id+'-cherry-'+str(side));p.line(x+side*3,y+1,x,y-5,stroke='#000' if dark else '#fff',id=commit.id+'-cherry-stem-'+str(side))
         if commit.type!='CHERRY_PICK' and (commit.type!='MERGE' or commit.custom_id) and cfg.get('showCommitLabel',True):
             label=p.measure(commit.id,size=number(theme(c,'commitLabelFontSize',10),10),html=False);vertical=m.direction in ('TB','BT');bx=x-label.width-21 if vertical else x-label.width/2-2;by=y-12 if vertical else y+13.5;tx=x-label.width-16 if vertical else x-label.width/2;ty=y+label.height-12-label.ascent if vertical else y+25-label.ascent
             if not(redux or neo):

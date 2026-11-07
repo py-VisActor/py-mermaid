@@ -1,0 +1,2022 @@
+{
+  "schema": "py-mermaid-vchart-dsl-source-audit/v1",
+  "status": "SOURCE_READING_NOT_EXECUTION",
+  "provider": "py-visactor-vchart==0.1.1",
+  "sourceBase": "../py-vchart/src/py_vchart",
+  "scope": "Root heavy family source evidence; compiled values must delegate unchanged to the same public provider",
+  "files": {
+    "chart/word_cloud.py": {
+      "sha256": "b228b46e9b64b521ca2aeb15fc7e5187670309e60a68704400d449e64a6f6c51",
+      "bytes": 7063,
+      "functions": [
+        {
+          "symbol": "place",
+          "startLine": 20,
+          "endLine": 40
+        },
+        {
+          "symbol": "render_words",
+          "startLine": 43,
+          "endLine": 198
+        }
+      ],
+      "keyValidationExpressions": [
+        {
+          "line": 44,
+          "expression": "check_keys(\n        spec,\n        DYNAMIC\n        | {\n            \"type\",\n            \"width\",\n            \"height\",\n            \"padding\",\n            \"data\",\n            \"background\",\n            \"nameField\",\n            \"fillingWord\",\n            \"maskShape\",\n            \"wordMask\",\n            \"wordCloudShapeConfig\",\n            \"valueField\",\n            \"fontSizeRange\",\n            \"random\",\n            \"wordCloudConfig\",\n            \"word\",\n            \"rotateAngles\",\n        },\n        \"wordCloud\",\n    )"
+        },
+        {
+          "line": 84,
+          "expression": "check_keys(word, {\"style\", \"padding\"}, \"word\")"
+        },
+        {
+          "line": 86,
+          "expression": "check_keys(style, {\"fontFamily\", \"fontWeight\", \"fill\"}, \"word.style\")"
+        }
+      ],
+      "explicitRaises": [
+        {
+          "line": 76,
+          "expression": "raise ValueError(\n            \"wordCloud requires deterministic random=false and layoutMode=fast\"\n        )"
+        },
+        {
+          "line": 81,
+          "expression": "raise ValueError(\"wordCloud requires a single fixed rotation\")"
+        },
+        {
+          "line": 104,
+          "expression": "raise ValueError(\"Shape masks require the default static layout\")"
+        },
+        {
+          "line": 164,
+          "expression": "raise ValueError(\"stepFactor must be positive\")"
+        }
+      ],
+      "conditionExpressions": [
+        {
+          "line": 37,
+          "expression": "left < 0 or top < 0 or left + w > width or top + h > height"
+        },
+        {
+          "line": 70,
+          "expression": "isinstance(mask, str) and mask in FAST_SHAPES"
+        },
+        {
+          "line": 72,
+          "expression": "mask is None and (\n        spec.get(\"random\") is not False\n        or spec.get(\"wordCloudConfig\") != {\"layoutMode\": \"fast\"}\n    )"
+        },
+        {
+          "line": 80,
+          "expression": "len(angles) != 1"
+        },
+        {
+          "line": 97,
+          "expression": "mask is not None"
+        },
+        {
+          "line": 121,
+          "expression": "board"
+        },
+        {
+          "line": 189,
+          "expression": "board"
+        },
+        {
+          "line": 30,
+          "expression": "radius > hypot(width, height) / 2"
+        },
+        {
+          "line": 69,
+          "expression": "isinstance(mask, str) and mask in FAST_SHAPES"
+        },
+        {
+          "line": 100,
+          "expression": "spec.get(\"wordCloudConfig\", {}).get(\"layoutMode\", \"default\") != \"default\"\n            or options.get(\"layoutMode\", \"default\") != \"default\""
+        },
+        {
+          "line": 106,
+          "expression": "isinstance(mask, dict) and spec.get(\"wordMask\", {}).get(\"visible\")"
+        },
+        {
+          "line": 113,
+          "expression": "sizes"
+        },
+        {
+          "line": 161,
+          "expression": "board"
+        },
+        {
+          "line": 184,
+          "expression": "board"
+        },
+        {
+          "line": 186,
+          "expression": "pos is None"
+        },
+        {
+          "line": 32,
+          "expression": "index % 2 == 0"
+        },
+        {
+          "line": 89,
+          "expression": "\"valueField\" in spec"
+        },
+        {
+          "line": 115,
+          "expression": "hi > lo"
+        },
+        {
+          "line": 163,
+          "expression": "step <= 0"
+        },
+        {
+          "line": 131,
+          "expression": "rotation == 0"
+        },
+        {
+          "line": 150,
+          "expression": "\"valueField\" in spec"
+        },
+        {
+          "line": 166,
+          "expression": "regions[i]"
+        },
+        {
+          "line": 150,
+          "expression": "hi == lo"
+        }
+      ]
+    },
+    "chart/statplots.py": {
+      "sha256": "610a4a7764b9239f8c8850c89b87da1614f7c734f5703751d2d30e11cd3da73b",
+      "bytes": 25439,
+      "functions": [
+        {
+          "symbol": "Plot",
+          "startLine": 18,
+          "endLine": 27
+        },
+        {
+          "symbol": "density_curve",
+          "startLine": 30,
+          "endLine": 48
+        },
+        {
+          "symbol": "summary",
+          "startLine": 51,
+          "endLine": 243
+        },
+        {
+          "symbol": "axis_for",
+          "startLine": 257,
+          "endLine": 270
+        },
+        {
+          "symbol": "draw_legend",
+          "startLine": 276,
+          "endLine": 295
+        },
+        {
+          "symbol": "statistical_frame",
+          "startLine": 298,
+          "endLine": 365
+        },
+        {
+          "symbol": "render_stat",
+          "startLine": 368,
+          "endLine": 517
+        }
+      ],
+      "keyValidationExpressions": [
+        {
+          "line": 34,
+          "expression": "check_keys(estimation,{\"bandwidth\",\"bandwidthAdjust\"},\"kdePlot.estimation\")"
+        },
+        {
+          "line": 35,
+          "expression": "check_keys(sampling,{\"points\",\"cut\"},\"kdePlot.sampling\")"
+        },
+        {
+          "line": 370,
+          "expression": "check_keys(spec,{\"type\",\"data\",\"width\",\"height\"}|OPTIONS[kind],kind)"
+        },
+        {
+          "line": 375,
+          "expression": "check_keys(spec[\"binning\"],{\"binCount\"},kind+\".binning\")"
+        }
+      ],
+      "explicitRaises": [
+        {
+          "line": 42,
+          "expression": "raise ValueError(\"Invalid KDE bandwidth or sampling range\")"
+        },
+        {
+          "line": 45,
+          "expression": "raise ValueError(\"KDE requires a nonempty sampling interval\")"
+        },
+        {
+          "line": 230,
+          "expression": "raise ValueError(\"classification requires boolean outcomes\")"
+        },
+        {
+          "line": 234,
+          "expression": "raise ValueError(\"classification requires both classes\")"
+        },
+        {
+          "line": 308,
+          "expression": "raise ValueError(\"Statistical plot requires measured values\")"
+        },
+        {
+          "line": 328,
+          "expression": "raise ValueError(\"Statistical canvas too small\")"
+        },
+        {
+          "line": 373,
+          "expression": "raise ValueError(f\"{kind} requires a nonempty single series of records\")"
+        },
+        {
+          "line": 79,
+          "expression": "raise ValueError(\"timeSeriesPlot requires observations or estimates\")"
+        },
+        {
+          "line": 101,
+          "expression": "raise ValueError(\"Invalid autocorrelation maxLag\")"
+        },
+        {
+          "line": 106,
+          "expression": "raise ValueError(\"Autocorrelation requires varying observations\")"
+        },
+        {
+          "line": 140,
+          "expression": "raise ValueError(\"pairedComparisonPlot requires two ordered categories\")"
+        },
+        {
+          "line": 204,
+          "expression": "raise ValueError(\"Invalid histogram binCount\")"
+        },
+        {
+          "line": 217,
+          "expression": "raise ValueError(\"Invalid calibration binCount\")"
+        },
+        {
+          "line": 69,
+          "expression": "raise ValueError(\"learningCurve requires folds or summaries\")"
+        },
+        {
+          "line": 84,
+          "expression": "raise ValueError(\"timeSeriesPlot requires zoned times without interval bands\")"
+        },
+        {
+          "line": 130,
+          "expression": "raise ValueError(\"residualPlot requires a supported input\")"
+        },
+        {
+          "line": 180,
+          "expression": "raise ValueError(\"embeddingPlot requires a supported method\")"
+        },
+        {
+          "line": 223,
+          "expression": "raise ValueError(\"calibration requires probabilities and boolean outcomes\")"
+        },
+        {
+          "line": 92,
+          "expression": "raise ValueError(\"timeSeriesPlot aggregated repeats require errorBar=false\")"
+        }
+      ],
+      "conditionExpressions": [
+        {
+          "line": 37,
+          "expression": "h == \"scott\""
+        },
+        {
+          "line": 41,
+          "expression": "not isinstance(h,(int,float)) or h<=0 or type(n) is not int or not 2<=n<=4096 or cut<0"
+        },
+        {
+          "line": 44,
+          "expression": "lo>=hi"
+        },
+        {
+          "line": 53,
+          "expression": "kind == \"learningCurve\""
+        },
+        {
+          "line": 72,
+          "expression": "kind==\"seasonalPlot\""
+        },
+        {
+          "line": 77,
+          "expression": "kind == \"timeSeriesPlot\""
+        },
+        {
+          "line": 96,
+          "expression": "kind == \"autocorrelationPlot\""
+        },
+        {
+          "line": 117,
+          "expression": "kind == \"residualPlot\""
+        },
+        {
+          "line": 133,
+          "expression": "kind == \"kdePlot\""
+        },
+        {
+          "line": 137,
+          "expression": "kind == \"pairedComparisonPlot\""
+        },
+        {
+          "line": 143,
+          "expression": "kind == \"violinPlot\""
+        },
+        {
+          "line": 151,
+          "expression": "kind == \"boxPlot\""
+        },
+        {
+          "line": 168,
+          "expression": "kind == \"countPlot\""
+        },
+        {
+          "line": 173,
+          "expression": "kind == \"screePlot\""
+        },
+        {
+          "line": 176,
+          "expression": "kind in (\"scatterPlot\",\"embeddingPlot\")"
+        },
+        {
+          "line": 187,
+          "expression": "kind == \"stripPlot\""
+        },
+        {
+          "line": 189,
+          "expression": "kind in (\"ecdfPlot\",\"qqPlot\",\"histogram\")"
+        },
+        {
+          "line": 214,
+          "expression": "kind == \"calibrationCurve\""
+        },
+        {
+          "line": 229,
+          "expression": "any(type(label) is not bool for _,label in scores)"
+        },
+        {
+          "line": 233,
+          "expression": "not positives or not negatives"
+        },
+        {
+          "line": 258,
+          "expression": "category"
+        },
+        {
+          "line": 260,
+          "expression": "limits"
+        },
+        {
+          "line": 263,
+          "expression": "zero"
+        },
+        {
+          "line": 265,
+          "expression": "lo == hi"
+        },
+        {
+          "line": 300,
+          "expression": "plot.step == \"after\""
+        },
+        {
+          "line": 303,
+          "expression": "plot.mark==\"acf\""
+        },
+        {
+          "line": 307,
+          "expression": "not ys"
+        },
+        {
+          "line": 309,
+          "expression": "plot.mark==\"groups\""
+        },
+        {
+          "line": 311,
+          "expression": "plot.mark==\"acf\""
+        },
+        {
+          "line": 313,
+          "expression": "plot.mark==\"box\""
+        },
+        {
+          "line": 318,
+          "expression": "not plot.titles[0]"
+        },
+        {
+          "line": 322,
+          "expression": "time_axis"
+        },
+        {
+          "line": 327,
+          "expression": "min(w,h)<=0"
+        },
+        {
+          "line": 332,
+          "expression": "plot.legend"
+        },
+        {
+          "line": 340,
+          "expression": "plot.category or time_axis"
+        },
+        {
+          "line": 360,
+          "expression": "plot.titles[1].isascii()"
+        },
+        {
+          "line": 372,
+          "expression": "not isinstance(rows,list) or not rows or not all(isinstance(r,dict) and \"series\" not in r for r in rows)"
+        },
+        {
+          "line": 374,
+          "expression": "\"binning\" in spec"
+        },
+        {
+          "line": 381,
+          "expression": "plot.mark in (\"bar\",\"bins\")"
+        },
+        {
+          "line": 398,
+          "expression": "plot.mark in (\"line\",\"curve\")"
+        },
+        {
+          "line": 406,
+          "expression": "plot.mark == \"groups\""
+        },
+        {
+          "line": 430,
+          "expression": "plot.mark == \"time\""
+        },
+        {
+          "line": 442,
+          "expression": "plot.mark == \"acf\""
+        },
+        {
+          "line": 460,
+          "expression": "plot.mark == \"paired\""
+        },
+        {
+          "line": 474,
+          "expression": "plot.mark == \"violin\""
+        },
+        {
+          "line": 484,
+          "expression": "plot.mark == \"box\""
+        },
+        {
+          "line": 501,
+          "expression": "plot.mark in (\"scatter\",\"curve\")"
+        },
+        {
+          "line": 508,
+          "expression": "plot.reference"
+        },
+        {
+          "line": 56,
+          "expression": "mode==\"folds\""
+        },
+        {
+          "line": 78,
+          "expression": "spec.get(\"input\") not in (\"observations\",\"estimates\")"
+        },
+        {
+          "line": 87,
+          "expression": "spec.get(\"input\")==\"observations\" and spec.get(\"estimator\") is not False"
+        },
+        {
+          "line": 100,
+          "expression": "not 1<=lag<n or type(lag) is not int"
+        },
+        {
+          "line": 105,
+          "expression": "not variance"
+        },
+        {
+          "line": 119,
+          "expression": "mode == \"observations\""
+        },
+        {
+          "line": 139,
+          "expression": "not isinstance(order,list) or len(order)!=2 or order[0]==order[1]"
+        },
+        {
+          "line": 178,
+          "expression": "kind == \"embeddingPlot\""
+        },
+        {
+          "line": 192,
+          "expression": "kind == \"qqPlot\""
+        },
+        {
+          "line": 197,
+          "expression": "kind == \"ecdfPlot\""
+        },
+        {
+          "line": 203,
+          "expression": "type(n) is not int or not 1 <= n <= 1000"
+        },
+        {
+          "line": 205,
+          "expression": "hi == lo"
+        },
+        {
+          "line": 216,
+          "expression": "type(n) is not int or not 1 <= n <= 1000"
+        },
+        {
+          "line": 282,
+          "expression": "shape==\"circle\""
+        },
+        {
+          "line": 325,
+          "expression": "plot.legend"
+        },
+        {
+          "line": 344,
+          "expression": "plot.category or time_axis"
+        },
+        {
+          "line": 347,
+          "expression": "not (plot.category or time_axis)"
+        },
+        {
+          "line": 409,
+          "expression": "has_bands"
+        },
+        {
+          "line": 444,
+          "expression": "plot.points[-1][2]"
+        },
+        {
+          "line": 511,
+          "expression": "plot.reference == \"zero\""
+        },
+        {
+          "line": 38,
+          "expression": "len(values)>1"
+        },
+        {
+          "line": 66,
+          "expression": "mode==\"summaries\""
+        },
+        {
+          "line": 83,
+          "expression": "dt.tzinfo is None or \"lower\" in row or \"upper\" in row"
+        },
+        {
+          "line": 108,
+          "expression": "level is not False"
+        },
+        {
+          "line": 114,
+          "expression": "i"
+        },
+        {
+          "line": 125,
+          "expression": "mode in (\"predictions\",\"residuals\")"
+        },
+        {
+          "line": 179,
+          "expression": "spec.get(\"method\") not in (\"pca\",\"tsne\",\"umap\")"
+        },
+        {
+          "line": 222,
+          "expression": "not 0 <= p <= 1 or type(r.get(\"actual\")) is not bool"
+        },
+        {
+          "line": 242,
+          "expression": "roc"
+        },
+        {
+          "line": 317,
+          "expression": "plot.category"
+        },
+        {
+          "line": 330,
+          "expression": "plot.category"
+        },
+        {
+          "line": 337,
+          "expression": "tick==y.domain[1]"
+        },
+        {
+          "line": 338,
+          "expression": "base==\"middle\""
+        },
+        {
+          "line": 349,
+          "expression": "time_axis"
+        },
+        {
+          "line": 384,
+          "expression": "plot.category"
+        },
+        {
+          "line": 390,
+          "expression": "plot.mark == \"bins\""
+        },
+        {
+          "line": 394,
+          "expression": "plot.mark == \"bins\""
+        },
+        {
+          "line": 401,
+          "expression": "path and plot.step"
+        },
+        {
+          "line": 416,
+          "expression": "has_bands"
+        },
+        {
+          "line": 433,
+          "expression": "v is not None"
+        },
+        {
+          "line": 503,
+          "expression": "plot.mark==\"scatter\""
+        },
+        {
+          "line": 91,
+          "expression": "len(vs)>1 and spec.get(\"errorBar\") is not False"
+        },
+        {
+          "line": 112,
+          "expression": "i"
+        },
+        {
+          "line": 184,
+          "expression": "\"explainedVarianceRatio\" in dim"
+        },
+        {
+          "line": 198,
+          "expression": "hi>lo"
+        },
+        {
+          "line": 235,
+          "expression": "roc"
+        },
+        {
+          "line": 241,
+          "expression": "roc"
+        },
+        {
+          "line": 243,
+          "expression": "roc"
+        },
+        {
+          "line": 243,
+          "expression": "roc"
+        },
+        {
+          "line": 285,
+          "expression": "shape==\"rect\""
+        },
+        {
+          "line": 304,
+          "expression": "plot.points[-1][2]"
+        },
+        {
+          "line": 333,
+          "expression": "any(p[3] is not None for p in plot.points)"
+        },
+        {
+          "line": 337,
+          "expression": "tick==y.domain[0]"
+        },
+        {
+          "line": 348,
+          "expression": "tick==x.domain[0]"
+        },
+        {
+          "line": 421,
+          "expression": "not defined"
+        },
+        {
+          "line": 64,
+          "expression": "spread is not False"
+        },
+        {
+          "line": 172,
+          "expression": "proportion"
+        },
+        {
+          "line": 172,
+          "expression": "proportion"
+        },
+        {
+          "line": 348,
+          "expression": "tick==x.domain[1]"
+        },
+        {
+          "line": 350,
+          "expression": "plot.category or time_axis"
+        },
+        {
+          "line": 357,
+          "expression": "plot.category or time_axis"
+        },
+        {
+          "line": 504,
+          "expression": "kind==\"stripPlot\""
+        },
+        {
+          "line": 85,
+          "expression": "row[\"value\"] is not None"
+        },
+        {
+          "line": 171,
+          "expression": "proportion"
+        },
+        {
+          "line": 402,
+          "expression": "plot.step==\"after\""
+        },
+        {
+          "line": 65,
+          "expression": "delta is not None"
+        },
+        {
+          "line": 65,
+          "expression": "delta is not None"
+        },
+        {
+          "line": 93,
+          "expression": "vs"
+        },
+        {
+          "line": 127,
+          "expression": "mode==\"residuals\""
+        },
+        {
+          "line": 93,
+          "expression": "spec.get(\"estimator\")==\"median\""
+        }
+      ]
+    },
+    "chart/stat_intervals.py": {
+      "sha256": "ba2feb4133588e9d9fecd8de0be71900794211cabc33558c2f34f880eef2df97",
+      "bytes": 6766,
+      "functions": [
+        {
+          "symbol": "sample_interval",
+          "startLine": 13,
+          "endLine": 50
+        },
+        {
+          "symbol": "render_horizontal",
+          "startLine": 53,
+          "endLine": 154
+        }
+      ],
+      "keyValidationExpressions": [
+        {
+          "line": 56,
+          "expression": "check_keys(spec,allowed|{\"type\",\"data\",\"width\",\"height\"},spec[\"type\"])"
+        }
+      ],
+      "explicitRaises": [
+        {
+          "line": 46,
+          "expression": "raise ValueError(\"Invalid confidence level\")"
+        },
+        {
+          "line": 59,
+          "expression": "raise ValueError(\"Horizontal estimates require a nonempty single series\")"
+        },
+        {
+          "line": 33,
+          "expression": "raise ValueError(\"Invalid confidence resamples\")"
+        },
+        {
+          "line": 43,
+          "expression": "raise ValueError(\"Unknown sample interval\")"
+        },
+        {
+          "line": 70,
+          "expression": "raise ValueError(\"Expected estimates or observations\")"
+        }
+      ],
+      "conditionExpressions": [
+        {
+          "line": 16,
+          "expression": "config is False"
+        },
+        {
+          "line": 19,
+          "expression": "kind == \"range\""
+        },
+        {
+          "line": 21,
+          "expression": "len(values)<2"
+        },
+        {
+          "line": 23,
+          "expression": "kind in (\"standardError\",\"standardDeviation\")"
+        },
+        {
+          "line": 29,
+          "expression": "kind==\"confidence\""
+        },
+        {
+          "line": 45,
+          "expression": "not 0<level<1"
+        },
+        {
+          "line": 58,
+          "expression": "not isinstance(rows,list) or not rows or any(not isinstance(r,dict) or \"series\" in r for r in rows)"
+        },
+        {
+          "line": 60,
+          "expression": "feature or spec.get(\"input\")==\"estimates\""
+        },
+        {
+          "line": 127,
+          "expression": "feature and intervals"
+        },
+        {
+          "line": 130,
+          "expression": "ref"
+        },
+        {
+          "line": 25,
+          "expression": "kind==\"standardError\""
+        },
+        {
+          "line": 32,
+          "expression": "type(repeats) is not int or not 100<=repeats<=10000"
+        },
+        {
+          "line": 42,
+          "expression": "kind!=\"percentile\""
+        },
+        {
+          "line": 55,
+          "expression": "feature"
+        },
+        {
+          "line": 63,
+          "expression": "spec.get(\"input\")==\"observations\""
+        },
+        {
+          "line": 89,
+          "expression": "feature"
+        },
+        {
+          "line": 105,
+          "expression": "feature"
+        },
+        {
+          "line": 111,
+          "expression": "low is not None and high is not None"
+        },
+        {
+          "line": 118,
+          "expression": "not feature"
+        },
+        {
+          "line": 126,
+          "expression": "feature"
+        },
+        {
+          "line": 136,
+          "expression": "ref.get(\"label\")"
+        },
+        {
+          "line": 87,
+          "expression": "t==x.domain[0]"
+        },
+        {
+          "line": 116,
+          "expression": "not feature"
+        },
+        {
+          "line": 87,
+          "expression": "t==x.domain[1]"
+        },
+        {
+          "line": 62,
+          "expression": "\"lower\" in r"
+        },
+        {
+          "line": 62,
+          "expression": "\"upper\" in r"
+        },
+        {
+          "line": 114,
+          "expression": "feature"
+        },
+        {
+          "line": 61,
+          "expression": "feature"
+        },
+        {
+          "line": 61,
+          "expression": "feature"
+        }
+      ]
+    },
+    "chart/stat_matrix.py": {
+      "sha256": "5cdac6a7191493578f92b5695f93e89a7a76c2b176f833c4205c24da00124eb5",
+      "bytes": 6961,
+      "functions": [
+        {
+          "symbol": "matrix_data",
+          "startLine": 12,
+          "endLine": 47
+        },
+        {
+          "symbol": "ramp",
+          "startLine": 50,
+          "endLine": 55
+        },
+        {
+          "symbol": "colorbar",
+          "startLine": 58,
+          "endLine": 75
+        },
+        {
+          "symbol": "render_matrix",
+          "startLine": 78,
+          "endLine": 149
+        }
+      ],
+      "keyValidationExpressions": [
+        {
+          "line": 83,
+          "expression": "check_keys(spec,fields|{\"type\",\"data\",\"width\",\"height\"},kind)"
+        }
+      ],
+      "explicitRaises": [
+        {
+          "line": 34,
+          "expression": "raise ValueError(\"correlationMatrix currently requires Pearson correlation\")"
+        },
+        {
+          "line": 86,
+          "expression": "raise ValueError(\"Matrix requires nonempty axes and data\")"
+        },
+        {
+          "line": 17,
+          "expression": "raise ValueError(\"confusionMatrix requires class records\")"
+        }
+      ],
+      "conditionExpressions": [
+        {
+          "line": 14,
+          "expression": "kind==\"confusionMatrix\""
+        },
+        {
+          "line": 31,
+          "expression": "kind==\"missingValueMatrix\""
+        },
+        {
+          "line": 33,
+          "expression": "spec.get(\"method\",\"pearson\")!=\"pearson\""
+        },
+        {
+          "line": 85,
+          "expression": "not xs or not ys or not cells"
+        },
+        {
+          "line": 90,
+          "expression": "kind==\"confusionMatrix\""
+        },
+        {
+          "line": 95,
+          "expression": "not missing"
+        },
+        {
+          "line": 107,
+          "expression": "not missing"
+        },
+        {
+          "line": 123,
+          "expression": "missing"
+        },
+        {
+          "line": 140,
+          "expression": "titles[0]"
+        },
+        {
+          "line": 16,
+          "expression": "not isinstance(records,list)"
+        },
+        {
+          "line": 82,
+          "expression": "corr"
+        },
+        {
+          "line": 87,
+          "expression": "missing"
+        },
+        {
+          "line": 89,
+          "expression": "not corr"
+        },
+        {
+          "line": 92,
+          "expression": "missing"
+        },
+        {
+          "line": 101,
+          "expression": "corr"
+        },
+        {
+          "line": 102,
+          "expression": "corr"
+        },
+        {
+          "line": 104,
+          "expression": "corr or percent or missing"
+        },
+        {
+          "line": 112,
+          "expression": "missing"
+        },
+        {
+          "line": 117,
+          "expression": "not missing"
+        },
+        {
+          "line": 38,
+          "expression": "spec.get(\"triangle\")==\"upper\" and i>j or spec.get(\"triangle\")==\"lower\" and i<j"
+        },
+        {
+          "line": 42,
+          "expression": "len(pairs)>=spec.get(\"minSamples\",2)"
+        },
+        {
+          "line": 74,
+          "expression": "percent"
+        },
+        {
+          "line": 82,
+          "expression": "missing"
+        },
+        {
+          "line": 87,
+          "expression": "corr"
+        },
+        {
+          "line": 93,
+          "expression": "corr"
+        },
+        {
+          "line": 114,
+          "expression": "v is None or missing and v"
+        },
+        {
+          "line": 130,
+          "expression": "corr"
+        },
+        {
+          "line": 44,
+          "expression": "len(set(xs))>1 and len(set(ys))>1"
+        },
+        {
+          "line": 114,
+          "expression": "missing"
+        },
+        {
+          "line": 119,
+          "expression": "v is None"
+        },
+        {
+          "line": 121,
+          "expression": "v is None"
+        },
+        {
+          "line": 130,
+          "expression": "percent"
+        },
+        {
+          "line": 131,
+          "expression": "corr"
+        },
+        {
+          "line": 89,
+          "expression": "corr"
+        },
+        {
+          "line": 119,
+          "expression": "corr"
+        },
+        {
+          "line": 121,
+          "expression": "lum<.175"
+        },
+        {
+          "line": 128,
+          "expression": "t==\"缺失\""
+        },
+        {
+          "line": 131,
+          "expression": "percent"
+        },
+        {
+          "line": 116,
+          "expression": "v is None"
+        },
+        {
+          "line": 119,
+          "expression": "percent"
+        },
+        {
+          "line": 127,
+          "expression": "v"
+        },
+        {
+          "line": 27,
+          "expression": "div"
+        }
+      ]
+    },
+    "chart/stat_panels.py": {
+      "sha256": "f01f118455db1d481c5b07241ff63ab9852eb52caf86876e3a1ad60f03680d58",
+      "bytes": 12447,
+      "functions": [
+        {
+          "symbol": "extent",
+          "startLine": 14,
+          "endLine": 21
+        },
+        {
+          "symbol": "numeric_panel",
+          "startLine": 24,
+          "endLine": 94
+        },
+        {
+          "symbol": "render_pairs",
+          "startLine": 97,
+          "endLine": 210
+        },
+        {
+          "symbol": "hexagons",
+          "startLine": 213,
+          "endLine": 252
+        },
+        {
+          "symbol": "render_hexbin",
+          "startLine": 255,
+          "endLine": 296
+        },
+        {
+          "symbol": "continuous_legend",
+          "startLine": 299,
+          "endLine": 318
+        }
+      ],
+      "keyValidationExpressions": [
+        {
+          "line": 98,
+          "expression": "check_keys(\n        spec,\n        {\"type\", \"variables\", \"data\", \"width\", \"height\", \"diagonal\", \"colors\"},\n        \"pairPlot\",\n    )"
+        },
+        {
+          "line": 256,
+          "expression": "check_keys(\n        spec,\n        {\"type\", \"data\", \"binning\", \"fieldLabels\", \"width\", \"height\"},\n        \"hexbinPlot\",\n    )"
+        }
+      ],
+      "explicitRaises": [
+        {
+          "line": 108,
+          "expression": "raise ValueError(\"pairPlot requires a series on every grouped observation\")"
+        },
+        {
+          "line": 121,
+          "expression": "raise ValueError(\"Expected a nonempty categorical palette\")"
+        },
+        {
+          "line": 125,
+          "expression": "raise ValueError(\"pairPlot requires histogram diagonal panels\")"
+        },
+        {
+          "line": 133,
+          "expression": "raise ValueError(\"pairPlot requires distinct variables\")"
+        },
+        {
+          "line": 137,
+          "expression": "raise ValueError(\"pairPlot canvas too narrow\")"
+        },
+        {
+          "line": 216,
+          "expression": "raise ValueError(\"hexbinPlot requires finite coordinates\")"
+        },
+        {
+          "line": 263,
+          "expression": "raise ValueError(\"hexbinPlot xBins must be an integer between 1 and 200\")"
+        },
+        {
+          "line": 279,
+          "expression": "raise ValueError(\"hexbinPlot canvas too small\")"
+        },
+        {
+          "line": 151,
+          "expression": "raise ValueError(\"binCount must be an integer between 1 and 200\")"
+        }
+      ],
+      "conditionExpressions": [
+        {
+          "line": 15,
+          "expression": "not values"
+        },
+        {
+          "line": 18,
+          "expression": "lo == hi"
+        },
+        {
+          "line": 107,
+          "expression": "grouped and None in groups"
+        },
+        {
+          "line": 110,
+          "expression": "palette == \"colorblind\""
+        },
+        {
+          "line": 120,
+          "expression": "not isinstance(palette, (tuple, list)) or not palette"
+        },
+        {
+          "line": 124,
+          "expression": "diagonal.get(\"type\", \"histogram\") != \"histogram\""
+        },
+        {
+          "line": 132,
+          "expression": "not n or len(columns) != n"
+        },
+        {
+          "line": 136,
+          "expression": "w <= 0"
+        },
+        {
+          "line": 201,
+          "expression": "grouped"
+        },
+        {
+          "line": 215,
+          "expression": "not all(isfinite(v) for values in (xs, ys) for v in values)"
+        },
+        {
+          "line": 262,
+          "expression": "type(resolution) is not int or not 1 <= resolution <= 200"
+        },
+        {
+          "line": 278,
+          "expression": "h <= 0"
+        },
+        {
+          "line": 294,
+          "expression": "rows"
+        },
+        {
+          "line": 43,
+          "expression": "side == \"left\" and len(ticks) > 1"
+        },
+        {
+          "line": 112,
+          "expression": "palette == \"deep\""
+        },
+        {
+          "line": 229,
+          "expression": "dq >= ds and dq >= dt"
+        },
+        {
+          "line": 266,
+          "expression": "rows"
+        },
+        {
+          "line": 30,
+          "expression": "ratio >= sqrt(50)"
+        },
+        {
+          "line": 53,
+          "expression": "side == \"left\""
+        },
+        {
+          "line": 116,
+          "expression": "palette == \"vchart\""
+        },
+        {
+          "line": 144,
+          "expression": "i == j"
+        },
+        {
+          "line": 231,
+          "expression": "ds >= dt"
+        },
+        {
+          "line": 32,
+          "expression": "ratio >= sqrt(10)"
+        },
+        {
+          "line": 150,
+          "expression": "type(count) is not int or not 1 <= count <= 200"
+        },
+        {
+          "line": 152,
+          "expression": "len(set(values)) < 2"
+        },
+        {
+          "line": 34,
+          "expression": "ratio >= sqrt(2)"
+        },
+        {
+          "line": 56,
+          "expression": "tick == axis.domain[0]"
+        },
+        {
+          "line": 66,
+          "expression": "tick == axis.domain[0]"
+        },
+        {
+          "line": 158,
+          "expression": "v is not None"
+        },
+        {
+          "line": 277,
+          "expression": "rows"
+        },
+        {
+          "line": 58,
+          "expression": "tick == axis.domain[1]"
+        },
+        {
+          "line": 68,
+          "expression": "tick == axis.domain[1]"
+        },
+        {
+          "line": 135,
+          "expression": "grouped"
+        }
+      ]
+    },
+    "chart/swarm.py": {
+      "sha256": "d8e2e05900dc271af98b56c54d66f2bf30d13f7c493c18b7b5e703a9346fc10f",
+      "bytes": 4424,
+      "functions": [
+        {
+          "symbol": "swarm_offsets",
+          "startLine": 13,
+          "endLine": 31
+        },
+        {
+          "symbol": "render_swarm",
+          "startLine": 34,
+          "endLine": 128
+        }
+      ],
+      "keyValidationExpressions": [
+        {
+          "line": 35,
+          "expression": "check_keys(\n        spec,\n        {\"type\", \"data\", \"featureOrder\", \"fieldLabels\", \"width\", \"height\"},\n        \"shapBeeswarmPlot\",\n    )"
+        }
+      ],
+      "explicitRaises": [
+        {
+          "line": 46,
+          "expression": "raise ValueError(\"Expected observations for each feature\")"
+        }
+      ],
+      "conditionExpressions": [
+        {
+          "line": 45,
+          "expression": "not rows or set(cats) != set(groups)"
+        },
+        {
+          "line": 23,
+          "expression": "abs(off) + 3.5 <= half_width and all(\n                (off - old) ** 2 + (x - px) ** 2 >= 7.49**2 for px, old in active\n            )"
+        },
+        {
+          "line": 71,
+          "expression": "t == x.domain[0]"
+        },
+        {
+          "line": 109,
+          "expression": "vals"
+        },
+        {
+          "line": 71,
+          "expression": "t == x.domain[1]"
+        },
+        {
+          "line": 115,
+          "expression": "v is None"
+        },
+        {
+          "line": 117,
+          "expression": "lo == hi"
+        }
+      ]
+    },
+    "chart/sequence.py": {
+      "sha256": "86a703df9c51c595e0b6b785bb5543a6d98d9b11831a2d7d607f28d0ca7b887f",
+      "bytes": 6032,
+      "functions": [
+        {
+          "symbol": "band_frame",
+          "startLine": 13,
+          "endLine": 18
+        },
+        {
+          "symbol": "series_marks",
+          "startLine": 21,
+          "endLine": 44
+        },
+        {
+          "symbol": "render_combination",
+          "startLine": 47,
+          "endLine": 95
+        },
+        {
+          "symbol": "render_sequence",
+          "startLine": 98,
+          "endLine": 165
+        }
+      ],
+      "keyValidationExpressions": [
+        {
+          "line": 48,
+          "expression": "check_keys(\n        spec,\n        {\n            \"type\",\n            \"width\",\n            \"height\",\n            \"candlestickSeries\",\n            \"previewSeries\",\n            \"axes\",\n            \"padding\",\n            \"previewHeight\",\n        },\n        \"combinationCandlestick\",\n    )"
+        },
+        {
+          "line": 99,
+          "expression": "check_keys(\n        spec,\n        {\n            \"type\",\n            \"width\",\n            \"height\",\n            \"padding\",\n            \"appendPadding\",\n            \"axes\",\n            \"series\",\n            \"data\",\n        },\n        \"sequence\",\n    )"
+        }
+      ],
+      "explicitRaises": [
+        {
+          "line": 44,
+          "expression": "raise ValueError(\"Expected a bar or line series\")"
+        },
+        {
+          "line": 115,
+          "expression": "raise ValueError(\"sequence requires series and a bottom axis\")"
+        }
+      ],
+      "conditionExpressions": [
+        {
+          "line": 23,
+          "expression": "series[\"type\"] == \"bar\""
+        },
+        {
+          "line": 28,
+          "expression": "series[\"type\"] == \"line\""
+        },
+        {
+          "line": 81,
+          "expression": "isinstance(h, str) and h.endswith(\"%\")"
+        },
+        {
+          "line": 89,
+          "expression": "preview"
+        },
+        {
+          "line": 114,
+          "expression": "not series or spec.get(\"axes\", [{}])[0].get(\"orient\") != \"bottom\""
+        },
+        {
+          "line": 117,
+          "expression": "isinstance(datasets, dict)"
+        },
+        {
+          "line": 80,
+          "expression": "preview is None"
+        },
+        {
+          "line": 123,
+          "expression": "ds is None"
+        },
+        {
+          "line": 144,
+          "expression": "s.get(\"grid\", {}).get(\"visible\", True)"
+        },
+        {
+          "line": 125,
+          "expression": "\"dataId\" in s"
+        }
+      ]
+    },
+    "chart/event_steps.py": {
+      "sha256": "e3e4f6e5e00b6c87b88d6a316fc85d29c381013b578de8fbd7d6fbd50293f4dc",
+      "bytes": 4711,
+      "functions": [
+        {
+          "symbol": "render_event_steps",
+          "startLine": 10,
+          "endLine": 116
+        }
+      ],
+      "keyValidationExpressions": [
+        {
+          "line": 11,
+          "expression": "check_keys(\n        spec,\n        {\n            \"type\",\n            \"width\",\n            \"height\",\n            \"mode\",\n            \"eventData\",\n            \"stepMediumMap\",\n            \"userImageMap\",\n            \"patternData\",\n            \"actionData\",\n            \"colors\",\n            \"mediumConnection\",\n        },\n        \"sequenceAnalysis\",\n    )"
+        }
+      ],
+      "explicitRaises": [
+        {
+          "line": 33,
+          "expression": "raise ValueError(\"sequenceAnalysis supports step mode with text lanes\")"
+        },
+        {
+          "line": 41,
+          "expression": "raise ValueError(\"sequenceAnalysis requires steps and a positive plot area\")"
+        }
+      ],
+      "conditionExpressions": [
+        {
+          "line": 28,
+          "expression": "spec.get(\"mode\") != \"step\"\n        or spec.get(\"mediumConnection\")\n        or any(spec.get(\"userImageMap\", {}).values())"
+        },
+        {
+          "line": 40,
+          "expression": "min(w, h) <= 0 or not steps"
+        },
+        {
+          "line": 59,
+          "expression": "x <= left + w"
+        },
+        {
+          "line": 70,
+          "expression": "bx <= left + w"
+        },
+        {
+          "line": 75,
+          "expression": "top <= cy <= bottom"
+        }
+      ]
+    },
+    "chart/scatter_sequence.py": {
+      "sha256": "43bee62a56e61f3461ebe00baba6b895a2555b304bdc3c39995fa8d42974f2d4",
+      "bytes": 7680,
+      "functions": [
+        {
+          "symbol": "class_color",
+          "startLine": 31,
+          "endLine": 41
+        },
+        {
+          "symbol": "draw_density",
+          "startLine": 44,
+          "endLine": 79
+        },
+        {
+          "symbol": "render_scatter_sequence",
+          "startLine": 82,
+          "endLine": 216
+        }
+      ],
+      "keyValidationExpressions": [
+        {
+          "line": 92,
+          "expression": "check_keys(\n        spec,\n        allowed\n        | {\n            \"type\",\n            \"width\",\n            \"height\",\n            \"data\",\n            \"xField\",\n            \"yField\",\n            \"infoLabel\",\n            \"player\",\n        },\n        kind,\n    )"
+        }
+      ],
+      "explicitRaises": [
+        {
+          "line": 109,
+          "expression": "raise ValueError(f\"{kind} requires at least one frame\")"
+        },
+        {
+          "line": 118,
+          "expression": "raise ValueError(\"sequenceScatterLink requires a local neighborhood frame\")"
+        },
+        {
+          "line": 35,
+          "expression": "raise ValueError"
+        },
+        {
+          "line": 38,
+          "expression": "raise ValueError(\n            \"sequenceScatterKDE supports class labels 0 through 10\"\n        ) from None"
+        }
+      ],
+      "conditionExpressions": [
+        {
+          "line": 108,
+          "expression": "not data"
+        },
+        {
+          "line": 117,
+          "expression": "link and spec.get(\"taskType\") != \"neighborhood\""
+        },
+        {
+          "line": 127,
+          "expression": "link"
+        },
+        {
+          "line": 134,
+          "expression": "pixel and key in spec.get(\"backgroundColors\", {})"
+        },
+        {
+          "line": 147,
+          "expression": "not (pixel or link)"
+        },
+        {
+          "line": 180,
+          "expression": "not link and style.get(\"visible\", True)"
+        },
+        {
+          "line": 192,
+          "expression": "link"
+        },
+        {
+          "line": 34,
+          "expression": "index < 0"
+        },
+        {
+          "line": 59,
+          "expression": "group_index"
+        },
+        {
+          "line": 86,
+          "expression": "pixel"
+        },
+        {
+          "line": 116,
+          "expression": "indices"
+        },
+        {
+          "line": 119,
+          "expression": "link"
+        },
+        {
+          "line": 151,
+          "expression": "link"
+        },
+        {
+          "line": 64,
+          "expression": "px - 2.5 >= surface.canvas.width or px + 2.5 < 0"
+        },
+        {
+          "line": 88,
+          "expression": "link"
+        },
+        {
+          "line": 123,
+          "expression": "link"
+        },
+        {
+          "line": 41,
+          "expression": "brighter"
+        },
+        {
+          "line": 75,
+          "expression": "alpha <= 1"
+        },
+        {
+          "line": 77,
+          "expression": "-2 < py < surface.canvas.height + 2"
+        },
+        {
+          "line": 183,
+          "expression": "pixel"
+        },
+        {
+          "line": 173,
+          "expression": "pixel"
+        },
+        {
+          "line": 174,
+          "expression": "pixel"
+        },
+        {
+          "line": 189,
+          "expression": "pixel"
+        }
+      ]
+    },
+    "_deps/vlayouts/word_mask.py": {
+      "sha256": "504d548c386115ae85f2840af86d49891402ff969468eecdb58198dae5ebd176",
+      "bytes": 17386,
+      "functions": [
+        {
+          "symbol": "spiral_radius",
+          "startLine": 21,
+          "endLine": 40
+        },
+        {
+          "symbol": "raster_mask",
+          "startLine": 43,
+          "endLine": 160
+        },
+        {
+          "symbol": "MaskBoard",
+          "startLine": 163,
+          "endLine": 280
+        },
+        {
+          "symbol": "_reference_glyph_offsets",
+          "startLine": 283,
+          "endLine": 328
+        },
+        {
+          "symbol": "glyph_offsets",
+          "startLine": 331,
+          "endLine": 354
+        },
+        {
+          "symbol": "filling_layout",
+          "startLine": 357,
+          "endLine": 450
+        }
+      ],
+      "keyValidationExpressions": [],
+      "explicitRaises": [
+        {
+          "line": 142,
+          "expression": "raise ValueError(f\"Unsupported geometric mask {name}\")"
+        }
+      ],
+      "conditionExpressions": [
+        {
+          "line": 22,
+          "expression": "shape in (\"circle\", \"rect\")"
+        },
+        {
+          "line": 24,
+          "expression": "shape == \"cardioid\""
+        },
+        {
+          "line": 26,
+          "expression": "shape == \"square\""
+        },
+        {
+          "line": 28,
+          "expression": "shape == \"diamond\""
+        },
+        {
+          "line": 48,
+          "expression": "isinstance(shape, str)"
+        },
+        {
+          "line": 61,
+          "expression": "shape.get(\"hollow\")"
+        },
+        {
+          "line": 67,
+          "expression": "shape.get(\"type\") == \"text\""
+        },
+        {
+          "line": 158,
+          "expression": "background == \"#fff\""
+        },
+        {
+          "line": 300,
+          "expression": "padding"
+        },
+        {
+          "line": 316,
+          "expression": "angle"
+        },
+        {
+          "line": 333,
+          "expression": "settings.get()[1]=='reference'"
+        },
+        {
+          "line": 343,
+          "expression": "padding"
+        },
+        {
+          "line": 349,
+          "expression": "angle"
+        },
+        {
+          "line": 365,
+          "expression": "not words or not times"
+        },
+        {
+          "line": 373,
+          "expression": "not size or not delta"
+        },
+        {
+          "line": 30,
+          "expression": "shape == \"pentagon\""
+        },
+        {
+          "line": 74,
+          "expression": "settings.get()[1]=='reference'"
+        },
+        {
+          "line": 113,
+          "expression": "name == \"cardioid\""
+        },
+        {
+          "line": 222,
+          "expression": "len(groups) == 1"
+        },
+        {
+          "line": 241,
+          "expression": "not regions"
+        },
+        {
+          "line": 265,
+          "expression": "not dx.size"
+        },
+        {
+          "line": 32,
+          "expression": "shape == \"star\""
+        },
+        {
+          "line": 99,
+          "expression": "shape.get(\"hollow\")"
+        },
+        {
+          "line": 129,
+          "expression": "name == \"circle\""
+        },
+        {
+          "line": 174,
+          "expression": "x.size"
+        },
+        {
+          "line": 179,
+          "expression": "x.size"
+        },
+        {
+          "line": 181,
+          "expression": "x.size"
+        },
+        {
+          "line": 275,
+          "expression": "x + xmin < 0 or x + xmax >= w or y + ymin < 0 or y + ymax >= h"
+        },
+        {
+          "line": 277,
+          "expression": "self.available[y + dy, x + dx].all()"
+        },
+        {
+          "line": 379,
+          "expression": "length"
+        },
+        {
+          "line": 391,
+          "expression": "ratio"
+        },
+        {
+          "line": 34,
+          "expression": "(theta + 0.955) % (2 * pi / 5) >= pi / 5"
+        },
+        {
+          "line": 85,
+          "expression": "table"
+        },
+        {
+          "line": 141,
+          "expression": "name not in polygons"
+        },
+        {
+          "line": 143,
+          "expression": "name in (\"triangle\", \"triangleUpright\")"
+        },
+        {
+          "line": 146,
+          "expression": "name == \"triangleForward\""
+        },
+        {
+          "line": 251,
+          "expression": "quotas[i] > 0 and size / max_size <= limits[i]"
+        },
+        {
+          "line": 254,
+          "expression": "attempt == len(regions) + 1"
+        },
+        {
+          "line": 419,
+          "expression": "dx.size"
+        },
+        {
+          "line": 431,
+          "expression": "placed and bounds"
+        },
+        {
+          "line": 444,
+          "expression": "i == len(candidates)"
+        },
+        {
+          "line": 449,
+          "expression": "size > delta"
+        },
+        {
+          "line": 38,
+          "expression": "shape == \"triangleForward\""
+        },
+        {
+          "line": 433,
+          "expression": "x + l < 0\n                        or x + r >= w\n                        or y + t < 0\n                        or y + b >= h\n                        or not board.available[y + dy, x + dx].all()"
+        },
+        {
+          "line": 446,
+          "expression": "options.get(\"random\", True)"
+        },
+        {
+          "line": 152,
+          "expression": "name == \"star\" and i % 2"
+        },
+        {
+          "line": 375,
+          "expression": "\"\\u4e00\" <= c <= \"\\u9fff\""
+        }
+      ]
+    }
+  },
+  "manualNotes": [
+    {
+      "types": [
+        "wordCloud"
+      ],
+      "source": "chart/word_cloud.py:render_words",
+      "facts": [
+        "Without a raster mask, random must be false and wordCloudConfig must exactly be {layoutMode:fast}. Named fast shapes use the same fast path.",
+        "Exactly one rotation angle is accepted. Main word.style only accepts fontFamily/fontWeight/fill; word.padding is used by masked glyph occupancy.",
+        "Mask/default layout requires both layoutMode options to be default; geometry/text/bitmap mask construction and filling options remain in word_mask helpers.",
+        "Name/value fields, sqrt size normalization, family/weight, per-word placement, stepFactor>0, minInitFontSize, keyword occupancy and repeated filling are forwarded unchanged.",
+        "fillingWord.style supplies family/weight to filling_layout, but fill color is painted by the main word.style closure; a separate filling fill is not a new supported DSL effect."
+      ],
+      "staticExclusions": [
+        "Animation/tooltip/hover/state-like branches are not new features; DYNAMIC fields remain provider static ignored contract."
+      ]
+    },
+    {
+      "types": [
+        "learningCurve",
+        "seasonalPlot",
+        "timeSeriesPlot",
+        "autocorrelationPlot",
+        "residualPlot",
+        "pairedComparisonPlot",
+        "kdePlot",
+        "violinPlot",
+        "boxPlot",
+        "countPlot",
+        "screePlot",
+        "scatterPlot",
+        "embeddingPlot",
+        "qqPlot",
+        "stripPlot",
+        "ecdfPlot",
+        "histogram",
+        "calibrationCurve",
+        "rocCurve",
+        "precisionRecallCurve"
+      ],
+      "source": "chart/statplots.py:OPTIONS/summary/render_stat",
+      "facts": [
+        "Top-level spec accepts type/data/width/height plus exact type-specific OPTIONS; nonempty raw list records with no per-row series key.",
+        "learningCurve requires folds or summaries; fold aggregation uses score mean and optional population spread. seasonalPlot follows explicit cycle/phase order.",
+        "timeSeriesPlot requires observations/estimates and zoned ISO strings without interval bands; repeated observations with automatic estimator require errorBar=false. Null values split runs.",
+        "autocorrelationPlot lag must be int within1..n-1 and varying data; confidence false or level controls confidence bands.",
+        "KDE/violin bandwidth and bandwidthAdjust, points2..4096 and nonnegative cut with positive interval are real options.",
+        "histogram raw samples use binCount1..1000 and count/proportion/density; boxPlot raw samples use category/value and iqrMultiplier. Core dispatch selects these branches only for raw value records without xField/yField.",
+        "calibration probabilities must be0..1 and outcomes bool; ROC/PR require bool outcomes and both classes. Bool/int identity is significant.",
+        "embedding method limited to pca/tsne/umap; pairedComparison requires two ordered categories; residual input observations/predictions/residuals selects real data computation."
+      ]
+    },
+    {
+      "types": [
+        "featureImportancePlot",
+        "pointIntervalPlot",
+        "missingValueMatrix",
+        "correlationMatrix",
+        "confusionMatrix",
+        "pairPlot",
+        "hexbinPlot",
+        "shapBeeswarmPlot"
+      ],
+      "source": "chart/stat_intervals.py/stat_matrix.py/stat_panels.py/swarm.py",
+      "facts": [
+        "Dedicated renderer-specific records and nested observation shapes remain exact, not normalized to the ordinary values wrapper.",
+        "pairPlot has histogram-only diagonal, explicit distinct variables, valid nonempty categorical palette and fully assigned group labels; diagonal binCount1..200 and canvas width constraints.",
+        "hexbinPlot xBins must be int1..200; finite coordinate domains and positive plot size required; empty dataset has an explicit path.",
+        "Matrix shapes/normalization/triangle/missingness and Pearson-only correlation, minSamples/pairwise nonconstant data paths remain provider computations.",
+        "SHAP requires observations for each selected feature, relative within-feature values, missing/constant colors and collision geometry; no DSL reimplementation."
+      ]
+    },
+    {
+      "types": [
+        "sequence",
+        "combinationCandlestick",
+        "sequenceAnalysis",
+        "sequenceScatterPixel",
+        "sequenceScatterKDE",
+        "sequenceScatterLink"
+      ],
+      "source": "chart/sequence.py/event_steps.py/scatter_sequence.py and core.VChart.spec_size",
+      "facts": [
+        "sequence accepts multiple bar/line panels with a bottom axis, inline/per-id/per-index datasets, appendPadding and per-series height/padding/grid; these nested structures must stay representable.",
+        "combinationCandlestick uses explicit candlestickSeries and optional bar/line previewSeries, numeric/percent previewHeight and price field channels.",
+        "sequenceAnalysis currently supports step mode/text lanes: mediumConnection or nonempty userImageMap values are rejected, not implied supported by key presence.",
+        "scatter sequence uses numeric JS array-index key precedence; otherwise first insertion-order frame. No key sorting by compiler/variable cloning/JSON serialization.",
+        "sequenceScatterPixel always emits300x300; backgroundColors is a per-frame RGB matrix.",
+        "sequenceScatterLink requires neighborhood taskType and explicit scope/labelColor; its first-frame nodes, confidence and node ids are static data.",
+        "KDE class labels supported0..10; infoLabel.style has actually used visible/fontSize/fillOpacity/fill/x/y paths. player is a provider-accepted field not an implemented playback feature."
+      ]
+    }
+  ],
+  "limitations": [
+    "Condition expressions/raises/check_keys are exact static source evidence, not a complete inferred schema or exhaustive branch-test coverage.",
+    "No provider runtime code changed, no DSL or provider behavior executed by this audit."
+  ]
+}

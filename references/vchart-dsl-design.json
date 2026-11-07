@@ -1,0 +1,2669 @@
+{
+  "schema": "py-mermaid-vchart-dsl-design/v1",
+  "status": "DESIGN_ONLY_NOT_IMPLEMENTED",
+  "design": "docs/VCHART_DSL_DESIGN.md",
+  "plan": "docs/VCHART_DSL_EXECUTION_PLAN.md",
+  "grammar": "docs/syntax/vchart-v1.ebnf",
+  "provider": {
+    "distribution": "py-visactor-vchart",
+    "version": "0.1.1",
+    "requiredVersion": "0.1.1",
+    "publicRegistry": "VChart.supported_types"
+  },
+  "registeredTypeCount": 68,
+  "groups": {
+    "cartesian_and_common": [
+      "bar",
+      "line",
+      "scatter",
+      "area",
+      "rangeArea",
+      "rangeColumn",
+      "waterfall",
+      "histogram",
+      "boxPlot",
+      "heatmap",
+      "mosaic",
+      "linearProgress",
+      "common"
+    ],
+    "polar_and_indicator": [
+      "pie",
+      "rose",
+      "radar",
+      "gauge",
+      "circularProgress",
+      "liquid"
+    ],
+    "hierarchy_and_relation": [
+      "funnel",
+      "treemap",
+      "sunburst",
+      "circlePacking",
+      "sankey",
+      "correlation",
+      "venn"
+    ],
+    "extension_2d": [
+      "storyline",
+      "sequenceAnalysis",
+      "sequence",
+      "combinationCandlestick",
+      "pictogram",
+      "imageCloud",
+      "candlestick",
+      "conversionFunnel",
+      "rankingList",
+      "rankingBar",
+      "timeline",
+      "sequenceScatterPixel",
+      "sequenceScatterKDE",
+      "sequenceScatterLink"
+    ],
+    "map_and_wordcloud": [
+      "map",
+      "wordCloud"
+    ],
+    "statistical_unique_names": [
+      "learningCurve",
+      "seasonalPlot",
+      "timeSeriesPlot",
+      "autocorrelationPlot",
+      "residualPlot",
+      "pairedComparisonPlot",
+      "kdePlot",
+      "violinPlot",
+      "countPlot",
+      "screePlot",
+      "scatterPlot",
+      "embeddingPlot",
+      "qqPlot",
+      "stripPlot",
+      "ecdfPlot",
+      "calibrationCurve",
+      "rocCurve",
+      "precisionRecallCurve",
+      "shapBeeswarmPlot",
+      "pairPlot",
+      "hexbinPlot",
+      "featureImportancePlot",
+      "pointIntervalPlot",
+      "missingValueMatrix",
+      "correlationMatrix",
+      "confusionMatrix"
+    ]
+  },
+  "types": [
+    {
+      "name": "learningCurve",
+      "representativeFixture": "vchart-learningCurve",
+      "representativeDataShape": "raw_array",
+      "representativeTopLevelKeys": [
+        "data",
+        "input",
+        "metric",
+        "type"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/learningCurve/stat-minimal",
+        "specSha256": "6861dde640b3ff5a0b59943cabafe79e3c99ccc7ae7c7ed259fa2b968a5b1232",
+        "captureSha256": "6ca98cd2d29796ba954ef73c91a7442b06bcad3914840000a051d625970a1cd8",
+        "pngSha256": "e5144707fc00c22d3b20fabe2466e78086c76bc93bbdb99f44301df71cba2780"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "seasonalPlot",
+      "representativeFixture": "vchart-seasonalPlot",
+      "representativeDataShape": "raw_array",
+      "representativeTopLevelKeys": [
+        "cycleOrder",
+        "data",
+        "phaseOrder",
+        "type"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/seasonalPlot/stat-minimal",
+        "specSha256": "bdb7b8e8cbf645892224e8c649e84c813a2cb16cef7da0075262240b558fa141",
+        "captureSha256": "79fe7bda0606af698a8620293608cc052fb68ca789ef5d6a3686f2ee5ce6e247",
+        "pngSha256": "99c519a15bd34fabb7a8553e371eb068b216a3023f797ca0a3583c75cf90d408"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "timeSeriesPlot",
+      "representativeFixture": "vchart-timeSeriesPlot",
+      "representativeDataShape": "raw_array",
+      "representativeTopLevelKeys": [
+        "data",
+        "errorBar",
+        "input",
+        "type"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/timeSeriesPlot/stat-minimal",
+        "specSha256": "6d655615e2d190ce5344416989f4bca88376da4e47029771df08e94812e6fb5c",
+        "captureSha256": "9e0877b8bb716bae37646e4e5a3445fcb6551706c3d72eeb2d536152eebf564b",
+        "pngSha256": "c0516ddf59b78b1924e465df0e7ef2dbd253eed2aaee8ae5298f68991da2ec3e"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "autocorrelationPlot",
+      "representativeFixture": "vchart-autocorrelationPlot",
+      "representativeDataShape": "raw_array",
+      "representativeTopLevelKeys": [
+        "data",
+        "type"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/autocorrelationPlot/stat-minimal",
+        "specSha256": "46439780e351fcbfae57c28ec7ad0c97ec860c80236484ba5db805e125eb8202",
+        "captureSha256": "380c39f2284166308292634b9e02f6c38dbee1622beaa0c6cef83a538eb73b74",
+        "pngSha256": "8b34dc0039aafee1a280bdb55d9a147066adafa63515157dbad0c4a5a597d9c6"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "residualPlot",
+      "representativeFixture": "vchart-residualPlot",
+      "representativeDataShape": "raw_array",
+      "representativeTopLevelKeys": [
+        "data",
+        "input",
+        "type"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/residualPlot/stat-minimal",
+        "specSha256": "78a12b67f086610ae9485588b762b23d1a6de3b4fdc7cee2e57d6b5317634355",
+        "captureSha256": "9577c79ea9cd524b85d8a0821d5c3a726a9e7158651e5d853a2dcc21e69e4a26",
+        "pngSha256": "194393cb5856b042724090f1e0ac2b13654e94020d71c17872b7d552714e907d"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "pairedComparisonPlot",
+      "representativeFixture": "vchart-pairedComparisonPlot",
+      "representativeDataShape": "raw_array",
+      "representativeTopLevelKeys": [
+        "categoryOrder",
+        "data",
+        "type"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/pairedComparisonPlot/stat-minimal",
+        "specSha256": "9b75d9a1f836b188203052b3790faebd9b6cfd76bec288060cd2b28632c19ec5",
+        "captureSha256": "3b7f8bd4e35da6443a992647ab584807963ba6af0c89477e936601d980c02e4f",
+        "pngSha256": "d469ad26716dd24282e4c17959533da34e2cbde51be310b5c7f61ff816460088"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "kdePlot",
+      "representativeFixture": "vchart-kdePlot",
+      "representativeDataShape": "raw_array",
+      "representativeTopLevelKeys": [
+        "data",
+        "type"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/kdePlot/stat-minimal",
+        "specSha256": "5c26f33f6a4e56820d39e00dd0932d7038e486368d97f8b60f3b8251ef0e656b",
+        "captureSha256": "b452ba32e9b84c6828681db7a6603f5697b9baa4b42d3a09c191d46a935b165c",
+        "pngSha256": "4e4d9bc3b2e0b0337b3a961aed2adf6fcb28145c0091f47c8cd9b9f5e9529ac1"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "violinPlot",
+      "representativeFixture": "vchart-violinPlot",
+      "representativeDataShape": "raw_array",
+      "representativeTopLevelKeys": [
+        "data",
+        "type"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/violinPlot/stat-minimal",
+        "specSha256": "3358436b0fe77fabdaede13ea1a3521723d98c47a187b3ea66e8c3eadd0a4331",
+        "captureSha256": "61c78cdb19c26ecc7d04e29c5320d4c54e2d4731019e2c0b8d606d651f13b0f6",
+        "pngSha256": "5bb3a6a865983b3f169ccfaaf9164bf12b904696407a4e48567a9210f024ab0e"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "boxPlot",
+      "representativeFixture": "vchart-boxPlot",
+      "representativeDataShape": "object_with_values",
+      "representativeTopLevelKeys": [
+        "data",
+        "height",
+        "maxField",
+        "medianField",
+        "minField",
+        "q1Field",
+        "q3Field",
+        "type",
+        "width",
+        "xField"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/boxPlot/basic",
+        "specSha256": "8c603f8f4645a84897ef6f08155aafd599d5e1e90056c7c457460db995d8e7ac",
+        "captureSha256": "859af993184fd753f95e1f6400a0b0088cdd870a1f67f7a91a8e332d44b29858",
+        "pngSha256": "955919c0338a11eefbeeef05efb5100d84ceec809d5fca3dd2148c35c79d1a1f"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "countPlot",
+      "representativeFixture": "vchart-countPlot",
+      "representativeDataShape": "raw_array",
+      "representativeTopLevelKeys": [
+        "data",
+        "type"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/countPlot/stat-minimal",
+        "specSha256": "e605c8d0c7325cba531154203190d1ef16301e892316922d0fd549b5a3a96b4c",
+        "captureSha256": "4013f0c6c5b00873fffb7b9e6dee3c0cc311aeac265604933131958ca798988e",
+        "pngSha256": "33401147223d8e53c83cfbfd9aa0b2574e02f08bc5053178cb5d29caa9ce6596"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "screePlot",
+      "representativeFixture": "vchart-screePlot",
+      "representativeDataShape": "raw_array",
+      "representativeTopLevelKeys": [
+        "data",
+        "type"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/screePlot/stat-minimal",
+        "specSha256": "87e769a427c008f7a7058c072834d0395a672ee312877a3909910aeaccb75232",
+        "captureSha256": "65548d75946689470ca55b845bc326ea0db6d7c3e1e8385d14c38e2f1a2c1c25",
+        "pngSha256": "717c2f31f949cac461d85d9c47e7e9bbb196c387808c7e3cb8c03382dddc9bfd"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "scatterPlot",
+      "representativeFixture": "vchart-scatterPlot",
+      "representativeDataShape": "raw_array",
+      "representativeTopLevelKeys": [
+        "data",
+        "type"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/scatterPlot/stat-minimal",
+        "specSha256": "501b51b738b5c5d9f73d1e06071054a43eb1ecb3866f8a841cc56a5bbb0064ad",
+        "captureSha256": "eac0ec272d7dd7e00223d384c5bc9ffd045490fcda44312dda106b71ebbaedf6",
+        "pngSha256": "29cf2fb4bbc2286eaafe018b54acdf9e551048728d9c318b459d346e0bf6f2cd"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "embeddingPlot",
+      "representativeFixture": "vchart-embeddingPlot",
+      "representativeDataShape": "raw_array",
+      "representativeTopLevelKeys": [
+        "data",
+        "dimensions",
+        "method",
+        "type"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/embeddingPlot/stat-minimal",
+        "specSha256": "aa1931c3cb7c95946b234122f369a54c9a25ddfee3ef23658098c7c610153403",
+        "captureSha256": "b6fa2ab13882ebb6e970e6ae454a90ea504d9217b9f334442d205cda8d61ca18",
+        "pngSha256": "483ddea0bf33733a11e03ebfa41ed6ffb93802e10a7131466230efaa3af5d2e9"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "qqPlot",
+      "representativeFixture": "vchart-qqPlot",
+      "representativeDataShape": "raw_array",
+      "representativeTopLevelKeys": [
+        "data",
+        "type"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/qqPlot/stat-minimal",
+        "specSha256": "af82fdf7e011f1b93f25b09526c3820288395284feee2e175e4cbde588703d99",
+        "captureSha256": "570879c4f20e7dd4d4f9196331a794d964d7a3f3536739188f3670177e937ce0",
+        "pngSha256": "c2e2e41fa2032bd3ac4c3559a4ed44fdaffcf02c39613364fc6c211d457dff27"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "stripPlot",
+      "representativeFixture": "vchart-stripPlot",
+      "representativeDataShape": "raw_array",
+      "representativeTopLevelKeys": [
+        "data",
+        "type"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/stripPlot/stat-minimal",
+        "specSha256": "03dcf84ad091ef81a74fbb32545f705485fbb24eb8776c4694f25cbf2e76014b",
+        "captureSha256": "47e83dd8daf6229e8b05b9d976d1407baef9d3ac88f67c1e0411b38573e880aa",
+        "pngSha256": "02d70d6f9e32f2c01f67d6a4b3030913c15c6e3ba9fd2a6a1d1ee4d8ccba9f9f"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "ecdfPlot",
+      "representativeFixture": "vchart-ecdfPlot",
+      "representativeDataShape": "raw_array",
+      "representativeTopLevelKeys": [
+        "data",
+        "type"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/ecdfPlot/stat-minimal",
+        "specSha256": "4cf9df901441a072678f64d9457d5c57e002fd16002a4f92ddcdd43f40ea523f",
+        "captureSha256": "5999705c36ee51c30057b3d6bb81a82d1d94f65abac39b2181af7d8ead599ba2",
+        "pngSha256": "3fbd6636bf9d9b6f15f4550d423b6fdc122e7de8fbd7c4bbe17510bfdcc7a157"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "histogram",
+      "representativeFixture": "vchart-histogram",
+      "representativeDataShape": "object_with_values",
+      "representativeTopLevelKeys": [
+        "data",
+        "height",
+        "type",
+        "width",
+        "x2Field",
+        "xField",
+        "yField"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/histogram/basic",
+        "specSha256": "d7c8b32e1821d535302b69af1ad60ac4deab9863001102b35bc249db7fd8dbcd",
+        "captureSha256": "85b538134cfa8cce1df0178d69115d3c297576918d8f08127549b303f42da039",
+        "pngSha256": "1f5996fabc38a29d90107678d54860c321b860ca494b61e0e538005b30cd16e1"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "calibrationCurve",
+      "representativeFixture": "vchart-calibrationCurve",
+      "representativeDataShape": "raw_array",
+      "representativeTopLevelKeys": [
+        "data",
+        "type"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/calibrationCurve/stat-minimal",
+        "specSha256": "02473636a6ec399c6975c2e31c7531e3db22960e0dc9f3bd4b37272fd27c5222",
+        "captureSha256": "c13d7ada17b75f934da90f478c910349668d47d83a20b80bc925069b250cae30",
+        "pngSha256": "d1d5ecd01ad6a8c6683d50fce0776ec1ca84be5a488d281e9e92c00594b3329f"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "rocCurve",
+      "representativeFixture": "vchart-rocCurve",
+      "representativeDataShape": "raw_array",
+      "representativeTopLevelKeys": [
+        "data",
+        "type"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/rocCurve/stat-minimal",
+        "specSha256": "5059ec0236d21d8ba2ef2010edb098f145dcd218ab1f7e1065f8e6b75b3810fb",
+        "captureSha256": "c51de74a64bf59efb8d67ab1fa3b69dc2e1897fb05d1b9520bcd2ef4b3d95b4e",
+        "pngSha256": "c50fca26c281d07d34bcc5afad49d63a60b47bde011137622d4793a72798e763"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "precisionRecallCurve",
+      "representativeFixture": "vchart-precisionRecallCurve",
+      "representativeDataShape": "raw_array",
+      "representativeTopLevelKeys": [
+        "data",
+        "type"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/precisionRecallCurve/stat-minimal",
+        "specSha256": "a125a0da19f9a5ed299b9e542c6688baf676dc95cb6c531faeadf991b267e3e3",
+        "captureSha256": "968cf8cbd50bba2f4b313f76dbc32f0df73f8a87e793df5473a62eac68507c81",
+        "pngSha256": "7e8b6fb46967a8710ef8e090c2a9bd04ad78f6339662609bff08b3c5ef9e0f51"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "shapBeeswarmPlot",
+      "representativeFixture": "vchart-shapBeeswarmPlot",
+      "representativeDataShape": "raw_array",
+      "representativeTopLevelKeys": [
+        "data",
+        "featureOrder",
+        "type"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/shapBeeswarmPlot/stat-minimal",
+        "specSha256": "f11ba0c760c60fc912b3802f17a8846c24b9c0261eb6f668c76285ca0e311da8",
+        "captureSha256": "eeb2e903cedf5db7ff30f039963a684b398be224826e4654d5cedcc7c132799b",
+        "pngSha256": "cc6e39a74d258f512e99b17150d292c322924ded258c22b3032a5ab1069f01a4"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "pairPlot",
+      "representativeFixture": "vchart-pairPlot",
+      "representativeDataShape": "object",
+      "representativeTopLevelKeys": [
+        "data",
+        "type",
+        "variables"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/pairPlot/stat-minimal",
+        "specSha256": "33177cc98d9653f952d3640b5ac3825b3456ce770058a91ef4ede9ec52d39d1c",
+        "captureSha256": "90ecf206813930e2966b37498a07cc8202038f74cfceb7d2639e361e6d4be397",
+        "pngSha256": "8a4b40c99d2888220af1e90d44976a81292294e867695d424736762bb48dd21f"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "hexbinPlot",
+      "representativeFixture": "vchart-hexbinPlot",
+      "representativeDataShape": "raw_array",
+      "representativeTopLevelKeys": [
+        "data",
+        "type"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/hexbinPlot/stat-minimal",
+        "specSha256": "dcc8be78b2f3ea0382b01d6de5e452bdc0bf207fbbf04b658a65a98e637dbf18",
+        "captureSha256": "a00d39fbf7f3f52dd1e5c22602bf23827507d1210e621cf282b11f8e2c4cbdd0",
+        "pngSha256": "3292fae30cb7e87cfbe7e3eae73a9b9533c873e2d7b478add6f4f637fa77ad41"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "featureImportancePlot",
+      "representativeFixture": "vchart-featureImportancePlot",
+      "representativeDataShape": "raw_array",
+      "representativeTopLevelKeys": [
+        "data",
+        "interval",
+        "method",
+        "type"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/featureImportancePlot/stat-minimal",
+        "specSha256": "8fafeaf179e1eb287c456db4fdfad36e6748ce9b2af5c5b78dfd3435d27dd2c0",
+        "captureSha256": "2f635c55a46acf31b6b10cd365be3eed5dede72c319e2a24dd3559d2fb45104c",
+        "pngSha256": "daa3e0376a5552ffd919b299d12c5b37f10b5c38eeb46043c90ce5e55093e990"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "pointIntervalPlot",
+      "representativeFixture": "vchart-pointIntervalPlot",
+      "representativeDataShape": "raw_array",
+      "representativeTopLevelKeys": [
+        "data",
+        "input",
+        "referenceLine",
+        "type"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/pointIntervalPlot/stat-minimal",
+        "specSha256": "7961559df13e3bd09f1003033702782d998a3158ecf360915106d277ec1058aa",
+        "captureSha256": "d9725753ffe200abd2fbe6f0756a327d3c682035ba2f93cd83311e1b726fa127",
+        "pngSha256": "e834e61a456c2e9342d36475a38e836ef277ac2ef87075e053c26f0cfec0fa52"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "missingValueMatrix",
+      "representativeFixture": "vchart-missingValueMatrix",
+      "representativeDataShape": "object",
+      "representativeTopLevelKeys": [
+        "data",
+        "type",
+        "variables"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/missingValueMatrix/stat-minimal",
+        "specSha256": "56f0b2e5e6160eaf6212ee560319a6994ac13f1e6f71a707f3e0fcbcaf4d97f5",
+        "captureSha256": "37639001339b5eefddb1bfb2082202ed8a1e4d573c03a880465bbef755d1d7d3",
+        "pngSha256": "da28bf0ba29187e62d02cd6cea8d33c1038211e3b1cd741e533a48fba8e197f8"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "correlationMatrix",
+      "representativeFixture": "vchart-correlationMatrix",
+      "representativeDataShape": "object",
+      "representativeTopLevelKeys": [
+        "data",
+        "method",
+        "type",
+        "variables"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/correlationMatrix/stat-minimal",
+        "specSha256": "8ab64fbcca367a448c08a24c9e5fe7989ce0dad237122e2041f872fb8a361cd9",
+        "captureSha256": "79b5b7b1a2611b554ef3455bf68ddd63b866ac20e1db3f57135bf1ef434ff79e",
+        "pngSha256": "899cea11684f7ee3c8c05ac067cd899740ff0002b043fc49248ad96e343a5fa2"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "confusionMatrix",
+      "representativeFixture": "vchart-confusionMatrix",
+      "representativeDataShape": "raw_array",
+      "representativeTopLevelKeys": [
+        "data",
+        "type"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/confusionMatrix/stat-minimal",
+        "specSha256": "976d90acf543bac1c7c0597fbb2029fe9da19dd2ba617555e6e87f5d61b69b2b",
+        "captureSha256": "da67516cda7783ec11189de93ea95139f417bc31f9d46d4de9ea9d2a995b5013",
+        "pngSha256": "6eb96670aa525c1972d5eae5b8f22f007ab8283bce9fd24ae62f000a0f2f104f"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "bar",
+      "representativeFixture": "vchart-bar",
+      "representativeDataShape": "array_of_data_views",
+      "representativeTopLevelKeys": [
+        "animation",
+        "data",
+        "height",
+        "type",
+        "width",
+        "xField",
+        "yField"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/bar/positive",
+        "specSha256": "9d65d98aa6745b31da3ec09de847c33a9c95457fe6303048ed37828fee313796",
+        "captureSha256": "fc2de6da25b4f6b8b03969be12e4dfbc73c6fc6ebd3b08b76d2730565e9f774a",
+        "pngSha256": "6826bfcf1331a959c2314033b3192d9e87e50dea2f683c42afdbd06b8a17c1ac"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "line",
+      "representativeFixture": "vchart-line",
+      "representativeDataShape": "object_with_values",
+      "representativeTopLevelKeys": [
+        "data",
+        "height",
+        "type",
+        "width",
+        "xField",
+        "yField"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/line/basic-demo",
+        "specSha256": "0d895b513de1dce6011754b8bfb04450c501e2958aa9866fe1efa0969c39f55d",
+        "captureSha256": "09cd35fcb4463b11ae6d45b0e48adf732cc69693ccf955b4399bb9a00af613ba",
+        "pngSha256": "62a1d9c5e5d33d0a766012f51323d8279b72717f86e0b47f6a9035b236322f26"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "scatter",
+      "representativeFixture": "vchart-scatter",
+      "representativeDataShape": "object_with_values",
+      "representativeTopLevelKeys": [
+        "data",
+        "height",
+        "type",
+        "width",
+        "xField",
+        "yField"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/scatter/positive",
+        "specSha256": "5711e02a3fac7e0ed99642d6154c0c9ddf216c1b0490ae82c970d4f3b155067d",
+        "captureSha256": "d1083d71787bf80fcc8ab1506c5e75952dce740c9c20ca3974d0558acdbdc7b7",
+        "pngSha256": "3aca6efcf618f1244a453a1ec74858e3cbb5c541cff647e91006fbe0598f97f1"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "area",
+      "representativeFixture": "vchart-area",
+      "representativeDataShape": "object_with_values",
+      "representativeTopLevelKeys": [
+        "data",
+        "height",
+        "type",
+        "width",
+        "xField",
+        "yField"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/area/basic",
+        "specSha256": "a267e0a3462b8e86668c23e7b0821c428ef9d68313f09ef75ced907f51381945",
+        "captureSha256": "ce09a99fea12ffea6eecbee3a225c81c40efe04c638b0ee10e5362112962eba4",
+        "pngSha256": "7957cb54619ec12e35125e2d9914e7424a9c2957b4d59b697e789e7ea1eb0cf3"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "rangeArea",
+      "representativeFixture": "vchart-rangeArea",
+      "representativeDataShape": "object_with_values",
+      "representativeTopLevelKeys": [
+        "data",
+        "height",
+        "type",
+        "width",
+        "xField",
+        "yField"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/rangeArea/basic",
+        "specSha256": "0403a253cbc7d23dcb292d3e3f6c1f8bd8e09e46651f97aaeab0488f3b58f987",
+        "captureSha256": "80c7b83197174a4c33224e668ad0604e5aa9fdfe789d7baf2b6b84c2697d9b82",
+        "pngSha256": "2c3eb24bcbff55ff7a1d2029c91d4e931bb46e3d944e279625e17d885bf638fc"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "rangeColumn",
+      "representativeFixture": "vchart-rangeColumn",
+      "representativeDataShape": "object_with_values",
+      "representativeTopLevelKeys": [
+        "data",
+        "height",
+        "type",
+        "width",
+        "xField",
+        "yField"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/rangeColumn/basic",
+        "specSha256": "83dce075f15a71d2db351de8a3833dc475e65e8bae1aef18ca965935cfeafa05",
+        "captureSha256": "2d5060b837329de2b4b43318f229609aca6ea5a77c350a49c47d0ef811460a5b",
+        "pngSha256": "ed971b38af86dcba231142e9c3778e7d0fa2a7e71130cbe28815fbf78f2b022e"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "waterfall",
+      "representativeFixture": "vchart-waterfall",
+      "representativeDataShape": "object_with_values",
+      "representativeTopLevelKeys": [
+        "data",
+        "height",
+        "stackLabel",
+        "type",
+        "width",
+        "xField",
+        "yField"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/waterfall/basic",
+        "specSha256": "e6600581e89452109291c781136c0b6397f0de8f81765f6fbd6536edebd91d02",
+        "captureSha256": "ab6cc0ff1ea2b7472c643d780561342ab7cf4b20b39b1eb32570448b15c5d6f2",
+        "pngSha256": "486b50c9ec95174b54b4ea3958dccb06e364eab1824fe5350940121d4a02a837"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "heatmap",
+      "representativeFixture": "vchart-heatmap",
+      "representativeDataShape": "object_with_values",
+      "representativeTopLevelKeys": [
+        "axes",
+        "color",
+        "data",
+        "height",
+        "type",
+        "valueField",
+        "width",
+        "xField",
+        "yField"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/heatmap/basic",
+        "specSha256": "3dd0837be105c1c8b1e001f102f88d6a11f4ded657f18a90884228b2d93ddf4f",
+        "captureSha256": "03452dad97e5a63652d8783bc1fcb0f47cad679fcf66ec3317e8e07f27343aa9",
+        "pngSha256": "78d51d196345081b11f47b5016e7bc20fbfcdef9014adc7b641d98b3a52bdc18"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "mosaic",
+      "representativeFixture": "vchart-mosaic",
+      "representativeDataShape": "object_with_values",
+      "representativeTopLevelKeys": [
+        "data",
+        "height",
+        "type",
+        "width",
+        "xField",
+        "yField"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/mosaic/basic",
+        "specSha256": "cdc7e62d546f1c47a141956798b0d1599b845dca4c6b9ce78d7d2b4f6f4de754",
+        "captureSha256": "2c80bffe1f4d92e969798556bd967f4f8b3e559722b5bc05ed1950826345898c",
+        "pngSha256": "4fdce1bc683d85356936d0d69a916612ab1dcce215e85320f66377206ba920fc"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "linearProgress",
+      "representativeFixture": "vchart-linearProgress",
+      "representativeDataShape": "object_with_values",
+      "representativeTopLevelKeys": [
+        "data",
+        "height",
+        "type",
+        "width",
+        "xField",
+        "yField"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/linearProgress/basic",
+        "specSha256": "10dede98e5743ccb65d13dc13fae4f8135951021d75a419903a1d1f76640a38c",
+        "captureSha256": "e74de7c40506288d671e61a86d0f22f35df4deb063f6bad5c9c1244c572a29b2",
+        "pngSha256": "7ede43f55d9d6720fb5752898960ce241ab91b04b8a15ed19a078e5f8a9da047"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "common",
+      "representativeFixture": "vchart-common",
+      "representativeDataShape": "object_with_values",
+      "representativeTopLevelKeys": [
+        "axes",
+        "data",
+        "height",
+        "series",
+        "type",
+        "width"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/common/basic",
+        "specSha256": "e2005dc4f3779ed2fd86113adef028d1dde8c57ce6f923788c190f9b40ceba33",
+        "captureSha256": "05cc421d37cc4690a0f8a7f7853a8cd40bba209f01179ff5d9baba0c694e5851",
+        "pngSha256": "4452c000ddf21b1ab41671e89086bd6178e2742950483162c52f29c4f33f8530"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "pie",
+      "representativeFixture": "vchart-pie",
+      "representativeDataShape": "object_with_values",
+      "representativeTopLevelKeys": [
+        "categoryField",
+        "data",
+        "height",
+        "type",
+        "valueField",
+        "width"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/pie/basic",
+        "specSha256": "ebf1f7d9194d28acc434b218c7d713fa9eb0402ecbd38d6234011615f986fe45",
+        "captureSha256": "4ae2eb3b63a7c820c1bed1a7c1133b23b97663bf81deee0ca591be0da9ebdc53",
+        "pngSha256": "c11cef5d58c1c59a797f93e49b9225537f7bd2dfb30dc25b67b388661533385e"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "rose",
+      "representativeFixture": "vchart-rose",
+      "representativeDataShape": "object_with_values",
+      "representativeTopLevelKeys": [
+        "categoryField",
+        "data",
+        "height",
+        "type",
+        "valueField",
+        "width"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/rose/basic",
+        "specSha256": "f5a584a9c6061ab3a5d8aa0d7782bdd12a84b6c26618706b73a95e133a23ac61",
+        "captureSha256": "0eee22cd3fd837df5f89ca2a87702990995c894ca9729b972fbc811c3d3617ba",
+        "pngSha256": "a0cfa3794f9d04d80e38cb4a05d1368b99030c5da5bd1447da6c059c1c5313c3"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "radar",
+      "representativeFixture": "vchart-radar",
+      "representativeDataShape": "object_with_values",
+      "representativeTopLevelKeys": [
+        "categoryField",
+        "data",
+        "height",
+        "type",
+        "valueField",
+        "width"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/radar/basic",
+        "specSha256": "87fed9493ed714c517558cfc3a24f1a237ae060a6dc36307de336e17b3f231c7",
+        "captureSha256": "7ed743b333cfcdfb227995fe882811a3cf5923e238e8b74619492a39de84e7a3",
+        "pngSha256": "3f31bbc4120fc2d18b0a621b7bc5e0be5187bd8ffa2eae7ad007518fcf593001"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "gauge",
+      "representativeFixture": "vchart-gauge",
+      "representativeDataShape": "object_with_values",
+      "representativeTopLevelKeys": [
+        "categoryField",
+        "data",
+        "height",
+        "type",
+        "valueField",
+        "width"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/gauge/basic",
+        "specSha256": "d87f771679c12c6c109dbacb9311825b5a92d524cd8c4a78ae4028254ed9d411",
+        "captureSha256": "4eb5edd384636f8166ed1ea0d67458b8d181d3c5ec7822ce4b1579342e70a8b8",
+        "pngSha256": "373f1c09b8e4fdf560a8fcf9cd388ae0cfe974cc775ed6d0dfa2e7ecb3d59d6b"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "circularProgress",
+      "representativeFixture": "vchart-circularProgress",
+      "representativeDataShape": "object_with_values",
+      "representativeTopLevelKeys": [
+        "categoryField",
+        "data",
+        "height",
+        "type",
+        "valueField",
+        "width"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/circularProgress/basic",
+        "specSha256": "86fe8dd2c4ebd8c3e0124e39718b6d968bfaf314ef2f5bf67a269779d84b6867",
+        "captureSha256": "ec9fb911893d9d0e3e72ad10a3310b03818fa751a762618bf47a732d5ba147ff",
+        "pngSha256": "6f7b2ab70e7854e8ac5d39afea7b7836ae392bc95794305f80e6bd7f1399a6f5"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "liquid",
+      "representativeFixture": "vchart-liquid",
+      "representativeDataShape": "object_with_values",
+      "representativeTopLevelKeys": [
+        "data",
+        "height",
+        "type",
+        "valueField",
+        "width"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/liquid/basic",
+        "specSha256": "408015de588df648b9457c037167730b6160c1a30a80286703706d7d6515ed3a",
+        "captureSha256": "f436b841cda46905aa349a950083f3af8a5a0be88eb41dc60efd16ed793aa49e",
+        "pngSha256": "2b7aec8da81334f4cace0a0a5ada51af158cd837b63c9adf82d6a02c2c18e2f4"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "funnel",
+      "representativeFixture": "vchart-funnel",
+      "representativeDataShape": "object_with_values",
+      "representativeTopLevelKeys": [
+        "categoryField",
+        "data",
+        "height",
+        "label",
+        "type",
+        "valueField",
+        "width"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/funnel/basic",
+        "specSha256": "256454dbfe50a1abff103913242cc885b2b713eaf07fcf08da06c18869ef6164",
+        "captureSha256": "d44b451c28e423b90aefb7096177b862cf6fcb88fc04310c9ab5099278043173",
+        "pngSha256": "15f1a83b85c0db5cac679a702b381d8437c1259c5ea1535b813a86de3f3389e8"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "treemap",
+      "representativeFixture": "vchart-treemap",
+      "representativeDataShape": "object_with_values",
+      "representativeTopLevelKeys": [
+        "categoryField",
+        "data",
+        "height",
+        "label",
+        "type",
+        "valueField",
+        "width"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/treemap/basic",
+        "specSha256": "de7cd701400278c14b0ce47d8dbee0e0e84213104247573c070fc5572f3c849b",
+        "captureSha256": "b106d3ef66260d27643367bd9ed53e9dff46cbce327c993d50f7aeae8790d0a3",
+        "pngSha256": "4efc92fcd0b9c853bbd41fd83b1d5cdc8468391825823d7f27c3f3723222ebb4"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "sunburst",
+      "representativeFixture": "vchart-sunburst",
+      "representativeDataShape": "object_with_values",
+      "representativeTopLevelKeys": [
+        "categoryField",
+        "data",
+        "height",
+        "label",
+        "type",
+        "valueField",
+        "width"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/sunburst/basic",
+        "specSha256": "c3a8dd9266f363b480da61ba0ecfde06dcd68590c178140db4fa1ae8809f3675",
+        "captureSha256": "987010402cc288af79c167291f71bc7f0426658192487368b9facff1c739c4bf",
+        "pngSha256": "b92c5cf5b92ca0e6417458953b13666efb5c6bec2d7c38ad0092f433488d4207"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "circlePacking",
+      "representativeFixture": "vchart-circlePacking",
+      "representativeDataShape": "object_with_values",
+      "representativeTopLevelKeys": [
+        "categoryField",
+        "data",
+        "height",
+        "label",
+        "type",
+        "valueField",
+        "width"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/circlePacking/nested",
+        "specSha256": "88006a9d3a55bbd61385e0be230506d0a5d5f02d93c157c089e011a02266cd09",
+        "captureSha256": "df19beb12c76f25aba8245ce9f3dc8bd4cbe0460933a06ea8d6c38f9793fad59",
+        "pngSha256": "b5876702e26280530cec3d605efacf28313c81140000640c428419cf69a697cd"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "sankey",
+      "representativeFixture": "vchart-sankey",
+      "representativeDataShape": "array_of_data_views",
+      "representativeTopLevelKeys": [
+        "categoryField",
+        "data",
+        "height",
+        "label",
+        "sourceField",
+        "targetField",
+        "type",
+        "valueField",
+        "width"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/sankey/single",
+        "specSha256": "cf2e752e2c3b7f8b350ad0eda49c653d9c0b5b6d229d9ba107593ca9852dd9a4",
+        "captureSha256": "f0498229df0eef943b348ee475277be0f49c6d534fb079b85fc4c4c4c13c7e5e",
+        "pngSha256": "9c44c90dc8175262a4643151807a1f42b50a8c146625f2ba7e379d962d89f4fa"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "correlation",
+      "representativeFixture": "vchart-correlation",
+      "representativeDataShape": "object_with_values",
+      "representativeTopLevelKeys": [
+        "categoryField",
+        "centerLabel",
+        "data",
+        "height",
+        "label",
+        "type",
+        "valueField",
+        "width"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/correlation/basic",
+        "specSha256": "658159e7a353c71b37d60127787144ecd0f68c53530cf0243589216baac88971",
+        "captureSha256": "f4cf51a56a59c2d4ed93e38792227591dede3f769ee7cda4341cddd9e75f9e86",
+        "pngSha256": "f649ce0f973ae7d4bc5770a03e341c750e6f68350df4e17b3d132653aea5deb8"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "venn",
+      "representativeFixture": "vchart-venn",
+      "representativeDataShape": "object_with_values",
+      "representativeTopLevelKeys": [
+        "categoryField",
+        "data",
+        "height",
+        "label",
+        "overlapLabel",
+        "seriesField",
+        "type",
+        "valueField",
+        "width"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/venn/official",
+        "specSha256": "bc0f0e27556a15e09f01cd898cf95df29bb0acae01aeb4df992f87629e9bd9cf",
+        "captureSha256": "688a696036ae231958f052244e4944b6bdb05d9daaaedba08162c685c6f0b7a5",
+        "pngSha256": "9446ac011469279ae31db99eb8fad76f7a56242335ab2c471ad34469c3359796"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "storyline",
+      "representativeFixture": "vchart-storyline",
+      "representativeDataShape": "raw_array",
+      "representativeTopLevelKeys": [
+        "data",
+        "height",
+        "layout",
+        "type",
+        "width"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/storyline/first-frame",
+        "specSha256": "ed2d10e5743c70865f818466283d0c6ff9c348ac17b519a790951e8764b6e15d",
+        "captureSha256": "658c5328a715832ef89cd8da6585af02bdcbeeb16dd8ccf30ba98976e3b9558e",
+        "pngSha256": "d2299fd1f0de1651556be9a5f5e6f02679e59c41686fb62798b9466c4b890c8d"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "sequenceAnalysis",
+      "representativeFixture": "vchart-sequenceAnalysis",
+      "representativeDataShape": "NoneType",
+      "representativeTopLevelKeys": [
+        "actionData",
+        "eventData",
+        "height",
+        "mode",
+        "patternData",
+        "stepMediumMap",
+        "type",
+        "userImageMap",
+        "width"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/sequenceAnalysis/first-frame",
+        "specSha256": "a9007a1f73e1b78babc0f27d1c67fd34b245cdbe65b6b912b2617b13c1b9e328",
+        "captureSha256": "d9c11637c2e8e5619499d7154f273bf12d7175874d444b65db33245b542267d2",
+        "pngSha256": "e9b1c81cd790665ce97e252b7bbd7785e1a0d66ffd9e2953d506c02d4d7a0a6e"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "sequence",
+      "representativeFixture": "vchart-sequence",
+      "representativeDataShape": "array_of_data_views",
+      "representativeTopLevelKeys": [
+        "axes",
+        "data",
+        "height",
+        "series",
+        "type",
+        "width"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/sequence/first-frame",
+        "specSha256": "57daa4846b078544500bba13e676be881a01debb35e551e85552eb8836799528",
+        "captureSha256": "d2990b3062c7f2b03abcdbed4df25ffe62a90d76335711eba7124169a1a898eb",
+        "pngSha256": "5df93967c2c3df3b87b85e3c573e9480fd6601cb49a44f62f80e19a66b07c90c"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "combinationCandlestick",
+      "representativeFixture": "vchart-combinationCandlestick",
+      "representativeDataShape": "NoneType",
+      "representativeTopLevelKeys": [
+        "axes",
+        "candlestickSeries",
+        "height",
+        "previewSeries",
+        "type",
+        "width"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/combinationCandlestick/first-frame",
+        "specSha256": "7dfd9df05fcf4288f452c0a5e32479b962725e6d21945a7c1fa1afe0e65e0aec",
+        "captureSha256": "f3b3143b57d725ac189c7757e836a58c6f23c9e09b592ee2dd3c3393316abdfc",
+        "pngSha256": "d54aafbbda45456e80c307e35fc36ab639cae405698a370af5cbe2c7beae2e7f"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "pictogram",
+      "representativeFixture": "vchart-pictogram",
+      "representativeDataShape": "object_with_values",
+      "representativeTopLevelKeys": [
+        "data",
+        "height",
+        "nameField",
+        "svg",
+        "type",
+        "valueField",
+        "width"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": [
+          "regions"
+        ]
+      },
+      "origin": {
+        "casePath": "tests/cases/pictogram/first-frame",
+        "specSha256": "9a2e00875ce1a9d213fab79b35b25baf4f0b9e248d8b5d94961d642d2ba7357a",
+        "captureSha256": "e2600aaeacd4aca552ca566fea3a6881de5dc07082acfaac4ad4f5975e104d0c",
+        "pngSha256": "7d2324755db916db50ef1e1ef02eced1a80b52016c69b1bd7a585260a0837326"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "imageCloud",
+      "representativeFixture": "vchart-imageCloud",
+      "representativeDataShape": "object_with_values",
+      "representativeTopLevelKeys": [
+        "data",
+        "height",
+        "imageSize",
+        "type",
+        "urlField",
+        "width"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/imageCloud/first-frame",
+        "specSha256": "b0ec40ac08ed3c660d634f9f34e15aefc0820f28f2f1e5c0b24f5994d32dd43c",
+        "captureSha256": "9ad1e88f74ec9869eb6130e3da6f8e5683dc7887452adb0dda8efea71c3f71c7",
+        "pngSha256": "ebcefc193cd67af1c521c5b28eb1f9d8d27244960ba37fcf33bba07da40dafe9"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "candlestick",
+      "representativeFixture": "vchart-candlestick",
+      "representativeDataShape": "object_with_values",
+      "representativeTopLevelKeys": [
+        "closeField",
+        "data",
+        "height",
+        "highField",
+        "lowField",
+        "openField",
+        "type",
+        "width",
+        "xField"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/candlestick/ohlc",
+        "specSha256": "d592bf39c24d2568782a0010b5ef3d4a2c2a58aa5eac60d5f299f51bb1f83379",
+        "captureSha256": "0273067bec3cae2fde6a0b4188b5b1b0f6d6309c011da9a746334860d17a7f72",
+        "pngSha256": "2ec457682e6640420d23dd08ea0c1521f2bc665ab21f6ec79fed96c2adb2e608"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "conversionFunnel",
+      "representativeFixture": "vchart-conversionFunnel",
+      "representativeDataShape": "object_with_values",
+      "representativeTopLevelKeys": [
+        "categoryField",
+        "data",
+        "height",
+        "isTransform",
+        "label",
+        "shape",
+        "type",
+        "valueField",
+        "width"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/conversionFunnel/stages",
+        "specSha256": "9069cab887582d32d71f36b4d0a905f0dca2958a4cabf32937c5613cc2672661",
+        "captureSha256": "2c14f92e8056c588ea7bc50bd63449ee4192985190d27efd6b4249268d9bd46b",
+        "pngSha256": "8244a6578f1c7458013e8963524a7c6b236401b88830433c79e57226102f3537"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "rankingList",
+      "representativeFixture": "vchart-rankingList",
+      "representativeDataShape": "raw_array",
+      "representativeTopLevelKeys": [
+        "bar",
+        "barBackground",
+        "data",
+        "decorateHaloIcons",
+        "height",
+        "nameLabel",
+        "orderLabel",
+        "pageSize",
+        "rankingIcon",
+        "type",
+        "valueLabel",
+        "width",
+        "xField",
+        "yField"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/rankingList/page",
+        "specSha256": "236f002b7dab3860ea16849a1b76bc1f7091765ceee67161098ff8209da2d3e7",
+        "captureSha256": "55e3fffd11e22084bc782fac9aaa3458faa44f8f006a17bc333ceb0371fde609",
+        "pngSha256": "2db1ecb69cb87d73eb505e89bb643b8e3000d8db679c5ba4a3e3a67fe9a09c37"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "rankingBar",
+      "representativeFixture": "vchart-rankingBar",
+      "representativeDataShape": "raw_array",
+      "representativeTopLevelKeys": [
+        "color",
+        "data",
+        "height",
+        "label",
+        "nameLabel",
+        "timeField",
+        "timeLabel",
+        "topN",
+        "type",
+        "width",
+        "xField",
+        "yField"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/rankingBar/first-frame",
+        "specSha256": "ea0d70e0c97a181ecc9313a81493f80d14fc427629a7021592c3f4558beaed52",
+        "captureSha256": "ce54ac7a8b7ac5eb02947f33b9aeb45e3c87f6fa9610b3ac6b87e38fcb507105",
+        "pngSha256": "5a5511f447bd0c67c74e2f75a82c2a5e7f3227815dd3253615f3ec7c61a55d07"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "timeline",
+      "representativeFixture": "vchart-timeline",
+      "representativeDataShape": "object_with_values",
+      "representativeTopLevelKeys": [
+        "data",
+        "direction",
+        "height",
+        "seriesField",
+        "subTitle",
+        "timeField",
+        "title",
+        "type",
+        "width"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/timeline/horizontal",
+        "specSha256": "a1573c114e1ea33eb1436c86df11ac02bc716fedaba8c56561de17934043c9b6",
+        "captureSha256": "6f9fb4a40b35a55b74fcabf84ce6a8822958b765d2edf341744a26faaf0d21d3",
+        "pngSha256": "60e664648922a55c9b463cd2b950b8c31beb7cb5ef1168b3ab24f6a65adabbb9"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "sequenceScatterPixel",
+      "representativeFixture": "vchart-sequenceScatterPixel",
+      "representativeDataShape": "object",
+      "representativeTopLevelKeys": [
+        "data",
+        "height",
+        "infoLabel",
+        "type",
+        "width",
+        "xField",
+        "yField"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/sequenceScatterPixel/first-frame",
+        "specSha256": "faae2aaf7062f672d00e5434688a1ee19588ace93cd54da67a0aaec1775cc256",
+        "captureSha256": "c4d3f926d7d6a6ce757802d5ea058bb7720dd1104bd1a6c3b737239e80bc5206",
+        "pngSha256": "ea259eda155f2fbe48b4e226321d7a4407abd346ad996c2bbbaace4d2b6885f0"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "sequenceScatterKDE",
+      "representativeFixture": "vchart-sequenceScatterKDE",
+      "representativeDataShape": "object",
+      "representativeTopLevelKeys": [
+        "data",
+        "height",
+        "infoLabel",
+        "seriesField",
+        "type",
+        "width",
+        "xField",
+        "yField"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/sequenceScatterKDE/first-frame",
+        "specSha256": "fe7303a4bdeccbc8d3a695917e9a1a079e7171e050a5332351f1915bcb5fde70",
+        "captureSha256": "12d01008434208d0dceb4fdec50efb48b20623fd68a41304273d5d52402e451a",
+        "pngSha256": "4ed730662fbc35be385f4d4a3edfc0b20730c7a5296756d82448e169722ad455"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "sequenceScatterLink",
+      "representativeFixture": "vchart-sequenceScatterLink",
+      "representativeDataShape": "object",
+      "representativeTopLevelKeys": [
+        "data",
+        "height",
+        "infoLabel",
+        "labelColor",
+        "scope",
+        "taskType",
+        "type",
+        "width",
+        "xField",
+        "yField"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/sequenceScatterLink/first-frame",
+        "specSha256": "7142a52f5d2ba4fbf3c4f0721ad7beeb258fb94caf8024803fc75b73b5243ad2",
+        "captureSha256": "aa0c8b99cfafed65840820fc9541321b35883ac29bbe809b10d93540da589fc9",
+        "pngSha256": "7276a67fd9cd5dc0bd29f6cd332fcb8590edcc702511aa24388fe76adb3f9340"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "map",
+      "representativeFixture": "vchart-map",
+      "representativeDataShape": "object_with_values",
+      "representativeTopLevelKeys": [
+        "data",
+        "height",
+        "label",
+        "map",
+        "nameField",
+        "padding",
+        "seriesField",
+        "type",
+        "width"
+      ],
+      "resourceNames": {
+        "maps": [
+          "local"
+        ],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/map/joined",
+        "specSha256": "15955e6fae70aa53af14eec7359ec92b6cd45e9ed25f3a034127abd689a248ba",
+        "captureSha256": "070dd41afda5003d00bd6695a8513a8b8c7be80f4928b74ff3a3890f77eaab58",
+        "pngSha256": "a9e53e48be46fba484090e5ba8d086da7ed04be93a9f9cbb084d88aed50d65ef"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    },
+    {
+      "name": "wordCloud",
+      "representativeFixture": "vchart-wordCloud",
+      "representativeDataShape": "object_with_values",
+      "representativeTopLevelKeys": [
+        "data",
+        "fontSizeRange",
+        "height",
+        "nameField",
+        "random",
+        "rotateAngles",
+        "type",
+        "valueField",
+        "width",
+        "word",
+        "wordCloudConfig"
+      ],
+      "resourceNames": {
+        "maps": [],
+        "svgs": []
+      },
+      "origin": {
+        "casePath": "tests/cases/wordCloud/weighted",
+        "specSha256": "cfbd9486a096d687a403a9b48bbc704be41614c011e63c084d28874ccee760a6",
+        "captureSha256": "90a9c41501188b989799c8db15f6a4282e72cd64716adf9612144a4229281922",
+        "pngSha256": "28ceea5962714bcd5611e45d23272c6e99b639b7d45abe3d74db1d17a3e66d71"
+      },
+      "optionAudit": "REQUIRES_SOURCE_BASED_FIELD_AND_CONDITIONAL_AUDIT"
+    }
+  ],
+  "observedSupplierInputs": {
+    "tests/cases/area/basic/spec.json": {
+      "sha256": "a267e0a3462b8e86668c23e7b0821c428ef9d68313f09ef75ced907f51381945",
+      "bytes": 646
+    },
+    "tests/cases/area/empty/spec.json": {
+      "sha256": "783af4a7040f7d09a4d4644f44a33ba1cdaecffcd9a4155920dd69ee268dde60",
+      "bytes": 122
+    },
+    "tests/cases/area/gap/spec.json": {
+      "sha256": "e0733ba36ffe26114cafa3295cc1ea70381676395c4816b76af42ff48ca799b6",
+      "bytes": 648
+    },
+    "tests/cases/autocorrelationPlot/stat-minimal/spec.json": {
+      "sha256": "46439780e351fcbfae57c28ec7ad0c97ec860c80236484ba5db805e125eb8202",
+      "bytes": 352
+    },
+    "tests/cases/bar/empty/spec.json": {
+      "sha256": "20683c1815589ecc308b854cc9849842607f234da0f033706b651f2471094376",
+      "bytes": 186
+    },
+    "tests/cases/bar/grouped/spec.json": {
+      "sha256": "31385809d6851308aaa44cd3812c3c57510e568396105406a514a752b2e87353",
+      "bytes": 577
+    },
+    "tests/cases/bar/hidden-axes/spec.json": {
+      "sha256": "a1ebb7c6836d646e5094cf016a5759049e56d0fb1181689044dbcede33179e81",
+      "bytes": 501
+    },
+    "tests/cases/bar/horizontal/spec.json": {
+      "sha256": "e17e0368ee30064a558eefff273972ded011850712bfe1849afe00f9504850c3",
+      "bytes": 358
+    },
+    "tests/cases/bar/narrow/spec.json": {
+      "sha256": "23122e01003a6d4991bf02719876a3e2ca9bb1b99f79c9aed4d9ca1bfb9ba246",
+      "bytes": 329
+    },
+    "tests/cases/bar/negative/spec.json": {
+      "sha256": "2ac7b2a2527099ce5016775b690baceba49623a01038578f59d0d500c872da1c",
+      "bytes": 241
+    },
+    "tests/cases/bar/positive/spec.json": {
+      "sha256": "9d65d98aa6745b31da3ec09de847c33a9c95457fe6303048ed37828fee313796",
+      "bytes": 370
+    },
+    "tests/cases/bar/signed-baseline/spec.json": {
+      "sha256": "b622dfbaa4d58faf1f8ae8dee14c3b809267fa4682371541ca18f4851e17f10f",
+      "bytes": 329
+    },
+    "tests/cases/bar/stacked/spec.json": {
+      "sha256": "9973cbc00189343ef6d0f06d718f5ad0f2b6a8cba3f7a74c9bc813b085b3a4cb",
+      "bytes": 575
+    },
+    "tests/cases/bar/zero/spec.json": {
+      "sha256": "ad111a622a20f8a088b39fbb6866d6008876b608680907e2b3ea8456ed9e2ed4",
+      "bytes": 240
+    },
+    "tests/cases/boxPlot/basic/spec.json": {
+      "sha256": "8c603f8f4645a84897ef6f08155aafd599d5e1e90056c7c457460db995d8e7ac",
+      "bytes": 736
+    },
+    "tests/cases/boxPlot/empty/spec.json": {
+      "sha256": "51afaed8e7c0d99fb63a3f0f1cb7084fe79567b4e6e29f05728cff3ac76351d7",
+      "bytes": 212
+    },
+    "tests/cases/boxPlot/horizontal/spec.json": {
+      "sha256": "bc74adc2dec94a02b673c3289c2b9f3985f8c2fe6e274633e9e331d04c31c585",
+      "bytes": 765
+    },
+    "tests/cases/boxPlot/outliers/spec.json": {
+      "sha256": "98131c824616f67d7562cc86f378a56befb50e0a1a85bc71e14413cf6637865b",
+      "bytes": 876
+    },
+    "tests/cases/boxPlot/stat-minimal/spec.json": {
+      "sha256": "f36b9ffb1121c4137365b58abeefe884f2b4f0c4ffb2d849da6d558afb044458",
+      "bytes": 147
+    },
+    "tests/cases/calibrationCurve/stat-minimal/spec.json": {
+      "sha256": "02473636a6ec399c6975c2e31c7531e3db22960e0dc9f3bd4b37272fd27c5222",
+      "bytes": 469
+    },
+    "tests/cases/candlestick/ohlc/spec.json": {
+      "sha256": "d592bf39c24d2568782a0010b5ef3d4a2c2a58aa5eac60d5f299f51bb1f83379",
+      "bytes": 581
+    },
+    "tests/cases/circlePacking/all-zero/spec.json": {
+      "sha256": "67f334e333eec0725f08e88e4b06aec1b2d51a95f2075fdf7a399e18dd046f9a",
+      "bytes": 328
+    },
+    "tests/cases/circlePacking/deep-mixed/spec.json": {
+      "sha256": "5e158634213403ec725031d9a11f3a411141175679a1fffd6d500cc9e43e22ad",
+      "bytes": 3738
+    },
+    "tests/cases/circlePacking/empty/spec.json": {
+      "sha256": "49fe501625db6b819703825826cf2af69970ea669c9af1707034bdf62d55f1f9",
+      "bytes": 201
+    },
+    "tests/cases/circlePacking/nested/spec.json": {
+      "sha256": "88006a9d3a55bbd61385e0be230506d0a5d5f02d93c157c089e011a02266cd09",
+      "bytes": 971
+    },
+    "tests/cases/circlePacking/no-gap/spec.json": {
+      "sha256": "37b29706743cea9ab5310bae85c6297eef3294c618fe8c237c06dd1bc9e00d0f",
+      "bytes": 718
+    },
+    "tests/cases/circlePacking/siblings/spec.json": {
+      "sha256": "5fcf646464db85b6aa7611c43cba11d3a87336b013418f76dc25e52e1ec0ac4b",
+      "bytes": 695
+    },
+    "tests/cases/circlePacking/single/spec.json": {
+      "sha256": "ab75ea75d2436e6b1a01246030ad74c8898d11bdff7409d391dc861d7d3937df",
+      "bytes": 267
+    },
+    "tests/cases/circlePacking/ties/spec.json": {
+      "sha256": "9e0780f8cfc9c2f9b2cf0e39d92a8005e3f897474ac95a2dab82be4f52d23f59",
+      "bytes": 1064
+    },
+    "tests/cases/circlePacking/wide/spec.json": {
+      "sha256": "4c3da41354825269f1dab6fffdf34e82fb6102747276cc2d0520c1adffa91d8b",
+      "bytes": 1015
+    },
+    "tests/cases/circlePacking/zero-leaf/spec.json": {
+      "sha256": "a6f776c1478d04257e170e88b69a049a500cdd649676b1e5065cfe121185ff1c",
+      "bytes": 393
+    },
+    "tests/cases/circularProgress/basic/spec.json": {
+      "sha256": "86fe8dd2c4ebd8c3e0124e39718b6d968bfaf314ef2f5bf67a269779d84b6867",
+      "bytes": 201
+    },
+    "tests/cases/circularProgress/full/spec.json": {
+      "sha256": "8bb362c50694ea8079713a43ef988a5a860afcb6458143304da6d907e416b464",
+      "bytes": 199
+    },
+    "tests/cases/circularProgress/half/spec.json": {
+      "sha256": "3aa3b96e727b8df3df9f076c8bc2bd565e281732dd60579d2a81f55d06e71a84",
+      "bytes": 240
+    },
+    "tests/cases/circularProgress/zero/spec.json": {
+      "sha256": "fb52052f519709b708aa6442883bd0d9f35c2366dab6889414fd27da3a209aac",
+      "bytes": 199
+    },
+    "tests/cases/combinationCandlestick/first-frame/spec.json": {
+      "sha256": "7dfd9df05fcf4288f452c0a5e32479b962725e6d21945a7c1fa1afe0e65e0aec",
+      "bytes": 1270
+    },
+    "tests/cases/common/basic/spec.json": {
+      "sha256": "e2005dc4f3779ed2fd86113adef028d1dde8c57ce6f923788c190f9b40ceba33",
+      "bytes": 920
+    },
+    "tests/cases/common/empty/spec.json": {
+      "sha256": "2ccf093c7c7a0c2dbdc7637d84c4f495acf534b4bb69d005b346d661d9158eb1",
+      "bytes": 396
+    },
+    "tests/cases/common/right-axis/spec.json": {
+      "sha256": "0eaf2ecd129eccf1d150d0867ea9d5d274275c3fed19b8725a7d361ba6718b65",
+      "bytes": 1068
+    },
+    "tests/cases/common/unequal-domains/spec.json": {
+      "sha256": "06001d7e55d1c5f21159da1b0f8d3d0460467ab8da0ab4621c8188fe42c4b28e",
+      "bytes": 1002
+    },
+    "tests/cases/confusionMatrix/stat-minimal/spec.json": {
+      "sha256": "976d90acf543bac1c7c0597fbb2029fe9da19dd2ba617555e6e87f5d61b69b2b",
+      "bytes": 276
+    },
+    "tests/cases/conversionFunnel/stages/spec.json": {
+      "sha256": "9069cab887582d32d71f36b4d0a905f0dca2958a4cabf32937c5613cc2672661",
+      "bytes": 497
+    },
+    "tests/cases/correlation/basic/spec.json": {
+      "sha256": "658159e7a353c71b37d60127787144ecd0f68c53530cf0243589216baac88971",
+      "bytes": 878
+    },
+    "tests/cases/correlation/crowded/spec.json": {
+      "sha256": "650efc9d578488751a1f7c63e9130a97d1e4b74caacbf37e8c7e9e9ca13960b7",
+      "bytes": 981
+    },
+    "tests/cases/correlation/empty/spec.json": {
+      "sha256": "71c921d03b023e85d844075e5739ddb1bdea447fcadb45f51545a34a1218ae65",
+      "bytes": 240
+    },
+    "tests/cases/correlation/equal/spec.json": {
+      "sha256": "b7927353d874b9166c43aca694451d81a68ff9a19989f840b6f404c5143f6886",
+      "bytes": 447
+    },
+    "tests/cases/correlation/keywords/spec.json": {
+      "sha256": "605b155edfbe7a8f1268847664f5916dbbee8f9ae26bf3730c97722b2e5e25fc",
+      "bytes": 4402
+    },
+    "tests/cases/correlation/many-groups/spec.json": {
+      "sha256": "7eb25dd7855e8082c60e14e8c8eeb1b9197ab72269b1f947cf25754cd19ae98c",
+      "bytes": 2238
+    },
+    "tests/cases/correlation/no-center/spec.json": {
+      "sha256": "aeaa6e9e0a87d768c6f8a3b8c57e80fdc8802bfe331fe1cd9a6a4babfe31c166",
+      "bytes": 974
+    },
+    "tests/cases/correlation/outside/spec.json": {
+      "sha256": "d4a6691a01728ad2644d62a62bc815f9d0ebdb34c4fde800041fc78a14c18673",
+      "bytes": 963
+    },
+    "tests/cases/correlation/partial/spec.json": {
+      "sha256": "f5e4e6be131b7a03621133dc9a60afe4ec181b8c158e3e64d2dfd83a311be6a6",
+      "bytes": 1001
+    },
+    "tests/cases/correlation/series/spec.json": {
+      "sha256": "c7f38ca1cbb254c638b087ad43add1e2d0c99c2013727860a53532132f05da33",
+      "bytes": 901
+    },
+    "tests/cases/correlation/single/spec.json": {
+      "sha256": "39ecff78a81878dd2527cfa8f6f765b154f1c3a32268a8e7f713176fe6384a79",
+      "bytes": 335
+    },
+    "tests/cases/correlation/size-field/spec.json": {
+      "sha256": "31d5f5c1c990f5601130f058c1788b15351f8d3b8ac6f7151d69d2ec3c4ebc87",
+      "bytes": 989
+    },
+    "tests/cases/correlation/styled/spec.json": {
+      "sha256": "5ee4541a90576bebde534326a3580deb8e090da5bae74428e79dbfa9cb67244b",
+      "bytes": 1185
+    },
+    "tests/cases/correlationMatrix/stat-minimal/spec.json": {
+      "sha256": "8ab64fbcca367a448c08a24c9e5fe7989ce0dad237122e2041f872fb8a361cd9",
+      "bytes": 968
+    },
+    "tests/cases/countPlot/stat-minimal/spec.json": {
+      "sha256": "e605c8d0c7325cba531154203190d1ef16301e892316922d0fd549b5a3a96b4c",
+      "bytes": 252
+    },
+    "tests/cases/ecdfPlot/stat-minimal/spec.json": {
+      "sha256": "4cf9df901441a072678f64d9457d5c57e002fd16002a4f92ddcdd43f40ea523f",
+      "bytes": 161
+    },
+    "tests/cases/embeddingPlot/stat-minimal/spec.json": {
+      "sha256": "aa1931c3cb7c95946b234122f369a54c9a25ddfee3ef23658098c7c610153403",
+      "bytes": 2530
+    },
+    "tests/cases/featureImportancePlot/stat-minimal/spec.json": {
+      "sha256": "8fafeaf179e1eb287c456db4fdfad36e6748ce9b2af5c5b78dfd3435d27dd2c0",
+      "bytes": 603
+    },
+    "tests/cases/funnel/basic/spec.json": {
+      "sha256": "256454dbfe50a1abff103913242cc885b2b713eaf07fcf08da06c18869ef6164",
+      "bytes": 443
+    },
+    "tests/cases/funnel/empty/spec.json": {
+      "sha256": "2437013c660fe694e46f337cefaa95cdb81e11b54362a568f8bea75fcf20a831",
+      "bytes": 194
+    },
+    "tests/cases/funnel/horizontal/spec.json": {
+      "sha256": "788186a80cf4f783f1d0d1617cd5488b406555cb41ff201918c814673385267b",
+      "bytes": 511
+    },
+    "tests/cases/funnel/reverse/spec.json": {
+      "sha256": "0a7d752e743761d5433db47715f6d88dd5a9e6613b1d40a8f9664e1413b28b36",
+      "bytes": 492
+    },
+    "tests/cases/funnel/right/spec.json": {
+      "sha256": "ed6fa58dc09df5e1d323a48dc1596fb6f37bb204a7e31303cdaf7a8265008092",
+      "bytes": 510
+    },
+    "tests/cases/funnel/stages/spec.json": {
+      "sha256": "8d5dafe62dce6fa2cd49b102b0845e4495c56c38702f8d16ab05162c990aed42",
+      "bytes": 487
+    },
+    "tests/cases/funnel/zero/spec.json": {
+      "sha256": "241c74a794b988acab04a17d30710819f08a69b14219faa96550b845d233e158",
+      "bytes": 321
+    },
+    "tests/cases/gauge/basic/spec.json": {
+      "sha256": "d87f771679c12c6c109dbacb9311825b5a92d524cd8c4a78ae4028254ed9d411",
+      "bytes": 190
+    },
+    "tests/cases/gauge/full/spec.json": {
+      "sha256": "6168f900edf07d00aefc86bd7ec287fb7a77dc2a75888d439c5cf164a12760b7",
+      "bytes": 188
+    },
+    "tests/cases/gauge/half/spec.json": {
+      "sha256": "02ad25dea127826a1c79336dcbc1954da7bd1f356cdd79307a1827095ad4cf98",
+      "bytes": 229
+    },
+    "tests/cases/gauge/zero/spec.json": {
+      "sha256": "ee3b3893774aa024142bfb4827155d177b3c1b995aa61d3cda41b2b14d72c22d",
+      "bytes": 188
+    },
+    "tests/cases/heatmap/basic/spec.json": {
+      "sha256": "3dd0837be105c1c8b1e001f102f88d6a11f4ded657f18a90884228b2d93ddf4f",
+      "bytes": 634
+    },
+    "tests/cases/heatmap/default-colors/spec.json": {
+      "sha256": "4c0248d53ddb6f4d7333a3667758cb448685c158d0a81e3c5139cdf2c420a136",
+      "bytes": 500
+    },
+    "tests/cases/heatmap/empty/spec.json": {
+      "sha256": "34b231c9de67f029a65ecfe2fe9fffcf4cfa2329960917c1d7f9c93d4730b539",
+      "bytes": 414
+    },
+    "tests/cases/heatmap/sparse/spec.json": {
+      "sha256": "e3d93f9dde357abad40cd96e8ea8374c8e457fc2aa8725fba66e42f5a3fb2e44",
+      "bytes": 707
+    },
+    "tests/cases/hexbinPlot/repeated-values/spec.json": {
+      "sha256": "db004f83014519167355b4efaeb9c8d31fd688424096453732e6133bc629e9b5",
+      "bytes": 306
+    },
+    "tests/cases/hexbinPlot/stat-minimal/spec.json": {
+      "sha256": "dcc8be78b2f3ea0382b01d6de5e452bdc0bf207fbbf04b658a65a98e637dbf18",
+      "bytes": 211
+    },
+    "tests/cases/histogram/basic/spec.json": {
+      "sha256": "d7c8b32e1821d535302b69af1ad60ac4deab9863001102b35bc249db7fd8dbcd",
+      "bytes": 349
+    },
+    "tests/cases/histogram/empty/spec.json": {
+      "sha256": "a0d95246b74933173e4daba982081f9f154961f6e588d62b88071ac79e80630c",
+      "bytes": 147
+    },
+    "tests/cases/histogram/horizontal/spec.json": {
+      "sha256": "33a02a619ed170ac59b1dc2bccbfbe1982d8e970cafcb70b7c09d82df0169c80",
+      "bytes": 378
+    },
+    "tests/cases/histogram/stat-minimal/spec.json": {
+      "sha256": "e895111827c9a4c6bc2dc55109854cf61e79beb4dbda75f4096f548f4a483d5f",
+      "bytes": 192
+    },
+    "tests/cases/imageCloud/first-frame/spec.json": {
+      "sha256": "b0ec40ac08ed3c660d634f9f34e15aefc0820f28f2f1e5c0b24f5994d32dd43c",
+      "bytes": 331
+    },
+    "tests/cases/kdePlot/stat-minimal/spec.json": {
+      "sha256": "5c26f33f6a4e56820d39e00dd0932d7038e486368d97f8b60f3b8251ef0e656b",
+      "bytes": 393
+    },
+    "tests/cases/learningCurve/stat-minimal/spec.json": {
+      "sha256": "6861dde640b3ff5a0b59943cabafe79e3c99ccc7ae7c7ed259fa2b968a5b1232",
+      "bytes": 3156
+    },
+    "tests/cases/line/basic-demo/spec.json": {
+      "sha256": "0d895b513de1dce6011754b8bfb04450c501e2958aa9866fe1efa0969c39f55d",
+      "bytes": 685
+    },
+    "tests/cases/line/empty/spec.json": {
+      "sha256": "3909a4c69dd5981fb862d20bfce3f2ad207387d289befcbda0618fa4122163eb",
+      "bytes": 122
+    },
+    "tests/cases/line/gaps/spec.json": {
+      "sha256": "a3890cdc243f4a63f4ba4d1415b265bbe4bdf8b65e445df31a412b596b1d3cab",
+      "bytes": 433
+    },
+    "tests/cases/line/horizontal/spec.json": {
+      "sha256": "915a58da318b31cbbe26d3455347d907ba91ed7786ce4b8e27ffc27a0cd8235f",
+      "bytes": 306
+    },
+    "tests/cases/line/single/spec.json": {
+      "sha256": "f55d4f61447d6850044000b00b4ca190826bfd9578d30f4ad8dd6c2d706d5a3c",
+      "bytes": 176
+    },
+    "tests/cases/line/styled/spec.json": {
+      "sha256": "c401d719a1df5ec6ca9ed3971c281122cb67847e3d995b56edf41ba57e588de0",
+      "bytes": 402
+    },
+    "tests/cases/linearProgress/basic/spec.json": {
+      "sha256": "10dede98e5743ccb65d13dc13fae4f8135951021d75a419903a1d1f76640a38c",
+      "bytes": 240
+    },
+    "tests/cases/linearProgress/empty/spec.json": {
+      "sha256": "ee3ea3ce1e5407eb416ac33222da1aa1e8cfff6d51209bdca552fcff374aa40c",
+      "bytes": 132
+    },
+    "tests/cases/linearProgress/vertical/spec.json": {
+      "sha256": "128c6c8e0e7e41888fe0c6afd66c1c5fbf40de7a39a3ecdfddeb976578361562",
+      "bytes": 267
+    },
+    "tests/cases/liquid/basic/spec.json": {
+      "sha256": "408015de588df648b9457c037167730b6160c1a30a80286703706d7d6515ed3a",
+      "bytes": 167
+    },
+    "tests/cases/liquid/full/spec.json": {
+      "sha256": "6e8164591fe69934f379f671f0c155bc111cec0181bd77b52cc62ef8be28209f",
+      "bytes": 165
+    },
+    "tests/cases/liquid/rect/spec.json": {
+      "sha256": "dbef477354126e6ffa870f468e9cc48c753602557c2384cbaffa5ccb3252bf78",
+      "bytes": 190
+    },
+    "tests/cases/liquid/zero/spec.json": {
+      "sha256": "77d42ab78f62dc652295d448da7a6bd81ad3a08e569d51aaab41d427a0345b3b",
+      "bytes": 165
+    },
+    "tests/cases/map/area-style/spec.json": {
+      "sha256": "360704ca8c88718a86f3a5ddbd4d219f218ec278c7c876a8704557d2312ebc46",
+      "bytes": 415
+    },
+    "tests/cases/map/curved-coast/spec.json": {
+      "sha256": "76822876db27a421d210e3b679748346a6617a8b90fa5174a8f612560927e493",
+      "bytes": 297
+    },
+    "tests/cases/map/custom-join/spec.json": {
+      "sha256": "ff37b97518b2ce043653b8dbf1785bb77fea84ad481b1ca486d118ffd18883f3",
+      "bytes": 393
+    },
+    "tests/cases/map/islands-hole/spec.json": {
+      "sha256": "15955e6fae70aa53af14eec7359ec92b6cd45e9ed25f3a034127abd689a248ba",
+      "bytes": 297
+    },
+    "tests/cases/map/joined/spec.json": {
+      "sha256": "15955e6fae70aa53af14eec7359ec92b6cd45e9ed25f3a034127abd689a248ba",
+      "bytes": 297
+    },
+    "tests/cases/map/no-records/spec.json": {
+      "sha256": "b1da493f083cd10454f7229139e18e159a4c353ed0940de9ca9ec088b75784cb",
+      "bytes": 195
+    },
+    "tests/cases/map/single-series/spec.json": {
+      "sha256": "01c5971f08663b81ad125ae873c8eddf3c28536e10f3f50a09b71a5276c2b1b4",
+      "bytes": 270
+    },
+    "tests/cases/missingValueMatrix/stat-minimal/spec.json": {
+      "sha256": "56f0b2e5e6160eaf6212ee560319a6994ac13f1e6f71a707f3e0fcbcaf4d97f5",
+      "bytes": 2061
+    },
+    "tests/cases/mosaic/basic/spec.json": {
+      "sha256": "cdc7e62d546f1c47a141956798b0d1599b845dca4c6b9ce78d7d2b4f6f4de754",
+      "bytes": 278
+    },
+    "tests/cases/mosaic/empty/spec.json": {
+      "sha256": "fd2ac8b2a2ea421abc0f762882e903bbb83ab8c7b4e3f5054788a9ca29a98705",
+      "bytes": 124
+    },
+    "tests/cases/mosaic/weighted/spec.json": {
+      "sha256": "35119ed5a193758dc860fb09741894bf0bcdc49bf350c4e2eabc90ebd0e1c4af",
+      "bytes": 363
+    },
+    "tests/cases/pairedComparisonPlot/stat-minimal/spec.json": {
+      "sha256": "9b75d9a1f836b188203052b3790faebd9b6cfd76bec288060cd2b28632c19ec5",
+      "bytes": 814
+    },
+    "tests/cases/pairPlot/grouped/spec.json": {
+      "sha256": "654c49117f95615dc287f0043bd8a0b5a4d174495aa0ddbb475d22a2ae163460",
+      "bytes": 664
+    },
+    "tests/cases/pairPlot/grouped-missing-series/spec.json": {
+      "sha256": "a4865ee244d9216105134edfbf2010803644809514a147502d0f0640701cdd31",
+      "bytes": 885
+    },
+    "tests/cases/pairPlot/grouped-three-variables/spec.json": {
+      "sha256": "164b232c944fd32721a2273ae3690c5a5c0733630fcaaf21ef5448cf1b0ab382",
+      "bytes": 6267
+    },
+    "tests/cases/pairPlot/reordered-bins/spec.json": {
+      "sha256": "1cfc017da4f6e3371cf66f643d321922e0c50f73afde67139a0aa5249fbf1fd9",
+      "bytes": 541
+    },
+    "tests/cases/pairPlot/stat-minimal/spec.json": {
+      "sha256": "33177cc98d9653f952d3640b5ac3825b3456ce770058a91ef4ede9ec52d39d1c",
+      "bytes": 402
+    },
+    "tests/cases/pictogram/first-frame/spec.json": {
+      "sha256": "9a2e00875ce1a9d213fab79b35b25baf4f0b9e248d8b5d94961d642d2ba7357a",
+      "bytes": 303
+    },
+    "tests/cases/pictogram/nested-svg/spec.json": {
+      "sha256": "651835309c5655438e10eee1912329be5cab42e99d8c50c713ea921a7aba4446",
+      "bytes": 305
+    },
+    "tests/cases/pictogram/svg-paint/spec.json": {
+      "sha256": "9a2e00875ce1a9d213fab79b35b25baf4f0b9e248d8b5d94961d642d2ba7357a",
+      "bytes": 303
+    },
+    "tests/cases/pie/basic/spec.json": {
+      "sha256": "ebf1f7d9194d28acc434b218c7d713fa9eb0402ecbd38d6234011615f986fe45",
+      "bytes": 336
+    },
+    "tests/cases/pie/partial/spec.json": {
+      "sha256": "da329dce7bb14579e4ab76d43f65c8354f0d7faa0bc6032141d1b8485a6fd760",
+      "bytes": 376
+    },
+    "tests/cases/pie/ring/spec.json": {
+      "sha256": "dc570ed6cda3f203bde948768c4d1c5250d338df6e43db183763723960f45f82",
+      "bytes": 359
+    },
+    "tests/cases/pie/zero/spec.json": {
+      "sha256": "8c78bafd7fc376c211d43bcfade2aa281dd7a431cca939a1b139d3bd33a9eb3f",
+      "bytes": 236
+    },
+    "tests/cases/pointIntervalPlot/stat-minimal/spec.json": {
+      "sha256": "7961559df13e3bd09f1003033702782d998a3158ecf360915106d277ec1058aa",
+      "bytes": 640
+    },
+    "tests/cases/precisionRecallCurve/stat-minimal/spec.json": {
+      "sha256": "a125a0da19f9a5ed299b9e542c6688baf676dc95cb6c531faeadf991b267e3e3",
+      "bytes": 272
+    },
+    "tests/cases/qqPlot/stat-minimal/spec.json": {
+      "sha256": "af82fdf7e011f1b93f25b09526c3820288395284feee2e175e4cbde588703d99",
+      "bytes": 220
+    },
+    "tests/cases/radar/basic/spec.json": {
+      "sha256": "87fed9493ed714c517558cfc3a24f1a237ae060a6dc36307de336e17b3f231c7",
+      "bytes": 338
+    },
+    "tests/cases/radar/empty/spec.json": {
+      "sha256": "3499b256c5528130d64428ce526d4c4d01f7dffa7a1be571a4314783cc8fe415",
+      "bytes": 134
+    },
+    "tests/cases/radar/filled/spec.json": {
+      "sha256": "13208d9b6ba22367b6eb3f322f9678eb52ce59088d03f5eeb378990076e5470e",
+      "bytes": 375
+    },
+    "tests/cases/radar/wide/spec.json": {
+      "sha256": "96f1f14250e3579530b572df539b193ca2d13c7a7e2a7c60f0af530095e4bc71",
+      "bytes": 338
+    },
+    "tests/cases/rangeArea/basic/spec.json": {
+      "sha256": "0403a253cbc7d23dcb292d3e3f6c1f8bd8e09e46651f97aaeab0488f3b58f987",
+      "bytes": 672
+    },
+    "tests/cases/rangeArea/empty/spec.json": {
+      "sha256": "0888139c98da09d6b406fed563b73861905ecc298773497e46bf6ed0571013c5",
+      "bytes": 148
+    },
+    "tests/cases/rangeArea/horizontal/spec.json": {
+      "sha256": "ad75c1808533cfa05d34a4a0768c6d84b6e71e5231d23749cf9dfe1e7d9c78e6",
+      "bytes": 701
+    },
+    "tests/cases/rangeColumn/basic/spec.json": {
+      "sha256": "83dce075f15a71d2db351de8a3833dc475e65e8bae1aef18ca965935cfeafa05",
+      "bytes": 674
+    },
+    "tests/cases/rangeColumn/empty/spec.json": {
+      "sha256": "10353535c3eaa494b75754e802df54326ec87b8a486c42e06267dd5cf6e40920",
+      "bytes": 150
+    },
+    "tests/cases/rangeColumn/horizontal/spec.json": {
+      "sha256": "2bed69319c255e768ec66dd00726d2bc7151a0e1ea04ad3d9f7e692986386222",
+      "bytes": 703
+    },
+    "tests/cases/rankingBar/first-frame/spec.json": {
+      "sha256": "ea0d70e0c97a181ecc9313a81493f80d14fc427629a7021592c3f4558beaed52",
+      "bytes": 551
+    },
+    "tests/cases/rankingList/page/spec.json": {
+      "sha256": "236f002b7dab3860ea16849a1b76bc1f7091765ceee67161098ff8209da2d3e7",
+      "bytes": 866
+    },
+    "tests/cases/residualPlot/stat-minimal/spec.json": {
+      "sha256": "78a12b67f086610ae9485588b762b23d1a6de3b4fdc7cee2e57d6b5317634355",
+      "bytes": 232
+    },
+    "tests/cases/rocCurve/stat-minimal/spec.json": {
+      "sha256": "5059ec0236d21d8ba2ef2010edb098f145dcd218ab1f7e1065f8e6b75b3810fb",
+      "bytes": 260
+    },
+    "tests/cases/rose/basic/spec.json": {
+      "sha256": "f5a584a9c6061ab3a5d8aa0d7782bdd12a84b6c26618706b73a95e133a23ac61",
+      "bytes": 337
+    },
+    "tests/cases/rose/grouped/spec.json": {
+      "sha256": "f9cace74b108279b3fccdc14deba950a1d1103d797529853e86602aaf6f9bba5",
+      "bytes": 604
+    },
+    "tests/cases/rose/inner/spec.json": {
+      "sha256": "0ddd58fb77e8f999e5a6a8d4a3f9ed24e60f557eb90a2b28798da42254cfebc1",
+      "bytes": 359
+    },
+    "tests/cases/rose/stacked/spec.json": {
+      "sha256": "6865615ac312e3e837ea6f5995c747269ac71cfc9149d0a8f82afb222f3aaa4d",
+      "bytes": 584
+    },
+    "tests/cases/sankey/all-zero/spec.json": {
+      "sha256": "20643e788f3ec3c638e68ceb7e032f71e68100bae3dbcba63c3c501af4e57cba",
+      "bytes": 594
+    },
+    "tests/cases/sankey/distinct-keys/spec.json": {
+      "sha256": "6b0524379f7bd9af14a12f5c1b43d3af08b9f4ca6c34b8197ab9200446116efa",
+      "bytes": 1378
+    },
+    "tests/cases/sankey/empty/spec.json": {
+      "sha256": "739d5bcc7c30038b4658f8db47ed89aaacd4a6855e250c5b3876233807b4f7a4",
+      "bytes": 343
+    },
+    "tests/cases/sankey/energy-flow/spec.json": {
+      "sha256": "85db9bb9331db04c9263ce80d3d3cca30189b6c413930d2e5d471070b90a389c",
+      "bytes": 11601
+    },
+    "tests/cases/sankey/isolated/spec.json": {
+      "sha256": "efa60ca88c6cba254e33e377ebaf5eb528f66303e15fef06f584f03b087a8cf3",
+      "bytes": 910
+    },
+    "tests/cases/sankey/keyed/spec.json": {
+      "sha256": "9a8f66a592c5adcf1dde799a1d40b8173fa2843e26419e8fa6551071c8b3b5da",
+      "bytes": 1220
+    },
+    "tests/cases/sankey/multistage/spec.json": {
+      "sha256": "4fc06f975f0d54946fe9d62836be47d97965fa313d78d28038ea6e3941f4293d",
+      "bytes": 3101
+    },
+    "tests/cases/sankey/no-links/spec.json": {
+      "sha256": "9f07c7ad2896724ea8902054a28d2d9026248b982083f8e4522ff168b44336b5",
+      "bytes": 470
+    },
+    "tests/cases/sankey/parallel/spec.json": {
+      "sha256": "550450e813a4f4244c867dfd1ad59c8aa126facc9a90a27e3ffc8417a7c22770",
+      "bytes": 878
+    },
+    "tests/cases/sankey/right-aligned/spec.json": {
+      "sha256": "bcb0382a1197fcf9f6e1461212c1d23b86bcb02a08be9a4994380f6485ebeb6e",
+      "bytes": 1471
+    },
+    "tests/cases/sankey/single/spec.json": {
+      "sha256": "cf2e752e2c3b7f8b350ad0eda49c653d9c0b5b6d229d9ba107593ca9852dd9a4",
+      "bytes": 594
+    },
+    "tests/cases/sankey/skip-layer/spec.json": {
+      "sha256": "40e731064a41866763405d385c3ac840cd520ca7fcb9c3d5254a6ef4a1a39475",
+      "bytes": 1357
+    },
+    "tests/cases/sankey/split-merge/spec.json": {
+      "sha256": "c8e1eeb49bf7d9259faf765b2576d6bbdb20c3696689148a0af6833cd29110ee",
+      "bytes": 1220
+    },
+    "tests/cases/sankey/two-views/spec.json": {
+      "sha256": "9db0a1db571cdb61e028e2a299b139d55a1f1cb7b58c538ced5cf9168ad31551",
+      "bytes": 1296
+    },
+    "tests/cases/sankey/vertical/spec.json": {
+      "sha256": "aa58298c2dc5432824bfcc955e7165b15b03204189e335eb591b86400240b16c",
+      "bytes": 1289
+    },
+    "tests/cases/sankey/zero-link/spec.json": {
+      "sha256": "fc482f6135cd4548b22a22d0744f432d1799c91b4ccaaa46d436d1b569cb3454",
+      "bytes": 1220
+    },
+    "tests/cases/scatter/cars/spec.json": {
+      "sha256": "14f1777acce308fec086ba686222af3d8a12d393aab4b0f5139fc6a53bcc6883",
+      "bytes": 22824
+    },
+    "tests/cases/scatter/dual-linear/spec.json": {
+      "sha256": "106e688d2f9f605c74a73985ad044e2d83a738704770b124705ab0afcabecc9f",
+      "bytes": 461
+    },
+    "tests/cases/scatter/empty/spec.json": {
+      "sha256": "0c4b6b73962a0c0f7873e90f6eb3a3327c7d0f80fc41df837a15a66bc2543dca",
+      "bytes": 125
+    },
+    "tests/cases/scatter/explicit/spec.json": {
+      "sha256": "e87b1b7f942dee3109636d4358cf08cd72dbf26c8e2cfb66da8119322cb3b4a8",
+      "bytes": 538
+    },
+    "tests/cases/scatter/overlap/spec.json": {
+      "sha256": "ded0f1f9b5e40a8d852e0c360dc40f321f5dfff188587bfa468af3d34ca23f75",
+      "bytes": 380
+    },
+    "tests/cases/scatter/positive/spec.json": {
+      "sha256": "5711e02a3fac7e0ed99642d6154c0c9ddf216c1b0490ae82c970d4f3b155067d",
+      "bytes": 274
+    },
+    "tests/cases/scatter/signed/spec.json": {
+      "sha256": "8581e07f4325268ce5935faeeec30f29345d8d60f4b1912fe67e46d1593ae913",
+      "bytes": 323
+    },
+    "tests/cases/scatter/single/spec.json": {
+      "sha256": "59f20654acbb39c5db1fd1c91ea94299effab032e7697994b7420ae1d5b4482c",
+      "bytes": 177
+    },
+    "tests/cases/scatterPlot/stat-minimal/spec.json": {
+      "sha256": "501b51b738b5c5d9f73d1e06071054a43eb1ecb3866f8a841cc56a5bbb0064ad",
+      "bytes": 1380
+    },
+    "tests/cases/screePlot/stat-minimal/spec.json": {
+      "sha256": "87e769a427c008f7a7058c072834d0395a672ee312877a3909910aeaccb75232",
+      "bytes": 474
+    },
+    "tests/cases/seasonalPlot/stat-minimal/spec.json": {
+      "sha256": "bdb7b8e8cbf645892224e8c649e84c813a2cb16cef7da0075262240b558fa141",
+      "bytes": 1065
+    },
+    "tests/cases/sequence/first-frame/spec.json": {
+      "sha256": "57daa4846b078544500bba13e676be881a01debb35e551e85552eb8836799528",
+      "bytes": 612
+    },
+    "tests/cases/sequenceAnalysis/first-frame/spec.json": {
+      "sha256": "a9007a1f73e1b78babc0f27d1c67fd34b245cdbe65b6b912b2617b13c1b9e328",
+      "bytes": 881
+    },
+    "tests/cases/sequenceScatterKDE/first-frame/spec.json": {
+      "sha256": "fe7303a4bdeccbc8d3a695917e9a1a079e7171e050a5332351f1915bcb5fde70",
+      "bytes": 486
+    },
+    "tests/cases/sequenceScatterLink/first-frame/spec.json": {
+      "sha256": "7142a52f5d2ba4fbf3c4f0721ad7beeb258fb94caf8024803fc75b73b5243ad2",
+      "bytes": 683
+    },
+    "tests/cases/sequenceScatterPixel/first-frame/spec.json": {
+      "sha256": "faae2aaf7062f672d00e5434688a1ee19588ace93cd54da67a0aaec1775cc256",
+      "bytes": 461
+    },
+    "tests/cases/sequenceScatterPixel/pixel-background/spec.json": {
+      "sha256": "91e40f83ac23cd35e9eb14e007851d966e41af56930f345e7550cdba12e40d7a",
+      "bytes": 623
+    },
+    "tests/cases/shapBeeswarmPlot/stat-minimal/spec.json": {
+      "sha256": "f11ba0c760c60fc912b3802f17a8846c24b9c0261eb6f668c76285ca0e311da8",
+      "bytes": 15032
+    },
+    "tests/cases/storyline/cover-cards/spec.json": {
+      "sha256": "31ab0c7803fc35de5e44fb2a57065241b756462ff4dc78aa068186089d57e390",
+      "bytes": 851
+    },
+    "tests/cases/storyline/first-frame/spec.json": {
+      "sha256": "ed2d10e5743c70865f818466283d0c6ff9c348ac17b519a790951e8764b6e15d",
+      "bytes": 275
+    },
+    "tests/cases/storyline/image-cards/spec.json": {
+      "sha256": "ad83b1a5bf4214be8c53495fbaf487e6f8cb57502faf752edd69e18045b1fee1",
+      "bytes": 761
+    },
+    "tests/cases/stripPlot/stat-minimal/spec.json": {
+      "sha256": "03dcf84ad091ef81a74fbb32545f705485fbb24eb8776c4694f25cbf2e76014b",
+      "bytes": 1205
+    },
+    "tests/cases/sunburst/basic/spec.json": {
+      "sha256": "c3a8dd9266f363b480da61ba0ecfde06dcd68590c178140db4fa1ae8809f3675",
+      "bytes": 445
+    },
+    "tests/cases/sunburst/empty/spec.json": {
+      "sha256": "1ae962bef11e15c71bc00e73e42e6e983363b1a3387fff85f4fef8fc6a6b3c59",
+      "bytes": 196
+    },
+    "tests/cases/sunburst/nested/spec.json": {
+      "sha256": "273b68185dc50a321864d1121ecdb482af1a552990679b3b3b0b123f6f68801f",
+      "bytes": 665
+    },
+    "tests/cases/sunburst/single-root/spec.json": {
+      "sha256": "81d78780a3a44fdfb1bdfb38e938fe8fda0502ad0b3fe8cae4d9e62c018cbfab",
+      "bytes": 432
+    },
+    "tests/cases/sunburst/wide/spec.json": {
+      "sha256": "31de4a09c3dcd88b0ff8f749671d5ff75170c271841ab5f164393b9316847d23",
+      "bytes": 711
+    },
+    "tests/cases/timeline/horizontal/spec.json": {
+      "sha256": "a1573c114e1ea33eb1436c86df11ac02bc716fedaba8c56561de17934043c9b6",
+      "bytes": 524
+    },
+    "tests/cases/timeline/vertical/spec.json": {
+      "sha256": "e9f413d4d9f4fd439184bcf8a5582cc4ec0ce5e71876c7a4040bbb219cd80c6a",
+      "bytes": 522
+    },
+    "tests/cases/timeSeriesPlot/stat-minimal/spec.json": {
+      "sha256": "6d655615e2d190ce5344416989f4bca88376da4e47029771df08e94812e6fb5c",
+      "bytes": 915
+    },
+    "tests/cases/treemap/basic/spec.json": {
+      "sha256": "de7cd701400278c14b0ce47d8dbee0e0e84213104247573c070fc5572f3c849b",
+      "bytes": 444
+    },
+    "tests/cases/treemap/empty/spec.json": {
+      "sha256": "bd95d0417ad012f18366d7903ce9424429e4f0f6c47cfa8779ecf2038a80a085",
+      "bytes": 195
+    },
+    "tests/cases/treemap/nested/spec.json": {
+      "sha256": "cc99fef215d140633efb8a1009f83870ba9fcebef06bb3580e4bd42997471fd1",
+      "bytes": 664
+    },
+    "tests/cases/treemap/single-root/spec.json": {
+      "sha256": "cdcd208c8db86b0d72269f9d4275cd4420e5c2d7870b9bad70dec198112c73f2",
+      "bytes": 431
+    },
+    "tests/cases/treemap/wide/spec.json": {
+      "sha256": "e48aa339ed030e1d911b70c68f598670a692cf6d9e8caf2b7718d602c3581886",
+      "bytes": 703
+    },
+    "tests/cases/venn/asymmetric/spec.json": {
+      "sha256": "bc3cbf012fd9ba069699768a85d91839b71b62407cbca143c68cf59da554fd7d",
+      "bytes": 950
+    },
+    "tests/cases/venn/contained/spec.json": {
+      "sha256": "c021b02defd2e6bd045f3833dd50318a409fbf6d09852edb10a5360029feaca7",
+      "bytes": 544
+    },
+    "tests/cases/venn/custom-fields/spec.json": {
+      "sha256": "b5af24c437fa774452995a8f535c7f4ca06bcf99e00ff5400cc1e2f22f11d01d",
+      "bytes": 529
+    },
+    "tests/cases/venn/disjoint/spec.json": {
+      "sha256": "f9b4dbca17731efcdee520b60f9ab6644f7a1b79354426f032fc121eeafe6795",
+      "bytes": 544
+    },
+    "tests/cases/venn/empty/spec.json": {
+      "sha256": "4bd5413fbdaec9fa99536575c48ba94daae59fe35e7543f714fca4cb36db9aa8",
+      "bytes": 267
+    },
+    "tests/cases/venn/equal/spec.json": {
+      "sha256": "7ed6a1500460e53d3a70ea83584ddc8033218a0ed4d6c9a60c282149a04baee8",
+      "bytes": 543
+    },
+    "tests/cases/venn/hidden-overlap/spec.json": {
+      "sha256": "b98c9f2466af329b217a25a04b105b948af5636a192b96ac5b5895c63b1c3881",
+      "bytes": 587
+    },
+    "tests/cases/venn/identical/spec.json": {
+      "sha256": "2bcf136492fd183894b7bb5ceeadf13a9d5bfb8c522bfa10b93e665a16460bd0",
+      "bytes": 543
+    },
+    "tests/cases/venn/large-arc/spec.json": {
+      "sha256": "c5ae4f3c34c48a32ad333dc4e70a86896ec9b35130e5fc7b250265b4740e5a36",
+      "bytes": 544
+    },
+    "tests/cases/venn/mixed/spec.json": {
+      "sha256": "2c011de5cdf8e94ef9a7f4b9b47ff1531cc09480456c9efe96c3d4f700ae3560",
+      "bytes": 629
+    },
+    "tests/cases/venn/official/spec.json": {
+      "sha256": "bc0f0e27556a15e09f01cd898cf95df29bb0acae01aeb4df992f87629e9bd9cf",
+      "bytes": 949
+    },
+    "tests/cases/venn/pair/spec.json": {
+      "sha256": "6be7889065b1372d8c0b31ef6f86a23bf6196f72e855b3222ff8d9bb36819ddf",
+      "bytes": 544
+    },
+    "tests/cases/venn/single/spec.json": {
+      "sha256": "3f2fbb1a0f59a52b6a4c09a277b4ffd5b7faf66226e0f1ce3acff80a6f27cd30",
+      "bytes": 357
+    },
+    "tests/cases/venn/styled/spec.json": {
+      "sha256": "5515ccadd7ca2afb56c5e2233d8a59d243777dbcd29706b73f1ef4d746a96cfa",
+      "bytes": 728
+    },
+    "tests/cases/venn/three/spec.json": {
+      "sha256": "591bc5d53c1156c98a451e23dba201340dc408e9f0689d7288228eb931853752",
+      "bytes": 832
+    },
+    "tests/cases/venn/three-disjoint/spec.json": {
+      "sha256": "e315f1ab88ff24eb299e74def98a0b7d6df079253a072e53b739e76b009a6ad6",
+      "bytes": 528
+    },
+    "tests/cases/venn/universe/spec.json": {
+      "sha256": "b4308b485fcb1de52765ed8f867bf5298ae53d4748843692783796af5f680096",
+      "bytes": 605
+    },
+    "tests/cases/venn/wide/spec.json": {
+      "sha256": "7b6febe5a1ac157774584f542fd0728478ab4cd9fc9dde1f6858f911fd543b19",
+      "bytes": 544
+    },
+    "tests/cases/violinPlot/stat-minimal/spec.json": {
+      "sha256": "3358436b0fe77fabdaede13ea1a3521723d98c47a187b3ea66e8c3eadd0a4331",
+      "bytes": 574
+    },
+    "tests/cases/waterfall/basic/spec.json": {
+      "sha256": "e6600581e89452109291c781136c0b6397f0de8f81765f6fbd6536edebd91d02",
+      "bytes": 695
+    },
+    "tests/cases/waterfall/empty/spec.json": {
+      "sha256": "ce13a542166db8221502252794af4d25f99ffc8fab2e4b9ecb1b561f9c61346d",
+      "bytes": 171
+    },
+    "tests/cases/waterfall/with-labels/spec.json": {
+      "sha256": "a83260bcc6c52e0f73ce3de0f148dc527baca4c4698d3b966713bc5b80a84bdb",
+      "bytes": 651
+    },
+    "tests/cases/wordCloud/bitmap-mask/spec.json": {
+      "sha256": "7bea4613291c21425e3cb630f29a41877bfaeb5a202014f2f8f5ae3188bbf944",
+      "bytes": 1644
+    },
+    "tests/cases/wordCloud/default-filling/spec.json": {
+      "sha256": "56fb5935e1ab6b82091368934451b5d19d0f016e9492149e17ac64377e2530e5",
+      "bytes": 782
+    },
+    "tests/cases/wordCloud/diamond-mask/spec.json": {
+      "sha256": "68ec10d74aa7293e625218cc14ccb0965ad47d9f5dcc596e0091c5022a0915ee",
+      "bytes": 736
+    },
+    "tests/cases/wordCloud/fast-diamond/spec.json": {
+      "sha256": "061ece7b886c0257b6b8a6e486556e44eb639d2160615c7fa39f8948d136ff84",
+      "bytes": 643
+    },
+    "tests/cases/wordCloud/filled-mask/spec.json": {
+      "sha256": "a353efa0f100b564aae19042202ba2dd599e3ecf85959f93145c78315609c480",
+      "bytes": 954
+    },
+    "tests/cases/wordCloud/rotated/spec.json": {
+      "sha256": "48de30414bf6f4b5ce066135edd0fb5cc1cb2ce8bd7e9785f167fc384b382f92",
+      "bytes": 497
+    },
+    "tests/cases/wordCloud/single/spec.json": {
+      "sha256": "c8292b32d9e77b8522b69b54765a3448c2ffd824ceb17428f8c55ee89078ae74",
+      "bytes": 497
+    },
+    "tests/cases/wordCloud/text-mask/spec.json": {
+      "sha256": "88660d64d797cab43b009459f7a6fadc87a65326a5773c62e8f2fcfa08ff7bb9",
+      "bytes": 800
+    },
+    "tests/cases/wordCloud/two-island-mask/spec.json": {
+      "sha256": "969999d23b937a60414bc59c707bc9250bc72ad09e87a6a735e8656fed5bcd3d",
+      "bytes": 1656
+    },
+    "tests/cases/wordCloud/weighted/spec.json": {
+      "sha256": "cfbd9486a096d687a403a9b48bbc704be41614c011e63c084d28874ccee760a6",
+      "bytes": 616
+    }
+  },
+  "sourceEvidence": {
+    "../py-vchart/src/py_vchart/core/__init__.py": {
+      "sha256": "f536b737501f3ea75a5853ee99e528174c5fa7414d0afac9bcca228611341a4e",
+      "bytes": 10662
+    },
+    "../py-vchart/src/py_vchart/chart/common.py": {
+      "sha256": "deaf4ab3495e1fc9381e6195b3d9f877e99505d2cc84e77219ee7d4055a90125",
+      "bytes": 3756
+    },
+    "../py-vchart/src/py_vchart/chart/cartesian.py": {
+      "sha256": "7e2704e7e8710058924f5e8b1e8e086f2ae67d1a4a0ca4eef23263a801ab8f5e",
+      "bytes": 9734
+    },
+    "../py-vchart/src/py_vchart/chart/statplots.py": {
+      "sha256": "610a4a7764b9239f8c8850c89b87da1614f7c734f5703751d2d30e11cd3da73b",
+      "bytes": 25439
+    },
+    "../py-vchart/src/py_vchart/chart/plot.py": {
+      "sha256": "02143205197782662530ded60895c43eedf2beef7e402e9d9a9cdfafb867784f",
+      "bytes": 829
+    },
+    "../py-vchart/src/py_vchart/chart/map.py": {
+      "sha256": "0a893758f860174f1aa231fcfc84b9aacf58c5e09034e3035985161828ebc1bd",
+      "bytes": 3026
+    },
+    "../py-vchart/src/py_vchart/chart/venn.py": {
+      "sha256": "b1262be0158affe2c75c1808a1849de20caff65c78ab773e80fe0b490e573544",
+      "bytes": 4156
+    },
+    "../py-vchart/src/py_vchart/chart/hierarchy.py": {
+      "sha256": "a880d9088de075f5195583c3c525208d097899d441de99d3c7a55bdca80be5b0",
+      "bytes": 3668
+    },
+    "src\\py_mermaid\\vchart_bridge.py": {
+      "sha256": "ab7716caf5f01d93ef68fa033126d890b5dfa52225b773478f4b9ecd8805ae67",
+      "bytes": 16847
+    },
+    "src\\py_mermaid\\model\\vchart.py": {
+      "sha256": "05fe64dea23b68a8424941294ce0804389f8ab0fd4aff6c8439aac213dc793f4",
+      "bytes": 572
+    },
+    "src\\py_mermaid\\diagrams\\charts\\vchart.py": {
+      "sha256": "377f83bf9dd173fdb34089fb069e7b547965d2752a503eb1dbf0e18b0ce9f281",
+      "bytes": 1604
+    },
+    "src\\py_mermaid\\runtime\\registry.py": {
+      "sha256": "665b570bf7f5db9a9d2d4cc4597a97fe1c33e8687c5e117033b6e12c9ed1c400",
+      "bytes": 6725
+    }
+  },
+  "fixture": {
+    "sha256": "84b63669ed3d227c8b5b9b51b4a20b6e465d56dd4bda690183a812881b2d83f7",
+    "bytes": 925315
+  },
+  "run": "C:\\code\\py-visactor\\py-mermaid\\test-runs\\VCHART-DSL-DESIGN-inventory-20261107T063954Z-eef1d415",
+  "coverageMeaning": "68 names and225 existing specs are inventoried; no new DSL parser, lowering, option completeness, render or installation acceptance is claimed."
+}

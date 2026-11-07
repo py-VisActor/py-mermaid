@@ -1,0 +1,26 @@
+{
+  "schema": "py-mermaid-collapsed-assertions/v1",
+  "status": "RELATED_PASS_FINAL_P4_PENDING",
+  "sourceControls": "test-runs/CLOSURE-C-COLLAPSED-SOURCE-batch-20261107T090536Z-bef2cda0",
+  "cases": {
+    "sha256": "4c836a26120541f90c12cbfd282f7a2977d000dad018c268b98a19664a75ecd5",
+    "bytes": 8459
+  },
+  "sourceExpected": {
+    "sha256": "f1fd024fd638e351c7ead9181635dca600476082a97add40f43eb2d1b45a85c9",
+    "bytes": 14685
+  },
+  "testMethods": 7,
+  "casesPerProfile": 6,
+  "relatedRun": "test-runs/CLOSURE-P3-C-PIXEL-FINAL-batch-20261107T100649Z-f82ccef1",
+  "checks": [
+    "actual source primitive roles/paint",
+    "low-contrast dots/alpha",
+    "separator dash on/off",
+    "rounded corner independent public Canvas arcTo and square rejection",
+    "source background independent of candidate sampling",
+    "CSS important child paint",
+    "outer local style independent of sibling dots"
+  ],
+  "sourceTreeSha256": "be468e0fce7ce54d5b2fb6dc4a57561974637a177491f98838070cc2c6857100"
+}

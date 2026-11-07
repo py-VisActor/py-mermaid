@@ -1,0 +1,404 @@
+{
+  "schema": "py-mermaid-change-receipt/v1",
+  "task": "BRANCH-VERIFY",
+  "date": "2026-11-06",
+  "authority": "User excludes static HTML/CSS extensions and requests branch coverage verification.",
+  "status": "AUDIT_COMPLETE_WITH_CONFIRMED_GAPS_NOT_PRODUCT_ACCEPTANCE",
+  "baselineSourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+  "finalSourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+  "productSourceChanged": false,
+  "startingDirtyTree": "test-runs/BRANCH-VERIFY-P0-scope-20261106T141035Z-51e3798c/git-status.txt",
+  "scopeDecision": {
+    "path": "references/html-css-extension-exclusion.json",
+    "sha256": "ce6ef0bb02cd8c7ac0ba0c68eea1a435c3e599b8dc9f1aab76aa4a15afea4362",
+    "bytes": 933
+  },
+  "verification": {
+    "catalogueBranchRecords": 122,
+    "initialDiagramInputs": 115,
+    "additionalTriggerInputs": 9,
+    "diagramInputs": 124,
+    "diagramNormalRenderExpectations": 123,
+    "diagramSyntaxGuards": 1,
+    "sourceRawPNGs": 120,
+    "sourceRecordedErrors": 4,
+    "nativeProfileCounts": {
+      "cpu": {
+        "FAILED": 14,
+        "CHECKS_PASSED": 109,
+        "EXPECTED_ERROR": 1
+      },
+      "auto": {
+        "FAILED": 14,
+        "CHECKS_PASSED": 109,
+        "EXPECTED_ERROR": 1
+      },
+      "gpu": {
+        "FAILED": 14,
+        "CHECKS_PASSED": 109,
+        "EXPECTED_ERROR": 1
+      }
+    },
+    "pureNumericalRows": 90,
+    "pureNumericalUTCCounts": {
+      "CONFIRMED_NUMERICAL_GAP": 6,
+      "OBSERVED_DIFFERENCE_REQUIRES_REVIEW": 22,
+      "SOURCE_INTERNAL_DOMAIN_DIFFERENCE": 1,
+      "UPSTREAM_EXCEPTION": 1,
+      "VERIFIED_OBSERVED_EQUAL": 60
+    },
+    "independentABNFInputs": 5,
+    "focusedUnitMethodsExecuted": 79,
+    "exactPriorVerifiedBranchRecords": 6,
+    "classificationCounts": {
+      "CONFIRMED_FUNCTIONAL_GAP": 22,
+      "VERIFIED_SCOPED": 66,
+      "UPSTREAM_DEFECT": 1,
+      "UNVERIFIED": 6,
+      "SEMANTIC_VALUE_DIFFERENCE": 4,
+      "SOURCE_TRIGGER_NOT_REACHED_WITH_EXTRA_ACCEPTANCE": 1,
+      "HISTORICAL_REVIEW_ONLY": 10,
+      "SOURCE_CONTEXT_EXCEPTION": 1,
+      "SOURCE_INTERNAL_API_NOT_MAPPED": 2,
+      "NUMERIC_BRANCH_DIFFERENCE": 1,
+      "SOURCE_NATIVE_OPEN_ACTIVATION_ADAPTATION_BOUNDARY": 1,
+      "STYLE_ROLE_DIFFERENCE": 1,
+      "VERIFIED_EXISTING": 6
+    },
+    "nativeProfileCountsMeaning": "Generic encoded-size/text/ink gates only, including known source-trigger/expected-label probe issues. CHECKS_PASSED does not imply the corresponding semantic branch passed; failed gates are not blindly counted as product gaps."
+  },
+  "sourceAndTestFailures": [
+    {
+      "path": "test-runs/BRANCH-VERIFY-P3-batch-20261106T143957Z-5bcb3fcf/run.json",
+      "sha256": "39228fc2b94ab427cc24525efb3181bf0392fc11916c9921e132286efbd2cad8",
+      "bytes": 337308
+    },
+    {
+      "path": "test-runs/BRANCH-VERIFY-P3-FOLLOWUP-batch-20261106T145346Z-9a049125/run.json",
+      "sha256": "94cf29d9fd921f640c533e1e284fedbf331649f8a0f2138fd679be217f51b847",
+      "bytes": 187675
+    }
+  ],
+  "triageReceipts": [
+    {
+      "path": "test-runs/branch-triage-A.json",
+      "sha256": "291c9c9c68510ac0760579e536eaabd05edf2d2dfdf2275dff094fa3c7f220cd",
+      "bytes": 675821
+    },
+    {
+      "path": "test-runs/branch-triage-A-followup.json",
+      "sha256": "6c5d3780c1ef64536fdf451b380f9f581973d2718a116ded6535516cf41d26cd",
+      "bytes": 15203
+    },
+    {
+      "path": "test-runs/branch-triage-B.json",
+      "sha256": "cee423811b8e4dd14eeace11069d6d2962a557c3bfe3c129ef67e34b5a001611",
+      "bytes": 398074
+    },
+    {
+      "path": "test-runs/branch-triage-B-followup.json",
+      "sha256": "ee8e2dcc246bdcf3392793ac67e3b997631ef4b27203c33d03222fe5900e7f50",
+      "bytes": 267973
+    },
+    {
+      "path": "test-runs/branch-triage-C.json",
+      "sha256": "d9d4330f8c27c27f3bedc87928c40399b38452bed2197032fa869b3f3b2e93ab",
+      "bytes": 1043580
+    },
+    {
+      "path": "test-runs/branch-triage-C-followup.json",
+      "sha256": "81279132d9c9962c7eea3bcbba8813d1751da06e953fc69eafc6417988a6b3a8",
+      "bytes": 320811
+    }
+  ],
+  "toolOnlyCRecheck": {
+    "path": "test-runs/BRANCH-VERIFY-C-tool-recheck-20261106T145012Z-a0ebc7e6/run.json",
+    "sha256": "5eb067cc4723b6032a730e05b021bbb26bb2d55b15bb83a33a92cf784f0e5452",
+    "bytes": 36090
+  },
+  "delivery": {
+    "path": "test-runs/BRANCH-VERIFY-P5-delivery-20261106T150821Z-81018151/run.json",
+    "sha256": "7b3a4163a8dfa07e0101bc799dc2db90b02386417ce53142d6faee20651f1c17",
+    "bytes": 52559
+  },
+  "presentationOnlyInitialMobileOverflowPreserved": {
+    "path": "test-runs/BRANCH-VERIFY-P5-delivery-20261106T150747Z-b8af4479/run.json",
+    "sha256": "bdea5c23b3e3b24ec1b31c7e20d773a58e7fca108f6ff094c6cf627f23a57c41",
+    "bytes": 47789
+  },
+  "pagination": {
+    "path": "test-runs/REPORT-ROUNDS-delivery-20261106T150823Z-94db3ad3/run.json",
+    "sha256": "4823045e145ae2681e242bbec47493cca9965767983dc286a67b820351e825f4",
+    "bytes": 40075
+  },
+  "finalChecks": {
+    "path": "test-runs/BRANCH-VERIFY-P5-final-checks-20261106T151312Z-34f6b81c/run.json",
+    "sha256": "fc09bd2a65e9e6226be72faf355004932225cc45b925272309bbbf0d3636fd2e",
+    "bytes": 39686
+  },
+  "reports": {
+    "conclusions": "http://127.0.0.1:8765/BRANCH-VERIFY-P5-delivery-20261106T150821Z-81018151/index.html",
+    "rawAB": "http://127.0.0.1:8765/REPORT-ROUNDS-delivery-20261106T150823Z-94db3ad3/index.html",
+    "summaryQA": {
+      "path": "test-runs/BRANCH-VERIFY-P5-delivery-20261106T150821Z-81018151/artifacts/summary-viewer/viewer.json",
+      "sha256": "3bf37248d3f4f16746153501728581eb19312d995be438439ddf78b70a31cf82",
+      "bytes": 1143
+    },
+    "rawQA": {
+      "path": "test-runs/REPORT-ROUNDS-delivery-20261106T150823Z-94db3ad3/artifacts/viewer/viewer.json",
+      "sha256": "26dbb986898248b55c755bc22b315167f486cdab27a3833a78c46fa95bddd1d7",
+      "bytes": 2547
+    },
+    "branchesPerPageMaximum": 12,
+    "branchPages": 13,
+    "casePages": 11,
+    "rawPNG": 468,
+    "rawSVG": 120
+  },
+  "ownedEvidenceAndToolFiles": [
+    {
+      "path": "tests/branch_verification/cases-A-followup.json",
+      "sha256": "2a00d894d2361bce25455dc8e78b303ead25f00320eb15a966611030426b19ee",
+      "bytes": 3844
+    },
+    {
+      "path": "tests/branch_verification/cases-A.json",
+      "sha256": "383134cbb816fd155d3f15066c5a8090beb023f796691229710f04f3b74ba07a",
+      "bytes": 51451
+    },
+    {
+      "path": "tests/branch_verification/cases-B-followup.json",
+      "sha256": "6a395ad0d8f9fab847f151274912737501bd4b30abfe5025e3584bd584886db8",
+      "bytes": 8532
+    },
+    {
+      "path": "tests/branch_verification/cases-B.json",
+      "sha256": "e0a8c864fe6b3878efe232e1a8015aa06ba8fdc1ade60c3cb48e7f7a505f0977",
+      "bytes": 49248
+    },
+    {
+      "path": "tests/branch_verification/cases-C-followup.json",
+      "sha256": "198fbcf28b758f9ca37e7258d7d031a052423ebed0bc54b721b1295b3e464132",
+      "bytes": 1279
+    },
+    {
+      "path": "tests/branch_verification/cases-C.json",
+      "sha256": "827ba92d95225862bcaf48f5418cc8a811821b858c77bdb392b12dd71bfd6796",
+      "bytes": 55123
+    },
+    {
+      "path": "tests/branch_verification/oracle_a.cjs",
+      "sha256": "ae0bd789f29438e8ced32462997a528197fecf3e1f643c3fe198481b9150de60",
+      "bytes": 3691
+    },
+    {
+      "path": "tests/branch_verification/oracle_b.cjs",
+      "sha256": "2dd4ccfa46018e019ebc4b767206bddb198e9ec695b4e2e9d9d4e5a41d2a47a2",
+      "bytes": 9206
+    },
+    {
+      "path": "tests/branch_verification/oracle_c.cjs",
+      "sha256": "2d5ea2e8d6548766d13f2a1d44d561c0780218e690201abc36a665c6295cbf72",
+      "bytes": 2579
+    },
+    {
+      "path": "tests/branch_verification/probe_a.py",
+      "sha256": "e41c6aeeb5c29225c579633bf8028caf10fba4f553838b341b47b55b5e7e7322",
+      "bytes": 5437
+    },
+    {
+      "path": "tests/branch_verification/probe_b.py",
+      "sha256": "98820ab70e686b9e02d0108694f72abec147b719e7129d7312a3c6baeb96d252",
+      "bytes": 4168
+    },
+    {
+      "path": "tests/branch_verification/probe_c.py",
+      "sha256": "18e681cbfdc11b88939542da4ba78baacef8d0b7a54042f91badac0a872ae36d",
+      "bytes": 8768
+    },
+    {
+      "path": "tests/branch_verification/support_a.py",
+      "sha256": "875046fda5c0c80b1ce75ff57a773feb8f624d8fad56b8ba84b1781362bbf59f",
+      "bytes": 1277
+    },
+    {
+      "path": "tests/branch_verification/support_b.py",
+      "sha256": "8092339b4bd88ba27806af5c700312a8a9bd31355e68b5016332b9ecaf128f41",
+      "bytes": 10676
+    },
+    {
+      "path": "tests/branch_verification/support_c.py",
+      "sha256": "a3fc736bc9d4b0072cd460cbbe8a80ed0e81625cd2a24ee8a8db31240d1998ec",
+      "bytes": 6145
+    },
+    {
+      "path": "tests/branch_verification/test_a_semantics.py",
+      "sha256": "87b92e1b7e4f18e8833ae0541f65cf3f5e7cd413d35807967b9b24399fa9bc1d",
+      "bytes": 5027
+    },
+    {
+      "path": "tests/branch_verification/test_b_layout.py",
+      "sha256": "c0b7137272a2971455c58738ed5cd8facc1e3436ff5bc4a1362585c1d77c6088",
+      "bytes": 5771
+    },
+    {
+      "path": "tests/branch_verification/test_b_numeric.py",
+      "sha256": "e0b685f492ce129c1143c581a866a7f7486ff4fbe85e15b2d1ff2574614631d1",
+      "bytes": 5540
+    },
+    {
+      "path": "tests/branch_verification/test_c_geometry.py",
+      "sha256": "90d6a1369ebe892ac7a662e844732f3938a43291b468f2d2d9f83ce3fa2c3aad",
+      "bytes": 8804
+    },
+    {
+      "path": "tests/branch_verification/test_c_routing.py",
+      "sha256": "5da888dae1aedc15626652bc348f92253bb95f995e1e7026267658b832cf9992",
+      "bytes": 4330
+    },
+    {
+      "path": "tests/branch_verification/test_c_tools.py",
+      "sha256": "961ef25cb2a344dbb5ef92f32e50a0339b7913af67706c818b6c358e92c903cb",
+      "bytes": 3909
+    },
+    {
+      "path": "tests/branch_verification/__init__.py",
+      "sha256": "98c7eaa13359172547e826a7f6bf7ff0821c13bda291b7af724a2a8681db41c0",
+      "bytes": 70
+    },
+    {
+      "path": "references/branch-verification-A.json",
+      "sha256": "250e93bab22244ed49400d5b80c0b1cdfe1db51214d680520a25b4a809d39ff1",
+      "bytes": 92141
+    },
+    {
+      "path": "references/branch-verification-B.json",
+      "sha256": "65c613cd2124cea89eea0ea9236c8dd946bcab028490088c79ebc218e901bb7b",
+      "bytes": 73783
+    },
+    {
+      "path": "references/branch-verification-C.json",
+      "sha256": "ebbb2e0ac017c01822abadad7935a52005d6f47f97fcdeeb8518eb8b53419a64",
+      "bytes": 90940
+    },
+    {
+      "path": "references/branch-verification-root.json",
+      "sha256": "62a0eb866ddefd97e951657ba4787495d60056b379ff2603633c9618bd59595c",
+      "bytes": 18016
+    },
+    {
+      "path": "references/branch-verification-summary.json",
+      "sha256": "cdf4226c982290875052614751fdf774d3bcb36609e4bc8f0c908205ce61613d",
+      "bytes": 1723432
+    },
+    {
+      "path": "references/branch-repair-queue.json",
+      "sha256": "7e6322ad17e20e648a587ec0d6839b67c7fa7f25e1824150ee9b2b7a1da6be92",
+      "bytes": 3628
+    },
+    {
+      "path": "references/html-css-extension-exclusion.json",
+      "sha256": "ce6ef0bb02cd8c7ac0ba0c68eea1a435c3e599b8dc9f1aab76aa4a15afea4362",
+      "bytes": 933
+    },
+    {
+      "path": "docs/BRANCH_VERIFICATION_RESULTS.md",
+      "sha256": "737ceac0dd351c6272ce4d7dfdfadcbf5922eb66944a9fa5956fc56af00df298",
+      "bytes": 6246
+    },
+    {
+      "path": "docs/BRANCH_COVERAGE_VERIFICATION.md",
+      "sha256": "edbe88423b47aad979edde136e11e9d51a7cc4596bbfd79ed46797829f43aec3",
+      "bytes": 4230
+    },
+    {
+      "path": "docs/NEXT_ITERATION.md",
+      "sha256": "09aaf481e4732b61969bddf9c40abe63e35d7e922ee6079ccf748ce63bf6926b",
+      "bytes": 1701
+    },
+    {
+      "path": "docs/compatibility.json",
+      "sha256": "10e851d0fddb81fc33a7be954bdfeee83688dff465e21098e04bfc4fe9225c37",
+      "bytes": 99466
+    },
+    {
+      "path": "docs/execution-state.json",
+      "sha256": "08d0ffa1d73bb15d1fbf1990c292562716566bbe8106d37369677c8df02fe756",
+      "bytes": 78983
+    },
+    {
+      "path": "tools/check_branch_catalogue.py",
+      "sha256": "45443e2779d05d4990d3cb11bfd1c5a8427f2ecba25743b2efe2f93b3990aa36",
+      "bytes": 9351
+    },
+    {
+      "path": "tools/freeze_branch_inputs.py",
+      "sha256": "98417602d9d5336659818785531f36720393249d8802795447d2ea2bd9d8ce84",
+      "bytes": 3529
+    },
+    {
+      "path": "tools/build_branch_summary.py",
+      "sha256": "22f2807a11397f51eff5f78b7afff367b36e547db9ffb764354bcd0fd4c72f8a",
+      "bytes": 5999
+    },
+    {
+      "path": "tools/qa_branch_summary.cjs",
+      "sha256": "50d20cb767d0df968ce47fe3791a93bd71b214209e6cbbab3670da868c1cf990",
+      "bytes": 4264
+    },
+    {
+      "path": "tools/build_bulk_report.py",
+      "sha256": "67a4d802aeb1b0bf6f6f96d248f99bc236d149b1f98a1b9382aee9da40a0f624",
+      "bytes": 18853
+    },
+    {
+      "path": "tools/oracle/bulk_capture.cjs",
+      "sha256": "35439702eb01eb0a4f945fdd8be9bc568e38c8df2fec851c9927ec788f2e7e65",
+      "bytes": 25872
+    },
+    {
+      "path": "tools/plans/branch-verification-first.json",
+      "sha256": "ac772f211e174663875c85cd34019518f805b92c91789334734fcadc99b2f579",
+      "bytes": 15235
+    },
+    {
+      "path": "tools/plans/branch-verification-followup.json",
+      "sha256": "47836853aee0f7a1370005590f408391da23d2c9cb5ad4b5d70f9500dbb63858",
+      "bytes": 19838
+    },
+    {
+      "path": "tools/report_specs/branch-verification-round4.json",
+      "sha256": "47735a72a0216c1e62d69c25856697b84a3d722423c0e335f4c7655b47a46235",
+      "bytes": 7080
+    },
+    {
+      "path": "tools/RUNS_AND_REPORTS.md",
+      "sha256": "5ebe7e911584d70834772944324e59a5f7219194438729de6cfcb2ca273d19be",
+      "bytes": 21113
+    }
+  ],
+  "correctedProbeProblems": [
+    "A module entry corrected; original import failure retained.",
+    "UTC and pure serializer fixed host epoch/DST/pre-epoch observation errors; actual product format errors unchanged.",
+    "Correct source YAML trigger and explicit labels added under new IDs; original semantics preserved as separate observations.",
+    "Cross marker two paint primitives combined as one logical marker; incomplete cross still rejected.",
+    "Mindmap actual getData-selected provider checked instead of an after-scope config echo.",
+    "See-prefixed source comment correctly reaches literal Marked link branch; original style-prefix nontrigger remains.",
+    "Incorrect positive Event title expectation not converted into native missing-title claim; original rejection/native extra acceptance separately recorded."
+  ],
+  "remaining": {
+    "functionalGapRecords": 22,
+    "functionalFamilies": 9,
+    "semanticValueDifferences": 4,
+    "unverifiedRecords": 6,
+    "historicalReviewOnly": 10,
+    "internalSourceAPIRecords": 2,
+    "globalBranchCoverageEstablished": false
+  },
+  "installationValidation": "DEFERRED_BY_USER",
+  "externalActions": {
+    "commit": false,
+    "push": false,
+    "publish": false
+  }
+}

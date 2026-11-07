@@ -1,0 +1,200 @@
+{
+  "schema": "py-mermaid-static-host-gap/v1",
+  "id": "static-html-controls-initial-appearance",
+  "status": "resolved_scoped_initial_static_controls_locally_verified",
+  "plan": "docs/STATIC_HTML_HOST_PLAN.md",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "fixedBundledSanitizer": "DOMPurify 3.4.12 source embedded in the fixed Mermaid bundle map",
+  "source": [
+    {
+      "path": "packages/mermaid/src/diagrams/common/common.ts",
+      "symbol": "sanitizeMore / sanitizeText",
+      "line": 70
+    },
+    {
+      "path": "packages/mermaid/src/rendering-util/createText.ts",
+      "symbol": "addHtmlSpan / createText HTML branch",
+      "line": 34
+    }
+  ],
+  "tags": [
+    "input",
+    "button",
+    "select",
+    "option",
+    "optgroup",
+    "textarea",
+    "meter",
+    "progress",
+    "fieldset",
+    "legend"
+  ],
+  "userExcluded": false,
+  "notCoveredByPyVchartDecision": true,
+  "interaction": "excluded_by_user",
+  "newRuntimeDependenciesRequired": "none_added",
+  "originalPixelVerification": true,
+  "nativeCompatibilityVerified": true,
+  "installationVerification": false,
+  "previousId": "static-html-controls-media-initial-appearance",
+  "historicalEvidenceCaseCounts": {
+    "originalCases": 9,
+    "nativeUnsupportedCases": 9,
+    "retainedControlCases": 7,
+    "excludedMediaCases": 2,
+    "note": "Existing facts/Run bytes unchanged; current 7 cases are the retained subset of those original 9, not a new capture."
+  },
+  "excludedByUser": {
+    "tags": [
+      "video",
+      "audio"
+    ],
+    "caseIds": [
+      "html-host-video",
+      "html-host-audio"
+    ],
+    "decision": "references/media-exclusion.json",
+    "status": "excluded_by_user_not_pending_not_passed"
+  },
+  "historicalDiagnostic": {
+    "native": [
+      {
+        "path": "src/py_mermaid/rendering/labels/rich.py",
+        "symbol": "_HTML.handle_starttag",
+        "errorCodes": [
+          "DEFERRED_HTML_CONTROL"
+        ]
+      },
+      {
+        "path": "src/py_mermaid/rendering/labels/sanitize.py",
+        "symbol": "_ATTRS / sanitize_markup",
+        "remaining": "Source-retained static state attributes require a dedicated native contract"
+      }
+    ],
+    "originalCasesVerified": 7,
+    "nativeUnsupportedCases": 7,
+    "sourceEvidenceRun": "HTML-HOST-diagnostic-20261106T083303Z-37172072",
+    "nativeEvidenceRun": "HTML-HOST-native-diagnostic-20261106T083415Z-f1ef8047",
+    "facts": {
+      "path": "test-runs/HTML-HOST-native-diagnostic-20261106T083415Z-f1ef8047/artifacts/facts.json",
+      "sha256": "62597246a0bb33e2883b60abf2d5940bd1f44f87ce4f107004d8c19f41460bcd",
+      "bytes": 12377
+    },
+    "retainedCaseIds": [
+      "html-host-input",
+      "html-host-checkbox",
+      "html-host-button",
+      "html-host-select",
+      "html-host-textarea",
+      "html-host-meter",
+      "html-host-progress"
+    ],
+    "status": "source_and_native_runtime_difference_confirmed_unimplemented",
+    "nativeCompatibilityVerified": false,
+    "meaning": "Original 9-case diagnostic; 7 retained controls were unsupported at that historical candidate. Unchanged Run/facts bytes remain historical evidence, not current unsupported counts."
+  },
+  "native": [
+    {
+      "path": "src/py_mermaid/rendering/labels/controls/semantic.py",
+      "symbol": "ControlCapture / normalize_control_markup"
+    },
+    {
+      "path": "src/py_mermaid/rendering/labels/controls/layout.py",
+      "symbol": "layout_control / control_ua_style"
+    },
+    {
+      "path": "src/py_mermaid/rendering/skia/controls.py",
+      "symbol": "paint_control"
+    },
+    {
+      "path": "src/py_mermaid/rendering/labels/rich.py",
+      "symbol": "control capture, recursive layout and measured run integration"
+    },
+    {
+      "path": "src/py_mermaid/rendering/labels/sanitize.py",
+      "symbol": "static safe attributes and media exclusion"
+    }
+  ],
+  "inputTypes": [
+    "hidden",
+    "text",
+    "search",
+    "tel",
+    "url",
+    "email",
+    "password",
+    "date",
+    "month",
+    "week",
+    "time",
+    "datetime-local",
+    "number",
+    "range",
+    "color",
+    "checkbox",
+    "radio",
+    "file",
+    "submit",
+    "image",
+    "reset",
+    "button"
+  ],
+  "runtimeDependenciesChanged": false,
+  "currentAcceptance": {
+    "status": "RETAINED_STATIC_LOCAL_ACCEPTED",
+    "sourceTreeSha256": "b605642cc285e95735f18d32f13ff8f98908bcae8e3fefb46120891edf42e268",
+    "fixtureCount": 865,
+    "htmlControlFixtureCount": 131,
+    "legacyFixtureCount": 734,
+    "unitMethods": 2046,
+    "nativeProfiles": {
+      "cpu": {
+        "CHECKS_PASSED": 818,
+        "EXPECTED_ERROR": 46,
+        "EXCLUDED": 1
+      },
+      "auto": {
+        "CHECKS_PASSED": 818,
+        "EXPECTED_ERROR": 46,
+        "EXCLUDED": 1
+      },
+      "gpu": {
+        "CHECKS_PASSED": 818,
+        "EXPECTED_ERROR": 46,
+        "EXCLUDED": 1
+      }
+    },
+    "p4Run": "test-runs/BULK-P4-final-20261106T125300Z-435e50af",
+    "exportRepairRun": "test-runs/HTML-HOST-P4-EXPORT-repair-20261106T130826Z-cebc530d",
+    "exportCounts": {
+      "regression": 465,
+      "htmlControls": 450,
+      "total": 915
+    },
+    "exportEvidenceNote": "Original P4 export file bindings were invalid because an SVG dimension-loop key overwrote the outer case key. Those saved exports are not accepted evidence. All 915 exports were independently rerun on the same frozen candidate in the closed successful exportRepairRun; original P4/P5 attempts are preserved.",
+    "evidence": [
+      {
+        "path": "docs/HTML_HOST_ACCEPTANCE.md",
+        "sha256": "bd24649160bcd5c2e450ee38839b35b49483400733d6f2dc215cd05f9f6a5504"
+      },
+      {
+        "path": "references/html-host-verification-summary.json",
+        "sha256": "a3156f9ba7565c360de3ee963a92f79573ca3407175cbddacf5430691d7f47f2"
+      }
+    ],
+    "installationVerification": "deferred_by_user",
+    "pixelEqualityClaimed": false,
+    "p5Run": "test-runs/HTML-HOST-P5-delivery-20261106T131153Z-15f07388",
+    "reportUrl": "http://127.0.0.1:8765/REPORT-ROUNDS-delivery-20261106T131320Z-1382c778/index.html",
+    "htmlControlsReportUrl": "http://127.0.0.1:8765/REPORT-ROUNDS-delivery-20261106T131320Z-1382c778/rounds/html-controls/index.html"
+  },
+  "currentHtmlControlFixtureCount": 131,
+  "currentNativeUnsupportedControlCases": 0,
+  "claim": "Scoped initial static values/state/appearance and applicable rich-label integration, not arbitrary HTML/CSS or identical platform UA pixels. Locale presentation may differ while initial content/state remains represented.",
+  "explicitLimitations": [
+    "Interaction/editing/focus/dropdown opening/scroll actions/submission/animation excluded.",
+    "Video/audio entirely excluded, not pending and not counted passed.",
+    "Complex CSS calc/min/max/clamp lengths, unsupported contextual colors and non-solid control backgrounds require explicit diagnostics/resolvers.",
+    "Complete browser HTML/CSS/layout engines, exhaustive upstream branches and platform installation/release acceptance are not claimed."
+  ]
+}

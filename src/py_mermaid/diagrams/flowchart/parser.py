@@ -67,6 +67,7 @@ class _Parser:
         self.default_edge_styles: tuple[str, ...] = ()
         self.default_edge_curve: str | None = None
         self.direction = "TD"
+        self.diagram_type = "flowchart-v2"
         self.utf16 = [0]
         self.lines = [0]
         for index, char in enumerate(self.raw):
@@ -736,17 +737,22 @@ class _Parser:
         edges = []
         for edge in self.edges:
             source, target = redirects.get(edge.source, edge.source), redirects.get(edge.target, edge.target)
-            if source == target and (edge.source in redirects or edge.target in redirects):
+            if self._drop_collapsed_selfloop(edge, source, target, redirects):
                 continue
             edges.append(replace(edge, source=source, target=target,
                 curve=edge.curve or self.default_edge_curve or self.config.curve))
         from py_mermaid.rendering.labels.sanitize import sanitize_markup
         return Flowchart(self.raw, self.direction, tuple(nodes), tuple(edges), self.config, groups=groups,
+            diagram_type=self.diagram_type,
             title=sanitize_markup(self.document.title, self.config) if self.document else "",
             acc_title=sanitize_markup(self.acc_title, self.config),
             acc_description=sanitize_markup(self.acc_description, self.config), source_document=self.document,
             class_definitions=tuple(self.classes.values()), default_edge_styles=self.default_edge_styles,
             default_edge_curve=self.default_edge_curve)
+
+    def _drop_collapsed_selfloop(self, edge, source, target, redirects):
+        """Keep the flowchart collapse policy; derived grammars own their policy."""
+        return source == target and (edge.source in redirects or edge.target in redirects)
 
     def accessibility(self):
         title = re.match(r"accTitle\s*:\s*", self.text[self.cursor:])
@@ -783,6 +789,7 @@ class _Parser:
         if header is None:
             self.error("Expected flowchart or graph header", "UNKNOWN_DIAGRAM")
         self.cursor = header.end()
+        if header[1]=='flowchart-elk':self.diagram_type='flowchart-elk'
         self.horizontal()
         direction_start = self.cursor
         if self.cursor == len(self.text) or self.text[self.cursor] in '\r\n':

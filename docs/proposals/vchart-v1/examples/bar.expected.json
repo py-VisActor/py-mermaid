@@ -1,0 +1,39 @@
+{
+  "type": "bar",
+  "width": 800,
+  "height": 420,
+  "data": {
+    "values": [
+      {
+        "month": "Jan",
+        "revenue": 120
+      },
+      {
+        "month": "Feb",
+        "revenue": 180
+      },
+      {
+        "month": "Mar",
+        "revenue": 150
+      }
+    ]
+  },
+  "xField": "month",
+  "yField": "revenue",
+  "bar": {
+    "style": {
+      "fill": "#1664ff"
+    }
+  },
+  "axes": [
+    {
+      "orient": "bottom",
+      "type": "band"
+    },
+    {
+      "orient": "left",
+      "type": "linear",
+      "min": 0
+    }
+  ]
+}

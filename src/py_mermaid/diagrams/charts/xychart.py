@@ -4,7 +4,14 @@ import math
 import re
 from ...runtime.common import make_diagram,config_dict,error
 from ._syntax import statements,common_statement,words,split,scalar
-from ._xyaxis import Axis,text_value
+from ._xyaxis import Axis as SourceAxis,text_value
+from ._vchart_bridge import geometry
+
+
+class Axis(SourceAxis):
+    def scale(self,value):
+        a,b=self.range
+        return geometry('position',self.geometry_source,self.kind,self.domain,(a+self.outer,b-self.outer),value,reverse=self.position=='left')
 
 @dataclass(frozen=True)
 class Plot:
@@ -93,6 +100,7 @@ async def build(diagram,p):
     colors=[s.strip() for s in theme.get('plotColorPalette','#6c8ebf,#d79b00,#82b366,#b85450,#9673a6').split(',')];colors=colors or ['#6c8ebf']
     def axiscolors(prefix):return {key:theme.get(prefix+name,'#333') for key,name in (('titleColor','TitleColor'),('labelColor','LabelColor'),('tickColor','TickColor'),('axisLineColor','LineColor'))}
     xa=Axis(m.xkind,m.xdomain,m.xtitle,q.get('xAxis',{}),p,axiscolors('xAxis'),'x');ya=Axis('linear',m.ydomain,m.ytitle,q.get('yAxis',{}),p,axiscolors('yAxis'),'y')
+    xa.geometry_source=ya.geometry_source=diagram.source
     cw=math.floor(w*q['plotReservedSpacePercent']/100);ch=math.floor(h*q['plotReservedSpacePercent']/100);aw=w-cw;ah=h-ch
     title=p.measure(m.title,size=q['titleFontSize']) if m.title else None;titleh=title.height+2*q['titlePadding'] if title and q['showTitle'] and title.height+2*q['titlePadding']<=ah else 0;ah-=titleh
     if horizontal:
@@ -112,7 +120,11 @@ async def build(diagram,p):
     source_labels=[v for x,v in m.plots[0].data]
     plotted=[]
     for i,plot in enumerate(m.plots):
-        color=colors[i%len(colors)];positions=[(xa.scale(x),ya.scale(v),j) for j,(x,v) in enumerate(plot.data) if v is not None];plotted.append((i,tuple((a,b) for a,b,j in positions)))
+        color=colors[i%len(colors)];valid=[(j,x,v) for j,(x,v) in enumerate(plot.data) if v is not None]
+        vchart=geometry('cartesian',diagram.source,plot.kind,[(x,v) for x,v in plot.data if plot.kind=='line' or v is not None],cw,ch,m.xdomain,m.ydomain,x_kind=m.xkind,horizontal=horizontal,category_padding=xa.outer)
+        raw_points=[point for segment in vchart.get('segments',()) for point in segment]
+        positions=[(py+y,px+x,j) if horizontal else (px+x,py+y,j) for (j,_,_),(x,y) in zip(valid,raw_points)] if plot.kind=='line' else []
+        plotted.append((i,tuple((a,b) for a,b,j in positions)))
         if plot.kind=='line':
             pts=[(b,a) if horizontal else (a,b) for a,b,j in positions]
             if pts:
@@ -122,9 +134,17 @@ async def build(diagram,p):
                 if j<len(plot.labels) and plot.labels[j]:
                     text=p.measure(plot.labels[j],size=12);p.text(text,b+10 if horizontal else a,a-text.height/2 if horizontal else b-10-text.height/2,align='left' if horizontal else 'center',color=color,id=f'point-label-{i}-{j}')
         else:
-            bw=min(xa.outer*2,xa.tick_distance())*.95;bars=[]
-            for a,b,j in positions:
-                rect=(px,a-bw/2,b-px,bw) if horizontal else (a-bw/2,b,bw,py+ch-b)
+            bars=[]
+            for (j,_,_),bounds in zip(valid,vchart.get('bars',())):
+                x0,y0,x1,y1=bounds
+                # Mermaid barPlot.ts retains the VChart projected center but
+                # sizes the bar from axis outer padding / tick distance.
+                breadth=min(xa.outer*2,xa.tick_distance())*.95
+                if horizontal:
+                    center=(y0+y1)/2;y0=center-breadth/2;y1=center+breadth/2
+                else:
+                    center=(x0+x1)/2;x0=center-breadth/2;x1=center+breadth/2
+                rect=(px+x0,py+y0,x1-x0,y1-y0)
                 if rect[2]<0 or rect[3]<0:continue # negative SVG sizes do not paint.
                 p.rect(*rect,fill=color,stroke=color,line_width=0,id=f'bar-{i}-{j}');bars.append((rect,text_value(source_labels[j]) if j<len(source_labels) and source_labels[j] is not None else ''))
             if q['showDataLabel']:

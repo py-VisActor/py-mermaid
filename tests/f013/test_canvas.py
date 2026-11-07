@@ -233,7 +233,15 @@ class RichCanvasTests(unittest.TestCase):
     def test_controls_resources_and_browser_only_policy_explicit_errors(self):
         mathematical=CanvasSession('cpu').measure(fixture('$$x$$'))[0]
         self.assertTrue(any(run.kind=='math' and run.math_key for run in mathematical.runs))
-        cases=[('<input value="hidden">',{},'DEFERRED_HTML_CONTROL'),('<button>Click</button>',{},'DEFERRED_HTML_CONTROL'),('<img src="https://example.com/a.png">',{},'RESOURCE_NOT_FOUND'),('<style>b{color:red}</style>Text',{'dompurifyConfig':{'ADD_TAGS':['style']}},'UNSUPPORTED_LABEL_STYLE_ELEMENT'),('Text',{'dompurifyConfig':{'WHOLE_DOCUMENT':True}},'UNSUPPORTED_SANITIZER_CONFIG')]
+        # Static controls are now implemented; retain the independent resource
+        # and host-policy rejection checks rather than expecting old deferral.
+        for text,value in (('<input value="hidden">','hidden'),('<button>Click</button>','Click')):
+            measured=CanvasSession('cpu').measure(fixture(text))[0]
+            widgets=[run.control for run in measured.runs if run.control is not None]
+            self.assertEqual(len(widgets),1)
+            self.assertEqual(widgets[0].spec.value or widgets[0].spec.text,value)
+            self.assertGreater(widgets[0].width,0)
+        cases=[('<img src="https://example.com/a.png">',{},'RESOURCE_NOT_FOUND'),('<style>b{color:red}</style>Text',{'dompurifyConfig':{'ADD_TAGS':['style']}},'UNSUPPORTED_LABEL_STYLE_ELEMENT'),('Text',{'dompurifyConfig':{'WHOLE_DOCUMENT':True}},'UNSUPPORTED_SANITIZER_CONFIG')]
         for text,config,code in cases:
             with self.subTest(text=text),self.assertRaises(MermaidError) as caught:CanvasSession('cpu').measure(fixture(text,config=config))
             self.assertEqual(caught.exception.code,code)

@@ -1,13 +1,37 @@
 """Cynefin grammar, DB reduction and dedicated source geometry."""
 from dataclasses import dataclass
-import json
+import math
 import re
 from ...runtime.common import make_diagram,config_dict,error
-from ..temporal._syntax import metadata
 from ._cynefin_geometry import boundary,cliff,confusion,hash_string
 
 NAMES=('complex','complicated','clear','chaotic','confusion')
 META={'complex':('Probe \u2192 Sense \u2192 Respond','Emergent Practices'),'complicated':('Sense \u2192 Analyse \u2192 Respond','Good Practices'),'clear':('Sense \u2192 Categorise \u2192 Respond','Best Practices'),'chaotic':('Act \u2192 Sense \u2192 Respond','Novel Practices'),'confusion':('','Disorder')}
+
+
+def _svg_display_text(text):
+    # cynefinRenderer writes plain SVG text with default normal whitespace.
+    # Normalize only XML ASCII whitespace for display/measurement; the model
+    # retains source values, including LF/TAB and non-ASCII whitespace.
+    return re.sub(r'[ \t\r\n]+', ' ', text).strip(' ')
+
+
+def _metadata(text,meta):
+    # common.langium terminals stop single-line values at %% before the
+    # CommonValueConverter trims/collapses them; multiline values retain %%.
+    match=re.fullmatch(r'title(?:[\t ](.*)|)|(accTitle)[\t ]*:(.*)|accDescr(?:[\t ]*:(.*)|\s*\{([^}]*)\})',text,re.S)
+    if not match:return False
+    if text.startswith('title'):key='title';value=match[1] or ''
+    elif match[2]:key='acctitle';value=match[3]
+    else:key='accdescr';value=match[4] if match[4] is not None else match[5]
+    if match[5] is not None:
+        value=re.sub(r'^\s*','',value,flags=re.M)
+        value=re.sub(r'\s+$','',value,flags=re.M)
+        value=re.sub(r'[\t ]{2,}',' ',value)
+        value=re.sub(r'[\n\r]{2,}','\n',value)
+    else:value=re.sub(r'[\t ]{2,}',' ',value.split('%%',1)[0].strip())
+    meta[key]=value
+    return True
 
 @dataclass(frozen=True)
 class Cynefin:
@@ -33,18 +57,19 @@ def parse(document,config):
     blocks={};trans=[];diagnostics=[];meta={'title':document.title or ''}
     def string(v,at):
         if len(v)<2 or v[0] not in '\"\'':raise error(document,at,'Expected quoted label')
-        if v[0]=='"':
-            try:return json.loads(v)
-            except ValueError:raise error(document,at,'Invalid quoted label')
-        return v[1:-1].replace("\\'","'").replace('\\\\','\\')
+        # Langium convertString is a one-character escape converter, not JSON:
+        # \u0041 becomes u0041, unknown escapes drop only the backslash, and
+        # both quote styles permit literal newlines in their terminal.
+        escapes={'b':'\b','f':'\f','n':'\n','r':'\r','t':'\t','v':'\v','0':'\0'}
+        return re.sub(r'\\(.)',lambda m:escapes.get(m[1],m[1]),v[1:-1],flags=re.S)
     while i<len(tokens):
         v,at=tokens[i]
-        if metadata(v,meta):i+=1;continue
+        if _metadata(v,meta):i+=1;continue
         if v in ('title','accTitle','accDescr'):
             end=s.find('\n',at)
             if end<0:end=len(s)
             raw=s[at:end]
-            if not metadata(raw,meta):raise error(document,at,'Invalid metadata')
+            if not _metadata(raw,meta):raise error(document,at,'Invalid metadata')
             i+=1
             while i<len(tokens) and tokens[i][1]<end:i+=1
             continue
@@ -73,14 +98,18 @@ async def build(diagram,p):
     from ._source_styles import styles
     p.add_styles(styles('cynefin',t))
     w=float(cfg['width']);h=float(cfg['height']);pad=float(cfg['padding']);show=cfg['showDomainDescriptions']
-    seed=cfg.get('seed',0) or hash_string(p.render_id)
+    configured_seed=cfg.get('seed',0)
+    # resolveSeed accepts only nonzero finite JS numbers. In particular bool
+    # is not numeric here, despite Python bool being an int subclass.
+    seed=configured_seed if type(configured_seed) in (int,float) and math.isfinite(configured_seed) and configured_seed!=0 else hash_string(p.render_id)
     # The browser source hashes its host element id when seed=0. Native has no
     # DOM element id; Painter.render_id is the native host's explicit identity.
     layouts={'complex':(0,0,w/4,h/4),'complicated':(w/2,0,w*.75,h/4),'chaotic':(0,h/2,w/4,h*.75),'clear':(w/2,h/2,w*.75,h*.75),'confusion':(w*.35,h*.35,w/2,h/2)}
     def style(cls,tag='path',**base):return p.style(cls,tag=tag,base=base)
     def label(text,x,y,cls,size,color,weight='normal',italic=False,baseline=False):
         st=style(cls,'text',font_size=size,text_color=color,font_weight=weight,font_style='italic' if italic else 'normal')
-        box=p.measure(text,html=False,style=st)
+        text=_svg_display_text(text)
+        box=p.measure(text,html=False,style=st,literal=True)
         p.text(box,x+pad,y+pad-(box.ascent if baseline else box.height/2),align='center',style=st)
     for name in ('complex','complicated','chaotic','clear'):
         x,y,_,_=layouts[name];p.rect(x+pad,y+pad,w/2,h/2,style=style('cynefinDomain','rect',fill=t[name+'Bg'],fill_opacity=.4,stroke='none'))
@@ -101,7 +130,8 @@ async def build(diagram,p):
         start=y+((22 if show else 14) if center else (25 if show else 15))
         for index,text in enumerate(labels):
             st=style('cynefinItemText','text',font_size=t['itemFontSize'],text_color=t['textColor'])
-            box=p.measure(text,html=False,style=st);bw=box.width+20;by=start+index*30;overflow=index>=len(shown)
+            text=_svg_display_text(text)
+            box=p.measure(text,html=False,style=st,literal=True);bw=box.width+20;by=start+index*30;overflow=index>=len(shown)
             p.rect(x-bw/2+pad,by+pad,bw,26,radius=4,style=style('cynefinItemOverflow' if overflow else 'cynefinItem','rect',fill=t[name+'Bg'],fill_opacity=.6 if overflow else .95,stroke=t['boundaryColor'],stroke_width=1,dash=(3,2) if overflow else ()))
             p.text(box,x+pad,by+pad+13-box.height/2,align='center',style=st)
     for a,b,text in m.transitions:
