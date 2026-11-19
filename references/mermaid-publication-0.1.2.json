@@ -1,0 +1,55 @@
+{
+  "schema": "py-mermaid-publication/v1",
+  "status": "PYPI_AND_GITHUB_VERIFIED",
+  "version": "0.1.2",
+  "sourceCommit": "9ba2f6ff3467330503982f2a5ce5df7290056851",
+  "pypi": "https://pypi.org/project/py-visactor-mermaid/0.1.2/",
+  "githubRelease": "https://github.com/py-VisActor/py-mermaid/releases/tag/py-visactor-mermaid-v0.1.2",
+  "workflow": "https://github.com/py-VisActor/py-mermaid/actions/runs/44458655299",
+  "verificationRunAttempt": 2,
+  "firstReadback": "PyPI index propagation returned HTTP 404 on the first readback; only the failed verify job was retried.",
+  "manifestSha256": "a2321fc07595ae4d0f89648436ff08b06a9b36bfcf272e018bb7856c2678d818",
+  "distributions": {
+    "py_visactor_mermaid-0.1.2-py3-none-any.whl": {
+      "sha256": "24bbb50de5b9c7941c7e8eff6365392025dcdf29b15645e9c17206bbb47ea05c",
+      "bytes": 648545
+    },
+    "py_visactor_mermaid-0.1.2.tar.gz": {
+      "sha256": "79a1295789df16c4c9589dc0055e358abbfb5c5c48483537e08620783e7f3b42",
+      "bytes": 555461
+    }
+  },
+  "verifiedPlatforms": [
+    "macos-15",
+    "macos-15-intel",
+    "ubuntu-24.04",
+    "windows-2025"
+  ],
+  "localCandidateObservations": {
+    "diagramKinds": 38,
+    "vchartTypes": 68,
+    "closureCases": 134,
+    "unitTests": 132,
+    "independentChecksPassed": 243,
+    "recordedSourceExceptions": 1
+  },
+  "publishedStackOnAppleSilicon": {
+    "status": "PASS",
+    "macOS": "13.7.8",
+    "arch": "arm64",
+    "packages": {
+      "py-skia-canvas": "0.1.0a21",
+      "py-visactor-elk": "0.1.2",
+      "py-visactor-katex": "0.1.2",
+      "py-visactor-vchart": "0.1.3",
+      "py-visactor-mermaid": "0.1.2"
+    },
+    "renderer": "Metal",
+    "outputs": [
+      "canvas.png",
+      "formula.pdf",
+      "chart.png",
+      "diagram.svg"
+    ]
+  }
+}
