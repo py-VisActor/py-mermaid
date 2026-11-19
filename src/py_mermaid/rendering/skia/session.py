@@ -35,7 +35,7 @@ class CanvasSession:
             raise MermaidError("backend must be auto, cpu or gpu", code="INVALID_BACKEND")
         from py_skia_canvas import Canvas, Path2D, Image, FontLibrary, __version__
         from ...resources import ResourceStore
-        expected = "0.1.0a21" if sys.platform == "darwin" else "0.1.0a18"
+        expected = "0.1.4" if sys.platform == "darwin" else "0.1.0a18"
         if __version__ != expected:
             raise MermaidError(f"Expected py-skia-canvas {expected}, found {__version__}", code="DEPENDENCY_VERSION")
         self._owner = threading.get_ident()

@@ -4,18 +4,18 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "py-visactor-mermaid"
-version = "0.1.2"
+version = "0.1.4"
 description = "Static Mermaid and VChart diagrams in Python using py-skia-canvas, pyelk and py-katex"
 readme = "README.md"
 requires-python = ">=3.13,<3.14"
 license = "MIT"
 license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md", "references/licenses/*"]
 dependencies = [
-    'py-skia-canvas==0.1.0a21; sys_platform == "darwin"',
+    'py-skia-canvas==0.1.4; sys_platform == "darwin"',
     'py-skia-canvas==0.1.0a18; sys_platform != "darwin"',
-    "py-visactor-elk==0.1.2",
-    "py-visactor-katex==0.1.2",
-    "py-visactor-vchart==0.1.3",
+    "py-visactor-elk==0.1.4",
+    "py-visactor-katex==0.1.4",
+    "py-visactor-vchart==0.1.4",
 ]
 classifiers = [
   "Development Status :: 5 - Production/Stable",

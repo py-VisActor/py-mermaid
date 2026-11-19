@@ -5,7 +5,7 @@
 Install on CPython 3.13, macOS 13+ (Apple Silicon and Intel), Windows AMD64, or Linux x86_64 with glibc 2.28+:
 
 ```shell
-python -m pip install py-visactor-mermaid==0.1.2
+python -m pip install py-visactor-mermaid==0.1.4
 ```
 
 Dependencies are installed from PyPI. No sibling checkout or Node.js installation is needed.

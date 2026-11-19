@@ -49,13 +49,13 @@ class BootstrapTests(unittest.TestCase):
             self.assertIn("Canvas dependency differs from lock", check(root)["errors"])
 
     def test_pypi_vchart_must_be_published(self):
-        with altered_document('references/vchart-release-lock-0.1.3.json',
+        with altered_document('references/vchart-release-lock-0.1.4.json',
                               lambda doc: doc['pypi'].update(published=False)) as root:
             self.assertIn('VChart delivery requirement/version/asset SHA differs from release lock',
                           check(root)['errors'])
 
     def test_pypi_vchart_rejects_untrusted_file_host(self):
-        with altered_document('references/vchart-release-lock-0.1.3.json',
+        with altered_document('references/vchart-release-lock-0.1.4.json',
                               lambda doc: doc['asset'].update(url='https://example.com/replaced.whl')) as root:
             self.assertIn('VChart delivery requirement/version/asset SHA differs from release lock',
                           check(root)['errors'])

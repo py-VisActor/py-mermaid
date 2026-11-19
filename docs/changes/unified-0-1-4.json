@@ -1,0 +1,15 @@
+{
+  "schema": "py-mermaid-change/v1",
+  "task": "unified-0-1-4",
+  "baseCommit": "ca708f2",
+  "targetVersion": "0.1.4",
+  "scope": "Align the public version, bundled metadata, source pin checks and release documentation with the macOS stack.",
+  "macOSDependencies": {
+    "py-skia-canvas": "0.1.4",
+    "py-visactor-elk": "0.1.4",
+    "py-visactor-katex": "0.1.4",
+    "py-visactor-vchart": "0.1.4"
+  },
+  "platforms": ["macos-15", "macos-15-intel", "ubuntu-24.04", "windows-2025"],
+  "supplierLock": "references/vchart-release-lock-0.1.4.json"
+}

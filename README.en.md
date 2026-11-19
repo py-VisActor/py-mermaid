@@ -9,7 +9,7 @@ Render Mermaid text as static images in Python. Draw flowcharts, sequence diagra
 Requires CPython 3.13 on macOS 13+ (Apple Silicon and Intel), Windows AMD64, or Linux x86_64 with glibc 2.28+. Install `py-visactor-mermaid`; import `py_mermaid`.
 
 ```shell
-python -m pip install py-visactor-mermaid==0.1.2
+python -m pip install py-visactor-mermaid==0.1.4
 ```
 
 ## Draw a flowchart

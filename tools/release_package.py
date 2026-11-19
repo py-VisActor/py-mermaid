@@ -94,7 +94,7 @@ def verification_fixture():
         closure.extend(read(file).get('cases', []))
     return {'schema': 'py-mermaid-release-inputs/v1', 'diagrams': [representatives[k] for k in wanted],
             'vchart': vchart['cases'], 'closure': closure,
-            'supplierLock': read(ROOT / 'references/vchart-release-lock-0.1.3.json')}
+            'supplierLock': read(ROOT / 'references/vchart-release-lock-0.1.4.json')}
 
 
 def build(args):
@@ -119,7 +119,7 @@ def build(args):
         fixture = args.out / 'verification-inputs.json'
         write_json(fixture, data, exclusive=True)
         inputs = {name: file_identity(ROOT / name) for name in ('tools/release_probe.py', 'tools/release_package.py',
-            'tools/check_closure_b.py', 'tests/vchart_integration/cases-vchart.json', 'references/vchart-release-lock-0.1.3.json')}
+            'tools/check_closure_b.py', 'tests/vchart_integration/cases-vchart.json', 'references/vchart-release-lock-0.1.4.json')}
         for file in sorted((ROOT / 'tests/closure').rglob('*')):
             if file.is_file() and '__pycache__' not in file.parts and file.suffix != '.pyc':
                 inputs[file.relative_to(ROOT).as_posix()] = file_identity(file)
