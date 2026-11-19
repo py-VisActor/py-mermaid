@@ -82,8 +82,7 @@ def check(root: Path = ROOT) -> dict:
                 errors.append(f"Invalid evidence file: {item['id']}")
             elif hashlib.sha256((root / evidence['path']).read_bytes()).hexdigest() != evidence.get("sha256"):
                 errors.append(f"Evidence hash differs: {item['id']}")
-    math_lock=json.loads((root/'references/math-release-lock.json').read_text('utf-8'))
-    chart_lock=json.loads((root/'references/vchart-release-lock.json').read_text('utf-8'))
+    chart_lock=json.loads((root/'references/vchart-release-lock-0.1.3.json').read_text('utf-8'))
     chart_asset=chart_lock.get('asset',{})
     chart_tag=f"py-visactor-vchart-v{chart_lock['version']}"
     chart_url=(f"https://github.com/py-VisActor/py-vchart/releases/download/{chart_tag}/"
@@ -110,10 +109,13 @@ def check(root: Path = ROOT) -> dict:
             or not re.fullmatch(r'[0-9a-f]{64}',chart_sha)
             or not re.fullmatch(r'[0-9a-f]{40}',chart_lock.get('sourceCommit',''))):
         errors.append('VChart delivery requirement/version/asset SHA differs from release lock')
-    expected_dependencies = [f"py-skia-canvas=={lock['canvas']['version']}", "py-visactor-elk==0.1.0",
-                             f"{math_lock['distribution']}=={math_lock['version']}",
-                             chart_requirement]
-    if expected_dependencies[0] not in project["dependencies"]:
+    canvas_dependencies = [
+        'py-skia-canvas==0.1.0a21; sys_platform == "darwin"',
+        f'py-skia-canvas=={lock["canvas"]["version"]}; sys_platform != "darwin"',
+    ]
+    expected_dependencies = [*canvas_dependencies, "py-visactor-elk==0.1.2",
+                             "py-visactor-katex==0.1.2", chart_requirement]
+    if not set(canvas_dependencies).issubset(project["dependencies"]):
         errors.append("Canvas dependency differs from lock")
     elif project["dependencies"] != expected_dependencies:
         errors.append("Runtime dependencies differ from pinned Canvas/ELK/math/VChart requirements")

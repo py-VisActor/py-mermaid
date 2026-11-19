@@ -11,7 +11,7 @@ Render Mermaid text or VChart specs as static images. Install `py-visactor-merma
 - [Resources and export](user/RESOURCES.md) (Chinese).
 - [Runnable examples](../examples/README.md).
 
-Requires CPython 3.13 on Windows AMD64 or Linux x86_64 with glibc 2.28+. Outputs are static. See [PyPI](https://pypi.org/project/py-visactor-mermaid/) and [release notes](https://github.com/py-VisActor/py-mermaid/releases) for published versions.
+Requires CPython 3.13 on macOS 13+ (Apple Silicon and Intel), Windows AMD64, or Linux x86_64 with glibc 2.28+. Outputs are static. See [PyPI](https://pypi.org/project/py-visactor-mermaid/) and [release notes](https://github.com/py-VisActor/py-mermaid/releases) for published versions.
 
 For bug reports, include a minimal input, package versions, OS, backend and full error in an [issue](https://github.com/py-VisActor/py-mermaid/issues).
 

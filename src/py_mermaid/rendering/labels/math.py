@@ -34,7 +34,7 @@ def typeset_formula(tex,style,position=0,*,resources=None,fallback_fonts=()):
         from py_katex import typeset,Options
         from py_katex.model import ParseError
     except ImportError as exc:
-        raise MermaidError('Mathematical labels require py-visactor-katex==0.1.0 (import py_katex)',code='MATH_DEPENDENCY') from exc
+        raise MermaidError('Mathematical labels require py-visactor-katex (import py_katex)',code='MATH_DEPENDENCY') from exc
     # createText.ts collapses actual double backslashes once in HTML mode.
     normalized=[];positions=[];i=0
     while i<len(tex):

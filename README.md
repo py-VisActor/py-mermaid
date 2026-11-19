@@ -6,10 +6,10 @@
 
 ## 安装
 
-需要 CPython 3.13，支持 Windows AMD64 和 Linux x86_64（glibc 2.28+）。发行包名为 `py-visactor-mermaid`，Python 导入名为 `py_mermaid`。
+需要 CPython 3.13，支持 macOS 13+（Apple Silicon 和 Intel）、Windows AMD64 和 Linux x86_64（glibc 2.28+）。发行包名为 `py-visactor-mermaid`，Python 导入名为 `py_mermaid`。
 
 ```shell
-python -m pip install py-visactor-mermaid==0.1.1
+python -m pip install py-visactor-mermaid==0.1.2
 ```
 
 ## 绘制流程图

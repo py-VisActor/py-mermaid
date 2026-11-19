@@ -4,10 +4,10 @@
 
 ## 安装
 
-使用 CPython 3.13，平台为 Windows AMD64 或 Linux x86_64（glibc 2.28+）：
+使用 CPython 3.13，平台为 macOS 13+（Apple Silicon 和 Intel）、Windows AMD64 和 Linux x86_64（glibc 2.28+）：
 
 ```shell
-python -m pip install py-visactor-mermaid==0.1.1
+python -m pip install py-visactor-mermaid==0.1.2
 ```
 
 依赖会随安装解析，不需要检出其他 py-VisActor 仓库或安装 Node.js。普通文字使用宿主字体；离线自定义字体见[资源指南](RESOURCES.md)。

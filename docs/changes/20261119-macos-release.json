@@ -1,0 +1,20 @@
+{
+  "schema": "py-mermaid-change/v1",
+  "task": "macos-release",
+  "baseCommit": "3d01a50",
+  "targetVersion": "0.1.2",
+  "platforms": ["macos-15", "macos-15-intel", "ubuntu-24.04", "windows-2025"],
+  "scope": "Match the macOS Canvas wheel and verified ELK, KaTeX, and VChart dependencies. Keep the existing Mermaid source and independent rendering fixtures.",
+  "localPreflight": {
+    "environment": "macOS 13.7.8 arm64, CPython 3.13.9",
+    "command": "python -m unittest discover -s tests/closure -t tests -v",
+    "tests": 132,
+    "exitCode": 0,
+    "dependencies": {
+      "py-skia-canvas": "0.1.0a21",
+      "py-visactor-elk": "0.1.2",
+      "py-visactor-katex": "0.1.2",
+      "py-visactor-vchart": "0.1.3"
+    }
+  }
+}

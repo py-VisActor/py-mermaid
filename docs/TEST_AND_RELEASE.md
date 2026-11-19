@@ -35,9 +35,9 @@ python tools/release_package.py build --out test-runs/NEW-RELEASE
 
 流水线依次执行：
 
-1. Windows/Linux 各自在仓库外独立安装 wheel、sdist，核查导入来源、API、CLI、静态图种、VChart、资源及合同方法。
-2. Linux 实际 IANA 时区检查闭合 Windows 明确跳过的 `tzset` 项，不把跳过写成通过。
-3. 两个平台均成功后，OIDC 上传同组已验证文件。
+1. Windows、Linux、macOS Apple Silicon 与 macOS Intel 各自在仓库外独立安装 wheel、sdist，核查导入来源、API、CLI、静态图种、VChart、资源及合同方法。
+2. Linux 与 macOS 运行实际 IANA 时区检查，覆盖 Windows 跳过的 `tzset` 路径，不把跳过写成通过。
+3. 全部平台成功后，OIDC 上传同组已验证文件。
 4. 从实际 PyPI 下载 wheel、sdist，核文件集合、字节大小和 SHA，再独立安装并验证。
 5. 回读成功后将 GitHub Release 标记为正式版，保存永久发行凭据和当前状态。
 
@@ -45,6 +45,6 @@ python tools/release_package.py build --out test-runs/NEW-RELEASE
 
 ## 元数据和交付
 
-现有 PyPI 版本描述不会随 GitHub 编辑自动更新，需要新版本发行。当前包支持 CPython 3.13、Windows AMD64 和 Linux glibc 2.28+ x86_64；CPU 安装检查不替代另行声明的 GPU 验收。
+现有 PyPI 版本描述不会随 GitHub 编辑自动更新，需要新版本发行。当前包使用 CPython 3.13，支持 macOS 13+（Apple Silicon 和 Intel）、Windows AMD64 和 Linux x86_64（glibc 2.28+）；CPU 安装检查不替代另行声明的 GPU 验收。
 
 发行记录分别保存构建提交、tag、manifest、CI、实际索引文件 SHA、隔离安装、已知限制和发布时间。旧证据仍绑定其原始候选，不能换上新版本或新 SHA。最终说明真实发布状态，并更新[当前发行状态](RELEASE_STATUS.md)。

@@ -5,7 +5,7 @@ on:
       release_tag:
         description: Immutable reviewed candidate tag
         type: string
-        default: py-visactor-mermaid-v0.1.1
+        default: py-visactor-mermaid-v0.1.2
         required: true
       manifest_sha256:
         description: SHA256 of reviewed release-manifest.json
@@ -28,7 +28,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-24.04, windows-2025]
+        os: [ubuntu-24.04, windows-2025, macos-15, macos-15-intel]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683

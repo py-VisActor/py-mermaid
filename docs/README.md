@@ -14,7 +14,7 @@
 | 提供字体、图片、图标或数学标签 | [资源与导出](user/RESOURCES.md) |
 | 运行更多示例 | [示例目录](../examples/README.md) |
 
-安装环境为 CPython 3.13、Windows AMD64 或 Linux x86_64（glibc 2.28+）。所有输出均为静态图像。当前发行版本见 [PyPI](https://pypi.org/project/py-visactor-mermaid/)，版本说明见 [GitHub Releases](https://github.com/py-VisActor/py-mermaid/releases)。
+安装环境为 CPython 3.13、macOS 13+（Apple Silicon 和 Intel）、Windows AMD64 和 Linux x86_64（glibc 2.28+）。所有输出均为静态图像。当前发行版本见 [PyPI](https://pypi.org/project/py-visactor-mermaid/)，版本说明见 [GitHub Releases](https://github.com/py-VisActor/py-mermaid/releases)。
 
 遇到问题请提交 [Issue](https://github.com/py-VisActor/py-mermaid/issues)，附最小输入、包版本、操作系统、后端和错误信息。
 

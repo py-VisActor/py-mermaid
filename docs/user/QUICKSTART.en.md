@@ -2,10 +2,10 @@
 
 [User documentation](../README.en.md) · [中文](QUICKSTART.md)
 
-Install on CPython 3.13, Windows AMD64 or Linux x86_64 with glibc 2.28+:
+Install on CPython 3.13, macOS 13+ (Apple Silicon and Intel), Windows AMD64, or Linux x86_64 with glibc 2.28+:
 
 ```shell
-python -m pip install py-visactor-mermaid==0.1.1
+python -m pip install py-visactor-mermaid==0.1.2
 ```
 
 Dependencies are installed from PyPI. No sibling checkout or Node.js installation is needed.

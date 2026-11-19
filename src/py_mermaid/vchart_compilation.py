@@ -28,7 +28,7 @@ def _diagnostics(model):
     if spec['type']=='sequenceScatterPixel' and any(spec.get(k,300)!=300 for k in ('width','height')):
         span=next((s for s in model.source_map if s.namespace=='spec' and s.path in (('width',),('height',))),None)
         diagnostics.append(DslDiagnostic('VCHART_FIXED_SIZE',
-            'py-visactor-vchart 0.1.1 sequenceScatterPixel always renders 300x300; requested width/height remain in the compiled spec.',
+            'py-visactor-vchart sequenceScatterPixel always renders 300x300; requested width/height remain in the compiled spec.',
             span.path if span else (),span.start if span else 0,span.end if span else 0))
     return replace(model,diagnostics=tuple(diagnostics))
 

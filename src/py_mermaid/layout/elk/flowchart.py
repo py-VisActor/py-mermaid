@@ -203,9 +203,9 @@ async def layout_flowchart(
     try:
         from pyelk import ELK, __version__
     except ImportError as exc:
-        raise MermaidError("py-visactor-elk==0.1.0 is required for flowchart layout", code="ELK_UNAVAILABLE") from exc
-    if __version__ != "0.1.0":
-        raise MermaidError(f"Expected py-visactor-elk 0.1.0, got {__version__}", code="ELK_VERSION_MISMATCH")
+        raise MermaidError("py-visactor-elk is required for flowchart layout", code="ELK_UNAVAILABLE") from exc
+    if __version__ != "0.1.2":
+        raise MermaidError(f"Expected py-visactor-elk 0.1.2, got {__version__}", code="ELK_VERSION_MISMATCH")
     try:
         with ELK() as engine:
             result = await engine.layout(graph)

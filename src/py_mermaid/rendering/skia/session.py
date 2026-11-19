@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import math
 import re
+import sys
 import threading
 from dataclasses import replace
 from ...geometry import arrow_polygon
@@ -34,8 +35,9 @@ class CanvasSession:
             raise MermaidError("backend must be auto, cpu or gpu", code="INVALID_BACKEND")
         from py_skia_canvas import Canvas, Path2D, Image, FontLibrary, __version__
         from ...resources import ResourceStore
-        if __version__ != "0.1.0a18":
-            raise MermaidError(f"Expected py-skia-canvas 0.1.0a18, found {__version__}", code="DEPENDENCY_VERSION")
+        expected = "0.1.0a21" if sys.platform == "darwin" else "0.1.0a18"
+        if __version__ != expected:
+            raise MermaidError(f"Expected py-skia-canvas {expected}, found {__version__}", code="DEPENDENCY_VERSION")
         self._owner = threading.get_ident()
         self._backend = backend
         self._resources=ResourceStore(resources)
